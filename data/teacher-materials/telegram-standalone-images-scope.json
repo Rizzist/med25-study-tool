@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "collectionDate": "2026-07-22",
+  "source": {
+    "chat": "TUMS MD&MBBS || TERM 2",
+    "url": "private Telegram study group",
+    "mode": "read-only-download",
+    "topics": ["Embryology", "Histology1"]
+  },
+  "archive": {
+    "directory": "data/teacher-materials/telegram/standalone-images/originals",
+    "downloadedImageCount": 47,
+    "downloadedBytes": 3304523,
+    "embryologyImageCount": 45,
+    "histologyImageCount": 2,
+    "originalFilenamesPreserved": true
+  },
+  "review": {
+    "promotedToQuestionBank": 19,
+    "embryologyPromoted": 17,
+    "histologyPromoted": 2,
+    "notPromoted": 28,
+    "notPromotedReasons": [
+      "blurry or low-contrast handwritten notes",
+      "near-duplicate reposts of cleaner diagrams",
+      "clinical images with weaker standalone teaching value",
+      "images whose embedded caption would reveal the intended answer"
+    ]
+  },
+  "identifiedCoverage": [
+    "abnormal gamete morphology and spermiogenesis",
+    "spermatogenic lineage and chromosome state",
+    "oocyte maturation and polar bodies",
+    "primordial, growing, antral, and mature follicles",
+    "fetal oogenesis and prophase-I arrest",
+    "Turner, Klinefelter, Edwards, and Down syndromes",
+    "free trisomy 21 and Robertsonian t(14;21)",
+    "meiosis-I versus meiosis-II nondisjunction",
+    "crossing over and chiasma formation",
+    "primordial germ-cell migration",
+    "spongy bone trabeculae",
+    "synovial-joint architecture"
+  ],
+  "questionBank": "data/bank/questions/telegram-standalone-image-recognition.jsonl",
+  "publicAssetDirectories": [
+    "public/study/embryology/telegram-standalone",
+    "public/study/histology/telegram-standalone"
+  ]
+}

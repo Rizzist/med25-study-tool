@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-22T03:27:05Z",
+  "subject": "physiology",
+  "examBlock": "term-1 general physiology",
+  "source": {
+    "platform": "Telegram",
+    "archiveRoot": "data/teacher-materials/telegram",
+    "evidenceType": "teacher PDFs inspected by extracted text and rendered-page visual review"
+  },
+  "inventory": {
+    "fileCount": 4,
+    "totalPages": 79,
+    "totalBytes": 5592181,
+    "files": [
+      {
+        "filename": "Introduction to Cell Physiology PDF.pdf",
+        "bytes": 2876967,
+        "sha256": "56c8187d07156b94b9355fc69b716c5d4291c9edc07673ea597d32417622c389",
+        "pages": 14,
+        "guytonChapters": ["Chapter 1", "Chapter 2", "Chapter 4", "Chapter 5"],
+        "pageMap": [
+          {"pages": "1", "topics": ["definition and shared properties of cells", "ECF as internal environment", "ECF versus ICF volumes and ion composition", "cell-tissue-organ-system organization"]},
+          {"pages": "2", "topics": ["homeostasis", "negative feedback", "useful positive feedback in childbirth", "organ-system contributions to ECF stability"]},
+          {"pages": "3", "topics": ["membrane lipid bilayer", "phospholipids, sphingolipids, and cholesterol", "integral and peripheral membrane proteins", "lipid-soluble diffusion", "positive feedback in clotting and action-potential initiation"]},
+          {"pages": "4", "topics": ["pinocytosis", "phagocytosis", "lysosomal digestion", "exocytosis", "ECF and ICF electrolyte differences"]},
+          {"pages": "5", "topics": ["channel versus carrier proteins", "diffusion versus active transport", "simple diffusion pathways", "basic determinants of diffusion rate"]},
+          {"pages": "6", "topics": ["lipid solubility", "aquaporins and molecular size", "concentration, electrical, and pressure gradients", "pore selectivity"]},
+          {"pages": "7", "topics": ["selective permeability", "voltage-gated channels", "ligand-gated channels", "acetylcholine-gated channels"]},
+          {"pages": "8", "topics": ["facilitated diffusion and transport maximum", "osmosis", "active-transport definition", "primary versus secondary active transport"]},
+          {"pages": "9", "topics": ["primary active transport", "Na+/K+-ATPase stoichiometry", "sodium-glucose cotransport", "sodium-calcium and sodium-hydrogen countertransport"]},
+          {"pages": "10", "topics": ["resting membrane potential", "potassium and sodium leak", "electrogenic Na+/K+ pump", "resting, depolarization, and repolarization phases"]},
+          {"pages": "11", "topics": ["voltage-gated sodium activation and inactivation", "voltage-gated potassium activation", "hyperpolarization", "action-potential threshold"]},
+          {"pages": "12", "topics": ["subthreshold potentials", "action-potential propagation", "restoration of ion gradients", "plateau action potentials"]},
+          {"pages": "13", "topics": ["L-type calcium current during plateau", "rhythmic action potentials", "myelinated versus unmyelinated fibers", "nodes of Ranvier"]},
+          {"pages": "14", "topics": ["saltatory conduction", "conduction-speed and energy advantages of myelin", "nerve conduction-velocity range"]}
+        ]
+      },
+      {
+        "filename": "1. Molecular basis of contraction.pdf",
+        "bytes": 854632,
+        "sha256": "8608a9f7dc854c46587c59c58e98b0e6798feb5682c8c5fae69b338d75d8f669",
+        "pages": 25,
+        "guytonChapters": ["Chapter 6", "Chapter 7"],
+        "pageMap": [
+          {"pages": "1", "topics": ["introduction to muscle physiology"]},
+          {"pages": "2", "topics": ["relative body mass of skeletal, smooth, and cardiac muscle", "shared contraction principles"]},
+          {"pages": "3", "topics": ["hierarchical organization of skeletal muscle"]},
+          {"pages": "4", "topics": ["sarcolemma", "sarcoplasm", "sarcoplasmic reticulum"]},
+          {"pages": "5", "topics": ["sarcomere organization", "thick and thin filaments", "Z disc, M line, and titin"]},
+          {"pages": "6", "topics": ["motor-nerve-to-contraction sequence", "acetylcholine", "muscle action potential", "SR calcium release and reuptake"]},
+          {"pages": "7", "topics": ["sliding-filament mechanism", "relaxed versus contracted overlap"]},
+          {"pages": "8", "topics": ["transition to molecular basis of filament sliding"]},
+          {"pages": "9", "topics": ["myosin molecules", "myosin heads", "myosin ATPase"]},
+          {"pages": "10", "topics": ["F-actin", "tropomyosin", "troponin complex", "actin active sites"]},
+          {"pages": "11", "topics": ["thin-filament inhibition and activation"]},
+          {"pages": "12", "topics": ["walk-along mechanism", "hinges and power stroke"]},
+          {"pages": "13-23", "topics": ["sequential cross-bridge-cycle animation", "ATP/ADP state changes", "attachment, power stroke, detachment, and recocking"]},
+          {"pages": "24", "topics": ["complete four-step cross-bridge cycle", "ATP dependence", "rigor in the absence of ATP"]},
+          {"pages": "25", "topics": ["blank closing slide"]}
+        ]
+      },
+      {
+        "filename": "2. Skeletal muscle.pdf",
+        "bytes": 1180611,
+        "sha256": "ca11bdeb6c330b96c193a598def1e2f8de25a0a0a3126fb46a2ea65321e6db51",
+        "pages": 21,
+        "guytonChapters": ["Chapter 6", "Chapter 7"],
+        "pageMap": [
+          {"pages": "1", "topics": ["skeletal muscle physiology title"]},
+          {"pages": "2", "topics": ["isotonic contraction", "isometric contraction", "force-load relationship"]},
+          {"pages": "3-4", "topics": ["motor-unit definition", "fine-control versus high-force unit size", "motor-unit anatomy"]},
+          {"pages": "5", "topics": ["muscle tone", "muscle fatigue", "glycogen, ATP, oxygen, and blood-flow limitations"]},
+          {"pages": "6", "topics": ["muscle remodeling", "hypertrophy", "loading and actin-myosin filament increase"]},
+          {"pages": "7", "topics": ["atrophy", "denervation atrophy", "stretch during denervation", "hyperplasia"]},
+          {"pages": "8", "topics": ["neuromuscular transmission and excitation-contraction coupling section title"]},
+          {"pages": "9-10", "topics": ["neuromuscular-junction anatomy", "motor end plate"]},
+          {"pages": "11-12", "topics": ["synaptic vesicles", "presynaptic calcium channels", "acetylcholine receptors", "ligand-gated cation-channel opening"]},
+          {"pages": "13-14", "topics": ["acetylcholinesterase", "brief duration of acetylcholine", "synaptic-space recap"]},
+          {"pages": "15", "topics": ["end-plate potential", "threshold", "subthreshold versus action-potential-producing EPP"]},
+          {"pages": "16", "topics": ["skeletal-muscle versus large-nerve resting potential", "action-potential duration", "conduction velocity"]},
+          {"pages": "17", "topics": ["spread of action potential through transverse tubules", "triad anatomy"]},
+          {"pages": "18", "topics": ["DHP voltage sensor", "ryanodine-receptor release channel", "terminal cisternae"]},
+          {"pages": "19", "topics": ["SR calcium release", "calcium-pump reuptake", "calcium activation of filaments"]},
+          {"pages": "20", "topics": ["closing thank-you slide"]},
+          {"pages": "21", "topics": ["unlabeled visual recap of acetylcholine release and postsynaptic activation"]}
+        ]
+      },
+      {
+        "filename": "3. Smooth muscle.pdf",
+        "bytes": 679971,
+        "sha256": "6b6693b37b64d3ee845c4d53ebbeec3af29310b2a6be30857ec2c50d55ba2ffc",
+        "pages": 19,
+        "guytonChapters": ["Chapter 8"],
+        "pageMap": [
+          {"pages": "1", "topics": ["excitation and contraction of smooth muscle title"]},
+          {"pages": "2", "topics": ["smooth-muscle fiber dimensions compared with skeletal muscle"]},
+          {"pages": "3", "topics": ["distinctive smooth-muscle structure and function"]},
+          {"pages": "4-5", "topics": ["actin and myosin without troponin", "dense bodies", "nonstriated organization", "calcium and energetic distinctions"]},
+          {"pages": "6-8", "topics": ["multiunit versus unitary smooth muscle", "independent control", "gap junctions", "iris, ciliary, GI, bile-duct, and vessel examples"]},
+          {"pages": "9", "topics": ["slow cross-bridge cycling", "low ATP requirement", "slow contraction and relaxation"]},
+          {"pages": "10-11", "topics": ["calcium-calmodulin", "MLCK", "myosin phosphorylation", "extracellular and SR calcium sources"]},
+          {"pages": "12", "topics": ["smooth-muscle sarcoplasmic reticulum", "caveolae"]},
+          {"pages": "13", "topics": ["calcium removal", "slow calcium pump", "myosin phosphatase and relaxation"]},
+          {"pages": "14", "topics": ["neural, hormonal, stretch, and chemical-environment stimuli"]},
+          {"pages": "15-16", "topics": ["autonomic varicosities", "diffuse junctions", "acetylcholine and norepinephrine effects depend on receptor"]},
+          {"pages": "17", "topics": ["unitary smooth-muscle spike, repetitive, and plateau action potentials"]},
+          {"pages": "18", "topics": ["multiunit smooth-muscle depolarization and contraction without action potentials"]},
+          {"pages": "19", "topics": ["closing thank-you slide"]}
+        ]
+      }
+    ]
+  },
+  "questionAlignment": {
+    "bank": "data/bank/questions/physiology-term1-general.jsonl",
+    "questions": 80,
+    "teacherSlideVerified": 49,
+    "provisionalGuytonOnly": 31,
+    "qualityFlags": {
+      "supported": ["teacher-slide-verified", "guyton-15e-cross-checked"],
+      "unsupported": ["teacher-filename-scope-pending-download", "guyton-15e-cross-checked"]
+    },
+    "provisionalAreas": [
+      "control-system gain and feed-forward control",
+      "mitochondria, secretory pathway, peroxisomes, microtubules, transcription, and translation",
+      "membrane area/thickness calculation, pressure-driven filtration nomenclature, and carrier competition",
+      "Nernst calculations, refractory-period terminology, hyperkalemia, local anesthetics, axon diameter, all-or-none coding, and extracellular calcium effects",
+      "skeletal troponin-C specificity, length-tension extremes, recruitment, temporal summation, work, and phosphocreatine",
+      "myasthenia gravis, botulinum toxin, and smooth-muscle latch mechanism",
+      "receptor-mediated intracellular calcium release without an action potential"
+    ],
+    "teacherTopicsNotYetDirectlyTested": [
+      "membrane composition and glycocalyx",
+      "pinocytosis and receptor-mediated endocytosis",
+      "muscle tone and fatigue",
+      "hypertrophy, atrophy, denervation, and hyperplasia",
+      "muscle-versus-nerve action-potential duration and conduction velocity",
+      "smooth-muscle dimensions, dense bodies, and explicit multiunit examples",
+      "receptor-dependent excitatory or inhibitory effects of acetylcholine and norepinephrine"
+    ],
+    "textbookCrosscheck": {
+      "title": "Guyton and Hall Textbook of Medical Physiology",
+      "edition": "15th (2026)",
+      "chapters": ["Chapter 1", "Chapter 2", "Chapter 3", "Chapter 4", "Chapter 5", "Chapter 6", "Chapter 7", "Chapter 8"]
+    }
+  }
+}

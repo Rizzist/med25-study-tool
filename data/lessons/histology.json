@@ -1,0 +1,2622 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "hist-methods-workflow",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Methods and microscopy",
+      "title": "From living tissue to a readable section",
+      "subtitle": "The routine paraffin sequence, artifacts, and what each microscope adds",
+      "kind": "process",
+      "topicPatterns": [
+        "Histological methods and stains",
+        "Histology methods and stains",
+        "Histology methods",
+        "Microscopy"
+      ],
+      "questionPatterns": [
+        "fixation",
+        "dehydration",
+        "clearing",
+        "embedding",
+        "microtome",
+        "paraffin",
+        "resolution",
+        "objective lens",
+        "electron microscope",
+        "tem",
+        "sem"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Routine processing replaces water with a hard medium so a thin, stainable slice can be made.",
+        "items": [
+          {
+            "label": "1. Fix",
+            "detail": "Formalin cross-links proteins, stops autolysis, and preserves relationships.",
+            "cue": "Preserve first"
+          },
+          {
+            "label": "2. Dehydrate",
+            "detail": "Increasing alcohol removes water because paraffin is not water-miscible.",
+            "cue": "Water out"
+          },
+          {
+            "label": "3. Clear",
+            "detail": "An organic solvent such as xylene replaces alcohol and mixes with paraffin.",
+            "cue": "Alcohol to solvent"
+          },
+          {
+            "label": "4. Infiltrate and embed",
+            "detail": "Molten paraffin enters tissue and hardens as a supporting block.",
+            "cue": "Support the tissue"
+          },
+          {
+            "label": "5. Section and stain",
+            "detail": "A microtome cuts thin sections; paraffin is removed before aqueous staining.",
+            "cue": "Cut, deparaffinize, color"
+          }
+        ]
+      },
+      "essentials": [
+        "Dehydration immediately precedes clearing; clearing immediately precedes paraffin infiltration.",
+        "The objective lens largely determines light-microscope resolution and useful magnification.",
+        "TEM shows internal ultrastructure in thin sections; SEM shows three-dimensional surface topography.",
+        "Frozen sections are rapid and preserve lipids or enzyme activity better, but morphology is usually less crisp.",
+        "Shrinkage, folds, tears, precipitate, and extraction of lipid are processing artifacts, not real structures."
+      ],
+      "traps": [
+        {
+          "wrong": "Clearing removes tissue water directly.",
+          "right": "Alcohol first removes water; clearing solvent then replaces the alcohol."
+        },
+        {
+          "wrong": "More magnification always reveals more detail.",
+          "right": "Resolution, not enlargement alone, determines whether two close points can be distinguished."
+        }
+      ],
+      "recognition": [
+        "TEM images are flat grayscale views of internal membranes and organelles.",
+        "SEM images have a shadowed, three-dimensional surface appearance.",
+        "Empty round spaces in routine adipose sections usually represent dissolved lipid."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 1; TUMS INTRODUCTION teacher deck, slides 7-22."
+      },
+      "asset": "/study/histology/local-tem-ultrastructure.png"
+    },
+    {
+      "id": "hist-stains-map",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Methods and stains",
+      "title": "Stain targets at a glance",
+      "subtitle": "Match the molecule, tissue component, and expected color",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Histological methods and stains",
+        "Histology methods and stains",
+        "Histology methods"
+      ],
+      "questionPatterns": [
+        "hematoxylin",
+        "eosin",
+        "pas",
+        "orcein",
+        "weigert",
+        "silver stain",
+        "reticular",
+        "masson",
+        "mallory",
+        "azan",
+        "toluidine",
+        "wright",
+        "metachromasia",
+        "immunohistochemistry"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Choose a stain from the chemical target, then use color as confirmation.",
+        "items": [
+          {
+            "label": "H&E",
+            "detail": "Hematoxylin colors acidic, nucleic-acid-rich structures blue-purple; eosin colors basic proteins, cytoplasm, and collagen pink.",
+            "cue": "Nuclei blue; protein pink"
+          },
+          {
+            "label": "PAS",
+            "detail": "Carbohydrate-rich structures such as glycogen, basement membrane, and mucins become magenta.",
+            "cue": "Sugar = magenta"
+          },
+          {
+            "label": "Elastic fibers",
+            "detail": "Orcein gives dark-brown elastic fibers; the teacher table assigns blue-black fibers to Weigert elastic stain.",
+            "cue": "Orcein brown; Weigert blue-black"
+          },
+          {
+            "label": "Silver",
+            "detail": "Argyrophilic reticular fibers, nerve fibers, and fungi are rendered brown-black or black.",
+            "cue": "Fine black network"
+          },
+          {
+            "label": "Trichromes",
+            "detail": "Masson: collagen blue-green and muscle red. Mallory: deep-blue collagen/bone, red muscle, orange keratin. AZAN strongly separates blue ECM from red muscle.",
+            "cue": "Collagen versus muscle"
+          },
+          {
+            "label": "Blood and granules",
+            "detail": "Wright differentiates blood cells; toluidine blue shows mast-cell granule metachromasia.",
+            "cue": "Romanowsky smear; purple mast granules"
+          }
+        ]
+      },
+      "essentials": [
+        "Basophilia reflects anionic macromolecules, especially DNA, ribosomal RNA, and rough ER.",
+        "Eosinophilia reflects proteins rich in positively charged groups, including cytoplasmic proteins and collagen.",
+        "Immunohistochemistry uses labeled antibodies to localize a specific antigen rather than a broad chemical class.",
+        "Enzyme histochemistry preserves and demonstrates catalytic activity; autoradiography tracks radiolabeled molecules.",
+        "A stain's target is more reliable than color alone because protocols can vary."
+      ],
+      "traps": [
+        {
+          "wrong": "PAS is a general protein stain.",
+          "right": "PAS detects carbohydrate-rich material and makes it magenta."
+        },
+        {
+          "wrong": "Orcein and silver stain identify the same fibers.",
+          "right": "Orcein highlights elastic fibers; silver methods classically reveal reticular fibers."
+        }
+      ],
+      "recognition": [
+        "A magenta basement membrane or brush border suggests PAS.",
+        "A delicate branching black mesh around cells suggests silver-stained reticular fibers.",
+        "Blue-green collagen beside red muscle suggests Masson's trichrome."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 1; TUMS INTRODUCTION teacher stain table, slides 14-16."
+      },
+      "asset": "/study/image-bank/histo-silver-reticular-fibers.png"
+    },
+    {
+      "id": "hist-membrane-transport-signaling",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Cell membrane, transport, and signaling",
+      "title": "The membrane decides what crosses and how cells hear",
+      "subtitle": "Fluid mosaic structure, transport routes, endocytosis, and receptor logic",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "Cell membrane",
+        "Membrane transport",
+        "Cell signaling"
+      ],
+      "questionPatterns": [
+        "fluid mosaic",
+        "glycocalyx",
+        "cholesterol",
+        "lipid raft",
+        "diffusion",
+        "facilitated",
+        "active transport",
+        "sodium potassium",
+        "endocytosis",
+        "clathrin",
+        "caveolin",
+        "transcytosis",
+        "receptor",
+        "paracrine",
+        "autocrine",
+        "endocrine"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Membrane proteins convert selective movement or an external signal into a cellular response.",
+        "items": [
+          {
+            "label": "Bilayer",
+            "detail": "Amphipathic phospholipids form an asymmetric fluid barrier; cholesterol buffers fluidity and permeability.",
+            "cue": "Hydrophilic faces out"
+          },
+          {
+            "label": "Passive routes",
+            "detail": "Simple diffusion crosses lipid; channels and carriers mediate facilitated diffusion down an electrochemical gradient.",
+            "cue": "No metabolic energy"
+          },
+          {
+            "label": "Active routes",
+            "detail": "Pumps use ATP directly; coupled transport uses a preexisting ion gradient.",
+            "cue": "Against gradient"
+          },
+          {
+            "label": "Vesicular routes",
+            "detail": "Phagocytosis takes large particles; pinocytosis takes fluid; receptor-mediated endocytosis concentrates selected cargo in clathrin-coated pits.",
+            "cue": "Cargo enters a vesicle"
+          },
+          {
+            "label": "Transcytosis",
+            "detail": "Endocytosis at one cell surface, vesicular transport across the cell, then exocytosis at the opposite surface.",
+            "cue": "Across, not into, the cell"
+          },
+          {
+            "label": "Signal range",
+            "detail": "Endocrine travels in blood; paracrine acts nearby; autocrine acts on the secreting cell; juxtacrine requires contact.",
+            "cue": "Far, near, self, touch"
+          }
+        ]
+      },
+      "essentials": [
+        "The glycocalyx is on the extracellular surface and supports protection, adhesion, and recognition.",
+        "Integral proteins span or embed in the bilayer; peripheral proteins attach more loosely to a surface.",
+        "Lipid rafts concentrate cholesterol, sphingolipids, receptors, and signaling proteins.",
+        "Hydrophilic ligands generally use surface receptors; steroid and thyroid hormones bind intracellular receptors.",
+        "A receptor can amplify a small extracellular signal through second messengers and kinase cascades."
+      ],
+      "traps": [
+        {
+          "wrong": "Facilitated diffusion uses ATP because it uses a carrier.",
+          "right": "It uses a protein but still moves down the gradient without direct energy."
+        },
+        {
+          "wrong": "Transcytosis ends in a lysosome.",
+          "right": "Transcytosis delivers intact cargo to the opposite cell surface."
+        }
+      ],
+      "recognition": [
+        "A bristle-like external coat on EM is glycocalyx.",
+        "A coated invagination with a polygonal cytoplasmic coat suggests clathrin-mediated uptake.",
+        "Multiple small flask-shaped membrane pits suggest caveolae."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 2; TUMS lecture 1 deck, membrane, transport, and signaling sections."
+      },
+      "asset": "/study/histology/local-plasma-membrane-model.png"
+    },
+    {
+      "id": "hist-organelles-trafficking",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Cytoplasm and organelles",
+      "title": "Protein and membrane traffic through the cell",
+      "subtitle": "Use organelle morphology to predict what a cell makes and where cargo goes",
+      "kind": "process",
+      "topicPatterns": [
+        "Cytoplasm",
+        "Cytoplasmic organelles"
+      ],
+      "questionPatterns": [
+        "rough endoplasmic",
+        "rer",
+        "smooth endoplasmic",
+        "ser",
+        "ribosome",
+        "golgi",
+        "lysosome",
+        "peroxisome",
+        "mitochondria",
+        "proteasome",
+        "secretory vesicle",
+        "cis face",
+        "trans face"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Secreted and membrane proteins follow a vectorial RER-to-Golgi pathway.",
+        "items": [
+          {
+            "label": "Free ribosome",
+            "detail": "Makes proteins that remain in cytosol or enter nucleus, mitochondria, and peroxisomes.",
+            "cue": "Internal-use proteins"
+          },
+          {
+            "label": "RER",
+            "detail": "A signal peptide directs the ribosome to RER for synthesis of secreted, lysosomal, and membrane proteins.",
+            "cue": "Protein enters ER lumen"
+          },
+          {
+            "label": "Cis Golgi",
+            "detail": "Receives transport vesicles from RER and begins further modification.",
+            "cue": "Cis receives"
+          },
+          {
+            "label": "Trans Golgi",
+            "detail": "Sorts and packages cargo for secretion, membrane insertion, or endosomal-lysosomal delivery.",
+            "cue": "Trans transports out"
+          },
+          {
+            "label": "Lysosome",
+            "detail": "Acid hydrolases digest material from endocytosis, phagocytosis, and autophagy.",
+            "cue": "Acidic recycling center"
+          }
+        ]
+      },
+      "essentials": [
+        "RER is basophilic because its ribosomes contain abundant rRNA; protein-secreting cells show prominent RER and Golgi.",
+        "SER supports lipid and steroid synthesis, detoxification, glycogen metabolism, and calcium storage in muscle.",
+        "Mitochondria have a double membrane and cristae; their abundance tracks ATP demand.",
+        "Peroxisomes oxidize very-long-chain fatty acids and use catalase to handle hydrogen peroxide.",
+        "Proteasomes degrade ubiquitin-tagged cytosolic proteins; lysosomes digest membrane-bound cargo and organelles."
+      ],
+      "traps": [
+        {
+          "wrong": "All proteins are synthesized on RER-bound ribosomes.",
+          "right": "Translation begins on free ribosomes; only proteins with the proper signal are directed to RER."
+        },
+        {
+          "wrong": "The cis Golgi is the shipping face.",
+          "right": "Cis receives from ER; trans sorts and ships toward final destinations."
+        }
+      ],
+      "recognition": [
+        "Parallel flattened cisternae studded with dots identify RER.",
+        "Smooth anastomosing tubules without ribosomes identify SER.",
+        "Stacked curved cisternae with many nearby vesicles identify Golgi."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 2; TUMS lecture 1 organelle and trafficking sections."
+      },
+      "asset": "/study/histology/local-golgi-cis-trans.png"
+    },
+    {
+      "id": "hist-cytoskeleton-inclusions",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Cytoskeleton and inclusions",
+      "title": "Three cytoskeletal systems, three jobs",
+      "subtitle": "Diameter, motor, function, and the difference between an organelle and an inclusion",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Cytoskeleton",
+        "Cytoplasmic inclusions"
+      ],
+      "questionPatterns": [
+        "microfilament",
+        "actin",
+        "intermediate filament",
+        "keratin",
+        "vimentin",
+        "desmin",
+        "microtubule",
+        "tubulin",
+        "kinesin",
+        "dynein",
+        "cilium",
+        "centriole",
+        "lipofuscin",
+        "glycogen",
+        "inclusion"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Size rises from actin to intermediate filaments to microtubules; functions shift from force to tensile strength to tracks.",
+        "items": [
+          {
+            "label": "Actin microfilaments",
+            "detail": "About 7 nm; cell cortex, microvilli, contraction with myosin, migration, and cytokinesis.",
+            "cue": "Force and shape"
+          },
+          {
+            "label": "Intermediate filaments",
+            "detail": "About 10 nm; stable tensile support. Keratin marks epithelia, vimentin mesenchyme, desmin muscle, GFAP astrocytes.",
+            "cue": "Mechanical identity"
+          },
+          {
+            "label": "Microtubules",
+            "detail": "About 25 nm; tubulin tracks for kinesin and dynein, mitotic spindle, cilia, and centrioles.",
+            "cue": "Transport and movement"
+          },
+          {
+            "label": "Motile cilium",
+            "detail": "A 9+2 axoneme bends through dynein; its basal body has nine triplet microtubules.",
+            "cue": "9+2 shaft, 9 triplet base"
+          },
+          {
+            "label": "Inclusions",
+            "detail": "Nonliving, usually temporary cytoplasmic deposits such as lipid droplets, glycogen, melanin, or lipofuscin.",
+            "cue": "Stored material, not machinery"
+          }
+        ]
+      },
+      "essentials": [
+        "Kinesin usually walks toward the microtubule plus end; dynein usually walks toward the minus end.",
+        "Primary cilia are usually nonmotile 9+0 sensory structures; motile cilia typically have 9+2 organization.",
+        "Centrioles and basal bodies contain nine peripheral triplets without a central pair.",
+        "Lipofuscin is a yellow-brown residual-body pigment that accumulates with age in long-lived cells.",
+        "Intermediate-filament markers help identify a cell's tissue of origin."
+      ],
+      "traps": [
+        {
+          "wrong": "Microvilli contain microtubules like cilia.",
+          "right": "Microvilli have actin cores; cilia have microtubular axonemes."
+        },
+        {
+          "wrong": "A lipid droplet is a membrane-bound organelle.",
+          "right": "It is a cytoplasmic inclusion with a phospholipid monolayer, not a classic bilayer organelle."
+        }
+      ],
+      "recognition": [
+        "A ciliary cross-section with nine doublets around two central microtubules is motile 9+2.",
+        "A cartwheel-like ring of nine triplets is a centriole or basal body.",
+        "Fine brown perinuclear granules in an old long-lived cell suggest lipofuscin."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 2; TUMS lecture 1 cytoskeleton and inclusion sections."
+      },
+      "asset": "/study/histology/local-cilium-axoneme.jpg"
+    },
+    {
+      "id": "hist-nucleus-cycle-death",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Nucleus, cell cycle, and cell death",
+      "title": "Read the nucleus to read the cell",
+      "subtitle": "Chromatin state, nuclear transport, checkpoints, mitosis, apoptosis, and necrosis",
+      "kind": "process",
+      "topicPatterns": [
+        "Nucleus",
+        "Cell cycle",
+        "Cell death",
+        "Cell division"
+      ],
+      "questionPatterns": [
+        "euchromatin",
+        "heterochromatin",
+        "nucleolus",
+        "nuclear pore",
+        "lamina",
+        "g1",
+        "s phase",
+        "g2",
+        "checkpoint",
+        "mitosis",
+        "metaphase",
+        "anaphase",
+        "apoptosis",
+        "necrosis",
+        "caspase"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "A cell passes checkpoints before DNA replication and chromosome separation; damage can divert it to apoptosis.",
+        "items": [
+          {
+            "label": "G1",
+            "detail": "Growth and preparation; the restriction checkpoint asks whether size, nutrients, signals, and DNA are suitable.",
+            "cue": "Commit or pause"
+          },
+          {
+            "label": "S",
+            "detail": "DNA is replicated and centrosomes duplicate; chromosome number is unchanged although DNA content doubles.",
+            "cue": "Synthesize DNA"
+          },
+          {
+            "label": "G2",
+            "detail": "The cell checks replicated DNA and prepares the mitotic apparatus.",
+            "cue": "Repair before division"
+          },
+          {
+            "label": "Mitosis",
+            "detail": "Condense, align, separate sister chromatids, rebuild nuclei, then divide cytoplasm by an actin-myosin ring.",
+            "cue": "PMAT plus cytokinesis"
+          },
+          {
+            "label": "Apoptosis",
+            "detail": "Caspase-driven cell shrinkage, chromatin condensation, and apoptotic bodies occur with little inflammation.",
+            "cue": "Programmed and tidy"
+          },
+          {
+            "label": "Necrosis",
+            "detail": "Cell swelling and membrane rupture release contents and provoke inflammation.",
+            "cue": "Injury and leakage"
+          }
+        ]
+      },
+      "essentials": [
+        "Euchromatin is pale, dispersed, and transcriptionally active; heterochromatin is dark and condensed.",
+        "The nucleolus makes rRNA and assembles ribosomal subunits, so it is prominent in protein-producing cells.",
+        "Nuclear pores mediate selective two-way traffic between nucleus and cytoplasm.",
+        "The spindle checkpoint prevents anaphase until all kinetochores are properly attached.",
+        "Apoptosis preserves membrane integrity until fragments are phagocytosed; necrosis disrupts the membrane."
+      ],
+      "traps": [
+        {
+          "wrong": "DNA replication doubles chromosome number in S phase.",
+          "right": "It doubles DNA content; chromosome number is counted by centromeres and stays the same until chromatids separate."
+        },
+        {
+          "wrong": "Apoptotic cells swell and cause intense inflammation.",
+          "right": "They shrink and fragment into membrane-bound bodies with minimal inflammation."
+        }
+      ],
+      "recognition": [
+        "A pale nucleus with a large nucleolus signals active transcription and ribosome production.",
+        "Dense peripheral chromatin and small membrane-bound fragments suggest apoptosis.",
+        "Chromosomes aligned at the equator identify metaphase."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 3; TUMS lecture 1 chromatin, cell-cycle, and death sections."
+      },
+      "asset": "/study/histology/local-cell-cycle-checkpoints.jpg"
+    },
+    {
+      "id": "hist-epithelium-classification",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Epithelial tissue",
+      "title": "Classify an epithelium in two decisions",
+      "subtitle": "Count layers at the basement membrane, then name the shape at the free surface",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Epithelial tissue"
+      ],
+      "questionPatterns": [
+        "simple squamous",
+        "simple cuboidal",
+        "simple columnar",
+        "stratified squamous",
+        "pseudostratified",
+        "transitional",
+        "urothelium",
+        "keratinized",
+        "nonkeratinized",
+        "covering epithelium"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Layer number predicts barrier strength; apical cell shape predicts the final name.",
+        "items": [
+          {
+            "label": "Simple squamous",
+            "detail": "One thin layer for exchange or lubrication: endothelium, mesothelium, alveoli.",
+            "cue": "Flat and fast"
+          },
+          {
+            "label": "Simple cuboidal",
+            "detail": "Round central nuclei in cells as tall as wide: small ducts, kidney tubules, thyroid follicles.",
+            "cue": "Secretion and absorption"
+          },
+          {
+            "label": "Simple columnar",
+            "detail": "Tall cells with basal oval nuclei: gut and gallbladder; may bear microvilli or cilia.",
+            "cue": "Tall absorptive lining"
+          },
+          {
+            "label": "Pseudostratified columnar",
+            "detail": "Every cell contacts basement membrane, but nuclei lie at different heights; often ciliated with goblet cells.",
+            "cue": "Looks layered, is not"
+          },
+          {
+            "label": "Stratified squamous",
+            "detail": "Many layers resist abrasion; surface cells are flat. Keratinized epidermis is dry; nonkeratinized mucosa is moist.",
+            "cue": "Protection"
+          },
+          {
+            "label": "Urothelium",
+            "detail": "Variable thickness with large dome-shaped umbrella cells; stretches in urinary passages.",
+            "cue": "Domes that flatten"
+          }
+        ]
+      },
+      "essentials": [
+        "All epithelial cells are closely packed, polarized, attached to a basement membrane, and avascular.",
+        "Classify by the number of layers and the shape of the most superficial cells, not the basal cells.",
+        "Endothelium lines blood and lymph vessels; mesothelium lines serous cavities.",
+        "Pseudostratified epithelium has one layer because every cell reaches the basement membrane.",
+        "Urothelial umbrella cells may be binucleate and have specialized apical plaques."
+      ],
+      "traps": [
+        {
+          "wrong": "Nuclei at several levels prove the epithelium is stratified.",
+          "right": "In pseudostratified epithelium, unequal cell height creates staggered nuclei even though all cells touch the basement membrane."
+        },
+        {
+          "wrong": "Stratified epithelia are named by their deepest cells.",
+          "right": "They are named by the shape of the surface cells."
+        }
+      ],
+      "recognition": [
+        "Very flat cells with flattened nuclei form simple squamous epithelium.",
+        "Cilia, goblet cells, and staggered nuclei strongly suggest respiratory pseudostratified epithelium.",
+        "Rounded dome-shaped surface cells identify relaxed urothelium."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 4; TUMS EPITHELIAL TISSUE deck, pages 3-7 and 28-38."
+      },
+      "asset": "/study/image-bank/histo-small-intestine.png"
+    },
+    {
+      "id": "hist-epithelium-junctions-glands",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Epithelial polarity, junctions, and glands",
+      "title": "Apical, lateral, basal: build the epithelial cell",
+      "subtitle": "Junction order, surface specializations, basement membrane, and gland secretion",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "Epithelial tissue"
+      ],
+      "questionPatterns": [
+        "tight junction",
+        "zonula occludens",
+        "zonula adherens",
+        "desmosome",
+        "hemidesmosome",
+        "gap junction",
+        "microvilli",
+        "stereocilia",
+        "cilia",
+        "basement membrane",
+        "goblet",
+        "merocrine",
+        "apocrine",
+        "holocrine",
+        "exocrine",
+        "endocrine"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "From apex to base, specializations control absorption, sealing, adhesion, communication, and attachment.",
+        "items": [
+          {
+            "label": "Apical surface",
+            "detail": "Microvilli and stereocilia have actin cores; motile cilia have 9+2 microtubules.",
+            "cue": "Absorb or move"
+          },
+          {
+            "label": "Tight junction",
+            "detail": "The most apical junction seals the paracellular pathway and helps preserve polarity.",
+            "cue": "Occludens = occludes"
+          },
+          {
+            "label": "Adherens and desmosome",
+            "detail": "Adherens junctions anchor actin belts; desmosomes anchor intermediate filaments at spot welds.",
+            "cue": "Actin belt, keratin spot"
+          },
+          {
+            "label": "Gap junction",
+            "detail": "Connexon channels pass ions and small molecules directly between adjacent cells.",
+            "cue": "Communication"
+          },
+          {
+            "label": "Basal surface",
+            "detail": "Hemidesmosomes bind intermediate filaments to basal lamina; focal adhesions link actin to ECM.",
+            "cue": "Cell to matrix"
+          },
+          {
+            "label": "Gland output",
+            "detail": "Merocrine uses exocytosis, apocrine sheds apical cytoplasm, and holocrine releases whole dying cells.",
+            "cue": "Exocytose, pinch, perish"
+          }
+        ]
+      },
+      "essentials": [
+        "The basal lamina contains type IV collagen and laminin; reticular lamina adds connective-tissue components.",
+        "Microvilli increase absorptive surface area; cilia move material over the epithelium.",
+        "Exocrine glands retain ducts; endocrine glands are ductless and release products toward capillaries.",
+        "Goblet cells are unicellular exocrine glands that release mucin by merocrine secretion.",
+        "Myoepithelial cells contract around secretory units and small ducts to aid product expulsion."
+      ],
+      "traps": [
+        {
+          "wrong": "A hemidesmosome joins two epithelial cells.",
+          "right": "A desmosome joins cell to cell; a hemidesmosome anchors cell to basal lamina."
+        },
+        {
+          "wrong": "Stereocilia are exceptionally long motile cilia.",
+          "right": "They are long, nonmotile, actin-based microvilli."
+        }
+      ],
+      "recognition": [
+        "A fuzzy apical brush border is densely packed microvilli.",
+        "A terminal bar by light microscopy represents the apical junctional complex.",
+        "Pale goblet-shaped cells between columnar cells are mucin-filled goblet cells."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 4; TUMS EPITHELIAL TISSUE deck, pages 9-26 and 39-45."
+      }
+    },
+    {
+      "id": "hist-connective-tissue-components",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Connective tissue",
+      "title": "Cells plus matrix make connective tissue",
+      "subtitle": "Identify resident and wandering cells, fiber types, and ground substance",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Connective tissue"
+      ],
+      "questionPatterns": [
+        "fibroblast",
+        "fibrocyte",
+        "macrophage",
+        "mast cell",
+        "plasma cell",
+        "collagen",
+        "elastic fiber",
+        "reticular fiber",
+        "ground substance",
+        "proteoglycan",
+        "glycosaminoglycan",
+        "dense irregular",
+        "dense regular",
+        "loose connective"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "The balance of cells, fibers, and hydrated ground substance determines the tissue's job.",
+        "items": [
+          {
+            "label": "Fibroblast",
+            "detail": "The principal ECM-producing cell; active cells are plump and basophilic, while fibrocytes are smaller and darker.",
+            "cue": "Builds matrix"
+          },
+          {
+            "label": "Immune cells",
+            "detail": "Macrophages phagocytose and present antigen; mast cells release inflammatory mediators; plasma cells secrete antibody.",
+            "cue": "Eat, alarm, antibody"
+          },
+          {
+            "label": "Type I collagen",
+            "detail": "Thick eosinophilic bundles resist tension in tendon, dermis, bone, and fibrocartilage.",
+            "cue": "Strong rope"
+          },
+          {
+            "label": "Type III reticular fibers",
+            "detail": "Thin branching argyrophilic fibers form supportive networks in marrow and lymphoid organs.",
+            "cue": "Fine silver mesh"
+          },
+          {
+            "label": "Elastic fibers",
+            "detail": "Elastin plus fibrillin permits stretch and recoil in large arteries, lung, and elastic ligaments.",
+            "cue": "Recoil"
+          },
+          {
+            "label": "Ground substance",
+            "detail": "Hydrated GAGs, proteoglycans, and adhesive glycoproteins support diffusion and resist compression.",
+            "cue": "Molecular gel"
+          }
+        ]
+      },
+      "essentials": [
+        "Loose connective tissue has many cells, abundant ground substance, and loosely arranged fibers beneath epithelia.",
+        "Dense regular connective tissue has parallel collagen for one-direction tension; dense irregular tissue has interwoven bundles for multidirectional stress.",
+        "Plasma cells have eccentric clock-face nuclei and a pale perinuclear Golgi hof.",
+        "Mast-cell granules show metachromasia and contain histamine, heparin, proteases, and other mediators.",
+        "Type IV collagen forms sheet-like basal lamina networks rather than visible fibers or bundles."
+      ],
+      "traps": [
+        {
+          "wrong": "Reticular fibers are a separate collagen-free fiber family.",
+          "right": "They are mainly type III collagen arranged as delicate branching networks."
+        },
+        {
+          "wrong": "A plasma cell's pale juxtanuclear area is its nucleus.",
+          "right": "It is the prominent Golgi apparatus adjacent to an eccentric nucleus."
+        }
+      ],
+      "recognition": [
+        "Parallel wavy collagen with rows of flattened nuclei suggests tendon.",
+        "Irregular thick collagen bundles in many directions suggest dermis.",
+        "A delicate black branching network on silver stain identifies reticular fibers."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 5; TUMS The Connective Tissue deck, pages 2-32."
+      },
+      "asset": "/study/image-bank/histo-silver-reticular-fibers.png"
+    },
+    {
+      "id": "hist-adipose-tissue",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Adipose tissue",
+      "title": "White stores; brown burns",
+      "subtitle": "Two adipocytes with different architecture, blood supply, and physiology",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Adipose tissue"
+      ],
+      "questionPatterns": [
+        "white adipose",
+        "unilocular",
+        "brown adipose",
+        "multilocular",
+        "thermogenin",
+        "ucp1",
+        "leptin",
+        "lipolysis",
+        "adipocyte"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Lipid-droplet architecture reveals whether the cell is optimized for storage or heat generation.",
+        "items": [
+          {
+            "label": "White adipocyte",
+            "detail": "One giant lipid droplet pushes a flattened nucleus to the edge; sparse cytoplasm forms a signet-ring profile.",
+            "cue": "Unilocular storage"
+          },
+          {
+            "label": "White functions",
+            "detail": "Stores triglyceride, cushions and insulates, and secretes adipokines including leptin and adiponectin.",
+            "cue": "Fuel plus endocrine organ"
+          },
+          {
+            "label": "Brown adipocyte",
+            "detail": "Many small lipid droplets surround a more central nucleus; abundant mitochondria and capillaries make the tissue brown.",
+            "cue": "Multilocular furnace"
+          },
+          {
+            "label": "Brown function",
+            "detail": "Sympathetic stimulation releases fatty acids; UCP1 uncouples oxidative phosphorylation so energy becomes heat.",
+            "cue": "Proton leak makes heat"
+          },
+          {
+            "label": "Mobilization",
+            "detail": "Catecholamines promote lipolysis; insulin favors glucose uptake and triglyceride storage.",
+            "cue": "Fasting releases, feeding stores"
+          }
+        ]
+      },
+      "essentials": [
+        "Routine processing dissolves stored lipid, leaving a large optically empty space in white adipocytes.",
+        "Each white adipocyte is supported by reticular fibers and a basal lamina.",
+        "Brown fat is especially important in newborn thermogenesis and persists in smaller adult depots.",
+        "UCP1 is located in the inner mitochondrial membrane and dissipates the proton gradient.",
+        "Adipose tissue is highly vascular because lipid storage, release, and endocrine signaling depend on blood flow."
+      ],
+      "traps": [
+        {
+          "wrong": "Brown fat makes ATP more efficiently than white fat.",
+          "right": "UCP1 uncouples respiration, decreasing ATP capture and releasing energy as heat."
+        },
+        {
+          "wrong": "The empty center of a white adipocyte is a vacuole filled with water.",
+          "right": "It is the site of a lipid droplet extracted during routine preparation."
+        }
+      ],
+      "recognition": [
+        "Large clear signet-ring cells with peripheral nuclei are white adipocytes.",
+        "Smaller eosinophilic cells with central nuclei and many droplets are brown adipocytes."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 6, Adipose Tissue."
+      }
+    },
+    {
+      "id": "hist-cartilage-types-growth",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Cartilage",
+      "title": "Recognize cartilage by its matrix and fibers",
+      "subtitle": "Hyaline, elastic, and fibrocartilage plus appositional and interstitial growth",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Cartilage",
+        "Cartilage and bone",
+        "Bone and joint tissue"
+      ],
+      "questionPatterns": [
+        "hyaline cartilage",
+        "elastic cartilage",
+        "fibrocartilage",
+        "chondroblast",
+        "chondrocyte",
+        "lacuna",
+        "isogenous",
+        "perichondrium",
+        "appositional",
+        "interstitial"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "All cartilage has chondrocytes in lacunae; the visible fibers, cell arrangement, and perichondrium separate the types.",
+        "items": [
+          {
+            "label": "Hyaline",
+            "detail": "Glassy type II collagen matrix with isogenous groups; perichondrium is present except at articular surfaces and growth plates.",
+            "cue": "Glassy matrix"
+          },
+          {
+            "label": "Elastic",
+            "detail": "Hyaline-like cartilage with a conspicuous elastic-fiber network and perichondrium; found in pinna and epiglottis.",
+            "cue": "Dark fibers, flexible shape"
+          },
+          {
+            "label": "Fibrocartilage",
+            "detail": "Rows of chondrocytes between thick type I collagen bundles; no perichondrium; resists compression and tension.",
+            "cue": "Chondrocytes in collagen rows"
+          },
+          {
+            "label": "Interstitial growth",
+            "detail": "Chondrocytes divide within existing matrix to form isogenous groups and expand from within.",
+            "cue": "Inside expansion"
+          },
+          {
+            "label": "Appositional growth",
+            "detail": "Perichondrial progenitors become chondroblasts and add new matrix at the surface.",
+            "cue": "Add at edge"
+          }
+        ]
+      },
+      "essentials": [
+        "Cartilage is avascular; nutrients diffuse through the hydrated matrix from perichondrium or synovial fluid.",
+        "Chondroblasts secrete matrix at the periphery; mature chondrocytes occupy lacunae.",
+        "Territorial matrix around lacunae is more basophilic because it contains more sulfated GAGs.",
+        "Hyaline cartilage matrix contains type II collagen fibrils that are usually not individually visible on H&E.",
+        "Fibrocartilage combines dense connective tissue with cartilage and therefore lacks perichondrium."
+      ],
+      "traps": [
+        {
+          "wrong": "Every cartilage surface is covered by perichondrium.",
+          "right": "Articular hyaline cartilage and fibrocartilage lack perichondrium."
+        },
+        {
+          "wrong": "A visible thick collagen bundle indicates hyaline cartilage.",
+          "right": "Thick type I bundles with chondrocyte rows indicate fibrocartilage."
+        }
+      ],
+      "recognition": [
+        "Glassy matrix with round lacunae and isogenous groups indicates hyaline cartilage.",
+        "A dense network of dark branching fibers around lacunae indicates elastic cartilage.",
+        "Parallel eosinophilic collagen bundles interrupted by rows of lacunae indicate fibrocartilage."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 7; TUMS BONE&JOINT TISSUE deck, pages 2-16."
+      },
+      "asset": "/study/image-bank/histo-fibrocartilage.png"
+    },
+    {
+      "id": "hist-bone-cells-architecture",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Bone",
+      "title": "Bone is a living lamellar map",
+      "subtitle": "Cells, matrix, compact osteons, spongy trabeculae, and remodeling surfaces",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Bone",
+        "Cartilage and bone",
+        "Bone and joint tissue"
+      ],
+      "questionPatterns": [
+        "osteoblast",
+        "osteocyte",
+        "osteoclast",
+        "osteoid",
+        "osteon",
+        "haversian",
+        "volkmann",
+        "canaliculi",
+        "compact bone",
+        "spongy bone",
+        "trabecula"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Cell shape and position reveal whether bone is being formed, maintained, or resorbed.",
+        "items": [
+          {
+            "label": "Osteoblast",
+            "detail": "A cuboidal surface cell that secretes type I collagen-rich osteoid and promotes mineralization.",
+            "cue": "Builds bone"
+          },
+          {
+            "label": "Osteocyte",
+            "detail": "A former osteoblast trapped in a lacuna; processes communicate through canaliculi and sense mechanical load.",
+            "cue": "Maintains and senses"
+          },
+          {
+            "label": "Osteoclast",
+            "detail": "A large multinucleated monocyte-derived cell in a Howship lacuna; ruffled border acidifies and digests bone.",
+            "cue": "Resorbs bone"
+          },
+          {
+            "label": "Compact bone",
+            "detail": "Osteons surround longitudinal Haversian canals; transverse Volkmann canals connect vascular channels.",
+            "cue": "Concentric cylinders"
+          },
+          {
+            "label": "Spongy bone",
+            "detail": "Branching lamellar trabeculae surround marrow spaces and usually lack complete osteons.",
+            "cue": "Lattice around marrow"
+          }
+        ]
+      },
+      "essentials": [
+        "Organic osteoid is mainly type I collagen and ground substance; hydroxyapatite supplies mineral hardness.",
+        "Osteoblasts may become osteocytes, bone-lining cells, or undergo apoptosis.",
+        "Osteoclasts arise by fusion of monocyte-macrophage precursors, not from osteoblasts.",
+        "Periosteum covers external bone except articular surfaces; endosteum lines internal bone surfaces.",
+        "Interstitial lamellae are remnants of old osteons left after remodeling."
+      ],
+      "traps": [
+        {
+          "wrong": "Volkmann canals are surrounded by concentric lamellae like osteons.",
+          "right": "They cross lamellae to connect canals and are not the central axis of an osteon."
+        },
+        {
+          "wrong": "Osteoclasts are multinucleated osteoblasts.",
+          "right": "They are hematopoietic monocyte-lineage cells specialized for resorption."
+        }
+      ],
+      "recognition": [
+        "Concentric rings around a central canal identify an osteon.",
+        "A huge multinucleated cell on a scalloped bone surface is an osteoclast.",
+        "Branching bony plates enclosing marrow spaces identify trabecular bone."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 8; TUMS BONE&JOINT TISSUE deck, pages 17-33."
+      },
+      "asset": "/study/image-bank/histo-osteon.png"
+    },
+    {
+      "id": "hist-ossification-growth-joints",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Bone formation, growth, repair, and joints",
+      "title": "Two routes build bone; one plate lengthens it",
+      "subtitle": "Intramembranous versus endochondral ossification, growth-plate zones, remodeling, and synovium",
+      "kind": "process",
+      "topicPatterns": [
+        "Cartilage and bone",
+        "Bone",
+        "Bone and joint tissue"
+      ],
+      "questionPatterns": [
+        "intramembranous",
+        "endochondral",
+        "ossification",
+        "growth plate",
+        "epiphyseal",
+        "zone of reserve",
+        "zone of proliferation",
+        "zone of hypertrophy",
+        "bone repair",
+        "synovial",
+        "articular cartilage"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Bone is always laid down by osteoblasts; the difference is whether it begins in mesenchyme or on a cartilage scaffold.",
+        "items": [
+          {
+            "label": "Intramembranous",
+            "detail": "Mesenchymal cells become osteoblasts directly, form osteoid spicules, and build woven then lamellar bone.",
+            "cue": "Mesenchyme to bone"
+          },
+          {
+            "label": "Endochondral",
+            "detail": "A hyaline cartilage model grows, calcifies, is invaded by vessels, and is replaced by bone.",
+            "cue": "Cartilage scaffold"
+          },
+          {
+            "label": "Growth plate order",
+            "detail": "From epiphysis to diaphysis: reserve, proliferation, hypertrophy, calcification, then ossification.",
+            "cue": "Rest, multiply, enlarge, calcify, replace"
+          },
+          {
+            "label": "Remodeling and repair",
+            "detail": "Osteoclast cutting cones resorb; vessels and osteoblasts follow to create new lamellar bone.",
+            "cue": "Remove, then rebuild"
+          },
+          {
+            "label": "Synovial joint",
+            "detail": "Hyaline articular cartilage faces a fluid cavity; a fibrous capsule and vascular synovial lining enclose it.",
+            "cue": "Cartilage-cavity-capsule"
+          }
+        ]
+      },
+      "essentials": [
+        "Flat skull bones develop mainly by intramembranous ossification; most long bones develop endochondrally.",
+        "Articular cartilage lacks perichondrium and receives nutrients from synovial fluid.",
+        "Type A synoviocytes are macrophage-like; type B synoviocytes synthesize hyaluronan and other fluid components.",
+        "Woven bone is formed rapidly with irregular collagen; remodeling replaces it with organized lamellar bone.",
+        "Fracture repair progresses through hematoma and inflammation, soft callus, hard bony callus, then remodeling."
+      ],
+      "traps": [
+        {
+          "wrong": "Endochondral ossification turns chondrocytes directly into osteocytes.",
+          "right": "Most cartilage calcifies and is removed; osteoblasts deposit bone on remaining calcified cartilage spicules."
+        },
+        {
+          "wrong": "Intramembranous bone has no cartilage anywhere in the mature skeleton.",
+          "right": "The name describes the developmental route, not every mature neighboring structure."
+        }
+      ],
+      "recognition": [
+        "Columns of flattened dividing chondrocytes identify the proliferative growth-plate zone.",
+        "Large pale lacunae identify hypertrophic cartilage.",
+        "A cavity between smooth articular cartilage surfaces identifies a synovial joint."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 8; TUMS BONE&JOINT TISSUE deck, pages 34-55."
+      },
+      "asset": "/study/histology/telegram-standalone/synovial-joint-low-power.jpg"
+    },
+    {
+      "id": "hist-muscle-types",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Muscle tissue",
+      "title": "Identify muscle before answering its physiology",
+      "subtitle": "Cell shape, nuclei, striations, junctions, and regenerative capacity",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Muscle tissue"
+      ],
+      "questionPatterns": [
+        "skeletal muscle",
+        "cardiac muscle",
+        "smooth muscle",
+        "striated",
+        "sarcomere",
+        "intercalated disc",
+        "triad",
+        "diad",
+        "dense body",
+        "satellite cell",
+        "regeneration"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Nuclear position and cell outline are the fastest identifiers; striations and junctions confirm.",
+        "items": [
+          {
+            "label": "Skeletal",
+            "detail": "Long unbranched multinucleated fibers, peripheral nuclei, strong striations, and no cell-to-cell junctional discs.",
+            "cue": "Many nuclei at edge"
+          },
+          {
+            "label": "Cardiac",
+            "detail": "Short branched striated cells with one or two central nuclei and dark intercalated discs.",
+            "cue": "Branch, central nucleus, disc"
+          },
+          {
+            "label": "Smooth",
+            "detail": "Spindle cells with one central cigar-shaped nucleus, no visible striations, and actin anchored to dense bodies.",
+            "cue": "Spindle, no stripes"
+          },
+          {
+            "label": "Membrane-SR unit",
+            "detail": "Skeletal muscle has triads at A-I junctions; cardiac muscle has diads near Z lines; smooth muscle uses caveolae and sparse SR.",
+            "cue": "Triad, diad, caveola"
+          },
+          {
+            "label": "Repair",
+            "detail": "Skeletal satellite cells permit limited repair, cardiac repair is minimal and fibrotic, smooth muscle can divide and hypertrophy.",
+            "cue": "Limited, almost none, good"
+          }
+        ]
+      },
+      "essentials": [
+        "Sarcomeres run from Z disc to Z disc; A-band length stays constant during contraction while I band and H zone shorten.",
+        "Intercalated discs combine fascia adherens, desmosomes, and gap junctions for mechanical and electrical coupling.",
+        "Smooth-muscle contraction uses calcium-calmodulin and myosin light-chain kinase rather than troponin.",
+        "Endomysium surrounds individual muscle cells, perimysium surrounds fascicles, and epimysium surrounds the entire muscle.",
+        "Cardiac cells have abundant mitochondria and a rich capillary supply."
+      ],
+      "traps": [
+        {
+          "wrong": "A central nucleus excludes striated muscle.",
+          "right": "Cardiac muscle is striated and usually has a central nucleus."
+        },
+        {
+          "wrong": "Smooth muscle lacks organized actin and myosin because it has no striations.",
+          "right": "It has both filaments, but they are arranged obliquely around dense bodies rather than in sarcomeres."
+        }
+      ],
+      "recognition": [
+        "Peripheral nuclei beneath the sarcolemma identify skeletal muscle.",
+        "Branching fibers and transverse dark intercalated discs identify cardiac muscle.",
+        "Bundles of spindle cells with elongated central nuclei identify smooth muscle."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 10; TUMS skeletal and smooth muscle teacher decks."
+      },
+      "asset": "/study/image-bank/histo-cardiac-muscle.png"
+    },
+    {
+      "id": "hist-nervous-neuron-glia",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Nervous tissue",
+      "title": "Neuron, myelin, and glia as one working circuit",
+      "subtitle": "Recognize the conducting cell, its support cells, and its peripheral coverings",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Nerve tissue and nervous system",
+        "Nervous tissue"
+      ],
+      "questionPatterns": [
+        "neuron",
+        "nissl",
+        "axon hillock",
+        "dendrite",
+        "axonal transport",
+        "astrocyte",
+        "oligodendrocyte",
+        "schwann",
+        "microglia",
+        "ependymal",
+        "myelin",
+        "node of ranvier",
+        "endoneurium",
+        "perineurium",
+        "epineurium",
+        "ganglion"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "The neuron conducts; glia maintain its chemical, metabolic, immune, and insulating environment.",
+        "items": [
+          {
+            "label": "Neuron",
+            "detail": "Soma and dendrites receive; the axon hillock initiates output; the axon conducts to terminals.",
+            "cue": "Input, trigger, output"
+          },
+          {
+            "label": "CNS support",
+            "detail": "Astrocytes regulate the environment and aid the blood-brain barrier; microglia phagocytose; ependymal cells line ventricles.",
+            "cue": "Homeostasis, defense, lining"
+          },
+          {
+            "label": "Myelin",
+            "detail": "One oligodendrocyte myelinates segments on multiple CNS axons; one Schwann cell myelinates one segment of one PNS axon.",
+            "cue": "Oligo many; Schwann one"
+          },
+          {
+            "label": "Peripheral nerve",
+            "detail": "Endoneurium surrounds fibers, perineurium encloses fascicles and forms a barrier, epineurium encloses the nerve.",
+            "cue": "Fiber, fascicle, full nerve"
+          },
+          {
+            "label": "Ganglia",
+            "detail": "Sensory ganglia have large neurons in orderly clusters with continuous satellite-cell rings; autonomic ganglia are more irregular.",
+            "cue": "Sensory orderly, autonomic scattered"
+          }
+        ]
+      },
+      "essentials": [
+        "Nissl substance is RER and free polyribosomes in soma and dendrites; it is absent from the axon hillock and axon.",
+        "Fast axonal transport uses microtubules: kinesin is mainly anterograde and dynein retrograde.",
+        "Nodes of Ranvier interrupt myelin and concentrate ion channels for saltatory conduction.",
+        "The PNS has greater regenerative potential because Schwann cells and endoneurial tubes guide axonal sprouts.",
+        "Synapses are asymmetric chemical junctions unless gap junctions form an electrical synapse."
+      ],
+      "traps": [
+        {
+          "wrong": "Schwann cells make all nervous-system myelin.",
+          "right": "Schwann cells myelinate PNS axons; oligodendrocytes myelinate CNS axons."
+        },
+        {
+          "wrong": "Nissl substance extends through the axon.",
+          "right": "The axon hillock and axon lack RER and therefore lack Nissl substance."
+        }
+      ],
+      "recognition": [
+        "A large pale soma with a prominent nucleolus and basophilic clumps is a neuron.",
+        "A honeycomb of clear rings in nerve cross-section represents myelinated fibers after lipid extraction.",
+        "A complete ring of satellite cells around each large neuron favors a sensory ganglion."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 9; TUMS NERVOUS TISSUE MEDICINE deck, slides 5-70."
+      }
+    },
+    {
+      "id": "hist-blood-rbc-platelets",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Read the smear: erythrocytes and platelets",
+      "subtitle": "Size anchors, shape, lifespan, and the platelet response to vessel injury",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Blood",
+        "Blood and hemopoiesis"
+      ],
+      "questionPatterns": [
+        "erythrocyte",
+        "red blood cell",
+        "rbc",
+        "biconcave",
+        "reticulocyte",
+        "platelet",
+        "thrombocyte",
+        "granulomere",
+        "hyalomere",
+        "alpha granule",
+        "dense granule",
+        "hemostasis"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Use the 7.5-micrometer erythrocyte as the ruler for every other cell in a blood smear.",
+        "items": [
+          {
+            "label": "Erythrocyte",
+            "detail": "An anucleate biconcave disc about 7.5 micrometers wide with central pallor occupying roughly one-third of its diameter.",
+            "cue": "Pink size ruler"
+          },
+          {
+            "label": "Reticulocyte",
+            "detail": "A slightly larger young RBC with residual ribosomal RNA, visible as a reticulum using supravital stain.",
+            "cue": "Young, RNA remains"
+          },
+          {
+            "label": "Platelet",
+            "detail": "A 2-4 micrometer anucleate megakaryocyte fragment with pale peripheral hyalomere and darker central granulomere.",
+            "cue": "Tiny purple fragment"
+          },
+          {
+            "label": "Adhesion",
+            "detail": "Vessel injury exposes collagen; von Willebrand factor links collagen to platelet GPIb.",
+            "cue": "vWF bridge"
+          },
+          {
+            "label": "Aggregation",
+            "detail": "Activation changes shape and releases granules; fibrinogen bridges platelet GPIIb/IIIa receptors.",
+            "cue": "Fibrinogen bridge"
+          }
+        ]
+      },
+      "essentials": [
+        "Mature erythrocytes lack nucleus and organelles, maximizing hemoglobin space but preventing repair or protein synthesis.",
+        "Their spectrin-actin membrane skeleton permits deformation through narrow capillaries.",
+        "Old RBCs are removed mainly by macrophages in spleen, liver, and marrow after about 120 days.",
+        "Platelet alpha granules contain adhesive and repair proteins; dense granules contain ADP, calcium, and serotonin.",
+        "A platelet's marginal microtubule bundle maintains its resting discoid shape."
+      ],
+      "traps": [
+        {
+          "wrong": "A reticulocyte has a small residual nucleus.",
+          "right": "It is already anucleate; only residual ribosomal RNA remains."
+        },
+        {
+          "wrong": "GPIIb/IIIa mediates initial adhesion to exposed collagen through vWF.",
+          "right": "GPIb mediates vWF-dependent adhesion; GPIIb/IIIa mediates fibrinogen-dependent aggregation."
+        }
+      ],
+      "recognition": [
+        "Numerous uniform pink discs with central pallor are erythrocytes.",
+        "Very small purple granular fragments between RBCs are platelets.",
+        "Diffuse bluish polychromasia in a young RBC suggests a reticulocyte."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 12; TUMS Blood& HEM deck, pages 3-15 and 31-38."
+      },
+      "asset": "/study/physiology/rbc-biconcave-morphology.jpg"
+    },
+    {
+      "id": "hist-blood-leukocytes",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Identify every leukocyte in seconds",
+      "subtitle": "Nuclear silhouette, granule color, relative size, and core function",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Blood",
+        "Blood and hemopoiesis"
+      ],
+      "questionPatterns": [
+        "neutrophil",
+        "eosinophil",
+        "basophil",
+        "lymphocyte",
+        "monocyte",
+        "leukocyte",
+        "granulocyte",
+        "agranulocyte",
+        "differential count"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Start with nucleus shape, then confirm with granule color and cell size.",
+        "items": [
+          {
+            "label": "Neutrophil",
+            "detail": "Most common WBC; 3-5 nuclear lobes with pale fine granules; rapid phagocyte in acute inflammation.",
+            "cue": "Multilobed first responder"
+          },
+          {
+            "label": "Eosinophil",
+            "detail": "Bilobed nucleus and large red-orange granules; attacks parasites and modulates allergy.",
+            "cue": "Red granules, two lobes"
+          },
+          {
+            "label": "Basophil",
+            "detail": "Coarse dark blue-purple granules often obscure an S-shaped nucleus; IgE-linked mediator release.",
+            "cue": "Dark granules hide nucleus"
+          },
+          {
+            "label": "Lymphocyte",
+            "detail": "Usually small with a dense round nucleus and thin pale rim of cytoplasm; adaptive immunity or NK function.",
+            "cue": "Nucleus fills cell"
+          },
+          {
+            "label": "Monocyte",
+            "detail": "Largest circulating WBC with kidney-shaped pale nucleus and abundant gray-blue cytoplasm; macrophage precursor.",
+            "cue": "Large kidney nucleus"
+          }
+        ]
+      },
+      "essentials": [
+        "Neutrophil azurophilic granules are lysosome-like; specific granules contain antimicrobial proteins and enzymes.",
+        "Eosinophil granule cores contain major basic protein toxic to helminths.",
+        "Basophils resemble mast cells functionally but are distinct circulating cells.",
+        "Small lymphocytes can look only slightly larger than RBCs; monocytes are usually the largest cells in a normal smear.",
+        "Leukocytes leave postcapillary venules through rolling, adhesion, and diapedesis."
+      ],
+      "traps": [
+        {
+          "wrong": "A bilobed nucleus alone identifies a basophil.",
+          "right": "Eosinophils also have bilobed nuclei; use orange-red versus dark purple granules."
+        },
+        {
+          "wrong": "Lymphocytes lack cytoplasm.",
+          "right": "Small lymphocytes have a narrow rim that may be hard to see, but it is present."
+        }
+      ],
+      "recognition": [
+        "Three to five connected nuclear lobes identify a neutrophil.",
+        "Large orange-red granules identify an eosinophil.",
+        "A folded kidney-shaped nucleus with abundant gray cytoplasm identifies a monocyte."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 12; TUMS Blood& HEM deck, pages 16-30."
+      },
+      "asset": "/study/image-bank/histo-eosinophil.png"
+    },
+    {
+      "id": "hist-hemopoiesis-lineages",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Hemopoiesis",
+      "title": "One stem cell, two major lineages",
+      "subtitle": "Marrow organization and the erythroid, granulocytic, lymphoid, monocytic, and megakaryocytic branches",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Hemopoiesis",
+        "Blood and hemopoiesis"
+      ],
+      "questionPatterns": [
+        "hematopoietic stem",
+        "hemopoietic stem",
+        "myeloid progenitor",
+        "lymphoid progenitor",
+        "bone marrow",
+        "megakaryocyte",
+        "granulopoiesis",
+        "monopoiesis",
+        "thrombopoiesis",
+        "colony stimulating",
+        "erythropoietin",
+        "thrombopoietin"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "A self-renewing stem cell generates committed progenitors that progressively restrict lineage choice.",
+        "items": [
+          {
+            "label": "HSC",
+            "detail": "A rare multipotent, self-renewing marrow cell gives rise to common myeloid and common lymphoid progenitors.",
+            "cue": "Root of all blood cells"
+          },
+          {
+            "label": "Myeloid branch",
+            "detail": "Produces erythrocytes, megakaryocytes and platelets, granulocytes, and monocytes.",
+            "cue": "RBC, platelet, granulocyte, monocyte"
+          },
+          {
+            "label": "Lymphoid branch",
+            "detail": "Produces B cells, T cells, and NK cells; T-cell precursors complete maturation in thymus.",
+            "cue": "B, T, NK"
+          },
+          {
+            "label": "Marrow niche",
+            "detail": "Developing cells lie in cords between sinusoidal capillaries supported by reticular stromal cells and macrophages.",
+            "cue": "Cords around sinusoids"
+          },
+          {
+            "label": "Growth signals",
+            "detail": "EPO favors erythroid survival, thrombopoietin drives megakaryocytes, and CSFs guide granulocyte-monocyte production.",
+            "cue": "Lineage-specific support"
+          }
+        ]
+      },
+      "essentials": [
+        "Red marrow is hematopoietically active; yellow marrow is adipocyte-rich but can revert toward red marrow under severe demand.",
+        "Megakaryocytes become polyploid by endomitosis and extend proplatelets through sinusoidal endothelium.",
+        "Granulocytes develop from myeloblast through promyelocyte, myelocyte, metamyelocyte, band cell, then mature cell.",
+        "The myelocyte is the last granulocytic stage capable of mitosis and the first stage with lineage-specific granules.",
+        "Marrow macrophages remove extruded erythroblast nuclei and recycle iron."
+      ],
+      "traps": [
+        {
+          "wrong": "Platelets are complete cells released by mitosis of megakaryocytes.",
+          "right": "They are cytoplasmic fragments shed from polyploid megakaryocytes."
+        },
+        {
+          "wrong": "All lymphocyte maturation occurs in bone marrow.",
+          "right": "B cells mature in marrow; T-cell precursors migrate to thymus."
+        }
+      ],
+      "recognition": [
+        "A giant multilobed marrow cell beside a sinusoid is a megakaryocyte.",
+        "Hematopoietic cords packed with cells at many stages distinguish red marrow from adipocyte-dominant yellow marrow."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 13; TUMS Blood& HEM deck, pages 43-55."
+      },
+      "asset": "/study/physiology/hematopoietic-lineage.jpg"
+    },
+    {
+      "id": "hist-erythropoiesis-sequence",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Hemopoiesis",
+      "title": "Erythropoiesis is a color-and-size sequence",
+      "subtitle": "Track hemoglobin, ribosomes, nuclear condensation, and enucleation stage by stage",
+      "kind": "timeline",
+      "topicPatterns": [
+        "Hemopoiesis",
+        "Blood and hemopoiesis",
+        "Blood"
+      ],
+      "questionPatterns": [
+        "proerythroblast",
+        "basophilic erythroblast",
+        "polychromatophilic erythroblast",
+        "orthochromatic erythroblast",
+        "orthochromatophilic erythroblast",
+        "normoblast",
+        "reticulocyte",
+        "hemoglobin synthesis",
+        "erythropoiesis",
+        "enucleation"
+      ],
+      "visual": {
+        "type": "timeline",
+        "caption": "Cells become smaller and pinker while the nucleus condenses and is eventually expelled.",
+        "items": [
+          {
+            "label": "Proerythroblast",
+            "detail": "Large cell, fine chromatin, nucleoli, and strongly basophilic cytoplasm from abundant ribosomes.",
+            "cue": "Largest committed precursor"
+          },
+          {
+            "label": "Basophilic erythroblast",
+            "detail": "Smaller, no visible nucleoli, deeply basophilic cytoplasm; hemoglobin synthesis begins on abundant polyribosomes.",
+            "cue": "Hemoglobin starts here"
+          },
+          {
+            "label": "Polychromatophilic erythroblast",
+            "detail": "Both blue ribosomal RNA and pink hemoglobin are abundant, creating gray-lilac cytoplasm; nucleus is more condensed.",
+            "cue": "Blue plus pink"
+          },
+          {
+            "label": "Orthochromatophilic erythroblast",
+            "detail": "Small cell with eosinophilic hemoglobin-rich cytoplasm and a pyknotic nucleus that is then expelled.",
+            "cue": "Pink, last nucleus"
+          },
+          {
+            "label": "Reticulocyte to RBC",
+            "detail": "An anucleate reticulocyte retains slight RNA polychromasia, enters blood, and matures in about one day.",
+            "cue": "RNA fades"
+          }
+        ]
+      },
+      "essentials": [
+        "Hemoglobin synthesis begins in the basophilic erythroblast, not the later orthochromatophilic stage.",
+        "Across the sequence, cell size and nuclear size decrease, chromatin condenses, and cytoplasm shifts from blue to pink.",
+        "Erythroblastic islands consist of developing erythroid cells around a central macrophage.",
+        "Erythropoietin from the kidney rises in response to hypoxia and supports erythroid progenitor survival.",
+        "Reticulocytes are normally a small fraction of circulating RBCs; an increased count indicates marrow response."
+      ],
+      "traps": [
+        {
+          "wrong": "Hemoglobin first appears when the cytoplasm becomes fully pink.",
+          "right": "Synthesis begins earlier in basophilic erythroblasts; pink staining becomes obvious later as hemoglobin accumulates."
+        },
+        {
+          "wrong": "The reticulocyte ejects its nucleus in circulation.",
+          "right": "The orthochromatophilic erythroblast ejects the nucleus in marrow; the reticulocyte is already anucleate."
+        }
+      ],
+      "recognition": [
+        "Deep blue cytoplasm with condensed nucleus indicates a basophilic erythroblast.",
+        "Gray-lilac cytoplasm indicates the mixed RNA and hemoglobin of a polychromatophilic erythroblast.",
+        "Pink cytoplasm around a tiny dense nucleus indicates an orthochromatophilic erythroblast."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 13, Figure 13-6 and erythropoiesis text; TUMS Blood& HEM deck."
+      },
+      "asset": "/study/physiology/erythropoiesis-morphologies.jpg"
+    },
+    {
+      "id": "hist-skin-layers-cells",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Skin",
+      "title": "Climb the epidermis from stem cell to keratin",
+      "subtitle": "Strata, epidermal cell types, dermis, thick-versus-thin skin, and sensory structures",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Skin"
+      ],
+      "questionPatterns": [
+        "epidermis",
+        "stratum basale",
+        "stratum spinosum",
+        "stratum granulosum",
+        "stratum lucidum",
+        "stratum corneum",
+        "keratinocyte",
+        "melanocyte",
+        "langerhans",
+        "merkel",
+        "papillary dermis",
+        "reticular dermis",
+        "thick skin",
+        "thin skin"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "From deep to superficial: basale, spinosum, granulosum, lucidum only in thick skin, then corneum.",
+        "items": [
+          {
+            "label": "Basale",
+            "detail": "One mitotically active row attached to basal lamina; contains stem keratinocytes, melanocytes, and Merkel cells.",
+            "cue": "Birth layer"
+          },
+          {
+            "label": "Spinosum",
+            "detail": "Several layers linked by many desmosomes; shrinkage makes intercellular spines visible.",
+            "cue": "Spiny strength"
+          },
+          {
+            "label": "Granulosum",
+            "detail": "Flattening cells contain basophilic keratohyalin granules and release lipid-rich lamellar bodies for the water barrier.",
+            "cue": "Granules and barrier"
+          },
+          {
+            "label": "Lucidum",
+            "detail": "A thin pale layer of anucleate cells seen only in thick skin.",
+            "cue": "Thick skin only"
+          },
+          {
+            "label": "Corneum",
+            "detail": "Flattened dead keratin-filled squames form the surface mechanical barrier.",
+            "cue": "Cornified shield"
+          },
+          {
+            "label": "Dermis",
+            "detail": "Superficial papillary loose CT supports capillaries and Meissner corpuscles; deeper reticular dense irregular CT contains appendages and Pacinian corpuscles.",
+            "cue": "Loose papillary, dense reticular"
+          }
+        ]
+      },
+      "essentials": [
+        "Melanocytes derive from neural crest and transfer melanin to keratinocytes; skin color differences mainly reflect melanin production and degradation, not melanocyte number.",
+        "Langerhans cells are antigen-presenting dendritic cells, especially in stratum spinosum.",
+        "Merkel cells associate with sensory nerve endings in the basal layer for fine touch.",
+        "Thick skin has a very thick epidermis, lucidum, and eccrine glands but no hair follicles or sebaceous glands.",
+        "Meissner corpuscles are superficial and touch-sensitive; Pacinian corpuscles are deep onion-like pressure and vibration receptors."
+      ],
+      "traps": [
+        {
+          "wrong": "Melanocytes form desmosomes with surrounding keratinocytes.",
+          "right": "They extend processes and transfer melanosomes but do not form the usual desmosomal attachments with keratinocytes."
+        },
+        {
+          "wrong": "Stratum lucidum is present wherever epidermis is thin and transparent.",
+          "right": "It is a feature of thick skin on palms and soles."
+        }
+      ],
+      "recognition": [
+        "A very thick corneum, visible lucidum, and absence of hair identify thick skin.",
+        "An onion-like encapsulated receptor deep in dermis or hypodermis is a Pacinian corpuscle.",
+        "A small oval receptor in a dermal papilla is a Meissner corpuscle."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 18; TUMS SKIN deck, slides 2-24 and 32."
+      }
+    },
+    {
+      "id": "hist-skin-appendages-glands",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Skin appendages",
+      "title": "Hair, sebaceous, eccrine, or apocrine?",
+      "subtitle": "Use duct destination, lumen size, secretion mechanism, and location",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Skin"
+      ],
+      "questionPatterns": [
+        "hair follicle",
+        "hair bulb",
+        "sebaceous",
+        "eccrine",
+        "apocrine sweat",
+        "sweat gland",
+        "arrector pili",
+        "nail",
+        "myoepithelial"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Coiled sweat glands look similar; lumen, epithelial height, and where the duct opens are decisive.",
+        "items": [
+          {
+            "label": "Eccrine gland",
+            "detail": "Small-lumen coiled secretory tubule with clear and dark cells; duct opens directly to surface and supports thermoregulation.",
+            "cue": "Everywhere, especially palms and soles"
+          },
+          {
+            "label": "Apocrine gland",
+            "detail": "Large-lumen coiled gland in axilla, areola, and anogenital skin; duct usually opens into a hair follicle.",
+            "cue": "Large lumen near hair"
+          },
+          {
+            "label": "Sebaceous gland",
+            "detail": "Branched acini of pale lipid-filled cells empty holocrine sebum into hair follicles.",
+            "cue": "Foamy cells perish"
+          },
+          {
+            "label": "Hair follicle",
+            "detail": "Epidermal invagination surrounds the shaft; matrix cells in the bulb divide around a vascular dermal papilla.",
+            "cue": "Bulb plus papilla"
+          },
+          {
+            "label": "Arrector pili",
+            "detail": "A small smooth-muscle bundle connects superficial dermis to the follicular sheath.",
+            "cue": "Oblique pink band"
+          }
+        ]
+      },
+      "essentials": [
+        "Despite its historical name, the human apocrine sweat gland releases most product by merocrine exocytosis.",
+        "Eccrine ducts have stratified cuboidal epithelium, a smaller lumen, and no myoepithelial cells in the duct wall.",
+        "Myoepithelial cells lie between secretory cells and basal lamina of sweat glands and contract to expel secretion.",
+        "Sebaceous glands are absent from thick skin because they are usually associated with hair follicles.",
+        "Hair matrix and nail matrix contain proliferating cells that generate hard keratin."
+      ],
+      "traps": [
+        {
+          "wrong": "Any gland beside a hair follicle is apocrine.",
+          "right": "Sebaceous glands are pale acini; apocrine glands are coiled tubules with a large lumen."
+        },
+        {
+          "wrong": "Eccrine secretory portions and ducts have identical staining.",
+          "right": "The duct is darker and stratified cuboidal; the secretory portion is paler with a wider lumen."
+        }
+      ],
+      "recognition": [
+        "Pale foamy acini opening into a follicle identify a sebaceous gland.",
+        "A coiled tubule with a very wide lumen near a follicle favors an apocrine gland.",
+        "A darker two-layered cuboidal profile within an eccrine coil is its duct."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 18; TUMS SKIN deck, slides 25-30."
+      }
+    },
+    {
+      "id": "hist-male-seminiferous-lineage",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Male reproductive system",
+      "title": "From basal spermatogonium to luminal spermatozoon",
+      "subtitle": "Map the seminiferous epithelium, meiosis, Sertoli support, and Leydig endocrine function",
+      "kind": "process",
+      "topicPatterns": [
+        "Male reproductive system"
+      ],
+      "questionPatterns": [
+        "seminiferous tubule",
+        "spermatogonium",
+        "primary spermatocyte",
+        "secondary spermatocyte",
+        "spermatid",
+        "spermiogenesis",
+        "sertoli",
+        "leydig",
+        "blood testis barrier",
+        "spermatozoa"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "Development advances from the basal compartment toward the lumen while Sertoli cells span the entire epithelium.",
+        "items": [
+          {
+            "label": "Basal spermatogonia",
+            "detail": "Diploid stem and differentiating cells lie directly on the basal lamina and divide mitotically.",
+            "cue": "Small darkest basal nuclei"
+          },
+          {
+            "label": "Primary spermatocytes",
+            "detail": "Large cells with coarse threadlike meiotic chromatin cross the Sertoli barrier and spend a long prophase I.",
+            "cue": "Largest germ cells"
+          },
+          {
+            "label": "Secondary spermatocytes",
+            "detail": "Short-lived haploid products of meiosis I rapidly enter meiosis II and are rarely seen.",
+            "cue": "Rare transition"
+          },
+          {
+            "label": "Spermatids",
+            "detail": "Small round then elongated haploid cells near the lumen remodel through spermiogenesis without further division.",
+            "cue": "Small luminal nuclei"
+          },
+          {
+            "label": "Sertoli cell",
+            "detail": "A tall support cell with pale ovoid nucleus and prominent nucleolus; tight junctions create basal and adluminal compartments.",
+            "cue": "Pale nucleus, vertical support"
+          },
+          {
+            "label": "Leydig cell",
+            "detail": "Eosinophilic steroid-secreting cells in vascular interstitial clusters make testosterone in response to LH.",
+            "cue": "Between tubules"
+          }
+        ]
+      },
+      "essentials": [
+        "The germ-cell order from base to lumen is spermatogonium, primary spermatocyte, secondary spermatocyte, spermatid, spermatozoon.",
+        "Spermiogenesis transforms spermatids by forming acrosome and flagellum, condensing nucleus, and shedding excess cytoplasm.",
+        "Sertoli cells respond mainly to FSH and testosterone, nourish germ cells, phagocytose residual bodies, secrete inhibin, and make androgen-binding protein.",
+        "The blood-testis barrier is formed by tight junctions between Sertoli cells, not by capillary endothelium alone.",
+        "Primary spermatocytes are commonly seen; secondary spermatocytes are rare because meiosis II follows quickly."
+      ],
+      "traps": [
+        {
+          "wrong": "Sertoli cells lie only at the base of the seminiferous epithelium.",
+          "right": "Their nuclei are basal, but their cytoplasm extends from basal lamina to lumen."
+        },
+        {
+          "wrong": "LH directly stimulates Sertoli cells to make inhibin.",
+          "right": "LH stimulates Leydig testosterone; FSH acts primarily on Sertoli cells."
+        }
+      ],
+      "recognition": [
+        "Round tubules with a thick multilayered germinal epithelium and central tails are seminiferous tubules.",
+        "Large coarse-chromatin cells above the basal layer are primary spermatocytes.",
+        "Clusters of eosinophilic cells between tubules are Leydig cells."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 21, Male Reproductive System."
+      },
+      "asset": "/study/image-bank/histo-seminiferous-tubule.png"
+    },
+    {
+      "id": "hist-male-ducts-glands",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Male reproductive system",
+      "title": "Follow sperm from testis to urethra",
+      "subtitle": "Duct epithelium, smooth muscle, sperm maturation, and accessory-gland fingerprints",
+      "kind": "process",
+      "topicPatterns": [
+        "Male reproductive system"
+      ],
+      "questionPatterns": [
+        "rete testis",
+        "efferent ductule",
+        "epididymis",
+        "ductus deferens",
+        "vas deferens",
+        "seminal vesicle",
+        "prostate",
+        "bulbourethral",
+        "stereocilia",
+        "corpora amylacea"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "The route is straight tubule, rete testis, efferent ductules, epididymis, ductus deferens, ejaculatory duct, urethra.",
+        "items": [
+          {
+            "label": "Efferent ductules",
+            "detail": "Alternating tall ciliated and short absorptive cells create a scalloped lumen and reclaim most testicular fluid.",
+            "cue": "Saw-tooth lumen"
+          },
+          {
+            "label": "Epididymis",
+            "detail": "A single highly coiled duct with pseudostratified columnar epithelium and long stereocilia; sperm mature and are stored here.",
+            "cue": "Smooth round lumen full of sperm"
+          },
+          {
+            "label": "Ductus deferens",
+            "detail": "A small folded lumen is surrounded by an extremely thick three-layer smooth-muscle wall.",
+            "cue": "Tiny star, huge muscle"
+          },
+          {
+            "label": "Seminal vesicle",
+            "detail": "A single tortuous gland with labyrinthine mucosal folds and smooth muscle; secretes fructose-rich alkaline fluid.",
+            "cue": "Honeycomb folds, no sperm storage"
+          },
+          {
+            "label": "Prostate",
+            "detail": "Tubuloalveolar glands lie in fibromuscular stroma around the prostatic urethra; lumina often contain corpora amylacea.",
+            "cue": "Glands plus concretions"
+          },
+          {
+            "label": "Bulbourethral gland",
+            "detail": "Mucous tubuloalveolar glands in skeletal muscle release lubricating pre-ejaculate into the spongy urethra.",
+            "cue": "Pale mucous acini"
+          }
+        ]
+      },
+      "essentials": [
+        "Epididymal stereocilia are long actin-based microvilli, not motile cilia.",
+        "Sperm acquire motility competence during epididymal passage but are not yet capable of fertilization until capacitation in the female tract.",
+        "Ductus deferens smooth muscle propels sperm during ejaculation.",
+        "Seminal-vesicle mucosa is highly folded but does not contain separate glandular acini.",
+        "Corpora amylacea are often laminated eosinophilic prostatic concretions that become more common with age."
+      ],
+      "traps": [
+        {
+          "wrong": "The seminal vesicle stores sperm because its name includes vesicle.",
+          "right": "Sperm are stored mainly in epididymis; seminal vesicles contribute secretory fluid."
+        },
+        {
+          "wrong": "Both epididymis and efferent ductules have a scalloped lumen.",
+          "right": "Alternating epithelial heights make efferent ductules scalloped; epididymis has a more even epithelial border."
+        }
+      ],
+      "recognition": [
+        "Alternating tall and short cells with a scalloped lumen identify efferent ductules.",
+        "Long stereocilia and a sperm-filled lumen identify epididymis.",
+        "A very thick muscular wall around a narrow folded lumen identifies ductus deferens."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 21, Male Reproductive System."
+      }
+    },
+    {
+      "id": "hist-female-folliculogenesis",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Female reproductive system",
+      "title": "Follicles grow from cortex to ovulation",
+      "subtitle": "Oocyte status, granulosa layers, zona pellucida, theca, antrum, and corpus luteum",
+      "kind": "timeline",
+      "topicPatterns": [
+        "Female reproductive system"
+      ],
+      "questionPatterns": [
+        "primordial follicle",
+        "primary follicle",
+        "secondary follicle",
+        "antral follicle",
+        "graafian",
+        "zona pellucida",
+        "granulosa",
+        "theca interna",
+        "theca externa",
+        "cumulus oophorus",
+        "corona radiata",
+        "corpus luteum",
+        "corpus albicans",
+        "atresia"
+      ],
+      "visual": {
+        "type": "timeline",
+        "caption": "Follicle stage is named by the surrounding follicular tissue, not by a change in the oocyte's meiotic stage.",
+        "items": [
+          {
+            "label": "Primordial",
+            "detail": "A primary oocyte arrested in prophase I is surrounded by one layer of flattened follicular cells in ovarian cortex.",
+            "cue": "Flat cells"
+          },
+          {
+            "label": "Primary",
+            "detail": "Follicular cells become cuboidal granulosa, then multilayered; zona pellucida appears around the growing oocyte.",
+            "cue": "Cuboidal plus zona"
+          },
+          {
+            "label": "Secondary/antral",
+            "detail": "Fluid spaces merge into an antrum; stromal theca differentiates into steroidogenic interna and fibrous externa.",
+            "cue": "Antrum appears"
+          },
+          {
+            "label": "Mature/Graafian",
+            "detail": "A huge antrum displaces the oocyte to a cumulus oophorus; corona radiata directly surrounds the zona pellucida.",
+            "cue": "Oocyte on a mound"
+          },
+          {
+            "label": "Corpus luteum",
+            "detail": "After ovulation, granulosa lutein and theca lutein cells form a vascular progesterone-secreting endocrine gland.",
+            "cue": "Folded eosinophilic gland"
+          },
+          {
+            "label": "Corpus albicans",
+            "detail": "Without sustained hCG, luteal cells regress and are replaced by a hyalinized collagen scar.",
+            "cue": "White scar"
+          }
+        ]
+      },
+      "essentials": [
+        "The oocyte remains a primary oocyte through most follicular growth and completes meiosis I just before ovulation.",
+        "The ovulated cell is a secondary oocyte arrested in metaphase II; meiosis II finishes only after fertilization.",
+        "Granulosa cells convert theca-derived androgens to estrogens under FSH stimulation.",
+        "Theca interna is vascular and steroidogenic; granulosa is initially avascular and separated from theca by a basal lamina.",
+        "Follicular atresia can occur at any stage and greatly exceeds the number of ovulated follicles."
+      ],
+      "traps": [
+        {
+          "wrong": "A primary follicle contains a secondary oocyte.",
+          "right": "Primary refers to follicle morphology; its oocyte is still primary and arrested in prophase I."
+        },
+        {
+          "wrong": "The corona radiata is the same as the cumulus oophorus.",
+          "right": "Corona radiata is the innermost granulosa layer around the zona; cumulus is the larger mound attaching the oocyte to the follicle wall."
+        }
+      ],
+      "recognition": [
+        "A tiny cortical oocyte with flattened surrounding cells is a primordial follicle.",
+        "A fluid-filled antrum establishes an antral follicle.",
+        "Large pale polygonal cells in folded, highly vascular tissue identify corpus luteum."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 22, Female Reproductive System."
+      },
+      "asset": "/study/image-bank/histo-primordial-follicles.png"
+    },
+    {
+      "id": "hist-female-tube-uterus-cycle",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Female reproductive system",
+      "title": "Tube transport and the uterine cycle",
+      "subtitle": "Recognize uterine tube, proliferative endometrium, secretory endometrium, and menstruation",
+      "kind": "timeline",
+      "topicPatterns": [
+        "Female reproductive system"
+      ],
+      "questionPatterns": [
+        "uterine tube",
+        "fallopian",
+        "oviduct",
+        "fimbria",
+        "ampulla",
+        "endometrium",
+        "proliferative phase",
+        "secretory phase",
+        "menstrual phase",
+        "spiral artery",
+        "uterine gland",
+        "myometrium"
+      ],
+      "visual": {
+        "type": "timeline",
+        "caption": "Estrogen rebuilds a straight-gland endometrium; progesterone converts it into a coiled, secretory implantation bed.",
+        "items": [
+          {
+            "label": "Uterine tube",
+            "detail": "Highly branched mucosal folds have ciliated and secretory simple columnar cells; fertilization usually occurs in ampulla.",
+            "cue": "Folds without glands"
+          },
+          {
+            "label": "Menstrual phase",
+            "detail": "Loss of progesterone causes spiral-artery constriction and shedding of stratum functionale; basale remains.",
+            "cue": "Breakdown and blood"
+          },
+          {
+            "label": "Proliferative phase",
+            "detail": "Estrogen rebuilds functionale; glands are relatively straight and narrow with mitoses.",
+            "cue": "Straight glands"
+          },
+          {
+            "label": "Early secretory phase",
+            "detail": "After ovulation, progesterone causes subnuclear glycogen vacuoles in glandular cells.",
+            "cue": "Subnuclear vacuoles"
+          },
+          {
+            "label": "Mid-secretory phase",
+            "detail": "Glands become saw-toothed and secrete into the lumen; stroma becomes edematous and predecidual.",
+            "cue": "Coiled glands"
+          },
+          {
+            "label": "Myometrium",
+            "detail": "Interwoven smooth-muscle bundles hypertrophy greatly during pregnancy and contract at birth.",
+            "cue": "Thick muscle wall"
+          }
+        ]
+      },
+      "essentials": [
+        "The uterine tube mucosa has elaborate folds but no true glands and no distinct submucosa.",
+        "Cilia beat toward the uterus; secretory peg cells support gametes and the early embryo.",
+        "Stratum functionale is hormone-responsive and shed; stratum basale regenerates it after menstruation.",
+        "Straight glands indicate proliferative endometrium, while corkscrew or saw-toothed glands indicate secretory endometrium.",
+        "Spiral arteries supply functionale; straighter arteries remain in basale."
+      ],
+      "traps": [
+        {
+          "wrong": "The most folded uterine tube segment is the intramural part.",
+          "right": "The ampulla has an especially complex folded mucosa and is the usual fertilization site."
+        },
+        {
+          "wrong": "All endometrium is lost during normal menstruation.",
+          "right": "The functionale is shed, while basale remains to regenerate the lining."
+        }
+      ],
+      "recognition": [
+        "A star-like lumen crowded by branching folds but lacking glands suggests uterine tube.",
+        "Straight tubular glands with frequent mitoses indicate proliferative endometrium.",
+        "Saw-toothed glands with luminal secretion and edematous stroma indicate secretory endometrium."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 22, Female Reproductive System."
+      }
+    },
+    {
+      "id": "hist-female-cervix-vagina-mammary",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Female reproductive system",
+      "title": "Recognize cervix, vagina, and mammary gland",
+      "subtitle": "Three common practical stations distinguished by epithelium, glands, and hormonal state",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Female reproductive system"
+      ],
+      "questionPatterns": [
+        "cervix",
+        "endocervix",
+        "ectocervix",
+        "transformation zone",
+        "vagina",
+        "mammary gland",
+        "lactating breast",
+        "nonlactating breast",
+        "alveoli",
+        "colostrum"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Surface epithelium identifies cervix and vagina; lobule-to-stroma ratio identifies mammary activity.",
+        "items": [
+          {
+            "label": "Endocervix",
+            "detail": "Mucus-secreting simple columnar epithelium forms deep branched cervical glands.",
+            "cue": "Columnar and glandular"
+          },
+          {
+            "label": "Ectocervix",
+            "detail": "Nonkeratinized stratified squamous epithelium faces the vagina; its junction with endocervix is the transformation zone.",
+            "cue": "Squamous protection"
+          },
+          {
+            "label": "Vagina",
+            "detail": "A folded nonkeratinized stratified squamous mucosa overlies elastic CT and smooth muscle; there are no mucosal glands.",
+            "cue": "Thick squamous, no glands"
+          },
+          {
+            "label": "Inactive mammary gland",
+            "detail": "Sparse small ducts lie in abundant dense and adipose stroma with few developed secretory alveoli.",
+            "cue": "Mostly stroma"
+          },
+          {
+            "label": "Lactating mammary gland",
+            "detail": "Numerous enlarged secretory alveoli fill lobules, stroma is reduced, and lumina contain milk product.",
+            "cue": "Mostly alveoli"
+          },
+          {
+            "label": "Milk secretion",
+            "detail": "Protein is released merocrinely; lipid droplets are released with apical cytoplasm by an apocrine mechanism.",
+            "cue": "Protein exocytosis, lipid pinch-off"
+          }
+        ]
+      },
+      "essentials": [
+        "The cervical transformation zone is clinically important because metaplasia and most cervical neoplasia arise there.",
+        "Vaginal epithelial glycogen supports lactobacilli, which help maintain an acidic environment.",
+        "Vaginal lubrication comes mainly from cervical mucus and transudate because the vaginal mucosa lacks glands.",
+        "Prolactin stimulates milk synthesis; oxytocin contracts myoepithelial cells for milk ejection.",
+        "Mammary alveoli are best developed during pregnancy and lactation."
+      ],
+      "traps": [
+        {
+          "wrong": "Mucus in the vagina proves that vaginal glands are present.",
+          "right": "The vaginal wall has no glands; cervical mucus and vascular transudate supply fluid."
+        },
+        {
+          "wrong": "All milk components use apocrine secretion.",
+          "right": "Milk protein is merocrine; milk lipid uses apocrine-like budding."
+        }
+      ],
+      "recognition": [
+        "A sharp meeting of simple columnar and stratified squamous epithelia identifies the cervical transformation zone.",
+        "Thick nonkeratinized squamous epithelium with no glands favors vagina.",
+        "Closely packed milk-filled alveoli with little stroma identify lactating mammary gland."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 22, Female Reproductive System."
+      }
+    },
+    {
+      "id": "hist-atlas-digestive-urinary",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Practical atlas: digestive and urinary",
+      "title": "Recognize gut and urinary specimens at low power",
+      "subtitle": "Start with wall organization, surface shape, glands, and the lining epithelium",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive tract",
+        "Urinary system"
+      ],
+      "questionPatterns": [
+        "esophagus",
+        "stomach",
+        "duodenum",
+        "jejunum",
+        "ileum",
+        "colon",
+        "small intestine",
+        "large intestine",
+        "kidney",
+        "renal cortex",
+        "renal medulla",
+        "glomerulus",
+        "proximal tubule",
+        "distal tubule",
+        "ureter",
+        "bladder"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Digestive organs are identified by mucosal architecture; urinary organs by renal corpuscles, tubule profiles, or urothelium.",
+        "items": [
+          {
+            "label": "Esophagus and stomach",
+            "detail": "Esophagus has nonkeratinized stratified squamous epithelium and submucosal glands; stomach has pits and glands but no villi.",
+            "cue": "Squamous tube versus gastric pits"
+          },
+          {
+            "label": "Small intestine",
+            "detail": "Villi plus crypts identify small intestine: duodenum has Brunner glands, jejunum tall folds, ileum Peyer patches.",
+            "cue": "Villi, then regional marker"
+          },
+          {
+            "label": "Colon",
+            "detail": "Straight closely packed crypts with abundant goblet cells and no villi produce a flat luminal surface.",
+            "cue": "Test tubes, no villi"
+          },
+          {
+            "label": "Renal cortex",
+            "detail": "Renal corpuscles occur only in cortex. PCT has eosinophilic cells and a fuzzy small lumen; DCT has a clearer wider lumen.",
+            "cue": "Glomeruli plus tubules"
+          },
+          {
+            "label": "Renal medulla",
+            "detail": "Parallel collecting ducts, loops of Henle, and capillaries dominate; renal corpuscles are absent.",
+            "cue": "Straight tubes, no glomeruli"
+          },
+          {
+            "label": "Ureter and bladder",
+            "detail": "Both have urothelium. Ureter has a folded star-shaped lumen and thick muscle; bladder has broad rugae and detrusor bundles.",
+            "cue": "Umbrella cells plus muscle"
+          }
+        ]
+      },
+      "essentials": [
+        "The GI wall usually follows mucosa, submucosa, muscularis externa, then serosa or adventitia.",
+        "A villus is a mucosal projection with a connective-tissue core; a crypt is an epithelial invagination.",
+        "Brush borders make PCT lumina look fuzzy, while DCT lumina are cleaner and their cells appear smaller.",
+        "Podocyte nuclei lie on glomerular capillaries; the parietal layer of Bowman's capsule is simple squamous.",
+        "Urothelial umbrella cells change shape with distension while preserving a tight urine barrier."
+      ],
+      "traps": [
+        {
+          "wrong": "Any intestinal section with many goblet cells is ileum.",
+          "right": "Ileum needs villi plus large aggregated lymphoid nodules; colon has many goblet cells but no villi."
+        },
+        {
+          "wrong": "Every round renal tubule with a small lumen is PCT.",
+          "right": "Confirm the eosinophilic cytoplasm and apical brush border; thin limbs and vessels can also have small lumina."
+        }
+      ],
+      "recognition": [
+        "Villi over pale submucosal Brunner glands identify duodenum.",
+        "A flat colonic surface over straight goblet-rich crypts identifies colon.",
+        "A capillary tuft within Bowman's space is a renal corpuscle and proves cortex."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapters 15 and 19; practical image-recognition exception only."
+      },
+      "asset": "/study/image-bank/histo-renal-cortex.png"
+    },
+    {
+      "id": "hist-atlas-endocrine-lymphoid",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Practical atlas: endocrine and lymphoid",
+      "title": "Recognize endocrine glands and lymphoid organs",
+      "subtitle": "Follicles, cords, zones, lobules, and nodules create distinct low-power fingerprints",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Endocrine glands",
+        "Immune system and lymphoid organs"
+      ],
+      "questionPatterns": [
+        "pituitary",
+        "thyroid",
+        "parathyroid",
+        "adrenal",
+        "pancreatic islet",
+        "thymus",
+        "lymph node",
+        "spleen",
+        "white pulp",
+        "red pulp",
+        "hassall corpuscle",
+        "cortex and medulla"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Endocrine tissue clusters around capillaries; lymphoid tissue organizes immune cells into compartments and filters lymph or blood.",
+        "items": [
+          {
+            "label": "Thyroid and parathyroid",
+            "detail": "Thyroid is unique for colloid-filled follicles; parathyroid is a solid corded gland of chief cells with increasing adipocytes after puberty.",
+            "cue": "Follicles versus solid cords"
+          },
+          {
+            "label": "Pituitary and adrenal",
+            "detail": "Anterior pituitary is a mixed dark cellular field; posterior pituitary is pale and fibrous. Adrenal has cortical zones around a central medulla.",
+            "cue": "Two textures versus concentric zones"
+          },
+          {
+            "label": "Thymus",
+            "detail": "Lobules have dark cortex, pale medulla, and eosinophilic Hassall corpuscles; lymphoid follicles are absent.",
+            "cue": "Lobules plus Hassall whorls"
+          },
+          {
+            "label": "Lymph node",
+            "detail": "A capsule surrounds cortical follicles, paracortex, and medullary cords and sinuses; afferent lymph enters the convex surface.",
+            "cue": "Cortex outside, medulla inside"
+          },
+          {
+            "label": "Spleen",
+            "detail": "White pulp lymphoid nodules surround central arteries within red pulp cords and sinusoids; there is no cortex-medulla division.",
+            "cue": "Islands in a red sea"
+          }
+        ]
+      },
+      "essentials": [
+        "Thyroid stores hormone precursor extracellularly in colloid, unlike most endocrine glands.",
+        "Adrenal cortex runs glomerulosa, fasciculata, reticularis from capsule inward; medulla contains chromaffin cells and large veins.",
+        "Thymic cortex is darker because it contains densely packed immature T cells.",
+        "Lymph nodes filter lymph, while spleen filters blood and removes old erythrocytes.",
+        "Spleen central arteries are typically eccentric within white pulp rather than truly central."
+      ],
+      "traps": [
+        {
+          "wrong": "Any dark cortex and pale medulla identify a lymph node.",
+          "right": "Thymus also has dark cortex and pale medulla; lobulation and Hassall corpuscles identify thymus."
+        },
+        {
+          "wrong": "Splenic white pulp is the pale background of the spleen.",
+          "right": "White pulp is basophilic lymphoid tissue around arteries; the more extensive background is red pulp."
+        }
+      ],
+      "recognition": [
+        "Round follicles filled with homogeneous pink colloid identify thyroid.",
+        "Concentric eosinophilic Hassall corpuscles identify thymic medulla.",
+        "A lymphoid nodule built around a central artery identifies splenic white pulp."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapters 14 and 20; practical image-recognition exception only."
+      },
+      "asset": "/study/image-bank/histo-spleen-white-pulp.png"
+    },
+    {
+      "id": "hist-atlas-respiratory",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Practical atlas: respiratory system",
+      "title": "Walk the airway until gas exchange begins",
+      "subtitle": "Cartilage, glands, epithelium, smooth muscle, and alveoli mark each branch",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Respiratory system"
+      ],
+      "questionPatterns": [
+        "trachea",
+        "bronchus",
+        "bronchiole",
+        "terminal bronchiole",
+        "respiratory bronchiole",
+        "alveolar duct",
+        "alveolar sac",
+        "alveolus",
+        "type i pneumocyte",
+        "type ii pneumocyte",
+        "club cell",
+        "surfactant"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "As airways narrow, cartilage and glands disappear, epithelium gets lower, and alveoli eventually interrupt the wall.",
+        "items": [
+          {
+            "label": "Trachea",
+            "detail": "Pseudostratified ciliated epithelium with goblet cells, submucosal seromucous glands, and C-shaped hyaline cartilage.",
+            "cue": "C-ring and trachealis"
+          },
+          {
+            "label": "Intrapulmonary bronchus",
+            "detail": "Irregular cartilage plates and glands surround a folded mucosa with a continuous smooth-muscle layer.",
+            "cue": "Cartilage plates in lung"
+          },
+          {
+            "label": "Terminal bronchiole",
+            "detail": "No cartilage or glands; simple ciliated cuboidal cells and club cells form a continuous wall with smooth muscle.",
+            "cue": "Last conducting airway"
+          },
+          {
+            "label": "Respiratory bronchiole",
+            "detail": "The cuboidal bronchiolar wall is first interrupted by scattered alveoli, marking the start of gas exchange.",
+            "cue": "Alveoli bud from wall"
+          },
+          {
+            "label": "Alveolar duct and sac",
+            "detail": "Alveoli line almost the entire passage; smooth-muscle knobs mark alveolar openings before clusters end in sacs.",
+            "cue": "Hallway then shared atrium"
+          },
+          {
+            "label": "Alveolar cells",
+            "detail": "Flat type I cells cover most surface; cuboidal type II cells secrete surfactant and replace damaged alveolar epithelium.",
+            "cue": "Thin exchange, cuboidal repair"
+          }
+        ]
+      },
+      "essentials": [
+        "Bronchioles are defined by absence of cartilage and submucosal glands.",
+        "Terminal bronchioles are entirely conducting; respiratory bronchioles have alveoli in their walls.",
+        "The blood-air barrier is type I cytoplasm, fused basal laminae, and capillary endothelium.",
+        "Type II pneumocytes contain lamellar bodies and reduce alveolar surface tension through surfactant.",
+        "Alveolar macrophages patrol septa and lumina and may carry particles toward bronchioles or lymphatics."
+      ],
+      "traps": [
+        {
+          "wrong": "Any airway without cartilage is a terminal bronchiole.",
+          "right": "All bronchioles lack cartilage; alveoli in the wall make it a respiratory bronchiole."
+        },
+        {
+          "wrong": "Type II pneumocytes cover most alveolar surface.",
+          "right": "They are more numerous than their small surface contribution suggests; thin type I cells cover most surface area."
+        }
+      ],
+      "recognition": [
+        "A C-shaped cartilage ring and posterior smooth muscle identify trachea.",
+        "An airway with no cartilage or glands but an intact wall identifies terminal bronchiole.",
+        "Cuboidal cells bulging at alveolar corners suggest type II pneumocytes."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 17; TUMS respiratory practical material and image set; practical image-recognition exception only."
+      },
+      "asset": "/study/histology/telegram-respiratory/respiratory-bronchiole.jpg"
+    },
+    {
+      "id": "hist-atlas-special-senses",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Practical atlas: special senses",
+      "title": "Orient the eye and inner ear",
+      "subtitle": "Retinal layers, cornea, lens, and the sensory epithelia most likely to appear as spotters",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Special sense organs"
+      ],
+      "questionPatterns": [
+        "retina",
+        "cornea",
+        "lens",
+        "iris",
+        "ciliary body",
+        "optic nerve",
+        "rods and cones",
+        "organ of corti",
+        "cochlea",
+        "vestibular",
+        "macula",
+        "crista ampullaris"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "For retina, orient from choroid toward vitreous; light and neural information travel in opposite directions.",
+        "items": [
+          {
+            "label": "Retina outer side",
+            "detail": "Pigmented epithelium lies against choroid, followed by photoreceptor outer segments and the outer nuclear layer.",
+            "cue": "Pigment then receptors"
+          },
+          {
+            "label": "Retina inner side",
+            "detail": "Inner nuclear layer, ganglion-cell layer, and nerve-fiber layer approach the vitreous and optic nerve.",
+            "cue": "Interneurons then output"
+          },
+          {
+            "label": "Cornea",
+            "detail": "Transparent avascular layers run epithelium, Bowman's layer, regular stromal lamellae, Descemet membrane, endothelium.",
+            "cue": "Five clear layers"
+          },
+          {
+            "label": "Lens",
+            "detail": "A thick capsule surrounds anterior subcapsular epithelium and elongated anucleate lens fibers.",
+            "cue": "Capsule plus fibers"
+          },
+          {
+            "label": "Organ of Corti",
+            "detail": "Hair cells and supporting cells sit on basilar membrane beneath the tectorial membrane within the cochlear duct.",
+            "cue": "Sensory mound in cochlea"
+          },
+          {
+            "label": "Vestibular receptors",
+            "detail": "Maculae have otolith-bearing membranes for linear acceleration; cristae project into cupulae for angular acceleration.",
+            "cue": "Otolith flat, cupula ridge"
+          }
+        ]
+      },
+      "essentials": [
+        "Light passes through inner retinal layers before reaching rods and cones near the pigment epithelium.",
+        "Photoreceptors synapse with bipolar cells, which synapse with ganglion cells; ganglion axons form the optic nerve.",
+        "Corneal transparency depends on regular collagen spacing, relative dehydration, avascularity, and smooth surfaces.",
+        "The organ of Corti transduces sound; vestibular hair cells transduce head position and acceleration.",
+        "Endolymph fills the membranous labyrinth, while perilymph surrounds it within the bony labyrinth."
+      ],
+      "traps": [
+        {
+          "wrong": "Photoreceptors form the retinal layer closest to vitreous because they receive light.",
+          "right": "They lie near the pigment epithelium on the outer side; light crosses the inner retina first."
+        },
+        {
+          "wrong": "Bowman's and Descemet membranes are equivalent basal laminae on the same side of cornea.",
+          "right": "Bowman's is anterior beneath epithelium; Descemet is the posterior corneal endothelial basal lamina."
+        }
+      ],
+      "recognition": [
+        "A dark pigment layer beside stacked nuclear and plexiform layers identifies retina.",
+        "A thick regular collagen stroma between two surface cell layers identifies cornea.",
+        "A triangular sensory complex on the basilar membrane identifies the organ of Corti."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 23; practical image-recognition exception only."
+      },
+      "asset": "/study/image-bank/histo-retina.png"
+    }
+  ]
+}

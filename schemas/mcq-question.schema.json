@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.med25/schemas/mcq-question.schema.json",
+  "title": "MED//25 MCQ question",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "revision", "status", "kind", "subject", "topic", "chapter", "difficulty", "prompt", "options", "correctOptionId", "explanation", "distractorExplanations", "learningObjective", "source", "tags", "examPriority", "qualityFlags"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "minLength": 5 },
+    "revision": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["draft", "verified", "retired"] },
+    "kind": { "enum": ["single_best_answer", "image_single_best_answer"] },
+    "subject": { "enum": ["histology", "embryology", "physiology", "biochemistry"] },
+    "topic": { "type": "string", "minLength": 1 },
+    "subtopic": { "type": "string" },
+    "chapter": { "type": "string", "minLength": 1 },
+    "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "prompt": { "type": "string", "minLength": 10 },
+    "options": { "type": "array", "minItems": 4, "maxItems": 6, "items": { "$ref": "#/$defs/option" } },
+    "correctOptionId": { "type": "string", "minLength": 1 },
+    "acceptedFreeText": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "explanation": { "type": "string", "minLength": 10 },
+    "distractorExplanations": { "type": "object", "additionalProperties": { "type": "string", "minLength": 3 } },
+    "learningObjective": { "type": "string", "minLength": 5 },
+    "source": { "$ref": "#/$defs/source" },
+    "media": { "type": "array", "items": { "$ref": "#/$defs/media" } },
+    "tags": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "examPriority": { "enum": ["core", "high", "standard"] },
+    "qualityFlags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  },
+  "$defs": {
+    "option": { "type": "object", "additionalProperties": false, "required": ["id", "text"], "properties": { "id": { "type": "string", "pattern": "^[A-F]$" }, "text": { "type": "string", "minLength": 1 } } },
+    "source": { "type": "object", "additionalProperties": false, "required": ["title", "chapter"], "properties": { "title": { "type": "string", "minLength": 1 }, "edition": { "type": "string" }, "chapter": { "type": "string", "minLength": 1 }, "page": { "type": "string" }, "figure": { "type": "string" }, "lecture": { "type": "string" }, "slide": { "type": "string" }, "excerpt": { "type": "string" } } },
+    "media": { "type": "object", "additionalProperties": false, "required": ["id", "type", "path", "alt"], "properties": { "id": { "type": "string", "minLength": 1 }, "type": { "const": "image" }, "path": { "type": "string", "minLength": 1 }, "alt": { "type": "string", "minLength": 1 }, "caption": { "type": "string" }, "attribution": { "type": "string" }, "annotations": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "label", "x", "y", "width", "height"], "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "x": { "type": "number", "minimum": 0, "maximum": 1 }, "y": { "type": "number", "minimum": 0, "maximum": 1 }, "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }, "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 } } } } } }
+  }
+}

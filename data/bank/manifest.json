@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankId": "first-semester-exam-sprint-2026",
+  "title": "First-Semester Exam Sprint - July 25 & 29",
+  "examDate": "2026-07-25",
+  "examDates": ["2026-07-25", "2026-07-29"],
+  "questionFormat": "jsonl",
+  "questionDirectory": "data/bank/questions",
+  "assetDirectories": ["data/assets", "public/study"],
+  "subjects": [
+    { "id": "histology", "title": "Histology" },
+    { "id": "embryology", "title": "Embryology" },
+    { "id": "physiology", "title": "Physiology" },
+    { "id": "biochemistry", "title": "Biochemistry" }
+  ]
+}

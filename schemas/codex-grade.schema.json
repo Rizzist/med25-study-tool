@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdict", "reasoningQuality", "confidenceAlignment", "misconception", "teachingNote", "whyCorrectAnswerWins", "optionFeedback", "reflectionQuestion", "sourceWarning"],
+  "properties": {
+    "verdict": { "enum": ["correct", "incorrect", "partially_correct", "ungradable"] },
+    "reasoningQuality": { "enum": ["sound", "mixed", "flawed", "missing"] },
+    "confidenceAlignment": { "enum": ["calibrated", "overconfident", "underconfident", "unknown"] },
+    "misconception": { "type": "string" },
+    "teachingNote": { "type": "string" },
+    "whyCorrectAnswerWins": { "type": "string" },
+    "optionFeedback": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["optionId", "feedback"], "properties": { "optionId": { "type": "string" }, "feedback": { "type": "string" } } } },
+    "reflectionQuestion": { "type": "string" },
+    "sourceWarning": { "type": "string" }
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "emb-congenital-malformations",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Congenital malformations and prenatal diagnosis",
+      "title": "Congenital malformations: timing predicts the pattern",
+      "subtitle": "Separate malformation, disruption, deformation, and the tests used to detect them",
+      "kind": "timeline",
+      "topicPatterns": ["Birth defects and prenatal diagnosis"],
+      "questionPatterns": ["congenital", "malformation", "teratogen", "susceptible period", "prenatal diagnosis", "amniocentesis", "chorionic villus", "screening", "folic acid"],
+      "visual": {
+        "type": "timeline",
+        "caption": "Teratogenic outcome depends most strongly on developmental timing, dose, and fetal susceptibility.",
+        "items": [
+          {"label": "Weeks 0-2", "detail": "Severe injury usually causes embryonic death; surviving embryos often recover without a structural defect.", "cue": "All-or-none period"},
+          {"label": "Weeks 3-8", "detail": "Organogenesis is the peak period for major structural malformations, with each organ having a specific critical window.", "cue": "Structure is most vulnerable"},
+          {"label": "Week 9 to birth", "detail": "Growth, functional maturation, and the CNS remain vulnerable; major new structural defects are less common.", "cue": "Growth and function"},
+          {"label": "Screen", "detail": "Ultrasound and maternal serum or cell-free DNA estimate risk but do not by themselves establish every diagnosis.", "cue": "Risk estimate"},
+          {"label": "Diagnose", "detail": "CVS samples placental tissue earlier; amniocentesis samples amniotic fluid later for definitive fetal testing when indicated.", "cue": "A sample can diagnose"}
+        ]
+      },
+      "essentials": [
+        "A malformation is an intrinsic developmental error; a disruption destroys previously normal tissue; a deformation results from mechanical force.",
+        "The embryonic period, especially weeks 3-8, is the most sensitive window for major structural malformations.",
+        "Risk depends on dose, duration, timing, maternal-fetal genotype, and simultaneous exposures.",
+        "Folate before conception and early pregnancy reduces neural-tube-defect risk.",
+        "A screening test changes probability; a diagnostic test establishes or excludes a condition with far greater certainty."
+      ],
+      "traps": [
+        {"wrong": "Every teratogenic exposure causes the same defect throughout pregnancy.", "right": "The same exposure can cause death, malformation, growth restriction, or functional injury depending on timing and dose."},
+        {"wrong": "A positive screening result is a confirmed fetal diagnosis.", "right": "Screening identifies increased risk and generally requires diagnostic confirmation."}
+      ],
+      "recognition": [
+        "A major structural defect following exposure during organogenesis points to a teratogenic malformation.",
+        "Abnormal positioning caused by uterine constraint is a deformation rather than a primary malformation.",
+        "CVS is the earlier invasive sampling option; amniocentesis is performed later."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Birth defects, teratology, and prenatal diagnosis chapter; confirmed TUMS curriculum."}
+    },
+    {
+      "id": "phys-neurotransmission-core",
+      "exam": "july25",
+      "subject": "physiology",
+      "topic": "Neurotransmission and neurotransmitters",
+      "title": "Chemical synaptic transmission from impulse to response",
+      "subtitle": "Release, receptor action, postsynaptic potentials, and signal termination",
+      "kind": "process",
+      "topicPatterns": ["Neurotransmission and neurotransmitters"],
+      "questionPatterns": ["neurotransmitter", "synapse", "synaptic vesicle", "calcium", "epsp", "ipsp", "ionotropic", "metabotropic", "reuptake", "acetylcholinesterase"],
+      "visual": {
+        "type": "flow",
+        "caption": "Chemical transmission is unidirectional because release machinery is presynaptic and receptors are postsynaptic.",
+        "items": [
+          {"label": "Arrival", "detail": "A presynaptic action potential depolarizes the terminal and opens voltage-gated Ca2+ channels.", "cue": "Voltage opens Ca2+"},
+          {"label": "Release", "detail": "Ca2+ binds the vesicle-fusion machinery, causing SNARE-dependent exocytosis of transmitter quanta.", "cue": "Ca2+ triggers fusion"},
+          {"label": "Receptor", "detail": "Ionotropic receptors directly gate channels; metabotropic receptors act through G proteins and second messengers.", "cue": "Fast channel vs slower cascade"},
+          {"label": "Integration", "detail": "EPSPs bring membrane voltage toward threshold; IPSPs oppose firing by hyperpolarization or shunting.", "cue": "Graded potentials summate"},
+          {"label": "Termination", "detail": "Transmitter is removed by enzymatic degradation, reuptake into neuron or glia, or diffusion away.", "cue": "Clear the cleft"}
+        ]
+      },
+      "essentials": [
+        "Postsynaptic potentials are graded and can summate temporally and spatially; action potentials are all-or-none.",
+        "An EPSP or IPSP is defined by its effect on firing probability, not by one universally fixed ion.",
+        "Small-molecule transmitters are commonly synthesized in terminals and stored in small clear vesicles; neuropeptides are synthesized in the soma.",
+        "Acetylcholine is terminated mainly by acetylcholinesterase; monoamines and many amino-acid transmitters rely heavily on reuptake.",
+        "Presynaptic inhibition often reduces Ca2+ entry and therefore reduces transmitter release."
+      ],
+      "traps": [
+        {"wrong": "Ca2+ carries the propagated nerve action potential down the axon.", "right": "Na+ and K+ dominate the axonal spike; terminal Ca2+ entry triggers vesicle release."},
+        {"wrong": "Every inhibitory synapse simply makes the membrane more negative.", "right": "Inhibition may hyperpolarize or shunt excitatory current by increasing membrane conductance."}
+      ],
+      "recognition": [
+        "A delay between presynaptic depolarization and postsynaptic response indicates a chemical synapse.",
+        "A receptor producing a rapid millisecond current is usually ionotropic; a slower amplified response is usually metabotropic.",
+        "Reduced quantal release after blocking terminal Ca2+ channels localizes the defect presynaptically."
+      ],
+      "source": {"label": "Guyton and Hall Textbook of Medical Physiology, 2026", "detail": "Synaptic transmission and neurotransmitter sections; confirmed TUMS Tissue, Development & Function curriculum."}
+    },
+    {
+      "id": "bio-hemoglobin-function",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Hemoglobin structure and function",
+      "title": "Hemoglobin turns structure into cooperative oxygen delivery",
+      "subtitle": "Heme chemistry, T-R transition, 2,3-BPG, Bohr effect, CO, and methemoglobin",
+      "kind": "mechanism",
+      "topicPatterns": ["hemoglobin structure and function"],
+      "questionPatterns": ["hemoglobin", "heme", "oxygen dissociation", "cooperativity", "bohr", "2,3-bpg", "carbon monoxide", "methemoglobin", "myoglobin"],
+      "visual": {
+        "type": "flow",
+        "caption": "O2 binding shifts hemoglobin from the low-affinity T state toward the high-affinity R state.",
+        "items": [
+          {"label": "Heme", "detail": "Each globin chain holds one protoporphyrin IX with Fe2+, which binds one O2 molecule reversibly.", "cue": "Four hemes, four O2"},
+          {"label": "T state", "detail": "Deoxyhemoglobin has lower O2 affinity and a larger central cavity that binds 2,3-BPG.", "cue": "Tense releases O2"},
+          {"label": "R state", "detail": "O2 binding changes heme and globin conformation, increasing the affinity of remaining subunits.", "cue": "Cooperative loading"},
+          {"label": "Right shift", "detail": "Higher H+, CO2, temperature, or 2,3-BPG lowers affinity and promotes tissue unloading.", "cue": "CADET face Right"},
+          {"label": "Abnormal ligands", "detail": "CO binds Fe2+ with high affinity and left-shifts remaining sites; Fe3+ methemoglobin cannot bind O2.", "cue": "CO occupies; Fe3+ cannot carry"}
+        ]
+      },
+      "essentials": [
+        "Adult HbA is α2β2; fetal HbF is α2γ2 and binds 2,3-BPG less strongly, giving it higher oxygen affinity.",
+        "Hemoglobin has a sigmoidal O2 curve because subunits cooperate; monomeric myoglobin has a hyperbolic curve.",
+        "The Bohr effect is reduced O2 affinity at higher H+ and CO2, aiding oxygen unloading in metabolically active tissue.",
+        "2,3-BPG binds the central cavity of deoxyhemoglobin and stabilizes the T state.",
+        "Oxidation of heme iron from Fe2+ to Fe3+ produces methemoglobin, which does not bind oxygen normally."
+      ],
+      "traps": [
+        {"wrong": "Oxygen binds directly to ferric Fe3+ in normal hemoglobin.", "right": "Normal oxygen binding requires ferrous Fe2+; Fe3+ defines methemoglobin."},
+        {"wrong": "A right shift means hemoglobin holds oxygen more tightly.", "right": "A right shift means lower affinity and easier tissue unloading."}
+      ],
+      "recognition": [
+        "A sigmoidal saturation curve identifies cooperative hemoglobin rather than myoglobin.",
+        "Low P50 means high oxygen affinity; high P50 means reduced affinity.",
+        "Normal PaO2 with impaired oxygen content after CO exposure reflects dysfunctional hemoglobin binding."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry", "detail": "Chapter 3, globular hemeproteins; confirmed TUMS Cell & Molecules curriculum."}
+    },
+    {
+      "id": "bio-carbohydrate-structure",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Mono- and disaccharide structure",
+      "title": "Carbohydrate structure: classify first, then predict reactivity",
+      "subtitle": "Aldose versus ketose, stereochemistry, anomers, bonds, and reducing sugars",
+      "kind": "comparison",
+      "topicPatterns": ["carbohydrate structure"],
+      "questionPatterns": ["monosaccharide", "disaccharide", "aldose", "ketose", "anomer", "epimer", "reducing sugar", "maltose", "lactose", "sucrose", "glycosidic"],
+      "visual": {
+        "type": "comparison",
+        "caption": "The free anomeric carbon determines whether a sugar can open into a reducing form.",
+        "items": [
+          {"label": "Monosaccharides", "detail": "Glucose and galactose are aldohexoses; fructose is a ketohexose. Ring closure creates an α or β anomer.", "cue": "Carbonyl type + carbon count"},
+          {"label": "Epimers", "detail": "Glucose and galactose differ at C4; glucose and mannose differ at C2.", "cue": "One stereocenter differs"},
+          {"label": "Maltose", "detail": "Glucose-α(1→4)-glucose; one anomeric carbon remains free, so maltose is reducing.", "cue": "Malt = α1→4"},
+          {"label": "Lactose", "detail": "Galactose-β(1→4)-glucose; the glucose anomeric carbon remains free, so lactose is reducing.", "cue": "Lactose = Gal β1→4 Glc"},
+          {"label": "Sucrose", "detail": "Glucose-α1↔β2-fructose joins both anomeric carbons and is therefore nonreducing.", "cue": "Both anomeric carbons locked"}
+        ]
+      },
+      "essentials": [
+        "D/L configuration is defined relative to glyceraldehyde and is not the same as the direction of optical rotation.",
+        "Anomers differ only at the anomeric carbon; epimers differ at one other stereocenter.",
+        "Mutarotation is interconversion of α and β anomers through the open-chain form.",
+        "A reducing sugar needs a free anomeric carbon capable of forming an open-chain carbonyl.",
+        "Lactase hydrolyzes lactose; sucrase hydrolyzes sucrose; maltase hydrolyzes maltose."
+      ],
+      "traps": [
+        {"wrong": "Every disaccharide is nonreducing.", "right": "Maltose and lactose are reducing; sucrose is nonreducing because both anomeric carbons form the bond."},
+        {"wrong": "Glucose and fructose are epimers.", "right": "They are constitutional isomers: glucose is an aldose and fructose is a ketose."}
+      ],
+      "recognition": [
+        "A ring carbon bonded to two oxygens is the anomeric carbon.",
+        "A glycosidic bond involving both anomeric carbons identifies a nonreducing disaccharide.",
+        "Rapid Seliwanoff positivity supports a ketose such as fructose."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry", "detail": "Chapter 7, carbohydrate structure; confirmed TUMS Cell & Molecules curriculum."}
+    },
+    {
+      "id": "bio-glycoconjugates",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Glycoconjugates",
+      "title": "Glycoconjugates organize recognition, membranes, and extracellular matrix",
+      "subtitle": "Distinguish glycoproteins, proteoglycans, glycolipids, and GPI anchors",
+      "kind": "comparison",
+      "topicPatterns": ["glycoconjugates"],
+      "questionPatterns": ["glycoconjugate", "glycoprotein", "proteoglycan", "glycolipid", "glycosaminoglycan", "gag", "n-linked", "o-linked", "gpi anchor"],
+      "visual": {
+        "type": "comparison",
+        "caption": "Classify a glycoconjugate by its backbone, carbohydrate proportion, and cellular location.",
+        "items": [
+          {"label": "Glycoprotein", "detail": "A protein bearing relatively short, branched oligosaccharides; common in receptors, antibodies, enzymes, and adhesion molecules.", "cue": "Protein-dominant and branched"},
+          {"label": "Proteoglycan", "detail": "A core protein bearing long, unbranched sulfated GAG chains; highly hydrated and abundant in extracellular matrix.", "cue": "GAG-dominant bottle brush"},
+          {"label": "Glycolipid", "detail": "A membrane lipid with an extracellular carbohydrate head; important in recognition and blood-group antigens.", "cue": "Sugar on lipid"},
+          {"label": "N-linked", "detail": "Oligosaccharide attaches to asparagine and is initiated in the rough ER before Golgi processing.", "cue": "N = asparagine"},
+          {"label": "O-linked and GPI", "detail": "O-linked sugars attach mainly to serine/threonine in Golgi; GPI anchors tether proteins to the outer membrane leaflet.", "cue": "O = Ser/Thr; GPI = membrane tether"}
+        ]
+      },
+      "essentials": [
+        "GAGs are repeating disaccharides, usually highly negatively charged and water-binding.",
+        "Proteoglycans resist compression and regulate diffusion/signaling in extracellular matrix.",
+        "N-linked oligosaccharides attach to asparagine; O-linked chains attach mainly to serine or threonine.",
+        "Cell-surface carbohydrates face the extracellular space and contribute to the glycocalyx.",
+        "ABO antigens are terminal carbohydrate structures on glycoproteins and glycolipids."
+      ],
+      "traps": [
+        {"wrong": "Proteoglycans are mostly protein with a few short branched sugars.", "right": "That better describes glycoproteins; proteoglycans are dominated by long GAG chains."},
+        {"wrong": "Membrane carbohydrate chains normally face the cytosol.", "right": "They face the noncytosolic/extracellular side of the membrane."}
+      ],
+      "recognition": [
+        "A bottle-brush ECM molecule with many long charged chains is a proteoglycan.",
+        "A membrane recognition determinant attached to ceramide is a glycolipid.",
+        "A carbohydrate attached to asparagine is N-linked."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry", "detail": "Carbohydrate and complex-carbohydrate sections; confirmed TUMS Cell & Molecules curriculum."}
+    },
+    {
+      "id": "bio-dna-repair",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "DNA repair mechanisms",
+      "title": "DNA repair: match the lesion to the repair pathway",
+      "subtitle": "Mismatch repair, BER, NER, homologous recombination, and end joining",
+      "kind": "comparison",
+      "topicPatterns": ["dna repair mechanisms"],
+      "questionPatterns": ["dna repair", "mismatch repair", "base excision", "nucleotide excision", "homologous recombination", "nonhomologous end joining", "xeroderma", "lynch", "double strand break"],
+      "visual": {
+        "type": "map",
+        "caption": "Identify the lesion first; the correct pathway follows from what must be removed or rebuilt.",
+        "items": [
+          {"label": "Mismatch repair", "detail": "Corrects replication mismatches and short insertion-deletion loops missed by proofreading.", "cue": "New-strand copying error"},
+          {"label": "Base-excision repair", "detail": "A DNA glycosylase removes one damaged base; AP endonuclease, polymerase, and ligase restore the site.", "cue": "Small nonbulky lesion"},
+          {"label": "Nucleotide-excision repair", "detail": "A short oligonucleotide containing a bulky helix-distorting lesion is excised and resynthesized.", "cue": "UV dimer or bulky adduct"},
+          {"label": "Homologous recombination", "detail": "Repairs double-strand breaks accurately by copying a homologous template, mainly in S/G2.", "cue": "Template-guided and high fidelity"},
+          {"label": "Nonhomologous end joining", "detail": "Directly rejoins broken ends without a homologous template and can lose or add nucleotides.", "cue": "Fast but error-prone"}
+        ]
+      },
+      "essentials": [
+        "Polymerase proofreading occurs during synthesis; mismatch repair corrects errors that escape proofreading.",
+        "BER removes an individual abnormal base, whereas NER removes a short stretch around a bulky lesion.",
+        "Xeroderma pigmentosum results from defective nucleotide-excision repair of UV-induced damage.",
+        "Lynch syndrome results from inherited mismatch-repair defects and microsatellite instability.",
+        "BRCA pathway defects impair homologous recombination repair of double-strand breaks."
+      ],
+      "traps": [
+        {"wrong": "UV thymine dimers are normally fixed by mismatch repair.", "right": "Bulky UV photoproducts are removed by nucleotide-excision repair."},
+        {"wrong": "Nonhomologous end joining requires a sister chromatid template.", "right": "NHEJ directly joins ends without a homologous template; homologous recombination uses the template."}
+      ],
+      "recognition": [
+        "Extreme UV sensitivity and skin-cancer risk indicate defective NER.",
+        "Microsatellite instability indicates defective mismatch repair.",
+        "Repair using the sister chromatid after replication indicates homologous recombination."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry", "detail": "DNA replication and repair section; confirmed TUMS Cell & Molecules curriculum."}
+    },
+    {
+      "id": "bio-practical-amino-tests",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Practical amino acid and protein tests",
+      "title": "Amino-acid and protein tests by reaction target",
+      "subtitle": "Use the detected chemical group and positive color to identify the assay",
+      "kind": "recognition",
+      "topicPatterns": ["Practical amino acid and protein tests"],
+      "questionPatterns": ["ninhydrin", "biuret", "xanthoproteic", "millon", "sulfur test", "amino acid test", "protein test"],
+      "visual": {
+        "type": "comparison",
+        "caption": "The most reliable memory anchor is the chemical target, followed by the positive appearance.",
+        "items": [
+          {"label": "Ninhydrin", "detail": "Most free α-amino groups produce blue-purple Ruhemann's purple; imino acids such as proline give yellow.", "cue": "Free amino groups"},
+          {"label": "Biuret", "detail": "Cu2+ complexes with multiple peptide bonds in alkaline solution to produce violet color.", "cue": "Peptide bonds"},
+          {"label": "Xanthoproteic", "detail": "Nitration of aromatic residues gives yellow that deepens to orange in alkali.", "cue": "Aromatic rings"},
+          {"label": "Millon", "detail": "The phenolic group of tyrosine produces a red reaction product.", "cue": "Tyrosine phenol"},
+          {"label": "Sulfur test", "detail": "Sulfur released from cysteine/cystine can form a dark lead-sulfide precipitate.", "cue": "Sulfur-containing residues"}
+        ]
+      },
+      "essentials": [
+        "Biuret requires multiple peptide bonds and is therefore a protein/peptide test rather than a sensitive free-amino-acid test.",
+        "Ninhydrin is broadly useful for amino acids and for visualizing separated amino acids on chromatography media.",
+        "Proline gives a yellow ninhydrin product because its amino group is secondary.",
+        "A blank controls for color contributed by reagents and solvent rather than analyte.",
+        "Positive color intensity is not automatically quantitative unless the method is calibrated."
+      ],
+      "traps": [
+        {"wrong": "Biuret detects the biuret molecule specifically in protein samples.", "right": "The named reaction detects coordinated peptide bonds in proteins and sufficiently long peptides."},
+        {"wrong": "Every amino acid gives the same purple ninhydrin color.", "right": "Proline and hydroxyproline characteristically give yellow products."}
+      ],
+      "recognition": [
+        "Violet alkaline copper reaction indicates Biuret.",
+        "Purple spots after spraying a chromatogram indicate ninhydrin-positive amino acids.",
+        "Yellow-to-orange reaction after nitric acid suggests aromatic residues."
+      ],
+      "source": {"label": "Confirmed TUMS Cell & Molecules practical curriculum", "detail": "Amino-acid practical block; standard qualitative biochemistry laboratory reactions."}
+    },
+    {
+      "id": "bio-practical-enzyme-assays",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Practical enzyme assays",
+      "title": "Enzyme assays: measure initial rate, not just final color",
+      "subtitle": "Controls, temperature, pH, substrate concentration, and activity calculations",
+      "kind": "process",
+      "topicPatterns": ["Practical enzyme assays"],
+      "questionPatterns": ["enzyme assay", "initial velocity", "enzyme activity", "blank", "incubation", "denatured enzyme", "substrate concentration"],
+      "visual": {
+        "type": "flow",
+        "caption": "A valid assay converts a calibrated signal change into product formed per unit time.",
+        "items": [
+          {"label": "Prepare controls", "detail": "Use a reagent blank and a negative control lacking active enzyme or substrate.", "cue": "Subtract background"},
+          {"label": "Control conditions", "detail": "Keep pH, temperature, ionic strength, volumes, and incubation timing constant.", "cue": "One variable at a time"},
+          {"label": "Start reaction", "detail": "Add the initiating component consistently, mix, and begin timing immediately.", "cue": "Same start for every tube"},
+          {"label": "Measure initial rate", "detail": "Use the early linear change before substrate depletion, product inhibition, or enzyme instability distorts velocity.", "cue": "Linear slope first"},
+          {"label": "Report activity", "detail": "Convert signal through a standard curve or extinction coefficient and report amount converted per time.", "cue": "Rate, not endpoint alone"}
+        ]
+      },
+      "essentials": [
+        "One enzyme unit commonly represents 1 µmol of substrate converted per minute under stated conditions.",
+        "Boiling usually reduces measured activity by denaturing the enzyme without removing substrate.",
+        "Initial velocity is proportional to enzyme concentration when substrate is abundant and conditions are fixed.",
+        "A pH or temperature optimum is assay-specific and reflects both catalysis and protein stability.",
+        "A standard curve is required when instrument response cannot be converted directly from a known extinction coefficient."
+      ],
+      "traps": [
+        {"wrong": "The darkest final tube always had the greatest initial velocity.", "right": "Final color also depends on incubation time, substrate depletion, and linearity; compare controlled initial slopes."},
+        {"wrong": "A blank without analyte is unnecessary if the solution looks colorless.", "right": "Reagents and cuvette can absorb light even when no visible color is obvious."}
+      ],
+      "recognition": [
+        "A straight early absorbance-versus-time segment is the interval used for initial velocity.",
+        "Loss of activity after boiling supports an enzyme-dependent reaction.",
+        "Doubling enzyme concentration should approximately double initial rate when substrate is not limiting."
+      ],
+      "source": {"label": "Confirmed TUMS Cell & Molecules practical curriculum", "detail": "Enzyme practical block; Lippincott enzyme kinetics principles."}
+    },
+    {
+      "id": "bio-practical-spectrophotometry",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Spectrophotometry",
+      "title": "Spectrophotometry: blank, wavelength, absorbance, concentration",
+      "subtitle": "Use Beer-Lambert correctly and recognize when the reading is unreliable",
+      "kind": "mechanism",
+      "topicPatterns": ["Spectrophotometry"],
+      "questionPatterns": ["spectrophotometer", "spectrophotometry", "beer-lambert", "absorbance", "transmittance", "wavelength", "blank", "cuvette", "standard curve"],
+      "visual": {
+        "type": "flow",
+        "caption": "A spectrophotometer compares incident with transmitted light at a selected wavelength.",
+        "items": [
+          {"label": "Select λ", "detail": "Measure near the analyte's λmax for greatest sensitivity and reproducibility.", "cue": "Best signal at λmax"},
+          {"label": "Blank", "detail": "Zero the instrument with solvent and all reagents except analyte.", "cue": "Remove background absorbance"},
+          {"label": "Measure", "detail": "The detector measures transmitted light; absorbance A = -log10(T).", "cue": "Less transmission means more absorbance"},
+          {"label": "Calculate", "detail": "Within the linear range, A = εlc, so absorbance is proportional to concentration and path length.", "cue": "Beer-Lambert"},
+          {"label": "Verify", "detail": "Dilute samples above the linear range and reject dirty, scratched, bubbled, or mismatched cuvettes.", "cue": "Good optics before good numbers"}
+        ]
+      },
+      "essentials": [
+        "Absorbance is logarithmically related to transmittance and is directly proportional to concentration only within the linear range.",
+        "The blank contains every non-analyte component used in the sample.",
+        "Cuvette orientation and path length must remain consistent between standards and unknowns.",
+        "A calibration curve plots known concentration against measured response and is used to interpolate an unknown.",
+        "Turbidity scatters light and can falsely increase apparent absorbance."
+      ],
+      "traps": [
+        {"wrong": "Double concentration always doubles percent transmittance.", "right": "Within the linear range, concentration is proportional to absorbance, not percent transmittance."},
+        {"wrong": "The blank should contain the analyte at the same concentration as the sample.", "right": "The blank contains solvent and reagents but omits the analyte being measured."}
+      ],
+      "recognition": [
+        "A plot of absorbance versus concentration should be linear over the validated working range.",
+        "An unexpectedly high reading with visible bubbles suggests optical interference.",
+        "A = 0 corresponds to 100% transmittance."
+      ],
+      "source": {"label": "Confirmed TUMS Cell & Molecules practical curriculum", "detail": "Spectrophotometer block; standard Beer-Lambert laboratory principles."}
+    },
+    {
+      "id": "bio-practical-dna-extraction",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "DNA extraction",
+      "title": "DNA extraction: release, protect, separate, precipitate",
+      "subtitle": "Know why detergent, salt, protease, and alcohol are used",
+      "kind": "process",
+      "topicPatterns": ["DNA extraction"],
+      "questionPatterns": ["dna extraction", "cell lysis", "detergent", "protease", "ethanol precipitation", "salt", "dnase", "spool dna"],
+      "visual": {
+        "type": "flow",
+        "caption": "Each reagent removes one barrier between intact cells and visible purified DNA.",
+        "items": [
+          {"label": "Lyse", "detail": "Detergent disrupts lipid cell and nuclear membranes, releasing nucleic acids and proteins.", "cue": "Break membranes"},
+          {"label": "Protect", "detail": "Cold conditions and chelation of divalent cations reduce nuclease activity.", "cue": "Keep DNases quiet"},
+          {"label": "Remove protein", "detail": "Protease digests histones and enzymes; salt helps dissociate and aggregate contaminants.", "cue": "Free DNA from protein"},
+          {"label": "Precipitate", "detail": "Salt neutralizes phosphate charge and cold ethanol or isopropanol lowers DNA solubility.", "cue": "DNA leaves solution"},
+          {"label": "Recover", "detail": "Spool or pellet the DNA, wash with alcohol, dry briefly, and redissolve in suitable buffer.", "cue": "Collect, wash, dissolve"}
+        ]
+      },
+      "essentials": [
+        "Detergent lyses membranes; it does not specifically cut DNA into fragments.",
+        "EDTA protects DNA by chelating Mg2+ and other divalent cofactors required by many nucleases.",
+        "DNA precipitates poorly from alcohol without sufficient cations to shield its negatively charged phosphate backbone.",
+        "Vigorous mixing after high-molecular-weight DNA is released can shear it mechanically.",
+        "The A260/A280 ratio is commonly used as a rough purity check for nucleic acid versus protein contamination."
+      ],
+      "traps": [
+        {"wrong": "Cold ethanol dissolves DNA so it disappears into solution.", "right": "Alcohol lowers DNA solubility and causes DNA to precipitate."},
+        {"wrong": "Protease is added to hydrolyze the DNA backbone.", "right": "Protease removes histones and contaminating enzymes while preserving DNA."}
+      ],
+      "recognition": [
+        "White stringy material at the alcohol interface is precipitated high-molecular-weight DNA.",
+        "A low A260/A280 ratio suggests protein contamination.",
+        "Highly fragmented DNA after harsh vortexing suggests mechanical shearing."
+      ],
+      "source": {"label": "Confirmed TUMS Cell & Molecules practical curriculum", "detail": "DNA extraction block; standard nucleic-acid purification principles."}
+    },
+    {
+      "id": "bio-practical-chromatography",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Chromatography",
+      "title": "Chromatography separates by unequal partitioning",
+      "subtitle": "Stationary phase, mobile phase, Rf, charge, size, and affinity",
+      "kind": "comparison",
+      "topicPatterns": ["Chromatography"],
+      "questionPatterns": ["chromatography", "stationary phase", "mobile phase", "rf", "thin layer", "paper chromatography", "ion exchange", "size exclusion", "affinity chromatography"],
+      "visual": {
+        "type": "comparison",
+        "caption": "A component moves faster when it prefers the mobile phase and slower when it interacts strongly with the stationary phase.",
+        "items": [
+          {"label": "Paper/TLC", "detail": "Components separate by differential partition or adsorption; Rf = distance solute / distance solvent front.", "cue": "Rf lies between 0 and 1"},
+          {"label": "Ion exchange", "detail": "A charged matrix binds oppositely charged molecules, which are eluted by changing salt or pH.", "cue": "Separate by charge"},
+          {"label": "Size exclusion", "detail": "Large molecules bypass bead pores and elute before smaller molecules that enter the pores.", "cue": "Large comes out first"},
+          {"label": "Affinity", "detail": "A specific immobilized ligand captures the target, which is later released by competition or altered conditions.", "cue": "Most specific binding"},
+          {"label": "Read the plate", "detail": "Mark the origin and solvent front immediately; visualize separated spots without letting the solvent cover the sample origin.", "cue": "Origin below solvent"}
+        ]
+      },
+      "essentials": [
+        "The mobile phase moves; the stationary phase remains fixed.",
+        "Rf is unitless and is only comparable when stationary phase, solvent, temperature, and other conditions match.",
+        "A compound with stronger stationary-phase interaction generally migrates less in planar chromatography.",
+        "In size-exclusion chromatography, large molecules elute first because they sample less internal bead volume.",
+        "Affinity chromatography offers high selectivity through a specific ligand-target interaction."
+      ],
+      "traps": [
+        {"wrong": "The solvent front distance is divided by the solute distance to calculate Rf.", "right": "Rf = distance traveled by solute divided by distance traveled by solvent front."},
+        {"wrong": "Small molecules always elute first in size-exclusion chromatography.", "right": "Large molecules are excluded from pores and therefore elute first."}
+      ],
+      "recognition": [
+        "A spot halfway to the solvent front has an Rf of approximately 0.5.",
+        "A column using an antibody to isolate one antigen is affinity chromatography.",
+        "A salt gradient releasing bound proteins suggests ion-exchange chromatography."
+      ],
+      "source": {"label": "Confirmed TUMS Cell & Molecules practical curriculum", "detail": "Chromatography block; standard biochemical separation principles."}
+    },
+    {
+      "id": "bio-practical-flame-photometry",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Flame photometry",
+      "title": "Flame photometry converts atomic emission into ion concentration",
+      "subtitle": "Nebulization, excitation, wavelength selection, calibration, and interference",
+      "kind": "process",
+      "topicPatterns": ["Flame photometry"],
+      "questionPatterns": ["flame photometry", "flame photometer", "atomic emission", "sodium", "potassium", "lithium", "calibration curve", "nebulizer"],
+      "visual": {
+        "type": "flow",
+        "caption": "The instrument measures element-specific light emitted as flame-excited atoms return to lower energy levels.",
+        "items": [
+          {"label": "Nebulize", "detail": "The liquid sample is converted into a fine aerosol and carried into the flame.", "cue": "Solution becomes droplets"},
+          {"label": "Atomize", "detail": "Solvent evaporates and salts dissociate to produce free atoms.", "cue": "Make free atoms"},
+          {"label": "Excite", "detail": "Thermal energy raises electrons to excited states.", "cue": "Flame adds energy"},
+          {"label": "Emit", "detail": "Atoms emit characteristic wavelengths as electrons return to lower energy levels.", "cue": "Element-specific color"},
+          {"label": "Quantify", "detail": "A wavelength filter and detector measure intensity, which is compared with standards in the valid range.", "cue": "Calibration gives concentration"}
+        ]
+      },
+      "essentials": [
+        "Flame photometry is especially useful for alkali metals such as sodium, potassium, and lithium.",
+        "It is an emission method: the instrument measures light produced by excited atoms, not light absorbed by molecules.",
+        "A reagent blank sets background and a calibration curve relates emission intensity to concentration.",
+        "Samples and standards should have similar matrix composition to reduce viscosity and ionization effects.",
+        "Readings outside the calibration range require dilution and correction by the dilution factor."
+      ],
+      "traps": [
+        {"wrong": "Flame photometry primarily measures peptide-bond absorbance.", "right": "It measures characteristic atomic emission, commonly from Na+, K+, or Li+."},
+        {"wrong": "Unknown concentration can be read reliably beyond the highest standard.", "right": "Dilute the unknown into the validated calibration range."}
+      ],
+      "recognition": [
+        "A nebulizer feeding a flame followed by an optical filter identifies a flame photometer.",
+        "Characteristic emission intensity increasing with sodium standards forms the calibration curve.",
+        "An unknown above the top standard should be diluted before quantification."
+      ],
+      "source": {"label": "Confirmed TUMS Cell & Molecules practical curriculum", "detail": "Flame-photometry block; standard clinical chemistry principles."}
+    },
+    {
+      "id": "bio-practical-osmosis",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Osmosis practical",
+      "title": "Osmosis practical: predict water movement from effective osmoles",
+      "subtitle": "Separate osmolarity, tonicity, permeability, and final cell volume",
+      "kind": "mechanism",
+      "topicPatterns": ["Osmosis practical"],
+      "questionPatterns": ["osmosis", "osmose", "dialysis bag", "semipermeable membrane", "tonicity", "osmolarity", "hemolysis", "crenation", "nonpenetrating solute"],
+      "visual": {
+        "type": "comparison",
+        "caption": "Water moves toward the side with greater effective concentration of nonpenetrating solute.",
+        "items": [
+          {"label": "Hypotonic outside", "detail": "Water enters cells; animal cells swell and may lyse.", "cue": "Outside dilute -> cell swells"},
+          {"label": "Isotonic outside", "detail": "Effective osmotic forces balance and cell volume remains stable.", "cue": "No sustained volume change"},
+          {"label": "Hypertonic outside", "detail": "Water leaves cells, causing shrinkage or RBC crenation.", "cue": "Outside concentrated -> cell shrinks"},
+          {"label": "Penetrating solute", "detail": "A solution may be isosmotic initially yet hypotonic after the solute enters and water follows.", "cue": "Tonicity depends on permeability"},
+          {"label": "Dialysis setup", "detail": "Small permeant solutes cross the membrane; retained macromolecules create sustained osmotic effects.", "cue": "Membrane selectivity decides outcome"}
+        ]
+      },
+      "essentials": [
+        "Osmolarity counts all dissolved particles; tonicity predicts final cell volume from effective nonpenetrating solutes.",
+        "Water crosses toward higher effective osmotic pressure until balanced by opposing forces.",
+        "RBC hemolysis indicates excessive water entry; crenation indicates water loss.",
+        "Urea can make a solution initially isosmotic but is ineffective for sustained tonicity because it penetrates many cell membranes.",
+        "Mass change of a dialysis bag reflects net water movement plus any permeant-solute movement."
+      ],
+      "traps": [
+        {"wrong": "Isosmotic and isotonic always mean the same thing.", "right": "A penetrating solute contributes to measured osmolarity but not sustained tonicity."},
+        {"wrong": "Water moves toward the lower solute concentration.", "right": "Across a water-permeable membrane, water moves toward the side with more effective nonpenetrating solute."}
+      ],
+      "recognition": [
+        "Swollen or lysed RBCs indicate a hypotonic external solution.",
+        "Crenated RBCs indicate a hypertonic external solution.",
+        "A dialysis bag gaining mass contains the greater effective concentration of retained solute."
+      ],
+      "source": {"label": "Guyton and Hall + confirmed TUMS practical curriculum", "detail": "Membrane transport and osmosis principles applied to the Cell & Molecules practical."}
+    }
+  ]
+}

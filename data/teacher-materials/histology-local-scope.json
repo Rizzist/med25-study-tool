@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-07-21",
+  "timezone": "America/Toronto",
+  "purpose": "Classify two local TUMS histology decks and map their teacher-specific content to current question-bank coverage and gaps.",
+  "sources": [
+    {
+      "filename": "INTRODUCTION.pptx",
+      "path": "~/Downloads/INTRODUCTION.pptx",
+      "sizeBytes": 5871546,
+      "sha256": "910fe8965daf9d0fde49f409de2aff78d625e24a0aef6b9c4d9029992918e48e",
+      "format": "pptx",
+      "slideCount": 24,
+      "classification": "histology-methods-and-stains",
+      "instructorEvidence": "Slide 1 identifies Dr Tayebeh Rastegar, Anatomy Department, TUMS.",
+      "referenceEvidence": "Slide 24 cites Junqueira's Basic Histology (2019), Chapter 1.",
+      "scope": [
+        {"slides": [1, 5], "topics": ["histology", "cells", "tissues", "organs"]},
+        {"slides": [7, 13], "topics": ["fixation", "dehydration", "clearing", "infiltration", "embedding", "microtome sectioning"]},
+        {"slides": [14, 16], "topics": ["H&E", "special stains", "stain target and color table"]},
+        {"slides": [17, 20], "topics": ["light microscopy", "fluorescence", "polarization", "confocal microscopy", "electron microscopy"]},
+        {"slides": [21, 22], "topics": ["autoradiography", "cell/tissue culture", "immunohistochemistry", "enzyme histochemistry"]}
+      ],
+      "stainTable": [
+        {"stain": "Hematoxylin", "teacherTargets": ["nucleic acids", "nucleus", "ER"], "teacherColors": ["blue", "blue-black"]},
+        {"stain": "Eosin", "teacherTargets": ["cytoplasmic proteins", "collagen", "eosinophilic material"], "teacherColors": ["pink", "orange-red"]},
+        {"stain": "Toluidine blue", "teacherTargets": ["general/basic dye", "mast-cell granules"], "teacherColors": ["blue", "purple metachromasia"]},
+        {"stain": "Masson's trichrome", "teacherTargets": ["connective tissue", "collagen", "cartilage", "muscle"], "teacherColors": ["collagen/cartilage blue-green", "muscle red"]},
+        {"stain": "Mallory's trichrome", "teacherTargets": ["connective tissue", "collagen", "cartilage", "bone", "muscle", "keratin"], "teacherColors": ["collagen/cartilage/bone deep blue", "muscle red", "keratin orange"]},
+        {"stain": "Weigert's elastic stain", "teacherTargets": ["elastic fibers"], "teacherColors": ["blue-black"]},
+        {"stain": "Heidenhain's AZAN", "teacherTargets": ["cells versus extracellular components", "collagen", "cartilage", "bone", "muscle"], "teacherColors": ["collagen/cartilage/bone blue", "muscle red"]},
+        {"stain": "Silver stain", "teacherTargets": ["reticular fibers", "nerve fibers", "fungi"], "teacherColors": ["brown-black", "black"]},
+        {"stain": "Wright's stain", "teacherTargets": ["blood cells", "leukocyte granules", "RBC", "platelets"], "teacherColors": ["differential Romanowsky colors"]},
+        {"stain": "Orcein", "teacherTargets": ["elastic fibers", "mast-cell/smooth-muscle contrasts as presented"], "teacherColors": ["dark brown elastic fibers"]},
+        {"stain": "PAS", "teacherTargets": ["basement membrane", "glycogen and carbohydrates"], "teacherColors": ["magenta"]}
+      ],
+      "teacherTableCaveat": "Preserve teacher-specific associations in source-tagged questions, but cross-check compressed or ambiguous columns against Junqueira before generalizing."
+    },
+    {
+      "filename": "lecture 1 .pptx",
+      "path": "~/Downloads/lecture 1 .pptx",
+      "sizeBytes": 25982985,
+      "sha256": "f656303af5e9adefc9892c823449dc5317e6a9f640b5a86e77d592486eb9a190",
+      "format": "pptx",
+      "slideCount": 111,
+      "classification": "histology-cell-biology",
+      "instructorEvidence": "Slide 1 identifies Dr Tayebeh Rastegar, Anatomy Department, TUMS.",
+      "referenceEvidence": "Slide 111 cites Junqueira's Basic Histology (2019), Chapter 3.",
+      "scope": [
+        {"slides": [1, 18], "topics": ["cell types and differentiation", "membrane components", "asymmetry", "cholesterol", "glycocalyx", "fluid mosaic", "lipid rafts"]},
+        {"slides": [19, 31], "topics": ["passive and active transport", "phagocytosis", "pinocytosis", "transcytosis", "clathrin", "caveolin", "exocytosis", "trafficking"]},
+        {"slides": [32, 43], "topics": ["endocrine", "paracrine", "juxtacrine", "autocrine", "synaptic signaling", "receptors"]},
+        {"slides": [44, 74], "topics": ["ribosomes", "RER", "SER", "Golgi", "vesicles", "mitochondria", "lysosomes", "proteasomes", "peroxisomes"]},
+        {"slides": [75, 89], "topics": ["microfilaments", "intermediate filaments", "microtubules", "kinesin", "dynein", "centrioles", "cilia", "flagella", "inclusions"]},
+        {"slides": [90, 110], "topics": ["nuclear envelope and pore", "chromatin", "nucleosome", "nucleolus", "cell cycle", "cyclins/CDKs", "apoptosis", "necrosis", "mitosis", "meiosis"]}
+      ]
+    }
+  ],
+  "bankAudit": {
+    "histologyQuestionCount": 399,
+    "files": [
+      {"filename": "histology-existing.jsonl", "count": 230},
+      {"filename": "histology-junqueira-assess.jsonl", "count": 130},
+      {"filename": "histology-stains.jsonl", "count": 24},
+      {"filename": "image-spotters.jsonl", "count": 15}
+    ],
+    "strongCoverage": [
+      {"area": "Junqueira Chapter 1 methods", "count": 10, "examples": ["processing order", "ionic staining", "light/EM resolution", "PAS", "autoradiography", "immunolocalization", "in-situ hybridization", "cryostat"]},
+      {"area": "Dedicated stain questions", "count": 24, "examples": ["H&E", "PAS/diastase", "orcein", "silver/reticulin", "methylene blue", "toluidine blue", "Wright-Giemsa", "Oil Red O", "osmium", "Feulgen", "Alcian blue", "Prussian blue", "Congo red", "Masson trichrome", "Nissl", "Luxol fast blue", "IHC/ISH", "enzyme histochemistry"]},
+      {"area": "Junqueira Chapter 2 cell/cytoplasm", "count": 10, "examples": ["membrane ultrastructure", "organelles", "exocytosis", "microtubule polarity", "signal peptides", "Golgi targeting", "proteostasis", "LDL endocytosis", "keratin disease"]},
+      {"area": "Junqueira Chapter 3 nucleus/cycle", "count": 10, "examples": ["nuclear envelope", "nuclear import", "chromatin", "meiosis", "cyclin control", "apoptosis/necrosis"]},
+      {"area": "Technique-specific image spotters", "count": 2, "examples": ["PAS small intestine", "silver reticular fibers"]}
+    ],
+    "gaps": [
+      {"area": "stain-table-specific", "items": ["Mallory trichrome", "Weigert elastic", "Heidenhain AZAN", "full Masson/Wright/orcein color comparisons", "silver for nerves and fungi", "euchromatin versus heterochromatin in H&E"]},
+      {"area": "processing-and-microscopy", "items": ["all fixation aims", "complete processing sequence", "fluorescence versus confocal versus polarized versus EM"]},
+      {"area": "membrane-and-transport", "items": ["membrane asymmetry", "cholesterol/fluidity", "glycocalyx", "fluid-mosaic evidence", "lipid rafts", "transcytosis", "clathrin versus caveolin"]},
+      {"area": "cell-signaling", "items": ["endocrine", "paracrine", "autocrine", "juxtacrine", "synaptic", "receptor categories"]},
+      {"area": "organelles", "items": ["RER versus SER", "Golgi cis versus trans", "mitochondrial outer versus inner membrane", "lysosome versus proteasome versus peroxisome", "P450 detoxification"]},
+      {"area": "cytoskeleton-and-inclusions", "items": ["filament dimensions/subunits/functions", "kinesin versus dynein", "MTOC and centrioles", "cilia/flagella", "glycogen/lipid/lipofuscin/melanin/hemosiderin"]},
+      {"area": "nucleus-cycle-death", "items": ["nuclear pore architecture", "nucleolus and rRNA", "chromatin state", "teacher mitosis/meiosis summary"]},
+      {"area": "image-recognition", "items": ["H&E", "toluidine blue", "trichromes", "Wright", "orcein", "microscope modality", "plasma membrane", "RER/SER", "Golgi", "mitochondria", "lysosome/peroxisome", "centriole/cilium", "nuclear pore", "nucleolus"]}
+    ]
+  },
+  "recommendedAdditiveMcqAllocation": {
+    "total": 64,
+    "blocks": [
+      {"topic": "Teacher stain-table distinctions", "count": 14},
+      {"topic": "Processing and microscope comparisons", "count": 8},
+      {"topic": "Membrane composition and transport", "count": 8},
+      {"topic": "Cell signaling", "count": 6},
+      {"topic": "Organelles and trafficking", "count": 12},
+      {"topic": "Cytoskeleton and inclusions", "count": 8},
+      {"topic": "Nucleus, cycle and cell death", "count": 8}
+    ],
+    "minimumImageOrDiagramQuestions": 18,
+    "deduplicationRequirement": "Run semantic duplicate detection against all 399 existing histology questions before import.",
+    "sourceMetadataRequirement": "Retain teacher filename and exact slide number for every new item."
+  },
+  "deduplication": {
+    "byteDuplicate": false,
+    "notes": [
+      "INTRODUCTION.pptx is histology and must not be merged with the biochemistry file INTRODUCTION.ppt.",
+      "The decks overlap Junqueira Chapters 1-3 conceptually but are not file duplicates of the current bank or textbook."
+    ]
+  }
+}

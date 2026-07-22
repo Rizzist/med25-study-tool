@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-07-21",
+  "classification": "Embryology teacher scope",
+  "sources": [
+    {
+      "filename": "Presentation2.pptx",
+      "path": "data/teacher-materials/telegram/Presentation2.pptx",
+      "sizeBytes": 9607123,
+      "sha256": "b5b76b8ea9835a5cb3c977c1d147a9ca1ab6a2ec2adb1e87faf340c3cbaaa617",
+      "unit": "slides",
+      "count": 14,
+      "ranges": [
+        {"from": 1, "to": 4, "topic": "second-week disc and primitive-streak drawings"},
+        {"from": 5, "to": 5, "topic": "somite and mesoderm drawing"},
+        {"from": 6, "to": 6, "topic": "empty slide"},
+        {"from": 7, "to": 7, "topic": "somite and mesoderm drawing"},
+        {"from": 8, "to": 14, "topic": "empty slides"}
+      ],
+      "gapQuestions": 0,
+      "notes": "Rendered ink content reinforces existing second/third-week coverage."
+    },
+    {
+      "filename": "FORMATION OF TRILAMINAR EMBRYO.ppt",
+      "path": "data/teacher-materials/telegram/FORMATION OF TRILAMINAR EMBRYO.ppt",
+      "sizeBytes": 14367744,
+      "sha256": "b47010dd81e84cf70b3f2ba0c0100fb568667b1f96fbf3a514f25443a12d6330",
+      "unit": "slides",
+      "count": 46,
+      "ranges": [
+        {"from": 1, "to": 15, "topic": "gastrulation and primitive streak"},
+        {"from": 16, "to": 25, "topic": "notochord and mesoderm organization"},
+        {"from": 26, "to": 35, "topic": "neurulation, neural crest and somites"},
+        {"from": 36, "to": 38, "topic": "intraembryonic coelom"},
+        {"from": 39, "to": 45, "topic": "angiogenesis and early cardiovascular development"},
+        {"from": 46, "to": 46, "topic": "teacher quiz"}
+      ],
+      "gapQuestions": 7
+    },
+    {
+      "filename": "Embryology  of respiratory system E1.pptx",
+      "path": "data/teacher-materials/telegram/Embryology  of respiratory system E1.pptx",
+      "sizeBytes": 36241843,
+      "sha256": "ed7c6a0cc0ee72c3916c4c40f8839e578544b3ff0e85af01d1466a5a94d19d08",
+      "unit": "slides",
+      "count": 19,
+      "ranges": [
+        {"from": 3, "to": 6, "topic": "lung bud, induction, mesenchyme and foregut partition"},
+        {"from": 7, "to": 10, "topic": "TEF, esophageal atresia, VACTERL and clinical features"},
+        {"from": 11, "to": 13, "topic": "laryngeal and pharyngeal figures"},
+        {"from": 14, "to": 17, "topic": "airway branching and thoracic-cavity partitioning"}
+      ],
+      "gapQuestions": 7,
+      "imageQuestions": 2
+    },
+    {
+      "filename": "Embryology  of respiratory system E2.pptx",
+      "path": "data/teacher-materials/telegram/Embryology  of respiratory system E2.pptx",
+      "sizeBytes": 38795602,
+      "sha256": "a1e1400d156c54a1d5722e0a38f061c765256a4268e4d242a4721325c76e0843",
+      "unit": "slides",
+      "count": 15,
+      "ranges": [
+        {"from": 4, "to": 7, "topic": "branching morphogenesis and lung maturation phases"},
+        {"from": 8, "to": 10, "topic": "surfactant and neonatal respiratory distress syndrome"},
+        {"from": 11, "to": 12, "topic": "congenital pulmonary abnormalities"},
+        {"from": 13, "to": 13, "topic": "fetal breathing, fluid clearance and birth transition"}
+      ],
+      "gapQuestions": 14,
+      "imageQuestions": 1
+    }
+  ],
+  "bankAction": {
+    "preserveExistingQuestions": true,
+    "addedQuestions": 28,
+    "textQuestions": 25,
+    "imageQuestions": 3,
+    "generalEmbryologyQuestions": 7,
+    "respiratoryDevelopmentQuestions": 21,
+    "answerBalance": {"A": 7, "B": 7, "C": 7, "D": 7},
+    "questionFile": "data/bank/questions/embryology-telegram-teacher-gaps.jsonl",
+    "assetDirectory": "public/study/embryology/telegram"
+  }
+}

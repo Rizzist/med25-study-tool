@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-07-21",
+  "timezone": "America/Toronto",
+  "examDate": "2026-07-25",
+  "classification": "confirmed-first-semester-cell-and-molecules-biochemistry",
+  "source": "Signed-in target TUMS Telegram group",
+  "includedSourceCount": 11,
+  "includedPageSlideTotal": 565,
+  "includedSources": [
+    {"filename": "Lipid structure Esmaeili.pdf", "format": "pdf", "pageCount": 96, "sha256": "b0def1d5e0fc8dcdeec41af2805ccb083e98691710b5e23bc5e3b216512397e3", "topics": ["fatty acids", "lipid classes", "phospholipids", "sphingolipids", "lipoproteins"]},
+    {"filename": "Amino acids and Proteins.Part1.pdf", "format": "pdf", "pageCount": 50, "sha256": "fe5690b2548dd0c5e2beaa715cb0399a3a604441521bda86706e1249d1a396fd", "topics": ["amino acids", "ionization", "protein structure", "denaturation"]},
+    {"filename": "Enzyme Kinetics and regulation- Session2 2024.pptx", "format": "pptx", "slideCount": 45, "sha256": "f414a483e89ae417f849d449aec41c3de433d8858a7522b864d834c1cbf0f867", "topics": ["Michaelis-Menten", "enzyme inhibition", "allostery", "enzyme regulation"]},
+    {"filename": "Deoxyribonucleic Acid(DNA)Structure (2).pdf", "format": "pdf", "pageCount": 46, "sha256": "a8383397b64c3b62fcbec30cd1bf50b4d92be7ce55823faf387213834eef9f33", "topics": ["nucleotides", "DNA structure", "DNA conformations", "chromatin"]},
+    {"filename": "Deoxyribonucleic Acid(DNA Replication (1).pptx", "format": "pptx", "slideCount": 76, "sha256": "2eccb7edf3bf479cb904a8b04bdcf48843e01acf7decefc43cfe36f3cccfb464", "topics": ["DNA replication", "polymerases", "proofreading", "termination", "telomeres"]},
+    {"filename": "Regulation of Gene Expression 2025.pptx", "format": "pptx", "slideCount": 44, "sha256": "6bc0722f94247e4553da29a56af7808f46685560253eed27d1c7051e94950b81", "topics": ["lac operon", "trp operon", "eukaryotic gene regulation"]},
+    {"filename": "Transcription 2025.pptx", "format": "pptx", "slideCount": 74, "sha256": "9deac7cb0e88d2019866473dab217519c3503b1e6188abcb55d3b22edf76ed8f", "topics": ["RNA", "prokaryotic transcription", "eukaryotic transcription", "inhibitors"]},
+    {"filename": "Translation 2025.pptx", "format": "pptx", "slideCount": 57, "sha256": "3eba3c46cfa061b0dcfd3c526fc8115a51cea6d1dbdeb4b0b2f8725fd8b0574a", "topics": ["genetic code", "ribosome", "translation", "antibiotics and toxins"]},
+    {"filename": "Carbohydrate Qualification Test Esmaeili Jan 2026.pdf", "format": "pdf", "pageCount": 21, "sha256": "b3a976bd8c9eb68a5ebb6b2e16fccf521272d7545584444a4d406519f75082c4", "topics": ["Molisch", "iodine", "Benedict", "Barfoed", "Seliwanoff"]},
+    {"filename": "Laboratory Equipment Esmaeili Jan 2026.pdf", "format": "pdf", "pageCount": 46, "sha256": "4d59a73deb958362fc52ce88fc731d86bbc3d7cbb92ed127975bf445895ff2ab", "topics": ["laboratory equipment", "measurement", "safety"]},
+    {"filename": "Titration Esmaeili Jan 2026.pdf", "format": "pdf", "pageCount": 10, "sha256": "e163d320a62ac89fc0ab4407121630ca69d7acad07e35707052b1634cd8edb39", "topics": ["acid-base titration", "phenolphthalein endpoint", "normality calculation"]}
+  ],
+  "provisionalExcludedSources": [
+    {
+      "filename": "carbohydrate metabolism MD Kish.pdf",
+      "format": "pdf",
+      "pageCount": 103,
+      "sha256": "9651a116d037915e2162e6dba02e087a170c10e111e61ad1e80ca426ca75a472",
+      "reason": "Likely later metabolism block; excluded from first-semester bank pending explicit teacher confirmation."
+    }
+  ],
+  "questionBank": {
+    "filename": "biochemistry-telegram-teacher-gaps.jsonl",
+    "newQuestions": 165,
+    "textQuestions": 151,
+    "imageQuestions": 14,
+    "combinedBiochemistryQuestions": 285,
+    "answerBalance": {"A": 42, "B": 41, "C": 41, "D": 41},
+    "sha256": "084b1269307fd2ce41e049d12fb5104c90df41e6a640d920339da6b92e145ae1"
+  }
+}

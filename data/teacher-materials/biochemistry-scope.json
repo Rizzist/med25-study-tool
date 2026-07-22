@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-07-21",
+  "timezone": "America/Toronto",
+  "purpose": "Classify local first-semester biochemistry sources and recommend a teacher-weighted MCQ allocation without modifying source files.",
+  "exam": {
+    "date": "2026-07-25",
+    "scopeConfidence": "medium-high",
+    "caveat": "The files are TUMS clinical-biochemistry course material and match the student's recalled first-semester biochemistry, but exact Telegram/timetable linkage to this sitting was not available in this audit lane."
+  },
+  "sourcePriority": [
+    "teacher-course-file",
+    "teacher-provided-reference",
+    "local-textbook-crosscheck"
+  ],
+  "primarySources": [
+    {
+      "filename": "INTRODUCTION.ppt",
+      "path": "~/Downloads/INTRODUCTION.ppt",
+      "sizeBytes": 4695552,
+      "sha256": "730b7f2a58852924c461599bc8ec92634aa4400837b3694adcced0c084ae35c2",
+      "kind": "teacher-course-file",
+      "format": "ppt",
+      "slideCount": 32,
+      "classification": "biochemistry",
+      "instructorEvidence": "Slide 2 identifies Solaleh Emamgholipour, Department of Clinical Biochemistry, TUMS.",
+      "evidence": [
+        {"slides": [3], "topics": ["course outline"]},
+        {"slides": [4, 6], "topics": ["definition and medical relevance of biochemistry"]},
+        {"slides": [9, 13], "topics": ["CHNOPS", "cells", "biomolecule classes", "central dogma"]},
+        {"slides": [16, 19], "topics": ["anabolism", "catabolism", "ATP"]},
+        {"slides": [20, 31], "topics": ["functional groups", "ionic and covalent bonds", "polarity", "disulfide bonds", "hydrogen bonds", "hydrophobic interactions"]}
+      ],
+      "courseScopeConfidence": "high",
+      "july25InclusionConfidence": "medium-high"
+    },
+    {
+      "filename": "Water and Buffer 1404.ppt",
+      "path": "~/Downloads/Water and Buffer 1404.ppt",
+      "sizeBytes": 2527744,
+      "sha256": "f9bcc75e5ff1a39a353bd25cc616961f5e5ae2962415e2cf25c0c63253c58574",
+      "kind": "teacher-course-file",
+      "format": "ppt",
+      "slideCount": 38,
+      "classification": "biochemistry",
+      "instructorEvidence": "Slide 2 identifies Solaleh Emamgholipour, Department of Clinical Biochemistry, TUMS.",
+      "evidence": [
+        {"slides": [3], "topics": ["water", "pH", "Ka", "titration", "Henderson-Hasselbalch", "buffers"]},
+        {"slides": [4, 8], "topics": ["water properties", "ICF/ECF/transcellular fluid", "hydrophilic/hydrophobic/amphipathic molecules"]},
+        {"slides": [9, 15], "topics": ["pH/pOH calculations", "acid-base classification", "acidosis", "alkalosis"]},
+        {"slides": [17, 20], "topics": ["conjugate pairs", "Ka", "pKa"]},
+        {"slides": [22, 28], "topics": ["titration curves", "Henderson-Hasselbalch", "buffer range and capacity"]},
+        {"slides": [29, 35], "topics": ["phosphate", "bicarbonate", "protein and hemoglobin buffers"]},
+        {"slides": [37, 38], "topics": ["teacher-provided MCQs"]}
+      ],
+      "courseScopeConfidence": "high",
+      "july25InclusionConfidence": "high-relative-priority"
+    },
+    {
+      "filename": "Vitamin 2024.pdf",
+      "path": "~/Downloads/Vitamin 2024.pdf",
+      "sizeBytes": 4465492,
+      "sha256": "e067cc71fb1347091bccdf62bb402ac6802a6568b2db3eb3408a9e193bbe72d7",
+      "kind": "teacher-course-file",
+      "format": "pdf-slide-deck",
+      "pageCount": 70,
+      "classification": "biochemistry",
+      "instructorEvidence": "Page 2 identifies Shadi Seyyed Ebrahimi, Department of Clinical Biochemistry, TUMS.",
+      "evidence": [
+        {"pages": [4, 12], "topics": ["vitamin definition", "cofactors/coenzymes/prosthetic groups", "water/fat soluble classification"]},
+        {"pages": [13, 45], "topics": ["B1", "B2", "B3", "B5", "B6", "biotin", "folate", "B12", "vitamin C"]},
+        {"pages": [46, 70], "topics": ["vitamins A", "D", "E", "K", "absorption", "storage", "deficiency", "toxicity"]},
+        {"pages": [34, 34], "topics": ["folate pathway diagram"]},
+        {"pages": [37, 39], "topics": ["B12 metabolism and absorption"]},
+        {"pages": [51, 53], "topics": ["vitamin A transport and vision"]},
+        {"pages": [58, 60], "topics": ["vitamin D synthesis and activation"]},
+        {"pages": [66, 68], "topics": ["vitamin K and gamma-carboxylation"]}
+      ],
+      "visualInspection": {"status": "passed", "pagesRendered": [4, 34, 59, 68]},
+      "courseScopeConfidence": "high",
+      "july25InclusionConfidence": "high-relative-priority"
+    }
+  ],
+  "referenceSources": [
+    {
+      "filename": "Refrence for session ۱-Water and Buffer.pdf",
+      "path": "~/Downloads/Refrence for session ۱-Water and Buffer.pdf",
+      "sizeBytes": 13112266,
+      "sha256": "706779fa0048612cb2a53ffeda4d0e5dc84f9e69d83be0543e19761efbeea2e6",
+      "kind": "teacher-provided-reference",
+      "pageCount": 8,
+      "printedPageRange": "21-28",
+      "classification": "biochemistry-reference",
+      "titleEvidence": "Reference page 1: Chapter 2, Water, Acids, Bases, and Buffers, from Marks' Essentials of Medical Biochemistry.",
+      "overlapWith": "Water and Buffer 1404.ppt",
+      "deduplication": "Conceptual overlap, not a byte/file duplicate.",
+      "additionsBeyondSlides": ["osmolality and water movement", "clinical ketoacidosis and aspirin cases", "clinical bicarbonate equation", "RBC/chloride-shift buffering", "urinary acid excretion"],
+      "visualInspection": {"status": "passed", "pagesRendered": [1, 2, 3, 4, 5, 6, 7, 8]}
+    },
+    {
+      "filename": "Biochemistry [Lippincott's Illustrated Reviews Series] Denise R. Ferrier PhD.pdf",
+      "path": "~/Documents/MED SCHOOL BOOKS/Biochemistry [Lippincott's Illustrated Reviews Series] Denise R. Ferrier PhD.pdf",
+      "sizeBytes": 23811942,
+      "sha256": "5e2b71105e7cc9915ba2204070ad8521cfb98a46a83711296391be604840a0b4",
+      "kind": "local-textbook-crosscheck",
+      "pageCount": 1108,
+      "classification": "biochemistry-textbook",
+      "edition": "6th edition, 2014",
+      "relevantRanges": [
+        {"pdfPages": [18, 21], "topics": ["acid/base properties", "Henderson-Hasselbalch", "buffers", "titration"]},
+        {"pdfPages": [681, 720], "chapter": "Chapter 28: Vitamins"}
+      ],
+      "deduplication": "Not a duplicate; use for verification and explanations, not to broaden teacher-defined scope."
+    }
+  ],
+  "classifiedOut": [
+    {
+      "filename": "INTRODUCTION.pptx",
+      "path": "~/Downloads/INTRODUCTION.pptx",
+      "sizeBytes": 5871546,
+      "sha256": "910fe8965daf9d0fde49f409de2aff78d625e24a0aef6b9c4d9029992918e48e",
+      "slideCount": 24,
+      "classification": "histology",
+      "evidence": "Slide 1 identifies Dr Tayebeh Rastegar's Introduction of Histology; slide 16 is a stain table; slide 24 cites Junqueira Chapter 1.",
+      "routing": "histology-local-scope.json"
+    },
+    {
+      "filename": "lecture 1 .pptx",
+      "path": "~/Downloads/lecture 1 .pptx",
+      "sizeBytes": 25982985,
+      "sha256": "f656303af5e9adefc9892c823449dc5317e6a9f640b5a86e77d592486eb9a190",
+      "slideCount": 111,
+      "classification": "histology-cell-biology",
+      "evidence": "Slide 1 identifies Dr Tayebeh Rastegar's CELL lecture; slide 111 cites Junqueira Chapter 3.",
+      "routing": "histology-local-scope.json"
+    },
+    {
+      "filename": "5_6075899438319016897.pptx",
+      "path": "~/Downloads/5_6075899438319016897.pptx",
+      "sizeBytes": 1219217,
+      "sha256": "52834b801ba10d87e845ab910c05ccfad7d0c78c4cc5cb26a303f28f18601b26",
+      "slideCount": 26,
+      "classification": "medical-mycology",
+      "evidence": "Slide 1: Subcutaneous mycoses; slide 2: Sporotrichosis objectives."
+    },
+    {
+      "filename": "5_6235392907122057387.pptx",
+      "path": "~/Downloads/5_6235392907122057387.pptx",
+      "sizeBytes": 1606232,
+      "sha256": "6f05b514779da47adf1668e8c77511164e21a09dc2d6136ca5c63995153da07b",
+      "slideCount": 43,
+      "classification": "medical-mycology",
+      "evidence": "Slide 1: The Most Common Saprophytic Fungi; slides 6-42 cover common genera."
+    },
+    {
+      "filename": "5_6235392907122057386.ppt",
+      "path": "~/Downloads/5_6235392907122057386.ppt",
+      "sizeBytes": 2066432,
+      "sha256": "762e958506ea7a2244f6be5a13f9956a46bb181cdccc700848f6f8c7ef963681",
+      "slideCount": 20,
+      "classification": "medical-mycology",
+      "evidence": "Slide 1: Introduction to Medical Mycology; slides 2-16 cover fungal morphology, lifecycle and mycoses."
+    }
+  ],
+  "deduplication": {
+    "byteIdenticalGroups": [],
+    "notes": [
+      "All audited SHA-256 hashes are distinct.",
+      "INTRODUCTION.ppt and INTRODUCTION.pptx share a basename but are different subjects and must not be collapsed.",
+      "The water/buffer reference overlaps the teacher deck conceptually; Lippincott Chapter 28 overlaps the vitamin deck conceptually."
+    ]
+  },
+  "recommendedMcqAllocation": {
+    "total": 120,
+    "blocks": [
+      {"topic": "Biochemistry overview, biomolecule classes, central dogma", "count": 10},
+      {"topic": "Anabolism/catabolism, ATP, functional groups and bonds", "count": 14},
+      {"topic": "Water properties and body-fluid compartments", "count": 10},
+      {"topic": "pH/pOH, strong/weak acids, Ka/pKa", "count": 16},
+      {"topic": "Titration, Henderson-Hasselbalch and buffer capacity", "count": 16},
+      {"topic": "Physiological buffers and clinical acid-base cases", "count": 10},
+      {"topic": "Water-soluble vitamins", "count": 26},
+      {"topic": "Fat-soluble vitamins", "count": 18}
+    ],
+    "formatsWithinTotal": {"figureOrPathway": 16, "numericalOrGraph": 14},
+    "priorityOrder": ["water/buffer calculations and teacher MCQs", "vitamin active forms and deficiency/toxicity", "functional groups and bonds", "reference-only clinical extensions"]
+  }
+}

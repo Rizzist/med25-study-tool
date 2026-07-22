@@ -1,0 +1,741 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "emb-signaling-map",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Molecular regulation and signaling",
+      "title": "How developmental instructions become cell fate",
+      "subtitle": "Gene control, signal range, morphogens, and cell-matrix communication",
+      "kind": "mechanism",
+      "topicPatterns": ["Molecular regulation and signaling", "Embryonic period and germ-layer derivatives"],
+      "questionPatterns": ["human genome", "one gene-one protein", "alternative splicing", "transcription factor", "tata box", "promoter region", "enhancers", "linker dna", "nucleosome", "chromatin", "dna methylation", "histone modification", "transcribed in which direction", "paracrine", "juxtacrine", "bmp", "shh", "gli", "cholesterol attached", "notch", "jag1", "notch2", "pcp", "vangl", "convergent extension", "integrins", "epithelial-mesenchymal interaction", "noggin", "chordin", "follistatin"],
+      "visual": {
+        "type": "map",
+        "caption": "Developmental control runs from accessible DNA to a tissue-specific signal and a transcriptional response.",
+        "items": [
+          {"label": "DNA access", "detail": "Euchromatin is open and active; heterochromatin is condensed and inactive. Promoter methylation usually represses transcription. A nucleosome is DNA around a histone octamer; linker DNA joins nucleosomes.", "cue": "Open chromatin can be read"},
+          {"label": "Gene output", "detail": "Promoters/TATA recruit transcription machinery, while distant enhancers specify tissue and timing. Transcription factors combine DNA-binding and transactivation domains; alternative splicing gives one gene several protein isoforms.", "cue": "Promoter starts; enhancer specifies"},
+          {"label": "Paracrine", "detail": "A secreted factor diffuses locally. Major developmental families are FGF, WNT, Hedgehog, and TGF-beta/BMP.", "cue": "Nearby cells, secreted ligand"},
+          {"label": "Juxtacrine", "detail": "Membrane-bound ligand on one cell contacts a receptor on its neighbor. NOTCH receptors bind ligands such as JAGGED or DELTA.", "cue": "Cells must touch"},
+          {"label": "SHH pathway", "detail": "SHH binding relieves PTCH inhibition of SMO; GLI transcription factors execute the response. Cholesterol modification helps distribution and potency.", "cue": "SHH -> PTCH/SMO -> GLI"},
+          {"label": "WNT pathways", "detail": "Canonical WNT stabilizes beta-catenin. Noncanonical planar-cell-polarity signaling controls coordinated cell movement and convergent extension.", "cue": "PCP = movement and polarity"},
+          {"label": "BMP balance", "detail": "High BMP promotes epidermal and ventral fates. Organizer factors noggin, chordin, and follistatin block BMP to permit neural and dorsal development.", "cue": "Block BMP -> neural"},
+          {"label": "Cell-matrix signal", "detail": "Integrins connect extracellular matrix to the cytoskeleton and transmit signals that regulate migration, survival, and differentiation.", "cue": "Integrin = ECM bridge"}
+        ]
+      },
+      "essentials": [
+        "Epigenetic regulation changes expression without changing DNA sequence; euchromatin is active and promoter methylation is usually repressive.",
+        "Promoters initiate transcription, enhancers specify its context, and alternative splicing greatly expands protein output from roughly 23,000 genes.",
+        "RNA is synthesized 5'-to-3'; transcription factors have both DNA-binding and regulatory activation domains.",
+        "A morphogen specifies different fates at different concentrations; paracrine signals diffuse locally while juxtacrine signaling requires contact.",
+        "SHH signals through PTCH/SMO to GLI; noncanonical WNT/PCP controls convergent extension.",
+        "BMP inhibition by noggin, chordin, and follistatin permits neural/dorsal fates; reciprocal epithelial-mesenchymal signaling patterns organs."
+      ],
+      "traps": [
+        {"wrong": "Heterochromatin and promoter methylation activate a gene.", "right": "Open euchromatin favors transcription, while promoter methylation usually represses it."},
+        {"wrong": "NOTCH is a diffusible paracrine factor and full BMP induces neural ectoderm.", "right": "NOTCH is contact-dependent; BMP inhibition permits neural induction."},
+        {"wrong": "Canonical beta-catenin signaling drives convergent extension.", "right": "Convergent extension is primarily controlled by noncanonical WNT/PCP signaling."}
+      ],
+      "recognition": [
+        "A beads-on-a-string diagram shows nucleosomes; promoter/TATA lies near the start site while enhancers may be distant.",
+        "Touching membrane ligand-receptor pairs indicate juxtacrine signaling; a graded field producing several fates indicates a morphogen."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 1 molecular signaling framework and Chapters 5-6 applications"}
+    },
+    {
+      "id": "emb-meiosis-bookkeeping",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Gametogenesis",
+      "title": "Meiosis without the chromosome-count confusion",
+      "subtitle": "Track homologs, chromatids, n, and C through both divisions",
+      "kind": "timeline",
+      "topicPatterns": ["Gametogenesis", "Gametogenesis and first week", "Chromosomal abnormalities"],
+      "questionPatterns": ["diploid, 4c", "2n, 4c", "secondary spermatocyte", "dna content", "meiosis i", "prophase i", "chiasmata", "crossing over", "genetic variability", "homologous chromosomes fail"],
+      "visual": {
+        "type": "timeline",
+        "caption": "n counts chromosome sets; C counts DNA content. DNA replication changes C, not n.",
+        "items": [
+          {"label": "Before S phase", "detail": "A diploid germ cell is 2n, 2C: two homologous sets and one chromatid per chromosome.", "cue": "2n, 2C"},
+          {"label": "Primary cell", "detail": "After DNA replication, a primary spermatocyte or oocyte is 2n, 4C. Homologs synapse and cross over during prophase I.", "cue": "2n, 4C"},
+          {"label": "After meiosis I", "detail": "Homologs separate. Each secondary spermatocyte or secondary oocyte is haploid but chromosomes remain duplicated.", "cue": "1n, 2C"},
+          {"label": "After meiosis II", "detail": "Sister chromatids separate, producing spermatids or the mature ovum plus polar body.", "cue": "1n, 1C"}
+        ]
+      },
+      "essentials": [
+        "Meiosis I is reductional because homologous chromosomes separate; meiosis II is equational because sister chromatids separate.",
+        "Synapsis and crossing over occur in prophase I and create recombinant chromatids.",
+        "A secondary spermatocyte is the first named haploid male germ cell, but each chromosome still has two chromatids.",
+        "One primary spermatocyte yields four functional sperm; unequal oocyte cytokinesis preserves cytoplasm in one functional ovum.",
+        "Independent assortment plus crossing over produces genetic variability."
+      ],
+      "traps": [
+        {"wrong": "A primary spermatocyte is haploid because its DNA has replicated.", "right": "It remains diploid, 2n, but has doubled DNA content, 4C."},
+        {"wrong": "Sister chromatids separate in meiosis I.", "right": "Homologs separate in meiosis I; sister chromatids separate in meiosis II."},
+        {"wrong": "A secondary spermatocyte is 1n, 1C.", "right": "It is 1n, 2C until meiosis II separates its chromatids."}
+      ],
+      "recognition": [
+        "Paired homologs with a chiasma identify prophase I.",
+        "Two cells with duplicated chromosomes indicate completion of meiosis I, not meiosis II."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 2, Gametogenesis: Conversion of Germ Cells into Male and Female Gametes"},
+      "asset": "/study/embryology/telegram-standalone/meiosis-crossing-over.jpg"
+    },
+    {
+      "id": "emb-oogenesis-ovulation",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Oogenesis and follicular development",
+      "title": "From primordial germ cell to ovulated oocyte",
+      "subtitle": "Arrests, follicle stages, hormones, and the corpus luteum",
+      "kind": "timeline",
+      "topicPatterns": ["Gametogenesis", "Gametogenesis and first week"],
+      "questionPatterns": ["primordial germ cells", "future gonads", "primary oocyte", "primordial follicle", "follicular stage", "antrum", "cumulus oophorus", "first polar body", "normally ovulated", "lh surge", "corpus luteum", "estrogens in the maturing ovarian follicle"],
+      "visual": {
+        "type": "timeline",
+        "caption": "Female meiosis starts before birth, pauses twice, and finishes only if fertilization occurs.",
+        "items": [
+          {"label": "Weeks 4-6", "detail": "Primordial germ cells migrate from the yolk-sac wall near the allantois to the genital ridges.", "cue": "Yolk sac -> gonadal ridge"},
+          {"label": "Before birth", "detail": "Oogonia proliferate; primary oocytes enter meiosis I and arrest in diplotene of prophase I inside primordial follicles.", "cue": "Primary = prophase I pause"},
+          {"label": "Follicle growth", "detail": "Primordial follicle becomes primary, secondary/antral, then mature Graafian follicle. Granulosa becomes cuboidal and proliferates; theca develops outside.", "cue": "Flat -> cuboidal -> antrum"},
+          {"label": "LH surge", "detail": "The primary oocyte completes meiosis I, creating a large secondary oocyte and first polar body. Ovulation releases the secondary oocyte arrested in metaphase II.", "cue": "Ovulated = secondary, MII"},
+          {"label": "After ovulation", "detail": "The ruptured follicle forms the corpus luteum. hCG from syncytiotrophoblast maintains it so progesterone supports the early endometrium.", "cue": "hCG saves corpus luteum"},
+          {"label": "If fertilized", "detail": "Sperm entry triggers completion of meiosis II and extrusion of the second polar body.", "cue": "Fertilization ends MII pause"}
+        ]
+      },
+      "essentials": [
+        "A newborn's primary oocytes are arrested in prophase I; the ovulated secondary oocyte is arrested in metaphase II.",
+        "The earliest follicular growth sign is conversion of flattened follicular cells to cuboidal granulosa cells and oocyte enlargement.",
+        "A mature Graafian follicle has a very large antrum and an eccentric oocyte on the cumulus oophorus.",
+        "Theca interna makes androgens under LH; granulosa aromatizes them to estrogens under FSH.",
+        "The corpus luteum is the initial progesterone source; placental steroid production takes over later."
+      ],
+      "traps": [
+        {"wrong": "A primary oocyte is ovulated in prophase I.", "right": "Ovulation releases a secondary oocyte arrested in metaphase II."},
+        {"wrong": "hCG directly initiates ovulation.", "right": "The LH surge initiates ovulation; hCG maintains the corpus luteum after implantation."},
+        {"wrong": "Primordial germ cells originate in the gonadal ridge.", "right": "They are first recognized near the yolk sac/allantois and migrate to the genital ridges."}
+      ],
+      "recognition": [
+        "Primordial follicle: primary oocyte with one layer of flattened follicular cells.",
+        "Primary follicle: cuboidal granulosa and zona pellucida; antral follicle: fluid-filled spaces; Graafian follicle: huge antrum and cumulus oophorus."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed. + teacher images", "detail": "Chapter 2 and TUMS follicle/oocyte maturation diagrams"},
+      "asset": "/study/embryology/telegram-standalone/oocyte-maturation.jpg"
+    },
+    {
+      "id": "emb-spermatogenesis",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Spermatogenesis and spermiogenesis",
+      "title": "Build a sperm cell from the basement membrane outward",
+      "subtitle": "Lineage, hormonal support, blood-testis barrier, and remodeling",
+      "kind": "process",
+      "topicPatterns": ["Gametogenesis", "Gametogenesis and first week"],
+      "questionPatterns": ["spermatogonia", "primary spermatocytes", "secondary spermatocyte", "blood-testis barrier", "sertoli", "leydig", "acrosome", "spermiogenesis", "teratospermia", "abnormal heads and tails", "poor motility"],
+      "visual": {
+        "type": "flow",
+        "caption": "Cell division produces haploid spermatids; spermiogenesis remodels them without another division.",
+        "items": [
+          {"label": "Type A spermatogonia", "detail": "Stem-cell pool near the basal lamina; mitosis maintains the pool and supplies differentiating cells.", "cue": "A = reserve and renew"},
+          {"label": "Type B spermatogonia", "detail": "Committed cells that differentiate directly into primary spermatocytes.", "cue": "B = before meiosis"},
+          {"label": "Primary -> secondary", "detail": "Primary spermatocytes complete meiosis I to form haploid secondary spermatocytes, which rapidly complete meiosis II.", "cue": "Primary 2n4C -> secondary 1n2C"},
+          {"label": "Spermatids", "detail": "Haploid 1n1C products of meiosis II. They no longer divide.", "cue": "Round and haploid"},
+          {"label": "Spermiogenesis", "detail": "Golgi forms acrosome, nucleus condenses, centriole organizes flagellum, mitochondria wrap the middle piece, and excess cytoplasm is shed.", "cue": "Remodel, no division"},
+          {"label": "Hormonal support", "detail": "LH stimulates Leydig testosterone; FSH acts on Sertoli cells. Sertoli tight junctions form the blood-testis barrier.", "cue": "LH-Leydig; FSH-Sertoli"}
+        ]
+      },
+      "essentials": [
+        "Type B spermatogonia directly give rise to primary spermatocytes.",
+        "Spermatogenesis includes mitosis and meiosis; spermiogenesis is only morphologic differentiation.",
+        "Golgi supplies the acrosomal vesicle; centriole supports the axoneme; mitochondria pack into the middle piece.",
+        "Teratospermia means excessive abnormal morphology; asthenozoospermia means poor motility; oligozoospermia means low count.",
+        "Sertoli-cell tight junctions divide basal and adluminal compartments and protect meiotic cells from immune exposure."
+      ],
+      "traps": [
+        {"wrong": "Spermiogenesis is meiosis II.", "right": "Meiosis II creates spermatids; spermiogenesis remodels spermatids into spermatozoa without division."},
+        {"wrong": "Mitochondria form the acrosome.", "right": "The acrosome is Golgi-derived; mitochondria form the middle-piece sheath."},
+        {"wrong": "LH acts mainly on Sertoli cells.", "right": "LH stimulates Leydig cells; FSH primarily supports Sertoli cells."}
+      ],
+      "recognition": [
+        "In a seminiferous tubule, spermatogonia are basal, large primary spermatocytes are deeper, and spermatids/sperm are nearest the lumen.",
+        "Acrosomal-cap diagrams show Golgi vesicles coalescing over the anterior nucleus."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed. + teacher images", "detail": "Chapter 2 and TUMS spermatogenesis/spermiogenesis diagrams"},
+      "asset": "/study/embryology/telegram-standalone/spermatogenesis-lineage.jpg"
+    },
+    {
+      "id": "emb-chromosome-errors",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Chromosomal abnormalities",
+      "title": "Chromosome errors: mechanism to recognizable syndrome",
+      "subtitle": "Nondisjunction, translocation, deletion, and classic karyotypes",
+      "kind": "comparison",
+      "topicPatterns": ["Chromosomal abnormalities", "Gametogenesis and first week"],
+      "questionPatterns": ["nondisjunction", "down syndrome", "trisomy 21", "robertsonian", "edwards", "turner", "klinefelter", "47,xx", "47,xy", "45,x", "47,xxy", "single-exon deletion", "15q11"],
+      "visual": {
+        "type": "comparison",
+        "caption": "First identify the error mechanism, then read the chromosome count and phenotype.",
+        "items": [
+          {"label": "Meiosis I nondisjunction", "detail": "Homologs fail to separate. After meiosis II, all four gametes are abnormal: two disomic and two nullisomic.", "cue": "MI: zero normal gametes"},
+          {"label": "Meiosis II nondisjunction", "detail": "Sister chromatids fail in one daughter cell. Products are one disomic, one nullisomic, and two normal gametes.", "cue": "MII: two normal gametes"},
+          {"label": "Down syndrome", "detail": "Usually meiotic trisomy 21: 47,XX,+21 or 47,XY,+21. Typical clues include characteristic facies, hypotonia, and a single transverse palmar crease.", "cue": "21 = Down"},
+          {"label": "Edwards syndrome", "detail": "Trisomy 18; characteristic clues include clenched hands with overlapping fingers and rocker-bottom feet.", "cue": "18 = Edwards"},
+          {"label": "Sex-chromosome patterns", "detail": "Turner is 45,X with short stature and shield chest. Klinefelter is 47,XXY with tall stature, small testes, and gynecomastia.", "cue": "Turner one X; Klinefelter extra X"},
+          {"label": "Robertsonian translocation", "detail": "Long arms of two acrocentric chromosomes fuse. A balanced 14;21 carrier is phenotypically normal and usually has 45 chromosomes but risks translocation Down syndrome in offspring.", "cue": "Balanced fusion = 45"}
+        ]
+      },
+      "essentials": [
+        "Aneuploidy is an abnormal chromosome number, usually caused by nondisjunction.",
+        "Maternal-age risk rises mainly because oocytes remain arrested in prophase I for years, increasing segregation errors.",
+        "Karyotyping detects large numerical or structural abnormalities; smaller deletions require higher-resolution molecular tests such as chromosomal microarray or targeted assays.",
+        "Genomic imprinting means the phenotype of some deletions depends on whether the affected allele came from the mother or father.",
+        "Always include sex chromosomes and the extra chromosome in formal trisomy notation."
+      ],
+      "traps": [
+        {"wrong": "Meiosis I nondisjunction produces two normal gametes.", "right": "All four products are abnormal after meiosis I nondisjunction."},
+        {"wrong": "A balanced Robertsonian carrier has 46 chromosomes.", "right": "Fusion reduces the visible chromosome count to 45 while preserving nearly all essential long-arm material."},
+        {"wrong": "Turner syndrome is 47,XXX.", "right": "Classic Turner syndrome is monosomy X: 45,X."}
+      ],
+      "recognition": [
+        "Count chromosome 21 copies before interpreting the sex chromosomes in a karyotype.",
+        "Overlapping fingers plus rocker-bottom feet points to trisomy 18; shield chest and webbed neck points to Turner syndrome.",
+        "A fused 14q-21q chromosome with 45 total chromosomes suggests a balanced Robertsonian carrier."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed. + teacher images", "detail": "Chapter 2 chromosomal abnormalities and TUMS karyotype/phenotype diagrams"},
+      "asset": "/study/embryology/telegram-standalone/meiotic-nondisjunction.jpg"
+    },
+    {
+      "id": "emb-fertilization",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Fertilization",
+      "title": "Fertilization: the six events in order",
+      "subtitle": "From capacitation to a diploid zygote",
+      "kind": "process",
+      "topicPatterns": ["Gametogenesis and first week", "First week of development"],
+      "questionPatterns": ["fertilization", "capacitation", "acrosome reaction", "zona pellucida", "zp3", "cortical granule", "polyspermy", "pronuclei", "ampulla"],
+      "visual": {
+        "type": "flow",
+        "caption": "Keep membrane penetration, blocks to polyspermy, and completion of oocyte meiosis in sequence.",
+        "items": [
+          {"label": "1. Capacitation", "detail": "Functional maturation in the female tract removes surface coatings and permits the sperm to respond to the zona pellucida.", "cue": "Female tract prepares sperm"},
+          {"label": "2. Corona penetration", "detail": "Motility and enzymes help sperm pass between corona radiata cells.", "cue": "Through follicular cells"},
+          {"label": "3. Zona binding and acrosome reaction", "detail": "Zona glycoprotein binding triggers release of acrosomal enzymes, allowing zona penetration.", "cue": "Bind -> release enzymes"},
+          {"label": "4. Membrane fusion", "detail": "Sperm and oocyte plasma membranes fuse; the sperm nucleus and centriole enter the oocyte cytoplasm.", "cue": "Entry signal"},
+          {"label": "5. Cortical/zona reaction", "detail": "Oocyte cortical granules modify the zona pellucida and block additional sperm entry.", "cue": "Block polyspermy"},
+          {"label": "6. Pronuclei and zygote", "detail": "The secondary oocyte completes meiosis II, male and female pronuclei form, DNA replicates, and chromosomes unite at the first mitosis.", "cue": "Meiosis ends, cleavage begins"}
+        ]
+      },
+      "essentials": [
+        "Fertilization usually occurs in the ampulla of the uterine tube.",
+        "Capacitation precedes the acrosome reaction and occurs after ejaculation in the female reproductive tract.",
+        "The cortical and zona reactions are the main block to polyspermy.",
+        "Sperm entry triggers completion of the secondary oocyte's meiosis II.",
+        "Fertilization restores diploidy, determines chromosomal sex, and initiates cleavage."
+      ],
+      "traps": [
+        {"wrong": "Capacitation forms the sperm acrosome.", "right": "The acrosome forms during spermiogenesis; capacitation makes ejaculated sperm functionally able to fertilize."},
+        {"wrong": "The zona reaction helps more sperm bind.", "right": "It alters zona receptors and blocks polyspermy."},
+        {"wrong": "The ovulated oocyte has already completed meiosis II.", "right": "It is arrested in metaphase II and completes meiosis II after sperm entry."}
+      ],
+      "recognition": [
+        "A sperm releasing enzymes at the zona pellucida depicts the acrosome reaction.",
+        "Cortical granules lined beneath the oocyte membrane identify the post-fusion block to polyspermy."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 3, First Week of Development: Ovulation to Implantation"}
+    },
+    {
+      "id": "emb-cleavage-blastocyst",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "First week of development",
+      "title": "Zygote to blastocyst: day-by-day",
+      "subtitle": "Cleavage, compaction, lineage separation, and hatching",
+      "kind": "timeline",
+      "topicPatterns": ["First week of development", "Gametogenesis and first week"],
+      "questionPatterns": ["two-cell", "cleavage", "blastomeres", "compaction", "morula", "day 5", "blastocyst", "blastocoel", "inner cell mass", "trophoblast", "before hatching", "zona pellucida primarily prevents"],
+      "visual": {
+        "type": "timeline",
+        "caption": "Cell number rises while the conceptus remains inside the zona and does not enlarge.",
+        "items": [
+          {"label": "Day 1", "detail": "First mitotic cleavage produces the two-cell stage. Repeated cleavage creates progressively smaller blastomeres.", "cue": "More cells, same outer size"},
+          {"label": "Day 3", "detail": "At about eight cells, blastomeres compact through tighter cell contact and polarity. A 16-cell compact ball is the morula.", "cue": "8 compact; 16 morula"},
+          {"label": "Days 3-4", "detail": "The morula enters the uterine cavity. Outer cells seal and pump ions; water follows to create the blastocoel.", "cue": "Cavity begins"},
+          {"label": "Days 4-5", "detail": "The blastocyst contains outer trophoblast, inner embryoblast, and the blastocoel. The embryoblast lies at the embryonic pole.", "cue": "Outside placenta; inside embryo"},
+          {"label": "About day 5", "detail": "The blastocyst sheds the zona pellucida. Hatching permits trophoblast contact with receptive endometrium and implantation to begin.", "cue": "Hatch before attach"}
+        ]
+      },
+      "essentials": [
+        "Cleavage is rapid mitosis without overall growth of the conceptus.",
+        "Compaction creates polarized outer cells and nonpolar inner cells, preparing the first lineage decision.",
+        "Trophoblast contributes chiefly to the fetal placenta; embryoblast forms the embryo proper.",
+        "Fluid transport by outer cells and their tight junctions produces and maintains the blastocoel.",
+        "The zona pellucida prevents premature implantation in the uterine tube and must be lost before attachment."
+      ],
+      "traps": [
+        {"wrong": "The morula has a large internal cavity.", "right": "The morula is a solid compact ball; the cavity defines the blastocyst."},
+        {"wrong": "The embryo enlarges with each cleavage division.", "right": "Blastomeres become smaller because the zona constrains the overall conceptus."},
+        {"wrong": "The inner cell mass forms the entire placenta.", "right": "It forms the embryo proper; trophoblast is the major embryonic contribution to the placenta."}
+      ],
+      "recognition": [
+        "Morula: solid compact cluster with no blastocoel.",
+        "Blastocyst: obvious cavity, a cell cluster at one pole, and a thin outer trophoblast layer."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 3, cleavage through blastocyst formation"},
+      "asset": "/study/image-bank/embryo-cleavage-morula.png"
+    },
+    {
+      "id": "emb-implantation-sequence",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Implantation",
+      "title": "Implantation: attachment, invasion, and maternal blood",
+      "subtitle": "Days 6-13 with trophoblast layers and lacunae",
+      "kind": "timeline",
+      "topicPatterns": ["Gametogenesis and first week", "Second week of development", "Second week: bilaminar disc and implantation"],
+      "questionPatterns": ["implantation", "day-8 conceptus", "day 8", "cytotrophoblast", "syncytiotrophoblast", "mitotic figures", "trophoblastic cell", "lacunae", "maternal sinusoids", "trophoblast invasion", "apposition", "firm adhesion", "cervix"],
+      "visual": {
+        "type": "timeline",
+        "caption": "Implantation starts at the embryonic pole, then trophoblast invasion opens maternal blood spaces.",
+        "items": [
+          {"label": "Days 6-7: attach", "detail": "The hatched blastocyst loosely apposes and then adheres to receptive endometrial epithelium at its embryonic pole.", "cue": "Embryonic pole first"},
+          {"label": "Day 8: two trophoblast layers", "detail": "Inner cytotrophoblast consists of distinct mitotic mononuclear cells. Outer syncytiotrophoblast is invasive, multinucleated, lacks cell boundaries, and has no visible mitoses.", "cue": "Cyto divides; syncytio invades"},
+          {"label": "Day 9: lacunar stage", "detail": "Vacuoles in syncytiotrophoblast fuse into lacunae while the surface defect is temporarily closed by a fibrin coagulum.", "cue": "Vacuoles -> lacunae"},
+          {"label": "Days 11-12: circulation", "detail": "Syncytiotrophoblast erodes maternal capillaries called sinusoids; maternal blood enters the lacunar network, beginning uteroplacental circulation.", "cue": "Sinusoids feed lacunae"},
+          {"label": "Day 13: embedded", "detail": "The endometrial surface is repaired and primary chorionic villi appear, especially at the embryonic pole.", "cue": "Primary villi = cyto core + syncytio shell"}
+        ]
+      },
+      "essentials": [
+        "Cytotrophoblast cells divide, migrate outward, and fuse into syncytiotrophoblast.",
+        "Syncytiotrophoblast secretes hCG, invades extracellular matrix, and opens maternal sinusoids.",
+        "At day 8 the conceptus is only partly embedded; implantation is essentially complete near the end of the second week.",
+        "Trophoblastic lacunae are spaces inside syncytiotrophoblast that later contain maternal blood.",
+        "An implantation site outside the uterine body is ectopic; tubal implantation is most common."
+      ],
+      "traps": [
+        {"wrong": "Mitoses are prominent in syncytiotrophoblast.", "right": "Visible mitoses occur in cytotrophoblast; its daughters fuse into the nonmitotic syncytial layer."},
+        {"wrong": "A day-8 blastocyst is fully embedded.", "right": "At day 8 it is partly embedded and implantation is still underway."},
+        {"wrong": "Lacunae are fetal blood vessels.", "right": "They are spaces in syncytiotrophoblast that become filled with maternal blood."}
+      ],
+      "recognition": [
+        "Day 8: partly embedded blastocyst, bilaminar disc, and two trophoblast layers.",
+        "Day 9: conspicuous syncytial lacunae; days 11-12: communicating maternal sinusoids; day 13: primary villi."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapters 3-4, implantation and early trophoblast development"},
+      "asset": "/study/image-bank/embryo-day-eight-implantation.png"
+    },
+    {
+      "id": "emb-week-two-map",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Second week",
+      "title": "The week of twos",
+      "subtitle": "Bilaminar disc, paired cavities, extraembryonic mesoderm, and chorion",
+      "kind": "comparison",
+      "topicPatterns": ["Gametogenesis and first week", "Second week of development", "Second week: bilaminar disc and implantation"],
+      "questionPatterns": ["week of 2s", "bilaminar germ disc", "bilaminar embryonic disc", "epiblast and hypoblast", "adjacent cavities", "amniotic cavity", "exocoelomic", "heuser", "extraembryonic mesoderm", "chorionic cavity", "connecting stalk", "primary villi"],
+      "visual": {
+        "type": "layers",
+        "caption": "Orient the conceptus from the maternal side toward the yolk sac, then learn what surrounds what.",
+        "items": [
+          {"label": "Amniotic cavity", "detail": "Forms above the epiblast; amnioblasts line its roof.", "cue": "Amnion above epiblast"},
+          {"label": "Epiblast", "detail": "Tall columnar cells next to the amniotic cavity. It later generates all three definitive germ layers.", "cue": "Epi = embryo source"},
+          {"label": "Hypoblast", "detail": "Small cuboidal cells facing the blastocyst cavity; contributes to extraembryonic endoderm lining the yolk sac, not the embryo proper.", "cue": "Hypo hugs yolk sac"},
+          {"label": "Yolk sac", "detail": "Hypoblast-derived exocoelomic membrane lines the primary yolk sac; a smaller secondary yolk sac replaces it.", "cue": "Heuser membrane makes primary sac"},
+          {"label": "Extraembryonic mesoderm", "detail": "Splits into somatic layer lining trophoblast/amnion and splanchnic layer covering yolk sac. The space between becomes the chorionic cavity.", "cue": "Somatic outside; splanchnic on sac"},
+          {"label": "Chorion and stalk", "detail": "Chorion consists of trophoblast plus somatic extraembryonic mesoderm. The embryo, amnion, and yolk sac hang in the chorionic cavity by the connecting stalk.", "cue": "Stalk is the only bridge"}
+        ]
+      },
+      "essentials": [
+        "The week of twos includes two trophoblast layers, two embryoblast layers, two extraembryonic mesoderm layers, and major paired cavities.",
+        "Epiblast faces the amniotic cavity; hypoblast faces the yolk sac.",
+        "The chorionic cavity surrounds the amnion and yolk sac except where the connecting stalk attaches.",
+        "Primary villi have cytotrophoblast cores covered by syncytiotrophoblast; mesoderm enters them later to make secondary villi.",
+        "The prechordal plate is a thickened cranial area where epiblast and hypoblast are closely joined and helps establish the cranial end."
+      ],
+      "traps": [
+        {"wrong": "Hypoblast forms definitive embryonic endoderm.", "right": "Definitive endoderm comes from ingressing epiblast during gastrulation; hypoblast contributes extraembryonic lining."},
+        {"wrong": "The chorionic cavity lies inside the amniotic cavity.", "right": "The large chorionic cavity surrounds the amnion and yolk sac."},
+        {"wrong": "Primary villi contain fetal capillaries.", "right": "Primary villi contain cytotrophoblast only; vessels appear in tertiary villi."}
+      ],
+      "recognition": [
+        "In section, the bilaminar disc is a two-layer plate sandwiched between amniotic cavity above and yolk sac below.",
+        "A huge outer space with the embryo suspended by a stalk is the chorionic cavity."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 4, Second Week of Development: Bilaminar Germ Disc"},
+      "asset": "/study/image-bank/embryo-bilaminar-disc.png"
+    },
+    {
+      "id": "emb-gastrulation",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Gastrulation",
+      "title": "Gastrulation: turn two layers into three",
+      "subtitle": "Primitive streak landmarks and the destinations of ingressing epiblast",
+      "kind": "process",
+      "topicPatterns": ["Third week of development", "Third week: gastrulation and axial patterning"],
+      "questionPatterns": ["gastrulation", "primitive streak", "primitive node", "primitive pit", "primitive groove", "trilaminar", "ingressing", "intraembryonic mesoderm", "epiblast cells", "three germ layers", "sacrococcygeal"],
+      "visual": {
+        "type": "flow",
+        "caption": "All three definitive germ layers come from epiblast; cell order through the streak determines destination.",
+        "items": [
+          {"label": "Day 15: streak appears", "detail": "A primitive streak forms in the caudal midline of the dorsal epiblast and establishes cranial-caudal orientation.", "cue": "Streak starts caudally"},
+          {"label": "Know the landmarks", "detail": "The cranial end is the primitive node containing a small primitive pit. The more caudal streak contains the longitudinal primitive groove.", "cue": "Node-pit; streak-groove"},
+          {"label": "Epiblast cells ingress", "detail": "Cells converge toward the streak, detach by epithelial-to-mesenchymal transition, and pass inward through groove or pit.", "cue": "Converge -> detach -> ingress"},
+          {"label": "First wave", "detail": "Ingressing cells displace hypoblast and form definitive endoderm.", "cue": "First replaces hypoblast"},
+          {"label": "Second wave", "detail": "Cells spread between epiblast and endoderm to form intraembryonic mesoderm.", "cue": "Middle migration = mesoderm"},
+          {"label": "Cells left above", "detail": "Epiblast cells remaining on the surface become ectoderm. The result is a trilaminar disc.", "cue": "Left on top = ectoderm"}
+        ]
+      },
+      "essentials": [
+        "Gastrulation begins in week 3 and establishes ectoderm, mesoderm, and definitive endoderm.",
+        "Primitive node and pit are cranial; primitive streak and groove extend caudally.",
+        "All three definitive germ layers derive from epiblast.",
+        "The oropharyngeal and cloacal membranes lack intervening mesoderm.",
+        "Persistent primitive-streak cells can form a sacrococcygeal teratoma containing tissues from all three germ layers."
+      ],
+      "traps": [
+        {"wrong": "Node contains the groove and streak contains the pit.", "right": "The node contains the pit; the streak contains the groove."},
+        {"wrong": "Hypoblast becomes definitive endoderm.", "right": "Ingressing epiblast displaces hypoblast to make definitive endoderm."},
+        {"wrong": "The primitive streak begins at the cranial end.", "right": "It appears caudally and its node is at its cranial tip."}
+      ],
+      "recognition": [
+        "On a dorsal view, locate the round node at the cranial tip of an elongated caudal streak.",
+        "Arrows diving through the streak and spreading between layers depict gastrulation, not neurulation."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed. + TUMS trilaminar embryo lecture", "detail": "Chapter 5 and FORMATION OF TRILAMINAR EMBRYO teacher slides"},
+      "asset": "/study/image-bank/embryo-primitive-streak.png"
+    },
+    {
+      "id": "emb-notochord-axes",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Notochord and body axes",
+      "title": "Build the midline, then orient the body",
+      "subtitle": "Notochord formation, cranial-caudal landmarks, and left-right signaling",
+      "kind": "process",
+      "topicPatterns": ["Third week: gastrulation and axial patterning"],
+      "questionPatterns": ["notochord", "notochordal process", "notochordal canal", "neurenteric canal", "nucleus pulposus", "prechordal", "oropharyngeal membrane", "cloacal membrane", "allantois", "left-right axis", "immotile cilia", "pitx2", "body axes"],
+      "visual": {
+        "type": "flow",
+        "caption": "Node-derived midline mesoderm creates the organizer rod that patterns nearby tissues.",
+        "items": [
+          {"label": "Node cells migrate cranially", "detail": "Prenotochordal cells pass through the primitive pit and extend toward the prechordal plate as a hollow notochordal process.", "cue": "Pit -> cranial tube"},
+          {"label": "Canal opens ventrally", "detail": "The floor of the notochordal process fuses with endoderm and degenerates, transiently connecting amniotic cavity and yolk sac through the neurenteric canal.", "cue": "Temporary top-to-bottom channel"},
+          {"label": "Notochordal plate", "detail": "The remaining flattened cells form a midline plate temporarily continuous with endoderm.", "cue": "Tube flattens"},
+          {"label": "Definitive notochord", "detail": "The plate rolls up and detaches as a solid rod between ectoderm and endoderm. It induces neural plate and patterns axial skeleton.", "cue": "Plate -> solid rod"},
+          {"label": "Left-right signal", "detail": "Motile nodal cilia create leftward flow; left-sided NODAL signaling culminates in PITX2, the left-side identity transcription factor.", "cue": "Nodal flow -> left PITX2"},
+          {"label": "End landmarks", "detail": "Cranial oropharyngeal membrane marks the future mouth; caudal cloacal membrane marks future anal and urogenital openings. Allantois buds into the connecting stalk around day 16.", "cue": "Oral cranial; cloacal caudal"}
+        ]
+      },
+      "essentials": [
+        "The notochord comes from epiblast cells entering through the primitive node and pit.",
+        "The neurenteric canal is a temporary communication between amniotic cavity and yolk sac.",
+        "Most notochord disappears as vertebral bodies form; the nucleus pulposus is its major adult remnant.",
+        "The three orthogonal body axes are cranial-caudal, dorsal-ventral, and left-right.",
+        "Abnormal nodal cilia can randomize organ laterality; ectopic right-sided PITX2 can impose left-sided identity on the right."
+      ],
+      "traps": [
+        {"wrong": "The notochord comes from hypoblast.", "right": "It comes from node-ingressing epiblast cells."},
+        {"wrong": "The neural tube becomes nucleus pulposus.", "right": "Persistent notochordal tissue becomes nucleus pulposus."},
+        {"wrong": "PITX2 is normally the right-side determinant.", "right": "PITX2 is the key left-side identity transcription factor."}
+      ],
+      "recognition": [
+        "A midline tube extending cranially from the primitive node is the notochordal process.",
+        "A temporary opening through the primitive pit between amnion and yolk sac is the neurenteric canal."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 5, notochord formation and establishment of body axes"}
+    },
+    {
+      "id": "emb-neurulation-somites",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Neurulation, neural crest, and somites",
+      "title": "Neurulation and the tissues beside it",
+      "subtitle": "Close the neural tube, release neural crest, and pattern paraxial mesoderm",
+      "kind": "process",
+      "topicPatterns": ["Embryonic period", "Embryonic period and germ-layer derivatives"],
+      "questionPatterns": ["neurulation", "neural plate", "neural folds", "neural groove", "neuropore", "neural-tube closure", "neural crest", "mesenchyme", "somite", "sclerotome", "dermomyotome", "paraxial mesoderm", "intermediate mesoderm"],
+      "visual": {
+        "type": "flow",
+        "caption": "Midline induction reshapes ectoderm while paraxial mesoderm segments on each side.",
+        "items": [
+          {"label": "Neural induction", "detail": "Notochord and prechordal mesoderm induce overlying ectoderm to thicken into neural plate; organizer BMP antagonists support neural fate.", "cue": "Midline mesoderm tells ectoderm"},
+          {"label": "Shape the plate", "detail": "The plate lengthens, its center forms a neural groove, and paired neural folds rise at the edges.", "cue": "Plate -> groove + folds"},
+          {"label": "Close the tube", "detail": "Fusion begins near the fifth somite in the future cervical region around day 22 and proceeds cranially and caudally like a zipper.", "cue": "Start cervical, zip both ways"},
+          {"label": "Close neuropores", "detail": "The cranial neuropore closes near day 25 and caudal neuropore near day 28.", "cue": "25 head; 28 tail"},
+          {"label": "Release neural crest", "detail": "Border cells undergo epithelial-to-mesenchymal transition, detach from the folds, and migrate widely.", "cue": "Crest leaves the roof"},
+          {"label": "Pattern somites", "detail": "Ventromedial sclerotome forms vertebrae and ribs; myotome forms skeletal muscle; dermatome forms dermis of the back.", "cue": "Sclero-skeleton, myo-muscle, derma-dermis"}
+        ]
+      },
+      "essentials": [
+        "Neurulation is formation of the neural tube from neural ectoderm.",
+        "The neural tube forms the central nervous system; neural crest produces much of the peripheral nervous system plus melanocytes, adrenal medulla, craniofacial tissues, and more.",
+        "Neural crest is ectoderm-derived but migrates as mesenchyme; mesenchyme describes cell organization, not germ-layer origin.",
+        "Paraxial mesoderm forms somites; intermediate mesoderm forms much of the urogenital system; lateral plate forms body wall, serosa, heart, blood vessels, and limb connective tissues.",
+        "Somite count is a reliable way to stage early embryos before external landmarks are sufficiently distinct."
+      ],
+      "traps": [
+        {"wrong": "Neural crest remains within the neural tube and forms only CNS neurons.", "right": "Neural crest detaches and migrates; the neural tube itself forms the CNS."},
+        {"wrong": "Mesenchyme is synonymous with mesoderm.", "right": "Mesenchyme is a loose migratory morphology and can arise from mesoderm or neural crest ectoderm."},
+        {"wrong": "Sclerotome forms skeletal muscle.", "right": "Sclerotome forms vertebrae/ribs; myotome forms skeletal muscle."}
+      ],
+      "recognition": [
+        "A flat plate, central groove, elevated folds, then closed tube is the neurulation sequence.",
+        "Cells leaving the dorsal neural tube are neural crest; paired blocks beside the tube are somites."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 6, neurulation and mesodermal derivatives"},
+      "asset": "/study/image-bank/embryo-neurulation-days-22-23.png"
+    },
+    {
+      "id": "emb-body-folding",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Fourth-week body folding",
+      "title": "Fold the flat disc into a tube-within-a-tube body",
+      "subtitle": "Cranial, caudal, and lateral folds with gut incorporation",
+      "kind": "process",
+      "topicPatterns": ["Fourth week: body folding"],
+      "questionPatterns": ["body folding", "cranial fold", "caudal fold", "lateral folding", "tube-within-a-tube", "primitive gut tube", "midgut", "yolk sac", "umbilical ring", "cloacal membrane", "neural tube and somites", "flat embryonic disc"],
+      "visual": {
+        "type": "map",
+        "caption": "Rapid neural and somite growth bends the disc in two planes; all folds meet around the umbilical ring.",
+        "items": [
+          {"label": "Mechanical driver", "detail": "Rapid growth of brain, neural tube, and somites outpaces the yolk sac and amnion, forcing the flat disc to bend.", "cue": "Fast dorsal growth causes folding"},
+          {"label": "Cranial fold", "detail": "The cranial rim bends ventrally. Foregut is incorporated; heart and septum transversum move from a cranial position to the ventral body surface below the future mouth.", "cue": "Head folds over heart"},
+          {"label": "Caudal fold", "detail": "The caudal rim bends ventrally. Hindgut is incorporated; the cloacal membrane, connecting stalk, and allantois move onto the ventral surface.", "cue": "Tail brings cloaca ventral"},
+          {"label": "Lateral folds", "detail": "Right and left body walls move ventrally and fuse at the midline, enclosing intraembryonic coelom and much of the gut tube.", "cue": "Sides zip the belly"},
+          {"label": "Midgut connection", "detail": "The midgut remains temporarily continuous with yolk sac through a narrowing vitelline duct.", "cue": "Middle keeps a small yolk link"},
+          {"label": "Final plan", "detail": "Outer ectoderm forms the body covering while inner endoderm forms the gut: the basic tube-within-a-tube plan. Folds remain open only at the umbilical ring.", "cue": "Ectoderm outside, endoderm inside"}
+        ]
+      },
+      "essentials": [
+        "Cephalocaudal and lateral folding are coordinated, not separate final events.",
+        "Foregut and hindgut arise by incorporation of endoderm during cranial and caudal folding; midgut remains linked to yolk sac.",
+        "Lateral folding closes the ventral body wall and positions the endodermal gut internally.",
+        "The cranial, caudal, and lateral folds are continuous at the umbilical ring around the connecting structures.",
+        "By the end of week 4 the embryo is curved, cylindrical, and externally very different from the original flat disc."
+      ],
+      "traps": [
+        {"wrong": "The yolk sac itself becomes the entire gut tube.", "right": "Part of its endoderm is incorporated into the embryo; the remaining sac stays extraembryonic."},
+        {"wrong": "The heart stays cranial to the oropharyngeal membrane.", "right": "Cranial folding moves it ventral and caudal to the future mouth."},
+        {"wrong": "The cloacal membrane moves dorsally during caudal folding.", "right": "It is repositioned onto the ventral surface."}
+      ],
+      "recognition": [
+        "Sagittal folding diagrams show foregut and hindgut pockets pinching inward from the yolk sac.",
+        "Transverse folding diagrams show lateral walls approaching ventrally around an endodermal gut tube."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapters 6-7, embryonic folding and formation of the gut tube/body cavities"}
+    },
+    {
+      "id": "emb-germ-layer-derivatives",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Germ-layer derivatives",
+      "title": "The three germ layers: a derivative map",
+      "subtitle": "Organize by layer first, then by subdivision",
+      "kind": "comparison",
+      "topicPatterns": ["Embryonic period and germ-layer derivatives", "Third week: gastrulation and axial patterning"],
+      "questionPatterns": ["germ-layer derivatives", "ectoderm", "mesoderm", "endoderm", "surface ectoderm", "neuroectoderm", "neural crest cell derivatives", "mesenchyme", "paraxial", "intermediate mesoderm", "lateral plate", "somite components"],
+      "visual": {
+        "type": "comparison",
+        "caption": "Use the subdivision to solve difficult derivatives instead of memorizing one enormous list.",
+        "items": [
+          {"label": "Surface ectoderm", "detail": "Epidermis and appendages, enamel, lens, adenohypophysis, epithelium of oral/nasal cavities and lower anal canal.", "cue": "Surface coverings and sensory entrances"},
+          {"label": "Neural tube", "detail": "Brain, spinal cord, retina, pineal gland, neurohypophysis, and CNS glia except microglia.", "cue": "Central nervous system"},
+          {"label": "Neural crest", "detail": "PNS ganglia and Schwann cells, melanocytes, adrenal medulla, craniofacial cartilage/bone, pia/arachnoid, odontoblasts, and conotruncal septum.", "cue": "Peripheral, pigment, face, adrenal"},
+          {"label": "Paraxial/intermediate mesoderm", "detail": "Somites form axial skeleton, skeletal muscle, and dermis of back. Intermediate mesoderm forms much of urinary and genital systems.", "cue": "Paraxial posture; intermediate urogenital"},
+          {"label": "Lateral plate and axial mesoderm", "detail": "Lateral plate forms heart, vessels, blood, serosa, body wall/limb connective tissues and smooth muscle. Notochord persists as nucleus pulposus.", "cue": "Lateral circulation and cavities"},
+          {"label": "Endoderm", "detail": "Epithelial lining of gastrointestinal and respiratory tracts plus parenchyma/epithelium of liver, pancreas, thyroid follicles, thymus, auditory tube, bladder, and most urethra.", "cue": "Internal epithelial tubes and glands"}
+        ]
+      },
+      "essentials": [
+        "Ectoderm makes external covering and nervous systems; mesoderm makes support, movement, circulation, and urogenital structures; endoderm makes internal epithelial linings and associated glands.",
+        "Neural crest is ectodermal despite behaving as migratory mesenchyme.",
+        "Microglia are mesoderm-derived; other major CNS glia are neuroectodermal.",
+        "Endoderm usually supplies epithelium and glandular parenchyma, while surrounding connective tissue and muscle usually come from mesoderm.",
+        "Somite divisions: sclerotome -> vertebrae/ribs; myotome -> skeletal muscle; dermatome -> dermis of back."
+      ],
+      "traps": [
+        {"wrong": "Adrenal cortex and medulla share one germ-layer origin.", "right": "Cortex is mesodermal; medulla is neural crest."},
+        {"wrong": "All skull bones are paraxial mesoderm.", "right": "Much craniofacial bone/cartilage is neural-crest derived; origin varies by region."},
+        {"wrong": "Respiratory epithelium and respiratory muscle are both endodermal.", "right": "Epithelium is endodermal; cartilage, connective tissue, and smooth muscle are splanchnic mesoderm."}
+      ],
+      "recognition": [
+        "If a derivative belongs to CNS, choose neural tube; if it is PNS, melanocyte, adrenal medulla, or craniofacial, think neural crest.",
+        "When an organ has epithelium plus stroma, expect mixed origins rather than assigning the whole organ to one layer."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapters 5-7, derivatives of ectoderm, mesoderm, and endoderm"}
+    },
+    {
+      "id": "emb-weeks-three-eight",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Embryonic period",
+      "title": "Weeks 3-8: the organogenesis danger window",
+      "subtitle": "One timeline for external form, internal patterning, and teratogenic risk",
+      "kind": "timeline",
+      "topicPatterns": ["Embryonic period", "Embryonic period and germ-layer derivatives"],
+      "questionPatterns": ["embryonic period", "developmental interval", "specific tissues and organs", "organogenesis", "teratogenic period", "day-20-to-30", "staged", "somite count", "external landmarks", "days 22 to 23"],
+      "visual": {
+        "type": "timeline",
+        "caption": "The embryonic period starts with gastrulation and ends after the basic organ systems and external body plan are established.",
+        "items": [
+          {"label": "Week 3", "detail": "Gastrulation makes three germ layers; notochord and body axes form; neural plate appears; somites and early vessels begin.", "cue": "Layers and axes"},
+          {"label": "Week 4", "detail": "Neural tube closes, body folds, gut tube forms, pharyngeal arches appear, heart beats, and limb buds begin.", "cue": "Fold, close, beat"},
+          {"label": "Weeks 5-6", "detail": "Rapid head growth, facial development, prominent upper limbs, hand plates and digital rays; physiologic midgut herniation begins.", "cue": "Face and upper limb"},
+          {"label": "Weeks 7-8", "detail": "Digits separate, limbs rotate, tail regresses, neck forms, and the embryo acquires a clearly human form; major organ primordia are present.", "cue": "Refine the body plan"},
+          {"label": "Risk pattern", "detail": "Major structural anomalies are most likely when a teratogen acts during an organ's critical morphogenetic window in weeks 3-8.", "cue": "Organ forming = structure vulnerable"},
+          {"label": "Stage correctly", "detail": "During early weeks, crown-rump length and especially somite number are more reliable than calendar age or subtle external landmarks.", "cue": "Count somites early"}
+        ]
+      },
+      "essentials": [
+        "The embryonic period is weeks 3 through 8; the fetal period starts at week 9.",
+        "Organogenesis means germ layers generate specific tissues and organ primordia.",
+        "Teratogenic susceptibility is organ-specific and extends beyond a single universal date, but weeks 3-8 carry the greatest risk of major malformations.",
+        "Before obvious external features develop, somite number is a key staging measure.",
+        "A day-22-to-23 embryo normally shows neural folds, several somites, and open cranial and caudal neuropores during neurulation."
+      ],
+      "traps": [
+        {"wrong": "The embryonic period is mainly rapid weight gain.", "right": "It is mainly organogenesis; growth and functional maturation dominate the fetal period."},
+        {"wrong": "All organs have identical teratogenic windows.", "right": "Each organ is vulnerable while its critical structures are developing."},
+        {"wrong": "External appearance alone precisely dates every early embryo.", "right": "Somite count and crown-rump length are often more reliable early staging measures."}
+      ],
+      "recognition": [
+        "Open neuropores plus paired somites indicate an early fourth-week embryo undergoing neurulation.",
+        "A C-shaped embryo with pharyngeal arches and limb buds belongs to the organogenesis period."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 6, Third to Eighth Weeks: The Embryonic Period"},
+      "asset": "/study/image-bank/embryo-neurulation-days-22-23.png"
+    },
+    {
+      "id": "emb-fetal-period",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Fetal growth and prenatal assessment",
+      "title": "Week 9 to birth: growth, proportions, and clinical milestones",
+      "subtitle": "Know the dates that turn fetal-period questions into easy marks",
+      "kind": "timeline",
+      "topicPatterns": ["Fetal period, placenta, and fetal membranes"],
+      "questionPatterns": ["fetal period", "week 9", "head-to-body proportion", "crown-rump", "crown-heel", "gestation", "last normal menstrual", "quickening", "fetal movement", "viability", "22 weeks", "intrauterine growth restriction", "barker", "cell-free fetal dna", "prenatal ultrasound", "congenital adrenal hyperplasia"],
+      "visual": {
+        "type": "timeline",
+        "caption": "After organ primordia exist, the exam focus shifts to maturation, growth, proportions, and prenatal assessment.",
+        "items": [
+          {"label": "Week 9 begins", "detail": "The fetal period starts after week 8 and continues to birth. Rapid growth and functional maturation replace organogenesis as the dominant processes.", "cue": "Week 9 = fetus"},
+          {"label": "Third month", "detail": "The head is about one-half of crown-rump length. Face becomes more human, limbs reach relative proportions, and external genitalia become distinguishable.", "cue": "Head = half CRL"},
+          {"label": "Months 4-5", "detail": "Length increases rapidly. Maternal perception of movement, called quickening, usually occurs around 18-20 weeks.", "cue": "Fifth month = movement felt"},
+          {"label": "Around 22 weeks", "detail": "The course threshold states survival ex utero is not currently possible before approximately 22 weeks; viability improves thereafter but remains limited by immature lungs and CNS.", "cue": "22-week threshold"},
+          {"label": "Late fetal period", "detail": "Weight gain, subcutaneous fat, and organ maturation accelerate. At birth the head is about one-quarter of crown-heel length.", "cue": "Birth head = quarter CHL"},
+          {"label": "Date correctly", "detail": "Gestation is about 266 days/38 weeks from fertilization or 280 days/40 weeks from the last normal menstrual period.", "cue": "Add two weeks for LMP dating"}
+        ]
+      },
+      "essentials": [
+        "Head proportion falls from about one-half of crown-rump length at week 9 to about one-quarter of crown-heel length at birth because the trunk and limbs grow faster.",
+        "Cell-free fetal DNA in maternal plasma is used for noninvasive screening of common aneuploidies, not as a definitive diagnostic test.",
+        "Ultrasound can detect or suggest structural problems such as neural tube defects, renal agenesis, diaphragmatic hernia, limb anomalies, and twin complications.",
+        "The Barker hypothesis links fetal growth restriction with later obesity, hypertension, dyslipidemia, cardiovascular disease, and type 2 diabetes.",
+        "Classic congenital adrenal hyperplasia is usually 21-hydroxylase deficiency causing low cortisol and androgen excess; maternal dexamethasone can reduce virilization of an affected female fetus."
+      ],
+      "traps": [
+        {"wrong": "The head remains one-quarter of body length throughout the fetal period.", "right": "It is about one-half of CRL at week 9 and about one-quarter of CHL at birth."},
+        {"wrong": "Pregnancy lasts 40 weeks from fertilization.", "right": "It is about 38 weeks from fertilization and 40 weeks from the LMP."},
+        {"wrong": "A positive cell-free fetal DNA result proves aneuploidy.", "right": "It is a screening result and generally requires confirmatory diagnostic testing."}
+      ],
+      "recognition": [
+        "When comparing fetal proportions, check whether the reference is crown-rump or crown-heel length.",
+        "A noninvasive maternal-blood aneuploidy question points to cell-free fetal DNA screening; a structural survey points to ultrasound."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapters 8-9, fetal period, growth, and prenatal diagnosis"}
+    },
+    {
+      "id": "emb-placenta-membranes",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Placenta and fetal membranes",
+      "title": "Placenta, decidua, membranes, and umbilical cord",
+      "subtitle": "Separate maternal tissue, fetal tissue, and the two circulations",
+      "kind": "comparison",
+      "topicPatterns": ["Fetal period, placenta, and fetal membranes"],
+      "questionPatterns": ["placenta", "chorion frondosum", "decidua basalis", "maternal component", "fetal component", "decidua capsularis", "decidua parietalis", "umbilical cord", "maternal and fetal components", "nutrients and eliminate wastes", "chorionic villi", "fetal membranes"],
+      "visual": {
+        "type": "layers",
+        "caption": "Maternal blood surrounds fetal villi, but the two bloodstreams normally remain in separate vascular spaces.",
+        "items": [
+          {"label": "Maternal plate", "detail": "Decidua basalis beneath the implanted embryonic pole forms the maternal component of the placenta and is divided into cotyledon regions by septa.", "cue": "Basalis = maternal base"},
+          {"label": "Intervillous space", "detail": "Maternal spiral arteries deliver oxygenated blood around chorionic villi; endometrial veins drain it.", "cue": "Maternal blood bathes villi"},
+          {"label": "Fetal plate", "detail": "Chorion frondosum is the persistent bushy villous chorion at the embryonic pole and forms the fetal component of the placenta.", "cue": "Frondosum = fetal leafy side"},
+          {"label": "Villous circulation", "detail": "Two umbilical arteries carry deoxygenated fetal blood to villous capillaries; one umbilical vein returns oxygenated blood to the fetus.", "cue": "Two away, one returns"},
+          {"label": "Smooth chorion and decidua", "detail": "Villi regress at the abembryonic pole to form chorion laeve. Expanding decidua capsularis contacts decidua parietalis and disintegrates around months 5-6, obliterating the uterine cavity.", "cue": "Laeve = smooth"},
+          {"label": "Membranes and cord", "detail": "Amnion enlarges and fuses with chorion. The cord encloses vessels in Wharton jelly and circulates blood between fetus and placenta.", "cue": "Cord moves blood, placenta exchanges"}
+        ]
+      },
+      "essentials": [
+        "The mature placenta has a fetal component, chorion frondosum, and a maternal component, decidua basalis.",
+        "Maternal blood occupies the intervillous space; fetal blood remains inside capillaries within chorionic villi.",
+        "Exchange of gases, nutrients, wastes, antibodies, and many drugs occurs across the placental barrier without routine mixing of whole blood.",
+        "The umbilical cord is the transport connection: two arteries go from fetus to placenta and one vein returns to the fetus.",
+        "Amnion contains amniotic fluid that cushions the fetus, permits movement and symmetric growth, and helps prevent adhesions.",
+        "Dizygotic twins always have separate amnions and chorions may appear fused; monozygotic membrane arrangement depends on when splitting occurs."
+      ],
+      "traps": [
+        {"wrong": "Decidua basalis is the fetal placenta.", "right": "Decidua basalis is maternal; chorion frondosum is fetal."},
+        {"wrong": "Umbilical arteries carry oxygenated blood to the fetus.", "right": "They carry deoxygenated fetal blood away to the placenta; the umbilical vein returns oxygenated blood."},
+        {"wrong": "Maternal and fetal blood normally mix freely in the intervillous space.", "right": "Maternal blood surrounds villi while fetal blood stays inside villous capillaries; exchange crosses a tissue barrier."}
+      ],
+      "recognition": [
+        "Dense branching villi at the embryonic pole identify chorion frondosum; a smooth abembryonic surface identifies chorion laeve.",
+        "In placental sections, fetal capillaries lie inside villi while maternal blood occupies the space outside them.",
+        "A normal umbilical-cord cross-section shows two smaller thick-walled arteries and one larger vein embedded in Wharton jelly."
+      ],
+      "source": {"label": "Langman's Medical Embryology, 15th ed.", "detail": "Chapter 8, fetal membranes, placenta, and umbilical cord"}
+    },
+    {
+      "id": "emb-respiratory-development",
+      "exam": "july25",
+      "subject": "embryology",
+      "topic": "Respiratory system development",
+      "title": "Lung development from foregut bud to working alveolus",
+      "subtitle": "A teacher-slide spotter guide for origin, partitioning, maturation, and surfactant",
+      "kind": "timeline",
+      "topicPatterns": ["Respiratory system development"],
+      "questionPatterns": ["respiratory primordium", "laryngotracheal diverticulum", "respiratory diverticulum", "tbx4", "tracheoesophageal", "esophageal atresia", "vacterl", "three cs", "airway branching", "fgf", "pseudoglandular", "canalicular", "saccular", "alveolar", "surfactant", "respiratory distress", "hyaline membranes", "glucocorticoids", "lung fluid", "breathing movements", "maturing alveolus"],
+      "visual": {
+        "type": "timeline",
+        "caption": "First separate the airway from foregut, then branch it, thin the exchange surface, and stabilize it with surfactant.",
+        "items": [
+          {"label": "Week 4: lung bud", "detail": "The laryngotracheal diverticulum buds from ventral foregut endoderm around day 25. Retinoic acid from adjacent mesoderm upregulates TBX4 in endoderm to specify its position and identity.", "cue": "Ventral foregut bud"},
+          {"label": "Partition the foregut", "detail": "Tracheoesophageal ridges fuse into a septum, creating a ventral laryngotracheal tube and dorsal esophagus. Failed partitioning causes fistula/atresia.", "cue": "Ventral airway, dorsal esophagus"},
+          {"label": "Pseudoglandular: weeks 5-16", "detail": "FGF-driven epithelial-mesenchymal signaling produces extensive conducting-airway branching, but no respiratory units capable of gas exchange exist yet.", "cue": "Branches, no exchange"},
+          {"label": "Canalicular: weeks 16-26", "detail": "Lumina enlarge, respiratory bronchioles appear, capillaries multiply, and cuboidal epithelium begins thinning. Limited viability approaches the end of this period.", "cue": "Canals and capillaries"},
+          {"label": "Saccular: week 26 to birth", "detail": "Terminal sacs expand, type I cells thin, and capillaries closely approach. Type II cells increase phospholipid-rich surfactant, especially late in gestation.", "cue": "Thin sacs + surfactant"},
+          {"label": "Alveolar: late fetal to childhood", "detail": "Mature alveoli increase greatly after birth. Fetal lung fluid is cleared into blood and lymph as air inflation begins; surfactant prevents expiratory collapse.", "cue": "Alveoli keep maturing after birth"}
+        ]
+      },
+      "essentials": [
+        "Foregut endoderm forms respiratory epithelium and glands; surrounding splanchnic mesoderm forms cartilage, smooth muscle, connective tissue, vessels, and visceral pleura.",
+        "The commonest tracheoesophageal defect is proximal esophageal atresia with a distal tracheoesophageal fistula; feeding produces coughing, choking, cyanosis, and excessive salivation.",
+        "Tracheoesophageal fistula can occur in VACTERL: vertebral, anal, cardiac, tracheoesophageal, renal, and limb anomalies.",
+        "Type II alveolar cells make surfactant, which lowers surface tension; deficiency causes collapse, neonatal respiratory distress, and hyaline membranes.",
+        "Antenatal glucocorticoids accelerate type II-cell maturation and surfactant production when preterm delivery is likely.",
+        "Fetal breathing movements stimulate lung growth but do not perform prenatal gas exchange."
+      ],
+      "traps": [
+        {"wrong": "All lung tissues arise from foregut endoderm.", "right": "Endoderm makes the epithelial lining; splanchnic mesoderm makes supporting tissue, vessels, muscle, cartilage, and pleural mesothelium."},
+        {"wrong": "Pseudoglandular lungs can exchange gases because branching is extensive.", "right": "They have conducting branches but no functional respiratory units for gas exchange."},
+        {"wrong": "Surfactant raises surface tension so alveoli remain rigid.", "right": "Surfactant lowers surface tension and prevents small alveoli from collapsing during expiration."}
+      ],
+      "recognition": [
+        "A day-25 ventral foregut outgrowth is the respiratory diverticulum; the esophagus remains dorsal.",
+        "The common fistula diagram shows a blind proximal esophagus with its distal segment connected to the trachea.",
+        "Cuboidal respiratory epithelium with increasing capillaries suggests canalicular lung; very thin type I cells with capillaries pressed against air spaces suggests newborn/alveolar maturation.",
+        "Collapsed air spaces lined by eosinophilic protein-rich membranes indicate surfactant-deficiency neonatal RDS."
+      ],
+      "source": {"label": "TUMS respiratory embryology teacher slides + Langman's Medical Embryology, 15th ed.", "detail": "Embryology of Respiratory System E1/E2 and Chapter 14, Respiratory System"},
+      "asset": "/study/embryology/telegram/respiratory-diverticulum-day25.jpg"
+    }
+  ]
+}

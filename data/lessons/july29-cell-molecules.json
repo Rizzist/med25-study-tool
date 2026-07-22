@@ -1,0 +1,2376 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "bio-foundations-energy-bonds",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Biochemical foundations",
+      "title": "Biochemistry foundations: energy, groups, and bonds",
+      "subtitle": "The chemical grammar behind every later pathway",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "Biochemical foundations",
+        "Metabolism, ATP, functional groups, and bonds"
+      ],
+      "questionPatterns": [
+        "anabolism",
+        "catabolism",
+        "atp",
+        "functional group",
+        "hydroxyl",
+        "carboxyl",
+        "sulfhydryl",
+        "hydrogen bond",
+        "hydrophobic interaction",
+        "central dogma"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Connect molecular structure to energy use and biological function.",
+        "items": [
+          {
+            "label": "Matter",
+            "detail": "CHNOPS atoms are arranged into carbohydrates, lipids, proteins, and nucleic acids.",
+            "cue": "Structure predicts function"
+          },
+          {
+            "label": "Functional groups",
+            "detail": "Hydroxyl and carbonyl groups add polarity; carboxyl groups donate H+; amino groups accept H+; phosphate transfers energy; sulfhydryls form disulfides.",
+            "cue": "Find the reactive handle"
+          },
+          {
+            "label": "Catabolism",
+            "detail": "Large molecules are oxidized to smaller products, releasing energy captured mainly as ATP and reduced cofactors.",
+            "cue": "Break down, make ATP"
+          },
+          {
+            "label": "Anabolism",
+            "detail": "Small precursors are assembled into complex molecules using ATP and usually NADPH.",
+            "cue": "Build up, spend ATP"
+          },
+          {
+            "label": "Information",
+            "detail": "DNA is transcribed into RNA, and coding RNA is translated into protein.",
+            "cue": "DNA → RNA → protein"
+          }
+        ]
+      },
+      "essentials": [
+        "ATP hydrolysis drives unfavorable reactions by coupling; ATP is an energy-transfer currency, not long-term energy storage.",
+        "Covalent bonds build molecules; hydrogen bonds, ionic attractions, van der Waals forces, and hydrophobic interactions control folding and recognition.",
+        "Oxidation is loss of electrons or hydrogen; reduction is gain of electrons or hydrogen.",
+        "Amphipathic molecules contain both hydrophilic and hydrophobic regions and can self-assemble into membranes."
+      ],
+      "traps": [
+        {
+          "wrong": "Anabolism produces ATP by breaking molecules down.",
+          "right": "Catabolism releases usable energy; anabolism consumes it to synthesize molecules."
+        },
+        {
+          "wrong": "Hydrophobic interactions are covalent bonds between nonpolar groups.",
+          "right": "They are noncovalent clustering effects driven by exclusion of nonpolar surfaces from water."
+        }
+      ],
+      "recognition": [
+        "A phosphate-containing energy-transfer reaction usually points to ATP coupling.",
+        "Two cysteine side chains linked together identify a disulfide bond."
+      ],
+      "source": {
+        "label": "TUMS Biochemistry Introduction + Lippincott",
+        "detail": "INTRODUCTION.ppt, slides 3–31; Lippincott Illustrated Reviews: Biochemistry, foundational chemistry cross-check."
+      }
+    },
+    {
+      "id": "bio-water-compartments",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Water and body-fluid compartments",
+      "title": "Water, osmosis, and body-fluid compartments",
+      "subtitle": "Where water sits and what makes it move",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Water and body-fluid compartments"
+      ],
+      "questionPatterns": [
+        "body water",
+        "intracellular fluid",
+        "extracellular fluid",
+        "interstitial",
+        "plasma volume",
+        "osmosis",
+        "osmolarity",
+        "hydrophilic",
+        "hydrophobic",
+        "amphipathic"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "Total body water divides first into ICF and ECF, then ECF into interstitial fluid and plasma.",
+        "items": [
+          {
+            "label": "Total body water",
+            "detail": "About 60% of body weight in a typical lean adult male, lower with more adipose tissue and often lower in females and older adults.",
+            "cue": "Starting pool"
+          },
+          {
+            "label": "ICF",
+            "detail": "About two-thirds of total body water; K+, Mg2+, phosphate, and proteins predominate.",
+            "cue": "K+ inside"
+          },
+          {
+            "label": "ECF",
+            "detail": "About one-third of total body water; Na+, Cl−, and bicarbonate predominate.",
+            "cue": "Na+ outside"
+          },
+          {
+            "label": "Interstitial fluid",
+            "detail": "Roughly three-quarters of ECF, outside cells and outside the vascular compartment.",
+            "cue": "Bathes cells"
+          },
+          {
+            "label": "Plasma",
+            "detail": "Roughly one-quarter of ECF; plasma proteins create colloid osmotic pressure.",
+            "cue": "Inside vessels"
+          }
+        ]
+      },
+      "essentials": [
+        "Water is polar and forms hydrogen bonds, giving it strong solvent, thermal, and cohesive properties.",
+        "Water moves across a semipermeable membrane toward the compartment with higher effective osmolarity.",
+        "At equilibrium, ICF and ECF osmolarities are nearly equal even though their ion compositions differ.",
+        "An amphipathic molecule has a polar region and a nonpolar region; membrane lipids are the central example."
+      ],
+      "traps": [
+        {
+          "wrong": "Most extracellular fluid is plasma.",
+          "right": "Most ECF is interstitial fluid; plasma is the smaller ECF subdivision."
+        },
+        {
+          "wrong": "Water moves toward lower solute concentration.",
+          "right": "Water moves toward higher effective solute concentration until osmotic equilibrium."
+        }
+      ],
+      "recognition": [
+        "A compartment rich in Na+ and Cl− is ECF; one rich in K+ and phosphate is ICF.",
+        "A molecule drawn with a charged head and hydrocarbon tail is amphipathic."
+      ],
+      "source": {
+        "label": "TUMS Water and Buffer + Marks",
+        "detail": "Water and Buffer 1404.ppt, slides 3–8; Marks’ Water, Acids, Bases, and Buffers reference, pp. 21–24."
+      }
+    },
+    {
+      "id": "bio-ph-acids-pka",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "pH, acids, bases, Ka, and pKa",
+      "title": "pH, weak acids, Ka, and pKa",
+      "subtitle": "Read acid strength and protonation without guessing",
+      "kind": "comparison",
+      "topicPatterns": [
+        "pH, acids, bases, Ka, and pKa"
+      ],
+      "questionPatterns": [
+        "ph",
+        "poh",
+        "ka",
+        "pka",
+        "strong acid",
+        "weak acid",
+        "conjugate acid",
+        "conjugate base",
+        "protonated",
+        "deprotonated"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "pKa ranks acid strength; the difference between pH and pKa predicts protonation.",
+        "items": [
+          {
+            "label": "Strong acid",
+            "detail": "Dissociates almost completely in water; large Ka and low pKa.",
+            "cue": "Strong = low pKa"
+          },
+          {
+            "label": "Weak acid",
+            "detail": "Partially dissociates and establishes HA ⇌ H+ + A−; smaller Ka and higher pKa.",
+            "cue": "Reversible pair"
+          },
+          {
+            "label": "pH < pKa",
+            "detail": "The environment is relatively proton-rich, so HA predominates.",
+            "cue": "Low pH = protonated"
+          },
+          {
+            "label": "pH = pKa",
+            "detail": "Concentrations of HA and A− are equal.",
+            "cue": "Half dissociated"
+          },
+          {
+            "label": "pH > pKa",
+            "detail": "The environment is relatively proton-poor, so A− predominates.",
+            "cue": "High pH = deprotonated"
+          }
+        ]
+      },
+      "essentials": [
+        "pH = −log[H+]; a one-unit pH change is a tenfold change in hydrogen-ion concentration.",
+        "At 25°C, pH + pOH = 14 for dilute aqueous solutions.",
+        "Ka measures dissociation directly; pKa = −log Ka, so stronger acids have lower pKa values.",
+        "An acid donates H+ and its conjugate base is what remains; a base accepts H+."
+      ],
+      "traps": [
+        {
+          "wrong": "A higher pKa means a stronger acid.",
+          "right": "A lower pKa means a stronger acid because Ka is larger."
+        },
+        {
+          "wrong": "At pH = pKa the acid is completely dissociated.",
+          "right": "At pH = pKa, protonated and deprotonated forms are present in equal amounts."
+        }
+      ],
+      "recognition": [
+        "If pH is two units above pKa, the deprotonated form exceeds the protonated form by 100:1.",
+        "A titration midpoint marks pH = pKa."
+      ],
+      "source": {
+        "label": "TUMS Water and Buffer",
+        "detail": "Water and Buffer 1404.ppt, slides 9–20; teacher definitions and pH/Ka/pKa examples."
+      }
+    },
+    {
+      "id": "bio-titration-henderson",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Titration and Henderson–Hasselbalch",
+      "title": "Titration curves and buffer capacity",
+      "subtitle": "Turn a curve into ratios, pKa, and buffer strength",
+      "kind": "timeline",
+      "topicPatterns": [
+        "Titration, Henderson-Hasselbalch, and buffer capacity"
+      ],
+      "questionPatterns": [
+        "henderson-hasselbalch",
+        "titration curve",
+        "buffer capacity",
+        "buffer range",
+        "half-equivalence",
+        "equivalence point",
+        "acid base ratio",
+        "midpoint"
+      ],
+      "visual": {
+        "type": "timeline",
+        "caption": "Follow a weak acid as base is added: acid-rich → maximum buffering → base-rich → equivalence.",
+        "items": [
+          {
+            "label": "Start",
+            "detail": "Mostly HA is present; pH is below pKa and added base converts HA to A−.",
+            "cue": "Acid form dominates"
+          },
+          {
+            "label": "Buffer region",
+            "detail": "Both HA and A− are appreciable; effective buffering is approximately pKa ± 1 pH unit.",
+            "cue": "Ratio 0.1–10"
+          },
+          {
+            "label": "Half-equivalence",
+            "detail": "Half the acid has been converted to conjugate base, so [A−] = [HA] and pH = pKa.",
+            "cue": "Maximum capacity"
+          },
+          {
+            "label": "Toward equivalence",
+            "detail": "A− increasingly predominates and the curve rises more steeply as buffer reserve is exhausted.",
+            "cue": "Base form dominates"
+          },
+          {
+            "label": "Equivalence",
+            "detail": "Stoichiometric neutralization is complete; this is not the same point as half-equivalence.",
+            "cue": "Moles matched"
+          }
+        ]
+      },
+      "essentials": [
+        "Henderson–Hasselbalch: pH = pKa + log([A−]/[HA]).",
+        "A tenfold increase in [A−]/[HA] raises pH by one unit.",
+        "Buffer capacity is greatest when pH is near pKa and rises with total buffer concentration.",
+        "Choose a buffer with a pKa near the desired working pH."
+      ],
+      "traps": [
+        {
+          "wrong": "Maximum buffering occurs at the equivalence point.",
+          "right": "Maximum buffering occurs near half-equivalence, where pH = pKa and HA equals A−."
+        },
+        {
+          "wrong": "Diluting a buffer changes its acid-to-base ratio and therefore always changes pH greatly.",
+          "right": "Ideal dilution preserves the ratio and pH approximately, but lowers buffer capacity."
+        }
+      ],
+      "recognition": [
+        "The flattest central region of a weak-acid titration curve is the buffer region.",
+        "The point where half the titrant required for equivalence has been added reveals pKa."
+      ],
+      "source": {
+        "label": "TUMS Water and Buffer + Titration practical",
+        "detail": "Water and Buffer 1404.ppt, slides 22–28; Titration Esmaeili Jan 2026.pdf, pp. 1–10."
+      }
+    },
+    {
+      "id": "bio-physiological-buffers",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Physiological buffer systems",
+      "title": "Physiological buffers: bicarbonate, phosphate, and proteins",
+      "subtitle": "Match each buffer to its compartment and controller",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "Physiological buffer systems"
+      ],
+      "questionPatterns": [
+        "bicarbonate buffer",
+        "phosphate buffer",
+        "hemoglobin buffer",
+        "protein buffer",
+        "carbonic acid",
+        "carbon dioxide",
+        "chloride shift",
+        "renal buffer",
+        "respiratory compensation"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Body pH is protected immediately by buffers, then by lungs, then by kidneys.",
+        "items": [
+          {
+            "label": "Bicarbonate",
+            "detail": "Major extracellular system: CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3−; lungs control CO2 and kidneys control HCO3−.",
+            "cue": "Open ECF buffer"
+          },
+          {
+            "label": "Hemoglobin",
+            "detail": "Deoxyhemoglobin accepts H+ produced when CO2 is hydrated in RBCs; oxygenation in lungs promotes H+ release and CO2 exhalation.",
+            "cue": "Major RBC buffer"
+          },
+          {
+            "label": "Plasma proteins",
+            "detail": "Ionizable amino-acid side chains, especially histidine, accept or donate protons.",
+            "cue": "Protein side chains"
+          },
+          {
+            "label": "Phosphate",
+            "detail": "HPO4²−/H2PO4− is most useful intracellularly and in renal tubular fluid because concentration and pH suit its pKa.",
+            "cue": "ICF + urine"
+          },
+          {
+            "label": "Controllers",
+            "detail": "Chemical buffers act in seconds, ventilation in minutes, and renal net acid excretion over hours to days.",
+            "cue": "Buffer → lung → kidney"
+          }
+        ]
+      },
+      "essentials": [
+        "Clinical bicarbonate equation: pH = 6.1 + log([HCO3−]/(0.03 × PCO2)).",
+        "Bicarbonate works well despite a pKa below blood pH because CO2 is continuously regulated by the lungs.",
+        "The chloride shift exchanges HCO3− and Cl− across the RBC membrane to transport large amounts of CO2 as bicarbonate.",
+        "Respiratory changes alter the denominator; metabolic or renal changes chiefly alter bicarbonate in the numerator."
+      ],
+      "traps": [
+        {
+          "wrong": "Phosphate is the quantitatively dominant extracellular buffer.",
+          "right": "Bicarbonate is the major extracellular buffer; phosphate is more important intracellularly and in urine."
+        },
+        {
+          "wrong": "Oxyhemoglobin binds H+ better than deoxyhemoglobin.",
+          "right": "Deoxyhemoglobin is the better H+ buffer; oxygenation favors proton release in the lungs."
+        }
+      ],
+      "recognition": [
+        "A question pairing lungs with CO2 and kidneys with bicarbonate is testing the open bicarbonate system.",
+        "Urinary buffering by HPO4²− to H2PO4− identifies titratable acid."
+      ],
+      "source": {
+        "label": "TUMS Water and Buffer + Marks",
+        "detail": "Water and Buffer 1404.ppt, slides 29–35; Marks reference pp. 26–28."
+      }
+    },
+    {
+      "id": "bio-water-soluble-vitamins",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Water-soluble vitamins",
+      "title": "Water-soluble vitamins: coenzymes and deficiency signatures",
+      "subtitle": "Match the active form to the reaction and clinical clue",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Water-soluble vitamins"
+      ],
+      "questionPatterns": [
+        "thiamine",
+        "riboflavin",
+        "niacin",
+        "pyridoxine",
+        "biotin",
+        "folate",
+        "cobalamin",
+        "vitamin c",
+        "scurvy",
+        "beriberi",
+        "megaloblastic"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Use one anchor for each vitamin: active coenzyme → reaction class → deficiency clue.",
+        "items": [
+          {
+            "label": "B1, B2, B3",
+            "detail": "B1/TPP transfers aldehyde units in oxidative decarboxylation and transketolase; B2/FAD-FMN and B3/NAD-NADP carry electrons.",
+            "cue": "Energy cofactors"
+          },
+          {
+            "label": "B5, B6, B7",
+            "detail": "B5 is part of CoA/acyl transfer; B6/PLP handles amino-acid reactions and heme synthesis; biotin carries CO2 in carboxylation.",
+            "cue": "Acyl, amino, CO2"
+          },
+          {
+            "label": "B9 folate",
+            "detail": "THF carries one-carbon units for purines and thymidylate; deficiency causes megaloblastic anemia without neurologic deficits.",
+            "cue": "DNA synthesis"
+          },
+          {
+            "label": "B12 cobalamin",
+            "detail": "Required for methionine synthase and methylmalonyl-CoA mutase; deficiency causes megaloblastic anemia plus neurologic injury and elevated methylmalonate.",
+            "cue": "Blood + nerves"
+          },
+          {
+            "label": "Vitamin C",
+            "detail": "Reduces iron and supports proline/lysine hydroxylation in collagen; deficiency causes bleeding, poor wound healing, and corkscrew hairs.",
+            "cue": "Collagen hydroxylation"
+          }
+        ]
+      },
+      "essentials": [
+        "Most water-soluble vitamins act as coenzyme precursors and have limited stores; B12 is the major exception with substantial hepatic stores.",
+        "B1 deficiency produces beriberi or Wernicke–Korsakoff; pyruvate dehydrogenase, α-ketoglutarate dehydrogenase, branched-chain dehydrogenase, and transketolase require TPP.",
+        "B3 can be synthesized from tryptophan; deficiency causes pellagra: dermatitis, diarrhea, dementia, and potentially death.",
+        "B6 deficiency can cause neuropathy, seizures, cheilosis, and sideroblastic anemia; isoniazid increases risk.",
+        "Folate can correct B12-deficient anemia while neurologic damage progresses, so distinguish them before treatment."
+      ],
+      "traps": [
+        {
+          "wrong": "Folate deficiency raises methylmalonic acid.",
+          "right": "Methylmalonic acid rises in B12 deficiency; homocysteine may rise in either B12 or folate deficiency."
+        },
+        {
+          "wrong": "Biotin is used by decarboxylases.",
+          "right": "Biotin carries activated CO2 for carboxylases."
+        }
+      ],
+      "recognition": [
+        "Megaloblastic anemia plus neurologic findings points to B12 rather than isolated folate deficiency.",
+        "Bleeding gums and poor wound healing identify vitamin C deficiency.",
+        "Confusion, ataxia, and ophthalmoplegia in malnutrition suggest B1 deficiency."
+      ],
+      "source": {
+        "label": "TUMS Vitamin lecture + Lippincott",
+        "detail": "Vitamin 2024.pdf, pp. 4–45; Lippincott Illustrated Reviews: Biochemistry, Chapter 28."
+      }
+    },
+    {
+      "id": "bio-fat-soluble-vitamins",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Fat-soluble vitamins",
+      "title": "Fat-soluble vitamins A, D, E, and K",
+      "subtitle": "Absorption, storage, function, deficiency, and toxicity",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Fat-soluble vitamins"
+      ],
+      "questionPatterns": [
+        "vitamin a",
+        "retinol",
+        "retinal",
+        "vitamin d",
+        "calcitriol",
+        "vitamin e",
+        "tocopherol",
+        "vitamin k",
+        "gamma-carboxylation",
+        "night blindness",
+        "rickets"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "ADEK travel with fat, so malabsorption can impair all four and storage makes toxicity more likely.",
+        "items": [
+          {
+            "label": "A",
+            "detail": "Retinal supports vision; retinoic acid controls epithelial differentiation and gene transcription. Deficiency: night blindness and xerophthalmia.",
+            "cue": "Eyes + epithelium"
+          },
+          {
+            "label": "D",
+            "detail": "Activated by liver 25-hydroxylation then kidney 1α-hydroxylation; calcitriol raises intestinal Ca2+ and phosphate absorption.",
+            "cue": "Bone mineral balance"
+          },
+          {
+            "label": "E",
+            "detail": "Lipid-phase antioxidant protecting membranes from peroxidation. Deficiency: hemolysis and neurologic dysfunction.",
+            "cue": "Membrane antioxidant"
+          },
+          {
+            "label": "K",
+            "detail": "Cofactor for γ-carboxylation of glutamate in factors II, VII, IX, X and proteins C and S, enabling Ca2+ binding.",
+            "cue": "Coagulation carboxylation"
+          }
+        ]
+      },
+      "essentials": [
+        "Fat-soluble vitamin absorption requires normal fat digestion, bile delivery, micelles, and chylomicron formation.",
+        "Vitamin D activation is stimulated by PTH at the renal 1α-hydroxylase step; deficiency causes rickets in children and osteomalacia in adults.",
+        "Warfarin inhibits vitamin K recycling; vitamin K deficiency typically prolongs PT first because factor VII has a short half-life.",
+        "Vitamins A and D can cause important toxicity because they are stored; high-dose vitamin A is teratogenic."
+      ],
+      "traps": [
+        {
+          "wrong": "Vitamin K is needed to synthesize the peptide chains of clotting factors.",
+          "right": "It enables post-translational γ-carboxylation so selected factors can bind Ca2+."
+        },
+        {
+          "wrong": "The kidney performs the first hydroxylation of vitamin D.",
+          "right": "The liver makes 25-OH D first; the kidney then makes active 1,25-(OH)2 D."
+        }
+      ],
+      "recognition": [
+        "Night blindness is the earliest classic vitamin A clue.",
+        "Hemolytic anemia with neurologic dysfunction in fat malabsorption suggests vitamin E deficiency.",
+        "Bleeding in a newborn or after prolonged antibiotics suggests vitamin K deficiency."
+      ],
+      "source": {
+        "label": "TUMS Vitamin lecture + Lippincott",
+        "detail": "Vitamin 2024.pdf, pp. 46–70; Lippincott Illustrated Reviews: Biochemistry, Chapter 28."
+      }
+    },
+    {
+      "id": "bio-fatty-acids-tag-eicosanoids",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Fatty acids, storage, oxidation, and eicosanoids",
+      "title": "Fatty acids: from structure to fuel and signals",
+      "subtitle": "Read saturation, storage, β-oxidation, and eicosanoid origin together",
+      "kind": "process",
+      "topicPatterns": [
+        "fatty acids",
+        "lipid oxidation",
+        "eicosanoids",
+        "triacylglycerol"
+      ],
+      "questionPatterns": [
+        "saturated fatty acid",
+        "unsaturated fatty acid",
+        "cis double bond",
+        "omega",
+        "beta oxidation",
+        "acetyl coa",
+        "triacylglycerol",
+        "eicosanoid",
+        "arachidonic acid",
+        "prostaglandin",
+        "leukotriene"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Fatty-acid structure determines packing; nutritional state determines storage, oxidation, or signaling use.",
+        "items": [
+          {
+            "label": "Structure",
+            "detail": "Saturated chains pack tightly; cis double bonds create kinks and lower melting point. Omega numbering begins at the methyl end.",
+            "cue": "Cis kink = more fluid"
+          },
+          {
+            "label": "Storage",
+            "detail": "Three fatty acyl chains esterified to glycerol form neutral triacylglycerol, stored without water in lipid droplets.",
+            "cue": "Dense fuel depot"
+          },
+          {
+            "label": "Mobilization",
+            "detail": "Lipases release free fatty acids, which circulate bound to albumin and are activated to fatty acyl-CoA.",
+            "cue": "Release, carry, activate"
+          },
+          {
+            "label": "β-oxidation",
+            "detail": "Repeated mitochondrial oxidation, hydration, oxidation, and thiolysis shorten the chain by two carbons, producing acetyl-CoA, NADH, and FADH2.",
+            "cue": "Four-step spiral"
+          },
+          {
+            "label": "Eicosanoids",
+            "detail": "Arachidonic acid released from membrane phospholipids forms prostaglandins/thromboxanes via cyclooxygenase and leukotrienes via lipoxygenase.",
+            "cue": "Local lipid signals"
+          }
+        ]
+      },
+      "essentials": [
+        "Long-chain fatty acids require the carnitine shuttle to enter the mitochondrial matrix for β-oxidation.",
+        "Each β-oxidation cycle removes one acetyl-CoA and generates one NADH and one FADH2, except the final cleavage yields two acetyl-CoA.",
+        "Triacylglycerols are nonpolar storage lipids; phospholipids are amphipathic structural lipids.",
+        "Aspirin and other NSAIDs inhibit cyclooxygenase products, not leukotriene synthesis."
+      ],
+      "traps": [
+        {
+          "wrong": "Cis double bonds allow tighter fatty-acid packing.",
+          "right": "Cis double bonds introduce kinks, reduce packing, and increase fluidity."
+        },
+        {
+          "wrong": "β-oxidation directly generates glucose from even-chain fatty acids.",
+          "right": "Even-chain fatty acids generate acetyl-CoA, which cannot yield net glucose in humans."
+        }
+      ],
+      "recognition": [
+        "A kinked hydrocarbon chain usually represents a cis unsaturated fatty acid.",
+        "A glycerol backbone with three esterified fatty acids is triacylglycerol.",
+        "Arachidonic acid plus COX points to prostaglandins or thromboxanes; 5-LOX points to leukotrienes."
+      ],
+      "source": {
+        "label": "TUMS Lipid structure + Lippincott",
+        "detail": "Lipid structure Esmaeili.pdf, fatty-acid, triacylglycerol, and eicosanoid sections; Lippincott lipid chemistry cross-check."
+      }
+    },
+    {
+      "id": "bio-lipid-architecture",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Lipid classes and membrane architecture",
+      "title": "Recognizing lipid classes by backbone and head group",
+      "subtitle": "Glycerol versus sphingosine is the fastest route to the answer",
+      "kind": "comparison",
+      "topicPatterns": [
+        "lipids",
+        "lipid structure",
+        "lipid classification",
+        "phospholipids",
+        "sphingolipids"
+      ],
+      "questionPatterns": [
+        "glycerophospholipid",
+        "phosphatidylcholine",
+        "lecithin",
+        "cardiolipin",
+        "sphingosine",
+        "ceramide",
+        "sphingomyelin",
+        "glycosphingolipid",
+        "cerebroside",
+        "ganglioside",
+        "amphipathic lipid"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Identify the backbone first, then phosphate versus carbohydrate head group.",
+        "items": [
+          {
+            "label": "Glycerophospholipid",
+            "detail": "Glycerol + two fatty acids + phosphate + polar alcohol; examples include phosphatidylcholine, phosphatidylethanolamine, and cardiolipin.",
+            "cue": "Glycerol + phosphate"
+          },
+          {
+            "label": "Ceramide",
+            "detail": "Sphingosine backbone plus one amide-linked fatty acid; this is the core of sphingolipids.",
+            "cue": "Sphingosine + FA"
+          },
+          {
+            "label": "Sphingomyelin",
+            "detail": "Ceramide plus phosphocholine; it is both a sphingolipid and a phospholipid and is abundant in myelin.",
+            "cue": "Ceramide + phosphate"
+          },
+          {
+            "label": "Cerebroside",
+            "detail": "Ceramide plus one sugar and no phosphate; neutral glycosphingolipid.",
+            "cue": "One sugar"
+          },
+          {
+            "label": "Ganglioside",
+            "detail": "Ceramide plus an oligosaccharide containing sialic acid; negatively charged glycosphingolipid.",
+            "cue": "Complex sugar + NANA"
+          }
+        ]
+      },
+      "essentials": [
+        "Most membrane lipids are amphipathic: polar heads face water while hydrophobic tails form the bilayer core.",
+        "Phosphatidylinositol derivatives participate in intracellular signaling; cardiolipin is characteristic of the inner mitochondrial membrane.",
+        "Phosphatidylcholine, also called lecithin, is a major membrane phospholipid and pulmonary surfactant component.",
+        "Glycosphingolipids contribute to cell recognition and blood-group antigens on the outer membrane leaflet."
+      ],
+      "traps": [
+        {
+          "wrong": "All phospholipids have glycerol backbones.",
+          "right": "Sphingomyelin is a phospholipid built on ceramide rather than glycerol."
+        },
+        {
+          "wrong": "Cerebrosides contain phosphate.",
+          "right": "Cerebrosides are ceramide plus one sugar and contain no phosphate."
+        }
+      ],
+      "recognition": [
+        "A long-chain amino alcohol backbone identifies sphingosine.",
+        "A negatively charged oligosaccharide containing sialic acid identifies a ganglioside.",
+        "Two acyl chains on glycerol plus phosphate identifies a glycerophospholipid."
+      ],
+      "source": {
+        "label": "TUMS Lipid structure",
+        "detail": "Lipid structure Esmaeili.pdf, lipid classification, phospholipid, sphingolipid, and membrane sections."
+      }
+    },
+    {
+      "id": "bio-cholesterol-lipoproteins",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Cholesterol and lipoprotein traffic",
+      "title": "Cholesterol and lipoprotein routes",
+      "subtitle": "Track dietary lipid, liver lipid, remnants, and reverse transport",
+      "kind": "process",
+      "topicPatterns": [
+        "cholesterol",
+        "lipoproteins"
+      ],
+      "questionPatterns": [
+        "chylomicron",
+        "vldl",
+        "idl",
+        "ldl",
+        "hdl",
+        "apob-48",
+        "apob-100",
+        "apoc-ii",
+        "apoe",
+        "lipoprotein lipase",
+        "reverse cholesterol"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Separate the exogenous, endogenous, and reverse-cholesterol pathways.",
+        "items": [
+          {
+            "label": "Chylomicron",
+            "detail": "Intestine packages dietary TAG with apoB-48; apoC-II activates capillary LPL; apoE directs the remnant to liver.",
+            "cue": "Diet → tissues → liver"
+          },
+          {
+            "label": "VLDL",
+            "detail": "Liver exports endogenous TAG with apoB-100; LPL removes TAG, producing IDL.",
+            "cue": "Liver TAG export"
+          },
+          {
+            "label": "IDL",
+            "detail": "VLDL remnant either returns to liver through apoE or loses more TAG to become LDL.",
+            "cue": "Branch point"
+          },
+          {
+            "label": "LDL",
+            "detail": "Cholesterol-rich particle delivers cholesterol to cells through LDL receptors recognizing apoB-100.",
+            "cue": "Cholesterol delivery"
+          },
+          {
+            "label": "HDL",
+            "detail": "Collects peripheral cholesterol; apoA-I activates LCAT, supporting reverse cholesterol transport to liver.",
+            "cue": "Cholesterol return"
+          }
+        ]
+      },
+      "essentials": [
+        "Cholesterol is a membrane component and precursor of steroid hormones, bile acids, and vitamin D; it is not oxidized for energy.",
+        "Lipoprotein density rises as protein proportion rises: chylomicron < VLDL < IDL < LDL < HDL.",
+        "ApoC-II activates lipoprotein lipase; apoE mediates remnant uptake; apoB-100 binds the LDL receptor; apoB-48 is structural in chylomicrons.",
+        "Free cholesterol is amphipathic at the surface; cholesteryl ester is hydrophobic and stored in the particle core."
+      ],
+      "traps": [
+        {
+          "wrong": "LDL transports dietary triacylglycerol from the intestine.",
+          "right": "Chylomicrons carry dietary TAG; LDL chiefly delivers cholesterol."
+        },
+        {
+          "wrong": "ApoC-II is the ligand for hepatic remnant uptake.",
+          "right": "ApoC-II activates LPL; apoE mediates remnant uptake."
+        }
+      ],
+      "recognition": [
+        "Largest, least dense, TAG-rich particle after a meal: chylomicron.",
+        "A cholesterol-rich apoB-100 particle binding peripheral receptors: LDL.",
+        "ApoA-I plus LCAT and cholesterol retrieval: HDL."
+      ],
+      "source": {
+        "label": "TUMS Lipid structure + Lippincott",
+        "detail": "Lipid structure Esmaeili.pdf, cholesterol and lipoprotein sections; Lippincott lipoprotein cross-check."
+      }
+    },
+    {
+      "id": "bio-amino-acids",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Amino-acid chemistry",
+      "title": "Amino acids: charge, pI, and side-chain logic",
+      "subtitle": "Use pH versus pKa to predict charge and behavior",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "amino acids"
+      ],
+      "questionPatterns": [
+        "zwitterion",
+        "isoelectric point",
+        "pi",
+        "essential amino acid",
+        "acidic amino acid",
+        "basic amino acid",
+        "aromatic amino acid",
+        "branched chain",
+        "peptide bond",
+        "amino acid charge"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "The common backbone gives acid-base behavior; the R group gives chemical identity.",
+        "items": [
+          {
+            "label": "Common backbone",
+            "detail": "An α-carbon bears amino, carboxyl, hydrogen, and R groups; glycine is achiral because R is H.",
+            "cue": "Four groups on Cα"
+          },
+          {
+            "label": "Low pH",
+            "detail": "Ionizable groups are more protonated and net charge becomes more positive.",
+            "cue": "Acid adds H+"
+          },
+          {
+            "label": "Isoelectric point",
+            "detail": "At pI, average net charge is zero and electrophoretic movement is minimal.",
+            "cue": "Net zero"
+          },
+          {
+            "label": "High pH",
+            "detail": "Ionizable groups are more deprotonated and net charge becomes more negative.",
+            "cue": "Base removes H+"
+          },
+          {
+            "label": "Side chains",
+            "detail": "Nonpolar, polar uncharged, acidic, basic, aromatic, sulfur-containing, and branched-chain categories predict interactions.",
+            "cue": "R group rules"
+          }
+        ]
+      },
+      "essentials": [
+        "At physiological pH, free amino acids usually exist as zwitterions with NH3+ and COO− groups.",
+        "Acidic side chains are Asp and Glu; basic side chains are Lys, Arg, and His.",
+        "The peptide bond is planar and has partial double-bond character, restricting rotation.",
+        "Essential amino acids must be supplied in the diet; conditionally essential amino acids become limiting in growth or illness."
+      ],
+      "traps": [
+        {
+          "wrong": "At pH below its pI, an amino acid has a net negative charge.",
+          "right": "Below pI it is more protonated and net positive; above pI it is net negative."
+        },
+        {
+          "wrong": "Every amino acid is optically active.",
+          "right": "Glycine is achiral because it has two hydrogens attached to its α-carbon."
+        }
+      ],
+      "recognition": [
+        "A sulfur-containing side chain that can form disulfides is cysteine.",
+        "An imidazole side chain with a pKa near physiological pH is histidine.",
+        "A cyclic side chain bonded to the amino nitrogen identifies proline."
+      ],
+      "source": {
+        "label": "TUMS Amino acids and Proteins",
+        "detail": "Amino acids and Proteins.Part1.pdf, amino-acid structure, classification, ionization, and peptide-bond sections."
+      }
+    },
+    {
+      "id": "bio-protein-structure-denaturation",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Protein structure and denaturation",
+      "title": "Protein structure: four levels and what denaturation breaks",
+      "subtitle": "Match every structural level to its stabilizing interactions",
+      "kind": "comparison",
+      "topicPatterns": [
+        "protein structure",
+        "protein denaturation"
+      ],
+      "questionPatterns": [
+        "primary structure",
+        "secondary structure",
+        "alpha helix",
+        "beta sheet",
+        "tertiary structure",
+        "quaternary structure",
+        "denaturation",
+        "disulfide",
+        "chaperone",
+        "protein folding"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "Each higher level depends on the sequence below it and adds new interactions.",
+        "items": [
+          {
+            "label": "Primary",
+            "detail": "Linear amino-acid sequence joined by covalent peptide bonds; ultimately specifies folding information.",
+            "cue": "Sequence"
+          },
+          {
+            "label": "Secondary",
+            "detail": "Local α-helices, β-sheets, and turns stabilized mainly by backbone hydrogen bonds.",
+            "cue": "Backbone H-bonds"
+          },
+          {
+            "label": "Tertiary",
+            "detail": "Three-dimensional fold of one polypeptide stabilized by hydrophobic packing, hydrogen bonds, ionic interactions, van der Waals forces, and sometimes disulfides.",
+            "cue": "One chain, full fold"
+          },
+          {
+            "label": "Quaternary",
+            "detail": "Arrangement of multiple polypeptide subunits, as in hemoglobin.",
+            "cue": "Multiple chains"
+          },
+          {
+            "label": "Denaturation",
+            "detail": "Heat, extreme pH, detergents, or solvents disrupt higher-order structure and function without normally hydrolyzing peptide bonds.",
+            "cue": "Fold lost, sequence kept"
+          }
+        ]
+      },
+      "essentials": [
+        "Hydrophobic side chains tend to be buried in soluble globular proteins, while polar groups tend to face water.",
+        "Proline disrupts α-helices; glycine increases flexibility; disulfides are covalent links between cysteines.",
+        "Denaturation usually destroys secondary, tertiary, and quaternary structure while preserving primary structure.",
+        "Molecular chaperones assist folding and prevent aggregation but do not dictate the amino-acid sequence."
+      ],
+      "traps": [
+        {
+          "wrong": "Denaturation cleaves peptide bonds and changes primary structure.",
+          "right": "Ordinary denaturation disrupts noncovalent folding interactions, not peptide-bond sequence."
+        },
+        {
+          "wrong": "α-helices are stabilized mainly by side-chain hydrogen bonds.",
+          "right": "Their repeating hydrogen bonds are between peptide-backbone C=O and N–H groups."
+        }
+      ],
+      "recognition": [
+        "A repeated coiled ribbon is an α-helix; aligned arrows usually depict a β-sheet.",
+        "Several differently colored subunits assembled together depict quaternary structure."
+      ],
+      "source": {
+        "label": "TUMS Amino acids and Proteins",
+        "detail": "Amino acids and Proteins.Part1.pdf, peptide and protein structure, folding, and denaturation sections."
+      }
+    },
+    {
+      "id": "bio-enzyme-kinetics",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Enzyme kinetics",
+      "title": "Michaelis–Menten kinetics",
+      "subtitle": "Read Km and Vmax from curves and experimental changes",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "enzyme kinetics"
+      ],
+      "questionPatterns": [
+        "michaelis-menten",
+        "vmax",
+        "km",
+        "half maximal",
+        "substrate concentration",
+        "initial velocity",
+        "lineweaver-burk",
+        "turnover number",
+        "enzyme concentration"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Substrate binding produces ES; catalysis releases product and regenerates free enzyme.",
+        "items": [
+          {
+            "label": "Binding",
+            "detail": "E + S ⇌ ES; increasing substrate raises ES formation and initial velocity.",
+            "cue": "More S, more ES"
+          },
+          {
+            "label": "Low substrate",
+            "detail": "Velocity is approximately proportional to substrate concentration because many active sites are free.",
+            "cue": "First-order region"
+          },
+          {
+            "label": "Km point",
+            "detail": "When [S] = Km, velocity equals one-half Vmax for a Michaelis–Menten enzyme.",
+            "cue": "Km → half Vmax"
+          },
+          {
+            "label": "Saturation",
+            "detail": "At high substrate, nearly all active sites are occupied and velocity approaches Vmax.",
+            "cue": "Zero-order in S"
+          },
+          {
+            "label": "More enzyme",
+            "detail": "Adding enzyme raises Vmax proportionally but does not change Km when other conditions remain constant.",
+            "cue": "More active sites"
+          }
+        ]
+      },
+      "essentials": [
+        "v = Vmax[S]/(Km + [S]).",
+        "Km is the substrate concentration at half Vmax and often inversely reflects affinity, but only under the model’s assumptions.",
+        "Vmax depends on total enzyme concentration; kcat = Vmax/[E]total.",
+        "A Michaelis–Menten plot is hyperbolic; many allosteric enzymes show a sigmoidal velocity curve."
+      ],
+      "traps": [
+        {
+          "wrong": "A larger Km always means greater substrate affinity.",
+          "right": "For simple kinetics, a smaller Km generally means half-maximal velocity is reached at less substrate and suggests greater affinity."
+        },
+        {
+          "wrong": "Adding more enzyme lowers Km.",
+          "right": "Adding enzyme raises Vmax; Km is unchanged."
+        }
+      ],
+      "recognition": [
+        "The substrate concentration at half the plateau is Km.",
+        "On a Lineweaver–Burk plot, y-intercept = 1/Vmax and x-intercept = −1/Km."
+      ],
+      "source": {
+        "label": "TUMS Enzyme Kinetics",
+        "detail": "Enzyme Kinetics and regulation- Session2 2024.pptx, Michaelis–Menten and Lineweaver–Burk sections."
+      }
+    },
+    {
+      "id": "bio-enzyme-inhibition-regulation",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Enzyme inhibition and regulation",
+      "title": "Enzyme inhibition and control",
+      "subtitle": "Predict Km/Vmax changes, then identify the regulatory strategy",
+      "kind": "comparison",
+      "topicPatterns": [
+        "enzyme inhibition",
+        "enzyme regulation"
+      ],
+      "questionPatterns": [
+        "competitive inhibitor",
+        "noncompetitive inhibitor",
+        "uncompetitive inhibitor",
+        "mixed inhibition",
+        "allosteric",
+        "feedback inhibition",
+        "covalent modification",
+        "phosphorylation",
+        "zymogen",
+        "irreversible inhibitor"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "First ask where the inhibitor binds; then ask whether extra substrate can overcome it.",
+        "items": [
+          {
+            "label": "Competitive",
+            "detail": "Binds free enzyme at the active site; apparent Km rises, Vmax is unchanged, and high substrate can overcome inhibition.",
+            "cue": "Km ↑, Vmax same"
+          },
+          {
+            "label": "Pure noncompetitive",
+            "detail": "Binds E and ES equally at a separate site; Vmax falls while Km remains unchanged.",
+            "cue": "Vmax ↓ only"
+          },
+          {
+            "label": "Uncompetitive",
+            "detail": "Binds only ES; both apparent Km and Vmax fall by the same factor.",
+            "cue": "Both ↓"
+          },
+          {
+            "label": "Mixed",
+            "detail": "Binds E and ES unequally; Vmax falls and Km may rise or fall.",
+            "cue": "Vmax ↓, Km shifts"
+          },
+          {
+            "label": "Physiologic control",
+            "detail": "Allostery is rapid and reversible; phosphorylation is covalent and reversible; zymogen cleavage is irreversible; enzyme amount changes slowly.",
+            "cue": "Seconds → hours"
+          }
+        ]
+      },
+      "essentials": [
+        "Competitive inhibitors produce intersecting Lineweaver–Burk lines at the y-axis because 1/Vmax is unchanged.",
+        "Pure noncompetitive lines intersect at the x-axis because Km is unchanged; uncompetitive lines are parallel.",
+        "Feedback inhibition usually targets an early committed step, preventing unnecessary synthesis of an end product.",
+        "Allosteric enzymes often have multiple subunits, cooperative behavior, and sigmoidal kinetics."
+      ],
+      "traps": [
+        {
+          "wrong": "All noncompetitive inhibition changes Km.",
+          "right": "Pure noncompetitive inhibition lowers Vmax without changing Km; mixed inhibition changes both."
+        },
+        {
+          "wrong": "Phosphorylation always activates enzymes.",
+          "right": "Phosphorylation can activate or inhibit, depending on the enzyme and pathway."
+        }
+      ],
+      "recognition": [
+        "Same Vmax but a right-shifted saturation curve indicates competitive inhibition.",
+        "Parallel Lineweaver–Burk lines indicate uncompetitive inhibition.",
+        "A secreted inactive digestive precursor activated by cleavage is a zymogen."
+      ],
+      "source": {
+        "label": "TUMS Enzyme Kinetics and Regulation",
+        "detail": "Enzyme Kinetics and regulation- Session2 2024.pptx, inhibition, allostery, covalent regulation, and zymogen sections."
+      }
+    },
+    {
+      "id": "bio-nucleotides-dna-structure",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Nucleotides and DNA structure",
+      "title": "Nucleotides, DNA helices, and melting",
+      "subtitle": "Build DNA from base to helix and recognize A-, B-, and Z-DNA",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "dna structure",
+        "nucleotides",
+        "dna conformation",
+        "dna denaturation"
+      ],
+      "questionPatterns": [
+        "nucleoside",
+        "nucleotide",
+        "purine",
+        "pyrimidine",
+        "phosphodiester",
+        "antiparallel",
+        "chargaff",
+        "b-dna",
+        "a-dna",
+        "z-dna",
+        "dna melting",
+        "hyperchromic"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "DNA structure builds in layers: base → nucleoside → nucleotide → strand → double helix.",
+        "items": [
+          {
+            "label": "Base",
+            "detail": "Purines are adenine and guanine; pyrimidines are cytosine, thymine, and uracil.",
+            "cue": "AG = two rings"
+          },
+          {
+            "label": "Nucleoside",
+            "detail": "Nitrogenous base linked to ribose or deoxyribose by a β-N-glycosidic bond; no phosphate.",
+            "cue": "Base + sugar"
+          },
+          {
+            "label": "Nucleotide",
+            "detail": "Nucleoside plus one or more phosphate groups; polymerization forms 3′–5′ phosphodiester bonds.",
+            "cue": "Add phosphate"
+          },
+          {
+            "label": "B-DNA",
+            "detail": "Predominant physiological form: right-handed, antiparallel strands with major and minor grooves; A pairs T and G pairs C.",
+            "cue": "Normal right-handed helix"
+          },
+          {
+            "label": "Melting",
+            "detail": "Heat or extreme pH disrupts hydrogen bonding and base stacking, separates strands, and increases absorbance at 260 nm.",
+            "cue": "Hyperchromic effect"
+          }
+        ]
+      },
+      "essentials": [
+        "A–T has two hydrogen bonds and G–C has three; higher GC content generally raises melting temperature.",
+        "The two DNA strands run antiparallel, one 5′→3′ and the other 3′→5′.",
+        "B-DNA is right-handed and common; A-DNA is shorter and wider; Z-DNA is left-handed with a zigzag backbone.",
+        "Denaturation separates strands without breaking the covalent phosphodiester backbone; slow cooling can permit renaturation."
+      ],
+      "traps": [
+        {
+          "wrong": "A nucleoside contains a phosphate group.",
+          "right": "A nucleoside is base plus sugar; adding phosphate makes a nucleotide."
+        },
+        {
+          "wrong": "DNA melting hydrolyzes phosphodiester bonds.",
+          "right": "Melting disrupts noncovalent base pairing and stacking while strands remain covalently intact."
+        }
+      ],
+      "recognition": [
+        "A left-handed helix with a zigzag backbone identifies Z-DNA.",
+        "An increase in A260 during heating is the hyperchromic effect of DNA denaturation.",
+        "A five-membered plus six-membered fused ring is a purine."
+      ],
+      "source": {
+        "label": "TUMS DNA Structure",
+        "detail": "Deoxyribonucleic Acid(DNA)Structure (2).pdf, nucleotide, helix conformation, and denaturation sections."
+      }
+    },
+    {
+      "id": "bio-chromatin",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Chromatin organization",
+      "title": "Chromatin: packing DNA while controlling access",
+      "subtitle": "From nucleosome core to active and silent domains",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "chromatin"
+      ],
+      "questionPatterns": [
+        "nucleosome",
+        "histone octamer",
+        "histone h1",
+        "euchromatin",
+        "heterochromatin",
+        "histone acetylation",
+        "dna methylation",
+        "chromatin remodeling",
+        "solenoid",
+        "beads on a string"
+      ],
+      "visual": {
+        "type": "layers",
+        "caption": "DNA accessibility changes as the fiber is wrapped, linked, looped, and chemically marked.",
+        "items": [
+          {
+            "label": "DNA double helix",
+            "detail": "Negatively charged phosphate backbone is attracted to positively charged lysine- and arginine-rich histones.",
+            "cue": "Charge attraction"
+          },
+          {
+            "label": "Nucleosome core",
+            "detail": "About 147 base pairs wrap around an octamer containing two each of H2A, H2B, H3, and H4.",
+            "cue": "Histone octamer"
+          },
+          {
+            "label": "Linker",
+            "detail": "Linker DNA connects nucleosomes; histone H1 binds the linker region and promotes higher-order compaction.",
+            "cue": "H1 is outside the core"
+          },
+          {
+            "label": "Euchromatin",
+            "detail": "Relatively open, lightly staining, and generally transcriptionally active.",
+            "cue": "Open = expressed"
+          },
+          {
+            "label": "Heterochromatin",
+            "detail": "Condensed, dark, and generally transcriptionally silent; may be constitutive or facultative.",
+            "cue": "Closed = quiet"
+          }
+        ]
+      },
+      "essentials": [
+        "Core histones are H2A, H2B, H3, and H4; H1 is a linker histone, not part of the core octamer.",
+        "Histone acetylation neutralizes lysine charge, often opens chromatin, and correlates with transcriptional activation.",
+        "Promoter CpG DNA methylation commonly correlates with transcriptional repression.",
+        "ATP-dependent chromatin-remodeling complexes reposition or eject nucleosomes to alter DNA access."
+      ],
+      "traps": [
+        {
+          "wrong": "Histone H1 is one of the four proteins duplicated in the nucleosome core.",
+          "right": "The core contains H2A, H2B, H3, and H4; H1 binds linker DNA."
+        },
+        {
+          "wrong": "Histone acetylation usually condenses chromatin.",
+          "right": "Acetylation usually reduces histone–DNA attraction and favors open, active chromatin."
+        }
+      ],
+      "recognition": [
+        "Beads on a string depict nucleosomes joined by linker DNA.",
+        "A dark condensed nuclear region is heterochromatin; a pale dispersed region is euchromatin."
+      ],
+      "source": {
+        "label": "TUMS DNA Structure",
+        "detail": "Deoxyribonucleic Acid(DNA)Structure (2).pdf, histone, nucleosome, and chromatin-packing sections."
+      }
+    },
+    {
+      "id": "bio-dna-replication-telomeres",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "DNA replication and telomeres",
+      "title": "DNA replication fork and the chromosome-end problem",
+      "subtitle": "Assign every enzyme to its exact job and direction",
+      "kind": "process",
+      "topicPatterns": [
+        "dna replication",
+        "telomeres"
+      ],
+      "questionPatterns": [
+        "semiconservative",
+        "replication fork",
+        "helicase",
+        "topoisomerase",
+        "primase",
+        "leading strand",
+        "lagging strand",
+        "okazaki",
+        "dna ligase",
+        "proofreading",
+        "telomerase"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "The fork opens once, but both new strands are synthesized only 5′→3′.",
+        "items": [
+          {
+            "label": "Open",
+            "detail": "Helicase separates parental strands; single-strand binding proteins stabilize them; topoisomerase relieves torsional stress ahead of the fork.",
+            "cue": "Unwind and relax"
+          },
+          {
+            "label": "Prime",
+            "detail": "Primase makes a short RNA primer because DNA polymerases require an existing 3′-OH.",
+            "cue": "Provide 3′-OH"
+          },
+          {
+            "label": "Extend",
+            "detail": "DNA polymerase reads template 3′→5′ and synthesizes new DNA 5′→3′.",
+            "cue": "Always add to 3′ end"
+          },
+          {
+            "label": "Continuous vs fragments",
+            "detail": "Leading synthesis follows the fork continuously; lagging synthesis forms Okazaki fragments away from the fork.",
+            "cue": "Same chemistry, different geometry"
+          },
+          {
+            "label": "Finish",
+            "detail": "RNA primers are removed and replaced; ligase seals nicks. Telomerase extends chromosome ends using its internal RNA template.",
+            "cue": "Replace, seal, extend ends"
+          }
+        ]
+      },
+      "essentials": [
+        "Replication is semiconservative: each daughter duplex contains one parental and one newly synthesized strand.",
+        "DNA polymerase proofreading is typically 3′→5′ exonuclease activity, opposite the direction of synthesis.",
+        "In eukaryotes, DNA polymerase α initiates with primase, polymerase ε mainly extends leading DNA, and polymerase δ mainly extends lagging DNA.",
+        "Telomerase is an RNA-dependent DNA polymerase active in germ cells, stem cells, and many cancers but low in most somatic cells."
+      ],
+      "traps": [
+        {
+          "wrong": "The lagging strand is synthesized 3′→5′.",
+          "right": "Both strands are synthesized 5′→3′; lagging synthesis is discontinuous because of template orientation."
+        },
+        {
+          "wrong": "DNA ligase synthesizes Okazaki fragments.",
+          "right": "DNA polymerase synthesizes the fragments; ligase seals the remaining phosphodiester nicks."
+        }
+      ],
+      "recognition": [
+        "Short discontinuous segments with repeated primers identify the lagging strand.",
+        "An enzyme with an internal RNA template extending a 3′ chromosome end is telomerase.",
+        "Positive supercoiling ahead of a fork is relieved by topoisomerase."
+      ],
+      "source": {
+        "label": "TUMS DNA Replication",
+        "detail": "Deoxyribonucleic Acid(DNA Replication (1).pptx, replication machinery, proofreading, termination, and telomere sections."
+      }
+    },
+    {
+      "id": "bio-rna-transcription",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "RNA synthesis and processing",
+      "title": "RNA and transcription",
+      "subtitle": "Choose the polymerase, direction, processing step, and inhibitor",
+      "kind": "process",
+      "topicPatterns": [
+        "rna",
+        "transcription",
+        "transcription inhibitors"
+      ],
+      "questionPatterns": [
+        "rna polymerase",
+        "promoter",
+        "template strand",
+        "coding strand",
+        "5 prime cap",
+        "poly a tail",
+        "splicing",
+        "snrnp",
+        "alpha amanitin",
+        "rifampin",
+        "actinomycin d",
+        "rrna",
+        "trna"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Transcription makes RNA 5′→3′, then eukaryotic pre-mRNA is capped, spliced, and polyadenylated.",
+        "items": [
+          {
+            "label": "Promoter recognition",
+            "detail": "Transcription factors and RNA polymerase assemble at a promoter; no RNA primer is required.",
+            "cue": "Start site selection"
+          },
+          {
+            "label": "Elongation",
+            "detail": "Polymerase reads the DNA template strand 3′→5′ while synthesizing RNA 5′→3′.",
+            "cue": "RNA grows at 3′ end"
+          },
+          {
+            "label": "5′ cap",
+            "detail": "7-methylguanosine protects mRNA and supports nuclear export and translation initiation.",
+            "cue": "Protect and recruit"
+          },
+          {
+            "label": "Splicing",
+            "detail": "The spliceosome removes introns, usually joining exons at GU–AG boundaries through a lariat intermediate.",
+            "cue": "Introns out"
+          },
+          {
+            "label": "3′ poly(A)",
+            "detail": "Cleavage after the AAUAAA signal is followed by polyadenylation, improving stability, export, and translation.",
+            "cue": "Tail after cleavage"
+          }
+        ]
+      },
+      "essentials": [
+        "RNA polymerase I makes most rRNA; II makes mRNA and several regulatory RNAs; III makes tRNA and 5S rRNA.",
+        "The RNA sequence matches the coding DNA strand except U replaces T; it is complementary to the template strand.",
+        "RNA differs from DNA by ribose 2′-OH, uracil instead of thymine, and usually single-stranded structure.",
+        "Rifampin inhibits bacterial RNA polymerase; α-amanitin strongly inhibits eukaryotic RNA polymerase II; actinomycin D intercalates DNA and blocks transcription."
+      ],
+      "traps": [
+        {
+          "wrong": "RNA polymerase requires a primer with a free 3′-OH.",
+          "right": "RNA polymerase initiates de novo; DNA polymerase requires a primer."
+        },
+        {
+          "wrong": "The poly(A) tail is encoded directly as a long DNA thymidine tract.",
+          "right": "The transcript is cleaved after a signal, then poly(A) polymerase adds the tail without a DNA template."
+        }
+      ],
+      "recognition": [
+        "A 5′–5′ triphosphate-linked methylguanosine is the mRNA cap.",
+        "A lariat with a 2′–5′ bond identifies pre-mRNA splicing.",
+        "A toxin selectively blocking eukaryotic mRNA synthesis points to α-amanitin."
+      ],
+      "source": {
+        "label": "TUMS Transcription",
+        "detail": "Transcription 2025.pptx, RNA types, polymerases, processing, and inhibitor sections."
+      }
+    },
+    {
+      "id": "bio-gene-regulation-operons",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Gene regulation and bacterial operons",
+      "title": "Gene regulation: lac, trp, and eukaryotic control",
+      "subtitle": "Inducible catabolism, repressible synthesis, and chromatin-based regulation",
+      "kind": "comparison",
+      "topicPatterns": [
+        "gene regulation",
+        "lac operon",
+        "trp operon"
+      ],
+      "questionPatterns": [
+        "lac operon",
+        "allolactose",
+        "cap",
+        "camp",
+        "glucose effect",
+        "trp operon",
+        "attenuation",
+        "repressor",
+        "operator",
+        "enhancer",
+        "epigenetic",
+        "histone acetylation"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "The lac operon turns on substrate breakdown; the trp operon turns off product synthesis.",
+        "items": [
+          {
+            "label": "lac: no lactose",
+            "detail": "Active repressor binds the operator and blocks transcription.",
+            "cue": "No substrate, OFF"
+          },
+          {
+            "label": "lac: lactose present",
+            "detail": "Allolactose inactivates the repressor; expression is highest when glucose is also low, allowing high cAMP–CAP activation.",
+            "cue": "Lactose yes + glucose low = MAX"
+          },
+          {
+            "label": "trp: tryptophan low",
+            "detail": "Repressor lacks corepressor and the ribosome stalls in the leader, favoring antitermination and transcription of biosynthetic genes.",
+            "cue": "Need Trp, genes ON"
+          },
+          {
+            "label": "trp: tryptophan high",
+            "detail": "Tryptophan activates the repressor and permits attenuation-mediated termination.",
+            "cue": "Product abundant, OFF"
+          },
+          {
+            "label": "Eukaryotes",
+            "detail": "Chromatin state, transcription factors, enhancers/silencers, RNA processing, RNA stability, translation, and protein modification all regulate expression.",
+            "cue": "Control at many levels"
+          }
+        ]
+      },
+      "essentials": [
+        "lac is an inducible catabolic operon under both negative control by repressor and positive control by cAMP–CAP.",
+        "Glucose lowers cAMP; therefore high glucose prevents maximal lac expression even when lactose is present.",
+        "trp is a repressible anabolic operon; tryptophan acts as a corepressor and also influences attenuation.",
+        "Enhancers can act at a distance and in either orientation through DNA looping and transcription-factor recruitment."
+      ],
+      "traps": [
+        {
+          "wrong": "Lactose directly activates CAP.",
+          "right": "Allolactose inactivates the repressor; low glucose raises cAMP, which activates CAP."
+        },
+        {
+          "wrong": "High tryptophan induces the trp biosynthetic operon.",
+          "right": "High tryptophan represses and attenuates the operon because the product is already abundant."
+        }
+      ],
+      "recognition": [
+        "Maximum lac expression requires lactose present and glucose absent or low.",
+        "A leader peptide with adjacent terminator/antiterminator hairpins indicates attenuation.",
+        "Open acetylated chromatin near an enhancer suggests active eukaryotic transcription."
+      ],
+      "source": {
+        "label": "TUMS Regulation of Gene Expression",
+        "detail": "Regulation of Gene Expression 2025.pptx, lac operon, trp operon, attenuation, and eukaryotic regulation sections."
+      }
+    },
+    {
+      "id": "bio-translation-mutations",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Translation, mutations, and inhibitors",
+      "title": "Translation and mutation consequences",
+      "subtitle": "Move from codon recognition to protein synthesis, then predict what sequence changes do",
+      "kind": "process",
+      "topicPatterns": [
+        "translation",
+        "mutations",
+        "translation inhibitors"
+      ],
+      "questionPatterns": [
+        "genetic code",
+        "start codon",
+        "stop codon",
+        "aminoacyl trna",
+        "peptidyl transferase",
+        "a site",
+        "p site",
+        "e site",
+        "missense",
+        "nonsense",
+        "frameshift",
+        "wobble",
+        "tetracycline",
+        "chloramphenicol",
+        "macrolide",
+        "diphtheria toxin"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Translation reads mRNA 5′→3′ and builds protein from amino terminus to carboxyl terminus.",
+        "items": [
+          {
+            "label": "Charge tRNA",
+            "detail": "Aminoacyl-tRNA synthetases use ATP to attach the correct amino acid to its tRNA and provide major fidelity.",
+            "cue": "Match amino acid to tRNA"
+          },
+          {
+            "label": "Initiate",
+            "detail": "Small subunit finds AUG; initiator Met-tRNA occupies the P site; the large subunit joins.",
+            "cue": "Start in P"
+          },
+          {
+            "label": "Elongate",
+            "detail": "Aminoacyl-tRNA enters A, rRNA catalyzes peptide-bond transfer to the A-site chain, then translocation moves tRNAs A→P→E.",
+            "cue": "A arrives, P holds, E exits"
+          },
+          {
+            "label": "Terminate",
+            "detail": "A stop codon recruits a release factor rather than tRNA, hydrolyzing and releasing the completed polypeptide.",
+            "cue": "Stop has no tRNA"
+          },
+          {
+            "label": "Mutation effect",
+            "detail": "Substitution may be silent, missense, or nonsense; an insertion/deletion not divisible by three shifts the downstream reading frame.",
+            "cue": "Ask what happens to codons"
+          }
+        ]
+      },
+      "essentials": [
+        "The genetic code is degenerate but unambiguous: multiple codons may specify one amino acid, but each codon specifies only one amino acid.",
+        "Peptidyl transferase activity is catalytic rRNA in the large ribosomal subunit, making the ribosome a ribozyme.",
+        "Bacterial 70S ribosomes contain 30S and 50S subunits; eukaryotic 80S ribosomes contain 40S and 60S subunits.",
+        "Tetracyclines block aminoacyl-tRNA entry to bacterial 30S; chloramphenicol blocks 50S peptidyl transferase; macrolides block 50S translocation; diphtheria toxin inhibits eukaryotic eEF-2."
+      ],
+      "traps": [
+        {
+          "wrong": "The growing peptide is synthesized from C-terminus to N-terminus.",
+          "right": "New amino acids are added to the C-terminus, so synthesis proceeds N→C."
+        },
+        {
+          "wrong": "Every base substitution changes an amino acid.",
+          "right": "Code degeneracy permits silent substitutions; others may be missense or nonsense."
+        }
+      ],
+      "recognition": [
+        "A premature stop codon is a nonsense mutation.",
+        "An insertion of one or two bases produces a frameshift; an insertion of three bases is in-frame.",
+        "A toxin ADP-ribosylating eEF-2 points to diphtheria toxin or exotoxin A."
+      ],
+      "source": {
+        "label": "TUMS Translation",
+        "detail": "Translation 2025.pptx, genetic code, tRNA/ribosome, synthesis stages, mutation effects, and inhibitor sections."
+      }
+    },
+    {
+      "id": "bio-practical-lab",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Practical biochemistry",
+      "title": "Practical biochemistry: equipment, titration, and carbohydrate tests",
+      "subtitle": "Recognize the tool, reaction principle, positive result, and selectivity",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Practical biochemistry"
+      ],
+      "questionPatterns": [
+        "molisch",
+        "benedict",
+        "barfoed",
+        "seliwanoff",
+        "iodine test",
+        "burette",
+        "volumetric pipette",
+        "volumetric flask",
+        "erlenmeyer",
+        "analytical balance",
+        "centrifuge",
+        "fume hood",
+        "phenolphthalein",
+        "n1v1"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "For each practical station, name what is detected, the positive appearance, and the important limitation.",
+        "items": [
+          {
+            "label": "Molisch",
+            "detail": "General carbohydrate test: dehydration forms furfural derivatives that react with α-naphthol, producing a violet ring at the interface.",
+            "cue": "Violet interface ring"
+          },
+          {
+            "label": "Benedict",
+            "detail": "Reducing sugars reduce Cu2+ in alkaline solution; color progresses from blue through green/yellow/orange to brick-red precipitate with increasing reduction.",
+            "cue": "Reducing sugar color series"
+          },
+          {
+            "label": "Barfoed and Seliwanoff",
+            "detail": "Barfoed rapidly favors monosaccharides in acidic copper reagent; Seliwanoff rapidly produces cherry-red color with ketoses, especially ketohexoses.",
+            "cue": "Mono fast; keto red"
+          },
+          {
+            "label": "Iodine",
+            "detail": "Iodine fits the amylose helix to produce blue-black color; heating disrupts the complex and cooling can restore it.",
+            "cue": "Starch blue-black"
+          },
+          {
+            "label": "Volumetric work",
+            "detail": "Burette delivers variable measured volume; volumetric pipette transfers one precise volume; volumetric flask prepares one precise final volume; titration uses N1V1 = N2V2 at stoichiometric equivalence.",
+            "cue": "Deliver, transfer, contain"
+          }
+        ]
+      },
+      "essentials": [
+        "Read the bottom of a colorless meniscus at eye level and remove air bubbles from a burette tip before titration.",
+        "A titration endpoint is the indicator color change; the equivalence point is the stoichiometric chemical point, and they should be close but are not identical concepts.",
+        "Phenolphthalein is colorless in acid and pink in sufficiently basic solution; use the first persistent faint pink endpoint, not a dark overshoot.",
+        "Analytical balances require draft protection; fume hoods protect from hazardous vapors; centrifuges must be balanced with opposing equal masses.",
+        "Sucrose is nonreducing before hydrolysis but its monosaccharide products are reducing."
+      ],
+      "traps": [
+        {
+          "wrong": "Benedict distinguishes glucose specifically from every other sugar.",
+          "right": "Benedict detects reducing ability and is not glucose-specific."
+        },
+        {
+          "wrong": "A volumetric flask is used to dispense many precise variable volumes.",
+          "right": "It is calibrated to contain one precise final volume; a burette delivers variable measured volumes."
+        },
+        {
+          "wrong": "Seliwanoff is a general test for all carbohydrates.",
+          "right": "Molisch is general; Seliwanoff distinguishes ketoses by their faster cherry-red reaction."
+        }
+      ],
+      "recognition": [
+        "A long graduated tube with a stopcock is a burette.",
+        "A bulb-centered pipette with one calibration mark is a volumetric pipette.",
+        "A narrow-neck flask with one calibration line is a volumetric flask.",
+        "A violet ring at a liquid interface is a positive Molisch test."
+      ],
+      "source": {
+        "label": "TUMS Practical Biochemistry",
+        "detail": "Carbohydrate Qualification Test Esmaeili Jan 2026.pdf; Laboratory Equipment Esmaeili Jan 2026.pdf; Titration Esmaeili Jan 2026.pdf."
+      },
+      "asset": "/study/biochemistry-telegram/carb-benedict-series.png"
+    },
+    {
+      "id": "phys-homeostasis-cell",
+      "exam": "both",
+      "subject": "physiology",
+      "topic": "Cell physiology and homeostasis",
+      "title": "Cell physiology and homeostatic control",
+      "subtitle": "Internal environment, feedback loops, and membrane organization",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "Cell physiology and homeostasis"
+      ],
+      "questionPatterns": [
+        "homeostasis",
+        "internal environment",
+        "negative feedback",
+        "positive feedback",
+        "control system gain",
+        "extracellular fluid",
+        "intracellular fluid",
+        "plasma membrane",
+        "glycocalyx",
+        "pinocytosis",
+        "phagocytosis",
+        "lysosome"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "A homeostatic system detects a deviation, compares it with a target, and drives an opposing response.",
+        "items": [
+          {
+            "label": "Controlled variable",
+            "detail": "A physiologic quantity such as temperature, pressure, glucose, pH, or osmolarity is maintained within a useful range.",
+            "cue": "What is held stable?"
+          },
+          {
+            "label": "Sensor",
+            "detail": "A receptor detects the current value or change and sends input to an integrating center.",
+            "cue": "Measure deviation"
+          },
+          {
+            "label": "Integrator",
+            "detail": "Compares input with the desired state and generates an output command.",
+            "cue": "Decide response"
+          },
+          {
+            "label": "Effector",
+            "detail": "Changes organ function so negative feedback reduces the initiating error.",
+            "cue": "Oppose disturbance"
+          },
+          {
+            "label": "Cell boundary",
+            "detail": "The lipid bilayer, membrane proteins, and glycocalyx control exchange, signaling, adhesion, and identity between ICF and ECF.",
+            "cue": "Selective interface"
+          }
+        ]
+      },
+      "essentials": [
+        "ECF is the body’s internal environment; stable ECF composition supports cell function despite external change.",
+        "Negative feedback is stabilizing and most common; positive feedback amplifies a process and requires a terminating event, as in clotting or childbirth.",
+        "Feedback gain describes correction relative to remaining error; a larger absolute negative gain means more effective control.",
+        "Pinocytosis internalizes fluid and small solutes; phagocytosis engulfs large particles; lysosomes digest endocytosed material; exocytosis releases vesicular contents."
+      ],
+      "traps": [
+        {
+          "wrong": "Positive feedback always causes disease and has no normal role.",
+          "right": "It serves normal processes such as labor, clotting, and the explosive upstroke of an action potential, but needs an endpoint."
+        },
+        {
+          "wrong": "Homeostasis means physiologic variables never change.",
+          "right": "They fluctuate within regulated ranges around functional targets."
+        }
+      ],
+      "recognition": [
+        "A response that reverses the initial change is negative feedback.",
+        "A response that reinforces the initial change until a defined endpoint is positive feedback.",
+        "Engulfment of a bacterium by pseudopods is phagocytosis."
+      ],
+      "source": {
+        "label": "TUMS Cell Physiology + Guyton",
+        "detail": "Introduction to Cell Physiology PDF.pdf, pp. 1–4; Guyton and Hall, 15th ed., Chapters 1–2."
+      }
+    },
+    {
+      "id": "phys-membrane-transport",
+      "exam": "both",
+      "subject": "physiology",
+      "topic": "Membrane transport",
+      "title": "Membrane transport: diffusion, carriers, pumps, and osmosis",
+      "subtitle": "Classify transport by protein use, energy source, direction, and saturation",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Membrane transport"
+      ],
+      "questionPatterns": [
+        "simple diffusion",
+        "facilitated diffusion",
+        "primary active transport",
+        "secondary active transport",
+        "sodium potassium pump",
+        "symport",
+        "antiport",
+        "osmosis",
+        "channel",
+        "carrier",
+        "saturation",
+        "aquaporin"
+      ],
+      "visual": {
+        "type": "comparison",
+        "caption": "Determine whether movement follows the electrochemical gradient and where its energy comes from.",
+        "items": [
+          {
+            "label": "Simple diffusion",
+            "detail": "Moves down a gradient through lipid or an open channel without metabolic energy; flux rises with gradient and permeability.",
+            "cue": "Downhill, no carrier cycle"
+          },
+          {
+            "label": "Facilitated diffusion",
+            "detail": "Carrier-mediated downhill movement; selective, competitively inhibitable, and saturable at a transport maximum.",
+            "cue": "Downhill but saturable"
+          },
+          {
+            "label": "Primary active",
+            "detail": "A pump directly hydrolyzes ATP to move solute uphill, as Na+/K+-ATPase, Ca2+-ATPase, and H+/K+-ATPase do.",
+            "cue": "ATP at transporter"
+          },
+          {
+            "label": "Secondary active",
+            "detail": "Uphill movement of one solute is coupled to downhill movement of another whose gradient was created by primary transport.",
+            "cue": "Gradient pays"
+          },
+          {
+            "label": "Osmosis",
+            "detail": "Water crosses toward higher effective osmolarity; aquaporins increase water permeability.",
+            "cue": "Water follows effective particles"
+          }
+        ]
+      },
+      "essentials": [
+        "Na+/K+-ATPase moves 3 Na+ out and 2 K+ in per ATP, maintains ion gradients, and is directly electrogenic.",
+        "Na+–glucose cotransport is symport; Na+/Ca2+ and Na+/H+ exchange are antiport examples.",
+        "Channels can be voltage-, ligand-, or mechanically gated; carriers bind solute and undergo conformational cycling.",
+        "Tonicity predicts sustained cell-volume change and depends on nonpenetrating solutes, not every measured osmole."
+      ],
+      "traps": [
+        {
+          "wrong": "Facilitated diffusion can move a solute against its electrochemical gradient.",
+          "right": "It is passive and moves downhill; active transport is required for net uphill movement."
+        },
+        {
+          "wrong": "Secondary active transport directly hydrolyzes ATP at its carrier.",
+          "right": "It uses an ion gradient established indirectly by an ATP-driven primary pump."
+        }
+      ],
+      "recognition": [
+        "A velocity curve approaching Vmax identifies carrier saturation.",
+        "A transporter moving Na+ and glucose in the same direction is a symporter.",
+        "A 3-out/2-in pump diagram identifies Na+/K+-ATPase."
+      ],
+      "source": {
+        "label": "TUMS Cell Physiology + Guyton",
+        "detail": "Introduction to Cell Physiology PDF.pdf, pp. 5–9; Guyton and Hall, 15th ed., Chapter 4."
+      },
+      "asset": "/study/histology/local-plasma-membrane-model.png"
+    },
+    {
+      "id": "phys-resting-membrane-potential",
+      "exam": "both",
+      "subject": "physiology",
+      "topic": "Membrane potentials",
+      "title": "Resting membrane potential and equilibrium potentials",
+      "subtitle": "Separate ion gradients, permeability, and the electrogenic pump",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "Membrane potentials"
+      ],
+      "questionPatterns": [
+        "resting membrane potential",
+        "nernst potential",
+        "equilibrium potential",
+        "goldman",
+        "potassium leak",
+        "sodium leak",
+        "electrogenic pump",
+        "depolarization",
+        "hyperpolarization",
+        "membrane conductance"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "A concentration gradient starts ion movement; charge separation creates an opposing electrical gradient.",
+        "items": [
+          {
+            "label": "Gradient",
+            "detail": "Na+ is concentrated outside and K+ inside, mainly because Na+/K+-ATPase continuously maintains these distributions.",
+            "cue": "Stored electrochemical energy"
+          },
+          {
+            "label": "Selective permeability",
+            "detail": "At rest, many cells are far more permeable to K+ than Na+ because of K+ leak channels.",
+            "cue": "K+ dominates rest"
+          },
+          {
+            "label": "K+ efflux",
+            "detail": "K+ diffuses outward, leaving impermeant negative charges behind and making the cell interior negative.",
+            "cue": "Chemical force outward"
+          },
+          {
+            "label": "Electrical opposition",
+            "detail": "The negative interior attracts K+ inward until electrical and chemical driving forces balance at EK.",
+            "cue": "Nernst equilibrium"
+          },
+          {
+            "label": "Actual resting value",
+            "detail": "Small Na+ permeability shifts Vm positive from EK; the electrogenic 3:2 pump contributes a few additional negative millivolts.",
+            "cue": "Goldman combines permeabilities"
+          }
+        ]
+      },
+      "essentials": [
+        "The Nernst equation gives the equilibrium potential for one ion; the Goldman equation combines multiple permeant ions and their relative permeabilities.",
+        "Increasing extracellular K+ reduces the K+ gradient, makes EK less negative, and usually depolarizes the membrane.",
+        "Depolarization means Vm becomes less negative; hyperpolarization means it becomes more negative.",
+        "Driving force depends on Vm − Eion; an ion has no net flux through open channels when Vm equals its equilibrium potential."
+      ],
+      "traps": [
+        {
+          "wrong": "The Na+/K+ pump directly creates the entire resting membrane potential.",
+          "right": "Selective K+ leak is the main immediate cause; the pump maintains gradients and adds a small electrogenic effect."
+        },
+        {
+          "wrong": "At an ion’s equilibrium potential, the ion stops moving microscopically.",
+          "right": "Movement continues in both directions, but net electrochemical flux is zero."
+        }
+      ],
+      "recognition": [
+        "A membrane potential near EK indicates dominant K+ permeability.",
+        "Acute hyperkalemia usually shifts resting potential in a depolarizing direction.",
+        "A calculation involving only one ion calls for Nernst; several ions call for Goldman."
+      ],
+      "source": {
+        "label": "TUMS Cell Physiology + Guyton",
+        "detail": "Introduction to Cell Physiology PDF.pdf, pp. 9–10; Guyton and Hall, 15th ed., Chapter 5."
+      }
+    },
+    {
+      "id": "phys-action-potential",
+      "exam": "both",
+      "subject": "physiology",
+      "topic": "Action potentials",
+      "title": "Action potentials: gates, phases, propagation, and refractoriness",
+      "subtitle": "Follow Na+ activation, Na+ inactivation, delayed K+ opening, and recovery",
+      "kind": "timeline",
+      "topicPatterns": [
+        "Action potentials"
+      ],
+      "questionPatterns": [
+        "action potential",
+        "threshold",
+        "voltage gated sodium",
+        "sodium inactivation",
+        "voltage gated potassium",
+        "refractory period",
+        "all or none",
+        "saltatory conduction",
+        "node of ranvier",
+        "propagation",
+        "plateau potential"
+      ],
+      "visual": {
+        "type": "timeline",
+        "caption": "The waveform is the visible result of time-dependent channel-state changes.",
+        "items": [
+          {
+            "label": "Rest",
+            "detail": "Voltage-gated Na+ activation gates are closed, inactivation gates are open, and delayed K+ channels are mostly closed.",
+            "cue": "Ready state"
+          },
+          {
+            "label": "Threshold and upstroke",
+            "detail": "Na+ activation gates open rapidly; Na+ influx causes regenerative depolarization and an all-or-none spike.",
+            "cue": "Fast Na+ positive feedback"
+          },
+          {
+            "label": "Peak",
+            "detail": "Na+ channels inactivate while delayed K+ channels open, terminating the upstroke.",
+            "cue": "Na+ off, K+ on"
+          },
+          {
+            "label": "Repolarization",
+            "detail": "K+ efflux returns Vm negative; persistent K+ conductance can cause after-hyperpolarization.",
+            "cue": "K+ exits"
+          },
+          {
+            "label": "Recovery",
+            "detail": "Na+ channels recover from inactivation as Vm repolarizes; K+ channels close slowly, restoring full excitability.",
+            "cue": "Reset gates"
+          }
+        ]
+      },
+      "essentials": [
+        "During the absolute refractory period, most Na+ channels are inactivated and no second propagated action potential can occur.",
+        "During the relative refractory period, some Na+ channels have recovered but elevated K+ conductance means a stronger stimulus is required.",
+        "Action-potential amplitude does not encode stimulus strength; frequency and recruited fibers do.",
+        "Myelin increases membrane resistance and lowers capacitance, allowing saltatory regeneration at nodes of Ranvier with faster, more efficient conduction.",
+        "Plateau action potentials reflect prolonged inward Ca2+ current plus reduced or delayed K+ efflux."
+      ],
+      "traps": [
+        {
+          "wrong": "Repolarization occurs because Na+/K+-ATPase rapidly pumps out the entering Na+.",
+          "right": "Rapid repolarization is mainly caused by Na+ channel inactivation and opening of voltage-gated K+ channels."
+        },
+        {
+          "wrong": "A stronger suprathreshold stimulus makes one action potential taller.",
+          "right": "The spike is all-or-none; stronger stimuli generally increase firing frequency."
+        }
+      ],
+      "recognition": [
+        "The steep rising phase of a nerve action potential indicates rapid voltage-gated Na+ influx.",
+        "An impulse jumping between exposed gaps in myelin is saltatory conduction.",
+        "A prolonged depolarized phase with L-type Ca2+ entry is a plateau."
+      ],
+      "source": {
+        "label": "TUMS Cell Physiology + Guyton",
+        "detail": "Introduction to Cell Physiology PDF.pdf, pp. 10–14; Guyton and Hall, 15th ed., Chapter 5."
+      }
+    },
+    {
+      "id": "phys-skeletal-muscle",
+      "exam": "july25",
+      "subject": "physiology",
+      "topic": "Skeletal muscle",
+      "title": "Skeletal muscle: sarcomere and cross-bridge cycle",
+      "subtitle": "Turn filament arrangement into force, shortening, and ATP use",
+      "kind": "mechanism",
+      "topicPatterns": [
+        "Skeletal muscle"
+      ],
+      "questionPatterns": [
+        "sarcomere",
+        "a band",
+        "i band",
+        "h zone",
+        "z disc",
+        "troponin",
+        "tropomyosin",
+        "cross bridge cycle",
+        "sliding filament",
+        "isometric",
+        "isotonic",
+        "motor unit",
+        "summation",
+        "tetanus"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Ca2+ exposes actin sites; ATP controls detachment and recocking; repeated cycles slide thin filaments inward.",
+        "items": [
+          {
+            "label": "Resting sarcomere",
+            "detail": "Thin actin filaments anchor at Z discs; thick myosin centers at the M line; tropomyosin blocks actin’s myosin-binding sites.",
+            "cue": "Blocked actin"
+          },
+          {
+            "label": "Expose",
+            "detail": "Ca2+ binds troponin C, shifting tropomyosin away from myosin-binding sites on actin.",
+            "cue": "Ca2+ opens access"
+          },
+          {
+            "label": "Bind and power stroke",
+            "detail": "Energized myosin–ADP–Pi binds actin; Pi then ADP release drives the head pivot and pulls actin toward the M line.",
+            "cue": "Pi release → pull"
+          },
+          {
+            "label": "Detach",
+            "detail": "A new ATP binds myosin and lowers its affinity for actin, causing detachment.",
+            "cue": "ATP releases myosin"
+          },
+          {
+            "label": "Recock",
+            "detail": "Myosin ATPase hydrolyzes ATP to ADP + Pi, returning the head to its high-energy position for another cycle.",
+            "cue": "Hydrolysis resets"
+          }
+        ]
+      },
+      "essentials": [
+        "During shortening, I bands and H zones decrease, Z discs approach, but A-band length remains constant because thick filaments do not shorten.",
+        "Without ATP, myosin cannot detach from actin, producing rigor; ATP also powers SERCA-mediated Ca2+ reuptake.",
+        "Isometric contraction raises tension without shortening; isotonic contraction changes length against an approximately constant load.",
+        "Force rises through recruitment of motor units and temporal summation; high-frequency stimulation can produce fused tetanus.",
+        "A motor unit is one α-motor neuron and all muscle fibers it innervates; small units permit fine control."
+      ],
+      "traps": [
+        {
+          "wrong": "The A band shortens during contraction.",
+          "right": "The A band equals thick-filament length and remains constant; I band and H zone narrow."
+        },
+        {
+          "wrong": "ATP binding produces the power stroke.",
+          "right": "ATP binding detaches myosin; Pi release from the cocked head initiates the power stroke."
+        }
+      ],
+      "recognition": [
+        "A central thick-filament-only region is the H zone; thin-filament-only regions are I bands.",
+        "A force trace rising with repeated stimuli before full relaxation demonstrates temporal summation.",
+        "Tension without change in muscle length is isometric contraction."
+      ],
+      "source": {
+        "label": "TUMS Molecular Basis + Skeletal Muscle",
+        "detail": "1. Molecular basis of contraction.pdf, pp. 1–24; 2. Skeletal muscle.pdf, pp. 2–7; Guyton and Hall, 15th ed., Chapter 6."
+      }
+    },
+    {
+      "id": "phys-neuromuscular-junction",
+      "exam": "july25",
+      "subject": "physiology",
+      "topic": "Neuromuscular junction",
+      "title": "Neuromuscular transmission",
+      "subtitle": "From motor-neuron action potential to muscle-fiber threshold",
+      "kind": "process",
+      "topicPatterns": [
+        "Neuromuscular junction"
+      ],
+      "questionPatterns": [
+        "neuromuscular junction",
+        "motor end plate",
+        "acetylcholine",
+        "nicotinic receptor",
+        "end plate potential",
+        "acetylcholinesterase",
+        "myasthenia gravis",
+        "botulinum toxin",
+        "curare",
+        "presynaptic calcium"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Every NMJ step is ordered: nerve AP → Ca2+ → ACh → end-plate potential → muscle AP → ACh breakdown.",
+        "items": [
+          {
+            "label": "Nerve terminal depolarizes",
+            "detail": "The motor-neuron action potential opens presynaptic voltage-gated Ca2+ channels.",
+            "cue": "Electrical signal arrives"
+          },
+          {
+            "label": "ACh release",
+            "detail": "Ca2+ triggers SNARE-dependent fusion of acetylcholine vesicles with the terminal membrane.",
+            "cue": "Ca2+ causes exocytosis"
+          },
+          {
+            "label": "End-plate current",
+            "detail": "ACh binds muscle nicotinic Nm receptors, opening nonselective cation channels; net Na+ influx generates a graded end-plate potential.",
+            "cue": "Ligand-gated local depolarization"
+          },
+          {
+            "label": "Muscle action potential",
+            "detail": "Local current reaches adjacent voltage-gated Na+ channels; threshold initiates an all-or-none action potential across sarcolemma and T tubules.",
+            "cue": "Graded EPP triggers spike"
+          },
+          {
+            "label": "Terminate",
+            "detail": "Acetylcholinesterase rapidly hydrolyzes ACh; choline is taken back up for resynthesis.",
+            "cue": "Brief one-way signal"
+          }
+        ]
+      },
+      "essentials": [
+        "The end-plate potential is graded and local; the muscle action potential is regenerative and all-or-none.",
+        "A normal NMJ has a safety factor: one nerve impulse usually creates an EPP well above muscle threshold.",
+        "Myasthenia gravis reduces postsynaptic Nm receptor function; botulinum toxin blocks presynaptic ACh release.",
+        "Acetylcholinesterase inhibitors prolong ACh action and can improve transmission in myasthenia, but excess causes cholinergic toxicity."
+      ],
+      "traps": [
+        {
+          "wrong": "The receptor at the skeletal motor end plate is muscarinic.",
+          "right": "It is a nicotinic Nm ligand-gated cation channel."
+        },
+        {
+          "wrong": "The end-plate potential itself propagates along the entire muscle fiber.",
+          "right": "The EPP is local; it triggers a propagated voltage-gated muscle action potential."
+        }
+      ],
+      "recognition": [
+        "Presynaptic vesicles facing deep postsynaptic junctional folds identify the motor end plate.",
+        "Fatigable weakness with reduced postsynaptic receptor number points to myasthenia gravis.",
+        "Failure of vesicle fusion and ACh release points to botulinum toxin."
+      ],
+      "source": {
+        "label": "TUMS Skeletal Muscle + Guyton",
+        "detail": "2. Skeletal muscle.pdf, pp. 8–16 and 21; Guyton and Hall, 15th ed., Chapter 7."
+      }
+    },
+    {
+      "id": "phys-excitation-contraction",
+      "exam": "july25",
+      "subject": "physiology",
+      "topic": "Excitation–contraction coupling",
+      "title": "Skeletal excitation–contraction coupling",
+      "subtitle": "How a surface action potential releases and then resequesters Ca2+",
+      "kind": "process",
+      "topicPatterns": [
+        "Excitation-contraction coupling"
+      ],
+      "questionPatterns": [
+        "excitation contraction coupling",
+        "t tubule",
+        "triad",
+        "dihydropyridine receptor",
+        "dhp receptor",
+        "ryanodine receptor",
+        "sarcoplasmic reticulum",
+        "terminal cisternae",
+        "serca",
+        "calsequestrin",
+        "calcium reuptake"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "The action potential travels inward through T tubules so the whole fiber releases Ca2+ nearly together.",
+        "items": [
+          {
+            "label": "Surface excitation",
+            "detail": "A muscle action potential spreads along the sarcolemma and descends into the fiber through transverse tubules.",
+            "cue": "Carry voltage inward"
+          },
+          {
+            "label": "Voltage sensing",
+            "detail": "T-tubule L-type Ca2+ channels called DHP receptors change conformation in response to depolarization.",
+            "cue": "DHP senses voltage"
+          },
+          {
+            "label": "SR release",
+            "detail": "Skeletal DHP receptors mechanically open RyR1 channels in adjacent terminal cisternae, releasing stored Ca2+ into cytosol.",
+            "cue": "DHP pulls RyR open"
+          },
+          {
+            "label": "Contraction",
+            "detail": "Cytosolic Ca2+ binds troponin C, moves tropomyosin, and permits cross-bridge cycling.",
+            "cue": "Ca2+ exposes actin"
+          },
+          {
+            "label": "Relaxation",
+            "detail": "SERCA pumps Ca2+ back into SR, where calsequestrin binds and stores it; cytosolic Ca2+ falls and tropomyosin reblocks actin.",
+            "cue": "ATP-dependent resequestration"
+          }
+        ]
+      },
+      "essentials": [
+        "A skeletal-muscle triad is one T tubule flanked by two terminal cisternae, typically at the A–I junction.",
+        "Skeletal-muscle contraction can occur without extracellular Ca2+ influx for each twitch because DHP mechanically gates SR RyR1.",
+        "SERCA consumes ATP directly; calsequestrin permits large Ca2+ storage while keeping free SR Ca2+ lower.",
+        "The latent period between action potential and force reflects coupling and cross-bridge activation, not delayed electrical propagation."
+      ],
+      "traps": [
+        {
+          "wrong": "Extracellular Ca2+ entering through DHP is the essential trigger for every skeletal twitch.",
+          "right": "In skeletal muscle, DHP mainly acts as a voltage sensor mechanically coupled to RyR1; SR Ca2+ supplies the activating pulse."
+        },
+        {
+          "wrong": "Relaxation occurs when Ca2+ is pumped out of the body by Na+/K+-ATPase.",
+          "right": "SERCA pumps cytosolic Ca2+ back into the sarcoplasmic reticulum."
+        }
+      ],
+      "recognition": [
+        "A T tubule between two swollen SR terminal cisternae is a triad.",
+        "A membrane voltage sensor directly aligned with an SR release channel depicts DHP–RyR coupling.",
+        "An ATP-driven SR membrane pump returning Ca2+ is SERCA."
+      ],
+      "source": {
+        "label": "TUMS Skeletal Muscle + Guyton",
+        "detail": "2. Skeletal muscle.pdf, pp. 16–19; 1. Molecular basis of contraction.pdf, pp. 5–12 and 24; Guyton and Hall, 15th ed., Chapter 7."
+      }
+    },
+    {
+      "id": "phys-smooth-muscle",
+      "exam": "july25",
+      "subject": "physiology",
+      "topic": "Smooth muscle",
+      "title": "Smooth muscle: calmodulin–MLCK control and economical force",
+      "subtitle": "No troponin: regulate myosin, not the thin filament",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Smooth muscle"
+      ],
+      "questionPatterns": [
+        "smooth muscle",
+        "calmodulin",
+        "mlck",
+        "myosin light chain kinase",
+        "myosin phosphatase",
+        "latch state",
+        "dense body",
+        "caveolae",
+        "unitary smooth muscle",
+        "multiunit smooth muscle",
+        "gap junction",
+        "varicosity"
+      ],
+      "visual": {
+        "type": "flow",
+        "caption": "Smooth muscle raises Ca2+, activates MLCK, phosphorylates myosin, cycles slowly, then relaxes through Ca2+ removal and MLCP.",
+        "items": [
+          {
+            "label": "Raise Ca2+",
+            "detail": "Depolarization, receptor signaling, stretch, or local factors increase cytosolic Ca2+ from ECF and/or SR stores.",
+            "cue": "Many triggers"
+          },
+          {
+            "label": "Calmodulin",
+            "detail": "Ca2+ binds calmodulin because smooth muscle lacks troponin C.",
+            "cue": "Ca2+ sensor"
+          },
+          {
+            "label": "Activate MLCK",
+            "detail": "Ca2+–calmodulin activates myosin light-chain kinase, which uses ATP to phosphorylate regulatory myosin light chains.",
+            "cue": "Turn myosin on"
+          },
+          {
+            "label": "Contract",
+            "detail": "Phosphorylated myosin develops ATPase activity and cycles with actin attached to dense bodies; cycling is slow but force can be sustained.",
+            "cue": "Slow, economical force"
+          },
+          {
+            "label": "Relax",
+            "detail": "Ca2+ pumps/exchangers lower cytosolic Ca2+, MLCK becomes inactive, and myosin light-chain phosphatase dephosphorylates myosin.",
+            "cue": "MLCP turns myosin off"
+          }
+        ]
+      },
+      "essentials": [
+        "Smooth muscle has actin, myosin, tropomyosin, dense bodies, and intermediate filaments but no sarcomeres or troponin, so it is nonstriated.",
+        "The latch state maintains force with low ATP consumption after myosin dephosphorylation while some cross-bridges remain attached.",
+        "Unitary smooth muscle has gap junctions and coordinated spontaneous or stretch-induced activity; multiunit muscle has more independent fibers and precise neural control.",
+        "Autonomic nerve varicosities release transmitter diffusely; receptor subtype determines whether ACh or norepinephrine contracts or relaxes a tissue.",
+        "Caveolae are membrane invaginations associated with Ca2+ handling and partially substitute for absent T tubules."
+      ],
+      "traps": [
+        {
+          "wrong": "Ca2+ initiates smooth-muscle contraction by binding troponin C.",
+          "right": "Smooth muscle lacks troponin; Ca2+ binds calmodulin and activates MLCK."
+        },
+        {
+          "wrong": "Smooth muscle requires an action potential for every contraction.",
+          "right": "Receptor pathways, stretch, and local chemicals can raise Ca2+ and produce contraction without a propagated action potential."
+        }
+      ],
+      "recognition": [
+        "Spindle-shaped nonstriated cells with central nuclei identify smooth muscle.",
+        "Many gap junctions and spontaneous waves suggest unitary smooth muscle; individually innervated fibers suggest multiunit muscle.",
+        "Ca2+–calmodulin → MLCK → myosin phosphorylation is the signature smooth-muscle pathway."
+      ],
+      "source": {
+        "label": "TUMS Smooth Muscle + Guyton",
+        "detail": "3. Smooth muscle.pdf, pp. 1–18; Guyton and Hall, 15th ed., Chapter 8."
+      }
+    }
+  ]
+}
