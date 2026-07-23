@@ -7,12 +7,14 @@ const manifest = JSON.parse(readFileSync(resolve(root, "data/bank/manifest.json"
 const schema = JSON.parse(readFileSync(resolve(root, "schemas/mcq-question.schema.json"), "utf8"));
 const validateSchema = new Ajv2020({ allErrors: true }).compile(schema);
 const questionDir = resolve(root, manifest.questionDirectory);
+const finalExamDir = resolve(root, "data/telegram-final");
 const assetRoots = manifest.assetDirectories.map((directory) => resolve(root, directory));
 const errors = [];
 const ids = new Set();
 let count = 0;
+let finalExamCount = 0;
 
-function validate(question, location) {
+function validate(question, location, expectedExam) {
   if (!validateSchema(question)) {
     for (const error of validateSchema.errors ?? []) errors.push(`${location}: ${error.instancePath || "/"} ${error.message}`);
   }
@@ -32,14 +34,28 @@ function validate(question, location) {
     const found = assetRoots.some((assetRoot) => existsSync(resolve(assetRoot, media.path)));
     if (!found) errors.push(`${location}: missing media ${media.path}`);
   }
+  if (expectedExam) {
+    if (question.status !== "verified") errors.push(`${location}: final-exam questions must be verified`);
+    if (!(question.tags ?? []).includes("telegram-final")) errors.push(`${location}: missing telegram-final tag`);
+    if (!(question.tags ?? []).includes(`exam-${expectedExam}`)) errors.push(`${location}: missing exam-${expectedExam} tag`);
+  }
 }
 
-if (existsSync(questionDir)) {
-  for (const filename of readdirSync(questionDir).filter((name) => name.endsWith(".jsonl")).sort()) {
-    const lines = readFileSync(resolve(questionDir, filename), "utf8").split(/\r?\n/);
+for (const source of [
+  { directory: questionDir, finalExam: false },
+  { directory: finalExamDir, finalExam: true },
+]) {
+  if (!existsSync(source.directory)) continue;
+  for (const filename of readdirSync(source.directory).filter((name) => name.endsWith(".jsonl")).sort()) {
+    const expectedExam = source.finalExam ? filename.replace(/\.jsonl$/, "") : undefined;
+    const lines = readFileSync(resolve(source.directory, filename), "utf8").split(/\r?\n/);
     lines.forEach((line, index) => {
       if (!line.trim()) return;
-      try { validate(JSON.parse(line), `${filename}:${index + 1}`); count += 1; }
+      try {
+        validate(JSON.parse(line), `${source.finalExam ? "telegram-final/" : ""}${filename}:${index + 1}`, expectedExam);
+        count += 1;
+        if (source.finalExam) finalExamCount += 1;
+      }
       catch (error) { errors.push(`${filename}:${index + 1}: invalid JSON (${error.message})`); }
     });
   }
@@ -50,4 +66,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log(`Bank valid: ${count} question(s), schema ${manifest.schemaVersion}.`);
+console.log(`Bank valid: ${count} question(s), including ${finalExamCount} Telegram final-exam item(s), schema ${manifest.schemaVersion}.`);

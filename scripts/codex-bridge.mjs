@@ -1,14 +1,17 @@
 import { execFile, spawn } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { createServer } from "node:http";
 import { extname, resolve, sep } from "node:path";
 import { promisify } from "node:util";
+import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 
 const execFileAsync = promisify(execFile);
 const root = resolve(import.meta.dirname, "..");
 const port = Number(process.env.CODEX_BRIDGE_PORT ?? 4111);
 const manifestPath = resolve(root, "data/bank/manifest.json");
 const gradeSchemaPath = resolve(root, "schemas/codex-grade.schema.json");
+const finalExamDirectory = resolve(root, "data/telegram-final");
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
 const assetRoots = manifest.assetDirectories.map((directory) => resolve(root, directory));
 
@@ -231,6 +234,7 @@ function bankSummary() {
     return {
       ...exam,
       questionCount: questions.length,
+      finalExamQuestionCount: loadFinalExamQuestions(exam.id).length,
       imageQuestionCount: questions.filter((question) => question.kind === "image_single_best_answer").length,
       collectionCounts: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).length])),
     };
@@ -266,6 +270,34 @@ function loadVerifiedQuestions() {
   return questions;
 }
 
+function loadFinalExamQuestions(exam) {
+  if (!["july25", "july29"].includes(exam)) throw new Error("A valid exam is required");
+  const filepath = resolve(finalExamDirectory, `${exam}.jsonl`);
+  if (!existsSync(filepath)) return [];
+  const questions = [];
+  for (const [index, line] of readFileSync(filepath, "utf8").split(/\r?\n/).entries()) {
+    if (!line.trim()) continue;
+    try {
+      const question = JSON.parse(line);
+      const tags = new Set(question.tags ?? []);
+      if (question.status === "verified" && tags.has("telegram-final") && tags.has(`exam-${exam}`)) questions.push(question);
+    } catch {
+      console.warn(`Skipped malformed final-exam question at ${filepath}:${index + 1}`);
+    }
+  }
+  return questions;
+}
+
+function finalExamSet(searchParams) {
+  const exam = searchParams.get("exam");
+  const questions = loadFinalExamQuestions(exam);
+  const fingerprint = createHash("sha256")
+    .update(JSON.stringify(questions.map((question) => [question.id, question.revision, question.correctOptionId])))
+    .digest("hex")
+    .slice(0, 20);
+  return { exam, availableCount: questions.length, fingerprint, questions };
+}
+
 function shuffled(items) {
   const result = [...items];
   for (let index = result.length - 1; index > 0; index -= 1) {
@@ -296,6 +328,26 @@ function questionSet(searchParams) {
   return { availableCount: filtered.length, questions: shuffled(filtered).slice(0, limit) };
 }
 
+function coverageQuestionSet(body) {
+  if (!body || !["july25", "july29"].includes(body.exam)) throw new Error("A valid exam is required");
+  const collection = typeof body.collection === "string" ? body.collection : "all";
+  if (!EXAM_COLLECTIONS.includes(collection)) throw new Error("A valid collection is required");
+  const requestedLimit = Number(body.limit ?? 20);
+  const limit = Number.isFinite(requestedLimit) ? Math.max(1, Math.min(250, Math.floor(requestedLimit))) : 20;
+  const cleanBodyIds = (value) => Array.isArray(value)
+    ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, 5000)
+    : [];
+  const seenIds = cleanBodyIds(body.seenIds);
+  const repairIds = cleanBodyIds(body.repairIds);
+  const filtered = loadVerifiedQuestions().filter((question) => matchesExam(question, body.exam) && matchesCollection(question, collection));
+  const selection = selectCoverageSprint(filtered, { limit, seenIds, repairIds });
+  return {
+    availableCount: filtered.length,
+    questions: selection.questions,
+    coverage: { unseenCount: selection.unseenCount, reviewCount: selection.reviewCount },
+  };
+}
+
 function questionSetByIds(body) {
   if (!body || !Array.isArray(body.ids)) throw new Error("Question ids are required");
   const exam = body.exam;
@@ -323,7 +375,11 @@ function resolveImage(question) {
 }
 
 function resolveQuestionMedia(questionId, mediaId) {
-  const question = loadVerifiedQuestions().find((item) => item.id === questionId);
+  const question = [
+    ...loadVerifiedQuestions(),
+    ...loadFinalExamQuestions("july25"),
+    ...loadFinalExamQuestions("july29"),
+  ].find((item) => item.id === questionId);
   const media = question?.media?.find((item) => item.id === mediaId);
   if (!question || !media || media.type !== "image") return null;
   return resolveImage({ ...question, media: [media] });
@@ -386,12 +442,14 @@ const server = createServer(async (request, response) => {
   if (request.method === "OPTIONS") return send(response, 204, {}, origin);
   const url = new URL(request.url ?? "/", `http://${request.headers.host ?? "127.0.0.1"}`);
   try {
-    if (request.method === "GET" && url.pathname === "/health") {
+    if (request.method === "GET" && ["/health", "/api/health"].includes(url.pathname)) {
       const version = await codexVersion();
       return send(response, 200, { ok: true, service: "med25-codex-bridge", codex: { available: Boolean(version), version } }, origin);
     }
     if (request.method === "GET" && url.pathname === "/api/bank/summary") return send(response, 200, bankSummary(), origin);
+    if (request.method === "GET" && url.pathname === "/api/final-exam") return send(response, 200, finalExamSet(url.searchParams), origin);
     if (request.method === "GET" && url.pathname === "/api/questions") return send(response, 200, questionSet(url.searchParams), origin);
+    if (request.method === "POST" && url.pathname === "/api/questions/sprint") return send(response, 200, coverageQuestionSet(await readJson(request)), origin);
     if (request.method === "POST" && url.pathname === "/api/questions/by-ids") return send(response, 200, questionSetByIds(await readJson(request)), origin);
     if (request.method === "GET" && url.pathname === "/api/media") {
       const filepath = resolveQuestionMedia(url.searchParams.get("questionId"), url.searchParams.get("mediaId"));

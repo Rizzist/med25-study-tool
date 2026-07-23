@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element -- question images are streamed from the local study bridge */
 
 import { useCallback, useEffect, useState } from "react";
+import { FinalExam } from "@/src/components/FinalExam";
 import { LessonGuide } from "@/src/components/LessonGuide";
 import { LessonSlide } from "@/src/components/LessonSlide";
 import { allLessons, lessonsForExam } from "@/src/lib/lessons";
@@ -27,6 +28,7 @@ type BankSummary = {
     date: string;
     title: string;
     questionCount: number;
+    finalExamQuestionCount: number;
     imageQuestionCount: number;
     collectionCounts: Partial<Record<CollectionId, number>>;
   }>;
@@ -58,10 +60,11 @@ type CompletedSession = ActiveSessionSnapshot & {
 };
 type SessionArchive = { version: 1; active: ActiveSessionSnapshot | null; history: CompletedSession[] };
 
-const bridgeUrl = process.env.NEXT_PUBLIC_CODEX_BRIDGE_URL ?? "http://127.0.0.1:4111";
+const bridgeUrl = process.env.NEXT_PUBLIC_CODEX_BRIDGE_URL
+  ?? (process.env.NODE_ENV === "production" ? "" : "http://127.0.0.1:4111");
 const progressStorageKey = "med25-study-progress-v1";
 const sessionArchiveStorageKey = "med25-session-archive-v1";
-const tabs = ["Overview", "Topics", "Visual Guide", "Results", "Codex tutor"] as const;
+const tabs = ["Overview", "Final exam", "Topics", "Visual Guide", "Results", "Codex tutor"] as const;
 const sprintLengths = [10, 20, 40, 60, 100, 150, 200, 250] as const;
 const examConfig: Record<ExamId, {
   date: string;
@@ -283,7 +286,7 @@ export default function Home() {
     setChecking(true);
     try {
       const [healthResponse, bankResponse] = await Promise.all([
-        fetch(`${bridgeUrl}/health`, { cache: "no-store" }),
+        fetch(`${bridgeUrl}/api/health`, { cache: "no-store" }),
         fetch(`${bridgeUrl}/api/bank/summary`, { cache: "no-store" }),
       ]);
       if (!healthResponse.ok || !bankResponse.ok) throw new Error("Local services unavailable");
@@ -389,8 +392,16 @@ export default function Home() {
           body: JSON.stringify({ exam, ids: requestedIds, limit: exactIds ? requestedIds.length : sessionSize }),
         });
       } else {
-        const params = new URLSearchParams({ limit: String(sessionSize), exam, collection: nextCollection });
-        response = await fetch(`${bridgeUrl}/api/questions?${params}`, { cache: "no-store" });
+        const repairIds = cleanIds([...examProgress.wrongIds, ...examProgress.flaggedIds]);
+        const historicalSeenIds = cleanIds(sessionArchive.history
+          .filter((session) => session.exam === exam)
+          .flatMap((session) => session.questionIds));
+        const seenIds = cleanIds([...historicalSeenIds, ...repairIds]);
+        response = await fetch(`${bridgeUrl}/api/questions/sprint`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ limit: sessionSize, exam, collection: nextCollection, seenIds, repairIds }),
+        });
       }
       if (!response.ok) throw new Error("Could not load the question bank.");
       const payload = await response.json() as { questions: MCQQuestion[]; validIds?: string[] };
@@ -705,7 +716,7 @@ export default function Home() {
       const item = examConfig[value];
       const summary = bank?.exams?.find((candidate) => candidate.id === value);
       return <button key={value} className={exam === value ? "active" : ""} onClick={() => chooseExam(value)} aria-pressed={exam === value}>
-        <span>{item.date}</span><b>{item.title}</b><small>{summary?.questionCount ?? "—"} focused questions</small>
+        <span>{item.date}</span><b>{item.title}</b><small>{tab === "Final exam" ? `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
       </button>;
     })}
   </div>;
@@ -734,20 +745,22 @@ export default function Home() {
     <main className="setup-shell">
       <aside className="setup-sidebar">
         <div className="brand"><span>MED//25</span><small>July 25 + July 29 exam sprint</small></div>
-        <nav className="setup-nav" aria-label="Application sections">{tabs.map((item) => <button key={item} className={tab === item ? "active" : ""} onClick={() => setTab(item)}>{item}</button>)}</nav>
+        <nav className="setup-nav" aria-label="Application sections">{tabs.map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
       </aside>
 
       <section className="setup-workspace">
-        <header className="setup-topbar"><span className="topbar-label">Local exam engine</span><div className="header-exam-switcher">{examSwitcher}</div><span className={health?.codex.available ? "connection good" : "connection waiting"}>● {health?.codex.available ? "Codex ready" : "Tutor bridge offline"}</span></header>
-        <section className={`setup-content ${tab === "Overview" ? "overview-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
+        <header className="setup-topbar"><span className="topbar-label">Exam engine</span><div className="header-exam-switcher">{examSwitcher}</div><span className={health?.ok ? "connection good" : "connection waiting"}>● {health?.ok ? (health.codex.available ? "Codex ready" : "Study engine ready") : "Study engine offline"}</span></header>
+        <section className={`setup-content ${tab === "Overview" ? "overview-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
           {tab === "Overview" && <>
             <p className="eyebrow">Priority exam · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam until you switch dates.</p>
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
-            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED SPRINT SAVED</span><h2>{examConfig[resumableSession.exam].date} · {collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><b>{Math.min(sessionSize, collectionCount)} questions</b><span>{collectionCount} available for {selectedConfig.date}</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
+            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED SPRINT SAVED</span><h2>{examConfig[resumableSession.exam].date} · {collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><b>{Math.min(sessionSize, collectionCount)} questions</b><span>{collectionCount} available for {selectedConfig.date} · 80% unseen / 20% review</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}
+
+          {tab === "Final exam" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
 
           {tab === "Topics" && <><p className="eyebrow">{selectedConfig.date} collections</p><h1>Choose a focused collection.</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p><div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div><div className="topic-grid">{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>{sessionError && <p className="session-error">{sessionError}</p>}</>}
 
