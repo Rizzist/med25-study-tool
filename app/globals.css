@@ -49,7 +49,7 @@ h1 { font-size:clamp(31px,4vw,48px); line-height:1.06; letter-spacing:-.045em; m
 .metric-grid article { min-height:114px; padding:16px; border:1px solid var(--line); border-radius:15px; background:#fff; display:grid; align-content:space-between; }
 .metric-grid span,.topic-grid article>span,.builder-label { color:var(--muted); font-size:9px; font-weight:900; letter-spacing:.13em; text-transform:uppercase; }
 .metric-grid strong { font-size:27px; }.metric-grid small { color:#818a85; font-size:11px; }
-.sprint-builder { border:1px solid var(--line); border-radius:16px; background:#fff; padding:17px; display:grid; grid-template-columns:1.4fr 1fr .8fr; gap:18px; align-items:end; }
+.sprint-builder { border:1px solid var(--line); border-radius:16px; background:#fff; padding:17px; display:grid; grid-template-columns:1.25fr .9fr 1fr; gap:18px; align-items:end; }
 .sprint-builder>div { display:grid; gap:9px; }
 .choice-row { display:flex; gap:5px; padding:4px; border-radius:11px; background:#eef0eb; }
 .choice-row button { flex:1; border:0; border-radius:8px; background:transparent; padding:8px 9px; color:#5f6964; text-transform:capitalize; font-size:12px; }
@@ -58,7 +58,14 @@ h1 { font-size:clamp(31px,4vw,48px); line-height:1.06; letter-spacing:-.045em; m
 .length-row { flex-wrap:wrap; }
 .length-row button { flex:1 0 calc(25% - 5px); }
 .choice-row button.active { background:#fff; color:var(--green); box-shadow:0 2px 8px #17211d12; font-weight:750; }
-.builder-summary b { font-size:15px; }.builder-summary span { color:var(--muted); font-size:11px; }
+.builder-summary>span { color:var(--muted); font-size:10px; }
+.builder-coverage { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; }
+.builder-coverage article { min-width:0; border:1px solid var(--line); border-radius:10px; background:#f6f7f3; padding:7px 8px; display:grid; gap:2px; }
+.builder-coverage span { color:var(--muted); font-size:7px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
+.builder-coverage strong { color:var(--ink); font-size:17px; line-height:1; }
+.builder-coverage article:nth-child(2) strong { color:#69746e; }
+.builder-coverage article:nth-child(3) { border-color:#bad0c5; background:#edf6f1; }
+.builder-coverage article:nth-child(3) strong { color:var(--green); }
 .builder-summary .start-sprint { width:100%; min-width:0; padding:10px 12px; font-size:11px; }
 .builder-summary .clear-progress { justify-self:start; padding-block:2px; }
 .session-actions { margin-top:14px; display:flex; align-items:center; gap:12px; }

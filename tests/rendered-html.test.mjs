@@ -103,6 +103,10 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   assert.match(page, /80% unseen \/ 20% review/);
   assert.match(page, /historicalSeenIds/);
   assert.match(bridge, /coverageQuestionSet/);
+  assert.match(bridge, /collectionQuestionIds/);
+  assert.match(page, /builder-coverage/);
+  assert.match(page, /seenCollectionCount/);
+  assert.match(page, /unseenCollectionCount/);
   assert.match(bridge, /selectCoverageSprint/);
   assert.match(bridge, /JULY_25_HISTOLOGY_TOPICS/);
   assert.match(bridge, /Male reproductive system/);

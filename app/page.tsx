@@ -31,6 +31,7 @@ type BankSummary = {
     finalExamQuestionCount: number;
     imageQuestionCount: number;
     collectionCounts: Partial<Record<CollectionId, number>>;
+    collectionQuestionIds?: Partial<Record<CollectionId, string[]>>;
   }>;
 };
 
@@ -363,6 +364,18 @@ export default function Home() {
   const examProgress = progress.exams[exam];
   const savedCount = (id: SavedCollectionId) => id === "wrong" ? examProgress.wrongIds.length : examProgress.flaggedIds.length;
   const collectionCount = isSavedCollection(collection) ? savedCount(collection) : selectedExam?.collectionCounts[collection] ?? 0;
+  const seenQuestionIds = new Set(cleanIds([
+    ...sessionArchive.history
+      .filter((session) => session.exam === exam)
+      .flatMap((session) => session.questionIds),
+    ...examProgress.wrongIds,
+    ...examProgress.flaggedIds,
+  ]));
+  const selectedCollectionQuestionIds = isSavedCollection(collection)
+    ? examProgress[`${collection}Ids`]
+    : selectedExam?.collectionQuestionIds?.[collection] ?? [];
+  const seenCollectionCount = selectedCollectionQuestionIds.filter((id) => seenQuestionIds.has(id)).length;
+  const unseenCollectionCount = Math.max(0, collectionCount - seenCollectionCount);
 
   function chooseExam(nextExam: ExamId) {
     setExam(nextExam);
@@ -756,7 +769,7 @@ export default function Home() {
             <p className="eyebrow">Priority exam · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam until you switch dates.</p>
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
-            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED SPRINT SAVED</span><h2>{examConfig[resumableSession.exam].date} · {collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><b>{Math.min(sessionSize, collectionCount)} questions</b><span>{collectionCount} available for {selectedConfig.date} · 80% unseen / 20% review</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
+            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED SPRINT SAVED</span><h2>{examConfig[resumableSession.exam].date} · {collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>{Math.min(sessionSize, collectionCount)}-question sprint · 80% unseen / 20% review</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}
 

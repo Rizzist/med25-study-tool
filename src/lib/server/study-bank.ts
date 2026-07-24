@@ -322,6 +322,10 @@ export function bankSummary() {
         collection,
         questions.filter((question) => matchesCollection(question, collection)).length,
       ])),
+      collectionQuestionIds: Object.fromEntries(COLLECTIONS.map((collection) => [
+        collection,
+        questions.filter((question) => matchesCollection(question, collection)).map((question) => question.id),
+      ])),
     };
   });
 

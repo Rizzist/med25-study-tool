@@ -237,6 +237,7 @@ function bankSummary() {
       finalExamQuestionCount: loadFinalExamQuestions(exam.id).length,
       imageQuestionCount: questions.filter((question) => question.kind === "image_single_best_answer").length,
       collectionCounts: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).length])),
+      collectionQuestionIds: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).map((question) => question.id)])),
     };
   });
   return {
