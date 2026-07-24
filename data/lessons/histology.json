@@ -1744,6 +1744,117 @@
       }
     },
     {
+      "id": "hist-skin-sensory-receptors",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Skin sensory receptors",
+      "title": "Decode every skin receptor by depth, stimulus, and adaptation",
+      "subtitle": "Free endings, Merkel, Meissner, Pacinian, Ruffini, Krause, and root-hair plexuses on one comparison slide",
+      "kind": "comparison",
+      "topicPatterns": [
+        "Skin",
+        "Cutaneous sensory receptors",
+        "Skin sensory receptors"
+      ],
+      "questionPatterns": [
+        "cutaneous sensory input",
+        "sensory receptor",
+        "free nerve ending",
+        "merkel",
+        "meissner",
+        "pacinian",
+        "lamellated corpuscle",
+        "ruffini",
+        "krause",
+        "root hair plexus",
+        "two point discrimination",
+        "light touch",
+        "high frequency vibration",
+        "low frequency vibration",
+        "hair movement",
+        "tonic",
+        "phasic",
+        "encapsulated"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Solve receptor questions in three passes: identify the stimulus, place the receptor by depth, then check whether the signal is sustained or rapidly changing.",
+        "items": [
+          {
+            "label": "Free nerve endings",
+            "detail": "Unencapsulated fibers in papillary dermis that can enter lower epidermis; detect pain, hot or cold extremes, itching, and some crude touch.",
+            "cue": "Pain, temperature, itch"
+          },
+          {
+            "label": "Merkel tactile disc",
+            "detail": "Unencapsulated Merkel cell-neurite complex in stratum basale; a tonic receptor for sustained light touch, edges, form, and texture.",
+            "cue": "Basal + stays on"
+          },
+          {
+            "label": "Meissner corpuscle",
+            "detail": "Small encapsulated oval in dermal papillae of glabrous skin; phasic light-touch and low-frequency deformation receptor, dense in fingertips.",
+            "cue": "Superficial stacked oval"
+          },
+          {
+            "label": "Pacinian corpuscle",
+            "detail": "Large encapsulated receptor in deep reticular dermis or hypodermis; concentric lamellae amplify coarse pressure and high-frequency vibration.",
+            "cue": "Deep onion"
+          },
+          {
+            "label": "Ruffini corpuscle",
+            "detail": "Fusiform collagenous capsule anchored to connective tissue; deformation signals skin stretch, tension, and twisting or torque.",
+            "cue": "Stretch spindle"
+          },
+          {
+            "label": "Krause end bulb",
+            "detail": "Small simple encapsulated ovoid receptor, emphasized in penile and clitoral skin; Junqueira assigns it low-frequency vibration or movement.",
+            "cue": "Genital low frequency"
+          },
+          {
+            "label": "Root-hair plexus",
+            "detail": "Unencapsulated sensory web around the base of a hair follicle in reticular dermis; bending the hair produces light-touch input.",
+            "cue": "Hair movement"
+          }
+        ]
+      },
+      "essentials": [
+        "The fastest discriminator is modality: pain, temperature, and itch mean free endings; sustained texture means Merkel; flutter or light deformation means Meissner; deep pressure or high-frequency vibration means Pacinian.",
+        "Depth is the visual map: Merkel and free endings are epidermal or very superficial, Meissner is in a dermal papilla, and Pacinian is deep in reticular dermis or hypodermis.",
+        "Unencapsulated receptors are free endings, Merkel tactile discs, and root-hair plexuses; Meissner, Pacinian, Ruffini, and Krause receptors are encapsulated.",
+        "For adaptation, memorize Merkel as tonic and Meissner/Pacinian as phasic. In physiology classifications Ruffini endings are commonly described as slowly adapting stretch receptors.",
+        "Junqueira links fingertip two-point discrimination to Meissner corpuscle density and notes that this density declines during adult life.",
+        "Meissner corpuscles are numerous in fingertips, palms, and soles; root-hair plexuses require hairy skin and therefore are absent from glabrous palms and soles."
+      ],
+      "traps": [
+        {
+          "wrong": "Any vibration is Pacinian.",
+          "right": "High-frequency or deep vibration favors Pacinian; low-frequency superficial deformation favors Meissner, while Junqueira assigns genital low-frequency vibration to Krause bulbs."
+        },
+        {
+          "wrong": "Two-point discrimination is a deep-pressure function, so the answer is Pacinian.",
+          "right": "Fine superficial spatial discrimination at the fingertip tracks dense Meissner corpuscles; Junqueira explicitly connects their age-related decline to worsening two-point discrimination."
+        },
+        {
+          "wrong": "All light touch is detected by the same receptor.",
+          "right": "Sustained texture and edges favor Merkel, changing superficial touch favors Meissner, and movement of a hair favors a root-hair plexus."
+        },
+        {
+          "wrong": "Every receptor that reaches the epidermis has a connective-tissue capsule.",
+          "right": "Free endings and Merkel-associated tactile discs are unencapsulated; the major encapsulated corpuscles lie in dermis or hypodermis."
+        }
+      ],
+      "recognition": [
+        "A small pale oval with stacked flattened Schwann cells inside a dermal papilla is a Meissner corpuscle.",
+        "A large onion-like body with many concentric lamellae among deep dermal or hypodermal adipocytes is a Pacinian corpuscle.",
+        "A fusiform collagenous receptor blending into deep connective tissue favors a Ruffini corpuscle.",
+        "Free endings, Merkel complexes, Krause bulbs, and root-hair plexuses are usually difficult to identify in routine H&E sections; use the stated location and modality."
+      ],
+      "source": {
+        "label": "Junqueira's Basic Histology, 16th ed.",
+        "detail": "Chapter 18, Figures 18-9, 18-11, and 18-12; sensory receptor text on pages 381-383."
+      }
+    },
+    {
       "id": "hist-skin-appendages-glands",
       "exam": "july25",
       "subject": "histology",
