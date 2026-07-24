@@ -1,6 +1,5 @@
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import embeddedBankData from "@/data/bank/embedded-bank.json";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
 export type ExamId = "july25" | "july29";
@@ -13,40 +12,6 @@ export type CollectionId =
   | "images"
   | "stains"
   | "practical";
-
-const root = process.cwd();
-
-/*
- * Keep these paths literal so Next/Vercel's output-file tracer can package the
- * source banks with the server functions. next.config.ts also includes data/**.
- */
-const QUESTION_FILES = [
-  resolve(root, "data/bank/questions/biochemistry-teacher-scope.jsonl"),
-  resolve(root, "data/bank/questions/biochemistry-telegram-teacher-gaps.jsonl"),
-  resolve(root, "data/bank/questions/confirmed-curriculum-gaps.jsonl"),
-  resolve(root, "data/bank/questions/embryology-existing.jsonl"),
-  resolve(root, "data/bank/questions/embryology-generated.jsonl"),
-  resolve(root, "data/bank/questions/embryology-telegram-teacher-gaps.jsonl"),
-  resolve(root, "data/bank/questions/histology-existing.jsonl"),
-  resolve(root, "data/bank/questions/histology-junqueira-assess.jsonl"),
-  resolve(root, "data/bank/questions/histology-local-teacher-images.jsonl"),
-  resolve(root, "data/bank/questions/histology-local-teacher-text.jsonl"),
-  resolve(root, "data/bank/questions/histology-respiratory-video-images.jsonl"),
-  resolve(root, "data/bank/questions/histology-stains.jsonl"),
-  resolve(root, "data/bank/questions/histology-telegram-teacher-gaps.jsonl"),
-  resolve(root, "data/bank/questions/image-spotters.jsonl"),
-  resolve(root, "data/bank/questions/physiology-image-spotters.jsonl"),
-  resolve(root, "data/bank/questions/physiology-teacher-scope.jsonl"),
-  resolve(root, "data/bank/questions/physiology-term1-general.jsonl"),
-  resolve(root, "data/bank/questions/telegram-standalone-image-recognition.jsonl"),
-] as const;
-
-const FINAL_EXAM_FILES: Record<ExamId, string> = {
-  july25: resolve(root, "data/telegram-final/july25.jsonl"),
-  july29: resolve(root, "data/telegram-final/july29.jsonl"),
-};
-
-const MANIFEST_FILE = resolve(root, "data/bank/manifest.json");
 
 const COLLECTIONS: CollectionId[] = [
   "all",
@@ -192,22 +157,15 @@ type BankManifest = {
   subjects: Array<{ id: string; title: string }>;
 };
 
+type EmbeddedBank = {
+  manifest: BankManifest;
+  questions: MCQQuestion[];
+  finalExams: Record<ExamId, MCQQuestion[]>;
+};
+
+const embeddedBank = embeddedBankData as unknown as EmbeddedBank;
 let verifiedCache: MCQQuestion[] | null = null;
 const finalCache: Partial<Record<ExamId, MCQQuestion[]>> = {};
-
-function readJsonLines(filepath: string): MCQQuestion[] {
-  if (!existsSync(filepath)) return [];
-  return readFileSync(filepath, "utf8")
-    .split(/\r?\n/)
-    .filter((line) => line.trim().length > 0)
-    .flatMap((line) => {
-      try {
-        return [JSON.parse(line) as MCQQuestion];
-      } catch {
-        return [];
-      }
-    });
-}
 
 export function isExamId(value: unknown): value is ExamId {
   return value === "july25" || value === "july29";
@@ -219,8 +177,7 @@ export function isCollectionId(value: unknown): value is CollectionId {
 
 export function loadVerifiedQuestions(): MCQQuestion[] {
   if (!verifiedCache) {
-    verifiedCache = QUESTION_FILES
-      .flatMap(readJsonLines)
+    verifiedCache = embeddedBank.questions
       .filter((question) => question.status === "verified");
   }
   return verifiedCache;
@@ -228,7 +185,7 @@ export function loadVerifiedQuestions(): MCQQuestion[] {
 
 export function loadFinalExamQuestions(exam: ExamId): MCQQuestion[] {
   if (!finalCache[exam]) {
-    finalCache[exam] = readJsonLines(FINAL_EXAM_FILES[exam]).filter((question) => {
+    finalCache[exam] = embeddedBank.finalExams[exam].filter((question) => {
       const tags = new Set(question.tags ?? []);
       return question.status === "verified"
         && tags.has("telegram-final")
@@ -297,8 +254,8 @@ function cleanIds(value: unknown, maximum: number): string[] {
 }
 
 export function bankSummary() {
-  const manifest = JSON.parse(readFileSync(MANIFEST_FILE, "utf8")) as BankManifest;
-  const allQuestions = QUESTION_FILES.flatMap(readJsonLines);
+  const manifest = embeddedBank.manifest;
+  const allQuestions = embeddedBank.questions;
   const verified = loadVerifiedQuestions();
   const subjectCounts = new Map<string, number>();
   const tagCounts = new Map<string, number>();
