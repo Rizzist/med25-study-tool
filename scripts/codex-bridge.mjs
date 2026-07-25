@@ -81,6 +81,7 @@ const JULY_25_EMBRYOLOGY_TOPICS = new Set([
   "Fourth week: body folding",
   "Embryonic period",
   "Embryonic period and germ-layer derivatives",
+  "Neurulation, gut tube, and body cavities",
   "Fetal period, placenta, and fetal membranes",
   "Birth defects and prenatal diagnosis",
 ]);
