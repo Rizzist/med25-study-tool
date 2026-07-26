@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
 const lessonDir = resolve(root, "data/lessons");
-const files = ["embryology.json", "histology.json", "july29-cell-molecules.json", "curriculum-gaps.json"];
+const files = ["embryology.json", "histology.json", "july29-cell-molecules.json", "curriculum-gaps.json", "july29-comprehensive.json"];
 const failures = [];
 const ids = new Set();
 const lessons = [];
@@ -68,6 +68,7 @@ const expected = [
   ...topicsFromBridge("JULY_25_PHYSIOLOGY_TOPICS").map((topic) => ["july25", "physiology", topic]),
   ...topicsFromBridge("JULY_29_BIOCHEMISTRY_TOPICS").map((topic) => ["july29", "biochemistry", topic]),
   ...topicsFromBridge("JULY_29_PHYSIOLOGY_TOPICS").map((topic) => ["july29", "physiology", topic]),
+  ...topicsFromBridge("JULY_29_HISTOLOGY_TOPICS").map((topic) => ["july29", "histology", topic]),
   ...["Digestive tract", "Endocrine glands", "Immune system and lymphoid organs", "Respiratory system", "Special sense organs", "Urinary system"].map((topic) => ["july25", "histology", topic]),
   ["july25", "embryology", "Respiratory system development"],
 ];

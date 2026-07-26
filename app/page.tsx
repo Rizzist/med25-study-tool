@@ -82,8 +82,8 @@ const examConfig: Record<ExamId, {
   july29: {
     date: "July 29",
     title: "Cell & Molecules",
-    focus: "Foundational biochemistry, molecular biology, membrane physiology and all confirmed laboratory methods",
-    collections: ["all", "wrong", "flagged", "biochemistry", "physiology", "images", "practical"],
+    focus: "Lippincott Chapters 1–7, 14–18 and 23–33, cellular histology, membrane physiology and all confirmed laboratory methods",
+    collections: ["all", "wrong", "flagged", "biochemistry", "histology", "physiology", "images", "stains", "practical"],
   },
 };
 const collectionLabel: Record<CollectionId, string> = {
@@ -718,7 +718,8 @@ export default function Home() {
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Histology fields and embryo diagrams", count: examCount("images") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Methods, stains, slides and recognition questions kept in the exam bank", count: examCount("practical") },
   ] : [
-    { id: "biochemistry", title: "Biochemistry", scope: "Lectures + Lippincott", detail: "Molecules, enzymes, genetics and lab reasoning", count: examCount("biochemistry") },
+    { id: "biochemistry", title: "Biochemistry", scope: "Lippincott 1–7, 14–18, 23–33", detail: "Molecules, enzymes, integrated metabolism, genetics, nutrition and laboratory reasoning", count: examCount("biochemistry") },
+    { id: "histology", title: "Cell + Intro Histology", scope: "Mandatory safety block", detail: "Methods, stains, membranes, organelles, cytoskeleton, nucleus, cell cycle and death", count: examCount("histology") },
     { id: "physiology", title: "Membrane physiology", scope: "Guyton + teacher slides", detail: "Homeostasis, transport, resting voltage and action potentials", count: examCount("physiology") },
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Cell, molecular and laboratory figures", count: examCount("images") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Equipment, carbohydrate tests, titration and image analysis", count: examCount("practical") },
@@ -744,7 +745,8 @@ export default function Home() {
     ["FLAGGED", savedCount("flagged"), "Manual review list"],
   ] : [
     ["FOCUSED BANK", selectedExam?.questionCount ?? "—", "This exam only"],
-    ["BIOCHEMISTRY", examCount("biochemistry"), "Theory + labs"],
+    ["BIOCHEMISTRY", examCount("biochemistry"), "Lippincott + lectures"],
+    ["CELL + HISTOLOGY", examCount("histology"), "Required safety block"],
     ["MEMBRANE PHYSIOLOGY", examCount("physiology"), "Muscle moved to July 25"],
     ["VISUAL LESSONS", lessonsForExam(exam).length, "Core reference guide"],
     ["WRONG", savedCount("wrong"), "Saved for repair"],

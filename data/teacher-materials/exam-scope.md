@@ -8,7 +8,8 @@ The second exam is **July 29**, not August 25.
 
 1. The pinned July 1, 2026 class-representative announcement confirms **Tissue Development & Function on July 25**, **Cell & Molecules on July 29**, one integrated theory paper per block, and practical exams scheduled later.
 2. The May 19 current-cohort checklist and recovered teacher materials identify the lectures actually delivered in 2026.
-3. On July 22, 2026, the student confirmed that the Tissue, Development & Function and Cell & Molecules tables on syllabus pages 30 and 28 are examinable in addition to the current Telegram material. The explicit student placement decision keeps cellular and introductory Histology in the July 25 bucket.
+3. On July 22, 2026, the student confirmed that the Tissue, Development & Function and Cell & Molecules tables on syllabus pages 30 and 28 are examinable in addition to the current Telegram material. After unexpected systemic Histology appeared on July 25, the student explicitly approved restoring cellular and introductory Histology as a mandatory July 29 safety block.
+4. On July 26, 2026, the student explicitly confirmed that all of Lippincott Chapters 23-28 are examinable. The July 29 bank therefore includes the full insulin/glucagon, feed-fast, diabetes, obesity, nutrition, and vitamin block.
 
 ## July 25 - Tissue Development & Function
 
@@ -57,9 +58,11 @@ Practical-derived material is **not excluded**. Stains, methods, microscopy, sli
 - Water- and fat-soluble vitamins.
 - Nucleotides, DNA/chromatin and replication.
 - DNA repair, mutation, transcription, translation and gene regulation.
+- Lippincott Chapters 23-28: insulin and glucagon, hypoglycemia, fed-fast integration, diabetes mellitus, obesity, nutrition and vitamins.
+- The complete confirmed textbook scaffold: Chapters 1-7, 14-18 and 23-33, with Chapters 8-13 and 19-22 still excluded unless separately confirmed.
 - Practical-derived theory: equipment, safety, titration, carbohydrate and amino-acid/protein tests, enzyme assays, spectrophotometry, DNA extraction, chromatography, flame photometry and osmosis.
 
-The later `carbohydrate metabolism MD Kish.pdf` pathway block remains excluded. The active bank contains foundational first-semester material rather than glycolysis/TCA-style later metabolism.
+The standalone `carbohydrate metabolism MD Kish.pdf` remains excluded because Chapters 8-13 were not confirmed. Integrated pathway consequences that are explicitly taught in Chapters 23-27 are included.
 
 ### Active Physiology scope
 
@@ -71,16 +74,16 @@ Muscle physiology, neuromuscular transmission and general neurotransmission are 
 
 ### Histology placement
 
-No Histology questions appear in the July 29 default. Cellular and introductory Histology remain in July 25 by explicit student instruction, despite their appearance in the confirmed Cell & Molecules syllabus table.
+Cellular and introductory Histology now appear in the July 29 default as a mandatory safety block. Coverage includes methods, stains, microscopy, membrane, transport, signaling, organelles, cytoskeleton, inclusions, nucleus, cell cycle, division and cell death. The same stable question IDs remain available in July 25 where applicable.
 
 ## Local app collections
 
-Each exam offers a mixed bank plus subject collections. July 25 includes Histology, Embryology, Guyton Chapters 1-8 Physiology, Stains, Images, and Practical + spotters. July 29 provides Biochemistry, membrane Physiology, Images, and Practical + spotters. The Guyton Chapters 1-5 questions intentionally appear in both exam collections because they are confirmed for July 25 and overlap the Cell & Molecules scope.
+Each exam offers a mixed bank plus subject collections. July 25 includes Histology, Embryology, Guyton Chapters 1-8 Physiology, Stains, Images, and Practical + spotters. July 29 provides Biochemistry, Cell + Intro Histology, membrane Physiology, Images, Stains, and Practical + spotters. Shared content keeps the same stable question IDs.
 
 Practical-derived questions intentionally overlap the mixed, image and stain collections. The overlap lets the student study them in context or isolate them for rapid recognition drills.
 
 Current filtered totals:
 
-- **July 25:** 601 questions - 317 Histology, 192 Embryology and 92 Physiology, including all 71 available image MCQs, 50 stain questions and 120 Practical + spotters drills.
-- **July 29:** 391 questions - 345 Biochemistry and 46 membrane Physiology, including 14 image MCQs and 56 Practical + spotters drills.
-- **Master bank:** 1,350 verified questions. Out-of-scope material remains preserved and is filtered rather than deleted.
+- **July 25:** 713 questions - 331 Histology, 258 Embryology and 124 Physiology, including 71 image MCQs and 120 Practical + spotters drills.
+- **July 29:** 744 questions - 570 Biochemistry, 120 cellular/introductory Histology and 54 membrane Physiology questions, including 34 image MCQs and 135 Practical + spotters drills.
+- **Master bank:** 1,672 verified study questions plus 367 sourced final-exam items. Out-of-scope material remains preserved and is filtered rather than deleted.

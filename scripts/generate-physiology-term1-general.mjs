@@ -424,7 +424,178 @@ q("Chapter 8", "Smooth muscle", "Pharmacomechanical coupling", 5,
   "Smooth muscle can contract through receptor-operated signaling that raises cytosolic calcium or calcium sensitivity without requiring an action potential.",
   "Explain pharmacomechanical coupling in smooth muscle.", ["smooth-muscle", "application"], "core");
 
-if (items.length !== 80) throw new Error(`Expected 80 items, found ${items.length}`);
+// Chapters 5-8 comprehensive expansion.
+// Appending these preserves the IDs of the original 80 questions and all saved progress.
+
+// Chapter 5 expansion - membrane potentials and action potentials (8)
+q("Chapter 5", "Membrane potentials", "Relative permeability", 3,
+  "A resting membrane suddenly becomes much more permeable to K+ while all ion gradients remain unchanged. Toward which value will membrane voltage move?",
+  "The K+ equilibrium potential", ["The Na+ equilibrium potential", "Exactly 0 mV", "The Cl- concentration in millimoles"],
+  "Increasing one ion's conductance gives that ion greater control of membrane voltage, so increased K+ permeability drives voltage toward EK.",
+  "Predict how a selective conductance change shifts membrane potential.", ["goldman", "conductance", "application"]);
+q("Chapter 5", "Membrane potentials", "Shunting inhibition", 4,
+  "Opening postsynaptic Cl- channels whose reversal potential is near the resting potential inhibits firing mainly by what mechanism?",
+  "Increasing membrane conductance so excitatory current produces a smaller voltage change", ["Producing a large regenerative Cl- action potential", "Permanently closing all voltage-gated Na+ channels", "Eliminating the transmembrane chloride gradient"],
+  "Cl- channels can inhibit with little hyperpolarization: conductance rises, input resistance falls, and the same excitatory current produces a smaller EPSP because delta V = I x R.",
+  "Explain conductance-based shunting inhibition.", ["chloride", "conductance", "shunting", "application"], "core");
+q("Chapter 5", "Action potentials", "Relative refractory period", 3,
+  "Why is a stronger-than-normal stimulus required during the relative refractory period?",
+  "Some Na+ channels have not recovered and K+ conductance may remain elevated", ["All Na+ channels are permanently closed", "The Na+/K+-ATPase has removed every intracellular Na+ ion", "Membrane capacitance has become zero"],
+  "Incomplete recovery of Na+ channels and persistent outward K+ current make threshold harder, but not impossible, to reach.",
+  "Distinguish the relative from the absolute refractory period.", ["refractory-period"]);
+q("Chapter 5", "Action potentials", "Sodium-channel gates", 3,
+  "What is the usual gate configuration of a voltage-gated Na+ channel at the resting membrane potential?",
+  "Activation gate closed and inactivation gate open", ["Activation gate open and inactivation gate closed", "Both gates open", "Both gates irreversibly closed"],
+  "At rest the rapid activation gate is closed while the slower inactivation gate is open, leaving the channel closed but available to activate.",
+  "Recall voltage-gated sodium-channel states.", ["sodium-channel", "gating"]);
+q("Chapter 5", "Action potentials", "Action-potential peak", 4,
+  "Which paired change most directly turns rapid depolarization into repolarization near the peak of a neuronal action potential?",
+  "Na+ channel inactivation and delayed opening of K+ channels", ["Further Na+ activation and closure of K+ channels", "Opening of ligand-gated Cl- channels only", "Immediate reversal of the Na+/K+-ATPase"],
+  "The inward Na+ current wanes as Na+ channels inactivate while delayed K+ channels increase outward current.",
+  "Explain the current switch at the action-potential peak.", ["sodium-channel", "potassium-channel", "application"], "core");
+q("Chapter 5", "Membrane potentials", "Electrogenic pump", 3,
+  "Which statement best describes the Na+/K+-ATPase contribution to membrane voltage?",
+  "It maintains Na+ and K+ gradients and is mildly electrogenic because it moves 3 Na+ out for 2 K+ in", ["It produces the rapid upstroke by pumping Na+ inward", "It directly opens voltage-gated K+ channels at threshold", "It moves equal positive charge in both directions"],
+  "The pump maintains gradients and makes the inside slightly more negative, but channel currents—not rapid pump cycling—create each action-potential phase.",
+  "Separate the pump's long-term and immediate electrical roles.", ["sodium-potassium-pump", "application"]);
+q("Chapter 5", "Action potentials", "Myelin electrical properties", 4,
+  "Which combination of electrical changes beneath myelin most directly speeds passive spread of local current?",
+  "Increased membrane resistance and decreased effective membrane capacitance", ["Decreased membrane resistance and increased capacitance", "Increased axial resistance and increased capacitance", "Decreased membrane resistance with unchanged capacitance"],
+  "High membrane resistance reduces current leak, while low capacitance means less charge is needed to change voltage; the next node therefore charges faster.",
+  "Relate myelin's electrical properties to conduction velocity.", ["myelin", "resistance", "capacitance"], "core");
+q("Chapter 5", "Action potentials", "Axial resistance", 4,
+  "If an axon's diameter doubles while resistivity and length stay constant, its internal axial resistance is approximately what fraction of the original?",
+  "One-quarter", ["One-half", "Twice", "Four times"],
+  "Axial resistance is inversely proportional to cross-sectional area, and area is proportional to diameter squared.",
+  "Calculate how axon diameter changes internal resistance.", ["axon-diameter", "resistance", "calculation"], "core");
+
+// Chapter 6 expansion - skeletal muscle contraction (8)
+q("Chapter 6", "Skeletal muscle", "Band changes", 3,
+  "During shortening of a skeletal-muscle sarcomere, which band remains essentially constant in length?",
+  "A band", ["I band", "H zone", "Distance between Z discs"],
+  "Thick-filament length defines the A band and does not change; the I band and H zone narrow and Z discs approach.",
+  "Predict sarcomere band changes during contraction.", ["sarcomere", "sliding-filament"], "core");
+q("Chapter 6", "Skeletal muscle", "Troponin subunits", 3,
+  "Which mapping of troponin subunits is correct?",
+  "TnC binds Ca2+, TnI inhibits actin-myosin interaction, and TnT binds tropomyosin", ["TnC binds tropomyosin, TnI binds Ca2+, and TnT hydrolyzes ATP", "TnC pumps Ca2+, TnI binds myosin ATP, and TnT forms titin", "All three subunits bind Ca2+ and perform identical functions"],
+  "Use the initials: C binds calcium, I is inhibitory, and T attaches the complex to tropomyosin.",
+  "Differentiate the three troponin subunits.", ["troponin", "calcium-regulation"], "core");
+q("Chapter 6", "Skeletal muscle", "Cross-bridge recocking", 3,
+  "After ATP causes myosin to detach from actin, what event re-cocks the myosin head into its high-energy position?",
+  "Hydrolysis of ATP to ADP plus phosphate", ["Release of calcium from troponin C", "Binding of a second actin molecule to tropomyosin", "Pumping sodium into the sarcoplasmic reticulum"],
+  "Myosin ATPase hydrolyzes ATP, storing the energy in the cocked ADP-Pi myosin head for the next cycle.",
+  "Order ATP binding, hydrolysis, attachment, and the power stroke.", ["cross-bridge", "ATP"]);
+q("Chapter 6", "Skeletal muscle", "Titin", 2,
+  "Which sarcomeric protein centers the thick filament and contributes passive elastic recoil when muscle is stretched?",
+  "Titin", ["Troponin I", "Dystrophin", "Calmodulin"],
+  "Titin spans from the Z disc toward the thick filament, stabilizes it, and behaves as a molecular spring.",
+  "State titin's structural and elastic roles.", ["sarcomere", "titin"]);
+q("Chapter 6", "Skeletal muscle", "Optimal length", 4,
+  "Why is active skeletal-muscle tension maximal near a sarcomere length of about 2.0 to 2.2 micrometers?",
+  "Actin and myosin overlap optimally without excessive thin-filament interference", ["Thick filaments completely disappear", "Every myosin head is detached by ATP depletion", "No actin overlaps myosin"],
+  "Maximum active force needs many possible cross-bridges without excessive overlap or compression; excessive shortening or stretch reduces productive interactions.",
+  "Explain the molecular basis of the length-tension curve.", ["length-tension", "application"], "core");
+q("Chapter 6", "Skeletal muscle", "Force-velocity relation", 4,
+  "During an isotonic skeletal-muscle contraction, increasing the opposing load generally has what effect on shortening velocity?",
+  "It decreases shortening velocity", ["It increases shortening velocity without limit", "It has no effect until the muscle tears", "It reverses ATP hydrolysis at every load"],
+  "Muscle shortens fastest against a light load; as load approaches maximal isometric force, shortening velocity approaches zero.",
+  "Interpret the force-velocity relationship.", ["force-velocity", "application"]);
+q("Chapter 6", "Skeletal muscle", "Fiber types", 3,
+  "Which profile best describes a slow oxidative type I skeletal-muscle fiber?",
+  "Many mitochondria, abundant myoglobin and capillaries, and high fatigue resistance", ["Few mitochondria, little myoglobin, and fastest fatigue", "No oxidative enzymes and no blood supply", "Largest diameter with exclusively anaerobic metabolism"],
+  "Type I fibers are red, richly vascularized, mitochondrial, and adapted for sustained aerobic activity.",
+  "Recognize the properties of type I fibers.", ["fiber-types", "type-I"]);
+q("Chapter 6", "Skeletal muscle", "Size principle", 4,
+  "As force demand gradually increases, which motor units are normally recruited first?",
+  "Small, fatigue-resistant motor units", ["The largest, fastest-fatiguing units", "All motor units simultaneously", "Only denervated motor units"],
+  "The size principle recruits small low-threshold units first, then progressively larger high-force units.",
+  "Apply the size principle of motor-unit recruitment.", ["motor-unit", "recruitment"], "core");
+
+// Chapter 7 expansion - neuromuscular transmission and excitation-contraction coupling (8)
+q("Chapter 7", "Neuromuscular junction", "Nicotinic receptor", 3,
+  "At the adult neuromuscular junction, opening one nicotinic acetylcholine receptor normally requires what?",
+  "Binding of two acetylcholine molecules to alpha subunits", ["Binding of one norepinephrine molecule", "Direct phosphorylation by myosin light-chain kinase", "Entry of calcium through the DHP receptor"],
+  "The muscle nicotinic receptor is a pentameric ligand-gated cation channel with two alpha ACh-binding sites.",
+  "Recall nicotinic receptor stoichiometry and activation.", ["acetylcholine", "nicotinic-receptor"]);
+q("Chapter 7", "Neuromuscular junction", "Graded versus all-or-none", 4,
+  "Which statement correctly compares the end-plate potential with the muscle action potential?",
+  "The end-plate potential is graded; if it reaches threshold, nearby voltage-gated Na+ channels generate an all-or-none action potential", ["Both are always all-or-none events produced by the same receptor", "The end-plate potential is generated mainly by voltage-gated K+ channels", "The muscle action potential remains confined to the motor end plate"],
+  "ACh receptor current produces a local graded EPP. Nearby voltage-gated Na+ channels convert sufficient depolarization into a regenerative action potential.",
+  "Differentiate an EPP from a muscle action potential.", ["end-plate-potential", "action-potential"], "core");
+q("Chapter 7", "Neuromuscular junction", "Quantal release", 4,
+  "A miniature end-plate potential recorded without a motor-neuron action potential usually represents what?",
+  "Spontaneous release of acetylcholine from one synaptic vesicle", ["A full skeletal-muscle action potential", "Opening of every receptor at the end plate", "One cycle of the Na+/K+-ATPase"],
+  "One vesicle is one quantum of transmitter; spontaneous fusion produces a small miniature EPP.",
+  "Explain quantal acetylcholine release.", ["quantal-release", "end-plate-potential"]);
+q("Chapter 7", "Neuromuscular junction", "Junctional folds", 4,
+  "Where are voltage-gated Na+ channels concentrated relative to nicotinic ACh receptors at the motor end plate?",
+  "Na+ channels are concentrated deeper in junctional folds, while ACh receptors are dense near their crests", ["Both are located only in the presynaptic terminal", "ACh receptors are only in T tubules", "Na+ channels float freely in the synaptic cleft"],
+  "ACh receptors detect transmitter at fold crests; Na+ channels deeper along the folds initiate the muscle action potential.",
+  "Relate motor end-plate microanatomy to function.", ["junctional-folds", "image-recognition"]);
+q("Chapter 7", "Neuromuscular junction", "Competitive blockade", 3,
+  "Curare-like nondepolarizing neuromuscular blockers cause weakness primarily by what action?",
+  "Competitive blockade of postsynaptic nicotinic acetylcholine receptors", ["Inhibition of acetylcholine synthesis by skeletal muscle", "Persistent opening of ryanodine receptors", "Activation of muscarinic receptors"],
+  "Competitive receptor blockade reduces end-plate current and can lower the EPP below threshold despite normal ACh release.",
+  "Explain nondepolarizing neuromuscular blockade.", ["curare", "nicotinic-receptor", "application"]);
+q("Chapter 7", "Excitation-contraction coupling", "Triad anatomy", 3,
+  "What structures form a skeletal-muscle triad?",
+  "One T tubule flanked by two terminal cisternae of sarcoplasmic reticulum", ["One Z disc between two thick filaments", "Two T tubules around one nucleus", "One motor axon between two Schwann cells"],
+  "At each A-I junction, a T tubule lies between two terminal cisternae.",
+  "Identify triad components and location.", ["triad", "image-recognition"], "core");
+q("Chapter 7", "Excitation-contraction coupling", "Skeletal versus cardiac coupling", 4,
+  "Why can a skeletal-muscle twitch occur even when extracellular Ca2+ entry during its action potential is minimal?",
+  "The DHP voltage sensor mechanically opens RyR1 to release Ca2+ already stored in the sarcoplasmic reticulum", ["Skeletal muscle does not require cytosolic Ca2+", "Troponin C binds sodium", "Acetylcholine releases calcium from mitochondria"],
+  "In skeletal muscle, depolarization changes DHP receptor conformation and mechanically gates RyR1; extracellular trigger calcium is not the primary requirement.",
+  "Distinguish skeletal from cardiac excitation-contraction coupling.", ["DHP", "ryanodine-receptor", "application"], "core");
+q("Chapter 7", "Excitation-contraction coupling", "Malignant hyperthermia", 5,
+  "A susceptible patient develops rigidity, hypercapnia, and rapidly rising temperature after a volatile anesthetic. Which treatment targets the skeletal-muscle defect?",
+  "Dantrolene inhibition of ryanodine-receptor-mediated Ca2+ release", ["Curare activation of nicotinic receptors", "Atropine inhibition of acetylcholinesterase", "Digoxin activation of SERCA"],
+  "Malignant hyperthermia reflects uncontrolled SR Ca2+ release, often through abnormal RyR1; dantrolene reduces that release.",
+  "Apply excitation-contraction coupling to malignant hyperthermia.", ["malignant-hyperthermia", "ryanodine-receptor", "application"], "core");
+
+// Chapter 8 expansion - smooth muscle (8)
+q("Chapter 8", "Smooth muscle", "Dense bodies", 2,
+  "Which smooth-muscle structure serves as an anchoring site analogous to the Z disc of skeletal muscle?",
+  "Dense body", ["Terminal cisterna", "Motor end plate", "H zone"],
+  "Actin and intermediate filaments attach to dense bodies, transmitting force through a non-sarcomeric network.",
+  "Identify the Z-disc analogue in smooth muscle.", ["dense-body", "image-recognition"]);
+q("Chapter 8", "Smooth muscle", "Multiunit muscle", 3,
+  "Which is a classic example of multiunit smooth muscle with individually controlled fibers and little electrical coupling?",
+  "Iris muscle", ["Intestinal wall", "Uterine myometrium during labor", "Urinary bladder detrusor"],
+  "Iris and ciliary muscles are multiunit: fibers are more independently innervated and have few gap junctions.",
+  "Recognize multiunit smooth muscle.", ["multiunit", "application"]);
+q("Chapter 8", "Smooth muscle", "Single-unit muscle", 3,
+  "Which property is most characteristic of single-unit visceral smooth muscle?",
+  "Gap junctions allow many cells to contract as a functional syncytium", ["Every cell requires a separate motor end plate", "It contains sarcomeres and troponin", "It cannot respond to stretch"],
+  "Visceral smooth muscle in organs such as gut and uterus is electrically coupled and often responds coordinately.",
+  "Recognize single-unit smooth muscle.", ["single-unit", "gap-junction"]);
+q("Chapter 8", "Smooth muscle", "Calcium source", 4,
+  "Compared with skeletal muscle, smooth-muscle contraction depends more strongly on which calcium source?",
+  "Entry from extracellular fluid through membrane calcium channels", ["Calcium bound to extracellular collagen", "Release from terminal cisternae exclusively", "Calcium synthesized by myosin ATPase"],
+  "Smooth muscle has a less extensive sarcoplasmic reticulum, so extracellular Ca2+ entry commonly makes a major contribution.",
+  "Compare calcium sources in smooth and skeletal muscle.", ["calcium-entry", "application"], "core");
+q("Chapter 8", "Smooth muscle", "Action potentials", 4,
+  "The rapid inward current of many smooth-muscle action potentials is carried mainly by which ion?",
+  "Ca2+ through slow voltage-gated calcium channels", ["Na+ through only fast neuronal sodium channels", "K+ through delayed rectifier channels", "Cl- through acetylcholine receptors"],
+  "Many smooth muscles use slow Ca2+ or Ca2+-Na+ channels for the upstroke, so their action potentials are slower and longer.",
+  "Explain the ionic basis of smooth-muscle action potentials.", ["smooth-action-potential", "calcium-channel"]);
+q("Chapter 8", "Smooth muscle", "Slow waves", 4,
+  "Which statement about gastrointestinal smooth-muscle slow waves is most accurate?",
+  "They are rhythmic membrane-potential oscillations that trigger spike potentials only when threshold is reached", ["Every slow wave is itself a full action potential", "They are caused by skeletal-muscle motor end plates", "They permanently hyperpolarize the membrane"],
+  "Slow waves organize rhythmic excitability but usually are not action potentials; spikes appear near their peaks if threshold is crossed.",
+  "Distinguish slow waves from spike potentials.", ["slow-waves", "rhythmicity"], "core");
+q("Chapter 8", "Smooth muscle", "Stress-relaxation", 4,
+  "Why can the bladder accommodate increased volume without maintaining a proportionally large pressure rise?",
+  "Smooth muscle undergoes stress-relaxation, adapting its tension after stretch", ["Its cells immediately lose all actin", "Stretch permanently closes every ion channel", "It converts smooth muscle into skeletal muscle"],
+  "After an initial stretch-induced tension increase, visceral smooth muscle can reduce tension and accommodate volume.",
+  "Explain the stress-relaxation response.", ["stress-relaxation", "application"]);
+q("Chapter 8", "Smooth muscle", "Nitric oxide", 4,
+  "Endothelial nitric oxide relaxes vascular smooth muscle mainly through which intracellular messenger?",
+  "cGMP", ["cAMP produced only by skeletal muscle", "IP3-mediated release of more Ca2+", "Troponin C"],
+  "Nitric oxide activates soluble guanylyl cyclase, raises cGMP, and promotes relaxation.",
+  "Explain nitric-oxide-mediated smooth-muscle relaxation.", ["nitric-oxide", "cGMP", "application"], "core");
+
+if (items.length !== 112) throw new Error(`Expected 112 items, found ${items.length}`);
 
 // Page-level teacher evidence. Questions absent from this map remain explicitly
 // provisional even though the four filename-level scope documents now exist.

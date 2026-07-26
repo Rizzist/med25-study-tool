@@ -77,6 +77,24 @@ const JULY_25_HISTOLOGY_TOPICS = new Set([
   "Female reproductive system",
 ]);
 
+const JULY_29_HISTOLOGY_TOPICS = new Set([
+  "Histological methods and stains",
+  "Histology methods and stains",
+  "Histology methods",
+  "Microscopy",
+  "Cytoplasm",
+  "Nucleus",
+  "Cell membrane",
+  "Membrane transport",
+  "Cell signaling",
+  "Cytoplasmic organelles",
+  "Cytoskeleton",
+  "Cytoplasmic inclusions",
+  "Cell cycle",
+  "Cell death",
+  "Cell division",
+]);
+
 const JULY_25_EMBRYOLOGY_TOPICS = new Set([
   "Molecular regulation and signaling",
   "Gametogenesis",
@@ -149,6 +167,19 @@ const JULY_29_BIOCHEMISTRY_TOPICS = new Set([
   "Chromatography",
   "Flame photometry",
   "Osmosis practical",
+  "bioenergetics",
+  "fibrous proteins",
+  "glycosaminoglycans and proteoglycans",
+  "dietary lipid metabolism",
+  "fatty acid and ketone metabolism",
+  "complex lipid metabolism",
+  "cholesterol and lipoprotein metabolism",
+  "metabolic effects of insulin and glucagon",
+  "feed-fast cycle",
+  "diabetes mellitus",
+  "obesity",
+  "nutrition",
+  "biotechnology and molecular techniques",
 ]);
 
 type BankManifest = {
@@ -220,6 +251,7 @@ export function matchesExam(question: MCQQuestion, exam: ExamId): boolean {
     return question.subject === "physiology" && JULY_25_PHYSIOLOGY_TOPICS.has(question.topic);
   }
   if (question.subject === "biochemistry") return JULY_29_BIOCHEMISTRY_TOPICS.has(question.topic);
+  if (question.subject === "histology") return JULY_29_HISTOLOGY_TOPICS.has(question.topic);
   return question.subject === "physiology" && JULY_29_PHYSIOLOGY_TOPICS.has(question.topic);
 }
 

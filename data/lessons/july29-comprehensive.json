@@ -1,0 +1,512 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "bio-oxidative-phosphorylation",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Bioenergetics and oxidative phosphorylation",
+      "title": "Turn electron flow into ATP",
+      "subtitle": "Complexes, carriers, proton pumping, inhibitors, and uncoupling",
+      "kind": "process",
+      "topicPatterns": ["bioenergetics"],
+      "questionPatterns": ["delta G", "ATP", "complex I", "complex II", "complex III", "complex IV", "coenzyme Q", "cytochrome c", "uncoupler", "oligomycin"],
+      "visual": {
+        "type": "flow",
+        "caption": "Electrons move downhill to oxygen while proton pumping stores the released energy as a gradient.",
+        "items": [
+          {"label": "Entry", "detail": "NADH enters at Complex I; FADH2-derived electrons commonly enter at Complex II. Complex II does not pump protons.", "cue": "I pumps; II does not"},
+          {"label": "Mobile carriers", "detail": "Coenzyme Q carries electrons within the membrane from I/II to III; cytochrome c carries them from III to IV.", "cue": "Q then cytochrome c"},
+          {"label": "Oxygen", "detail": "Complex IV transfers electrons to O2, forming water. Cyanide and CO block this terminal step.", "cue": "O2 is the final acceptor"},
+          {"label": "ATP synthase", "detail": "Protons return to the matrix through F0F1 ATP synthase, driving phosphorylation of ADP.", "cue": "Gradient becomes ATP"},
+          {"label": "Uncoupling", "detail": "A proton leak accelerates fuel oxidation and oxygen use but lowers ATP yield and releases energy as heat.", "cue": "More O2, less ATP, more heat"}
+        ]
+      },
+      "essentials": [
+        "Complexes I, III, and IV pump protons; Complex II does not.",
+        "NADH yields about 2.5 ATP and FADH2 about 1.5 ATP because FADH2 bypasses Complex I.",
+        "Oligomycin blocks ATP synthase; rotenone blocks I, antimycin blocks III, and cyanide/CO block IV.",
+        "UCP1 in brown adipose tissue produces heat by permitting proton return without ATP formation.",
+        "Superoxide dismutase forms H2O2; catalase and selenium-dependent glutathione peroxidase remove peroxide."
+      ],
+      "traps": [
+        {"wrong": "A negative delta G means a reaction must be fast.", "right": "Delta G describes thermodynamic direction; activation energy and enzymes determine rate."},
+        {"wrong": "Uncoupling stops electron transport.", "right": "Uncoupling usually accelerates electron transport while decreasing ATP production."}
+      ],
+      "recognition": [
+        "No oxygen use after cyanide points to Complex IV blockade.",
+        "High oxygen consumption with heat and low ATP points to uncoupling.",
+        "Electron entry through Complex II produces less ATP because one proton-pumping site is bypassed."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 6, Bioenergetics and Oxidative Phosphorylation."}
+    },
+    {
+      "id": "bio-collagen-elastin",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Fibrous proteins",
+      "title": "Build collagen inside, finish it outside",
+      "subtitle": "Triple helices, collagen types, cross-links, elastin, and classic diseases",
+      "kind": "process",
+      "topicPatterns": ["fibrous proteins"],
+      "questionPatterns": ["collagen", "elastin", "fibrillin", "hydroxyproline", "lysyl oxidase", "scurvy", "osteogenesis imperfecta", "alpha1-antitrypsin"],
+      "visual": {
+        "type": "flow",
+        "caption": "Collagen synthesis crosses the ER, Golgi, extracellular cleavage, and cross-linking compartments.",
+        "items": [
+          {"label": "Translate", "detail": "Prepro-alpha chains enter RER and lose signal peptides. Their repeating sequence is Gly-X-Y.", "cue": "Gly every third residue"},
+          {"label": "Modify", "detail": "Vitamin C-dependent hydroxylation and selected hydroxylysine glycosylation occur in the ER.", "cue": "Vitamin C before secretion"},
+          {"label": "Triple helix", "detail": "Three chains form soluble procollagen with terminal propeptides that prevent intracellular fibrils.", "cue": "Propeptides keep it soluble"},
+          {"label": "Extracellular finish", "detail": "Propeptides are cleaved to tropocollagen; copper-dependent lysyl oxidase forms covalent cross-links.", "cue": "Copper cross-links outside"},
+          {"label": "Elastic fiber", "detail": "Tropoelastin is cross-linked on a fibrillin scaffold; alpha1-antitrypsin protects it from neutrophil elastase.", "cue": "Fibrillin frame, elastin recoil"}
+        ]
+      },
+      "essentials": [
+        "Type I is found in bone, skin, tendon, and scar; type II in cartilage; type III in reticular fibers; type IV in basement membranes.",
+        "Scurvy impairs hydroxylation, osteogenesis imperfecta commonly affects type I collagen, and many Ehlers-Danlos forms affect processing or structure.",
+        "Lysyl oxidase requires copper and acts extracellularly.",
+        "Fibrillin defects cause Marfan syndrome; elastase injury is amplified in alpha1-antitrypsin deficiency.",
+        "Denaturation of collagen's triple helix produces gelatin."
+      ],
+      "traps": [
+        {"wrong": "Vitamin C cross-links collagen extracellularly.", "right": "Vitamin C supports intracellular hydroxylation; copper-dependent lysyl oxidase creates extracellular cross-links."},
+        {"wrong": "Type IV collagen forms ordinary fibrils in tendon.", "right": "Type IV forms sheet-like basement-membrane networks."}
+      ],
+      "recognition": [
+        "Fractures plus blue sclerae indicate type I collagen disease.",
+        "Bleeding gums and poor wound healing indicate impaired vitamin C-dependent hydroxylation.",
+        "Early emphysema plus liver disease suggests alpha1-antitrypsin deficiency."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 4, Fibrous Proteins."}
+    },
+    {
+      "id": "bio-gag-proteoglycan-map",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "GAGs, proteoglycans, and glycoproteins",
+      "title": "Separate GAG, proteoglycan, and glycoprotein",
+      "subtitle": "Architecture, charge, targeting, and mucopolysaccharidoses",
+      "kind": "comparison",
+      "topicPatterns": ["glycosaminoglycans and proteoglycans"],
+      "questionPatterns": ["GAG", "hyaluronan", "proteoglycan", "glycoprotein", "mannose-6-phosphate", "Hurler", "Hunter", "heparin"],
+      "visual": {
+        "type": "comparison",
+        "caption": "The length, branching, linkage, and charge of carbohydrate identify the glycoconjugate.",
+        "items": [
+          {"label": "GAG", "detail": "Long unbranched repeating disaccharides; sulfate and carboxyl groups attract water and resist compression.", "cue": "Long, linear, negative"},
+          {"label": "Hyaluronan", "detail": "Very large, unsulfated GAG made at the plasma membrane and not covalently linked to a core protein.", "cue": "The GAG exception"},
+          {"label": "Proteoglycan", "detail": "Core protein with multiple long GAG chains; carbohydrate dominates mass and charge.", "cue": "Bottle-brush matrix"},
+          {"label": "Glycoprotein", "detail": "Protein bearing shorter branched oligosaccharides, often for receptors, enzymes, antibodies, or recognition.", "cue": "Protein-rich and branched"},
+          {"label": "Degradation", "detail": "Lysosomal hydrolase defects cause stepwise substrate accumulation; mannose-6-phosphate directs enzymes to lysosomes.", "cue": "Match missing enzyme to stored GAG"}
+        ]
+      },
+      "essentials": [
+        "N-linked carbohydrate attaches to asparagine; O-linked carbohydrate commonly attaches to serine or threonine.",
+        "Hyaluronan is unsulfated and not covalently linked to core protein.",
+        "Heparin is highly sulfated and potentiates antithrombin.",
+        "Hurler is autosomal recessive with corneal clouding; Hunter is X-linked and generally lacks clouding.",
+        "Failure of mannose-6-phosphate tagging causes I-cell disease."
+      ],
+      "traps": [
+        {"wrong": "Proteoglycans and glycoproteins are interchangeable terms.", "right": "Proteoglycans contain long GAG chains; glycoproteins contain shorter branched oligosaccharides."},
+        {"wrong": "Every GAG contains uronic acid.", "right": "Keratan sulfate contains galactose instead of uronic acid."}
+      ],
+      "recognition": [
+        "A hydrated compression-resistant ECM points to negatively charged GAGs.",
+        "Coarse features plus corneal clouding suggest Hurler rather than Hunter.",
+        "Secreted lysosomal enzymes with cellular inclusions suggest defective mannose-6-phosphate targeting."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 14, Glycosaminoglycans, Proteoglycans, and Glycoproteins."}
+    },
+    {
+      "id": "bio-dietary-lipid-route",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Dietary lipid digestion and transport",
+      "title": "Follow dietary fat from lumen to liver",
+      "subtitle": "Bile, enzymes, micelles, chylomicrons, LPL, and remnants",
+      "kind": "process",
+      "topicPatterns": ["dietary lipid metabolism"],
+      "questionPatterns": ["bile salt", "pancreatic lipase", "colipase", "micelle", "chylomicron", "ApoB-48", "ApoC-II", "ApoE", "MTP"],
+      "visual": {
+        "type": "flow",
+        "caption": "Long-chain dietary fat takes a lumen-micelle-enterocyte-chylomicron route.",
+        "items": [
+          {"label": "Emulsify", "detail": "Bile salts create small droplets and increase surface area for pancreatic enzymes.", "cue": "Bile disperses"},
+          {"label": "Digest", "detail": "Pancreatic lipase plus colipase yields 2-monoacylglycerol and free fatty acids; other enzymes release cholesterol and lysophospholipid.", "cue": "Hydrolyze before uptake"},
+          {"label": "Micelle", "detail": "Mixed micelles deliver long-chain products and fat-soluble vitamins through the unstirred layer.", "cue": "Micelle reaches brush border"},
+          {"label": "Package", "detail": "Enterocytes re-esterify lipids and use MTP plus ApoB-48 to assemble chylomicrons for lymph.", "cue": "ApoB-48 leaves intestine"},
+          {"label": "Unload and return", "detail": "HDL donates ApoC-II and ApoE; LPL unloads TAG and ApoE directs remnants to liver.", "cue": "C-II cuts, E returns"}
+        ]
+      },
+      "essentials": [
+        "Short- and medium-chain fatty acids can enter portal blood directly on albumin.",
+        "ApoB-48 is structural for chylomicrons; ApoC-II activates LPL; ApoE mediates remnant uptake.",
+        "Bile obstruction or pancreatic insufficiency causes steatorrhea and fat-soluble-vitamin deficiency.",
+        "MTP deficiency prevents ApoB lipoprotein assembly in abetalipoproteinemia.",
+        "Orlistat inhibits gastric and pancreatic lipases."
+      ],
+      "traps": [
+        {"wrong": "Intact chylomicrons are components of intestinal micelles.", "right": "Micelles are luminal bile-salt structures; chylomicrons are assembled inside enterocytes."},
+        {"wrong": "Bile salts enzymatically hydrolyze triacylglycerol.", "right": "Bile salts emulsify; pancreatic lipase performs hydrolysis."}
+      ],
+      "recognition": [
+        "Fat-soluble-vitamin deficiency plus acanthocytes suggests abetalipoproteinemia.",
+        "Creamy plasma and pancreatitis point to LPL or ApoC-II failure.",
+        "ApoE is the clue for hepatic remnant clearance."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 15, Dietary Lipid Metabolism."}
+    },
+    {
+      "id": "bio-fatty-acid-ketone-switch",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Fatty acids, TAG, and ketone bodies",
+      "title": "Switch between making fat and burning fat",
+      "subtitle": "ACC, malonyl-CoA, carnitine, beta oxidation, and ketogenesis",
+      "kind": "comparison",
+      "topicPatterns": ["fatty acid and ketone metabolism"],
+      "questionPatterns": ["acetyl-CoA carboxylase", "fatty acid synthase", "malonyl-CoA", "CPT-I", "carnitine", "beta oxidation", "MCAD", "ketone", "HMG-CoA synthase"],
+      "visual": {
+        "type": "comparison",
+        "caption": "Malonyl-CoA is the gatekeeper that prevents synthesis and oxidation from running together.",
+        "items": [
+          {"label": "Fed signal", "detail": "Insulin activates ACC; citrate supplies cytosolic acetyl-CoA; malonyl-CoA rises.", "cue": "Fed makes malonyl-CoA"},
+          {"label": "Synthesis", "detail": "Fatty-acid synthase uses malonyl units and NADPH from PPP/malic enzyme to make palmitate.", "cue": "Cytosol makes 16:0"},
+          {"label": "Gate", "detail": "Malonyl-CoA inhibits CPT-I, preventing long-chain acyl entry into mitochondria.", "cue": "Malonyl closes carnitine"},
+          {"label": "Fasting burn", "detail": "Low insulin activates adipose lipolysis and lowers malonyl-CoA; carnitine transport enables beta oxidation.", "cue": "Fasting opens CPT-I"},
+          {"label": "Ketones", "detail": "Liver mitochondrial acetyl-CoA forms ketones. Liver lacks thiophorase, and red cells lack mitochondria, so neither uses them.", "cue": "Liver makes; other mitochondria use"}
+        ]
+      },
+      "essentials": [
+        "ACC is biotin dependent and rate limiting for synthesis; fatty-acid synthase releases palmitate.",
+        "Long-chain acyl entry uses CPT-I, translocase, and CPT-II.",
+        "One beta-oxidation cycle yields FADH2, NADH, acetyl-CoA, and a chain shortened by two carbons.",
+        "Odd-chain fatty acids yield succinyl-CoA through biotin- and B12-dependent steps.",
+        "MCAD deficiency causes fasting hypoketotic hypoglycemia and dicarboxylic aciduria."
+      ],
+      "traps": [
+        {"wrong": "High malonyl-CoA accelerates beta oxidation.", "right": "Malonyl-CoA inhibits CPT-I and therefore blocks long-chain beta oxidation."},
+        {"wrong": "Liver is the principal user of ketone bodies.", "right": "Liver exports ketones because it lacks thiophorase."}
+      ],
+      "recognition": [
+        "Fasting hypoglycemia with low ketones suggests a fatty-acid-oxidation defect.",
+        "Dicarboxylic aciduria indicates compensatory omega oxidation.",
+        "High mitochondrial NADH shifts acetoacetate toward beta-hydroxybutyrate."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 16, Fatty Acid, Ketone Body, and Triacylglycerol Metabolism."}
+    },
+    {
+      "id": "bio-complex-lipid-eicosanoid",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Complex lipids and eicosanoids",
+      "title": "Read phospholipids, sphingolipids, and eicosanoids as one map",
+      "subtitle": "Membrane backbones, storage diseases, and opposing inflammatory mediators",
+      "kind": "map",
+      "topicPatterns": ["complex lipid metabolism"],
+      "questionPatterns": ["phosphatidic acid", "cardiolipin", "surfactant", "ceramide", "sphingomyelin", "Tay-Sachs", "Gaucher", "cyclooxygenase", "leukotriene"],
+      "visual": {
+        "type": "map",
+        "caption": "First identify the backbone, then the head group, then the enzyme that builds or degrades it.",
+        "items": [
+          {"label": "Glycerol lipids", "detail": "Phosphatidic acid branches toward TAG and glycerophospholipids; cardiolipin marks inner mitochondria and DPPC marks surfactant.", "cue": "Glycerol backbone"},
+          {"label": "Sphingolipid core", "detail": "Sphingosine plus fatty acid forms ceramide; phosphocholine makes sphingomyelin and sugars make glycosphingolipids.", "cue": "Ceramide is the hub"},
+          {"label": "Storage diseases", "detail": "Hex A-Tay-Sachs; sphingomyelinase-Niemann-Pick; glucocerebrosidase-Gaucher; alpha-gal A-Fabry.", "cue": "Enzyme predicts stored lipid"},
+          {"label": "COX branch", "detail": "Cyclooxygenase makes prostaglandins, prostacyclin, and thromboxanes; aspirin irreversibly blocks it.", "cue": "COX makes prostanoids"},
+          {"label": "LOX branch", "detail": "5-lipoxygenase makes leukotrienes: LTB4 recruits neutrophils; LTC4/D4/E4 constrict bronchi.", "cue": "LOX makes leukotrienes"}
+        ]
+      },
+      "essentials": [
+        "Phospholipase A2 releases arachidonic acid from the sn-2 position.",
+        "TXA2 promotes platelet aggregation and vasoconstriction; PGI2 opposes both.",
+        "Cerebrosides contain one sugar; gangliosides contain oligosaccharide plus sialic acid.",
+        "Tay-Sachs lacks hepatosplenomegaly; Niemann-Pick commonly has it.",
+        "Aspirin's platelet effect lasts because platelets cannot synthesize new COX."
+      ],
+      "traps": [
+        {"wrong": "All cherry-red-macula diseases are the same.", "right": "Organomegaly and the stored lipid/enzyme distinguish Tay-Sachs from Niemann-Pick."},
+        {"wrong": "LTB4 is the main cysteinyl bronchoconstrictor.", "right": "LTB4 is chemotactic; LTC4, LTD4, and LTE4 strongly bronchoconstrict."}
+      ],
+      "recognition": [
+        "Crumpled-paper macrophages identify Gaucher disease.",
+        "Angiokeratomas and acroparesthesias in an X-linked pattern identify Fabry disease.",
+        "Arachidonic-acid questions split immediately into COX versus LOX products."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 17, Phospholipid, Glycosphingolipid, and Eicosanoid Metabolism."}
+    },
+    {
+      "id": "bio-cholesterol-lipoprotein-steroid",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Cholesterol, lipoproteins, and steroids",
+      "title": "Route every lipoprotein by origin, cargo, and apoprotein",
+      "subtitle": "Cholesterol synthesis, reverse transport, familial disorders, and steroid entry",
+      "kind": "flow",
+      "topicPatterns": ["cholesterol and lipoprotein metabolism"],
+      "questionPatterns": ["HMG-CoA reductase", "statin", "chylomicron", "VLDL", "LDL", "HDL", "ApoB", "ApoC-II", "ApoE", "LCAT", "CETP", "StAR"],
+      "visual": {
+        "type": "flow",
+        "caption": "Origin and cargo identify the particle; apoproteins identify its next interaction.",
+        "items": [
+          {"label": "Chylomicron", "detail": "Intestinal ApoB-48 particle carries dietary TAG; C-II activates LPL and E returns the remnant to liver.", "cue": "Dietary TAG"},
+          {"label": "VLDL to LDL", "detail": "Liver exports TAG in ApoB-100 VLDL; lipolysis creates IDL and cholesterol-rich LDL.", "cue": "Liver TAG becomes LDL"},
+          {"label": "LDL", "detail": "ApoB-100 binds LDL receptor to deliver cholesterol; oxidized LDL enters macrophage scavenger receptors and forms foam cells.", "cue": "Deliver cholesterol"},
+          {"label": "HDL", "detail": "ApoA-I activates LCAT and supports reverse cholesterol transport; HDL also supplies C-II and E.", "cue": "Collect and recycle"},
+          {"label": "Cholesterol fate", "detail": "HMG-CoA reductase makes cholesterol; CYP7A1 begins bile-acid synthesis; StAR moves cholesterol into mitochondria for steroids.", "cue": "Make, eliminate, or convert"}
+        ]
+      },
+      "essentials": [
+        "Statins inhibit HMG-CoA reductase and increase hepatic LDL-receptor expression.",
+        "LCAT esterifies cholesterol in plasma HDL; ACAT esterifies it inside cells.",
+        "ApoB-48 is chylomicron structural protein; ApoB-100 binds LDL receptor; ApoC-II activates LPL; ApoE clears remnants.",
+        "Familial hypercholesterolemia reduces LDL clearance; LPL/ApoC-II deficiency causes severe chylomicronemia.",
+        "Humans eliminate cholesterol through bile as free cholesterol or bile acids, not by complete oxidation."
+      ],
+      "traps": [
+        {"wrong": "HDL mainly delivers dietary TAG.", "right": "Chylomicrons deliver dietary TAG; HDL specializes in reverse cholesterol transport and apoprotein exchange."},
+        {"wrong": "LCAT and ACAT act in the same compartment.", "right": "LCAT acts in plasma on HDL; ACAT acts intracellularly."}
+      ],
+      "recognition": [
+        "Tendon xanthomas with very high LDL indicate defective LDL-receptor pathway.",
+        "Orange tonsils with very low HDL indicate ABCA1/Tangier disease.",
+        "Pancreatitis with creamy plasma indicates failure to clear chylomicron TAG."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 18, Cholesterol, Lipoprotein, and Steroid Metabolism."}
+    },
+    {
+      "id": "bio-insulin-glucagon-control",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Insulin, glucagon, and hypoglycemia",
+      "title": "Let the insulin-to-glucagon ratio choose the pathway",
+      "subtitle": "Secretion, receptors, tissue effects, and hypoglycemic patterns",
+      "kind": "mechanism",
+      "topicPatterns": ["metabolic effects of insulin and glucagon"],
+      "questionPatterns": ["insulin", "glucagon", "C-peptide", "KATP", "GLUT4", "cAMP", "hypoglycemia", "insulinoma", "ethanol"],
+      "visual": {
+        "type": "comparison",
+        "caption": "Insulin stores incoming fuel; glucagon preserves circulating fuel during fasting.",
+        "items": [
+          {"label": "Beta-cell sensor", "detail": "Glucose raises ATP, closes KATP, depolarizes the cell, opens Ca2+ channels, and triggers insulin exocytosis.", "cue": "ATP closes K+"},
+          {"label": "Insulin signal", "detail": "Receptor tyrosine kinase signaling recruits GLUT4 in muscle/adipose and promotes glycogen, fat, and protein synthesis.", "cue": "Store fuel"},
+          {"label": "Glucagon signal", "detail": "Hepatic Gs-cAMP-PKA signaling promotes glycogenolysis, gluconeogenesis, fatty-acid oxidation, and ketogenesis.", "cue": "Release fuel"},
+          {"label": "C-peptide", "detail": "Endogenous insulin carries equimolar C-peptide; injected insulin does not.", "cue": "C-peptide proves secretion"},
+          {"label": "Low glucose", "detail": "Autonomic symptoms warn first; neuroglycopenia causes confusion, seizures, and coma.", "cue": "Warning then brain failure"}
+        ]
+      },
+      "essentials": [
+        "The insulin receptor is a receptor tyrosine kinase; the glucagon receptor is a Gs-coupled GPCR.",
+        "Liver uses GLUT2, not insulin-recruited GLUT4.",
+        "Skeletal muscle has little direct glucagon response.",
+        "An amino-acid meal can stimulate both insulin and glucagon.",
+        "High insulin plus high C-peptide suggests endogenous secretion; high insulin plus low C-peptide suggests injected insulin."
+      ],
+      "traps": [
+        {"wrong": "Insulin opens beta-cell KATP channels.", "right": "Glucose-derived ATP closes KATP channels, initiating depolarization."},
+        {"wrong": "Ethanol provides extra gluconeogenic substrate.", "right": "High NADH from ethanol diverts pyruvate and oxaloacetate away from gluconeogenesis."}
+      ],
+      "recognition": [
+        "Sulfonylureas close KATP and can cause hypoglycemia.",
+        "Tremor and sweating are autonomic; confusion and seizure are neuroglycopenic.",
+        "Endogenous hyperinsulinism is C-peptide positive."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 23, Metabolic Effects of Insulin and Glucagon."}
+    },
+    {
+      "id": "bio-feed-fast-tissue-map",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Fed and fasting metabolism",
+      "title": "Track fuel by tissue across fed, overnight fast, and starvation",
+      "subtitle": "Liver, adipose, muscle, brain, and red-cell priorities",
+      "kind": "timeline",
+      "topicPatterns": ["feed-fast cycle"],
+      "questionPatterns": ["fed state", "absorptive", "fasting", "starvation", "glycogenolysis", "gluconeogenesis", "ketone", "Cori", "alanine cycle"],
+      "visual": {
+        "type": "timeline",
+        "caption": "As fasting lengthens, glycogen gives way to gluconeogenesis and then brain ketone use spares protein.",
+        "items": [
+          {"label": "Fed", "detail": "High insulin drives hepatic glycogen/glycolysis/lipogenesis, adipose TAG storage, and muscle glycogen/protein synthesis.", "cue": "Use and store"},
+          {"label": "Overnight fast", "detail": "Hepatic glycogenolysis dominates early while gluconeogenesis rises; adipose releases fatty acids and glycerol.", "cue": "Glycogen first"},
+          {"label": "One day", "detail": "Liver glycogen wanes; lactate, alanine, and glycerol support gluconeogenesis using energy from beta oxidation.", "cue": "Make glucose"},
+          {"label": "Several days", "detail": "Liver makes ketones from fatty acids; brain increasingly uses them and reduces glucose demand.", "cue": "Ketones spare protein"},
+          {"label": "Obligate glucose", "detail": "Red cells always require glucose and release lactate; some brain and renal-medullary needs also persist.", "cue": "No mitochondria means glucose"}
+        ]
+      },
+      "essentials": [
+        "Even-chain fatty acids cannot provide net glucose; glycerol and odd-chain fatty acids can contribute.",
+        "Beta oxidation supplies ATP and acetyl-CoA to support gluconeogenesis.",
+        "Low malonyl-CoA opens CPT-I during fasting.",
+        "The Cori cycle carries lactate carbon; the alanine cycle also carries amino nitrogen.",
+        "Liver makes but cannot use ketones; red cells can neither make nor use them."
+      ],
+      "traps": [
+        {"wrong": "The brain switches to long-chain fatty acids during starvation.", "right": "The brain adapts to ketone bodies because long-chain fatty acids poorly cross the blood-brain barrier."},
+        {"wrong": "Muscle glycogen directly maintains blood glucose.", "right": "Muscle lacks glucose-6-phosphatase and uses its glycogen locally."}
+      ],
+      "recognition": [
+        "Early fasting questions point to hepatic glycogen; prolonged fasting points to gluconeogenesis and ketones.",
+        "Falling urinary nitrogen after several days reflects brain ketone adaptation and protein sparing.",
+        "Albumin-bound fatty acids and glycerol both originate from adipose TAG lipolysis."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 24, The Feed-Fast Cycle."}
+    },
+    {
+      "id": "bio-diabetes-metabolic-map",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Diabetes mellitus",
+      "title": "See diabetes as uncontrolled fasting plus glucose toxicity",
+      "subtitle": "Type 1 versus type 2, DKA versus HHS, diagnosis, and chronic injury",
+      "kind": "comparison",
+      "topicPatterns": ["diabetes mellitus"],
+      "questionPatterns": ["type 1 diabetes", "type 2 diabetes", "DKA", "HHS", "HbA1c", "C-peptide", "metformin", "sorbitol", "advanced glycation"],
+      "visual": {
+        "type": "comparison",
+        "caption": "Insulin availability determines ketone risk; hyperglycemia and dehydration can be profound in both major types.",
+        "items": [
+          {"label": "Type 1", "detail": "Autoimmune beta-cell destruction causes absolute insulin deficiency, low C-peptide, abrupt symptoms, and strong DKA risk.", "cue": "No insulin"},
+          {"label": "Type 2", "detail": "Insulin resistance begins with compensatory insulin, then progressive beta-cell failure; obesity is a common driver.", "cue": "Resistance then failure"},
+          {"label": "DKA", "detail": "Low insulin permits HSL, fatty-acid delivery, ketogenesis, high-anion-gap acidosis, and total-body potassium loss.", "cue": "Ketones plus acidosis"},
+          {"label": "HHS", "detail": "Residual insulin limits ketones, but extreme glucose causes osmotic diuresis, hyperosmolarity, and neurologic change.", "cue": "Very high glucose, little ketone"},
+          {"label": "Chronic damage", "detail": "AGEs, polyol flux, oxidative stress, and vascular injury drive retinopathy, nephropathy, neuropathy, and atherosclerosis.", "cue": "Glucose modifies tissues"}
+        ]
+      },
+      "essentials": [
+        "Diagnostic thresholds include fasting glucose at least 126 mg/dL and HbA1c at least 6.5% when appropriately confirmed.",
+        "HbA1c reflects roughly 2-3 months and can be misleading when red-cell lifespan is abnormal.",
+        "Hyperglycemia causes polyuria by glucosuria-mediated osmotic diuresis.",
+        "Metformin primarily reduces hepatic gluconeogenesis and usually does not cause hypoglycemia alone.",
+        "Classic microvascular complications are retinopathy, nephropathy, and neuropathy."
+      ],
+      "traps": [
+        {"wrong": "HHS cannot occur because residual insulin normalizes glucose.", "right": "Residual insulin may suppress ketones without controlling severe hyperglycemia."},
+        {"wrong": "Serum potassium must be low in DKA.", "right": "Serum potassium may be normal/high despite profound total-body depletion."}
+      ],
+      "recognition": [
+        "High glucose, ketones, and acidosis strongly suggest DKA.",
+        "Extreme hyperosmolarity with minimal ketones suggests HHS.",
+        "High insulin with low C-peptide points to injected insulin rather than beta-cell secretion."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 25, Diabetes Mellitus."}
+    },
+    {
+      "id": "bio-obesity-signal-map",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Obesity and energy regulation",
+      "title": "Regulate body weight with long-term stores and short-term meals",
+      "subtitle": "Leptin, adiponectin, ghrelin, hypothalamic circuits, and metabolic syndrome",
+      "kind": "map",
+      "topicPatterns": ["obesity"],
+      "questionPatterns": ["BMI", "visceral", "leptin", "adiponectin", "ghrelin", "NPY", "POMC", "metabolic syndrome", "bariatric"],
+      "visual": {
+        "type": "map",
+        "caption": "Body weight reflects integration of adipose-store signals, meal signals, reward, and expenditure.",
+        "items": [
+          {"label": "Long-term store", "detail": "Leptin rises with fat mass and normally suppresses appetite; common obesity usually has leptin resistance, not deficiency.", "cue": "More fat, more leptin"},
+          {"label": "Insulin sensitivity", "detail": "Adiponectin supports fatty-acid oxidation and insulin action but falls as adiposity rises.", "cue": "Adiponectin falls"},
+          {"label": "Meal timing", "detail": "Ghrelin rises before meals; gut satiety signals include CCK, PYY, and GLP-1.", "cue": "Ghrelin says eat"},
+          {"label": "Hypothalamus", "detail": "NPY/AgRP neurons promote feeding; POMC/CART melanocortin signaling suppresses it.", "cue": "NPY eats; POMC pauses"},
+          {"label": "Visceral risk", "detail": "Visceral fat releases fatty acids and inflammatory mediators toward liver, promoting insulin resistance and metabolic syndrome.", "cue": "Apple carries more risk"}
+        ]
+      },
+      "essentials": [
+        "BMI is kg/m2; adult obesity is conventionally BMI at least 30.",
+        "Visceral fat distribution predicts metabolic risk better than BMI alone.",
+        "Common obesity usually has elevated leptin with leptin resistance.",
+        "Metabolic syndrome combines central obesity, high triglycerides, low HDL, hypertension, and impaired glucose regulation.",
+        "Weight loss lowers leptin and energy expenditure, promoting hunger and regain."
+      ],
+      "traps": [
+        {"wrong": "Most obesity is caused by congenital absence of leptin.", "right": "Congenital leptin deficiency is rare; resistance to abundant leptin is common."},
+        {"wrong": "Adiponectin rises with obesity.", "right": "Adiponectin generally falls and insulin sensitivity worsens."}
+      ],
+      "recognition": [
+        "Orange-sized central adiposity with hypertension and high triglycerides suggests metabolic syndrome.",
+        "Ghrelin is the premeal hunger signal.",
+        "Rapid glycemic improvement after bariatric surgery reflects gut and hepatic signaling as well as later weight loss."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 26, Obesity."}
+    },
+    {
+      "id": "bio-nutrition-master-map",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Nutrition",
+      "title": "Convert nutrition numbers into clinical predictions",
+      "subtitle": "DRIs, energy density, macronutrient ranges, fat quality, nitrogen balance, and malnutrition",
+      "kind": "comparison",
+      "topicPatterns": ["nutrition"],
+      "questionPatterns": ["EAR", "RDA", "AI", "UL", "kcal", "AMDR", "trans fat", "fiber", "nitrogen balance", "kwashiorkor", "marasmus"],
+      "visual": {
+        "type": "comparison",
+        "caption": "First classify the reference value or nutrient, then predict the physiologic consequence.",
+        "items": [
+          {"label": "Reference values", "detail": "EAR covers about half; RDA covers nearly all; AI substitutes when evidence is insufficient; UL marks the upper safety boundary.", "cue": "Average, allowance, adequate, upper"},
+          {"label": "Energy", "detail": "Carbohydrate 4 kcal/g, protein 4, fat 9, alcohol 7. Resting expenditure is usually the largest daily component.", "cue": "4-4-9-7"},
+          {"label": "AMDR", "detail": "Adults: carbohydrate 45-65%, fat 20-35%, protein 10-35% of energy.", "cue": "45-65, 20-35, 10-35"},
+          {"label": "Fat quality", "detail": "Trans fat raises LDL and may lower HDL; linoleic and alpha-linolenic acids are essential.", "cue": "Trans is worst"},
+          {"label": "Protein-energy malnutrition", "detail": "Kwashiorkor causes edema and fatty liver; marasmus causes severe wasting without prominent edema.", "cue": "Kwashiorkor swells; marasmus wastes"}
+        ]
+      },
+      "essentials": [
+        "Positive nitrogen balance occurs in growth, pregnancy, and recovery; trauma and starvation produce negative balance.",
+        "The limiting amino acid is the essential amino acid present in the lowest amount relative to need.",
+        "Soluble fiber can reduce cholesterol absorption and slow postprandial glucose rise.",
+        "Glycemic load accounts for both glycemic index and carbohydrate quantity.",
+        "Protein has the highest thermic effect of the major macronutrients."
+      ],
+      "traps": [
+        {"wrong": "The UL is the ideal daily intake target.", "right": "The UL is the highest chronic intake unlikely to cause harm."},
+        {"wrong": "Kwashiorkor and marasmus both characteristically cause the same edema.", "right": "Edema and fatty liver favor kwashiorkor; severe nonedematous wasting favors marasmus."}
+      ],
+      "recognition": [
+        "Low albumin with edema and fatty liver indicates kwashiorkor.",
+        "Severe loss of fat and muscle without edema indicates marasmus.",
+        "A serving-size question requires glycemic load rather than glycemic index alone."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 27, Nutrition."}
+    },
+    {
+      "id": "bio-biotechnology-toolkit",
+      "exam": "july29",
+      "subject": "biochemistry",
+      "topic": "Biotechnology and molecular methods",
+      "title": "Choose the molecular tool by what must be detected",
+      "subtitle": "Restriction, cloning, PCR, probes, blots, sequencing, and expression analysis",
+      "kind": "comparison",
+      "topicPatterns": ["biotechnology and molecular techniques"],
+      "questionPatterns": ["restriction enzyme", "plasmid", "cDNA", "probe", "PCR", "Southern", "Northern", "Western", "RFLP", "Sanger", "microarray"],
+      "visual": {
+        "type": "comparison",
+        "caption": "The target molecule and the question being asked determine the correct technique.",
+        "items": [
+          {"label": "Cut and clone", "detail": "Restriction enzymes cut specific often-palindromic sites; compatible ends align insert and vector and ligase seals them.", "cue": "Cut, pair, ligate"},
+          {"label": "Amplify", "detail": "PCR repeats denaturation, primer annealing, and thermostable-polymerase extension.", "cue": "Heat, cool, extend"},
+          {"label": "Start from RNA", "detail": "Reverse transcriptase makes intron-free cDNA from mature mRNA before PCR or bacterial expression.", "cue": "RNA becomes cDNA"},
+          {"label": "Blot", "detail": "Southern detects DNA, Northern RNA, and Western protein.", "cue": "S-DNA, N-RNA, W-protein"},
+          {"label": "Read variation", "detail": "RFLP detects altered restriction fragments; Sanger ddNTPs terminate chains; microarrays compare many transcripts.", "cue": "Fragment, sequence, expression"}
+        ]
+      },
+      "essentials": [
+        "PCR primers define both boundaries and orientation of the amplicon.",
+        "Taq is thermostable but ordinary Taq has limited proofreading.",
+        "A cloning vector needs an origin, selectable marker, and insertion site.",
+        "Nucleic-acid probes depend on complementary hybridization and controlled stringency.",
+        "Dideoxynucleotides terminate extension because they lack a 3-prime hydroxyl."
+      ],
+      "traps": [
+        {"wrong": "Western blot detects DNA.", "right": "Western detects protein; Southern detects DNA and Northern detects RNA."},
+        {"wrong": "Bacterial expression should use genomic human DNA with introns.", "right": "Bacteria generally require intron-free cDNA."}
+      ],
+      "recognition": [
+        "A known sequence that must be amplified points to PCR.",
+        "Transcript abundance points to Northern, RT-qPCR, or expression array.",
+        "A single-base change affecting a restriction site can be detected by RFLP."
+      ],
+      "source": {"label": "Lippincott Illustrated Reviews: Biochemistry, 6th ed.", "detail": "Chapter 33, Biotechnology and Human Disease."}
+    }
+  ]
+}

@@ -4,11 +4,11 @@ A local-first medical-school study app built for two July 2026 exams. It combine
 
 ## What is included
 
-- **July 25 — Tissue Development & Function:** 601 focused questions across histology, embryology, and physiology
-- **July 29 — Cell & Molecules:** 391 focused questions across biochemistry and physiology
-- **Master bank:** 1,350 verified questions
+- **July 25 — Tissue Development & Function:** 713 focused questions across histology, embryology, and physiology
+- **July 29 — Cell & Molecules:** 744 focused questions across biochemistry, cellular histology, and physiology
+- **Master bank:** 1,672 verified study questions plus 367 sourced past-paper questions
 - Histology practicals, stains, blood-cell recognition, embryo diagrams, and other image-based questions
-- 90 validated visual lessons, routed to the appropriate exam
+- 104 validated visual lessons, including 55 available for July 29
 - Select-an-option and typed-answer modes, plus optional reasoning and confidence capture
 - End-of-sprint grading with explanations for every missed answer
 - Persistent wrong-answer, flagged-question, active-sprint, and completed-result history in the same browser profile
