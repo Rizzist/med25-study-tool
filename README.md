@@ -4,11 +4,11 @@ A local-first medical-school study app built for two July 2026 exams. It combine
 
 ## What is included
 
-- **July 25 — Tissue Development & Function:** 713 focused questions across histology, embryology, and physiology
+- **July 25 — Tissue Development & Function:** 758 focused questions across histology, embryology, and physiology
 - **July 29 — Cell & Molecules:** 744 focused questions across biochemistry, cellular histology, and physiology
-- **Master bank:** 1,672 verified study questions plus 367 sourced past-paper questions
-- Histology practicals, stains, blood-cell recognition, embryo diagrams, and other image-based questions
-- 104 validated visual lessons, including 55 available for July 29
+- **Master bank:** 1,717 verified study questions plus 367 sourced past-paper questions
+- A dedicated 15-specimen Histology Practical Atlas with 45 image questions, plus stains, blood-cell recognition, embryo diagrams, and other image-based questions
+- 119 validated visual lessons, including 15 specimen atlas lessons and 55 available for July 29
 - Select-an-option and typed-answer modes, plus optional reasoning and confidence capture
 - End-of-sprint grading with explanations for every missed answer
 - Persistent wrong-answer, flagged-question, active-sprint, and completed-result history in the same browser profile
@@ -57,6 +57,8 @@ npm test
 - `public/study/` — app-ready local study images
 - `data/teacher-materials/` — scope maps and source provenance, without the raw private decks
 - `scripts/codex-bridge.mjs` — question/media API, exam routing, and optional Codex tutor bridge
+- `scripts/generate-histology-practicals.mjs` — reproducible 45-question histology practical bank
+- `scripts/generate-histology-practical-lessons.mjs` — reproducible 15-specimen practical atlas
 
 ## Add questions
 

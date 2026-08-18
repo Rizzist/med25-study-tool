@@ -11,6 +11,7 @@ export type CollectionId =
   | "biochemistry"
   | "images"
   | "stains"
+  | "histo-practical"
   | "practical";
 
 const COLLECTIONS: CollectionId[] = [
@@ -21,6 +22,7 @@ const COLLECTIONS: CollectionId[] = [
   "biochemistry",
   "images",
   "stains",
+  "histo-practical",
   "practical",
 ];
 
@@ -262,6 +264,7 @@ export function matchesCollection(question: MCQQuestion, collection: CollectionI
   }
   if (collection === "images") return question.kind === "image_single_best_answer";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
+  if (collection === "histo-practical") return (question.tags ?? []).includes("histo-practical");
   return isPracticalDerived(question);
 }
 

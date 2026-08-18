@@ -29,6 +29,8 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
   assert.match(html, /Priority exam/i);
   assert.match(html, /Codex tutor/i);
   assert.match(html, /Visual Guide/i);
+  assert.match(html, /Practical Atlas/i);
+  assert.match(html, /HISTO PRACTICALS/i);
   assert.match(html, /VISUAL LESSONS/i);
   assert.match(html, /histology/i);
   assert.match(html, /embryology/i);
@@ -36,7 +38,7 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
 });
 
 test("source keeps answers hidden during sprints and supports the confirmed exam split", async () => {
-  const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles] = await Promise.all([
+  const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles, practicalQuestionText, practicalLessonText] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../scripts/codex-bridge.mjs", import.meta.url), "utf8"),
     readFile(new URL("../src/components/FinalExam.tsx", import.meta.url), "utf8"),
@@ -45,8 +47,12 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
     readFile(new URL("../data/bank/manifest.json", import.meta.url), "utf8"),
     readdir(new URL("../data/bank/questions/", import.meta.url)),
     readdir(new URL("../data/telegram-final/", import.meta.url)),
+    readFile(new URL("../data/bank/questions/histology-practicals.jsonl", import.meta.url), "utf8"),
+    readFile(new URL("../data/lessons/histology-practicals.json", import.meta.url), "utf8"),
   ]);
   const manifest = JSON.parse(manifestText);
+  const practicalQuestions = practicalQuestionText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const practicalLessons = JSON.parse(practicalLessonText).lessons;
 
   assert.deepEqual(manifest.examDates, ["2026-07-25", "2026-07-29"]);
   assert.deepEqual(manifest.subjects.map((subject) => subject.id), [
@@ -72,6 +78,11 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   assert.match(page, /Membrane physiology/);
   assert.match(page, /Biochemistry/);
   assert.match(page, /Practical \+ spotters/);
+  assert.match(page, /15-slide practical bank/);
+  assert.match(page, /Test all 45/);
+  assert.match(page, /tab === "Practical Atlas"/);
+  assert.match(page, /startSession\("histo-practical"/);
+  assert.match(page, /if \(exactIds \|\| isSavedCollection\(nextCollection\)\)/);
   assert.match(page, /reproductive histology/i);
   assert.match(page, /med25-study-progress-v1/);
   assert.match(page, /med25-session-archive-v1/);
@@ -104,6 +115,7 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   assert.match(page, /historicalSeenIds/);
   assert.match(bridge, /coverageQuestionSet/);
   assert.match(bridge, /collectionQuestionIds/);
+  assert.match(bridge, /"histo-practical"/);
   assert.match(page, /builder-coverage/);
   assert.match(page, /seenCollectionCount/);
   assert.match(page, /unseenCollectionCount/);
@@ -129,6 +141,12 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   assert.match(bridge, /body\.preserveOrder === true/);
   assert.match(lessonGuide, /Full screen/);
   assert.match(lessonGuide, /Escape/);
+  assert.match(lessonGuide, /Test this slide/);
+  assert.equal(practicalQuestions.length, 45);
+  assert.equal(practicalLessons.length, 15);
+  assert.ok(practicalLessons.every((lesson) => practicalQuestions.filter((question) => question.id.startsWith(`${lesson.id}-`)).length === 3));
+  assert.ok(practicalQuestions.every((question) => question.tags.includes("histo-practical") && question.kind === "image_single_best_answer"));
+  assert.ok(practicalLessons.every((lesson) => lesson.id.startsWith("hpr-") && lesson.asset));
   assert.doesNotMatch(bridge, /JULY_29_CELL_BIOLOGY_TOPICS/);
 });
 

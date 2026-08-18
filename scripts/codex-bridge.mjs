@@ -173,7 +173,7 @@ const JULY_29_BIOCHEMISTRY_TOPICS = new Set([
   "biotechnology and molecular techniques",
 ]);
 
-const EXAM_COLLECTIONS = ["all", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "practical"];
+const EXAM_COLLECTIONS = ["all", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "practical"];
 
 function matchesExam(question, exam) {
   if (exam === "july25") {
@@ -203,6 +203,7 @@ function matchesCollection(question, collection) {
   if (["histology", "embryology", "physiology", "biochemistry"].includes(collection)) return question.subject === collection;
   if (collection === "images") return question.kind === "image_single_best_answer";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
+  if (collection === "histo-practical") return (question.tags ?? []).includes("histo-practical");
   if (collection === "practical") return isPracticalDerived(question);
   return false;
 }

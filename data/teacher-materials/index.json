@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "collectionDate": "2026-07-21",
-  "lastUpdated": "2026-07-22",
-  "timezone": "America/Toronto",
+  "lastUpdated": "2026-08-18",
+  "timezone": "Asia/Tehran",
   "telegram": {
     "targetUrl": "private Telegram study group",
     "chat": "TUMS MD&MBBS || TERM 2",
@@ -109,6 +109,8 @@
       "data/teacher-materials/histology-local-scope.json",
       "data/teacher-materials/histology1-telegram-scope.json",
       "data/teacher-materials/respiratory-histology-video-scope.md",
+      "data/teacher-materials/histology-practicals-scope.json",
+      "data/teacher-materials/histology-practicals-scope.md",
       "data/teacher-materials/embryology-telegram-scope.json",
       "data/teacher-materials/physiology-scope.json",
       "data/teacher-materials/physiology-term1-scope.json",
@@ -157,6 +159,33 @@
       "slideCount": 111,
       "subject": "histology",
       "use": "Cell membrane, organelles, cytoskeleton, nucleus, signaling and cell-cycle scope."
+    },
+    {
+      "id": "local-junqueira-histology-16e",
+      "kind": "local-textbook",
+      "title": "Junqueira's Basic Histology",
+      "edition": "16th edition",
+      "path": "~/Documents/MED SCHOOL BOOKS/Junqueira's Basic Histology 16th Edition.pdf",
+      "subject": "histology",
+      "use": "Morphology, mechanism, and verified figure source for the 15-slide practical bank."
+    },
+    {
+      "id": "local-difiore-histology-atlas-11e",
+      "kind": "local-textbook",
+      "title": "diFiore's Atlas of Histology with Functional Correlations",
+      "edition": "11th edition",
+      "path": "~/Documents/MED SCHOOL BOOKS/diFiore's Atlas of Histology with Functional Correlations.pdf",
+      "subject": "histology",
+      "use": "Whole-slide orientation and reproducible image crops for the 15-slide practical bank."
+    },
+    {
+      "id": "local-cell-counting-1",
+      "kind": "user-supplied-deck",
+      "title": "Cell Counting 1",
+      "path": "~/Downloads/Cell Counting 1.pptx",
+      "slideCount": 24,
+      "subject": "histology-practical-context",
+      "use": "Inspected in full and kept separate because it covers hemocytometer counting rather than the requested tissue specimens."
     }
   ]
 }

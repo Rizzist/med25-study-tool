@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2026-08-18",
+  "timezone": "Asia/Tehran",
+  "exam": "july25",
+  "collection": "histo-practical",
+  "specimenCount": 15,
+  "questionCount": 45,
+  "lessonCount": 15,
+  "specimens": [
+    "trachea",
+    "urinary bladder",
+    "compact bone",
+    "hyaline cartilage",
+    "synovial joint",
+    "peripheral nerve",
+    "dorsal root ganglion",
+    "thin skin with hair",
+    "thick skin without hair",
+    "white adipose tissue",
+    "brown adipose tissue",
+    "thyroid gland",
+    "skeletal muscle",
+    "cardiac muscle",
+    "tendon"
+  ],
+  "localSources": [
+    {
+      "title": "Junqueira's Basic Histology",
+      "edition": "16th",
+      "use": "Morphology, mechanisms, and verified figure assets"
+    },
+    {
+      "title": "diFiore's Atlas of Histology with Functional Correlations",
+      "edition": "11th",
+      "use": "Whole-slide orientation and app-ready figure crops"
+    },
+    {
+      "title": "Cell Counting 1",
+      "kind": "supplied deck",
+      "use": "Inspected and excluded from specimen content because it covers hemocytometer cell counts rather than the requested tissues"
+    }
+  ],
+  "externalSources": [
+    "https://openstax.org/books/anatomy-and-physiology-2e/pages/4-3-connective-tissue-supports-and-protects",
+    "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-1-overview-of-muscle-tissues",
+    "https://histology.siu.edu/crr/CR045b.htm",
+    "https://www.ncbi.nlm.nih.gov/books/NBK540963/",
+    "https://histology.siu.edu/intro/skin.htm",
+    "https://histology.siu.edu/intro/ct.htm",
+    "https://histology.oit.duke.edu/MBS/CellSci/CS-Nerve/CS-Nerve.html",
+    "https://histology.siu.edu/ssb/drgang.htm",
+    "https://www.columbia.edu/itc/hs/medical/sbpm_histology_old/lab/lab06_joint.html",
+    "https://histology.siu.edu/ssb/skeleton.htm",
+    "https://medcell.org/histology/virtualSlide.php?lab_name=endocrine_systems_lab&slide_id=5&slide_name=CB502_Histo_0005"
+  ],
+  "generators": [
+    "scripts/extract-histology-practical-images.py",
+    "scripts/generate-histology-practicals.mjs",
+    "scripts/generate-histology-practical-lessons.mjs"
+  ]
+}

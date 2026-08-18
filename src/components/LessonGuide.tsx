@@ -11,7 +11,7 @@ const subjectTitle = {
   biochemistry: "Biochemistry",
 } as const;
 
-export function LessonGuide({ exam, lessons }: { exam: LessonExamId; lessons: CoreLesson[] }) {
+export function LessonGuide({ exam, lessons, onStartLesson }: { exam: LessonExamId; lessons: CoreLesson[]; onStartLesson?: (lesson: CoreLesson) => void }) {
   const examLessons = useMemo(() => lessons.filter((lesson) => lesson.exam === exam), [exam, lessons]);
   const subjects = [...new Set(examLessons.map((lesson) => lesson.subject))];
   const [subject, setSubject] = useState<string>("all");
@@ -53,6 +53,9 @@ export function LessonGuide({ exam, lessons }: { exam: LessonExamId; lessons: Co
         {!filtered.length && <p>No lessons match this search.</p>}
       </div>
     </aside>
-    <section className="lesson-stage">{selected && <LessonSlide lesson={selected} actions={<button className="lesson-focus-button" onClick={() => setFocusMode((current) => !current)}>{focusMode ? "× Exit focus" : "⛶ Full screen"}</button>} />}</section>
+    <section className="lesson-stage">{selected && <LessonSlide lesson={selected} actions={<>
+      {onStartLesson && <button className="lesson-test-button" onClick={() => onStartLesson(selected)}>Test this slide →</button>}
+      <button className="lesson-focus-button" onClick={() => setFocusMode((current) => !current)}>{focusMode ? "× Exit focus" : "⛶ Full screen"}</button>
+    </>} />}</section>
   </div>;
 }

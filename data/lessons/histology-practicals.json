@@ -1,0 +1,980 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "hpr-trachea",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Respiratory system",
+      "title": "Trachea",
+      "subtitle": "Respiratory epithelium, glands, perichondrium, and hyaline cartilage",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Respiratory system",
+        "Trachea"
+      ],
+      "questionPatterns": [
+        "trachea",
+        "trachea",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Orient from the luminal respiratory epithelium through lamina propria and pale seromucous glands to perichondrium and hyaline cartilage.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "The lining is ciliated pseudostratified columnar epithelium with goblet and basal cells.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Basal cells touch the basement membrane but do not reach the lumen; ciliated and goblet cells do.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A broad outer cartilage band without surrounding lung parenchyma favors trachea; intrapulmonary bronchi have irregular plates within lung.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Orient from the luminal respiratory epithelium through lamina propria and pale seromucous glands to perichondrium and hyaline cartilage.",
+        "The lining is ciliated pseudostratified columnar epithelium with goblet and basal cells.",
+        "Basal cells touch the basement membrane but do not reach the lumen; ciliated and goblet cells do.",
+        "A broad outer cartilage band without surrounding lung parenchyma favors trachea; intrapulmonary bronchi have irregular plates within lung."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling it bronchus because the lining is ciliated",
+          "right": "Use the complete wall sequence and context: gland-rich submucosa, broad cartilage, and no surrounding alveoli."
+        }
+      ],
+      "recognition": [
+        "Respiratory epithelium, glands, perichondrium, and hyaline cartilage",
+        "A broad outer cartilage band without surrounding lung parenchyma favors trachea; intrapulmonary bronchi have irregular plates within lung."
+      ],
+      "source": {
+        "label": "Junqueira 16e + diFiore 11e",
+        "detail": "Respiratory system / trachea; Junqueira Figure 17-5, PDF page 365."
+      },
+      "asset": "/study/histology/practicals/trachea.jpg"
+    },
+    {
+      "id": "hpr-bladder",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Urinary system",
+      "title": "Urinary bladder",
+      "subtitle": "Folded urothelium over interlacing detrusor muscle",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Urinary system",
+        "Urinary bladder"
+      ],
+      "questionPatterns": [
+        "bladder",
+        "urinary bladder",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Orient from the folded mucosa to a very thick wall of irregular smooth-muscle bundles.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Urothelium has small basal cells, intermediate cells, and large dome-shaped superficial umbrella cells.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Umbrella cells may be binucleate and flatten as the organ fills while preserving the urine barrier.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Bladder has a broad lumen and interlacing detrusor; ureter is smaller, often stellate, with more orderly muscle layers.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Orient from the folded mucosa to a very thick wall of irregular smooth-muscle bundles.",
+        "Urothelium has small basal cells, intermediate cells, and large dome-shaped superficial umbrella cells.",
+        "Umbrella cells may be binucleate and flatten as the organ fills while preserving the urine barrier.",
+        "Bladder has a broad lumen and interlacing detrusor; ureter is smaller, often stellate, with more orderly muscle layers."
+      ],
+      "traps": [
+        {
+          "wrong": "Counting a fixed number of urothelial layers",
+          "right": "Layer count and umbrella-cell shape vary with distension; identify the epithelial type and wall pattern."
+        }
+      ],
+      "recognition": [
+        "Folded urothelium over interlacing detrusor muscle",
+        "Bladder has a broad lumen and interlacing detrusor; ureter is smaller, often stellate, with more orderly muscle layers."
+      ],
+      "source": {
+        "label": "diFiore 11e",
+        "detail": "Chapter 16, Figures 16.13–16.14; PDF page 397."
+      },
+      "asset": "/study/histology/practicals/bladder.jpg"
+    },
+    {
+      "id": "hpr-bone",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Bone",
+      "title": "Compact bone",
+      "subtitle": "Osteons, lamellae, lacunae, and canaliculi",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Bone",
+        "Compact bone"
+      ],
+      "questionPatterns": [
+        "bone",
+        "compact bone",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Locate circular osteons built around central vascular Haversian canals.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Concentric lamellae contain osteocyte lacunae linked by fine radiating canaliculi.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Osteocytes occupy lacunae; osteoblasts line forming surfaces and osteoclasts are large multinucleated surface cells.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Mineralized concentric lamellae and central canals distinguish compact bone from avascular cartilage.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Locate circular osteons built around central vascular Haversian canals.",
+        "Concentric lamellae contain osteocyte lacunae linked by fine radiating canaliculi.",
+        "Osteocytes occupy lacunae; osteoblasts line forming surfaces and osteoclasts are large multinucleated surface cells.",
+        "Mineralized concentric lamellae and central canals distinguish compact bone from avascular cartilage."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every dark space a chondrocyte lacuna",
+          "right": "Look for concentric lamellae and canaliculi: those make it an osteon."
+        }
+      ],
+      "recognition": [
+        "Osteons, lamellae, lacunae, and canaliculi",
+        "Mineralized concentric lamellae and central canals distinguish compact bone from avascular cartilage."
+      ],
+      "source": {
+        "label": "diFiore 11e + Junqueira 16e",
+        "detail": "Compact bone osteon; diFiore Figure 4.19, PDF page 115."
+      },
+      "asset": "/study/histology/practicals/compact-bone.jpg"
+    },
+    {
+      "id": "hpr-cartilage",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Cartilage",
+      "title": "Hyaline cartilage",
+      "subtitle": "Glassy matrix, lacunae, and isogenous groups",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Cartilage",
+        "Hyaline cartilage"
+      ],
+      "questionPatterns": [
+        "cartilage",
+        "hyaline cartilage",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Look for an avascular glassy matrix bounded by perichondrium in most locations.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Rounded chondrocytes sit in lacunae, often as isogenous groups within darker territorial matrix.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Chondroblasts lie near the perichondrium; mature chondrocytes are deeper and enclosed in matrix.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Hyaline matrix hides its fine type II collagen; elastic cartilage shows elastic fibers and fibrocartilage shows thick type I bundles.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Look for an avascular glassy matrix bounded by perichondrium in most locations.",
+        "Rounded chondrocytes sit in lacunae, often as isogenous groups within darker territorial matrix.",
+        "Chondroblasts lie near the perichondrium; mature chondrocytes are deeper and enclosed in matrix.",
+        "Hyaline matrix hides its fine type II collagen; elastic cartilage shows elastic fibers and fibrocartilage shows thick type I bundles."
+      ],
+      "traps": [
+        {
+          "wrong": "Mistaking empty shrinkage spaces for the whole lacuna",
+          "right": "Identify the basophilic chondrocyte and its surrounding territorial matrix, not just the processing gap."
+        }
+      ],
+      "recognition": [
+        "Glassy matrix, lacunae, and isogenous groups",
+        "Hyaline matrix hides its fine type II collagen; elastic cartilage shows elastic fibers and fibrocartilage shows thick type I bundles."
+      ],
+      "source": {
+        "label": "Junqueira 16e",
+        "detail": "Chapter 7, Figure 7-3b; PDF page 143."
+      },
+      "asset": "/study/image-bank/histo-hyaline-cartilage.png"
+    },
+    {
+      "id": "hpr-joint",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Bone and joint tissue",
+      "title": "Synovial joint",
+      "subtitle": "Articular cartilage, joint space, capsule, and synovium",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Bone and joint tissue",
+        "Synovial joint"
+      ],
+      "questionPatterns": [
+        "joint",
+        "synovial joint",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Find two opposing articular surfaces separated by a joint cavity and enclosed by a fibrous capsule.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Articular hyaline cartilage has zonal chondrocytes and no perichondrium; synovium lines non-articular internal surfaces.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Type A synoviocytes are macrophage-like; type B synoviocytes are fibroblast-like and produce matrix components.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A true joint cavity plus opposing articular cartilage identifies a synovial joint.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Find two opposing articular surfaces separated by a joint cavity and enclosed by a fibrous capsule.",
+        "Articular hyaline cartilage has zonal chondrocytes and no perichondrium; synovium lines non-articular internal surfaces.",
+        "Type A synoviocytes are macrophage-like; type B synoviocytes are fibroblast-like and produce matrix components.",
+        "A true joint cavity plus opposing articular cartilage identifies a synovial joint."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the synovial lining an epithelium",
+          "right": "Synovium is specialized vascular connective tissue without a basement membrane or true epithelial sheet."
+        }
+      ],
+      "recognition": [
+        "Articular cartilage, joint space, capsule, and synovium",
+        "A true joint cavity plus opposing articular cartilage identifies a synovial joint."
+      ],
+      "source": {
+        "label": "Junqueira 16e + Columbia Histology",
+        "detail": "Joints and articular cartilage; course image cross-checked with academic virtual-lab descriptions."
+      },
+      "asset": "/study/histology/telegram-standalone/synovial-joint-low-power.jpg"
+    },
+    {
+      "id": "hpr-nerve",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Nerve tissue and nervous system",
+      "title": "Peripheral nerve",
+      "subtitle": "Axons and Schwann cells organized into fascicles",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Nerve tissue and nervous system",
+        "Peripheral nerve"
+      ],
+      "questionPatterns": [
+        "nerve",
+        "peripheral nerve",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Identify round or oval fascicles enclosed by distinct perineurium within looser epineurial connective tissue.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Each axon is surrounded by endoneurium; dissolved myelin often leaves a pale ring around a central axon.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Schwann-cell nuclei are small and elongated; they myelinate one internode of one peripheral axon.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Perineurial fascicles distinguish nerve from tendon, which has parallel collagen without axons or myelin spaces.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Identify round or oval fascicles enclosed by distinct perineurium within looser epineurial connective tissue.",
+        "Each axon is surrounded by endoneurium; dissolved myelin often leaves a pale ring around a central axon.",
+        "Schwann-cell nuclei are small and elongated; they myelinate one internode of one peripheral axon.",
+        "Perineurial fascicles distinguish nerve from tendon, which has parallel collagen without axons or myelin spaces."
+      ],
+      "traps": [
+        {
+          "wrong": "Mistaking perineurium for epineurium",
+          "right": "Perineurium wraps one fascicle; epineurium binds multiple fascicles and larger vessels."
+        }
+      ],
+      "recognition": [
+        "Axons and Schwann cells organized into fascicles",
+        "Perineurial fascicles distinguish nerve from tendon, which has parallel collagen without axons or myelin spaces."
+      ],
+      "source": {
+        "label": "diFiore 11e + Duke Histology",
+        "detail": "Nervous tissue, peripheral nerve; diFiore Figure 7.15, PDF page 179."
+      },
+      "asset": "/study/histology/practicals/peripheral-nerve.jpg"
+    },
+    {
+      "id": "hpr-ganglion",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Nerve tissue and nervous system",
+      "title": "Dorsal root ganglion",
+      "subtitle": "Large sensory neurons ringed by satellite cells",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Nerve tissue and nervous system",
+        "Dorsal root ganglion"
+      ],
+      "questionPatterns": [
+        "ganglion",
+        "dorsal root ganglion",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Look for a capsule, bundles of nerve fibers, and clusters of very large neuronal cell bodies.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Pseudounipolar sensory neurons have central nuclei, prominent nucleoli, and a nearly complete satellite-cell cuff.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Satellite glial cells form a tight ring around each neuronal soma and regulate its local microenvironment.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Orderly satellite-cell rings and central neuronal nuclei favor dorsal root ganglion over autonomic ganglion.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Look for a capsule, bundles of nerve fibers, and clusters of very large neuronal cell bodies.",
+        "Pseudounipolar sensory neurons have central nuclei, prominent nucleoli, and a nearly complete satellite-cell cuff.",
+        "Satellite glial cells form a tight ring around each neuronal soma and regulate its local microenvironment.",
+        "Orderly satellite-cell rings and central neuronal nuclei favor dorsal root ganglion over autonomic ganglion."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every small nucleus a lymphocyte",
+          "right": "Small nuclei directly cuffing a giant neuronal soma are satellite cells; Schwann cells follow axons."
+        }
+      ],
+      "recognition": [
+        "Large sensory neurons ringed by satellite cells",
+        "Orderly satellite-cell rings and central neuronal nuclei favor dorsal root ganglion over autonomic ganglion."
+      ],
+      "source": {
+        "label": "diFiore 11e + SIU Histology",
+        "detail": "Dorsal root ganglion; diFiore Figure 7.21, PDF page 185."
+      },
+      "asset": "/study/histology/practicals/dorsal-root-ganglion.jpg"
+    },
+    {
+      "id": "hpr-skin-with-hair",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Skin",
+      "title": "Thin skin with hair",
+      "subtitle": "Hair follicles, sebaceous glands, and a thin epidermis",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Skin",
+        "Thin skin with hair"
+      ],
+      "questionPatterns": [
+        "skin with hair",
+        "thin skin with hair",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Orient from a relatively thin epidermis into dermis containing oblique hair follicles and adnexal glands.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Sebaceous glands have pale foamy holocrine cells; arrector pili is a small smooth-muscle bundle attached to a follicle.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Hair-matrix keratinocytes proliferate around a dermal papilla; melanocytes transfer pigment to the forming hair.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Hair follicles and sebaceous glands identify thin hairy skin; thick glabrous skin lacks both.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Orient from a relatively thin epidermis into dermis containing oblique hair follicles and adnexal glands.",
+        "Sebaceous glands have pale foamy holocrine cells; arrector pili is a small smooth-muscle bundle attached to a follicle.",
+        "Hair-matrix keratinocytes proliferate around a dermal papilla; melanocytes transfer pigment to the forming hair.",
+        "Hair follicles and sebaceous glands identify thin hairy skin; thick glabrous skin lacks both."
+      ],
+      "traps": [
+        {
+          "wrong": "Using epidermal thickness alone",
+          "right": "Confirm the adnexa: follicles plus sebaceous glands are decisive for skin with hair."
+        }
+      ],
+      "recognition": [
+        "Hair follicles, sebaceous glands, and a thin epidermis",
+        "Hair follicles and sebaceous glands identify thin hairy skin; thick glabrous skin lacks both."
+      ],
+      "source": {
+        "label": "diFiore 11e + SIU Histology",
+        "detail": "Integument, hairy skin; diFiore Figures 10.3–10.4, PDF page 241."
+      },
+      "asset": "/study/histology/practicals/skin-with-hair.jpg"
+    },
+    {
+      "id": "hpr-skin-without-hair",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Skin",
+      "title": "Thick skin without hair",
+      "subtitle": "Very thick keratin, prominent ridges, and eccrine ducts",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Skin",
+        "Thick skin without hair"
+      ],
+      "questionPatterns": [
+        "skin without hair",
+        "thick skin without hair",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Find an exceptionally thick stratum corneum with deep epidermal ridges and no pilosebaceous units.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "A pale stratum lucidum lies between the granular and cornified layers; coiled eccrine glands fill deep dermis and hypodermis.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Keratinocytes progress from basal mitotic cells through spinous, granular, lucid, and cornified compartments.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Hairless skin with a thick corneum and stratum lucidum is palm or sole; it lacks follicles and sebaceous glands.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Find an exceptionally thick stratum corneum with deep epidermal ridges and no pilosebaceous units.",
+        "A pale stratum lucidum lies between the granular and cornified layers; coiled eccrine glands fill deep dermis and hypodermis.",
+        "Keratinocytes progress from basal mitotic cells through spinous, granular, lucid, and cornified compartments.",
+        "Hairless skin with a thick corneum and stratum lucidum is palm or sole; it lacks follicles and sebaceous glands."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling any hairless crop thick skin",
+          "right": "Require the full pattern: massive corneum, lucidum, deep ridges, and abundant eccrine structures."
+        }
+      ],
+      "recognition": [
+        "Very thick keratin, prominent ridges, and eccrine ducts",
+        "Hairless skin with a thick corneum and stratum lucidum is palm or sole; it lacks follicles and sebaceous glands."
+      ],
+      "source": {
+        "label": "diFiore 11e + SIU Histology",
+        "detail": "Integument, thick skin; diFiore Figure 10.7, PDF page 247."
+      },
+      "asset": "/study/histology/practicals/thick-skin.jpg"
+    },
+    {
+      "id": "hpr-white-adipose",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Adipose tissue",
+      "title": "White adipose tissue",
+      "subtitle": "Unilocular adipocytes with signet-ring profiles",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Adipose tissue",
+        "White adipose tissue"
+      ],
+      "questionPatterns": [
+        "white adipose",
+        "white adipose tissue",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The tissue resembles chicken wire because each large adipocyte lost one dominant lipid droplet during processing.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "A thin rim of cytoplasm and flattened peripheral nucleus surround the empty-appearing unilocular space.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "White adipocytes store triacylglycerol and secrete adipokines; delicate reticular fibers and capillaries support each cell.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "One large vacuole and an eccentric flattened nucleus distinguish white from multilocular brown adipocytes.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The tissue resembles chicken wire because each large adipocyte lost one dominant lipid droplet during processing.",
+        "A thin rim of cytoplasm and flattened peripheral nucleus surround the empty-appearing unilocular space.",
+        "White adipocytes store triacylglycerol and secrete adipokines; delicate reticular fibers and capillaries support each cell.",
+        "One large vacuole and an eccentric flattened nucleus distinguish white from multilocular brown adipocytes."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the clear space an intracellular lumen",
+          "right": "It is the site of an extracted lipid droplet; the living cell is filled by lipid."
+        }
+      ],
+      "recognition": [
+        "Unilocular adipocytes with signet-ring profiles",
+        "One large vacuole and an eccentric flattened nucleus distinguish white from multilocular brown adipocytes."
+      ],
+      "source": {
+        "label": "Junqueira 16e + SIU Histology",
+        "detail": "Chapter 6, white adipose tissue; Figure 6-1, PDF page 134."
+      },
+      "asset": "/study/histology/practicals/white-adipose.jpg"
+    },
+    {
+      "id": "hpr-brown-adipose",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Adipose tissue",
+      "title": "Brown adipose tissue",
+      "subtitle": "Multilocular, mitochondria-rich thermogenic adipocytes",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Adipose tissue",
+        "Brown adipose tissue"
+      ],
+      "questionPatterns": [
+        "brown adipose",
+        "brown adipose tissue",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Lobules contain smaller, darker cells and a very rich capillary network rather than large chicken-wire spaces.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Each brown adipocyte has many lipid droplets, a more central nucleus, and eosinophilic mitochondria-rich cytoplasm.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "UCP1 in the inner mitochondrial membrane uncouples oxidation from ATP synthesis to generate heat.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Multiple droplets and central nuclei distinguish brown adipocytes from unilocular white fat.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Lobules contain smaller, darker cells and a very rich capillary network rather than large chicken-wire spaces.",
+        "Each brown adipocyte has many lipid droplets, a more central nucleus, and eosinophilic mitochondria-rich cytoplasm.",
+        "UCP1 in the inner mitochondrial membrane uncouples oxidation from ATP synthesis to generate heat.",
+        "Multiple droplets and central nuclei distinguish brown adipocytes from unilocular white fat."
+      ],
+      "traps": [
+        {
+          "wrong": "Mistaking brown fat for an endocrine gland",
+          "right": "Confirm the many small lipid vacuoles in individual cells and the lobular vascular pattern."
+        }
+      ],
+      "recognition": [
+        "Multilocular, mitochondria-rich thermogenic adipocytes",
+        "Multiple droplets and central nuclei distinguish brown adipocytes from unilocular white fat."
+      ],
+      "source": {
+        "label": "Junqueira 16e",
+        "detail": "Chapter 6, brown adipose tissue; Figure 6-4a, PDF page 137."
+      },
+      "asset": "/study/histology/practicals/brown-adipose.jpg"
+    },
+    {
+      "id": "hpr-thyroid",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Endocrine glands",
+      "title": "Thyroid gland",
+      "subtitle": "Colloid-filled follicles lined by simple epithelium",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Endocrine glands",
+        "Thyroid gland"
+      ],
+      "questionPatterns": [
+        "thyroid",
+        "thyroid gland",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The gland is packed with round follicles of variable size, each filled by homogeneous eosinophilic colloid.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Follicular-cell height reflects activity: flatter in less-active follicles and cuboidal to columnar when stimulated.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Follicular cells produce T3 and T4; pale parafollicular C cells produce calcitonin and do not contact the follicular lumen.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Extracellular colloid within true follicles is unique among the common endocrine practical slides.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The gland is packed with round follicles of variable size, each filled by homogeneous eosinophilic colloid.",
+        "Follicular-cell height reflects activity: flatter in less-active follicles and cuboidal to columnar when stimulated.",
+        "Follicular cells produce T3 and T4; pale parafollicular C cells produce calcitonin and do not contact the follicular lumen.",
+        "Extracellular colloid within true follicles is unique among the common endocrine practical slides."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling colloid a lumen full of mucus",
+          "right": "Colloid is extracellular thyroglobulin; identify the complete follicular epithelial ring."
+        }
+      ],
+      "recognition": [
+        "Colloid-filled follicles lined by simple epithelium",
+        "Extracellular colloid within true follicles is unique among the common endocrine practical slides."
+      ],
+      "source": {
+        "label": "Junqueira 16e + Yale MedCell",
+        "detail": "Endocrine glands, thyroid; morphology cross-checked with an academic virtual slide."
+      },
+      "asset": "/study/image-bank/histo-thyroid.png"
+    },
+    {
+      "id": "hpr-skeletal-muscle",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Muscle tissue",
+      "title": "Skeletal muscle",
+      "subtitle": "Long striated fibers with multiple peripheral nuclei",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Muscle tissue",
+        "Skeletal muscle"
+      ],
+      "questionPatterns": [
+        "skeletal muscle",
+        "skeletal muscle",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Parallel unbranched fascicles are separated by perimysium; individual fibers are wrapped by delicate endomysium.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Longitudinal fibers show cross-striations and multiple flattened nuclei immediately beneath the sarcolemma.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "A skeletal muscle fiber is one multinucleated syncytium; satellite cells lie outside its sarcolemma under the basal lamina.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Peripheral multiple nuclei and no branching distinguish skeletal from cardiac muscle.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Parallel unbranched fascicles are separated by perimysium; individual fibers are wrapped by delicate endomysium.",
+        "Longitudinal fibers show cross-striations and multiple flattened nuclei immediately beneath the sarcolemma.",
+        "A skeletal muscle fiber is one multinucleated syncytium; satellite cells lie outside its sarcolemma under the basal lamina.",
+        "Peripheral multiple nuclei and no branching distinguish skeletal from cardiac muscle."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling a peripheral satellite-cell nucleus a myonucleus",
+          "right": "Myonuclei are inside the sarcolemma; satellite cells occupy a narrow external niche."
+        }
+      ],
+      "recognition": [
+        "Long striated fibers with multiple peripheral nuclei",
+        "Peripheral multiple nuclei and no branching distinguish skeletal from cardiac muscle."
+      ],
+      "source": {
+        "label": "Junqueira 16e",
+        "detail": "Chapter 10, skeletal muscle; Figure 10-1a, PDF page 205."
+      },
+      "asset": "/study/histology/practicals/skeletal-muscle.jpg"
+    },
+    {
+      "id": "hpr-cardiac-muscle",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Muscle tissue",
+      "title": "Cardiac muscle",
+      "subtitle": "Branching striated myocytes joined by intercalated discs",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Muscle tissue",
+        "Cardiac muscle"
+      ],
+      "questionPatterns": [
+        "cardiac muscle",
+        "cardiac muscle",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Myocytes form an irregular branching network with abundant endomysial capillaries rather than parallel fascicles.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Cells have one or two central nuclei, cross-striations, and dark transverse intercalated discs at cell boundaries.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Gap junctions electrically couple myocytes; fasciae adherentes and desmosomes transmit force and resist separation.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Branching cells, central nuclei, and intercalated discs distinguish cardiac from skeletal muscle.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Myocytes form an irregular branching network with abundant endomysial capillaries rather than parallel fascicles.",
+        "Cells have one or two central nuclei, cross-striations, and dark transverse intercalated discs at cell boundaries.",
+        "Gap junctions electrically couple myocytes; fasciae adherentes and desmosomes transmit force and resist separation.",
+        "Branching cells, central nuclei, and intercalated discs distinguish cardiac from skeletal muscle."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every transverse stripe an intercalated disc",
+          "right": "Discs are darker, less regularly spaced cell boundaries; sarcomeric striations repeat finely within each cell."
+        }
+      ],
+      "recognition": [
+        "Branching striated myocytes joined by intercalated discs",
+        "Branching cells, central nuclei, and intercalated discs distinguish cardiac from skeletal muscle."
+      ],
+      "source": {
+        "label": "Junqueira 16e",
+        "detail": "Chapter 10, cardiac muscle and intercalated discs."
+      },
+      "asset": "/study/image-bank/histo-cardiac-muscle.png"
+    },
+    {
+      "id": "hpr-tendon",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Connective tissue",
+      "title": "Tendon",
+      "subtitle": "Dense regular type I collagen with rows of tenocytes",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Connective tissue",
+        "Tendon"
+      ],
+      "questionPatterns": [
+        "tendon",
+        "tendon",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → high power → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Densely packed eosinophilic collagen runs in one direction with little ground substance or vascular space.",
+            "cue": "Start at the edge and the lumen or capsule."
+          },
+          {
+            "label": "2 · Zoom",
+            "detail": "Sparse flattened tenocyte nuclei form dark rows squeezed between slightly wavy collagen bundles.",
+            "cue": "Name the dominant architecture before a single cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Tenocytes are specialized fibroblasts that maintain the parallel type I collagen matrix.",
+            "cue": "Match nuclear position, cytoplasm, and matrix."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Tendon lacks muscle striations and myofiber borders; unlike fibrocartilage, its cells do not sit in lacunae.",
+            "cue": "Say why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Densely packed eosinophilic collagen runs in one direction with little ground substance or vascular space.",
+        "Sparse flattened tenocyte nuclei form dark rows squeezed between slightly wavy collagen bundles.",
+        "Tenocytes are specialized fibroblasts that maintain the parallel type I collagen matrix.",
+        "Tendon lacks muscle striations and myofiber borders; unlike fibrocartilage, its cells do not sit in lacunae."
+      ],
+      "traps": [
+        {
+          "wrong": "Mistaking longitudinal tendon for skeletal muscle",
+          "right": "Follow the nuclei: tendon nuclei are sparse, thin, and arranged between collagen bundles with no cross-striations."
+        }
+      ],
+      "recognition": [
+        "Dense regular type I collagen with rows of tenocytes",
+        "Tendon lacks muscle striations and myofiber borders; unlike fibrocartilage, its cells do not sit in lacunae."
+      ],
+      "source": {
+        "label": "diFiore 11e",
+        "detail": "Chapter 3, dense regular connective tissue; Figure 3.9, PDF page 85."
+      },
+      "asset": "/study/histology/practicals/tendon.jpg"
+    }
+  ]
+}

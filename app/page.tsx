@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import { FinalExam } from "@/src/components/FinalExam";
 import { LessonGuide } from "@/src/components/LessonGuide";
 import { LessonSlide } from "@/src/components/LessonSlide";
-import { allLessons, lessonsForExam } from "@/src/lib/lessons";
+import { allLessons, histologyPracticalLessons, lessonsForExam } from "@/src/lib/lessons";
 import { lessonForQuestion } from "@/src/lib/lessons/types";
 import type { CodexGrade, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
 
@@ -37,7 +37,7 @@ type BankSummary = {
 
 type SessionAnswer = StudentAnswer & { flagged: boolean };
 type ExamId = "july25" | "july29";
-type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "practical" | "wrong" | "flagged";
+type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "practical" | "wrong" | "flagged";
 type SavedCollectionId = "wrong" | "flagged";
 type SessionPhase = "setup" | "loading" | "active" | "review";
 type ReviewFilter = "all" | "wrong" | "flagged";
@@ -65,7 +65,7 @@ const bridgeUrl = process.env.NEXT_PUBLIC_CODEX_BRIDGE_URL
   ?? (process.env.NODE_ENV === "production" ? "" : "http://127.0.0.1:4111");
 const progressStorageKey = "med25-study-progress-v1";
 const sessionArchiveStorageKey = "med25-session-archive-v1";
-const tabs = ["Overview", "Final exam", "Topics", "Visual Guide", "Results", "Codex tutor"] as const;
+const tabs = ["Overview", "Final exam", "Topics", "Practical Atlas", "Visual Guide", "Results", "Codex tutor"] as const;
 const sprintLengths = [10, 20, 40, 60, 100, 150, 200, 250] as const;
 const examConfig: Record<ExamId, {
   date: string;
@@ -77,7 +77,7 @@ const examConfig: Record<ExamId, {
     date: "July 25",
     title: "Tissue Development & Function",
     focus: "Histology I, cellular histology, early embryology, congenital malformations, Guyton Chapters 1–8, stains and practical recognition",
-    collections: ["all", "wrong", "flagged", "histology", "embryology", "physiology", "images", "stains", "practical"],
+    collections: ["all", "wrong", "flagged", "histo-practical", "histology", "embryology", "physiology", "images", "stains", "practical"],
   },
   july29: {
     date: "July 29",
@@ -94,6 +94,7 @@ const collectionLabel: Record<CollectionId, string> = {
   biochemistry: "Biochemistry",
   images: "Images",
   stains: "Stains",
+  "histo-practical": "Histology practicals",
   practical: "Practical + spotters",
   wrong: "Wrong answers",
   flagged: "Flagged",
@@ -397,7 +398,7 @@ export default function Home() {
             ? examProgress.flaggedIds
             : [];
       let response: Response;
-      if (isSavedCollection(nextCollection)) {
+      if (exactIds || isSavedCollection(nextCollection)) {
         if (!requestedIds.length) throw new Error(`No ${collectionLabel[nextCollection].toLowerCase()} are saved for ${selectedConfig.date}.`);
         response = await fetch(`${bridgeUrl}/api/questions/by-ids`, {
           method: "POST",
@@ -716,6 +717,7 @@ export default function Home() {
     { id: "physiology", title: "Guyton Chapters 1–8", scope: "Confirmed July 25 physiology", detail: "Homeostasis, cell physiology, transport, potentials, skeletal and smooth muscle, NMJ and synapses", count: examCount("physiology") },
     { id: "stains", title: "Stains", scope: "Dedicated recall", detail: "Target, color, preparation and exclusions", count: examCount("stains") },
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Histology fields and embryo diagrams", count: examCount("images") },
+    { id: "histo-practical", title: "15-slide practical bank", scope: "45 microscope questions", detail: "Trachea, bladder, support tissues, nerve, skin, fat, thyroid, muscle and tendon", count: examCount("histo-practical") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Methods, stains, slides and recognition questions kept in the exam bank", count: examCount("practical") },
   ] : [
     { id: "biochemistry", title: "Biochemistry", scope: "Lippincott 1–7, 14–18, 23–33", detail: "Molecules, enzymes, integrated metabolism, genetics, nutrition and laboratory reasoning", count: examCount("biochemistry") },
@@ -740,6 +742,7 @@ export default function Home() {
     ["HISTOLOGY", examCount("histology"), "Junqueira + lectures"],
     ["EMBRYOLOGY", examCount("embryology"), "General + images"],
     ["GUYTON 1–8", examCount("physiology"), "Complete chapter set"],
+    ["HISTO PRACTICALS", examCount("histo-practical"), "15 microscope slides"],
     ["VISUAL LESSONS", lessonsForExam(exam).length, "Core reference guide"],
     ["WRONG", savedCount("wrong"), "Saved for repair"],
     ["FLAGGED", savedCount("flagged"), "Manual review list"],
@@ -766,7 +769,7 @@ export default function Home() {
 
       <section className="setup-workspace">
         <header className="setup-topbar"><span className="topbar-label">Exam engine</span><div className="header-exam-switcher">{examSwitcher}</div><span className={health?.ok ? "connection good" : "connection waiting"}>● {health?.ok ? (health.codex.available ? "Codex ready" : "Study engine ready") : "Study engine offline"}</span></header>
-        <section className={`setup-content ${tab === "Overview" ? "overview-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
+        <section className={`setup-content ${tab === "Overview" ? "overview-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Practical Atlas" || tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Practical Atlas" ? "practical-atlas-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
           {tab === "Overview" && <>
             <p className="eyebrow">Priority exam · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam until you switch dates.</p>
@@ -778,6 +781,13 @@ export default function Home() {
           {tab === "Final exam" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
 
           {tab === "Topics" && <><p className="eyebrow">{selectedConfig.date} collections</p><h1>Choose a focused collection.</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p><div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div><div className="topic-grid">{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>{sessionError && <p className="session-error">{sessionError}</p>}</>}
+
+          {tab === "Practical Atlas" && exam === "july25" && <div className="practical-atlas-shell">
+            <div className="practical-atlas-head"><div><span>HISTOLOGY PRACTICALS · 15 SPECIMENS</span><b>Orient first. Identify the cells. Name the discriminator.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all 45 →</button></div>
+            <LessonGuide exam="july25" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
+          </div>}
+
+          {tab === "Practical Atlas" && exam === "july29" && <div className="practical-atlas-empty"><span className="eyebrow">July 25 practical</span><h1>This atlas belongs to Tissue Development &amp; Function.</h1><p>Switch to July 25 above to study and test the 15 microscope specimens.</p></div>}
 
           {tab === "Visual Guide" && <LessonGuide key={exam} exam={exam} lessons={allLessons} />}
 

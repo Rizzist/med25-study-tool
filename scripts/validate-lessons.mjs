@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
 const lessonDir = resolve(root, "data/lessons");
-const files = ["embryology.json", "histology.json", "july29-cell-molecules.json", "curriculum-gaps.json", "july29-comprehensive.json"];
+const files = ["embryology.json", "histology.json", "july29-cell-molecules.json", "curriculum-gaps.json", "july29-comprehensive.json", "histology-practicals.json"];
 const failures = [];
 const ids = new Set();
 const lessons = [];
