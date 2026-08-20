@@ -34,7 +34,7 @@ type FinalProgress = { version: 1; exams: Record<ExamId, FinalSession | null> };
 
 const examLabels: Record<ExamId, { date: string; title: string }> = {
   july25: { date: "July 25", title: "Tissue Development & Function" },
-  july29: { date: "July 29", title: "Cell & Molecules" },
+  july29: { date: "Aug 25", title: "Cell & Molecules" },
 };
 
 function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {

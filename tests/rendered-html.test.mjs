@@ -23,14 +23,15 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>MED\/\/25 Exam Sprint<\/title>/i);
-  assert.match(html, /July 25 \+ July 29 exam sprint/i);
+  assert.match(html, /July 25 · Aug 22 · Aug 25/i);
   assert.match(html, /Tissue Development &amp; Function/i);
   assert.match(html, /Cell &amp; Molecules/i);
+  assert.match(html, /Histology Practical/i);
   assert.match(html, /Priority exam/i);
   assert.match(html, /Codex tutor/i);
   assert.match(html, /Visual Guide/i);
   assert.match(html, /Practical Atlas/i);
-  assert.match(html, /HISTO PRACTICALS/i);
+  assert.match(html, /Histology Practical/i);
   assert.match(html, /VISUAL LESSONS/i);
   assert.match(html, /histology/i);
   assert.match(html, /embryology/i);
@@ -56,7 +57,7 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   const practicalQuestions = [practicalQuestionText, fullPracticalQuestionText].flatMap((text) => text.trim().split(/\r?\n/).map((line) => JSON.parse(line)));
   const practicalLessons = [...JSON.parse(practicalLessonText).lessons, ...JSON.parse(fullPracticalLessonText).lessons];
 
-  assert.deepEqual(manifest.examDates, ["2026-07-25", "2026-07-29"]);
+  assert.deepEqual(manifest.examDates, ["2026-07-25", "2026-08-22", "2026-08-25"]);
   assert.deepEqual(manifest.subjects.map((subject) => subject.id), [
     "histology",
     "embryology",
@@ -146,6 +147,8 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   assert.match(lessonGuide, /Test this slide/);
   assert.equal(practicalQuestions.length, 165);
   assert.equal(practicalLessons.length, 55);
+  assert.ok(practicalQuestions.every((question) => question.tags.includes("exam-aug22")));
+  assert.ok(practicalLessons.every((lesson) => lesson.exam === "aug22"));
   assert.ok(practicalLessons.every((lesson) => practicalQuestions.filter((question) => question.id.startsWith(`${lesson.id}-`)).length === 3));
   assert.ok(practicalQuestions.every((question) => question.tags.includes("histo-practical") && question.kind === "image_single_best_answer"));
   assert.ok(practicalLessons.every((lesson) => lesson.id.startsWith("hpr-") && lesson.asset));

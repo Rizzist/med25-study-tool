@@ -174,8 +174,12 @@ const JULY_29_BIOCHEMISTRY_TOPICS = new Set([
 ]);
 
 const EXAM_COLLECTIONS = ["all", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "practical"];
+const EXAM_IDS = ["july25", "aug22", "july29"];
 
 function matchesExam(question, exam) {
+  const isHistologyPractical = (question.tags ?? []).includes("histo-practical");
+  if (isHistologyPractical) return exam === "aug22";
+  if (exam === "aug22") return false;
   if (exam === "july25") {
     if (["histology", "embryology"].includes(question.subject) && isPracticalDerived(question)) return true;
     if (question.subject === "histology") return JULY_25_HISTOLOGY_TOPICS.has(question.topic);
@@ -262,7 +266,8 @@ function bankSummary() {
   const verifiedQuestions = loadVerifiedQuestions();
   const exams = [
     { id: "july25", date: "2026-07-25", title: "Tissue Development & Function" },
-    { id: "july29", date: "2026-07-29", title: "Cell & Molecules" },
+    { id: "aug22", date: "2026-08-22", title: "Histology Practical" },
+    { id: "july29", date: "2026-08-25", title: "Cell & Molecules" },
   ].map((exam) => {
     const questions = verifiedQuestions.filter((question) => matchesExam(question, exam.id));
     return {
@@ -306,7 +311,7 @@ function loadVerifiedQuestions() {
 }
 
 function loadFinalExamQuestions(exam) {
-  if (!["july25", "july29"].includes(exam)) throw new Error("A valid exam is required");
+  if (!EXAM_IDS.includes(exam)) throw new Error("A valid exam is required");
   const filepath = resolve(finalExamDirectory, `${exam}.jsonl`);
   if (!existsSync(filepath)) return [];
   const questions = [];
@@ -364,7 +369,7 @@ function questionSet(searchParams) {
 }
 
 function coverageQuestionSet(body) {
-  if (!body || !["july25", "july29"].includes(body.exam)) throw new Error("A valid exam is required");
+  if (!body || !EXAM_IDS.includes(body.exam)) throw new Error("A valid exam is required");
   const collection = typeof body.collection === "string" ? body.collection : "all";
   if (!EXAM_COLLECTIONS.includes(collection)) throw new Error("A valid collection is required");
   const requestedLimit = Number(body.limit ?? 20);
@@ -386,7 +391,7 @@ function coverageQuestionSet(body) {
 function questionSetByIds(body) {
   if (!body || !Array.isArray(body.ids)) throw new Error("Question ids are required");
   const exam = body.exam;
-  if (!['july25', 'july29'].includes(exam)) throw new Error("A valid exam is required");
+  if (!EXAM_IDS.includes(exam)) throw new Error("A valid exam is required");
   const ids = [...new Set(body.ids.filter((id) => typeof id === "string" && id.length <= 160))].slice(0, 500);
   const requestedLimit = Number(body.limit ?? ids.length);
   const limit = Number.isFinite(requestedLimit) ? Math.max(1, Math.min(250, Math.floor(requestedLimit))) : Math.min(250, ids.length);

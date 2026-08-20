@@ -36,7 +36,7 @@ type BankSummary = {
 };
 
 type SessionAnswer = StudentAnswer & { flagged: boolean };
-type ExamId = "july25" | "july29";
+type ExamId = "july25" | "aug22" | "july29";
 type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "practical" | "wrong" | "flagged";
 type SavedCollectionId = "wrong" | "flagged";
 type SessionPhase = "setup" | "loading" | "active" | "review";
@@ -76,11 +76,17 @@ const examConfig: Record<ExamId, {
   july25: {
     date: "July 25",
     title: "Tissue Development & Function",
-    focus: "Histology I, cellular histology, early embryology, congenital malformations, Guyton Chapters 1–8, stains and practical recognition",
-    collections: ["all", "wrong", "flagged", "histo-practical", "histology", "embryology", "physiology", "images", "stains", "practical"],
+    focus: "Histology I, cellular histology, early embryology, congenital malformations, Guyton Chapters 1–8 and stains",
+    collections: ["all", "wrong", "flagged", "histology", "embryology", "physiology", "images", "stains", "practical"],
+  },
+  aug22: {
+    date: "Aug 22",
+    title: "Histology Practical",
+    focus: "55 microscope specimens, tissue orientation, defining architecture, characteristic cell identification and closest-slide discrimination",
+    collections: ["histo-practical", "wrong", "flagged"],
   },
   july29: {
-    date: "July 29",
+    date: "Aug 25",
     title: "Cell & Molecules",
     focus: "Lippincott Chapters 1–7, 14–18 and 23–33, cellular histology, membrane physiology and all confirmed laboratory methods",
     collections: ["all", "wrong", "flagged", "biochemistry", "histology", "physiology", "images", "stains", "practical"],
@@ -106,6 +112,7 @@ function createEmptyProgress(): StudyProgress {
     version: 1,
     exams: {
       july25: { wrongIds: [], flaggedIds: [] },
+      aug22: { wrongIds: [], flaggedIds: [] },
       july29: { wrongIds: [], flaggedIds: [] },
     },
   };
@@ -120,12 +127,18 @@ function parseProgress(raw: string | null): StudyProgress {
   if (!raw) return createEmptyProgress();
   try {
     const value = JSON.parse(raw) as Partial<StudyProgress>;
+    const oldJuly25WrongIds = cleanIds(value.exams?.july25?.wrongIds);
+    const oldJuly25FlaggedIds = cleanIds(value.exams?.july25?.flaggedIds);
     return {
       version: 1,
       exams: {
         july25: {
-          wrongIds: cleanIds(value.exams?.july25?.wrongIds),
-          flaggedIds: cleanIds(value.exams?.july25?.flaggedIds),
+          wrongIds: oldJuly25WrongIds.filter((id) => !id.startsWith("hpr-")),
+          flaggedIds: oldJuly25FlaggedIds.filter((id) => !id.startsWith("hpr-")),
+        },
+        aug22: {
+          wrongIds: cleanIds([...(value.exams?.aug22?.wrongIds ?? []), ...oldJuly25WrongIds.filter((id) => id.startsWith("hpr-"))]),
+          flaggedIds: cleanIds([...(value.exams?.aug22?.flaggedIds ?? []), ...oldJuly25FlaggedIds.filter((id) => id.startsWith("hpr-"))]),
         },
         july29: {
           wrongIds: cleanIds(value.exams?.july29?.wrongIds),
@@ -139,7 +152,7 @@ function parseProgress(raw: string | null): StudyProgress {
 }
 
 function isExamId(value: unknown): value is ExamId {
-  return value === "july25" || value === "july29";
+  return value === "july25" || value === "aug22" || value === "july29";
 }
 
 function isCollectionId(value: unknown): value is CollectionId {
@@ -171,8 +184,11 @@ function cleanActiveSession(value: unknown): ActiveSessionSnapshot | null {
   const questionIds = cleanIds(session.questionIds).slice(0, 250);
   if (!questionIds.length) return null;
   const requestedSize = Number(session.sessionSize);
+  const migratedExam = session.exam === "july25" && (session.collection === "histo-practical" || questionIds.every((id) => id.startsWith("hpr-")))
+    ? "aug22"
+    : session.exam;
   return {
-    exam: session.exam,
+    exam: migratedExam,
     collection: session.collection,
     sessionSize: Number.isFinite(requestedSize) ? Math.max(1, Math.min(250, Math.floor(requestedSize))) : questionIds.length,
     questionIds,
@@ -380,7 +396,7 @@ export default function Home() {
 
   function chooseExam(nextExam: ExamId) {
     setExam(nextExam);
-    setCollection("all");
+    setCollection(examConfig[nextExam].collections[0]);
     setSessionError("");
     setExpandedLessons({});
   }
@@ -717,8 +733,9 @@ export default function Home() {
     { id: "physiology", title: "Guyton Chapters 1–8", scope: "Confirmed July 25 physiology", detail: "Homeostasis, cell physiology, transport, potentials, skeletal and smooth muscle, NMJ and synapses", count: examCount("physiology") },
     { id: "stains", title: "Stains", scope: "Dedicated recall", detail: "Target, color, preparation and exclusions", count: examCount("stains") },
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Histology fields and embryo diagrams", count: examCount("images") },
-    { id: "histo-practical", title: "55-specimen practical bank", scope: `${examCount("histo-practical")} microscope questions`, detail: "Full deck: epithelium, connective tissue, blood, muscle, nerve, digestive, endocrine, urinary, vessels and lymphoid organs", count: examCount("histo-practical") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Methods, stains, slides and recognition questions kept in the exam bank", count: examCount("practical") },
+  ] : exam === "aug22" ? [
+    { id: "histo-practical", title: "55-specimen practical bank", scope: `${examCount("histo-practical")} microscope questions`, detail: "Full deck: epithelium, connective tissue, blood, muscle, nerve, digestive, endocrine, urinary, vessels and lymphoid organs", count: examCount("histo-practical") },
   ] : [
     { id: "biochemistry", title: "Biochemistry", scope: "Lippincott 1–7, 14–18, 23–33", detail: "Molecules, enzymes, integrated metabolism, genetics, nutrition and laboratory reasoning", count: examCount("biochemistry") },
     { id: "histology", title: "Cell + Intro Histology", scope: "Mandatory safety block", detail: "Methods, stains, membranes, organelles, cytoskeleton, nucleus, cell cycle and death", count: examCount("histology") },
@@ -732,7 +749,7 @@ export default function Home() {
       const item = examConfig[value];
       const summary = bank?.exams?.find((candidate) => candidate.id === value);
       return <button key={value} className={exam === value ? "active" : ""} onClick={() => chooseExam(value)} aria-pressed={exam === value}>
-        <span>{item.date}</span><b>{item.title}</b><small>{tab === "Final exam" ? `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
+        <span>{item.date}</span><b>{item.title}</b><small>{value === "aug22" ? `${summary?.questionCount ?? "—"} practical questions` : tab === "Final exam" ? `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
       </button>;
     })}
   </div>;
@@ -742,8 +759,14 @@ export default function Home() {
     ["HISTOLOGY", examCount("histology"), "Junqueira + lectures"],
     ["EMBRYOLOGY", examCount("embryology"), "General + images"],
     ["GUYTON 1–8", examCount("physiology"), "Complete chapter set"],
-    ["HISTO PRACTICALS", examCount("histo-practical"), "55 microscope specimens"],
     ["VISUAL LESSONS", lessonsForExam(exam).length, "Core reference guide"],
+    ["WRONG", savedCount("wrong"), "Saved for repair"],
+    ["FLAGGED", savedCount("flagged"), "Manual review list"],
+  ] : exam === "aug22" ? [
+    ["PRACTICAL BANK", selectedExam?.questionCount ?? "—", "This exam only"],
+    ["MICROSCOPE SPECIMENS", 55, "Complete full deck"],
+    ["IMAGE QUESTIONS", examCount("images"), "Three per specimen"],
+    ["ATLAS LESSONS", histologyPracticalLessons.length, "One per specimen"],
     ["WRONG", savedCount("wrong"), "Saved for repair"],
     ["FLAGGED", savedCount("flagged"), "Manual review list"],
   ] : [
@@ -762,7 +785,7 @@ export default function Home() {
   return (
     <main className="setup-shell">
       <aside className="setup-sidebar">
-        <div className="brand"><span>MED//25</span><small>July 25 + July 29 exam sprint</small></div>
+        <div className="brand"><span>MED//25</span><small>July 25 · Aug 22 · Aug 25</small></div>
         <nav className="setup-nav" aria-label="Application sections">{tabs.map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
       </aside>
@@ -778,16 +801,17 @@ export default function Home() {
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}
 
-          {tab === "Final exam" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
+          {tab === "Final exam" && exam !== "aug22" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
+          {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use the focused practical bank.</h1><p>This date has 165 image questions and 55 atlas lessons rather than a separate past-paper final. Open Overview, Topics, or Practical Atlas to test it.</p></div>}
 
           {tab === "Topics" && <><p className="eyebrow">{selectedConfig.date} collections</p><h1>Choose a focused collection.</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p><div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div><div className="topic-grid">{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>{sessionError && <p className="session-error">{sessionError}</p>}</>}
 
-          {tab === "Practical Atlas" && exam === "july25" && <div className="practical-atlas-shell">
+          {tab === "Practical Atlas" && exam === "aug22" && <div className="practical-atlas-shell">
             <div className="practical-atlas-head"><div><span>HISTOLOGY PRACTICALS · 55 SPECIMENS</span><b>Orient first. Identify the cells. Name the discriminator.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all {examCount("histo-practical")} →</button></div>
-            <LessonGuide exam="july25" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
+            <LessonGuide exam="aug22" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
           </div>}
 
-          {tab === "Practical Atlas" && exam === "july29" && <div className="practical-atlas-empty"><span className="eyebrow">July 25 practical</span><h1>This atlas belongs to Tissue Development &amp; Function.</h1><p>Switch to July 25 above to study and test the 55 microscope specimens.</p></div>}
+          {tab === "Practical Atlas" && exam !== "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 practical</span><h1>This atlas belongs to Histology Practical.</h1><p>Switch to Aug 22 above to study and test the 55 microscope specimens.</p></div>}
 
           {tab === "Visual Guide" && <LessonGuide key={exam} exam={exam} lessons={allLessons} />}
 

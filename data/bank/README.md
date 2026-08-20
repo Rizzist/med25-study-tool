@@ -1,6 +1,6 @@
 # MCQ bank
 
-The bank contains verified July 25 and July 29 exam questions as JSON Lines files under `data/bank/questions/`.
+The bank contains verified July 25, August 22, and August 25 exam questions as JSON Lines files under `data/bank/questions/`.
 
 - One question object per line.
 - Validate with `npm run bank:validate`.

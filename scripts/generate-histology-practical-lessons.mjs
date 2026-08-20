@@ -159,7 +159,7 @@ const specimens = [
 
 const lessons = specimens.map((specimen) => ({
   id: `hpr-${specimen.slug}`,
-  exam: "july25",
+  exam: "aug22",
   subject: "histology",
   topic: specimen.topic,
   title: specimen.title,

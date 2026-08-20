@@ -929,7 +929,7 @@ function buildQuestion(specimen, question) {
       "histo-practical",
       "histo-practical-15",
       specimen.slug,
-      "exam-july25",
+      "exam-aug22",
     ],
     examPriority: "core",
     qualityFlags: ["source-verified", "crop-visually-reviewed", "internet-cross-checked", "practical-bank"],

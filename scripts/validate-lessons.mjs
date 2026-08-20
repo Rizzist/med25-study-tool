@@ -85,5 +85,6 @@ if (failures.length) {
 }
 
 const july25Count = lessons.filter((lesson) => lesson.exam === "july25" || lesson.exam === "both").length;
+const aug22Count = lessons.filter((lesson) => lesson.exam === "aug22").length;
 const july29Count = lessons.filter((lesson) => lesson.exam === "july29" || lesson.exam === "both").length;
-console.log(`Validated ${lessons.length} core lessons (${july25Count} available for July 25, ${july29Count} available for July 29).`);
+console.log(`Validated ${lessons.length} core lessons (${july25Count} available for July 25, ${aug22Count} available for August 22, ${july29Count} available for August 25).`);

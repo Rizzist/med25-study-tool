@@ -1,15 +1,15 @@
-# First-semester exam scope: July 25 and July 29
+# First-semester exam scope: July 25, August 22, and August 25
 
-Updated: 2026-07-22 (America/Toronto)
+Updated: 2026-08-20 (Asia/Tehran)
 
-The second exam is **July 29**, not August 25.
+The Histology Practical is **August 22**. The Cell & Molecules exam originally scheduled for July 29 was moved to **August 25**.
 
 ## Evidence order
 
-1. The pinned July 1, 2026 class-representative announcement confirms **Tissue Development & Function on July 25**, **Cell & Molecules on July 29**, one integrated theory paper per block, and practical exams scheduled later.
+1. The student's August 20 update supersedes the earlier schedule: **Histology Practical is August 22** and **Cell & Molecules is August 25**. Tissue Development & Function remains recorded on July 25.
 2. The May 19 current-cohort checklist and recovered teacher materials identify the lectures actually delivered in 2026.
-3. On July 22, 2026, the student confirmed that the Tissue, Development & Function and Cell & Molecules tables on syllabus pages 30 and 28 are examinable in addition to the current Telegram material. After unexpected systemic Histology appeared on July 25, the student explicitly approved restoring cellular and introductory Histology as a mandatory July 29 safety block.
-4. On July 26, 2026, the student explicitly confirmed that all of Lippincott Chapters 23-28 are examinable. The July 29 bank therefore includes the full insulin/glucagon, feed-fast, diabetes, obesity, nutrition, and vitamin block.
+3. On July 22, 2026, the student confirmed that the Tissue, Development & Function and Cell & Molecules tables on syllabus pages 30 and 28 are examinable in addition to the current Telegram material. After unexpected systemic Histology appeared on July 25, the student explicitly approved restoring cellular and introductory Histology as a mandatory Cell & Molecules safety block.
+4. On July 26, 2026, the student explicitly confirmed that all of Lippincott Chapters 23-28 are examinable. The August 25 bank therefore includes the full insulin/glucagon, feed-fast, diabetes, obesity, nutrition, and vitamin block.
 
 ## July 25 - Tissue Development & Function
 
@@ -24,7 +24,7 @@ The second exam is **July 29**, not August 25.
 - Skin.
 - **Male and female reproductive-system Histology**, retained because it directly reinforces the Embryology course.
 
-The ordinary text banks for circulatory/lymphoid, digestive and associated glands, respiratory, urinary, endocrine, eye/ear and special-sense Histology are excluded from the July 25 default. Their practical/image spotters remain active as an explicit exception because practical-derived theory and image analysis are examinable. All excluded text questions remain preserved in the master bank.
+The ordinary text banks for circulatory/lymphoid, digestive and associated glands, respiratory, urinary, endocrine, eye/ear and special-sense Histology are excluded from the July 25 default. The dedicated 55-specimen microscope bank is routed to August 22; other theory-relevant image questions remain available where their subject scope applies. All excluded text questions remain preserved in the master bank.
 
 ### Active Embryology scope
 
@@ -45,9 +45,13 @@ The ordinary text banks for later system development and system-specific cardiov
 
 ### Practical-derived theory and images
 
-Practical-derived material is **not excluded**. Stains, methods, microscopy, slide recognition and embryo diagrams remain inside the July 25 mixed bank because their theory and image analysis can be tested. A separate **Practical + spotters** collection exposes the same material for targeted drilling; it is a study view, not a claim that a separate practical exam occurs on July 25.
+Stains, methods, microscopy and embryo diagrams remain inside the July 25 mixed bank where they reinforce the theory scope. The dedicated full-deck Histology Practical questions are excluded from July 25 and live only in the August 22 bank.
 
-## July 29 - Cell & Molecules
+## August 22 - Histology Practical
+
+The full practical bank contains 55 microscope specimens, 165 image questions and 55 atlas lessons. It is a separate exam option with its own saved progress, wrong-answer list, flags and sprint history.
+
+## August 25 - Cell & Molecules
 
 ### Active Biochemistry scope
 
@@ -74,16 +78,17 @@ Muscle physiology, neuromuscular transmission and general neurotransmission are 
 
 ### Histology placement
 
-Cellular and introductory Histology now appear in the July 29 default as a mandatory safety block. Coverage includes methods, stains, microscopy, membrane, transport, signaling, organelles, cytoskeleton, inclusions, nucleus, cell cycle, division and cell death. The same stable question IDs remain available in July 25 where applicable.
+Cellular and introductory Histology appear in the August 25 default as a mandatory safety block. Coverage includes methods, stains, microscopy, membrane, transport, signaling, organelles, cytoskeleton, inclusions, nucleus, cell cycle, division and cell death. The same stable question IDs remain available in July 25 where applicable.
 
 ## Local app collections
 
-Each exam offers a mixed bank plus subject collections. July 25 includes Histology, Embryology, Guyton Chapters 1-8 Physiology, Stains, Images, and Practical + spotters. July 29 provides Biochemistry, Cell + Intro Histology, membrane Physiology, Images, Stains, and Practical + spotters. Shared content keeps the same stable question IDs.
+July 25 includes Histology, Embryology, Guyton Chapters 1-8 Physiology, Stains, Images, and Practical + spotters. August 22 provides the dedicated Histology Practical bank and its atlas. August 25 provides Biochemistry, Cell + Intro Histology, membrane Physiology, Images, Stains, and Practical + spotters. Shared theory content keeps the same stable question IDs.
 
 Practical-derived questions intentionally overlap the mixed, image and stain collections. The overlap lets the student study them in context or isolate them for rapid recognition drills.
 
 Current filtered totals:
 
-- **July 25:** 878 questions - 496 Histology, 258 Embryology and 124 Physiology, including 236 image MCQs, 165 dedicated Histology Practical questions, and 285 Practical + spotters drills.
-- **July 29:** 744 questions - 570 Biochemistry, 120 cellular/introductory Histology and 54 membrane Physiology questions, including 34 image MCQs and 135 Practical + spotters drills.
+- **July 25:** 713 questions - 331 Histology, 258 Embryology and 124 Physiology, including 71 image MCQs and 120 Practical + spotters drills.
+- **August 22:** 165 Histology Practical image questions across 55 microscope specimens, with three questions and one atlas lesson per specimen.
+- **August 25:** 744 questions - 570 Biochemistry, 120 cellular/introductory Histology and 54 membrane Physiology questions, including 34 image MCQs and 135 Practical + spotters drills.
 - **Master bank:** 1,837 verified study questions plus 367 sourced final-exam items. Out-of-scope material remains preserved and is filtered rather than deleted.

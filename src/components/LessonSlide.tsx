@@ -3,6 +3,8 @@
 import type { ReactNode } from "react";
 import type { CoreLesson } from "@/src/lib/lessons/types";
 
+const examBadge = { july25: "JUL 25", aug22: "AUG 22", july29: "AUG 25", both: "BOTH" } as const;
+
 export function LessonSlide({ lesson, compact = false, actions }: { lesson: CoreLesson; compact?: boolean; actions?: ReactNode }) {
   return <article className={`lesson-slide ${compact ? "compact" : ""}`}>
     <header className="lesson-slide-header">
@@ -11,7 +13,7 @@ export function LessonSlide({ lesson, compact = false, actions }: { lesson: Core
         <h2>{lesson.title}</h2>
         <p>{lesson.subtitle}</p>
       </div>
-      <div className="lesson-slide-actions">{actions}<b>{lesson.exam === "july25" ? "JUL 25" : "JUL 29"}</b></div>
+      <div className="lesson-slide-actions">{actions}<b>{examBadge[lesson.exam]}</b></div>
     </header>
 
     <div className={`lesson-main ${lesson.asset ? "with-asset" : ""}`}>

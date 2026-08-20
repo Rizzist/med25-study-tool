@@ -1,6 +1,6 @@
 import type { MCQQuestion, SubjectId } from "@/src/lib/mcq/types";
 
-export type LessonExamId = "july25" | "july29";
+export type LessonExamId = "july25" | "aug22" | "july29";
 export type LessonExamScope = LessonExamId | "both";
 export type LessonKind = "process" | "timeline" | "comparison" | "recognition" | "mechanism";
 export type LessonVisualType = "flow" | "timeline" | "layers" | "comparison" | "map";

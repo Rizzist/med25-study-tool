@@ -4,7 +4,7 @@ Last updated: 2026-08-20 (Asia/Tehran)
 
 ## Implemented scope
 
-This bank is a distinct July 25 collection with **165 image questions** (three per specimen) and **55 atlas lessons**. Each lesson follows the same microscope routine: orient at low power, inspect the defining architecture, identify the characteristic cell, and state the closest discriminator.
+This bank is the dedicated **August 22 Histology Practical** option with **165 image questions** (three per specimen) and **55 atlas lessons**. Each lesson follows the same microscope routine: orient at low power, inspect the defining architecture, identify the characteristic cell, and state the closest discriminator.
 
 1. Trachea
 2. Urinary bladder

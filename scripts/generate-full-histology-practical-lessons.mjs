@@ -7,7 +7,7 @@ const output = resolve(root, "data/lessons/histology-practicals-full.json");
 
 const lessons = fullPracticalSpecimens.map((specimen) => ({
   id: `hpr-${specimen.slug}`,
-  exam: "july25",
+  exam: "aug22",
   subject: "histology",
   topic: specimen.topic,
   title: specimen.title,

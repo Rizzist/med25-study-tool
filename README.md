@@ -1,14 +1,15 @@
 # MED//25 Study Tool
 
-A local-first medical-school study app built for two July 2026 exams. It combines focused MCQ sprints, image recognition, visual lessons, persistent review lists, and an optional Codex tutor.
+A local-first medical-school study app built for three 2026 exams. It combines focused MCQ sprints, image recognition, visual lessons, persistent review lists, and an optional Codex tutor.
 
 ## What is included
 
-- **July 25 — Tissue Development & Function:** 878 focused questions across histology, embryology, and physiology
-- **July 29 — Cell & Molecules:** 744 focused questions across biochemistry, cellular histology, and physiology
+- **July 25 — Tissue Development & Function:** 713 focused questions across histology, embryology, and physiology
+- **August 22 — Histology Practical:** 165 image questions across 55 microscope specimens
+- **August 25 — Cell & Molecules:** 744 focused questions across biochemistry, cellular histology, and physiology
 - **Master bank:** 1,837 verified study questions plus 367 sourced past-paper questions
 - A dedicated 55-specimen Histology Practical Atlas with 165 image questions, plus stains, embryo diagrams, and other image-based questions
-- 159 validated visual lessons, including 55 specimen atlas lessons and 55 available for July 29
+- 159 validated visual lessons, including 55 specimen atlas lessons and 55 available for August 25
 - Select-an-option and typed-answer modes, plus optional reasoning and confidence capture
 - End-of-sprint grading with explanations for every missed answer
 - Persistent wrong-answer, flagged-question, active-sprint, and completed-result history in the same browser profile
@@ -85,7 +86,7 @@ To remove a question topic from only one exam, remove that topic from the corres
 
 ## Add or remove visual lessons
 
-Visual lessons live in `data/lessons/`. Add or edit a lesson JSON file, route it to `july25`, `july29`, or `both` through its exam field, then run:
+Visual lessons live in `data/lessons/`. Add or edit a lesson JSON file, route it to `july25`, `aug22`, `july29` (the stable internal ID for the rescheduled August 25 bank), or `both` through its exam field, then run:
 
 ```bash
 npm run lessons:validate

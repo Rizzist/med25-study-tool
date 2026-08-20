@@ -56,7 +56,7 @@ function makeQuestion(specimen, suffix, difficulty, prompt, correct, accepted, d
       "histo-practical-full",
       "practical-deck",
       specimen.slug,
-      "exam-july25",
+      "exam-aug22",
     ],
     examPriority: "core",
     qualityFlags: ["source-verified", "crop-visually-reviewed", "full-deck-cross-referenced", "practical-bank"],
@@ -104,4 +104,3 @@ const questions = fullPracticalSpecimens.flatMap((specimen) => [
 mkdirSync(dirname(output), { recursive: true });
 writeFileSync(output, `${questions.map((question) => JSON.stringify(question)).join("\n")}\n`);
 console.log(`Wrote ${questions.length} supplemental practical questions across ${fullPracticalSpecimens.length} specimens.`);
-

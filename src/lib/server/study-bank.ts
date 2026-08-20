@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import embeddedBankData from "@/data/bank/embedded-bank.json";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
-export type ExamId = "july25" | "july29";
+export type ExamId = "july25" | "aug22" | "july29";
 export type CollectionId =
   | "all"
   | "histology"
@@ -194,7 +194,7 @@ type BankManifest = {
 type EmbeddedBank = {
   manifest: BankManifest;
   questions: MCQQuestion[];
-  finalExams: Record<ExamId, MCQQuestion[]>;
+  finalExams: Partial<Record<ExamId, MCQQuestion[]>>;
 };
 
 const embeddedBank = embeddedBankData as unknown as EmbeddedBank;
@@ -202,7 +202,7 @@ let verifiedCache: MCQQuestion[] | null = null;
 const finalCache: Partial<Record<ExamId, MCQQuestion[]>> = {};
 
 export function isExamId(value: unknown): value is ExamId {
-  return value === "july25" || value === "july29";
+  return value === "july25" || value === "aug22" || value === "july29";
 }
 
 export function isCollectionId(value: unknown): value is CollectionId {
@@ -219,7 +219,7 @@ export function loadVerifiedQuestions(): MCQQuestion[] {
 
 export function loadFinalExamQuestions(exam: ExamId): MCQQuestion[] {
   if (!finalCache[exam]) {
-    finalCache[exam] = embeddedBank.finalExams[exam].filter((question) => {
+    finalCache[exam] = (embeddedBank.finalExams[exam] ?? []).filter((question) => {
       const tags = new Set(question.tags ?? []);
       return question.status === "verified"
         && tags.has("telegram-final")
@@ -246,6 +246,9 @@ function isPracticalDerived(question: MCQQuestion): boolean {
 }
 
 export function matchesExam(question: MCQQuestion, exam: ExamId): boolean {
+  const isHistologyPractical = (question.tags ?? []).includes("histo-practical");
+  if (isHistologyPractical) return exam === "aug22";
+  if (exam === "aug22") return false;
   if (exam === "july25") {
     if (["histology", "embryology"].includes(question.subject) && isPracticalDerived(question)) return true;
     if (question.subject === "histology") return JULY_25_HISTOLOGY_TOPICS.has(question.topic);
@@ -303,7 +306,8 @@ export function bankSummary() {
 
   const exams = ([
     { id: "july25" as const, date: "2026-07-25", title: "Tissue Development & Function" },
-    { id: "july29" as const, date: "2026-07-29", title: "Cell & Molecules" },
+    { id: "aug22" as const, date: "2026-08-22", title: "Histology Practical" },
+    { id: "july29" as const, date: "2026-08-25", title: "Cell & Molecules" },
   ]).map((exam) => {
     const questions = verified.filter((question) => matchesExam(question, exam.id));
     return {
