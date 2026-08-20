@@ -11,6 +11,8 @@
     "bridge": "node scripts/codex-bridge.mjs",
     "bank:validate": "node scripts/validate-bank.mjs",
     "lessons:validate": "node scripts/validate-lessons.mjs",
+    "practicals:generate": "node scripts/generate-histology-practicals.mjs && node scripts/generate-histology-practical-lessons.mjs && node scripts/generate-full-histology-practicals.mjs && node scripts/generate-full-histology-practical-lessons.mjs",
+    "practicals:extract-full": "python3 scripts/extract-full-histology-practical-images.py",
     "build": "node scripts/build-embedded-bank.mjs && WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
     "vercel-build": "node scripts/build-embedded-bank.mjs && next build",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",

@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-08-18",
+  "lastUpdated": "2026-08-20",
   "timezone": "Asia/Tehran",
   "exam": "july25",
   "collection": "histo-practical",
-  "specimenCount": 15,
-  "questionCount": 45,
-  "lessonCount": 15,
+  "specimenCount": 55,
+  "questionCount": 165,
+  "lessonCount": 55,
   "specimens": [
     "trachea",
     "urinary bladder",
@@ -22,7 +22,47 @@
     "thyroid gland",
     "skeletal muscle",
     "cardiac muscle",
-    "tendon"
+    "tendon",
+    "simple squamous epithelium",
+    "simple columnar epithelium",
+    "nonkeratinized stratified squamous epithelium",
+    "stratified cuboidal epithelium",
+    "loose connective tissue",
+    "dense irregular connective tissue",
+    "spongy bone",
+    "erythrocytes and platelets",
+    "neutrophil",
+    "eosinophil",
+    "lymphocyte",
+    "monocyte",
+    "basophil",
+    "muscle spindle",
+    "sympathetic ganglion",
+    "parotid gland",
+    "submandibular gland",
+    "sublingual gland",
+    "lip",
+    "tongue papillae and taste buds",
+    "lingual tonsil",
+    "esophagus",
+    "fundic stomach",
+    "duodenum",
+    "ileum",
+    "colon",
+    "appendix",
+    "adrenal gland",
+    "pituitary gland",
+    "kidney cortex",
+    "kidney medulla",
+    "juxtaglomerular apparatus",
+    "muscular artery and vein",
+    "lymph node",
+    "thymus",
+    "spleen",
+    "endochondral ossification",
+    "circumvallate papilla",
+    "large vein",
+    "palatine tonsil"
   ],
   "localSources": [
     {
@@ -39,6 +79,14 @@
       "title": "Cell Counting 1",
       "kind": "supplied deck",
       "use": "Inspected and excluded from specimen content because it covers hemocytometer cell counts rather than the requested tissues"
+    },
+    {
+      "title": "PRACTICAL",
+      "kind": "supplied full practical deck",
+      "slideCount": 113,
+      "sizeBytes": 23282498,
+      "sha256": "b3dbb3a86ad9c19c36bbdea59d10aa1142bbcb4c65fc90a6c4155e9fca1a4341",
+      "use": "Inspected in full; microscope figures and captions supplied the 40 non-duplicate expansion specimens. Deck text was treated as source content, not user instruction."
     }
   ],
   "externalSources": [
@@ -56,7 +104,10 @@
   ],
   "generators": [
     "scripts/extract-histology-practical-images.py",
+    "scripts/extract-full-histology-practical-images.py",
     "scripts/generate-histology-practicals.mjs",
-    "scripts/generate-histology-practical-lessons.mjs"
+    "scripts/generate-histology-practical-lessons.mjs",
+    "scripts/generate-full-histology-practicals.mjs",
+    "scripts/generate-full-histology-practical-lessons.mjs"
   ]
 }

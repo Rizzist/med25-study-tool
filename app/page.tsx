@@ -717,7 +717,7 @@ export default function Home() {
     { id: "physiology", title: "Guyton Chapters 1–8", scope: "Confirmed July 25 physiology", detail: "Homeostasis, cell physiology, transport, potentials, skeletal and smooth muscle, NMJ and synapses", count: examCount("physiology") },
     { id: "stains", title: "Stains", scope: "Dedicated recall", detail: "Target, color, preparation and exclusions", count: examCount("stains") },
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Histology fields and embryo diagrams", count: examCount("images") },
-    { id: "histo-practical", title: "15-slide practical bank", scope: "45 microscope questions", detail: "Trachea, bladder, support tissues, nerve, skin, fat, thyroid, muscle and tendon", count: examCount("histo-practical") },
+    { id: "histo-practical", title: "55-specimen practical bank", scope: `${examCount("histo-practical")} microscope questions`, detail: "Full deck: epithelium, connective tissue, blood, muscle, nerve, digestive, endocrine, urinary, vessels and lymphoid organs", count: examCount("histo-practical") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Methods, stains, slides and recognition questions kept in the exam bank", count: examCount("practical") },
   ] : [
     { id: "biochemistry", title: "Biochemistry", scope: "Lippincott 1–7, 14–18, 23–33", detail: "Molecules, enzymes, integrated metabolism, genetics, nutrition and laboratory reasoning", count: examCount("biochemistry") },
@@ -742,7 +742,7 @@ export default function Home() {
     ["HISTOLOGY", examCount("histology"), "Junqueira + lectures"],
     ["EMBRYOLOGY", examCount("embryology"), "General + images"],
     ["GUYTON 1–8", examCount("physiology"), "Complete chapter set"],
-    ["HISTO PRACTICALS", examCount("histo-practical"), "15 microscope slides"],
+    ["HISTO PRACTICALS", examCount("histo-practical"), "55 microscope specimens"],
     ["VISUAL LESSONS", lessonsForExam(exam).length, "Core reference guide"],
     ["WRONG", savedCount("wrong"), "Saved for repair"],
     ["FLAGGED", savedCount("flagged"), "Manual review list"],
@@ -783,11 +783,11 @@ export default function Home() {
           {tab === "Topics" && <><p className="eyebrow">{selectedConfig.date} collections</p><h1>Choose a focused collection.</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p><div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div><div className="topic-grid">{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>{sessionError && <p className="session-error">{sessionError}</p>}</>}
 
           {tab === "Practical Atlas" && exam === "july25" && <div className="practical-atlas-shell">
-            <div className="practical-atlas-head"><div><span>HISTOLOGY PRACTICALS · 15 SPECIMENS</span><b>Orient first. Identify the cells. Name the discriminator.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all 45 →</button></div>
+            <div className="practical-atlas-head"><div><span>HISTOLOGY PRACTICALS · 55 SPECIMENS</span><b>Orient first. Identify the cells. Name the discriminator.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all {examCount("histo-practical")} →</button></div>
             <LessonGuide exam="july25" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
           </div>}
 
-          {tab === "Practical Atlas" && exam === "july29" && <div className="practical-atlas-empty"><span className="eyebrow">July 25 practical</span><h1>This atlas belongs to Tissue Development &amp; Function.</h1><p>Switch to July 25 above to study and test the 15 microscope specimens.</p></div>}
+          {tab === "Practical Atlas" && exam === "july29" && <div className="practical-atlas-empty"><span className="eyebrow">July 25 practical</span><h1>This atlas belongs to Tissue Development &amp; Function.</h1><p>Switch to July 25 above to study and test the 55 microscope specimens.</p></div>}
 
           {tab === "Visual Guide" && <LessonGuide key={exam} exam={exam} lessons={allLessons} />}
 

@@ -84,6 +84,6 @@ Practical-derived questions intentionally overlap the mixed, image and stain col
 
 Current filtered totals:
 
-- **July 25:** 713 questions - 331 Histology, 258 Embryology and 124 Physiology, including 71 image MCQs and 120 Practical + spotters drills.
+- **July 25:** 878 questions - 496 Histology, 258 Embryology and 124 Physiology, including 236 image MCQs, 165 dedicated Histology Practical questions, and 285 Practical + spotters drills.
 - **July 29:** 744 questions - 570 Biochemistry, 120 cellular/introductory Histology and 54 membrane Physiology questions, including 34 image MCQs and 135 Practical + spotters drills.
-- **Master bank:** 1,672 verified study questions plus 367 sourced final-exam items. Out-of-scope material remains preserved and is filtered rather than deleted.
+- **Master bank:** 1,837 verified study questions plus 367 sourced final-exam items. Out-of-scope material remains preserved and is filtered rather than deleted.

@@ -1,6 +1,6 @@
 # Teacher-material collection
 
-Last updated: 2026-08-18 (Asia/Tehran)
+Last updated: 2026-08-20 (Asia/Tehran)
 
 This directory is the provenance boundary for the teacher uploads used to define exam scope. Telegram was accessed in strict read-only mode: files and visible course context were inspected, but no messages, reactions, uploads, group settings, memberships, or unrelated chats were touched.
 
@@ -24,7 +24,7 @@ This directory is the provenance boundary for the teacher uploads used to define
 - `biochemistry-scope.*` — initial foundations, water/buffers, and vitamins audit
 - `biochemistry-telegram-scope.*` — lipids, proteins, enzymes, molecular biology, and practical labs
 - `respiratory-histology-video-scope.md` — timestamped trachea/lung practical frames
-- `histology-practicals-scope.*` — fixed 15-slide practical list, local-book provenance, web cross-checks, and reproducible image/question generators
+- `histology-practicals-scope.*` — complete 55-specimen practical list, full-deck cross-reference, local-book provenance, web checks, and reproducible image/question generators
 
 ## Source policy
 

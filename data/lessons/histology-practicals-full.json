@@ -1,0 +1,2605 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "id": "hpr-simple-squamous",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Epithelium",
+      "title": "Simple squamous epithelium",
+      "subtitle": "A single layer of flattened cells with flattened central nuclei",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Epithelium",
+        "Simple squamous epithelium"
+      ],
+      "questionPatterns": [
+        "simple squamous",
+        "simple squamous epithelium",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A surface view shows one sheet of very thin polygonal cells with sharp borders and one central nucleus per cell.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "The minimal diffusion barrier is one attenuated cell layer; in surface view the cells appear polygonal and their nuclei bulge slightly.",
+            "cue": "Commit to: A single layer of flattened cells with flattened central nuclei."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Mesothelial and endothelial cells are specialized simple squamous cells; type I pneumocytes also share this attenuated profile.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Count layers before judging shape: simple squamous has one layer, whereas stratified squamous has many.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A surface view shows one sheet of very thin polygonal cells with sharp borders and one central nucleus per cell.",
+        "The minimal diffusion barrier is one attenuated cell layer; in surface view the cells appear polygonal and their nuclei bulge slightly.",
+        "Mesothelial and endothelial cells are specialized simple squamous cells; type I pneumocytes also share this attenuated profile.",
+        "Count layers before judging shape: simple squamous has one layer, whereas stratified squamous has many."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling it stratified because cell borders overlap visually",
+          "right": "Trace nuclei to the basement membrane: every cell belongs to one continuous layer."
+        }
+      ],
+      "recognition": [
+        "A single layer of flattened cells with flattened central nuclei",
+        "Count layers before judging shape: simple squamous has one layer, whereas stratified squamous has many."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 5; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/simple-squamous.jpg"
+    },
+    {
+      "id": "hpr-simple-columnar",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Epithelium",
+      "title": "Simple columnar epithelium",
+      "subtitle": "One layer of tall cells with aligned basal oval nuclei",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Epithelium",
+        "Simple columnar epithelium"
+      ],
+      "questionPatterns": [
+        "simple columnar",
+        "simple columnar epithelium",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The luminal surface and pits are lined by one layer of tall cells whose oval nuclei occupy the basal half.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "All cells contact the basement membrane and lumen, producing a single orderly row of tall profiles and basal nuclei.",
+            "cue": "Commit to: One layer of tall cells with aligned basal oval nuclei."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Columnar absorptive or secretory cells may bear microvilli; goblet cells can be interspersed depending on organ.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "An orderly single nuclear row favors simple columnar over pseudostratified columnar epithelium.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The luminal surface and pits are lined by one layer of tall cells whose oval nuclei occupy the basal half.",
+        "All cells contact the basement membrane and lumen, producing a single orderly row of tall profiles and basal nuclei.",
+        "Columnar absorptive or secretory cells may bear microvilli; goblet cells can be interspersed depending on organ.",
+        "An orderly single nuclear row favors simple columnar over pseudostratified columnar epithelium."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling gastric pits glands only",
+          "right": "First identify the continuous surface lining, then follow it into pits and glands."
+        }
+      ],
+      "recognition": [
+        "One layer of tall cells with aligned basal oval nuclei",
+        "An orderly single nuclear row favors simple columnar over pseudostratified columnar epithelium."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 11; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/simple-columnar.jpg"
+    },
+    {
+      "id": "hpr-stratified-squamous-nonkeratinized",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Epithelium",
+      "title": "Nonkeratinized stratified squamous epithelium",
+      "subtitle": "Flattened nucleated surface cells over many deeper layers",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Epithelium",
+        "Nonkeratinized stratified squamous epithelium"
+      ],
+      "questionPatterns": [
+        "stratified squamous nonkeratinized",
+        "nonkeratinized stratified squamous epithelium",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A thick multilayered lining has flattened surface cells that retain nuclei and lacks an anuclear cornified layer.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "The basal cells are cuboidal, intermediate cells become polygonal, and superficial squames remain alive and nucleated.",
+            "cue": "Commit to: Flattened nucleated surface cells over many deeper layers."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Basal keratinocytes divide; surface squames remain nucleated because this moist lining does not form a stratum corneum.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Nuclei persist to the luminal surface, unlike keratinized skin.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A thick multilayered lining has flattened surface cells that retain nuclei and lacks an anuclear cornified layer.",
+        "The basal cells are cuboidal, intermediate cells become polygonal, and superficial squames remain alive and nucleated.",
+        "Basal keratinocytes divide; surface squames remain nucleated because this moist lining does not form a stratum corneum.",
+        "Nuclei persist to the luminal surface, unlike keratinized skin."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every stratified squamous lining skin",
+          "right": "Check the surface: retained nuclei and absent corneum indicate a moist nonkeratinized lining."
+        }
+      ],
+      "recognition": [
+        "Flattened nucleated surface cells over many deeper layers",
+        "Nuclei persist to the luminal surface, unlike keratinized skin."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 15; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/stratified-squamous-nonkeratinized.jpg"
+    },
+    {
+      "id": "hpr-stratified-cuboidal",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Epithelium",
+      "title": "Stratified cuboidal epithelium",
+      "subtitle": "Two cuboidal cell layers surrounding a duct lumen",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Epithelium",
+        "Stratified cuboidal epithelium"
+      ],
+      "questionPatterns": [
+        "stratified cuboidal",
+        "stratified cuboidal epithelium",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A relatively large glandular duct is lined by two layers of roughly cuboidal cells around a clear lumen.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Stratified cuboidal epithelium most often appears as a protective two-layered lining in larger excretory ducts.",
+            "cue": "Commit to: Two cuboidal cell layers surrounding a duct lumen."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "The luminal and basal cells are cuboidal; unlike small intralobular ducts, the wall contains more than one epithelial layer.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A true bilayer around a gland duct separates it from simple cuboidal duct epithelium.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A relatively large glandular duct is lined by two layers of roughly cuboidal cells around a clear lumen.",
+        "Stratified cuboidal epithelium most often appears as a protective two-layered lining in larger excretory ducts.",
+        "The luminal and basal cells are cuboidal; unlike small intralobular ducts, the wall contains more than one epithelial layer.",
+        "A true bilayer around a gland duct separates it from simple cuboidal duct epithelium."
+      ],
+      "traps": [
+        {
+          "wrong": "Counting tangentially cut nuclei as extra layers",
+          "right": "Confirm two continuous cell rows around the entire lumen."
+        }
+      ],
+      "recognition": [
+        "Two cuboidal cell layers surrounding a duct lumen",
+        "A true bilayer around a gland duct separates it from simple cuboidal duct epithelium."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 18; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/stratified-cuboidal.jpg"
+    },
+    {
+      "id": "hpr-loose-connective-tissue",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Connective tissue",
+      "title": "Loose connective tissue",
+      "subtitle": "Abundant ground substance with loosely spaced fibers and many cells",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Connective tissue",
+        "Loose connective tissue"
+      ],
+      "questionPatterns": [
+        "loose connective tissue",
+        "loose connective tissue",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The field has abundant pale ground substance, loosely arranged collagen and elastic fibers, small vessels, and several cell types.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Loose connective tissue maximizes diffusion and cell movement by combining abundant ground substance with a delicate fiber network.",
+            "cue": "Commit to: Abundant ground substance with loosely spaced fibers and many cells."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Fibroblasts predominate, with macrophages, mast cells, leukocytes, and adipocytes variably present.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "More open space, cells, and vessels and less collagen density separate loose from dense connective tissue.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The field has abundant pale ground substance, loosely arranged collagen and elastic fibers, small vessels, and several cell types.",
+        "Loose connective tissue maximizes diffusion and cell movement by combining abundant ground substance with a delicate fiber network.",
+        "Fibroblasts predominate, with macrophages, mast cells, leukocytes, and adipocytes variably present.",
+        "More open space, cells, and vessels and less collagen density separate loose from dense connective tissue."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling any pink collagen connective tissue dense",
+          "right": "Judge the collagen-to-ground-substance ratio and spacing, not color alone."
+        }
+      ],
+      "recognition": [
+        "Abundant ground substance with loosely spaced fibers and many cells",
+        "More open space, cells, and vessels and less collagen density separate loose from dense connective tissue."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 20; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/loose-connective-tissue.jpg"
+    },
+    {
+      "id": "hpr-dense-irregular-connective-tissue",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Connective tissue",
+      "title": "Dense irregular connective tissue",
+      "subtitle": "Thick type I collagen bundles oriented in many directions",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Connective tissue",
+        "Dense irregular connective tissue"
+      ],
+      "questionPatterns": [
+        "dense irregular connective tissue",
+        "dense irregular connective tissue",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Thick eosinophilic collagen bundles interweave in multiple directions with scattered flattened fibroblast nuclei.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Interwoven type I collagen resists tension from several directions, as in the reticular dermis and organ capsules.",
+            "cue": "Commit to: Thick type I collagen bundles oriented in many directions."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Fibroblasts are sparse relative to matrix and appear as elongated dark nuclei between collagen bundles.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Multidirectional bundles distinguish it from the parallel collagen of tendon.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Thick eosinophilic collagen bundles interweave in multiple directions with scattered flattened fibroblast nuclei.",
+        "Interwoven type I collagen resists tension from several directions, as in the reticular dermis and organ capsules.",
+        "Fibroblasts are sparse relative to matrix and appear as elongated dark nuclei between collagen bundles.",
+        "Multidirectional bundles distinguish it from the parallel collagen of tendon."
+      ],
+      "traps": [
+        {
+          "wrong": "Mistaking elongated fibroblast nuclei for smooth-muscle nuclei",
+          "right": "Follow the extracellular wavy collagen bundles and note the low cellularity."
+        }
+      ],
+      "recognition": [
+        "Thick type I collagen bundles oriented in many directions",
+        "Multidirectional bundles distinguish it from the parallel collagen of tendon."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 22; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/dense-irregular-connective-tissue.jpg"
+    },
+    {
+      "id": "hpr-spongy-bone",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Bone",
+      "title": "Spongy bone",
+      "subtitle": "Branching trabeculae separated by marrow spaces",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Bone",
+        "Spongy bone"
+      ],
+      "questionPatterns": [
+        "spongy bone",
+        "spongy bone",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Branching eosinophilic bony plates form a lattice around marrow spaces and lack complete cylindrical osteons.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Cancellous bone consists of lamellar trabeculae whose surfaces contact marrow; most trabeculae are thin enough to be nourished without central canals.",
+            "cue": "Commit to: Branching trabeculae separated by marrow spaces."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Osteocytes occupy lacunae within trabeculae; endosteal osteoblasts or osteoclasts may line their surfaces.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A marrow-filled lattice rather than packed osteons identifies spongy bone.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Branching eosinophilic bony plates form a lattice around marrow spaces and lack complete cylindrical osteons.",
+        "Cancellous bone consists of lamellar trabeculae whose surfaces contact marrow; most trabeculae are thin enough to be nourished without central canals.",
+        "Osteocytes occupy lacunae within trabeculae; endosteal osteoblasts or osteoclasts may line their surfaces.",
+        "A marrow-filled lattice rather than packed osteons identifies spongy bone."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every marrow space a Haversian canal",
+          "right": "Haversian canals sit inside osteons; marrow spaces lie between branching trabeculae."
+        }
+      ],
+      "recognition": [
+        "Branching trabeculae separated by marrow spaces",
+        "A marrow-filled lattice rather than packed osteons identifies spongy bone."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 34; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/spongy-bone.jpg"
+    },
+    {
+      "id": "hpr-erythrocytes-platelets",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Erythrocytes and platelets",
+      "subtitle": "Anucleate pink discs with central pallor plus tiny purple fragments",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Blood",
+        "Erythrocytes and platelets"
+      ],
+      "questionPatterns": [
+        "erythrocytes platelets",
+        "erythrocytes and platelets",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The smear is dominated by uniform pink biconcave discs with central pallor and scattered tiny purple cell fragments.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Mature erythrocytes are anucleate biconcave discs; platelets are much smaller anucleate cytoplasmic fragments.",
+            "cue": "Commit to: Anucleate pink discs with central pallor plus tiny purple fragments."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Erythrocytes transport gases using hemoglobin; platelets derive from megakaryocytes and support primary hemostasis.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Platelets are far smaller and more purple than erythrocytes and lack a true nucleus.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The smear is dominated by uniform pink biconcave discs with central pallor and scattered tiny purple cell fragments.",
+        "Mature erythrocytes are anucleate biconcave discs; platelets are much smaller anucleate cytoplasmic fragments.",
+        "Erythrocytes transport gases using hemoglobin; platelets derive from megakaryocytes and support primary hemostasis.",
+        "Platelets are far smaller and more purple than erythrocytes and lack a true nucleus."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling platelets nuclear debris",
+          "right": "Platelets are organized megakaryocyte-derived fragments with granules and a functional membrane system."
+        }
+      ],
+      "recognition": [
+        "Anucleate pink discs with central pallor plus tiny purple fragments",
+        "Platelets are far smaller and more purple than erythrocytes and lack a true nucleus."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 38; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/erythrocytes-platelets.jpg"
+    },
+    {
+      "id": "hpr-neutrophil",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Neutrophil",
+      "subtitle": "A segmented three-to-five-lobed nucleus",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Blood",
+        "Neutrophil"
+      ],
+      "questionPatterns": [
+        "neutrophil",
+        "neutrophil",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A leukocyte has three to five nuclear lobes joined by thin strands and pale, fine cytoplasmic granules.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "The mature neutrophil's segmented nucleus and inconspicuous neutral granules make it the common polymorphonuclear leukocyte.",
+            "cue": "Commit to: A segmented three-to-five-lobed nucleus."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Neutrophils are short-lived phagocytes recruited early in acute bacterial inflammation.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Segmented nucleus plus fine pale granules separates neutrophils from other leukocytes.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A leukocyte has three to five nuclear lobes joined by thin strands and pale, fine cytoplasmic granules.",
+        "The mature neutrophil's segmented nucleus and inconspicuous neutral granules make it the common polymorphonuclear leukocyte.",
+        "Neutrophils are short-lived phagocytes recruited early in acute bacterial inflammation.",
+        "Segmented nucleus plus fine pale granules separates neutrophils from other leukocytes."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling a band neutrophil a monocyte",
+          "right": "A band cell has a uniform horseshoe nucleus; monocyte chromatin is looser and cytoplasm more abundant."
+        }
+      ],
+      "recognition": [
+        "A segmented three-to-five-lobed nucleus",
+        "Segmented nucleus plus fine pale granules separates neutrophils from other leukocytes."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 39; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/neutrophil.jpg"
+    },
+    {
+      "id": "hpr-eosinophil",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Eosinophil",
+      "subtitle": "Bilobed nucleus with coarse eosinophilic granules",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Blood",
+        "Eosinophil"
+      ],
+      "questionPatterns": [
+        "eosinophil",
+        "eosinophil",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A granulocyte has a bilobed nucleus and many coarse, intensely red-orange cytoplasmic granules.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Large eosin-staining specific granules and a usually bilobed nucleus are the decisive smear features.",
+            "cue": "Commit to: Bilobed nucleus with coarse eosinophilic granules."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Eosinophils participate in helminth defense and modulate allergic inflammation; their granules include major basic protein.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Granule color and bilobed nuclear shape distinguish eosinophils from neutrophils and basophils.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A granulocyte has a bilobed nucleus and many coarse, intensely red-orange cytoplasmic granules.",
+        "Large eosin-staining specific granules and a usually bilobed nucleus are the decisive smear features.",
+        "Eosinophils participate in helminth defense and modulate allergic inflammation; their granules include major basic protein.",
+        "Granule color and bilobed nuclear shape distinguish eosinophils from neutrophils and basophils."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling orange granules erythrocytes overlying a leukocyte",
+          "right": "Confirm many granules contained within one bilobed nucleated cell."
+        }
+      ],
+      "recognition": [
+        "Bilobed nucleus with coarse eosinophilic granules",
+        "Granule color and bilobed nuclear shape distinguish eosinophils from neutrophils and basophils."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 40; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/eosinophil.jpg"
+    },
+    {
+      "id": "hpr-lymphocyte",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Lymphocyte",
+      "subtitle": "Dense round nucleus occupying most of the cell",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Blood",
+        "Lymphocyte"
+      ],
+      "questionPatterns": [
+        "lymphocyte",
+        "lymphocyte",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A small leukocyte is mostly a dense round nucleus surrounded by only a narrow rim of basophilic cytoplasm.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "The high nucleus-to-cytoplasm ratio is typical of a small circulating lymphocyte.",
+            "cue": "Commit to: Dense round nucleus occupying most of the cell."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Routine smears cannot reliably separate B, T, and NK lymphocytes by morphology alone.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A round, very dense nucleus and scant cytoplasm separate a small lymphocyte from a larger monocyte.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A small leukocyte is mostly a dense round nucleus surrounded by only a narrow rim of basophilic cytoplasm.",
+        "The high nucleus-to-cytoplasm ratio is typical of a small circulating lymphocyte.",
+        "Routine smears cannot reliably separate B, T, and NK lymphocytes by morphology alone.",
+        "A round, very dense nucleus and scant cytoplasm separate a small lymphocyte from a larger monocyte."
+      ],
+      "traps": [
+        {
+          "wrong": "Assigning B versus T lineage from H&E appearance",
+          "right": "Lineage requires immunophenotyping; routine smear morphology is insufficient."
+        }
+      ],
+      "recognition": [
+        "Dense round nucleus occupying most of the cell",
+        "A round, very dense nucleus and scant cytoplasm separate a small lymphocyte from a larger monocyte."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 41; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/lymphocyte.jpg"
+    },
+    {
+      "id": "hpr-monocyte",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Monocyte",
+      "subtitle": "A folded or kidney-shaped nucleus with abundant gray cytoplasm",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Blood",
+        "Monocyte"
+      ],
+      "questionPatterns": [
+        "monocyte",
+        "monocyte",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The largest circulating leukocyte in the field has a folded kidney-shaped nucleus and abundant pale gray-blue cytoplasm.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Monocytes are large, with indented nuclei, delicate chromatin, and abundant ground-glass cytoplasm that may contain vacuoles.",
+            "cue": "Commit to: A folded or kidney-shaped nucleus with abundant gray cytoplasm."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "After entering tissues, monocytes can differentiate into macrophages or related mononuclear phagocytes.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Size, abundant gray cytoplasm, and a folded nucleus distinguish monocytes from lymphocytes.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The largest circulating leukocyte in the field has a folded kidney-shaped nucleus and abundant pale gray-blue cytoplasm.",
+        "Monocytes are large, with indented nuclei, delicate chromatin, and abundant ground-glass cytoplasm that may contain vacuoles.",
+        "After entering tissues, monocytes can differentiate into macrophages or related mononuclear phagocytes.",
+        "Size, abundant gray cytoplasm, and a folded nucleus distinguish monocytes from lymphocytes."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling any horseshoe nucleus a band neutrophil",
+          "right": "Monocytes have looser chromatin, more cytoplasm, and a less uniform nuclear indentation."
+        }
+      ],
+      "recognition": [
+        "A folded or kidney-shaped nucleus with abundant gray cytoplasm",
+        "Size, abundant gray cytoplasm, and a folded nucleus distinguish monocytes from lymphocytes."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 42; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/monocyte.jpg"
+    },
+    {
+      "id": "hpr-basophil",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Blood",
+      "title": "Basophil",
+      "subtitle": "Coarse dark basophilic granules obscuring the nucleus",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Blood",
+        "Basophil"
+      ],
+      "questionPatterns": [
+        "basophil",
+        "basophil",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A rare leukocyte is packed with coarse blue-purple granules that partly obscure its lobed nucleus.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Metachromatic basophil granules contain histamine and heparin and can hide the usually bilobed or S-shaped nucleus.",
+            "cue": "Commit to: Coarse dark basophilic granules obscuring the nucleus."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Basophils express high-affinity IgE receptors and participate in immediate hypersensitivity reactions.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Very dark coarse granules distinguish basophils from every other circulating leukocyte.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A rare leukocyte is packed with coarse blue-purple granules that partly obscure its lobed nucleus.",
+        "Metachromatic basophil granules contain histamine and heparin and can hide the usually bilobed or S-shaped nucleus.",
+        "Basophils express high-affinity IgE receptors and participate in immediate hypersensitivity reactions.",
+        "Very dark coarse granules distinguish basophils from every other circulating leukocyte."
+      ],
+      "traps": [
+        {
+          "wrong": "Equating basophils with tissue mast cells",
+          "right": "They share mediators and IgE receptors but are distinct cell populations in blood and tissue."
+        }
+      ],
+      "recognition": [
+        "Coarse dark basophilic granules obscuring the nucleus",
+        "Very dark coarse granules distinguish basophils from every other circulating leukocyte."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 43; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/basophil.jpg"
+    },
+    {
+      "id": "hpr-muscle-spindle",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Muscle tissue",
+      "title": "Muscle spindle",
+      "subtitle": "Encapsulated intrafusal fibers within skeletal muscle",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Muscle tissue",
+        "Muscle spindle"
+      ],
+      "questionPatterns": [
+        "muscle spindle",
+        "muscle spindle",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Within ordinary skeletal muscle fascicles, an oval connective-tissue capsule encloses several small specialized muscle fibers and sensory nerve profiles.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "A muscle spindle is a fusiform capsule containing intrafusal fibers, positioned parallel to surrounding extrafusal fibers.",
+            "cue": "Commit to: Encapsulated intrafusal fibers within skeletal muscle."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Nuclear-bag and nuclear-chain intrafusal fibers receive sensory endings and gamma motor innervation.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Intrafusal muscle fibers inside a capsule distinguish the spindle from a nerve fascicle.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Within ordinary skeletal muscle fascicles, an oval connective-tissue capsule encloses several small specialized muscle fibers and sensory nerve profiles.",
+        "A muscle spindle is a fusiform capsule containing intrafusal fibers, positioned parallel to surrounding extrafusal fibers.",
+        "Nuclear-bag and nuclear-chain intrafusal fibers receive sensory endings and gamma motor innervation.",
+        "Intrafusal muscle fibers inside a capsule distinguish the spindle from a nerve fascicle."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the capsule perineurium",
+          "right": "Look inside: muscle fibers with nuclei identify a spindle, whereas axon profiles identify nerve."
+        }
+      ],
+      "recognition": [
+        "Encapsulated intrafusal fibers within skeletal muscle",
+        "Intrafusal muscle fibers inside a capsule distinguish the spindle from a nerve fascicle."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 48; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/muscle-spindle.jpg"
+    },
+    {
+      "id": "hpr-sympathetic-ganglion",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Nervous system",
+      "title": "Sympathetic ganglion",
+      "subtitle": "Scattered multipolar neurons with eccentric nuclei and incomplete satellite cuffs",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Nervous system",
+        "Sympathetic ganglion"
+      ],
+      "questionPatterns": [
+        "sympathetic ganglion",
+        "sympathetic ganglion",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Large multipolar neuronal somata are scattered among nerve fibers; nuclei are often eccentric and satellite cells form incomplete cuffs.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Autonomic ganglia contain multipolar neurons with irregular outlines, eccentric nuclei, synapses, and less orderly satellite-cell sheaths.",
+            "cue": "Commit to: Scattered multipolar neurons with eccentric nuclei and incomplete satellite cuffs."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "The principal neurons are postganglionic sympathetic neurons; preganglionic fibers synapse on their somata and dendrites.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Eccentric nuclei and incomplete satellite cuffs distinguish autonomic from dorsal root ganglion.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Large multipolar neuronal somata are scattered among nerve fibers; nuclei are often eccentric and satellite cells form incomplete cuffs.",
+        "Autonomic ganglia contain multipolar neurons with irregular outlines, eccentric nuclei, synapses, and less orderly satellite-cell sheaths.",
+        "The principal neurons are postganglionic sympathetic neurons; preganglionic fibers synapse on their somata and dendrites.",
+        "Eccentric nuclei and incomplete satellite cuffs distinguish autonomic from dorsal root ganglion."
+      ],
+      "traps": [
+        {
+          "wrong": "Using neuron size alone",
+          "right": "Both ganglia contain large neurons; use nuclear position, soma shape, and satellite-cell organization."
+        }
+      ],
+      "recognition": [
+        "Scattered multipolar neurons with eccentric nuclei and incomplete satellite cuffs",
+        "Eccentric nuclei and incomplete satellite cuffs distinguish autonomic from dorsal root ganglion."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 59; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/sympathetic-ganglion.jpg"
+    },
+    {
+      "id": "hpr-parotid",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Parotid gland",
+      "subtitle": "Nearly all-serous acini with conspicuous striated ducts",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Parotid gland"
+      ],
+      "questionPatterns": [
+        "parotid",
+        "parotid gland",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A lobulated salivary gland is composed almost entirely of dark serous acini, with intercalated and striated ducts and no obvious mucous tubules.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Parotid is a purely serous major salivary gland; intralobular ducts are well developed and adipocytes may increase with age.",
+            "cue": "Commit to: Nearly all-serous acini with conspicuous striated ducts."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Serous acinar cells are pyramidal, basophilic basally, and contain apical protein-rich secretory granules.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Striated ducts plus exclusively serous units separate parotid from pancreas and other major salivary glands.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A lobulated salivary gland is composed almost entirely of dark serous acini, with intercalated and striated ducts and no obvious mucous tubules.",
+        "Parotid is a purely serous major salivary gland; intralobular ducts are well developed and adipocytes may increase with age.",
+        "Serous acinar cells are pyramidal, basophilic basally, and contain apical protein-rich secretory granules.",
+        "Striated ducts plus exclusively serous units separate parotid from pancreas and other major salivary glands."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling it pancreas because both have serous acini",
+          "right": "Search for striated ducts and the absence of islets and centroacinar cells."
+        }
+      ],
+      "recognition": [
+        "Nearly all-serous acini with conspicuous striated ducts",
+        "Striated ducts plus exclusively serous units separate parotid from pancreas and other major salivary glands."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 62; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/parotid.jpg"
+    },
+    {
+      "id": "hpr-submandibular",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Submandibular gland",
+      "subtitle": "A mixed gland dominated by serous acini",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Submandibular gland"
+      ],
+      "questionPatterns": [
+        "submandibular",
+        "submandibular gland",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A mixed salivary gland contains mostly dark serous acini plus scattered pale mucous tubules, some capped by serous demilunes.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Submandibular gland is mixed but serous-predominant and has conspicuous striated ducts.",
+            "cue": "Commit to: A mixed gland dominated by serous acini."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Mucous cells appear pale with flattened basal nuclei; serous cells are darker with round nuclei and apical granules.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "The serous-predominant mixed pattern lies between all-serous parotid and mucous-predominant sublingual.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A mixed salivary gland contains mostly dark serous acini plus scattered pale mucous tubules, some capped by serous demilunes.",
+        "Submandibular gland is mixed but serous-predominant and has conspicuous striated ducts.",
+        "Mucous cells appear pale with flattened basal nuclei; serous cells are darker with round nuclei and apical granules.",
+        "The serous-predominant mixed pattern lies between all-serous parotid and mucous-predominant sublingual."
+      ],
+      "traps": [
+        {
+          "wrong": "Treating serous demilunes as the only evidence of a mixed gland",
+          "right": "Evaluate the overall proportion of mucous and serous secretory units across the lobule."
+        }
+      ],
+      "recognition": [
+        "A mixed gland dominated by serous acini",
+        "The serous-predominant mixed pattern lies between all-serous parotid and mucous-predominant sublingual."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 63; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/submandibular.jpg"
+    },
+    {
+      "id": "hpr-sublingual",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Sublingual gland",
+      "subtitle": "Predominantly pale mucous secretory units",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Sublingual gland"
+      ],
+      "questionPatterns": [
+        "sublingual",
+        "sublingual gland",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Most secretory units are pale mucous tubules with flattened basal nuclei; small dark serous demilunes are scattered at their edges.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Sublingual is the most mucous of the major salivary glands and has less-developed striated ducts.",
+            "cue": "Commit to: Predominantly pale mucous secretory units."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Mucous cells contain pale mucinogen, have indistinct borders, and show compressed basal nuclei.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A mucous-predominant mixed pattern separates sublingual from the darker submandibular and parotid glands.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Most secretory units are pale mucous tubules with flattened basal nuclei; small dark serous demilunes are scattered at their edges.",
+        "Sublingual is the most mucous of the major salivary glands and has less-developed striated ducts.",
+        "Mucous cells contain pale mucinogen, have indistinct borders, and show compressed basal nuclei.",
+        "A mucous-predominant mixed pattern separates sublingual from the darker submandibular and parotid glands."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling pale mucous units fat cells",
+          "right": "Mucous cells form organized acini or tubules around tiny lumina and retain basal nuclei."
+        }
+      ],
+      "recognition": [
+        "Predominantly pale mucous secretory units",
+        "A mucous-predominant mixed pattern separates sublingual from the darker submandibular and parotid glands."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 64; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/sublingual.jpg"
+    },
+    {
+      "id": "hpr-lip",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Lip",
+      "subtitle": "Skin and oral mucosa meeting around a skeletal-muscle core",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Lip"
+      ],
+      "questionPatterns": [
+        "lip",
+        "lip",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "One side has hair-bearing skin, the other has moist oral mucosa with minor salivary glands, and skeletal muscle fills the core.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "The lip is a mucocutaneous junction: external skin transitions through vermilion into oral mucosa over orbicularis oris muscle.",
+            "cue": "Commit to: Skin and oral mucosa meeting around a skeletal-muscle core."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Keratinocytes line the skin/vermilion, nonkeratinized squames line the oral surface, and mucous acini lie submucosally.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "The opposing skin and oral surfaces plus a skeletal-muscle core are diagnostic.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "One side has hair-bearing skin, the other has moist oral mucosa with minor salivary glands, and skeletal muscle fills the core.",
+        "The lip is a mucocutaneous junction: external skin transitions through vermilion into oral mucosa over orbicularis oris muscle.",
+        "Keratinocytes line the skin/vermilion, nonkeratinized squames line the oral surface, and mucous acini lie submucosally.",
+        "The opposing skin and oral surfaces plus a skeletal-muscle core are diagnostic."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the vermilion border ordinary thin skin",
+          "right": "The vermilion has tall vascular papillae and lacks typical hair and sweat glands."
+        }
+      ],
+      "recognition": [
+        "Skin and oral mucosa meeting around a skeletal-muscle core",
+        "The opposing skin and oral surfaces plus a skeletal-muscle core are diagnostic."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 65; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/lip.jpg"
+    },
+    {
+      "id": "hpr-tongue-papillae",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Tongue papillae and taste buds",
+      "subtitle": "Filiform and fungiform papillae over skeletal muscle",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Tongue papillae and taste buds"
+      ],
+      "questionPatterns": [
+        "tongue papillae",
+        "tongue papillae and taste buds",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The dorsal mucosa forms pointed keratinized projections and broader mushroom-shaped projections over interlacing skeletal muscle.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Filiform papillae are slender and keratinized; fungiform papillae are broader, less keratinized, and may bear taste buds.",
+            "cue": "Commit to: Filiform and fungiform papillae over skeletal muscle."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Taste buds contain gustatory receptor, supporting, and basal cells and appear as pale ovoid profiles in the epithelium.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Stratified squamous papillae plus a three-directional skeletal-muscle core identify tongue rather than intestine.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The dorsal mucosa forms pointed keratinized projections and broader mushroom-shaped projections over interlacing skeletal muscle.",
+        "Filiform papillae are slender and keratinized; fungiform papillae are broader, less keratinized, and may bear taste buds.",
+        "Taste buds contain gustatory receptor, supporting, and basal cells and appear as pale ovoid profiles in the epithelium.",
+        "Stratified squamous papillae plus a three-directional skeletal-muscle core identify tongue rather than intestine."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling lingual papillae intestinal villi",
+          "right": "Check the lining: tongue uses stratified squamous epithelium, not simple columnar epithelium."
+        }
+      ],
+      "recognition": [
+        "Filiform and fungiform papillae over skeletal muscle",
+        "Stratified squamous papillae plus a three-directional skeletal-muscle core identify tongue rather than intestine."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 67; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/tongue-papillae.jpg"
+    },
+    {
+      "id": "hpr-lingual-tonsil",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Lymphoid organs",
+      "title": "Lingual tonsil",
+      "subtitle": "A single mucosal crypt with lymphoid follicles over tongue muscle",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Lymphoid organs",
+        "Lingual tonsil"
+      ],
+      "questionPatterns": [
+        "lingual tonsil",
+        "lingual tonsil",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Stratified squamous mucosa forms a crypt above lymphoid follicles, with mucous glands and skeletal muscle deep to the lymphoid tissue.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Each lingual tonsil commonly drains into one crypt; adjacent mucous glands and tongue skeletal muscle aid identification.",
+            "cue": "Commit to: A single mucosal crypt with lymphoid follicles over tongue muscle."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Lymphocytes infiltrate the stratified squamous epithelium and organize into follicles with germinal centers.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Mucosal epithelium, a shallow single crypt, glands, and tongue muscle distinguish lingual tonsil from encapsulated lymphoid organs.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Stratified squamous mucosa forms a crypt above lymphoid follicles, with mucous glands and skeletal muscle deep to the lymphoid tissue.",
+        "Each lingual tonsil commonly drains into one crypt; adjacent mucous glands and tongue skeletal muscle aid identification.",
+        "Lymphocytes infiltrate the stratified squamous epithelium and organize into follicles with germinal centers.",
+        "Mucosal epithelium, a shallow single crypt, glands, and tongue muscle distinguish lingual tonsil from encapsulated lymphoid organs."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling any lymphoid follicle a lymph node",
+          "right": "Look for a covering epithelium and crypt: lymph nodes have neither."
+        }
+      ],
+      "recognition": [
+        "A single mucosal crypt with lymphoid follicles over tongue muscle",
+        "Mucosal epithelium, a shallow single crypt, glands, and tongue muscle distinguish lingual tonsil from encapsulated lymphoid organs."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 70; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/lingual-tonsil.jpg"
+    },
+    {
+      "id": "hpr-esophagus",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Esophagus",
+      "subtitle": "Nonkeratinized stratified squamous mucosa with submucosal glands",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Esophagus"
+      ],
+      "questionPatterns": [
+        "esophagus",
+        "esophagus",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A collapsed muscular tube is lined by nonkeratinized stratified squamous epithelium and contains mucous glands in its submucosa.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Abrasion-resistant nonkeratinized epithelium and esophageal glands proper in the submucosa identify the esophagus.",
+            "cue": "Commit to: Nonkeratinized stratified squamous mucosa with submucosal glands."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Mucous gland cells lubricate the lumen; the muscularis externa changes from skeletal to mixed to smooth muscle down the organ.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "No villi or gastric pits, plus a thick squamous lining and submucosal glands, separates esophagus from adjacent gut segments.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A collapsed muscular tube is lined by nonkeratinized stratified squamous epithelium and contains mucous glands in its submucosa.",
+        "Abrasion-resistant nonkeratinized epithelium and esophageal glands proper in the submucosa identify the esophagus.",
+        "Mucous gland cells lubricate the lumen; the muscularis externa changes from skeletal to mixed to smooth muscle down the organ.",
+        "No villi or gastric pits, plus a thick squamous lining and submucosal glands, separates esophagus from adjacent gut segments."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the empty-looking gland acini adipose tissue",
+          "right": "Trace ducts from pale mucous acini toward the surface epithelium."
+        }
+      ],
+      "recognition": [
+        "Nonkeratinized stratified squamous mucosa with submucosal glands",
+        "No villi or gastric pits, plus a thick squamous lining and submucosal glands, separates esophagus from adjacent gut segments."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 71; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/esophagus.jpg"
+    },
+    {
+      "id": "hpr-stomach-fundus",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Fundic stomach",
+      "subtitle": "Short pits over long fundic glands with parietal and chief cells",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Fundic stomach"
+      ],
+      "questionPatterns": [
+        "stomach fundus",
+        "fundic stomach",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Short gastric pits open into long straight tubular glands containing large eosinophilic cells and deeper basophilic cells.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Fundic/body mucosa has relatively short pits and long glands with eosinophilic parietal cells and basophilic chief cells.",
+            "cue": "Commit to: Short pits over long fundic glands with parietal and chief cells."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Parietal cells secrete HCl and intrinsic factor; chief cells secrete pepsinogen and gastric lipase.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Fundic glands contain conspicuous parietal and chief cells, unlike pyloric glands, which are mucous and more coiled.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Short gastric pits open into long straight tubular glands containing large eosinophilic cells and deeper basophilic cells.",
+        "Fundic/body mucosa has relatively short pits and long glands with eosinophilic parietal cells and basophilic chief cells.",
+        "Parietal cells secrete HCl and intrinsic factor; chief cells secrete pepsinogen and gastric lipase.",
+        "Fundic glands contain conspicuous parietal and chief cells, unlike pyloric glands, which are mucous and more coiled."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every eosinophilic gland cell a chief cell",
+          "right": "Parietal cells are large and pink; chief cells are basophilic and deeper."
+        }
+      ],
+      "recognition": [
+        "Short pits over long fundic glands with parietal and chief cells",
+        "Fundic glands contain conspicuous parietal and chief cells, unlike pyloric glands, which are mucous and more coiled."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 73; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/stomach-fundus.jpg"
+    },
+    {
+      "id": "hpr-duodenum",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Duodenum",
+      "subtitle": "Submucosal Brunner glands beneath villi",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Duodenum"
+      ],
+      "questionPatterns": [
+        "duodenum",
+        "duodenum",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Finger-like villi and crypts line the lumen, while pale mucous glands occupy the submucosa beneath the muscularis mucosae.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Brunner glands in the submucosa are the decisive low-power feature of duodenum.",
+            "cue": "Commit to: Submucosal Brunner glands beneath villi."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Enterocytes and goblet cells cover villi; Paneth cells occupy crypt bases and Brunner cells secrete alkaline mucus.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Submucosal glands distinguish duodenum from jejunum and ileum.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Finger-like villi and crypts line the lumen, while pale mucous glands occupy the submucosa beneath the muscularis mucosae.",
+        "Brunner glands in the submucosa are the decisive low-power feature of duodenum.",
+        "Enterocytes and goblet cells cover villi; Paneth cells occupy crypt bases and Brunner cells secrete alkaline mucus.",
+        "Submucosal glands distinguish duodenum from jejunum and ileum."
+      ],
+      "traps": [
+        {
+          "wrong": "Mistaking crypts for Brunner glands",
+          "right": "Crypts remain in mucosa above the muscularis mucosae; Brunner glands lie below it."
+        }
+      ],
+      "recognition": [
+        "Submucosal Brunner glands beneath villi",
+        "Submucosal glands distinguish duodenum from jejunum and ileum."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 76; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/duodenum.jpg"
+    },
+    {
+      "id": "hpr-ileum",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Ileum",
+      "subtitle": "Aggregated Peyer patches beneath short villi",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Ileum"
+      ],
+      "questionPatterns": [
+        "ileum",
+        "ileum",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Small-intestinal villi are relatively short, goblet cells are numerous, and a large aggregate of lymphoid nodules extends toward the submucosa.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Peyer patches are aggregated lymphoid nodules most prominent along the antimesenteric ileum.",
+            "cue": "Commit to: Aggregated Peyer patches beneath short villi."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "M cells overlying the domes sample luminal antigen; enterocytes and goblet cells line the remaining villi.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Villi plus large aggregated lymphoid tissue distinguishes ileum from appendix and other small-intestinal regions.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Small-intestinal villi are relatively short, goblet cells are numerous, and a large aggregate of lymphoid nodules extends toward the submucosa.",
+        "Peyer patches are aggregated lymphoid nodules most prominent along the antimesenteric ileum.",
+        "M cells overlying the domes sample luminal antigen; enterocytes and goblet cells line the remaining villi.",
+        "Villi plus large aggregated lymphoid tissue distinguishes ileum from appendix and other small-intestinal regions."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every lymphoid nodule appendix",
+          "right": "Appendix lacks villi; ileum retains small-intestinal villi above Peyer patches."
+        }
+      ],
+      "recognition": [
+        "Aggregated Peyer patches beneath short villi",
+        "Villi plus large aggregated lymphoid tissue distinguishes ileum from appendix and other small-intestinal regions."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 77; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/ileum.jpg"
+    },
+    {
+      "id": "hpr-colon",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Colon",
+      "subtitle": "Straight goblet-rich crypts with no villi",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Colon"
+      ],
+      "questionPatterns": [
+        "colon",
+        "colon",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The mucosa forms temporary folds but has no true villi; tightly packed straight tubular crypts are rich in goblet cells and the outer longitudinal muscle is gathered into taeniae coli.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Colon mucosa is a flat absorptive sheet punctuated by long straight crypts with abundant goblet cells.",
+            "cue": "Commit to: Straight goblet-rich crypts with no villi."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Colonocytes absorb water and electrolytes; goblet cells become progressively abundant distally and lubricate feces.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Absence of villi is the fastest separator from small intestine.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The mucosa forms temporary folds but has no true villi; tightly packed straight tubular crypts are rich in goblet cells and the outer longitudinal muscle is gathered into taeniae coli.",
+        "Colon mucosa is a flat absorptive sheet punctuated by long straight crypts with abundant goblet cells.",
+        "Colonocytes absorb water and electrolytes; goblet cells become progressively abundant distally and lubricate feces.",
+        "Absence of villi is the fastest separator from small intestine."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling crypt profiles villi",
+          "right": "Crypts descend from the surface; villi project into the lumen."
+        }
+      ],
+      "recognition": [
+        "Straight goblet-rich crypts with no villi",
+        "Absence of villi is the fastest separator from small intestine."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 78; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/colon.jpg"
+    },
+    {
+      "id": "hpr-appendix",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Appendix",
+      "subtitle": "Circumferential lymphoid follicles around a narrow crypt-lined lumen",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Appendix"
+      ],
+      "questionPatterns": [
+        "appendix",
+        "appendix",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A small blind-ended intestinal tube has a narrow irregular lumen, no villi, short colonic crypts, and abundant circumferential lymphoid follicles.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Appendix resembles colon but has a smaller irregular lumen, shorter crypts, and striking lymphoid tissue through mucosa and submucosa.",
+            "cue": "Commit to: Circumferential lymphoid follicles around a narrow crypt-lined lumen."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Lymphocytes and plasma cells are abundant; the surface and crypts retain colonic absorptive and goblet cells.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "No villi plus circumferential lymphoid tissue distinguishes appendix from ileum.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A small blind-ended intestinal tube has a narrow irregular lumen, no villi, short colonic crypts, and abundant circumferential lymphoid follicles.",
+        "Appendix resembles colon but has a smaller irregular lumen, shorter crypts, and striking lymphoid tissue through mucosa and submucosa.",
+        "Lymphocytes and plasma cells are abundant; the surface and crypts retain colonic absorptive and goblet cells.",
+        "No villi plus circumferential lymphoid tissue distinguishes appendix from ileum."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling it ileum because of lymphoid nodules",
+          "right": "Ileum has villi; appendix has a colonic-type flat surface and crypts."
+        }
+      ],
+      "recognition": [
+        "Circumferential lymphoid follicles around a narrow crypt-lined lumen",
+        "No villi plus circumferential lymphoid tissue distinguishes appendix from ileum."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 79; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/appendix.jpg"
+    },
+    {
+      "id": "hpr-adrenal",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Endocrine system",
+      "title": "Adrenal gland",
+      "subtitle": "Capsule → zona glomerulosa → zona fasciculata → zona reticularis → medulla",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Endocrine system",
+        "Adrenal gland"
+      ],
+      "questionPatterns": [
+        "adrenal",
+        "adrenal gland",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A capsule surrounds a broad cortex with three concentric zones and a central, more basophilic medulla containing large vessels.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "The adrenal cortex is zoned: thin glomerulosa, broad pale fasciculata, and darker reticularis surrounding the medulla.",
+            "cue": "Commit to: Capsule → zona glomerulosa → zona fasciculata → zona reticularis → medulla."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Zona fasciculata spongiocytes have lipid-rich pale cytoplasm; medullary chromaffin cells secrete catecholamines.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A three-zone steroidogenic cortex around chromaffin medulla is unique to adrenal.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A capsule surrounds a broad cortex with three concentric zones and a central, more basophilic medulla containing large vessels.",
+        "The adrenal cortex is zoned: thin glomerulosa, broad pale fasciculata, and darker reticularis surrounding the medulla.",
+        "Zona fasciculata spongiocytes have lipid-rich pale cytoplasm; medullary chromaffin cells secrete catecholamines.",
+        "A three-zone steroidogenic cortex around chromaffin medulla is unique to adrenal."
+      ],
+      "traps": [
+        {
+          "wrong": "Reversing glomerulosa and reticularis",
+          "right": "Orient from capsule inward: G-F-R, then medulla."
+        }
+      ],
+      "recognition": [
+        "Capsule → zona glomerulosa → zona fasciculata → zona reticularis → medulla",
+        "A three-zone steroidogenic cortex around chromaffin medulla is unique to adrenal."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 82; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/adrenal.jpg"
+    },
+    {
+      "id": "hpr-pituitary",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Endocrine system",
+      "title": "Pituitary gland",
+      "subtitle": "Dark cellular pars distalis beside pale pars nervosa",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Endocrine system",
+        "Pituitary gland"
+      ],
+      "questionPatterns": [
+        "pituitary",
+        "pituitary gland",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Two sharply contrasting endocrine regions lie together: a dark, highly cellular glandular portion and a pale, fibrous neural portion.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Adenohypophysis forms cords of endocrine cells around sinusoids; neurohypophysis is paler because it contains axons and pituicytes.",
+            "cue": "Commit to: Dark cellular pars distalis beside pale pars nervosa."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Acidophils and basophils populate pars distalis; pituicytes support hypothalamic axons in pars nervosa.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "The adjacent dark glandular and pale neural regions distinguish pituitary from other endocrine glands.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Two sharply contrasting endocrine regions lie together: a dark, highly cellular glandular portion and a pale, fibrous neural portion.",
+        "Adenohypophysis forms cords of endocrine cells around sinusoids; neurohypophysis is paler because it contains axons and pituicytes.",
+        "Acidophils and basophils populate pars distalis; pituicytes support hypothalamic axons in pars nervosa.",
+        "The adjacent dark glandular and pale neural regions distinguish pituitary from other endocrine glands."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling pars nervosa empty connective tissue",
+          "right": "Look for unmyelinated axons, pituicyte nuclei, capillaries, and possible Herring bodies."
+        }
+      ],
+      "recognition": [
+        "Dark cellular pars distalis beside pale pars nervosa",
+        "The adjacent dark glandular and pale neural regions distinguish pituitary from other endocrine glands."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 85; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/pituitary.jpg"
+    },
+    {
+      "id": "hpr-kidney-cortex",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Urinary system",
+      "title": "Kidney cortex",
+      "subtitle": "Renal corpuscles among proximal and distal convoluted tubules",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Urinary system",
+        "Kidney cortex"
+      ],
+      "questionPatterns": [
+        "kidney cortex",
+        "kidney cortex",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The parenchyma contains round renal corpuscles scattered among numerous convoluted tubule profiles.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Renal corpuscles occur only in cortex; surrounding proximal tubules are more eosinophilic and fuzzy-lumened than distal tubules.",
+            "cue": "Commit to: Renal corpuscles among proximal and distal convoluted tubules."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Podocytes form the visceral layer of Bowman's capsule; proximal tubular cells bear a brush border.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A glomerulus is the decisive cortical landmark.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The parenchyma contains round renal corpuscles scattered among numerous convoluted tubule profiles.",
+        "Renal corpuscles occur only in cortex; surrounding proximal tubules are more eosinophilic and fuzzy-lumened than distal tubules.",
+        "Podocytes form the visceral layer of Bowman's capsule; proximal tubular cells bear a brush border.",
+        "A glomerulus is the decisive cortical landmark."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every circular profile a glomerulus",
+          "right": "A renal corpuscle contains a capillary tuft within Bowman's space; tubules have a simple cuboidal wall."
+        }
+      ],
+      "recognition": [
+        "Renal corpuscles among proximal and distal convoluted tubules",
+        "A glomerulus is the decisive cortical landmark."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 91; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/kidney-cortex.jpg"
+    },
+    {
+      "id": "hpr-kidney-medulla",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Urinary system",
+      "title": "Kidney medulla",
+      "subtitle": "Parallel straight tubules with no renal corpuscles",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Urinary system",
+        "Kidney medulla"
+      ],
+      "questionPatterns": [
+        "kidney medulla",
+        "kidney medulla",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "The field lacks renal corpuscles and is composed of parallel straight tubules, thin squamous limbs, collecting ducts, and capillaries.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Medulla contains loops of Henle, collecting ducts, and vasa recta arranged along the corticomedullary axis.",
+            "cue": "Commit to: Parallel straight tubules with no renal corpuscles."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Collecting-duct principal cells are pale with distinct borders; thin limbs are lined by simple squamous cells.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "The absence of renal corpuscles is the fastest cortex-versus-medulla distinction.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "The field lacks renal corpuscles and is composed of parallel straight tubules, thin squamous limbs, collecting ducts, and capillaries.",
+        "Medulla contains loops of Henle, collecting ducts, and vasa recta arranged along the corticomedullary axis.",
+        "Collecting-duct principal cells are pale with distinct borders; thin limbs are lined by simple squamous cells.",
+        "The absence of renal corpuscles is the fastest cortex-versus-medulla distinction."
+      ],
+      "traps": [
+        {
+          "wrong": "Mistaking thin limbs for capillaries",
+          "right": "Capillaries contain erythrocytes; thin limbs have a slightly thicker wall and empty lumen."
+        }
+      ],
+      "recognition": [
+        "Parallel straight tubules with no renal corpuscles",
+        "The absence of renal corpuscles is the fastest cortex-versus-medulla distinction."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 93; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/kidney-medulla.jpg"
+    },
+    {
+      "id": "hpr-juxtaglomerular-apparatus",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Urinary system",
+      "title": "Juxtaglomerular apparatus",
+      "subtitle": "Macula densa adjacent to juxtaglomerular cells of the afferent arteriole",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Urinary system",
+        "Juxtaglomerular apparatus"
+      ],
+      "questionPatterns": [
+        "juxtaglomerular apparatus",
+        "juxtaglomerular apparatus",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "At the vascular pole of a renal corpuscle, a distal-tubule segment has a dense row of nuclei next to a thick-walled afferent arteriole.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "The macula densa is a densely nucleated distal-tubule plaque contacting renin-containing modified smooth-muscle cells of the afferent arteriole.",
+            "cue": "Commit to: Macula densa adjacent to juxtaglomerular cells of the afferent arteriole."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Juxtaglomerular cells secrete renin; macula-densa cells sense tubular NaCl delivery.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "The exact contact between distal tubule and glomerular vascular pole defines the apparatus.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "At the vascular pole of a renal corpuscle, a distal-tubule segment has a dense row of nuclei next to a thick-walled afferent arteriole.",
+        "The macula densa is a densely nucleated distal-tubule plaque contacting renin-containing modified smooth-muscle cells of the afferent arteriole.",
+        "Juxtaglomerular cells secrete renin; macula-densa cells sense tubular NaCl delivery.",
+        "The exact contact between distal tubule and glomerular vascular pole defines the apparatus."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling any crowded distal-tubule nuclei macula densa",
+          "right": "Confirm that the crowded plaque directly abuts the afferent arteriole at a renal corpuscle."
+        }
+      ],
+      "recognition": [
+        "Macula densa adjacent to juxtaglomerular cells of the afferent arteriole",
+        "The exact contact between distal tubule and glomerular vascular pole defines the apparatus."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 92; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/juxtaglomerular-apparatus.jpg"
+    },
+    {
+      "id": "hpr-muscular-artery-vein",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Cardiovascular system",
+      "title": "Muscular artery and vein",
+      "subtitle": "Thick tunica media in the artery; thin wall and irregular lumen in the vein",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Cardiovascular system",
+        "Muscular artery and vein"
+      ],
+      "questionPatterns": [
+        "muscular artery vein",
+        "muscular artery and vein",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Two vessels travel together: one has a round lumen and thick smooth-muscle media, while the other has a larger irregular lumen and thinner media.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Muscular arteries maintain a round profile through a thick media; veins are more collapsible with thinner media and relatively prominent adventitia.",
+            "cue": "Commit to: Thick tunica media in the artery; thin wall and irregular lumen in the vein."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Smooth-muscle cells dominate the arterial media; endothelial cells line both vessel lumina.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Compare wall-to-lumen ratio rather than lumen size alone.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Two vessels travel together: one has a round lumen and thick smooth-muscle media, while the other has a larger irregular lumen and thinner media.",
+        "Muscular arteries maintain a round profile through a thick media; veins are more collapsible with thinner media and relatively prominent adventitia.",
+        "Smooth-muscle cells dominate the arterial media; endothelial cells line both vessel lumina.",
+        "Compare wall-to-lumen ratio rather than lumen size alone."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the more open vessel the artery",
+          "right": "Fixation often collapses veins; use tunica media thickness and internal elastic lamina."
+        }
+      ],
+      "recognition": [
+        "Thick tunica media in the artery; thin wall and irregular lumen in the vein",
+        "Compare wall-to-lumen ratio rather than lumen size alone."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 99; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/muscular-artery-vein.jpg"
+    },
+    {
+      "id": "hpr-lymph-node",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Lymphoid organs",
+      "title": "Lymph node",
+      "subtitle": "Cortical follicles and medullary cords/sinuses beneath a capsule",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Lymphoid organs",
+        "Lymph node"
+      ],
+      "questionPatterns": [
+        "lymph node",
+        "lymph node",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "An encapsulated bean-shaped organ has a peripheral cortex with lymphoid follicles, a deeper paracortex, and a central medulla of cords and sinuses.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Lymph enters subcapsular sinuses, passes through cortical and medullary sinuses, and exits at the hilum.",
+            "cue": "Commit to: Cortical follicles and medullary cords/sinuses beneath a capsule."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "B-cell follicles occupy cortex; T cells dominate paracortex; plasma cells are common in medullary cords.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A cortex-medulla arrangement and subcapsular sinus distinguish lymph node from spleen and thymus.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "An encapsulated bean-shaped organ has a peripheral cortex with lymphoid follicles, a deeper paracortex, and a central medulla of cords and sinuses.",
+        "Lymph enters subcapsular sinuses, passes through cortical and medullary sinuses, and exits at the hilum.",
+        "B-cell follicles occupy cortex; T cells dominate paracortex; plasma cells are common in medullary cords.",
+        "A cortex-medulla arrangement and subcapsular sinus distinguish lymph node from spleen and thymus."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the pale medulla fat",
+          "right": "Medullary sinuses are pale channels separated by cellular medullary cords."
+        }
+      ],
+      "recognition": [
+        "Cortical follicles and medullary cords/sinuses beneath a capsule",
+        "A cortex-medulla arrangement and subcapsular sinus distinguish lymph node from spleen and thymus."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 102; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/lymph-node.jpg"
+    },
+    {
+      "id": "hpr-thymus",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Lymphoid organs",
+      "title": "Thymus",
+      "subtitle": "Lobules with cortex, medulla, and Hassall corpuscles",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Lymphoid organs",
+        "Thymus"
+      ],
+      "questionPatterns": [
+        "thymus",
+        "thymus",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A lobulated lymphoid organ has dark peripheral cortex, pale central medulla, and concentric eosinophilic whorls in the medulla.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Thymic septa incompletely divide the organ into lobules; medullae are continuous and contain epithelial-reticular Hassall corpuscles.",
+            "cue": "Commit to: Lobules with cortex, medulla, and Hassall corpuscles."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Developing T cells are densely packed in cortex; epithelial reticular cells create the stromal framework.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Hassall corpuscles and absence of lymphoid follicles make thymus distinctive.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A lobulated lymphoid organ has dark peripheral cortex, pale central medulla, and concentric eosinophilic whorls in the medulla.",
+        "Thymic septa incompletely divide the organ into lobules; medullae are continuous and contain epithelial-reticular Hassall corpuscles.",
+        "Developing T cells are densely packed in cortex; epithelial reticular cells create the stromal framework.",
+        "Hassall corpuscles and absence of lymphoid follicles make thymus distinctive."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling Hassall corpuscles keratin pearls of carcinoma",
+          "right": "In normal thymic medulla they are orderly concentric whorls of epithelial reticular cells."
+        }
+      ],
+      "recognition": [
+        "Lobules with cortex, medulla, and Hassall corpuscles",
+        "Hassall corpuscles and absence of lymphoid follicles make thymus distinctive."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 108; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/thymus.jpg"
+    },
+    {
+      "id": "hpr-spleen",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Lymphoid organs",
+      "title": "Spleen",
+      "subtitle": "White pulp around central arteries scattered in red pulp",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Lymphoid organs",
+        "Spleen"
+      ],
+      "questionPatterns": [
+        "spleen",
+        "spleen",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "An encapsulated organ contains dark lymphoid nodules scattered throughout a more eosinophilic, blood-filled background, without cortex or medulla.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "White pulp is periarterial lymphoid tissue; red pulp consists of splenic cords and venous sinusoids rich in erythrocytes.",
+            "cue": "Commit to: White pulp around central arteries scattered in red pulp."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Macrophages in red pulp remove aged erythrocytes; lymphocytes respond to blood-borne antigens in white pulp.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Scattered white pulp within blood-filled red pulp and no cortex-medulla organization identify spleen.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "An encapsulated organ contains dark lymphoid nodules scattered throughout a more eosinophilic, blood-filled background, without cortex or medulla.",
+        "White pulp is periarterial lymphoid tissue; red pulp consists of splenic cords and venous sinusoids rich in erythrocytes.",
+        "Macrophages in red pulp remove aged erythrocytes; lymphocytes respond to blood-borne antigens in white pulp.",
+        "Scattered white pulp within blood-filled red pulp and no cortex-medulla organization identify spleen."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every pale channel a lymph-node sinus",
+          "right": "In spleen, sinusoids belong to red pulp and are surrounded by erythrocyte-rich cords."
+        }
+      ],
+      "recognition": [
+        "White pulp around central arteries scattered in red pulp",
+        "Scattered white pulp within blood-filled red pulp and no cortex-medulla organization identify spleen."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 110; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/spleen.jpg"
+    },
+    {
+      "id": "hpr-endochondral-ossification",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Bone",
+      "title": "Endochondral ossification",
+      "subtitle": "Columnar chondrocyte zones merging with primary bone spicules",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Bone",
+        "Endochondral ossification"
+      ],
+      "questionPatterns": [
+        "endochondral ossification",
+        "endochondral ossification",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A developing long bone shows orderly columns of proliferating and hypertrophic chondrocytes transitioning into calcified cartilage and newly deposited bone.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "From epiphysis toward diaphysis, resting cartilage is followed by proliferation, hypertrophy, calcification, and ossification.",
+            "cue": "Commit to: Columnar chondrocyte zones merging with primary bone spicules."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Chondrocytes divide and hypertrophy; osteoblasts deposit osteoid on calcified-cartilage spicules after vascular invasion.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "A cartilage template with sequential zones distinguishes endochondral from intramembranous ossification.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A developing long bone shows orderly columns of proliferating and hypertrophic chondrocytes transitioning into calcified cartilage and newly deposited bone.",
+        "From epiphysis toward diaphysis, resting cartilage is followed by proliferation, hypertrophy, calcification, and ossification.",
+        "Chondrocytes divide and hypertrophy; osteoblasts deposit osteoid on calcified-cartilage spicules after vascular invasion.",
+        "A cartilage template with sequential zones distinguishes endochondral from intramembranous ossification."
+      ],
+      "traps": [
+        {
+          "wrong": "Reversing the growth-plate zones",
+          "right": "Orient from epiphysis to diaphysis: reserve, proliferation, hypertrophy, calcification, then ossification."
+        }
+      ],
+      "recognition": [
+        "Columnar chondrocyte zones merging with primary bone spicules",
+        "A cartilage template with sequential zones distinguishes endochondral from intramembranous ossification."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 36; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/endochondral-ossification.jpg"
+    },
+    {
+      "id": "hpr-circumvallate-papilla",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Digestive system",
+      "title": "Circumvallate papilla",
+      "subtitle": "A trench surrounding a large papilla with lateral taste buds",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Digestive system",
+        "Circumvallate papilla"
+      ],
+      "questionPatterns": [
+        "circumvallate papilla",
+        "circumvallate papilla",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A very large lingual papilla is encircled by a deep trench; pale taste buds line its lateral epithelium and serous glands lie beneath it.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Circumvallate papillae are large, trench-bound structures with numerous taste buds on their lateral walls.",
+            "cue": "Commit to: A trench surrounding a large papilla with lateral taste buds."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Taste-bud gustatory cells project microvilli into a taste pore and are renewed from basal cells.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "The encircling trench and lateral taste buds distinguish circumvallate from other lingual papillae.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A very large lingual papilla is encircled by a deep trench; pale taste buds line its lateral epithelium and serous glands lie beneath it.",
+        "Circumvallate papillae are large, trench-bound structures with numerous taste buds on their lateral walls.",
+        "Taste-bud gustatory cells project microvilli into a taste pore and are renewed from basal cells.",
+        "The encircling trench and lateral taste buds distinguish circumvallate from other lingual papillae."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the trench an intestinal lumen",
+          "right": "Confirm stratified squamous epithelium, taste buds, and underlying tongue glands and muscle."
+        }
+      ],
+      "recognition": [
+        "A trench surrounding a large papilla with lateral taste buds",
+        "The encircling trench and lateral taste buds distinguish circumvallate from other lingual papillae."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 68; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/circumvallate-papilla.jpg"
+    },
+    {
+      "id": "hpr-large-vein",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Cardiovascular system",
+      "title": "Large vein",
+      "subtitle": "Very thick adventitia with longitudinal smooth muscle and vasa vasorum",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Cardiovascular system",
+        "Large vein"
+      ],
+      "questionPatterns": [
+        "large vein",
+        "large vein",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "A very large vessel has a relatively thin tunica media and a dominant thick adventitia containing longitudinal smooth-muscle bundles and vasa vasorum.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "In large veins such as the vena cava or portal vein, the adventitia is the dominant layer and often contains longitudinal smooth muscle.",
+            "cue": "Commit to: Very thick adventitia with longitudinal smooth muscle and vasa vasorum."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Endothelium lines the lumen; smooth-muscle bundles and fibroblasts populate the thick adventitia around vasa vasorum.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Adventitia thicker than media is the key large-vein pattern, opposite the dominant media of large arteries.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "A very large vessel has a relatively thin tunica media and a dominant thick adventitia containing longitudinal smooth-muscle bundles and vasa vasorum.",
+        "In large veins such as the vena cava or portal vein, the adventitia is the dominant layer and often contains longitudinal smooth muscle.",
+        "Endothelium lines the lumen; smooth-muscle bundles and fibroblasts populate the thick adventitia around vasa vasorum.",
+        "Adventitia thicker than media is the key large-vein pattern, opposite the dominant media of large arteries."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling every large thick-walled vessel an artery",
+          "right": "Determine which layer is thick: large veins are adventitia-dominant, arteries are media-dominant."
+        }
+      ],
+      "recognition": [
+        "Very thick adventitia with longitudinal smooth muscle and vasa vasorum",
+        "Adventitia thicker than media is the key large-vein pattern, opposite the dominant media of large arteries."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 100; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/large-vein.jpg"
+    },
+    {
+      "id": "hpr-palatine-tonsil",
+      "exam": "july25",
+      "subject": "histology",
+      "topic": "Lymphoid organs",
+      "title": "Palatine tonsil",
+      "subtitle": "Deep branching squamous crypts with lymphoid follicles and a lateral capsule",
+      "kind": "recognition",
+      "topicPatterns": [
+        "Lymphoid organs",
+        "Palatine tonsil"
+      ],
+      "questionPatterns": [
+        "palatine tonsil",
+        "palatine tonsil",
+        "histo practical"
+      ],
+      "visual": {
+        "type": "map",
+        "caption": "Low power → defining landmark → cell identity → closest discriminator",
+        "items": [
+          {
+            "label": "1 · Orient",
+            "detail": "Nonkeratinized stratified squamous epithelium plunges into multiple deep branching crypts packed with lymphocytes, with follicles beneath and a capsule on the deep surface.",
+            "cue": "Name the overall arrangement before focusing on one cell."
+          },
+          {
+            "label": "2 · Landmark",
+            "detail": "Palatine tonsil has 10–20 deep branching crypts lined by squamous epithelium and a dense capsule on its lateral surface.",
+            "cue": "Commit to: Deep branching squamous crypts with lymphoid follicles and a lateral capsule."
+          },
+          {
+            "label": "3 · Cells",
+            "detail": "Lymphocytes infiltrate the crypt epithelium; B-cell follicles may contain pale germinal centers.",
+            "cue": "Use nuclear shape, cytoplasm, matrix, and position together."
+          },
+          {
+            "label": "4 · Separate",
+            "detail": "Multiple deep squamous crypts distinguish palatine from lingual and pharyngeal tonsils.",
+            "cue": "State why the closest look-alike loses."
+          }
+        ]
+      },
+      "essentials": [
+        "Nonkeratinized stratified squamous epithelium plunges into multiple deep branching crypts packed with lymphocytes, with follicles beneath and a capsule on the deep surface.",
+        "Palatine tonsil has 10–20 deep branching crypts lined by squamous epithelium and a dense capsule on its lateral surface.",
+        "Lymphocytes infiltrate the crypt epithelium; B-cell follicles may contain pale germinal centers.",
+        "Multiple deep squamous crypts distinguish palatine from lingual and pharyngeal tonsils."
+      ],
+      "traps": [
+        {
+          "wrong": "Calling the crypt lumen a gland duct",
+          "right": "The crypt is a broad epithelial invagination surrounded by dense lymphoid tissue, not a small secretory duct."
+        }
+      ],
+      "recognition": [
+        "Deep branching squamous crypts with lymphoid follicles and a lateral capsule",
+        "Multiple deep squamous crypts distinguish palatine from lingual and pharyngeal tonsils."
+      ],
+      "source": {
+        "label": "PRACTICAL.pptx — full course practical deck",
+        "detail": "Slide 113; central label-free crop derived from the supplied deck and cross-referenced with the existing MED//25 histology sources."
+      },
+      "asset": "/study/histology/practicals/full/palatine-tonsil.jpg"
+    }
+  ]
+}
