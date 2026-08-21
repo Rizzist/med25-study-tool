@@ -63,6 +63,8 @@ npm test
 - `scripts/generate-full-histology-practicals.mjs` — 120 supplemental questions cross-referenced to the full practical deck
 - `scripts/generate-full-histology-practical-lessons.mjs` — 40 supplemental specimen atlas lessons
 - `scripts/extract-full-histology-practical-images.py` — source-slide and crop ledger for the 40 full-deck image assets
+- `scripts/generate-histology-identification-15.mjs` — reproducible 60-question, identification-only bank for the confirmed Aug 22 slides
+- `scripts/extract-histology-identification-images.py` — crop ledger for its answer-neutral local, book and morphology-verified course fields
 
 ## Add questions
 

@@ -7,7 +7,7 @@ import { LessonGuide } from "@/src/components/LessonGuide";
 import { LessonSlide } from "@/src/components/LessonSlide";
 import { allLessons, histologyPracticalLessons, lessonsForExam } from "@/src/lib/lessons";
 import { lessonForQuestion } from "@/src/lib/lessons/types";
-import type { CodexGrade, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
+import type { CodexGrade, MCQMedia, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
 
 type BridgeHealth = {
   ok: boolean;
@@ -37,7 +37,7 @@ type BankSummary = {
 
 type SessionAnswer = StudentAnswer & { flagged: boolean };
 type ExamId = "july25" | "aug22" | "july29";
-type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "practical" | "wrong" | "flagged";
+type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "histo-identification" | "practical" | "wrong" | "flagged";
 type SavedCollectionId = "wrong" | "flagged";
 type SessionPhase = "setup" | "loading" | "active" | "review";
 type ReviewFilter = "all" | "wrong" | "flagged";
@@ -82,8 +82,8 @@ const examConfig: Record<ExamId, {
   aug22: {
     date: "Aug 22",
     title: "Histology Practical",
-    focus: "55 microscope specimens, tissue orientation, defining architecture, characteristic cell identification and closest-slide discrimination",
-    collections: ["histo-practical", "wrong", "flagged"],
+    focus: "Two microscope modes: the confirmed 15-slide identification practical plus the complete 55-specimen atlas bank",
+    collections: ["histo-identification", "histo-practical", "wrong", "flagged"],
   },
   july29: {
     date: "Aug 25",
@@ -101,6 +101,7 @@ const collectionLabel: Record<CollectionId, string> = {
   images: "Images",
   stains: "Stains",
   "histo-practical": "Histology practicals",
+  "histo-identification": "15-slide identification",
   practical: "Practical + spotters",
   wrong: "Wrong answers",
   flagged: "Flagged",
@@ -271,6 +272,21 @@ function isCorrect(question: MCQQuestion, answer?: SessionAnswer) {
 function mediaUrl(question: MCQQuestion, mediaId: string) {
   const query = new URLSearchParams({ questionId: question.id, mediaId });
   return `${bridgeUrl}/api/media?${query}`;
+}
+
+function StudyImage({ question, media, review = false }: { question: MCQQuestion; media: MCQMedia; review?: boolean }) {
+  return <figure className={`study-image ${review ? "review-image" : ""}`}>
+    <div className="study-image-stage">
+      <img src={mediaUrl(question, media.id)} alt={review ? media.alt : "Unlabeled microscope question field"} />
+      {media.annotations?.map((annotation) => <span
+        className="study-image-marker"
+        key={annotation.id}
+        aria-label={`Marker ${annotation.label}`}
+        style={{ left: `${annotation.x * 100}%`, top: `${annotation.y * 100}%`, width: `${annotation.width * 100}%`, height: `${annotation.height * 100}%` }}
+      ><i>{annotation.label}</i></span>)}
+    </div>
+    <figcaption>{review ? media.caption ?? "Image recognition" : media.annotations?.length ? "Structure identification · name marker A" : "Specimen identification · inspect before choosing"}</figcaption>
+  </figure>;
 }
 
 export default function Home() {
@@ -654,7 +670,7 @@ export default function Home() {
                 <span>{question.subject}</span><span>{question.topic}</span><span>Difficulty {question.difficulty}/5</span>
               </div>
               <h1>{question.prompt}</h1>
-              {question.media?.map((media) => <figure className="study-image" key={media.id}><img src={mediaUrl(question, media.id)} alt="Question image" /><figcaption>Image recognition · inspect before choosing</figcaption></figure>)}
+              {question.media?.map((media) => <StudyImage question={question} media={media} key={media.id} />)}
 
               <div className="mode-switch" aria-label="Answer mode">
                 <button disabled={hasImmediateFeedback} className={answer.mode === "select" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "select" })}>Choose option</button>
@@ -723,7 +739,7 @@ export default function Home() {
             return <article className={`review-item ${isCorrect(question, answer) ? "correct" : "wrong"}`} key={question.id}>
               <div className="review-item-head"><span>{isCorrect(question, answer) ? "✓ Correct" : "× Repair"}</span><div><small>{question.subject} · {question.topic}</small><button className={answer?.flagged ? "active" : ""} onClick={() => toggleFlag(question.id)}>{answer?.flagged ? "★ Unflag" : "☆ Flag"}</button></div></div>
               <h2>{question.prompt}</h2>
-              {question.media?.map((media) => <figure className="study-image review-image" key={media.id}><img src={mediaUrl(question, media.id)} alt={media.alt} /><figcaption>{media.caption ?? "Image recognition"}</figcaption></figure>)}
+              {question.media?.map((media) => <StudyImage question={question} media={media} review key={media.id} />)}
               <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer?.writtenAnswer || "No answer"}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
               <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{!isPracticalQuestion && chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>
@@ -754,6 +770,7 @@ export default function Home() {
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Histology fields and embryo diagrams", count: examCount("images") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Methods, stains, slides and recognition questions kept in the exam bank", count: examCount("practical") },
   ] : exam === "aug22" ? [
+    { id: "histo-identification", title: "15-slide microscope identification", scope: `${examCount("histo-identification")} identification questions`, detail: "Only the confirmed exam set: identify each specimen and its visible parts across several fields and magnifications", count: examCount("histo-identification") },
     { id: "histo-practical", title: "55-specimen practical bank", scope: `${examCount("histo-practical")} microscope questions`, detail: "Full deck: epithelium, connective tissue, blood, muscle, nerve, digestive, endocrine, urinary, vessels and lymphoid organs", count: examCount("histo-practical") },
   ] : [
     { id: "biochemistry", title: "Biochemistry", scope: "Lippincott 1–7, 14–18, 23–33", detail: "Molecules, enzymes, integrated metabolism, genetics, nutrition and laboratory reasoning", count: examCount("biochemistry") },
@@ -783,8 +800,8 @@ export default function Home() {
     ["FLAGGED", savedCount("flagged"), "Manual review list"],
   ] : exam === "aug22" ? [
     ["PRACTICAL BANK", selectedExam?.questionCount ?? "—", "This exam only"],
-    ["MICROSCOPE SPECIMENS", 55, "Complete full deck"],
-    ["IMAGE QUESTIONS", examCount("images"), "Three per specimen"],
+    ["15-SLIDE IDENTIFICATION", examCount("histo-identification"), "Specimen + structure ID"],
+    ["FULL ATLAS", examCount("histo-practical"), "55-specimen bank"],
     ["ATLAS LESSONS", histologyPracticalLessons.length, "One per specimen"],
     ["WRONG", savedCount("wrong"), "Saved for repair"],
     ["FLAGGED", savedCount("flagged"), "Manual review list"],
@@ -821,12 +838,15 @@ export default function Home() {
           </>}
 
           {tab === "Final exam" && exam !== "aug22" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
-          {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use the focused practical bank.</h1><p>This date has 165 image questions and 55 atlas lessons rather than a separate past-paper final. Open Overview, Topics, or Practical Atlas to test it.</p></div>}
+          {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use either focused practical mode.</h1><p>The 15-slide collection is identification-only; the full atlas adds the broader 55-specimen bank and visual lessons. Open Overview, Topics, or Practical Atlas to test either mode.</p></div>}
 
           {tab === "Topics" && <><p className="eyebrow">{selectedConfig.date} collections</p><h1>Choose a focused collection.</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p><div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div><div className="topic-grid">{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>{sessionError && <p className="session-error">{sessionError}</p>}</>}
 
           {tab === "Practical Atlas" && exam === "aug22" && <div className="practical-atlas-shell">
-            <div className="practical-atlas-head"><div><span>HISTOLOGY PRACTICALS · 55 SPECIMENS</span><b>Orient first. Identify the cells. Name the discriminator.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all {examCount("histo-practical")} →</button></div>
+            <div className="practical-atlas-actions">
+              <div className="practical-atlas-head identification-head"><div><span>EXAM MODE · CONFIRMED 15 SLIDES</span><b>Identification only: name the specimen, then identify parts marked A.</b></div><button className="primary" disabled={!examCount("histo-identification")} onClick={() => void startSession("histo-identification", selectedExam?.collectionQuestionIds?.["histo-identification"] ?? [])}>Test all {examCount("histo-identification")} →</button></div>
+              <div className="practical-atlas-head"><div><span>SUPPLEMENT · 55-SPECIMEN ATLAS</span><b>Broader transfer practice, cell recognition and closest-slide discrimination.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all {examCount("histo-practical")} →</button></div>
+            </div>
             <LessonGuide exam="aug22" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
           </div>}
 

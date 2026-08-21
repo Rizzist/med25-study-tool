@@ -56,7 +56,7 @@ function add(chapter, topic, subtopic, difficulty, prompt, correct, distractors,
       edition: "6th edition",
       chapter: `Chapter ${chapter}`,
       page: pages[chapter],
-      lecture: "Confirmed July 29 Cell & Molecules scope",
+      lecture: "Confirmed August 25 Cell & Molecules scope",
     },
     tags: [...new Set(["july29", `lippincott-${chapter}`, ...tags])],
     examPriority: priority,
@@ -94,7 +94,7 @@ function addLab(topic, subtopic, difficulty, prompt, correct, distractors, expla
     source: {
       title: "Confirmed TUMS Cell & Molecules practical curriculum",
       chapter: topic,
-      lecture: "July 29 practical-derived theory",
+      lecture: "August 25 practical-derived theory",
     },
     tags: [...new Set(["july29", "biochemistry-lab", ...tags])],
     examPriority: "core",
@@ -1259,4 +1259,4 @@ addLab("Osmosis practical", "Tonicity", 3,
 
 if (items.length < 200) throw new Error(`Expected comprehensive expansion, found only ${items.length} items`);
 writeFileSync(output, `${items.map((item) => JSON.stringify(item)).join("\n")}\n`);
-console.log(`Wrote ${items.length} July 29 comprehensive gap questions to ${output}`);
+console.log(`Wrote ${items.length} August 25 comprehensive gap questions to ${output}`);

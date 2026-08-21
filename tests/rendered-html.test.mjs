@@ -39,7 +39,7 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
 });
 
 test("source provides immediate answer feedback and supports the confirmed exam split", async () => {
-  const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles, practicalQuestionText, fullPracticalQuestionText, practicalLessonText, fullPracticalLessonText] = await Promise.all([
+  const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles, practicalQuestionText, fullPracticalQuestionText, identificationQuestionText, practicalLessonText, fullPracticalLessonText] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../scripts/codex-bridge.mjs", import.meta.url), "utf8"),
     readFile(new URL("../src/components/FinalExam.tsx", import.meta.url), "utf8"),
@@ -50,11 +50,13 @@ test("source provides immediate answer feedback and supports the confirmed exam 
     readdir(new URL("../data/telegram-final/", import.meta.url)),
     readFile(new URL("../data/bank/questions/histology-practicals.jsonl", import.meta.url), "utf8"),
     readFile(new URL("../data/bank/questions/histology-practicals-full.jsonl", import.meta.url), "utf8"),
+    readFile(new URL("../data/bank/questions/histology-identification-15.jsonl", import.meta.url), "utf8"),
     readFile(new URL("../data/lessons/histology-practicals.json", import.meta.url), "utf8"),
     readFile(new URL("../data/lessons/histology-practicals-full.json", import.meta.url), "utf8"),
   ]);
   const manifest = JSON.parse(manifestText);
   const practicalQuestions = [practicalQuestionText, fullPracticalQuestionText].flatMap((text) => text.trim().split(/\r?\n/).map((line) => JSON.parse(line)));
+  const identificationQuestions = identificationQuestionText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
   const practicalLessons = [...JSON.parse(practicalLessonText).lessons, ...JSON.parse(fullPracticalLessonText).lessons];
 
   assert.deepEqual(manifest.examDates, ["2026-07-25", "2026-08-22", "2026-08-25"]);
@@ -85,6 +87,10 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(page, /Biochemistry/);
   assert.match(page, /Practical \+ spotters/);
   assert.match(page, /55-specimen practical bank/);
+  assert.match(page, /15-slide microscope identification/);
+  assert.match(page, /histo-identification/);
+  assert.match(page, /Structure identification · name marker A/);
+  assert.match(page, /study-image-marker/);
   assert.match(page, /Test all \{examCount\("histo-practical"\)\}/);
   assert.match(page, /tab === "Practical Atlas"/);
   assert.match(page, /startSession\("histo-practical"/);
@@ -122,6 +128,8 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(bridge, /coverageQuestionSet/);
   assert.match(bridge, /collectionQuestionIds/);
   assert.match(bridge, /"histo-practical"/);
+  assert.match(bridge, /"histo-identification"/);
+  assert.match(bridge, /histo-identification-15/);
   assert.match(page, /builder-coverage/);
   assert.match(page, /seenCollectionCount/);
   assert.match(page, /unseenCollectionCount/);
@@ -149,6 +157,16 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(lessonGuide, /Escape/);
   assert.match(lessonGuide, /Test this slide/);
   assert.equal(practicalQuestions.length, 165);
+  assert.equal(identificationQuestions.length, 60);
+  assert.equal(identificationQuestions.filter((question) => question.media[0].annotations?.length).length, 30);
+  assert.equal(new Set(identificationQuestions.map((question) => question.tags.find((tag) => [
+    "trachea", "bladder", "bone", "cartilage", "joint", "nerve", "ganglion", "skin-with-hair", "skin-without-hair", "white-adipose", "brown-adipose", "thyroid", "skeletal-muscle", "cardiac-muscle", "tendon",
+  ].includes(tag)))).size, 15);
+  assert.ok(identificationQuestions.every((question) => question.tags.includes("histo-identification-15") && question.tags.includes("identification-only")));
+  assert.ok(identificationQuestions.every((question) => question.options.length === 4 && Object.keys(question.distractorExplanations).length === 3));
+  assert.ok(identificationQuestions.every((question) => question.options.filter((option) => option.id !== question.correctOptionId).every((option) => question.distractorExplanations[option.id]?.length >= 45)));
+  assert.ok(identificationQuestions.every((question) => question.qualityFlags.includes("student-labels-independent")));
+  assert.ok(identificationQuestions.some((question) => question.id === "hpi15-bone-identify-overview" && question.options.find((option) => option.id === question.correctOptionId)?.text === "Spongy (trabecular) bone"));
   assert.equal(practicalLessons.length, 55);
   assert.ok(practicalQuestions.every((question) => question.tags.includes("exam-aug22")));
   assert.ok(practicalQuestions.every((question) => question.revision === 2));
