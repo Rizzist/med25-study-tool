@@ -8,6 +8,10 @@ write what they see. The dedicated `histo-identification-15` collection is
 therefore restricted to specimen identification and identification of visible
 parts. It contains no standalone mechanism or physiology questions.
 
+The focused bank is delivered as written recall rather than visible multiple
+choice. Every specimen-recognition item presents a wide architectural field
+beside a diagnostic close field before the student types the tissue name.
+
 ## Required specimens
 
 1. Trachea
@@ -38,6 +42,11 @@ parts. It contains no standalone mechanism or physiology questions.
   Those labels were not copied; the bank uses follicles/sebaceous glands for
   hair-bearing skin and a thick stratum corneum/eccrine glands with no follicles
   for glabrous skin.
+- The 2026-08-21 priority announcement is exhaustively represented as six
+  discrimination groups: joint/cartilage/bone; ganglion/nerve;
+  cardiac/skeletal muscle; white/brown adipose/tendon; thin/thick skin; and
+  simple cuboidal/transitional/pseudostratified epithelium. The epithelial
+  group is trained through thyroid, bladder and trachea respectively.
 
 ## Image provenance and privacy
 
@@ -64,7 +73,8 @@ parts. It contains no standalone mechanism or physiology questions.
 
 ## Bank shape
 
-The collection contains 60 image questions: four per specimen. Every specimen
-has two recognition fields plus two marker-based part-identification questions.
-All four options have explicit reasoning so immediate feedback explains why the
-correct answer wins and why each of the other three loses.
+The collection contains 60 written image questions: four per specimen. Every
+specimen has two paired wide/close recognition drills plus two marker-based
+part-identification questions. Hidden comparison keys retain explicit reasoning
+for the correct diagnosis and three high-yield look-alikes; they appear only
+after the student submits a typed answer and also ground optional Codex grading.

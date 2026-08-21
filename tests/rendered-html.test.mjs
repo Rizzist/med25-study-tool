@@ -75,6 +75,13 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(page, /Why this is right/);
   assert.match(page, /Why this is wrong/);
   assert.doesNotMatch(page, /Why the other three lose/);
+  assert.match(page, /Write the tissue or marked structure/);
+  assert.match(page, /no word bank/);
+  assert.match(page, /Check tissue/);
+  assert.match(page, /interpretWrittenAnswer/);
+  assert.match(page, /What confirms it across both magnifications/);
+  assert.match(page, /Ask Codex: why my tissue differs/);
+  assert.match(page, /study-image-pair/);
   assert.match(page, /option\.id === question\.correctOptionId \? "correct"/);
   assert.match(page, /End session/);
   assert.match(page, /Finish & grade/);
@@ -90,7 +97,7 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(page, /Biochemistry/);
   assert.match(page, /Practical \+ spotters/);
   assert.match(page, /55-specimen practical bank/);
-  assert.match(page, /15-slide microscope identification/);
+  assert.match(page, /paired wide\/close views for the confirmed 15 slides/);
   assert.match(page, /histo-identification/);
   assert.match(page, /Structure identification · name marker A/);
   assert.match(page, /study-image-marker/);
@@ -162,6 +169,9 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.equal(practicalQuestions.length, 165);
   assert.equal(identificationQuestions.length, 60);
   assert.equal(identificationQuestions.filter((question) => question.media[0].annotations?.length).length, 30);
+  assert.equal(identificationQuestions.filter((question) => question.tags.includes("specimen-identification") && question.media.length === 2).length, 30);
+  assert.equal(identificationQuestions.filter((question) => question.tags.includes("structure-identification") && question.media.length === 1).length, 30);
+  assert.ok(identificationQuestions.every((question) => question.tags.includes("written-answer") && question.tags.some((tag) => tag.startsWith("priority-"))));
   assert.equal(new Set(identificationQuestions.map((question) => question.tags.find((tag) => [
     "trachea", "bladder", "bone", "cartilage", "joint", "nerve", "ganglion", "skin-with-hair", "skin-without-hair", "white-adipose", "brown-adipose", "thyroid", "skeletal-muscle", "cardiac-muscle", "tendon",
   ].includes(tag)))).size, 15);

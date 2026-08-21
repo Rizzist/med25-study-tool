@@ -31,7 +31,8 @@ const specimens = [
   {
     slug: "trachea",
     name: "Trachea",
-    accepted: ["trachea", "tracheal wall"],
+    accepted: ["trachea", "tracheal wall", "respiratory epithelium", "pseudostratified", "pseudostratified epithelium", "pseudostratified ciliated epithelium", "ciliated pseudostratified columnar epithelium"],
+    priorityGroup: "epithelium-comparison",
     topic: "Respiratory system",
     subtopic: "Trachea identification",
     chapter: "Chapter 17 - The Respiratory System",
@@ -81,7 +82,8 @@ const specimens = [
   {
     slug: "bladder",
     name: "Urinary bladder",
-    accepted: ["bladder", "urinary bladder"],
+    accepted: ["bladder", "urinary bladder", "urothelium", "transitional", "transitional epithelium"],
+    priorityGroup: "epithelium-comparison",
     topic: "Urinary system",
     subtopic: "Bladder identification",
     chapter: "Chapter 19 - The Urinary System",
@@ -94,8 +96,8 @@ const specimens = [
     ],
     tissueDistractors: [
       ["Trachea", "Trachea has ciliated respiratory epithelium, glands and cartilage instead of urothelium and detrusor."],
+      ["Thyroid", "Thyroid uses a single cuboidal layer around colloid-filled follicles, not multilayered transitional epithelium with umbrella cells."],
       ["Skin without hair", "Thick skin has a keratin surface and dermal papillae, not folded urothelium."],
-      ["Tendon", "Tendon is parallel type I collagen with sparse tenocyte nuclei and has no epithelial lumen."],
     ],
     parts: [
       {
@@ -131,7 +133,8 @@ const specimens = [
   {
     slug: "bone",
     name: "Spongy (trabecular) bone",
-    accepted: ["spongy bone", "trabecular bone", "cancellous bone"],
+    accepted: ["spongy bone", "trabecular bone", "cancellous bone", "bone"],
+    priorityGroup: "joint-cartilage-bone",
     topic: "Bone",
     subtopic: "Spongy bone identification",
     chapter: "Chapter 8 - Bone",
@@ -186,7 +189,8 @@ const specimens = [
   {
     slug: "cartilage",
     name: "Hyaline cartilage",
-    accepted: ["hyaline cartilage"],
+    accepted: ["hyaline cartilage", "cartilage"],
+    priorityGroup: "joint-cartilage-bone",
     topic: "Cartilage",
     subtopic: "Hyaline cartilage identification",
     chapter: "Chapter 7 - Cartilage",
@@ -201,8 +205,8 @@ const specimens = [
     ],
     tissueDistractors: [
       ["Spongy bone", "Spongy bone has eosinophilic trabeculae and marrow spaces rather than a homogeneous cartilage matrix."],
+      ["Synovial joint", "A joint shows opposing articular surfaces and a cavity; this field is one continuous cartilage matrix."],
       ["Tendon", "Tendon has parallel type I collagen and thin tenocyte nuclei, not round lacunae."],
-      ["Thyroid", "Thyroid contains colloid-filled follicles lined by simple cuboidal cells, not chondrocyte lacunae."],
     ],
     parts: [
       {
@@ -239,6 +243,7 @@ const specimens = [
     slug: "joint",
     name: "Synovial joint",
     accepted: ["joint", "synovial joint"],
+    priorityGroup: "joint-cartilage-bone",
     topic: "Bone and joint tissue",
     subtopic: "Synovial joint identification",
     chapter: "Chapter 8 - Bone",
@@ -289,6 +294,7 @@ const specimens = [
     slug: "nerve",
     name: "Peripheral nerve",
     accepted: ["nerve", "peripheral nerve"],
+    priorityGroup: "ganglion-nerve",
     topic: "Nervous tissue",
     subtopic: "Peripheral nerve identification",
     chapter: "Chapter 9 - Nerve Tissue and the Nervous System",
@@ -339,6 +345,7 @@ const specimens = [
     slug: "ganglion",
     name: "Sensory ganglion",
     accepted: ["ganglion", "sensory ganglion", "dorsal root ganglion"],
+    priorityGroup: "ganglion-nerve",
     topic: "Nervous tissue",
     subtopic: "Ganglion identification",
     chapter: "Chapter 9 - Nerve Tissue and the Nervous System",
@@ -387,6 +394,7 @@ const specimens = [
     slug: "skin-with-hair",
     name: "Skin with hair (thin skin)",
     accepted: ["skin with hair", "thin skin", "hairy skin"],
+    priorityGroup: "thin-thick-skin",
     topic: "Skin",
     subtopic: "Hair-bearing skin identification",
     chapter: "Chapter 18 - Skin",
@@ -437,6 +445,7 @@ const specimens = [
     slug: "skin-without-hair",
     name: "Skin without hair (thick skin)",
     accepted: ["skin without hair", "thick skin", "glabrous skin"],
+    priorityGroup: "thin-thick-skin",
     topic: "Skin",
     subtopic: "Glabrous skin identification",
     chapter: "Chapter 18 - Skin",
@@ -486,7 +495,8 @@ const specimens = [
   {
     slug: "white-adipose",
     name: "White adipose tissue",
-    accepted: ["white adipose", "white adipose tissue", "unilocular adipose tissue"],
+    accepted: ["white adipose", "white adipose tissue", "white fat", "unilocular adipose tissue"],
+    priorityGroup: "adipose-tendon",
     topic: "Adipose tissue",
     subtopic: "White adipose identification",
     chapter: "Chapter 6 - Adipose Tissue",
@@ -499,8 +509,8 @@ const specimens = [
     ],
     tissueDistractors: [
       ["Brown adipose tissue", "Brown adipocytes are smaller and multilocular with more central nuclei and a dense capillary network."],
+      ["Tendon", "Tendon is a solid field of parallel wavy collagen with thin tenocyte nuclei, not large clear unilocular cells."],
       ["Thyroid", "Thyroid follicles have cuboidal epithelial walls and homogeneous colloid, not empty lipid spaces."],
-      ["Peripheral nerve", "Peripheral nerve has fascicles of axon profiles bounded by perineurium, not large unilocular cells."],
     ],
     parts: [
       {
@@ -537,6 +547,7 @@ const specimens = [
     slug: "brown-adipose",
     name: "Brown adipose tissue",
     accepted: ["brown adipose", "brown adipose tissue", "multilocular adipose tissue"],
+    priorityGroup: "adipose-tendon",
     topic: "Adipose tissue",
     subtopic: "Brown adipose identification",
     chapter: "Chapter 6 - Adipose Tissue",
@@ -547,8 +558,8 @@ const specimens = [
     ],
     tissueDistractors: [
       ["White adipose tissue", "White adipocytes are larger, unilocular and have flattened peripheral nuclei."],
+      ["Tendon", "Tendon has parallel type I collagen bundles and thin tenocyte nuclei rather than multilocular adipocytes."],
       ["Thyroid", "Thyroid is organized into colloid-filled follicles with continuous epithelial walls."],
-      ["Ganglion", "Ganglia have large neuronal somata surrounded by satellite cells, not multilocular fat cells."],
     ],
     parts: [
       {
@@ -584,7 +595,8 @@ const specimens = [
   {
     slug: "thyroid",
     name: "Thyroid gland",
-    accepted: ["thyroid", "thyroid gland"],
+    accepted: ["thyroid", "thyroid gland", "cuboidal epithelium", "simple cuboidal epithelium", "simple cuboidal"],
+    priorityGroup: "epithelium-comparison",
     topic: "Endocrine organs",
     subtopic: "Thyroid identification",
     chapter: "Chapter 20 - Endocrine Glands",
@@ -596,9 +608,9 @@ const specimens = [
       "The second field shows follicles of different sizes separated by a capillary-rich stroma.",
     ],
     tissueDistractors: [
-      ["White adipose tissue", "White fat has empty unilocular cells without an epithelial wall or colloid."],
-      ["Brown adipose tissue", "Brown fat has multilocular cells and capillaries, not organized colloid-filled follicles."],
-      ["Ganglion", "Ganglia contain neuronal somata and satellite cells rather than epithelial follicles."],
+      ["Urinary bladder", "Bladder has multilayered transitional epithelium with umbrella cells and no colloid-filled follicles."],
+      ["Trachea", "Trachea has pseudostratified ciliated epithelium, glands and cartilage rather than simple cuboidal follicular walls."],
+      ["White adipose tissue", "White fat has empty unilocular cells without a cuboidal epithelial wall or colloid."],
     ],
     parts: [
       {
@@ -635,6 +647,7 @@ const specimens = [
     slug: "skeletal-muscle",
     name: "Skeletal muscle",
     accepted: ["skeletal muscle", "striated skeletal muscle"],
+    priorityGroup: "cardiac-skeletal-muscle",
     topic: "Muscle tissue",
     subtopic: "Skeletal muscle identification",
     chapter: "Chapter 10 - Muscle Tissue",
@@ -685,6 +698,7 @@ const specimens = [
     slug: "cardiac-muscle",
     name: "Cardiac muscle",
     accepted: ["cardiac muscle", "myocardium"],
+    priorityGroup: "cardiac-skeletal-muscle",
     topic: "Muscle tissue",
     subtopic: "Cardiac muscle identification",
     chapter: "Chapter 10 - Muscle Tissue",
@@ -733,6 +747,7 @@ const specimens = [
     slug: "tendon",
     name: "Tendon",
     accepted: ["tendon", "dense regular connective tissue"],
+    priorityGroup: "adipose-tendon",
     topic: "Connective tissue",
     subtopic: "Tendon identification",
     chapter: "Chapter 5 - Connective Tissue",
@@ -744,9 +759,9 @@ const specimens = [
       "The closer field emphasizes collagen crimp and thin nuclei without muscle striations or nerve fascicles.",
     ],
     tissueDistractors: [
+      ["White adipose tissue", "White adipose is formed by large clear unilocular cells rather than solid parallel collagen bundles."],
+      ["Brown adipose tissue", "Brown adipose has small multilocular cells and abundant capillaries rather than sparse nuclei between wavy collagen."],
       ["Skeletal muscle", "Skeletal muscle has thick cellular fibers with cross-striations and peripheral myonuclei."],
-      ["Peripheral nerve", "Peripheral nerve contains axons grouped into rounded fascicles with perineurium."],
-      ["Cardiac muscle", "Cardiac muscle is cellular, branching and striated with central nuclei and intercalated discs."],
     ],
     parts: [
       {
@@ -795,24 +810,29 @@ function buildOptions(correct, distractors) {
   return { options, correctOptionId, distractorExplanations };
 }
 
-function mediaFor(specimen, suffix, variant, annotation, source) {
-  const filename = variant.endsWith(".jpg") ? variant : `${specimen.slug}-${variant}.jpg`;
-  return [{
-    id: `hpi15-${specimen.slug}-${suffix}-image`,
-    type: "image",
-    path: `${imageRoot}/${filename}`,
-    alt: `${specimen.name} microscope field used for ${suffix.replaceAll("-", " ")} practice`,
-    caption: annotation ? `Structure identification · marker A` : `Specimen identification · ${specimen.name}`,
-    attribution: source.title,
-    ...(annotation ? { annotations: [{
-      id: "A",
-      label: "A",
-      x: annotation.x / 100,
-      y: annotation.y / 100,
-      width: annotation.width / 100,
-      height: annotation.height / 100,
-    }] } : {}),
-  }];
+function mediaFor(specimen, suffix, mediaInput, annotation, source) {
+  const inputs = Array.isArray(mediaInput) ? mediaInput : [mediaInput];
+  return inputs.map((input, index) => {
+    const descriptor = typeof input === "string" ? { variant: input } : input;
+    const filename = descriptor.variant.endsWith(".jpg") ? descriptor.variant : `${specimen.slug}-${descriptor.variant}.jpg`;
+    const mediaSource = descriptor.source ?? source;
+    return {
+      id: `hpi15-${specimen.slug}-${suffix}-image${inputs.length > 1 ? `-${index + 1}` : ""}`,
+      type: "image",
+      path: `${imageRoot}/${filename}`,
+      alt: `${descriptor.role ?? specimen.name} microscope field used for ${suffix.replaceAll("-", " ")} practice`,
+      caption: annotation ? `Structure identification · marker A` : descriptor.role ?? `Specimen identification · ${specimen.name}`,
+      attribution: mediaSource.title,
+      ...(annotation ? { annotations: [{
+        id: "A",
+        label: "A",
+        x: annotation.x / 100,
+        y: annotation.y / 100,
+        width: annotation.width / 100,
+        height: annotation.height / 100,
+      }] } : {}),
+    };
+  });
 }
 
 function makeQuestion(specimen, item) {
@@ -839,8 +859,10 @@ function makeQuestion(specimen, item) {
       "histo-practical",
       "histo-identification-15",
       "identification-only",
+      "written-answer",
       "exam-aug22",
       specimen.slug,
+      `priority-${specimen.priorityGroup}`,
       item.annotation ? "structure-identification" : "specimen-identification",
     ],
     examPriority: "core",
@@ -862,9 +884,12 @@ const questions = specimens.flatMap((specimen) => {
   const identification = [
     {
       suffix: "identify-overview",
-      media: overviewMedia,
+      media: [
+        { variant: overviewMedia, source: overviewSource, role: "Wide field · orient to the whole-slide architecture" },
+        { variant: "field-a", source: specimen.source, role: "Close field · confirm the diagnostic cellular pattern" },
+      ],
       source: overviewSource,
-      prompt: `At the microscope, what should be written for this specimen?`,
+      prompt: `Study the wide and close fields together. What tissue or specimen should be written?`,
       correct: specimen.name,
       accepted: specimen.accepted,
       distractors: specimen.tissueDistractors,
@@ -873,9 +898,12 @@ const questions = specimens.flatMap((specimen) => {
     },
     {
       suffix: "identify-second-field",
-      media: secondMedia,
+      media: [
+        { variant: secondMedia, source: secondSource, role: "Second field · transfer the low-power pattern" },
+        { variant: "field-b", source: specimen.source, role: "Diagnostic close field · verify the decisive feature" },
+      ],
       source: secondSource,
-      prompt: `This is a second field or magnification from one of the 15 required slides. What is the specimen?`,
+      prompt: `Use both magnifications to identify this required slide. Write the tissue, specimen or defining epithelial pattern.`,
       correct: specimen.name,
       accepted: specimen.accepted,
       distractors: specimen.tissueDistractors,

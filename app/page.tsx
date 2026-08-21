@@ -35,7 +35,7 @@ type BankSummary = {
   }>;
 };
 
-type SessionAnswer = StudentAnswer & { flagged: boolean };
+type SessionAnswer = StudentAnswer & { flagged: boolean; writtenSubmitted?: boolean };
 type ExamId = "july25" | "aug22" | "july29";
 type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "histo-identification" | "practical" | "wrong" | "flagged";
 type SavedCollectionId = "wrong" | "flagged";
@@ -82,7 +82,7 @@ const examConfig: Record<ExamId, {
   aug22: {
     date: "Aug 22",
     title: "Histology Practical",
-    focus: "Two microscope modes: the confirmed 15-slide identification practical plus the complete 55-specimen atlas bank",
+    focus: "Written microscope identification with paired wide/close views for the confirmed 15 slides, plus the complete 55-specimen atlas bank",
     collections: ["histo-identification", "histo-practical", "wrong", "flagged"],
   },
   july29: {
@@ -174,6 +174,7 @@ function cleanAnswers(value: unknown, questionIds: string[]) {
     };
     if (typeof answer.selectedOptionId === "string") normalized.selectedOptionId = answer.selectedOptionId.slice(0, 8);
     if (typeof answer.writtenAnswer === "string") normalized.writtenAnswer = answer.writtenAnswer.slice(0, 6000);
+    if (typeof answer.writtenSubmitted === "boolean") normalized.writtenSubmitted = answer.writtenSubmitted;
     return [questionId, normalized];
   }));
 }
@@ -232,28 +233,113 @@ function isSavedCollection(value: CollectionId): value is SavedCollectionId {
   return value === "wrong" || value === "flagged";
 }
 
-const emptyAnswer = (questionId: string, flagged = false): SessionAnswer => ({
+const emptyAnswer = (questionId: string, flagged = false, mode: StudentAnswer["mode"] = "select"): SessionAnswer => ({
   questionId,
-  mode: "select",
+  mode,
   reasoning: "",
   confidence: "unsure",
   flagged,
+  ...(mode === "write" ? { writtenSubmitted: false } : {}),
 });
 
 function normalize(value: string) {
   return value.toLowerCase().trim().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
+const practicalTissueVocabulary = [
+  ["Trachea / pseudostratified respiratory epithelium", ["trachea", "tracheal wall", "respiratory epithelium", "pseudostratified", "pseudostratified epithelium", "pseudostratified ciliated epithelium", "pseudostratified ciliated columnar epithelium", "ciliated pseudostratified columnar epithelium"]],
+  ["Urinary bladder / transitional epithelium", ["bladder", "urinary bladder", "urothelium", "transitional", "transitional epithelium"]],
+  ["Spongy (trabecular) bone", ["spongy bone", "trabecular bone", "cancellous bone", "bone"]],
+  ["Hyaline cartilage", ["hyaline cartilage", "cartilage"]],
+  ["Synovial joint", ["joint", "synovial joint"]],
+  ["Peripheral nerve", ["nerve", "peripheral nerve"]],
+  ["Sensory ganglion", ["ganglion", "sensory ganglion", "dorsal root ganglion", "drg"]],
+  ["Thin skin (skin with hair)", ["thin skin", "skin with hair", "hairy skin"]],
+  ["Thick skin (skin without hair)", ["thick skin", "skin without hair", "glabrous skin", "hairless skin"]],
+  ["White adipose tissue", ["white adipose", "white adipose tissue", "white fat", "unilocular adipose", "unilocular adipose tissue"]],
+  ["Brown adipose tissue", ["brown adipose", "brown adipose tissue", "brown fat", "multilocular adipose", "multilocular adipose tissue"]],
+  ["Thyroid / simple cuboidal epithelium", ["thyroid", "thyroid gland", "cuboidal epithelium", "simple cuboidal", "simple cuboidal epithelium"]],
+  ["Skeletal muscle", ["skeletal muscle", "striated skeletal muscle"]],
+  ["Cardiac muscle", ["cardiac muscle", "myocardium", "heart muscle"]],
+  ["Tendon", ["tendon", "dense regular connective tissue", "dense regular collagenous connective tissue"]],
+] as const;
+
+function isWrittenPracticalQuestion(question: MCQQuestion) {
+  return (question.tags ?? []).includes("histo-identification-15");
+}
+
+function answerForQuestion(question: MCQQuestion, saved?: SessionAnswer, flagged = false): SessionAnswer {
+  if (!isWrittenPracticalQuestion(question)) return saved ?? emptyAnswer(question.id, flagged);
+  if (saved?.mode === "write") return { ...saved, mode: "write", writtenSubmitted: saved.writtenSubmitted ?? Boolean(saved.writtenAnswer?.trim()) };
+  return emptyAnswer(question.id, saved?.flagged ?? flagged, "write");
+}
+
+function editDistance(left: string, right: string) {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex];
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      current[rightIndex] = Math.min(
+        current[rightIndex - 1] + 1,
+        previous[rightIndex] + 1,
+        previous[rightIndex - 1] + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      );
+    }
+    previous.splice(0, previous.length, ...current);
+  }
+  return previous[right.length];
+}
+
+function writtenSimilarity(input: string, candidate: string) {
+  if (!input || !candidate) return 0;
+  if (input === candidate) return 1;
+  const inputTokens = input.split(" ");
+  const candidateTokens = candidate.split(" ");
+  const shorter = inputTokens.length <= candidateTokens.length ? inputTokens : candidateTokens;
+  const longer = shorter === inputTokens ? candidateTokens : inputTokens;
+  if (shorter.length >= 2 && shorter.every((token) => longer.includes(token))) return 0.94;
+  const longest = Math.max(input.length, candidate.length);
+  if (longest < 5) return 0;
+  return 1 - editDistance(input, candidate) / longest;
+}
+
+type WrittenInterpretation = { optionId?: string; label?: string; autocorrected: boolean };
+
+function interpretWrittenAnswer(question: MCQQuestion, answer?: SessionAnswer): WrittenInterpretation {
+  const raw = answer?.writtenAnswer?.trim() ?? "";
+  const input = normalize(raw);
+  if (!input) return { autocorrected: false };
+  const correctOption = question.options.find((option) => option.id === question.correctOptionId);
+  const candidates: Array<{ optionId?: string; label: string; alias: string }> = [];
+  for (const option of question.options) {
+    const aliases = [option.text];
+    if (option.id === question.correctOptionId) aliases.push(...(question.acceptedFreeText ?? []));
+    const vocabulary = practicalTissueVocabulary.find(([, groupAliases]) => groupAliases.some((alias) => normalize(alias) === normalize(option.text)));
+    if (vocabulary) aliases.push(...vocabulary[1]);
+    for (const alias of aliases) candidates.push({ optionId: option.id, label: option.text, alias });
+  }
+  if ((question.tags ?? []).includes("specimen-identification")) {
+    for (const [label, aliases] of practicalTissueVocabulary) {
+      for (const alias of aliases) candidates.push({ label, alias });
+    }
+  }
+  const ranked = candidates
+    .map((candidate) => ({ ...candidate, score: writtenSimilarity(input, normalize(candidate.alias)) }))
+    .filter((candidate) => candidate.score >= 0.76)
+    .sort((left, right) => right.score - left.score || left.alias.length - right.alias.length);
+  const best = ranked[0];
+  if (!best) return { autocorrected: false };
+  const tiedLabels = new Set(ranked.filter((candidate) => candidate.score === best.score).map((candidate) => normalize(candidate.label)));
+  if (tiedLabels.size > 1 && best.score < 1) return { autocorrected: false };
+  const label = best.optionId === question.correctOptionId && correctOption ? correctOption.text : best.label;
+  return { optionId: best.optionId, label, autocorrected: normalize(label) !== input };
+}
+
 function writtenOptionId(question: MCQQuestion, answer: SessionAnswer) {
   const raw = answer.writtenAnswer?.trim() ?? "";
   const leadingLetter = raw.match(/^(?:option\s*)?([a-f])(?:\b|[).:\-])/i)?.[1]?.toUpperCase();
   if (leadingLetter && question.options.some((option) => option.id.toUpperCase() === leadingLetter)) return leadingLetter;
-  const normalized = normalize(raw);
-  if (!normalized) return undefined;
-  const aliases = [...(question.acceptedFreeText ?? []), question.options.find((option) => option.id === question.correctOptionId)?.text ?? ""];
-  if (aliases.some((alias) => normalize(alias) === normalized || (normalize(alias).length > 3 && normalized.startsWith(`${normalize(alias)} `)))) return question.correctOptionId;
-  const optionMatch = question.options.find((option) => normalize(option.text) === normalized);
-  return optionMatch?.id;
+  return interpretWrittenAnswer(question, answer).optionId;
 }
 
 function selectedOptionId(question: MCQQuestion, answer?: SessionAnswer) {
@@ -262,10 +348,11 @@ function selectedOptionId(question: MCQQuestion, answer?: SessionAnswer) {
 }
 
 function isAnswered(answer?: SessionAnswer) {
-  return Boolean(answer && (answer.mode === "select" ? answer.selectedOptionId : answer.writtenAnswer?.trim()));
+  return Boolean(answer && (answer.mode === "select" ? answer.selectedOptionId : answer.writtenAnswer?.trim() && answer.writtenSubmitted !== false));
 }
 
 function isCorrect(question: MCQQuestion, answer?: SessionAnswer) {
+  if (answer?.mode === "write" && answer.writtenSubmitted === false) return false;
   return selectedOptionId(question, answer) === question.correctOptionId;
 }
 
@@ -287,6 +374,11 @@ function StudyImage({ question, media, review = false }: { question: MCQQuestion
     </div>
     <figcaption>{review ? media.caption ?? "Image recognition" : media.annotations?.length ? "Structure identification · name marker A" : "Specimen identification · inspect before choosing"}</figcaption>
   </figure>;
+}
+
+function StudyMedia({ question, review = false }: { question: MCQQuestion; review?: boolean }) {
+  if (!question.media?.length) return null;
+  return <div className={question.media.length > 1 ? "study-image-pair" : "study-image-single"}>{question.media.map((media) => <StudyImage question={question} media={media} review={review} key={media.id} />)}</div>;
 }
 
 export default function Home() {
@@ -467,7 +559,7 @@ export default function Home() {
       }
       const flaggedIds = new Set(progress.exams[exam].flaggedIds);
       setQuestions(payload.questions);
-      setAnswers(Object.fromEntries(payload.questions.map((question) => [question.id, emptyAnswer(question.id, flaggedIds.has(question.id))])));
+      setAnswers(Object.fromEntries(payload.questions.map((question) => [question.id, answerForQuestion(question, undefined, flaggedIds.has(question.id))])));
       setQuestionIndex(0);
       setGrades({});
       setGradeErrors({});
@@ -483,6 +575,19 @@ export default function Home() {
 
   function updateAnswer(questionId: string, patch: Partial<SessionAnswer>) {
     setAnswers((current) => ({ ...current, [questionId]: { ...(current[questionId] ?? emptyAnswer(questionId)), ...patch } }));
+  }
+
+  function submitWrittenAnswer(questionId: string) {
+    if (!answers[questionId]?.writtenAnswer?.trim()) return;
+    updateAnswer(questionId, { writtenSubmitted: true });
+    setGrades((current) => Object.fromEntries(Object.entries(current).filter(([id]) => id !== questionId)));
+    setGradeErrors((current) => ({ ...current, [questionId]: "" }));
+  }
+
+  function reviseWrittenAnswer(questionId: string) {
+    updateAnswer(questionId, { writtenSubmitted: false });
+    setGrades((current) => Object.fromEntries(Object.entries(current).filter(([id]) => id !== questionId)));
+    setGradeErrors((current) => ({ ...current, [questionId]: "" }));
   }
 
   function toggleFlag(questionId: string) {
@@ -573,7 +678,7 @@ export default function Home() {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
       const restoredIds = new Set(restoredQuestions.map((question) => question.id));
       setQuestions(restoredQuestions);
-      setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, saved.answers[question.id] ?? emptyAnswer(question.id)])));
+      setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, answerForQuestion(question, saved.answers[question.id])])));
       setQuestionIndex(Math.min(saved.questionIndex, restoredQuestions.length - 1));
       setGrades({});
       setGradeErrors({});
@@ -610,7 +715,7 @@ export default function Home() {
     try {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
       setQuestions(restoredQuestions);
-      setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, saved.answers[question.id] ?? emptyAnswer(question.id)])));
+      setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, answerForQuestion(question, saved.answers[question.id])])));
       setQuestionIndex(0);
       setGrades({});
       setGradeErrors({});
@@ -648,12 +753,15 @@ export default function Home() {
 
   if (phase === "active") {
     const question = questions[questionIndex];
-    const answer = answers[question.id] ?? emptyAnswer(question.id);
+    const answer = answers[question.id] ?? answerForQuestion(question);
     const chosenId = selectedOptionId(question, answer);
     const chosen = question.options.find((option) => option.id === chosenId);
     const correct = question.options.find((option) => option.id === question.correctOptionId);
-    const hasImmediateFeedback = answer.mode === "select" && Boolean(answer.selectedOptionId);
     const isPracticalQuestion = (question.tags ?? []).includes("histo-practical");
+    const isWrittenPractical = isWrittenPracticalQuestion(question);
+    const hasImmediateFeedback = answer.mode === "select" ? Boolean(answer.selectedOptionId) : answer.writtenSubmitted === true;
+    const writtenInterpretation = answer.mode === "write" ? interpretWrittenAnswer(question, answer) : undefined;
+    const grade = grades[question.id];
     const answeredCount = questions.filter((item) => isAnswered(answers[item.id])).length;
     return (
       <main className="session-shell">
@@ -670,12 +778,12 @@ export default function Home() {
                 <span>{question.subject}</span><span>{question.topic}</span><span>Difficulty {question.difficulty}/5</span>
               </div>
               <h1>{question.prompt}</h1>
-              {question.media?.map((media) => <StudyImage question={question} media={media} key={media.id} />)}
+              <StudyMedia question={question} />
 
-              <div className="mode-switch" aria-label="Answer mode">
+              {!isWrittenPractical && <div className="mode-switch" aria-label="Answer mode">
                 <button disabled={hasImmediateFeedback} className={answer.mode === "select" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "select" })}>Choose option</button>
                 <button disabled={hasImmediateFeedback} className={answer.mode === "write" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "write" })}>Type my answer</button>
-              </div>
+              </div>}
 
               {answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked" : ""} ${hasImmediateFeedback && isPracticalQuestion ? "has-explanations" : ""}`}>
                 {question.options.map((option) => {
@@ -690,9 +798,24 @@ export default function Home() {
                     <span className="option-copy"><b>{option.text}</b>{hasImmediateFeedback && isPracticalQuestion && <small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{inlineExplanation}</small>}</span>
                   </button>;
                 })}
+              </div> : isWrittenPractical ? <div className="written-identification">
+                <label><span>Write the tissue or marked structure <em>no word bank</em></span><input autoComplete="off" disabled={hasImmediateFeedback} value={answer.writtenAnswer ?? ""} onChange={(event) => updateAnswer(question.id, { writtenAnswer: event.target.value, writtenSubmitted: false })} onKeyDown={(event) => { if (event.key === "Enter") submitWrittenAnswer(question.id); }} placeholder="e.g. sensory ganglion, hyaline cartilage, transitional epithelium…" /></label>
+                <button className={hasImmediateFeedback ? "revise-answer" : "primary"} disabled={!hasImmediateFeedback && !answer.writtenAnswer?.trim()} onClick={() => hasImmediateFeedback ? reviseWrittenAnswer(question.id) : submitWrittenAnswer(question.id)}>{hasImmediateFeedback ? "Revise answer" : "Check tissue →"}</button>
               </div> : <label className="written-label"><span>Your answer</span><textarea className="answer-box" value={answer.writtenAnswer ?? ""} onChange={(event) => updateAnswer(question.id, { writtenAnswer: event.target.value })} placeholder="Type the option letter or the answer in your own words…" /></label>}
 
-              {hasImmediateFeedback && <section className={`instant-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
+              {hasImmediateFeedback && isWrittenPractical && <section className={`instant-feedback written-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
+                <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct identification" : "× Compare and repair"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
+                <div className="written-match-grid"><div><span>You wrote</span><b>{answer.writtenAnswer}</b></div><div><span>Interpreted as</span><b>{writtenInterpretation?.label ?? "No confident tissue match"}{writtenInterpretation?.autocorrected && writtenInterpretation.label ? " · spelling normalized" : ""}</b></div><div><span>Expected</span><b>{correct?.text ?? question.correctOptionId}</b><small>Also accepted: {(question.acceptedFreeText ?? []).slice(0, 5).join(" · ")}</small></div></div>
+                <div className="explanation"><span>What confirms it across both magnifications</span><p>{question.explanation}</p></div>
+                <div className="written-lookalikes"><span>High-yield look-alikes from the practical list</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div>
+                <div className="tutor-review immediate-tutor">
+                  {!grade && <button disabled={grading[question.id] || !health?.codex.available} onClick={() => void requestCodexGrade(question)}>{grading[question.id] ? "Codex is comparing the fields…" : health?.codex.available ? "Ask Codex: why my tissue differs →" : "Codex comparison unavailable"}</button>}
+                  {gradeErrors[question.id] && <p className="tutor-error">{gradeErrors[question.id]} Deterministic tissue grading remains available.</p>}
+                  {grade && <div className="tutor-result"><span>CODEX MICROSCOPE COMPARISON · {grade.verdict}</span><p>{grade.teachingNote}</p>{grade.whyCorrectAnswerWins && <p><b>Decisive clue:</b> {grade.whyCorrectAnswerWins}</p>}{grade.misconception && <p><b>Repair:</b> {grade.misconception}</p>}<blockquote>{grade.reflectionQuestion}</blockquote></div>}
+                </div>
+              </section>}
+
+              {hasImmediateFeedback && !isWrittenPractical && <section className={`instant-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
                 <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
                 <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : chosenId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
                 {!isPracticalQuestion && <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p></div>}
@@ -742,15 +865,18 @@ export default function Home() {
             const grade = grades[question.id];
             const linkedLesson = lessonForQuestion(question, exam, allLessons);
             const isPracticalQuestion = (question.tags ?? []).includes("histo-practical");
+            const isWrittenPractical = isWrittenPracticalQuestion(question);
+            const writtenInterpretation = isWrittenPractical ? interpretWrittenAnswer(question, answer) : undefined;
             return <article className={`review-item ${isCorrect(question, answer) ? "correct" : "wrong"}`} key={question.id}>
               <div className="review-item-head"><span>{isCorrect(question, answer) ? "✓ Correct" : "× Repair"}</span><div><small>{question.subject} · {question.topic}</small><button className={answer?.flagged ? "active" : ""} onClick={() => toggleFlag(question.id)}>{answer?.flagged ? "★ Unflag" : "☆ Flag"}</button></div></div>
               <h2>{question.prompt}</h2>
-              {question.media?.map((media) => <StudyImage question={question} media={media} review key={media.id} />)}
-              <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer?.writtenAnswer || "No answer"}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
-              {isPracticalQuestion && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
+              <StudyMedia question={question} review />
+              <div className="answer-comparison"><div><span>Your answer</span><b>{answer?.mode === "write" ? answer.writtenAnswer || "No answer" : chosen ? `${chosen.id}. ${chosen.text}` : "No answer"}</b>{writtenInterpretation?.label && <small>Interpreted as {writtenInterpretation.label}</small>}</div><div><span>Correct answer</span><b>{correct ? correct.text : question.correctOptionId}</b></div></div>
+              {isPracticalQuestion && !isWrittenPractical && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
                 <span className="option-letter">{option.id}</span>
                 <span className="option-copy"><b>{option.text}</b><small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{option.id === question.correctOptionId ? question.explanation : question.distractorExplanations[option.id]}</small></span>
               </button>)}</div>}
+              {isWrittenPractical && <><div className="explanation"><span>What confirms it across the fields</span><p>{question.explanation}</p></div><div className="written-lookalikes"><span>High-yield look-alikes</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div></>}
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
               {!isPracticalQuestion && <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>}
               {linkedLesson && <div className="linked-lesson"><button onClick={() => setExpandedLessons((current) => ({ ...current, [question.id]: !current[question.id] }))}><b>{expandedLessons[question.id] ? "Close visual lesson" : "Open 90-second visual lesson"}</b><span>{linkedLesson.title} {expandedLessons[question.id] ? "↑" : "↓"}</span></button>{expandedLessons[question.id] && <LessonSlide lesson={linkedLesson} compact />}</div>}
@@ -779,7 +905,7 @@ export default function Home() {
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Histology fields and embryo diagrams", count: examCount("images") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Methods, stains, slides and recognition questions kept in the exam bank", count: examCount("practical") },
   ] : exam === "aug22" ? [
-    { id: "histo-identification", title: "15-slide microscope identification", scope: `${examCount("histo-identification")} identification questions`, detail: "Only the confirmed exam set: identify each specimen and its visible parts across several fields and magnifications", count: examCount("histo-identification") },
+    { id: "histo-identification", title: "15-slide written microscope identification", scope: `${examCount("histo-identification")} written drills`, detail: "Paired wide/close fields, typed tissue names, tolerant spelling correction, marked parts and priority look-alike comparisons", count: examCount("histo-identification") },
     { id: "histo-practical", title: "55-specimen practical bank", scope: `${examCount("histo-practical")} microscope questions`, detail: "Full deck: epithelium, connective tissue, blood, muscle, nerve, digestive, endocrine, urinary, vessels and lymphoid organs", count: examCount("histo-practical") },
   ] : [
     { id: "biochemistry", title: "Biochemistry", scope: "Lippincott 1–7, 14–18, 23–33", detail: "Molecules, enzymes, integrated metabolism, genetics, nutrition and laboratory reasoning", count: examCount("biochemistry") },
@@ -853,7 +979,7 @@ export default function Home() {
 
           {tab === "Practical Atlas" && exam === "aug22" && <div className="practical-atlas-shell">
             <div className="practical-atlas-actions">
-              <div className="practical-atlas-head identification-head"><div><span>EXAM MODE · CONFIRMED 15 SLIDES</span><b>Identification only: name the specimen, then identify parts marked A.</b></div><button className="primary" disabled={!examCount("histo-identification")} onClick={() => void startSession("histo-identification", selectedExam?.collectionQuestionIds?.["histo-identification"] ?? [])}>Test all {examCount("histo-identification")} →</button></div>
+              <div className="practical-atlas-head identification-head"><div><span>EXAM MODE · CONFIRMED 15 SLIDES</span><b>Write the answer yourself from paired wide/close fields; then compare the decisive morphology.</b></div><button className="primary" disabled={!examCount("histo-identification")} onClick={() => void startSession("histo-identification", selectedExam?.collectionQuestionIds?.["histo-identification"] ?? [])}>Write all {examCount("histo-identification")} →</button></div>
               <div className="practical-atlas-head"><div><span>SUPPLEMENT · 55-SPECIMEN ATLAS</span><b>Broader transfer practice, cell recognition and closest-slide discrimination.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all {examCount("histo-practical")} →</button></div>
             </div>
             <LessonGuide exam="aug22" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
