@@ -677,20 +677,26 @@ export default function Home() {
                 <button disabled={hasImmediateFeedback} className={answer.mode === "write" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "write" })}>Type my answer</button>
               </div>
 
-              {answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked" : ""}`}>
+              {answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked" : ""} ${hasImmediateFeedback && isPracticalQuestion ? "has-explanations" : ""}`}>
                 {question.options.map((option) => {
                   const state = hasImmediateFeedback
                     ? option.id === question.correctOptionId ? "correct" : option.id === answer.selectedOptionId ? "wrong" : ""
                     : answer.selectedOptionId === option.id ? "chosen" : "";
-                  return <button key={option.id} className={state} disabled={hasImmediateFeedback} onClick={() => updateAnswer(question.id, { selectedOptionId: option.id })}><span>{option.id}</span><b>{option.text}</b></button>;
+                  const inlineExplanation = option.id === question.correctOptionId
+                    ? question.explanation
+                    : question.distractorExplanations[option.id];
+                  return <button key={option.id} className={state} disabled={hasImmediateFeedback} onClick={() => updateAnswer(question.id, { selectedOptionId: option.id })}>
+                    <span className="option-letter">{option.id}</span>
+                    <span className="option-copy"><b>{option.text}</b>{hasImmediateFeedback && isPracticalQuestion && <small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{inlineExplanation}</small>}</span>
+                  </button>;
                 })}
               </div> : <label className="written-label"><span>Your answer</span><textarea className="answer-box" value={answer.writtenAnswer ?? ""} onChange={(event) => updateAnswer(question.id, { writtenAnswer: event.target.value })} placeholder="Type the option letter or the answer in your own words…" /></label>}
 
               {hasImmediateFeedback && <section className={`instant-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
                 <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
                 <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : chosenId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
-                <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p></div>
-                {isPracticalQuestion ? <div className="option-breakdown"><span>Why the other three lose</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === chosenId ? "selected-distractor" : ""}><b>{option.id}. {option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div> : chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note immediate-distractor"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}
+                {!isPracticalQuestion && <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p></div>}
+                {!isPracticalQuestion && chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note immediate-distractor"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}
               </section>}
 
               <label className="reasoning-label"><span>Reasoning <em>optional · saved for review</em></span><textarea value={answer.reasoning} onChange={(event) => updateAnswer(question.id, { reasoning: event.target.value })} placeholder="Why does this answer win? What clue ruled out the alternatives?" /></label>
@@ -741,9 +747,12 @@ export default function Home() {
               <h2>{question.prompt}</h2>
               {question.media?.map((media) => <StudyImage question={question} media={media} review key={media.id} />)}
               <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer?.writtenAnswer || "No answer"}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
+              {isPracticalQuestion && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
+                <span className="option-letter">{option.id}</span>
+                <span className="option-copy"><b>{option.text}</b><small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{option.id === question.correctOptionId ? question.explanation : question.distractorExplanations[option.id]}</small></span>
+              </button>)}</div>}
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
-              <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{!isPracticalQuestion && chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>
-              {isPracticalQuestion && <div className="option-breakdown"><span>Why the other three lose</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === chosenId ? "selected-distractor" : ""}><b>{option.id}. {option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div>}
+              {!isPracticalQuestion && <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>}
               {linkedLesson && <div className="linked-lesson"><button onClick={() => setExpandedLessons((current) => ({ ...current, [question.id]: !current[question.id] }))}><b>{expandedLessons[question.id] ? "Close visual lesson" : "Open 90-second visual lesson"}</b><span>{linkedLesson.title} {expandedLessons[question.id] ? "↑" : "↓"}</span></button>{expandedLessons[question.id] && <LessonSlide lesson={linkedLesson} compact />}</div>}
               {(answer?.mode === "write" || answer?.reasoning) && <div className="tutor-review">
                 {!grade && <button disabled={grading[question.id]} onClick={() => void requestCodexGrade(question)}>{grading[question.id] ? "Codex is analyzing…" : "Ask Codex to audit my reasoning"}</button>}

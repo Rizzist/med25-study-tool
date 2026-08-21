@@ -71,7 +71,10 @@ test("source provides immediate answer feedback and supports the confirmed exam 
 
   assert.match(page, /if \(phase === "active"\)/);
   assert.match(page, /hasImmediateFeedback/);
-  assert.match(page, /Why the other three lose/);
+  assert.match(page, /option-inline-explanation/);
+  assert.match(page, /Why this is right/);
+  assert.match(page, /Why this is wrong/);
+  assert.doesNotMatch(page, /Why the other three lose/);
   assert.match(page, /option\.id === question\.correctOptionId \? "correct"/);
   assert.match(page, /End session/);
   assert.match(page, /Finish & grade/);
