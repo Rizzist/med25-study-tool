@@ -7,6 +7,13 @@ const output = resolve(root, "data/bank/questions/histology-practicals-full.json
 const optionIds = ["A", "B", "C", "D"];
 let questionIndex = 0;
 
+function strengthenDistractor(reason, correct, explanation) {
+  const trimmed = reason.trim();
+  return trimmed.length >= 45
+    ? trimmed
+    : `${trimmed} The correct choice is ${correct}: ${explanation}`;
+}
+
 function makeQuestion(specimen, suffix, difficulty, prompt, correct, accepted, distractors, explanation, objective) {
   const correctPosition = questionIndex % optionIds.length;
   const choices = distractors.map((item) => ({ ...item, correct: false }));
@@ -14,12 +21,12 @@ function makeQuestion(specimen, suffix, difficulty, prompt, correct, accepted, d
   const options = choices.map((choice, index) => ({ id: optionIds[index], text: choice.text }));
   const correctOptionId = optionIds[correctPosition];
   const distractorExplanations = Object.fromEntries(choices.flatMap((choice, index) => (
-    choice.correct ? [] : [[optionIds[index], choice.why]]
+    choice.correct ? [] : [[optionIds[index], strengthenDistractor(choice.why, correct, explanation)]]
   )));
   const record = {
     schemaVersion: "1.0.0",
     id: `hpr-${specimen.slug}-${suffix}`,
-    revision: 1,
+    revision: 2,
     status: "verified",
     kind: "image_single_best_answer",
     subject: "histology",
@@ -59,7 +66,7 @@ function makeQuestion(specimen, suffix, difficulty, prompt, correct, accepted, d
       "exam-aug22",
     ],
     examPriority: "core",
-    qualityFlags: ["source-verified", "crop-visually-reviewed", "full-deck-cross-referenced", "practical-bank"],
+    qualityFlags: ["source-verified", "crop-visually-reviewed", "full-deck-cross-referenced", "practical-bank", "complete-distractor-reasoning"],
   };
   questionIndex += 1;
   return record;

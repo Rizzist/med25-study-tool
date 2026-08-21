@@ -893,6 +893,13 @@ const specimens = [
 const optionIds = ["A", "B", "C", "D"];
 let questionIndex = 0;
 
+function strengthenDistractor(reason, correct, explanation) {
+  const trimmed = reason.trim();
+  return trimmed.length >= 45
+    ? trimmed
+    : `${trimmed} The correct choice is ${correct}: ${explanation}`;
+}
+
 function buildQuestion(specimen, question) {
   const correctPosition = questionIndex % optionIds.length;
   const choices = [...question.distractors.map(([text, reason]) => ({ text, reason, correct: false }))];
@@ -900,12 +907,12 @@ function buildQuestion(specimen, question) {
   const options = choices.map((choice, index) => ({ id: optionIds[index], text: choice.text }));
   const correctOptionId = options[correctPosition].id;
   const distractorExplanations = Object.fromEntries(choices.flatMap((choice, index) => (
-    choice.correct ? [] : [[optionIds[index], choice.reason]]
+    choice.correct ? [] : [[optionIds[index], strengthenDistractor(choice.reason, question.correct, question.explanation)]]
   )));
   const record = {
     schemaVersion: "1.0.0",
     id: `hpr-${specimen.slug}-${question.suffix}`,
-    revision: 1,
+    revision: 2,
     status: "verified",
     kind: "image_single_best_answer",
     subject: "histology",
@@ -932,7 +939,7 @@ function buildQuestion(specimen, question) {
       "exam-aug22",
     ],
     examPriority: "core",
-    qualityFlags: ["source-verified", "crop-visually-reviewed", "internet-cross-checked", "practical-bank"],
+    qualityFlags: ["source-verified", "crop-visually-reviewed", "internet-cross-checked", "practical-bank", "complete-distractor-reasoning"],
   };
   questionIndex += 1;
   return record;

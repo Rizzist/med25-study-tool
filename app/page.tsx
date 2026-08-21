@@ -633,6 +633,11 @@ export default function Home() {
   if (phase === "active") {
     const question = questions[questionIndex];
     const answer = answers[question.id] ?? emptyAnswer(question.id);
+    const chosenId = selectedOptionId(question, answer);
+    const chosen = question.options.find((option) => option.id === chosenId);
+    const correct = question.options.find((option) => option.id === question.correctOptionId);
+    const hasImmediateFeedback = answer.mode === "select" && Boolean(answer.selectedOptionId);
+    const isPracticalQuestion = (question.tags ?? []).includes("histo-practical");
     const answeredCount = questions.filter((item) => isAnswered(answers[item.id])).length;
     return (
       <main className="session-shell">
@@ -652,15 +657,27 @@ export default function Home() {
               {question.media?.map((media) => <figure className="study-image" key={media.id}><img src={mediaUrl(question, media.id)} alt="Question image" /><figcaption>Image recognition · inspect before choosing</figcaption></figure>)}
 
               <div className="mode-switch" aria-label="Answer mode">
-                <button className={answer.mode === "select" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "select" })}>Choose option</button>
-                <button className={answer.mode === "write" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "write" })}>Type my answer</button>
+                <button disabled={hasImmediateFeedback} className={answer.mode === "select" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "select" })}>Choose option</button>
+                <button disabled={hasImmediateFeedback} className={answer.mode === "write" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "write" })}>Type my answer</button>
               </div>
 
-              {answer.mode === "select" ? <div className="options">
-                {question.options.map((option) => <button key={option.id} className={answer.selectedOptionId === option.id ? "chosen" : ""} onClick={() => updateAnswer(question.id, { selectedOptionId: option.id })}><span>{option.id}</span><b>{option.text}</b></button>)}
+              {answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked" : ""}`}>
+                {question.options.map((option) => {
+                  const state = hasImmediateFeedback
+                    ? option.id === question.correctOptionId ? "correct" : option.id === answer.selectedOptionId ? "wrong" : ""
+                    : answer.selectedOptionId === option.id ? "chosen" : "";
+                  return <button key={option.id} className={state} disabled={hasImmediateFeedback} onClick={() => updateAnswer(question.id, { selectedOptionId: option.id })}><span>{option.id}</span><b>{option.text}</b></button>;
+                })}
               </div> : <label className="written-label"><span>Your answer</span><textarea className="answer-box" value={answer.writtenAnswer ?? ""} onChange={(event) => updateAnswer(question.id, { writtenAnswer: event.target.value })} placeholder="Type the option letter or the answer in your own words…" /></label>}
 
-              <label className="reasoning-label"><span>Reasoning <em>optional · reviewed after the sprint</em></span><textarea value={answer.reasoning} onChange={(event) => updateAnswer(question.id, { reasoning: event.target.value })} placeholder="Why does this answer win? What clue ruled out the alternatives?" /></label>
+              {hasImmediateFeedback && <section className={`instant-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
+                <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
+                <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : chosenId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
+                <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p></div>
+                {isPracticalQuestion ? <div className="option-breakdown"><span>Why the other three lose</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === chosenId ? "selected-distractor" : ""}><b>{option.id}. {option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div> : chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note immediate-distractor"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}
+              </section>}
+
+              <label className="reasoning-label"><span>Reasoning <em>optional · saved for review</em></span><textarea value={answer.reasoning} onChange={(event) => updateAnswer(question.id, { reasoning: event.target.value })} placeholder="Why does this answer win? What clue ruled out the alternatives?" /></label>
               <div className="answer-tools">
                 <div className="confidence"><span>Confidence</span>{(["guess", "unsure", "confident"] as const).map((value) => <button key={value} className={answer.confidence === value ? "selected" : ""} onClick={() => updateAnswer(question.id, { confidence: value })}>{value}</button>)}</div>
                 <button className={`flag-button ${answer.flagged ? "active" : ""}`} onClick={() => toggleFlag(question.id)}>{answer.flagged ? "★ Flagged" : "☆ Flag for review"}</button>
@@ -675,7 +692,7 @@ export default function Home() {
           </footer>
         </section>
 
-        {confirmEnd && <div className="modal-backdrop"><div className="end-modal" role="dialog" aria-modal="true"><span className="eyebrow">Finish sprint</span><h2>Ready to reveal the review?</h2><p>{questions.length - answeredCount ? `${questions.length - answeredCount} questions are unanswered and will count as incorrect.` : "Every question has an answer."} Answers cannot be changed after grading.</p><div><button onClick={() => setConfirmEnd(false)}>Keep working</button><button className="primary" onClick={finishSession}>Grade session</button></div></div></div>}
+        {confirmEnd && <div className="modal-backdrop"><div className="end-modal" role="dialog" aria-modal="true"><span className="eyebrow">Finish sprint</span><h2>Ready to save the full review?</h2><p>{questions.length - answeredCount ? `${questions.length - answeredCount} questions are unanswered and will count as incorrect.` : "Every question has an answer."} The completed score and explanations will be saved in Results.</p><div><button onClick={() => setConfirmEnd(false)}>Keep working</button><button className="primary" onClick={finishSession}>Grade session</button></div></div></div>}
       </main>
     );
   }
@@ -702,13 +719,15 @@ export default function Home() {
             const correct = question.options.find((option) => option.id === question.correctOptionId);
             const grade = grades[question.id];
             const linkedLesson = lessonForQuestion(question, exam, allLessons);
+            const isPracticalQuestion = (question.tags ?? []).includes("histo-practical");
             return <article className={`review-item ${isCorrect(question, answer) ? "correct" : "wrong"}`} key={question.id}>
               <div className="review-item-head"><span>{isCorrect(question, answer) ? "✓ Correct" : "× Repair"}</span><div><small>{question.subject} · {question.topic}</small><button className={answer?.flagged ? "active" : ""} onClick={() => toggleFlag(question.id)}>{answer?.flagged ? "★ Unflag" : "☆ Flag"}</button></div></div>
               <h2>{question.prompt}</h2>
               {question.media?.map((media) => <figure className="study-image review-image" key={media.id}><img src={mediaUrl(question, media.id)} alt={media.alt} /><figcaption>{media.caption ?? "Image recognition"}</figcaption></figure>)}
               <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer?.writtenAnswer || "No answer"}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
-              <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>
+              <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{!isPracticalQuestion && chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>
+              {isPracticalQuestion && <div className="option-breakdown"><span>Why the other three lose</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === chosenId ? "selected-distractor" : ""}><b>{option.id}. {option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div>}
               {linkedLesson && <div className="linked-lesson"><button onClick={() => setExpandedLessons((current) => ({ ...current, [question.id]: !current[question.id] }))}><b>{expandedLessons[question.id] ? "Close visual lesson" : "Open 90-second visual lesson"}</b><span>{linkedLesson.title} {expandedLessons[question.id] ? "↑" : "↓"}</span></button>{expandedLessons[question.id] && <LessonSlide lesson={linkedLesson} compact />}</div>}
               {(answer?.mode === "write" || answer?.reasoning) && <div className="tutor-review">
                 {!grade && <button disabled={grading[question.id]} onClick={() => void requestCodexGrade(question)}>{grading[question.id] ? "Codex is analyzing…" : "Ask Codex to audit my reasoning"}</button>}

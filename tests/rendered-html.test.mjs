@@ -38,7 +38,7 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
   assert.doesNotMatch(html, /Your site is taking shape|starter loading skeleton/i);
 });
 
-test("source keeps answers hidden during sprints and supports the confirmed exam split", async () => {
+test("source provides immediate answer feedback and supports the confirmed exam split", async () => {
   const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles, practicalQuestionText, fullPracticalQuestionText, practicalLessonText, fullPracticalLessonText] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../scripts/codex-bridge.mjs", import.meta.url), "utf8"),
@@ -68,6 +68,9 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   assert.deepEqual(finalExamFiles.filter((name) => name.endsWith(".jsonl")).sort(), ["july25.jsonl", "july29.jsonl"]);
 
   assert.match(page, /if \(phase === "active"\)/);
+  assert.match(page, /hasImmediateFeedback/);
+  assert.match(page, /Why the other three lose/);
+  assert.match(page, /option\.id === question\.correctOptionId \? "correct"/);
   assert.match(page, /End session/);
   assert.match(page, /Finish & grade/);
   assert.match(page, /if \(phase === "review"\)/);
@@ -148,6 +151,9 @@ test("source keeps answers hidden during sprints and supports the confirmed exam
   assert.equal(practicalQuestions.length, 165);
   assert.equal(practicalLessons.length, 55);
   assert.ok(practicalQuestions.every((question) => question.tags.includes("exam-aug22")));
+  assert.ok(practicalQuestions.every((question) => question.revision === 2));
+  assert.ok(practicalQuestions.every((question) => question.options.filter((option) => option.id !== question.correctOptionId).every((option) => question.distractorExplanations[option.id]?.length >= 45)));
+  assert.ok(practicalQuestions.every((question) => question.qualityFlags.includes("complete-distractor-reasoning")));
   assert.ok(practicalLessons.every((lesson) => lesson.exam === "aug22"));
   assert.ok(practicalLessons.every((lesson) => practicalQuestions.filter((question) => question.id.startsWith(`${lesson.id}-`)).length === 3));
   assert.ok(practicalQuestions.every((question) => question.tags.includes("histo-practical") && question.kind === "image_single_best_answer"));

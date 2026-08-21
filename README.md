@@ -15,7 +15,7 @@ A local-first medical-school study app built for three 2026 exams. It combines f
 - Persistent wrong-answer, flagged-question, active-sprint, and completed-result history in the same browser profile
 - Optional local Codex reasoning audits; all ordinary scoring and stored explanations work without Codex
 
-Answers, hints, explanations, and topic navigation remain hidden while a sprint is in progress.
+Choosing an option immediately locks that question, highlights the correct answer, and shows the explanation. Histology Practical questions also explain why each of the other three options is wrong. Topic navigation remains hidden while a sprint is in progress.
 
 > Raw teacher decks, Telegram exports, textbooks, and temporary extraction files are intentionally not included in this repository. The derived questions, lessons, app-ready study images, and provenance metadata are included.
 

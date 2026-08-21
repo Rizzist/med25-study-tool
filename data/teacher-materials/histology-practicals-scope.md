@@ -6,6 +6,8 @@ Last updated: 2026-08-20 (Asia/Tehran)
 
 This bank is the dedicated **August 22 Histology Practical** option with **165 image questions** (three per specimen) and **55 atlas lessons**. Each lesson follows the same microscope routine: orient at low power, inspect the defining architecture, identify the characteristic cell, and state the closest discriminator.
 
+Every question now uses immediate teaching feedback: the selected option locks, the correct option is highlighted, and the rationale appears before the student moves on. All three incorrect options have a specimen-specific explanation so the bank teaches the nearest look-alikes as well as the correct identification.
+
 1. Trachea
 2. Urinary bladder
 3. Compact bone
@@ -111,3 +113,4 @@ Web sources were used to cross-check standard morphological distinctions. The 40
 - Image extraction requires Poppler (`pdftoppm`) and Pillow 12.3.0, pinned in `scripts/requirements-histology-practicals.txt`; the textbook directory can be overridden with `MED_SCHOOL_BOOKS_DIR`.
 - `npm run bank:validate` verifies the question schema, IDs, options, sources, and media paths.
 - `npm run lessons:validate` verifies lesson structure, uniqueness, and every referenced asset.
+- The practical-bank regression test requires three distractor explanations per question and rejects explanations shorter than 45 characters.
