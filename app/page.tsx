@@ -830,18 +830,20 @@ export default function Home() {
     const chosenId = selectedOptionId(question, answer);
     const chosen = question.options.find((option) => option.id === chosenId);
     const correct = question.options.find((option) => option.id === question.correctOptionId);
-    const isPracticalQuestion = (question.tags ?? []).includes("histo-practical");
     const isWrittenPractical = isWrittenPracticalQuestion(question);
-    const hasImmediateFeedback = answer.mode === "select" ? Boolean(answer.selectedOptionId) : answer.writtenSubmitted === true;
+    const hasAnswer = answer.mode === "select" ? Boolean(answer.selectedOptionId) : answer.writtenSubmitted === true;
+    const hasImmediateFeedback = studyMode === "learn" && hasAnswer;
+    const activeChapter = biochemistryChapterById(activeBiochemistryChapterId);
+    const sessionLabel = activeChapter ? `${activeChapter.chapterLabel} · ${activeChapter.shortTitle}` : collectionLabel[collection];
     const writtenInterpretation = answer.mode === "write" ? interpretWrittenAnswer(question, answer) : undefined;
     const grade = grades[question.id];
     const answeredCount = questions.filter((item) => isAnswered(answers[item.id])).length;
     return (
       <main className="session-shell">
         <header className="session-header">
-          <div className="session-mark"><b>MED//25</b><span>{examConfig[exam].date} · {collectionLabel[collection]}</span></div>
+          <div className="session-mark"><b>MED//25</b><span>{examConfig[exam].date} · {sessionLabel}</span></div>
           <div className="session-progress"><span>Question {questionIndex + 1} of {questions.length}</span><div><i style={{ width: `${((questionIndex + 1) / questions.length) * 100}%` }} /></div><small>{answeredCount} answered</small></div>
-          <button className="end-button" onClick={() => setConfirmEnd(true)}>End session</button>
+          <div className="session-end-stack"><span className={`session-mode-badge ${studyMode}`}>{studyMode === "exam" ? "Exam · answers hidden" : "Learn · instant teaching"}</span><button className="end-button" onClick={() => setConfirmEnd(true)}>End session</button></div>
         </header>
 
         <section className="session-body">
@@ -858,7 +860,7 @@ export default function Home() {
                 <button disabled={hasImmediateFeedback} className={answer.mode === "write" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "write" })}>Type my answer</button>
               </div>}
 
-              {answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked" : ""} ${hasImmediateFeedback && isPracticalQuestion ? "has-explanations" : ""}`}>
+              {answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked has-explanations" : ""}`}>
                 {question.options.map((option) => {
                   const state = hasImmediateFeedback
                     ? option.id === question.correctOptionId ? "correct" : option.id === answer.selectedOptionId ? "wrong" : ""
@@ -868,7 +870,7 @@ export default function Home() {
                     : question.distractorExplanations[option.id];
                   return <button key={option.id} className={state} disabled={hasImmediateFeedback} onClick={() => updateAnswer(question.id, { selectedOptionId: option.id })}>
                     <span className="option-letter">{option.id}</span>
-                    <span className="option-copy"><b>{option.text}</b>{hasImmediateFeedback && isPracticalQuestion && <small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{inlineExplanation}</small>}</span>
+                    <span className="option-copy"><b>{option.text}</b>{hasImmediateFeedback && <small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{inlineExplanation}</small>}</span>
                   </button>;
                 })}
               </div> : isWrittenPractical ? <div className="written-identification">
@@ -891,8 +893,7 @@ export default function Home() {
               {hasImmediateFeedback && !isWrittenPractical && <section className={`instant-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
                 <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
                 <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : chosenId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
-                {!isPracticalQuestion && <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p></div>}
-                {!isPracticalQuestion && chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note immediate-distractor"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}
+                <p className="feedback-key-rule"><b>Fast rule:</b> Read the green option as the key concept, then compare each red/neutral option with the chapter checkpoint it actually describes.</p>
               </section>}
 
               <label className="reasoning-label"><span>Reasoning <em>optional · saved for review</em></span><textarea value={answer.reasoning} onChange={(event) => updateAnswer(question.id, { reasoning: event.target.value })} placeholder="Why does this answer win? What clue ruled out the alternatives?" /></label>
@@ -925,9 +926,9 @@ export default function Home() {
     return <main className="review-shell">
       <header className="review-header"><div className="session-mark"><b>MED//25</b><span>Session review</span></div><button onClick={resetSession}>Return to dashboard</button></header>
       <section className="review-page">
-        <div className="score-hero"><div><span className="eyebrow">Sprint complete</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Review the misses now, while your reasoning is still fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
+        <div className="score-hero"><div><span className="eyebrow">{studyMode === "exam" ? "Chapter exam complete" : "Learning sprint complete"}{activeBiochemistryChapterId ? ` · ${biochemistryChapterById(activeBiochemistryChapterId)?.shortTitle}` : ""}</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Every option now explains the concept it represents, so repair the misses while your reasoning is fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
         <div className="result-stats"><div><strong>{correctCount}</strong><span>Correct</span></div><div><strong>{questions.length - correctCount}</strong><span>To repair</span></div><div><strong>{questions.length - answeredCount}</strong><span>Unanswered</span></div><div><strong>{flaggedCount}</strong><span>Flagged</span></div></div>
-        <div className="review-toolbar"><div className="review-filters">{(["wrong", "flagged", "all"] as const).map((value) => <button key={value} className={reviewFilter === value ? "active" : ""} onClick={() => setReviewFilter(value)}>{value === "wrong" ? `Wrong (${questions.length - correctCount})` : value === "flagged" ? `Flagged (${flaggedCount})` : `All (${questions.length})`}</button>)}</div><div className="review-actions">{missedIds.length > 0 && <button className="retry-button" onClick={() => void startSession("wrong", missedIds)}>Retry these {missedIds.length}</button>}<button className="primary" onClick={() => void startSession(collection)}>New sprint</button></div></div>
+        <div className="review-toolbar"><div className="review-filters">{(["wrong", "flagged", "all"] as const).map((value) => <button key={value} className={reviewFilter === value ? "active" : ""} onClick={() => setReviewFilter(value)}>{value === "wrong" ? `Wrong (${questions.length - correctCount})` : value === "flagged" ? `Flagged (${flaggedCount})` : `All (${questions.length})`}</button>)}</div><div className="review-actions">{missedIds.length > 0 && <button className="retry-button" onClick={() => void startSession("wrong", missedIds, { biochemistryChapterId: activeBiochemistryChapterId, mode: "learn", limit: missedIds.length })}>Retry these {missedIds.length}</button>}<button className="primary" onClick={() => void startSession(collection, undefined, { biochemistryChapterId: activeBiochemistryChapterId, mode: studyMode, limit: sessionSize })}>New sprint</button></div></div>
         <div className="review-list">
           {!visible.length && <div className="empty-review"><b>Nothing in this view.</b><span>Switch the filter to inspect all answers.</span></div>}
           {visible.map((question) => {
@@ -937,7 +938,6 @@ export default function Home() {
             const correct = question.options.find((option) => option.id === question.correctOptionId);
             const grade = grades[question.id];
             const linkedLesson = lessonForQuestion(question, exam, allLessons);
-            const isPracticalQuestion = (question.tags ?? []).includes("histo-practical");
             const isWrittenPractical = isWrittenPracticalQuestion(question);
             const writtenInterpretation = isWrittenPractical ? interpretWrittenAnswer(question, answer) : undefined;
             return <article className={`review-item ${isCorrect(question, answer) ? "correct" : "wrong"}`} key={question.id}>
@@ -945,13 +945,12 @@ export default function Home() {
               <h2>{question.prompt}</h2>
               <StudyMedia question={question} review />
               <div className="answer-comparison"><div><span>Your answer</span><b>{answer?.mode === "write" ? answer.writtenAnswer || "No answer" : chosen ? `${chosen.id}. ${chosen.text}` : "No answer"}</b>{writtenInterpretation?.label && <small>Interpreted as {writtenInterpretation.label}</small>}</div><div><span>Correct answer</span><b>{correct ? correct.text : question.correctOptionId}</b></div></div>
-              {isPracticalQuestion && !isWrittenPractical && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
+              {!isWrittenPractical && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
                 <span className="option-letter">{option.id}</span>
                 <span className="option-copy"><b>{option.text}</b><small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{option.id === question.correctOptionId ? question.explanation : question.distractorExplanations[option.id]}</small></span>
               </button>)}</div>}
               {isWrittenPractical && <><div className="explanation"><span>{question.media?.length === 1 ? "What confirms it in this field" : "What confirms it across the fields"}</span><p>{question.explanation}</p></div><div className="written-lookalikes"><span>High-yield look-alikes</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div></>}
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
-              {!isPracticalQuestion && <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>}
               {linkedLesson && <div className="linked-lesson"><button onClick={() => setExpandedLessons((current) => ({ ...current, [question.id]: !current[question.id] }))}><b>{expandedLessons[question.id] ? "Close visual lesson" : "Open 90-second visual lesson"}</b><span>{linkedLesson.title} {expandedLessons[question.id] ? "↑" : "↓"}</span></button>{expandedLessons[question.id] && <LessonSlide lesson={linkedLesson} compact />}</div>}
               {(answer?.mode === "write" || answer?.reasoning) && <div className="tutor-review">
                 {!grade && <button disabled={grading[question.id]} onClick={() => void requestCodexGrade(question)}>{grading[question.id] ? "Codex is analyzing…" : "Ask Codex to audit my reasoning"}</button>}
@@ -982,7 +981,7 @@ export default function Home() {
     { id: "histo-identification", title: "15-slide written microscope identification", scope: `${examCount("histo-identification")} written drills`, detail: "Paired wide/close fields, typed tissue names, tolerant spelling correction, marked parts and priority look-alike comparisons", count: examCount("histo-identification") },
     { id: "histo-practical", title: "55-specimen practical bank", scope: `${examCount("histo-practical")} microscope questions`, detail: "Full deck: epithelium, connective tissue, blood, muscle, nerve, digestive, endocrine, urinary, vessels and lymphoid organs", count: examCount("histo-practical") },
   ] : [
-    { id: "biochemistry", title: "Biochemistry", scope: "Lippincott 1–7, 14–18, 23–33", detail: "Molecules, enzymes, integrated metabolism, genetics, nutrition and laboratory reasoning", count: examCount("biochemistry") },
+    { id: "biochemistry", title: "Mixed biochemistry", scope: "All available chapters", detail: "A shuffled comprehensive sprint after you have worked through the chapter map above", count: examCount("biochemistry") },
     { id: "histology", title: "Cell + Intro Histology", scope: "Mandatory safety block", detail: "Methods, stains, membranes, organelles, cytoskeleton, nucleus, cell cycle and death", count: examCount("histology") },
     { id: "physiology", title: "Membrane physiology", scope: "Guyton + teacher slides", detail: "Homeostasis, transport, resting voltage and action potentials", count: examCount("physiology") },
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Cell, molecular and laboratory figures", count: examCount("images") },
@@ -1028,6 +1027,13 @@ export default function Home() {
   const resumableSession = sessionArchive.active;
   const resumableAnsweredCount = resumableSession ? Object.values(resumableSession.answers).filter((answer) => isAnswered(answer)).length : 0;
 
+  function startChapterRepair(chapterId: string, chapterQuestionIds: string[]) {
+    const repairSet = new Set([...examProgress.wrongIds, ...examProgress.flaggedIds]);
+    const repairIds = chapterQuestionIds.filter((id) => repairSet.has(id));
+    if (!repairIds.length) return;
+    void startSession("wrong", repairIds, { biochemistryChapterId: chapterId, mode: "learn", limit: repairIds.length });
+  }
+
   return (
     <main className="setup-shell">
       <aside className="setup-sidebar">
@@ -1043,14 +1049,20 @@ export default function Home() {
             <p className="eyebrow">Priority exam · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam until you switch dates.</p>
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
-            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED SPRINT SAVED</span><h2>{examConfig[resumableSession.exam].date} · {collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>{Math.min(sessionSize, collectionCount)}-question sprint · 80% unseen / 20% review</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
+            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].date} · {biochemistryChapterById(resumableSession.biochemistryChapterId)?.shortTitle ?? collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>{Math.min(sessionSize, collectionCount)}-question sprint · 80% unseen / 20% review</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}
 
           {tab === "Final exam" && exam !== "aug22" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
           {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use one of the focused practical modes.</h1><p>The 15-slide collection mirrors the teacher list, the 110+ transfer lab tests unfamiliar internet fields, and the full atlas adds the broader 55-specimen bank and visual lessons. Open Overview, Topics, or Practical Atlas to choose.</p></div>}
 
-          {tab === "Topics" && <><p className="eyebrow">{selectedConfig.date} collections</p><h1>Choose a focused collection.</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p><div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div><div className="topic-grid">{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>{sessionError && <p className="session-error">{sessionError}</p>}</>}
+          {tab === "Topics" && <>
+            <p className="eyebrow">{selectedConfig.date} collections</p><h1>{exam === "july29" ? "Choose a biochemistry chapter." : "Choose a focused collection."}</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p>
+            <div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div>
+            {exam === "july29" && <BiochemistryChapterHub chapters={biochemistryChapterProgress} loading={phase === "loading"} onStart={(chapterId, mode, length) => void startSession("biochemistry", undefined, { biochemistryChapterId: chapterId, mode, limit: length })} />}
+            <div className={`topic-grid ${exam === "july29" ? "secondary-topic-grid" : ""}`}>{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>
+            {sessionError && <p className="session-error">{sessionError}</p>}
+          </>}
 
           {tab === "Practical Atlas" && exam === "aug22" && <div className="practical-atlas-shell">
             <div className="practical-atlas-actions">
@@ -1069,12 +1081,13 @@ export default function Home() {
             <p className="eyebrow">Saved on this device · {examConfig[exam].date}</p><h1>Past sprint results.</h1>
             <p className="lede">Every completed sprint stays here with its original answers. Open any result to revisit the full repair review.</p>
             {sessionError && <p className="session-error">{sessionError}</p>}
+            {exam === "july29" && <BiochemistryMasteryGrid chapters={biochemistryChapterProgress} onRepair={startChapterRepair} />}
             <div className="results-list">
               {!examHistory.length && <div className="empty-review"><b>No completed {examConfig[exam].date} sprints yet.</b><span>Finish a sprint and its score and full review will appear here automatically.</span></div>}
               {examHistory.map((saved) => {
                 const score = Math.round((saved.correctCount / saved.questionIds.length) * 100);
                 return <article className="saved-result" key={saved.id}>
-                  <div className="saved-result-copy"><span>{formatSessionDate(saved.completedAt)}</span><h2>{collectionLabel[saved.collection]} · {saved.questionIds.length} questions</h2><p>{saved.correctCount} correct · {saved.questionIds.length - saved.correctCount} to repair · {saved.flaggedCount} flagged</p></div>
+                  <div className="saved-result-copy"><span>{formatSessionDate(saved.completedAt)} · {saved.studyMode === "exam" ? "Chapter exam" : "Learn"}</span><h2>{biochemistryChapterById(saved.biochemistryChapterId)?.shortTitle ?? collectionLabel[saved.collection]} · {saved.questionIds.length} questions</h2><p>{saved.correctCount} correct · {saved.questionIds.length - saved.correctCount} to repair · {saved.flaggedCount} flagged</p></div>
                   <strong>{score}%</strong>
                   <button className="primary" disabled={historyLoadingId === saved.id} onClick={() => void openSavedReview(saved)}>{historyLoadingId === saved.id ? "Opening…" : "Open full review →"}</button>
                 </article>;

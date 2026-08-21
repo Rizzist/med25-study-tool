@@ -4,6 +4,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { createServer } from "node:http";
 import { extname, resolve, sep } from "node:path";
 import { promisify } from "node:util";
+import { biochemistryChapterIdForQuestion, biochemistryChapterIds } from "../src/lib/biochemistry/chapter-mapping.mjs";
 import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -187,7 +188,7 @@ function matchesExam(question, exam) {
     return question.subject === "physiology" && JULY_25_PHYSIOLOGY_TOPICS.has(question.topic);
   }
   if (exam === "july29") {
-    if (question.subject === "biochemistry") return JULY_29_BIOCHEMISTRY_TOPICS.has(question.topic);
+    if (question.subject === "biochemistry") return Boolean(biochemistryChapterIdForQuestion(question)) || JULY_29_BIOCHEMISTRY_TOPICS.has(question.topic);
     if (question.subject === "histology") return JULY_29_HISTOLOGY_TOPICS.has(question.topic);
     return question.subject === "physiology" && JULY_29_PHYSIOLOGY_TOPICS.has(question.topic);
   }
@@ -272,6 +273,10 @@ function bankSummary() {
     { id: "july29", date: "2026-08-25", title: "Cell & Molecules" },
   ].map((exam) => {
     const questions = verifiedQuestions.filter((question) => matchesExam(question, exam.id));
+    const chapterSummaries = exam.id === "july29" ? biochemistryChapterIds.flatMap((id) => {
+      const chapterQuestions = questions.filter((question) => biochemistryChapterIdForQuestion(question) === id);
+      return chapterQuestions.length ? [{ id, questionCount: chapterQuestions.length, questionIds: chapterQuestions.map((question) => question.id) }] : [];
+    }) : [];
     return {
       ...exam,
       questionCount: questions.length,
@@ -279,6 +284,7 @@ function bankSummary() {
       imageQuestionCount: questions.filter((question) => question.kind === "image_single_best_answer").length,
       collectionCounts: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).length])),
       collectionQuestionIds: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).map((question) => question.id)])),
+      biochemistryChapters: chapterSummaries,
     };
   });
   return {
@@ -356,6 +362,8 @@ function questionSet(searchParams) {
   const kind = searchParams.get("kind");
   const topic = searchParams.get("topic")?.trim().toLowerCase();
   const tag = searchParams.get("tag")?.trim().toLowerCase();
+  const chapterId = searchParams.get("biochemistryChapterId")?.trim();
+  if (chapterId && !biochemistryChapterIds.includes(chapterId)) throw new Error("A valid biochemistry chapter is required");
   const requestedLimit = Number(searchParams.get("limit") ?? 20);
   const limit = Number.isFinite(requestedLimit) ? Math.max(1, Math.min(250, Math.floor(requestedLimit))) : 20;
   const filtered = loadVerifiedQuestions().filter((question) => {
@@ -365,6 +373,7 @@ function questionSet(searchParams) {
     if (kind && question.kind !== kind) return false;
     if (topic && question.topic?.toLowerCase() !== topic) return false;
     if (tag && !(question.tags ?? []).some((value) => value.toLowerCase() === tag)) return false;
+    if (chapterId && biochemistryChapterIdForQuestion(question) !== chapterId) return false;
     return true;
   });
   return { availableCount: filtered.length, questions: shuffled(filtered).slice(0, limit) };
@@ -376,17 +385,22 @@ function coverageQuestionSet(body) {
   if (!EXAM_COLLECTIONS.includes(collection)) throw new Error("A valid collection is required");
   const requestedLimit = Number(body.limit ?? 20);
   const limit = Number.isFinite(requestedLimit) ? Math.max(1, Math.min(250, Math.floor(requestedLimit))) : 20;
+  const chapterId = typeof body.biochemistryChapterId === "string" ? body.biochemistryChapterId : undefined;
+  if (chapterId && !biochemistryChapterIds.includes(chapterId)) throw new Error("A valid biochemistry chapter is required");
   const cleanBodyIds = (value) => Array.isArray(value)
     ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, 5000)
     : [];
   const seenIds = cleanBodyIds(body.seenIds);
   const repairIds = cleanBodyIds(body.repairIds);
-  const filtered = loadVerifiedQuestions().filter((question) => matchesExam(question, body.exam) && matchesCollection(question, collection));
+  const filtered = loadVerifiedQuestions().filter((question) => matchesExam(question, body.exam)
+    && matchesCollection(question, collection)
+    && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
   const selection = selectCoverageSprint(filtered, { limit, seenIds, repairIds });
   return {
     availableCount: filtered.length,
     questions: selection.questions,
     coverage: { unseenCount: selection.unseenCount, reviewCount: selection.reviewCount },
+    biochemistryChapterId: chapterId,
   };
 }
 

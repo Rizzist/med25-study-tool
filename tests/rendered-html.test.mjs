@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
+import { biochemistryChapterIdForQuestion } from "../src/lib/biochemistry/chapter-mapping.mjs";
 import { parseFinalExamProgress, reconcileFinalExamSession } from "../src/lib/mcq/final-exam-state.mjs";
 import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 
@@ -222,6 +223,37 @@ test("coverage-first sprints use 80 percent unseen and prioritize repair questio
   assert.equal(selected.unseenCount, 16);
   assert.equal(selected.reviewCount, 4);
   assert.equal(selectedIds.filter((id) => repairIds.includes(id)).length, 4);
+});
+
+test("biochemistry chapter mode is source-traceable, scoped and fully explanatory", async () => {
+  const [page, chapterHub, bridge, lippincottText, carbohydrateText] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/components/BiochemistryChapterHub.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/codex-bridge.mjs", import.meta.url), "utf8"),
+    readFile(new URL("../data/bank/questions/biochemistry-lippincott-chapter-bank.jsonl", import.meta.url), "utf8"),
+    readFile(new URL("../data/bank/questions/biochemistry-carbohydrate-metabolism-chapters.jsonl", import.meta.url), "utf8"),
+  ]);
+  const lippincottQuestions = lippincottText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const carbohydrateQuestions = carbohydrateText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const questions = [...lippincottQuestions, ...carbohydrateQuestions];
+
+  assert.equal(lippincottQuestions.length, 2366);
+  assert.equal(carbohydrateQuestions.length, 100);
+  assert.ok(questions.every((question) => question.status === "verified" && question.options.length === 4));
+  assert.ok(questions.every((question) => Object.keys(question.distractorExplanations).length === 3));
+  assert.ok(questions.every((question) => biochemistryChapterIdForQuestion(question)));
+  assert.deepEqual(new Set(carbohydrateQuestions.map((question) => biochemistryChapterIdForQuestion(question))), new Set(["ch-9", "ch-10", "ch-11", "ch-12", "ch-13"]));
+  assert.match(page, /studyMode === "learn" && hasAnswer/);
+  assert.match(page, /hasImmediateFeedback && <small className/);
+  assert.match(page, /BiochemistryChapterHub/);
+  assert.match(page, /BiochemistryMasteryGrid/);
+  assert.match(chapterHub, /Learn/);
+  assert.match(chapterHub, /Chapter exam/);
+  assert.match(chapterHub, /Teacher-confirmed/);
+  assert.match(chapterHub, /Lippincott supplement/);
+  assert.match(chapterHub, /Repair \$\{chapter\.repairCount\}/);
+  assert.match(bridge, /biochemistryChapterId/);
+  assert.match(bridge, /biochemistryChapters/);
 });
 
 test("coverage-first sprints fill from the available pool when an 80/20 split is impossible", () => {

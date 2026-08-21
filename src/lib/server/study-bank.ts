@@ -1,5 +1,10 @@
 import { createHash } from "node:crypto";
 import embeddedBankData from "@/data/bank/embedded-bank.json";
+import {
+  biochemistryChapterIdForQuestion,
+  biochemistryChapters,
+  isBiochemistryChapterId,
+} from "@/src/lib/biochemistry/chapters";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
 export type ExamId = "july25" | "aug22" | "july29";
@@ -259,7 +264,7 @@ export function matchesExam(question: MCQQuestion, exam: ExamId): boolean {
     if (question.subject === "embryology") return JULY_25_EMBRYOLOGY_TOPICS.has(question.topic);
     return question.subject === "physiology" && JULY_25_PHYSIOLOGY_TOPICS.has(question.topic);
   }
-  if (question.subject === "biochemistry") return JULY_29_BIOCHEMISTRY_TOPICS.has(question.topic);
+  if (question.subject === "biochemistry") return Boolean(biochemistryChapterIdForQuestion(question)) || JULY_29_BIOCHEMISTRY_TOPICS.has(question.topic);
   if (question.subject === "histology") return JULY_29_HISTOLOGY_TOPICS.has(question.topic);
   return question.subject === "physiology" && JULY_29_PHYSIOLOGY_TOPICS.has(question.topic);
 }
@@ -316,6 +321,12 @@ export function bankSummary() {
     { id: "july29" as const, date: "2026-08-25", title: "Cell & Molecules" },
   ]).map((exam) => {
     const questions = verified.filter((question) => matchesExam(question, exam.id));
+    const chapterSummaries = exam.id === "july29"
+      ? biochemistryChapters.map((chapter) => {
+        const chapterQuestions = questions.filter((question) => biochemistryChapterIdForQuestion(question) === chapter.id);
+        return { ...chapter, questionCount: chapterQuestions.length, questionIds: chapterQuestions.map((question) => question.id) };
+      }).filter((chapter) => chapter.questionCount > 0)
+      : [];
     return {
       ...exam,
       questionCount: questions.length,
@@ -329,6 +340,7 @@ export function bankSummary() {
         collection,
         questions.filter((question) => matchesCollection(question, collection)).map((question) => question.id),
       ])),
+      biochemistryChapters: chapterSummaries,
     };
   });
 
@@ -371,6 +383,8 @@ export function questionSet(searchParams: URLSearchParams) {
   const kind = searchParams.get("kind");
   const topic = searchParams.get("topic")?.trim().toLowerCase();
   const tag = searchParams.get("tag")?.trim().toLowerCase();
+  const chapterId = searchParams.get("biochemistryChapterId")?.trim();
+  if (chapterId && !isBiochemistryChapterId(chapterId)) throw new Error("A valid biochemistry chapter is required");
   const limit = cappedLimit(searchParams.get("limit"), 20);
   const filtered = loadVerifiedQuestions().filter((question) => {
     if (exam && !matchesExam(question, exam)) return false;
@@ -379,6 +393,7 @@ export function questionSet(searchParams: URLSearchParams) {
     if (kind && question.kind !== kind) return false;
     if (topic && question.topic.toLowerCase() !== topic) return false;
     if (tag && !(question.tags ?? []).some((value) => value.toLowerCase() === tag)) return false;
+    if (chapterId && biochemistryChapterIdForQuestion(question) !== chapterId) return false;
     return true;
   });
   return { availableCount: filtered.length, questions: shuffle(filtered).slice(0, limit) };
@@ -392,10 +407,14 @@ export function coverageQuestionSet(body: unknown) {
   if (!isCollectionId(collection)) throw new Error("A valid collection is required");
 
   const limit = cappedLimit(input.limit, 20);
+  const chapterId = typeof input.biochemistryChapterId === "string" ? input.biochemistryChapterId : undefined;
+  if (chapterId && !isBiochemistryChapterId(chapterId)) throw new Error("A valid biochemistry chapter is required");
   const seen = new Set(cleanIds(input.seenIds, 5_000));
   const repair = new Set(cleanIds(input.repairIds, 5_000));
   const filtered = loadVerifiedQuestions()
-    .filter((question) => matchesExam(question, exam) && matchesCollection(question, collection));
+    .filter((question) => matchesExam(question, exam)
+      && matchesCollection(question, collection)
+      && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
   const capped = Math.min(limit, filtered.length);
   const unseenPool = shuffle(filtered.filter((question) => !seen.has(question.id)));
   const repairPool = shuffle(filtered.filter((question) => seen.has(question.id) && repair.has(question.id)));
@@ -416,6 +435,7 @@ export function coverageQuestionSet(body: unknown) {
     availableCount: filtered.length,
     questions: shuffle([...selectedUnseen, ...selectedReview]),
     coverage: { unseenCount: selectedUnseen.length, reviewCount: selectedReview.length },
+    biochemistryChapterId: chapterId,
   };
 }
 
