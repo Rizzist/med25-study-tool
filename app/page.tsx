@@ -2,9 +2,20 @@
 /* eslint-disable @next/next/no-img-element -- question images are streamed from the local study bridge */
 
 import { useCallback, useEffect, useState } from "react";
+import {
+  BiochemistryChapterHub,
+  BiochemistryMasteryGrid,
+  type BiochemistryChapterProgress,
+  type BiochemistryStudyMode,
+} from "@/src/components/BiochemistryChapterHub";
 import { FinalExam } from "@/src/components/FinalExam";
 import { LessonGuide } from "@/src/components/LessonGuide";
 import { LessonSlide } from "@/src/components/LessonSlide";
+import {
+  biochemistryChapterById,
+  biochemistryChapters,
+  isBiochemistryChapterId,
+} from "@/src/lib/biochemistry/chapters";
 import { allLessons, histologyPracticalLessons, lessonsForExam } from "@/src/lib/lessons";
 import { lessonForQuestion } from "@/src/lib/lessons/types";
 import type { CodexGrade, MCQMedia, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
@@ -32,12 +43,13 @@ type BankSummary = {
     imageQuestionCount: number;
     collectionCounts: Partial<Record<CollectionId, number>>;
     collectionQuestionIds?: Partial<Record<CollectionId, string[]>>;
+    biochemistryChapters?: Array<{ id: string; questionCount: number; questionIds: string[] }>;
   }>;
 };
 
 type SessionAnswer = StudentAnswer & { flagged: boolean; writtenSubmitted?: boolean };
 type ExamId = "july25" | "aug22" | "july29";
-type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "histo-identification" | "practical" | "wrong" | "flagged";
+type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "histo-identification" | "histo-transfer" | "practical" | "wrong" | "flagged";
 type SavedCollectionId = "wrong" | "flagged";
 type SessionPhase = "setup" | "loading" | "active" | "review";
 type ReviewFilter = "all" | "wrong" | "flagged";
@@ -51,6 +63,8 @@ type ActiveSessionSnapshot = {
   answers: Record<string, SessionAnswer>;
   questionIndex: number;
   startedAt: string;
+  studyMode: BiochemistryStudyMode;
+  biochemistryChapterId?: string;
 };
 type CompletedSession = ActiveSessionSnapshot & {
   id: string;
@@ -82,13 +96,13 @@ const examConfig: Record<ExamId, {
   aug22: {
     date: "Aug 22",
     title: "Histology Practical",
-    focus: "Written microscope identification with paired wide/close views for the confirmed 15 slides, plus the complete 55-specimen atlas bank",
-    collections: ["histo-identification", "histo-practical", "wrong", "flagged"],
+    focus: "Written microscope identification for the confirmed slides, a 100+ unfamiliar-field transfer bank, and the complete 55-specimen atlas",
+    collections: ["histo-transfer", "histo-identification", "histo-practical", "wrong", "flagged"],
   },
   july29: {
     date: "Aug 25",
     title: "Cell & Molecules",
-    focus: "Lippincott Chapters 1–7, 14–18 and 23–33, cellular histology, membrane physiology and all confirmed laboratory methods",
+    focus: "Teacher-confirmed Lippincott chapters, chapter-by-chapter self-testing, cellular histology, membrane physiology and confirmed laboratory methods; partial and supplementary chapters are labeled clearly",
     collections: ["all", "wrong", "flagged", "biochemistry", "histology", "physiology", "images", "stains", "practical"],
   },
 };
@@ -102,6 +116,7 @@ const collectionLabel: Record<CollectionId, string> = {
   stains: "Stains",
   "histo-practical": "Histology practicals",
   "histo-identification": "15-slide identification",
+  "histo-transfer": "110+ field transfer lab",
   practical: "Practical + spotters",
   wrong: "Wrong answers",
   flagged: "Flagged",
@@ -197,6 +212,8 @@ function cleanActiveSession(value: unknown): ActiveSessionSnapshot | null {
     answers: cleanAnswers(session.answers, questionIds),
     questionIndex: Math.max(0, Math.min(questionIds.length - 1, Math.floor(Number(session.questionIndex) || 0))),
     startedAt: typeof session.startedAt === "string" ? session.startedAt : new Date().toISOString(),
+    studyMode: session.studyMode === "exam" ? "exam" : "learn",
+    biochemistryChapterId: isBiochemistryChapterId(session.biochemistryChapterId) ? session.biochemistryChapterId : undefined,
   };
 }
 
@@ -251,9 +268,16 @@ const practicalTissueVocabulary = [
   ["Urinary bladder / transitional epithelium", ["bladder", "urinary bladder", "urothelium", "transitional", "transitional epithelium"]],
   ["Spongy (trabecular) bone", ["spongy bone", "trabecular bone", "cancellous bone", "bone"]],
   ["Hyaline cartilage", ["hyaline cartilage", "cartilage"]],
-  ["Synovial joint", ["joint", "synovial joint"]],
+  ["Synovial joint", ["joint", "synovial joint", "diarthrosis", "diarthrodial joint"]],
+  ["Cartilaginous symphysis (amphiarthrosis)", ["cartilaginous joint", "symphysis", "pubic symphysis", "amphiarthrosis", "secondary cartilaginous joint"]],
+  ["Fibrous joint (synarthrosis)", ["fibrous joint", "synarthrosis", "suture", "syndesmosis", "gomphosis"]],
+  ["Elastic cartilage", ["elastic cartilage"]],
+  ["Fibrocartilage", ["fibrocartilage", "fibrous cartilage"]],
+  ["Compact (cortical) bone", ["compact bone", "cortical bone", "lamellar bone", "osteon", "haversian system"]],
+  ["Woven (immature) bone", ["woven bone", "immature bone", "primary bone", "ossification"]],
   ["Peripheral nerve", ["nerve", "peripheral nerve"]],
   ["Sensory ganglion", ["ganglion", "sensory ganglion", "dorsal root ganglion", "drg"]],
+  ["Autonomic ganglion", ["autonomic ganglion", "parasympathetic ganglion", "sympathetic ganglion"]],
   ["Thin skin (skin with hair)", ["thin skin", "skin with hair", "hairy skin"]],
   ["Thick skin (skin without hair)", ["thick skin", "skin without hair", "glabrous skin", "hairless skin"]],
   ["White adipose tissue", ["white adipose", "white adipose tissue", "white fat", "unilocular adipose", "unilocular adipose tissue"]],
@@ -262,10 +286,14 @@ const practicalTissueVocabulary = [
   ["Skeletal muscle", ["skeletal muscle", "striated skeletal muscle"]],
   ["Cardiac muscle", ["cardiac muscle", "myocardium", "heart muscle"]],
   ["Tendon", ["tendon", "dense regular connective tissue", "dense regular collagenous connective tissue"]],
+  ["Ligament", ["ligament", "enthesis"]],
+  ["Simple cuboidal epithelium", ["simple cuboidal", "simple cuboidal epithelium", "cuboidal epithelium"]],
+  ["Transitional epithelium (urothelium)", ["transitional", "transitional epithelium", "urothelium", "urinary epithelium"]],
+  ["Pseudostratified columnar epithelium", ["pseudostratified", "pseudostratified epithelium", "pseudostratified columnar epithelium", "pseudostratified ciliated columnar epithelium", "respiratory epithelium"]],
 ] as const;
 
 function isWrittenPracticalQuestion(question: MCQQuestion) {
-  return (question.tags ?? []).includes("histo-identification-15");
+  return (question.tags ?? []).includes("written-answer");
 }
 
 function answerForQuestion(question: MCQQuestion, saved?: SessionAnswer, flagged = false): SessionAnswer {
@@ -372,7 +400,7 @@ function StudyImage({ question, media, review = false }: { question: MCQQuestion
         style={{ left: `${annotation.x * 100}%`, top: `${annotation.y * 100}%`, width: `${annotation.width * 100}%`, height: `${annotation.height * 100}%` }}
       ><i>{annotation.label}</i></span>)}
     </div>
-    <figcaption>{review ? media.caption ?? "Image recognition" : media.annotations?.length ? "Structure identification · name marker A" : "Specimen identification · inspect before choosing"}</figcaption>
+    <figcaption>{review ? media.caption ?? "Image recognition" : media.annotations?.length ? "Structure identification · name marker A" : "Specimen identification · inspect before answering"}</figcaption>
   </figure>;
 }
 
@@ -405,6 +433,8 @@ export default function Home() {
   const [sessionArchive, setSessionArchive] = useState<SessionArchive>({ version: 1, active: null, history: [] });
   const [sessionArchiveReady, setSessionArchiveReady] = useState(false);
   const [sessionStartedAt, setSessionStartedAt] = useState("");
+  const [studyMode, setStudyMode] = useState<BiochemistryStudyMode>("learn");
+  const [activeBiochemistryChapterId, setActiveBiochemistryChapterId] = useState<string>();
   const [historyLoadingId, setHistoryLoadingId] = useState("");
   const [resumingSession, setResumingSession] = useState(false);
 
@@ -480,9 +510,11 @@ export default function Home() {
         answers,
         questionIndex,
         startedAt,
+        studyMode,
+        biochemistryChapterId: activeBiochemistryChapterId,
       },
     }));
-  }, [answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt]);
+  }, [activeBiochemistryChapterId, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode]);
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const selectedConfig = examConfig[exam];
@@ -501,16 +533,47 @@ export default function Home() {
     : selectedExam?.collectionQuestionIds?.[collection] ?? [];
   const seenCollectionCount = selectedCollectionQuestionIds.filter((id) => seenQuestionIds.has(id)).length;
   const unseenCollectionCount = Math.max(0, collectionCount - seenCollectionCount);
+  const biochemistryChapterProgress: BiochemistryChapterProgress[] = biochemistryChapters.flatMap((definition) => {
+    const summary = selectedExam?.biochemistryChapters?.find((chapter) => chapter.id === definition.id);
+    if (!summary?.questionCount) return [];
+    const ids = summary.questionIds ?? [];
+    const seenCount = ids.filter((id) => seenQuestionIds.has(id)).length;
+    const wrongIds = new Set(ids.filter((id) => examProgress.wrongIds.includes(id)));
+    const repairIds = new Set(ids.filter((id) => wrongIds.has(id) || examProgress.flaggedIds.includes(id)));
+    const masteredCount = ids.filter((id) => seenQuestionIds.has(id) && !wrongIds.has(id)).length;
+    return [{
+      ...definition,
+      questionCount: summary.questionCount,
+      questionIds: ids,
+      seenCount,
+      unseenCount: Math.max(0, summary.questionCount - seenCount),
+      wrongCount: wrongIds.size,
+      repairCount: repairIds.size,
+      masteredCount,
+      mastery: Math.round((masteredCount / summary.questionCount) * 100),
+    }];
+  });
 
   function chooseExam(nextExam: ExamId) {
     setExam(nextExam);
     setCollection(examConfig[nextExam].collections[0]);
     setSessionError("");
     setExpandedLessons({});
+    setStudyMode("learn");
+    setActiveBiochemistryChapterId(undefined);
   }
 
-  async function startSession(nextCollection: CollectionId = collection, exactIds?: string[]) {
+  async function startSession(nextCollection: CollectionId = collection, exactIds?: string[], options: {
+    biochemistryChapterId?: string;
+    mode?: BiochemistryStudyMode;
+    limit?: number;
+  } = {}) {
+    const requestedLimit = options.limit ?? (exactIds ? exactIds.length : sessionSize);
+    const nextStudyMode = options.mode ?? "learn";
     setCollection(nextCollection);
+    setSessionSize(requestedLimit);
+    setStudyMode(nextStudyMode);
+    setActiveBiochemistryChapterId(options.biochemistryChapterId);
     setPhase("loading");
     setSessionError("");
     try {
@@ -527,7 +590,7 @@ export default function Home() {
         response = await fetch(`${bridgeUrl}/api/questions/by-ids`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ exam, ids: requestedIds, limit: exactIds ? requestedIds.length : sessionSize }),
+          body: JSON.stringify({ exam, ids: requestedIds, limit: requestedLimit }),
         });
       } else {
         const repairIds = cleanIds([...examProgress.wrongIds, ...examProgress.flaggedIds]);
@@ -538,7 +601,7 @@ export default function Home() {
         response = await fetch(`${bridgeUrl}/api/questions/sprint`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ limit: sessionSize, exam, collection: nextCollection, seenIds, repairIds }),
+          body: JSON.stringify({ limit: requestedLimit, exam, collection: nextCollection, seenIds, repairIds, biochemistryChapterId: options.biochemistryChapterId }),
         });
       }
       if (!response.ok) throw new Error("Could not load the question bank.");
@@ -621,6 +684,8 @@ export default function Home() {
       answers,
       questionIndex,
       startedAt: sessionStartedAt || completedAt,
+      studyMode,
+      biochemistryChapterId: activeBiochemistryChapterId,
       completedAt,
       correctCount: correctIds.size,
       answeredCount,
@@ -658,6 +723,8 @@ export default function Home() {
     setAnswers({});
     setQuestionIndex(0);
     setSessionStartedAt("");
+    setStudyMode("learn");
+    setActiveBiochemistryChapterId(undefined);
     setConfirmEnd(false);
     setSessionArchive((current) => ({ ...current, active: null }));
     setPhase("setup");
@@ -674,6 +741,8 @@ export default function Home() {
     setCollection(saved.collection);
     setSessionSize(saved.sessionSize);
     setSessionStartedAt(saved.startedAt);
+    setStudyMode(saved.studyMode);
+    setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     try {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
       const restoredIds = new Set(restoredQuestions.map((question) => question.id));
@@ -700,6 +769,8 @@ export default function Home() {
     setAnswers({});
     setQuestionIndex(0);
     setSessionStartedAt("");
+    setStudyMode("learn");
+    setActiveBiochemistryChapterId(undefined);
     setSessionError("");
     setPhase("setup");
   }
@@ -712,6 +783,8 @@ export default function Home() {
     setCollection(saved.collection);
     setSessionSize(saved.sessionSize);
     setSessionStartedAt(saved.startedAt);
+    setStudyMode(saved.studyMode);
+    setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     try {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
       setQuestions(restoredQuestions);
@@ -806,7 +879,7 @@ export default function Home() {
               {hasImmediateFeedback && isWrittenPractical && <section className={`instant-feedback written-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
                 <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct identification" : "× Compare and repair"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
                 <div className="written-match-grid"><div><span>You wrote</span><b>{answer.writtenAnswer}</b></div><div><span>Interpreted as</span><b>{writtenInterpretation?.label ?? "No confident tissue match"}{writtenInterpretation?.autocorrected && writtenInterpretation.label ? " · spelling normalized" : ""}</b></div><div><span>Expected</span><b>{correct?.text ?? question.correctOptionId}</b><small>Also accepted: {(question.acceptedFreeText ?? []).slice(0, 5).join(" · ")}</small></div></div>
-                <div className="explanation"><span>What confirms it across both magnifications</span><p>{question.explanation}</p></div>
+                <div className="explanation"><span>{question.media?.length === 1 ? "What confirms it in this field" : "What confirms it across both magnifications"}</span><p>{question.explanation}</p></div>
                 <div className="written-lookalikes"><span>High-yield look-alikes from the practical list</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div>
                 <div className="tutor-review immediate-tutor">
                   {!grade && <button disabled={grading[question.id] || !health?.codex.available} onClick={() => void requestCodexGrade(question)}>{grading[question.id] ? "Codex is comparing the fields…" : health?.codex.available ? "Ask Codex: why my tissue differs →" : "Codex comparison unavailable"}</button>}
@@ -876,7 +949,7 @@ export default function Home() {
                 <span className="option-letter">{option.id}</span>
                 <span className="option-copy"><b>{option.text}</b><small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{option.id === question.correctOptionId ? question.explanation : question.distractorExplanations[option.id]}</small></span>
               </button>)}</div>}
-              {isWrittenPractical && <><div className="explanation"><span>What confirms it across the fields</span><p>{question.explanation}</p></div><div className="written-lookalikes"><span>High-yield look-alikes</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div></>}
+              {isWrittenPractical && <><div className="explanation"><span>{question.media?.length === 1 ? "What confirms it in this field" : "What confirms it across the fields"}</span><p>{question.explanation}</p></div><div className="written-lookalikes"><span>High-yield look-alikes</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div></>}
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
               {!isPracticalQuestion && <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{chosenId && chosenId !== question.correctOptionId && question.distractorExplanations[chosenId] && <p className="distractor-note"><b>Why {chosenId} loses:</b> {question.distractorExplanations[chosenId]}</p>}</div>}
               {linkedLesson && <div className="linked-lesson"><button onClick={() => setExpandedLessons((current) => ({ ...current, [question.id]: !current[question.id] }))}><b>{expandedLessons[question.id] ? "Close visual lesson" : "Open 90-second visual lesson"}</b><span>{linkedLesson.title} {expandedLessons[question.id] ? "↑" : "↓"}</span></button>{expandedLessons[question.id] && <LessonSlide lesson={linkedLesson} compact />}</div>}
@@ -905,6 +978,7 @@ export default function Home() {
     { id: "images", title: "Image recognition", scope: "Exam-specific", detail: "Histology fields and embryo diagrams", count: examCount("images") },
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Methods, stains, slides and recognition questions kept in the exam bank", count: examCount("practical") },
   ] : exam === "aug22" ? [
+    { id: "histo-transfer", title: "110+ field unfamiliar-slide transfer lab", scope: `${examCount("histo-transfer")} written drills`, detail: "Licensed internet micrographs across joint classes, cartilage, bone maturity, ganglion/nerve/fat, tendon/ligament, muscle, skin and high-yield epithelia", count: examCount("histo-transfer") },
     { id: "histo-identification", title: "15-slide written microscope identification", scope: `${examCount("histo-identification")} written drills`, detail: "Paired wide/close fields, typed tissue names, tolerant spelling correction, marked parts and priority look-alike comparisons", count: examCount("histo-identification") },
     { id: "histo-practical", title: "55-specimen practical bank", scope: `${examCount("histo-practical")} microscope questions`, detail: "Full deck: epithelium, connective tissue, blood, muscle, nerve, digestive, endocrine, urinary, vessels and lymphoid organs", count: examCount("histo-practical") },
   ] : [
@@ -935,6 +1009,7 @@ export default function Home() {
     ["FLAGGED", savedCount("flagged"), "Manual review list"],
   ] : exam === "aug22" ? [
     ["PRACTICAL BANK", selectedExam?.questionCount ?? "—", "This exam only"],
+    ["TRANSFER FIELDS", examCount("histo-transfer"), "112 internet + 2 textbook"],
     ["15-SLIDE IDENTIFICATION", examCount("histo-identification"), "Specimen + structure ID"],
     ["FULL ATLAS", examCount("histo-practical"), "55-specimen bank"],
     ["ATLAS LESSONS", histologyPracticalLessons.length, "One per specimen"],
@@ -973,12 +1048,13 @@ export default function Home() {
           </>}
 
           {tab === "Final exam" && exam !== "aug22" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
-          {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use either focused practical mode.</h1><p>The 15-slide collection is identification-only; the full atlas adds the broader 55-specimen bank and visual lessons. Open Overview, Topics, or Practical Atlas to test either mode.</p></div>}
+          {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use one of the focused practical modes.</h1><p>The 15-slide collection mirrors the teacher list, the 110+ transfer lab tests unfamiliar internet fields, and the full atlas adds the broader 55-specimen bank and visual lessons. Open Overview, Topics, or Practical Atlas to choose.</p></div>}
 
           {tab === "Topics" && <><p className="eyebrow">{selectedConfig.date} collections</p><h1>Choose a focused collection.</h1><p className="lede">Only {selectedConfig.title} material appears here. Topic controls vanish as soon as the first MCQ opens.</p><div className="saved-review-grid">{savedReviewCards.map((item) => <button key={item.id} disabled={!item.count} onClick={() => void startSession(item.id)}><strong>{item.count}</strong><span><b>{item.title}</b><small>{item.detail}</small></span><i>{item.count ? "Start →" : "Empty"}</i></button>)}</div><div className="topic-grid">{topicCards.map((item) => <article key={item.id}><span>{item.count} QUESTIONS</span><h2>{item.title}</h2><b>{item.scope}</b><p>{item.detail}</p><button disabled={!item.count} onClick={() => void startSession(item.id)}>{item.count ? "Start focused sprint →" : "Being assembled"}</button></article>)}</div>{sessionError && <p className="session-error">{sessionError}</p>}</>}
 
           {tab === "Practical Atlas" && exam === "aug22" && <div className="practical-atlas-shell">
             <div className="practical-atlas-actions">
+              <div className="practical-atlas-head identification-head"><div><span>TRANSFER LAB · 100+ UNFAMILIAR FIELDS</span><b>Write the tissue yourself across different stains, species and magnifications; repair the closest high-yield look-alikes after each answer.</b></div><button className="primary" disabled={!examCount("histo-transfer")} onClick={() => void startSession("histo-transfer", selectedExam?.collectionQuestionIds?.["histo-transfer"] ?? [])}>Write all {examCount("histo-transfer")} →</button></div>
               <div className="practical-atlas-head identification-head"><div><span>EXAM MODE · CONFIRMED 15 SLIDES</span><b>Write the answer yourself from paired wide/close fields; then compare the decisive morphology.</b></div><button className="primary" disabled={!examCount("histo-identification")} onClick={() => void startSession("histo-identification", selectedExam?.collectionQuestionIds?.["histo-identification"] ?? [])}>Write all {examCount("histo-identification")} →</button></div>
               <div className="practical-atlas-head"><div><span>SUPPLEMENT · 55-SPECIMEN ATLAS</span><b>Broader transfer practice, cell recognition and closest-slide discrimination.</b></div><button className="primary" disabled={!examCount("histo-practical")} onClick={() => void startSession("histo-practical", selectedExam?.collectionQuestionIds?.["histo-practical"] ?? [])}>Test all {examCount("histo-practical")} →</button></div>
             </div>

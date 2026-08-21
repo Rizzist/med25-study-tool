@@ -173,7 +173,7 @@ const JULY_29_BIOCHEMISTRY_TOPICS = new Set([
   "biotechnology and molecular techniques",
 ]);
 
-const EXAM_COLLECTIONS = ["all", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "histo-identification", "practical"];
+const EXAM_COLLECTIONS = ["all", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "histo-identification", "histo-transfer", "practical"];
 const EXAM_IDS = ["july25", "aug22", "july29"];
 
 function matchesExam(question, exam) {
@@ -208,7 +208,8 @@ function matchesCollection(question, collection) {
   if (collection === "images") return question.kind === "image_single_best_answer";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
   if (collection === "histo-identification") return (question.tags ?? []).includes("histo-identification-15");
-  if (collection === "histo-practical") return (question.tags ?? []).includes("histo-practical") && !(question.tags ?? []).includes("histo-identification-15");
+  if (collection === "histo-transfer") return (question.tags ?? []).includes("histo-transfer-100");
+  if (collection === "histo-practical") return (question.tags ?? []).includes("histo-practical") && !(question.tags ?? []).some((tag) => tag === "histo-identification-15" || tag === "histo-transfer-100");
   if (collection === "practical") return isPracticalDerived(question);
   return false;
 }
@@ -467,7 +468,7 @@ function runCodexGrade(body) {
     },
     studentAnswer: body.studentAnswer,
   };
-  const isWrittenPractical = (body.question.tags ?? []).includes("histo-identification-15");
+  const isWrittenPractical = (body.question.tags ?? []).includes("written-answer");
   const role = isWrittenPractical
     ? "You are a concise medical histology microscope tutor. Compare the student's typed identification with the verified tissue or marked structure across every supplied wide and close field. Explain the decisive architecture-to-cellular-detail chain and explicitly contrast the student's proposed tissue with the correct tissue."
     : "You are a concise medical-school MCQ remediation tutor.";

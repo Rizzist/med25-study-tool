@@ -39,7 +39,7 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
 });
 
 test("source provides immediate answer feedback and supports the confirmed exam split", async () => {
-  const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles, practicalQuestionText, fullPracticalQuestionText, identificationQuestionText, practicalLessonText, fullPracticalLessonText] = await Promise.all([
+  const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles, practicalQuestionText, fullPracticalQuestionText, identificationQuestionText, transferQuestionText, transferCatalogText, practicalLessonText, fullPracticalLessonText] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../scripts/codex-bridge.mjs", import.meta.url), "utf8"),
     readFile(new URL("../src/components/FinalExam.tsx", import.meta.url), "utf8"),
@@ -51,12 +51,16 @@ test("source provides immediate answer feedback and supports the confirmed exam 
     readFile(new URL("../data/bank/questions/histology-practicals.jsonl", import.meta.url), "utf8"),
     readFile(new URL("../data/bank/questions/histology-practicals-full.jsonl", import.meta.url), "utf8"),
     readFile(new URL("../data/bank/questions/histology-identification-15.jsonl", import.meta.url), "utf8"),
+    readFile(new URL("../data/bank/questions/histology-transfer-100.jsonl", import.meta.url), "utf8"),
+    readFile(new URL("../data/teacher-materials/histology-internet-example-catalog.json", import.meta.url), "utf8"),
     readFile(new URL("../data/lessons/histology-practicals.json", import.meta.url), "utf8"),
     readFile(new URL("../data/lessons/histology-practicals-full.json", import.meta.url), "utf8"),
   ]);
   const manifest = JSON.parse(manifestText);
   const practicalQuestions = [practicalQuestionText, fullPracticalQuestionText].flatMap((text) => text.trim().split(/\r?\n/).map((line) => JSON.parse(line)));
   const identificationQuestions = identificationQuestionText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const transferQuestions = transferQuestionText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const transferCatalog = JSON.parse(transferCatalogText);
   const practicalLessons = [...JSON.parse(practicalLessonText).lessons, ...JSON.parse(fullPracticalLessonText).lessons];
 
   assert.deepEqual(manifest.examDates, ["2026-07-25", "2026-08-22", "2026-08-25"]);
@@ -97,8 +101,10 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(page, /Biochemistry/);
   assert.match(page, /Practical \+ spotters/);
   assert.match(page, /55-specimen practical bank/);
-  assert.match(page, /paired wide\/close views for the confirmed 15 slides/);
+  assert.match(page, /100\+ unfamiliar-field transfer bank/);
   assert.match(page, /histo-identification/);
+  assert.match(page, /histo-transfer/);
+  assert.match(page, /110\+ field unfamiliar-slide transfer lab/);
   assert.match(page, /Structure identification · name marker A/);
   assert.match(page, /study-image-marker/);
   assert.match(page, /Test all \{examCount\("histo-practical"\)\}/);
@@ -139,6 +145,7 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(bridge, /collectionQuestionIds/);
   assert.match(bridge, /"histo-practical"/);
   assert.match(bridge, /"histo-identification"/);
+  assert.match(bridge, /"histo-transfer"/);
   assert.match(bridge, /histo-identification-15/);
   assert.match(page, /builder-coverage/);
   assert.match(page, /seenCollectionCount/);
@@ -180,6 +187,17 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.ok(identificationQuestions.every((question) => question.options.filter((option) => option.id !== question.correctOptionId).every((option) => question.distractorExplanations[option.id]?.length >= 45)));
   assert.ok(identificationQuestions.every((question) => question.qualityFlags.includes("student-labels-independent")));
   assert.ok(identificationQuestions.some((question) => question.id === "hpi15-bone-identify-overview" && question.options.find((option) => option.id === question.correctOptionId)?.text === "Spongy (trabecular) bone"));
+  assert.equal(transferCatalog.count, 112);
+  assert.equal(transferQuestions.length, 114);
+  assert.ok(transferQuestions.every((question) => question.tags.includes("histo-transfer-100") && question.tags.includes("written-answer")));
+  assert.ok(transferQuestions.every((question) => question.options.length === 4 && Object.keys(question.distractorExplanations).length === 3));
+  assert.ok(transferQuestions.every((question) => question.qualityFlags.includes("answer-neutral-image")));
+  assert.ok(transferQuestions.some((question) => question.options.find((option) => option.id === question.correctOptionId)?.text === "Synovial joint (diarthrosis)"));
+  assert.ok(transferQuestions.some((question) => question.options.find((option) => option.id === question.correctOptionId)?.text === "Articular hyaline cartilage"));
+  assert.ok(transferQuestions.some((question) => question.options.find((option) => option.id === question.correctOptionId)?.text === "Synovium (synovial membrane)"));
+  assert.ok(transferQuestions.some((question) => question.options.find((option) => option.id === question.correctOptionId)?.text === "Woven (immature) bone"));
+  assert.ok(transferQuestions.some((question) => question.options.find((option) => option.id === question.correctOptionId)?.text === "Autonomic ganglion"));
+  assert.ok(transferQuestions.some((question) => question.options.find((option) => option.id === question.correctOptionId)?.text === "Simple cuboidal epithelium"));
   assert.equal(practicalLessons.length, 55);
   assert.ok(practicalQuestions.every((question) => question.tags.includes("exam-aug22")));
   assert.ok(practicalQuestions.every((question) => question.revision === 2));

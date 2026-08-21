@@ -13,6 +13,7 @@ export type CollectionId =
   | "stains"
   | "histo-practical"
   | "histo-identification"
+  | "histo-transfer"
   | "practical";
 
 const COLLECTIONS: CollectionId[] = [
@@ -25,6 +26,7 @@ const COLLECTIONS: CollectionId[] = [
   "stains",
   "histo-practical",
   "histo-identification",
+  "histo-transfer",
   "practical",
 ];
 
@@ -270,7 +272,8 @@ export function matchesCollection(question: MCQQuestion, collection: CollectionI
   if (collection === "images") return question.kind === "image_single_best_answer";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
   if (collection === "histo-identification") return (question.tags ?? []).includes("histo-identification-15");
-  if (collection === "histo-practical") return (question.tags ?? []).includes("histo-practical") && !(question.tags ?? []).includes("histo-identification-15");
+  if (collection === "histo-transfer") return (question.tags ?? []).includes("histo-transfer-100");
+  if (collection === "histo-practical") return (question.tags ?? []).includes("histo-practical") && !(question.tags ?? []).some((tag) => tag === "histo-identification-15" || tag === "histo-transfer-100");
   return isPracticalDerived(question);
 }
 
