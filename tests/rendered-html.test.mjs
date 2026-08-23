@@ -307,7 +307,7 @@ test("biochemistry chapter mode is source-traceable, scoped and fully explanator
 
 test("the active biochemistry bank is concept-curated without deleting the generated archive", async () => {
   const [catalogText, questionFiles, page, chapterHub, bridge, finalExamText, summaryResponse, finalResponse] = await Promise.all([
-    readFile(new URL("../data/teacher-materials/biochemistry-core-concepts.json", import.meta.url), "utf8"),
+    readFile(new URL("../data/bank/biochemistry-core-concepts.json", import.meta.url), "utf8"),
     readdir(new URL("../data/bank/questions/", import.meta.url)),
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../src/components/BiochemistryChapterHub.tsx", import.meta.url), "utf8"),

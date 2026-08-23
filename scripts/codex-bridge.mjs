@@ -13,7 +13,7 @@ const port = Number(process.env.CODEX_BRIDGE_PORT ?? 4111);
 const manifestPath = resolve(root, "data/bank/manifest.json");
 const gradeSchemaPath = resolve(root, "schemas/codex-grade.schema.json");
 const finalExamDirectory = resolve(root, "data/telegram-final");
-const biochemistryConceptCatalogPath = resolve(root, "data/teacher-materials/biochemistry-core-concepts.json");
+const biochemistryConceptCatalogPath = resolve(root, "data/bank/biochemistry-core-concepts.json");
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
 const assetRoots = manifest.assetDirectories.map((directory) => resolve(root, directory));
 const biochemistryConceptCatalog = JSON.parse(readFileSync(biochemistryConceptCatalogPath, "utf8"));

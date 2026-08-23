@@ -1,4 +1,4 @@
-import conceptCatalogData from "@/data/teacher-materials/biochemistry-core-concepts.json";
+import conceptCatalogData from "@/data/bank/biochemistry-core-concepts.json";
 
 export type BiochemistryConceptPriority = "exam-core" | "medical-core" | "supplement";
 

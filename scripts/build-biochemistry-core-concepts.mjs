@@ -8,7 +8,7 @@ const fragmentPaths = [
   "data/teacher-materials/biochemistry-concepts-metabolism.json",
   "data/teacher-materials/biochemistry-concepts-genetics-lab.json",
 ];
-const outputPath = resolve(root, "data/teacher-materials/biochemistry-core-concepts.json");
+const outputPath = resolve(root, "data/bank/biochemistry-core-concepts.json");
 const questionDirectory = resolve(root, "data/bank/questions");
 const priorities = new Set(["exam-core", "medical-core", "supplement"]);
 
