@@ -5,7 +5,9 @@ import {
   biochemistryChapters,
   isBiochemistryChapterId,
 } from "@/src/lib/biochemistry/chapters";
+import { isCuratedBiochemistryQuestion } from "@/src/lib/biochemistry/concepts";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
+import { selectCoverageSprint } from "@/src/lib/mcq/sprint-selection.mjs";
 
 export type ExamId = "july25" | "aug22" | "july29";
 export type CollectionId =
@@ -264,7 +266,8 @@ export function matchesExam(question: MCQQuestion, exam: ExamId): boolean {
     if (question.subject === "embryology") return JULY_25_EMBRYOLOGY_TOPICS.has(question.topic);
     return question.subject === "physiology" && JULY_25_PHYSIOLOGY_TOPICS.has(question.topic);
   }
-  if (question.subject === "biochemistry") return Boolean(biochemistryChapterIdForQuestion(question)) || JULY_29_BIOCHEMISTRY_TOPICS.has(question.topic);
+  if (question.subject === "biochemistry") return isCuratedBiochemistryQuestion(question.id)
+    && (Boolean(biochemistryChapterIdForQuestion(question)) || JULY_29_BIOCHEMISTRY_TOPICS.has(question.topic));
   if (question.subject === "histology") return JULY_29_HISTOLOGY_TOPICS.has(question.topic);
   return question.subject === "physiology" && JULY_29_PHYSIOLOGY_TOPICS.has(question.topic);
 }
@@ -409,32 +412,23 @@ export function coverageQuestionSet(body: unknown) {
   const limit = cappedLimit(input.limit, 20);
   const chapterId = typeof input.biochemistryChapterId === "string" ? input.biochemistryChapterId : undefined;
   if (chapterId && !isBiochemistryChapterId(chapterId)) throw new Error("A valid biochemistry chapter is required");
-  const seen = new Set(cleanIds(input.seenIds, 5_000));
-  const repair = new Set(cleanIds(input.repairIds, 5_000));
+  const seenIds = cleanIds(input.seenIds, 5_000);
+  const repairIds = cleanIds(input.repairIds, 5_000);
   const filtered = loadVerifiedQuestions()
     .filter((question) => matchesExam(question, exam)
       && matchesCollection(question, collection)
       && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
-  const capped = Math.min(limit, filtered.length);
-  const unseenPool = shuffle(filtered.filter((question) => !seen.has(question.id)));
-  const repairPool = shuffle(filtered.filter((question) => seen.has(question.id) && repair.has(question.id)));
-  const ordinaryReviewPool = shuffle(filtered.filter((question) => seen.has(question.id) && !repair.has(question.id)));
-  const reviewPool = [...repairPool, ...ordinaryReviewPool];
-  const unseenTarget = Math.min(unseenPool.length, Math.ceil(capped * 0.8));
-  const selectedUnseen = unseenPool.slice(0, unseenTarget);
-  const selectedReview = reviewPool.slice(0, Math.min(reviewPool.length, capped - unseenTarget));
-  let remaining = capped - selectedUnseen.length - selectedReview.length;
-  if (remaining > 0) {
-    const fill = unseenPool.slice(unseenTarget, unseenTarget + remaining);
-    selectedUnseen.push(...fill);
-    remaining -= fill.length;
-  }
-  if (remaining > 0) selectedReview.push(...reviewPool.slice(selectedReview.length, selectedReview.length + remaining));
+  const selection = selectCoverageSprint(filtered, { limit, seenIds, repairIds });
 
   return {
     availableCount: filtered.length,
-    questions: shuffle([...selectedUnseen, ...selectedReview]),
-    coverage: { unseenCount: selectedUnseen.length, reviewCount: selectedReview.length },
+    questions: selection.questions,
+    coverage: {
+      repairCount: selection.repairCount,
+      unseenCount: selection.unseenCount,
+      reviewCount: selection.reviewCount,
+      ordinaryReviewCount: selection.ordinaryReviewCount,
+    },
     biochemistryChapterId: chapterId,
   };
 }
@@ -450,12 +444,18 @@ export function questionSetByIds(body: unknown) {
   const filtered = loadVerifiedQuestions()
     .filter((question) => idSet.has(question.id) && matchesExam(question, exam));
   const byId = new Map(filtered.map((question) => [question.id, question]));
-  const ordered = input.preserveOrder === true
-    ? ids.flatMap((id) => {
-      const question = byId.get(id);
-      return question ? [question] : [];
-    })
-    : shuffle(filtered);
+  const ordered = input.prioritize === true
+    ? selectCoverageSprint(filtered, {
+      limit,
+      seenIds: cleanIds(input.seenIds, 5_000),
+      repairIds: cleanIds(input.repairIds, 5_000),
+    }).questions
+    : input.preserveOrder === true
+      ? ids.flatMap((id) => {
+        const question = byId.get(id);
+        return question ? [question] : [];
+      })
+      : shuffle(filtered);
   return {
     availableCount: filtered.length,
     validIds: filtered.map((question) => question.id),

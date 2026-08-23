@@ -1,6 +1,6 @@
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
-export type BiochemistryCoverage = "confirmed" | "partial" | "supplement";
+export type BiochemistryCoverage = "confirmed" | "partial" | "supplement" | "unconfirmed";
 
 export type BiochemistryChapterDefinition = {
   id: string;
@@ -48,58 +48,58 @@ export const biochemistryChapters: BiochemistryChapterDefinition[] = [
     id: "ch-5", unit: "Unit I · Protein structure and function", chapterNumber: 5, chapterLabel: "Chapter 5", title: "Enzymes", shortTitle: "Enzymes", description: "Catalysis, Michaelis-Menten kinetics, inhibition and regulation.", coverage: "confirmed",
   },
   {
-    id: "ch-6", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 6, chapterLabel: "Chapter 6", title: "Bioenergetics and Oxidative Phosphorylation", shortTitle: "Bioenergetics", description: "Free energy, electron transport, ATP synthesis, inhibitors and uncoupling.", coverage: "supplement",
+    id: "ch-6", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 6, chapterLabel: "Chapter 6", title: "Bioenergetics and Oxidative Phosphorylation", shortTitle: "Bioenergetics", description: "Free energy, electron transport, ATP synthesis, inhibitors and uncoupling.", coverage: "confirmed",
   },
   {
     id: "ch-7", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 7, chapterLabel: "Chapter 7", title: "Introduction to Carbohydrates", shortTitle: "Carbohydrates", description: "Stereochemistry, monosaccharides, disaccharides and carbohydrate structure.", coverage: "confirmed",
   },
   {
-    id: "ch-8", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 8, chapterLabel: "Chapter 8", title: "Metabolism and Glycolysis", shortTitle: "Glycolysis", description: "Metabolic organization, glycolytic reactions, regulation and pyruvate fates.", coverage: "confirmed",
+    id: "ch-8", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 8, chapterLabel: "Chapter 8", title: "Metabolism and Glycolysis", shortTitle: "Glycolysis", description: "Metabolic organization, glycolytic reactions, regulation and pyruvate fates.", coverage: "unconfirmed",
   },
   {
-    id: "ch-9", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 9, chapterLabel: "Chapter 9", title: "TCA Cycle and Pyruvate Dehydrogenase", shortTitle: "TCA & PDH", description: "PDH cofactors and regulation, TCA reactions, energy yield and anaplerosis.", coverage: "confirmed",
+    id: "ch-9", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 9, chapterLabel: "Chapter 9", title: "TCA Cycle and Pyruvate Dehydrogenase", shortTitle: "TCA & PDH", description: "PDH cofactors and regulation, TCA reactions, energy yield and anaplerosis.", coverage: "unconfirmed",
   },
   {
-    id: "ch-10", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 10, chapterLabel: "Chapter 10", title: "Gluconeogenesis", shortTitle: "Gluconeogenesis", description: "Precursors, bypass reactions, energetic cost and reciprocal regulation.", coverage: "confirmed",
+    id: "ch-10", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 10, chapterLabel: "Chapter 10", title: "Gluconeogenesis", shortTitle: "Gluconeogenesis", description: "Precursors, bypass reactions, energetic cost and reciprocal regulation.", coverage: "unconfirmed",
   },
   {
-    id: "ch-11", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 11, chapterLabel: "Chapter 11", title: "Glycogen Metabolism", shortTitle: "Glycogen", description: "Synthesis, degradation, hormonal control and glycogen-storage diseases.", coverage: "confirmed",
+    id: "ch-11", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 11, chapterLabel: "Chapter 11", title: "Glycogen Metabolism", shortTitle: "Glycogen", description: "Synthesis, degradation, hormonal control and glycogen-storage diseases.", coverage: "unconfirmed",
   },
   {
-    id: "ch-12", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 12, chapterLabel: "Chapter 12", title: "Monosaccharides and Disaccharides", shortTitle: "Other sugars", description: "Fructose, galactose, lactose, sorbitol and associated disorders.", coverage: "confirmed",
+    id: "ch-12", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 12, chapterLabel: "Chapter 12", title: "Monosaccharides and Disaccharides", shortTitle: "Other sugars", description: "Fructose, galactose, lactose, sorbitol and associated disorders.", coverage: "unconfirmed",
   },
   {
-    id: "ch-13", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 13, chapterLabel: "Chapter 13", title: "Pentose Phosphate Pathway and NADPH", shortTitle: "PPP & NADPH", description: "Oxidative and nonoxidative phases, NADPH functions and G6PD deficiency.", coverage: "confirmed",
+    id: "ch-13", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 13, chapterLabel: "Chapter 13", title: "Pentose Phosphate Pathway and NADPH", shortTitle: "PPP & NADPH", description: "Oxidative and nonoxidative phases, NADPH functions and G6PD deficiency.", coverage: "unconfirmed",
   },
   {
-    id: "ch-14", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 14, chapterLabel: "Chapter 14", title: "Glycoconjugates", shortTitle: "Glycoconjugates", description: "Glycosaminoglycans, proteoglycans, glycoproteins and lysosomal disease.", coverage: "partial",
+    id: "ch-14", unit: "Unit II · Bioenergetics and carbohydrate metabolism", chapterNumber: 14, chapterLabel: "Chapter 14", title: "Glycoconjugates", shortTitle: "Glycoconjugates", description: "Glycosaminoglycans, proteoglycans, glycoproteins and lysosomal disease.", coverage: "confirmed",
   },
   {
     id: "ch-15", unit: "Unit III · Lipid metabolism", chapterNumber: 15, chapterLabel: "Chapter 15", title: "Dietary Lipid Metabolism", shortTitle: "Dietary lipids", description: "Digestion, absorption, chylomicrons, lipoprotein lipase and clinical disorders.", coverage: "confirmed",
   },
   {
-    id: "ch-16", unit: "Unit III · Lipid metabolism", chapterNumber: 16, chapterLabel: "Chapter 16", title: "Fatty Acids, Ketone Bodies and TAG", shortTitle: "Fatty acids & ketones", description: "Synthesis, oxidation, ketogenesis, triacylglycerol turnover and regulation.", coverage: "partial",
+    id: "ch-16", unit: "Unit III · Lipid metabolism", chapterNumber: 16, chapterLabel: "Chapter 16", title: "Fatty Acids, Ketone Bodies and TAG", shortTitle: "Fatty acids & ketones", description: "Synthesis, oxidation, ketogenesis, triacylglycerol turnover and regulation.", coverage: "confirmed",
   },
   {
-    id: "ch-17", unit: "Unit III · Lipid metabolism", chapterNumber: 17, chapterLabel: "Chapter 17", title: "Complex Lipids and Eicosanoids", shortTitle: "Complex lipids", description: "Phospholipids, sphingolipids, eicosanoids and their diseases.", coverage: "partial",
+    id: "ch-17", unit: "Unit III · Lipid metabolism", chapterNumber: 17, chapterLabel: "Chapter 17", title: "Complex Lipids and Eicosanoids", shortTitle: "Complex lipids", description: "Phospholipids, sphingolipids, eicosanoids and their diseases.", coverage: "confirmed",
   },
   {
-    id: "ch-18", unit: "Unit III · Lipid metabolism", chapterNumber: 18, chapterLabel: "Chapter 18", title: "Cholesterol, Lipoproteins and Steroids", shortTitle: "Cholesterol & LP", description: "Cholesterol synthesis, plasma lipoproteins, bile acids and steroids.", coverage: "partial",
+    id: "ch-18", unit: "Unit III · Lipid metabolism", chapterNumber: 18, chapterLabel: "Chapter 18", title: "Cholesterol, Lipoproteins and Steroids", shortTitle: "Cholesterol & LP", description: "Cholesterol synthesis, plasma lipoproteins, bile acids and steroids.", coverage: "confirmed",
   },
   {
-    id: "ch-23", unit: "Unit V · Integration of metabolism", chapterNumber: 23, chapterLabel: "Chapter 23", title: "Insulin and Glucagon", shortTitle: "Insulin & glucagon", description: "Hormonal integration of fuel metabolism and glucose homeostasis.", coverage: "supplement",
+    id: "ch-23", unit: "Unit V · Integration of metabolism", chapterNumber: 23, chapterLabel: "Chapter 23", title: "Insulin and Glucagon", shortTitle: "Insulin & glucagon", description: "Hormonal integration of fuel metabolism and glucose homeostasis.", coverage: "confirmed",
   },
   {
-    id: "ch-24", unit: "Unit V · Integration of metabolism", chapterNumber: 24, chapterLabel: "Chapter 24", title: "Feed-Fast Cycle", shortTitle: "Feed-fast cycle", description: "Organ-specific metabolism in fed, fasting and prolonged-fasting states.", coverage: "supplement",
+    id: "ch-24", unit: "Unit V · Integration of metabolism", chapterNumber: 24, chapterLabel: "Chapter 24", title: "Feed-Fast Cycle", shortTitle: "Feed-fast cycle", description: "Organ-specific metabolism in fed, fasting and prolonged-fasting states.", coverage: "confirmed",
   },
   {
-    id: "ch-25", unit: "Unit V · Integration of metabolism", chapterNumber: 25, chapterLabel: "Chapter 25", title: "Diabetes Mellitus", shortTitle: "Diabetes", description: "Diagnosis, acute and chronic complications, and metabolic consequences.", coverage: "supplement",
+    id: "ch-25", unit: "Unit V · Integration of metabolism", chapterNumber: 25, chapterLabel: "Chapter 25", title: "Diabetes Mellitus", shortTitle: "Diabetes", description: "Diagnosis, acute and chronic complications, and metabolic consequences.", coverage: "confirmed",
   },
   {
-    id: "ch-26", unit: "Unit V · Integration of metabolism", chapterNumber: 26, chapterLabel: "Chapter 26", title: "Obesity", shortTitle: "Obesity", description: "Energy balance, adipokines, appetite and metabolic syndrome.", coverage: "supplement",
+    id: "ch-26", unit: "Unit V · Integration of metabolism", chapterNumber: 26, chapterLabel: "Chapter 26", title: "Obesity", shortTitle: "Obesity", description: "Energy balance, adipokines, appetite and metabolic syndrome.", coverage: "confirmed",
   },
   {
-    id: "ch-27", unit: "Unit V · Integration of metabolism", chapterNumber: 27, chapterLabel: "Chapter 27", title: "Nutrition", shortTitle: "Nutrition", description: "Dietary reference values, macronutrients and malnutrition.", coverage: "supplement",
+    id: "ch-27", unit: "Unit V · Integration of metabolism", chapterNumber: 27, chapterLabel: "Chapter 27", title: "Nutrition", shortTitle: "Nutrition", description: "Dietary reference values, macronutrients and malnutrition.", coverage: "confirmed",
   },
   {
     id: "ch-28", unit: "Unit V · Integration of metabolism", chapterNumber: 28, chapterLabel: "Chapter 28", title: "Vitamins", shortTitle: "Vitamins", description: "Coenzyme forms, pathways, deficiency, toxicity and clinical associations.", coverage: "confirmed",
@@ -117,7 +117,7 @@ export const biochemistryChapters: BiochemistryChapterDefinition[] = [
     id: "ch-32", unit: "Unit VI · Genetic information", chapterNumber: 32, chapterLabel: "Chapter 32", title: "Regulation of Gene Expression", shortTitle: "Gene regulation", description: "Prokaryotic operons and multilevel eukaryotic regulation.", coverage: "confirmed",
   },
   {
-    id: "ch-33", unit: "Unit VI · Genetic information", chapterNumber: 33, chapterLabel: "Chapter 33", title: "Biotechnology and Molecular Techniques", shortTitle: "Biotechnology", description: "PCR, cloning, blotting, sequencing and molecular diagnostics.", coverage: "supplement",
+    id: "ch-33", unit: "Unit VI · Genetic information", chapterNumber: 33, chapterLabel: "Chapter 33", title: "Biotechnology and Molecular Techniques", shortTitle: "Biotechnology", description: "PCR, cloning, blotting, sequencing and molecular diagnostics.", coverage: "confirmed",
   },
   {
     id: "lab-practical",

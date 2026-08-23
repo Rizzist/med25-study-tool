@@ -1,0 +1,1403 @@
+{
+  "family": "Molecular genetics, biotechnology, and practical biochemistry",
+  "chapters": [
+    {
+      "chapterId": "ch-29",
+      "concepts": [
+        {
+          "id": "bio-29-nucleotide-chemistry",
+          "title": "Nucleosides, nucleotides, and the phosphodiester backbone",
+          "priority": "exam-core",
+          "rationale": "The teacher DNA-structure deck explicitly tests the chemical vocabulary needed for every later molecular-biology mechanism.",
+          "summary": "A nucleoside is a nitrogenous base joined to a pentose sugar, whereas a nucleotide adds one or more phosphates. Purines are adenine and guanine; pyrimidines are cytosine, thymine, and uracil. Within one nucleic-acid strand, the 3′ hydroxyl of one sugar is joined to the 5′ phosphate of the next nucleotide by a phosphodiester bond, giving the strand directionality.",
+          "keyPoints": [
+            "Nucleoside = base + sugar; nucleotide = nucleoside + phosphate.",
+            "Ribose has a 2′-OH, whereas deoxyribose has 2′-H.",
+            "A and G are purines; C, T, and U are pyrimidines.",
+            "The backbone linkage is 3′→5′ phosphodiester, and sequences are written 5′→3′."
+          ],
+          "clinicalLinks": [
+            "Nucleoside and nucleotide analogs are used as antiviral and anticancer drugs because they can inhibit polymerases or terminate chains."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA)Structure (2).pdf, pp. 6-14 and 25-28.",
+            "Lippincott Illustrated Reviews: Biochemistry, 6e, Chapter 29, DNA primary structure and polarity."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-053-v1",
+            "bio-telegram-gap-055-v1",
+            "bio-telegram-gap-060-v1"
+          ]
+        },
+        {
+          "id": "bio-29-dna-duplex-and-melting",
+          "title": "Complementary antiparallel DNA, helix forms, and melting",
+          "priority": "exam-core",
+          "rationale": "Base pairing, strand orientation, and GC-dependent stability are explicit teacher-slide facts and essential for replication, PCR, and hybridization.",
+          "summary": "Double-stranded DNA contains complementary strands running in opposite 5′→3′ directions. Adenine pairs with thymine through two hydrogen bonds and guanine pairs with cytosine through three, so Chargaff's relation is A = T and G = C. B-DNA is the usual right-handed physiologic form; heat, extreme pH, or low ionic strength denatures DNA, and greater GC content generally raises its melting temperature.",
+          "keyPoints": [
+            "The strands are complementary and antiparallel.",
+            "A–T has two hydrogen bonds; G–C has three.",
+            "Base stacking also makes a major contribution to duplex stability.",
+            "B-DNA is physiologic and right-handed; Z-DNA is left-handed.",
+            "Denaturation is strand separation without backbone hydrolysis and can be reversed by controlled annealing."
+          ],
+          "clinicalLinks": [
+            "Hybridization-based diagnostics and PCR primer design depend on complementarity and melting temperature."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA)Structure (2).pdf, pp. 22-34.",
+            "Lippincott 6e, Chapter 29, DNA secondary structure, denaturation, and A/B/Z forms."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-057-v1",
+            "bio-telegram-gap-059-v1",
+            "bio-telegram-gap-063-v1"
+          ]
+        },
+        {
+          "id": "bio-29-chromatin-nucleosome",
+          "title": "Nucleosomes, histone H1, and chromatin accessibility",
+          "priority": "exam-core",
+          "rationale": "The complete nucleosome model and the effect of histone acetylation are explicitly covered in the DNA-structure slides and recur in gene regulation.",
+          "summary": "A nucleosome core contains two copies each of H2A, H2B, H3, and H4 around which DNA is wrapped. Histone H1 binds linker DNA and promotes higher-order compaction but is not part of the core octamer. Acetylation of lysine residues reduces histone positive charge, loosens DNA association, and generally makes chromatin more transcriptionally accessible.",
+          "keyPoints": [
+            "Core octamer = 2 × H2A, H2B, H3, and H4.",
+            "Histones bind negatively charged DNA because they are rich in lysine and arginine.",
+            "H1 is the linker histone.",
+            "Open euchromatin is generally more transcriptionally active than compact heterochromatin.",
+            "Histone-tail modifications can recruit proteins that activate or repress genes."
+          ],
+          "clinicalLinks": [
+            "Histone deacetylase inhibitors are used in selected malignancies because chromatin state can alter gene expression."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA)Structure (2).pdf, pp. 40-43.",
+            "Lippincott 6e, Chapter 29, chromatin packaging and nucleosome organization."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-064-v1",
+            "bio-telegram-gap-065-v1",
+            "bio-telegram-gap-066-v1"
+          ]
+        },
+        {
+          "id": "bio-29-replication-origins",
+          "title": "Semiconservative, bidirectional replication from origins",
+          "priority": "exam-core",
+          "rationale": "The replication deck begins with these organizing principles; without them, the enzyme details become disconnected memorization.",
+          "summary": "DNA replication is semiconservative because each daughter duplex retains one parental strand and contains one newly synthesized strand. Replication starts at defined origins and usually proceeds bidirectionally through replication forks. Eukaryotic chromosomes use many licensed origins so their large linear genomes can be copied completely during S phase.",
+          "keyPoints": [
+            "Each parental strand is a template for a complementary daughter strand.",
+            "An origin opens into a replication bubble with two forks.",
+            "Bacterial chromosomes usually use one main origin; eukaryotic chromosomes use many.",
+            "Origin firing is restricted so each segment is copied once per cell cycle."
+          ],
+          "clinicalLinks": [
+            "Replication stress and defective origin control contribute to genomic instability in cancer."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, slides 3-11 and 53-54.",
+            "Lippincott 6e, Chapter 29, semiconservative and bidirectional replication."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-067-v1",
+            "bio-telegram-gap-068-v1",
+            "bio-telegram-gap-069-v1"
+          ]
+        },
+        {
+          "id": "bio-29-replication-fork-machinery",
+          "title": "Helicase, single-strand binding proteins, and topoisomerases",
+          "priority": "exam-core",
+          "rationale": "These proteins solve the three immediate physical problems created when a fork opens: strand separation, reannealing, and torsional stress.",
+          "summary": "Helicase separates parental strands, while single-strand DNA-binding proteins keep the templates apart and protect them. Unwinding produces positive supercoiling ahead of the fork, which topoisomerases relieve by transiently breaking and resealing DNA. Type I topoisomerases cut one strand without ATP, whereas type II enzymes cut both strands and require ATP.",
+          "keyPoints": [
+            "DnaB is the principal bacterial replicative helicase.",
+            "SSB prevents reannealing and protects exposed single-stranded DNA.",
+            "Topoisomerase I changes linking number in steps of one.",
+            "Topoisomerase II changes linking number in steps of two and includes bacterial DNA gyrase."
+          ],
+          "clinicalLinks": [
+            "Fluoroquinolones inhibit bacterial gyrase/topoisomerase IV; several anticancer drugs target human topoisomerases."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, slides 15 onward in the fork-machinery block.",
+            "Lippincott 6e, Chapter 29, prepriming complex and topoisomerases."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-070-v1",
+            "bio-telegram-gap-071-v1",
+            "bio-telegram-gap-072-v1"
+          ]
+        },
+        {
+          "id": "bio-29-leading-lagging-synthesis",
+          "title": "5′→3′ synthesis, primers, and leading versus lagging strands",
+          "priority": "exam-core",
+          "rationale": "This is the central mechanistic distinction in DNA replication and is repeatedly tested in both teacher and textbook material.",
+          "summary": "DNA polymerases add nucleotides only to a free 3′-OH, so every new strand grows 5′→3′ and requires a primer. The leading strand is synthesized continuously toward the fork, whereas the lagging strand is synthesized away from the fork as Okazaki fragments. Primase makes the RNA primers, and the repeated primers on the lagging strand must later be removed and the fragments joined.",
+          "keyPoints": [
+            "Polymerase reads template 3′→5′ while synthesizing 5′→3′.",
+            "A primer supplies the initial paired 3′-OH.",
+            "Leading synthesis is continuous; lagging synthesis is discontinuous.",
+            "Okazaki fragments arise from antiparallel template geometry."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, strand-synthesis and Okazaki-fragment slides.",
+            "Lippincott 6e, Chapter 29, DNA synthesis directionality and primer requirement."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-073-v1",
+            "bio-telegram-gap-074-v1",
+            "bio-telegram-gap-077-v1"
+          ]
+        },
+        {
+          "id": "bio-29-polymerases-proofreading-ligation",
+          "title": "Polymerase specialization, proofreading, primer removal, and ligation",
+          "priority": "exam-core",
+          "rationale": "The teacher deck explicitly contrasts polymerase functions and exonuclease directions, a common source of exam errors.",
+          "summary": "Replicative polymerases extend DNA processively, and their 3′→5′ exonuclease activity removes a newly misincorporated nucleotide for proofreading. In bacteria, DNA polymerase I uses 5′→3′ exonuclease activity to remove RNA primers and fills the resulting gaps with DNA. DNA ligase then seals the remaining nick by creating the final phosphodiester bond.",
+          "keyPoints": [
+            "Bacterial DNA polymerase III performs most fork elongation.",
+            "Proofreading exonuclease is 3′→5′.",
+            "Bacterial DNA polymerase I removes primers with 5′→3′ exonuclease.",
+            "DNA ligase seals, but does not fill, a nick.",
+            "PCNA is the eukaryotic sliding clamp."
+          ],
+          "clinicalLinks": [
+            "Polymerase proofreading defects produce mutator phenotypes and increase cancer susceptibility."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, polymerase, exonuclease, and ligase block.",
+            "Lippincott 6e, Chapter 29, polymerases I/III, proofreading, and ligation."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-079-v1",
+            "bio-telegram-gap-080-v1",
+            "bio-telegram-gap-081-v1"
+          ]
+        },
+        {
+          "id": "bio-29-eukaryotic-polymerases-telomeres",
+          "title": "Eukaryotic polymerases and the telomere end-replication problem",
+          "priority": "exam-core",
+          "rationale": "The replication slides explicitly test polymerase-α/primase, PCNA, mitochondrial polymerase, and telomerase.",
+          "summary": "In eukaryotes, polymerase α works with primase to initiate synthesis, while high-processivity polymerases extend the leading and lagging strands with PCNA as their clamp. Linear chromosome ends cannot be completely copied by ordinary lagging-strand synthesis, causing telomere shortening in most somatic cells. Telomerase solves this problem using an intrinsic RNA template and a reverse-transcriptase protein subunit to extend the 3′ chromosome end.",
+          "keyPoints": [
+            "Polymerase α/primase initiates; polymerases ε and δ perform most nuclear elongation.",
+            "Polymerase γ replicates mitochondrial DNA.",
+            "Telomerase contains RNA plus telomerase reverse transcriptase.",
+            "Telomerase is active in germ/stem cells and commonly reactivated in cancer.",
+            "Progressive telomere shortening contributes to replicative senescence."
+          ],
+          "clinicalLinks": [
+            "Telomerase reactivation supports unlimited proliferation in many cancers.",
+            "Telomere-maintenance defects cause bone-marrow failure and other telomere biology disorders."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, eukaryotic polymerase and telomere sections.",
+            "Lippincott 6e, Chapter 29, telomere synthesis and reverse transcriptase."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-084-v1",
+            "bio-telegram-gap-085-v1",
+            "bio-telegram-gap-087-v1"
+          ]
+        },
+        {
+          "id": "bio-29-single-strand-dna-repair",
+          "title": "Mismatch, nucleotide-excision, and base-excision repair",
+          "priority": "medical-core",
+          "rationale": "The repair pathways link a specific lesion to a specific correction mechanism and to classic inherited cancer syndromes.",
+          "summary": "Mismatch repair removes replication errors that escape proofreading. Nucleotide-excision repair removes a short oligonucleotide containing a bulky, helix-distorting lesion such as a UV-induced pyrimidine dimer. Base-excision repair begins with a lesion-specific glycosylase that removes a damaged base, followed by AP-site incision, gap filling, and ligation.",
+          "keyPoints": [
+            "Mismatch repair corrects base mismatches and small insertion/deletion loops.",
+            "NER handles bulky, helix-distorting lesions.",
+            "BER handles small, nonbulky base damage such as deamination.",
+            "All three pathways use an intact complementary strand as sequence information."
+          ],
+          "clinicalLinks": [
+            "Mismatch-repair defects cause Lynch syndrome and microsatellite instability.",
+            "NER defects cause xeroderma pigmentosum with extreme UV sensitivity and early skin cancers."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 29, DNA repair section: mismatch, nucleotide-excision, and base-excision repair.",
+            "The teacher replication deck is titled DNA replication and the textbook supplies the repair mechanisms needed to complete that chapter outcome."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch29-bank-124-v1",
+            "lippincott-ch29-bank-130-v1",
+            "lippincott-ch29-bank-134-v1"
+          ]
+        },
+        {
+          "id": "bio-29-double-strand-break-repair",
+          "title": "Homologous recombination versus nonhomologous end joining",
+          "priority": "medical-core",
+          "rationale": "Double-strand-break pathway choice explains chromosomal rearrangements, radiosensitivity, and BRCA-associated cancer risk.",
+          "summary": "Homologous recombination repairs a double-strand break using a homologous template, usually the sister chromatid, and is therefore relatively accurate. Nonhomologous end joining directly processes and ligates broken ends without requiring a homologous template, so sequence may be lost or altered. Failure or misuse of either pathway creates chromosome instability and can initiate malignancy.",
+          "keyPoints": [
+            "HR is template directed and favored in S/G2 when a sister chromatid is available.",
+            "NHEJ is available more broadly but is intrinsically error prone.",
+            "BRCA1 and BRCA2 participate in homologous recombination.",
+            "End-joining errors can create deletions and translocations."
+          ],
+          "clinicalLinks": [
+            "BRCA1/2 loss increases breast, ovarian, prostate, and pancreatic cancer risk.",
+            "HR-deficient tumors can be selectively vulnerable to PARP inhibition."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 29, double-strand break repair by HR and NHEJ.",
+            "Lippincott Chapter 29 question extraction includes BRCA and clinical consequences of defective end joining."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch29-bank-141-v1",
+            "lippincott-ch29-bank-142-v1",
+            "lippincott-ch29-bank-145-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-30",
+      "concepts": [
+        {
+          "id": "bio-30-rna-types-and-mrna-architecture",
+          "title": "RNA types and bacterial versus eukaryotic mRNA architecture",
+          "priority": "exam-core",
+          "rationale": "The transcription teacher deck begins by distinguishing RNA products, and those structures determine later processing and translation.",
+          "summary": "mRNA carries coding information, tRNA is the adaptor that matches codons to amino acids, and rRNA provides structural and catalytic functions in ribosomes. Bacterial mRNA is often polycistronic and can be translated while it is transcribed. Eukaryotic mRNA is usually monocistronic and is processed with a 5′ cap, splicing, and a 3′ poly(A) tail before export to the cytoplasm.",
+          "keyPoints": [
+            "mRNA is the translated RNA; tRNA decodes; rRNA forms the catalytic ribosome.",
+            "RNA uses ribose and uracil and is usually single stranded.",
+            "Bacterial transcription and translation can be coupled.",
+            "Eukaryotic pre-mRNA is processed in the nucleus before translation."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, RNA-structure and RNA-type introduction.",
+            "Lippincott 6e, Chapter 30, major RNA types and eukaryotic mRNA architecture."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-088-v1",
+            "bio-telegram-gap-089-v1",
+            "lippincott-ch30-bank-025-v1"
+          ]
+        },
+        {
+          "id": "bio-30-bacterial-transcription-initiation",
+          "title": "Primer-independent bacterial transcription initiation",
+          "priority": "exam-core",
+          "rationale": "RNA polymerase, sigma factor, and the −10/−35 promoter are explicit high-yield teacher-slide targets.",
+          "summary": "RNA polymerase can begin RNA synthesis de novo and therefore does not require a primer. In bacteria, the sigma factor joins the core enzyme to form a holoenzyme that recognizes promoter consensus sequences. The −35 region supports recognition and the AT-rich −10 Pribnow box facilitates local DNA opening near the +1 start site.",
+          "keyPoints": [
+            "RNA polymerase synthesizes RNA 5′→3′ without a primer.",
+            "Sigma confers promoter specificity but is not the elongating catalytic core.",
+            "Canonical bacterial promoter elements are near −35 and −10.",
+            "Promoter sequences are not themselves transcribed."
+          ],
+          "clinicalLinks": [
+            "Rifampicin selectively inhibits bacterial RNA polymerase and is central to tuberculosis therapy."
+          ],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, bacterial RNA polymerase and promoter-initiation block.",
+            "Lippincott 6e, Chapter 30, bacterial promoter recognition and sigma factor."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-090-v1",
+            "bio-telegram-gap-092-v1",
+            "bio-telegram-gap-093-v1"
+          ]
+        },
+        {
+          "id": "bio-30-transcription-elongation-termination",
+          "title": "Transcript direction, coding/template strands, and bacterial termination",
+          "priority": "exam-core",
+          "rationale": "Directionality and rho-dependent versus intrinsic termination are repeatedly contrasted in the teacher deck.",
+          "summary": "RNA polymerase reads the DNA template strand 3′→5′ and synthesizes RNA 5′→3′. The RNA sequence is complementary to the template and matches the coding strand except that uracil replaces thymine. Intrinsic termination uses a GC-rich RNA hairpin followed by uridines, whereas rho-dependent termination uses an ATP-dependent helicase to release the transcript.",
+          "keyPoints": [
+            "RNA grows 5′→3′ and the template is read 3′→5′.",
+            "Coding-strand sequence corresponds to RNA with T replaced by U.",
+            "Sigma commonly dissociates after promoter clearance.",
+            "Intrinsic termination requires a hairpin plus a U-rich tract.",
+            "Rho binds RNA and catches a paused polymerase."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, elongation and termination sections.",
+            "Lippincott 6e, Chapter 30, transcript directionality and bacterial termination mechanisms."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-091-v1",
+            "bio-telegram-gap-097-v1",
+            "bio-telegram-gap-098-v1"
+          ]
+        },
+        {
+          "id": "bio-30-eukaryotic-rna-polymerases",
+          "title": "Division of labor among RNA polymerases I, II, and III",
+          "priority": "exam-core",
+          "rationale": "The three-polymerase product map is directly tested in the teacher slides and is a classic single-best-answer topic.",
+          "summary": "RNA polymerase I produces the 45S precursor that yields 18S, 5.8S, and 28S rRNAs. RNA polymerase II produces pre-mRNA and several regulatory RNAs. RNA polymerase III produces tRNAs and 5S rRNA, so the exceptional 5S product must not be assigned to polymerase I.",
+          "keyPoints": [
+            "Pol I: 45S pre-rRNA → 18S, 5.8S, 28S.",
+            "Pol II: pre-mRNA and selected sn/miRNAs.",
+            "Pol III: tRNA and 5S rRNA.",
+            "Pol I acts in the nucleolus; Pol II and III act in the nucleoplasm."
+          ],
+          "clinicalLinks": [
+            "α-Amanitin strongly inhibits RNA polymerase II and, at higher doses, polymerase III."
+          ],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, eukaryotic polymerase section.",
+            "Lippincott 6e, Chapter 30, eukaryotic nuclear RNA polymerases."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-099-v1",
+            "bio-telegram-gap-100-v1",
+            "bio-telegram-gap-101-v1"
+          ]
+        },
+        {
+          "id": "bio-30-pol2-promoter-general-factors",
+          "title": "RNA polymerase II promoters and general transcription factors",
+          "priority": "exam-core",
+          "rationale": "The teacher slides test TFIIH, while Lippincott supplies the promoter and preinitiation-complex framework needed to understand it.",
+          "summary": "RNA polymerase II does not recognize its promoter alone; general transcription factors assemble a preinitiation complex. TFIID, through TBP, recognizes the TATA box when present, and other core promoter elements can substitute in TATA-less genes. TFIIH opens DNA with helicase activity and phosphorylates the polymerase II C-terminal domain to permit promoter escape.",
+          "keyPoints": [
+            "TATA/Hogness box is a core promoter element near −25 in many genes.",
+            "TBP is part of TFIID.",
+            "General factors position Pol II and create an open complex.",
+            "TFIIH has helicase and kinase activities."
+          ],
+          "clinicalLinks": [
+            "Defects in TFIIH-associated nucleotide-excision repair/transcription proteins can cause xeroderma pigmentosum or trichothiodystrophy."
+          ],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, Pol II general-factor section.",
+            "Lippincott 6e, Chapter 30, TATA box, TFIID, and TFIIH."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-102-v1",
+            "lippincott-ch30-bank-074-v1",
+            "lippincott-ch30-bank-081-v1"
+          ]
+        },
+        {
+          "id": "bio-30-cap-polyadenylation",
+          "title": "5′ capping and 3′ polyadenylation of pre-mRNA",
+          "priority": "exam-core",
+          "rationale": "These modifications connect transcription to RNA stability, export, and translation and are core Lippincott Chapter 30 outcomes.",
+          "summary": "Eukaryotic pre-mRNA receives a 7-methylguanosine cap through an unusual 5′–5′ triphosphate linkage early during transcription. The 3′ end is cleaved downstream of the AAUAAA signal and poly(A) polymerase adds a tail that is not directly encoded by the DNA template. The cap and tail protect the transcript, support nuclear export, and cooperate in efficient translation initiation.",
+          "keyPoints": [
+            "The cap is 7-methylguanosine linked 5′–5′.",
+            "The cap supports stability, export, and ribosome recruitment.",
+            "AAUAAA directs cleavage/polyadenylation.",
+            "Poly(A) polymerase adds the non-templated tail.",
+            "Histone mRNAs are an important poly(A)-tail exception."
+          ],
+          "clinicalLinks": [
+            "Mutations in polyadenylation signals can reduce normal mRNA production, including in globin disorders."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 30, pre-mRNA capping and polyadenylation.",
+            "Teacher: Transcription 2025.pptx includes eukaryotic transcription and RNA processing in its confirmed scope."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch30-bank-105-v1",
+            "lippincott-ch30-bank-107-v1",
+            "lippincott-ch30-bank-111-v1"
+          ]
+        },
+        {
+          "id": "bio-30-splicing-alternative-splicing",
+          "title": "Spliceosome mechanism, splice-site disease, and alternative splicing",
+          "priority": "medical-core",
+          "rationale": "Splicing is indispensable for eukaryotic gene expression, and splice-site mutations are a common mechanism of inherited disease.",
+          "summary": "The spliceosome uses snRNPs to recognize the 5′ GU site, branch-point adenine, polypyrimidine tract, and 3′ AG site. Two transesterification reactions form a lariat and join neighboring exons without consuming ATP for the bond-exchange chemistry itself. Alternative splice-site choice allows one gene to produce different protein isoforms, while pathogenic splice mutations can cause exon skipping, intron retention, or activation of cryptic sites.",
+          "keyPoints": [
+            "Introns are removed and exons are ligated by the spliceosome.",
+            "The branch-point A forms a 2′–5′ bond in the lariat.",
+            "Consensus boundaries are usually GU at the 5′ end and AG at the 3′ end.",
+            "Alternative splicing expands the proteome without adding genes.",
+            "Splice-site mutations can alter the reading frame or introduce premature stops."
+          ],
+          "clinicalLinks": [
+            "β-thalassemia can result from abnormal β-globin pre-mRNA splicing.",
+            "Antisense oligonucleotides can therapeutically redirect splicing in selected diseases."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 30, spliceosome, splice-site mutations, and alternative splicing.",
+            "Teacher: Transcription 2025.pptx includes eukaryotic RNA processing in the confirmed course block."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch30-bank-112-v1",
+            "lippincott-ch30-bank-121-v1",
+            "lippincott-ch30-bank-125-v1"
+          ]
+        },
+        {
+          "id": "bio-30-transcription-inhibitors",
+          "title": "Transcription inhibitors as mechanism probes and drugs",
+          "priority": "exam-core",
+          "rationale": "Actinomycin D, rifampicin, and α-amanitin are named directly in the teacher transcription deck.",
+          "summary": "Actinomycin D intercalates into DNA and broadly blocks RNA-chain elongation. Rifampicin binds the β subunit of bacterial RNA polymerase and prevents productive initiation. α-Amanitin from Amanita mushrooms most strongly inhibits eukaryotic RNA polymerase II, shutting down mRNA synthesis.",
+          "keyPoints": [
+            "Actinomycin D targets DNA and inhibits transcription broadly.",
+            "Rifampicin selectively targets bacterial RNA polymerase.",
+            "α-Amanitin is most potent against Pol II.",
+            "Selectivity depends on whether the target is DNA itself or a domain-specific polymerase."
+          ],
+          "clinicalLinks": [
+            "Rifampicin is a key antimycobacterial drug and a strong hepatic enzyme inducer.",
+            "Amanita poisoning can produce fulminant hepatic failure."
+          ],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, transcription-inhibitor section.",
+            "Lippincott 6e, Chapter 30, rifampin, dactinomycin, and α-amanitin."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-103-v1",
+            "bio-telegram-gap-104-v1",
+            "bio-telegram-gap-105-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-31",
+      "concepts": [
+        {
+          "id": "bio-31-genetic-code-and-mutations",
+          "title": "Genetic code properties, reading frames, and mutation consequences",
+          "priority": "exam-core",
+          "rationale": "The translation deck directly tests degeneracy, nonsense mutation, and frameshift logic rather than isolated codon memorization.",
+          "summary": "The genetic code is degenerate because several codons can specify the same amino acid, but it is unambiguous because each codon specifies only one amino acid. An open reading frame extends from an initiation codon through a stop codon in one nucleotide grouping. A nonsense mutation creates a premature stop, while an insertion or deletion not divisible by three shifts the downstream reading frame.",
+          "keyPoints": [
+            "Degenerate does not mean ambiguous.",
+            "AUG usually initiates translation and also encodes methionine.",
+            "UAA, UAG, and UGA are stop codons.",
+            "Missense changes an amino acid; nonsense creates a stop; frameshift changes downstream codon grouping.",
+            "Silent substitutions can still affect splicing or translation efficiency."
+          ],
+          "clinicalLinks": [
+            "Nonsense and frameshift variants often cause severe loss-of-function genetic disease."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 6 and 9-10.",
+            "Lippincott 6e, Chapter 31, genetic code and mutation effects."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-117-v1",
+            "bio-telegram-gap-118-v1",
+            "bio-telegram-gap-119-v1"
+          ]
+        },
+        {
+          "id": "bio-31-trna-charging-wobble",
+          "title": "Aminoacyl-tRNA synthetases, proofreading, and wobble",
+          "priority": "exam-core",
+          "rationale": "Accurate tRNA charging is the first major fidelity checkpoint in translation and is explicitly emphasized in the teacher deck.",
+          "summary": "An aminoacyl-tRNA synthetase uses ATP to attach a specific amino acid to the 3′ CCA end of its cognate tRNA. Many synthetases proofread by removing an incorrectly activated or attached amino acid before the tRNA reaches the ribosome. Flexible pairing between the third codon base and first anticodon base, called wobble, lets one tRNA decode several synonymous codons.",
+          "keyPoints": [
+            "Each amino acid has a corresponding synthetase specificity system.",
+            "Charging consumes ATP to AMP, equivalent to two high-energy phosphate bonds.",
+            "The ribosome checks codon–anticodon pairing but cannot verify the attached amino acid.",
+            "Wobble explains why fewer tRNAs than sense codons are required."
+          ],
+          "clinicalLinks": [
+            "Some antimicrobial drugs exploit differences in microbial aminoacyl-tRNA synthetases."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 17-25.",
+            "Lippincott 6e, Chapter 31, tRNA charging and wobble."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-120-v1",
+            "bio-telegram-gap-121-v1",
+            "bio-telegram-gap-123-v1"
+          ]
+        },
+        {
+          "id": "bio-31-ribosome-sites-direction",
+          "title": "Ribosomal A/P/E sites, peptidyl transferase, and directionality",
+          "priority": "exam-core",
+          "rationale": "The teacher deck tests the movement of mRNA, tRNAs, and the peptide and highlights the ribosome as a ribozyme.",
+          "summary": "The ribosome reads mRNA 5′→3′ and synthesizes protein from the amino terminus toward the carboxyl terminus. Incoming aminoacyl-tRNA enters the A site, peptidyl-tRNA occupies the P site, and deacylated tRNA exits through the E site. The large-subunit rRNA catalyzes peptide-bond formation, demonstrating that the ribosome is a ribozyme.",
+          "keyPoints": [
+            "A = aminoacyl entry, P = peptidyl chain, E = exit.",
+            "Protein elongates N→C.",
+            "Peptide-bond energy comes from the high-energy aminoacyl-tRNA ester bond.",
+            "Bacterial 23S rRNA is the peptidyl-transferase catalyst."
+          ],
+          "clinicalLinks": [
+            "Many antibiotics selectively bind bacterial ribosomal sites or the peptidyl-transferase center."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 26, 28, and 41-42.",
+            "Lippincott 6e, Chapter 31, ribosome structure and directionality."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-124-v1",
+            "bio-telegram-gap-125-v1",
+            "bio-telegram-gap-129-v1"
+          ]
+        },
+        {
+          "id": "bio-31-initiation-prokaryote-eukaryote",
+          "title": "Prokaryotic Shine–Dalgarno alignment versus eukaryotic cap scanning",
+          "priority": "exam-core",
+          "rationale": "The start-site contrast is explicitly tested in back-to-back teacher questions and explains major domain-specific drug selectivity.",
+          "summary": "In bacteria, the Shine–Dalgarno sequence base-pairs with 16S rRNA to position the start codon in the P site. In eukaryotes, the small subunit is recruited near the 5′ cap and scans to an AUG in a favorable Kozak context. The initiator tRNA is special because it enters the P site directly; bacteria use formylmethionine whereas cytosolic eukaryotic translation begins with methionine.",
+          "keyPoints": [
+            "Shine–Dalgarno is bacterial; Kozak/cap scanning is eukaryotic.",
+            "Initiator tRNA starts in the P site, not the A site.",
+            "Bacterial initiation uses fMet-tRNA.",
+            "Initiation factors and GTP assemble the complete ribosome only after correct start recognition."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 27, 29-30, and 37-38.",
+            "Lippincott 6e, Chapter 31, prokaryotic and eukaryotic initiation."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-126-v1",
+            "bio-telegram-gap-127-v1",
+            "lippincott-ch31-bank-070-v1"
+          ]
+        },
+        {
+          "id": "bio-31-elongation-cycle",
+          "title": "Elongation-factor cycle and translocation",
+          "priority": "exam-core",
+          "rationale": "The teacher deck names the GTPases that deliver tRNA and move the ribosome, making this a mechanism rather than a factor list.",
+          "summary": "During elongation, EF-Tu–GTP delivers an aminoacyl-tRNA to the bacterial A site and GTP hydrolysis helps enforce correct codon recognition. Peptidyl transfer moves the growing chain from the P-site tRNA to the A-site amino acid. EF-G–GTP then drives translocation by one codon, shifting peptidyl-tRNA to P and deacylated tRNA toward E.",
+          "keyPoints": [
+            "EF-Tu delivers charged tRNA; EF-Ts reloads EF-Tu with GTP.",
+            "Peptidyl transfer precedes translocation.",
+            "EF-G is the bacterial translocase.",
+            "Eukaryotic homologs include eEF1A and eEF2.",
+            "At least two GTP molecules are hydrolyzed per elongation cycle."
+          ],
+          "clinicalLinks": [
+            "Diphtheria toxin and Pseudomonas exotoxin A inactivate eEF2 and stop translocation."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 39-43.",
+            "Lippincott 6e, Chapter 31, elongation cycle and energy use."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-128-v1",
+            "bio-telegram-gap-130-v1",
+            "lippincott-ch31-bank-080-v1"
+          ]
+        },
+        {
+          "id": "bio-31-termination-polysomes",
+          "title": "Stop-codon termination, ribosome recycling, and polysomes",
+          "priority": "exam-core",
+          "rationale": "Termination completes the translation cycle and explains why stop codons recruit protein factors instead of tRNAs.",
+          "summary": "No tRNA recognizes a stop codon; release factors instead enter the A site and stimulate hydrolysis of the completed peptide from the P-site tRNA. GTP-dependent factors then promote release-factor departure and ribosome recycling. Multiple ribosomes can translate one mRNA simultaneously as a polysome, increasing protein output without increasing mRNA number.",
+          "keyPoints": [
+            "Stop codons are recognized by release factors, not suppressor tRNAs under normal conditions.",
+            "Termination hydrolyzes the peptidyl-tRNA ester bond.",
+            "Ribosomal subunits, mRNA, and tRNA are recycled.",
+            "A polysome is many ribosomes translating one mRNA."
+          ],
+          "clinicalLinks": [
+            "Premature termination codons can trigger nonsense-mediated mRNA decay."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 31, termination, recycling, and polysomes.",
+            "Teacher: Translation 2025.pptx covers the complete translation cycle."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch31-bank-084-v1",
+            "lippincott-ch31-bank-086-v1",
+            "lippincott-ch31-bank-090-v1"
+          ]
+        },
+        {
+          "id": "bio-31-protein-targeting",
+          "title": "Signal sequences direct proteins to ER, nucleus, and mitochondria",
+          "priority": "medical-core",
+          "rationale": "A protein's destination is part of its function, and targeting failure explains several inherited and acquired diseases.",
+          "summary": "Secreted and many membrane proteins carry an N-terminal signal peptide recognized by signal-recognition particle, which pauses translation and directs the ribosome to the rough ER. Nuclear proteins use nuclear-localization signals and are generally imported after synthesis. Many mitochondrial matrix proteins carry an N-terminal amphipathic targeting sequence and are imported posttranslationally.",
+          "keyPoints": [
+            "ER targeting is usually cotranslational through SRP and its receptor.",
+            "Free and ER-bound ribosomes are structurally identical; the signal sequence determines destination.",
+            "Nuclear localization signals are not usually cleaved.",
+            "Mitochondrial targeting sequences commonly form amphipathic helices."
+          ],
+          "clinicalLinks": [
+            "Defective peroxisomal targeting causes Zellweger-spectrum disorders.",
+            "Mistargeting or failed trafficking can cause protein accumulation and organelle dysfunction."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 31, protein targeting to ER, nucleus, and mitochondria.",
+            "Teacher translation deck establishes translation machinery; the book supplies the medically essential destination step."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch31-bank-094-v1",
+            "lippincott-ch31-bank-095-v1",
+            "lippincott-ch31-bank-097-v1"
+          ]
+        },
+        {
+          "id": "bio-31-posttranslational-processing-quality-control",
+          "title": "Posttranslational modification, folding, and ubiquitin–proteasome quality control",
+          "priority": "medical-core",
+          "rationale": "A newly synthesized chain is not necessarily a functional protein; processing and quality control determine localization, activity, and half-life.",
+          "summary": "Proteins can be cleaved, phosphorylated, glycosylated, hydroxylated, carboxylated, or lipidated after or during translation. N-linked glycosylation begins on asparagine in the ER, whereas O-linked sugars are added mainly to serine or threonine in the Golgi. Persistently misfolded cytosolic proteins are polyubiquitinated and degraded by the proteasome.",
+          "keyPoints": [
+            "Modification can activate a precursor, target a protein, or change stability.",
+            "N-linked glycosylation is on Asn; O-linked is commonly on Ser/Thr.",
+            "Collagen proline/lysine hydroxylation requires vitamin C.",
+            "Vitamin K supports γ-carboxylation of glutamate in clotting proteins.",
+            "Polyubiquitin commonly marks proteins for proteasomal degradation."
+          ],
+          "clinicalLinks": [
+            "ΔF508 CFTR is often degraded by quality control before reaching the plasma membrane.",
+            "Vitamin C or K deficiency disrupts specific posttranslational modifications."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 31, posttranslational modifications and protein degradation.",
+            "Lippincott Chapter 31 clinical examples include collagen, clotting proteins, and CFTR quality control."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch31-bank-103-v1",
+            "lippincott-ch31-bank-105-v1",
+            "lippincott-ch31-bank-112-v1"
+          ]
+        },
+        {
+          "id": "bio-31-translation-inhibitors-toxins",
+          "title": "Antibiotics and toxins mapped to translation steps",
+          "priority": "exam-core",
+          "rationale": "The teacher deck devotes a named block to translation inhibitors and tests both antimicrobial selectivity and toxin mechanisms.",
+          "summary": "Tetracyclines block aminoacyl-tRNA entry into the bacterial A site, whereas macrolides inhibit translocation through the 50S subunit. Puromycin mimics aminoacyl-tRNA and causes premature chain release in both domains. Diphtheria toxin ADP-ribosylates eEF2, and ricin depurinates 28S rRNA, so both arrest eukaryotic protein synthesis by distinct mechanisms.",
+          "keyPoints": [
+            "Tetracycline: blocks A-site entry on bacterial ribosomes.",
+            "Macrolides: 50S binding and impaired translocation.",
+            "Chloramphenicol: inhibits bacterial/mitochondrial peptidyl transferase.",
+            "Puromycin: aminoacyl-tRNA analog causing premature termination.",
+            "Diphtheria toxin targets eEF2; ricin targets 28S rRNA."
+          ],
+          "clinicalLinks": [
+            "Mitochondrial ribosomes partly resemble bacterial ribosomes, explaining selected antimicrobial toxicities."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 47-50.",
+            "Lippincott 6e, Chapter 31, inhibitors of protein synthesis."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-131-v1",
+            "bio-telegram-gap-132-v1",
+            "bio-telegram-gap-136-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-32",
+      "concepts": [
+        {
+          "id": "bio-32-regulatory-logic-cis-trans",
+          "title": "Constitutive versus regulated genes, cis elements, trans factors, and operons",
+          "priority": "exam-core",
+          "rationale": "These definitions form the shared grammar for every prokaryotic and eukaryotic regulation mechanism in the teacher deck.",
+          "summary": "Constitutive genes are expressed relatively continuously for basal functions, whereas regulated genes change expression with conditions, cell type, or signals. A cis-acting element is a DNA sequence that affects linked genes on the same DNA molecule; a trans-acting factor is a diffusible product, usually a protein, that binds a target sequence. A bacterial operon places multiple structural genes under shared regulatory DNA so they can be transcribed together as a polycistronic mRNA.",
+          "keyPoints": [
+            "Cis = local DNA sequence; trans = diffusible regulator.",
+            "Promoters, operators, enhancers, and response elements are cis elements.",
+            "Repressors, activators, and many transcription factors act in trans.",
+            "Operons coordinate related bacterial genes efficiently."
+          ],
+          "clinicalLinks": [
+            "Pathogenic variants can affect either a coding trans factor or a noncoding cis-regulatory element."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, constitutive/controllable genes, cis/trans factors, and operons.",
+            "Lippincott 6e, Chapter 32, universal transcriptional-regulation logic."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-106-v1",
+            "bio-telegram-gap-107-v1",
+            "bio-telegram-gap-108-v1"
+          ]
+        },
+        {
+          "id": "bio-32-lac-operon",
+          "title": "Lac operon integrates lactose availability with glucose status",
+          "priority": "exam-core",
+          "rationale": "The teacher deck asks allolactose, cAMP–CAP, and the condition for maximal transcription as one integrated decision table.",
+          "summary": "Without lactose, active lac repressor binds the operator and blocks transcription. Lactose-derived allolactose binds the repressor and lowers its operator affinity, providing negative-control release. When glucose is low, cAMP rises and cAMP–CAP activates RNA-polymerase recruitment, so maximal expression requires lactose present and glucose absent.",
+          "keyPoints": [
+            "Allolactose is the inducer that inactivates lac repressor.",
+            "Low glucose → high cAMP → active CAP.",
+            "Lactose present removes negative control; low glucose provides positive control.",
+            "Maximal lacZYA transcription: lactose present, glucose absent.",
+            "Glucose-mediated suppression is catabolite repression."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, lac-operon block.",
+            "Lippincott 6e, Chapter 32, lac negative and positive regulation."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-109-v1",
+            "bio-telegram-gap-110-v1",
+            "bio-telegram-gap-111-v1"
+          ]
+        },
+        {
+          "id": "bio-32-trp-operon-attenuation",
+          "title": "Trp operon repression and attenuation sense amino-acid supply",
+          "priority": "exam-core",
+          "rationale": "The teacher identifies trp as a repressible operon, while Lippincott supplies the attenuation logic frequently tested as a contrast to lac.",
+          "summary": "The trp operon is normally on when tryptophan is scarce and is repressed when tryptophan acts as a corepressor. Attenuation adds a second layer by coupling translation of a leader peptide to formation of alternative mRNA hairpins. Abundant charged tRNA-Trp allows the ribosome to advance and favors a terminator, whereas scarcity stalls the ribosome and favors an antiterminator so biosynthetic genes are transcribed.",
+          "keyPoints": [
+            "Lac is inducible and catabolic; trp is repressible and anabolic.",
+            "Tryptophan activates its repressor as a corepressor.",
+            "Attenuation depends on coupled transcription and translation.",
+            "High Trp favors termination; low Trp permits transcription."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, trp-operon section.",
+            "Lippincott 6e, Chapter 32, trp attenuation mechanism."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-112-v1",
+            "lippincott-ch32-bank-041-v1",
+            "lippincott-ch32-bank-045-v1"
+          ]
+        },
+        {
+          "id": "bio-32-eukaryotic-combinatorial-control",
+          "title": "Enhancers, specific transcription factors, and combinatorial control",
+          "priority": "exam-core",
+          "rationale": "This is the central eukaryotic contrast to operons: separate genes can respond together through shared cis motifs and trans factors.",
+          "summary": "Specific transcription factors combine a DNA-binding domain with an activation or repression domain. Enhancers can act upstream, downstream, or at long distance and communicate with promoters through DNA looping and coactivator complexes. Different combinations of factors generate cell-specific expression, and genes on different chromosomes can be coordinated if they share response elements recognized by the same trans-acting factor.",
+          "keyPoints": [
+            "Enhancers are cis DNA elements; activators are trans proteins.",
+            "Enhancer action is often distance and orientation independent.",
+            "Combinatorial control lets a limited factor set specify many expression patterns.",
+            "Shared consensus elements coordinate unlinked genes."
+          ],
+          "clinicalLinks": [
+            "Enhancer mutations and enhancer hijacking can activate oncogenes without altering their coding sequence."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, eukaryotic regulation section.",
+            "Lippincott 6e, Chapter 32, specific transcription factors and coordinate regulation."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch32-bank-063-v1",
+            "lippincott-ch32-bank-064-v1",
+            "lippincott-ch32-bank-061-v1"
+          ]
+        },
+        {
+          "id": "bio-32-hormonal-gene-regulation",
+          "title": "Nuclear receptors and cAMP–CREB connect hormones to transcription",
+          "priority": "medical-core",
+          "rationale": "These two routes connect molecular regulation to endocrine physiology and are explicit Lippincott Chapter 32 mechanisms.",
+          "summary": "Lipid-soluble hormones can enter cells, bind intracellular nuclear receptors, and direct receptor binding to hormone-response elements such as GREs. Peptide hormones instead signal through cell-surface receptors; glucagon raises cAMP, activates PKA, and phosphorylates CREB. Activated CREB binds cAMP-response elements and recruits transcriptional coactivators to change target-gene expression.",
+          "keyPoints": [
+            "Nuclear receptors are ligand-activated transcription factors.",
+            "HRE is cis acting; hormone–receptor complex is trans acting.",
+            "Glucagon → GPCR → cAMP → PKA → CREB → CRE.",
+            "Coactivator versus corepressor recruitment determines transcriptional direction."
+          ],
+          "clinicalLinks": [
+            "Glucocorticoid and thyroid-hormone therapies alter transcription through nuclear receptors.",
+            "Defects in receptor or response-element signaling can cause hormone resistance."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 32, hormone-response elements, nuclear receptors, and CREB.",
+            "Teacher regulation deck confirms multi-level eukaryotic gene regulation as exam scope."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch32-bank-068-v1",
+            "lippincott-ch32-bank-072-v1",
+            "lippincott-ch32-bank-073-v1"
+          ]
+        },
+        {
+          "id": "bio-32-epigenetic-chromatin-control",
+          "title": "Histone modifications, chromatin remodeling, and DNA methylation",
+          "priority": "exam-core",
+          "rationale": "DNA methylation is directly tested in the teacher deck and complements the histone-accessibility concept introduced in Chapter 29.",
+          "summary": "Gene expression can change heritably without changing DNA sequence through epigenetic mechanisms. Histone acetylation and ATP-dependent chromatin remodeling generally increase access to regulatory DNA, whereas promoter CpG methylation is usually associated with reduced transcription. The pattern is maintained through cell division yet remains more reversible than a DNA mutation.",
+          "keyPoints": [
+            "Epigenetic change alters expression without changing base sequence.",
+            "Histone acetylation commonly opens chromatin.",
+            "DNA methyltransferases use S-adenosylmethionine as methyl donor.",
+            "Promoter CpG-island methylation usually represses transcription.",
+            "Chromatin remodeling repositions or ejects nucleosomes."
+          ],
+          "clinicalLinks": [
+            "Tumor-suppressor promoters can be silenced by aberrant hypermethylation.",
+            "DNA-methyltransferase and histone-deacetylase inhibitors are used in selected cancers."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, DNA-methylation and eukaryotic-regulation content.",
+            "Lippincott 6e, Chapter 32, DNA-level and chromatin-level regulation."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-115-v1",
+            "lippincott-ch32-bank-104-v1",
+            "lippincott-ch32-bank-109-v1"
+          ]
+        },
+        {
+          "id": "bio-32-posttranscriptional-control",
+          "title": "Alternative processing, RNA editing, and mRNA stability",
+          "priority": "exam-core",
+          "rationale": "The teacher deck explicitly tests posttranscriptional regulation and ApoB editing, which are best learned as one decision layer after transcription.",
+          "summary": "Cells regulate gene output after transcription by selecting splice and polyadenylation sites, editing RNA sequence, controlling nuclear export, and changing mRNA half-life. ApoB editing converts a cytidine to uridine and creates a stop codon, producing shorter ApoB-48 in intestine versus full-length ApoB-100 in liver. Stability elements and RNA-binding proteins determine how long a transcript remains available for translation.",
+          "keyPoints": [
+            "One pre-mRNA can yield different isoforms through alternative processing.",
+            "RNA editing changes transcript information without changing genomic DNA.",
+            "ApoB-48 is intestinal; ApoB-100 is hepatic.",
+            "Longer mRNA half-life generally permits more protein synthesis.",
+            "Iron-response elements provide a classic stability/translation control system."
+          ],
+          "clinicalLinks": [
+            "ApoB-100 is required for LDL-receptor recognition, whereas ApoB-48 packages dietary lipid in chylomicrons."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, posttranscriptional regulation and ApoB editing.",
+            "Lippincott 6e, Chapter 32, mRNA processing and stability."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-113-v1",
+            "bio-telegram-gap-114-v1",
+            "lippincott-ch32-bank-082-v1"
+          ]
+        },
+        {
+          "id": "bio-32-rnai-translation-control",
+          "title": "RNA interference and regulation of translation initiation",
+          "priority": "medical-core",
+          "rationale": "RNAi is a foundational endogenous regulatory system and a current therapeutic platform; eIF2 control links translation to cellular stress.",
+          "summary": "MicroRNAs are processed into short guide strands loaded into RISC, where base pairing directs translational repression or mRNA cleavage depending on complementarity. Small interfering RNAs use the same core machinery and usually pair extensively with a target for cleavage. Cells also reduce global translation during stress by phosphorylating eIF2, which limits regeneration of the initiation ternary complex.",
+          "keyPoints": [
+            "Dicer helps generate short RNA duplexes; Argonaute is the RISC effector.",
+            "Partial pairing usually represses translation; extensive pairing favors cleavage.",
+            "siRNA can be experimentally or therapeutically supplied.",
+            "Phosphorylated eIF2 inhibits translation initiation during stress."
+          ],
+          "clinicalLinks": [
+            "Approved siRNA drugs silence pathogenic hepatic transcripts.",
+            "The integrated stress response uses eIF2 phosphorylation to rebalance protein synthesis."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 32, RNA interference and eIF2-mediated translational control.",
+            "Teacher regulation deck confirms posttranscriptional and translational regulation in the course scope."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch32-bank-090-v1",
+            "lippincott-ch32-bank-093-v1",
+            "lippincott-ch32-bank-100-v1"
+          ]
+        },
+        {
+          "id": "bio-32-genome-rearrangement-copy-number-mobile-dna",
+          "title": "Gene rearrangement, amplification, and transposable elements",
+          "priority": "medical-core",
+          "rationale": "These mechanisms alter gene output at the DNA level and explain antibody diversity, drug resistance, and genome instability.",
+          "summary": "V(D)J recombination rearranges immunoglobulin gene segments to create enormous antibody diversity from a limited inherited segment set. Gene amplification increases copy number and can raise protein abundance, as in DHFR amplification during methotrexate resistance. Transposons and retrotransposons move through DNA- or RNA-based mechanisms and can disrupt genes or spread antimicrobial-resistance determinants.",
+          "keyPoints": [
+            "Somatic V(D)J recombination permanently rearranges lymphocyte DNA.",
+            "Copy-number increase can drive overexpression and drug resistance.",
+            "Transposons use transposase; retrotransposons use an RNA intermediate.",
+            "Mobile elements can cause insertional mutation or move resistance genes."
+          ],
+          "clinicalLinks": [
+            "Defective V(D)J machinery causes severe immunodeficiency.",
+            "Oncogene amplification and mobile resistance cassettes are clinically important forms of genome change."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, immunoglobulin rearrangement in the eukaryotic-regulation section.",
+            "Lippincott 6e, Chapter 32, gene amplification and transposons."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-116-v1",
+            "lippincott-ch32-bank-110-v1",
+            "lippincott-ch32-bank-122-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-33",
+      "concepts": [
+        {
+          "id": "bio-33-restriction-cloning",
+          "title": "Restriction enzymes, sticky ends, and plasmid cloning vectors",
+          "priority": "exam-core",
+          "rationale": "These are the foundational operations from which the rest of the biotechnology toolkit is built in the confirmed Chapter 33 scope.",
+          "summary": "Type II restriction endonucleases recognize short, often palindromic DNA sequences and cut reproducibly. Staggered cuts can create complementary sticky ends that align insert and vector before DNA ligase seals the backbone. A basic plasmid vector needs an origin of replication, a selectable marker, and a cloning site for the inserted DNA.",
+          "keyPoints": [
+            "Restriction enzymes cut sequence-specific sites.",
+            "Compatible sticky ends improve directional assembly efficiency.",
+            "DNA ligase covalently seals vector and insert.",
+            "Origin, selectable marker, and cloning site are core vector features."
+          ],
+          "clinicalLinks": [
+            "Recombinant plasmids enable production of therapeutic proteins such as human insulin."
+          ],
+          "sourceEvidence": [
+            "Lippincott Illustrated Reviews: Biochemistry, 6e, Chapter 33, PDF pp. 838-877.",
+            "Tracked bank source labels Chapter 33 as confirmed August 25 Cell & Molecules scope."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-200-v1",
+            "july29-comprehensive-201-v1",
+            "july29-comprehensive-202-v1"
+          ]
+        },
+        {
+          "id": "bio-33-cdna-probes",
+          "title": "cDNA and complementary nucleic-acid probes",
+          "priority": "exam-core",
+          "rationale": "cDNA production and sequence-specific hybridization are common principles underlying expression cloning, diagnostic probes, PCR, and arrays.",
+          "summary": "Reverse transcriptase copies mature mRNA into complementary DNA, so cDNA represents expressed, already-spliced sequence and lacks genomic introns. That property allows a human coding sequence to be expressed in bacteria, which cannot remove most eukaryotic introns. A labeled probe detects a target by complementary base pairing under controlled stringency.",
+          "keyPoints": [
+            "cDNA reflects the transcripts present in the sampled cell.",
+            "Mature-mRNA-derived cDNA lacks introns.",
+            "Reverse transcriptase makes the initial DNA copy.",
+            "Probe specificity depends on complementarity, temperature, salt, and mismatch tolerance."
+          ],
+          "clinicalLinks": [
+            "cDNA and probes are used to measure gene expression and detect infectious or inherited sequences."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 33, cDNA synthesis and nucleic-acid hybridization.",
+            "Confirmed August 25 Chapter 33 question bank, PDF pp. 838-877."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-203-v1",
+            "july29-comprehensive-204-v1"
+          ]
+        },
+        {
+          "id": "bio-33-pcr-rtpcr",
+          "title": "PCR amplification and reverse-transcription PCR",
+          "priority": "exam-core",
+          "rationale": "PCR is the most transferable molecular diagnostic method and the tracked Chapter 33 bank tests both cycle logic and primer-defined specificity.",
+          "summary": "Each PCR cycle proceeds through strand denaturation, primer annealing, and thermostable-polymerase extension. The two primers bind opposite strands with their 3′ ends aimed toward the target, thereby defining the amplified interval. To analyze RNA, reverse transcriptase first creates cDNA, which then serves as the PCR template.",
+          "keyPoints": [
+            "Cycle order: denature → anneal → extend.",
+            "Primers determine specificity and amplicon boundaries.",
+            "Thermostable polymerase survives repeated heating.",
+            "RT-PCR begins with reverse transcription of RNA.",
+            "Quantitative PCR follows amplification using fluorescence."
+          ],
+          "clinicalLinks": [
+            "PCR is used for pathogen detection, genotyping, minimal-residual-disease testing, and viral-load assays."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 33, PCR and reverse-transcription PCR.",
+            "Confirmed August 25 Chapter 33 question bank, PDF pp. 838-877."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-205-v1",
+            "july29-comprehensive-206-v1",
+            "july29-comprehensive-208-v1"
+          ]
+        },
+        {
+          "id": "bio-33-southern-northern-western",
+          "title": "Southern, Northern, and Western blot targets",
+          "priority": "exam-core",
+          "rationale": "The three blots are a compact high-yield distinction that tests target molecule and detection reagent.",
+          "summary": "Southern blotting detects a specific DNA sequence after fragment separation and transfer to a membrane. Northern blotting detects RNA transcripts and can report transcript size and relative abundance. Western blotting detects a protein using target-specific antibodies after electrophoresis and membrane transfer.",
+          "keyPoints": [
+            "Southern = DNA with a nucleic-acid probe.",
+            "Northern = RNA with a nucleic-acid probe.",
+            "Western = protein with antibodies.",
+            "All separate a sample, transfer it, and detect a specific target."
+          ],
+          "clinicalLinks": [
+            "Western-type immunoblots can confirm protein identity or pathogen-specific antibodies, though many clinical workflows now use other platforms."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 33, blotting methods.",
+            "Confirmed August 25 Chapter 33 question bank, PDF pp. 838-877."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-209-v1",
+            "july29-comprehensive-210-v1",
+            "july29-comprehensive-211-v1"
+          ]
+        },
+        {
+          "id": "bio-33-rflp-sanger",
+          "title": "Restriction-fragment polymorphism and Sanger sequencing",
+          "priority": "medical-core",
+          "rationale": "These methods connect a sequence variant to either an altered restriction pattern or direct base-by-base readout.",
+          "summary": "A variant that creates or abolishes a restriction site changes fragment lengths and can be detected as an RFLP after digestion and suitable fragment analysis. Sanger sequencing uses occasional dideoxynucleotide incorporation to terminate extension because ddNTPs lack a 3′-OH. Sorting terminated fragments by length reveals the newly synthesized DNA sequence.",
+          "keyPoints": [
+            "RFLP detects sequence-dependent fragment-length differences.",
+            "ddNTP incorporation prevents the next phosphodiester bond.",
+            "Sanger products differ by one nucleotide in length.",
+            "Sequence is read from the order of labeled terminated fragments."
+          ],
+          "clinicalLinks": [
+            "Sanger sequencing remains a common confirmatory method for targeted variants."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 33, RFLP analysis and chain-termination sequencing.",
+            "Confirmed August 25 Chapter 33 question bank, PDF pp. 838-877."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-212-v1",
+            "july29-comprehensive-213-v1"
+          ]
+        },
+        {
+          "id": "bio-33-expression-arrays-allele-specific",
+          "title": "Expression microarrays and allele-specific hybridization",
+          "priority": "supplement",
+          "rationale": "These methods extend the same hybridization principle from one target to either thousands of transcripts or a single-nucleotide distinction.",
+          "summary": "A gene-expression microarray hybridizes labeled cDNA from a sample to thousands of fixed probes, allowing relative transcript abundance to be compared across conditions. An allele-specific oligonucleotide can distinguish sequences differing by one nucleotide if hybridization stringency preserves the perfect match but destabilizes the mismatch. Both methods require careful controls because signal measures hybridization, not necessarily protein abundance or function.",
+          "keyPoints": [
+            "Microarray signal estimates relative mRNA abundance through cDNA.",
+            "Allele-specific probes depend on mismatch-sensitive stringency.",
+            "Hybridization results require normalization and suitable controls.",
+            "Expression change does not prove a causal functional change."
+          ],
+          "clinicalLinks": [
+            "Expression signatures can classify selected tumors and predict biologic behavior."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 33, microarray and allele-specific detection methods.",
+            "Confirmed August 25 Chapter 33 question bank, PDF pp. 838-877."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-214-v1",
+            "july29-comprehensive-215-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "lab-practical",
+      "concepts": [
+        {
+          "id": "bio-lab-carbohydrate-general-tests",
+          "title": "General carbohydrate, starch, and reducing-sugar tests",
+          "priority": "exam-core",
+          "rationale": "Molisch, iodine, and Benedict are directly taught in the practical carbohydrate slide deck and include recognizable visual endpoints.",
+          "summary": "Molisch is a broad carbohydrate test that produces a violet ring at the acid–aqueous interface. Iodine forms a blue-black complex with the helical structure of starch and is useful for polysaccharide recognition. Benedict reagent detects reducing sugars by reduction of Cu2+ to Cu2O, with color progressing from green toward orange or brick red as reducing-sugar concentration increases.",
+          "keyPoints": [
+            "Molisch: general carbohydrate; violet interfacial ring.",
+            "Iodine: starch/polysaccharide; blue-black complex.",
+            "Benedict: reducing sugar; colored Cu2O precipitate after heating.",
+            "A positive broad test does not identify the exact carbohydrate."
+          ],
+          "clinicalLinks": [
+            "Copper-reduction tests are historical screening methods; modern glucose assays are more specific and quantitative."
+          ],
+          "sourceEvidence": [
+            "Teacher: Carbohydrate Qualification Test Esmaeili Jan 2026.pdf, pp. 7-15.",
+            "Telegram scope audit identifies this 21-page file as confirmed practical biochemistry material."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-138-v1",
+            "bio-telegram-gap-139-v1",
+            "bio-telegram-gap-140-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-carbohydrate-differentiation-tests",
+          "title": "Use reaction conditions and timing to distinguish carbohydrate classes",
+          "priority": "exam-core",
+          "rationale": "The practical deck explicitly contrasts Benedict, Barfoed, and Seliwanoff by target, medium, speed, and color.",
+          "summary": "Benedict color is semiquantitative because increasing reducing-sugar concentration produces progressively more colored Cu2O precipitate rather than an exact calibrated concentration. Barfoed uses acidic copper reagent, in which monosaccharides reduce copper rapidly while disaccharides react more slowly. Seliwanoff uses acid and resorcinol; ketoses dehydrate rapidly and form a red product sooner than aldoses.",
+          "keyPoints": [
+            "Benedict estimates reducing-sugar amount only roughly by color.",
+            "Barfoed separates rapid monosaccharide reduction from slower disaccharide reduction.",
+            "Seliwanoff favors rapid ketose detection.",
+            "Timing matters: prolonged heating can create misleading late positives."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Teacher: Carbohydrate Qualification Test Esmaeili Jan 2026.pdf, pp. 14-19.",
+            "Teacher-derived image spotters confirm the expected Benedict, Barfoed, and Seliwanoff appearances."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-141-v1",
+            "bio-telegram-gap-142-v1",
+            "bio-telegram-gap-143-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-amino-acid-protein-tests",
+          "title": "Ninhydrin, Biuret, and xanthoproteic reaction targets",
+          "priority": "exam-core",
+          "rationale": "The confirmed practical curriculum names amino-acid/protein tests; learning the molecular target prevents color-only memorization.",
+          "summary": "Ninhydrin reacts with free amino groups and gives Ruhemann's purple for most amino acids, while proline characteristically gives yellow. Biuret detects multiple peptide bonds through a violet Cu2+ complex in alkaline solution and is therefore a protein/peptide test rather than a free-amino-acid test. The xanthoproteic reaction nitrates aromatic residues, producing yellow that deepens toward orange after alkali.",
+          "keyPoints": [
+            "Ninhydrin: free amino groups; purple for most amino acids.",
+            "Proline is the yellow ninhydrin exception.",
+            "Biuret: Cu2+ complex with multiple peptide bonds in alkali.",
+            "Xanthoproteic: aromatic amino-acid residues; yellow-to-orange product."
+          ],
+          "clinicalLinks": [
+            "Modern clinical protein quantification uses standardized colorimetric or immunochemical assays, but Biuret chemistry remains widely used for total protein."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Practical amino acid and protein tests. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-045-v1",
+            "confirmed-curriculum-gap-047-v1",
+            "confirmed-curriculum-gap-048-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-volumetric-technique",
+          "title": "Precision glassware, meniscus reading, and burette delivery",
+          "priority": "exam-core",
+          "rationale": "These are direct teacher-practical skills and common sources of systematic measurement error.",
+          "summary": "A volumetric pipette is calibrated to deliver one specified volume with high precision, whereas a graduated pipette can deliver variable volumes with lower precision. A typical aqueous meniscus should be read at eye level from its bottom to avoid parallax. A burette delivers controlled variable volumes of titrant through a stopcock and is read from the change between initial and final graduations.",
+          "keyPoints": [
+            "Volumetric pipette: one precise delivered volume.",
+            "Volumetric flask: one precise contained final volume.",
+            "Read the lower aqueous meniscus at eye level.",
+            "Burette: variable controlled delivery for titration.",
+            "Correct pipette fillers are used; mouth pipetting is never acceptable."
+          ],
+          "clinicalLinks": [
+            "Preanalytical volume errors can bias every downstream calculated concentration."
+          ],
+          "sourceEvidence": [
+            "Teacher: Laboratory Equipment Esmaeili Jan 2026.pdf, pp. 18-27.",
+            "Telegram scope audit confirms the 46-page laboratory-equipment deck."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-144-v1",
+            "bio-telegram-gap-145-v1",
+            "bio-telegram-gap-146-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-equipment-safety-separation",
+          "title": "Recognize core equipment and match it to safety or separation function",
+          "priority": "exam-core",
+          "rationale": "The equipment deck and its image spotters test function, not merely object names.",
+          "summary": "A fume hood captures hazardous vapors and exhausts them away from the worker; it is not a sterile cabinet. An analytical balance uses a draft shield to support high-precision mass measurement. A centrifuge accelerates sedimentation so components separate according to a combination of size, shape, and density under the applied relative centrifugal force.",
+          "keyPoints": [
+            "Fume hood protects from chemical vapors; it does not guarantee product sterility.",
+            "Analytical balance doors reduce air-current error.",
+            "Centrifugation separates by sedimentation behavior, not pH alone.",
+            "Rotors must be balanced by mass and tube position before spinning.",
+            "Use relative centrifugal force when protocols require cross-instrument reproducibility."
+          ],
+          "clinicalLinks": [
+            "Improper centrifugation can hemolyze samples or leave cells in plasma/serum and distort results."
+          ],
+          "sourceEvidence": [
+            "Teacher: Laboratory Equipment Esmaeili Jan 2026.pdf, pp. 36 and 43-44.",
+            "Teacher-derived image spotters identify analytical balance, fume hood, and centrifuges."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-147-v1",
+            "bio-telegram-gap-158-v1",
+            "bio-telegram-gap-160-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-acid-base-titration",
+          "title": "Acid–base titration endpoint and normality calculation",
+          "priority": "exam-core",
+          "rationale": "The teacher titration deck directly specifies the standard, phenolphthalein endpoint, and N1V1 = N2V2 calculation.",
+          "summary": "In the teacher experiment, standardized 0.1 N NaOH is delivered from the burette to determine an unknown acid concentration. Phenolphthalein marks the endpoint as the first faint pink color persisting for roughly 30 seconds; a strong pink indicates overshooting. At the stated equivalence relationship, unknown normality follows from N1V1 = N2V2 using consistent volume units.",
+          "keyPoints": [
+            "Titrant is known; analyte is unknown.",
+            "Teacher standard: 0.1 N NaOH.",
+            "Endpoint is persistent pale pink, not deep pink.",
+            "Normality counts reactive equivalents per liter.",
+            "Record initial and final burette readings and use their difference."
+          ],
+          "clinicalLinks": [
+            "Titrimetric principles underlie several classical laboratory standardizations and acid–base measurements."
+          ],
+          "sourceEvidence": [
+            "Teacher: Titration Esmaeili Jan 2026.pdf, pp. 6-9.",
+            "Telegram scope audit confirms this 10-page practical titration file."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-149-v1",
+            "bio-telegram-gap-150-v1",
+            "bio-telegram-gap-151-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-enzyme-assays",
+          "title": "Initial velocity, reagent blanks, and enzyme units",
+          "priority": "exam-core",
+          "rationale": "These principles determine whether an enzyme-activity result reflects catalytic rate rather than substrate depletion or background signal.",
+          "summary": "Enzyme activity is measured in the early linear phase so substrate is not yet substantially depleted and product accumulation has not driven the reverse reaction. A reagent blank contains the nonenzymatic assay components but lacks active enzyme or otherwise prevents reaction, allowing background signal to be subtracted. One conventional enzyme unit is the amount catalyzing conversion of one micromole of substrate per minute under defined conditions.",
+          "keyPoints": [
+            "Use initial velocity in the linear range.",
+            "A blank measures non-analyte/reagent background.",
+            "Activity depends on temperature, pH, substrate concentration, and assay time.",
+            "An enzyme unit is a rate under specified conditions, not a mass.",
+            "Boiling usually destroys activity by denaturing protein structure."
+          ],
+          "clinicalLinks": [
+            "Serum ALT, AST, ALP, CK, and lipase are commonly reported as catalytic activity rather than enzyme concentration."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Practical enzyme assays. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-049-v1",
+            "confirmed-curriculum-gap-050-v1",
+            "confirmed-curriculum-gap-052-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-spectrophotometry",
+          "title": "Beer–Lambert law, blanking, and wavelength selection",
+          "priority": "exam-core",
+          "rationale": "Spectrophotometry is a foundational quantitative method for biochemistry and clinical chemistry assays.",
+          "summary": "Within its linear range, Beer–Lambert law states A = εbc, so absorbance is proportional to molar absorptivity, path length, and concentration. A reagent blank removes absorbance caused by solvent, reagents, and cuvette so the remaining signal is attributed to analyte or reaction product. Measuring near the wavelength of maximum absorbance improves sensitivity and reduces the effect of small wavelength-setting errors.",
+          "keyPoints": [
+            "A = εbc within the validated linear range.",
+            "Absorbance is −log10 of fractional transmittance.",
+            "Blank composition should match the sample except for the measured analyte/reaction.",
+            "Use λmax for sensitivity.",
+            "Dilute and apply the dilution factor when absorbance exceeds the calibration range."
+          ],
+          "clinicalLinks": [
+            "Many glucose, bilirubin, protein, and enzyme assays convert concentration or reaction rate into absorbance."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Spectrophotometry. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-054-v1",
+            "confirmed-curriculum-gap-055-v1",
+            "confirmed-curriculum-gap-056-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-dna-extraction",
+          "title": "DNA extraction by lysis, nuclease inhibition, and alcohol precipitation",
+          "priority": "medical-core",
+          "rationale": "The extraction workflow turns abstract molecular properties into practical sample preparation for PCR and sequencing.",
+          "summary": "Detergent disrupts lipid membranes and helps release DNA from cells and nuclei. EDTA chelates divalent cations required by many nucleases, while protease removes protein contaminants including histones and nucleases. Salt shields phosphate charges and cold ethanol lowers DNA solubility, allowing DNA to aggregate and precipitate from the aqueous extract.",
+          "keyPoints": [
+            "Detergent lyses membranes.",
+            "EDTA chelates Mg2+/Ca2+ and suppresses nucleases.",
+            "Protease removes DNA-bound and contaminating proteins.",
+            "Salt plus cold alcohol precipitates DNA.",
+            "Avoid vigorous shearing when intact high-molecular-weight DNA is needed."
+          ],
+          "clinicalLinks": [
+            "Poor extraction quality can cause false-negative PCR or failed sequencing."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: DNA extraction. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-057-v1",
+            "confirmed-curriculum-gap-058-v1",
+            "confirmed-curriculum-gap-059-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-chromatography",
+          "title": "Chromatographic separation by mobility, charge, size, or affinity",
+          "priority": "medical-core",
+          "rationale": "Chromatography becomes easier and more transferable when each method is tied to the property responsible for separation.",
+          "summary": "In paper or thin-layer chromatography, Rf is the distance traveled by solute divided by the solvent-front distance under the same run conditions. Ion-exchange chromatography separates by net charge through reversible binding to oppositely charged groups. Affinity chromatography uses a specific immobilized ligand to retain a target, while size-exclusion chromatography makes larger molecules elute first because they enter fewer bead pores.",
+          "keyPoints": [
+            "Rf is unitless and lies between zero and one in a valid planar run.",
+            "Ion exchange separates principally by net charge.",
+            "Affinity uses specific target–ligand recognition.",
+            "Size exclusion: large molecules elute before small molecules.",
+            "Changing pH or ionic strength can alter binding and elution."
+          ],
+          "clinicalLinks": [
+            "Chromatographic methods separate hemoglobin variants, drugs, metabolites, and proteins in clinical laboratories."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Chromatography. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-061-v1",
+            "confirmed-curriculum-gap-063-v1",
+            "confirmed-curriculum-gap-064-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-flame-photometry",
+          "title": "Atomic emission, calibration, and clinical ions in flame photometry",
+          "priority": "medical-core",
+          "rationale": "The confirmed practical curriculum uses flame photometry to connect a physical signal with quantitative electrolyte measurement.",
+          "summary": "A flame excites atoms, and light emitted as electrons return to lower energy levels is measured at element-specific wavelengths. Sodium, potassium, and lithium are common analytes because their atomic emissions are strong and characteristic. An unknown concentration is obtained from standards and a calibration curve; out-of-range samples must be diluted into the validated range and corrected by the dilution factor.",
+          "keyPoints": [
+            "Flame photometry measures emitted light, not absorbance.",
+            "Emission wavelength identifies the element; intensity relates to concentration.",
+            "Na+ and K+ are classic analytes.",
+            "Standards and blanks establish a valid calibration.",
+            "Never extrapolate far beyond the highest standard."
+          ],
+          "clinicalLinks": [
+            "Flame emission was widely used for serum sodium and potassium and remains conceptually important in electrolyte analysis."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Flame photometry. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-065-v1",
+            "confirmed-curriculum-gap-066-v1",
+            "confirmed-curriculum-gap-067-v1"
+          ]
+        },
+        {
+          "id": "bio-lab-osmosis-tonicity",
+          "title": "Osmolarity, tonicity, RBC behavior, and dialysis",
+          "priority": "medical-core",
+          "rationale": "The practical forces distinction between total particle concentration and the sustained water movement produced by nonpenetrating solutes.",
+          "summary": "Hypotonic extracellular fluid causes red cells to gain water, swell, and potentially hemolyze, whereas hypertonic fluid causes water loss and crenation. Tonicity depends on effective nonpenetrating solutes rather than total osmolarity alone, so an isosmotic solution of a readily permeant solute such as urea can still be hypotonic. Across a dialysis membrane, water initially moves toward the compartment with the higher concentration of retained solute.",
+          "keyPoints": [
+            "Hypotonic → cell swelling/hemolysis.",
+            "Hypertonic → cell shrinkage/crenation.",
+            "Isosmotic does not always mean isotonic.",
+            "Penetrating solutes contribute little to sustained tonicity after equilibration.",
+            "Water moves toward higher effective osmolarity across a water-permeable membrane."
+          ],
+          "clinicalLinks": [
+            "Incorrect IV-fluid tonicity can cause dangerous cellular swelling or dehydration, especially in the brain."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Osmosis practical. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-069-v1",
+            "confirmed-curriculum-gap-070-v1",
+            "confirmed-curriculum-gap-071-v1"
+          ]
+        }
+      ]
+    }
+  ]
+}

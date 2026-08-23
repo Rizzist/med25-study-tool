@@ -16,8 +16,13 @@ import {
   biochemistryChapters,
   isBiochemistryChapterId,
 } from "@/src/lib/biochemistry/chapters";
+import {
+  biochemistryConceptForQuestion,
+  biochemistryConceptQuestionPosition,
+} from "@/src/lib/biochemistry/concepts";
 import { allLessons, histologyPracticalLessons, lessonsForExam } from "@/src/lib/lessons";
 import { lessonForQuestion } from "@/src/lib/lessons/types";
+import { classifySessionCompletion } from "@/src/lib/mcq/sprint-selection.mjs";
 import type { CodexGrade, MCQMedia, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
 
 type BridgeHealth = {
@@ -61,6 +66,7 @@ type ActiveSessionSnapshot = {
   sessionSize: number;
   questionIds: string[];
   answers: Record<string, SessionAnswer>;
+  visitedQuestionIds: string[];
   questionIndex: number;
   startedAt: string;
   studyMode: BiochemistryStudyMode;
@@ -102,7 +108,7 @@ const examConfig: Record<ExamId, {
   july29: {
     date: "Aug 25",
     title: "Cell & Molecules",
-    focus: "Teacher-confirmed Lippincott chapters, chapter-by-chapter self-testing, cellular histology, membrane physiology and confirmed laboratory methods; partial and supplementary chapters are labeled clearly",
+    focus: "Teacher-confirmed Lippincott chapters, chapter-by-chapter self-testing, cellular histology, membrane physiology and confirmed laboratory methods; partial, supplementary and unconfirmed chapters are labeled clearly",
     collections: ["all", "wrong", "flagged", "biochemistry", "histology", "physiology", "images", "stains", "practical"],
   },
 };
@@ -204,13 +210,24 @@ function cleanActiveSession(value: unknown): ActiveSessionSnapshot | null {
   const migratedExam = session.exam === "july25" && (session.collection === "histo-practical" || questionIds.every((id) => id.startsWith("hpr-")))
     ? "aug22"
     : session.exam;
+  const questionIndex = Math.max(0, Math.min(questionIds.length - 1, Math.floor(Number(session.questionIndex) || 0)));
+  const answers = cleanAnswers(session.answers, questionIds);
+  const validQuestionIds = new Set(questionIds);
+  const explicitVisitedIds = cleanIds(session.visitedQuestionIds).filter((id) => validQuestionIds.has(id));
+  const visitedQuestionIds = explicitVisitedIds.length
+    ? explicitVisitedIds
+    : cleanIds([
+      ...questionIds.slice(0, questionIndex + 1),
+      ...questionIds.filter((id) => isAnswered(answers[id])),
+    ]);
   return {
     exam: migratedExam,
     collection: session.collection,
     sessionSize: Number.isFinite(requestedSize) ? Math.max(1, Math.min(250, Math.floor(requestedSize))) : questionIds.length,
     questionIds,
-    answers: cleanAnswers(session.answers, questionIds),
-    questionIndex: Math.max(0, Math.min(questionIds.length - 1, Math.floor(Number(session.questionIndex) || 0))),
+    answers,
+    visitedQuestionIds,
+    questionIndex,
     startedAt: typeof session.startedAt === "string" ? session.startedAt : new Date().toISOString(),
     studyMode: session.studyMode === "exam" ? "exam" : "learn",
     biochemistryChapterId: isBiochemistryChapterId(session.biochemistryChapterId) ? session.biochemistryChapterId : undefined,
@@ -225,13 +242,17 @@ function parseSessionArchive(raw: string | null): SessionArchive {
       const active = cleanActiveSession(item);
       if (!active || !item || typeof item !== "object") return [];
       const completed = item as Partial<CompletedSession>;
+      const completedQuestionIds = active.visitedQuestionIds.length ? active.visitedQuestionIds : active.questionIds;
       return [{
         ...active,
+        questionIds: completedQuestionIds,
+        answers: cleanAnswers(completed.answers, completedQuestionIds),
+        visitedQuestionIds: completedQuestionIds,
         id: typeof completed.id === "string" ? completed.id : `${completed.completedAt ?? active.startedAt}-${active.questionIds[0]}`,
         completedAt: typeof completed.completedAt === "string" ? completed.completedAt : active.startedAt,
-        correctCount: Math.max(0, Math.min(active.questionIds.length, Math.floor(Number(completed.correctCount) || 0))),
-        answeredCount: Math.max(0, Math.min(active.questionIds.length, Math.floor(Number(completed.answeredCount) || 0))),
-        flaggedCount: Math.max(0, Math.min(active.questionIds.length, Math.floor(Number(completed.flaggedCount) || 0))),
+        correctCount: Math.max(0, Math.min(completedQuestionIds.length, Math.floor(Number(completed.correctCount) || 0))),
+        answeredCount: Math.max(0, Math.min(completedQuestionIds.length, Math.floor(Number(completed.answeredCount) || 0))),
+        flaggedCount: Math.max(0, Math.min(completedQuestionIds.length, Math.floor(Number(completed.flaggedCount) || 0))),
       } satisfies CompletedSession];
     }) : [];
     return { version: 1, active: cleanActiveSession(value.active), history };
@@ -409,6 +430,19 @@ function StudyMedia({ question, review = false }: { question: MCQQuestion; revie
   return <div className={question.media.length > 1 ? "study-image-pair" : "study-image-single"}>{question.media.map((media) => <StudyImage question={question} media={media} review={review} key={media.id} />)}</div>;
 }
 
+function BiochemistryConceptFeedback({ questionId }: { questionId: string }) {
+  const concept = biochemistryConceptForQuestion(questionId);
+  if (!concept) return null;
+  const position = biochemistryConceptQuestionPosition(concept, questionId);
+  return <section className="question-concept-link" aria-label={`Chapter concept: ${concept.title}`}>
+    <div className="question-concept-head"><span>Chapter concept</span><i className={`concept-priority ${concept.priority}`}>{concept.priority.replace("-", " ")}</i>{position && <small>Question {position.current} of {position.total} for this idea</small>}</div>
+    <h3>{concept.title}</h3>
+    <p>{concept.summary}</p>
+    <div className="question-concept-points"><span>Connect this answer back to:</span><ul>{concept.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul></div>
+    {concept.clinicalLinks.length > 0 && <p className="question-clinical-link"><b>Why a doctor cares:</b> {concept.clinicalLinks.join(" ")}</p>}
+  </section>;
+}
+
 export default function Home() {
   const [tab, setTab] = useState<Tab>("Overview");
   const [health, setHealth] = useState<BridgeHealth | null>(null);
@@ -420,6 +454,7 @@ export default function Home() {
   const [sessionSize, setSessionSize] = useState(20);
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [answers, setAnswers] = useState<Record<string, SessionAnswer>>({});
+  const [visitedQuestionIds, setVisitedQuestionIds] = useState<string[]>([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [sessionError, setSessionError] = useState("");
   const [confirmEnd, setConfirmEnd] = useState(false);
@@ -497,6 +532,13 @@ export default function Home() {
   }, [sessionArchive, sessionArchiveReady]);
 
   useEffect(() => {
+    if (phase !== "active") return;
+    const currentQuestionId = questions[questionIndex]?.id;
+    if (!currentQuestionId) return;
+    setVisitedQuestionIds((current) => current.includes(currentQuestionId) ? current : [...current, currentQuestionId]);
+  }, [phase, questionIndex, questions]);
+
+  useEffect(() => {
     if (!sessionArchiveReady || phase !== "active" || !questions.length) return;
     const startedAt = sessionStartedAt || new Date().toISOString();
     if (!sessionStartedAt) setSessionStartedAt(startedAt);
@@ -508,13 +550,14 @@ export default function Home() {
         sessionSize,
         questionIds: questions.map((question) => question.id),
         answers,
+        visitedQuestionIds,
         questionIndex,
         startedAt,
         studyMode,
         biochemistryChapterId: activeBiochemistryChapterId,
       },
     }));
-  }, [activeBiochemistryChapterId, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode]);
+  }, [activeBiochemistryChapterId, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, visitedQuestionIds]);
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const selectedConfig = examConfig[exam];
@@ -584,20 +627,20 @@ export default function Home() {
           : nextCollection === "flagged"
             ? examProgress.flaggedIds
             : [];
+      const repairIds = cleanIds([...examProgress.wrongIds, ...examProgress.flaggedIds]);
+      const historicalSeenIds = cleanIds(sessionArchive.history
+        .filter((session) => session.exam === exam)
+        .flatMap((session) => session.questionIds));
+      const seenIds = cleanIds([...historicalSeenIds, ...repairIds]);
       let response: Response;
       if (exactIds || isSavedCollection(nextCollection)) {
         if (!requestedIds.length) throw new Error(`No ${collectionLabel[nextCollection].toLowerCase()} are saved for ${selectedConfig.date}.`);
         response = await fetch(`${bridgeUrl}/api/questions/by-ids`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ exam, ids: requestedIds, limit: requestedLimit }),
+          body: JSON.stringify({ exam, ids: requestedIds, limit: requestedLimit, prioritize: true, seenIds, repairIds }),
         });
       } else {
-        const repairIds = cleanIds([...examProgress.wrongIds, ...examProgress.flaggedIds]);
-        const historicalSeenIds = cleanIds(sessionArchive.history
-          .filter((session) => session.exam === exam)
-          .flatMap((session) => session.questionIds));
-        const seenIds = cleanIds([...historicalSeenIds, ...repairIds]);
         response = await fetch(`${bridgeUrl}/api/questions/sprint`, {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -623,6 +666,7 @@ export default function Home() {
       const flaggedIds = new Set(progress.exams[exam].flaggedIds);
       setQuestions(payload.questions);
       setAnswers(Object.fromEntries(payload.questions.map((question) => [question.id, answerForQuestion(question, undefined, flaggedIds.has(question.id))])));
+      setVisitedQuestionIds(payload.questions[0] ? [payload.questions[0].id] : []);
       setQuestionIndex(0);
       setGrades({});
       setGradeErrors({});
@@ -670,19 +714,32 @@ export default function Home() {
   }
 
   function finishSession() {
-    const correctIds = new Set(questions.filter((question) => isCorrect(question, answers[question.id])).map((question) => question.id));
-    const missedIds = questions.filter((question) => !correctIds.has(question.id)).map((question) => question.id);
+    const currentQuestionId = questions[questionIndex]?.id;
+    const answeredIds = questions.filter((question) => isAnswered(answers[question.id])).map((question) => question.id);
+    const effectiveVisitedIds = cleanIds([...visitedQuestionIds, currentQuestionId, ...answeredIds]);
+    const correctAnswerIds = questions.filter((question) => isCorrect(question, answers[question.id])).map((question) => question.id);
+    const completion = classifySessionCompletion(questions.map((question) => question.id), {
+      visitedIds: effectiveVisitedIds,
+      answeredIds,
+      correctIds: correctAnswerIds,
+    });
+    const completedIdSet = new Set(completion.seenIds);
+    const completedQuestions = questions.filter((question) => completedIdSet.has(question.id));
+    const completedAnswers = Object.fromEntries(completion.seenIds.map((id) => [id, answers[id] ?? emptyAnswer(id)]));
+    const correctIds = new Set(completion.correctIds);
+    const missedIds = completion.repairIds;
     const completedAt = new Date().toISOString();
-    const answeredCount = questions.filter((question) => isAnswered(answers[question.id])).length;
-    const flaggedCount = questions.filter((question) => answers[question.id]?.flagged).length;
+    const answeredCount = completion.seenIds.filter((id) => isAnswered(answers[id])).length;
+    const flaggedCount = completion.seenIds.filter((id) => answers[id]?.flagged).length;
     const completedSession: CompletedSession = {
       id: `${Date.now()}-${questions[0]?.id ?? "session"}`,
       exam,
       collection,
       sessionSize,
-      questionIds: questions.map((question) => question.id),
-      answers,
-      questionIndex,
+      questionIds: completion.seenIds,
+      answers: completedAnswers,
+      visitedQuestionIds: completion.seenIds,
+      questionIndex: Math.max(0, completion.seenIds.length - 1),
       startedAt: sessionStartedAt || completedAt,
       studyMode,
       biochemistryChapterId: activeBiochemistryChapterId,
@@ -702,6 +759,10 @@ export default function Home() {
       };
     });
     setSessionArchive((current) => ({ version: 1, active: null, history: [completedSession, ...current.history] }));
+    setQuestions(completedQuestions);
+    setAnswers(completedAnswers);
+    setVisitedQuestionIds(completion.seenIds);
+    setQuestionIndex(0);
     setConfirmEnd(false);
     setExpandedLessons({});
     setPhase("review");
@@ -721,6 +782,7 @@ export default function Home() {
   function resetSession() {
     setQuestions([]);
     setAnswers({});
+    setVisitedQuestionIds([]);
     setQuestionIndex(0);
     setSessionStartedAt("");
     setStudyMode("learn");
@@ -748,6 +810,7 @@ export default function Home() {
       const restoredIds = new Set(restoredQuestions.map((question) => question.id));
       setQuestions(restoredQuestions);
       setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, answerForQuestion(question, saved.answers[question.id])])));
+      setVisitedQuestionIds(saved.visitedQuestionIds.filter((id) => restoredIds.has(id)));
       setQuestionIndex(Math.min(saved.questionIndex, restoredQuestions.length - 1));
       setGrades({});
       setGradeErrors({});
@@ -767,6 +830,7 @@ export default function Home() {
     setSessionArchive((current) => ({ ...current, active: null }));
     setQuestions([]);
     setAnswers({});
+    setVisitedQuestionIds([]);
     setQuestionIndex(0);
     setSessionStartedAt("");
     setStudyMode("learn");
@@ -789,6 +853,7 @@ export default function Home() {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
       setQuestions(restoredQuestions);
       setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, answerForQuestion(question, saved.answers[question.id])])));
+      setVisitedQuestionIds(restoredQuestions.map((question) => question.id));
       setQuestionIndex(0);
       setGrades({});
       setGradeErrors({});
@@ -833,11 +898,15 @@ export default function Home() {
     const isWrittenPractical = isWrittenPracticalQuestion(question);
     const hasAnswer = answer.mode === "select" ? Boolean(answer.selectedOptionId) : answer.writtenSubmitted === true;
     const hasImmediateFeedback = studyMode === "learn" && hasAnswer;
+    const hasSavedWrittenAnswer = answer.mode === "write" && answer.writtenSubmitted === true;
     const activeChapter = biochemistryChapterById(activeBiochemistryChapterId);
     const sessionLabel = activeChapter ? `${activeChapter.chapterLabel} · ${activeChapter.shortTitle}` : collectionLabel[collection];
     const writtenInterpretation = answer.mode === "write" ? interpretWrittenAnswer(question, answer) : undefined;
     const grade = grades[question.id];
     const answeredCount = questions.filter((item) => isAnswered(answers[item.id])).length;
+    const effectiveVisitedIds = new Set([...visitedQuestionIds, question.id]);
+    const openedUnansweredCount = questions.filter((item) => effectiveVisitedIds.has(item.id) && !isAnswered(answers[item.id])).length;
+    const untouchedCount = questions.filter((item) => !effectiveVisitedIds.has(item.id)).length;
     return (
       <main className="session-shell">
         <header className="session-header">
@@ -876,7 +945,10 @@ export default function Home() {
               </div> : isWrittenPractical ? <div className="written-identification">
                 <label><span>Write the tissue or marked structure <em>no word bank</em></span><input autoComplete="off" disabled={hasImmediateFeedback} value={answer.writtenAnswer ?? ""} onChange={(event) => updateAnswer(question.id, { writtenAnswer: event.target.value, writtenSubmitted: false })} onKeyDown={(event) => { if (event.key === "Enter") submitWrittenAnswer(question.id); }} placeholder="e.g. sensory ganglion, hyaline cartilage, transitional epithelium…" /></label>
                 <button className={hasImmediateFeedback ? "revise-answer" : "primary"} disabled={!hasImmediateFeedback && !answer.writtenAnswer?.trim()} onClick={() => hasImmediateFeedback ? reviseWrittenAnswer(question.id) : submitWrittenAnswer(question.id)}>{hasImmediateFeedback ? "Revise answer" : "Check tissue →"}</button>
-              </div> : <label className="written-label"><span>Your answer</span><textarea className="answer-box" value={answer.writtenAnswer ?? ""} onChange={(event) => updateAnswer(question.id, { writtenAnswer: event.target.value })} placeholder="Type the option letter or the answer in your own words…" /></label>}
+              </div> : <div className="written-response">
+                <label className="written-label"><span>Your answer</span><textarea className="answer-box" disabled={hasImmediateFeedback} value={answer.writtenAnswer ?? ""} onChange={(event) => updateAnswer(question.id, { writtenAnswer: event.target.value, writtenSubmitted: false })} onKeyDown={(event) => { if ((event.metaKey || event.ctrlKey) && event.key === "Enter") submitWrittenAnswer(question.id); }} placeholder="Type the option letter or the answer in your own words…" /></label>
+                <button className={hasImmediateFeedback ? "revise-answer" : "primary"} disabled={(!hasImmediateFeedback && !answer.writtenAnswer?.trim()) || (studyMode === "exam" && hasSavedWrittenAnswer)} onClick={() => hasImmediateFeedback ? reviseWrittenAnswer(question.id) : submitWrittenAnswer(question.id)}>{hasImmediateFeedback ? "Revise answer" : studyMode === "exam" && hasSavedWrittenAnswer ? "Saved ✓" : studyMode === "exam" ? "Save answer" : "Check answer →"}</button>
+              </div>}
 
               {hasImmediateFeedback && isWrittenPractical && <section className={`instant-feedback written-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
                 <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct identification" : "× Compare and repair"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
@@ -896,6 +968,8 @@ export default function Home() {
                 <p className="feedback-key-rule"><b>Fast rule:</b> Read the green option as the key concept, then compare each red/neutral option with the chapter checkpoint it actually describes.</p>
               </section>}
 
+              {hasImmediateFeedback && question.subject === "biochemistry" && <BiochemistryConceptFeedback questionId={question.id} />}
+
               <label className="reasoning-label"><span>Reasoning <em>optional · saved for review</em></span><textarea value={answer.reasoning} onChange={(event) => updateAnswer(question.id, { reasoning: event.target.value })} placeholder="Why does this answer win? What clue ruled out the alternatives?" /></label>
               <div className="answer-tools">
                 <div className="confidence"><span>Confidence</span>{(["guess", "unsure", "confident"] as const).map((value) => <button key={value} className={answer.confidence === value ? "selected" : ""} onClick={() => updateAnswer(question.id, { confidence: value })}>{value}</button>)}</div>
@@ -911,7 +985,7 @@ export default function Home() {
           </footer>
         </section>
 
-        {confirmEnd && <div className="modal-backdrop"><div className="end-modal" role="dialog" aria-modal="true"><span className="eyebrow">Finish sprint</span><h2>Ready to save the full review?</h2><p>{questions.length - answeredCount ? `${questions.length - answeredCount} questions are unanswered and will count as incorrect.` : "Every question has an answer."} The completed score and explanations will be saved in Results.</p><div><button onClick={() => setConfirmEnd(false)}>Keep working</button><button className="primary" onClick={finishSession}>Grade session</button></div></div></div>}
+        {confirmEnd && <div className="modal-backdrop"><div className="end-modal" role="dialog" aria-modal="true"><span className="eyebrow">Finish sprint</span><h2>Ready to save this review?</h2><p>{openedUnansweredCount ? `${openedUnansweredCount} opened but unanswered ${openedUnansweredCount === 1 ? "question" : "questions"} will be saved for repair. ` : ""}{untouchedCount ? `${untouchedCount} untouched ${untouchedCount === 1 ? "question remains" : "questions remain"} unseen and will return with priority.` : "Every question in this sprint was opened."}</p><div><button onClick={() => setConfirmEnd(false)}>Keep working</button><button className="primary" onClick={finishSession}>Grade seen questions</button></div></div></div>}
       </main>
     );
   }
@@ -950,6 +1024,7 @@ export default function Home() {
                 <span className="option-copy"><b>{option.text}</b><small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{option.id === question.correctOptionId ? question.explanation : question.distractorExplanations[option.id]}</small></span>
               </button>)}</div>}
               {isWrittenPractical && <><div className="explanation"><span>{question.media?.length === 1 ? "What confirms it in this field" : "What confirms it across the fields"}</span><p>{question.explanation}</p></div><div className="written-lookalikes"><span>High-yield look-alikes</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div></>}
+              {question.subject === "biochemistry" && <BiochemistryConceptFeedback questionId={question.id} />}
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
               {linkedLesson && <div className="linked-lesson"><button onClick={() => setExpandedLessons((current) => ({ ...current, [question.id]: !current[question.id] }))}><b>{expandedLessons[question.id] ? "Close visual lesson" : "Open 90-second visual lesson"}</b><span>{linkedLesson.title} {expandedLessons[question.id] ? "↑" : "↓"}</span></button>{expandedLessons[question.id] && <LessonSlide lesson={linkedLesson} compact />}</div>}
               {(answer?.mode === "write" || answer?.reasoning) && <div className="tutor-review">
@@ -966,7 +1041,7 @@ export default function Home() {
 
   const examCount = (id: CollectionId) => isSavedCollection(id) ? savedCount(id) : selectedExam?.collectionCounts[id] ?? 0;
   const savedReviewCards: Array<{ id: SavedCollectionId; title: string; detail: string; count: number }> = [
-    { id: "wrong", title: "Wrong answers", detail: "Incorrect and unanswered questions stay here until corrected.", count: savedCount("wrong") },
+    { id: "wrong", title: "Wrong answers", detail: "Incorrect and opened-unanswered questions stay here until corrected.", count: savedCount("wrong") },
     { id: "flagged", title: "Flagged", detail: "Manual flags stay saved until you remove them.", count: savedCount("flagged") },
   ];
   const topicCards: Array<{ id: CollectionId; title: string; scope: string; detail: string; count: number }> = exam === "july25" ? [
@@ -1049,7 +1124,7 @@ export default function Home() {
             <p className="eyebrow">Priority exam · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam until you switch dates.</p>
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
-            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].date} · {biochemistryChapterById(resumableSession.biochemistryChapterId)?.shortTitle ?? collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>{Math.min(sessionSize, collectionCount)}-question sprint · 80% unseen / 20% review</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
+            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].date} · {biochemistryChapterById(resumableSession.biochemistryChapterId)?.shortTitle ?? collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>{Math.min(sessionSize, collectionCount)}-question sprint · repair → unseen → mastered</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}
 

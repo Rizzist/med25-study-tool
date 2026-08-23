@@ -1,0 +1,2393 @@
+{
+  "family": "Metabolism, carbohydrates, lipids, metabolic integration, nutrition, and vitamins",
+  "chapters": [
+    {
+      "chapterId": "ch-6",
+      "concepts": [
+        {
+          "id": "ch6-free-energy-coupling",
+          "title": "Free energy, reaction direction, and energetic coupling",
+          "priority": "exam-core",
+          "rationale": "This is the organizing principle for understanding why pathways run forward and how ATP drives otherwise unfavorable reactions, but no dedicated teacher deck for Chapter 6 was located.",
+          "summary": "A negative actual free-energy change (ΔG) means a reaction is thermodynamically favorable in the written direction; ΔG = 0 at equilibrium. Actual ΔG depends on concentrations, so it can differ from standard ΔG°′. Cells drive an endergonic step by coupling it to a sufficiently exergonic process such as ATP hydrolysis, making the summed ΔG negative.",
+          "keyPoints": [
+            "ΔG predicts feasibility, not reaction rate",
+            "Actual concentrations can change the sign of ΔG",
+            "Free-energy changes of coupled reactions are additive",
+            "ATP is kinetically stable but has high phosphate-transfer potential"
+          ],
+          "clinicalLinks": [
+            "Energy failure during hypoxia",
+            "ATP-dependent ion-pump failure"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 6, bioenergetics and free energy (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch6-bank-017-v1",
+            "lippincott-ch6-bank-040-v1",
+            "lippincott-ch6-bank-048-v1"
+          ]
+        },
+        {
+          "id": "ch6-electron-transport-chain",
+          "title": "Electron-transport chain organization and electron flow",
+          "priority": "exam-core",
+          "rationale": "Every physician should be able to connect NADH/FADH2 oxidation, oxygen consumption, and respiratory-chain poisons.",
+          "summary": "Electrons from NADH enter at Complex I and those from succinate-linked FADH2 enter at Complex II; both routes converge on coenzyme Q, Complex III, cytochrome c, and Complex IV. Oxygen is the terminal electron acceptor and is reduced to water. Complexes I, III, and IV pump protons, whereas Complex II does not.",
+          "keyPoints": [
+            "ETC is in the inner mitochondrial membrane",
+            "CoQ and cytochrome c are mobile carriers",
+            "Complex II is also succinate dehydrogenase",
+            "O2 accepts electrons at Complex IV"
+          ],
+          "clinicalLinks": [
+            "Cyanide and carbon-monoxide poisoning",
+            "Mitochondrial respiratory-chain disease"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 6, electron transport (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch6-bank-051-v1",
+            "lippincott-ch6-bank-066-v1",
+            "lippincott-ch6-bank-067-v1"
+          ]
+        },
+        {
+          "id": "ch6-oxidative-phosphorylation",
+          "title": "Chemiosmosis, ATP synthase, and oxidative phosphorylation",
+          "priority": "exam-core",
+          "rationale": "This concept links fuel oxidation to ATP production and explains why inhibition at any major respiratory-chain step rapidly compromises cellular energy.",
+          "summary": "Electron transport pumps protons from the matrix into the intermembrane space, creating an electrochemical gradient. Proton return through the Fo portion of Complex V drives conformational changes in F1 that synthesize ATP. Electron flow, proton pumping, and phosphorylation are therefore functionally coupled.",
+          "keyPoints": [
+            "Proton-motive force is the coupling intermediate",
+            "Fo conducts protons",
+            "F1 catalyzes ATP formation",
+            "ETC blockade prevents maintenance of the gradient"
+          ],
+          "clinicalLinks": [
+            "Oligomycin inhibition of ATP synthase",
+            "Tissue vulnerability in severe hypoxia"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 6, oxidative phosphorylation (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch6-bank-098-v1",
+            "lippincott-ch6-bank-102-v1",
+            "lippincott-ch6-bank-079-v1"
+          ]
+        },
+        {
+          "id": "ch6-inhibitors-uncouplers",
+          "title": "Respiratory-chain inhibitors versus uncouplers",
+          "priority": "exam-core",
+          "rationale": "Distinguishing blocked electron transfer from dissipated proton coupling is both a classic exam contrast and clinically relevant toxicology.",
+          "summary": "A respiratory-chain inhibitor stops electron flow at a defined complex, decreases oxygen consumption, and prevents ATP generation. An uncoupler allows electron transport and oxygen use to continue or accelerate while dissipating the proton gradient as heat, so ATP production falls. Rotenone/amytal inhibit Complex I, antimycin A inhibits Complex III, and cyanide or carbon monoxide inhibit Complex IV.",
+          "keyPoints": [
+            "Inhibitor: electron flow and oxygen consumption fall",
+            "Uncoupler: oxygen consumption rises while ATP falls",
+            "UCP1 supports physiologic thermogenesis",
+            "DNP is a dangerous synthetic uncoupler"
+          ],
+          "clinicalLinks": [
+            "Cyanide poisoning",
+            "Salicylate toxicity",
+            "Brown-fat thermogenesis"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 6, inhibitors and uncoupling (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-034-v1",
+            "july29-comprehensive-036-v1",
+            "lippincott-ch6-bank-110-v1"
+          ]
+        },
+        {
+          "id": "ch6-shuttles-ros",
+          "title": "Cytosolic NADH shuttles and reactive oxygen species",
+          "priority": "exam-core",
+          "rationale": "These mechanisms explain tissue-specific ATP yield and mitochondrial oxidative injury without requiring memorization of every carrier intermediate.",
+          "summary": "The inner mitochondrial membrane lacks a direct NADH transporter, so reducing equivalents enter through the malate-aspartate or glycerol-3-phosphate shuttle. The malate-aspartate shuttle preserves transfer to mitochondrial NADH and the higher ATP yield. Electron leakage can partially reduce oxygen to reactive oxygen species, opposed by superoxide dismutase, catalase, and glutathione peroxidase.",
+          "keyPoints": [
+            "Shuttles move reducing equivalents, not NADH itself",
+            "Malate-aspartate is more energy efficient",
+            "ROS damage lipids, proteins, and DNA",
+            "Antioxidant enzymes limit mitochondrial oxidant injury"
+          ],
+          "clinicalLinks": [
+            "Oxidative stress",
+            "Mitochondrial disease"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 6, shuttles and ROS (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch6-bank-128-v1",
+            "lippincott-ch6-bank-129-v1",
+            "lippincott-ch6-bank-082-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-7",
+      "concepts": [
+        {
+          "id": "ch7-monosaccharide-stereochemistry",
+          "title": "Monosaccharide classification and stereochemistry",
+          "priority": "exam-core",
+          "rationale": "Epimers, enantiomers, and anomers underpin carbohydrate recognition, digestion, and laboratory testing, but no dedicated Chapter 7 teacher lecture was found.",
+          "summary": "Monosaccharides are classified by carbonyl type and carbon number. Epimers differ at one chiral carbon, while enantiomers are mirror images; D-glucose and D-galactose are C4 epimers, and glucose and mannose are C2 epimers. Cyclization creates an anomeric carbon, and alpha and beta forms differ at that carbon.",
+          "keyPoints": [
+            "Aldose versus ketose",
+            "Epimer differs at one chiral center",
+            "Anomer differs at the anomeric carbon",
+            "D/L does not specify optical rotation"
+          ],
+          "clinicalLinks": [
+            "Galactose and fructose metabolic disorders"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 7, monosaccharide structure (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch7-bank-012-v1",
+            "lippincott-ch7-bank-023-v1",
+            "lippincott-ch7-bank-024-v1"
+          ]
+        },
+        {
+          "id": "ch7-glycosidic-reducing-sugars",
+          "title": "Glycosidic bonds and reducing sugars",
+          "priority": "exam-core",
+          "rationale": "This is the chemical basis of disaccharide structure and of classic reducing-sugar tests.",
+          "summary": "A glycosidic bond links the anomeric carbon of a sugar to an oxygen or nitrogen on another molecule. A sugar is reducing when it retains a free anomeric carbon capable of opening to a reactive carbonyl. All monosaccharides are reducing; lactose and maltose are reducing, whereas sucrose is not because both anomeric carbons participate in the bond.",
+          "keyPoints": [
+            "Free anomeric carbon permits reduction tests",
+            "Glycosidic linkages are named by alpha/beta and carbon positions",
+            "Sucrose is nonreducing",
+            "Benedict reagent detects reducing sugars"
+          ],
+          "clinicalLinks": [
+            "Reducing substances in urine",
+            "Carbohydrate qualification practical"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 7, glycosidic bonds (textbook-confirmed).",
+            "Carbohydrate Qualification Test Esmaeili Jan 2026 — 21-page teacher practical deck (teacher-confirmed practical context).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch7-bank-029-v1",
+            "lippincott-ch7-bank-035-v1",
+            "lippincott-ch7-bank-040-v1"
+          ]
+        },
+        {
+          "id": "ch7-disaccharides-digestion",
+          "title": "Dietary disaccharides and carbohydrate digestion",
+          "priority": "exam-core",
+          "rationale": "The physician-facing core is knowing what is ingested, which bond is cleaved, and why brush-border enzyme loss causes osmotic symptoms.",
+          "summary": "Starch digestion begins with alpha-amylases, whereas final carbohydrate digestion occurs at the small-intestinal brush border. Lactase, sucrase-isomaltase, and maltase produce glucose, galactose, and fructose for absorption. Undigested carbohydrate retains water and is fermented by colonic bacteria, producing acidic diarrhea, gas, and bloating.",
+          "keyPoints": [
+            "Lactose = glucose + galactose",
+            "Sucrose = glucose + fructose",
+            "Brush-border enzymes finish digestion",
+            "Lactase is commonly deficient"
+          ],
+          "clinicalLinks": [
+            "Lactose intolerance",
+            "Congenital sucrase-isomaltase deficiency"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 7, digestion of carbohydrates (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch7-bank-036-v1",
+            "lippincott-ch7-bank-044-v1",
+            "lippincott-ch7-bank-058-v1"
+          ]
+        },
+        {
+          "id": "ch7-monosaccharide-absorption",
+          "title": "Intestinal monosaccharide absorption",
+          "priority": "exam-core",
+          "rationale": "Transporter logic connects luminal digestion to oral rehydration and malabsorption physiology.",
+          "summary": "Glucose and galactose enter enterocytes apically through sodium-dependent SGLT1, whereas fructose uses facilitated diffusion through GLUT5. All three leave basolaterally mainly through GLUT2. The sodium gradient that powers SGLT1 is maintained indirectly by the basolateral Na+/K+-ATPase.",
+          "keyPoints": [
+            "SGLT1 transports glucose and galactose",
+            "GLUT5 transports fructose",
+            "GLUT2 supports basolateral exit",
+            "Na+/K+-ATPase maintains the driving gradient"
+          ],
+          "clinicalLinks": [
+            "Oral rehydration therapy",
+            "Glucose-galactose malabsorption"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 7, monosaccharide uptake (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch7-bank-069-v1",
+            "lippincott-ch7-bank-070-v1",
+            "lippincott-ch7-bank-071-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-8",
+      "concepts": [
+        {
+          "id": "ch8-glycolysis-purpose-yield",
+          "title": "Glycolysis: purpose, phases, location, and net yield",
+          "priority": "medical-core",
+          "rationale": "The carbohydrate-metabolism teacher deck explicitly introduces glycolysis, its location, products, and energy accounting. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Glycolysis is a cytosolic pathway converting one glucose to two pyruvate through an investment phase and a payoff phase. Net substrate-level yield is two ATP and two NADH per glucose. Under anaerobic conditions, pyruvate is reduced to lactate to regenerate NAD+, so the net energy yield remains two ATP.",
+          "keyPoints": [
+            "Occurs in cytosol",
+            "One glucose yields two pyruvate",
+            "Net 2 ATP and 2 NADH aerobically",
+            "Lactate formation regenerates NAD+"
+          ],
+          "clinicalLinks": [
+            "Exercise-associated lactate production",
+            "RBC dependence on glycolysis"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 1-26, glycolysis and pyruvate fates (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 8 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch8-bank-032-v1",
+            "lippincott-ch8-bank-106-v1",
+            "lippincott-ch8-bank-107-v1"
+          ]
+        },
+        {
+          "id": "ch8-hexokinase-glucokinase",
+          "title": "Hexokinase versus glucokinase",
+          "priority": "medical-core",
+          "rationale": "This contrast explains tissue glucose trapping and fed-state hepatic handling and is a standard regulated-step comparison. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Hexokinases I-III have low Km, are active at low glucose, and are inhibited by glucose 6-phosphate in most tissues. Glucokinase in liver and pancreatic beta cells has a higher Km and Vmax and is not directly inhibited by glucose 6-phosphate. Its properties allow liver to take up excess postprandial glucose and beta cells to sense rising glucose.",
+          "keyPoints": [
+            "Hexokinase: low Km, low Vmax",
+            "Glucokinase: high Km, high Vmax",
+            "Glucokinase is in liver and beta cells",
+            "Both trap glucose as glucose 6-phosphate"
+          ],
+          "clinicalLinks": [
+            "MODY2 from glucokinase variants",
+            "Glucose sensing by pancreatic beta cells"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — glycolysis regulation section (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 8 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch8-bank-054-v1",
+            "lippincott-ch8-bank-057-v1",
+            "lippincott-ch8-bank-058-v1"
+          ]
+        },
+        {
+          "id": "ch8-irreversible-regulated-steps",
+          "title": "Irreversible glycolytic steps and reciprocal regulation",
+          "priority": "medical-core",
+          "rationale": "PFK-1 and pyruvate kinase integrate energy status and hormones; these are the decisive control points rather than every reversible reaction. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Hexokinase/glucokinase, PFK-1, and pyruvate kinase catalyze the major irreversible glycolytic steps. PFK-1 is activated by AMP and fructose 2,6-bisphosphate and inhibited by ATP and citrate. In liver, glucagon lowers fructose 2,6-bisphosphate and phosphorylates pyruvate kinase, suppressing glycolysis during fasting.",
+          "keyPoints": [
+            "PFK-1 is the committed and rate-limiting step",
+            "Fructose 2,6-bisphosphate activates PFK-1",
+            "ATP and citrate inhibit PFK-1",
+            "Glucagon inhibits hepatic glycolysis"
+          ],
+          "clinicalLinks": [
+            "Fed-fast transition",
+            "Cancer-associated high glycolytic flux"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 55-62, reciprocal regulation (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 8 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch8-bank-064-v1",
+            "lippincott-ch8-bank-067-v1",
+            "lippincott-ch8-bank-091-v1"
+          ]
+        },
+        {
+          "id": "ch8-lactate-rbc-23bpg",
+          "title": "Anaerobic glycolysis, erythrocytes, and 2,3-BPG",
+          "priority": "medical-core",
+          "rationale": "RBC metabolism and lactate production are clinically central applications of glycolysis. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Mature erythrocytes lack mitochondria, so glycolysis is their only ATP source and lactate is their end product. The Rapoport-Luebering shunt diverts 1,3-BPG to 2,3-BPG, lowering hemoglobin oxygen affinity at the cost of bypassing an ATP-generating step. Pyruvate-kinase deficiency therefore causes chronic hemolytic anemia from inadequate RBC ATP.",
+          "keyPoints": [
+            "RBCs cannot perform TCA or oxidative phosphorylation",
+            "LDH regenerates NAD+",
+            "2,3-BPG promotes oxygen unloading",
+            "Pyruvate-kinase deficiency causes hemolysis"
+          ],
+          "clinicalLinks": [
+            "Hemolytic anemia",
+            "Adaptation to hypoxia and altitude",
+            "Lactic acidosis"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pyruvate fate and tissue-use slides (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 8 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch8-bank-093-v1",
+            "lippincott-ch8-bank-081-v1",
+            "lippincott-ch8-bank-098-v1"
+          ]
+        },
+        {
+          "id": "ch8-pyruvate-fates",
+          "title": "Major metabolic fates of pyruvate",
+          "priority": "medical-core",
+          "rationale": "The teacher deck explicitly frames pyruvate as the branch point connecting aerobic oxidation, lactate, and biosynthesis. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Pyruvate can become lactate through LDH, acetyl-CoA through PDH, oxaloacetate through pyruvate carboxylase, or alanine by transamination. Oxygen availability, mitochondrial capacity, hormonal state, and tissue determine which fate dominates. The branch point connects glycolysis to TCA oxidation, gluconeogenesis, amino-acid transport, and anaerobic NAD+ regeneration.",
+          "keyPoints": [
+            "LDH: pyruvate to lactate",
+            "PDH: pyruvate to acetyl-CoA",
+            "Pyruvate carboxylase: pyruvate to oxaloacetate",
+            "ALT interconverts pyruvate and alanine"
+          ],
+          "clinicalLinks": [
+            "Hypoxic lactic acidosis",
+            "Thiamine-deficiency lactic acidosis",
+            "Glucose-alanine cycle"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 22-26 and 61-82 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch8-bank-033-v1",
+            "lippincott-ch8-bank-035-v1",
+            "lippincott-ch8-bank-104-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-9",
+      "concepts": [
+        {
+          "id": "ch9-pdh-complex",
+          "title": "Pyruvate dehydrogenase reaction, cofactors, and regulation",
+          "priority": "medical-core",
+          "rationale": "The teacher deck directly covers PDH as the irreversible link between glycolysis and the TCA cycle. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Mitochondrial PDH oxidatively decarboxylates pyruvate to acetyl-CoA, CO2, and NADH. Its five cofactors are TPP, lipoate, CoA, FAD, and NAD+. PDH kinase phosphorylation inactivates the complex, whereas phosphatase dephosphorylation activates it; high acetyl-CoA/NADH favor inhibition and muscle Ca2+ favors activation.",
+          "keyPoints": [
+            "Irreversible link to acetyl-CoA",
+            "Five cofactors: TPP, lipoate, CoA, FAD, NAD+",
+            "Phosphorylation turns PDH off",
+            "Ca2+ activates PDH phosphatase in muscle"
+          ],
+          "clinicalLinks": [
+            "Thiamine-deficiency lactic acidosis",
+            "Arsenic inhibition through lipoate",
+            "PDH deficiency"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 61-82, PDH and TCA (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 9 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch9-001-v1",
+            "teacher-carb-ch9-003-v1",
+            "teacher-carb-ch9-004-v1"
+          ]
+        },
+        {
+          "id": "ch9-tca-sequence-yield",
+          "title": "TCA-cycle sequence, carbon loss, and energy yield",
+          "priority": "medical-core",
+          "rationale": "The teacher deck presents the TCA cycle as the common oxidative hub and tests its characteristic products. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Acetyl-CoA condenses with oxaloacetate to form citrate, and the cycle regenerates oxaloacetate while releasing two CO2. Each acetyl-CoA yields three NADH, one FADH2, and one GTP. Succinate dehydrogenase is both a TCA enzyme and respiratory Complex II, and succinyl-CoA synthetase performs substrate-level phosphorylation.",
+          "keyPoints": [
+            "Citrate synthase begins the cycle",
+            "Two oxidative decarboxylations release CO2",
+            "Yield: 3 NADH, 1 FADH2, 1 GTP",
+            "Succinate dehydrogenase is Complex II"
+          ],
+          "clinicalLinks": [
+            "Energy failure in mitochondrial disease",
+            "Oncometabolites from TCA-enzyme defects"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 61-82 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch9-006-v1",
+            "teacher-carb-ch9-010-v1",
+            "teacher-carb-ch9-013-v1"
+          ]
+        },
+        {
+          "id": "ch9-tca-regulation-amphibolic",
+          "title": "TCA regulation and amphibolic function",
+          "priority": "medical-core",
+          "rationale": "Understanding regulated dehydrogenases and replenishment is more useful than memorizing every intermediate in isolation. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Citrate synthase, isocitrate dehydrogenase, and alpha-ketoglutarate dehydrogenase are major regulated points, inhibited by high-energy signals and activated by low-energy demand; Ca2+ stimulates oxidative metabolism in contracting muscle. TCA intermediates also supply biosynthetic pathways, making the cycle amphibolic. Anaplerotic reactions, especially biotin-dependent pyruvate carboxylase, replenish withdrawn oxaloacetate.",
+          "keyPoints": [
+            "ADP activates isocitrate dehydrogenase",
+            "Ca2+ stimulates muscle oxidative flux",
+            "Intermediates support biosynthesis",
+            "Pyruvate carboxylase is a major anaplerotic enzyme"
+          ],
+          "clinicalLinks": [
+            "Exercise metabolism",
+            "Biotin-dependent carboxylase function"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 61-82 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch9-007-v1",
+            "teacher-carb-ch9-015-v1",
+            "teacher-carb-ch9-016-v1"
+          ]
+        },
+        {
+          "id": "ch9-pdh-tca-toxicology",
+          "title": "Clinically important PDH/TCA cofactor defects and toxins",
+          "priority": "medical-core",
+          "rationale": "The teacher-aligned questions explicitly connect thiamine, arsenic, and fluoroacetate to central oxidative metabolism. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Thiamine deficiency lowers TPP-dependent PDH and alpha-ketoglutarate-dehydrogenase activity, diverting pyruvate toward lactate. Arsenite binds reduced lipoate and inhibits both multienzyme complexes. Fluoroacetate is converted to fluorocitrate, which blocks aconitase and arrests TCA flux.",
+          "keyPoints": [
+            "TPP deficiency promotes lactic acidosis",
+            "Arsenic targets lipoate",
+            "Fluorocitrate inhibits aconitase",
+            "PDH and alpha-ketoglutarate dehydrogenase share five cofactors"
+          ],
+          "clinicalLinks": [
+            "Wernicke encephalopathy and lactic acidosis",
+            "Arsenic poisoning",
+            "Fluoroacetate toxicity"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — PDH/TCA clinical correlations, pp. 61-82 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch9-017-v1",
+            "teacher-carb-ch9-018-v1",
+            "teacher-carb-ch9-019-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-10",
+      "concepts": [
+        {
+          "id": "ch10-purpose-sites-substrates",
+          "title": "Purpose, organs, and substrates of gluconeogenesis",
+          "priority": "medical-core",
+          "rationale": "The teacher deck directly teaches why gluconeogenesis is needed during fasting and where its carbons originate. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Gluconeogenesis maintains blood glucose for glucose-dependent tissues during fasting. Liver is the major early site, while renal cortex contributes increasingly during prolonged fasting. Major precursors are lactate, glycerol, and glucogenic amino acids; even-chain fatty acids cannot provide net glucose.",
+          "keyPoints": [
+            "Liver dominates early fasting",
+            "Kidney contribution rises with prolonged fasting",
+            "Lactate, glycerol, and alanine are major substrates",
+            "Even-chain fatty acids are not net glucogenic"
+          ],
+          "clinicalLinks": [
+            "Fasting hypoglycemia",
+            "Renal contribution during prolonged fasting"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 38-60 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch10-001-v1",
+            "teacher-carb-ch10-002-v1",
+            "teacher-carb-ch10-003-v1"
+          ]
+        },
+        {
+          "id": "ch10-bypasses-energy",
+          "title": "Gluconeogenic bypass reactions and energy cost",
+          "priority": "medical-core",
+          "rationale": "The four bypass enzymes are the minimal pathway architecture needed to understand regulation and inherited/organ-specific defects. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Pyruvate carboxylase and PEP carboxykinase bypass pyruvate kinase; fructose-1,6-bisphosphatase bypasses PFK-1; and glucose-6-phosphatase bypasses hexokinase/glucokinase. Producing one glucose from two pyruvate consumes four ATP, two GTP, and two NADH. Glucose-6-phosphatase in liver and kidney permits release of free glucose, whereas muscle lacks it.",
+          "keyPoints": [
+            "Pyruvate carboxylase uses ATP and biotin",
+            "PEPCK uses GTP",
+            "FBPase-1 bypasses PFK-1",
+            "Glucose-6-phosphatase enables glucose export"
+          ],
+          "clinicalLinks": [
+            "Von Gierke disease",
+            "Muscle cannot export glycogen-derived glucose"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 38-60 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch10-004-v1",
+            "teacher-carb-ch10-006-v1",
+            "teacher-carb-ch10-009-v1"
+          ]
+        },
+        {
+          "id": "ch10-reciprocal-regulation",
+          "title": "Reciprocal regulation of glycolysis and gluconeogenesis",
+          "priority": "medical-core",
+          "rationale": "This prevents futile cycling and integrates hepatic glucose production with glucagon and cellular energy state. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "High acetyl-CoA activates pyruvate carboxylase and inhibits PDH, directing pyruvate toward glucose production during fatty-acid oxidation. AMP and fructose 2,6-bisphosphate inhibit fructose-1,6-bisphosphatase. Glucagon activates PKA, shifts the hepatic PFK-2/FBPase-2 enzyme toward FBPase-2, lowers fructose 2,6-bisphosphate, and therefore favors gluconeogenesis.",
+          "keyPoints": [
+            "Acetyl-CoA activates pyruvate carboxylase",
+            "AMP inhibits FBPase-1",
+            "F2,6BP inhibits FBPase-1 and activates PFK-1",
+            "Glucagon lowers hepatic F2,6BP"
+          ],
+          "clinicalLinks": [
+            "Hormonal fasting response",
+            "Metabolic effects of glucagon"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 55-62 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch10-010-v1",
+            "teacher-carb-ch10-012-v1",
+            "teacher-carb-ch10-013-v1"
+          ]
+        },
+        {
+          "id": "ch10-substrate-cycles-ethanol",
+          "title": "Cori cycle, glucose-alanine cycle, and ethanol hypoglycemia",
+          "priority": "medical-core",
+          "rationale": "These are the principal clinical and interorgan applications of gluconeogenic substrate flow. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "In the Cori cycle, liver converts lactate from RBCs or exercising muscle back to glucose. In the glucose-alanine cycle, alanine carries both carbon and amino nitrogen from muscle to liver. Ethanol oxidation raises hepatic NADH, shifting pyruvate to lactate and oxaloacetate to malate, thereby impairing gluconeogenesis and risking fasting hypoglycemia.",
+          "keyPoints": [
+            "Cori cycle recycles lactate",
+            "Alanine carries carbon plus nitrogen",
+            "Glycerol enters through DHAP",
+            "High NADH inhibits gluconeogenesis"
+          ],
+          "clinicalLinks": [
+            "Alcohol-associated fasting hypoglycemia",
+            "Lactic acidosis",
+            "Exercise metabolism"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 38-60 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch10-014-v1",
+            "teacher-carb-ch10-015-v1",
+            "teacher-carb-ch10-019-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-11",
+      "concepts": [
+        {
+          "id": "ch11-glycogen-functions-synthesis",
+          "title": "Glycogen roles and synthesis",
+          "priority": "medical-core",
+          "rationale": "The carbohydrate teacher deck includes glycogen handling, and liver-versus-muscle function is essential for fasting and exercise physiology. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Liver glycogen buffers blood glucose, whereas muscle glycogen supplies local ATP during contraction. Glycogenin creates the primer, UDP-glucose provides activated glucose, glycogen synthase forms alpha-1,4 bonds, and branching enzyme creates alpha-1,6 branches. Branching increases solubility and the number of nonreducing ends available for rapid synthesis or breakdown.",
+          "keyPoints": [
+            "Liver supports blood glucose",
+            "Muscle glycogen is for muscle itself",
+            "UDP-glucose is the activated donor",
+            "Glycogen synthase makes alpha-1,4 bonds",
+            "Branching enzyme makes alpha-1,6 bonds"
+          ],
+          "clinicalLinks": [
+            "Exercise fuel",
+            "Fasting glucose maintenance"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — glycogen sections, including pp. 36-37 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 11 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch11-001-v1",
+            "teacher-carb-ch11-003-v1",
+            "teacher-carb-ch11-005-v1"
+          ]
+        },
+        {
+          "id": "ch11-glycogenolysis",
+          "title": "Glycogenolysis and debranching",
+          "priority": "medical-core",
+          "rationale": "The distinct products of phosphorylase and debranching enzyme are recurring high-yield details that explain several glycogen-storage diseases. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Glycogen phosphorylase uses pyridoxal phosphate to cleave alpha-1,4 bonds and release glucose 1-phosphate. Debranching enzyme has transferase and alpha-1,6-glucosidase activities, and the branch-point glucose is released as free glucose. Phosphoglucomutase converts glucose 1-phosphate to glucose 6-phosphate for glycolysis or hepatic glucose release.",
+          "keyPoints": [
+            "Phosphorylase releases glucose 1-phosphate",
+            "PLP is the phosphorylase cofactor",
+            "Debranching enzyme has two activities",
+            "Alpha-1,6 cleavage releases free glucose"
+          ],
+          "clinicalLinks": [
+            "Cori disease",
+            "McArdle disease"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 36-37 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch11-006-v1",
+            "teacher-carb-ch11-007-v1",
+            "teacher-carb-ch11-008-v1"
+          ]
+        },
+        {
+          "id": "ch11-hormonal-reciprocal-regulation",
+          "title": "Hormonal and reciprocal regulation of glycogen",
+          "priority": "medical-core",
+          "rationale": "Insulin, glucagon, and epinephrine coordinate glycogen synthase and phosphorylase in opposite directions. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Glucagon in liver and epinephrine in liver or muscle signal through cAMP/PKA to activate phosphorylase kinase and promote glycogenolysis. Insulin activates protein phosphatase 1, which dephosphorylates and activates glycogen synthase while inactivating phosphorylase. Skeletal muscle lacks a glucagon receptor, so glucagon does not directly mobilize muscle glycogen.",
+          "keyPoints": [
+            "Phosphorylation favors glycogen breakdown",
+            "Dephosphorylation favors synthesis",
+            "Insulin acts through protein phosphatase 1",
+            "Glucagon targets liver, not skeletal muscle"
+          ],
+          "clinicalLinks": [
+            "Fed-fast transition",
+            "Epinephrine response during exercise"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — glycogen regulation section (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 11 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch11-010-v1",
+            "teacher-carb-ch11-011-v1",
+            "teacher-carb-ch11-013-v1"
+          ]
+        },
+        {
+          "id": "ch11-glycogen-storage-diseases",
+          "title": "Pattern recognition in glycogen-storage diseases",
+          "priority": "medical-core",
+          "rationale": "The diseases are clinically important applications, but the audited teacher deck does not clearly establish every named disorder as exam-confirmed. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Von Gierke disease causes severe fasting hypoglycemia and lactic acidosis from glucose-6-phosphatase deficiency. Pompe disease is lysosomal acid alpha-glucosidase deficiency with cardiomyopathy, while McArdle disease is muscle phosphorylase deficiency with exercise intolerance and absent lactate rise. Cori disease causes limit-dextrin accumulation, and Andersen disease produces poorly branched, insoluble glycogen.",
+          "keyPoints": [
+            "Von Gierke: glucose-6-phosphatase",
+            "Pompe: lysosomal acid alpha-glucosidase",
+            "McArdle: muscle phosphorylase",
+            "Cori: debranching enzyme",
+            "Andersen: branching enzyme"
+          ],
+          "clinicalLinks": [
+            "Infantile cardiomyopathy",
+            "Exercise intolerance",
+            "Fasting hypoglycemia"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 11, glycogen-storage diseases (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch11-015-v1",
+            "teacher-carb-ch11-016-v1",
+            "teacher-carb-ch11-017-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-12",
+      "concepts": [
+        {
+          "id": "ch12-fructose-metabolism",
+          "title": "Fructose metabolism and hereditary fructose intolerance",
+          "priority": "medical-core",
+          "rationale": "The teacher deck explicitly covers fructose entry and the contrast between benign fructokinase deficiency and dangerous aldolase-B deficiency. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Hepatic fructokinase converts fructose to fructose 1-phosphate, which aldolase B cleaves into triose products downstream of PFK-1. Fructokinase deficiency causes benign essential fructosuria. Aldolase-B deficiency causes hereditary fructose intolerance: fructose 1-phosphate traps phosphate and inhibits glycogenolysis and gluconeogenesis, producing vomiting and hypoglycemia after fructose or sucrose intake.",
+          "keyPoints": [
+            "Fructokinase makes fructose 1-phosphate",
+            "Fructokinase deficiency is usually benign",
+            "Aldolase-B deficiency causes HFI",
+            "Avoid fructose, sucrose, and sorbitol in HFI"
+          ],
+          "clinicalLinks": [
+            "Hereditary fructose intolerance",
+            "Essential fructosuria",
+            "Fructose-driven hepatic lipogenesis"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 27-35 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch12-002-v1",
+            "teacher-carb-ch12-003-v1",
+            "teacher-carb-ch12-004-v1"
+          ]
+        },
+        {
+          "id": "ch12-galactose-metabolism",
+          "title": "Galactose metabolism and galactosemias",
+          "priority": "medical-core",
+          "rationale": "The deck directly teaches galactose conversion and clinically distinguishes galactokinase deficiency from classic galactosemia. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Galactokinase forms galactose 1-phosphate, and GALT transfers UDP from UDP-glucose to generate glucose 1-phosphate and UDP-galactose. GALT deficiency causes classic galactosemia with liver injury, cataracts, and increased E. coli sepsis risk. Isolated galactokinase deficiency mainly causes cataracts from galactitol accumulation.",
+          "keyPoints": [
+            "Galactokinase is the first enzyme",
+            "GALT deficiency is classic galactosemia",
+            "Galactitol causes cataracts",
+            "Remove galactose and lactose from the diet"
+          ],
+          "clinicalLinks": [
+            "Neonatal E. coli sepsis",
+            "Cataracts",
+            "Liver dysfunction"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 27-35 and 83-90 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch12-007-v1",
+            "teacher-carb-ch12-008-v1",
+            "teacher-carb-ch12-009-v1"
+          ]
+        },
+        {
+          "id": "ch12-disaccharides-transport",
+          "title": "Disaccharidases and monosaccharide transport",
+          "priority": "medical-core",
+          "rationale": "This unifies the teacher deck's entry of dietary carbohydrates into glycolysis with clinically common lactase deficiency. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Brush-border lactase, sucrase-isomaltase, and maltase hydrolyze dietary disaccharides. Glucose and galactose enter through SGLT1, while fructose enters through GLUT5. Lactase deficiency leaves lactose osmotically active and fermentable, causing bloating, gas, and acidic diarrhea.",
+          "keyPoints": [
+            "Disaccharidases are on enterocyte brush border",
+            "SGLT1 handles glucose and galactose",
+            "GLUT5 handles fructose",
+            "Lactase deficiency causes osmotic diarrhea"
+          ],
+          "clinicalLinks": [
+            "Lactose intolerance",
+            "Congenital glucose-galactose malabsorption"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 27-35 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch12-013-v1",
+            "teacher-carb-ch12-018-v1"
+          ]
+        },
+        {
+          "id": "ch12-polyol-pathway",
+          "title": "Polyol pathway and sorbitol injury",
+          "priority": "medical-core",
+          "rationale": "The pathway is a direct bridge from carbohydrate metabolism to diabetic tissue complications. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "Aldose reductase uses NADPH to reduce glucose to sorbitol. Liver and seminal vesicles can oxidize sorbitol to fructose through sorbitol dehydrogenase, but lens, retina, Schwann cells, and kidney have limited activity. During hyperglycemia, trapped sorbitol produces osmotic stress and NADPH consumption may weaken antioxidant defense.",
+          "keyPoints": [
+            "Aldose reductase consumes NADPH",
+            "Sorbitol dehydrogenase makes fructose",
+            "Sorbitol accumulates in selected insulin-independent tissues",
+            "Osmotic and oxidative injury contribute to complications"
+          ],
+          "clinicalLinks": [
+            "Diabetic cataracts",
+            "Neuropathy",
+            "Retinopathy"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — carbohydrate-entry and clinical sections (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch12-014-v1",
+            "teacher-carb-ch12-015-v1",
+            "teacher-carb-ch12-016-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-13",
+      "concepts": [
+        {
+          "id": "ch13-oxidative-ppp",
+          "title": "Oxidative pentose-phosphate pathway and G6PD regulation",
+          "priority": "medical-core",
+          "rationale": "The final section of the carbohydrate teacher deck explicitly presents PPP phases, products, and regulation. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "The cytosolic oxidative PPP irreversibly converts glucose 6-phosphate to ribulose 5-phosphate, CO2, and NADPH. Glucose-6-phosphate dehydrogenase catalyzes the regulated first step. A high NADP+/NADPH ratio activates pathway flux so NADPH production rises when reducing power is needed.",
+          "keyPoints": [
+            "Oxidative phase is irreversible",
+            "G6PD is rate limiting",
+            "NADPH and ribulose 5-phosphate are products",
+            "NADP+ stimulates G6PD"
+          ],
+          "clinicalLinks": [
+            "G6PD deficiency",
+            "Reductive biosynthesis"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 91-103 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch13-002-v1",
+            "teacher-carb-ch13-003-v1",
+            "teacher-carb-ch13-004-v1"
+          ]
+        },
+        {
+          "id": "ch13-nonoxidative-ppp",
+          "title": "Nonoxidative PPP and carbon rearrangement",
+          "priority": "medical-core",
+          "rationale": "This explains how cells match the need for ribose with the need for NADPH and reconnect pentoses to glycolysis. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "The nonoxidative PPP reversibly interconverts sugars containing three to seven carbons. Transketolase transfers two-carbon units and requires TPP, whereas transaldolase transfers three-carbon units. The pathway can supply ribose 5-phosphate for nucleotides or return carbons to glycolysis as fructose 6-phosphate and glyceraldehyde 3-phosphate.",
+          "keyPoints": [
+            "Nonoxidative reactions are reversible",
+            "Transketolase requires TPP",
+            "Transaldolase transfers three carbons",
+            "Ribose 5-phosphate supports nucleotide synthesis"
+          ],
+          "clinicalLinks": [
+            "Thiamine status assessed by transketolase",
+            "Rapidly dividing cells need ribose"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 91-103 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch13-006-v1",
+            "teacher-carb-ch13-007-v1",
+            "teacher-carb-ch13-020-v1"
+          ]
+        },
+        {
+          "id": "ch13-g6pd-hemolysis",
+          "title": "NADPH, glutathione, and G6PD-deficient hemolysis",
+          "priority": "medical-core",
+          "rationale": "This is the most clinically important PPP application and is directly represented in the teacher-aligned bank. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "RBCs rely on the PPP as their only NADPH source. NADPH allows glutathione reductase to regenerate reduced glutathione, which removes peroxides through glutathione peroxidase. In G6PD deficiency, infection, fava beans, or oxidant drugs can cause Heinz-body formation and splenic removal of inclusions, producing bite cells and episodic hemolysis.",
+          "keyPoints": [
+            "RBC PPP supplies NADPH",
+            "Reduced glutathione neutralizes peroxides",
+            "Oxidant stress precipitates hemolysis",
+            "Heinz bodies lead to bite cells"
+          ],
+          "clinicalLinks": [
+            "Acute hemolytic anemia",
+            "Neonatal jaundice",
+            "Drug-triggered oxidant injury"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 91-103 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch13-010-v1",
+            "teacher-carb-ch13-012-v1",
+            "teacher-carb-ch13-014-v1"
+          ]
+        },
+        {
+          "id": "ch13-nadph-other-uses",
+          "title": "Other major uses of NADPH",
+          "priority": "medical-core",
+          "rationale": "Knowing why NADPH is produced is more valuable than learning the PPP as an isolated sequence. The local deck supports this mechanism, but exam-scope.md explicitly excludes Chapters 8–13 unless separately confirmed.",
+          "summary": "NADPH provides reducing power for fatty-acid and steroid synthesis, cytochrome-P450 monooxygenase reactions, glutathione reduction, and the phagocyte respiratory burst. NADPH oxidase generates superoxide for microbial killing. Defective NADPH oxidase causes chronic granulomatous disease and an abnormal dihydrorhodamine test.",
+          "keyPoints": [
+            "NADPH drives reductive biosynthesis",
+            "P450 reactions require NADPH",
+            "NADPH oxidase initiates respiratory burst",
+            "DHR testing evaluates oxidase activity"
+          ],
+          "clinicalLinks": [
+            "Chronic granulomatous disease",
+            "Drug metabolism",
+            "Steroid synthesis"
+          ],
+          "sourceEvidence": [
+            "Carbohydrate Metabolism, MD Kish — pp. 91-103 (local teacher-authored deck available; August 25 exam inclusion explicitly unconfirmed/excluded by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): Chapters 8–13 remain excluded unless separately confirmed."
+          ],
+          "selectedQuestionIds": [
+            "teacher-carb-ch13-016-v1",
+            "teacher-carb-ch13-017-v1",
+            "teacher-carb-ch13-019-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-14",
+      "concepts": [
+        {
+          "id": "ch14-gags",
+          "title": "Glycosaminoglycan structure and major examples",
+          "priority": "exam-core",
+          "rationale": "GAG charge and hydration explain extracellular-matrix mechanics, but no dedicated local teacher lecture for Chapter 14 was found.",
+          "summary": "Glycosaminoglycans are long repeating disaccharide chains whose sulfate and carboxyl groups attract cations and water. Their hydrated gels resist compression and support extracellular matrix. Hyaluronan is unusual because it is unsulfated, is not covalently attached to a core protein, and is synthesized at the plasma membrane.",
+          "keyPoints": [
+            "Most GAGs are highly negatively charged",
+            "Hydration provides resilience",
+            "Hyaluronan is unsulfated",
+            "Keratan sulfate lacks uronic acid"
+          ],
+          "clinicalLinks": [
+            "Cartilage mechanics",
+            "Heparin anticoagulation"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 14, glycosaminoglycans (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-043-v1",
+            "july29-comprehensive-044-v1",
+            "july29-comprehensive-049-v1"
+          ]
+        },
+        {
+          "id": "ch14-proteoglycan-glycoprotein",
+          "title": "Proteoglycans versus glycoproteins",
+          "priority": "exam-core",
+          "rationale": "The structural distinction prevents a common misconception and links carbohydrates to extracellular matrix and receptors.",
+          "summary": "A proteoglycan contains a core protein bearing long GAG chains, so carbohydrate is usually the dominant mass. Glycoproteins typically contain shorter, branched oligosaccharides and relatively more protein. Proteoglycans chiefly organize hydrated extracellular matrix, while glycoproteins have diverse roles in receptors, adhesion, immunity, and secretion.",
+          "keyPoints": [
+            "Proteoglycan = core protein plus GAG chains",
+            "Glycoprotein glycans are shorter and branched",
+            "Proteoglycans are carbohydrate-rich",
+            "Both are formed through specific glycosylation pathways"
+          ],
+          "clinicalLinks": [
+            "Basement membranes",
+            "Cell-surface receptors and immune proteins"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 14, proteoglycans and glycoproteins (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-045-v1",
+            "july29-comprehensive-046-v1"
+          ]
+        },
+        {
+          "id": "ch14-glycosylation-lysosomal-targeting",
+          "title": "N-linked glycosylation and mannose-6-phosphate targeting",
+          "priority": "exam-core",
+          "rationale": "This is a compact clinically meaningful example of how carbohydrate tags determine protein destination.",
+          "summary": "N-linked oligosaccharides attach to asparagine and begin assembly on dolichol in the ER before Golgi processing. Lysosomal hydrolases acquire mannose-6-phosphate in the Golgi, which directs them to lysosomes. Failure to add the tag causes I-cell disease, with hydrolases secreted extracellularly and undegraded substrates accumulating in cells.",
+          "keyPoints": [
+            "N-linked glycans attach to asparagine",
+            "Dolichol supports ER assembly",
+            "Mannose-6-phosphate targets lysosomal enzymes",
+            "I-cell disease is a targeting defect"
+          ],
+          "clinicalLinks": [
+            "I-cell disease",
+            "Congenital disorders of glycosylation"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 14, glycoprotein synthesis and lysosomal targeting (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-047-v1",
+            "july29-comprehensive-048-v1"
+          ]
+        },
+        {
+          "id": "ch14-mucopolysaccharidoses",
+          "title": "Mucopolysaccharidoses: Hurler versus Hunter",
+          "priority": "exam-core",
+          "rationale": "The Hurler-Hunter contrast is the minimum clinically useful disease pattern from GAG degradation.",
+          "summary": "Lysosomal defects in GAG degradation cause mucopolysaccharidoses with coarse facial features, organomegaly, skeletal abnormalities, and developmental effects. Hurler syndrome is autosomal recessive alpha-L-iduronidase deficiency and typically has corneal clouding. Hunter syndrome is X-linked iduronate-sulfatase deficiency and generally lacks corneal clouding.",
+          "keyPoints": [
+            "Both accumulate dermatan and heparan sulfate",
+            "Hurler is autosomal recessive",
+            "Hunter is X-linked",
+            "Corneal clouding favors Hurler"
+          ],
+          "clinicalLinks": [
+            "Hurler syndrome",
+            "Hunter syndrome"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 14, mucopolysaccharidoses (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-051-v1",
+            "july29-comprehensive-052-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-15",
+      "concepts": [
+        {
+          "id": "ch15-lipid-classes-fatty-acid-structure",
+          "title": "Lipid classes and fatty-acid structure",
+          "priority": "exam-core",
+          "rationale": "The teacher lipid-structure deck explicitly introduces fatty-acid saturation, cis double bonds, melting behavior, and the distinction between simple and complex lipids before applying them to membranes and transport.",
+          "summary": "Fatty acids contain a carboxyl group and a hydrocarbon chain; saturated fatty acids have no carbon-carbon double bonds, whereas unsaturated fatty acids contain one or more. A cis double bond introduces a kink that reduces packing and generally lowers melting point, while greater chain length and saturation raise melting point. Triacylglycerols and cholesteryl esters are simple storage or transport lipids; phospholipids and glycolipids contain additional polar groups and are major membrane lipids.",
+          "keyPoints": [
+            "Saturated fatty acids contain no carbon-carbon double bonds",
+            "Cis double bonds disrupt packing and lower melting point",
+            "Longer and more saturated chains generally melt at higher temperatures",
+            "Triacylglycerol is a concentrated hydrophobic energy store",
+            "Complex lipids include additional phosphate, carbohydrate, or nitrogen-containing groups"
+          ],
+          "clinicalLinks": [
+            "Membrane fluidity depends partly on fatty-acid chain length and unsaturation",
+            "Essential omega-6 and omega-3 fatty acids must be obtained from diet"
+          ],
+          "sourceEvidence": [
+            "Lipid structure Esmaeili.pdf, 96-page teacher deck, early fatty-acid and lipid-classification sections.",
+            "biochemistry-telegram-scope.md: lipid structure, classification, fatty acids, complex lipids, and lipoproteins are confirmed first-semester teacher material."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-003-v1",
+            "bio-telegram-gap-005-v1",
+            "bio-telegram-gap-011-v1"
+          ]
+        },
+        {
+          "id": "ch15-digestion-enzymes",
+          "title": "Enzymatic digestion of dietary lipids",
+          "priority": "exam-core",
+          "rationale": "The 42-page Lipid and Lipoprotein Metabolism 1 teacher deck explicitly centers dietary lipid metabolism and its disorders.",
+          "summary": "Lingual and gastric lipases begin TAG digestion and are especially useful for short- and medium-chain TAG and in neonates. Pancreatic lipase with colipase performs most adult TAG digestion, hydrolyzing the 1 and 3 positions to yield 2-monoacylglycerol and free fatty acids. Pancreatic esterases and phospholipases digest cholesterol esters and phospholipids.",
+          "keyPoints": [
+            "Acid lipases start digestion",
+            "Pancreatic lipase is the main adult TAG enzyme",
+            "Colipase anchors lipase at the lipid-water interface",
+            "TAG digestion yields 2-MAG plus free fatty acids"
+          ],
+          "clinicalLinks": [
+            "Pancreatic insufficiency",
+            "Orlistat inhibition of lipases"
+          ],
+          "sourceEvidence": [
+            "Lipid and Lipoprotein Metabolism 1, Fataneh Esmaeili — pp. 4-21 (teacher-confirmed).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 15 (cross-check).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch15-bank-006-v1",
+            "lippincott-ch15-bank-022-v1",
+            "lippincott-ch15-bank-025-v1"
+          ]
+        },
+        {
+          "id": "ch15-bile-emulsification",
+          "title": "Bile salts and emulsification",
+          "priority": "exam-core",
+          "rationale": "The teacher deck directly explains how amphipathic bile salts make hydrophobic dietary lipids accessible to enzymes.",
+          "summary": "Conjugated bile salts are amphipathic cholesterol derivatives released into the duodenum. Together with intestinal mixing and phospholipids, they emulsify large lipid droplets into smaller particles with greater surface area. Bile salts also remain with digestion products to form mixed micelles for delivery across the unstirred water layer.",
+          "keyPoints": [
+            "Bile salts are made in liver and stored in gallbladder",
+            "Conjugation increases amphipathic behavior",
+            "Emulsification increases enzyme-accessible area",
+            "Bile flow is required for fat-soluble vitamin absorption"
+          ],
+          "clinicalLinks": [
+            "Cholestasis",
+            "Fat-soluble vitamin deficiency",
+            "Gallstone disease"
+          ],
+          "sourceEvidence": [
+            "Lipid and Lipoprotein Metabolism 1, Fataneh Esmaeili — pp. 17-24 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch15-bank-015-v1",
+            "lippincott-ch15-bank-018-v1",
+            "lippincott-ch15-bank-020-v1"
+          ]
+        },
+        {
+          "id": "ch15-micelles-enterocyte",
+          "title": "Mixed micelles, enterocyte uptake, and re-esterification",
+          "priority": "exam-core",
+          "rationale": "This is the decisive absorption sequence between luminal digestion and chylomicron assembly.",
+          "summary": "Mixed micelles solubilize long-chain fatty acids, 2-monoacylglycerol, cholesterol, lysophospholipids, and fat-soluble vitamins and carry them to the enterocyte surface. The lipids leave the micelle and enter the cell; the micelle itself is not absorbed. Enterocytes activate long-chain fatty acids and re-esterify complex lipids in smooth ER, whereas short- and medium-chain fatty acids can enter portal blood bound to albumin.",
+          "keyPoints": [
+            "Micelles cross the unstirred water layer",
+            "Micelles are not endocytosed intact",
+            "Long-chain lipids are re-esterified",
+            "Short/medium chains can use portal blood directly"
+          ],
+          "clinicalLinks": [
+            "Fat malabsorption",
+            "Use of medium-chain TAG in selected malabsorption disorders"
+          ],
+          "sourceEvidence": [
+            "Lipid and Lipoprotein Metabolism 1, Fataneh Esmaeili — pp. 22-27 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch15-bank-042-v1",
+            "lippincott-ch15-bank-043-v1",
+            "lippincott-ch15-bank-049-v1"
+          ]
+        },
+        {
+          "id": "ch15-chylomicrons-malabsorption",
+          "title": "Chylomicron assembly, clearance, and steatorrhea",
+          "priority": "exam-core",
+          "rationale": "The teacher deck follows absorbed lipid into chylomicrons and explicitly ends with chylomicronemia and fat-malabsorption disorders.",
+          "summary": "Enterocytes package re-esterified TAG with apoB-48 through microsomal TAG-transfer protein to form chylomicrons, which enter lymph before blood. In plasma they acquire apoC-II and apoE from HDL; apoC-II activates capillary LPL, and apoE directs remnant uptake by liver. Defective digestion, bile delivery, pancreatic secretion, or mucosal absorption can cause steatorrhea and fat-soluble vitamin deficiency.",
+          "keyPoints": [
+            "ApoB-48 and MTP are required for assembly",
+            "Chylomicrons travel through lymph",
+            "ApoC-II activates LPL",
+            "ApoE supports remnant uptake"
+          ],
+          "clinicalLinks": [
+            "Familial chylomicronemia",
+            "Cystic fibrosis",
+            "Steatorrhea"
+          ],
+          "sourceEvidence": [
+            "Lipid and Lipoprotein Metabolism 1, Fataneh Esmaeili — pp. 27-42 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch15-bank-062-v1",
+            "lippincott-ch15-bank-065-v1",
+            "lippincott-ch15-bank-057-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-16",
+      "concepts": [
+        {
+          "id": "ch16-fa-entry-carnitine",
+          "title": "Fatty-acid activation and the carnitine shuttle",
+          "priority": "exam-core",
+          "rationale": "This is the gate into long-chain fatty-acid oxidation; the audited teacher lipid-metabolism deck is dietary-lipid focused, so detailed Chapter 16 inclusion is not claimed as definite.",
+          "summary": "Acyl-CoA synthetase activates a fatty acid to fatty acyl-CoA at a cost equivalent to two ATP. Long-chain acyl groups enter the mitochondrial matrix through CPT-I, the carnitine-acylcarnitine translocase, and CPT-II. Malonyl-CoA inhibits CPT-I, preventing simultaneous synthesis and oxidation of fatty acids.",
+          "keyPoints": [
+            "Activation forms fatty acyl-CoA",
+            "CPT-I is the regulated entry step",
+            "Carnitine carries long-chain acyl groups",
+            "Malonyl-CoA inhibits CPT-I"
+          ],
+          "clinicalLinks": [
+            "Primary carnitine deficiency",
+            "CPT deficiency"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch16-bank-071-v1",
+            "lippincott-ch16-bank-090-v1",
+            "lippincott-ch16-bank-093-v1"
+          ]
+        },
+        {
+          "id": "ch16-beta-oxidation",
+          "title": "Mitochondrial beta-oxidation and odd-chain fatty acids",
+          "priority": "exam-core",
+          "rationale": "Physicians need the repeating oxidation logic and the special glucogenic fate of odd-chain fatty acids.",
+          "summary": "Each beta-oxidation cycle performs oxidation, hydration, oxidation, and thiolysis, producing FADH2, NADH, acetyl-CoA, and a two-carbon-shorter acyl-CoA. Even-chain fatty acids end as acetyl-CoA and cannot produce net glucose. Odd-chain fatty acids also yield propionyl-CoA, which becomes succinyl-CoA through biotin- and B12-dependent steps.",
+          "keyPoints": [
+            "Occurs mainly in mitochondrial matrix",
+            "Four recurring reactions",
+            "Produces NADH, FADH2, and acetyl-CoA",
+            "Propionyl-CoA is glucogenic through succinyl-CoA"
+          ],
+          "clinicalLinks": [
+            "Methylmalonic acidemia",
+            "Propionic acidemia"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16, fatty-acid oxidation (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch16-bank-089-v1",
+            "lippincott-ch16-bank-105-v1",
+            "lippincott-ch16-bank-116-v1"
+          ]
+        },
+        {
+          "id": "ch16-ketone-bodies",
+          "title": "Ketogenesis and ketone-body utilization",
+          "priority": "exam-core",
+          "rationale": "Ketones unify fasting physiology, uncontrolled diabetes, liver metabolism, and brain fuel adaptation.",
+          "summary": "During fasting, hepatic mitochondrial beta-oxidation supplies acetyl-CoA while oxaloacetate is diverted toward gluconeogenesis, favoring ketogenesis. Mitochondrial HMG-CoA synthase is rate limiting for formation of acetoacetate and beta-hydroxybutyrate. Extrahepatic mitochondria use thiophorase to oxidize ketones, but liver lacks thiophorase and RBCs lack mitochondria.",
+          "keyPoints": [
+            "Liver makes but cannot use ketone bodies",
+            "HMG-CoA synthase is rate limiting",
+            "Brain use rises during prolonged fasting",
+            "Excess ketones cause high-anion-gap acidosis"
+          ],
+          "clinicalLinks": [
+            "Diabetic ketoacidosis",
+            "Starvation adaptation",
+            "Hypoketotic hypoglycemia"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16, ketone bodies (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch16-bank-136-v1",
+            "lippincott-ch16-bank-141-v1",
+            "lippincott-ch16-bank-151-v1"
+          ]
+        },
+        {
+          "id": "ch16-fatty-acid-synthesis",
+          "title": "Fatty-acid synthesis and reciprocal control",
+          "priority": "exam-core",
+          "rationale": "The synthesis-versus-oxidation switch is essential metabolic integration even though the local metabolism-1 lipid deck does not establish this full chapter as teacher-taught.",
+          "summary": "Cytosolic acetyl-CoA carboxylase uses biotin and ATP to form malonyl-CoA, the committed and rate-limiting step. Fatty-acid synthase uses acetyl and malonyl units plus NADPH to make palmitate. Insulin and citrate activate synthesis, whereas glucagon, epinephrine, AMPK, and long-chain acyl-CoA oppose it; malonyl-CoA simultaneously blocks CPT-I.",
+          "keyPoints": [
+            "ACC makes malonyl-CoA",
+            "Biotin is required",
+            "FAS mainly produces palmitate",
+            "NADPH supplies reducing power",
+            "Malonyl-CoA coordinates synthesis with oxidation"
+          ],
+          "clinicalLinks": [
+            "Hepatic steatosis",
+            "Metabolic syndrome"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16, fatty-acid synthesis (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch16-bank-034-v1",
+            "lippincott-ch16-bank-043-v1",
+            "lippincott-ch16-bank-167-v1"
+          ]
+        },
+        {
+          "id": "ch16-tag-lipolysis",
+          "title": "Triacylglycerol synthesis and adipose lipolysis",
+          "priority": "exam-core",
+          "rationale": "This explains why insulin stores fuel and fasting hormones mobilize fatty acids.",
+          "summary": "TAG synthesis esterifies three fatty acyl-CoA molecules to glycerol 3-phosphate; adipocytes depend strongly on glucose-derived DHAP for their glycerol backbone. During fasting, adipose lipases release free fatty acids and glycerol. Fatty acids travel on albumin to oxidative tissues, whereas glycerol goes mainly to liver because adipose tissue has little glycerol kinase.",
+          "keyPoints": [
+            "Glycerol 3-phosphate supplies the TAG backbone",
+            "Insulin promotes adipose TAG storage",
+            "Fasting activates lipolysis",
+            "Released fatty acids bind albumin",
+            "Glycerol is handled mainly by liver"
+          ],
+          "clinicalLinks": [
+            "Fasting hyperlipolysis",
+            "Insulin resistance"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16, TAG metabolism (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch16-bank-067-v1",
+            "lippincott-ch16-bank-076-v1",
+            "lippincott-ch16-bank-171-v1"
+          ]
+        },
+        {
+          "id": "ch16-oxidation-disorders",
+          "title": "Fatty-acid oxidation disorders and hypoketotic hypoglycemia",
+          "priority": "exam-core",
+          "rationale": "Recognizing hypoketotic hypoglycemia is a clinically decisive pattern in infants and children.",
+          "summary": "Fatty-acid oxidation supports fasting ATP, hepatic gluconeogenesis, and ketone production. MCAD deficiency impairs medium-chain oxidation and commonly presents after fasting or illness with hypoketotic hypoglycemia, vomiting, lethargy, and dicarboxylic aciduria. Carnitine or shuttle defects similarly limit long-chain oxidation and can affect muscle and heart.",
+          "keyPoints": [
+            "Low glucose plus low ketones suggests FA-oxidation failure",
+            "MCAD is autosomal recessive",
+            "Avoid fasting",
+            "Dicarboxylic acids reflect omega oxidation"
+          ],
+          "clinicalLinks": [
+            "MCAD deficiency",
+            "Carnitine deficiency",
+            "Sudden decompensation during illness"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16, oxidation disorders (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch16-bank-098-v1",
+            "lippincott-ch16-bank-111-v1",
+            "lippincott-ch16-bank-113-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-17",
+      "concepts": [
+        {
+          "id": "ch17-phospholipids-signaling",
+          "title": "Phospholipid structure, membranes, and PIP2 signaling",
+          "priority": "exam-core",
+          "rationale": "The Lipid Structure teacher deck explicitly covers complex lipids; membrane organization and phosphoinositide signaling are the central transferable concepts.",
+          "summary": "Phospholipids are amphipathic molecules that form membrane bilayers and also serve as reservoirs for signaling molecules. Receptor-activated phospholipase C cleaves PIP2 to IP3 and DAG. IP3 releases ER Ca2+, while DAG activates protein kinase C.",
+          "keyPoints": [
+            "Polar head and hydrophobic tails",
+            "Phospholipids form bilayers",
+            "PLC cleaves PIP2",
+            "IP3 raises cytosolic Ca2+",
+            "DAG activates PKC"
+          ],
+          "clinicalLinks": [
+            "Signal-transduction disorders",
+            "GPI-anchor deficiency in PNH"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — 96-page teacher deck, phospholipid section (teacher-confirmed).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 17 (mechanism cross-check).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch17-bank-001-v1",
+            "lippincott-ch17-bank-056-v1",
+            "lippincott-ch17-bank-057-v1"
+          ]
+        },
+        {
+          "id": "ch17-surfactant",
+          "title": "DPPC, pulmonary surfactant, and neonatal respiratory distress",
+          "priority": "exam-core",
+          "rationale": "Pulmonary surfactant is a clinically important function of phosphatidylcholine and appears directly in the complex-lipid source bank.",
+          "summary": "Type II pneumocytes secrete surfactant rich in dipalmitoyl phosphatidylcholine, which lowers alveolar surface tension and prevents collapse at end-expiration. Production rises late in gestation. Prematurity can therefore cause neonatal respiratory distress syndrome, treated or prevented with antenatal glucocorticoids and exogenous surfactant as appropriate.",
+          "keyPoints": [
+            "DPPC is the major surface-active phospholipid",
+            "Made by type II pneumocytes",
+            "Reduces surface tension",
+            "Deficiency causes neonatal RDS"
+          ],
+          "clinicalLinks": [
+            "Prematurity",
+            "Neonatal respiratory distress syndrome"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 17, surfactant (confirmed August 25 scope in tracked bank).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch17-bank-040-v1",
+            "lippincott-ch17-bank-041-v1",
+            "lippincott-ch17-bank-043-v1"
+          ]
+        },
+        {
+          "id": "ch17-sphingolipids",
+          "title": "Sphingolipid architecture and sphingolipidoses",
+          "priority": "exam-core",
+          "rationale": "The teacher lipid-structure deck covers sphingolipids, and the tracked August 25 bank explicitly marks the major storage diseases as confirmed scope.",
+          "summary": "Ceramide is the core of sphingomyelin and glycosphingolipids. Lysosomal hydrolase defects cause substrate-specific accumulation: hexosaminidase A deficiency causes Tay-Sachs, sphingomyelinase deficiency causes Niemann-Pick A/B, and glucocerebrosidase deficiency causes Gaucher disease. Clinical pattern recognition should be linked to the accumulated lipid and missing enzyme rather than memorized as isolated names.",
+          "keyPoints": [
+            "Ceramide is the common sphingolipid core",
+            "Tay-Sachs: GM2 and hexosaminidase A",
+            "Niemann-Pick A/B: sphingomyelinase",
+            "Gaucher: glucocerebrosidase"
+          ],
+          "clinicalLinks": [
+            "Cherry-red macula",
+            "Hepatosplenomegaly",
+            "Neurodegeneration"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — sphingolipid section (teacher-confirmed class).",
+            "Tracked comprehensive bank — Chapter 17, PDF pp. 374-405 (marked confirmed August 25 scope).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-016-v1",
+            "july29-comprehensive-092-v1",
+            "july29-comprehensive-094-v1"
+          ]
+        },
+        {
+          "id": "ch17-eicosanoids-cox",
+          "title": "Arachidonic acid, cyclooxygenase products, and NSAIDs",
+          "priority": "exam-core",
+          "rationale": "Eicosanoid synthesis is a high-value bridge between membrane lipids, inflammation, platelets, and common drugs.",
+          "summary": "Phospholipase A2 releases arachidonic acid from membrane phospholipids. Cyclooxygenases convert it toward prostaglandins, prostacyclin, and thromboxanes; NSAIDs inhibit COX and therefore reduce these mediators. Glucocorticoids act further upstream by inducing lipocortin and reducing phospholipase-A2-mediated release.",
+          "keyPoints": [
+            "Arachidonate is stored in membrane phospholipids",
+            "COX produces prostanoid precursors",
+            "NSAIDs inhibit COX",
+            "Glucocorticoids reduce arachidonate release"
+          ],
+          "clinicalLinks": [
+            "Pain and inflammation",
+            "Aspirin antiplatelet effect",
+            "Gastric and renal NSAID toxicity"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 17, eicosanoids (confirmed August 25 scope in tracked bank).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch17-bank-117-v1",
+            "lippincott-ch17-bank-126-v1",
+            "july29-comprehensive-096-v1"
+          ]
+        },
+        {
+          "id": "ch17-leukotrienes",
+          "title": "Lipoxygenase, leukotrienes, and aspirin-exacerbated asthma",
+          "priority": "exam-core",
+          "rationale": "This is the clinically essential contrast to the COX branch without requiring exhaustive mediator memorization.",
+          "summary": "The 5-lipoxygenase pathway converts arachidonic acid into leukotrienes. Cysteinyl leukotrienes promote bronchoconstriction, mucus production, and vascular permeability. COX inhibition does not block this branch and can divert substrate toward leukotrienes, contributing to aspirin-exacerbated respiratory disease.",
+          "keyPoints": [
+            "5-LOX produces leukotrienes",
+            "Leukotrienes are not blocked by NSAIDs",
+            "Cysteinyl leukotrienes constrict bronchi",
+            "Montelukast blocks their receptor"
+          ],
+          "clinicalLinks": [
+            "Asthma",
+            "Aspirin-exacerbated respiratory disease"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 17, leukotrienes (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch17-bank-130-v1",
+            "lippincott-ch17-bank-132-v1",
+            "lippincott-ch17-bank-133-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-18",
+      "concepts": [
+        {
+          "id": "ch18-cholesterol-synthesis",
+          "title": "Cholesterol synthesis, HMG-CoA reductase, and statins",
+          "priority": "exam-core",
+          "rationale": "Cholesterol is covered in the teacher lipid material, and regulation of HMG-CoA reductase is medically indispensable.",
+          "summary": "Cytosolic/ER HMG-CoA reductase converts HMG-CoA to mevalonate using NADPH and is the rate-limiting step of cholesterol synthesis. Insulin and low sterol favor activity, whereas glucagon, AMPK phosphorylation, high sterol, and enzyme degradation reduce it. Statins competitively inhibit the enzyme and increase hepatic LDL-receptor expression, lowering plasma LDL.",
+          "keyPoints": [
+            "HMG-CoA reductase is rate limiting",
+            "Uses NADPH",
+            "AMPK phosphorylation inhibits it",
+            "Statins increase hepatic LDL clearance"
+          ],
+          "clinicalLinks": [
+            "Hypercholesterolemia",
+            "Statin therapy",
+            "Atherosclerotic cardiovascular disease"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — cholesterol/lipoprotein sections (teacher-confirmed class).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 18 (regulatory cross-check).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch18-bank-027-v1",
+            "lippincott-ch18-bank-044-v1",
+            "july29-comprehensive-102-v1"
+          ]
+        },
+        {
+          "id": "ch18-bile-acids-elimination",
+          "title": "Bile-acid synthesis and cholesterol elimination",
+          "priority": "exam-core",
+          "rationale": "This is the major route for net loss of the cholesterol nucleus and links hepatic metabolism to lipid absorption.",
+          "summary": "Humans cannot fully oxidize the steroid nucleus, so cholesterol leaves mainly in bile as cholesterol or bile acids. Cholesterol 7-alpha-hydroxylase is rate limiting for bile-acid synthesis. Conjugation with glycine or taurine makes amphipathic bile salts that emulsify dietary lipid and undergo enterohepatic recycling.",
+          "keyPoints": [
+            "Biliary secretion is the net elimination route",
+            "7-alpha-hydroxylase is rate limiting",
+            "Bile salts are amphipathic",
+            "Most bile salts are recycled"
+          ],
+          "clinicalLinks": [
+            "Cholestasis",
+            "Bile-acid sequestrants",
+            "Gallstones"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 18, bile acids (textbook-confirmed; teacher emphasis uncertain).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-103-v1",
+            "july29-comprehensive-104-v1",
+            "lippincott-ch18-bank-061-v1"
+          ]
+        },
+        {
+          "id": "ch18-apo-lipoprotein-map",
+          "title": "Lipoprotein pathways and apolipoprotein map",
+          "priority": "exam-core",
+          "rationale": "The teacher lipid-structure deck explicitly includes lipoproteins, making particle source, cargo, and apolipoprotein function exam-core.",
+          "summary": "Chylomicrons carry dietary TAG with apoB-48; VLDL carries hepatic TAG with apoB-100 and becomes IDL then LDL. ApoC-II activates LPL, apoE mediates remnant uptake, apoB-100 binds the LDL receptor, and apoA-I activates LCAT on HDL. HDL also supplies apoC-II and apoE to nascent TAG-rich particles.",
+          "keyPoints": [
+            "ApoB-48: chylomicron structure",
+            "ApoB-100: VLDL/LDL structure and LDL-receptor ligand",
+            "ApoC-II activates LPL",
+            "ApoE clears remnants",
+            "ApoA-I activates LCAT"
+          ],
+          "clinicalLinks": [
+            "Familial chylomicronemia",
+            "Dysbetalipoproteinemia",
+            "Familial hypercholesterolemia"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — 96-page deck, lipoprotein section (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-105-v1",
+            "july29-comprehensive-106-v1",
+            "july29-comprehensive-115-v1"
+          ]
+        },
+        {
+          "id": "ch18-ldl-atherosclerosis",
+          "title": "LDL-receptor uptake and atherosclerotic foam cells",
+          "priority": "exam-core",
+          "rationale": "This is the central clinical consequence of lipoprotein metabolism and a common exam presentation.",
+          "summary": "LDL delivers cholesterol through apoB-100 binding to the LDL receptor and receptor-mediated endocytosis. LDL-receptor loss, defective apoB-100 binding, or gain-of-function PCSK9 variants can cause severe familial hypercholesterolemia. Macrophage scavenger receptors take up oxidized LDL without normal cholesterol feedback, creating foam cells and promoting atherosclerotic plaques.",
+          "keyPoints": [
+            "LDL receptor recognizes apoB-100",
+            "Receptors recycle after endosomal release",
+            "Familial hypercholesterolemia causes early ASCVD",
+            "Scavenger receptors are not normally downregulated by cholesterol"
+          ],
+          "clinicalLinks": [
+            "Tendon xanthomas",
+            "Premature coronary disease",
+            "PCSK9-targeted therapy"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — lipoprotein section (teacher-confirmed).",
+            "Tracked comprehensive bank — Chapter 18 (marked confirmed August 25 scope).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch18-bank-133-v1",
+            "july29-comprehensive-113-v1",
+            "july29-comprehensive-116-v1"
+          ]
+        },
+        {
+          "id": "ch18-hdl-reverse-transport",
+          "title": "HDL maturation and reverse cholesterol transport",
+          "priority": "exam-core",
+          "rationale": "The HDL pathway consolidates apoA-I, ABCA1, LCAT, CETP, and SR-B1 into one clinically coherent concept.",
+          "summary": "Lipid-poor apoA-I accepts cellular cholesterol through ABCA1 to form nascent HDL. LCAT esterifies surface cholesterol, allowing cholesteryl ester to enter the HDL core; HDL returns it directly to liver through SR-B1 or transfers it to apoB particles through CETP. ABCA1 deficiency causes Tangier disease with nearly absent HDL.",
+          "keyPoints": [
+            "ABCA1 loads cholesterol onto apoA-I",
+            "LCAT esterifies HDL cholesterol",
+            "SR-B1 supports selective hepatic uptake",
+            "CETP exchanges HDL cholesteryl ester for TAG"
+          ],
+          "clinicalLinks": [
+            "Tangier disease",
+            "Reverse cholesterol transport"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — lipoprotein section (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-108-v1",
+            "july29-comprehensive-109-v1",
+            "july29-comprehensive-119-v1"
+          ]
+        },
+        {
+          "id": "ch18-steroidogenesis",
+          "title": "Cholesterol as steroid precursor and acute StAR control",
+          "priority": "exam-core",
+          "rationale": "This is medically important endocrine biochemistry, but the audited teacher lipid decks do not clearly confirm full steroidogenic pathways for this exam.",
+          "summary": "All steroid hormones derive from cholesterol. The acute regulated step is StAR-mediated movement of cholesterol into the inner mitochondrial membrane, where CYP11A1 converts it to pregnenolone. Tissue-specific hydroxylases then generate glucocorticoids, mineralocorticoids, and sex steroids, which act mainly through intracellular nuclear receptors.",
+          "keyPoints": [
+            "Cholesterol is the common precursor",
+            "StAR controls mitochondrial entry",
+            "CYP11A1 makes pregnenolone",
+            "Steroid receptors regulate transcription"
+          ],
+          "clinicalLinks": [
+            "Congenital adrenal hyperplasia",
+            "Lipoid adrenal hyperplasia",
+            "Aromatase-inhibitor therapy"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 18, steroid hormones (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-117-v1",
+            "july29-comprehensive-118-v1",
+            "lippincott-ch18-bank-203-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-23",
+      "concepts": [
+        {
+          "id": "ch23-insulin-synthesis-secretion",
+          "title": "Insulin biosynthesis and glucose-stimulated secretion",
+          "priority": "exam-core",
+          "rationale": "Essential endocrine physiology with strong tracked-bank coverage, but no dedicated local Chapter 23 teacher deck was located.",
+          "summary": "Preproinsulin becomes proinsulin and then insulin plus C-peptide in secretory granules. Beta-cell glucose metabolism raises ATP, closes ATP-sensitive K+ channels, depolarizes the membrane, and opens voltage-gated Ca2+ channels to trigger exocytosis. Endogenous insulin secretion releases equimolar C-peptide, unlike injected insulin.",
+          "keyPoints": [
+            "Preproinsulin to proinsulin to insulin plus C-peptide",
+            "ATP closes KATP channels",
+            "Ca2+ triggers granule release",
+            "C-peptide marks endogenous secretion"
+          ],
+          "clinicalLinks": [
+            "Insulinoma",
+            "Sulfonylurea action",
+            "Distinguishing injected insulin"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 23 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-121-v1",
+            "july29-comprehensive-122-v1",
+            "july29-comprehensive-123-v1"
+          ]
+        },
+        {
+          "id": "ch23-insulin-action",
+          "title": "Insulin receptor signaling and metabolic effects",
+          "priority": "exam-core",
+          "rationale": "This explains the coordinated fed-state response rather than reducing insulin to glucose uptake alone.",
+          "summary": "The insulin receptor is a receptor tyrosine kinase that signals through IRS proteins, PI3K, and Akt. Insulin recruits GLUT4 to skeletal-muscle and adipose membranes and promotes glycogen, lipid, and protein synthesis while suppressing gluconeogenesis and lipolysis. Liver uses GLUT2 rather than insulin-recruited GLUT4, but insulin still changes hepatic enzyme activity and gene expression.",
+          "keyPoints": [
+            "Insulin receptor is a receptor tyrosine kinase",
+            "GLUT4 is in muscle and adipose tissue",
+            "Insulin promotes storage and synthesis",
+            "Insulin suppresses hepatic glucose output"
+          ],
+          "clinicalLinks": [
+            "Insulin resistance",
+            "Type 2 diabetes"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 23 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-125-v1",
+            "july29-comprehensive-126-v1",
+            "july29-comprehensive-128-v1"
+          ]
+        },
+        {
+          "id": "ch23-glucagon-counterregulation",
+          "title": "Glucagon signaling and counterregulatory hormones",
+          "priority": "exam-core",
+          "rationale": "The insulin-glucagon ratio is the main endocrine switch for fed versus fasting metabolism.",
+          "summary": "Glucagon binds a hepatic Gs-coupled receptor, raises cAMP, and activates PKA to promote glycogenolysis and gluconeogenesis while suppressing glycolysis. Skeletal muscle lacks a meaningful glucagon response and mobilizes glycogen mainly through epinephrine and contraction signals. Glucagon and epinephrine provide rapid defense against falling glucose, with cortisol and growth hormone acting more slowly.",
+          "keyPoints": [
+            "Glucagon uses Gs-cAMP-PKA",
+            "Primary target is liver",
+            "No direct glucagon-driven muscle glycogenolysis",
+            "Counterregulation protects against hypoglycemia"
+          ],
+          "clinicalLinks": [
+            "Glucagon rescue for severe hypoglycemia",
+            "Fasting response"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 23 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-129-v1",
+            "july29-comprehensive-130-v1",
+            "july29-comprehensive-132-v1"
+          ]
+        },
+        {
+          "id": "ch23-hypoglycemia-recognition-and-diagnosis",
+          "title": "Hypoglycemia recognition, mechanism, and biochemical diagnosis",
+          "priority": "exam-core",
+          "rationale": "The active August 25 scope explicitly includes hypoglycemia, and a physician must distinguish autonomic warning symptoms from neuroglycopenia while using the insulin–C-peptide pattern to identify endogenous insulin secretion.",
+          "summary": "Falling plasma glucose first triggers counterregulatory hormones and autonomic symptoms such as tremor, palpitations, anxiety, and sweating; more severe or prolonged deficiency deprives the brain of fuel and causes confusion, abnormal behavior, seizures, or coma. Ethanol can cause fasting hypoglycemia because its high NADH state diverts pyruvate to lactate and oxaloacetate to malate, limiting gluconeogenesis. During hypoglycemia, high insulin with high C-peptide supports endogenous secretion, whereas injected insulin raises insulin but suppresses C-peptide.",
+          "keyPoints": [
+            "Autonomic symptoms are early warning signs",
+            "Neuroglycopenia causes confusion, seizures, and coma",
+            "Ethanol inhibits gluconeogenesis through a high-NADH redox shift",
+            "C-peptide distinguishes endogenous from injected insulin",
+            "Interpret insulin and C-peptide only in the context of documented low glucose"
+          ],
+          "clinicalLinks": [
+            "Insulinoma versus exogenous-insulin exposure",
+            "Alcohol-associated fasting hypoglycemia",
+            "Urgent recognition of neuroglycopenia"
+          ],
+          "sourceEvidence": [
+            "exam-scope.md (updated 2026-08-20): the active August 25 scope explicitly includes insulin, glucagon, and hypoglycemia.",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e, Chapter 23, hypoglycemia mechanisms and evaluation."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-133-v1",
+            "july29-comprehensive-135-v1",
+            "july29-comprehensive-136-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-24",
+      "concepts": [
+        {
+          "id": "ch24-fed-state",
+          "title": "Absorptive-state metabolism by organ",
+          "priority": "exam-core",
+          "rationale": "This is the core integrative map for postprandial biochemistry, although no local dedicated Chapter 24 teacher deck was found.",
+          "summary": "After a carbohydrate-containing meal, high insulin and low glucagon promote hepatic glycolysis, glycogen synthesis, fatty-acid synthesis, and TAG export. Adipose tissue increases GLUT4-mediated glucose uptake and TAG storage, while muscle takes up glucose and amino acids for glycogen and protein synthesis. Brain primarily uses glucose, and RBCs always rely on glycolysis.",
+          "keyPoints": [
+            "High insulin-to-glucagon ratio",
+            "Liver stores glucose and makes lipid",
+            "Adipose stores TAG",
+            "Muscle makes glycogen and protein",
+            "RBCs remain glycolytic"
+          ],
+          "clinicalLinks": [
+            "Postprandial hyperglycemia",
+            "Insulin action"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 24 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-137-v1",
+            "july29-comprehensive-140-v1",
+            "july29-comprehensive-142-v1"
+          ]
+        },
+        {
+          "id": "ch24-early-fasting",
+          "title": "Early fasting: glycogenolysis and gluconeogenesis",
+          "priority": "exam-core",
+          "rationale": "The timing and changing source of blood glucose are essential to interpreting fasting physiology.",
+          "summary": "In early fasting, lower insulin and higher glucagon cause hepatic glycogenolysis to maintain blood glucose. As hepatic glycogen wanes, gluconeogenesis from lactate, glycerol, and glucogenic amino acids becomes dominant. Adipose lipolysis supplies fatty acids for tissue and hepatic energy plus glycerol for glucose synthesis.",
+          "keyPoints": [
+            "Glycogenolysis dominates first",
+            "Gluconeogenesis rises with fasting duration",
+            "Lipolysis supplies fatty acids and glycerol",
+            "Liver preserves glucose for dependent tissues"
+          ],
+          "clinicalLinks": [
+            "Fasting hypoglycemia",
+            "Alcohol-associated impaired gluconeogenesis"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 24 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-145-v1",
+            "july29-comprehensive-146-v1",
+            "july29-comprehensive-147-v1"
+          ]
+        },
+        {
+          "id": "ch24-prolonged-fasting",
+          "title": "Prolonged fasting and protein-sparing ketone adaptation",
+          "priority": "exam-core",
+          "rationale": "This explains why starvation is not simply prolonged early fasting.",
+          "summary": "With prolonged fasting, hepatic ketone production rises and the brain increasingly oxidizes ketones. This reduces the brain's glucose demand and therefore decreases the amount of amino acid that must be sacrificed for gluconeogenesis. RBCs still require glucose and produce lactate because they lack mitochondria.",
+          "keyPoints": [
+            "Brain progressively uses ketones",
+            "Ketones spare muscle protein",
+            "RBCs cannot use ketones",
+            "Liver makes but does not consume ketones"
+          ],
+          "clinicalLinks": [
+            "Starvation",
+            "Ketogenic adaptation"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 24 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-151-v1",
+            "july29-comprehensive-152-v1"
+          ]
+        },
+        {
+          "id": "ch24-tissue-fuel-exceptions",
+          "title": "Tissue-specific fuel constraints",
+          "priority": "exam-core",
+          "rationale": "The exceptions—RBC, liver, brain, muscle, and adipose—are the fastest way to reason through integrated metabolism questions.",
+          "summary": "RBCs lack mitochondria and need glucose for glycolysis. Liver can oxidize fatty acids and make ketones but cannot use ketones because it lacks thiophorase; muscle uses fatty acids and ketones according to state. Brain normally relies on glucose but uses substantial ketones during prolonged fasting, while long-chain fatty acids do not cross the blood-brain barrier efficiently.",
+          "keyPoints": [
+            "RBC: glucose only for ATP",
+            "Liver: produces ketones",
+            "Brain: glucose, then more ketones in fasting",
+            "Muscle: flexible fuel use"
+          ],
+          "clinicalLinks": [
+            "Hypoglycemic neurologic symptoms",
+            "Ketoacidosis"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 24 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-143-v1",
+            "july29-comprehensive-144-v1",
+            "july29-comprehensive-150-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-25",
+      "concepts": [
+        {
+          "id": "ch25-diabetes-pathophysiology",
+          "title": "Type 1 versus type 2 diabetes pathophysiology",
+          "priority": "exam-core",
+          "rationale": "Diabetes is indispensable medical biochemistry, but no dedicated local teacher diabetes deck was located.",
+          "summary": "Type 1 diabetes results from autoimmune beta-cell destruction and absolute insulin deficiency. Early type 2 diabetes combines insulin resistance with compensatory hyperinsulinemia, followed by progressive beta-cell failure. Both increase hepatic glucose output and impair peripheral glucose handling, but severe unopposed lipolysis and ketogenesis are characteristic of untreated type 1 disease.",
+          "keyPoints": [
+            "Type 1: absolute insulin deficiency",
+            "Type 2: insulin resistance plus beta-cell dysfunction",
+            "Both cause hyperglycemia",
+            "Type 1 has greater DKA risk"
+          ],
+          "clinicalLinks": [
+            "Autoimmune type 1 diabetes",
+            "Metabolic syndrome and type 2 diabetes"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 25 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-156-v1",
+            "july29-comprehensive-157-v1",
+            "july29-comprehensive-164-v1"
+          ]
+        },
+        {
+          "id": "ch25-diagnosis-monitoring",
+          "title": "Diagnosis and glycemic monitoring",
+          "priority": "exam-core",
+          "rationale": "Every physician must interpret fasting glucose and HbA1c, though thresholds should be checked against current clinical standards when used in practice.",
+          "summary": "Diabetes can be diagnosed with reproducibly elevated fasting plasma glucose, HbA1c, oral-glucose-tolerance values, or classic symptoms with a high random glucose. HbA1c reflects nonenzymatic glycation over the approximate lifespan of circulating RBCs and therefore represents roughly two to three months of glycemia. Altered RBC survival can make HbA1c misleading.",
+          "keyPoints": [
+            "Repeat abnormal testing when symptoms are absent",
+            "HbA1c reflects recent months",
+            "RBC lifespan affects HbA1c",
+            "Diagnosis and treatment targets are not identical"
+          ],
+          "clinicalLinks": [
+            "Diabetes screening",
+            "Hemoglobinopathy or hemolysis affecting HbA1c"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 25 (textbook/tracked-bank; current thresholds require guideline verification).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-158-v1",
+            "july29-comprehensive-159-v1",
+            "july29-comprehensive-160-v1"
+          ]
+        },
+        {
+          "id": "ch25-dka-hhs",
+          "title": "DKA versus hyperosmolar hyperglycemic state",
+          "priority": "exam-core",
+          "rationale": "This distinction is urgent clinical pattern recognition grounded in the biochemistry of insulin deficiency.",
+          "summary": "Severe insulin deficiency activates adipose lipolysis and hepatic ketogenesis, causing DKA with high-anion-gap metabolic acidosis. HHS typically retains enough insulin to restrain major ketogenesis but not enough to prevent profound hyperglycemia and osmotic diuresis. Both cause dehydration and require urgent fluid, electrolyte, and insulin management.",
+          "keyPoints": [
+            "DKA has significant ketonemia and acidosis",
+            "HHS has more extreme hyperosmolality",
+            "Osmotic diuresis drives dehydration",
+            "Potassium balance requires close monitoring"
+          ],
+          "clinicalLinks": [
+            "Diabetic ketoacidosis",
+            "Hyperosmolar hyperglycemic state"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 25 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-161-v1",
+            "july29-comprehensive-162-v1",
+            "july29-comprehensive-163-v1"
+          ]
+        },
+        {
+          "id": "ch25-chronic-complications",
+          "title": "Biochemical basis of chronic diabetic complications",
+          "priority": "exam-core",
+          "rationale": "Glycation and polyol-pathway injury connect persistent hyperglycemia to the organs physicians monitor.",
+          "summary": "Chronic hyperglycemia forms advanced glycation end products that cross-link matrix proteins, trap plasma proteins, and activate inflammatory receptors. Sorbitol accumulation and oxidative stress contribute in tissues with insulin-independent glucose uptake. These mechanisms participate in retinopathy, nephropathy, neuropathy, and accelerated atherosclerosis.",
+          "keyPoints": [
+            "AGEs alter proteins and vessels",
+            "Sorbitol creates osmotic stress",
+            "Microvascular disease affects retina, kidney, and nerves",
+            "Cardiovascular risk is increased"
+          ],
+          "clinicalLinks": [
+            "Diabetic retinopathy",
+            "Nephropathy",
+            "Neuropathy",
+            "Atherosclerotic disease"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 25 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-166-v1",
+            "july29-comprehensive-167-v1",
+            "july29-comprehensive-168-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-26",
+      "concepts": [
+        {
+          "id": "ch26-obesity-measures-risk",
+          "title": "Obesity measurement and metabolic risk",
+          "priority": "exam-core",
+          "rationale": "BMI and fat distribution are basic clinical screening concepts; no local Chapter 26 teacher deck was found.",
+          "summary": "BMI is weight in kilograms divided by height in meters squared and is a screening measure rather than a direct measure of adiposity. Visceral/upper-body fat is more strongly associated with insulin resistance, dyslipidemia, fatty liver, and cardiovascular disease than gluteofemoral fat. Waist measures therefore add risk information beyond BMI.",
+          "keyPoints": [
+            "BMI = kg/m2",
+            "BMI 30 or greater conventionally indicates obesity",
+            "Visceral fat carries higher metabolic risk",
+            "Interpret BMI in clinical context"
+          ],
+          "clinicalLinks": [
+            "Metabolic syndrome",
+            "NAFLD",
+            "Cardiovascular risk"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 26 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-170-v1",
+            "july29-comprehensive-171-v1",
+            "july29-comprehensive-172-v1"
+          ]
+        },
+        {
+          "id": "ch26-appetite-hormones",
+          "title": "Leptin, ghrelin, and hypothalamic appetite circuits",
+          "priority": "exam-core",
+          "rationale": "These signals explain energy-homeostasis feedback and why common obesity usually is not simple leptin deficiency.",
+          "summary": "Leptin from adipose tissue signals energy stores and normally suppresses orexigenic NPY/AgRP neurons while favoring anorexigenic pathways. Ghrelin rises before meals and stimulates appetite. Common obesity usually features high leptin with central leptin resistance, while weight loss lowers leptin and increases hunger signals.",
+          "keyPoints": [
+            "Leptin reflects adipose stores",
+            "Common obesity has leptin resistance",
+            "Ghrelin stimulates appetite",
+            "NPY/AgRP neurons are orexigenic"
+          ],
+          "clinicalLinks": [
+            "Adaptive hunger after weight loss",
+            "Rare congenital leptin deficiency"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 26 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-173-v1",
+            "july29-comprehensive-174-v1",
+            "july29-comprehensive-176-v1"
+          ]
+        },
+        {
+          "id": "ch26-adipose-endocrine-organ",
+          "title": "Adipose inflammation, adiponectin, and insulin resistance",
+          "priority": "exam-core",
+          "rationale": "Treating adipose as an endocrine organ explains obesity-related systemic disease better than energy storage alone.",
+          "summary": "Expanded visceral adipose tissue releases excess fatty acids and proinflammatory cytokines and recruits immune cells. Adiponectin, which normally supports insulin sensitivity and fatty-acid oxidation, generally falls in obesity. These changes promote hepatic and muscle insulin resistance and contribute to type 2 diabetes.",
+          "keyPoints": [
+            "Adipose tissue secretes adipokines",
+            "Adiponectin falls in obesity",
+            "Inflammation promotes insulin resistance",
+            "Free-fatty-acid flux worsens ectopic lipid storage"
+          ],
+          "clinicalLinks": [
+            "Type 2 diabetes",
+            "NAFLD",
+            "Metabolic syndrome"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 26 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-175-v1",
+            "july29-comprehensive-179-v1",
+            "july29-comprehensive-181-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-27",
+      "concepts": [
+        {
+          "id": "ch27-dietary-reference-intakes",
+          "title": "EAR, RDA, AI, and tolerable upper intake level",
+          "priority": "exam-core",
+          "rationale": "These terms prevent incorrect interpretation of nutrition recommendations, but no dedicated local Chapter 27 teacher lecture was located.",
+          "summary": "The EAR estimates the intake meeting the needs of half a defined healthy group, while the RDA is set higher to cover nearly all. AI is used when evidence is insufficient to establish an EAR and RDA. The tolerable upper intake level estimates the highest chronic intake unlikely to create adverse effects and is not a recommended target.",
+          "keyPoints": [
+            "EAR covers about half of a group",
+            "RDA covers nearly all healthy individuals",
+            "AI substitutes when evidence is insufficient",
+            "UL addresses toxicity risk"
+          ],
+          "clinicalLinks": [
+            "Dietary counseling",
+            "Supplement toxicity"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 27 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-182-v1",
+            "july29-comprehensive-183-v1",
+            "july29-comprehensive-184-v1"
+          ]
+        },
+        {
+          "id": "ch27-energy-macronutrients",
+          "title": "Energy density and total energy expenditure",
+          "priority": "exam-core",
+          "rationale": "This is the minimal quantitative framework for nutrition assessment.",
+          "summary": "Carbohydrate and protein provide about 4 kcal/g, fat about 9 kcal/g, and ethanol about 7 kcal/g. Resting/basal expenditure is usually the largest component of daily energy use in sedentary adults. Physical activity is the most variable component, and protein has the greatest thermic effect of feeding.",
+          "keyPoints": [
+            "Fat: 9 kcal/g",
+            "Alcohol: 7 kcal/g",
+            "Carbohydrate/protein: 4 kcal/g",
+            "Basal metabolism is usually the largest component",
+            "Protein has high thermic effect"
+          ],
+          "clinicalLinks": [
+            "Weight-management counseling",
+            "Nutrition support calculations"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 27 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-185-v1",
+            "july29-comprehensive-187-v1",
+            "july29-comprehensive-188-v1"
+          ]
+        },
+        {
+          "id": "ch27-essential-nutrients-nitrogen",
+          "title": "Essential fatty acids, limiting amino acids, and nitrogen balance",
+          "priority": "exam-core",
+          "rationale": "These concepts identify what diet must supply and how protein adequacy is assessed.",
+          "summary": "Linoleic acid and alpha-linolenic acid are the parent essential fatty acids because humans cannot introduce double bonds beyond carbon 9. A limiting amino acid is the essential amino acid present in the lowest amount relative to need. Positive nitrogen balance occurs in growth, pregnancy, or recovery, whereas illness, trauma, or inadequate protein can produce negative balance.",
+          "keyPoints": [
+            "Linoleic acid is omega-6",
+            "Alpha-linolenic acid is omega-3",
+            "Essential amino acids must come from diet",
+            "Nitrogen balance reflects protein gain or loss"
+          ],
+          "clinicalLinks": [
+            "Growth and pregnancy",
+            "Catabolic illness",
+            "Essential-fatty-acid deficiency"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 27 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-193-v1",
+            "july29-comprehensive-196-v1",
+            "july29-comprehensive-197-v1"
+          ]
+        },
+        {
+          "id": "ch27-protein-energy-malnutrition",
+          "title": "Kwashiorkor versus marasmus",
+          "priority": "exam-core",
+          "rationale": "This is the key clinical pattern distinction for severe protein-energy malnutrition.",
+          "summary": "Kwashiorkor features disproportionate protein deficiency with edema, fatty liver, skin/hair changes, and low albumin. Marasmus reflects severe total energy deficiency with marked wasting of muscle and subcutaneous fat but usually no prominent edema. Mixed phenotypes occur, so real patients require full nutritional and medical assessment.",
+          "keyPoints": [
+            "Kwashiorkor: edema and fatty liver",
+            "Marasmus: severe wasting",
+            "Low albumin contributes to edema",
+            "Infection commonly complicates both"
+          ],
+          "clinicalLinks": [
+            "Childhood malnutrition",
+            "Refeeding risk"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 27 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-198-v1",
+            "july29-comprehensive-199-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-28",
+      "concepts": [
+        {
+          "id": "ch28-vitamin-framework",
+          "title": "Vitamin solubility, coenzymes, storage, and toxicity",
+          "priority": "exam-core",
+          "rationale": "The 70-page Vitamin 2024 teacher deck explicitly covers classification, coenzymes, absorption, deficiency, and toxicity.",
+          "summary": "Most B vitamins act as coenzyme precursors, whereas vitamins A and D also have hormone-like transcriptional roles. Water-soluble vitamins generally have limited storage and faster deficiency, with B12 as a major exception. Fat-soluble vitamins require normal lipid absorption, are stored more readily, and therefore have greater potential for accumulation and toxicity.",
+          "keyPoints": [
+            "B and C are water soluble",
+            "A, D, E, and K are fat soluble",
+            "Coenzymes may be loosely or tightly bound",
+            "Fat malabsorption threatens A/D/E/K",
+            "Storage increases toxicity potential"
+          ],
+          "clinicalLinks": [
+            "Cholestatic vitamin deficiency",
+            "Supplement toxicity"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024, TUMS Clinical Biochemistry — pp. 4-12 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-077-v1",
+            "bio-teacher-079-v1",
+            "bio-teacher-104-v1"
+          ]
+        },
+        {
+          "id": "ch28-thiamine",
+          "title": "Thiamine (B1): TPP reactions and neurologic deficiency",
+          "priority": "exam-core",
+          "rationale": "The teacher deck emphasizes active forms, metabolic pathways, and clinical deficiency syndromes.",
+          "summary": "Thiamine pyrophosphate supports oxidative decarboxylation by PDH, alpha-ketoglutarate dehydrogenase, and branched-chain alpha-ketoacid dehydrogenase, plus transketolase reactions. Deficiency impairs glucose oxidation and can raise lactate. Wernicke encephalopathy presents with confusion, ataxia, and ocular abnormalities and requires thiamine before glucose in an at-risk patient.",
+          "keyPoints": [
+            "Active form is TPP",
+            "Required by three major dehydrogenase complexes",
+            "Required by transketolase",
+            "Deficiency causes Wernicke-Korsakoff and beriberi"
+          ],
+          "clinicalLinks": [
+            "Alcohol-use disorder",
+            "Refeeding",
+            "Lactic acidosis"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — water-soluble vitamin section, pp. 13-45 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-080-v1",
+            "bio-teacher-081-v1",
+            "bio-teacher-082-v1"
+          ]
+        },
+        {
+          "id": "ch28-riboflavin-niacin",
+          "title": "Riboflavin (B2) and niacin (B3) in redox metabolism",
+          "priority": "exam-core",
+          "rationale": "These are the principal flavin and nicotinamide electron carriers used throughout metabolism.",
+          "summary": "Riboflavin forms FMN and FAD, tightly associated redox cofactors in dehydrogenases and the respiratory chain. Niacin forms NAD+ and NADP+; NADH is used mainly for ATP-generating oxidation, while NADPH supports reductive synthesis and antioxidant defense. Niacin deficiency causes pellagra with dermatitis, diarrhea, and dementia.",
+          "keyPoints": [
+            "B2 gives FMN and FAD",
+            "B3 gives NAD and NADP",
+            "NADH favors energy production",
+            "NADPH favors reductive work",
+            "Pellagra is niacin deficiency"
+          ],
+          "clinicalLinks": [
+            "Pellagra",
+            "Hartnup disease",
+            "Carcinoid-associated niacin depletion"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — water-soluble vitamin section, pp. 13-45 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-083-v1",
+            "bio-teacher-087-v1",
+            "bio-teacher-088-v1"
+          ]
+        },
+        {
+          "id": "ch28-b5-b6-biotin",
+          "title": "Pantothenate, pyridoxine, and biotin reaction patterns",
+          "priority": "exam-core",
+          "rationale": "Grouping these by reaction class reduces memorization while preserving clinically important drug and deficiency links.",
+          "summary": "Pantothenate is part of CoA and acyl-carrier protein, supporting acyl-group transfer. Pyridoxal phosphate from B6 supports amino-acid transamination and decarboxylation and glycogen phosphorylase; isoniazid can cause functional B6 deficiency. Biotin carries CO2 in carboxylase reactions, and avidin in raw egg white can impair its absorption.",
+          "keyPoints": [
+            "B5 supports acyl transfer",
+            "PLP supports amino-acid reactions",
+            "Isoniazid can cause B6 deficiency",
+            "Biotin supports carboxylation",
+            "Avidin binds biotin"
+          ],
+          "clinicalLinks": [
+            "Isoniazid neuropathy prevention",
+            "Multiple carboxylase deficiency"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — water-soluble vitamin section, pp. 13-45 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-090-v1",
+            "bio-teacher-092-v1",
+            "bio-teacher-095-v1"
+          ]
+        },
+        {
+          "id": "ch28-folate-b12",
+          "title": "Folate and B12 one-carbon metabolism",
+          "priority": "exam-core",
+          "rationale": "The teacher deck highlights folate pathways and B12 absorption/metabolism, including the clinically crucial neurologic distinction.",
+          "summary": "Tetrahydrofolate transfers one-carbon units for nucleotide synthesis, while B12 is needed for methionine synthase and methylmalonyl-CoA mutase. Both deficiencies cause megaloblastic anemia and elevated homocysteine, but only B12 deficiency raises methylmalonic acid and causes characteristic neurologic injury. B12 absorption requires gastric intrinsic factor and terminal ileum.",
+          "keyPoints": [
+            "Folate supports nucleotide synthesis",
+            "B12 requires intrinsic factor",
+            "Both can cause megaloblastic anemia",
+            "Neurologic deficits and methylmalonate favor B12 deficiency",
+            "Folate prevents neural-tube defects"
+          ],
+          "clinicalLinks": [
+            "Pernicious anemia",
+            "Neural-tube defects",
+            "Methotrexate therapy"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — folate p. 34; B12 pp. 37-39 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-098-v1",
+            "bio-teacher-099-v1",
+            "bio-teacher-101-v1"
+          ]
+        },
+        {
+          "id": "ch28-vitamins-a-d",
+          "title": "Vitamins A and D: vision, transcription, and calcium balance",
+          "priority": "exam-core",
+          "rationale": "The fat-soluble teacher section explicitly covers transport, activation pathways, function, deficiency, and toxicity for A and D.",
+          "summary": "Retinal participates in the visual cycle and retinoic acid regulates transcription through nuclear receptors; vitamin-A deficiency causes night blindness and may progress to xerophthalmia. Vitamin D3 is made in skin, 25-hydroxylated in liver, and 1-alpha-hydroxylated in kidney to calcitriol. Calcitriol supports calcium/phosphate balance and bone mineralization; deficiency causes rickets/osteomalacia and excess causes hypercalcemia.",
+          "keyPoints": [
+            "11-cis-retinal supports vision",
+            "Retinoic acid controls transcription",
+            "Vitamin D activation uses skin, liver, kidney",
+            "Calcitriol increases calcium/phosphate availability",
+            "A and D can be toxic in excess"
+          ],
+          "clinicalLinks": [
+            "Night blindness",
+            "Rickets and osteomalacia",
+            "Vitamin-D toxicity"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — vitamin A pp. 46-55; vitamin D pp. 56-63 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-105-v1",
+            "bio-teacher-111-v1",
+            "bio-teacher-114-v1"
+          ]
+        },
+        {
+          "id": "ch28-vitamins-e-k-c",
+          "title": "Vitamins E, K, and C: antioxidant, coagulation, and collagen roles",
+          "priority": "exam-core",
+          "rationale": "These functions and deficiency patterns are directly covered in the teacher vitamin deck and are common clinical reasoning points.",
+          "summary": "Vitamin E is a lipid-phase antioxidant that protects membranes and RBCs from peroxidation; deficiency is most likely with fat malabsorption and can cause hemolysis or neurologic dysfunction. Vitamin K supports gamma-carboxylation of glutamate residues in clotting and bone proteins, and deficiency prolongs PT early because factor VII has a short half-life. Vitamin C supports collagen hydroxylation and iron absorption; deficiency causes scurvy with poor wound healing and bleeding.",
+          "keyPoints": [
+            "Vitamin E protects membranes",
+            "Vitamin K enables gamma-carboxylation",
+            "PT rises early in vitamin-K deficiency",
+            "Vitamin C supports collagen hydroxylation",
+            "Fat malabsorption threatens E and K"
+          ],
+          "clinicalLinks": [
+            "Hemolysis in vitamin-E deficiency",
+            "Warfarin mechanism",
+            "Scurvy"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — vitamin C pp. 40-45; vitamins E/K pp. 63-70 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-102-v1",
+            "bio-teacher-116-v1",
+            "bio-teacher-119-v1"
+          ]
+        }
+      ]
+    }
+  ]
+}

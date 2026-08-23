@@ -3,18 +3,22 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { biochemistryChapterIdForQuestion } from "../src/lib/biochemistry/chapter-mapping.mjs";
 import { parseFinalExamProgress, reconcileFinalExamSession } from "../src/lib/mcq/final-exam-state.mjs";
-import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
+import { classifySessionCompletion, selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 
-async function render() {
+async function fetchBuiltRoute(pathname, init) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${pathname}`, init),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
+}
+
+async function render() {
+  return fetchBuiltRoute("/", { headers: { accept: "text/html" } });
 }
 
 test("server-renders the MED//25 exam dashboard shell", async () => {
@@ -140,7 +144,9 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(page, /flaggedIds: flagged \? \[\.\.\.existing, questionId\] : existing/);
   assert.doesNotMatch(page, /cellbiology|Cell biology/);
   assert.match(page, /\/api\/questions\/sprint/);
-  assert.match(page, /80% unseen \/ 20% review/);
+  assert.match(page, /repair → unseen → mastered/);
+  assert.match(page, /visitedQuestionIds/);
+  assert.match(page, /untouched .* remain.* unseen and will return with priority/);
   assert.match(page, /historicalSeenIds/);
   assert.match(bridge, /coverageQuestionSet/);
   assert.match(bridge, /collectionQuestionIds/);
@@ -211,7 +217,7 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.doesNotMatch(bridge, /JULY_29_CELL_BIOLOGY_TOPICS/);
 });
 
-test("coverage-first sprints use 80 percent unseen and prioritize repair questions", () => {
+test("focused sprints exhaust repair before unseen and mastered questions", () => {
   const questions = Array.from({ length: 100 }, (_, index) => ({ id: `q-${index}` }));
   const seenIds = questions.slice(0, 40).map((question) => question.id);
   const repairIds = questions.slice(0, 8).map((question) => question.id);
@@ -220,15 +226,50 @@ test("coverage-first sprints use 80 percent unseen and prioritize repair questio
 
   assert.equal(selected.questions.length, 20);
   assert.equal(new Set(selectedIds).size, 20);
-  assert.equal(selected.unseenCount, 16);
-  assert.equal(selected.reviewCount, 4);
-  assert.equal(selectedIds.filter((id) => repairIds.includes(id)).length, 4);
+  assert.equal(selected.repairCount, 8);
+  assert.equal(selected.unseenCount, 12);
+  assert.equal(selected.reviewCount, 8);
+  assert.equal(selected.ordinaryReviewCount, 0);
+  assert.ok(selectedIds.slice(0, 8).every((id) => repairIds.includes(id)));
+  assert.ok(selectedIds.slice(8).every((id) => !seenIds.includes(id)));
+});
+
+test("a large repair queue fills a focused sprint before any unseen question", () => {
+  const questions = Array.from({ length: 100 }, (_, index) => ({ id: `q-${index}` }));
+  const repairIds = questions.slice(0, 30).map((question) => question.id);
+  const selected = selectCoverageSprint(questions, {
+    limit: 20,
+    seenIds: repairIds,
+    repairIds,
+    random: () => 0.5,
+  });
+
+  assert.equal(selected.repairCount, 20);
+  assert.equal(selected.unseenCount, 0);
+  assert.equal(selected.ordinaryReviewCount, 0);
+  assert.ok(selected.questions.every((question) => repairIds.includes(question.id)));
+});
+
+test("ending a 100-question session early leaves untouched questions unseen", () => {
+  const questionIds = Array.from({ length: 100 }, (_, index) => `q-${index}`);
+  const completion = classifySessionCompletion(questionIds, {
+    visitedIds: questionIds.slice(0, 6),
+    answeredIds: questionIds.slice(0, 5),
+    correctIds: questionIds.slice(0, 4),
+  });
+
+  assert.deepEqual(completion.seenIds, questionIds.slice(0, 6));
+  assert.deepEqual(completion.correctIds, questionIds.slice(0, 4));
+  assert.deepEqual(completion.repairIds, questionIds.slice(4, 6));
+  assert.deepEqual(completion.unansweredIds, [questionIds[5]]);
+  assert.deepEqual(completion.untouchedIds, questionIds.slice(6));
 });
 
 test("biochemistry chapter mode is source-traceable, scoped and fully explanatory", async () => {
-  const [page, chapterHub, bridge, lippincottText, carbohydrateText] = await Promise.all([
+  const [page, chapterHub, chapterDefinitions, bridge, lippincottText, carbohydrateText] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../src/components/BiochemistryChapterHub.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/lib/biochemistry/chapters.ts", import.meta.url), "utf8"),
     readFile(new URL("../scripts/codex-bridge.mjs", import.meta.url), "utf8"),
     readFile(new URL("../data/bank/questions/biochemistry-lippincott-chapter-bank.jsonl", import.meta.url), "utf8"),
     readFile(new URL("../data/bank/questions/biochemistry-carbohydrate-metabolism-chapters.jsonl", import.meta.url), "utf8"),
@@ -251,19 +292,116 @@ test("biochemistry chapter mode is source-traceable, scoped and fully explanator
   assert.match(chapterHub, /Chapter exam/);
   assert.match(chapterHub, /Teacher-confirmed/);
   assert.match(chapterHub, /Lippincott supplement/);
+  assert.match(chapterHub, /Not teacher-confirmed/);
+  assert.match(chapterHub, /inclusion in the August 25 exam is not confirmed/);
+  for (const chapter of [8, 9, 10, 11, 12, 13]) {
+    assert.match(chapterDefinitions, new RegExp(`chapterNumber: ${chapter},[^\\n]+coverage: "unconfirmed"`));
+  }
+  for (const chapter of [6, 7, 14, 15, 16, 17, 18, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]) {
+    assert.match(chapterDefinitions, new RegExp(`chapterNumber: ${chapter},[^\\n]+coverage: "confirmed"`));
+  }
   assert.match(chapterHub, /Repair \$\{chapter\.repairCount\}/);
   assert.match(bridge, /biochemistryChapterId/);
   assert.match(bridge, /biochemistryChapters/);
 });
 
-test("coverage-first sprints fill from the available pool when an 80/20 split is impossible", () => {
+test("the active biochemistry bank is concept-curated without deleting the generated archive", async () => {
+  const [catalogText, questionFiles, page, chapterHub, bridge, finalExamText, summaryResponse, finalResponse] = await Promise.all([
+    readFile(new URL("../data/teacher-materials/biochemistry-core-concepts.json", import.meta.url), "utf8"),
+    readdir(new URL("../data/bank/questions/", import.meta.url)),
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/components/BiochemistryChapterHub.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/codex-bridge.mjs", import.meta.url), "utf8"),
+    readFile(new URL("../data/telegram-final/july29.jsonl", import.meta.url), "utf8"),
+    fetchBuiltRoute("/api/bank/summary"),
+    fetchBuiltRoute("/api/final-exam?exam=july29"),
+  ]);
+  const catalog = JSON.parse(catalogText);
+  const allQuestions = (await Promise.all(questionFiles.filter((name) => name.endsWith(".jsonl")).map(async (name) => {
+    const text = await readFile(new URL(`../data/bank/questions/${name}`, import.meta.url), "utf8");
+    return text.trim().split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line));
+  }))).flat();
+  const questionById = new Map(allQuestions.map((question) => [question.id, question]));
+  const concepts = catalog.chapters.flatMap((chapter) => chapter.concepts);
+  const selectedQuestionIds = concepts.flatMap((concept) => concept.selectedQuestionIds);
+  const selectedQuestionIdSet = new Set(selectedQuestionIds);
+  const selectedQuestions = selectedQuestionIds.map((questionId) => questionById.get(questionId));
+  const normalizedSelectedPrompts = selectedQuestions.map((question) => question.prompt.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim());
+  const summary = await summaryResponse.json();
+  const august25 = summary.exams.find((exam) => exam.id === "july29");
+  const finalExam = await finalResponse.json();
+  const expectedFinalExamCount = finalExamText.trim().split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line)).filter((question) => (
+    question.status === "verified"
+    && question.tags?.includes("telegram-final")
+    && question.tags?.includes("exam-july29")
+    && question.source?.title
+    && question.source?.chapter
+  )).length;
+  const chapterQuestionIds = august25.biochemistryChapters.flatMap((chapter) => chapter.questionIds);
+  const archiveOnlyQuestion = allQuestions.find((question) => question.subject === "biochemistry"
+    && question.status === "verified"
+    && !selectedQuestionIdSet.has(question.id));
+
+  assert.equal(catalog.chapterCount, 32);
+  assert.equal(catalog.chapterCount, catalog.chapters.length);
+  assert.equal(catalog.conceptCount, concepts.length);
+  assert.equal(catalog.questionCount, selectedQuestionIds.length);
+  assert.ok(catalog.conceptCount >= 100, "expected a comprehensive concept map");
+  assert.ok(catalog.questionCount < 1000, "active bank should be dramatically smaller than the generated archive");
+  assert.ok(allQuestions.filter((question) => question.subject === "biochemistry").length > 2500, "generated archive should remain intact");
+  assert.ok(archiveOnlyQuestion, "expected the generated archive to retain non-curated questions");
+  assert.equal(questionById.size, allQuestions.length, "archived question IDs must be unique");
+  assert.equal(new Set(concepts.map((concept) => concept.id)).size, concepts.length);
+  assert.equal(new Set(selectedQuestionIds).size, selectedQuestionIds.length);
+  assert.equal(new Set(normalizedSelectedPrompts).size, normalizedSelectedPrompts.length, "selected stems must not repeat");
+  assert.ok(concepts.every((concept) => concept.selectedQuestionIds.length >= 2 && concept.selectedQuestionIds.length <= 3));
+  assert.ok(catalog.chapters.every((chapter) => chapter.concepts.every((concept) => concept.selectedQuestionIds.every((questionId) => (
+    questionById.get(questionId)?.subject === "biochemistry"
+    && questionById.get(questionId)?.status === "verified"
+    && biochemistryChapterIdForQuestion(questionById.get(questionId)) === chapter.chapterId
+    && Boolean(questionById.get(questionId)?.source?.title)
+    && Boolean(questionById.get(questionId)?.source?.chapter)
+  )))));
+  assert.equal(august25.collectionCounts.biochemistry, selectedQuestionIds.length);
+  assert.equal(new Set(chapterQuestionIds).size, selectedQuestionIds.length);
+  assert.deepEqual(new Set(chapterQuestionIds), selectedQuestionIdSet);
+  assert.equal(finalExam.availableCount, expectedFinalExamCount, "past-paper final exam must remain independent of curation");
+
+  const byIdsResponse = await fetchBuiltRoute("/api/questions/by-ids", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      exam: "july29",
+      ids: [selectedQuestionIds[0], archiveOnlyQuestion.id],
+      limit: 2,
+      preserveOrder: true,
+    }),
+  });
+  const byIds = await byIdsResponse.json();
+  assert.deepEqual(byIds.questions.map((question) => question.id), [selectedQuestionIds[0]], "saved sessions must drop retired archive-only items");
+
+  assert.match(chapterHub, /Study \{chapterConcepts\.length\} ideas/);
+  assert.match(chapterHub, /Know this cold/);
+  assert.match(chapterHub, /Clinical connection/);
+  assert.match(page, /BiochemistryConceptFeedback/);
+  assert.match(page, /Connect this answer back to/);
+  assert.match(page, /Why a doctor cares/);
+  assert.match(bridge, /biochemistryCoreQuestionIds\.has\(question\.id\)/);
+  assert.match(bridge, /chapterConcept/);
+  assert.match(bridge, /question\.source/);
+});
+
+test("focused sprints fall back to mastered questions only after unseen is exhausted", () => {
   const questions = Array.from({ length: 20 }, (_, index) => ({ id: `q-${index}` }));
   const seenIds = questions.slice(0, 18).map((question) => question.id);
   const selected = selectCoverageSprint(questions, { limit: 10, seenIds, random: () => 0.5 });
 
   assert.equal(selected.questions.length, 10);
+  assert.equal(selected.repairCount, 0);
   assert.equal(selected.unseenCount, 2);
   assert.equal(selected.reviewCount, 8);
+  assert.equal(selected.ordinaryReviewCount, 8);
+  assert.ok(selected.questions.slice(0, 2).every((question) => !seenIds.includes(question.id)));
 });
 
 test("final-exam progress survives reloads and reconciles a revised bank", () => {

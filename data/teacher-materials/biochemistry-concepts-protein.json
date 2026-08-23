@@ -1,0 +1,1435 @@
+{
+  "family": "Biochemical foundations and protein structure/function",
+  "chapters": [
+    {
+      "chapterId": "foundations",
+      "concepts": [
+        {
+          "id": "foundations-scope-and-medical-relevance",
+          "title": "What biochemistry explains in medicine",
+          "priority": "exam-core",
+          "rationale": "The teacher's introduction opens with the definition and clinical relevance of biochemistry, so this is explicit course scope rather than a textbook-only addition.",
+          "summary": "Biochemistry applies chemical principles to biological processes at the molecular and cellular levels. It connects a molecular change to altered cell function, a clinical phenotype, a diagnostic marker, and sometimes a targeted treatment. A useful medical answer therefore moves from molecule to mechanism to patient rather than stopping at a definition.",
+          "keyPoints": [
+            "Biochemistry studies the chemistry of living systems.",
+            "Molecular abnormalities can explain disease mechanisms and laboratory findings.",
+            "Mechanistic understanding supports diagnosis, prevention, and rational treatment."
+          ],
+          "clinicalLinks": [
+            "A pathogenic enzyme variant can change a metabolite concentration and create a recognizable disease pattern.",
+            "Biomarkers are clinically useful because they report an underlying molecular or cellular process."
+          ],
+          "sourceEvidence": [
+            "INTRODUCTION.ppt, slides 3-6 (definition, scope, and medical relevance).",
+            "biochemistry-scope.md, Primary course files: INTRODUCTION.ppt."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-001-v1",
+            "bio-teacher-002-v1"
+          ]
+        },
+        {
+          "id": "foundations-elements-and-biomolecule-classes",
+          "title": "Elements and major biomolecule classes",
+          "priority": "exam-core",
+          "rationale": "CHNOPS and the major biomolecule classes are explicitly presented in the teacher introduction and organize the rest of the course.",
+          "summary": "Most biological matter is built chiefly from carbon, hydrogen, nitrogen, oxygen, phosphorus, and sulfur. Carbohydrates, lipids, proteins, and nucleic acids have distinct recurring chemical features and major roles, but they interact in cells rather than operating as isolated lists. Proteins perform much of the cell's catalytic and structural work, whereas nucleic acids store and transmit hereditary information.",
+          "keyPoints": [
+            "CHNOPS denotes carbon, hydrogen, nitrogen, oxygen, phosphorus, and sulfur.",
+            "Carbohydrates commonly provide fuel and participate in structure and recognition.",
+            "Lipids store energy, form membranes, insulate, and generate signaling molecules.",
+            "Proteins act as enzymes, receptors, transporters, antibodies, and structural elements.",
+            "Nucleic acids store and express genetic information."
+          ],
+          "clinicalLinks": [
+            "Different biomolecule classes require different laboratory measurements and therapeutic approaches."
+          ],
+          "sourceEvidence": [
+            "INTRODUCTION.ppt, slides 9-13 (CHNOPS, cells, biomolecule classes, and central dogma)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-003-v1",
+            "bio-teacher-005-v1",
+            "bio-teacher-006-v1"
+          ]
+        },
+        {
+          "id": "foundations-information-flow",
+          "title": "Central dogma and genotype-to-phenotype reasoning",
+          "priority": "exam-core",
+          "rationale": "DNA-to-RNA-to-protein information flow and an applied mutation example are explicit in the teacher introduction.",
+          "summary": "The usual flow of sequence information is DNA to RNA to protein. A DNA variant can alter an RNA sequence or its expression and thereby change the amount or amino-acid sequence of a protein. The resulting change in protein structure or function is the mechanistic bridge from genotype to phenotype.",
+          "keyPoints": [
+            "Transcription transfers information from DNA to RNA.",
+            "Translation uses messenger RNA to specify a polypeptide sequence.",
+            "Mutations can affect protein sequence, abundance, localization, or regulation."
+          ],
+          "clinicalLinks": [
+            "Missense variants can replace one amino acid and change enzyme or hemoglobin function.",
+            "Some disease variants affect RNA processing or expression without changing a coding sequence."
+          ],
+          "sourceEvidence": [
+            "INTRODUCTION.ppt, slide 13 (central dogma and information flow)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-007-v1",
+            "bio-teacher-010-v1"
+          ]
+        },
+        {
+          "id": "foundations-metabolism-and-atp-coupling",
+          "title": "Anabolism, catabolism, and ATP coupling",
+          "priority": "exam-core",
+          "rationale": "The teacher deck explicitly contrasts anabolism and catabolism and assigns ATP its central energy-coupling role.",
+          "summary": "Catabolic pathways break molecules down and often capture released energy, whereas anabolic pathways build molecules and require energy and reducing power. ATP couples favorable energy-releasing reactions to otherwise unfavorable cellular work through group transfer and linked reactions. ATP is an immediate energy currency, not the body's only energy store.",
+          "keyPoints": [
+            "Catabolism is degradative and commonly energy yielding.",
+            "Anabolism is synthetic and commonly energy requiring.",
+            "ATP contains adenine, ribose, and three phosphate groups.",
+            "ATP hydrolysis can be coupled to biosynthesis, transport, and mechanical work."
+          ],
+          "clinicalLinks": [
+            "Hypoxia impairs ATP generation and rapidly compromises ion pumps and cell viability."
+          ],
+          "sourceEvidence": [
+            "INTRODUCTION.ppt, slides 16-19 (anabolism, catabolism, and ATP)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-011-v1",
+            "bio-teacher-012-v1",
+            "bio-teacher-014-v1"
+          ]
+        },
+        {
+          "id": "foundations-functional-groups",
+          "title": "Functional groups determine biochemical behavior",
+          "priority": "exam-core",
+          "rationale": "Hydroxyl, carboxyl, amino, phosphate, carbonyl, and sulfhydryl groups are an explicit teacher-slide block and recur throughout the exam syllabus.",
+          "summary": "Functional groups give biomolecules predictable acid-base behavior, polarity, reactivity, and interaction patterns. Hydroxyl groups are polar; carboxyl and amino groups participate in proton transfer; carbonyl groups define aldehydes and ketones; phosphate groups carry charge and transfer energy; and sulfhydryls can form disulfides. Recognizing the group is more useful than memorizing an isolated molecule because the same chemistry reappears in proteins, carbohydrates, lipids, and nucleotides.",
+          "keyPoints": [
+            "Hydroxyl groups support polarity and hydrogen bonding.",
+            "Carboxyl groups can donate protons; amino groups can accept protons.",
+            "Carbonyl groups occur in aldehydes and ketones.",
+            "Phosphate groups contribute negative charge and participate in energy and signal transfer.",
+            "Two oxidized cysteine sulfhydryls can form a disulfide bond."
+          ],
+          "clinicalLinks": [
+            "Ionization of functional groups affects drug solubility, membrane passage, and protein binding."
+          ],
+          "sourceEvidence": [
+            "INTRODUCTION.ppt, slides 20-22 (major biological functional groups)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-015-v1",
+            "bio-teacher-016-v1",
+            "bio-teacher-018-v1"
+          ]
+        },
+        {
+          "id": "foundations-bonds-polarity-and-hydrophobic-effect",
+          "title": "Covalent and noncovalent forces in biomolecules",
+          "priority": "exam-core",
+          "rationale": "Chemical bonds, polarity, hydrogen bonding, disulfides, and hydrophobic interactions occupy the final teacher-introduction block.",
+          "summary": "Covalent bonds share electrons and build stable molecular backbones, while ionic interactions, hydrogen bonds, and hydrophobic effects organize molecules and are often reversible. Unequal electron sharing makes a bond polar and creates partial charges that can interact with water. Nonpolar groups cluster in water because this minimizes disruption of water-water hydrogen bonding, a major driver of membranes and protein folding.",
+          "keyPoints": [
+            "Ionic interactions are attractions between opposite charges.",
+            "Polar covalent bonds share electrons unequally; nonpolar covalent bonds share them more evenly.",
+            "Hydrogen bonds are individually weak but collectively important.",
+            "Disulfide bonds are covalent links between cysteine residues.",
+            "The hydrophobic effect drives nonpolar groups away from water."
+          ],
+          "clinicalLinks": [
+            "Heat, extreme pH, and detergents can disrupt noncovalent forces and denature proteins.",
+            "A mutation that replaces a charged residue with a hydrophobic one can promote abnormal protein aggregation."
+          ],
+          "sourceEvidence": [
+            "INTRODUCTION.ppt, slides 24-31 (ionic/covalent bonds, polarity, disulfides, hydrogen bonds, and hydrophobic interactions)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-020-v1",
+            "bio-teacher-023-v1",
+            "bio-teacher-024-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "water-buffers",
+      "concepts": [
+        {
+          "id": "water-compartments-and-major-ions",
+          "title": "Body-water compartments and ionic composition",
+          "priority": "exam-core",
+          "rationale": "The proportions and characteristic solutes of ICF, ECF, and transcellular fluid are explicitly taught in the water-and-buffer lecture.",
+          "summary": "Total body water is distributed mainly between intracellular fluid and extracellular fluid, with roughly two thirds intracellular. Extracellular fluid includes plasma and interstitial fluid, while transcellular fluids are specialized small compartments such as cerebrospinal fluid. Sodium and chloride predominate extracellularly, whereas potassium, magnesium, and phosphate are relatively enriched intracellularly.",
+          "keyPoints": [
+            "About two thirds of total body water is intracellular.",
+            "ECF comprises plasma, interstitial fluid, and small transcellular compartments.",
+            "Sodium is the major ECF cation; potassium is the major ICF cation.",
+            "Solute distribution and membrane permeability govern water movement."
+          ],
+          "clinicalLinks": [
+            "Fluid therapy changes ECF first and then redistributes according to tonicity and permeability.",
+            "Serum sodium is primarily a marker of water balance relative to exchangeable body solute."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 4-5 (body water and compartments).",
+            "Marks water/buffer reference, local reference pages 2-4 (compartments, electrolytes, and osmolality)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-026-v1",
+            "bio-teacher-027-v1",
+            "bio-teacher-029-v1"
+          ]
+        },
+        {
+          "id": "water-polarity-solvation-and-amphipathy",
+          "title": "Water polarity, hydrogen bonding, and solubility",
+          "priority": "exam-core",
+          "rationale": "Water's dipole, hydrogen bonding, hydration, and hydrophilic/hydrophobic/amphipathic classification are an explicit teacher-slide sequence.",
+          "summary": "Water is polar because oxygen attracts shared electrons more strongly than hydrogen and the molecule has a bent geometry. Its partial charges permit hydrogen bonding and hydration shells around ions and polar solutes. Amphipathic molecules contain both hydrophilic and hydrophobic regions and therefore organize into structures such as membranes and micelles.",
+          "keyPoints": [
+            "Water is a dipole with partial negative charge on oxygen and partial positive charge on hydrogen.",
+            "Hydrogen bonding explains much of water's solvent behavior.",
+            "Hydrophilic solutes interact favorably with water; hydrophobic solutes do not.",
+            "Amphipathic molecules contain both polar and nonpolar regions."
+          ],
+          "clinicalLinks": [
+            "Amphipathic bile salts emulsify dietary lipids.",
+            "Drug polarity influences distribution between aqueous compartments and membranes."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 4 and 6-8 (water polarity, hydrogen bonds, and solubility classes)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-030-v1",
+            "bio-teacher-031-v1",
+            "bio-teacher-034-v1"
+          ]
+        },
+        {
+          "id": "water-ph-and-logarithmic-scale",
+          "title": "pH, pOH, and logarithmic concentration reasoning",
+          "priority": "exam-core",
+          "rationale": "The lecture explicitly tests pH/pOH calculations and emphasizes clinical interpretation of the logarithmic scale.",
+          "summary": "pH is the negative base-10 logarithm of hydrogen-ion concentration, so each pH unit represents a tenfold change in hydrogen-ion concentration. At 25°C, pH plus pOH equals 14, which allows conversion between hydrogen and hydroxide concentrations. Because physiology operates over a narrow pH range, small numerical pH shifts represent substantial chemical changes.",
+          "keyPoints": [
+            "pH = -log10[H+].",
+            "At 25°C, pH + pOH = 14.",
+            "A fall of one pH unit means a tenfold increase in [H+].",
+            "Acidemia and alkalemia refer to measured blood pH, not the underlying process."
+          ],
+          "clinicalLinks": [
+            "Arterial pH below the reference range is acidemia; above it is alkalemia.",
+            "A change from pH 7.4 to 7.1 is chemically much larger than the decimal difference suggests."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 9-15 (pH, pOH, clinical pH, acidosis, and alkalosis)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-035-v1",
+            "bio-teacher-038-v1",
+            "bio-teacher-040-v1"
+          ]
+        },
+        {
+          "id": "water-acids-bases-ka-and-pka",
+          "title": "Acids, bases, conjugate pairs, Ka, and pKa",
+          "priority": "exam-core",
+          "rationale": "Definitions of acids/bases, strong versus weak dissociation, conjugate pairs, Ka, and pKa are direct teacher content.",
+          "summary": "A Brønsted acid donates a proton and a Brønsted base accepts one; loss of a proton converts an acid into its conjugate base. Strong acids dissociate more completely than weak acids in water. A larger Ka and therefore a lower pKa indicate a stronger acid and make quantitative prediction of ionization possible.",
+          "keyPoints": [
+            "Acid and conjugate base differ by one proton.",
+            "Ka measures the extent of acid dissociation.",
+            "pKa = -log10 Ka.",
+            "Lower pKa means stronger acid.",
+            "Weak does not mean dilute; it describes incomplete dissociation."
+          ],
+          "clinicalLinks": [
+            "The pKa of a drug helps predict its charge state and membrane permeability at a given pH."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 14 and 17-20 (acid-base definitions, conjugate pairs, Ka, and pKa)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-043-v1",
+            "bio-teacher-044-v1",
+            "bio-teacher-047-v1"
+          ]
+        },
+        {
+          "id": "water-henderson-hasselbalch-calculations",
+          "title": "Henderson-Hasselbalch equation and ionization ratios",
+          "priority": "exam-core",
+          "rationale": "The equation, ratio calculations, and midpoint interpretation are repeatedly emphasized in the teacher lecture and its supplied MCQs.",
+          "summary": "The Henderson-Hasselbalch equation is pH = pKa + log([A-]/[HA]). It converts the difference between pH and pKa into the ratio of conjugate base to weak acid: one unit above pKa means 10:1, and one unit below means 1:10. At pH equal to pKa, acid and conjugate base are equal.",
+          "keyPoints": [
+            "pH - pKa = log([A-]/[HA]).",
+            "pH = pKa gives [A-] = [HA].",
+            "Each unit of pH-pKa changes the ratio tenfold.",
+            "Above pKa the deprotonated form predominates; below pKa the protonated form predominates."
+          ],
+          "clinicalLinks": [
+            "Ion trapping of weak acids and bases follows the same pH-pKa logic.",
+            "The bicarbonate equation applies this relationship to blood acid-base physiology."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 24-28 and teacher MCQs 37-38.",
+            "Lippincott 6e, Chapter 1 acid-base section, local PDF pages 18-21."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-051-v1",
+            "bio-teacher-054-v1",
+            "bio-teacher-058-v1"
+          ]
+        },
+        {
+          "id": "water-titration-buffer-range-and-capacity",
+          "title": "Titration curves and how buffers resist pH change",
+          "priority": "exam-core",
+          "rationale": "Titration curves, buffer mechanism, effective range, and concentration-dependent capacity are explicit teacher targets.",
+          "summary": "A buffer contains a weak acid and its conjugate base, allowing added H+ to be consumed by base and added OH- to be consumed by acid. Its flattest titration-curve region lies near pKa, with greatest effectiveness roughly within pKa plus or minus one pH unit. Buffer capacity depends on the total concentration of the pair, not just their ratio.",
+          "keyPoints": [
+            "At half-equivalence, pH = pKa and buffering is maximal.",
+            "The useful buffer range is approximately pKa ± 1.",
+            "The conjugate base consumes added H+.",
+            "Higher total buffer concentration gives greater capacity at the same pH and ratio."
+          ],
+          "clinicalLinks": [
+            "A patient's ability to buffer an acid load depends on available buffer stores as well as ventilation and renal response."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 22-28 (titration, buffer region, range, and capacity)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-052-v1",
+            "bio-teacher-063-v1",
+            "bio-teacher-064-v1"
+          ]
+        },
+        {
+          "id": "water-physiological-buffers-and-compensation",
+          "title": "Bicarbonate, phosphate, proteins, and hemoglobin in acid-base control",
+          "priority": "exam-core",
+          "rationale": "All four physiological buffer systems and a ketoacidosis compensation example are directly covered by the teacher slides.",
+          "summary": "The major physiological buffers are bicarbonate, phosphate, plasma proteins, and hemoglobin. Bicarbonate is an open system because the lungs regulate CO2 rapidly and the kidneys regulate bicarbonate and net acid more slowly. Protein side chains, especially in hemoglobin, accept or donate protons; compensation limits a pH disturbance but does not remove its primary cause.",
+          "keyPoints": [
+            "Bicarbonate couples blood chemistry to pulmonary CO2 elimination.",
+            "Phosphate is important intracellularly and in urine.",
+            "Ionizable protein side chains buffer H+.",
+            "Deoxyhemoglobin binds H+ more readily than oxyhemoglobin.",
+            "Respiratory compensation for metabolic acidosis lowers PaCO2."
+          ],
+          "clinicalLinks": [
+            "Kussmaul breathing in ketoacidosis lowers CO2 and partially raises pH.",
+            "Carbonic anhydrase and the chloride shift support CO2 transport by red cells."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 29-35 (physiological buffers).",
+            "Marks water/buffer reference, local reference pages 6-8 (bicarbonate, hemoglobin, chloride shift, and urinary buffering)."
+          ],
+          "selectedQuestionIds": [
+            "bio-teacher-067-v1",
+            "bio-teacher-071-v1",
+            "bio-teacher-074-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-1",
+      "concepts": [
+        {
+          "id": "ch1-common-structure-and-classification",
+          "title": "Common amino-acid structure and side-chain classification",
+          "priority": "exam-core",
+          "rationale": "The teacher amino-acid deck explicitly begins with alpha-amino-acid structure and classifies residues by side-chain polarity and charge.",
+          "summary": "A standard alpha-amino acid has an alpha carbon attached to an amino group, a carboxyl group, a hydrogen, and a distinctive side chain. The side chain determines most residue-specific chemistry and supports the practical classification into nonpolar, uncharged polar, acidic, and basic groups. At physiological pH, the alpha amino and carboxyl groups are usually protonated and deprotonated respectively.",
+          "keyPoints": [
+            "The R group distinguishes one amino acid from another.",
+            "Nonpolar side chains favor hydrophobic interactions.",
+            "Uncharged polar side chains can hydrogen bond.",
+            "Acidic side chains are usually negative and basic side chains often positive at physiological pH.",
+            "Proline has a secondary amino group; glycine has two alpha-carbon hydrogens."
+          ],
+          "clinicalLinks": [
+            "A single side-chain substitution can alter folding, solubility, charge, or catalytic activity."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 7-15 (structure and side-chain classes).",
+            "Lippincott 6e, Chapter 1, local extraction items 11 and 135."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-022-v1",
+            "lippincott-ch1-bank-135-v1"
+          ]
+        },
+        {
+          "id": "ch1-nonpolar-residues-and-hydrophobic-effect",
+          "title": "Nonpolar residues and the hydrophobic effect",
+          "priority": "exam-core",
+          "rationale": "Side-chain polarity is explicit teacher scope, and the hydrophobic effect is the central Lippincott application linking amino-acid chemistry to folding.",
+          "summary": "Nonpolar side chains avoid favorable contact with water and therefore cluster in the interior of soluble globular proteins. In membrane proteins the orientation can reverse, with hydrophobic residues exposed to lipid. This hydrophobic effect is a major force driving folding and can become pathological when a mutation creates an exposed hydrophobic patch.",
+          "keyPoints": [
+            "Nonpolar residues usually do not form ionic or hydrogen bonds through their side chains.",
+            "They pack inside soluble proteins but can face membrane lipids.",
+            "Hydrophobic clustering stabilizes a protein's three-dimensional structure."
+          ],
+          "clinicalLinks": [
+            "The beta-globin Glu-to-Val substitution in HbS creates a hydrophobic interaction that promotes deoxyhemoglobin polymerization."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 10-15 (amino-acid side-chain classes).",
+            "Lippincott 6e, Chapter 1, local extraction items 20 and 23."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch1-bank-020-v1",
+            "lippincott-ch1-bank-023-v1"
+          ]
+        },
+        {
+          "id": "ch1-polar-residues-and-covalent-modification",
+          "title": "Polar residues, phosphorylation, and disulfide bonds",
+          "priority": "exam-core",
+          "rationale": "The teacher deck explicitly tests hydroxyl-containing residues, while Lippincott connects cysteine chemistry to covalent protein stabilization.",
+          "summary": "Serine, threonine, and tyrosine contain hydroxyl groups that form hydrogen bonds and can be phosphorylated. Cysteine contains a sulfhydryl group; oxidation of two cysteines forms a covalent disulfide bond and the paired product is cystine. These modifications can alter protein activity, localization, or structural stability.",
+          "keyPoints": [
+            "Serine, threonine, and tyrosine are common phosphorylation sites.",
+            "Asparagine and glutamine have polar amide side chains.",
+            "Two cysteine thiols can oxidize to a disulfide.",
+            "Disulfides are especially common in extracellular and secreted proteins."
+          ],
+          "clinicalLinks": [
+            "Kinases regulate many enzymes and receptors through reversible phosphorylation.",
+            "The oxidizing extracellular environment favors disulfide stabilization."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 12-13 and 31-33.",
+            "Lippincott 6e, Chapter 1, local extraction item 35."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-024-v1",
+            "lippincott-ch1-bank-035-v1"
+          ]
+        },
+        {
+          "id": "ch1-acidic-basic-and-histidine-chemistry",
+          "title": "Acidic and basic side chains, especially histidine",
+          "priority": "exam-core",
+          "rationale": "Acidic/basic residues and histidine's imidazole are direct teacher-slide targets with immediate enzyme and hemoglobin relevance.",
+          "summary": "Aspartate and glutamate carry negatively charged carboxylate side chains at physiological pH, whereas lysine and arginine are usually positively charged. Histidine's imidazole has a pKa near the physiological range, so local protein environments can switch it between protonated and neutral states. That makes histidine particularly useful for acid-base catalysis and buffering.",
+          "keyPoints": [
+            "Aspartate and glutamate are acidic and usually negative.",
+            "Lysine and arginine are basic and usually positive.",
+            "Histidine can donate or accept protons near physiological pH.",
+            "Local electrostatic environment can shift a side-chain pKa."
+          ],
+          "clinicalLinks": [
+            "Histidines contribute to hemoglobin buffering and the Bohr effect.",
+            "Catalytic histidine often acts as a proton shuttle in enzyme active sites."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 14-15 (acidic/basic residues and histidine)."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-025-v1",
+            "bio-telegram-gap-026-v1"
+          ]
+        },
+        {
+          "id": "ch1-stereochemistry-and-glycine",
+          "title": "Amino-acid stereochemistry and the glycine exception",
+          "priority": "exam-core",
+          "rationale": "The teacher deck explicitly asks both the glycine exception and the L configuration used in human proteins.",
+          "summary": "Except for glycine, standard amino acids have four different substituents on the alpha carbon and are chiral. Human ribosomal proteins are synthesized from L-amino acids. Glycine is achiral because its side chain is hydrogen, leaving two hydrogens attached to the alpha carbon.",
+          "keyPoints": [
+            "Chiral amino acids occur as D and L enantiomers.",
+            "Human proteins use L-amino acids.",
+            "Glycine is achiral.",
+            "D-amino acids occur in some bacterial cell walls and antibiotics."
+          ],
+          "clinicalLinks": [
+            "Stereochemistry affects enzyme recognition and drug design."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, page 20 (glycine and L-amino acids).",
+            "Lippincott 6e, Chapter 1 stereochemistry section."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-027-v1",
+            "bio-telegram-gap-028-v1"
+          ]
+        },
+        {
+          "id": "ch1-ionization-titration-and-pi",
+          "title": "Amino-acid ionization, titration, and isoelectric point",
+          "priority": "exam-core",
+          "rationale": "The teacher amino-acid deck explicitly covers pI, and the confirmed Lippincott scaffold applies pH-versus-pI reasoning.",
+          "summary": "Amino acids are amphoteric and can carry positive, zero, or negative net charge as pH changes. The isoelectric point is the pH at which the average net charge is zero; below pI a molecule is more protonated and positive, while above pI it is more deprotonated and negative. Buffering is greatest near each ionizable group's pKa, not specifically at pI unless a pKa coincides with it.",
+          "keyPoints": [
+            "At pI, average net charge is zero.",
+            "pH below pI gives a net positive charge.",
+            "pH above pI gives a net negative charge.",
+            "Titration curves reveal pKa values and buffering regions.",
+            "Ionizable side chains add extra titration steps."
+          ],
+          "clinicalLinks": [
+            "Electrophoresis separates proteins according to net charge at the buffer pH.",
+            "Solubility is often lowest near a protein's pI."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 25-26 (isoelectric point).",
+            "Lippincott 6e, Chapter 1, local PDF pages 10-29."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-030-v1",
+            "july29-comprehensive-002-v1",
+            "lippincott-ch1-bank-097-v1"
+          ]
+        },
+        {
+          "id": "ch1-aromatic-residues-and-protein-detection",
+          "title": "Aromatic amino acids and analytical recognition",
+          "priority": "exam-core",
+          "rationale": "The teacher amino-acid deck explicitly tests aromatic-residue absorbance at 280 nm, and these side chains also support a confirmed protein practical test.",
+          "summary": "Phenylalanine, tyrosine, and tryptophan contain aromatic rings, with tryptophan contributing most strongly to protein absorbance near 280 nm and tyrosine contributing substantially. Tyrosine also contains a phenolic hydroxyl that can hydrogen bond, be phosphorylated, and ionize at alkaline pH. Aromatic-ring nitration underlies the xanthoproteic protein test.",
+          "keyPoints": [
+            "Tryptophan is the strongest common contributor to A280.",
+            "Tyrosine also absorbs near 280 nm; phenylalanine contributes less.",
+            "Tyrosine is aromatic yet has a polar hydroxyl group.",
+            "The xanthoproteic reaction detects aromatic residues by a yellow-to-orange color."
+          ],
+          "clinicalLinks": [
+            "A280 is commonly used to estimate protein concentration, but nucleic acids and other chromophores can interfere.",
+            "Tyrosine phosphorylation is a central signaling mechanism."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, page 21 (aromatic amino acids and absorbance).",
+            "Confirmed TUMS practical curriculum: xanthoproteic test."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-029-v1",
+            "lippincott-ch1-bank-031-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-2",
+      "concepts": [
+        {
+          "id": "ch2-primary-structure-sequence-and-function",
+          "title": "Primary structure encodes folding and function",
+          "priority": "exam-core",
+          "rationale": "Primary through quaternary structure is explicit teacher scope, and the confirmed Lippincott chapter emphasizes sequence as the basis of normal and mutant protein behavior.",
+          "summary": "Primary structure is the linear amino-acid sequence of a polypeptide, conventionally read from N terminus to C terminus. Sequence determines the pattern of side-chain interactions available during folding and therefore strongly constrains final structure and function. A sequence-changing mutation can cause loss of function, instability, mislocalization, or toxic aggregation.",
+          "keyPoints": [
+            "Primary structure is amino-acid sequence.",
+            "Sequences are written N terminus to C terminus.",
+            "The sequence contains the information needed for native folding, although cells often require chaperones.",
+            "A changed sequence can produce a changed phenotype."
+          ],
+          "clinicalLinks": [
+            "Missense variants can cause sickle cell disease or destabilize collagen.",
+            "Sequence comparison helps interpret genetic disease variants."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 31-33 and 43-49.",
+            "Lippincott 6e, Chapter 2, local extraction items 5-6."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch2-bank-005-v1",
+            "lippincott-ch2-bank-006-v1"
+          ]
+        },
+        {
+          "id": "ch2-peptide-bond-chemistry-and-planarity",
+          "title": "Peptide-bond formation, resonance, and planarity",
+          "priority": "exam-core",
+          "rationale": "The teacher deck explicitly defines the peptide bond, while the chapter scaffold makes restricted rotation a central structural consequence.",
+          "summary": "A peptide bond is an amide linkage formed between an alpha-carboxyl group and an alpha-amino group. Resonance gives the C-N bond partial double-bond character, making the peptide unit rigid and planar and restricting rotation. Rotation around bonds adjacent to the alpha carbon still permits organized folding, and peptide bonds are usually trans.",
+          "keyPoints": [
+            "Peptide formation is a condensation reaction.",
+            "The peptide C-N bond has partial double-bond character.",
+            "Restricted rotation makes the peptide unit planar.",
+            "Most peptide bonds adopt the trans configuration.",
+            "Denaturation usually does not hydrolyze peptide bonds."
+          ],
+          "clinicalLinks": [
+            "Proteases hydrolyze selected peptide bonds during digestion, signaling, and zymogen activation."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 31-33 (peptide bond).",
+            "Lippincott 6e, Chapter 2, local PDF pages 30-54."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-031-v1",
+            "july29-comprehensive-005-v1"
+          ]
+        },
+        {
+          "id": "ch2-secondary-structure",
+          "title": "Alpha helices, beta sheets, and beta turns",
+          "priority": "exam-core",
+          "rationale": "All three secondary-structure elements are explicitly taught in the teacher amino-acid/protein deck.",
+          "summary": "Secondary structure is local, repetitive backbone folding stabilized mainly by hydrogen bonds between peptide carbonyl and amide groups. In an alpha helix, hydrogen bonds form within one chain and the side chains project outward; beta sheets contain extended strands hydrogen-bonded in parallel or antiparallel arrangements. Beta turns reverse chain direction and often connect nearby antiparallel strands.",
+          "keyPoints": [
+            "An alpha helix has about 3.6 residues per turn and i-to-i+4 backbone hydrogen bonds.",
+            "Proline often disrupts an alpha helix.",
+            "Beta sheets are stabilized by backbone hydrogen bonds between extended strands.",
+            "Beta turns permit compact folding and often contain glycine or proline."
+          ],
+          "clinicalLinks": [
+            "Amyloid fibrils are enriched in ordered beta-sheet structure."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 36-40 (alpha helix, beta sheet, and beta turn)."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-032-v1",
+            "bio-telegram-gap-034-v1",
+            "bio-telegram-gap-035-v1"
+          ]
+        },
+        {
+          "id": "ch2-tertiary-structure-domains-and-stabilization",
+          "title": "Tertiary structure, motifs, domains, and side-chain forces",
+          "priority": "exam-core",
+          "rationale": "Domains are explicit teacher content, and the confirmed Lippincott scaffold specifies the forces that stabilize tertiary structure.",
+          "summary": "Tertiary structure is the overall three-dimensional arrangement of one polypeptide, including how secondary elements assemble into motifs and domains. A domain is a compact structural and often functional unit that can fold somewhat independently. Hydrophobic interactions, hydrogen bonds, ionic interactions, and disulfide bonds collectively stabilize the native conformation.",
+          "keyPoints": [
+            "Motifs are recurring combinations of secondary structures.",
+            "Domains are modular structural and functional units.",
+            "Hydrophobic burial is a major folding force in aqueous solution.",
+            "Ionic and hydrogen bonds are sensitive to pH and solvent.",
+            "Disulfides provide covalent stabilization, especially extracellularly."
+          ],
+          "clinicalLinks": [
+            "A domain-specific mutation can selectively abolish binding or catalysis while leaving other domains intact."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, page 43 (protein domains).",
+            "Lippincott 6e, Chapter 2, local extraction item 91."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-036-v1",
+            "lippincott-ch2-bank-091-v1"
+          ]
+        },
+        {
+          "id": "ch2-quaternary-structure-and-cooperativity",
+          "title": "Quaternary structure requires multiple subunits",
+          "priority": "exam-core",
+          "rationale": "The teacher deck explicitly defines quaternary structure, and the selected application corrects a recurrent misconception found in the current bank.",
+          "summary": "Quaternary structure describes the arrangement and interaction of two or more polypeptide subunits. A one-chain protein can have tertiary structure but has no quaternary structure. Subunits are held mainly by noncovalent forces, although occasional interchain disulfides can contribute, and subunit communication permits cooperativity and allostery.",
+          "keyPoints": [
+            "One polypeptide has no quaternary structure.",
+            "Two or more interacting polypeptides create quaternary structure.",
+            "Hydrophobic, ionic, and hydrogen-bond interactions usually dominate subunit association.",
+            "Hemoglobin is an alpha2beta2 cooperative tetramer."
+          ],
+          "clinicalLinks": [
+            "A variant at a subunit interface can alter cooperativity without directly changing an active or ligand-binding site."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, page 49 (quaternary structure).",
+            "Lippincott 6e, Chapter 2, local extraction item 160."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-038-v1",
+            "lippincott-ch2-bank-160-v1"
+          ]
+        },
+        {
+          "id": "ch2-folding-and-chaperones",
+          "title": "Protein folding and molecular chaperones",
+          "priority": "medical-core",
+          "rationale": "The primary-structure-to-folding relationship belongs to the confirmed chapter scaffold; chaperones add medically important proteostasis context beyond the teacher deck's explicit endpoints.",
+          "summary": "Amino-acid sequence drives folding toward a low-energy native conformation, with the hydrophobic effect as a major early force. Molecular chaperones bind exposed hydrophobic regions, prevent inappropriate aggregation, and often use ATP to give a protein another opportunity to fold correctly. Chaperones assist folding but do not dictate a different final sequence-encoded structure.",
+          "keyPoints": [
+            "Folding is ordered rather than a random search of all conformations.",
+            "Hydrophobic collapse helps organize early folding intermediates.",
+            "Hsp70 protects exposed hydrophobic regions of nascent chains.",
+            "Chaperonins provide a protected folding chamber.",
+            "Many chaperone cycles require ATP."
+          ],
+          "clinicalLinks": [
+            "Cell stress increases heat-shock proteins.",
+            "Failure of proteostasis contributes to neurodegeneration and some loss-of-function diseases."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 2.",
+            "Lippincott 6e, Chapter 2, local extraction items 101, 110, and 115."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch2-bank-101-v1",
+            "lippincott-ch2-bank-110-v1",
+            "lippincott-ch2-bank-115-v1"
+          ]
+        },
+        {
+          "id": "ch2-denaturation-and-renaturation",
+          "title": "Denaturation disrupts higher structure, not primary sequence",
+          "priority": "exam-core",
+          "rationale": "Denaturation is explicit in the teacher protein deck and is reinforced by the confirmed chapter scaffold.",
+          "summary": "Denaturation unfolds and disorganizes secondary and tertiary structure without ordinarily hydrolyzing peptide bonds, so primary structure remains intact. Heat, extreme pH, organic solvents, detergents, urea, and heavy metals can disrupt the interactions maintaining the native state. Some proteins refold after the denaturant is removed, but aggregation makes denaturation commonly irreversible in practice.",
+          "keyPoints": [
+            "Denaturation causes loss of native conformation and usually function.",
+            "Peptide bonds are generally preserved.",
+            "Hydrophobic exposure can cause precipitation and aggregation.",
+            "Reversibility depends on sequence, conditions, and avoidance of aggregation."
+          ],
+          "clinicalLinks": [
+            "Fever and severe acidosis can impair enzyme function, although ordinary fever is not equivalent to wholesale protein denaturation.",
+            "Heat inactivates many enzymes used in laboratory samples."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, page 48 (protein denaturation).",
+            "Lippincott 6e, Chapter 2, local extraction item 107."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-037-v1",
+            "lippincott-ch2-bank-107-v1"
+          ]
+        },
+        {
+          "id": "ch2-misfolding-amyloid-and-prions",
+          "title": "Protein misfolding, amyloid, and prion propagation",
+          "priority": "medical-core",
+          "rationale": "This is a major doctor-level application in the confirmed Lippincott chapter but is not explicitly listed in the recovered teacher protein deck, so it is labeled medical-core rather than teacher-confirmed exam-core.",
+          "summary": "Misfolded proteins are normally refolded or targeted for degradation, but failed quality control can allow toxic aggregates to accumulate. Amyloid is an ordered, insoluble, beta-sheet-rich fibrillar assembly rather than a random denatured precipitate. In prion disease, a pathogenic PrP conformation templates conversion of normal host PrP into the same abnormal conformation.",
+          "keyPoints": [
+            "Amyloid fibrils are ordered and beta-sheet rich.",
+            "Alzheimer plaques contain A beta fragments produced from APP.",
+            "PrPSc promotes conformational conversion of PrPC.",
+            "Sequence mutation is not required for every misfolding disease."
+          ],
+          "clinicalLinks": [
+            "Amyloid disorders include Alzheimer disease and systemic amyloidoses.",
+            "Prion diseases are transmissible spongiform encephalopathies and resist ordinary proteolysis."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 2.",
+            "Lippincott 6e, Chapter 2, local extraction items 125, 148, and 172."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch2-bank-125-v1",
+            "lippincott-ch2-bank-148-v1",
+            "lippincott-ch2-bank-172-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-3",
+      "concepts": [
+        {
+          "id": "ch3-heme-and-adult-hemoglobin-architecture",
+          "title": "Heme chemistry and HbA architecture",
+          "priority": "exam-core",
+          "rationale": "Hemoglobin is explicitly active exam scope, and Lippincott Chapter 3 belongs to the confirmed textbook scaffold even though no separate hemoglobin teacher deck was recovered.",
+          "summary": "Heme consists of protoporphyrin IX coordinated to ferrous iron, Fe2+, which can bind oxygen reversibly. Major adult hemoglobin HbA is an alpha2beta2 tetramer with one heme per subunit and therefore four oxygen-binding sites. Oxidation of iron to Fe3+ produces methemoglobin, which cannot bind oxygen normally.",
+          "keyPoints": [
+            "Functional heme oxygen binding requires Fe2+.",
+            "HbA contains two alpha and two beta chains.",
+            "Each globin subunit contains one heme.",
+            "Hemoglobin subunits associate mainly through noncovalent forces."
+          ],
+          "clinicalLinks": [
+            "Oxidant drugs can convert Fe2+ to Fe3+ and cause methemoglobinemia."
+          ],
+          "sourceEvidence": [
+            "exam-scope.md, August 25 active biochemistry scope: proteins and hemoglobin; complete Lippincott Chapters 1-7 scaffold.",
+            "Lippincott 6e, Chapter 3, local extraction items 8 and 28."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-013-v1",
+            "confirmed-curriculum-gap-014-v1"
+          ]
+        },
+        {
+          "id": "ch3-myoglobin-versus-hemoglobin",
+          "title": "Myoglobin stores oxygen; hemoglobin transports it",
+          "priority": "exam-core",
+          "rationale": "The distinction is foundational to the confirmed globular-protein chapter and supports interpretation of every oxygen-binding curve.",
+          "summary": "Myoglobin is a monomeric muscle hemeprotein that stores and facilitates intracellular oxygen movement, whereas hemoglobin is a tetrameric red-cell transporter. Myoglobin binds one oxygen and has a hyperbolic, high-affinity curve without cooperativity. Hemoglobin binds up to four oxygen molecules and uses subunit interactions to load in lungs and unload in tissues.",
+          "keyPoints": [
+            "Myoglobin is monomeric and found in cardiac and skeletal muscle.",
+            "Hemoglobin is tetrameric and found in erythrocytes.",
+            "Myoglobin has a hyperbolic oxygen-binding curve.",
+            "Hemoglobin has a sigmoidal oxygen-binding curve."
+          ],
+          "clinicalLinks": [
+            "Myoglobin rises early after muscle injury but is less cardiac-specific than troponin."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 3, local extraction items 7, 12-16, and 41-53.",
+            "exam-scope.md, complete confirmed Lippincott Chapters 1-7 scaffold."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-019-v1",
+            "lippincott-ch3-bank-007-v1"
+          ]
+        },
+        {
+          "id": "ch3-cooperativity-tr-and-p50",
+          "title": "Cooperativity, T/R states, and P50",
+          "priority": "exam-core",
+          "rationale": "Cooperative oxygen binding and curve shifts are the central mechanism of confirmed Lippincott Chapter 3 and are represented in the active hemoglobin gap bank.",
+          "summary": "Deoxyhemoglobin favors the low-affinity T state, whereas oxygen binding shifts subunits toward the high-affinity R state. Binding at one heme increases affinity at the remaining hemes, producing the sigmoidal curve and efficient tissue unloading. P50 is the oxygen partial pressure at half-saturation; a higher P50 means lower affinity and a right shift.",
+          "keyPoints": [
+            "T state is tense, deoxygenated, and lower affinity.",
+            "R state is relaxed, oxygenated, and higher affinity.",
+            "Positive cooperativity creates a sigmoidal curve.",
+            "Higher P50 means lower oxygen affinity."
+          ],
+          "clinicalLinks": [
+            "Right shifts improve unloading but can impair loading if extreme; left shifts do the reverse."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 3, local extraction items 39-40, 49, and 53-64."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-015-v1",
+            "confirmed-curriculum-gap-022-v1"
+          ]
+        },
+        {
+          "id": "ch3-bohr-effect-and-co2-transport",
+          "title": "Bohr effect: active tissues promote oxygen unloading",
+          "priority": "exam-core",
+          "rationale": "The Bohr effect integrates the confirmed water/buffer and hemoglobin blocks and is central to medically useful oxygen-curve interpretation.",
+          "summary": "In metabolically active tissues, increased H+ and CO2 stabilize deoxyhemoglobin's T state and lower oxygen affinity, shifting the curve right. In the lungs, CO2 removal and higher pH favor oxygen loading. CO2 also forms carbamates at globin N termini, while deoxyhemoglobin helps buffer protons.",
+          "keyPoints": [
+            "Lower pH decreases hemoglobin oxygen affinity.",
+            "Higher CO2 favors oxygen unloading.",
+            "The effect is reversed in the lungs.",
+            "Deoxyhemoglobin binds H+ more strongly than oxyhemoglobin."
+          ],
+          "clinicalLinks": [
+            "Exercise increases local CO2, H+, and temperature, promoting oxygen delivery.",
+            "Acidosis can worsen HbS deoxygenation and sickling."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 33-35 (hemoglobin buffering and CO2 transport).",
+            "Lippincott 6e, Chapter 3, local extraction item 65."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-017-v1",
+            "lippincott-ch3-bank-065-v1"
+          ]
+        },
+        {
+          "id": "ch3-bpg-and-oxygen-delivery",
+          "title": "2,3-BPG stabilizes deoxyhemoglobin",
+          "priority": "exam-core",
+          "rationale": "2,3-BPG is indispensable for explaining physiological oxygen delivery and multiple Chapter 3 clinical adaptations.",
+          "summary": "2,3-BPG is an anionic red-cell metabolite that binds the positively charged central cavity of deoxyhemoglobin. It stabilizes the T state, lowers oxygen affinity, shifts the curve right, and thereby enhances tissue unloading. Its concentration rises in chronic hypoxia and anemia, whereas stored blood loses 2,3-BPG and initially unloads oxygen less effectively.",
+          "keyPoints": [
+            "One 2,3-BPG binds per deoxyhemoglobin tetramer.",
+            "It binds chiefly between the beta chains.",
+            "It lowers oxygen affinity and raises P50.",
+            "Hypoxia and chronic anemia increase its concentration."
+          ],
+          "clinicalLinks": [
+            "High-altitude adaptation includes increased 2,3-BPG.",
+            "Freshly transfused stored red cells may temporarily have reduced unloading capacity."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 3, local extraction items 77-91."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-016-v1",
+            "lippincott-ch3-bank-087-v1"
+          ]
+        },
+        {
+          "id": "ch3-fetal-hemoglobin",
+          "title": "Fetal hemoglobin and placental oxygen transfer",
+          "priority": "exam-core",
+          "rationale": "HbF is a high-yield physiological application within confirmed Chapter 3 and appears in the active hemoglobin curriculum gaps.",
+          "summary": "Fetal hemoglobin is alpha2gamma2. Gamma chains bind 2,3-BPG less strongly than adult beta chains, so HbF has higher oxygen affinity than HbA in the same red-cell environment. This left shift enables fetal blood to acquire oxygen from maternal blood across the placenta.",
+          "keyPoints": [
+            "HbF composition is alpha2gamma2.",
+            "HbF binds 2,3-BPG weakly.",
+            "Weaker BPG binding increases oxygen affinity.",
+            "HbF predominates before birth and falls after birth."
+          ],
+          "clinicalLinks": [
+            "Increasing HbF with hydroxyurea reduces HbS polymerization and sickle crises."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 3, local extraction items 108 and 116-119."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-018-v1",
+            "lippincott-ch3-bank-119-v1"
+          ]
+        },
+        {
+          "id": "ch3-carbon-monoxide-and-methemoglobin",
+          "title": "Carbon monoxide poisoning versus methemoglobinemia",
+          "priority": "medical-core",
+          "rationale": "These are core emergency interpretations from the confirmed globular-protein chapter, although no recovered teacher slide explicitly prioritizes them.",
+          "summary": "Carbon monoxide occupies heme sites and stabilizes the R state, reducing oxygen capacity while making remaining sites hold oxygen more tightly. Methemoglobin instead contains Fe3+, which cannot bind oxygen normally and can produce brown blood with cyanosis. Both cause tissue hypoxia, but pulse oximetry and treatment considerations differ.",
+          "keyPoints": [
+            "CO reduces available sites and left-shifts remaining oxygen binding.",
+            "Methemoglobin contains Fe3+ rather than Fe2+.",
+            "Chocolate-brown blood suggests methemoglobinemia.",
+            "Oxidant drugs such as nitrates or benzocaine can cause acquired methemoglobinemia."
+          ],
+          "clinicalLinks": [
+            "CO poisoning is treated with high-concentration oxygen and sometimes hyperbaric oxygen.",
+            "Methylene blue can reduce methemoglobin in appropriate patients but requires clinical caution."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 3.",
+            "Lippincott 6e, Chapter 3, local extraction items 97-104 and 167-174."
+          ],
+          "selectedQuestionIds": [
+            "confirmed-curriculum-gap-020-v1",
+            "confirmed-curriculum-gap-021-v1",
+            "lippincott-ch3-bank-217-v1"
+          ]
+        },
+        {
+          "id": "ch3-hba1c-and-chronic-glycemia",
+          "title": "HbA1c records cumulative glucose exposure",
+          "priority": "medical-core",
+          "rationale": "HbA1c is essential physician knowledge and a named Chapter 3 hemoglobin derivative, but it is not separately emphasized by the recovered teacher slides.",
+          "summary": "HbA1c forms by slow nonenzymatic glycation of HbA, especially at the N-terminal valines of beta chains. Its abundance reflects average glucose exposure over the circulating red cell population rather than a momentary glucose value. Altered red-cell lifespan, transfusion, or some hemoglobin variants can make HbA1c misleading.",
+          "keyPoints": [
+            "Glycation is nonenzymatic and differs from enzyme-directed glycosylation.",
+            "The extent of HbA1c formation rises with ambient glucose concentration and time.",
+            "HbA1c reflects roughly the preceding two to three months with greater weighting of recent weeks.",
+            "Conditions changing erythrocyte lifespan can bias the result."
+          ],
+          "clinicalLinks": [
+            "HbA1c is used to diagnose and monitor diabetes when the assay is reliable.",
+            "Recent blood loss or hemolysis can produce an unexpectedly low HbA1c."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 3.",
+            "Lippincott 6e, Chapter 3, local extraction items 122-128 and 204."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch3-bank-122-v1",
+            "lippincott-ch3-bank-202-v1"
+          ]
+        },
+        {
+          "id": "ch3-sickle-cell-disease",
+          "title": "HbS: a primary-structure change causes polymerization",
+          "priority": "medical-core",
+          "rationale": "Sickle cell disease is the canonical mechanism linking amino-acid chemistry, protein structure, oxygen state, and clinical disease in confirmed Chapter 3.",
+          "summary": "HbS contains a beta-chain Glu6Val substitution that creates a hydrophobic patch. When deoxygenated, HbS molecules polymerize into rigid fibers that distort red cells, impair deformability, and occlude small vessels. Low oxygen, acidosis, dehydration, and other conditions favoring deoxyhemoglobin increase sickling, whereas HbF reduces polymerization.",
+          "keyPoints": [
+            "The mutation is beta6 glutamate to valine.",
+            "Deoxy-HbS, not oxy-HbS, polymerizes most readily.",
+            "Polymerization causes hemolysis and vaso-occlusion.",
+            "Hydroxyurea helps by increasing HbF."
+          ],
+          "clinicalLinks": [
+            "Vaso-occlusion causes painful crises, infarction, and organ damage.",
+            "Newborn screening enables prophylaxis before severe infection occurs."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 1 local extraction item 24 and Chapter 3 local extraction items 151-158."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch3-bank-147-v1",
+            "lippincott-ch3-bank-150-v1",
+            "lippincott-ch3-bank-157-v1"
+          ]
+        },
+        {
+          "id": "ch3-thalassemia-quantity-versus-quality",
+          "title": "Thalassemia is impaired globin-chain production",
+          "priority": "medical-core",
+          "rationale": "The qualitative-versus-quantitative hemoglobinopathy distinction is a fundamental diagnostic concept in the confirmed globular-protein chapter.",
+          "summary": "Thalassemias result from decreased or absent synthesis of alpha- or beta-globin chains rather than a single abnormal hemoglobin structure alone. The unbalanced normally synthesized partner chains precipitate, damage erythroid precursors, and cause ineffective erythropoiesis and hemolysis. Alpha-thalassemia is commonly deletional, while beta-thalassemia commonly reflects point mutations affecting expression or RNA processing.",
+          "keyPoints": [
+            "Thalassemia is primarily a quantitative globin defect.",
+            "Beta-thalassemia leaves excess alpha chains that precipitate.",
+            "Severity depends on how many genes are affected and whether production is reduced or absent.",
+            "Beta-thalassemia often raises HbA2 and HbF."
+          ],
+          "clinicalLinks": [
+            "Severe disease produces anemia, marrow expansion, transfusion dependence, and iron overload.",
+            "Microcytosis out of proportion to anemia can suggest thalassemia trait."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 3.",
+            "Lippincott 6e, Chapter 3, local extraction items 175-193."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch3-bank-174-v1",
+            "lippincott-ch3-bank-180-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-4",
+      "concepts": [
+        {
+          "id": "ch4-collagen-triple-helix-and-types",
+          "title": "Collagen triple helix, Gly-X-Y, and major types",
+          "priority": "exam-core",
+          "rationale": "Fibrous proteins are part of the confirmed Chapter 1-7 scaffold; collagen architecture and types are the chapter's organizing facts.",
+          "summary": "Collagen is a triple helix of three alpha chains with a repeating Gly-X-Y sequence, commonly containing proline and hydroxyproline. Glycine must occur every third residue because only its small hydrogen side chain fits at the helix center. Types I, II, and III form fibrils, whereas type IV forms a sheet-like basement-membrane network.",
+          "keyPoints": [
+            "Collagen is the most abundant protein in the body.",
+            "Gly-X-Y repeats permit triple-helix packing.",
+            "Type I predominates in bone, skin, tendon, and scar.",
+            "Type II predominates in cartilage and vitreous body.",
+            "Type III forms reticular fibers; type IV forms basement-membrane networks."
+          ],
+          "clinicalLinks": [
+            "Tissue distribution helps predict the phenotype of a collagen defect."
+          ],
+          "sourceEvidence": [
+            "exam-scope.md, complete confirmed Lippincott Chapters 1-7 scaffold.",
+            "Lippincott 6e, Chapter 4, local PDF pages 87-104."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-009-v1",
+            "july29-comprehensive-015-v1",
+            "july29-comprehensive-018-v1"
+          ]
+        },
+        {
+          "id": "ch4-intracellular-collagen-synthesis",
+          "title": "Intracellular collagen synthesis and vitamin C",
+          "priority": "exam-core",
+          "rationale": "The ordered synthesis pathway and vitamin C dependence are central high-yield mechanisms in confirmed Chapter 4.",
+          "summary": "Prepro-alpha chains enter rough ER, lose their signal sequence, and undergo selected proline and lysine hydroxylation plus hydroxylysine glycosylation. Hydroxylases require oxygen, Fe2+, and vitamin C; terminal propeptides align three chains and prevent premature fibril formation. The chains assemble from the C terminus into a procollagen triple helix before Golgi processing and secretion.",
+          "keyPoints": [
+            "Hydroxylation occurs in rough ER after residues enter the chain.",
+            "Vitamin C keeps iron in the reduced state needed by hydroxylases.",
+            "Hydroxyproline stabilizes the triple helix through hydrogen bonding.",
+            "Propeptides align chains and keep procollagen soluble inside the cell."
+          ],
+          "clinicalLinks": [
+            "Vitamin C deficiency causes weak collagen, bleeding, and poor wound healing."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 4, local PDF pages 87-104 and extraction items 31-39."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-010-v1",
+            "july29-comprehensive-011-v1",
+            "july29-comprehensive-012-v1"
+          ]
+        },
+        {
+          "id": "ch4-extracellular-collagen-processing",
+          "title": "Extracellular procollagen cleavage and copper-dependent cross-linking",
+          "priority": "exam-core",
+          "rationale": "Propeptide cleavage and lysyl-oxidase cross-linking are the two decisive extracellular steps in the confirmed collagen synthesis pathway.",
+          "summary": "After secretion, N- and C-procollagen peptidases remove terminal propeptides to produce tropocollagen. Tropocollagen molecules align into staggered fibrils, and copper-dependent lysyl oxidase creates reactive aldehydes from lysine or hydroxylysine. Covalent intermolecular cross-links then provide tensile strength.",
+          "keyPoints": [
+            "Procollagen cleavage occurs extracellularly.",
+            "Tropocollagen self-assembles into staggered fibrils.",
+            "Lysyl oxidase requires copper.",
+            "Cross-link density increases tensile strength with maturation."
+          ],
+          "clinicalLinks": [
+            "Copper deficiency or lysyl-oxidase inhibition weakens collagen cross-linking.",
+            "Defective procollagen peptidases can cause Ehlers-Danlos phenotypes."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 4, local PDF pages 87-104 and extraction items 40-47."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-013-v1",
+            "july29-comprehensive-014-v1"
+          ]
+        },
+        {
+          "id": "ch4-collagen-degradation-and-remodeling",
+          "title": "Collagen degradation and matrix remodeling",
+          "priority": "medical-core",
+          "rationale": "Matrix turnover is medically important for wound healing, fibrosis, invasion, and arthritis, but it is not separately emphasized by recovered teacher slides.",
+          "summary": "Collagen is long lived but not permanent; collagenases initiate cleavage of the otherwise resistant triple helix. These enzymes belong to the matrix metalloproteinase family and produce fragments that other proteases further degrade. Synthesis and degradation must remain balanced during development, wound healing, and tissue maintenance.",
+          "keyPoints": [
+            "Collagenases are matrix metalloproteinases.",
+            "Initial collagenase cleavage enables further proteolysis.",
+            "MMP activity is regulated by activation and tissue inhibitors.",
+            "Excess breakdown weakens matrix; excess deposition causes fibrosis."
+          ],
+          "clinicalLinks": [
+            "MMP activity contributes to arthritis, tumor invasion, and vascular remodeling.",
+            "Chronic injury can shift balance toward fibrotic collagen deposition."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 4.",
+            "Lippincott 6e, Chapter 4, local extraction items 52-53."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch4-bank-048-v1",
+            "lippincott-ch4-bank-049-v1"
+          ]
+        },
+        {
+          "id": "ch4-collagen-disorders",
+          "title": "Scurvy, osteogenesis imperfecta, and Ehlers-Danlos syndrome",
+          "priority": "medical-core",
+          "rationale": "These diseases test whether the learner can localize a defect to collagen modification, structure, type, or processing rather than recall isolated names.",
+          "summary": "Scurvy is acquired defective hydroxylation from vitamin C deficiency, causing capillary fragility and poor wound healing. Osteogenesis imperfecta usually involves type I collagen quantity or structure and produces fractures, blue sclerae, and sometimes hearing or dental abnormalities. Ehlers-Danlos syndromes arise from varied collagen or processing defects and commonly feature skin hyperextensibility and joint hypermobility; vascular type III collagen defects risk arterial rupture.",
+          "keyPoints": [
+            "Scurvy impairs proline and lysine hydroxylation.",
+            "Osteogenesis imperfecta commonly involves type I collagen.",
+            "Glycine substitution can disrupt the entire triple helix.",
+            "Classic EDS often involves type V; vascular EDS involves type III.",
+            "Dominant-negative chains can damage a multichain collagen molecule."
+          ],
+          "clinicalLinks": [
+            "Bleeding plus dietary deficiency suggests scurvy; congenital recurrent fractures suggest OI.",
+            "Marked hypermobility with fragile hyperextensible skin suggests EDS."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 4, local PDF pages 87-104 and extraction item 58."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-019-v1",
+            "july29-comprehensive-020-v1",
+            "lippincott-ch4-bank-054-v1"
+          ]
+        },
+        {
+          "id": "ch4-elastin-architecture-and-recoil",
+          "title": "Elastin structure permits stretch and recoil",
+          "priority": "exam-core",
+          "rationale": "Elastin is the second major fibrous protein in confirmed Chapter 4 and must be distinguished mechanistically from collagen.",
+          "summary": "Collagen resists stretch, whereas elastin permits tissues to extend and recoil. Tropoelastin is rich in small nonpolar residues and lysine and is deposited on a fibrillin microfibril scaffold. Lysyl oxidase contributes to desmosine cross-links, creating an extensible, amorphous network important in lungs, large arteries, and elastic ligaments.",
+          "keyPoints": [
+            "Elastin provides elasticity rather than high tensile strength.",
+            "Tropoelastin is the soluble precursor.",
+            "Fibrillin microfibrils guide elastic-fiber assembly.",
+            "Desmosine cross-links connect tropoelastin chains.",
+            "Elastic recoil is crucial in alveoli and large arteries."
+          ],
+          "clinicalLinks": [
+            "Loss of alveolar elastin reduces recoil and promotes expiratory airway collapse."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 4, local extraction items 68-74."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch4-bank-064-v1",
+            "lippincott-ch4-bank-067-v1"
+          ]
+        },
+        {
+          "id": "ch4-fibrillin-and-alpha1-antitrypsin-disease",
+          "title": "Fibrillin defects and unopposed elastase injury",
+          "priority": "medical-core",
+          "rationale": "Marfan syndrome and alpha1-antitrypsin deficiency are the two essential clinical mechanisms linking elastic tissue to disease in confirmed Chapter 4.",
+          "summary": "Fibrillin-1 forms the microfibril scaffold for elastic fibers, and its mutation causes Marfan syndrome with skeletal, ocular, and cardiovascular manifestations. Alpha1-antitrypsin normally restrains neutrophil elastase in the lung; deficiency permits destruction of alveolar elastic tissue and panacinar emphysema. The common severe Z variant also polymerizes in hepatocyte ER, producing both low circulating inhibitor and liver injury.",
+          "keyPoints": [
+            "Fibrillin-1 mutation causes Marfan syndrome.",
+            "Alpha1-antitrypsin inhibits neutrophil elastase.",
+            "Unopposed elastase destroys alveolar walls and recoil.",
+            "Misfolded Z-variant AAT can accumulate in hepatocytes."
+          ],
+          "clinicalLinks": [
+            "Marfan syndrome raises risk of aortic root disease and lens dislocation.",
+            "AAT deficiency causes early panacinar emphysema, worsened by smoking, and may cause cirrhosis."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 4.",
+            "Lippincott 6e, Chapter 4, local extraction items 74 and 78-85."
+          ],
+          "selectedQuestionIds": [
+            "july29-comprehensive-021-v1",
+            "july29-comprehensive-022-v1",
+            "lippincott-ch4-bank-080-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-5",
+      "concepts": [
+        {
+          "id": "ch5-active-site-specificity-and-induced-fit",
+          "title": "Active sites create specificity and induced fit",
+          "priority": "exam-core",
+          "rationale": "These ideas establish how enzymes recognize substrates before the directly teacher-confirmed kinetics and regulation material.",
+          "summary": "An enzyme active site is a three-dimensional pocket formed by residues that may be far apart in primary sequence. Complementary shape, charge, polarity, and dynamics give substrate and reaction specificity. Substrate binding can induce a conformational change that positions catalytic groups and stabilizes the transition state.",
+          "keyPoints": [
+            "The active site is created by tertiary structure.",
+            "Specificity can be absolute, group, bond, or stereochemical.",
+            "Induced fit is conformational adjustment after binding.",
+            "Catalytic residues need not be adjacent in sequence."
+          ],
+          "clinicalLinks": [
+            "Many drugs work by occupying an enzyme active site or an allosteric pocket.",
+            "Stereospecificity explains why drug enantiomers can differ in effect."
+          ],
+          "sourceEvidence": [
+            "exam-scope.md, August 25 active biochemistry scope: enzymes and regulation; complete Lippincott Chapters 1-7 scaffold.",
+            "Lippincott 6e, Chapter 5, local extraction items 12, 14, and 18."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch5-bank-012-v1",
+            "lippincott-ch5-bank-014-v1",
+            "lippincott-ch5-bank-018-v1"
+          ]
+        },
+        {
+          "id": "ch5-catalysis-activation-energy-and-equilibrium",
+          "title": "Enzymes lower activation energy without changing equilibrium",
+          "priority": "exam-core",
+          "rationale": "This is the core mechanistic rule needed to avoid confusing reaction rate with thermodynamic favorability.",
+          "summary": "Enzymes accelerate reactions by stabilizing the transition state and providing a lower-activation-energy pathway. They do not change the overall free-energy difference between reactants and products and do not move the equilibrium position. They accelerate both forward and reverse reactions, allowing equilibrium to be reached faster.",
+          "keyPoints": [
+            "Activation energy is the barrier to reaching the transition state.",
+            "Enzymes lower activation energy.",
+            "Enzymes do not change reaction delta G.",
+            "Enzymes do not change the equilibrium constant.",
+            "Transition-state stabilization is central to catalysis."
+          ],
+          "clinicalLinks": [
+            "Transition-state analogs can be potent enzyme inhibitors and useful drugs."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 5, local extraction items 29-36."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch5-bank-032-v1",
+            "lippincott-ch5-bank-033-v1",
+            "lippincott-ch5-bank-034-v1"
+          ]
+        },
+        {
+          "id": "ch5-cofactors-coenzymes-and-holoenzymes",
+          "title": "Apoenzyme, holoenzyme, cofactor, and coenzyme",
+          "priority": "exam-core",
+          "rationale": "Cofactor terminology links enzyme function to the explicit vitamin block and appears throughout medically important metabolic mechanisms.",
+          "summary": "An apoenzyme is the protein portion without a required nonprotein component, whereas the complete active form is the holoenzyme. Metal ions can act as cofactors; organic helpers are coenzymes, many derived from vitamins. A cosubstrate binds transiently and leaves chemically changed, while a prosthetic group remains tightly bound and is regenerated on the enzyme.",
+          "keyPoints": [
+            "Apoenzyme plus required nonprotein component equals holoenzyme.",
+            "Metal ions such as Zn2+ or Fe2+ can be cofactors.",
+            "NAD+ is a vitamin-derived coenzyme and cosubstrate.",
+            "Tightly bound FAD can function as a prosthetic group."
+          ],
+          "clinicalLinks": [
+            "Vitamin deficiencies can reduce the activity of all enzymes requiring the corresponding coenzyme.",
+            "Metal chelation can inhibit metalloenzymes."
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024.pdf, pages 4-12 (cofactors, coenzymes, and prosthetic groups).",
+            "Lippincott 6e, Chapter 5, local extraction items 20-25 and 114."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch5-bank-020-v1",
+            "lippincott-ch5-bank-022-v1",
+            "lippincott-ch5-bank-112-v1"
+          ]
+        },
+        {
+          "id": "ch5-temperature-and-ph-effects",
+          "title": "Temperature and pH alter enzyme rate",
+          "priority": "medical-core",
+          "rationale": "These are universal assay and physiology principles in confirmed Chapter 5, but not individually highlighted in the recovered enzyme-regulation slide ranges.",
+          "summary": "Raising temperature initially increases molecular collisions and reaction rate, but excessive heat unfolds enzymes and reduces activity. pH changes the protonation of catalytic and substrate-binding residues, and extreme pH can disrupt the protein's stabilizing interactions. Each enzyme therefore has an activity profile suited to its physiological compartment.",
+          "keyPoints": [
+            "Rate rises with temperature until structural instability dominates.",
+            "High heat decreases activity through denaturation.",
+            "pH controls active-site residue ionization.",
+            "Extreme pH can disrupt tertiary structure.",
+            "Pepsin and cytosolic enzymes have different pH optima."
+          ],
+          "clinicalLinks": [
+            "Specimen handling temperature and pH can change measured enzyme activity.",
+            "Acidic lysosomes support hydrolases that would be less active in neutral cytosol."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 5, local extraction items 43-48."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch5-bank-044-v1",
+            "lippincott-ch5-bank-046-v1"
+          ]
+        },
+        {
+          "id": "ch5-michaelis-menten-km-vmax",
+          "title": "Michaelis-Menten saturation, Km, and Vmax",
+          "priority": "exam-core",
+          "rationale": "Saturation, Km, and apparent affinity are direct teacher enzyme-slide questions and top-priority Telegram scope.",
+          "summary": "For a simple Michaelis-Menten enzyme, velocity rises hyperbolically with substrate concentration and approaches Vmax as active sites become saturated. Km is the substrate concentration at half Vmax and is often used as an inverse indicator of apparent substrate affinity. Vmax depends on enzyme concentration, whereas Km for a given enzyme-substrate system does not.",
+          "keyPoints": [
+            "v = Vmax[S]/(Km + [S]).",
+            "At [S] = Km, v = Vmax/2.",
+            "Lower Km commonly means higher apparent affinity.",
+            "At saturation, adding substrate does not raise velocity further.",
+            "Increasing enzyme concentration increases Vmax."
+          ],
+          "clinicalLinks": [
+            "Km and Vmax help distinguish inhibitor mechanisms and compare enzyme variants."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 7 and 9-10."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-039-v1",
+            "bio-telegram-gap-040-v1",
+            "bio-telegram-gap-041-v1"
+          ]
+        },
+        {
+          "id": "ch5-lineweaver-burk-interpretation",
+          "title": "Lineweaver-Burk plot interpretation",
+          "priority": "exam-core",
+          "rationale": "The teacher enzyme deck explicitly teaches double-reciprocal plots and uses them to distinguish inhibition patterns.",
+          "summary": "The Lineweaver-Burk plot linearizes Michaelis-Menten kinetics by plotting 1/v against 1/[S]. Its y-intercept is 1/Vmax, x-intercept is -1/Km, and slope is Km/Vmax. Although modern fitting generally uses the original nonlinear equation, the plot remains a common exam tool for recognizing parameter changes.",
+          "keyPoints": [
+            "y-intercept = 1/Vmax.",
+            "x-intercept = -1/Km.",
+            "slope = Km/Vmax.",
+            "Competitive and noncompetitive inhibitors produce different intersection patterns."
+          ],
+          "clinicalLinks": [],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 13-14.",
+            "Lippincott 6e, Chapter 5, local extraction items 62-65."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-042-v1",
+            "lippincott-ch5-bank-062-v1"
+          ]
+        },
+        {
+          "id": "ch5-competitive-inhibition",
+          "title": "Competitive inhibition raises apparent Km",
+          "priority": "exam-core",
+          "rationale": "Competitive inhibition and its Km/Vmax signature are explicit teacher-slide targets with a strong poisoning application in the chapter bank.",
+          "summary": "A competitive inhibitor and substrate compete for the enzyme's active site. It increases apparent Km because more substrate is needed to reach half Vmax, but Vmax is unchanged because sufficiently high substrate can outcompete reversible inhibitor. On a Lineweaver-Burk plot, lines share the y-intercept.",
+          "keyPoints": [
+            "Competitive inhibitor binds the active site.",
+            "Apparent Km increases.",
+            "Vmax is unchanged.",
+            "Increasing substrate can overcome reversible competitive inhibition."
+          ],
+          "clinicalLinks": [
+            "Fomepizole or ethanol competitively limits toxic alcohol metabolism by alcohol dehydrogenase.",
+            "Statins competitively inhibit HMG-CoA reductase."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 16-18 and 21.",
+            "Lippincott 6e, Chapter 5, local extraction item 112."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-043-v1",
+            "lippincott-ch5-bank-110-v1"
+          ]
+        },
+        {
+          "id": "ch5-noncompetitive-and-irreversible-inhibition",
+          "title": "Noncompetitive versus irreversible inhibition",
+          "priority": "exam-core",
+          "rationale": "Both pure noncompetitive and irreversible inhibition are explicitly contrasted in the teacher enzyme deck.",
+          "summary": "A pure noncompetitive inhibitor binds enzyme and enzyme-substrate complex outside the active site, lowering Vmax without changing Km. An irreversible inhibitor permanently inactivates enzyme, commonly through covalent modification, so activity returns only when new enzyme is synthesized. Neither mechanism is overcome simply by increasing substrate concentration.",
+          "keyPoints": [
+            "Pure noncompetitive inhibition decreases Vmax and leaves Km unchanged.",
+            "Irreversible inhibition permanently reduces active enzyme concentration.",
+            "Increasing substrate does not restore the original Vmax.",
+            "Real mixed inhibition can change both Km and Vmax."
+          ],
+          "clinicalLinks": [
+            "Aspirin irreversibly acetylates cyclooxygenase.",
+            "Organophosphates irreversibly inhibit acetylcholinesterase unless treated before aging."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 19-24.",
+            "Lippincott 6e, Chapter 5, local extraction item 82."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-044-v1",
+            "bio-telegram-gap-045-v1",
+            "lippincott-ch5-bank-080-v1"
+          ]
+        },
+        {
+          "id": "ch5-allostery-rate-limiting-steps-and-feedback",
+          "title": "Allosteric enzymes control pathway flux",
+          "priority": "exam-core",
+          "rationale": "Regulatory sites, non-Michaelis kinetics, rate-limiting steps, and feedback inhibition are a direct teacher-slide sequence.",
+          "summary": "Allosteric effectors bind regulatory sites distinct from the active site and shift an enzyme between activity states. These enzymes are often multisubunit, show sigmoidal rather than simple Michaelis-Menten kinetics, and catalyze rate-limiting or committed steps. Feedback inhibition occurs when a pathway end product inhibits an earlier regulatory enzyme, preventing wasteful overproduction.",
+          "keyPoints": [
+            "Allosteric sites are distinct from catalytic sites.",
+            "Allosteric enzymes often show cooperative sigmoidal kinetics.",
+            "Regulatory enzymes commonly occur at irreversible pathway-control steps.",
+            "End-product feedback conserves energy and precursors."
+          ],
+          "clinicalLinks": [
+            "Allosteric drugs can modulate activity without competing with substrate."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 35-38."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-047-v1",
+            "bio-telegram-gap-048-v1",
+            "bio-telegram-gap-049-v1"
+          ]
+        },
+        {
+          "id": "ch5-covalent-zymogen-and-enzyme-amount-regulation",
+          "title": "Fast and slow modes of enzyme regulation",
+          "priority": "exam-core",
+          "rationale": "Phosphorylation, zymogen activation, and induction are all direct teacher-slide regulation targets.",
+          "summary": "Reversible phosphorylation rapidly changes existing enzyme activity and commonly targets serine, threonine, or tyrosine. Proteolytic cleavage activates zymogens irreversibly, which is useful when enzymes must remain off until they reach a specific site. Induction and repression alter enzyme abundance through synthesis or degradation and therefore act more slowly than allosteric or covalent control.",
+          "keyPoints": [
+            "Kinases add phosphate; phosphatases remove it.",
+            "Phosphorylation can activate one enzyme and inhibit another.",
+            "Zymogen activation is proteolytic and irreversible for that molecule.",
+            "Induction increases enzyme synthesis over hours to days.",
+            "Multiple regulation modes can act on the same pathway."
+          ],
+          "clinicalLinks": [
+            "Digestive proteases and coagulation factors are synthesized as zymogens.",
+            "Inappropriate protease activation can cause pancreatitis or uncontrolled coagulation."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 39, 41, and 43."
+          ],
+          "selectedQuestionIds": [
+            "bio-telegram-gap-050-v1",
+            "bio-telegram-gap-051-v1",
+            "bio-telegram-gap-052-v1"
+          ]
+        },
+        {
+          "id": "ch5-clinical-enzymes-isoenzymes-and-biomarkers",
+          "title": "Plasma enzymes, isoenzymes, and tissue injury",
+          "priority": "medical-core",
+          "rationale": "Diagnostic enzyme interpretation is essential physician knowledge in confirmed Chapter 5, but modern biomarker details should not be mistaken for a recovered teacher-slide emphasis.",
+          "summary": "Many intracellular enzymes appear in plasma at low steady-state concentrations and rise when cells are injured. Isoenzymes catalyze the same reaction but differ in structure and tissue distribution, helping identify a source of damage. Biomarker interpretation requires tissue specificity and time course; for myocardial infarction, cardiac troponin has replaced CK-MB as the preferred marker in most settings.",
+          "keyPoints": [
+            "Plasma enzyme elevation can indicate cell injury rather than increased pathway activity in plasma.",
+            "Isoenzymes differ in sequence, charge, kinetics, or tissue distribution.",
+            "ALT is relatively useful for hepatocellular injury.",
+            "Cardiac troponin is the preferred myocardial-injury biomarker.",
+            "A result must be interpreted with symptoms, timing, and reference intervals."
+          ],
+          "clinicalLinks": [
+            "Serial troponin measurements help detect an evolving myocardial injury pattern.",
+            "An enzyme pattern can support a tissue source but rarely establishes a diagnosis alone."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 5.",
+            "Lippincott 6e, Chapter 5, local extraction items 96-110."
+          ],
+          "selectedQuestionIds": [
+            "lippincott-ch5-bank-097-v1",
+            "lippincott-ch5-bank-099-v1",
+            "lippincott-ch5-bank-108-v1"
+          ]
+        }
+      ]
+    }
+  ]
+}
