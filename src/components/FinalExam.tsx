@@ -286,7 +286,7 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
       className={`final-metabolism-filter ${excludeCarbohydrateLipidMetabolism ? "active" : ""}`}
       onClick={() => chooseMetabolismScope(!excludeCarbohydrateLipidMetabolism)}
     >
-      <span className="final-metabolism-filter-copy"><small>EXAM-SCOPE FILTER</small><b>Exclude carbohydrate + lipid metabolism</b><em>{excludeCarbohydrateLipidMetabolism ? `${filteredOutCount} off-syllabus questions hidden` : "All topics included"}</em></span>
+      <span className="final-metabolism-filter-copy"><small>EXAM-SCOPE FILTER</small><b>Exclude carbohydrate, lipid + oxidative metabolism</b><em>{excludeCarbohydrateLipidMetabolism ? `${filteredOutCount} off-syllabus questions hidden` : "All topics included"}</em></span>
       <i aria-hidden="true"><span /></i>
     </button>}
     {loading && <div className="final-exam-empty"><b>Loading verified past papers…</b><span>Filtering to the confirmed syllabus.</span></div>}

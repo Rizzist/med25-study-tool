@@ -479,7 +479,7 @@ test("August 25 exposes two independent final banks and keeps the original archi
   assert.match(component, /bank=\$\{bank\}/);
 });
 
-test("August 25 final banks default to the no carbohydrate/lipid metabolism exam scope", async () => {
+test("August 25 final banks default to the no carbohydrate/lipid/oxidative metabolism exam scope", async () => {
   const [component, stateSource, oldText, downloadedText] = await Promise.all([
     readFile(new URL("../src/components/FinalExam.tsx", import.meta.url), "utf8"),
     readFile(new URL("../src/lib/mcq/final-exam-state.mjs", import.meta.url), "utf8"),
@@ -492,14 +492,16 @@ test("August 25 final banks default to the no carbohydrate/lipid metabolism exam
   const filteredDownloaded = filterFinalExamQuestions(downloaded, true);
 
   assert.equal(filteredTelegram.length, 194);
-  assert.equal(filteredDownloaded.length, 79);
+  assert.equal(filteredDownloaded.length, 66);
   assert.ok(filteredTelegram.every((question) => !isCarbohydrateOrLipidMetabolism(question)));
   assert.ok(filteredDownloaded.every((question) => !isCarbohydrateOrLipidMetabolism(question)));
   assert.match(component, /useState\(true\)/, "the exam-scope filter should be enabled by default");
-  assert.match(component, /Exclude carbohydrate \+ lipid metabolism/);
+  assert.match(component, /Exclude carbohydrate, lipid \+ oxidative metabolism/);
   assert.match(component, /without-carb-lipid-metabolism/);
   assert.match(stateSource, /july29:telegram-past-papers:no-carb-lipid-metabolism/);
   assert.match(stateSource, /july29:downloaded-core:no-carb-lipid-metabolism/);
+  assert.ok(!filteredDownloaded.some((question) => question.prompt === "During skeletal-muscle contraction, how do ADP and calcium affect oxidative metabolism?"));
+  assert.ok(filteredDownloaded.some((question) => question.prompt === "What occurs when mitochondrial cytochrome c is released into the cytosol?"));
 });
 
 test("final-exam reconciliation follows the current question and unlocks revised items", () => {
