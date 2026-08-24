@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 import { biochemistryChapterIdForQuestion } from "../src/lib/biochemistry/chapter-mapping.mjs";
+import { filterFinalExamQuestions, isCarbohydrateOrLipidMetabolism } from "../src/lib/mcq/final-exam-scope.mjs";
 import { parseFinalExamProgress, reconcileFinalExamSession } from "../src/lib/mcq/final-exam-state.mjs";
 import { classifySessionCompletion, selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 
@@ -476,6 +477,29 @@ test("August 25 exposes two independent final banks and keeps the original archi
   assert.match(component, /New Downloads · Core Distilled/);
   assert.match(component, /sessionKey/);
   assert.match(component, /bank=\$\{bank\}/);
+});
+
+test("August 25 final banks default to the no carbohydrate/lipid metabolism exam scope", async () => {
+  const [component, stateSource, oldText, downloadedText] = await Promise.all([
+    readFile(new URL("../src/components/FinalExam.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../src/lib/mcq/final-exam-state.mjs", import.meta.url), "utf8"),
+    readFile(new URL("../data/telegram-final/july29.jsonl", import.meta.url), "utf8"),
+    readFile(new URL("../data/final-exams/aug25-downloaded-core.jsonl", import.meta.url), "utf8"),
+  ]);
+  const telegram = oldText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const downloaded = downloadedText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const filteredTelegram = filterFinalExamQuestions(telegram, true);
+  const filteredDownloaded = filterFinalExamQuestions(downloaded, true);
+
+  assert.equal(filteredTelegram.length, 194);
+  assert.equal(filteredDownloaded.length, 79);
+  assert.ok(filteredTelegram.every((question) => !isCarbohydrateOrLipidMetabolism(question)));
+  assert.ok(filteredDownloaded.every((question) => !isCarbohydrateOrLipidMetabolism(question)));
+  assert.match(component, /useState\(true\)/, "the exam-scope filter should be enabled by default");
+  assert.match(component, /Exclude carbohydrate \+ lipid metabolism/);
+  assert.match(component, /without-carb-lipid-metabolism/);
+  assert.match(stateSource, /july29:telegram-past-papers:no-carb-lipid-metabolism/);
+  assert.match(stateSource, /july29:downloaded-core:no-carb-lipid-metabolism/);
 });
 
 test("final-exam reconciliation follows the current question and unlocks revised items", () => {

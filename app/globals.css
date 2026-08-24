@@ -198,6 +198,16 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 .final-bank-chooser button span { color:var(--muted); font-size:10px; }
 .final-bank-chooser button.active { border-color:var(--green); background:#eaf4ef; box-shadow:0 0 0 2px #126b4b16; }
 .final-bank-chooser button.active b { color:var(--green); }
+.final-metabolism-filter { width:min(860px,100%); padding:13px 15px; border:1px solid var(--line); border-radius:14px; background:#fff; color:var(--ink); display:flex; align-items:center; justify-content:space-between; gap:18px; text-align:left; }
+.final-metabolism-filter.active { border-color:#d2b55b; background:#fff9e7; }
+.final-metabolism-filter-copy { display:grid; gap:3px; }
+.final-metabolism-filter-copy small { color:#8b7838; font-size:8px; font-weight:900; letter-spacing:.12em; }
+.final-metabolism-filter-copy b { font-size:13px; }
+.final-metabolism-filter-copy em { color:var(--muted); font-size:10px; font-style:normal; }
+.final-metabolism-filter>i { width:42px; height:24px; flex:none; border-radius:99px; padding:3px; background:#cfd5d0; transition:background .18s ease; }
+.final-metabolism-filter>i span { display:block; width:18px; height:18px; border-radius:50%; background:#fff; box-shadow:0 1px 4px #14251f38; transition:transform .18s ease; }
+.final-metabolism-filter.active>i { background:#b18b14; }
+.final-metabolism-filter.active>i span { transform:translateX(18px); }
 .final-exam-launch { display:grid; gap:12px; }
 .final-exam-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }
 .final-exam-stats article { min-height:112px; padding:15px; border:1px solid var(--line); border-radius:15px; background:#fff; display:grid; align-content:space-between; }

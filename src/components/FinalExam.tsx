@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { LessonSlide } from "@/src/components/LessonSlide";
 import { allLessons } from "@/src/lib/lessons";
 import { lessonForQuestion } from "@/src/lib/lessons/types";
+import { filterFinalExamQuestions } from "@/src/lib/mcq/final-exam-scope.mjs";
 import {
   FINAL_EXAM_STORAGE_KEY,
   emptyFinalExamProgress,
@@ -15,7 +16,10 @@ import type { MCQQuestion } from "@/src/lib/mcq/types";
 
 type ExamId = "july25" | "july29";
 type FinalExamBankId = "telegram-past-papers" | "downloaded-core";
-type FinalSessionKey = `${ExamId}:${FinalExamBankId}`;
+type FinalBaseSessionKey = `${ExamId}:${FinalExamBankId}`;
+type FinalSessionKey = FinalBaseSessionKey
+  | "july29:telegram-past-papers:no-carb-lipid-metabolism"
+  | "july29:downloaded-core:no-carb-lipid-metabolism";
 type FinalAnswer = {
   selectedOptionId: string;
   correct: boolean;
@@ -50,6 +54,8 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
   const [fingerprint, setFingerprint] = useState("");
   const [bankLabel, setBankLabel] = useState("Telegram Past Papers");
   const [bankDescription, setBankDescription] = useState("The original source-traceable past-paper bank.");
+  const [excludeCarbohydrateLipidMetabolism, setExcludeCarbohydrateLipidMetabolism] = useState(true);
+  const [filteredOutCount, setFilteredOutCount] = useState(0);
   const [progress, setProgress] = useState<FinalProgress>(() => emptyFinalExamProgress() as FinalProgress);
   const [ready, setReady] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -58,7 +64,9 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
   const [lessonOpen, setLessonOpen] = useState(false);
 
   const byId = useMemo(() => new Map(questions.map((question) => [question.id, question])), [questions]);
-  const sessionKey = `${exam}:${bank}` as FinalSessionKey;
+  const baseSessionKey = `${exam}:${bank}` as FinalBaseSessionKey;
+  const metabolismFilterActive = exam === "july29" && excludeCarbohydrateLipidMetabolism;
+  const sessionKey = `${baseSessionKey}${metabolismFilterActive ? ":no-carb-lipid-metabolism" : ""}` as FinalSessionKey;
   const session = progress.sessions[sessionKey];
   const orderedQuestions = useMemo(
     () => session?.questionIds.flatMap((id) => byId.get(id) ?? []) ?? questions,
@@ -79,15 +87,19 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
         const payload = await response.json() as { questions?: MCQQuestion[]; fingerprint?: string; label?: string; description?: string; error?: string };
         if (!response.ok) throw new Error(payload.error ?? "Could not load the final-exam bank.");
         if (cancelled) return;
-        const loaded = payload.questions ?? [];
-        const nextFingerprint = payload.fingerprint ?? `${exam}-${loaded.length}`;
+        const allLoaded = payload.questions ?? [];
+        const loaded = filterFinalExamQuestions(allLoaded, metabolismFilterActive);
+        const rawFingerprint = payload.fingerprint ?? `${exam}-${allLoaded.length}`;
+        const nextFingerprint = `${rawFingerprint}:${metabolismFilterActive ? "without-carb-lipid-metabolism" : "all-topics"}`;
         let stored = emptyFinalExamProgress() as FinalProgress;
         try {
           stored = parseFinalExamProgress(window.localStorage.getItem(FINAL_EXAM_STORAGE_KEY)) as FinalProgress;
         } catch { /* Continue with an empty final-exam record. */ }
         const saved = stored.sessions[sessionKey];
-        const nextSession = saved ? reconcileFinalExamSession(saved, loaded, nextFingerprint) as FinalSession : null;
+        const migrationSeed = saved ?? (metabolismFilterActive ? stored.sessions[baseSessionKey] : null);
+        const nextSession = migrationSeed ? reconcileFinalExamSession(migrationSeed, loaded, nextFingerprint) as FinalSession : null;
         setQuestions(loaded);
+        setFilteredOutCount(allLoaded.length - loaded.length);
         setFingerprint(nextFingerprint);
         setBankLabel(payload.label ?? (bank === "downloaded-core" ? "New Downloads · Core Distilled" : "Telegram Past Papers"));
         setBankDescription(payload.description ?? "A source-traceable final-exam bank.");
@@ -101,7 +113,7 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
         if (!cancelled) setLoading(false);
       });
     return () => { cancelled = true; };
-  }, [bank, bridgeUrl, exam, sessionKey]);
+  }, [bank, baseSessionKey, bridgeUrl, exam, metabolismFilterActive, sessionKey]);
 
   useEffect(() => {
     if (!ready) return;
@@ -117,8 +129,21 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
     setActive(false);
     setLessonOpen(false);
     setQuestions([]);
+    setFilteredOutCount(0);
     setBankLabel(nextBank === "downloaded-core" ? "New Downloads · Core Distilled" : "Telegram Past Papers");
     setBank(nextBank);
+  }
+
+  function chooseMetabolismScope(exclude: boolean) {
+    if (exclude === excludeCarbohydrateLipidMetabolism) return;
+    setLoading(true);
+    setReady(false);
+    setError("");
+    setActive(false);
+    setLessonOpen(false);
+    setQuestions([]);
+    setFilteredOutCount(0);
+    setExcludeCarbohydrateLipidMetabolism(exclude);
   }
 
   function startOrResume() {
@@ -254,6 +279,16 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
       <button className={bank === "telegram-past-papers" ? "active" : ""} aria-pressed={bank === "telegram-past-papers"} onClick={() => chooseBank("telegram-past-papers")}><b>Telegram Past Papers</b><span>Original 199-question archive</span></button>
       <button className={bank === "downloaded-core" ? "active" : ""} aria-pressed={bank === "downloaded-core"} onClick={() => chooseBank("downloaded-core")}><b>New Downloads · Core Distilled</b><span>Deduplicated and scientifically re-keyed</span></button>
     </div>}
+    {exam === "july29" && <button
+      type="button"
+      role="switch"
+      aria-checked={excludeCarbohydrateLipidMetabolism}
+      className={`final-metabolism-filter ${excludeCarbohydrateLipidMetabolism ? "active" : ""}`}
+      onClick={() => chooseMetabolismScope(!excludeCarbohydrateLipidMetabolism)}
+    >
+      <span className="final-metabolism-filter-copy"><small>EXAM-SCOPE FILTER</small><b>Exclude carbohydrate + lipid metabolism</b><em>{excludeCarbohydrateLipidMetabolism ? `${filteredOutCount} off-syllabus questions hidden` : "All topics included"}</em></span>
+      <i aria-hidden="true"><span /></i>
+    </button>}
     {loading && <div className="final-exam-empty"><b>Loading verified past papers…</b><span>Filtering to the confirmed syllabus.</span></div>}
     {!loading && error && <div className="final-exam-empty error"><b>Final exam bank is unavailable.</b><span>{error}</span></div>}
     {!loading && !error && !questions.length && <div className="final-exam-empty"><b>No verified past-paper questions have been imported yet.</b><span>The ordinary study bank is still available in Overview and Topics.</span></div>}
