@@ -45,6 +45,12 @@ type BankSummary = {
     title: string;
     questionCount: number;
     finalExamQuestionCount: number;
+    finalExamBanks?: Array<{
+      id: "telegram-past-papers" | "downloaded-core";
+      label: string;
+      description: string;
+      questionCount: number;
+    }>;
     imageQuestionCount: number;
     collectionCounts: Partial<Record<CollectionId, number>>;
     collectionQuestionIds?: Partial<Record<CollectionId, string[]>>;
@@ -1068,7 +1074,7 @@ export default function Home() {
       const item = examConfig[value];
       const summary = bank?.exams?.find((candidate) => candidate.id === value);
       return <button key={value} className={exam === value ? "active" : ""} onClick={() => chooseExam(value)} aria-pressed={exam === value}>
-        <span>{item.date}</span><b>{item.title}</b><small>{value === "aug22" ? `${summary?.questionCount ?? "—"} practical questions` : tab === "Final exam" ? `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
+        <span>{item.date}</span><b>{item.title}</b><small>{value === "aug22" ? `${summary?.questionCount ?? "—"} practical questions` : tab === "Final exam" ? value === "july29" ? `${summary?.finalExamBanks?.length ?? "—"} final banks` : `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
       </button>;
     })}
   </div>;

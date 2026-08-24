@@ -10,6 +10,8 @@ import type { MCQQuestion } from "@/src/lib/mcq/types";
 import { selectCoverageSprint } from "@/src/lib/mcq/sprint-selection.mjs";
 
 export type ExamId = "july25" | "aug22" | "july29";
+export type FinalExamBankId = "telegram-past-papers" | "downloaded-core";
+type FinalExamBankKey = `${ExamId}:${FinalExamBankId}`;
 export type CollectionId =
   | "all"
   | "histology"
@@ -205,12 +207,50 @@ type BankManifest = {
 type EmbeddedBank = {
   manifest: BankManifest;
   questions: MCQQuestion[];
-  finalExams: Partial<Record<ExamId, MCQQuestion[]>>;
+  finalExams: Partial<Record<FinalExamBankKey, MCQQuestion[]>>;
 };
 
 const embeddedBank = embeddedBankData as unknown as EmbeddedBank;
 let verifiedCache: MCQQuestion[] | null = null;
-const finalCache: Partial<Record<ExamId, MCQQuestion[]>> = {};
+const finalCache: Partial<Record<FinalExamBankKey, MCQQuestion[]>> = {};
+
+const FINAL_EXAM_BANKS = [
+  {
+    id: "telegram-past-papers" as const,
+    exam: "july25" as const,
+    label: "Telegram Past Papers",
+    description: "The original source-traceable July 25 past-paper bank.",
+    requiredTag: "telegram-final",
+  },
+  {
+    id: "telegram-past-papers" as const,
+    exam: "july29" as const,
+    label: "Telegram Past Papers",
+    description: "The original 199-question August 25 Telegram archive.",
+    requiredTag: "telegram-final",
+  },
+  {
+    id: "downloaded-core" as const,
+    exam: "july29" as const,
+    label: "New Downloads · Core Distilled",
+    description: "Scientifically re-keyed core questions distilled from the newly downloaded past papers and exam photos.",
+    requiredTag: "final-bank-aug25-downloaded-core",
+  },
+] as const;
+
+export function isFinalExamBankId(value: unknown): value is FinalExamBankId {
+  return value === "telegram-past-papers" || value === "downloaded-core";
+}
+
+export function defaultFinalExamBank(): FinalExamBankId {
+  return "telegram-past-papers";
+}
+
+function finalExamBankDefinition(exam: ExamId, bank: FinalExamBankId) {
+  const definition = FINAL_EXAM_BANKS.find((candidate) => candidate.exam === exam && candidate.id === bank);
+  if (!definition) throw new Error("That final-exam bank is not available for this exam");
+  return definition;
+}
 
 export function isExamId(value: unknown): value is ExamId {
   return value === "july25" || value === "aug22" || value === "july29";
@@ -228,18 +268,20 @@ export function loadVerifiedQuestions(): MCQQuestion[] {
   return verifiedCache;
 }
 
-export function loadFinalExamQuestions(exam: ExamId): MCQQuestion[] {
-  if (!finalCache[exam]) {
-    finalCache[exam] = (embeddedBank.finalExams[exam] ?? []).filter((question) => {
+export function loadFinalExamQuestions(exam: ExamId, bank: FinalExamBankId = defaultFinalExamBank()): MCQQuestion[] {
+  const definition = finalExamBankDefinition(exam, bank);
+  const key: FinalExamBankKey = `${exam}:${bank}`;
+  if (!finalCache[key]) {
+    finalCache[key] = (embeddedBank.finalExams[key] ?? []).filter((question) => {
       const tags = new Set(question.tags ?? []);
       return question.status === "verified"
-        && tags.has("telegram-final")
+        && tags.has(definition.requiredTag)
         && tags.has(`exam-${exam}`)
         && Boolean(question.source?.title)
         && Boolean(question.source?.chapter);
     });
   }
-  return finalCache[exam] ?? [];
+  return finalCache[key] ?? [];
 }
 
 function isPracticalDerived(question: MCQQuestion): boolean {
@@ -333,7 +375,17 @@ export function bankSummary() {
     return {
       ...exam,
       questionCount: questions.length,
-      finalExamQuestionCount: loadFinalExamQuestions(exam.id).length,
+      finalExamQuestionCount: FINAL_EXAM_BANKS
+        .filter((bank) => bank.exam === exam.id)
+        .reduce((total, bank) => total + loadFinalExamQuestions(exam.id, bank.id).length, 0),
+      finalExamBanks: FINAL_EXAM_BANKS
+        .filter((bank) => bank.exam === exam.id)
+        .map((bank) => ({
+          id: bank.id,
+          label: bank.label,
+          description: bank.description,
+          questionCount: loadFinalExamQuestions(exam.id, bank.id).length,
+        })),
       imageQuestionCount: questions.filter((question) => question.kind === "image_single_best_answer").length,
       collectionCounts: Object.fromEntries(COLLECTIONS.map((collection) => [
         collection,
@@ -362,18 +414,27 @@ export function bankSummary() {
   };
 }
 
-export function finalExamSet(exam: ExamId) {
-  const questions = loadFinalExamQuestions(exam);
+export function finalExamSet(exam: ExamId, bank: FinalExamBankId = defaultFinalExamBank()) {
+  const definition = finalExamBankDefinition(exam, bank);
+  const questions = loadFinalExamQuestions(exam, bank);
   const fingerprint = createHash("sha256")
-    .update(JSON.stringify(questions.map((question) => [
+    .update(JSON.stringify([exam, bank, ...questions.map((question) => [
       question.id,
       question.revision,
       question.correctOptionId,
       question.source,
-    ])))
+    ])]))
     .digest("hex")
     .slice(0, 20);
-  return { exam, availableCount: questions.length, fingerprint, questions };
+  return {
+    exam,
+    bank,
+    label: definition.label,
+    description: definition.description,
+    availableCount: questions.length,
+    fingerprint,
+    questions,
+  };
 }
 
 export function questionSet(searchParams: URLSearchParams) {
@@ -469,6 +530,7 @@ export function resolveMedia(questionId: string | null, mediaId: string | null) 
     ...loadVerifiedQuestions(),
     ...loadFinalExamQuestions("july25"),
     ...loadFinalExamQuestions("july29"),
+    ...loadFinalExamQuestions("july29", "downloaded-core"),
   ].find((candidate) => candidate.id === questionId);
   const media = question?.media?.find((candidate) => candidate.id === mediaId);
   if (!media || media.type !== "image") return null;

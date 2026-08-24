@@ -8,13 +8,16 @@ const schema = JSON.parse(readFileSync(resolve(root, "schemas/mcq-question.schem
 const validateSchema = new Ajv2020({ allErrors: true }).compile(schema);
 const questionDir = resolve(root, manifest.questionDirectory);
 const finalExamDir = resolve(root, "data/telegram-final");
+const downloadedFinalExamDir = resolve(root, "data/final-exams");
 const assetRoots = manifest.assetDirectories.map((directory) => resolve(root, directory));
 const errors = [];
 const ids = new Set();
 let count = 0;
 let finalExamCount = 0;
+let downloadedFinalExamCount = 0;
+const downloadedPrompts = new Set();
 
-function validate(question, location, expectedExam) {
+function validate(question, location, finalMetadata) {
   if (!validateSchema(question)) {
     for (const error of validateSchema.errors ?? []) errors.push(`${location}: ${error.instancePath || "/"} ${error.message}`);
   }
@@ -34,36 +37,46 @@ function validate(question, location, expectedExam) {
     const found = assetRoots.some((assetRoot) => existsSync(resolve(assetRoot, media.path)));
     if (!found) errors.push(`${location}: missing media ${media.path}`);
   }
-  if (expectedExam) {
+  if (finalMetadata) {
     if (question.status !== "verified") errors.push(`${location}: final-exam questions must be verified`);
-    if (!(question.tags ?? []).includes("telegram-final")) errors.push(`${location}: missing telegram-final tag`);
-    if (!(question.tags ?? []).includes(`exam-${expectedExam}`)) errors.push(`${location}: missing exam-${expectedExam} tag`);
+    if (!(question.tags ?? []).includes(finalMetadata.requiredTag)) errors.push(`${location}: missing ${finalMetadata.requiredTag} tag`);
+    if (!(question.tags ?? []).includes(`exam-${finalMetadata.exam}`)) errors.push(`${location}: missing exam-${finalMetadata.exam} tag`);
+    if (finalMetadata.bank === "downloaded-core") {
+      if (question.subject !== "biochemistry") errors.push(`${location}: downloaded-core item must be biochemistry`);
+      if (!(question.tags ?? []).includes("distilled-core")) errors.push(`${location}: missing distilled-core tag`);
+      const normalizedPrompt = question.prompt?.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+      if (downloadedPrompts.has(normalizedPrompt)) errors.push(`${location}: repeated normalized downloaded-core stem`);
+      downloadedPrompts.add(normalizedPrompt);
+    }
   }
 }
 
 for (const source of [
-  { directory: questionDir, finalExam: false },
-  { directory: finalExamDir, finalExam: true },
+  { directory: questionDir },
+  { directory: finalExamDir, metadataFor: (filename) => ({ exam: filename.replace(/\.jsonl$/, ""), requiredTag: "telegram-final", bank: "telegram-past-papers" }) },
+  { directory: downloadedFinalExamDir, metadataFor: () => ({ exam: "july29", requiredTag: "final-bank-aug25-downloaded-core", bank: "downloaded-core" }) },
 ]) {
   if (!existsSync(source.directory)) continue;
   for (const filename of readdirSync(source.directory).filter((name) => name.endsWith(".jsonl")).sort()) {
-    const expectedExam = source.finalExam ? filename.replace(/\.jsonl$/, "") : undefined;
+    const finalMetadata = source.metadataFor?.(filename);
     const lines = readFileSync(resolve(source.directory, filename), "utf8").split(/\r?\n/);
     lines.forEach((line, index) => {
       if (!line.trim()) return;
       try {
-        validate(JSON.parse(line), `${source.finalExam ? "telegram-final/" : ""}${filename}:${index + 1}`, expectedExam);
+        validate(JSON.parse(line), `${finalMetadata ? `${finalMetadata.bank}/` : ""}${filename}:${index + 1}`, finalMetadata);
         count += 1;
-        if (source.finalExam) finalExamCount += 1;
+        if (finalMetadata) finalExamCount += 1;
+        if (finalMetadata?.bank === "downloaded-core") downloadedFinalExamCount += 1;
       }
       catch (error) { errors.push(`${filename}:${index + 1}: invalid JSON (${error.message})`); }
     });
   }
 }
+if (downloadedFinalExamCount < 100 || downloadedFinalExamCount > 200) errors.push(`downloaded-core: expected a distilled 100–200 question bank, found ${downloadedFinalExamCount}`);
 
 if (errors.length) {
   console.error(`Bank validation failed with ${errors.length} error(s):`);
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log(`Bank valid: ${count} question(s), including ${finalExamCount} Telegram final-exam item(s), schema ${manifest.schemaVersion}.`);
+console.log(`Bank valid: ${count} question(s), including ${finalExamCount} final-exam item(s) (${downloadedFinalExamCount} downloaded-core), schema ${manifest.schemaVersion}.`);

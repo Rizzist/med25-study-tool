@@ -192,6 +192,12 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 .final-exam-home { display:grid; align-content:start; gap:16px; }
 .final-exam-copy h1 { margin:13px 0 11px; }
 .final-exam-copy p { max-width:780px; margin:0; color:var(--muted); line-height:1.55; font-size:14px; }
+.final-bank-chooser { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; max-width:860px; }
+.final-bank-chooser button { min-height:74px; padding:13px 15px; border:1px solid var(--line); border-radius:14px; background:#fff; color:var(--ink); display:grid; gap:5px; text-align:left; }
+.final-bank-chooser button b { font-size:13px; }
+.final-bank-chooser button span { color:var(--muted); font-size:10px; }
+.final-bank-chooser button.active { border-color:var(--green); background:#eaf4ef; box-shadow:0 0 0 2px #126b4b16; }
+.final-bank-chooser button.active b { color:var(--green); }
 .final-exam-launch { display:grid; gap:12px; }
 .final-exam-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }
 .final-exam-stats article { min-height:112px; padding:15px; border:1px solid var(--line); border-radius:15px; background:#fff; display:grid; align-content:space-between; }

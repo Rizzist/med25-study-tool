@@ -29,7 +29,19 @@ for (const questionId of selectedQuestionIds) {
   assert(question.subject === "biochemistry", `Curated question ${questionId} is not biochemistry`);
 }
 
-assert(Array.isArray(embeddedBank.finalExams?.july25), "Embedded July 25 final exam is missing");
-assert(Array.isArray(embeddedBank.finalExams?.july29), "Embedded August 25 final exam is missing");
+const july25Telegram = embeddedBank.finalExams?.["july25:telegram-past-papers"];
+const july29Telegram = embeddedBank.finalExams?.["july29:telegram-past-papers"];
+const july29Downloaded = embeddedBank.finalExams?.["july29:downloaded-core"];
+assert(Array.isArray(july25Telegram), "Embedded July 25 Telegram final exam is missing");
+assert(Array.isArray(july29Telegram), "Embedded August 25 Telegram final exam is missing");
+assert(Array.isArray(july29Downloaded), "Embedded August 25 downloaded-core final exam is missing");
+assert(july29Telegram.length === 199, `August 25 Telegram bank changed unexpectedly (${july29Telegram.length})`);
+assert(july29Downloaded.length >= 100 && july29Downloaded.length <= 200, `Downloaded-core bank is not distilled (${july29Downloaded.length})`);
+assert(july29Downloaded.every((question) => question.status === "verified"
+  && question.subject === "biochemistry"
+  && question.tags?.includes("final-bank-aug25-downloaded-core")
+  && question.tags?.includes("distilled-core")), "Downloaded-core bank contains an unverified or incorrectly tagged item");
+const allFinalIds = [july25Telegram, july29Telegram, july29Downloaded].flat().map((question) => question.id);
+assert(new Set(allFinalIds).size === allFinalIds.length, "Final-exam question IDs are not globally unique");
 
-console.log(`Deployment assets valid: ${catalog.chapterCount} chapters, ${catalog.conceptCount} concepts, ${catalog.questionCount} curated questions, ${embeddedBank.questions.length} embedded questions.`);
+console.log(`Deployment assets valid: ${catalog.chapterCount} chapters, ${catalog.conceptCount} concepts, ${catalog.questionCount} curated questions, ${embeddedBank.questions.length} embedded questions, ${july29Downloaded.length} downloaded-core final questions.`);

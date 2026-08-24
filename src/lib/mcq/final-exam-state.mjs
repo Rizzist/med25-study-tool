@@ -1,11 +1,18 @@
 export const FINAL_EXAM_STORAGE_KEY = "med25-final-exam-v1";
 
+export const FINAL_EXAM_SESSION_KEYS = {
+  july25Telegram: "july25:telegram-past-papers",
+  july29Telegram: "july29:telegram-past-papers",
+  july29Downloaded: "july29:downloaded-core",
+};
+
 export function emptyFinalExamProgress() {
   return {
-    version: 1,
-    exams: {
-      july25: null,
-      july29: null,
+    version: 2,
+    sessions: {
+      [FINAL_EXAM_SESSION_KEYS.july25Telegram]: null,
+      [FINAL_EXAM_SESSION_KEYS.july29Telegram]: null,
+      [FINAL_EXAM_SESSION_KEYS.july29Downloaded]: null,
     },
   };
 }
@@ -70,17 +77,20 @@ export function parseFinalExamProgress(raw, banks = {}) {
   if (!raw) return empty;
   try {
     const value = JSON.parse(raw);
-    return {
-      version: 1,
-      exams: {
-        july25: banks.july25
-          ? reconcileFinalExamSession(value?.exams?.july25, banks.july25.questions, banks.july25.fingerprint)
-          : value?.exams?.july25 ?? null,
-        july29: banks.july29
-          ? reconcileFinalExamSession(value?.exams?.july29, banks.july29.questions, banks.july29.fingerprint)
-          : value?.exams?.july29 ?? null,
-      },
-    };
+    const sourceSessions = value?.version === 2 && value?.sessions && typeof value.sessions === "object"
+      ? value.sessions
+      : {
+        [FINAL_EXAM_SESSION_KEYS.july25Telegram]: value?.exams?.july25 ?? null,
+        [FINAL_EXAM_SESSION_KEYS.july29Telegram]: value?.exams?.july29 ?? null,
+        [FINAL_EXAM_SESSION_KEYS.july29Downloaded]: null,
+      };
+    const sessions = { ...empty.sessions };
+    for (const key of Object.keys(sessions)) {
+      sessions[key] = banks[key]
+        ? reconcileFinalExamSession(sourceSessions[key], banks[key].questions, banks[key].fingerprint)
+        : sourceSessions[key] ?? null;
+    }
+    return { version: 2, sessions };
   } catch {
     return empty;
   }

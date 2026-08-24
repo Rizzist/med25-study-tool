@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const questionDirectory = resolve(root, "data/bank/questions");
 const finalExamDirectory = resolve(root, "data/telegram-final");
+const downloadedFinalExamDirectory = resolve(root, "data/final-exams");
 const outputPath = resolve(root, "data/bank/embedded-bank.json");
 
 function readJsonLines(filepath) {
@@ -22,10 +23,11 @@ const embeddedBank = {
   manifest: JSON.parse(readFileSync(resolve(root, "data/bank/manifest.json"), "utf8")),
   questions,
   finalExams: {
-    july25: readJsonLines(resolve(finalExamDirectory, "july25.jsonl")),
-    july29: readJsonLines(resolve(finalExamDirectory, "july29.jsonl")),
+    "july25:telegram-past-papers": readJsonLines(resolve(finalExamDirectory, "july25.jsonl")),
+    "july29:telegram-past-papers": readJsonLines(resolve(finalExamDirectory, "july29.jsonl")),
+    "july29:downloaded-core": readJsonLines(resolve(downloadedFinalExamDirectory, "aug25-downloaded-core.jsonl")),
   },
 };
 
 writeFileSync(outputPath, `${JSON.stringify(embeddedBank)}\n`);
-console.log(`Embedded ${questions.length} study questions and ${embeddedBank.finalExams.july25.length + embeddedBank.finalExams.july29.length} final-exam questions.`);
+console.log(`Embedded ${questions.length} study questions and ${Object.values(embeddedBank.finalExams).reduce((total, bank) => total + bank.length, 0)} final-exam questions across ${Object.keys(embeddedBank.finalExams).length} banks.`);

@@ -14,6 +14,8 @@ import {
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
 type ExamId = "july25" | "july29";
+type FinalExamBankId = "telegram-past-papers" | "downloaded-core";
+type FinalSessionKey = `${ExamId}:${FinalExamBankId}`;
 type FinalAnswer = {
   selectedOptionId: string;
   correct: boolean;
@@ -30,7 +32,7 @@ type FinalSession = {
   updatedAt: string;
   completedAt: string | null;
 };
-type FinalProgress = { version: 1; exams: Record<ExamId, FinalSession | null> };
+type FinalProgress = { version: 2; sessions: Record<FinalSessionKey, FinalSession | null> };
 
 const examLabels: Record<ExamId, { date: string; title: string }> = {
   july25: { date: "July 25", title: "Tissue Development & Function" },
@@ -43,8 +45,11 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
 }
 
 export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string }) {
+  const [bank, setBank] = useState<FinalExamBankId>("telegram-past-papers");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
+  const [bankLabel, setBankLabel] = useState("Telegram Past Papers");
+  const [bankDescription, setBankDescription] = useState("The original source-traceable past-paper bank.");
   const [progress, setProgress] = useState<FinalProgress>(() => emptyFinalExamProgress() as FinalProgress);
   const [ready, setReady] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -53,7 +58,8 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
   const [lessonOpen, setLessonOpen] = useState(false);
 
   const byId = useMemo(() => new Map(questions.map((question) => [question.id, question])), [questions]);
-  const session = progress.exams[exam];
+  const sessionKey = `${exam}:${bank}` as FinalSessionKey;
+  const session = progress.sessions[sessionKey];
   const orderedQuestions = useMemo(
     () => session?.questionIds.flatMap((id) => byId.get(id) ?? []) ?? questions,
     [byId, questions, session],
@@ -64,13 +70,13 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
   const correctCount = session ? Object.values(session.answers).filter((item) => item.correct).length : 0;
   const wrongCount = answeredCount - correctCount;
   const completed = Boolean(session?.completedAt);
-  const linkedLesson = question ? lessonForQuestion(question, exam, allLessons) : undefined;
+  const linkedLesson = question && bank !== "downloaded-core" ? lessonForQuestion(question, exam, allLessons) : undefined;
 
   useEffect(() => {
     let cancelled = false;
-    void fetch(`${bridgeUrl}/api/final-exam?exam=${exam}`, { cache: "no-store" })
+    void fetch(`${bridgeUrl}/api/final-exam?exam=${exam}&bank=${bank}`, { cache: "no-store" })
       .then(async (response) => {
-        const payload = await response.json() as { questions?: MCQQuestion[]; fingerprint?: string; error?: string };
+        const payload = await response.json() as { questions?: MCQQuestion[]; fingerprint?: string; label?: string; description?: string; error?: string };
         if (!response.ok) throw new Error(payload.error ?? "Could not load the final-exam bank.");
         if (cancelled) return;
         const loaded = payload.questions ?? [];
@@ -79,11 +85,13 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
         try {
           stored = parseFinalExamProgress(window.localStorage.getItem(FINAL_EXAM_STORAGE_KEY)) as FinalProgress;
         } catch { /* Continue with an empty final-exam record. */ }
-        const saved = stored.exams[exam];
+        const saved = stored.sessions[sessionKey];
         const nextSession = saved ? reconcileFinalExamSession(saved, loaded, nextFingerprint) as FinalSession : null;
         setQuestions(loaded);
         setFingerprint(nextFingerprint);
-        setProgress({ ...stored, exams: { ...stored.exams, [exam]: nextSession } });
+        setBankLabel(payload.label ?? (bank === "downloaded-core" ? "New Downloads · Core Distilled" : "Telegram Past Papers"));
+        setBankDescription(payload.description ?? "A source-traceable final-exam bank.");
+        setProgress({ ...stored, sessions: { ...stored.sessions, [sessionKey]: nextSession } });
         setReady(true);
       })
       .catch((cause) => {
@@ -93,7 +101,7 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
         if (!cancelled) setLoading(false);
       });
     return () => { cancelled = true; };
-  }, [bridgeUrl, exam]);
+  }, [bank, bridgeUrl, exam, sessionKey]);
 
   useEffect(() => {
     if (!ready) return;
@@ -101,20 +109,32 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
     catch { /* The exam remains usable if browser storage is unavailable. */ }
   }, [progress, ready]);
 
+  function chooseBank(nextBank: FinalExamBankId) {
+    if (nextBank === bank) return;
+    setLoading(true);
+    setReady(false);
+    setError("");
+    setActive(false);
+    setLessonOpen(false);
+    setQuestions([]);
+    setBankLabel(nextBank === "downloaded-core" ? "New Downloads · Core Distilled" : "Telegram Past Papers");
+    setBank(nextBank);
+  }
+
   function startOrResume() {
     if (!questions.length) return;
     if (!session) {
       const next = reconcileFinalExamSession(null, questions, fingerprint) as FinalSession;
-      setProgress((current) => ({ ...current, exams: { ...current.exams, [exam]: next } }));
+      setProgress((current) => ({ ...current, sessions: { ...current.sessions, [sessionKey]: next } }));
     }
     setLessonOpen(false);
     setActive(true);
   }
 
   function resetProgress() {
-    if (!window.confirm(`Delete all saved Final exam answers for ${examLabels[exam].date} and restart from question 1?`)) return;
+    if (!window.confirm(`Delete all saved ${bankLabel} answers for ${examLabels[exam].date} and restart from question 1?`)) return;
     const next = reconcileFinalExamSession(null, questions, fingerprint) as FinalSession;
-    setProgress((current) => ({ ...current, exams: { ...current.exams, [exam]: next } }));
+    setProgress((current) => ({ ...current, sessions: { ...current.sessions, [sessionKey]: next } }));
     setLessonOpen(false);
     setActive(true);
   }
@@ -122,13 +142,13 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
   function moveTo(index: number) {
     setLessonOpen(false);
     setProgress((current) => {
-      const existing = current.exams[exam];
+      const existing = current.sessions[sessionKey];
       if (!existing) return current;
       return {
         ...current,
-        exams: {
-          ...current.exams,
-          [exam]: {
+        sessions: {
+          ...current.sessions,
+          [sessionKey]: {
             ...existing,
             currentIndex: Math.max(0, Math.min(existing.questionIds.length - 1, index)),
             updatedAt: new Date().toISOString(),
@@ -148,14 +168,14 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
       correctOptionId: question.correctOptionId,
     };
     setProgress((current) => {
-      const existing = current.exams[exam];
+      const existing = current.sessions[sessionKey];
       if (!existing || existing.answers[question.id]) return current;
       const answers = { ...existing.answers, [question.id]: nextAnswer };
       return {
         ...current,
-        exams: {
-          ...current.exams,
-          [exam]: {
+        sessions: {
+          ...current.sessions,
+          [sessionKey]: {
             ...existing,
             answers,
             updatedAt: nextAnswer.answeredAt,
@@ -190,7 +210,7 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
       <section className="final-exam-body">
         <div className="final-question-scroll">
           <article className="final-question-card">
-            <div className="question-meta"><span>Past paper</span><span>{question.subject}</span><span>{question.topic}</span></div>
+            <div className="question-meta"><span>{bank === "downloaded-core" ? "Distilled core" : "Past paper"}</span><span>{question.subject}</span><span>{question.topic}</span></div>
             <h1>{question.prompt}</h1>
             {question.media?.map((media) => <figure className="study-image" key={media.id}><img src={mediaUrl(bridgeUrl, question, media.id)} alt={media.alt} /><figcaption>{media.caption ?? "Past-paper image"}</figcaption></figure>)}
             <div className={`final-options ${answer ? "locked" : ""}`}>
@@ -226,10 +246,14 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
 
   return <section className="final-exam-home">
     <div className="final-exam-copy">
-      <span className="eyebrow">Telegram past papers · {examLabels[exam].date}</span>
+      <span className="eyebrow">{bankLabel} · {examLabels[exam].date}</span>
       <h1>Final exam mode.</h1>
-      <p>One continuous, source-traceable bank. Each answer locks immediately, shows the repair lesson, and stays saved on this device so you can leave and resume at the same question.</p>
+      <p>{bankDescription} Each answer locks immediately, shows the repair lesson, and stays saved on this device so you can leave and resume at the same question.</p>
     </div>
+    {exam === "july29" && <div className="final-bank-chooser" aria-label="Choose August 25 final-exam bank">
+      <button className={bank === "telegram-past-papers" ? "active" : ""} aria-pressed={bank === "telegram-past-papers"} onClick={() => chooseBank("telegram-past-papers")}><b>Telegram Past Papers</b><span>Original 199-question archive</span></button>
+      <button className={bank === "downloaded-core" ? "active" : ""} aria-pressed={bank === "downloaded-core"} onClick={() => chooseBank("downloaded-core")}><b>New Downloads · Core Distilled</b><span>Deduplicated and scientifically re-keyed</span></button>
+    </div>}
     {loading && <div className="final-exam-empty"><b>Loading verified past papers…</b><span>Filtering to the confirmed syllabus.</span></div>}
     {!loading && error && <div className="final-exam-empty error"><b>Final exam bank is unavailable.</b><span>{error}</span></div>}
     {!loading && !error && !questions.length && <div className="final-exam-empty"><b>No verified past-paper questions have been imported yet.</b><span>The ordinary study bank is still available in Overview and Topics.</span></div>}

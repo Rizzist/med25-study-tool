@@ -423,7 +423,7 @@ test("final-exam progress survives reloads and reconciles a revised bank", () =>
     version: 1,
     exams: { july25: first, july29: null },
   }), {
-    july25: {
+    "july25:telegram-past-papers": {
       fingerprint: "bank-2",
       questions: [
         questions[0],
@@ -432,10 +432,50 @@ test("final-exam progress survives reloads and reconciles a revised bank", () =>
     },
   });
 
-  assert.deepEqual(parsed.exams.july25.questionIds, ["q-1", "q-3"]);
-  assert.equal(parsed.exams.july25.answers["q-1"].correct, true);
-  assert.equal(parsed.exams.july25.currentIndex, 1);
-  assert.equal(parsed.exams.july25.bankFingerprint, "bank-2");
+  const migrated = parsed.sessions["july25:telegram-past-papers"];
+  assert.equal(parsed.version, 2);
+  assert.deepEqual(migrated.questionIds, ["q-1", "q-3"]);
+  assert.equal(migrated.answers["q-1"].correct, true);
+  assert.equal(migrated.currentIndex, 1);
+  assert.equal(migrated.bankFingerprint, "bank-2");
+  assert.equal(parsed.sessions["july29:downloaded-core"], null);
+});
+
+test("August 25 exposes two independent final banks and keeps the original archive stable", async () => {
+  const [component, oldText, downloadedText, summaryResponse, defaultResponse, downloadedResponse, invalidResponse] = await Promise.all([
+    readFile(new URL("../src/components/FinalExam.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../data/telegram-final/july29.jsonl", import.meta.url), "utf8"),
+    readFile(new URL("../data/final-exams/aug25-downloaded-core.jsonl", import.meta.url), "utf8"),
+    fetchBuiltRoute("/api/bank/summary"),
+    fetchBuiltRoute("/api/final-exam?exam=july29"),
+    fetchBuiltRoute("/api/final-exam?exam=july29&bank=downloaded-core"),
+    fetchBuiltRoute("/api/final-exam?exam=july25&bank=downloaded-core"),
+  ]);
+  const oldQuestions = oldText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const downloadedQuestions = downloadedText.trim().split(/\r?\n/).map((line) => JSON.parse(line));
+  const summary = await summaryResponse.json();
+  const defaultBank = await defaultResponse.json();
+  const downloadedBank = await downloadedResponse.json();
+  const august25 = summary.exams.find((exam) => exam.id === "july29");
+  const normalizedPrompts = downloadedQuestions.map((question) => question.prompt.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim());
+
+  assert.equal(oldQuestions.length, 199, "the original Telegram bank must remain unchanged");
+  assert.equal(defaultBank.bank, "telegram-past-papers");
+  assert.equal(defaultBank.availableCount, 199);
+  assert.equal(downloadedBank.bank, "downloaded-core");
+  assert.equal(downloadedBank.availableCount, downloadedQuestions.length);
+  assert.ok(downloadedQuestions.length >= 100 && downloadedQuestions.length <= 200);
+  assert.equal(new Set(normalizedPrompts).size, normalizedPrompts.length);
+  assert.ok(downloadedQuestions.every((question) => question.subject === "biochemistry"
+    && question.status === "verified"
+    && question.tags.includes("distilled-core")
+    && question.tags.includes("final-bank-aug25-downloaded-core")
+    && Object.keys(question.distractorExplanations).length === 3));
+  assert.deepEqual(august25.finalExamBanks.map((bank) => bank.id), ["telegram-past-papers", "downloaded-core"]);
+  assert.equal(invalidResponse.status, 400);
+  assert.match(component, /New Downloads · Core Distilled/);
+  assert.match(component, /sessionKey/);
+  assert.match(component, /bank=\$\{bank\}/);
 });
 
 test("final-exam reconciliation follows the current question and unlocks revised items", () => {

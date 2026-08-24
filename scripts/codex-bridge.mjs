@@ -13,6 +13,7 @@ const port = Number(process.env.CODEX_BRIDGE_PORT ?? 4111);
 const manifestPath = resolve(root, "data/bank/manifest.json");
 const gradeSchemaPath = resolve(root, "schemas/codex-grade.schema.json");
 const finalExamDirectory = resolve(root, "data/telegram-final");
+const downloadedFinalExamDirectory = resolve(root, "data/final-exams");
 const biochemistryConceptCatalogPath = resolve(root, "data/bank/biochemistry-core-concepts.json");
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
 const assetRoots = manifest.assetDirectories.map((directory) => resolve(root, directory));
@@ -181,6 +182,18 @@ const JULY_29_BIOCHEMISTRY_TOPICS = new Set([
 
 const EXAM_COLLECTIONS = ["all", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "histo-identification", "histo-transfer", "practical"];
 const EXAM_IDS = ["july25", "aug22", "july29"];
+const FINAL_EXAM_BANKS = [
+  { id: "telegram-past-papers", exam: "july25", label: "Telegram Past Papers", description: "The original source-traceable July 25 past-paper bank.", requiredTag: "telegram-final", filepath: resolve(finalExamDirectory, "july25.jsonl") },
+  { id: "telegram-past-papers", exam: "july29", label: "Telegram Past Papers", description: "The original 199-question August 25 Telegram archive.", requiredTag: "telegram-final", filepath: resolve(finalExamDirectory, "july29.jsonl") },
+  { id: "downloaded-core", exam: "july29", label: "New Downloads · Core Distilled", description: "Scientifically re-keyed core questions distilled from the newly downloaded past papers and exam photos.", requiredTag: "final-bank-aug25-downloaded-core", filepath: resolve(downloadedFinalExamDirectory, "aug25-downloaded-core.jsonl") },
+];
+
+function finalExamBankDefinition(exam, bank = "telegram-past-papers") {
+  if (!EXAM_IDS.includes(exam)) throw new Error("A valid exam is required");
+  const definition = FINAL_EXAM_BANKS.find((candidate) => candidate.exam === exam && candidate.id === bank);
+  if (!definition) throw new Error("That final-exam bank is not available for this exam");
+  return definition;
+}
 
 function matchesExam(question, exam) {
   const isHistologyPractical = (question.tags ?? []).includes("histo-practical");
@@ -286,7 +299,8 @@ function bankSummary() {
     return {
       ...exam,
       questionCount: questions.length,
-      finalExamQuestionCount: loadFinalExamQuestions(exam.id).length,
+      finalExamQuestionCount: FINAL_EXAM_BANKS.filter((bank) => bank.exam === exam.id).reduce((total, bank) => total + loadFinalExamQuestions(exam.id, bank.id).length, 0),
+      finalExamBanks: FINAL_EXAM_BANKS.filter((bank) => bank.exam === exam.id).map((bank) => ({ id: bank.id, label: bank.label, description: bank.description, questionCount: loadFinalExamQuestions(exam.id, bank.id).length })),
       imageQuestionCount: questions.filter((question) => question.kind === "image_single_best_answer").length,
       collectionCounts: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).length])),
       collectionQuestionIds: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).map((question) => question.id)])),
@@ -324,9 +338,9 @@ function loadVerifiedQuestions() {
   return questions;
 }
 
-function loadFinalExamQuestions(exam) {
-  if (!EXAM_IDS.includes(exam)) throw new Error("A valid exam is required");
-  const filepath = resolve(finalExamDirectory, `${exam}.jsonl`);
+function loadFinalExamQuestions(exam, bank = "telegram-past-papers") {
+  const definition = finalExamBankDefinition(exam, bank);
+  const filepath = definition.filepath;
   if (!existsSync(filepath)) return [];
   const questions = [];
   for (const [index, line] of readFileSync(filepath, "utf8").split(/\r?\n/).entries()) {
@@ -335,7 +349,7 @@ function loadFinalExamQuestions(exam) {
       const question = JSON.parse(line);
       const tags = new Set(question.tags ?? []);
       if (question.status === "verified"
-        && tags.has("telegram-final")
+        && tags.has(definition.requiredTag)
         && tags.has(`exam-${exam}`)
         && Boolean(question.source?.title)
         && Boolean(question.source?.chapter)) questions.push(question);
@@ -348,17 +362,19 @@ function loadFinalExamQuestions(exam) {
 
 function finalExamSet(searchParams) {
   const exam = searchParams.get("exam");
-  const questions = loadFinalExamQuestions(exam);
+  const bank = searchParams.get("bank") ?? "telegram-past-papers";
+  const definition = finalExamBankDefinition(exam, bank);
+  const questions = loadFinalExamQuestions(exam, bank);
   const fingerprint = createHash("sha256")
-    .update(JSON.stringify(questions.map((question) => [
+    .update(JSON.stringify([exam, bank, ...questions.map((question) => [
       question.id,
       question.revision,
       question.correctOptionId,
       question.source,
-    ])))
+    ])]))
     .digest("hex")
     .slice(0, 20);
-  return { exam, availableCount: questions.length, fingerprint, questions };
+  return { exam, bank, label: definition.label, description: definition.description, availableCount: questions.length, fingerprint, questions };
 }
 
 function shuffled(items) {
@@ -476,6 +492,7 @@ function resolveQuestionMedia(questionId, mediaId) {
     ...loadVerifiedQuestions(),
     ...loadFinalExamQuestions("july25"),
     ...loadFinalExamQuestions("july29"),
+    ...loadFinalExamQuestions("july29", "downloaded-core"),
   ].find((item) => item.id === questionId);
   const media = question?.media?.find((item) => item.id === mediaId);
   if (!question || !media || media.type !== "image") return null;

@@ -1,6 +1,11 @@
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
 export const FINAL_EXAM_STORAGE_KEY: "med25-final-exam-v1";
+export const FINAL_EXAM_SESSION_KEYS: {
+  readonly july25Telegram: "july25:telegram-past-papers";
+  readonly july29Telegram: "july29:telegram-past-papers";
+  readonly july29Downloaded: "july29:downloaded-core";
+};
 
 export type StoredFinalAnswer = {
   selectedOptionId: string;
@@ -21,8 +26,11 @@ export type StoredFinalExamSession = {
 };
 
 export type StoredFinalExamProgress = {
-  version: 1;
-  exams: Record<"july25" | "july29", StoredFinalExamSession | null>;
+  version: 2;
+  sessions: Record<
+    "july25:telegram-past-papers" | "july29:telegram-past-papers" | "july29:downloaded-core",
+    StoredFinalExamSession | null
+  >;
 };
 
 export function emptyFinalExamProgress(): StoredFinalExamProgress;
@@ -33,5 +41,8 @@ export function reconcileFinalExamSession(
 ): StoredFinalExamSession;
 export function parseFinalExamProgress(
   raw: string | null,
-  banks?: Partial<Record<"july25" | "july29", { questions: MCQQuestion[]; fingerprint: string }>>,
+  banks?: Partial<Record<
+    "july25:telegram-past-papers" | "july29:telegram-past-papers" | "july29:downloaded-core",
+    { questions: MCQQuestion[]; fingerprint: string }
+  >>,
 ): StoredFinalExamProgress;
