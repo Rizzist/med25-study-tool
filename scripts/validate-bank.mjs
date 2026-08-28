@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
+import { anatomyValidationErrors } from "../src/lib/mcq/dynamic-anatomy.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const manifest = JSON.parse(readFileSync(resolve(root, "data/bank/manifest.json"), "utf8"));
@@ -32,7 +33,8 @@ function validate(question, location, finalMetadata) {
   for (const id of optionIds) {
     if (id !== question.correctOptionId && !question.distractorExplanations?.[id]) errors.push(`${location}: missing distractor explanation for ${id}`);
   }
-  if (question.kind === "image_single_best_answer" && !question.media?.length) errors.push(`${location}: image question has no media`);
+  if ((question.kind === "image_single_best_answer" || question.kind === "dynamic_anatomy") && !question.media?.length) errors.push(`${location}: image question has no media`);
+  for (const error of anatomyValidationErrors(question)) errors.push(`${location}: ${error}`);
   for (const media of question.media ?? []) {
     const found = assetRoots.some((assetRoot) => existsSync(resolve(assetRoot, media.path)));
     if (!found) errors.push(`${location}: missing media ${media.path}`);

@@ -22,7 +22,8 @@
     "build": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/build-embedded-bank.mjs && WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
     "vercel-build": "node scripts/validate-deployment-assets.mjs && next build",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run bank:validate && npm run lessons:validate && npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run bank:validate && npm run lessons:validate && npm run build && node --test tests/*.test.mjs",
+    "respiratory:generate": "node scripts/build-respiratory-anatomy.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },

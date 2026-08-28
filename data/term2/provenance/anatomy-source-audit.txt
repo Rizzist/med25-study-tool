@@ -1,0 +1,70 @@
+Respiratory anatomy content source audit
+
+Sources restricted to the local respiratory anatomy teaching decks and Gray's Anatomy for Students, 3rd edition, clean PDF.
+No internet, transcripts, or past-question banks used.
+
+COMPLETED DELIVERABLES
+
+anatomy.jsonl: 48 original single-best-answer questions, ids resp-anat-001 through resp-anat-048.
+anatomy-images.json: 4 diagrams and 28 visually verified target regions.
+resp-anat-airway-spaces.jpeg
+resp-anat-coronal-sinuses.png
+resp-anat-posterior-larynx.jpeg
+resp-anat-lung-roots.jpeg
+
+Only these six content/image files are intended for application integration. The scripts, rendered pages, OCR files, intermediate PDFs and *-QA.png files are audit/build material, not production content.
+
+QUESTION SOURCE AUDIT
+
+All question facts were checked against the local Gray's Anatomy for Students, 3rd edition, clean PDF. Its extracted text is font-encoded gibberish, so the relevant sections were rendered and read using local OCR with visual checks of source pages and figures. No transcript text was used. The PDF's physical page index is twelve greater than its printed Arabic page number; both locators are recorded in every question.
+
+001-010  Nose and paranasal sinuses (10): chapter 8, Nasal cavities, printed pp1072-1085. Includes maxillary/sphenoidal/posterior ethmoidal drainage, nasolacrimal duct, olfactory pathway, septum, conchae, epistaxis, sensory innervation and dental relationships.
+011-018  Pharynx (8): chapter 8, Pharynx, printed pp1040-1052. Includes boundaries, tonsils, auditory tube, constrictor gap, stylopharyngeus, soft-palate closure and gag afferent.
+019-030  Larynx (12): chapter 8, Larynx, printed pp1055-1069. Includes vocal-fold movement, recurrent/internal/external laryngeal nerves, cricothyroid mechanics, intrinsic ligaments, arytenoid processes and the anatomical cricothyroid interval.
+031-037  Trachea, bronchi and segments (7): chapter 3, Pleural cavities/Lungs, printed pp169,172-173,178. Includes bifurcation, tracheal wall, aspiration, carina, lobar branching and segmental bronchovascular organization.
+038-042  Lung and hilum (5): chapter 3, printed pp167-174. Includes fissures, lingula, root nerve relationships, right superior lobar bronchus and bronchial nutritive circulation.
+043-048  Pleura (6): chapter 3, printed pp163-168. Includes recesses, surface levels, somatic sensation, pneumothorax space and pulmonary ligament.
+
+These are source-grounded original exam-style questions, not official TUMS questions or a past-paper reconstruction. Verified means the local source/answer/options audit was completed; it does not mean faculty review. The set is a deliberately bounded sample, not exhaustive coverage of every lecture fact. Dedicated coverage of all named segment lists, laryngeal/pharyngeal vascular and lymphatic details, and every sinus/foramen relationship remains outside this 48-item set.
+
+QUESTION QA
+
+All 48 records passed a recursive validator covering every validation keyword used in the checked-in MCQ schema, with anatomy enabled only in the validator's in-memory subject enum. No site schema or code was edited.
+All required fields present; no additional question properties; valid IDs; four unique options; one correct key; exactly three matching distractor explanations; all required tags; all source editions and printed/PDF locators present.
+Answer positions are shuffled and balanced: A=12, B=12, C=12, D=12. No three identical correct letters occur consecutively.
+
+IMAGE SOURCE AUDIT
+
+1. resp-anat-airway-spaces.jpeg
+   Raw bytes: Nasal Bones 1.pptx, slide 4, ppt/media/image5.jpeg.
+   Native dimensions 461 x 502. Six targets; ten masks.
+   Source credit: Elsevier / Drake et al., Gray's Anatomy for Students, visibly retained along the bottom.
+   SHA256 9ab050c293f472ecfe11dfefdf16dda54476916ae2effd5287ccc17527764c4d
+
+2. resp-anat-coronal-sinuses.png
+   Raw bytes: Nasal Bones 1.pptx, slide 11, ppt/media/image11.png.
+   Native dimensions 803 x 748. Six targets; twenty-four masks.
+   Source credit: original Netter signature/copyright retained at lower right.
+   SHA256 c4c5e44ee51c5083391079ad1931ef967e593647f67c69343065f7da3d9a7567
+
+3. resp-anat-posterior-larynx.jpeg
+   Raw bytes: LARYNX 3.pptx, slide 6, ppt/media/image11.jpeg.
+   Native dimensions 801 x 734. Eight targets; nine masks.
+   Source credit: original Netter signature/copyright retained at lower right.
+   SHA256 4472d77f786a226edb3d8ab125f329cac449a9f07d6110d8d27389a55131bfa3
+
+4. resp-anat-lung-roots.jpeg
+   Raw bytes: trachea and lungs 2.pptx, slide 9, ppt/media/image12.jpeg.
+   Native dimensions 579 x 368. Eight targets; ten masks.
+   Source credit: Elsevier / Drake et al., Gray's Anatomy for Students, visibly retained along the bottom.
+   SHA256 ce004eec733a990ea46ace29f8b39e111a7db4fd1ffb9a15cd5586e6d63ebd45
+
+IMAGE QA / INTEGRATION NOTES
+
+All four production images are exact, unaltered embedded-source bytes. They have not been AI-redrawn, relabeled, cropped or upscaled. Only separate metadata defines the masks and point-anchor rectangles.
+Mask previews were rendered and visually checked. Two residual label fragments on the coronal section were corrected, then the preview was checked again. All printed anatomical labels are covered; the broad view title and source attribution remain visible. White mask fill matches the source background. Reveal masks only after answering.
+Every target center was checked on actual anatomy, not the printed label. Coordinates are normalized to the original full image, origin top-left. Rectangles are compact pointer anchors, not whole-structure segmentation boundaries. All bounds are valid and no target center lies inside a mask. Each target has three other valid same-image distractor IDs. Descriptions state anatomical facts and can be reused for both correct and distractor explanations.
+All native resolutions are adequate for the chosen gross structures but two are modest resolution; do not imply that upscaling recovers detail. The source decks do not state the original illustration editions; that uncertainty is explicitly preserved in source.edition. The underlying figures were cross-checked with relevant Gray's 3e material, but the deck illustration itself is not mislabeled as a specific edition.
+The root image's airway labels are intentionally generic 'Bronchus at the right/left lung root'. In particular, do not rename the right target 'main bronchus': the source drawing does not establish that more specific label. No uncertain main-versus-lobar claim is included.
+
+No Site checkout writes, Sites tool calls, internet calls, past-question banks, transcripts or additional agents were used in this content task.

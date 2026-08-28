@@ -1,0 +1,794 @@
+{
+  "images": [
+    {
+      "id": "resp-anat-airway-spaces",
+      "title": "Upper airway spaces — anterolateral view",
+      "path": "term2/respiratory/resp-anat-airway-spaces.jpeg",
+      "width": 461,
+      "height": 502,
+      "alt": "An anterolateral transparent anatomical illustration showing adjacent spaces in the face and upper throat.",
+      "source": {
+        "title": "Nasal Bones 1 — TUMS anatomy lecture deck; illustration credited to Elsevier / Drake et al., Gray's Anatomy for Students",
+        "edition": "Illustration edition not stated in slide",
+        "chapter": "Nasal cavities and relationships to adjacent cavities",
+        "lecture": "Nasal Bones 1.pptx",
+        "slide": "4"
+      },
+      "labelMasks": [
+        {
+          "x": 0.468547,
+          "y": 0.083665,
+          "width": 0.160521,
+          "height": 0.049801
+        },
+        {
+          "x": 0.0282,
+          "y": 0.262948,
+          "width": 0.114967,
+          "height": 0.039841
+        },
+        {
+          "x": 0,
+          "y": 0.378486,
+          "width": 0.145336,
+          "height": 0.037849
+        },
+        {
+          "x": 0,
+          "y": 0.442231,
+          "width": 0.147505,
+          "height": 0.037849
+        },
+        {
+          "x": 0.071584,
+          "y": 0.589641,
+          "width": 0.071584,
+          "height": 0.037849
+        },
+        {
+          "x": 0.789588,
+          "y": 0.181275,
+          "width": 0.123644,
+          "height": 0.045817
+        },
+        {
+          "x": 0.861171,
+          "y": 0.332669,
+          "width": 0.138829,
+          "height": 0.041833
+        },
+        {
+          "x": 0.861171,
+          "y": 0.434263,
+          "width": 0.13449,
+          "height": 0.041833
+        },
+        {
+          "x": 0.861171,
+          "y": 0.5,
+          "width": 0.138829,
+          "height": 0.039841
+        },
+        {
+          "x": 0.859002,
+          "y": 0.611554,
+          "width": 0.138829,
+          "height": 0.039841
+        }
+      ],
+      "regions": [
+        {
+          "id": "nasal-septum",
+          "label": "Nasal septum",
+          "description": "The nasal septum is the median wall separating the right and left nasal cavities.",
+          "distractorRegionIds": [
+            "nasopharynx",
+            "oral-cavity",
+            "soft-palate"
+          ],
+          "x": 0.392625,
+          "y": 0.386454,
+          "width": 0.02603,
+          "height": 0.023904
+        },
+        {
+          "id": "nasopharynx",
+          "label": "Nasopharynx",
+          "description": "The nasopharynx lies behind the choanae and above the soft palate; it occupies the superior green space.",
+          "distractorRegionIds": [
+            "oropharynx",
+            "oral-cavity",
+            "nasal-septum"
+          ],
+          "x": 0.741866,
+          "y": 0.350598,
+          "width": 0.021692,
+          "height": 0.01992
+        },
+        {
+          "id": "oropharynx",
+          "label": "Oropharynx",
+          "description": "The oropharynx lies posterior to the oral cavity and inferior to the soft palate; it occupies the lower green space.",
+          "distractorRegionIds": [
+            "nasopharynx",
+            "oral-cavity",
+            "soft-palate"
+          ],
+          "x": 0.750542,
+          "y": 0.515936,
+          "width": 0.017354,
+          "height": 0.015936
+        },
+        {
+          "id": "soft-palate",
+          "label": "Soft palate",
+          "description": "The soft palate is the movable posterior continuation of the hard palate; it forms the boundary below the nasopharynx.",
+          "distractorRegionIds": [
+            "nasal-septum",
+            "nares",
+            "oral-cavity"
+          ],
+          "x": 0.689805,
+          "y": 0.454183,
+          "width": 0.021692,
+          "height": 0.01992
+        },
+        {
+          "id": "nares",
+          "label": "Nares",
+          "description": "The nares are the anterior openings of the nasal cavities on the inferior surface of the external nose.",
+          "distractorRegionIds": [
+            "nasopharynx",
+            "oropharynx",
+            "soft-palate"
+          ],
+          "x": 0.446855,
+          "y": 0.543825,
+          "width": 0.021692,
+          "height": 0.01992
+        },
+        {
+          "id": "oral-cavity",
+          "label": "Oral cavity",
+          "description": "The oral cavity lies inferior to the nasal cavities and anterior to the oropharynx; it is represented by the pink space.",
+          "distractorRegionIds": [
+            "nasopharynx",
+            "oropharynx",
+            "nasal-septum"
+          ],
+          "x": 0.613883,
+          "y": 0.625498,
+          "width": 0.030369,
+          "height": 0.027888
+        }
+      ],
+      "view": "anterolateral upper-airway"
+    },
+    {
+      "id": "resp-anat-coronal-sinuses",
+      "title": "Nasal region — coronal section",
+      "path": "term2/respiratory/resp-anat-coronal-sinuses.png",
+      "width": 803,
+      "height": 748,
+      "alt": "A coronal anatomical section through the face showing air spaces, bony partitions, and the upper oral region.",
+      "source": {
+        "title": "Nasal Bones 1 — TUMS anatomy lecture deck; Netter illustration with original signature preserved",
+        "edition": "Illustration edition not stated in slide",
+        "chapter": "Nasal cavity and paranasal sinuses",
+        "lecture": "Nasal Bones 1.pptx",
+        "slide": "11"
+      },
+      "labelMasks": [
+        {
+          "x": 0.083437,
+          "y": 0.161765,
+          "width": 0.092154,
+          "height": 0.026738
+        },
+        {
+          "x": 0.113325,
+          "y": 0.23262,
+          "width": 0.044832,
+          "height": 0.024064
+        },
+        {
+          "x": 0.063512,
+          "y": 0.287433,
+          "width": 0.09589,
+          "height": 0.026738
+        },
+        {
+          "x": 0.062267,
+          "y": 0.354278,
+          "width": 0.0934,
+          "height": 0.026738
+        },
+        {
+          "x": 0.062267,
+          "y": 0.426471,
+          "width": 0.090909,
+          "height": 0.040107
+        },
+        {
+          "x": 0.059776,
+          "y": 0.509358,
+          "width": 0.092154,
+          "height": 0.040107
+        },
+        {
+          "x": 0.059776,
+          "y": 0.586898,
+          "width": 0.097136,
+          "height": 0.030749
+        },
+        {
+          "x": 0.072229,
+          "y": 0.65107,
+          "width": 0.100872,
+          "height": 0.044118
+        },
+        {
+          "x": 0.084682,
+          "y": 0.736631,
+          "width": 0.132005,
+          "height": 0.026738
+        },
+        {
+          "x": 0.118306,
+          "y": 0.80615,
+          "width": 0.083437,
+          "height": 0.026738
+        },
+        {
+          "x": 0.13076,
+          "y": 0.870321,
+          "width": 0.075965,
+          "height": 0.026738
+        },
+        {
+          "x": 0.793275,
+          "y": 0.149733,
+          "width": 0.102117,
+          "height": 0.029412
+        },
+        {
+          "x": 0.800747,
+          "y": 0.233957,
+          "width": 0.088418,
+          "height": 0.029412
+        },
+        {
+          "x": 0.808219,
+          "y": 0.303476,
+          "width": 0.083437,
+          "height": 0.030749
+        },
+        {
+          "x": 0.804483,
+          "y": 0.372995,
+          "width": 0.104608,
+          "height": 0.030749
+        },
+        {
+          "x": 0.799502,
+          "y": 0.44385,
+          "width": 0.132005,
+          "height": 0.050802
+        },
+        {
+          "x": 0.799502,
+          "y": 0.501337,
+          "width": 0.134496,
+          "height": 0.049465
+        },
+        {
+          "x": 0.788294,
+          "y": 0.558824,
+          "width": 0.144458,
+          "height": 0.050802
+        },
+        {
+          "x": 0.783313,
+          "y": 0.613636,
+          "width": 0.140722,
+          "height": 0.049465
+        },
+        {
+          "x": 0.777086,
+          "y": 0.664439,
+          "width": 0.139477,
+          "height": 0.033422
+        },
+        {
+          "x": 0.749689,
+          "y": 0.723262,
+          "width": 0.171856,
+          "height": 0.036096
+        },
+        {
+          "x": 0.734745,
+          "y": 0.782086,
+          "width": 0.108344,
+          "height": 0.032086
+        },
+        {
+          "x": 0.724782,
+          "y": 0.842246,
+          "width": 0.125778,
+          "height": 0.032086
+        },
+        {
+          "x": 0.686177,
+          "y": 0.898396,
+          "width": 0.171856,
+          "height": 0.033422
+        }
+      ],
+      "regions": [
+        {
+          "id": "maxillary-sinus",
+          "label": "Maxillary sinus",
+          "description": "The maxillary sinus is the large air cavity within the body of the maxilla, lateral to the nasal cavity and inferior to the orbit.",
+          "distractorRegionIds": [
+            "ethmoidal-cells",
+            "middle-concha",
+            "inferior-concha"
+          ],
+          "x": 0.339975,
+          "y": 0.629679,
+          "width": 0.022416,
+          "height": 0.024064
+        },
+        {
+          "id": "ethmoidal-cells",
+          "label": "Ethmoidal air cells",
+          "description": "The ethmoidal air cells are small cavities in the ethmoidal labyrinth between the nasal cavity and the orbit.",
+          "distractorRegionIds": [
+            "maxillary-sinus",
+            "middle-concha",
+            "inferior-concha"
+          ],
+          "x": 0.515567,
+          "y": 0.465241,
+          "width": 0.009963,
+          "height": 0.010695
+        },
+        {
+          "id": "middle-concha",
+          "label": "Middle nasal concha",
+          "description": "The middle concha projects from the ethmoid into the nasal cavity above the inferior concha.",
+          "distractorRegionIds": [
+            "inferior-concha",
+            "nasal-septum",
+            "ethmoidal-cells"
+          ],
+          "x": 0.440847,
+          "y": 0.552139,
+          "width": 0.012453,
+          "height": 0.013369
+        },
+        {
+          "id": "inferior-concha",
+          "label": "Inferior nasal concha",
+          "description": "The inferior concha is the lowest bony shelf on the lateral nasal wall and is a separate bone.",
+          "distractorRegionIds": [
+            "middle-concha",
+            "nasal-septum",
+            "hard-palate"
+          ],
+          "x": 0.437111,
+          "y": 0.63369,
+          "width": 0.012453,
+          "height": 0.013369
+        },
+        {
+          "id": "nasal-septum",
+          "label": "Nasal septum",
+          "description": "The vertical median septum divides the two nasal cavities; it is distinct from the paired lateral conchae.",
+          "distractorRegionIds": [
+            "middle-concha",
+            "inferior-concha",
+            "hard-palate"
+          ],
+          "x": 0.473225,
+          "y": 0.580214,
+          "width": 0.009963,
+          "height": 0.010695
+        },
+        {
+          "id": "hard-palate",
+          "label": "Hard palate",
+          "description": "The hard palate is the horizontal bony partition forming the nasal floor and the roof of the oral cavity.",
+          "distractorRegionIds": [
+            "nasal-septum",
+            "inferior-concha",
+            "maxillary-sinus"
+          ],
+          "x": 0.47198,
+          "y": 0.69385,
+          "width": 0.014944,
+          "height": 0.016043
+        }
+      ],
+      "view": "coronal nasal-region"
+    },
+    {
+      "id": "resp-anat-posterior-larynx",
+      "title": "Larynx — posterior view",
+      "path": "term2/respiratory/resp-anat-posterior-larynx.jpeg",
+      "width": 801,
+      "height": 734,
+      "alt": "A posterior anatomical view of the laryngeal framework and intrinsic muscles.",
+      "source": {
+        "title": "LARYNX 3 — TUMS anatomy lecture deck; Netter illustration with original signature preserved",
+        "edition": "Illustration edition not stated in slide",
+        "chapter": "Intrinsic laryngeal muscles and inlet landmarks",
+        "lecture": "LARYNX 3.pptx",
+        "slide": "6"
+      },
+      "labelMasks": [
+        {
+          "x": 0.142322,
+          "y": 0.163488,
+          "width": 0.066167,
+          "height": 0.031335
+        },
+        {
+          "x": 0.073658,
+          "y": 0.384196,
+          "width": 0.133583,
+          "height": 0.032698
+        },
+        {
+          "x": 0.09613,
+          "y": 0.570845,
+          "width": 0.129838,
+          "height": 0.03406
+        },
+        {
+          "x": 0.069913,
+          "y": 0.743869,
+          "width": 0.197253,
+          "height": 0.036785
+        },
+        {
+          "x": 0.7603,
+          "y": 0.224796,
+          "width": 0.123596,
+          "height": 0.03406
+        },
+        {
+          "x": 0.750312,
+          "y": 0.385559,
+          "width": 0.138577,
+          "height": 0.035422
+        },
+        {
+          "x": 0.716604,
+          "y": 0.525886,
+          "width": 0.168539,
+          "height": 0.036785
+        },
+        {
+          "x": 0.696629,
+          "y": 0.611717,
+          "width": 0.17603,
+          "height": 0.035422
+        },
+        {
+          "x": 0.676654,
+          "y": 0.747956,
+          "width": 0.117353,
+          "height": 0.036785
+        }
+      ],
+      "regions": [
+        {
+          "id": "epiglottis",
+          "label": "Epiglottis",
+          "description": "The epiglottis is the leaf-shaped cartilage forming the anterior boundary of the laryngeal inlet.",
+          "distractorRegionIds": [
+            "cricoid-cartilage",
+            "cuneiform-tubercle",
+            "corniculate-tubercle"
+          ],
+          "x": 0.480649,
+          "y": 0.276567,
+          "width": 0.029963,
+          "height": 0.032698
+        },
+        {
+          "id": "aryepiglottic-fold",
+          "label": "Aryepiglottic fold",
+          "description": "An aryepiglottic fold forms a lateral border of the laryngeal inlet and encloses the upper margin of the quadrangular membrane.",
+          "distractorRegionIds": [
+            "epiglottis",
+            "oblique-arytenoid",
+            "transverse-arytenoid"
+          ],
+          "x": 0.585518,
+          "y": 0.320163,
+          "width": 0.012484,
+          "height": 0.013624
+        },
+        {
+          "id": "cuneiform-tubercle",
+          "label": "Cuneiform tubercle",
+          "description": "This mucosal prominence overlies a cuneiform cartilage in the aryepiglottic fold, anterior to the corniculate prominence.",
+          "distractorRegionIds": [
+            "corniculate-tubercle",
+            "epiglottis",
+            "cricoid-cartilage"
+          ],
+          "x": 0.541823,
+          "y": 0.415531,
+          "width": 0.009988,
+          "height": 0.010899
+        },
+        {
+          "id": "corniculate-tubercle",
+          "label": "Corniculate tubercle",
+          "description": "This prominence overlies a corniculate cartilage at the apex of an arytenoid, posterior to the cuneiform prominence.",
+          "distractorRegionIds": [
+            "cuneiform-tubercle",
+            "epiglottis",
+            "cricoid-cartilage"
+          ],
+          "x": 0.510612,
+          "y": 0.467302,
+          "width": 0.009988,
+          "height": 0.010899
+        },
+        {
+          "id": "oblique-arytenoid",
+          "label": "Oblique arytenoid muscle",
+          "description": "The paired oblique arytenoids cross between opposite arytenoid cartilages and help narrow the laryngeal inlet.",
+          "distractorRegionIds": [
+            "transverse-arytenoid",
+            "posterior-cricoarytenoid",
+            "aryepiglottic-fold"
+          ],
+          "x": 0.519351,
+          "y": 0.570845,
+          "width": 0.012484,
+          "height": 0.013624
+        },
+        {
+          "id": "transverse-arytenoid",
+          "label": "Transverse arytenoid muscle",
+          "description": "The unpaired transverse arytenoid runs horizontally between the arytenoid cartilages and adducts them.",
+          "distractorRegionIds": [
+            "oblique-arytenoid",
+            "posterior-cricoarytenoid",
+            "cricoid-cartilage"
+          ],
+          "x": 0.480649,
+          "y": 0.610354,
+          "width": 0.012484,
+          "height": 0.013624
+        },
+        {
+          "id": "posterior-cricoarytenoid",
+          "label": "Posterior crico-arytenoid muscle",
+          "description": "This muscle arises from the posterior cricoid lamina and inserts on the arytenoid muscular process; it abducts the vocal fold.",
+          "distractorRegionIds": [
+            "transverse-arytenoid",
+            "oblique-arytenoid",
+            "cricoid-cartilage"
+          ],
+          "x": 0.419476,
+          "y": 0.72752,
+          "width": 0.022472,
+          "height": 0.024523
+        },
+        {
+          "id": "cricoid-cartilage",
+          "label": "Cricoid cartilage",
+          "description": "The broad posterior cricoid lamina supports the posterior crico-arytenoid muscles; its exposed cartilaginous edges are pale blue-gray.",
+          "distractorRegionIds": [
+            "epiglottis",
+            "corniculate-tubercle",
+            "posterior-cricoarytenoid"
+          ],
+          "x": 0.578027,
+          "y": 0.816076,
+          "width": 0.012484,
+          "height": 0.013624
+        }
+      ],
+      "view": "posterior laryngeal"
+    },
+    {
+      "id": "resp-anat-lung-roots",
+      "title": "Lung roots — medial surfaces",
+      "path": "term2/respiratory/resp-anat-lung-roots.jpeg",
+      "width": 579,
+      "height": 368,
+      "alt": "Paired medial lung views with tubular structures and pleural reflections at their roots; the right lung is on the viewer’s left.",
+      "source": {
+        "title": "trachea and lungs 2 — TUMS anatomy lecture deck; illustration credited to Elsevier / Drake et al., Gray's Anatomy for Students",
+        "edition": "Illustration edition not stated in slide",
+        "chapter": "Lung roots and hila",
+        "lecture": "trachea and lungs 2.pptx",
+        "slide": "9"
+      },
+      "labelMasks": [
+        {
+          "x": 0.127807,
+          "y": 0.095109,
+          "width": 0.060449,
+          "height": 0.057065
+        },
+        {
+          "x": 0.474957,
+          "y": 0.029891,
+          "width": 0.053541,
+          "height": 0.05163
+        },
+        {
+          "x": 0.443869,
+          "y": 0.179348,
+          "width": 0.08981,
+          "height": 0.057065
+        },
+        {
+          "x": 0,
+          "y": 0.3125,
+          "width": 0.08981,
+          "height": 0.081522
+        },
+        {
+          "x": 0,
+          "y": 0.418478,
+          "width": 0.093264,
+          "height": 0.081522
+        },
+        {
+          "x": 0.816926,
+          "y": 0.027174,
+          "width": 0.183074,
+          "height": 0.092391
+        },
+        {
+          "x": 0.815199,
+          "y": 0.125,
+          "width": 0.184801,
+          "height": 0.095109
+        },
+        {
+          "x": 0.390328,
+          "y": 0.858696,
+          "width": 0.196891,
+          "height": 0.0625
+        },
+        {
+          "x": 0.222798,
+          "y": 0.902174,
+          "width": 0.11399,
+          "height": 0.048913
+        },
+        {
+          "x": 0.651123,
+          "y": 0.902174,
+          "width": 0.107081,
+          "height": 0.048913
+        }
+      ],
+      "regions": [
+        {
+          "id": "right-bronchus",
+          "label": "Bronchus at the right lung root",
+          "description": "The cartilaginous airway at the right root is shown with a tan lumen and pale cartilaginous wall. The source labels it generically as bronchus.",
+          "distractorRegionIds": [
+            "right-pulmonary-artery",
+            "right-pulmonary-veins",
+            "right-pulmonary-ligament"
+          ],
+          "x": 0.409326,
+          "y": 0.26087,
+          "width": 0.013817,
+          "height": 0.021739
+        },
+        {
+          "id": "right-pulmonary-artery",
+          "label": "Pulmonary artery at the right lung root",
+          "description": "The purple vessel carries deoxygenated blood into the right lung; it is distinct from the pale-ringed bronchus and red pulmonary veins.",
+          "distractorRegionIds": [
+            "right-bronchus",
+            "right-pulmonary-veins",
+            "right-pulmonary-ligament"
+          ],
+          "x": 0.354059,
+          "y": 0.339674,
+          "width": 0.013817,
+          "height": 0.021739
+        },
+        {
+          "id": "right-pulmonary-veins",
+          "label": "Pulmonary veins at the right lung root",
+          "description": "The red vessels leave the right lung carrying oxygenated blood to the left atrium.",
+          "distractorRegionIds": [
+            "right-bronchus",
+            "right-pulmonary-artery",
+            "right-pulmonary-ligament"
+          ],
+          "x": 0.393782,
+          "y": 0.404891,
+          "width": 0.013817,
+          "height": 0.021739
+        },
+        {
+          "id": "right-pulmonary-ligament",
+          "label": "Pulmonary ligament below the right lung root",
+          "description": "The inferior blue pleural fold continues down from the right root; it is the pulmonary ligament, not a vessel or bronchus.",
+          "distractorRegionIds": [
+            "right-bronchus",
+            "right-pulmonary-artery",
+            "right-pulmonary-veins"
+          ],
+          "x": 0.360967,
+          "y": 0.5625,
+          "width": 0.013817,
+          "height": 0.021739
+        },
+        {
+          "id": "left-bronchus",
+          "label": "Bronchus at the left lung root",
+          "description": "The airway at the left root has a tan lumen surrounded by a pale cartilaginous wall; it carries air into the lung.",
+          "distractorRegionIds": [
+            "left-pulmonary-artery",
+            "left-pulmonary-veins",
+            "left-pulmonary-ligament"
+          ],
+          "x": 0.549223,
+          "y": 0.279891,
+          "width": 0.013817,
+          "height": 0.021739
+        },
+        {
+          "id": "left-pulmonary-artery",
+          "label": "Pulmonary artery at the left lung root",
+          "description": "The purple vessel carries deoxygenated blood into the left lung and lies superior to the red venous structures in this view.",
+          "distractorRegionIds": [
+            "left-bronchus",
+            "left-pulmonary-veins",
+            "left-pulmonary-ligament"
+          ],
+          "x": 0.609672,
+          "y": 0.317935,
+          "width": 0.013817,
+          "height": 0.021739
+        },
+        {
+          "id": "left-pulmonary-veins",
+          "label": "Pulmonary veins at the left lung root",
+          "description": "The red vessels return oxygenated blood from the left lung to the left atrium.",
+          "distractorRegionIds": [
+            "left-bronchus",
+            "left-pulmonary-artery",
+            "left-pulmonary-ligament"
+          ],
+          "x": 0.595855,
+          "y": 0.402174,
+          "width": 0.013817,
+          "height": 0.021739
+        },
+        {
+          "id": "left-pulmonary-ligament",
+          "label": "Pulmonary ligament below the left lung root",
+          "description": "The blue pleural fold descending below the left root is the pulmonary ligament.",
+          "distractorRegionIds": [
+            "left-bronchus",
+            "left-pulmonary-artery",
+            "left-pulmonary-veins"
+          ],
+          "x": 0.623489,
+          "y": 0.584239,
+          "width": 0.013817,
+          "height": 0.021739
+        }
+      ],
+      "view": "bilateral lung-root"
+    }
+  ]
+}

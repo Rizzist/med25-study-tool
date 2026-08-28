@@ -30,15 +30,15 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
   const html = await response.text();
   assert.match(html, /<title>MED\/\/25 Exam Sprint<\/title>/i);
   assert.match(html, /July 25 · Aug 22 · Aug 25/i);
-  assert.match(html, /Tissue Development &amp; Function/i);
-  assert.match(html, /Cell &amp; Molecules/i);
-  assert.match(html, /Histology Practical/i);
-  assert.match(html, /Priority exam/i);
+  assert.match(html, /Term 2 exam/i);
+  assert.match(html, /Respiratory/i);
+  assert.match(html, /Upper &amp; Lower Limbs/i);
+  assert.match(html, /Biochemistry II/i);
+  assert.match(html, /CVS/i);
   assert.match(html, /Codex tutor/i);
   assert.match(html, /Visual Guide/i);
   assert.match(html, /Practical Atlas/i);
-  assert.match(html, /Histology Practical/i);
-  assert.match(html, /VISUAL LESSONS/i);
+  assert.match(html, /DYNAMIC IMAGES/i);
   assert.match(html, /histology/i);
   assert.match(html, /embryology/i);
   assert.doesNotMatch(html, /Your site is taking shape|starter loading skeleton/i);
@@ -75,6 +75,7 @@ test("source provides immediate answer feedback and supports the confirmed exam 
     "embryology",
     "physiology",
     "biochemistry",
+    "anatomy",
   ]);
   assert.ok(questionFiles.filter((name) => name.endsWith(".jsonl")).length >= 10);
   assert.deepEqual(finalExamFiles.filter((name) => name.endsWith(".jsonl")).sort(), ["july25.jsonl", "july29.jsonl"]);
@@ -98,7 +99,7 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(page, /if \(phase === "review"\)/);
   assert.match(page, /Ask Codex to audit my reasoning/);
   assert.match(page, /Open 90-second visual lesson/);
-  assert.match(page, /tab === "Visual Guide" && <LessonGuide/);
+  assert.match(page, /tab === "Visual Guide" && !isTerm2Exam\(exam\) && <LessonGuide/);
   assert.match(page, /lessonForQuestion/);
   assert.match(page, /Tabs disappear during MCQs/);
   assert.match(page, /Guyton Chapters 1–8/);

@@ -297,3 +297,73 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 }
 
 @media (max-width:470px) { .metric-grid { grid-template-columns:1fr; }.score-ring { display:none; }.choice-row { overflow:auto; }.sprint-builder { padding:13px; }.review-item { padding:17px; }.mastery-grid { grid-template-columns:1fr; }.chapter-segmented { overflow:auto; }.chapter-segmented button { min-width:74px; } }
+
+/* Term 2: independent exams, source-backed questions, post-answer anatomy exploration. */
+.setup-topbar { height:110px; grid-template-columns:minmax(0,1fr) auto; gap:16px; }
+.setup-topbar .topbar-label { display:none; }
+.exam-switcher-shell { display:grid; gap:7px; }
+.term-switcher { display:flex; gap:5px; }
+.term-switcher button { border:0; border-radius:7px; padding:5px 15px; background:#e5e9e1; color:var(--muted); font-size:11px; font-weight:750; }
+.term-switcher button.active { background:var(--deep); color:var(--lime); }
+.header-exam-switcher .term2-exams { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.header-exam-switcher .term2-exams button { display:flex; flex-direction:column; align-items:flex-start; gap:3px; min-height:57px; }
+.header-exam-switcher .term2-exams button>span { padding:0; background:none; color:var(--muted); font-size:8px; }
+.header-exam-switcher .term2-exams button.active>span { color:var(--green); }
+.header-exam-switcher .term2-exams button>b { white-space:normal; }
+.term2-notice { border:1px solid #bbd2c5; border-left:4px solid var(--green); background:#edf5ee; border-radius:12px; padding:13px 16px; margin:15px 0; }
+.term2-notice>b { font-size:13px; }
+.term2-notice p { font-size:12px; line-height:1.5; margin:7px 0; }
+.term2-notice small { display:block; color:#5a6d62; font-size:11px; line-height:1.5; }
+.term2-source-guide { width:100%; padding:20px 0; }
+.term2-source-guide>h2 { font-size:28px; letter-spacing:-.025em; }
+.term2-source-guide>p,.term2-mock>p { font-size:13px; line-height:1.65; color:var(--muted); }
+.source-map { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0; }
+.source-map article { background:#fff; border:1px solid var(--line); padding:18px; border-radius:14px; }
+.source-map article>div { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; }
+.source-map article>div>span { color:var(--green); font-weight:850; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+.source-map article>div>small { border-radius:6px; background:#edf2eb; padding:4px 7px; font-size:10px; }
+.source-map h3 { margin:15px 0 9px; font-size:17px; }
+.source-map p { font-size:13px; line-height:1.5; }
+.source-map article>small { display:block; color:var(--muted); font-size:12px; line-height:1.55; }
+.term2-scope-note { border-top:1px solid var(--line); padding-top:16px; }
+.term2-mock { max-width:900px; padding-bottom:35px; }
+.question-source { color:var(--muted); font-size:11px; line-height:1.6; padding:12px 14px; background:#e9eee8; border-radius:9px; overflow-wrap:anywhere; }
+.question-source>b { margin-right:8px; color:var(--green); }
+.anatomy-image { margin:18px 0; width:100%; border:1px solid #c9d7cd; border-radius:14px; background:white; padding:12px; }
+.anatomy-toolbar { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px; }
+.anatomy-toolbar>span { color:var(--green); font-size:10px; font-weight:850; letter-spacing:.08em; }
+.anatomy-toolbar button { background:#edf2eb; color:var(--ink); border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:11px; min-height:36px; }
+.anatomy-scroll { overflow:auto; max-width:100%; }
+.anatomy-stage { position:relative; margin:auto; width:100%; max-width:860px; line-height:0; }
+.anatomy-stage>img { display:block; width:100%; height:auto; max-height:none; }
+.anatomy-image.expanded .anatomy-stage { width:1100px; max-width:none; }
+.source-label-mask { position:absolute; background:#fff; z-index:1; pointer-events:none; }
+.anatomy-target { position:absolute; transform:translate(-50%,-50%); width:16px; height:16px; border:2px solid #b63922; border-radius:50%; background:transparent; box-shadow:0 0 0 1px white; pointer-events:none; z-index:3; }
+.anatomy-target>i { position:absolute; bottom:100%; left:100%; display:grid; place-items:center; width:23px; height:23px; background:#b63922; color:white; font-style:normal; font-size:12px; font-weight:900; line-height:1; border:1px solid white; border-radius:5px; }
+.anatomy-hotspot { position:absolute; border:1px solid #126b4b80; background:#126b4b08; padding:0; border-radius:4px; z-index:2; }
+.anatomy-hotspot.active,.anatomy-hotspot:hover,.anatomy-hotspot:focus-visible { border:2px solid var(--green); background:#126b4b25; z-index:4; }
+.anatomy-hotspot>span { display:none; position:absolute; bottom:100%; left:0; color:white; background:var(--deep); border-radius:5px; padding:7px; white-space:nowrap; font-size:11px; line-height:1.25; pointer-events:none; }
+.anatomy-hotspot.active>span { display:block; }
+.anatomy-detail { padding:12px 14px; margin-top:12px; background:#edf5ee; border:1px solid #c3d7c8; border-radius:9px; min-height:84px; }
+.anatomy-detail>b { display:block; color:var(--green); font-size:14px; }
+.anatomy-detail p { margin:5px 0 0; color:#44574a; font-size:12px; line-height:1.6; }
+.anatomy-region-list { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; }
+.anatomy-region-list button { min-height:40px; border:1px solid #c5d3c8; background:white; color:var(--ink); border-radius:8px; padding:8px 11px; font-size:12px; }
+.anatomy-region-list button.selected { background:var(--green); color:white; }
+.anatomy-image figcaption { margin-top:10px; color:var(--muted); font-size:11px; line-height:1.6; text-align:left; }
+.anatomy-hotspot:focus-visible,.anatomy-region-list button:focus-visible,.term-switcher button:focus-visible,.exam-switcher button:focus-visible { outline:3px solid #b4772f; outline-offset:3px; }
+@media (min-width:801px) {
+  .setup-content { height:calc(100dvh - 110px); }
+  .setup-content.term2-view { overflow:auto; scrollbar-gutter:stable; display:block; }
+}
+@media (max-width:1100px) { .setup-topbar { padding-inline:16px; }.setup-topbar .connection { display:none; }.setup-topbar { grid-template-columns:minmax(0,1fr); } }
+@media (max-width:800px) {
+  .setup-topbar { height:auto; padding:12px 15px; }
+  .header-exam-switcher .term2-exams { grid-template-columns:1fr 1fr; }
+  .header-exam-switcher .term2-exams button { min-height:66px; text-align:left; }
+  .header-exam-switcher .term2-exams button>b,.header-exam-switcher .term2-exams button>small { display:block; }
+  .header-exam-switcher .term2-exams button>b { font-size:12px; }
+  .term2-view .metric-grid { grid-template-columns:1fr 1fr; }
+  .source-map { grid-template-columns:1fr; }
+  .anatomy-image { padding:8px; }
+}

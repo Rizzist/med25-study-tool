@@ -1,0 +1,15 @@
+import { term2Exams, type Term2ExamId } from "@/src/lib/mcq/exams.mjs";
+
+const sources = [
+  { subject: "Anatomy", book: "Gray’s Anatomy for Students · 3rd edition", chapters: "Chapter 3: Thorax, respiratory parts (pp. 162–178); Chapter 8: pharynx, larynx and nasal cavities (pp. 1040–1086)", slides: "11 local anatomy decks: Nasal Bones 1–4, LARYNX 1–4, Trachea and lung 1–3", status: "Book + slides" },
+  { subject: "Histology", book: "Junqueira’s Basic Histology · 16th edition", chapters: "Chapter 17: The Respiratory System · printed pages 349–369", slides: "Text and micrographs from the book. No transcript-derived questions in this bank.", status: "Book + micrographs" },
+  { subject: "Embryology", book: "Langman’s Medical Embryology · 15th edition", chapters: "Chapter 14: Respiratory System · printed pages 225–231", slides: "Local respiratory embryology decks E1 and E2", status: "Book + slides" },
+  { subject: "Physiology", book: "Guyton and Hall · 15th edition (2026)", chapters: "38 Ventilation · 39 Pulmonary circulation · 40 Gas exchange · 41 Gas transport · 42 Regulation of respiration", slides: "Respiratory physiology teacher slides have not been found. These questions are explicitly book-only.", status: "Book-only" },
+];
+
+export function Term2Guide({ exam, compact = false }: { exam: Term2ExamId; compact?: boolean }) {
+  const definition = term2Exams.find((item) => item.id === exam)!;
+  if (exam !== "term2-respiratory") return <aside className="term2-notice"><b>Exam section created · question bank planned</b><p>{definition.scope}. Only Respiratory is populated in this release. No Term 1 questions have been relabeled as Term 2.</p><small>Exam date: awaiting confirmation.</small></aside>;
+  if (compact) return <aside className="term2-notice"><b>Learn → answer → explore</b><p>Original practice questions grounded in your local books and slides. Every answer includes an explanation and source locator. Anatomy labels unlock after answering; in mock exams they wait until grading. Each session uses only one variant per anatomical target.</p><small>Date TBA · physiology is book-only · source coverage is not an official exam blueprint. Open Visual Guide for the reading map.</small></aside>;
+  return <section className="term2-source-guide"><p className="eyebrow">Respiratory · Source & reading map</p><h2>Read the theory. Then test it.</h2><p>Use these specific editions: chapter numbers differ from the older syllabus references. This bank does not use past papers, web question banks or video transcripts.</p><div className="source-map">{sources.map((source) => <article key={source.subject}><div><span>{source.subject}</span><small>{source.status}</small></div><h3>{source.book}</h3><p>{source.chapters}</p><small>{source.slides}</small></article>)}</div><p className="term2-scope-note">Coverage means these source topics are represented, not that every possible question or teacher emphasis is covered. The exact exam date and final blueprint remain unconfirmed. Physiology clinical extensions beyond Chapters 38–42 are not included.</p></section>;
+}

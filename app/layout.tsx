@@ -1,29 +1,25 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
-  const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const image = `${protocol}://${host}/og.png`;
-  const description = "July 25, August 22, and August 25 medical exam preparation with sourced MCQs, a 55-specimen histology practical atlas, persistent review, and reasoning repair.";
+  const image = "https://med25-exam-sprint.wise-sun-8653.chatgpt.site/og.png";
+  const description = "Term 1 and Term 2 medical exam preparation with source-based MCQs, interactive respiratory anatomy, histology images, saved progress and answer explanations.";
   return {
     title: "MED//25 Exam Sprint",
     description,
     openGraph: {
       title: "MED//25 · Exam Sprint",
-      description: "1,837 focused questions · 55-specimen histology practical atlas",
+      description,
       images: [{ url: image, width: 1200, height: 630, alt: "MED//25 medical exam sprint" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "MED//25 · Exam Sprint",
-      description: "1,837 focused questions · 55-specimen histology practical atlas",
+      description,
       images: [image],
     },
   };

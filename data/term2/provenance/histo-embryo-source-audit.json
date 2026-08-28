@@ -1,0 +1,326 @@
+{
+  "auditDate": "2026-08-28",
+  "schemaPath": "/Users/rizzist/Documents/CODING/med-school-prep/schemas/mcq-question.schema.json",
+  "schemaSha256": "eb1a737520669457b37f26ceaa19c6de9343adf6f8a15e848cd3e576a0f3a47d",
+  "validation": "Recursive validation of all keywords used in the supplied schema, plus content invariants and a separate manual source audit.",
+  "sourceScope": "Only local Junqueira16e chapter17, Langman15e chapter14, and E1/E2 respiratory embryology slides; no internet, transcripts, or past questions used as factual sources.",
+  "pageConvention": {
+    "Junqueira16e": "Question citations use printed pages. PDF page = printed page +11.",
+    "Langman15eOCR": "Question citations use printed pages. PDF page = printed page +12."
+  },
+  "sourceReconciliation": [
+    "E1/E2 embed older Langman9e figure citations; all question book citations were reverified in the owned15e.",
+    "Developmental periods overlap and slide timing graphics are not identical at boundaries; age questions use12 and20weeks, not boundary dates. The supplied table14-1 is the reference for its stated ranges.",
+    "Some original embedded-image candidates contained baked-in abbreviations. They were rejected. Eight selected assets have no answer-bearing labels; two have only original arrows.",
+    "The local text explicitly states continuous nonfenestrated alveolar capillaries; all relevant questions follow this distinction."
+  ],
+  "subjects": {
+    "histology": {
+      "count": 32,
+      "images": 8,
+      "correctLetterCounts": {
+        "A": 8,
+        "B": 8,
+        "C": 8,
+        "D": 8
+      },
+      "status": "verified",
+      "sha256": "28027e79bf6315682dfcfd62979eaa12be8ca00f50d6244334b25927f6f3d808"
+    },
+    "embryology": {
+      "count": 24,
+      "images": 0,
+      "correctLetterCounts": {
+        "A": 6,
+        "B": 6,
+        "C": 6,
+        "D": 6
+      },
+      "status": "verified",
+      "sha256": "856d652c7f3911ef32b9d31d3a82453f510cdb3c5d1572c053b99beb42e4bd90"
+    }
+  },
+  "sourceAudits": [
+    {
+      "id": "resp-hist-001",
+      "result": "approved",
+      "note": "Junqueira pp349,358: respiratory bronchioles are the first segment with alveolar openings; conducting-airway distractors checked."
+    },
+    {
+      "id": "resp-hist-002",
+      "result": "approved",
+      "note": "Junqueira p349: superficial blood vessels warm inspired air and seromucous gland water humidifies it."
+    },
+    {
+      "id": "resp-hist-003",
+      "result": "approved",
+      "note": "Junqueira pp350,352: basal olfactory cells regenerate neurons and supporting cells; gland and macrophage distinctions checked."
+    },
+    {
+      "id": "resp-hist-004",
+      "result": "approved",
+      "note": "Junqueira p350: brush-cell short microvilli and afferent synapse support chemosensory function."
+    },
+    {
+      "id": "resp-hist-005",
+      "result": "approved",
+      "note": "Junqueira pp350,369: Kulchitsky small granule cells are DNES cells; source links small cell carcinoma to this population."
+    },
+    {
+      "id": "resp-hist-006",
+      "result": "approved",
+      "note": "Junqueira p350: smoking-related squamous metaplasia removes the normal ciliated clearance apparatus."
+    },
+    {
+      "id": "resp-hist-007",
+      "result": "approved",
+      "note": "Junqueira p352: epiglottis contains elastic cartilage and has a squamous lingual surface."
+    },
+    {
+      "id": "resp-hist-008",
+      "result": "approved",
+      "note": "Junqueira pp353-354: true vocal folds have squamous lining, an elastic ligament, and skeletal vocalis muscle."
+    },
+    {
+      "id": "resp-hist-009",
+      "result": "approved",
+      "note": "Junqueira p354: trachealis contraction narrows the lumen and increases expelled-air velocity in cough."
+    },
+    {
+      "id": "resp-hist-010",
+      "result": "approved",
+      "note": "Junqueira pp356-357: bronchioles lack cartilage and mucosal glands while retaining smooth muscle."
+    },
+    {
+      "id": "resp-hist-011",
+      "result": "approved",
+      "note": "Junqueira pp357,360: nonciliated club cells use SER/P450 enzymes for xenobiotic detoxification."
+    },
+    {
+      "id": "resp-hist-012",
+      "result": "approved",
+      "note": "Junqueira p357: proportionately prominent bronchiolar smooth muscle mediates bronchospasm."
+    },
+    {
+      "id": "resp-hist-013",
+      "result": "approved",
+      "note": "Junqueira pp362,369: elastic recoil distinguished from reticular-fiber limitation of distention."
+    },
+    {
+      "id": "resp-hist-014",
+      "result": "approved",
+      "note": "Junqueira pp362-363: Kohn pores allow pressure equilibration and collateral air passage; endothelial fenestration rejected."
+    },
+    {
+      "id": "resp-hist-015",
+      "result": "approved",
+      "note": "Junqueira pp362-363,365 and figures17-13/15: type I cytoplasm, fused basal laminae, and continuous endothelial cytoplasm comprise the thin barrier."
+    },
+    {
+      "id": "resp-hist-016",
+      "result": "approved",
+      "note": "Junqueira pp362-363,365: alveolar capillary endothelium is explicitly continuous, not fenestrated; attenuated peripheral cytoplasm verified visually."
+    },
+    {
+      "id": "resp-hist-017",
+      "result": "approved",
+      "note": "Junqueira p363: about95% is type I alveolar surface coverage, not95% of all lung cells or all pneumocyte numbers."
+    },
+    {
+      "id": "resp-hist-018",
+      "result": "approved",
+      "note": "Junqueira pp359,362 figure17-12b: eosinophilic knobs at alveolar openings represent smooth muscle."
+    },
+    {
+      "id": "resp-hist-019",
+      "result": "approved",
+      "note": "Junqueira p364: hydrophobic SP-B/SP-C orient DPPC; SP-A/SP-D have innate immune roles."
+    },
+    {
+      "id": "resp-hist-020",
+      "result": "approved",
+      "note": "Junqueira p364: SP-A/SP-D immune pairing distinguished from mixed and hydrophobic pairs."
+    },
+    {
+      "id": "resp-hist-021",
+      "result": "approved",
+      "note": "Junqueira pp366-367: surviving type II cells proliferate and generate progenitors for both alveolar epithelial types."
+    },
+    {
+      "id": "resp-hist-022",
+      "result": "approved",
+      "note": "Junqueira pp365-366: macrophages ingest extravasated erythrocytes and become hemosiderin-positive heart failure cells; not type II cells."
+    },
+    {
+      "id": "resp-hist-023",
+      "result": "approved",
+      "note": "Junqueira pp362,367: pulmonary arterial branches accompany airways and supply alveolar capillaries; bronchial arteries carry oxygen-rich blood."
+    },
+    {
+      "id": "resp-hist-024",
+      "result": "approved",
+      "note": "Junqueira p368: visceral pleural mesothelium covers the lung and parietal mesothelium lines the thoracic wall."
+    },
+    {
+      "id": "resp-hist-025",
+      "result": "approved",
+      "note": "Junqueira p351 figure17-2a; raw field-101 visually matched to the source; ciliated pseudostratified lining without identifying text."
+    },
+    {
+      "id": "resp-hist-026",
+      "result": "approved",
+      "note": "Junqueira p352 figure17-3b; raw field-102 visually matched; neuronal intermediate zone distinguished from basal and supporting zones."
+    },
+    {
+      "id": "resp-hist-027",
+      "result": "approved",
+      "note": "Junqueira pp353-354 figure17-4; raw field-103 matched; lower sharp true folds and large vocalis bundles distinguish them from upper vestibular folds."
+    },
+    {
+      "id": "resp-hist-028",
+      "result": "approved",
+      "note": "Junqueira p354 figure17-5; raw field-104 matched; central seromucous units supply watery airway mucus."
+    },
+    {
+      "id": "resp-hist-029",
+      "result": "approved",
+      "note": "Junqueira p358 figure17-8b; raw field-105 matched; cartilage at right and ciliated lining at left establish bronchial wall; no answer-bearing letters."
+    },
+    {
+      "id": "resp-hist-030",
+      "result": "approved",
+      "note": "Junqueira p359 figure17-9c; raw field-106 matched; small bronchiole with smooth muscle, no cartilage/glands; original arrows only."
+    },
+    {
+      "id": "resp-hist-031",
+      "result": "approved",
+      "note": "Junqueira p360 figure17-10b; raw field-107 matched; domed nonciliated granule-containing club cells."
+    },
+    {
+      "id": "resp-hist-032",
+      "result": "approved",
+      "note": "Junqueira p366 figure17-16; raw field-108 matched; multiple characteristic lamellar bodies identify type II pneumocyte, not macrophage or endothelial cell."
+    },
+    {
+      "id": "resp-emb-001",
+      "result": "approved",
+      "note": "Langman p225; E1 slides3-4: approximately4-week ventral foregut respiratory diverticulum."
+    },
+    {
+      "id": "resp-emb-002",
+      "result": "approved",
+      "note": "Langman p225; E1 slides3,5: endodermal epithelial lining versus splanchnic mesodermal supporting tissues."
+    },
+    {
+      "id": "resp-emb-003",
+      "result": "approved",
+      "note": "Langman p225; E1 slide3: local source explicitly describes mesodermal RA upregulating endodermal TBX4."
+    },
+    {
+      "id": "resp-emb-004",
+      "result": "approved",
+      "note": "Langman pp225-226 figure14-2; E1 slides6,13: dorsal esophagus, ventral trachea, persistent laryngeal communication."
+    },
+    {
+      "id": "resp-emb-005",
+      "result": "approved",
+      "note": "Langman pp226-227 figure14-3A; E1 slides7-8: common proximal atresia/distal fistula and faulty tracheoesophageal partitioning."
+    },
+    {
+      "id": "resp-emb-006",
+      "result": "approved",
+      "note": "Langman p227: esophageal obstruction impairs swallowed amniotic-fluid passage into stomach/intestine and can cause polyhydramnios."
+    },
+    {
+      "id": "resp-emb-007",
+      "result": "approved",
+      "note": "Langman p227; E1 slide9: renal anomalies are a defining VACTERL category; other congenital pulmonary abnormalities are not named components."
+    },
+    {
+      "id": "resp-emb-008",
+      "result": "approved",
+      "note": "Langman p227; E1 slides11-12: fourth/sixth arch mesenchyme supplies laryngeal cartilages and muscles."
+    },
+    {
+      "id": "resp-emb-009",
+      "result": "approved",
+      "note": "Langman p227; E1 slide12: superior laryngeal to fourth arch, recurrent laryngeal to sixth; slide also supports second/facial and third/glossopharyngeal distractors."
+    },
+    {
+      "id": "resp-emb-010",
+      "result": "approved",
+      "note": "Langman p227: epithelial occlusion followed by vacuolization/recanalization produces laryngeal ventricles."
+    },
+    {
+      "id": "resp-emb-011",
+      "result": "approved",
+      "note": "Langman pp227-228 figure14-5; E1 slide14: right3/left2 secondary bronchi predict lung lobes."
+    },
+    {
+      "id": "resp-emb-012",
+      "result": "approved",
+      "note": "Langman p228: tertiary bronchi are segmental, while secondary are lobar."
+    },
+    {
+      "id": "resp-emb-013",
+      "result": "approved",
+      "note": "Langman p228; E2 slide4: epithelial-mesenchymal branching interaction with mesodermal FGF-family signals."
+    },
+    {
+      "id": "resp-emb-014",
+      "result": "approved",
+      "note": "Langman p228 figure14-6; E1 slides5,15: splanchnic visceral pleura versus somatic parietal pleura."
+    },
+    {
+      "id": "resp-emb-015",
+      "result": "approved",
+      "note": "Langman pp227-228; E1 slides15-17: pleuroperitoneal separation from peritoneum distinguished from pleuropericardial separation."
+    },
+    {
+      "id": "resp-emb-016",
+      "result": "approved",
+      "note": "Langman p230 table14-1; E2 slides5-6:12 weeks is safely within pseudoglandular period; no respiratory bronchioles/alveoli yet."
+    },
+    {
+      "id": "resp-emb-017",
+      "result": "approved",
+      "note": "Langman pp228-230 table14-1; E2 slides5-7:20 weeks is canalicular with respiratory bronchioles, ducts, and increasing vascularity."
+    },
+    {
+      "id": "resp-emb-018",
+      "result": "approved",
+      "note": "Langman pp229-230; E2 slide7: type I thinning and capillary apposition improve diffusion distance; no exact boundary-age claim."
+    },
+    {
+      "id": "resp-emb-019",
+      "result": "approved",
+      "note": "Langman p230; E2 slide8: type II cells produce surfactant around end24weeks/end6thmonth in these sources."
+    },
+    {
+      "id": "resp-emb-020",
+      "result": "approved",
+      "note": "Langman pp230-231; E2 slides9-10: inadequate surfactant increases surface tension and expiratory collapse risk."
+    },
+    {
+      "id": "resp-emb-021",
+      "result": "approved",
+      "note": "Langman p230; E2 slide13: most fetal fluid resorbed by blood/lymph capillaries; surfactant surface coat remains."
+    },
+    {
+      "id": "resp-emb-022",
+      "result": "approved",
+      "note": "Langman p230; E2 slide13: fetal movements stimulate lung development and condition respiratory muscles in fluid-filled lungs."
+    },
+    {
+      "id": "resp-emb-023",
+      "result": "approved",
+      "note": "Langman pp230-231; E2 slide6: postnatal growth chiefly increases respiratory bronchiolar/alveolar numbers;10-year statement specifically from book."
+    },
+    {
+      "id": "resp-emb-024",
+      "result": "approved",
+      "note": "Langman p231; E2 slide11: congenital cysts arise by bronchial dilation; independent buds explain ectopic lobes instead."
+    }
+  ],
+  "result": "passed"
+}

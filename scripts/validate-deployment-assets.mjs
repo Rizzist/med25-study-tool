@@ -1,4 +1,5 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
@@ -43,5 +44,16 @@ assert(july29Downloaded.every((question) => question.status === "verified"
   && question.tags?.includes("distilled-core")), "Downloaded-core bank contains an unverified or incorrectly tagged item");
 const allFinalIds = [july25Telegram, july29Telegram, july29Downloaded].flat().map((question) => question.id);
 assert(new Set(allFinalIds).size === allFinalIds.length, "Final-exam question IDs are not globally unique");
+
+const respiratory = embeddedBank.questions.filter((question) => question.tags?.includes("exam-term2-respiratory"));
+assert(respiratory.length >= 216, "Respiratory integration is incomplete");
+const respiratoryImages = new Set(respiratory.flatMap((question) => (question.media ?? []).map((media) => media.path)));
+assert(respiratoryImages.size === 12, "Expected 4 anatomy source diagrams and 8 histology micrographs");
+for (const path of respiratoryImages) assert(existsSync(resolve(root, "public/study", path)), `Missing Respiratory image: ${path}`);
+const imageProvenance = JSON.parse(readFileSync(resolve(root, "data/term2/provenance/histology-images.json"), "utf8"));
+for (const image of imageProvenance) {
+  const hash = createHash("sha256").update(readFileSync(resolve(root, "public/study", image.path))).digest("hex");
+  assert(hash === image.sha256, `Histology source image changed: ${image.path}`);
+}
 
 console.log(`Deployment assets valid: ${catalog.chapterCount} chapters, ${catalog.conceptCount} concepts, ${catalog.questionCount} curated questions, ${embeddedBank.questions.length} embedded questions, ${july29Downloaded.length} downloaded-core final questions.`);

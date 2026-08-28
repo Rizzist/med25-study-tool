@@ -5,6 +5,7 @@ import { LessonSlide } from "@/src/components/LessonSlide";
 import type { CoreLesson, LessonExamId } from "@/src/lib/lessons/types";
 
 const subjectTitle = {
+  anatomy: "Anatomy",
   histology: "Histology",
   embryology: "Embryology",
   physiology: "Physiology",

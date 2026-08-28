@@ -6,6 +6,8 @@ import { extname, resolve, sep } from "node:path";
 import { promisify } from "node:util";
 import { biochemistryChapterIdForQuestion, biochemistryChapterIds } from "../src/lib/biochemistry/chapter-mapping.mjs";
 import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
+import { selectRespiratorySprint } from "../src/lib/mcq/respiratory-selection.mjs";
+import { examIds, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, term2Exams } from "../src/lib/mcq/exams.mjs";
 
 const execFileAsync = promisify(execFile);
 const root = resolve(import.meta.dirname, "..");
@@ -180,8 +182,8 @@ const JULY_29_BIOCHEMISTRY_TOPICS = new Set([
   "biotechnology and molecular techniques",
 ]);
 
-const EXAM_COLLECTIONS = ["all", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "histo-identification", "histo-transfer", "practical"];
-const EXAM_IDS = ["july25", "aug22", "july29"];
+const EXAM_COLLECTIONS = ["all", "anatomy", "dynamic-anatomy", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "histo-identification", "histo-transfer", "practical"];
+const EXAM_IDS = examIds;
 const FINAL_EXAM_BANKS = [
   { id: "telegram-past-papers", exam: "july25", label: "Telegram Past Papers", description: "The original source-traceable July 25 past-paper bank.", requiredTag: "telegram-final", filepath: resolve(finalExamDirectory, "july25.jsonl") },
   { id: "telegram-past-papers", exam: "july29", label: "Telegram Past Papers", description: "The original 199-question August 25 Telegram archive.", requiredTag: "telegram-final", filepath: resolve(finalExamDirectory, "july29.jsonl") },
@@ -196,6 +198,8 @@ function finalExamBankDefinition(exam, bank = "telegram-past-papers") {
 }
 
 function matchesExam(question, exam) {
+  if (isTerm2Exam(exam)) return matchesTerm2Exam(question, exam);
+  if (isTerm2Question(question)) return false;
   const isHistologyPractical = (question.tags ?? []).includes("histo-practical");
   if (isHistologyPractical) return exam === "aug22";
   if (exam === "aug22") return false;
@@ -224,8 +228,9 @@ function isPracticalDerived(question) {
 
 function matchesCollection(question, collection) {
   if (!collection || collection === "all") return true;
-  if (["histology", "embryology", "physiology", "biochemistry"].includes(collection)) return question.subject === collection;
-  if (collection === "images") return question.kind === "image_single_best_answer";
+  if (["anatomy", "histology", "embryology", "physiology", "biochemistry"].includes(collection)) return question.subject === collection;
+  if (collection === "images") return isImageQuestion(question);
+  if (collection === "dynamic-anatomy") return question.kind === "dynamic_anatomy";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
   if (collection === "histo-identification") return (question.tags ?? []).includes("histo-identification-15");
   if (collection === "histo-transfer") return (question.tags ?? []).includes("histo-transfer-100");
@@ -278,7 +283,7 @@ function bankSummary() {
         try {
           const question = JSON.parse(line);
           questionCount += 1;
-          if (question.kind === "image_single_best_answer") imageQuestionCount += 1;
+          if (isImageQuestion(question)) imageQuestionCount += 1;
           counts.set(question.subject, (counts.get(question.subject) ?? 0) + 1);
           for (const tag of question.tags ?? []) tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
         } catch { /* The validator reports malformed records. */ }
@@ -290,6 +295,7 @@ function bankSummary() {
     { id: "july25", date: "2026-07-25", title: "Tissue Development & Function" },
     { id: "aug22", date: "2026-08-22", title: "Histology Practical" },
     { id: "july29", date: "2026-08-25", title: "Cell & Molecules" },
+    ...term2Exams,
   ].map((exam) => {
     const questions = verifiedQuestions.filter((question) => matchesExam(question, exam.id));
     const chapterSummaries = exam.id === "july29" ? biochemistryChapterIds.flatMap((id) => {
@@ -301,7 +307,8 @@ function bankSummary() {
       questionCount: questions.length,
       finalExamQuestionCount: FINAL_EXAM_BANKS.filter((bank) => bank.exam === exam.id).reduce((total, bank) => total + loadFinalExamQuestions(exam.id, bank.id).length, 0),
       finalExamBanks: FINAL_EXAM_BANKS.filter((bank) => bank.exam === exam.id).map((bank) => ({ id: bank.id, label: bank.label, description: bank.description, questionCount: loadFinalExamQuestions(exam.id, bank.id).length })),
-      imageQuestionCount: questions.filter((question) => question.kind === "image_single_best_answer").length,
+      imageQuestionCount: questions.filter(isImageQuestion).length,
+      dynamicImageCount: new Set(questions.filter((question) => question.kind === "dynamic_anatomy").map((question) => question.anatomy?.imageId)).size,
       collectionCounts: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).length])),
       collectionQuestionIds: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).map((question) => question.id)])),
       biochemistryChapters: chapterSummaries,
@@ -428,7 +435,9 @@ function coverageQuestionSet(body) {
   const filtered = loadVerifiedQuestions().filter((question) => matchesExam(question, body.exam)
     && matchesCollection(question, collection)
     && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
-  const selection = selectCoverageSprint(filtered, { limit, seenIds, repairIds });
+  const selection = body.exam === "term2-respiratory"
+    ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: body.studyMode === "exam" ? "exam" : "learn" })
+    : selectCoverageSprint(filtered, { limit, seenIds, repairIds });
   return {
     availableCount: filtered.length,
     questions: selection.questions,

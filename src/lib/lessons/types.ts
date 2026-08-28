@@ -1,6 +1,7 @@
 import type { MCQQuestion, SubjectId } from "@/src/lib/mcq/types";
+import type { ExamId } from "@/src/lib/mcq/exams.mjs";
 
-export type LessonExamId = "july25" | "aug22" | "july29";
+export type LessonExamId = ExamId;
 export type LessonExamScope = LessonExamId | "both";
 export type LessonKind = "process" | "timeline" | "comparison" | "recognition" | "mechanism";
 export type LessonVisualType = "flow" | "timeline" | "layers" | "comparison" | "map";
@@ -39,7 +40,7 @@ export type LessonCollection = {
 };
 
 export function lessonMatchesExam(lesson: CoreLesson, exam: LessonExamId) {
-  return lesson.exam === exam || lesson.exam === "both";
+  return lesson.exam === exam || (lesson.exam === "both" && (exam === "july25" || exam === "july29"));
 }
 
 function normalize(value: string) {

@@ -9,6 +9,8 @@ import {
   type BiochemistryStudyMode,
 } from "@/src/components/BiochemistryChapterHub";
 import { FinalExam } from "@/src/components/FinalExam";
+import { AnatomyImage } from "@/src/components/AnatomyImage";
+import { Term2Guide } from "@/src/components/Term2Guide";
 import { LessonGuide } from "@/src/components/LessonGuide";
 import { LessonSlide } from "@/src/components/LessonSlide";
 import {
@@ -24,6 +26,8 @@ import { allLessons, histologyPracticalLessons, lessonsForExam } from "@/src/lib
 import { lessonForQuestion } from "@/src/lib/lessons/types";
 import { classifySessionCompletion } from "@/src/lib/mcq/sprint-selection.mjs";
 import type { CodexGrade, MCQMedia, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
+import { isExamId, isTerm2Exam, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
+import { createEmptyProgress, parseProgress, type StudyProgress } from "@/src/lib/mcq/study-progress.mjs";
 
 type BridgeHealth = {
   ok: boolean;
@@ -41,7 +45,7 @@ type BankSummary = {
   tags?: Record<string, number>;
   exams?: Array<{
     id: ExamId;
-    date: string;
+    date: string | null;
     title: string;
     questionCount: number;
     finalExamQuestionCount: number;
@@ -52,6 +56,7 @@ type BankSummary = {
       questionCount: number;
     }>;
     imageQuestionCount: number;
+    dynamicImageCount?: number;
     collectionCounts: Partial<Record<CollectionId, number>>;
     collectionQuestionIds?: Partial<Record<CollectionId, string[]>>;
     biochemistryChapters?: Array<{ id: string; questionCount: number; questionIds: string[] }>;
@@ -59,13 +64,10 @@ type BankSummary = {
 };
 
 type SessionAnswer = StudentAnswer & { flagged: boolean; writtenSubmitted?: boolean };
-type ExamId = "july25" | "aug22" | "july29";
-type CollectionId = "all" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "histo-identification" | "histo-transfer" | "practical" | "wrong" | "flagged";
+type CollectionId = "all" | "anatomy" | "dynamic-anatomy" | "histology" | "embryology" | "physiology" | "biochemistry" | "images" | "stains" | "histo-practical" | "histo-identification" | "histo-transfer" | "practical" | "wrong" | "flagged";
 type SavedCollectionId = "wrong" | "flagged";
 type SessionPhase = "setup" | "loading" | "active" | "review";
 type ReviewFilter = "all" | "wrong" | "flagged";
-type ExamProgress = { wrongIds: string[]; flaggedIds: string[] };
-type StudyProgress = { version: 1; exams: Record<ExamId, ExamProgress> };
 type ActiveSessionSnapshot = {
   exam: ExamId;
   collection: CollectionId;
@@ -117,9 +119,15 @@ const examConfig: Record<ExamId, {
     focus: "Teacher-confirmed Lippincott chapters, chapter-by-chapter self-testing, cellular histology, membrane physiology and confirmed laboratory methods; partial, supplementary and unconfirmed chapters are labeled clearly",
     collections: ["all", "wrong", "flagged", "biochemistry", "histology", "physiology", "images", "stains", "practical"],
   },
+  "term2-cvs": { date: "Date TBA", title: "CVS", focus: term2Exams[0].scope, collections: ["all", "wrong", "flagged"] },
+  "term2-respiratory": { date: "Date TBA", title: "Respiratory", focus: term2Exams[1].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
+  "term2-limbs": { date: "Date TBA", title: "Upper & Lower Limbs", focus: term2Exams[2].scope, collections: ["all", "wrong", "flagged"] },
+  "term2-biochemistry": { date: "Date TBA", title: "Biochemistry II", focus: term2Exams[3].scope, collections: ["all", "wrong", "flagged"] },
 };
 const collectionLabel: Record<CollectionId, string> = {
   all: "Mixed",
+  anatomy: "Anatomy",
+  "dynamic-anatomy": "Dynamic anatomy",
   histology: "Histology",
   embryology: "Embryology",
   physiology: "Physiology",
@@ -135,56 +143,13 @@ const collectionLabel: Record<CollectionId, string> = {
 };
 type Tab = (typeof tabs)[number];
 
-function createEmptyProgress(): StudyProgress {
-  return {
-    version: 1,
-    exams: {
-      july25: { wrongIds: [], flaggedIds: [] },
-      aug22: { wrongIds: [], flaggedIds: [] },
-      july29: { wrongIds: [], flaggedIds: [] },
-    },
-  };
-}
-
 function cleanIds(value: unknown) {
   if (!Array.isArray(value)) return [];
   return [...new Set(value.filter((id): id is string => typeof id === "string" && id.length > 0 && id.length <= 160))];
 }
 
-function parseProgress(raw: string | null): StudyProgress {
-  if (!raw) return createEmptyProgress();
-  try {
-    const value = JSON.parse(raw) as Partial<StudyProgress>;
-    const oldJuly25WrongIds = cleanIds(value.exams?.july25?.wrongIds);
-    const oldJuly25FlaggedIds = cleanIds(value.exams?.july25?.flaggedIds);
-    return {
-      version: 1,
-      exams: {
-        july25: {
-          wrongIds: oldJuly25WrongIds.filter((id) => !id.startsWith("hpr-")),
-          flaggedIds: oldJuly25FlaggedIds.filter((id) => !id.startsWith("hpr-")),
-        },
-        aug22: {
-          wrongIds: cleanIds([...(value.exams?.aug22?.wrongIds ?? []), ...oldJuly25WrongIds.filter((id) => id.startsWith("hpr-"))]),
-          flaggedIds: cleanIds([...(value.exams?.aug22?.flaggedIds ?? []), ...oldJuly25FlaggedIds.filter((id) => id.startsWith("hpr-"))]),
-        },
-        july29: {
-          wrongIds: cleanIds(value.exams?.july29?.wrongIds),
-          flaggedIds: cleanIds(value.exams?.july29?.flaggedIds),
-        },
-      },
-    };
-  } catch {
-    return createEmptyProgress();
-  }
-}
-
-function isExamId(value: unknown): value is ExamId {
-  return value === "july25" || value === "aug22" || value === "july29";
-}
-
 function isCollectionId(value: unknown): value is CollectionId {
-  return typeof value === "string" && value in collectionLabel;
+  return typeof value === "string" && Object.hasOwn(collectionLabel, value);
 }
 
 function cleanAnswers(value: unknown, questionIds: string[]) {
@@ -417,9 +382,11 @@ function mediaUrl(question: MCQQuestion, mediaId: string) {
 }
 
 function StudyImage({ question, media, review = false }: { question: MCQQuestion; media: MCQMedia; review?: boolean }) {
+  if (question.kind === "dynamic_anatomy") return <AnatomyImage key={question.id} question={question} media={media} src={mediaUrl(question, media.id)} revealed={review} />;
   return <figure className={`study-image ${review ? "review-image" : ""}`}>
     <div className="study-image-stage">
-      <img src={mediaUrl(question, media.id)} alt={review ? media.alt : "Unlabeled microscope question field"} />
+      <img src={mediaUrl(question, media.id)} alt={review ? media.alt : "Unlabeled source image for this question"} />
+      {!review && media.labelMasks?.map((mask, index) => <span key={index} className="source-label-mask" aria-hidden="true" style={{ left: `${mask.x * 100}%`, top: `${mask.y * 100}%`, width: `${mask.width * 100}%`, height: `${mask.height * 100}%` }} />)}
       {media.annotations?.map((annotation) => <span
         className="study-image-marker"
         key={annotation.id}
@@ -427,8 +394,13 @@ function StudyImage({ question, media, review = false }: { question: MCQQuestion
         style={{ left: `${annotation.x * 100}%`, top: `${annotation.y * 100}%`, width: `${annotation.width * 100}%`, height: `${annotation.height * 100}%` }}
       ><i>{annotation.label}</i></span>)}
     </div>
-    <figcaption>{review ? media.caption ?? "Image recognition" : media.annotations?.length ? "Structure identification · name marker A" : "Specimen identification · inspect before answering"}</figcaption>
+    <figcaption>{review ? [media.caption ?? "Image recognition", media.attribution].filter(Boolean).join(" · ") : media.annotations?.length ? "Structure identification · name marker A" : "Specimen identification · inspect before answering"}</figcaption>
   </figure>;
+}
+
+function QuestionSource({ question }: { question: MCQQuestion }) {
+  const source = question.source;
+  return <p className="question-source"><b>Source</b> {[source.title, source.edition, source.chapter, source.page, source.figure, source.lecture, source.slide ? `Slide ${source.slide}` : null].filter(Boolean).join(" · ")}</p>;
 }
 
 function StudyMedia({ question, review = false }: { question: MCQQuestion; review?: boolean }) {
@@ -455,7 +427,7 @@ export default function Home() {
   const [bank, setBank] = useState<BankSummary | null>(null);
   const [checking, setChecking] = useState(false);
   const [phase, setPhase] = useState<SessionPhase>("setup");
-  const [exam, setExam] = useState<ExamId>("july25");
+  const [exam, setExam] = useState<ExamId>("term2-respiratory");
   const [collection, setCollection] = useState<CollectionId>("all");
   const [sessionSize, setSessionSize] = useState(20);
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
@@ -567,6 +539,7 @@ export default function Home() {
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const selectedConfig = examConfig[exam];
+  const examLabel = isTerm2Exam(exam) ? selectedConfig.title : selectedConfig.date;
   const examProgress = progress.exams[exam];
   const savedCount = (id: SavedCollectionId) => id === "wrong" ? examProgress.wrongIds.length : examProgress.flaggedIds.length;
   const collectionCount = isSavedCollection(collection) ? savedCount(collection) : selectedExam?.collectionCounts[collection] ?? 0;
@@ -650,7 +623,7 @@ export default function Home() {
         response = await fetch(`${bridgeUrl}/api/questions/sprint`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ limit: requestedLimit, exam, collection: nextCollection, seenIds, repairIds, biochemistryChapterId: options.biochemistryChapterId }),
+          body: JSON.stringify({ limit: requestedLimit, exam, collection: nextCollection, seenIds, repairIds, studyMode: nextStudyMode, biochemistryChapterId: options.biochemistryChapterId }),
         });
       }
       if (!response.ok) throw new Error("Could not load the question bank.");
@@ -916,7 +889,7 @@ export default function Home() {
     return (
       <main className="session-shell">
         <header className="session-header">
-          <div className="session-mark"><b>MED//25</b><span>{examConfig[exam].date} · {sessionLabel}</span></div>
+          <div className="session-mark"><b>MED//25</b><span>{examLabel} · {sessionLabel}</span></div>
           <div className="session-progress"><span>Question {questionIndex + 1} of {questions.length}</span><div><i style={{ width: `${((questionIndex + 1) / questions.length) * 100}%` }} /></div><small>{answeredCount} answered</small></div>
           <div className="session-end-stack"><span className={`session-mode-badge ${studyMode}`}>{studyMode === "exam" ? "Exam · answers hidden" : "Learn · instant teaching"}</span><button className="end-button" onClick={() => setConfirmEnd(true)}>End session</button></div>
         </header>
@@ -928,8 +901,9 @@ export default function Home() {
                 <span>{question.subject}</span><span>{question.topic}</span><span>Difficulty {question.difficulty}/5</span>
               </div>
               <h1>{question.prompt}</h1>
-              <StudyMedia question={question} />
+              <StudyMedia question={question} review={hasImmediateFeedback} />
 
+              {hasImmediateFeedback && <QuestionSource question={question} />}
               {!isWrittenPractical && <div className="mode-switch" aria-label="Answer mode">
                 <button disabled={hasImmediateFeedback} className={answer.mode === "select" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "select" })}>Choose option</button>
                 <button disabled={hasImmediateFeedback} className={answer.mode === "write" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "write" })}>Type my answer</button>
@@ -972,6 +946,7 @@ export default function Home() {
                 <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
                 <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : chosenId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
                 <p className="feedback-key-rule"><b>Fast rule:</b> Read the green option as the key concept, then compare each red/neutral option with the chapter checkpoint it actually describes.</p>
+                {answer.mode === "write" && <div className="explanation"><span>Why this answer is correct</span><p>{question.explanation}</p></div>}
               </section>}
 
               {hasImmediateFeedback && question.subject === "biochemistry" && <BiochemistryConceptFeedback questionId={question.id} />}
@@ -1024,6 +999,7 @@ export default function Home() {
               <div className="review-item-head"><span>{isCorrect(question, answer) ? "✓ Correct" : "× Repair"}</span><div><small>{question.subject} · {question.topic}</small><button className={answer?.flagged ? "active" : ""} onClick={() => toggleFlag(question.id)}>{answer?.flagged ? "★ Unflag" : "☆ Flag"}</button></div></div>
               <h2>{question.prompt}</h2>
               <StudyMedia question={question} review />
+              <QuestionSource question={question} />
               <div className="answer-comparison"><div><span>Your answer</span><b>{answer?.mode === "write" ? answer.writtenAnswer || "No answer" : chosen ? `${chosen.id}. ${chosen.text}` : "No answer"}</b>{writtenInterpretation?.label && <small>Interpreted as {writtenInterpretation.label}</small>}</div><div><span>Correct answer</span><b>{correct ? correct.text : question.correctOptionId}</b></div></div>
               {!isWrittenPractical && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
                 <span className="option-letter">{option.id}</span>
@@ -1050,7 +1026,14 @@ export default function Home() {
     { id: "wrong", title: "Wrong answers", detail: "Incorrect and opened-unanswered questions stay here until corrected.", count: savedCount("wrong") },
     { id: "flagged", title: "Flagged", detail: "Manual flags stay saved until you remove them.", count: savedCount("flagged") },
   ];
-  const topicCards: Array<{ id: CollectionId; title: string; scope: string; detail: string; count: number }> = exam === "july25" ? [
+  const topicCards: Array<{ id: CollectionId; title: string; scope: string; detail: string; count: number }> = isTerm2Exam(exam) ? exam === "term2-respiratory" ? [
+    { id: "anatomy", title: "Respiratory anatomy", scope: "Gray’s 3e + 11 local decks", detail: "Nasal cavity, larynx, trachea, lungs, pleura and thoracic relationships", count: examCount("anatomy") },
+    { id: "histology", title: "Respiratory histology", scope: "Junqueira 16e · Chapter 17", detail: "Conducting airways, respiratory zone, cells and source micrographs", count: examCount("histology") },
+    { id: "embryology", title: "Lung development", scope: "Langman 15e · Chapter 14 + E1/E2", detail: "Respiratory diverticulum, airway branching, maturation and congenital defects", count: examCount("embryology") },
+    { id: "physiology", title: "Respiratory physiology", scope: "Guyton 15e · Chapters 38–42", detail: "Ventilation, pulmonary circulation, gas exchange and transport, control of breathing · book-only", count: examCount("physiology") },
+    { id: "dynamic-anatomy", title: "Dynamic anatomy lab", scope: `${selectedExam?.dynamicImageCount ?? 0} reusable source images`, detail: "Different targets and distractors on the same image. Answer first, then explore the annotated structures.", count: examCount("dynamic-anatomy") },
+    { id: "images", title: "All visual questions", scope: "Source diagrams + micrographs", detail: "Mix anatomy targets with respiratory histology identification", count: examCount("images") },
+  ] : [] : exam === "july25" ? [
     { id: "histology", title: "Histology I", scope: "Core tissues + reproductive", detail: "Cells, basic tissues, skin, ovary, uterus and male reproductive histology", count: examCount("histology") },
     { id: "embryology", title: "Embryology", scope: "General embryology + teratology", detail: "Gametogenesis through weeks 1–8, fetal period, placenta and congenital malformations", count: examCount("embryology") },
     { id: "physiology", title: "Guyton Chapters 1–8", scope: "Confirmed July 25 physiology", detail: "Homeostasis, cell physiology, transport, potentials, skeletal and smooth muscle, NMJ and synapses", count: examCount("physiology") },
@@ -1069,17 +1052,25 @@ export default function Home() {
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Equipment, carbohydrate tests, titration and image analysis", count: examCount("practical") },
   ];
 
-  const examSwitcher = <div className="exam-switcher" aria-label="Choose exam">
-    {(Object.keys(examConfig) as ExamId[]).map((value) => {
+  const examSwitcher = <div className="exam-switcher-shell"><div className="term-switcher" aria-label="Choose term"><button className={!isTerm2Exam(exam) ? "active" : ""} aria-pressed={!isTerm2Exam(exam)} onClick={() => chooseExam("july25")}>Term 1</button><button className={isTerm2Exam(exam) ? "active" : ""} aria-pressed={isTerm2Exam(exam)} onClick={() => chooseExam("term2-respiratory")}>Term 2</button></div><div className={`exam-switcher ${isTerm2Exam(exam) ? "term2-exams" : ""}`} aria-label="Choose exam">
+    {(Object.keys(examConfig) as ExamId[]).filter((value) => isTerm2Exam(value) === isTerm2Exam(exam)).map((value) => {
       const item = examConfig[value];
       const summary = bank?.exams?.find((candidate) => candidate.id === value);
       return <button key={value} className={exam === value ? "active" : ""} onClick={() => chooseExam(value)} aria-pressed={exam === value}>
-        <span>{item.date}</span><b>{item.title}</b><small>{value === "aug22" ? `${summary?.questionCount ?? "—"} practical questions` : tab === "Final exam" ? value === "july29" ? `${summary?.finalExamBanks?.length ?? "—"} final banks` : `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
+        <span>{item.date}</span><b>{item.title}</b><small>{isTerm2Exam(value) ? value === "term2-respiratory" ? `${summary?.questionCount ?? "—"} source-based questions` : "Section ready · bank planned" : value === "aug22" ? `${summary?.questionCount ?? "—"} practical questions` : tab === "Final exam" ? value === "july29" ? `${summary?.finalExamBanks?.length ?? "—"} final banks` : `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
       </button>;
     })}
-  </div>;
+  </div></div>;
 
-  const metricCards = exam === "july25" ? [
+  const metricCards = isTerm2Exam(exam) ? [
+    ["EXAM BANK", selectedExam?.questionCount ?? "—", exam === "term2-respiratory" ? "Slides + books only" : "Not populated yet"],
+    ["ANATOMY", examCount("anatomy"), "Text + image targets"],
+    ["HISTOLOGY", examCount("histology"), "Junqueira + micrographs"],
+    ["EMBRYOLOGY", examCount("embryology"), "Langman + E1/E2"],
+    ["PHYSIOLOGY", examCount("physiology"), "Guyton · book-only"],
+    ["DYNAMIC IMAGES", selectedExam?.dynamicImageCount ?? 0, "Hover / tap after answering"],
+    ["TO REPAIR", savedCount("wrong"), "Saved for this exam"],
+  ] : exam === "july25" ? [
     ["FOCUSED BANK", selectedExam?.questionCount ?? "—", "This exam only"],
     ["HISTOLOGY", examCount("histology"), "Junqueira + lectures"],
     ["EMBRYOLOGY", examCount("embryology"), "General + images"],
@@ -1118,23 +1109,25 @@ export default function Home() {
   return (
     <main className="setup-shell">
       <aside className="setup-sidebar">
-        <div className="brand"><span>MED//25</span><small>July 25 · Aug 22 · Aug 25</small></div>
+        <div className="brand"><span>MED//25</span><small>Term 1 + Term 2</small><small>July 25 · Aug 22 · Aug 25</small></div>
         <nav className="setup-nav" aria-label="Application sections">{tabs.map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
       </aside>
 
       <section className="setup-workspace">
         <header className="setup-topbar"><span className="topbar-label">Exam engine</span><div className="header-exam-switcher">{examSwitcher}</div><span className={health?.ok ? "connection good" : "connection waiting"}>● {health?.ok ? (health.codex.available ? "Codex ready" : "Study engine ready") : "Study engine offline"}</span></header>
-        <section className={`setup-content ${tab === "Overview" ? "overview-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Practical Atlas" || tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Practical Atlas" ? "practical-atlas-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
+        <section className={`setup-content ${isTerm2Exam(exam) ? "term2-view" : ""} ${tab === "Overview" ? "overview-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Practical Atlas" || tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Practical Atlas" ? "practical-atlas-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
           {tab === "Overview" && <>
-            <p className="eyebrow">Priority exam · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
-            <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam until you switch dates.</p>
+            <p className="eyebrow">{isTerm2Exam(exam) ? "Term 2 exam" : "Priority exam"} · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
+            <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam.</p>
+            {isTerm2Exam(exam) && <Term2Guide exam={exam} compact />}
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
-            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].date} · {biochemistryChapterById(resumableSession.biochemistryChapterId)?.shortTitle ?? collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>{Math.min(sessionSize, collectionCount)}-question sprint · repair → unseen → mastered</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${selectedConfig.date} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {selectedConfig.date} saved progress</button></div></div>}
+            {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].title} · {biochemistryChapterById(resumableSession.biochemistryChapterId)?.shortTitle ?? collectionLabel[resumableSession.collection]}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>Up to {Math.min(sessionSize, collectionCount)} questions · repair → unseen → mastered</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${examLabel} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {examLabel} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}
 
-          {tab === "Final exam" && exam !== "aug22" && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
+          {tab === "Final exam" && (exam === "july25" || exam === "july29") && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
+          {tab === "Final exam" && isTerm2Exam(exam) && <section className="term2-mock"><p className="eyebrow">Term 2 · Practice exam · Date TBA</p><h1>{selectedConfig.title} mock exam</h1><p className="lede">{exam === "term2-respiratory" ? "Source-based practice, not an official past paper or a prediction of the exam. Answers, explanations and interactive anatomy labels stay hidden until you finish and grade." : "This exam section is ready. Its question bank has intentionally not been populated yet."}</p>{exam === "term2-respiratory" && <><div className="choice-row length-row">{[20, 40, 60, 100].map((size) => <button key={size} className={sessionSize === size ? "active" : ""} onClick={() => setSessionSize(size)}>{size} questions</button>)}</div><p>{Math.min(sessionSize, examCount("all"))} available questions across anatomy, histology, embryology and physiology. Untimed; your session is saved on this device.</p><button className="primary" disabled={!examCount("all") || phase === "loading"} onClick={() => void startSession("all", undefined, { mode: "exam", limit: sessionSize })}>Start Respiratory mock →</button>{sessionError && <p className="session-error">{sessionError}</p>}</>}<Term2Guide exam={exam} /></section>}
           {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use one of the focused practical modes.</h1><p>The 15-slide collection mirrors the teacher list, the 110+ transfer lab tests unfamiliar internet fields, and the full atlas adds the broader 55-specimen bank and visual lessons. Open Overview, Topics, or Practical Atlas to choose.</p></div>}
 
           {tab === "Topics" && <>
@@ -1154,9 +1147,11 @@ export default function Home() {
             <LessonGuide exam="aug22" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
           </div>}
 
-          {tab === "Practical Atlas" && exam !== "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 practical</span><h1>This atlas belongs to Histology Practical.</h1><p>Switch to Aug 22 above to study and test the 55 microscope specimens.</p></div>}
+          {tab === "Practical Atlas" && exam === "term2-respiratory" && <section className="term2-mock"><p className="eyebrow">Respiratory · Interactive image lab</p><h1>One image. Many structures.</h1><p className="lede">Each question marks a different anatomical target. Answer first, then hover, tap or keyboard-focus any highlighted region to learn its name and relationship. The structure list also works on touchscreens.</p><button className="primary" disabled={!examCount("dynamic-anatomy")} onClick={() => void startSession("dynamic-anatomy")}>Start dynamic anatomy →</button><p>{selectedExam?.dynamicImageCount ?? 0} annotated source diagrams · {examCount("dynamic-anatomy")} target-and-option variants</p>{sessionError && <p className="session-error">{sessionError}</p>}</section>}
+          {tab === "Practical Atlas" && exam !== "aug22" && exam !== "term2-respiratory" && <div className="practical-atlas-empty"><span className="eyebrow">Image study</span><h1>{isTerm2Exam(exam) ? "The image bank is planned." : "This atlas belongs to Histology Practical."}</h1><p>{isTerm2Exam(exam) ? "Respiratory is the first Term 2 bank being populated. Switch to it to use the dynamic anatomy lab." : "Switch to Term 1 · Aug 22 above to study and test the 55 microscope specimens."}</p></div>}
 
-          {tab === "Visual Guide" && <LessonGuide key={exam} exam={exam} lessons={allLessons} />}
+          {tab === "Visual Guide" && !isTerm2Exam(exam) && <LessonGuide key={exam} exam={exam} lessons={allLessons} />}
+          {tab === "Visual Guide" && isTerm2Exam(exam) && <Term2Guide exam={exam} />}
 
           {tab === "Results" && <>
             <p className="eyebrow">Saved on this device · {examConfig[exam].date}</p><h1>Past sprint results.</h1>

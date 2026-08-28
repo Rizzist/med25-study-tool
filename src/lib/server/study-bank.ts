@@ -8,12 +8,17 @@ import {
 import { isCuratedBiochemistryQuestion } from "@/src/lib/biochemistry/concepts";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 import { selectCoverageSprint } from "@/src/lib/mcq/sprint-selection.mjs";
+import { selectRespiratorySprint } from "@/src/lib/mcq/respiratory-selection.mjs";
+import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
 
-export type ExamId = "july25" | "aug22" | "july29";
+export { isExamId };
+export type { ExamId };
 export type FinalExamBankId = "telegram-past-papers" | "downloaded-core";
 type FinalExamBankKey = `${ExamId}:${FinalExamBankId}`;
 export type CollectionId =
   | "all"
+  | "anatomy"
+  | "dynamic-anatomy"
   | "histology"
   | "embryology"
   | "physiology"
@@ -27,6 +32,8 @@ export type CollectionId =
 
 const COLLECTIONS: CollectionId[] = [
   "all",
+  "anatomy",
+  "dynamic-anatomy",
   "histology",
   "embryology",
   "physiology",
@@ -252,10 +259,6 @@ function finalExamBankDefinition(exam: ExamId, bank: FinalExamBankId) {
   return definition;
 }
 
-export function isExamId(value: unknown): value is ExamId {
-  return value === "july25" || value === "aug22" || value === "july29";
-}
-
 export function isCollectionId(value: unknown): value is CollectionId {
   return typeof value === "string" && COLLECTIONS.includes(value as CollectionId);
 }
@@ -299,6 +302,8 @@ function isPracticalDerived(question: MCQQuestion): boolean {
 }
 
 export function matchesExam(question: MCQQuestion, exam: ExamId): boolean {
+  if (isTerm2Exam(exam)) return matchesTerm2Exam(question, exam);
+  if (isTerm2Question(question)) return false;
   const isHistologyPractical = (question.tags ?? []).includes("histo-practical");
   if (isHistologyPractical) return exam === "aug22";
   if (exam === "aug22") return false;
@@ -316,10 +321,11 @@ export function matchesExam(question: MCQQuestion, exam: ExamId): boolean {
 
 export function matchesCollection(question: MCQQuestion, collection: CollectionId): boolean {
   if (collection === "all") return true;
-  if (["histology", "embryology", "physiology", "biochemistry"].includes(collection)) {
+  if (["anatomy", "histology", "embryology", "physiology", "biochemistry"].includes(collection)) {
     return question.subject === collection;
   }
-  if (collection === "images") return question.kind === "image_single_best_answer";
+  if (collection === "images") return isImageQuestion(question);
+  if (collection === "dynamic-anatomy") return question.kind === "dynamic_anatomy";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
   if (collection === "histo-identification") return (question.tags ?? []).includes("histo-identification-15");
   if (collection === "histo-transfer") return (question.tags ?? []).includes("histo-transfer-100");
@@ -364,6 +370,7 @@ export function bankSummary() {
     { id: "july25" as const, date: "2026-07-25", title: "Tissue Development & Function" },
     { id: "aug22" as const, date: "2026-08-22", title: "Histology Practical" },
     { id: "july29" as const, date: "2026-08-25", title: "Cell & Molecules" },
+    ...term2Exams,
   ]).map((exam) => {
     const questions = verified.filter((question) => matchesExam(question, exam.id));
     const chapterSummaries = exam.id === "july29"
@@ -386,7 +393,8 @@ export function bankSummary() {
           description: bank.description,
           questionCount: loadFinalExamQuestions(exam.id, bank.id).length,
         })),
-      imageQuestionCount: questions.filter((question) => question.kind === "image_single_best_answer").length,
+      imageQuestionCount: questions.filter(isImageQuestion).length,
+      dynamicImageCount: new Set(questions.filter((question) => question.kind === "dynamic_anatomy").map((question) => question.anatomy?.imageId)).size,
       collectionCounts: Object.fromEntries(COLLECTIONS.map((collection) => [
         collection,
         questions.filter((question) => matchesCollection(question, collection)).length,
@@ -404,7 +412,7 @@ export function bankSummary() {
     title: manifest.title,
     schemaVersion: manifest.schemaVersion,
     questionCount: allQuestions.length,
-    imageQuestionCount: allQuestions.filter((question) => question.kind === "image_single_best_answer").length,
+    imageQuestionCount: allQuestions.filter(isImageQuestion).length,
     subjects: manifest.subjects.map((subject) => ({
       ...subject,
       questionCount: subjectCounts.get(subject.id) ?? 0,
@@ -479,7 +487,9 @@ export function coverageQuestionSet(body: unknown) {
     .filter((question) => matchesExam(question, exam)
       && matchesCollection(question, collection)
       && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
-  const selection = selectCoverageSprint(filtered, { limit, seenIds, repairIds });
+  const selection = exam === "term2-respiratory"
+    ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
+    : selectCoverageSprint(filtered, { limit, seenIds, repairIds });
 
   return {
     availableCount: filtered.length,

@@ -1,7 +1,7 @@
 export const MCQ_SCHEMA_VERSION = "1.0.0" as const;
 
-export type SubjectId = "histology" | "embryology" | "physiology" | "biochemistry";
-export type QuestionKind = "single_best_answer" | "image_single_best_answer";
+export type SubjectId = "anatomy" | "histology" | "embryology" | "physiology" | "biochemistry";
+export type QuestionKind = "single_best_answer" | "image_single_best_answer" | "dynamic_anatomy";
 export type QuestionStatus = "draft" | "verified" | "retired";
 export type Difficulty = 1 | 2 | 3 | 4 | 5;
 
@@ -17,9 +17,11 @@ export type MCQMedia = {
   alt: string;
   caption?: string;
   attribution?: string;
+  labelMasks?: Array<{ x: number; y: number; width: number; height: number }>;
   annotations?: Array<{
     id: string;
     label: string;
+    description?: string;
     x: number;
     y: number;
     width: number;
@@ -58,6 +60,7 @@ export type MCQQuestion = {
   learningObjective: string;
   source: MCQSource;
   media?: MCQMedia[];
+  anatomy?: { imageId: string; targetRegionId: string; variant: number };
   tags: string[];
   examPriority: "core" | "high" | "standard";
   qualityFlags: string[];

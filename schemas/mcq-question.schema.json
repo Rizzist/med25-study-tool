@@ -10,8 +10,8 @@
     "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "minLength": 5 },
     "revision": { "type": "integer", "minimum": 1 },
     "status": { "enum": ["draft", "verified", "retired"] },
-    "kind": { "enum": ["single_best_answer", "image_single_best_answer"] },
-    "subject": { "enum": ["histology", "embryology", "physiology", "biochemistry"] },
+    "kind": { "enum": ["single_best_answer", "image_single_best_answer", "dynamic_anatomy"] },
+    "subject": { "enum": ["anatomy", "histology", "embryology", "physiology", "biochemistry"] },
     "topic": { "type": "string", "minLength": 1 },
     "subtopic": { "type": "string" },
     "chapter": { "type": "string", "minLength": 1 },
@@ -25,6 +25,7 @@
     "learningObjective": { "type": "string", "minLength": 5 },
     "source": { "$ref": "#/$defs/source" },
     "media": { "type": "array", "items": { "$ref": "#/$defs/media" } },
+    "anatomy": { "type": "object", "additionalProperties": false, "required": ["imageId", "targetRegionId", "variant"], "properties": { "imageId": { "type": "string", "minLength": 1 }, "targetRegionId": { "type": "string", "minLength": 1 }, "variant": { "type": "integer", "minimum": 1 } } },
     "tags": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
     "examPriority": { "enum": ["core", "high", "standard"] },
     "qualityFlags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
@@ -32,6 +33,29 @@
   "$defs": {
     "option": { "type": "object", "additionalProperties": false, "required": ["id", "text"], "properties": { "id": { "type": "string", "pattern": "^[A-F]$" }, "text": { "type": "string", "minLength": 1 } } },
     "source": { "type": "object", "additionalProperties": false, "required": ["title", "chapter"], "properties": { "title": { "type": "string", "minLength": 1 }, "edition": { "type": "string" }, "chapter": { "type": "string", "minLength": 1 }, "page": { "type": "string" }, "figure": { "type": "string" }, "lecture": { "type": "string" }, "slide": { "type": "string" }, "excerpt": { "type": "string" } } },
-    "media": { "type": "object", "additionalProperties": false, "required": ["id", "type", "path", "alt"], "properties": { "id": { "type": "string", "minLength": 1 }, "type": { "const": "image" }, "path": { "type": "string", "minLength": 1 }, "alt": { "type": "string", "minLength": 1 }, "caption": { "type": "string" }, "attribution": { "type": "string" }, "annotations": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "label", "x", "y", "width", "height"], "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "x": { "type": "number", "minimum": 0, "maximum": 1 }, "y": { "type": "number", "minimum": 0, "maximum": 1 }, "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }, "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 } } } } } }
+    "media": {
+      "type": "object", "additionalProperties": false, "required": ["id", "type", "path", "alt"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 }, "type": { "const": "image" },
+        "path": { "type": "string", "minLength": 1 }, "alt": { "type": "string", "minLength": 1 },
+        "caption": { "type": "string" }, "attribution": { "type": "string" },
+        "labelMasks": { "type": "array", "items": { "$ref": "#/$defs/box" } },
+        "annotations": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["id", "label", "x", "y", "width", "height"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 }, "label": { "type": "string", "minLength": 1 }, "description": { "type": "string" },
+            "x": { "type": "number", "minimum": 0, "maximum": 1 }, "y": { "type": "number", "minimum": 0, "maximum": 1 },
+            "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }, "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+          }
+        } }
+      }
+    },
+    "box": {
+      "type": "object", "additionalProperties": false, "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 }, "y": { "type": "number", "minimum": 0, "maximum": 1 },
+        "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }, "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      }
+    }
   }
 }
