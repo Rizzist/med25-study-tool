@@ -1,0 +1,45 @@
+{
+  "requiredCorrections": [],
+  "optionalClarifications": [
+    {
+      "id": "resp-emb-003",
+      "revisionExamined": 1,
+      "reason": "The current answer is faithful to the local Langman/E1 account. Source-qualifying the stem prevents this course-specific molecular account being presented as an unqualified universal claim; no answer-key change is proposed.",
+      "replacementFields": {
+        "prompt": "In the account taught in Langman's Medical Embryology (15th edition) and respiratory embryology E1, which signaling relationship between adjacent tissues promotes induction of the respiratory diverticulum?"
+      },
+      "source": {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th",
+        "chapter": "14 - Respiratory System",
+        "page": "225",
+        "lecture": "Embryology of respiratory system E1",
+        "slide": "3"
+      }
+    },
+    {
+      "id": "resp-emb-019",
+      "revisionExamined": 1,
+      "reason": "The cell-identification answer is unchanged. Naming the book anchors its exact end-of-24-week convention without converting E2's end-of-sixth-month wording into an independently verified exact-week equivalence.",
+      "replacementFields": {
+        "prompt": "According to Langman's Medical Embryology (15th edition), near the end of 24 weeks a fetal alveolar epithelial population begins producing a phospholipid-rich secretion that lowers surface tension. Which population is responsible?"
+      },
+      "source": {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th",
+        "chapter": "14 - Respiratory System",
+        "page": "230",
+        "lecture": "Embryology of respiratory system E2",
+        "slide": "8"
+      }
+    }
+  ],
+  "newDraftCorrections": [
+    {
+      "id": "resp-emb-gap-001",
+      "issue": "Two original distractors both described isolated esophageal atresia without fistula.",
+      "resolution": "Replaced the redundant choice with atresia plus a proximal tracheal fistula and a blind distal segment, visually checked in Langman15e printed226/PDF238 Figure14-3D. Explanation and figure citation updated. Final option positions were then shuffled with their explanations."
+    }
+  ],
+  "existingBankFilesEdited": false
+}

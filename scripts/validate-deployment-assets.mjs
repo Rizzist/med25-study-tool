@@ -1,6 +1,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { resolve } from "node:path";
+import { auditRespiratoryCatalog } from "../src/lib/respiratory/audit.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const catalogPath = resolve(root, "data/bank/biochemistry-core-concepts.json");
@@ -46,7 +47,14 @@ const allFinalIds = [july25Telegram, july29Telegram, july29Downloaded].flat().ma
 assert(new Set(allFinalIds).size === allFinalIds.length, "Final-exam question IDs are not globally unique");
 
 const respiratory = embeddedBank.questions.filter((question) => question.tags?.includes("exam-term2-respiratory"));
-assert(respiratory.length >= 216, "Respiratory integration is incomplete");
+assert(respiratory.length > 224, "Respiratory gap expansion is incomplete");
+const respiratoryCatalog = JSON.parse(readFileSync(resolve(root, "data/term2/respiratory-concepts.json"), "utf8"));
+const respiratoryAudit = auditRespiratoryCatalog(respiratoryCatalog, respiratory);
+assert(!respiratoryAudit.errors.length, `Respiratory concept errors: ${respiratoryAudit.errors.join("; ")}`);
+const respiratoryIndex = JSON.parse(readFileSync(resolve(root, "data/term2/respiratory-question-index.json"), "utf8"));
+assert(JSON.stringify(respiratoryIndex) === JSON.stringify(respiratoryAudit.index), "Respiratory concept index and embedded questions disagree");
+const respiratoryReport = JSON.parse(readFileSync(resolve(root, "data/term2/respiratory-coverage.json"), "utf8"));
+assert(JSON.stringify(respiratoryReport) === JSON.stringify(respiratoryAudit.report), "Respiratory coverage report is stale");
 const respiratoryImages = new Set(respiratory.flatMap((question) => (question.media ?? []).map((media) => media.path)));
 assert(respiratoryImages.size === 12, "Expected 4 anatomy source diagrams and 8 histology micrographs");
 for (const path of respiratoryImages) assert(existsSync(resolve(root, "public/study", path)), `Missing Respiratory image: ${path}`);

@@ -455,7 +455,7 @@ function questionSetByIds(body) {
   if (!body || !Array.isArray(body.ids)) throw new Error("Question ids are required");
   const exam = body.exam;
   if (!EXAM_IDS.includes(exam)) throw new Error("A valid exam is required");
-  const ids = [...new Set(body.ids.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, 500);
+  const ids = [...new Set(body.ids.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, exam === "term2-respiratory" ? 2000 : 500);
   const requestedLimit = Number(body.limit ?? ids.length);
   const limit = Number.isFinite(requestedLimit) ? Math.max(1, Math.min(250, Math.floor(requestedLimit))) : Math.min(250, ids.length);
   const idSet = new Set(ids);
@@ -465,10 +465,11 @@ function questionSetByIds(body) {
     ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, 5000)
     : [];
   const ordered = body.prioritize === true
-    ? selectCoverageSprint(filtered, {
+    ? (exam === "term2-respiratory" ? selectRespiratorySprint : selectCoverageSprint)(filtered, {
       limit,
       seenIds: cleanBodyIds(body.seenIds),
       repairIds: cleanBodyIds(body.repairIds),
+      studyMode: body.studyMode === "exam" ? "exam" : "learn",
     }).questions
     : body.preserveOrder === true ? ids.flatMap((id) => byId.get(id) ?? []) : shuffled(filtered);
   return { availableCount: filtered.length, validIds: filtered.map((question) => question.id), questions: ordered.slice(0, limit) };

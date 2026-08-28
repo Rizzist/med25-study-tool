@@ -1,0 +1,65 @@
+{
+  "status": "verified",
+  "modules": 5,
+  "concepts": 41,
+  "objectives": 101,
+  "existingQuestions": 56,
+  "newQuestions": 54,
+  "totalQuestions": 110,
+  "objectivesSampledByExisting": 53,
+  "objectivesNewlySampled": 48,
+  "unsampledInScopeObjectives": [],
+  "unmappedExistingQuestions": [],
+  "unmappedNewQuestions": [],
+  "uninventoriedConcepts": [],
+  "sourceAuditEntries": 165,
+  "sourceAuditStatuses": {
+    "mapped": 160,
+    "source-missing": 2,
+    "outside-scope": 3
+  },
+  "conceptsByChapter": {
+    "38": 10,
+    "39": 6,
+    "40": 7,
+    "41": 9,
+    "42": 9
+  },
+  "newQuestionsByChapter": {
+    "38": 12,
+    "39": 7,
+    "40": 9,
+    "41": 13,
+    "42": 13
+  },
+  "newAnswerBalance": {
+    "A": 14,
+    "B": 14,
+    "C": 13,
+    "D": 13
+  },
+  "numericalChecks": {
+    "g003": {
+      "RV": 1.4,
+      "TLC": 5.4
+    },
+    "g004": 150,
+    "g017": 2,
+    "g021": 4,
+    "g023": 200,
+    "g024": 0.2,
+    "g048": 19,
+    "g049": 150,
+    "g051": 0.25
+  },
+  "existingBankSha256": "7f58cc039175c377d217ab081e369ec7a49ccd9b3e1983bc51bc9e019aa722de",
+  "checks": [
+    "Existing schema validated with Ajv 2020-12",
+    "Every existing and new question has exactly one primary objective home",
+    "Every concept appears in sourceAudit",
+    "Every selected in-scope objective is directly sampled",
+    "All book page locators checked against extracted printed footers",
+    "Correct/wrong explanations remain aligned after balanced option permutation",
+    "All writes restricted to physiology research folder"
+  ]
+}

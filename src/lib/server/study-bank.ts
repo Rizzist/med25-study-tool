@@ -509,17 +509,18 @@ export function questionSetByIds(body: unknown) {
   if (!input || !Array.isArray(input.ids)) throw new Error("Question ids are required");
   if (!isExamId(input.exam)) throw new Error("A valid exam is required");
   const exam = input.exam;
-  const ids = cleanIds(input.ids, 500);
+  const ids = cleanIds(input.ids, exam === "term2-respiratory" ? 2_000 : 500);
   const limit = cappedLimit(input.limit, ids.length || 1);
   const idSet = new Set(ids);
   const filtered = loadVerifiedQuestions()
     .filter((question) => idSet.has(question.id) && matchesExam(question, exam));
   const byId = new Map(filtered.map((question) => [question.id, question]));
   const ordered = input.prioritize === true
-    ? selectCoverageSprint(filtered, {
+    ? (exam === "term2-respiratory" ? selectRespiratorySprint : selectCoverageSprint)(filtered, {
       limit,
       seenIds: cleanIds(input.seenIds, 5_000),
       repairIds: cleanIds(input.repairIds, 5_000),
+      studyMode: input.studyMode === "exam" ? "exam" : "learn",
     }).questions
     : input.preserveOrder === true
       ? ids.flatMap((id) => {

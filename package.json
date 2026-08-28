@@ -7,9 +7,9 @@
   },
   "scripts": {
     "dev": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/build-embedded-bank.mjs && WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
-    "dev:local": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/dev-local.mjs",
-    "bridge": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/codex-bridge.mjs",
-    "bank:validate": "node scripts/validate-bank.mjs",
+    "dev:local": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/build-respiratory-concepts.mjs && node scripts/dev-local.mjs",
+    "bridge": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/build-respiratory-concepts.mjs && node scripts/codex-bridge.mjs",
+    "bank:validate": "node scripts/validate-bank.mjs && node scripts/build-respiratory-concepts.mjs --check",
     "lessons:validate": "node scripts/validate-lessons.mjs",
     "practicals:generate": "node scripts/generate-histology-practicals.mjs && node scripts/generate-histology-practical-lessons.mjs && node scripts/generate-full-histology-practicals.mjs && node scripts/generate-full-histology-practical-lessons.mjs && node scripts/generate-histology-identification-15.mjs",
     "practicals:extract-full": "python3 scripts/extract-full-histology-practical-images.py",
@@ -23,7 +23,8 @@
     "vercel-build": "node scripts/validate-deployment-assets.mjs && next build",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run bank:validate && npm run lessons:validate && npm run build && node --test tests/*.test.mjs",
-    "respiratory:generate": "node scripts/build-respiratory-anatomy.mjs",
+    "respiratory:generate": "node scripts/build-respiratory-anatomy.mjs && node scripts/build-respiratory-concepts.mjs",
+    "respiratory:concepts": "node scripts/build-respiratory-concepts.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },

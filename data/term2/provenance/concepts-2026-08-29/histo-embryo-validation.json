@@ -1,0 +1,40 @@
+{
+  "ok": true,
+  "errors": [],
+  "modules": 10,
+  "concepts": 42,
+  "objectives": 101,
+  "sourceAuditRows": 81,
+  "existingQuestions": 56,
+  "newQuestions": 53,
+  "totalMapped": 109,
+  "counts": {
+    "histology": {
+      "existing": 32,
+      "new": 36,
+      "answerPositions": {
+        "A": 9,
+        "B": 9,
+        "C": 9,
+        "D": 9
+      }
+    },
+    "embryology": {
+      "existing": 24,
+      "new": 17,
+      "answerPositions": {
+        "A": 4,
+        "B": 5,
+        "C": 4,
+        "D": 4
+      }
+    }
+  },
+  "statuses": [
+    "verified"
+  ],
+  "existingFileSha256": {
+    "/Users/rizzist/Documents/CODING/med-school-prep/data/bank/questions/term2-respiratory-histology.jsonl": "28027e79bf6315682dfcfd62979eaa12be8ca00f50d6244334b25927f6f3d808",
+    "/Users/rizzist/Documents/CODING/med-school-prep/data/bank/questions/term2-respiratory-embryology.jsonl": "856d652c7f3911ef32b9d31d3a82453f510cdb3c5d1572c053b99beb42e4bd90"
+  }
+}

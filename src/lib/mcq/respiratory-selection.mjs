@@ -1,3 +1,5 @@
+import questionIndex from "../../../data/term2/respiratory-question-index.json" with { type: "json" };
+
 function shuffle(items, random) {
   const result = [...items];
   for (let index = result.length - 1; index > 0; index--) {
@@ -7,12 +9,17 @@ function shuffle(items, random) {
   return result;
 }
 
-function balanced(items, random) {
+function balanced(items, random, level = 0) {
+  if (level >= 3) return shuffle(items, random);
   const groups = new Map();
   for (const item of shuffle(items, random)) {
-    if (!groups.has(item.subject)) groups.set(item.subject, []);
-    groups.get(item.subject).push(item);
+    const key = level === 0 ? item.subject : level === 1
+      ? questionIndex[item.id]?.moduleId ?? item.chapter ?? item.subject
+      : questionIndex[item.id]?.primaryConceptId ?? item.subtopic ?? item.topic ?? item.subject;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(item);
   }
+  for (const [key, group] of groups) groups.set(key, balanced(group, random, level + 1));
   const result = [];
   while ([...groups.values()].some((group) => group.length)) {
     for (const subject of shuffle([...groups.keys()], random)) {
@@ -26,8 +33,10 @@ function balanced(items, random) {
 // One variant of a given image/target per session, while retaining stable IDs for resume.
 export function selectRespiratorySprint(items, { limit = 20, seenIds = [], repairIds = [], studyMode = "learn", random = Math.random } = {}) {
   const seen = new Set(seenIds);
+  const seenTargets = new Set(seenIds.map((id) => questionIndex[id]?.dedupeKey ?? id));
   const repair = new Set(repairIds);
-  const priority = (item) => studyMode === "exam" ? 0 : repair.has(item.id) ? 0 : !seen.has(item.id) ? 1 : 2;
+  const wasSeen = (item) => seen.has(item.id) || seenTargets.has(questionIndex[item.id]?.dedupeKey ?? item.id);
+  const priority = (item) => studyMode === "exam" ? 0 : repair.has(item.id) ? 0 : !wasSeen(item) ? 1 : 2;
   const candidates = shuffle(items, random).sort((a, b) => priority(a) - priority(b));
   const targets = new Set();
   const unique = candidates.filter((item) => {
@@ -42,6 +51,6 @@ export function selectRespiratorySprint(items, { limit = 20, seenIds = [], repai
   const selected = ordered.slice(0, Math.max(1, Math.min(250, Math.floor(Number(limit) || 20))));
   const questions = studyMode === "exam" ? shuffle(selected, random) : selected;
   const repairCount = questions.filter((item) => repair.has(item.id)).length;
-  const unseenCount = questions.filter((item) => !repair.has(item.id) && !seen.has(item.id)).length;
+  const unseenCount = questions.filter((item) => !repair.has(item.id) && !wasSeen(item)).length;
   return { questions, repairCount, unseenCount, reviewCount: questions.length - unseenCount, ordinaryReviewCount: questions.length - unseenCount - repairCount };
 }
