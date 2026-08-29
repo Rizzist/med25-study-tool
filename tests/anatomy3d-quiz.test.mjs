@@ -1,17 +1,17 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { demoManifest } from "../src/lib/anatomy3d/manifests/respiratory/_demo.manifest.mjs";
+import { larynxManifest } from "../src/lib/anatomy3d/manifests/respiratory/larynx.manifest.mjs";
 import { buildAnatomyQuiz, validateQuizQuestion } from "../src/lib/anatomy3d/quiz.mjs";
 
 test("anatomy quiz generation is deterministic for the same seed", () => {
-  const first = buildAnatomyQuiz(demoManifest, { seed: "resp-demo-seed" });
-  const second = buildAnatomyQuiz(demoManifest, { seed: "resp-demo-seed" });
+  const first = buildAnatomyQuiz(larynxManifest, { seed: "resp-larynx-seed" });
+  const second = buildAnatomyQuiz(larynxManifest, { seed: "resp-larynx-seed" });
   assert.deepEqual(first, second);
-  assert.equal(first.length, demoManifest.structures.length);
+  assert.equal(first.length, larynxManifest.structures.filter((structure) => structure.quizable !== false).length);
 });
 
 test("anatomy questions have four unique options and identify the highlighted target", () => {
-  const questions = buildAnatomyQuiz(demoManifest, { seed: "validity-seed" });
+  const questions = buildAnatomyQuiz(larynxManifest, { seed: "validity-seed" });
   for (const question of questions) {
     assert.deepEqual(validateQuizQuestion(question), []);
     assert.equal(question.options.length, 4);
@@ -20,7 +20,7 @@ test("anatomy questions have four unique options and identify the highlighted ta
     assert(correct);
     assert.equal(correct.text, question.label);
     assert.equal(
-      demoManifest.structures.find((structure) => structure.id === question.structureId)?.label,
+      larynxManifest.structures.find((structure) => structure.id === question.structureId)?.label,
       question.label,
     );
   }

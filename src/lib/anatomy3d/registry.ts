@@ -1,4 +1,6 @@
-import { demoManifest } from "./manifests/respiratory/_demo.manifest.mjs";
+import { larynxManifest } from "./manifests/respiratory/larynx.manifest.mjs";
+import { nasalManifest } from "./manifests/respiratory/nasal.manifest.mjs";
+import { tracheaLungManifest } from "./manifests/respiratory/trachea-lung.manifest.mjs";
 import type { AnatomyModelHandle, AnatomyModuleManifest } from "./types.ts";
 
 export type AnatomyModuleRegistration = {
@@ -8,10 +10,24 @@ export type AnatomyModuleRegistration = {
 
 const registrations: AnatomyModuleRegistration[] = [
   {
-    manifest: demoManifest,
+    manifest: larynxManifest,
     async createModel() {
-      const { createDemoModel } = await import("./models/respiratory/_demo.ts");
-      return createDemoModel();
+      const { createLarynxModel } = await import("./models/respiratory/larynx.ts");
+      return createLarynxModel();
+    },
+  },
+  {
+    manifest: nasalManifest,
+    async createModel() {
+      const { createNasalModel } = await import("./models/respiratory/nasal.ts");
+      return createNasalModel();
+    },
+  },
+  {
+    manifest: tracheaLungManifest,
+    async createModel() {
+      const { createTracheaLungModel } = await import("./models/respiratory/trachea-lung.ts");
+      return createTracheaLungModel();
     },
   },
 ];
