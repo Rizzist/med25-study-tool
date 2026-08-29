@@ -22,6 +22,7 @@ export type AnatomyViewerHandle = {
   setModule(modelKey: string): void;
   setPickEnabled(enabled: boolean): void;
   setShowLabels(enabled: boolean): void;
+  setHiddenStructures(ids: ReadonlySet<string>): void;
 };
 
 type AnatomyViewerProps = {
@@ -29,10 +30,13 @@ type AnatomyViewerProps = {
   focusStructureId?: string | null;
   pickEnabled?: boolean;
   showLabels?: boolean;
+  hiddenStructureIds?: ReadonlySet<string>;
   onPick?: (structureId: string) => void;
   onReady?: () => void;
   className?: string;
 };
+
+const EMPTY_HIDDEN: ReadonlySet<string> = new Set<string>();
 
 type RuntimeApi = AnatomyViewerHandle;
 
@@ -49,6 +53,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
   focusStructureId = null,
   pickEnabled = false,
   showLabels = false,
+  hiddenStructureIds,
   onPick,
   onReady,
   className = "",
@@ -61,6 +66,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
   const queuedFocusRef = useRef<string | null>(focusStructureId);
   const pickEnabledRef = useRef(pickEnabled);
   const showLabelsRef = useRef(showLabels);
+  const hiddenStructuresRef = useRef<ReadonlySet<string>>(hiddenStructureIds ?? EMPTY_HIDDEN);
   const onPickRef = useRef(onPick);
   const onReadyRef = useRef(onReady);
 
@@ -85,6 +91,10 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
     setShowLabels(enabled) {
       showLabelsRef.current = enabled;
       runtimeRef.current?.setShowLabels(enabled);
+    },
+    setHiddenStructures(ids) {
+      hiddenStructuresRef.current = ids;
+      runtimeRef.current?.setHiddenStructures(ids);
     },
   }), []);
 
@@ -116,6 +126,12 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
     showLabelsRef.current = showLabels;
     runtimeRef.current?.setShowLabels(showLabels);
   }, [showLabels]);
+
+  useEffect(() => {
+    const ids = hiddenStructureIds ?? EMPTY_HIDDEN;
+    hiddenStructuresRef.current = ids;
+    runtimeRef.current?.setHiddenStructures(ids);
+  }, [hiddenStructureIds]);
 
   useEffect(() => {
     const labelsLayerElement = labelsLayerRef.current;
@@ -185,6 +201,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
       let activeManifest: AnatomyModuleManifest | null = null;
       let flight: CameraFlight | null = null;
       let focusedId: string | null = null;
+      let hiddenIds: ReadonlySet<string> = hiddenStructuresRef.current ?? EMPTY_HIDDEN;
       let lastFrame = performance.now();
       let lastActivity = lastFrame;
       let drag: {
@@ -220,7 +237,26 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
         materialHelpers.clearDim(currentHandle.structures);
       }
 
+      // Toggle mesh visibility for the current hidden set (a system the user peeled away). Hidden
+      // meshes are excluded from rendering here; pick/focus/label exclusion is enforced separately
+      // because three's raycaster ignores `.visible`.
+      function applyHiddenVisibility() {
+        if (!currentHandle) return;
+        for (const [id, objects] of currentHandle.structures) {
+          const visible = !hiddenIds.has(id);
+          for (const object of objects) object.visible = visible;
+        }
+      }
+
+      function setHiddenStructures(ids: ReadonlySet<string>) {
+        hiddenIds = ids;
+        applyHiddenVisibility();
+        // Never keep a hidden structure highlighted / framed.
+        if (focusedId && hiddenIds.has(focusedId)) clearFocus();
+      }
+
       function focusStructure(id: string) {
+        if (hiddenIds.has(id)) return; // never fly-to or highlight a hidden structure
         const objects = currentHandle?.structures.get(id);
         const structure = activeManifest?.structures.find((candidate) => candidate.id === id);
         if (!currentHandle || !objects?.length || !structure) {
@@ -297,6 +333,9 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
         flight = null;
         scene.add(currentHandle.root);
         createLabels(activeManifest);
+        // Re-apply the latest hidden set to the freshly built meshes.
+        hiddenIds = hiddenStructuresRef.current ?? EMPTY_HIDDEN;
+        applyHiddenVisibility();
         scene.updateMatrixWorld(true);
         const pose = cameraHelpers.frameStructure([currentHandle.root], camera);
         camera.position.copy(pose.position);
@@ -330,6 +369,10 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
       function updateLabels() {
         if (!currentHandle || !showLabelsRef.current) return;
         for (const [id, label] of labelElements) {
+          if (hiddenIds.has(id)) {
+            label.hidden = true;
+            continue;
+          }
           const objects = currentHandle.structures.get(id) ?? [];
           box.makeEmpty();
           for (const object of objects) box.expandByObject(object, true);
@@ -357,9 +400,12 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
           -((clientY - bounds.top) / bounds.height) * 2 + 1,
         );
         raycaster.setFromCamera(pointer, camera);
-        const hit = raycaster.intersectObject(currentHandle.root, true).find((intersection) => (
-          typeof intersection.object.userData.structureId === "string"
-        ));
+        // Skip hidden structures: three's raycaster ignores `.visible`, so a peeled-away mesh in
+        // front must not steal the click — fall through to the first VISIBLE structure behind it.
+        const hit = raycaster.intersectObject(currentHandle.root, true).find((intersection) => {
+          const candidateId = intersection.object.userData.structureId;
+          return typeof candidateId === "string" && !hiddenIds.has(candidateId);
+        });
         const structureId = hit?.object.userData.structureId;
         if (typeof structureId !== "string") return;
         focusStructure(structureId);
@@ -471,6 +517,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
         },
         setPickEnabled,
         setShowLabels,
+        setHiddenStructures,
       };
       setPickEnabled(pickEnabledRef.current);
       setShowLabels(showLabelsRef.current);

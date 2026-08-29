@@ -408,7 +408,7 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 .anatomy3d-exit span { font-size:15px; line-height:1; }
 .anatomy3d-exit:hover { border-color:var(--green); color:var(--deep); transform:translateY(-1px); }
 .anatomy3d-exit:focus-visible { outline:3px solid var(--amber); outline-offset:2px; }
-.anatomy3d-immersive .anatomy3d-trainer { flex:1; min-height:0; width:min(1760px,100%); grid-template-rows:auto auto minmax(0,1fr); }
+.anatomy3d-immersive .anatomy3d-trainer { flex:1; min-height:0; width:min(1760px,100%); grid-template-rows:auto auto auto minmax(0,1fr); }
 .anatomy3d-immersive .anatomy3d-layout { min-height:0; height:100%; grid-template-columns:minmax(0,1.62fr) minmax(340px,.68fr); }
 .anatomy3d-immersive .anatomy3d-viewer-card { display:flex; flex-direction:column; }
 .anatomy3d-immersive .anatomy3d-stage { flex:1; height:auto; min-height:0; max-height:none; }
@@ -433,6 +433,19 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 .anatomy3d-mode-switch button.active,.anatomy3d-module-switcher button.active { background:var(--deep); color:white; box-shadow:0 5px 14px #10282024; }
 .anatomy3d-module-switcher { display:flex; gap:6px; padding:5px; overflow-x:auto; border:1px solid var(--line); border-radius:13px; background:var(--card); }
 .anatomy3d-module-switcher button { flex:0 0 auto; background:#f2f5f2; }
+/* Layer (system) toggle strip — kept thin so it never crowds the immersive viewer. */
+.anatomy3d-layers { display:flex; align-items:center; flex-wrap:wrap; gap:9px; padding:7px 12px; border:1px solid var(--line); border-radius:13px; background:var(--card); }
+.anatomy3d-layers-title { flex:0 0 auto; font-size:11px; font-weight:850; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
+.anatomy3d-layers-chips { display:flex; flex-wrap:wrap; gap:6px; flex:1; min-width:0; }
+.anatomy3d-layer-chip { min-height:30px; padding:5px 11px; border:1px solid var(--line); border-radius:999px; background:#f2f5f2; color:var(--muted); font-size:12px; font-weight:800; cursor:pointer; }
+.anatomy3d-layer-chip:hover { border-color:var(--green); color:var(--deep); }
+.anatomy3d-layer-chip.active { background:var(--deep); border-color:var(--deep); color:white; }
+.anatomy3d-layer-chip:not(.active) { text-decoration:line-through; opacity:.72; }
+.anatomy3d-layers-reset { flex:0 0 auto; min-height:30px; padding:5px 13px; border:1px solid var(--line); border-radius:999px; background:white; color:var(--ink); font-size:12px; font-weight:850; cursor:pointer; }
+.anatomy3d-layers-reset:hover:not(:disabled) { border-color:var(--green); color:var(--deep); }
+.anatomy3d-layers-reset:disabled { opacity:.45; cursor:default; }
+.anatomy3d-immersive .anatomy3d-layers { padding:5px 10px; gap:7px; }
+.anatomy3d-immersive .anatomy3d-layer-chip,.anatomy3d-immersive .anatomy3d-layers-reset { min-height:28px; padding:4px 10px; }
 .anatomy3d-layout { min-height:0; display:grid; grid-template-columns:minmax(0,1.4fr) minmax(320px,.72fr); gap:14px; align-items:stretch; }
 .anatomy3d-viewer-card,.anatomy3d-panel { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:17px; box-shadow:0 18px 48px #23372a14; }
 .anatomy3d-viewer-card { overflow:hidden; padding:8px; }

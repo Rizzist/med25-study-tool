@@ -24,6 +24,7 @@ const tissuePalette: Record<Tissue, { color: string; transparent?: boolean; opac
   vein: { color: "#2b5fa0" },
   gland: { color: "#c98f6b" },
   cavity: { color: "#8fb0c8", transparent: true, opacity: 0.48 },
+  fat: { color: "#f2e2a8" },
 };
 
 type MaterialState = {

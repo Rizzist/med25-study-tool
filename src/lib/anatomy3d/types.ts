@@ -11,7 +11,8 @@ export type Tissue =
   | "artery"
   | "vein"
   | "gland"
-  | "cavity";
+  | "cavity"
+  | "fat";
 
 export type CameraView = {
   azimuth: number;

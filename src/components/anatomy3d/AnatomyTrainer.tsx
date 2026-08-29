@@ -5,6 +5,7 @@ import { listAnatomyModules } from "../../lib/anatomy3d/registry";
 import { buildAnatomyQuiz } from "../../lib/anatomy3d/quiz.mjs";
 import type { AnatomyQuestion } from "../../lib/anatomy3d/quiz.mjs";
 import type { AnatomyStructure } from "../../lib/anatomy3d/types";
+import { systemForStructure, systemsInManifest, type AnatomySystem } from "../../lib/anatomy3d/systems";
 import AnatomyViewer, { type AnatomyViewerHandle } from "./AnatomyViewer";
 
 type TrainerMode = "quiz" | "training";
@@ -21,7 +22,28 @@ type AnatomyProgress = {
 };
 
 const progressStorageKey = "anatomy3d.progress.v1";
+const layersStorageKey = "anatomy3d.layers.v1";
 const respiratoryModules = listAnatomyModules("respiratory");
+
+// Per-module map of HIDDEN system ids (systems the user has peeled away). Missing/empty = all shown.
+function readHiddenLayers(): Record<string, string[]> {
+  if (typeof window === "undefined") return {};
+  try {
+    const parsed: unknown = JSON.parse(window.localStorage.getItem(layersStorageKey) ?? "null");
+    if (!parsed || typeof parsed !== "object" || !("version" in parsed) || parsed.version !== 1 || !("modules" in parsed)) {
+      return {};
+    }
+    const rawModules = parsed.modules;
+    if (!rawModules || typeof rawModules !== "object" || Array.isArray(rawModules)) return {};
+    const modules: Record<string, string[]> = {};
+    for (const [key, value] of Object.entries(rawModules)) {
+      if (Array.isArray(value)) modules[key] = [...new Set(value.filter((id): id is string => typeof id === "string"))];
+    }
+    return modules;
+  } catch {
+    return {};
+  }
+}
 
 function emptyProgress(): AnatomyProgress {
   return { version: 1, modules: {} };
@@ -68,13 +90,61 @@ export function AnatomyTrainer() {
   const [trainingStructureId, setTrainingStructureId] = useState<string | null>(null);
   const [showLabels, setShowLabels] = useState(false);
   const [progress, setProgress] = useState<AnatomyProgress>(readProgress);
+  const [hiddenByModule, setHiddenByModule] = useState<Record<string, string[]>>(readHiddenLayers);
 
   const registration = respiratoryModules.find((candidate) => candidate.manifest.modelKey === moduleKey)
     ?? respiratoryModules[0];
   const manifest = registration?.manifest;
+
+  // --- Anatomical layers (systems) ---------------------------------------------------------------
+  const presentSystems = useMemo(() => (manifest ? systemsInManifest(manifest) : []), [manifest]);
+  const presentSystemIds = useMemo(() => new Set(presentSystems.map((system) => system.id)), [presentSystems]);
+  const hiddenSystems = useMemo<Set<AnatomySystem>>(() => {
+    const stored = hiddenByModule[moduleKey] ?? [];
+    return new Set(stored.filter((id): id is AnatomySystem => presentSystemIds.has(id as AnatomySystem)));
+  }, [hiddenByModule, moduleKey, presentSystemIds]);
+  const layerSignature = useMemo(() => [...hiddenSystems].sort().join(","), [hiddenSystems]);
+  const hiddenStructureIds = useMemo<Set<string>>(() => {
+    const ids = new Set<string>();
+    if (manifest) {
+      for (const structure of manifest.structures) {
+        if (hiddenSystems.has(systemForStructure(structure))) ids.add(structure.id);
+      }
+    }
+    return ids;
+  }, [manifest, hiddenSystems]);
+  const visibleStructures = useMemo<AnatomyStructure[]>(() => (
+    manifest ? manifest.structures.filter((structure) => !hiddenStructureIds.has(structure.id)) : []
+  ), [manifest, hiddenStructureIds]);
+  const quizableVisible = useMemo(
+    () => visibleStructures.filter((structure) => structure.quizable !== false),
+    [visibleStructures],
+  );
+  const canQuiz = quizableVisible.length >= 4;
+
   const questions = useMemo<AnatomyQuestion[]>(() => (
-    manifest ? buildAnatomyQuiz(manifest, { seed: `${manifest.modelKey}:${quizRound}` }) : []
-  ), [manifest, quizRound]);
+    manifest && canQuiz
+      ? buildAnatomyQuiz(manifest, {
+        seed: `${manifest.modelKey}:${quizRound}:${layerSignature}`,
+        structureIds: quizableVisible.map((structure) => structure.id),
+      })
+      : []
+  ), [manifest, quizRound, canQuiz, quizableVisible, layerSignature]);
+
+  // Reset the quiz cursor whenever the visible quiz set changes (module / restart / layer toggle),
+  // adjusting state during render (React-endorsed) rather than in an effect.
+  const quizKey = `${moduleKey}:${quizRound}:${layerSignature}`;
+  const [lastQuizKey, setLastQuizKey] = useState(quizKey);
+  if (lastQuizKey !== quizKey) {
+    setLastQuizKey(quizKey);
+    setQuestionIndex(0);
+    setSelectedOptionId(null);
+  }
+  // A structure peeled away by a layer toggle can no longer be the selected training target.
+  if (trainingStructureId && hiddenStructureIds.has(trainingStructureId)) {
+    setTrainingStructureId(null);
+  }
+
   const currentQuestion = questions[questionIndex] ?? null;
   const moduleProgress = progressFor(progress, moduleKey);
   const selectedTrainingStructure = manifest?.structures.find((structure) => structure.id === trainingStructureId) ?? null;
@@ -90,6 +160,14 @@ export function AnatomyTrainer() {
       // Progress remains usable for this session when browser storage is unavailable.
     }
   }, [progress]);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(layersStorageKey, JSON.stringify({ version: 1, modules: hiddenByModule }));
+    } catch {
+      // Layer state remains usable for this session when browser storage is unavailable.
+    }
+  }, [hiddenByModule]);
 
   useEffect(() => {
     if (mode === "quiz" && currentQuestion) viewerRef.current?.focusStructure(currentQuestion.structureId);
@@ -165,10 +243,23 @@ export function AnatomyTrainer() {
   }
 
   function showRandomLocation() {
-    if (!manifest?.structures.length) return;
+    if (!visibleStructures.length) return;
     randomStateRef.current = (Math.imul(1664525, randomStateRef.current) + 1013904223) >>> 0;
-    const index = Math.floor((randomStateRef.current / 4294967296) * manifest.structures.length);
-    selectTrainingStructure(manifest.structures[index]);
+    const index = Math.floor((randomStateRef.current / 4294967296) * visibleStructures.length);
+    selectTrainingStructure(visibleStructures[index]);
+  }
+
+  function toggleSystem(systemId: AnatomySystem) {
+    setHiddenByModule((current) => {
+      const nextHidden = new Set(current[moduleKey] ?? []);
+      if (nextHidden.has(systemId)) nextHidden.delete(systemId);
+      else nextHidden.add(systemId);
+      return { ...current, [moduleKey]: [...nextHidden] };
+    });
+  }
+
+  function resetLayers() {
+    setHiddenByModule((current) => ({ ...current, [moduleKey]: [] }));
   }
 
   if (!registration || !manifest) {
@@ -206,6 +297,36 @@ export function AnatomyTrainer() {
         ))}
       </nav>
 
+      {presentSystems.length > 0 && (
+        <div className="anatomy3d-layers" role="group" aria-label="Anatomy layers">
+          <span className="anatomy3d-layers-title">Layers</span>
+          <div className="anatomy3d-layers-chips">
+            {presentSystems.map((system) => {
+              const shown = !hiddenSystems.has(system.id);
+              return (
+                <button
+                  type="button"
+                  key={system.id}
+                  className={`anatomy3d-layer-chip ${shown ? "active" : ""}`.trim()}
+                  aria-pressed={shown}
+                  onClick={() => toggleSystem(system.id)}
+                >
+                  {system.label}
+                </button>
+              );
+            })}
+          </div>
+          <button
+            type="button"
+            className="anatomy3d-layers-reset"
+            onClick={resetLayers}
+            disabled={hiddenSystems.size === 0}
+          >
+            {hiddenSystems.size === 0 ? "All shown" : "Show all"}
+          </button>
+        </div>
+      )}
+
       <div className="anatomy3d-layout">
         <div className="anatomy3d-viewer-card">
           <AnatomyViewer
@@ -214,6 +335,7 @@ export function AnatomyTrainer() {
             focusStructureId={mode === "quiz" ? currentQuestion?.structureId : trainingStructureId}
             pickEnabled={mode === "training"}
             showLabels={mode === "training" && showLabels}
+            hiddenStructureIds={hiddenStructureIds}
             onPick={(structureId) => {
               if (mode === "training") setTrainingStructureId(structureId);
             }}
@@ -221,7 +343,8 @@ export function AnatomyTrainer() {
         </div>
 
         <aside className="anatomy3d-panel">
-          {mode === "quiz" && currentQuestion ? (
+          {mode === "quiz" ? (
+            canQuiz && currentQuestion ? (
             <>
               <div className="anatomy3d-score">
                 <span>Question {questionIndex + 1}/{questions.length}</span>
@@ -275,6 +398,12 @@ export function AnatomyTrainer() {
                 </details>
               )}
             </>
+            ) : (
+              <div className="anatomy3d-empty">
+                <strong>Show more layers to quiz</strong>
+                <p>The quiz needs at least four visible structures. Turn layers back on to build a set.</p>
+              </div>
+            )
           ) : (
             <>
               <div className="anatomy3d-training-controls">

@@ -1,7 +1,10 @@
-const tissues = new Set([
+/** Every valid `Tissue` string (keep in sync with the `Tissue` union in types.ts). */
+export const TISSUES = [
   "cartilage", "bone", "mucosa", "muscle", "ligament", "membrane", "airway",
-  "lung", "nerve", "artery", "vein", "gland", "cavity",
-]);
+  "lung", "nerve", "artery", "vein", "gland", "cavity", "fat",
+];
+
+const tissues = new Set(TISSUES);
 
 function nonEmpty(value) {
   return typeof value === "string" && value.trim().length > 0;

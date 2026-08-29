@@ -41,7 +41,9 @@ export function buildAnatomyQuiz(manifest, options) {
 
   return orderedTargets.slice(0, requestedCount).map((target) => {
     const targetLabel = target.label.trim().toLocaleLowerCase();
-    const otherStructures = uniqueByLabel(quizable.filter((structure) => structure.id !== target.id), [targetLabel]);
+    // Distractors are drawn only from the eligible pool (== the requested/visible structures when
+    // `structureIds` is passed), so a hidden structure can never be the answer OR a distractor.
+    const otherStructures = uniqueByLabel(eligible.filter((structure) => structure.id !== target.id), [targetLabel]);
     if (otherStructures.length < 3) {
       throw new Error(`${manifest.id} needs at least four uniquely labelled quizable structures`);
     }
