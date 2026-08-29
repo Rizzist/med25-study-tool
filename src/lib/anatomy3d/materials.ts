@@ -8,7 +8,7 @@ import type { Tissue } from "./types.ts";
 
 export const HIGHLIGHT_COLOR = "#d8ff62";
 export const HIGHLIGHT_INTENSITY = 0.72;
-export const DIM_OPACITY = 0.18;
+export const DIM_OPACITY = 0.4;
 
 const tissuePalette: Record<Tissue, { color: string; transparent?: boolean; opacity?: number }> = {
   cartilage: { color: "#c8d4e0" },

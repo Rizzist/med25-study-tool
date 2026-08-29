@@ -18,6 +18,7 @@ import type {
 
 export type AnatomyViewerHandle = {
   focusStructure(id: string): void;
+  clearFocus(): void;
   setModule(modelKey: string): void;
   setPickEnabled(enabled: boolean): void;
   setShowLabels(enabled: boolean): void;
@@ -68,6 +69,10 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
       queuedFocusRef.current = id;
       runtimeRef.current?.focusStructure(id);
     },
+    clearFocus() {
+      queuedFocusRef.current = null;
+      runtimeRef.current?.clearFocus();
+    },
     setModule(nextModelKey) {
       queuedModelRef.current = nextModelKey;
       queuedFocusRef.current = null;
@@ -97,8 +102,9 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
   }, [modelKey]);
 
   useEffect(() => {
-    queuedFocusRef.current = focusStructureId;
+    queuedFocusRef.current = focusStructureId ?? null;
     if (focusStructureId) runtimeRef.current?.focusStructure(focusStructureId);
+    else runtimeRef.current?.clearFocus();
   }, [focusStructureId]);
 
   useEffect(() => {
@@ -226,6 +232,11 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
         materialHelpers.applyHighlight(objects);
         materialHelpers.applyDim(currentHandle.structures, [id]);
         const pose = cameraHelpers.frameStructure(objects, camera, undefined, structure.view);
+        // The authored `view` is model-relative, but the pose direction is built in world
+        // space. Rotate the target→camera offset by the model root's current world orientation
+        // so the authored anatomical face stays framed after any drag or idle rotation.
+        const worldQuaternion = currentHandle.root.getWorldQuaternion(new THREE.Quaternion());
+        pose.position.sub(pose.target).applyQuaternion(worldQuaternion).add(pose.target);
         const now = performance.now();
         flight = {
           startedAt: now,
@@ -235,6 +246,28 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
           toTarget: pose.target,
         };
         focusedId = id;
+        lastActivity = now;
+        queuedFocusRef.current = null;
+      }
+
+      function clearFocus() {
+        clearVisualState();
+        if (!currentHandle) {
+          focusedId = null;
+          queuedFocusRef.current = null;
+          return;
+        }
+        scene.updateMatrixWorld(true);
+        const pose = cameraHelpers.frameStructure([currentHandle.root], camera);
+        const now = performance.now();
+        flight = {
+          startedAt: now,
+          fromPosition: camera.position.clone(),
+          fromTarget: orbitTarget.clone(),
+          toPosition: pose.position,
+          toTarget: pose.target,
+        };
+        focusedId = null;
         lastActivity = now;
         queuedFocusRef.current = null;
       }
@@ -350,6 +383,11 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
 
       function onPointerMove(event: PointerEvent) {
         if (!drag || drag.pointerId !== event.pointerId || !currentHandle) return;
+        if (flight) {
+          camera.position.copy(flight.toPosition);
+          orbitTarget.copy(flight.toTarget);
+          flight = null;
+        }
         const deltaX = event.clientX - drag.lastX;
         const deltaY = event.clientY - drag.lastY;
         drag.lastX = event.clientX;
@@ -375,7 +413,11 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
 
       function onWheel(event: WheelEvent) {
         event.preventDefault();
-        flight = null;
+        if (flight) {
+          camera.position.copy(flight.toPosition);
+          orbitTarget.copy(flight.toTarget);
+          flight = null;
+        }
         const offset = camera.position.clone().sub(orbitTarget);
         const distance = THREE.MathUtils.clamp(offset.length() * Math.exp(event.deltaY * 0.001), 0.42, 8);
         camera.position.copy(orbitTarget).add(offset.setLength(distance));
@@ -421,6 +463,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
 
       runtimeRef.current = {
         focusStructure,
+        clearFocus,
         setModule(nextModelKey) {
           queuedModelRef.current = nextModelKey;
           queuedFocusRef.current = null;

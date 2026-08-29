@@ -15,8 +15,8 @@ function shuffled(items, key) {
   return result;
 }
 
-function uniqueByLabel(structures) {
-  const labels = new Set();
+function uniqueByLabel(structures, seedLabels) {
+  const labels = new Set(seedLabels);
   return structures.filter((structure) => {
     const label = structure.label.trim().toLocaleLowerCase();
     if (labels.has(label)) return false;
@@ -40,7 +40,8 @@ export function buildAnatomyQuiz(manifest, options) {
     : Math.max(0, Math.floor(options.count));
 
   return orderedTargets.slice(0, requestedCount).map((target) => {
-    const otherStructures = uniqueByLabel(quizable.filter((structure) => structure.id !== target.id));
+    const targetLabel = target.label.trim().toLocaleLowerCase();
+    const otherStructures = uniqueByLabel(quizable.filter((structure) => structure.id !== target.id), [targetLabel]);
     if (otherStructures.length < 3) {
       throw new Error(`${manifest.id} needs at least four uniquely labelled quizable structures`);
     }
@@ -60,7 +61,7 @@ export function buildAnatomyQuiz(manifest, options) {
       otherStructures.filter((structure) => !usedIds.has(structure.id)),
       `${seed}:${manifest.id}:${target.id}:remaining`,
     );
-    const distractors = uniqueByLabel([...preferred, ...sameTissue, ...remaining]).slice(0, 3);
+    const distractors = uniqueByLabel([...preferred, ...sameTissue, ...remaining], [targetLabel]).slice(0, 3);
     const questionId = `${manifest.id}-${target.id}-${seed}`;
     const choices = shuffled([target, ...distractors], `${questionId}:options`);
     const optionsForQuestion = choices.map((structure, index) => ({
