@@ -6,6 +6,7 @@ import {
   CylinderGeometry,
   Group,
   Material,
+  Matrix4,
   Mesh,
   Object3D,
   SphereGeometry,
@@ -96,12 +97,44 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     pushMesh(id, mesh);
   };
   const vec = (x: number, y: number, z: number) => new Vector3(x, y, z);
-  const tube = (id: string, pts: Vector3[], radius: number) =>
-    addProcedural(id, new Mesh(new TubeGeometry(new CatmullRomCurve3(pts), Math.max(16, pts.length * 8), radius, 7, false)));
+  // Solid, smoothly-curving cord: densify the coarse control polyline into arc-length-even points
+  // (so the path is graceful with no kinks), give the tube a rounded cross-section (radialSegments
+  // 10) and a finely-tessellated length (tubularSegments), then radius sets the visible thickness.
+  const tube = (id: string, pts: Vector3[], radius: number) => {
+    const path = new CatmullRomCurve3(pts, false, "centripetal", 0.5);
+    const divisions = Math.max(28, (pts.length - 1) * 16);
+    const smooth = new CatmullRomCurve3(path.getSpacedPoints(divisions), false, "centripetal", 0.5);
+    addProcedural(id, new Mesh(new TubeGeometry(smooth, divisions, radius, 10, false)));
+  };
 
   const tracheaBox = boxOf(["trachea"]);
   const rightLungBox = boxOf(["right-upper-lobe", "right-middle-lobe", "right-lower-lobe"]);
   const leftLungBox = boxOf(["left-upper-lobe", "left-lower-lobe"]);
+
+  // Lobe centres (real meshes) drive fissure orientation + the lobe separation below.
+  const lobeCenter = (id: string): Vector3 => {
+    const box = boxOf([id]);
+    return box.isEmpty() ? new Vector3() : box.getCenter(new Vector3());
+  };
+  const mid2 = (a: Vector3, b: Vector3) => a.clone().add(b).multiplyScalar(0.5);
+  // Anatomical fissure-plane normals (unit-ish), pointing toward the upper/superior side:
+  //  - oblique fissure is steep, running high-posterior → low-anterior, so its face looks
+  //    antero-superiorly;  - horizontal fissure is near-transverse (upper vs middle lobe).
+  const OBLIQUE_NORMAL = new Vector3(0, 0.64, 0.77);
+  const HORIZONTAL_NORMAL = new Vector3(0, 0.94, 0.34);
+  // A thin fissure slab dropped into the gap between two lobes: it sits at `position` with its
+  // (thin) Y axis along `normal`, and spans `lateral` left↔right and `slope` along the fissure tilt.
+  const fissurePlane = (id: string, position: Vector3, normal: Vector3, lateral: number, slope: number) => {
+    const n = normal.clone().normalize();
+    const xAxis = new Vector3(1, 0, 0).addScaledVector(n, -n.x); // world-X made ⟂ to the normal
+    if (xAxis.lengthSq() < 1e-4) xAxis.set(0, 0, 1).addScaledVector(n, -n.z);
+    xAxis.normalize();
+    const zAxis = new Vector3().crossVectors(xAxis, n).normalize(); // right-handed (X × Y = Z)
+    const mesh = new Mesh(new BoxGeometry(lateral, 0.024, slope));
+    mesh.quaternion.setFromRotationMatrix(new Matrix4().makeBasis(xAxis, n, zAxis));
+    mesh.position.copy(position);
+    addProcedural(id, mesh);
+  };
 
   if (!tracheaBox.isEmpty()) {
     const c = tracheaBox.getCenter(new Vector3());
@@ -137,15 +170,13 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
   if (!rightLungBox.isEmpty()) {
     const c = rightLungBox.getCenter(new Vector3());
     const s = rightLungBox.getSize(new Vector3());
-    // Horizontal fissure: right lung only, upper third, roughly transverse.
-    const hf = new Mesh(new BoxGeometry(s.x * 0.92, s.y * 0.02, s.z * 0.86));
-    hf.position.set(c.x, c.y + s.y * 0.16, c.z + s.z * 0.06);
-    addProcedural("horizontal-fissure", hf);
-    // Oblique fissure (right): tilted plane, lower-anterior to higher-posterior.
-    const ofr = new Mesh(new BoxGeometry(s.x * 0.9, s.y * 0.02, s.z * 1.05));
-    ofr.position.set(c.x, c.y, c.z);
-    ofr.rotation.x = -0.9;
-    addProcedural("oblique-fissure", ofr);
+    const cRUL = lobeCenter("right-upper-lobe");
+    const cRML = lobeCenter("right-middle-lobe");
+    const cRLL = lobeCenter("right-lower-lobe");
+    // Horizontal fissure: separates the upper lobe from the middle lobe (right lung only).
+    fissurePlane("horizontal-fissure", mid2(cRUL, cRML), HORIZONTAL_NORMAL, s.x * 0.9, s.z * 0.72);
+    // Oblique fissure (right): separates the lower lobe from the upper+middle mass.
+    fissurePlane("oblique-fissure", mid2(mid2(cRUL, cRML), cRLL), OBLIQUE_NORMAL, s.x * 0.88, Math.hypot(s.y, s.z) * 0.62);
     // Hilum / root (right): medial surface (toward the midline, +X side of the right lung).
     const hr = new Mesh(new SphereGeometry(Math.min(s.x, s.z) * 0.22, 16, 12));
     hr.position.set(c.x + s.x * 0.36, c.y + s.y * 0.05, c.z - s.z * 0.12);
@@ -156,11 +187,8 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
   if (!leftLungBox.isEmpty()) {
     const c = leftLungBox.getCenter(new Vector3());
     const s = leftLungBox.getSize(new Vector3());
-    // Oblique fissure (left).
-    const ofl = new Mesh(new BoxGeometry(s.x * 0.9, s.y * 0.02, s.z * 1.05));
-    ofl.position.set(c.x, c.y, c.z);
-    ofl.rotation.x = -0.9;
-    addProcedural("oblique-fissure", ofl);
+    // Oblique fissure (left): separates the upper lobe from the lower lobe.
+    fissurePlane("oblique-fissure", mid2(lobeCenter("left-upper-lobe"), lobeCenter("left-lower-lobe")), OBLIQUE_NORMAL, s.x * 0.88, Math.hypot(s.y, s.z) * 0.6);
     // Cardiac notch: concave scoop on the anteroinferior margin of the left lung.
     const notch = new Mesh(
       new CylinderGeometry(Math.min(s.x, s.z) * 0.5, Math.min(s.x, s.z) * 0.5, s.y * 0.4, 16, 1, true, -Math.PI / 4, Math.PI / 2),
@@ -188,29 +216,29 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     tube("vagus-nerve", [
       vec(side * 0.28, 0.9, -0.08), vec(side * 0.3, 0.5, -0.15),
       vec(side * 0.26, 0.1, -0.25), vec(side * 0.22, -0.3, -0.3),
-    ], 0.018);
+    ], 0.014);
   }
   // Recurrent laryngeal nerve — the classic asymmetric loops, then ascent in the T-O groove.
   // LEFT recurs low, under the arch of the aorta.
   tube("recurrent-laryngeal-nerve", [
     vec(0.30, 0.5, -0.15), vec(0.18, -0.02, 0.06), vec(0.08, -0.12, 0.12),
     vec(0.06, -0.04, -0.06), vec(0.05, 0.4, -0.16), vec(0.02, 0.9, -0.12),
-  ], 0.013);
+  ], 0.012);
   // RIGHT recurs higher, under the right subclavian artery.
   tube("recurrent-laryngeal-nerve", [
     vec(-0.28, 0.55, -0.12), vec(-0.24, 0.42, 0.07), vec(-0.14, 0.36, 0.1),
     vec(-0.1, 0.44, -0.08), vec(-0.05, 0.7, -0.12), vec(-0.03, 0.9, -0.12),
-  ], 0.013);
+  ], 0.012);
   // Pulmonary plexus — autonomic network around each hilum / main bronchus.
   for (const b of [rBronch, lBronch]) {
     for (const [ox, oy, oz] of [[0.05, 0.03, 0.03], [-0.05, 0.03, -0.03], [0.04, -0.03, 0.04], [-0.04, -0.03, -0.04]] as const) {
-      tube("pulmonary-plexus", [vec(b.x - ox, b.y - oy, b.z - oz), vec(b.x, b.y, b.z), vec(b.x + ox, b.y + oy, b.z + oz)], 0.007);
+      tube("pulmonary-plexus", [vec(b.x - ox, b.y - oy, b.z - oz), vec(b.x, b.y, b.z), vec(b.x + ox, b.y + oy, b.z + oz)], 0.009);
     }
   }
   // Bronchial arteries — run along the posterior wall of the bronchi (1 right, 2 left, typically).
-  tube("bronchial-arteries", [vec(0, -0.02, -0.28), vec(rBronch.x * 0.6, rBronch.y, rBronch.z - 0.04), vec(rBronch.x, rBronch.y - 0.06, rBronch.z - 0.02)], 0.008);
-  tube("bronchial-arteries", [vec(0.03, -0.02, -0.3), vec(lBronch.x * 0.6, lBronch.y, lBronch.z - 0.04), vec(lBronch.x, lBronch.y - 0.04, lBronch.z - 0.02)], 0.008);
-  tube("bronchial-arteries", [vec(0.02, -0.1, -0.3), vec(lBronch.x * 0.55, lBronch.y - 0.1, lBronch.z - 0.05), vec(lBronch.x * 0.95, lBronch.y - 0.12, lBronch.z - 0.03)], 0.007);
+  tube("bronchial-arteries", [vec(0, -0.02, -0.28), vec(rBronch.x * 0.6, rBronch.y, rBronch.z - 0.04), vec(rBronch.x, rBronch.y - 0.06, rBronch.z - 0.02)], 0.013);
+  tube("bronchial-arteries", [vec(0.03, -0.02, -0.3), vec(lBronch.x * 0.6, lBronch.y, lBronch.z - 0.04), vec(lBronch.x, lBronch.y - 0.04, lBronch.z - 0.02)], 0.013);
+  tube("bronchial-arteries", [vec(0.02, -0.1, -0.3), vec(lBronch.x * 0.55, lBronch.y - 0.1, lBronch.z - 0.05), vec(lBronch.x * 0.95, lBronch.y - 0.12, lBronch.z - 0.03)], 0.012);
   // Mediastinal fat — soft pads in the central mediastinum between the lungs.
   for (const [at, sx, sy, sz] of [
     [vec(0, 0.15, 0.05), 0.14, 0.18, 0.12], [vec(0, -0.08, -0.04), 0.13, 0.16, 0.12],
@@ -219,6 +247,27 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     fat.position.copy(at); fat.scale.set(sx, sy, sz);
     addProcedural("mediastinal-fat", fat);
   }
+
+  // --- Lobe separation --------------------------------------------------------------------------
+  // The real lobe meshes interdigitate along the (oblique/horizontal) fissures, so their bounding
+  // boxes overlap and the lobes read as one mass. Nudge each lobe radially outward from its lung's
+  // centroid to open a small visible gap along every fissure; the fissure slabs placed at the
+  // inter-lobe midpoints above then sit in those gaps. Lobe meshes share an identity-rotation parent
+  // with world-baked geometry, so a world-space position offset is applied directly.
+  const explodeLobes = (ids: string[], gap: number) => {
+    const centers = ids.map((id) => lobeCenter(id));
+    const centroid = new Vector3();
+    for (const cc of centers) centroid.add(cc);
+    centroid.multiplyScalar(1 / centers.length);
+    ids.forEach((id, i) => {
+      const dir = centers[i].clone().sub(centroid);
+      if (dir.lengthSq() < 1e-6) return;
+      dir.normalize().multiplyScalar(gap);
+      for (const obj of structures.get(id) ?? []) obj.position.add(dir);
+    });
+  };
+  explodeLobes(["right-upper-lobe", "right-middle-lobe", "right-lower-lobe"], 0.045);
+  explodeLobes(["left-upper-lobe", "left-lower-lobe"], 0.05);
 
   // Defensive normalization to the contract (~2-unit bbox at origin). The GLB is baked
   // normalized; this stays ~no-op but also folds in the procedural fills.

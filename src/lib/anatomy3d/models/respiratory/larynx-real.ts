@@ -102,8 +102,15 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
     pushMesh(id, mesh);
   };
   const v = (x: number, y: number, z: number) => new Vector3(x, y, z);
-  const tube = (id: string, pts: Vector3[], radius: number) =>
-    addProcedural(id, new Mesh(new TubeGeometry(new CatmullRomCurve3(pts), Math.max(12, pts.length * 8), radius, 7, false)));
+  // Solid, smoothly-curving cord: densify the coarse control polyline into arc-length-even points
+  // (so the path is graceful with no kinks), give the tube a rounded cross-section (radialSegments
+  // 10) and a finely-tessellated length (tubularSegments), then radius sets the visible thickness.
+  const tube = (id: string, pts: Vector3[], radius: number) => {
+    const path = new CatmullRomCurve3(pts, false, "centripetal", 0.5);
+    const divisions = Math.max(28, (pts.length - 1) * 16);
+    const smooth = new CatmullRomCurve3(path.getSpacedPoints(divisions), false, "centripetal", 0.5);
+    addProcedural(id, new Mesh(new TubeGeometry(smooth, divisions, radius, 10, false)));
+  };
   const blob = (id: string, at: Vector3, sx: number, sy: number, sz: number) => {
     const m = new Mesh(new SphereGeometry(1, 14, 10));
     m.position.copy(at); m.scale.set(sx, sy, sz);
@@ -118,7 +125,7 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
     tube("vagus-nerve", [
       v(side * 0.5, 0.95, -0.14), v(side * 0.48, 0.4, -0.18),
       v(side * 0.47, -0.1, -0.2), v(side * 0.49, -0.95, -0.2),
-    ], 0.02);
+    ], 0.013);
     // Superior laryngeal nerve — internal branch pierces the thyrohyoid membrane; external branch
     // runs down to the cricothyroid muscle.
     tube("superior-laryngeal-nerve", [
@@ -126,23 +133,23 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
     ], 0.012);
     tube("superior-laryngeal-nerve", [
       v(side * 0.46, 0.46, -0.15), v(side * 0.35, 0.0, -0.12), v(side * 0.2, cricoY + 0.12, -0.08),
-    ], 0.01);
+    ], 0.011);
     // Recurrent laryngeal nerve — ascends in the tracheo-oesophageal groove, entering behind the cricoid.
     tube("recurrent-laryngeal-nerve", [
       v(side * 0.15, -0.95, -0.24), v(side * 0.16, -0.72, -0.3), v(side * 0.13, cricoY + 0.05, -0.34),
-    ], 0.013);
+    ], 0.012);
     // Superior thyroid artery — first branch of the external carotid, descending anteriorly.
     tube("superior-thyroid-artery", [
       v(side * 0.5, 0.55, -0.04), v(side * 0.42, 0.2, 0.02), v(side * 0.32, -0.35, 0.06), v(side * 0.28, -0.6, 0.05),
-    ], 0.014);
+    ], 0.017);
     // Superior laryngeal artery — its branch that pierces the thyrohyoid membrane with the nerve.
     tube("superior-laryngeal-artery", [
       v(side * 0.46, 0.5, -0.02), v(side * 0.28, memb.y + 0.02, 0.03), v(side * 0.12, memb.y, 0.02),
-    ], 0.01);
+    ], 0.014);
     // Inferior thyroid artery — from the thyrocervical trunk, ascending to the lower larynx.
     tube("inferior-thyroid-artery", [
       v(side * 0.5, -0.92, -0.04), v(side * 0.42, -0.72, 0.01), v(side * 0.32, cricoY + 0.02, 0.05),
-    ], 0.013);
+    ], 0.016);
     // Paraglottic fat — paired fat spaces lateral to the ventricle, deep to the thyroid lamina.
     blob("paraglottic-fat", v(side * 0.22, thyroidY + 0.06, -0.02), 0.1, 0.16, 0.12);
   }
