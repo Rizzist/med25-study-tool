@@ -1,6 +1,7 @@
 import {
   Box3,
   BoxGeometry,
+  CatmullRomCurve3,
   CylinderGeometry,
   Group,
   Material,
@@ -8,6 +9,7 @@ import {
   Object3D,
   SphereGeometry,
   TorusGeometry,
+  TubeGeometry,
   Vector3,
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -101,6 +103,9 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
     gltf.scene.add(mesh);
     pushMesh(id, mesh);
   };
+  const vec = (x: number, y: number, z: number) => new Vector3(x, y, z);
+  const tube = (id: string, pts: Vector3[], radius: number) =>
+    addProcedural(id, new Mesh(new TubeGeometry(new CatmullRomCurve3(pts), Math.max(12, pts.length * 8), radius, 6, false)));
 
   const nasalBox = boxOf(["nasal-bone", "nasal-septum", "lateral-nasal-cartilage", "vomer", "inferior-concha", "ethmoid-bone"]);
   const infConchaBox = boxOf(["inferior-concha"]);
@@ -174,6 +179,51 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
     const palate = new Mesh(new BoxGeometry(s.x * 0.9, s.y * 0.06, s.z * 0.68));
     palate.position.set(0, nasalBox.min.y + s.y * 0.06, c.z + s.z * 0.04);
     addProcedural("hard-palate", palate);
+
+    // --- Procedural NERVE & VESSEL layers (no BodyParts3D mesh) ----------------
+    // (+Z = anterior/front of nose, −Z = posterior toward the nasopharynx.)
+    for (const side of [1, -1]) {
+      // Nasopalatine nerve: from the sphenopalatine foramen forward & down along the septum.
+      tube("nasopalatine-nerve", [
+        vec(side * 0.05, c.y + s.y * 0.12, c.z - s.z * 0.32),
+        vec(side * 0.04, c.y - s.y * 0.05, c.z - s.z * 0.02),
+        vec(side * 0.03, c.y - s.y * 0.28, c.z + s.z * 0.32),
+      ], 0.012);
+      // Anterior ethmoidal nerve: enters the roof anteriorly, runs down the internal nose.
+      tube("anterior-ethmoidal-nerve", [
+        vec(side * s.x * 0.18, c.y + s.y * 0.34, c.z - s.z * 0.04),
+        vec(side * s.x * 0.15, c.y + s.y * 0.12, c.z + s.z * 0.18),
+        vec(side * s.x * 0.12, c.y - s.y * 0.05, c.z + s.z * 0.40),
+      ], 0.011);
+      // Sphenopalatine artery: from the sphenopalatine foramen, fanning antero-medially.
+      tube("sphenopalatine-artery", [
+        vec(side * s.x * 0.30, c.y + s.y * 0.04, c.z - s.z * 0.32),
+        vec(side * s.x * 0.22, c.y - s.y * 0.05, c.z - s.z * 0.04),
+        vec(side * s.x * 0.14, c.y - s.y * 0.16, c.z + s.z * 0.20),
+      ], 0.013);
+      // Anterior ethmoidal artery: accompanies its nerve along the roof.
+      tube("anterior-ethmoidal-artery", [
+        vec(side * s.x * 0.21, c.y + s.y * 0.36, c.z - s.z * 0.07),
+        vec(side * s.x * 0.15, c.y + s.y * 0.14, c.z + s.z * 0.16),
+        vec(side * s.x * 0.10, c.y, c.z + s.z * 0.38),
+      ], 0.011);
+    }
+    // Olfactory nerve (CN I): fine fila piercing the cribriform plate of the ethmoid (the roof).
+    for (let i = 0; i < 10; i++) {
+      const fx = (-0.16 + (i % 5) * 0.08) * s.x;
+      const fz = (i < 5 ? -0.06 : 0.06) * s.z;
+      tube("olfactory-nerve", [
+        vec(fx, c.y + s.y * 0.46, c.z + fz),
+        vec(fx, c.y + s.y * 0.33, c.z + fz),
+      ], 0.006);
+    }
+    // Kiesselbach plexus (Little's area): anastomotic vascular patch on the anteroinferior septum.
+    const kx = c.z + s.z * 0.42, ky = c.y - s.y * 0.15;
+    for (const [dx, dz] of [[0.05, 0.06], [-0.05, 0.06], [0.05, -0.05], [-0.05, -0.05]] as const) {
+      tube("kiesselbach-plexus", [
+        vec(-dx, ky - dz, kx - 0.02), vec(0, ky, kx), vec(dx, ky + dz, kx - 0.02),
+      ], 0.008);
+    }
   }
 
   // Defensive normalization to the contract (~2-unit bbox at origin; ~no-op for the baked GLB).

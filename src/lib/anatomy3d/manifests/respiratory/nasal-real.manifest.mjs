@@ -299,5 +299,101 @@ export const nasalRealManifest = {
       distractorIds: ["sphenoid-sinus", "inferior-meatus", "hard-palate"],
       view: { azimuth: 3.14159, elevation: -0.05, zoom: 1.5 },
     },
+    {
+      id: "nasopalatine-nerve",
+      label: "Nasopalatine nerve",
+      shortLabel: "Nasopalatine n.",
+      aliases: ["long sphenopalatine nerve"],
+      tissue: "nerve",
+      description:
+        "The nasopalatine nerve enters the nasal cavity at the sphenopalatine foramen and runs antero-inferiorly across the roof and down the nasal septum to the incisive canal, supplying the septal mucosa and the anterior hard palate.",
+      keyPoints: [
+        "A branch of the maxillary nerve (CN V2) relayed through the pterygopalatine ganglion.",
+        "Runs on the septum and passes through the incisive foramen to the anterior palate.",
+      ],
+      difficulty: 3,
+      distractorIds: ["anterior-ethmoidal-nerve", "olfactory-nerve", "sphenopalatine-artery"],
+      view: { azimuth: 1.2, elevation: 0.0, zoom: 1.4 },
+    },
+    {
+      id: "anterior-ethmoidal-nerve",
+      label: "Anterior ethmoidal nerve",
+      shortLabel: "Ant. ethmoidal n.",
+      aliases: ["anterior ethmoidal branch"],
+      tissue: "nerve",
+      description:
+        "The anterior ethmoidal nerve, a branch of the nasociliary nerve (CN V1), enters the nasal cavity through the cribriform region and supplies the anterosuperior nasal mucosa before emerging as the external nasal nerve on the dorsum of the nose.",
+      keyPoints: [
+        "Branch of the nasociliary nerve (ophthalmic division, CN V1).",
+        "Supplies the anterosuperior nasal cavity and the skin over the nasal tip.",
+      ],
+      difficulty: 3,
+      distractorIds: ["nasopalatine-nerve", "olfactory-nerve", "anterior-ethmoidal-artery"],
+      view: { azimuth: 0.3, elevation: 0.3, zoom: 1.5 },
+    },
+    {
+      id: "olfactory-nerve",
+      label: "Olfactory nerve (CN I)",
+      shortLabel: "Olfactory (I)",
+      aliases: ["CN I", "first cranial nerve", "olfactory fila"],
+      tissue: "nerve",
+      description:
+        "The olfactory nerve is formed by ~15–20 bundles of fine fibres (fila olfactoria) that arise from receptors in the olfactory epithelium of the roof and pass upward through the cribriform plate of the ethmoid to the olfactory bulb.",
+      keyPoints: [
+        "The special sensory nerve of smell.",
+        "Its fila pass through the cribriform plate; fractures there cause anosmia and CSF rhinorrhoea.",
+      ],
+      difficulty: 2,
+      distractorIds: ["anterior-ethmoidal-nerve", "nasopalatine-nerve", "ethmoid-bone"],
+      view: { azimuth: 0.2, elevation: 0.45, zoom: 1.6 },
+    },
+    {
+      id: "sphenopalatine-artery",
+      label: "Sphenopalatine artery",
+      shortLabel: "Sphenopalatine a.",
+      aliases: ["artery of epistaxis"],
+      tissue: "artery",
+      description:
+        "The sphenopalatine artery is the terminal branch of the maxillary artery, entering the nasal cavity through the sphenopalatine foramen to supply the lateral wall (conchae) and, via its septal branch, the nasal septum. It is the main artery of posterior epistaxis.",
+      keyPoints: [
+        "Terminal branch of the maxillary artery.",
+        "The principal source of posterior (and severe) epistaxis.",
+      ],
+      difficulty: 2,
+      distractorIds: ["anterior-ethmoidal-artery", "kiesselbach-plexus", "nasopalatine-nerve"],
+      view: { azimuth: 2.6, elevation: 0.05, zoom: 1.4 },
+    },
+    {
+      id: "anterior-ethmoidal-artery",
+      label: "Anterior ethmoidal artery",
+      shortLabel: "Ant. ethmoidal a.",
+      aliases: ["anterior ethmoidal branch of ophthalmic artery"],
+      tissue: "artery",
+      description:
+        "The anterior ethmoidal artery, a branch of the ophthalmic artery, enters the nasal cavity through the anterior ethmoidal foramen and cribriform region to supply the anterosuperior lateral wall and septum. It contributes to Kiesselbach's plexus.",
+      keyPoints: [
+        "Branch of the ophthalmic artery (from the internal carotid).",
+        "Supplies the anterosuperior nose and feeds Little's area.",
+      ],
+      difficulty: 3,
+      distractorIds: ["sphenopalatine-artery", "kiesselbach-plexus", "anterior-ethmoidal-nerve"],
+      view: { azimuth: 0.3, elevation: 0.3, zoom: 1.5 },
+    },
+    {
+      id: "kiesselbach-plexus",
+      label: "Kiesselbach's plexus",
+      shortLabel: "Little's area",
+      aliases: ["Little's area", "Kiesselbach's area"],
+      tissue: "artery",
+      description:
+        "Kiesselbach's plexus is the anastomotic vascular network on the anteroinferior nasal septum (Little's area), where the sphenopalatine, anterior ethmoidal, greater palatine and superior labial arteries meet. It is the commonest site of anterior epistaxis.",
+      keyPoints: [
+        "A four-artery anastomosis on the anterior septum (Little's area).",
+        "The commonest site of nosebleeds (anterior epistaxis).",
+      ],
+      difficulty: 2,
+      distractorIds: ["sphenopalatine-artery", "anterior-ethmoidal-artery", "nasal-septum"],
+      view: { azimuth: 1.5, elevation: -0.05, zoom: 1.7 },
+    },
   ],
 };

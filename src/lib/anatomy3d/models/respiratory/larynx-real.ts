@@ -1,9 +1,12 @@
 import {
   Box3,
+  CatmullRomCurve3,
   Group,
   Material,
   Mesh,
   Object3D,
+  SphereGeometry,
+  TubeGeometry,
   Vector3,
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -79,6 +82,72 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
     if (old) for (const m of Array.isArray(old) ? old : [old]) (m as Material).dispose?.();
     structures.set(id, [...(structures.get(id) ?? []), mesh]);
   }
+
+  // --- Procedural (schematic) LAYERS: nerves / vessels / fat --------------------
+  // BodyParts3D has no laryngeal nerves or (superior) laryngeal vessels or peri-laryngeal fat, so
+  // these are authored here (userData.schematic = true) and routed relative to the real cartilages.
+  gltf.scene.updateMatrixWorld(true);
+  const pushMesh = (id: string, mesh: Object3D) => structures.set(id, [...(structures.get(id) ?? []), mesh]);
+  const centre = (id: string): Vector3 => {
+    const box = new Box3();
+    for (const obj of structures.get(id) ?? []) box.expandByObject(obj);
+    return box.isEmpty() ? new Vector3() : box.getCenter(new Vector3());
+  };
+  const addProcedural = (id: string, mesh: Mesh) => {
+    mesh.name = id;
+    mesh.userData.structureId = id;
+    mesh.userData.schematic = true;
+    mesh.material = tissueMaterial(structureTissue(id));
+    gltf.scene.add(mesh);
+    pushMesh(id, mesh);
+  };
+  const v = (x: number, y: number, z: number) => new Vector3(x, y, z);
+  const tube = (id: string, pts: Vector3[], radius: number) =>
+    addProcedural(id, new Mesh(new TubeGeometry(new CatmullRomCurve3(pts), Math.max(12, pts.length * 8), radius, 7, false)));
+  const blob = (id: string, at: Vector3, sx: number, sy: number, sz: number) => {
+    const m = new Mesh(new SphereGeometry(1, 14, 10));
+    m.position.copy(at); m.scale.set(sx, sy, sz);
+    addProcedural(id, m);
+  };
+
+  const thyroidY = centre("thyroid-cartilage").y;
+  const memb = centre("thyrohyoid-membrane");
+  const cricoY = centre("cricoid-cartilage").y;
+  for (const side of [1, -1]) {
+    // Vagus nerve (CN X) — descends in the carotid sheath, lateral & slightly posterior.
+    tube("vagus-nerve", [
+      v(side * 0.5, 0.95, -0.14), v(side * 0.48, 0.4, -0.18),
+      v(side * 0.47, -0.1, -0.2), v(side * 0.49, -0.95, -0.2),
+    ], 0.02);
+    // Superior laryngeal nerve — internal branch pierces the thyrohyoid membrane; external branch
+    // runs down to the cricothyroid muscle.
+    tube("superior-laryngeal-nerve", [
+      v(side * 0.46, 0.52, -0.15), v(side * 0.3, 0.49, -0.02), v(side * 0.12, memb.y, 0.0),
+    ], 0.012);
+    tube("superior-laryngeal-nerve", [
+      v(side * 0.46, 0.46, -0.15), v(side * 0.35, 0.0, -0.12), v(side * 0.2, cricoY + 0.12, -0.08),
+    ], 0.01);
+    // Recurrent laryngeal nerve — ascends in the tracheo-oesophageal groove, entering behind the cricoid.
+    tube("recurrent-laryngeal-nerve", [
+      v(side * 0.15, -0.95, -0.24), v(side * 0.16, -0.72, -0.3), v(side * 0.13, cricoY + 0.05, -0.34),
+    ], 0.013);
+    // Superior thyroid artery — first branch of the external carotid, descending anteriorly.
+    tube("superior-thyroid-artery", [
+      v(side * 0.5, 0.55, -0.04), v(side * 0.42, 0.2, 0.02), v(side * 0.32, -0.35, 0.06), v(side * 0.28, -0.6, 0.05),
+    ], 0.014);
+    // Superior laryngeal artery — its branch that pierces the thyrohyoid membrane with the nerve.
+    tube("superior-laryngeal-artery", [
+      v(side * 0.46, 0.5, -0.02), v(side * 0.28, memb.y + 0.02, 0.03), v(side * 0.12, memb.y, 0.02),
+    ], 0.01);
+    // Inferior thyroid artery — from the thyrocervical trunk, ascending to the lower larynx.
+    tube("inferior-thyroid-artery", [
+      v(side * 0.5, -0.92, -0.04), v(side * 0.42, -0.72, 0.01), v(side * 0.32, cricoY + 0.02, 0.05),
+    ], 0.013);
+    // Paraglottic fat — paired fat spaces lateral to the ventricle, deep to the thyroid lamina.
+    blob("paraglottic-fat", v(side * 0.22, thyroidY + 0.06, -0.02), 0.1, 0.16, 0.12);
+  }
+  // Pre-epiglottic fat — the fat body anterior to the epiglottis, under the hyoid & thyrohyoid membrane.
+  blob("pre-epiglottic-fat", v(0, memb.y - 0.06, 0.16), 0.16, 0.18, 0.1);
 
   // Defensive normalization to the contract: centre at origin and scale to a ~2-unit bbox.
   // (The GLB is baked normalized; this makes the loader idempotent and robust to re-exports.)

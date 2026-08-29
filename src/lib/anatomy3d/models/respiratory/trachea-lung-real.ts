@@ -1,6 +1,7 @@
 import {
   Box3,
   BoxGeometry,
+  CatmullRomCurve3,
   ConeGeometry,
   CylinderGeometry,
   Group,
@@ -9,6 +10,7 @@ import {
   Object3D,
   SphereGeometry,
   TorusGeometry,
+  TubeGeometry,
   Vector3,
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -93,6 +95,9 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     gltf.scene.add(mesh);
     pushMesh(id, mesh);
   };
+  const vec = (x: number, y: number, z: number) => new Vector3(x, y, z);
+  const tube = (id: string, pts: Vector3[], radius: number) =>
+    addProcedural(id, new Mesh(new TubeGeometry(new CatmullRomCurve3(pts), Math.max(16, pts.length * 8), radius, 7, false)));
 
   const tracheaBox = boxOf(["trachea"]);
   const rightLungBox = boxOf(["right-upper-lobe", "right-middle-lobe", "right-lower-lobe"]);
@@ -172,6 +177,47 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     hl.position.set(c.x - s.x * 0.36, c.y + s.y * 0.05, c.z - s.z * 0.12);
     hl.scale.set(0.8, 1.1, 0.8);
     addProcedural("hilum-root", hl);
+  }
+
+  // --- Procedural NERVE / VESSEL / FAT layers (no BodyParts3D mesh) -------------
+  // Routed relative to the real trachea and main bronchi. (+Z = anterior, −Z = posterior.)
+  const rBronch = boxOf(["right-main-bronchus"]).getCenter(new Vector3());
+  const lBronch = boxOf(["left-main-bronchus"]).getCenter(new Vector3());
+  for (const side of [1, -1]) {
+    // Vagus nerve — descends beside the trachea, then posteriorly toward the hilum & oesophagus.
+    tube("vagus-nerve", [
+      vec(side * 0.28, 0.9, -0.08), vec(side * 0.3, 0.5, -0.15),
+      vec(side * 0.26, 0.1, -0.25), vec(side * 0.22, -0.3, -0.3),
+    ], 0.018);
+  }
+  // Recurrent laryngeal nerve — the classic asymmetric loops, then ascent in the T-O groove.
+  // LEFT recurs low, under the arch of the aorta.
+  tube("recurrent-laryngeal-nerve", [
+    vec(0.30, 0.5, -0.15), vec(0.18, -0.02, 0.06), vec(0.08, -0.12, 0.12),
+    vec(0.06, -0.04, -0.06), vec(0.05, 0.4, -0.16), vec(0.02, 0.9, -0.12),
+  ], 0.013);
+  // RIGHT recurs higher, under the right subclavian artery.
+  tube("recurrent-laryngeal-nerve", [
+    vec(-0.28, 0.55, -0.12), vec(-0.24, 0.42, 0.07), vec(-0.14, 0.36, 0.1),
+    vec(-0.1, 0.44, -0.08), vec(-0.05, 0.7, -0.12), vec(-0.03, 0.9, -0.12),
+  ], 0.013);
+  // Pulmonary plexus — autonomic network around each hilum / main bronchus.
+  for (const b of [rBronch, lBronch]) {
+    for (const [ox, oy, oz] of [[0.05, 0.03, 0.03], [-0.05, 0.03, -0.03], [0.04, -0.03, 0.04], [-0.04, -0.03, -0.04]] as const) {
+      tube("pulmonary-plexus", [vec(b.x - ox, b.y - oy, b.z - oz), vec(b.x, b.y, b.z), vec(b.x + ox, b.y + oy, b.z + oz)], 0.007);
+    }
+  }
+  // Bronchial arteries — run along the posterior wall of the bronchi (1 right, 2 left, typically).
+  tube("bronchial-arteries", [vec(0, -0.02, -0.28), vec(rBronch.x * 0.6, rBronch.y, rBronch.z - 0.04), vec(rBronch.x, rBronch.y - 0.06, rBronch.z - 0.02)], 0.008);
+  tube("bronchial-arteries", [vec(0.03, -0.02, -0.3), vec(lBronch.x * 0.6, lBronch.y, lBronch.z - 0.04), vec(lBronch.x, lBronch.y - 0.04, lBronch.z - 0.02)], 0.008);
+  tube("bronchial-arteries", [vec(0.02, -0.1, -0.3), vec(lBronch.x * 0.55, lBronch.y - 0.1, lBronch.z - 0.05), vec(lBronch.x * 0.95, lBronch.y - 0.12, lBronch.z - 0.03)], 0.007);
+  // Mediastinal fat — soft pads in the central mediastinum between the lungs.
+  for (const [at, sx, sy, sz] of [
+    [vec(0, 0.15, 0.05), 0.14, 0.18, 0.12], [vec(0, -0.08, -0.04), 0.13, 0.16, 0.12],
+  ] as const) {
+    const fat = new Mesh(new SphereGeometry(1, 12, 9));
+    fat.position.copy(at); fat.scale.set(sx, sy, sz);
+    addProcedural("mediastinal-fat", fat);
   }
 
   // Defensive normalization to the contract (~2-unit bbox at origin). The GLB is baked

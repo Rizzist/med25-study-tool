@@ -294,5 +294,85 @@ export const tracheaLungRealManifest = {
       distractorIds: ["carina", "right-main-bronchus", "left-main-bronchus"],
       view: { azimuth: 3.14159, elevation: 0.05, zoom: 1.6 },
     },
+    {
+      id: "vagus-nerve",
+      label: "Vagus nerve (CN X)",
+      shortLabel: "Vagus (X)",
+      aliases: ["CN X", "tenth cranial nerve"],
+      tissue: "nerve",
+      description:
+        "The vagus nerves descend through the thorax alongside the trachea and oesophagus. The right vagus runs beside the trachea; the left crosses the arch of the aorta. Both break up into the pulmonary and oesophageal plexuses.",
+      keyPoints: [
+        "Provide parasympathetic (bronchoconstrictor, secretomotor) supply to the lungs.",
+        "Give off the recurrent laryngeal nerves within the thorax.",
+      ],
+      difficulty: 2,
+      distractorIds: ["recurrent-laryngeal-nerve", "pulmonary-plexus", "bronchial-arteries"],
+      view: { azimuth: 1.4, elevation: 0.15, zoom: 1.2 },
+    },
+    {
+      id: "recurrent-laryngeal-nerve",
+      label: "Recurrent laryngeal nerve",
+      shortLabel: "Recurrent laryngeal n.",
+      aliases: ["RLN", "inferior laryngeal nerve"],
+      tissue: "nerve",
+      description:
+        "The recurrent laryngeal nerves branch from the vagus in the thorax and hook back up to the larynx. The LEFT loops beneath the arch of the aorta; the RIGHT loops beneath the right subclavian artery. Both then ascend in the tracheo-oesophageal groove.",
+      keyPoints: [
+        "Left hooks under the aortic arch; right hooks under the right subclavian artery.",
+        "A left recurrent palsy can result from an aortic arch aneurysm or a lung apex tumour.",
+      ],
+      difficulty: 2,
+      distractorIds: ["vagus-nerve", "pulmonary-plexus", "bronchial-arteries"],
+      view: { azimuth: 0.2, elevation: 0.05, zoom: 1.2 },
+    },
+    {
+      id: "pulmonary-plexus",
+      label: "Pulmonary plexus",
+      shortLabel: "Pulmonary plexus",
+      aliases: ["anterior and posterior pulmonary plexuses"],
+      tissue: "nerve",
+      description:
+        "The pulmonary plexus is the autonomic nerve network at the root of each lung, formed by vagal (parasympathetic) and sympathetic fibres. Its branches follow the bronchi and vessels into the lung to control bronchial muscle tone and gland secretion.",
+      keyPoints: [
+        "Lies anterior and posterior to the main bronchi at the hilum.",
+        "Parasympathetic fibres constrict bronchi; sympathetic fibres dilate them.",
+      ],
+      difficulty: 3,
+      distractorIds: ["vagus-nerve", "recurrent-laryngeal-nerve", "hilum-root"],
+      view: { azimuth: 3.0, elevation: 0.0, zoom: 1.5 },
+    },
+    {
+      id: "bronchial-arteries",
+      label: "Bronchial arteries",
+      shortLabel: "Bronchial aa.",
+      aliases: ["bronchial artery"],
+      tissue: "artery",
+      description:
+        "The bronchial arteries are small vessels — usually one on the right (from a posterior intercostal artery) and two on the left (from the descending thoracic aorta) — that supply oxygenated systemic blood to the walls of the bronchi and the lung stroma, unlike the pulmonary arteries.",
+      keyPoints: [
+        "Supply the bronchial walls and lung connective tissue with oxygenated blood.",
+        "Right usually arises from a posterior intercostal artery; the two left from the thoracic aorta.",
+      ],
+      difficulty: 2,
+      distractorIds: ["pulmonary-artery", "pulmonary-vein", "hilum-root"],
+      view: { azimuth: 3.0, elevation: 0.0, zoom: 1.4 },
+    },
+    {
+      id: "mediastinal-fat",
+      label: "Mediastinal fat",
+      shortLabel: "Mediastinal fat",
+      aliases: ["mediastinal adipose tissue"],
+      tissue: "fat",
+      description:
+        "Adipose tissue fills the mediastinum between the two lungs, cushioning and supporting the heart, great vessels, trachea and oesophagus. Its amount increases with age and body habitus.",
+      keyPoints: [
+        "Occupies the space between the pleural cavities, around the mediastinal structures.",
+        "A frequent site of incidental findings on chest imaging.",
+      ],
+      difficulty: 2,
+      distractorIds: ["hilum-root", "pulmonary-artery", "carina"],
+      view: { azimuth: 0.1, elevation: 0.05, zoom: 1.2 },
+    },
   ],
 };
