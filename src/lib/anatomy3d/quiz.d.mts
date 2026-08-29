@@ -5,8 +5,15 @@ export type AnatomyQuizOption = {
   text: string;
 };
 
+export type AnatomyQuizKind = "identify" | "system";
+
 export type AnatomyQuestion = {
   id: string;
+  /**
+   * "identify" — pick the highlighted structure's name (label is the structure's label).
+   * "system"   — pick the system the highlighted structure belongs to (label is the system's label).
+   */
+  kind: AnatomyQuizKind;
   moduleId: string;
   structureId: string;
   prompt: string;

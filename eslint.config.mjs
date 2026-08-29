@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored third-party minified assets (Draco decoder for GLB models).
+    "public/anatomy3d/draco/**",
   ]),
 ]);
 

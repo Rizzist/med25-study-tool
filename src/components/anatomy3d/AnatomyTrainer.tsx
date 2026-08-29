@@ -120,7 +120,9 @@ export function AnatomyTrainer() {
     () => visibleStructures.filter((structure) => structure.quizable !== false),
     [visibleStructures],
   );
-  const canQuiz = quizableVisible.length >= 4;
+  // A single visible quizable structure is enough: distractor labels are borrowed from the rest of
+  // the module (see buildAnatomyQuiz), so the quiz only dead-ends when nothing quizable is visible.
+  const canQuiz = quizableVisible.length >= 1;
 
   const questions = useMemo<AnatomyQuestion[]>(() => (
     manifest && canQuiz
@@ -354,7 +356,11 @@ export function AnatomyTrainer() {
               <div className="anatomy3d-question">
                 <p className="eyebrow">Difficulty {currentQuestion.difficulty}</p>
                 <h3>{currentQuestion.prompt}</h3>
-                <p>Inspect the highlighted structure, then choose its anatomical name.</p>
+                <p>
+                  {currentQuestion.kind === "system"
+                    ? "Inspect the highlighted structure, then choose the system it belongs to."
+                    : "Inspect the highlighted structure, then choose its anatomical name."}
+                </p>
               </div>
               <div className={`anatomy3d-options ${answered ? "locked" : ""}`}>
                 {currentQuestion.options.map((option) => {
@@ -400,8 +406,8 @@ export function AnatomyTrainer() {
             </>
             ) : (
               <div className="anatomy3d-empty">
-                <strong>Show more layers to quiz</strong>
-                <p>The quiz needs at least four visible structures. Turn layers back on to build a set.</p>
+                <strong>Show a layer to quiz</strong>
+                <p>Every layer is hidden. Turn at least one layer back on to reveal a structure to quiz.</p>
               </div>
             )
           ) : (

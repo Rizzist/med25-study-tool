@@ -95,11 +95,16 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
     for (const id of ids) for (const obj of structures.get(id) ?? []) box.expandByObject(obj);
     return box;
   };
-  const addProcedural = (id: string, mesh: Mesh) => {
+  // `opacity` (optional) overrides the tissue default per mesh so overlapping translucent air
+  // cavities read as distinct volumes instead of one muddy blob (only meaningful for transparent
+  // tissues such as `cavity`; the mesh is already `transparent` from the palette).
+  const addProcedural = (id: string, mesh: Mesh, opacity?: number) => {
     mesh.name = id;
     mesh.userData.structureId = id;
     mesh.userData.schematic = true;
-    mesh.material = tissueMaterial(structureTissue(id));
+    const material = tissueMaterial(structureTissue(id));
+    if (opacity !== undefined) material.opacity = opacity;
+    mesh.material = material;
     gltf.scene.add(mesh);
     pushMesh(id, mesh);
   };
@@ -121,13 +126,15 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
     const s = nasalBox.getSize(new Vector3());
     const infY = infConchaBox.isEmpty() ? c.y - s.y * 0.18 : infConchaBox.getCenter(new Vector3()).y;
     const zMid = c.z - s.z * 0.02;         // conchae/meatuses sit just behind the anterior cartilages
-    const midConchaY = infY + s.y * 0.26;  // middle concha just above the real inferior concha
-    const supConchaY = infY + s.y * 0.44;  // superior concha above the middle
+    // Stack the conchae with clear vertical air-gaps so each shelf + its meatus reads separately
+    // (the real inferior concha is a tall solid mesh, so lift the middle/superior well above it).
+    const midConchaY = infY + s.y * 0.32;  // middle concha, clear of the inferior concha above
+    const supConchaY = infY + s.y * 0.52;  // superior concha, clear of the middle concha above
     const zSup = zMid - s.z * 0.10;        // the superior concha/meatus lie postero-superiorly
 
     for (const side of [1, -1]) {
       // Conchae — clean scroll shelves hugging the lateral wall, stacked above the real inferior
-      // concha (middle just above it, superior above that and set back).
+      // concha (middle above it, superior above that and set back), spaced so none overlap.
       const mid = conchaMesh(s.x * 0.11, s.z * 0.36, side);
       mid.position.set(side * s.x * 0.26, midConchaY, zMid);
       addProcedural("middle-concha", mid);
@@ -135,51 +142,54 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
       sup.position.set(side * s.x * 0.24, supConchaY, zSup);
       addProcedural("superior-concha", sup);
 
-      // Meatuses — thin translucent air slabs immediately beneath each concha.
+      // Meatuses — thin translucent air slabs nested in the gap immediately beneath each concha,
+      // slightly more opaque than the big sinuses so the three read as distinct lateral-wall slots.
       const supM = new Mesh(new BoxGeometry(s.x * 0.12, s.y * 0.05, s.z * 0.26));
-      supM.position.set(side * s.x * 0.20, supConchaY - s.y * 0.09, zSup);
-      addProcedural("superior-meatus", supM);
+      supM.position.set(side * s.x * 0.20, supConchaY - s.y * 0.085, zSup);
+      addProcedural("superior-meatus", supM, 0.52);
       const midM = new Mesh(new BoxGeometry(s.x * 0.14, s.y * 0.055, s.z * 0.34));
-      midM.position.set(side * s.x * 0.22, midConchaY - s.y * 0.10, zMid);
-      addProcedural("middle-meatus", midM);
+      midM.position.set(side * s.x * 0.22, midConchaY - s.y * 0.11, zMid);
+      addProcedural("middle-meatus", midM, 0.52);
       const infM = new Mesh(new BoxGeometry(s.x * 0.16, s.y * 0.06, s.z * 0.40));
-      infM.position.set(side * s.x * 0.24, infY - s.y * 0.13, zMid + s.z * 0.02);
-      addProcedural("inferior-meatus", infM);
+      infM.position.set(side * s.x * 0.28, infY - s.y * 0.12, zMid + s.z * 0.02);
+      addProcedural("inferior-meatus", infM, 0.52);
 
-      // Maxillary sinus (paired) — the largest sinus: lateral & inferior, clear of the cavity.
+      // Maxillary sinus (paired) — the largest sinus: pushed lateral & inferior into the maxillary
+      // body so its medial edge stays off the conchae/central cavity; kept faintest so bone reads.
       const maxS = new Mesh(new SphereGeometry(1, 20, 14));
-      maxS.position.set(side * s.x * 0.48, c.y - s.y * 0.13, c.z + s.z * 0.02);
-      maxS.scale.set(s.x * 0.21, s.y * 0.22, s.z * 0.17);
-      addProcedural("maxillary-sinus", maxS);
+      maxS.position.set(side * s.x * 0.52, c.y - s.y * 0.16, c.z + s.z * 0.02);
+      maxS.scale.set(s.x * 0.19, s.y * 0.23, s.z * 0.18);
+      addProcedural("maxillary-sinus", maxS, 0.3);
 
       // Choanae (paired posterior nasal apertures) — rings at the back of each cavity.
       const cho = new Mesh(new TorusGeometry(Math.min(s.x, s.y) * 0.16, Math.min(s.x, s.y) * 0.045, 12, 24));
       cho.position.set(side * s.x * 0.15, c.y - s.y * 0.13, nasalBox.min.z + s.z * 0.07);
-      addProcedural("choanae", cho);
+      addProcedural("choanae", cho, 0.6);
 
-      // Frontal sinus (paired) — superior & anterior, just above the nasal bones, midline septum.
+      // Frontal sinus (paired) — superior & anterior, sitting just above the nasal bones.
       const frontal = new Mesh(new SphereGeometry(1, 20, 14));
-      frontal.position.set(side * s.x * 0.135, c.y + s.y * 0.57, c.z + s.z * 0.14);
+      frontal.position.set(side * s.x * 0.135, c.y + s.y * 0.60, c.z + s.z * 0.16);
       frontal.scale.set(s.x * 0.12, s.y * 0.10, s.z * 0.10);
-      addProcedural("frontal-sinus", frontal);
+      addProcedural("frontal-sinus", frontal, 0.5);
 
-      // Ethmoidal air cells — a tidy medial cluster of small cells between the orbits (3 per side).
-      for (const [zCoef, yCoef] of [[-0.005, 0.21], [-0.073, 0.21], [-0.141, 0.22]] as const) {
-        const cell = new Mesh(new SphereGeometry(s.x * 0.075, 12, 10));
-        cell.position.set(side * s.x * 0.11, c.y + s.y * yCoef, c.z + s.z * zCoef);
-        addProcedural("ethmoidal-air-cells", cell);
+      // Ethmoidal air cells — a tidy, small medial cluster between the orbits (2 per side),
+      // slightly opaque so the little beads stay distinct from the surrounding cavities.
+      for (const [zCoef, yCoef] of [[0.04, 0.18], [-0.06, 0.18]] as const) {
+        const cell = new Mesh(new SphereGeometry(s.x * 0.06, 12, 10));
+        cell.position.set(side * s.x * 0.14, c.y + s.y * yCoef, c.z + s.z * zCoef);
+        addProcedural("ethmoidal-air-cells", cell, 0.6);
       }
     }
 
     // Sphenoid sinus — a single deep cavity, posterior & superior in the midline.
     const sphenoid = new Mesh(new SphereGeometry(1, 22, 16));
-    sphenoid.position.set(0, c.y + s.y * 0.11, c.z - s.z * 0.44);
+    sphenoid.position.set(0, c.y + s.y * 0.14, c.z - s.z * 0.44);
     sphenoid.scale.set(s.x * 0.20, s.y * 0.17, s.z * 0.14);
-    addProcedural("sphenoid-sinus", sphenoid);
+    addProcedural("sphenoid-sinus", sphenoid, 0.44);
 
     // Hard palate — horizontal bony plate at the floor of the cavity / roof of the mouth.
     const palate = new Mesh(new BoxGeometry(s.x * 0.85, s.y * 0.06, s.z * 0.60));
-    palate.position.set(0, nasalBox.min.y + s.y * 0.07, c.z + s.z * 0.06);
+    palate.position.set(0, nasalBox.min.y + s.y * 0.05, c.z + s.z * 0.06);
     addProcedural("hard-palate", palate);
 
     // --- Procedural NERVE & VESSEL layers (no BodyParts3D mesh) ----------------
