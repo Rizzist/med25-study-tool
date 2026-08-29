@@ -308,6 +308,10 @@ export function AnatomyTrainer() {
           )}
         </aside>
       </div>
+
+      <p className="anatomy3d-attribution">
+        Anatomical meshes: BodyParts3D, © The Database Center for Life Science — CC BY 4.0
+      </p>
     </section>
   );
 }

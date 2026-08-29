@@ -18,7 +18,7 @@ export const larynxRealManifest = {
   id: "resp-larynx-real",
   region: "respiratory",
   modelKey: "larynx-real",
-  title: "Larynx (real mesh)",
+  title: "Larynx",
   subject: "anatomy",
   blurb:
     "Anatomically-accurate human larynx reconstructed from BodyParts3D segmented meshes: the laryngeal cartilages, hyoid bone, intrinsic muscles, membranes and the vocal ligament in true anatomical relationship.",

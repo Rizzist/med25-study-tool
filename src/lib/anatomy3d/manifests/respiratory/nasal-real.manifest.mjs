@@ -1,12 +1,30 @@
-/** @type {import("../../types").AnatomyModuleManifest} */
-export const nasalManifest = {
-  id: "resp-nasal",
+/**
+ * REAL (mesh-backed) + PROCEDURAL nasal / paranasal manifest — additive prototype, NOT registered.
+ *
+ * Real meshes from BodyParts3D (CC-BY 4.0), served in `nasal-real.glb`: nasal bones, septal +
+ * lateral nasal cartilage, vomer, ethmoid, and the inferior nasal concha.
+ *   Attribution: "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+ *
+ * BodyParts3D models solids only, so the paranasal AIR SPACES (frontal / maxillary / sphenoid
+ * sinuses, ethmoidal air cells), the three meatuses, the superior + middle conchae (parts of the
+ * ethmoid it does not separate), the hard palate and the choanae have NO mesh. Those are added
+ * PROCEDURALLY in the factory (userData.schematic = true), reusing the stylised nasal shapes and
+ * placed from the real nasal bounding box. Structure IDs match the stylised `nasal` manifest so
+ * quiz progress stays aligned; vomer, ethmoid-bone and lateral-nasal-cartilage are new real parts.
+ * (The whole maxilla and sphenoid bones are available in BodyParts3D but omitted — at ~93 mm and
+ * ~111 mm wide they would triple the model and make the nasal cavity unreadable; their sinuses are
+ * represented procedurally instead.)
+ *
+ * @type {import("../../types").AnatomyModuleManifest}
+ */
+export const nasalRealManifest = {
+  id: "resp-nasal-real",
   region: "respiratory",
-  modelKey: "nasal",
+  modelKey: "nasal-real",
   title: "Nasal cavity & paranasal sinuses",
   subject: "anatomy",
   blurb:
-    "A stylised cut-open block of the nasal cavity showing the septum, the three conchae and their meatuses, and the four paranasal sinuses.",
+    "The bony and cartilaginous nasal skeleton from BodyParts3D — nasal bones, septal cartilage, vomer, ethmoid and inferior concha — with the conchae, meatuses and paranasal sinuses overlaid as schematic air spaces.",
   structures: [
     {
       id: "nasal-bone",
@@ -26,19 +44,67 @@ export const nasalManifest = {
     },
     {
       id: "nasal-septum",
-      label: "Nasal septum",
+      label: "Nasal septum (septal cartilage)",
       shortLabel: "Septum",
-      aliases: ["septum of nose", "nasal septum"],
+      aliases: ["septum of nose", "septal cartilage", "nasal septum"],
       tissue: "cartilage",
       description:
-        "The nasal septum is the midline vertical partition that divides the nasal cavity into right and left halves. It is formed by the perpendicular plate of the ethmoid and the vomer posteriorly and the septal cartilage anteriorly.",
+        "The nasal septum is the midline partition dividing the nasal cavity into right and left halves. Its anterior part, shown here, is the septal cartilage; posteriorly it is completed by the perpendicular plate of the ethmoid above and the vomer below.",
       keyPoints: [
         "Lies in the midsagittal plane, separating the two nasal cavities.",
         "Deviation of the septum is a common cause of unilateral nasal obstruction.",
       ],
       difficulty: 1,
-      distractorIds: ["middle-concha", "hard-palate", "inferior-concha"],
+      distractorIds: ["vomer", "lateral-nasal-cartilage", "middle-concha"],
       view: { azimuth: 1.15, elevation: 0.08, zoom: 1.15 },
+    },
+    {
+      id: "lateral-nasal-cartilage",
+      label: "Lateral nasal cartilage",
+      shortLabel: "Lat. nasal cart.",
+      aliases: ["upper lateral cartilage", "lateral cartilage of nose"],
+      tissue: "cartilage",
+      description:
+        "The paired lateral (upper) nasal cartilages form the middle third of the external nose, extending from the lower border of the nasal bones down toward the alar cartilages. They are continuous in the midline with the septal cartilage.",
+      keyPoints: [
+        "Continuous superiorly with the nasal bones and medially with the septal cartilage.",
+        "Help keep the nasal vestibule patent during inspiration.",
+      ],
+      difficulty: 3,
+      distractorIds: ["nasal-septum", "nasal-bone", "inferior-concha"],
+      view: { azimuth: 0.25, elevation: 0.05, zoom: 1.7 },
+    },
+    {
+      id: "vomer",
+      label: "Vomer",
+      shortLabel: "Vomer",
+      aliases: ["vomer bone"],
+      tissue: "bone",
+      description:
+        "The vomer is a thin, flat, plough-shaped midline bone that forms the posteroinferior part of the bony nasal septum. It articulates above with the sphenoid and the perpendicular plate of the ethmoid, and below with the nasal crests of the maxillae and palatine bones.",
+      keyPoints: [
+        "Forms the posteroinferior bony nasal septum.",
+        "Its posterior free border separates the two choanae.",
+      ],
+      difficulty: 2,
+      distractorIds: ["nasal-septum", "ethmoid-bone", "hard-palate"],
+      view: { azimuth: 1.2, elevation: 0.0, zoom: 1.3 },
+    },
+    {
+      id: "ethmoid-bone",
+      label: "Ethmoid bone",
+      shortLabel: "Ethmoid",
+      aliases: ["ethmoid"],
+      tissue: "bone",
+      description:
+        "The ethmoid is a light, cubical midline bone lying between the orbits. It contributes the cribriform plate (roof), the perpendicular plate (upper septum), the superior and middle conchae, and the ethmoidal air cells, forming much of the roof and lateral walls of the nasal cavity.",
+      keyPoints: [
+        "Gives rise to the superior and middle nasal conchae.",
+        "Its cribriform plate transmits the olfactory nerve filaments into the cranial cavity.",
+      ],
+      difficulty: 2,
+      distractorIds: ["vomer", "middle-concha", "sphenoid-sinus"],
+      view: { azimuth: 0.3, elevation: 0.22, zoom: 1.4 },
     },
     {
       id: "superior-concha",
@@ -199,7 +265,7 @@ export const nasalManifest = {
       ],
       difficulty: 2,
       distractorIds: ["ethmoidal-air-cells", "frontal-sinus", "choanae"],
-      view: { azimuth: Math.PI, elevation: 0.12, zoom: 1.6 },
+      view: { azimuth: 3.14159, elevation: 0.12, zoom: 1.6 },
     },
     {
       id: "hard-palate",
@@ -231,7 +297,7 @@ export const nasalManifest = {
       ],
       difficulty: 2,
       distractorIds: ["sphenoid-sinus", "inferior-meatus", "hard-palate"],
-      view: { azimuth: Math.PI, elevation: -0.05, zoom: 1.5 },
+      view: { azimuth: 3.14159, elevation: -0.05, zoom: 1.5 },
     },
   ],
 };

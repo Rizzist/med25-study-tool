@@ -1,11 +1,28 @@
-/** @type {import("../../types").AnatomyModuleManifest} */
-export const tracheaLungManifest = {
-  id: "resp-trachea-lung",
+/**
+ * REAL (mesh-backed) + PROCEDURAL trachea / bronchi / lungs manifest — additive prototype,
+ * NOT registered in the live app.
+ *
+ * Real meshes come from BodyParts3D (CC-BY 4.0), served in `trachea-lung-real.glb`:
+ *   trachea, right/left main bronchus, the five lobes (each merged from its part-of segment
+ *   fragments and decimated), and the pulmonary artery + veins.
+ *   Attribution: "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+ *
+ * Structures that BodyParts3D does not model as separable meshes (tracheal rings, trachealis,
+ * carina, fissures, cardiac notch, lingula, hilum) are added PROCEDURALLY in the factory
+ * (userData.schematic = true) and placed from the real meshes' bounding boxes. Structure IDs are
+ * kept identical to the stylised `trachea-lung` manifest so quiz progress stays aligned; the
+ * pulmonary artery + veins are new (real) additions.
+ *
+ * @type {import("../../types").AnatomyModuleManifest}
+ */
+export const tracheaLungRealManifest = {
+  id: "resp-trachea-lung-real",
   region: "respiratory",
-  modelKey: "trachea-lung",
+  modelKey: "trachea-lung-real",
   title: "Trachea, bronchi & lungs",
   subject: "anatomy",
-  blurb: "The lower conducting airways and the lobed lungs: trachea, C-ring cartilages, carina, main bronchi, and the lobes, fissures and surface features of both lungs.",
+  blurb:
+    "Anatomically-accurate lower airways and lobed lungs from BodyParts3D meshes — trachea, main bronchi, the five lobes and the pulmonary vessels — with schematic tracheal rings, fissures and surface features overlaid.",
   structures: [
     {
       id: "trachea",
@@ -96,6 +113,36 @@ export const tracheaLungManifest = {
       difficulty: 2,
       distractorIds: ["right-main-bronchus", "carina", "trachea"],
       view: { azimuth: 0.35, elevation: 0.0, zoom: 1.6 },
+    },
+    {
+      id: "pulmonary-artery",
+      label: "Pulmonary artery",
+      shortLabel: "Pulmonary a.",
+      aliases: ["pulmonary trunk", "right/left pulmonary artery"],
+      tissue: "artery",
+      description: "The pulmonary trunk leaves the right ventricle and divides under the arch of the aorta into the right and left pulmonary arteries, carrying deoxygenated blood to the lungs. Each pulmonary artery enters the hilum anterosuperior to the main bronchus.",
+      keyPoints: [
+        "Carries deoxygenated blood — the exception among named arteries.",
+        "The right pulmonary artery is longer and passes behind the ascending aorta and SVC.",
+      ],
+      difficulty: 2,
+      distractorIds: ["pulmonary-vein", "hilum-root", "right-main-bronchus"],
+      view: { azimuth: 0.1, elevation: 0.1, zoom: 1.4 },
+    },
+    {
+      id: "pulmonary-vein",
+      label: "Pulmonary veins",
+      shortLabel: "Pulmonary v.",
+      aliases: ["pulmonary vein", "superior and inferior pulmonary veins"],
+      tissue: "vein",
+      description: "Four pulmonary veins — two from each lung — return oxygenated blood from the lungs to the left atrium. They occupy the most anteroinferior part of each hilum, below and in front of the pulmonary artery and bronchus.",
+      keyPoints: [
+        "Carry oxygenated blood — the exception among named veins.",
+        "Two superior and two inferior veins drain into the left atrium.",
+      ],
+      difficulty: 2,
+      distractorIds: ["pulmonary-artery", "hilum-root", "left-main-bronchus"],
+      view: { azimuth: 0.1, elevation: 0.05, zoom: 1.4 },
     },
     {
       id: "right-upper-lobe",

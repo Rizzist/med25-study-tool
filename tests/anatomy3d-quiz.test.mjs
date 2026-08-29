@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { larynxManifest } from "../src/lib/anatomy3d/manifests/respiratory/larynx.manifest.mjs";
+import { larynxRealManifest as larynxManifest } from "../src/lib/anatomy3d/manifests/respiratory/larynx-real.manifest.mjs";
 import { buildAnatomyQuiz, validateQuizQuestion } from "../src/lib/anatomy3d/quiz.mjs";
 
 test("anatomy quiz generation is deterministic for the same seed", () => {

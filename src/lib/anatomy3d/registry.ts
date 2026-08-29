@@ -1,7 +1,6 @@
+import { nasalRealManifest } from "./manifests/respiratory/nasal-real.manifest.mjs";
 import { larynxRealManifest } from "./manifests/respiratory/larynx-real.manifest.mjs";
-import { larynxManifest } from "./manifests/respiratory/larynx.manifest.mjs";
-import { nasalManifest } from "./manifests/respiratory/nasal.manifest.mjs";
-import { tracheaLungManifest } from "./manifests/respiratory/trachea-lung.manifest.mjs";
+import { tracheaLungRealManifest } from "./manifests/respiratory/trachea-lung-real.manifest.mjs";
 import type { AnatomyModelHandle, AnatomyModuleManifest } from "./types.ts";
 
 export type AnatomyModuleRegistration = {
@@ -9,7 +8,17 @@ export type AnatomyModuleRegistration = {
   createModel: () => AnatomyModelHandle | Promise<AnatomyModelHandle>;
 };
 
+// Real / hybrid BodyParts3D mesh-backed modules, ordered anatomically superior -> inferior.
+// The stylised procedural models (larynx.ts / nasal.ts / trachea-lung.ts and their manifests)
+// remain on disk but are no longer registered.
 const registrations: AnatomyModuleRegistration[] = [
+  {
+    manifest: nasalRealManifest,
+    async createModel() {
+      const { createRealNasalModel } = await import("./models/respiratory/nasal-real.ts");
+      return createRealNasalModel();
+    },
+  },
   {
     manifest: larynxRealManifest,
     async createModel() {
@@ -18,24 +27,10 @@ const registrations: AnatomyModuleRegistration[] = [
     },
   },
   {
-    manifest: larynxManifest,
+    manifest: tracheaLungRealManifest,
     async createModel() {
-      const { createLarynxModel } = await import("./models/respiratory/larynx.ts");
-      return createLarynxModel();
-    },
-  },
-  {
-    manifest: nasalManifest,
-    async createModel() {
-      const { createNasalModel } = await import("./models/respiratory/nasal.ts");
-      return createNasalModel();
-    },
-  },
-  {
-    manifest: tracheaLungManifest,
-    async createModel() {
-      const { createTracheaLungModel } = await import("./models/respiratory/trachea-lung.ts");
-      return createTracheaLungModel();
+      const { createRealTracheaLungModel } = await import("./models/respiratory/trachea-lung-real.ts");
+      return createRealTracheaLungModel();
     },
   },
 ];
