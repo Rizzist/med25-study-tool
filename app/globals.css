@@ -402,7 +402,17 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 }
 
 /* 3D anatomy trainer */
-.setup-content.anatomy3d-view { padding:20px; overflow:auto; }
+/* Immersive full-viewport view: app chrome (sidebar + top navbar) is hidden, mirroring the active-sprint session-shell. */
+.anatomy3d-immersive { position:relative; height:100dvh; overflow:hidden; display:flex; flex-direction:column; padding:14px 20px 18px; background:var(--paper); color:var(--ink); }
+.anatomy3d-exit { align-self:flex-start; display:inline-flex; align-items:center; gap:7px; min-height:38px; margin-bottom:12px; padding:8px 15px; border:1px solid var(--line); border-radius:999px; background:var(--card); color:var(--ink); font-weight:850; font-size:13px; cursor:pointer; box-shadow:0 6px 18px #23372a12; }
+.anatomy3d-exit span { font-size:15px; line-height:1; }
+.anatomy3d-exit:hover { border-color:var(--green); color:var(--deep); transform:translateY(-1px); }
+.anatomy3d-exit:focus-visible { outline:3px solid var(--amber); outline-offset:2px; }
+.anatomy3d-immersive .anatomy3d-trainer { flex:1; min-height:0; width:min(1760px,100%); grid-template-rows:auto auto minmax(0,1fr); }
+.anatomy3d-immersive .anatomy3d-layout { min-height:0; height:100%; grid-template-columns:minmax(0,1.62fr) minmax(340px,.68fr); }
+.anatomy3d-immersive .anatomy3d-viewer-card { display:flex; flex-direction:column; }
+.anatomy3d-immersive .anatomy3d-stage { flex:1; height:auto; min-height:0; max-height:none; }
+.anatomy3d-immersive .anatomy3d-panel { height:100%; max-height:none; }
 .anatomy3d-trainer { width:min(1500px,100%); margin:0 auto; display:grid; gap:14px; color:var(--ink); }
 .anatomy3d-header { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; padding:18px 20px; background:var(--card); border:1px solid var(--line); border-radius:16px; }
 .anatomy3d-header h2 { margin:2px 0 4px; font-size:clamp(25px,3vw,38px); letter-spacing:-.04em; }
@@ -469,7 +479,6 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
   .anatomy3d-stage { min-height:480px; }
 }
 @media (max-width:800px) {
-  .setup-content.anatomy3d-view { padding:12px; }
   .anatomy3d-header { align-items:stretch; flex-direction:column; }
   .anatomy3d-mode-switch { width:100%; }
   .anatomy3d-layout { grid-template-columns:1fr; }
@@ -483,4 +492,13 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
   .anatomy3d-training-controls label { justify-content:center; }
   .anatomy3d-actions { justify-content:stretch; }
   .anatomy3d-actions button { flex:1; }
+}
+/* Immersive view stacks and scrolls on narrow screens (side panel drops below the viewer). */
+@media (max-width:900px) {
+  .anatomy3d-immersive { height:auto; min-height:100dvh; overflow:auto; padding:12px 14px 22px; }
+  .anatomy3d-immersive .anatomy3d-trainer { flex:none; width:100%; grid-template-rows:none; }
+  .anatomy3d-immersive .anatomy3d-layout { height:auto; grid-template-columns:1fr; }
+  .anatomy3d-immersive .anatomy3d-viewer-card { display:block; }
+  .anatomy3d-immersive .anatomy3d-stage { flex:none; height:56vh; min-height:360px; }
+  .anatomy3d-immersive .anatomy3d-panel { height:auto; overflow:visible; }
 }

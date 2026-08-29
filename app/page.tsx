@@ -1095,6 +1095,17 @@ export default function Home() {
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Equipment, carbohydrate tests, titration and image analysis", count: examCount("practical") },
   ];
 
+  if (tab === "3D Anatomy" && exam === "term2-respiratory") {
+    return (
+      <main className="anatomy3d-immersive">
+        <button type="button" className="anatomy3d-exit" onClick={() => setTab("Overview")}>
+          <span aria-hidden="true">←</span> Back to study
+        </button>
+        <AnatomyTrainer />
+      </main>
+    );
+  }
+
   const examSwitcher = <div className="exam-switcher-shell"><div className="term-switcher" aria-label="Choose term"><button className={!isTerm2Exam(exam) ? "active" : ""} aria-pressed={!isTerm2Exam(exam)} onClick={() => chooseExam("july25")}>Term 1</button><button className={isTerm2Exam(exam) ? "active" : ""} aria-pressed={isTerm2Exam(exam)} onClick={() => chooseExam("term2-respiratory")}>Term 2</button></div><div className={`exam-switcher ${isTerm2Exam(exam) ? "term2-exams" : ""}`} aria-label="Choose exam">
     {(Object.keys(examConfig) as ExamId[]).filter((value) => isTerm2Exam(value) === isTerm2Exam(exam)).map((value) => {
       const item = examConfig[value];
@@ -1159,7 +1170,7 @@ export default function Home() {
 
       <section className="setup-workspace">
         <header className="setup-topbar"><span className="topbar-label">Exam engine</span><div className="header-exam-switcher">{examSwitcher}</div><span className={health?.ok ? "connection good" : "connection waiting"}>● {health?.ok ? (health.codex.available ? "Codex ready" : "Study engine ready") : "Study engine offline"}</span></header>
-        <section className={`setup-content ${isTerm2Exam(exam) ? "term2-view" : ""} ${tab === "Overview" ? "overview-view" : ""} ${tab === "3D Anatomy" ? "anatomy3d-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Practical Atlas" || tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Practical Atlas" ? "practical-atlas-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
+        <section className={`setup-content ${isTerm2Exam(exam) ? "term2-view" : ""} ${tab === "Overview" ? "overview-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Practical Atlas" || tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Practical Atlas" ? "practical-atlas-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
           {tab === "Study concepts" && exam === "term2-respiratory" && <>
             <RespiratoryConceptHub
               initialScopeId={lastRespiratoryScopeId}
@@ -1171,7 +1182,6 @@ export default function Home() {
             {phase === "loading" && <p role="status" className="resp-session-alert">Preparing your concept practice…</p>}
             {sessionError && <p role="alert" className="session-error resp-session-alert">{sessionError}</p>}
           </>}
-          {tab === "3D Anatomy" && exam === "term2-respiratory" && <AnatomyTrainer />}
           {tab === "Overview" && <>
             <p className="eyebrow">{isTerm2Exam(exam) ? "Term 2 exam" : "Priority exam"} · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam.</p>
