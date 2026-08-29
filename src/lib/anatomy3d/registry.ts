@@ -1,3 +1,4 @@
+import { larynxRealManifest } from "./manifests/respiratory/larynx-real.manifest.mjs";
 import { larynxManifest } from "./manifests/respiratory/larynx.manifest.mjs";
 import { nasalManifest } from "./manifests/respiratory/nasal.manifest.mjs";
 import { tracheaLungManifest } from "./manifests/respiratory/trachea-lung.manifest.mjs";
@@ -9,6 +10,13 @@ export type AnatomyModuleRegistration = {
 };
 
 const registrations: AnatomyModuleRegistration[] = [
+  {
+    manifest: larynxRealManifest,
+    async createModel() {
+      const { createRealLarynxModel } = await import("./models/respiratory/larynx-real.ts");
+      return createRealLarynxModel();
+    },
+  },
   {
     manifest: larynxManifest,
     async createModel() {
