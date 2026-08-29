@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistSans = localFont({
+  src: "../node_modules/next/dist/next-devtools/server/font/geist-latin.woff2",
+  variable: "--font-geist-sans",
+});
+const geistMono = localFont({
+  src: "../node_modules/next/dist/next-devtools/server/font/geist-mono-latin.woff2",
+  variable: "--font-geist-mono",
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const image = "https://med25-exam-sprint.wise-sun-8653.chatgpt.site/og.png";

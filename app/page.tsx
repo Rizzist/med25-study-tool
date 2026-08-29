@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element -- question images are streamed from the local study bridge */
 
 import { useCallback, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import {
   BiochemistryChapterHub,
   BiochemistryMasteryGrid,
@@ -31,6 +32,8 @@ import { classifySessionCompletion } from "@/src/lib/mcq/sprint-selection.mjs";
 import type { CodexGrade, MCQMedia, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
 import { isExamId, isTerm2Exam, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
 import { createEmptyProgress, parseProgress, type StudyProgress } from "@/src/lib/mcq/study-progress.mjs";
+
+const AnatomyTrainer = dynamic(() => import("@/src/components/anatomy3d/AnatomyTrainer"), { ssr: false });
 
 type BridgeHealth = {
   ok: boolean;
@@ -98,7 +101,7 @@ const bridgeUrl = process.env.NEXT_PUBLIC_CODEX_BRIDGE_URL
   ?? (process.env.NODE_ENV === "production" ? "" : "http://127.0.0.1:4111");
 const progressStorageKey = "med25-study-progress-v1";
 const sessionArchiveStorageKey = "med25-session-archive-v1";
-const tabs = ["Overview", "Study concepts", "Final exam", "Topics", "Practical Atlas", "Visual Guide", "Results", "Codex tutor"] as const;
+const tabs = ["Overview", "Study concepts", "3D Anatomy", "Final exam", "Topics", "Practical Atlas", "Visual Guide", "Results", "Codex tutor"] as const;
 const sprintLengths = [10, 20, 40, 60, 100, 150, 200, 250] as const;
 const examConfig: Record<ExamId, {
   date: string;
@@ -601,7 +604,7 @@ export default function Home() {
     setActiveBiochemistryChapterId(undefined);
     setActiveRespiratoryScopeId(undefined);
     setActiveRespiratoryPracticeIds(undefined);
-    if (tab === "Study concepts" && nextExam !== "term2-respiratory") setTab("Overview");
+    if ((tab === "Study concepts" || tab === "3D Anatomy") && nextExam !== "term2-respiratory") setTab("Overview");
   }
 
   async function startSession(nextCollection: CollectionId = collection, exactIds?: string[], options: {
@@ -1150,13 +1153,13 @@ export default function Home() {
     <main className="setup-shell">
       <aside className="setup-sidebar">
         <div className="brand"><span>MED//25</span><small>Term 1 + Term 2</small><small>July 25 · Aug 22 · Aug 25</small></div>
-        <nav className="setup-nav" aria-label="Application sections">{tabs.filter((item) => item !== "Study concepts" || exam === "term2-respiratory").map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{item}</button>)}</nav>
+        <nav className="setup-nav" aria-label="Application sections">{tabs.filter((item) => (item !== "Study concepts" && item !== "3D Anatomy") || exam === "term2-respiratory").map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
       </aside>
 
       <section className="setup-workspace">
         <header className="setup-topbar"><span className="topbar-label">Exam engine</span><div className="header-exam-switcher">{examSwitcher}</div><span className={health?.ok ? "connection good" : "connection waiting"}>● {health?.ok ? (health.codex.available ? "Codex ready" : "Study engine ready") : "Study engine offline"}</span></header>
-        <section className={`setup-content ${isTerm2Exam(exam) ? "term2-view" : ""} ${tab === "Overview" ? "overview-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Practical Atlas" || tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Practical Atlas" ? "practical-atlas-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
+        <section className={`setup-content ${isTerm2Exam(exam) ? "term2-view" : ""} ${tab === "Overview" ? "overview-view" : ""} ${tab === "3D Anatomy" ? "anatomy3d-view" : ""} ${tab === "Final exam" ? "final-exam-view" : ""} ${tab === "Topics" ? "topics-view" : ""} ${tab === "Practical Atlas" || tab === "Visual Guide" ? "lesson-guide-view" : ""} ${tab === "Practical Atlas" ? "practical-atlas-view" : ""} ${tab === "Results" ? "results-view" : ""}`}>
           {tab === "Study concepts" && exam === "term2-respiratory" && <>
             <RespiratoryConceptHub
               initialScopeId={lastRespiratoryScopeId}
@@ -1168,6 +1171,7 @@ export default function Home() {
             {phase === "loading" && <p role="status" className="resp-session-alert">Preparing your concept practice…</p>}
             {sessionError && <p role="alert" className="session-error resp-session-alert">{sessionError}</p>}
           </>}
+          {tab === "3D Anatomy" && exam === "term2-respiratory" && <AnatomyTrainer />}
           {tab === "Overview" && <>
             <p className="eyebrow">{isTerm2Exam(exam) ? "Term 2 exam" : "Priority exam"} · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam.</p>
