@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
 import { selectPracticalSprint } from "../src/lib/mcq/practical-selection.mjs";
 import { createEmptyProgress, parseProgress } from "../src/lib/mcq/study-progress.mjs";
+import { filterPracticalQuestions } from "../src/lib/mcq/practical-filter.mjs";
 const root = new URL("../", import.meta.url);
 const catalog = JSON.parse(readFileSync(new URL("data/term2/physiology-practical.json", root), "utf8"));
 const bank = readFileSync(new URL("data/bank/questions/term2-physiology-practical.jsonl", root), "utf8").trim().split("\n").map((line) => JSON.parse(line));
@@ -16,18 +17,19 @@ async function route(path, body) {
 }
 test("practical catalog maps every objective to source-linked questions and existing figures", () => {
   assert.equal(catalog.stations.length, 9);
-  assert.equal(catalog.totals.objectives, 36);
-  assert.equal(bank.length, 72);
-  assert.equal(catalog.totals.imageQuestions, 9);
+  assert.equal(catalog.totals.objectives, 98);
+  assert.equal(catalog.totals.theorySets, 62);
+  assert.equal(bank.length, 320);
+  assert.equal(catalog.totals.imageQuestions, 30);
   const ids = new Set(bank.map((q) => q.id));
-  assert.equal(ids.size, 72);
+  assert.equal(ids.size, bank.length);
   const mapped = catalog.stations.flatMap((station) => {
-    assert.equal(station.objectiveCoverage.length, 4);
+    assert.equal(station.objectiveCoverage.length, 4 + station.theorySets.length);
     assert(station.steps.length >= 5 && station.worked.length && station.traps.length);
     for (const image of station.images) assert(existsSync(new URL(`public/study/${image.path}`, root)));
     for (const video of station.videos) assert.match(video.id, /^[\w-]{11}$/);
     return station.objectiveCoverage.flatMap((objective) => {
-      assert.equal(objective.questionIds.length, 2);
+      assert(objective.questionIds.length >= 2);
       for (const id of objective.questionIds) assert.equal(bank.find((q) => q.id === id).learningObjective, objective.title);
       return objective.questionIds;
     });
@@ -40,7 +42,7 @@ test("practical catalog maps every objective to source-linked questions and exis
     for (const option of question.options.filter((option) => option.id !== question.correctOptionId)) assert(question.distractorExplanations[option.id].length > 20);
     for (const media of question.media ?? []) assert(existsSync(new URL(`public/study/${media.path}`, root)));
   }
-  for (const letter of ["A", "B", "C", "D"]) assert.equal(bank.filter((q) => q.correctOptionId === letter).length, 18);
+  for (const letter of ["A", "B", "C", "D"]) assert.equal(bank.filter((q) => q.correctOptionId === letter).length, 80);
 });
 test("practical mocks balance stations, respect limits and do not mutate the bank", () => {
   const original = JSON.stringify(bank);
@@ -53,7 +55,8 @@ test("practical mocks balance stations, respect limits and do not mutate the ban
   assert.equal(JSON.stringify(bank), original);
   assert.equal(selectPracticalSprint([], { limit: 36, studyMode: "exam" }).questions.length, 0);
   const station = bank.filter((q) => q.tags.includes("practical-station-ecg"));
-  assert.equal(selectPracticalSprint(station, { limit: 36, studyMode: "exam" }).questions.length, 8);
+  assert.equal(selectPracticalSprint(station, { limit: 36, studyMode: "exam" }).questions.length, 36);
+  assert.equal(selectPracticalSprint(station, { limit: 100, studyMode: "exam" }).questions.length, 52);
   assert.equal(selectPracticalSprint(bank, { limit: 1, repairIds: [bank[5].id] }).questions[0].id, bank[5].id);
 });
 test("practical progress is isolated and older progress survives migration", () => {
@@ -66,10 +69,10 @@ test("practical progress is isolated and older progress survives migration", () 
 test("practical API supports balanced mocks, exact resume, media and strict exam separation", async () => {
   const summary = await (await route("/api/bank/summary")).json();
   const practical = summary.exams.find((exam) => exam.id === catalog.examId);
-  assert.equal(practical.questionCount, 72);
-  assert.equal(practical.imageQuestionCount, 9);
+  assert.equal(practical.questionCount, 320);
+  assert.equal(practical.imageQuestionCount, 30);
   assert.equal(practical.finalExamQuestionCount, 0);
-  assert.equal(practical.collectionCounts.practical, 72);
+  assert.equal(practical.collectionCounts.practical, 320);
   const { questions } = await (await route("/api/questions/sprint", { exam: catalog.examId, collection: "all", limit: 36, studyMode: "exam" })).json();
   assert.equal(questions.length, 36);
   for (const station of catalog.stations) assert.equal(questions.filter((q) => station.questionIds.includes(q.id)).length, 4);
@@ -128,4 +131,79 @@ test("practical lessons render substantive study, image/video and recall panels 
   assert.match(recall, /Objective → question coverage/);
   assert.match(recall, /Test this/);
   assert.match(recall, /Station mock/);
+  const questionSets = compiled.exports.render("questions");
+  assert.match(questionSets, /Theory, one problem set at a time/);
+  assert.match(questionSets, /40 questions for this station/);
+  assert.match(questionSets, /Search this station/);
+  assert.match(questionSets, /Preview question prompts/);
+  assert.match(questionSets, /Slide-by-slide audit/);
+  assert.doesNotMatch(questionSets, /distractorExplanations|correctOptionId/);
+});
+
+test("all 72 original question IDs, options, answers and explanations remain unchanged", () => {
+  const original = readFileSync(new URL("tests/fixtures/physiology-practical-v1.jsonl", root), "utf8").trim().split("\n").map(JSON.parse);
+  assert.equal(original.length, 72);
+  for (const old of original) {
+    const current = bank.find((q) => q.id === old.id);
+    for (const field of ["id", "prompt", "options", "correctOptionId", "explanation", "distractorExplanations", "learningObjective", "source", "media"]) assert.deepEqual(current[field], old[field], `${old.id}: ${field}`);
+  }
+});
+
+test("theory sets and page audit account for all eight files without hiding unresolved content", () => {
+  assert.equal(catalog.pageAudit.length, 8);
+  assert.equal(catalog.pageAudit.reduce((n, source) => n + source.audit.length, 0), 198);
+  const sets = catalog.stations.flatMap((s) => s.theorySets);
+  const setIds = new Set(sets.map((set) => set.id));
+  assert.equal(setIds.size, 62);
+  assert.equal(sets.flatMap((s) => s.questionIds).length, 248);
+  for (const source of catalog.pageAudit) {
+    assert.deepEqual(source.audit.map((row) => row.page), Array.from({ length: source.pages }, (_, i) => i + 1));
+    for (const row of source.audit) {
+      assert(row.note && row.status);
+      if (row.status === "mapped") assert(row.unitIds.length);
+      assert(row.unitIds.every((id) => setIds.has(id)));
+    }
+  }
+  assert.equal(catalog.pageAudit.find((s) => s.key === "ecg").audit[29].status, "unavailable");
+  assert.equal(catalog.pageAudit.find((s) => s.key === "spiro").audit[23].status, "limited");
+  for (const set of sets) {
+    assert.equal(set.questionIds.length, 4);
+    assert(set.locator && set.source);
+    for (const id of set.questionIds) assert(bank.find((q) => q.id === id).tags.includes(`practical-set-${set.id}`));
+  }
+});
+
+test("question filters give exact launch pools, combine search and progress, and expose no answer keys", () => {
+  const ids = bank.map((q) => q.id);
+  const index = catalog.questionIndex;
+  assert(index.every((q) => !q.answer && !q.correctOptionId && !q.explanation));
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "new" }).length, 248);
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "images" }).length, 30);
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "calculations" }).length, 56);
+  const attemptedIds = ids.slice(0, 40);
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "unseen", attemptedIds }).length, 280);
+  assert.deepEqual(filterPracticalQuestions(index, ids, { filter: "repair", repairIds: [ids[5], "invalid"] }), [ids[5]]);
+  assert.deepEqual(filterPracticalQuestions(index, [ids[0], ids[0], "invalid"]), [ids[0]]);
+  assert.deepEqual(filterPracticalQuestions(index, ids, { query: "zzzz-nonexistent" }), []);
+  const ecg = catalog.stations.find((s) => s.id === "ecg");
+  const result = filterPracticalQuestions(index, ecg.questionIds, { query: "  PAPER speed ", filter: "new" });
+  assert(result.length > 0 && result.every((id) => ecg.questionIds.includes(id) && id.includes("theory-")));
+});
+
+test("independent worked-value checks protect common calculation traps", () => {
+  const expected = {
+    "pp-ecg-theory-small-box-voltage": `${8 / 10} mV`,
+    "pp-ecg-theory-rate-fifty-speed": `${60 / (25 / 50)} beats/min`,
+    "pp-ecg-theory-timed-strip-rate": `${13 * 6} beats/min`,
+    "pp-spirometry-theory-percent-predicted-case": `${Math.round(3.24 / 4 * 100)}%`,
+    "pp-spirometry-theory-mixed-volume-units": `${2800 / 3500 * 100}%`,
+    "pp-rbc-theory-rbc-five-counts": `${((96 + 102 + 100 + 104 + 98) * 200 / 0.02 / 1e6).toFixed(1)} million cells/µL`,
+    "pp-wbc-theory-wbc-four-counts": `${((32 + 28 + 30 + 34) * 20 / 0.4).toLocaleString("en-US")}/µL`,
+    "pp-differential-theory-dlc-twohundred": `${Math.round(112 / 200 * 100)}%`,
+    "pp-hematocrit-theory-hct-18-45": `${18 / 45 * 100}%`,
+  };
+  for (const [id, answer] of Object.entries(expected)) {
+    const question = bank.find((q) => q.id === id);
+    assert.equal(question.options.find((option) => option.id === question.correctOptionId).text, answer, id);
+  }
 });

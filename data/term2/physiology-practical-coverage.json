@@ -2,19 +2,1803 @@
   "basis": "Seven unique WhatsApp files plus the existing local ECG applied-physiology assignment. This is a source-based revision circuit, not an official station blueprint or past-paper bank.",
   "totals": {
     "stations": 9,
-    "objectives": 36,
-    "questions": 72,
-    "imageQuestions": 9,
-    "images": 16,
+    "objectives": 98,
+    "questions": 320,
+    "imageQuestions": 30,
+    "images": 29,
     "videos": 12,
-    "studyMinutes": 310
+    "studyMinutes": 310,
+    "theorySets": 62,
+    "newQuestions": 248,
+    "sourcePages": 198,
+    "calculationQuestions": 56
   },
+  "pageAudit": [
+    {
+      "key": "bp",
+      "title": "Blood pressure measurement international.pdf",
+      "file": "01 - Blood pressure and heart sounds.pdf",
+      "pages": 38,
+      "kind": "page",
+      "audit": [
+        {
+          "page": 1,
+          "status": "noninstructional",
+          "note": "Title page.",
+          "unitIds": []
+        },
+        {
+          "page": 2,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "pressure-principles"
+          ]
+        },
+        {
+          "page": 3,
+          "status": "background",
+          "note": "Historical direct-measurement illustration; no date-recall question.",
+          "unitIds": [
+            "pressure-principles"
+          ]
+        },
+        {
+          "page": 4,
+          "status": "background",
+          "note": "Historical instrument timeline; no date-recall question.",
+          "unitIds": [
+            "pressure-principles"
+          ]
+        },
+        {
+          "page": 5,
+          "status": "background",
+          "note": "Laennec/stethoscope history; acoustics assessed elsewhere, historical dates not assessed.",
+          "unitIds": [
+            "stethoscope-theory"
+          ]
+        },
+        {
+          "page": 6,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "pressure-principles"
+          ]
+        },
+        {
+          "page": 7,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "pressure-principles",
+            "endpoint-troubleshooting",
+            "bp-procedure-reasons"
+          ]
+        },
+        {
+          "page": 8,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "arterial-sites",
+            "endpoint-troubleshooting"
+          ]
+        },
+        {
+          "page": 9,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "arterial-sites"
+          ]
+        },
+        {
+          "page": 10,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "arterial-sites"
+          ]
+        },
+        {
+          "page": 11,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bp-procedure-reasons",
+            "stethoscope-theory"
+          ]
+        },
+        {
+          "page": 12,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "pressure-principles",
+            "korotkoff-phases"
+          ]
+        },
+        {
+          "page": 13,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "pressure-principles",
+            "korotkoff-phases"
+          ]
+        },
+        {
+          "page": 14,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "pressure-principles",
+            "korotkoff-phases"
+          ]
+        },
+        {
+          "page": 15,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "arterial-sites"
+          ]
+        },
+        {
+          "page": 16,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "korotkoff-phases",
+            "endpoint-troubleshooting"
+          ]
+        },
+        {
+          "page": 17,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "korotkoff-phases",
+            "endpoint-troubleshooting"
+          ]
+        },
+        {
+          "page": 18,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "position-errors"
+          ]
+        },
+        {
+          "page": 19,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "position-errors"
+          ]
+        },
+        {
+          "page": 20,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "pressure-calculations"
+          ]
+        },
+        {
+          "page": 21,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "stethoscope-theory"
+          ]
+        },
+        {
+          "page": 22,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "arterial-sites"
+          ]
+        },
+        {
+          "page": 23,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "arterial-sites"
+          ]
+        },
+        {
+          "page": 24,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "arterial-sites"
+          ]
+        },
+        {
+          "page": 25,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "endpoint-troubleshooting"
+          ]
+        },
+        {
+          "page": 26,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "endpoint-troubleshooting"
+          ]
+        },
+        {
+          "page": 27,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "cardiac-sound-timing",
+            "extra-sounds",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 28,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "cardiac-sound-timing",
+            "extra-sounds",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 29,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "listening-landmarks",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 30,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "listening-landmarks",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 31,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "listening-landmarks",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 32,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bp-procedure-reasons",
+            "stethoscope-theory",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 33,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bp-procedure-reasons",
+            "stethoscope-theory",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 34,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bp-procedure-reasons"
+          ]
+        },
+        {
+          "page": 35,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "position-errors",
+            "bp-procedure-reasons"
+          ]
+        },
+        {
+          "page": 36,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bp-table"
+          ]
+        },
+        {
+          "page": 37,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "position-errors",
+            "endpoint-troubleshooting",
+            "bp-procedure-reasons",
+            "listening-landmarks",
+            "sound-integration"
+          ]
+        },
+        {
+          "page": 38,
+          "status": "noninstructional",
+          "note": "Closing slide.",
+          "unitIds": []
+        }
+      ]
+    },
+    {
+      "key": "ecg",
+      "title": "ECG Appl Physio Class 7.ppt",
+      "file": "02 - ECG recording and interpretation.ppt",
+      "pages": 61,
+      "kind": "slide",
+      "audit": [
+        {
+          "page": 1,
+          "status": "background",
+          "note": "Einthoven historical photograph; no biographical/date question.",
+          "unitIds": []
+        },
+        {
+          "page": 2,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-leads"
+          ]
+        },
+        {
+          "page": 3,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-calibration"
+          ]
+        },
+        {
+          "page": 4,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-leads"
+          ]
+        },
+        {
+          "page": 5,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-leads"
+          ]
+        },
+        {
+          "page": 6,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-leads"
+          ]
+        },
+        {
+          "page": 7,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-leads",
+            "ecg-axes-views"
+          ]
+        },
+        {
+          "page": 8,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axes-views"
+          ]
+        },
+        {
+          "page": 9,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axes-views"
+          ]
+        },
+        {
+          "page": 10,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axes-views",
+            "ecg-territories"
+          ]
+        },
+        {
+          "page": 11,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axes-views",
+            "ecg-territories"
+          ]
+        },
+        {
+          "page": 12,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-calibration",
+            "ecg-rate-maths"
+          ]
+        },
+        {
+          "page": 13,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-calibration",
+            "ecg-rate-maths"
+          ]
+        },
+        {
+          "page": 14,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-calibration",
+            "ecg-rate-maths"
+          ]
+        },
+        {
+          "page": 15,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-calibration",
+            "ecg-rate-maths"
+          ]
+        },
+        {
+          "page": 16,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-rate-maths"
+          ]
+        },
+        {
+          "page": 17,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-rate-maths"
+          ]
+        },
+        {
+          "page": 18,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-wave-intervals",
+            "ecg-sinus-check"
+          ]
+        },
+        {
+          "page": 19,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-sinus-check"
+          ]
+        },
+        {
+          "page": 20,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axis-quadrants"
+          ]
+        },
+        {
+          "page": 21,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axis-quadrants"
+          ]
+        },
+        {
+          "page": 22,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axis-quadrants",
+            "ecg-equiphasic"
+          ]
+        },
+        {
+          "page": 23,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axis-quadrants",
+            "ecg-equiphasic"
+          ]
+        },
+        {
+          "page": 24,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axis-quadrants"
+          ]
+        },
+        {
+          "page": 25,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-axis-quadrants"
+          ]
+        },
+        {
+          "page": 26,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-equiphasic"
+          ]
+        },
+        {
+          "page": 27,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-acquisition"
+          ]
+        },
+        {
+          "page": 28,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-acquisition"
+          ]
+        },
+        {
+          "page": 29,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-acquisition"
+          ]
+        },
+        {
+          "page": 30,
+          "status": "unavailable",
+          "note": "Embedded-video placeholder has no playable content in the local rendered source.",
+          "unitIds": []
+        },
+        {
+          "page": 31,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 32,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 33,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 34,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 35,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 36,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-calibration"
+          ]
+        },
+        {
+          "page": 37,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 38,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-sinus-check"
+          ]
+        },
+        {
+          "page": 39,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 40,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 41,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 42,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer",
+            "ecg-equiphasic"
+          ]
+        },
+        {
+          "page": 43,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 44,
+          "status": "limited",
+          "note": "Visible ECG examples audited. Transfer questions assess calibration/rhythm/axis; specific diagnoses are not keyed. Unrelated hidden vendor text is not teaching content; patient-labelled images are not newly republished.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 45,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-sinus-check"
+          ]
+        },
+        {
+          "page": 46,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 47,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 48,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 49,
+          "status": "limited",
+          "note": "Unkeyed axis example. Axis methods assessed; no invented official diagnosis/answer key.",
+          "unitIds": [
+            "ecg-visual-transfer",
+            "ecg-equiphasic"
+          ]
+        },
+        {
+          "page": 50,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 51,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-sinus-check"
+          ]
+        },
+        {
+          "page": 52,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-acquisition"
+          ]
+        },
+        {
+          "page": 53,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-acquisition"
+          ]
+        },
+        {
+          "page": 54,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-acquisition"
+          ]
+        },
+        {
+          "page": 55,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-wave-intervals",
+            "ecg-territories"
+          ]
+        },
+        {
+          "page": 56,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-acquisition"
+          ]
+        },
+        {
+          "page": 57,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-territories"
+          ]
+        },
+        {
+          "page": 58,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-territories"
+          ]
+        },
+        {
+          "page": 59,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-territories"
+          ]
+        },
+        {
+          "page": 60,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-territories"
+          ]
+        },
+        {
+          "page": 61,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-territories"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "assignment",
+      "title": "ECG Eng Appl Physio Assignment.ppt",
+      "file": "03 - ECG practice assignment.ppt",
+      "pages": 4,
+      "kind": "slide",
+      "audit": [
+        {
+          "page": 1,
+          "status": "limited",
+          "note": "Five-rule rhythm assessment practised; no invented definitive official answer to this unkeyed trace.",
+          "unitIds": [
+            "ecg-sinus-check",
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 2,
+          "status": "limited",
+          "note": "Recording-speed adjustment and rapid regular pattern assessed; exact rhythm mechanism not established by the unkeyed image.",
+          "unitIds": [
+            "ecg-calibration",
+            "ecg-visual-transfer"
+          ]
+        },
+        {
+          "page": 3,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-rate-maths"
+          ]
+        },
+        {
+          "page": 4,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "ecg-equiphasic"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "spiro",
+      "title": "Spirometery for kish class.pptx",
+      "file": "04 - Spirometry and trace calculations.pptx",
+      "pages": 25,
+      "kind": "slide",
+      "audit": [
+        {
+          "page": 1,
+          "status": "noninstructional",
+          "note": "Decorative opening image.",
+          "unitIds": []
+        },
+        {
+          "page": 2,
+          "status": "noninstructional",
+          "note": "Title slide.",
+          "unitIds": []
+        },
+        {
+          "page": 3,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-apparatus"
+          ]
+        },
+        {
+          "page": 4,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-volumes",
+            "spiro-capacities"
+          ]
+        },
+        {
+          "page": 5,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-apparatus"
+          ]
+        },
+        {
+          "page": 6,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-apparatus"
+          ]
+        },
+        {
+          "page": 7,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-integrated"
+          ]
+        },
+        {
+          "page": 8,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-volumes",
+            "spiro-trace-scale"
+          ]
+        },
+        {
+          "page": 9,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-volumes",
+            "spiro-trace-scale"
+          ]
+        },
+        {
+          "page": 10,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-correction"
+          ]
+        },
+        {
+          "page": 11,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-correction"
+          ]
+        },
+        {
+          "page": 12,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-correction"
+          ]
+        },
+        {
+          "page": 13,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-correction"
+          ]
+        },
+        {
+          "page": 14,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-correction",
+            "spiro-integrated"
+          ]
+        },
+        {
+          "page": 15,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-correction",
+            "spiro-patterns"
+          ]
+        },
+        {
+          "page": 16,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-correction",
+            "spiro-integrated"
+          ]
+        },
+        {
+          "page": 17,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-ratio"
+          ]
+        },
+        {
+          "page": 18,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-trace-scale",
+            "spiro-ratio"
+          ]
+        },
+        {
+          "page": 19,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-trace-scale",
+            "spiro-ratio",
+            "spiro-integrated"
+          ]
+        },
+        {
+          "page": 20,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-ratio",
+            "spiro-patterns",
+            "spiro-integrated"
+          ]
+        },
+        {
+          "page": 21,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-trace-scale",
+            "spiro-integrated"
+          ]
+        },
+        {
+          "page": 22,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-patterns"
+          ]
+        },
+        {
+          "page": 23,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "spiro-capacities",
+            "spiro-ratio",
+            "spiro-patterns"
+          ]
+        },
+        {
+          "page": 24,
+          "status": "limited",
+          "note": "All requested calculation types are practised with explicit values; exact volumes from this resized trace lack a reliable supplied answer key.",
+          "unitIds": [
+            "spiro-volumes",
+            "spiro-capacities",
+            "spiro-trace-scale",
+            "spiro-ratio",
+            "spiro-patterns",
+            "spiro-integrated"
+          ]
+        },
+        {
+          "page": 25,
+          "status": "noninstructional",
+          "note": "Decorative closing image.",
+          "unitIds": []
+        }
+      ]
+    },
+    {
+      "key": "count",
+      "title": "Cell Counting 1.pptx",
+      "file": "05 - RBC and WBC counting.pptx",
+      "pages": 24,
+      "kind": "slide",
+      "audit": [
+        {
+          "page": 1,
+          "status": "noninstructional",
+          "note": "Title slide.",
+          "unitIds": []
+        },
+        {
+          "page": 2,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "microscope-optics",
+            "microscope-handling"
+          ]
+        },
+        {
+          "page": 3,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "microscope-optics",
+            "microscope-handling"
+          ]
+        },
+        {
+          "page": 4,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "microscope-optics"
+          ]
+        },
+        {
+          "page": 5,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "microscope-optics"
+          ]
+        },
+        {
+          "page": 6,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "microscope-optics",
+            "microscope-handling"
+          ]
+        },
+        {
+          "page": 7,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-geometry",
+            "wbc-geometry"
+          ]
+        },
+        {
+          "page": 8,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-geometry",
+            "wbc-geometry"
+          ]
+        },
+        {
+          "page": 9,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-geometry",
+            "wbc-geometry"
+          ]
+        },
+        {
+          "page": 10,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-pipette",
+            "rbc-count-errors",
+            "wbc-dilution-reagent",
+            "wbc-quality"
+          ]
+        },
+        {
+          "page": 11,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-pipette",
+            "wbc-dilution-reagent"
+          ]
+        },
+        {
+          "page": 12,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-dilution-reagent",
+            "wbc-calculations",
+            "wbc-quality"
+          ]
+        },
+        {
+          "page": 13,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-pipette",
+            "rbc-count-errors",
+            "wbc-dilution-reagent",
+            "wbc-geometry",
+            "wbc-calculations",
+            "wbc-quality"
+          ]
+        },
+        {
+          "page": 14,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-geometry",
+            "rbc-count-errors",
+            "wbc-geometry",
+            "wbc-calculations",
+            "wbc-quality"
+          ]
+        },
+        {
+          "page": 15,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-dilution-reagent",
+            "wbc-quality"
+          ]
+        },
+        {
+          "page": 16,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-geometry",
+            "wbc-calculations",
+            "wbc-quality"
+          ]
+        },
+        {
+          "page": 17,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-calculations"
+          ]
+        },
+        {
+          "page": 18,
+          "status": "noninstructional",
+          "note": "RBC-section heading.",
+          "unitIds": []
+        },
+        {
+          "page": 19,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "microscope-handling",
+            "rbc-pipette",
+            "rbc-count-errors"
+          ]
+        },
+        {
+          "page": 20,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "microscope-handling",
+            "rbc-geometry",
+            "rbc-count-calculations",
+            "rbc-count-errors"
+          ]
+        },
+        {
+          "page": 21,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-geometry",
+            "rbc-count-calculations",
+            "rbc-count-errors"
+          ]
+        },
+        {
+          "page": 22,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-geometry",
+            "rbc-count-calculations",
+            "rbc-count-errors"
+          ]
+        },
+        {
+          "page": 23,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "rbc-reference"
+          ]
+        },
+        {
+          "page": 24,
+          "status": "noninstructional",
+          "note": "Closing slide.",
+          "unitIds": []
+        }
+      ]
+    },
+    {
+      "key": "dlc",
+      "title": "differential count.ppt",
+      "file": "06 - Differential WBC identification.ppt",
+      "pages": 18,
+      "kind": "slide",
+      "audit": [
+        {
+          "page": 1,
+          "status": "noninstructional",
+          "note": "Decorative opening.",
+          "unitIds": []
+        },
+        {
+          "page": 2,
+          "status": "noninstructional",
+          "note": "Title slide.",
+          "unitIds": []
+        },
+        {
+          "page": 3,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-total-versus-differential",
+            "dlc-calculations",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 4,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-total-versus-differential",
+            "dlc-lineage",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 5,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 6,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-lineage"
+          ]
+        },
+        {
+          "page": 7,
+          "status": "limited",
+          "note": "Mature-cell lineages and RBC/platelet maturation assessed; full developmental chronology is not exhaustively tested.",
+          "unitIds": [
+            "dlc-lineage"
+          ]
+        },
+        {
+          "page": 8,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-total-versus-differential",
+            "dlc-functions",
+            "dlc-lineage",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 9,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-total-versus-differential",
+            "dlc-functions",
+            "dlc-ranges-size",
+            "dlc-calculations",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 10,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-functions",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 11,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 12,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 13,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 14,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 15,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 16,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "dlc-morphology",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 17,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "wbc-total-versus-differential",
+            "dlc-calculations",
+            "dlc-integration"
+          ]
+        },
+        {
+          "page": 18,
+          "status": "noninstructional",
+          "note": "Decorative closing.",
+          "unitIds": []
+        }
+      ]
+    },
+    {
+      "key": "blood",
+      "title": "Bleeding-Time.pptx",
+      "file": "07 - Hematocrit, bleeding time and clotting time.pptx",
+      "pages": 25,
+      "kind": "slide",
+      "audit": [
+        {
+          "page": 1,
+          "status": "noninstructional",
+          "note": "Hematocrit heading.",
+          "unitIds": [
+            "hct-principle"
+          ]
+        },
+        {
+          "page": 2,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-principle"
+          ]
+        },
+        {
+          "page": 3,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-ranges-quality"
+          ]
+        },
+        {
+          "page": 4,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-low-high",
+            "hct-ranges-quality"
+          ]
+        },
+        {
+          "page": 5,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-low-high",
+            "hct-ranges-quality"
+          ]
+        },
+        {
+          "page": 6,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-principle",
+            "hct-preparation",
+            "hct-ranges-quality"
+          ]
+        },
+        {
+          "page": 7,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-preparation"
+          ]
+        },
+        {
+          "page": 8,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-preparation"
+          ]
+        },
+        {
+          "page": 9,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-principle",
+            "hct-preparation",
+            "hct-ranges-quality"
+          ]
+        },
+        {
+          "page": 10,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-principle",
+            "hct-reading",
+            "hct-ranges-quality"
+          ]
+        },
+        {
+          "page": 11,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hct-principle",
+            "hct-reading",
+            "hct-ranges-quality"
+          ]
+        },
+        {
+          "page": 12,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hemostasis-sequence",
+            "bt-ct-principles",
+            "hemostasis-cases"
+          ]
+        },
+        {
+          "page": 13,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "hemostasis-sequence",
+            "bt-ct-principles",
+            "hemostasis-cases"
+          ]
+        },
+        {
+          "page": 14,
+          "status": "noninstructional",
+          "note": "Bleeding-time heading.",
+          "unitIds": [
+            "bleeding-time-details"
+          ]
+        },
+        {
+          "page": 15,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bt-ct-principles",
+            "bleeding-time-details",
+            "hemostasis-cases",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 16,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bt-ct-principles",
+            "bleeding-time-details",
+            "hemostasis-cases",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 17,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bleeding-time-details",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 18,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "capillary-ct"
+          ]
+        },
+        {
+          "page": 19,
+          "status": "noninstructional",
+          "note": "Clotting-time title/illustration; endpoint assessed on the adjacent method slides.",
+          "unitIds": [
+            "capillary-ct"
+          ]
+        },
+        {
+          "page": 20,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "capillary-ct",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 21,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "capillary-ct",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 22,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bt-ct-principles",
+            "capillary-ct",
+            "hemostasis-cases",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 23,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "bt-ct-principles",
+            "slide-ct",
+            "hemostasis-cases",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 24,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "slide-ct",
+            "hemostasis-quality-safety"
+          ]
+        },
+        {
+          "page": 25,
+          "status": "mapped",
+          "note": "Core concepts mapped to the linked theory sets; not a guarantee of every possible exam question.",
+          "unitIds": [
+            "slide-ct",
+            "hemostasis-quality-safety"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "notes",
+      "title": "Handwritten BP notes — corrections required.pdf",
+      "file": "08 - Handwritten BP notes - READ CORRECTIONS FIRST.pdf",
+      "pages": 3,
+      "kind": "page",
+      "audit": [
+        {
+          "page": 1,
+          "status": "correction-only",
+          "note": "Handwritten BP notes cross-checked against the main pack. Incorrect fixed inflation, inter-arm difference and valve-area claims are not taught as facts.",
+          "unitIds": [
+            "bp-procedure-reasons",
+            "endpoint-troubleshooting"
+          ]
+        },
+        {
+          "page": 2,
+          "status": "correction-only",
+          "note": "Handwritten BP notes cross-checked against the main pack. Incorrect fixed inflation, inter-arm difference and valve-area claims are not taught as facts.",
+          "unitIds": [
+            "pressure-calculations",
+            "position-errors"
+          ]
+        },
+        {
+          "page": 3,
+          "status": "correction-only",
+          "note": "Handwritten BP notes cross-checked against the main pack. Incorrect fixed inflation, inter-arm difference and valve-area claims are not taught as facts.",
+          "unitIds": [
+            "listening-landmarks",
+            "sound-integration"
+          ]
+        }
+      ]
+    }
+  ],
   "stations": [
     {
       "id": "bp",
       "title": "Measure blood pressure",
       "source": "Blood pressure measurement international.pdf",
-      "sourceRange": "Pages 7–17, 20, 25 and 37",
+      "sourceRange": "Pages 7–17, 20, 25 and 37; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "bp-1",
@@ -47,6 +1831,86 @@
             "pp-bp-pp",
             "pp-bp-map"
           ]
+        },
+        {
+          "id": "bp-5",
+          "title": "Pressure, arterial occlusion and direct versus indirect measurement",
+          "questionIds": [
+            "pp-bp-theory-force-area",
+            "pp-bp-theory-direct-method",
+            "pp-bp-theory-occlusion-above",
+            "pp-bp-theory-occlusion-between"
+          ]
+        },
+        {
+          "id": "bp-6",
+          "title": "Arterial landmarks and alternative cuff sites",
+          "questionIds": [
+            "pp-bp-theory-radial-site",
+            "pp-bp-theory-brachial-landmark",
+            "pp-bp-theory-thigh-pair",
+            "pp-bp-theory-calf-pair"
+          ]
+        },
+        {
+          "id": "bp-7",
+          "title": "Cuff fit, hydrostatic error and comparison between arms",
+          "questionIds": [
+            "pp-bp-theory-arm-low",
+            "pp-bp-theory-standing-gradient",
+            "pp-bp-theory-oversized-cuff",
+            "pp-bp-theory-both-arms"
+          ]
+        },
+        {
+          "id": "bp-8",
+          "title": "Korotkoff phases and the meaning of silence",
+          "questionIds": [
+            "pp-bp-theory-phase-two",
+            "pp-bp-theory-phase-four",
+            "pp-bp-theory-silence-low",
+            "pp-bp-theory-two-silences"
+          ]
+        },
+        {
+          "id": "bp-9",
+          "title": "Palpatory limits, gaps and endpoint errors",
+          "questionIds": [
+            "pp-bp-theory-palpation-diastolic",
+            "pp-bp-theory-gap-missed-first",
+            "pp-bp-theory-gap-false-diastolic",
+            "pp-bp-theory-persistent-sounds"
+          ]
+        },
+        {
+          "id": "bp-10",
+          "title": "Pulse pressure, MAP weighting and worked comparisons",
+          "questionIds": [
+            "pp-bp-theory-map-weight",
+            "pp-bp-theory-derive-sbp",
+            "pp-bp-theory-same-map",
+            "pp-bp-theory-map-tachy-limit"
+          ]
+        },
+        {
+          "id": "bp-11",
+          "title": "Read the course BP classification table without diagnosing from one reading",
+          "questionIds": [
+            "pp-bp-theory-bp-elevated-table",
+            "pp-bp-theory-bp-diastolic-category",
+            "pp-bp-theory-bp-stage-two-table",
+            "pp-bp-theory-bp-diagnosis-limit"
+          ]
+        },
+        {
+          "id": "bp-12",
+          "title": "Explain the measurement sequence and instrument function",
+          "questionIds": [
+            "pp-bp-theory-rapid-deflation",
+            "pp-bp-theory-bulb-gauge",
+            "pp-bp-theory-rest-repeat",
+            "pp-bp-theory-report-method"
+          ]
         }
       ]
     },
@@ -54,7 +1918,7 @@
       "id": "heart-sounds",
       "title": "Find and explain heart sounds",
       "source": "Blood pressure measurement international.pdf",
-      "sourceRange": "Pages 27–33 and assignment p. 37",
+      "sourceRange": "Pages 27–33 and assignment p. 37; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "heart-sounds-1",
@@ -87,6 +1951,56 @@
             "pp-heart-sounds-area",
             "pp-heart-sounds-aortic"
           ]
+        },
+        {
+          "id": "heart-sounds-5",
+          "title": "S1/S2, systole and isovolumetric phases",
+          "questionIds": [
+            "pp-heart-sounds-theory-s1-phase",
+            "pp-heart-sounds-theory-s2-phase",
+            "pp-heart-sounds-theory-s1-s2-interval",
+            "pp-heart-sounds-theory-s2-nexts1"
+          ]
+        },
+        {
+          "id": "heart-sounds-6",
+          "title": "S3/S4: filling mechanism and cautious interpretation",
+          "questionIds": [
+            "pp-heart-sounds-theory-s3-filling",
+            "pp-heart-sounds-theory-s4-mechanism",
+            "pp-heart-sounds-theory-s3-age-context",
+            "pp-heart-sounds-theory-s4-before-s1"
+          ]
+        },
+        {
+          "id": "heart-sounds-7",
+          "title": "Sternal angle and all four valve listening areas",
+          "questionIds": [
+            "pp-heart-sounds-theory-sternal-angle",
+            "pp-heart-sounds-theory-mitral-landmark",
+            "pp-heart-sounds-theory-tricuspid-correction",
+            "pp-heart-sounds-theory-two-upper-areas"
+          ]
+        },
+        {
+          "id": "heart-sounds-8",
+          "title": "Stethoscope acoustics and troubleshooting",
+          "questionIds": [
+            "pp-heart-sounds-theory-bell-frequency",
+            "pp-heart-sounds-theory-diaphragm-frequency",
+            "pp-heart-sounds-theory-earpiece-direction",
+            "pp-heart-sounds-theory-closed-chestpiece"
+          ]
+        },
+        {
+          "id": "heart-sounds-9",
+          "title": "Integrate timing, anatomy and a defensible practical report",
+          "questionIds": [
+            "pp-heart-sounds-theory-sounds-not-opening",
+            "pp-heart-sounds-theory-sound-origin-vs-area",
+            "pp-heart-sounds-theory-sound-report-limits",
+            "pp-heart-sounds-theory-valves-isovolumetric"
+          ]
         }
       ]
     },
@@ -94,7 +2008,7 @@
       "id": "ecg",
       "title": "Record and interpret an ECG",
       "source": "ECG Appl Physio Class 7.ppt + ECG Eng Appl Physio Assignment.ppt",
-      "sourceRange": "Main slides 5–30, 36, 52–61; all four assignment slides",
+      "sourceRange": "Main slides 5–30, 36, 52–61; all four assignment slides; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "ecg-1",
@@ -127,6 +2041,116 @@
             "pp-ecg-axis",
             "pp-ecg-territory"
           ]
+        },
+        {
+          "id": "ecg-5",
+          "title": "Leads versus electrodes and the three bipolar limb views",
+          "questionIds": [
+            "pp-ecg-theory-lead-view",
+            "pp-ecg-theory-lead-one",
+            "pp-ecg-theory-lead-two",
+            "pp-ecg-theory-lead-three"
+          ]
+        },
+        {
+          "id": "ecg-6",
+          "title": "Hexaxial directions and frontal versus horizontal views",
+          "questionIds": [
+            "pp-ecg-theory-axis-lead-angles",
+            "pp-ecg-theory-augmented-angles",
+            "pp-ecg-theory-frontal-horizontal",
+            "pp-ecg-theory-augmented-reference"
+          ]
+        },
+        {
+          "id": "ecg-7",
+          "title": "Electrode landmarks, skin contact and recording quality",
+          "questionIds": [
+            "pp-ecg-theory-v1-v2",
+            "pp-ecg-theory-v3-after-v4",
+            "pp-ecg-theory-v6-level",
+            "pp-ecg-theory-ecg-artifact"
+          ]
+        },
+        {
+          "id": "ecg-8",
+          "title": "Paper speed, gain and millimetre-to-unit conversions",
+          "questionIds": [
+            "pp-ecg-theory-small-box-voltage",
+            "pp-ecg-theory-gain-halved",
+            "pp-ecg-theory-interval-boxes",
+            "pp-ecg-theory-speed-not-gain"
+          ]
+        },
+        {
+          "id": "ecg-9",
+          "title": "P/QRS/T, PR segment versus interval, QT and ST",
+          "questionIds": [
+            "pp-ecg-theory-wave-events",
+            "pp-ecg-theory-pr-six-boxes",
+            "pp-ecg-theory-qt-endpoints",
+            "pp-ecg-theory-st-segment"
+          ]
+        },
+        {
+          "id": "ecg-10",
+          "title": "Regular and irregular rate calculations with explicit calibration",
+          "questionIds": [
+            "pp-ecg-theory-rate-fifty-speed",
+            "pp-ecg-theory-timed-strip-rate",
+            "pp-ecg-theory-irregular-worked",
+            "pp-ecg-theory-mean-not-fastest"
+          ]
+        },
+        {
+          "id": "ecg-11",
+          "title": "Apply all five sinus-rhythm criteria, not rate alone",
+          "questionIds": [
+            "pp-ecg-theory-sinus-five",
+            "pp-ecg-theory-sinus-p-polarity",
+            "pp-ecg-theory-regular-strip-evidence",
+            "pp-ecg-theory-normal-sinus-rate"
+          ]
+        },
+        {
+          "id": "ecg-12",
+          "title": "Describe unfamiliar rhythm strips before naming a diagnosis",
+          "questionIds": [
+            "pp-ecg-theory-sawtooth-observation",
+            "pp-ecg-theory-rapid-strip-observation",
+            "pp-ecg-theory-nonconducted-observation",
+            "pp-ecg-theory-atrial-ventricular-rates"
+          ]
+        },
+        {
+          "id": "ecg-13",
+          "title": "Axis quadrants, net QRS polarity and lead-II refinement",
+          "questionIds": [
+            "pp-ecg-theory-net-qrs",
+            "pp-ecg-theory-axis-right",
+            "pp-ecg-theory-axis-extreme",
+            "pp-ecg-theory-axis-left-refine"
+          ]
+        },
+        {
+          "id": "ecg-14",
+          "title": "Equiphasic-axis construction and the local assignment",
+          "questionIds": [
+            "pp-ecg-theory-equiphasic-meaning",
+            "pp-ecg-theory-equiphasic-avr-candidates",
+            "pp-ecg-theory-equiphasic-avr-choice",
+            "pp-ecg-theory-equiphasic-one"
+          ]
+        },
+        {
+          "id": "ecg-15",
+          "title": "Lead territories and avoiding overdiagnosis",
+          "questionIds": [
+            "pp-ecg-theory-inferior-leads",
+            "pp-ecg-theory-lateral-leads",
+            "pp-ecg-theory-septal-versus-anterior",
+            "pp-ecg-theory-ecg-interpretation-limit"
+          ]
         }
       ]
     },
@@ -134,7 +2158,7 @@
       "id": "spirometry",
       "title": "Read a spirometry trace",
       "source": "Spirometery for kish class.pptx",
-      "sourceRange": "Slides 6–24; final exercise slide 24",
+      "sourceRange": "Slides 6–24; final exercise slide 24; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "spirometry-1",
@@ -167,6 +2191,86 @@
             "pp-spirometry-ratio",
             "pp-spirometry-restriction"
           ]
+        },
+        {
+          "id": "spirometry-5",
+          "title": "What a spirometer records and why the manoeuvre matters",
+          "questionIds": [
+            "pp-spirometry-theory-spiro-bell",
+            "pp-spirometry-theory-spiro-water-seal",
+            "pp-spirometry-theory-spiro-noseclip",
+            "pp-spirometry-theory-spiro-slow-start"
+          ]
+        },
+        {
+          "id": "spirometry-6",
+          "title": "Tidal and reserve volumes on a tracing",
+          "questionIds": [
+            "pp-spirometry-theory-tv-excursion",
+            "pp-spirometry-theory-irv-definition",
+            "pp-spirometry-theory-erv-definition",
+            "pp-spirometry-theory-diagram-rv-limit"
+          ]
+        },
+        {
+          "id": "spirometry-7",
+          "title": "VC, IC, FRC and TLC: definitions and sums",
+          "questionIds": [
+            "pp-spirometry-theory-vc-components",
+            "pp-spirometry-theory-ic-components",
+            "pp-spirometry-theory-frc-endpoint",
+            "pp-spirometry-theory-tlc-supplied-rv"
+          ]
+        },
+        {
+          "id": "spirometry-8",
+          "title": "Use the paper's time and volume scale, not screen dimensions",
+          "questionIds": [
+            "pp-spirometry-theory-trace-volume-grid",
+            "pp-spirometry-theory-trace-time-grid",
+            "pp-spirometry-theory-screen-resize",
+            "pp-spirometry-theory-fev1-start-zero"
+          ]
+        },
+        {
+          "id": "spirometry-9",
+          "title": "Temperature correction and percentage predicted",
+          "questionIds": [
+            "pp-spirometry-theory-temperature-reason",
+            "pp-spirometry-theory-corrected-vc-case",
+            "pp-spirometry-theory-percent-predicted-case",
+            "pp-spirometry-theory-prediction-data"
+          ]
+        },
+        {
+          "id": "spirometry-10",
+          "title": "FEV1, VC/FVC denominators and ratio arithmetic",
+          "questionIds": [
+            "pp-spirometry-theory-fev1-not-rate",
+            "pp-spirometry-theory-ratio-correct-denominator",
+            "pp-spirometry-theory-ratio-obstructive-example",
+            "pp-spirometry-theory-same-factor-ratio"
+          ]
+        },
+        {
+          "id": "spirometry-11",
+          "title": "Obstruction versus restriction and the incorrect TLC slide",
+          "questionIds": [
+            "pp-spirometry-theory-tlc-slide-error",
+            "pp-spirometry-theory-low-fvc-preserved",
+            "pp-spirometry-theory-disease-pattern-pair",
+            "pp-spirometry-theory-course-cutoff-limit"
+          ]
+        },
+        {
+          "id": "spirometry-12",
+          "title": "Work the final exercise: order, units and quality checks",
+          "questionIds": [
+            "pp-spirometry-theory-spiro-workflow",
+            "pp-spirometry-theory-mixed-volume-units",
+            "pp-spirometry-theory-early-stop-bias",
+            "pp-spirometry-theory-predicted-table-lookup"
+          ]
         }
       ]
     },
@@ -174,7 +2278,7 @@
       "id": "rbc",
       "title": "Count red blood cells",
       "source": "Cell Counting 1.pptx",
-      "sourceRange": "Slides 8–10, 13–15 and 19–23",
+      "sourceRange": "Slides 8–10, 13–15 and 19–23; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "rbc-1",
@@ -207,6 +2311,76 @@
             "pp-rbc-bubble",
             "pp-rbc-mixing"
           ]
+        },
+        {
+          "id": "rbc-5",
+          "title": "Microscope parts, magnification and illumination",
+          "questionIds": [
+            "pp-rbc-theory-total-mag",
+            "pp-rbc-theory-oil-objective",
+            "pp-rbc-theory-condenser-role",
+            "pp-rbc-theory-iris-role"
+          ]
+        },
+        {
+          "id": "rbc-6",
+          "title": "Find the chamber grid safely and focus at the right power",
+          "questionIds": [
+            "pp-rbc-theory-low-power-first",
+            "pp-rbc-theory-fine-focus",
+            "pp-rbc-theory-stage-motion",
+            "pp-rbc-theory-nosepiece-role"
+          ]
+        },
+        {
+          "id": "rbc-7",
+          "title": "Derive the central-grid dimensions rather than memorising a multiplier",
+          "questionIds": [
+            "pp-rbc-theory-medium-side",
+            "pp-rbc-theory-tiny-side",
+            "pp-rbc-theory-five-group-area",
+            "pp-rbc-theory-rbc-volume"
+          ]
+        },
+        {
+          "id": "rbc-8",
+          "title": "RBC pipette identification and dilution logic",
+          "questionIds": [
+            "pp-rbc-theory-red-pipette",
+            "pp-rbc-theory-rbc-05-101",
+            "pp-rbc-theory-rbc-1-101",
+            "pp-rbc-theory-hayem-purpose"
+          ]
+        },
+        {
+          "id": "rbc-9",
+          "title": "RBC concentration calculations and altered dilution",
+          "questionIds": [
+            "pp-rbc-theory-rbc-five-counts",
+            "pp-rbc-theory-rbc-dilution-100",
+            "pp-rbc-theory-rbc-reverse-count",
+            "pp-rbc-theory-rbc-multiplier-change"
+          ]
+        },
+        {
+          "id": "rbc-10",
+          "title": "Boundary rules, chamber loading and systematic count errors",
+          "questionIds": [
+            "pp-rbc-theory-edge-consistency",
+            "pp-rbc-theory-missing-cover",
+            "pp-rbc-theory-uneven-rbc",
+            "pp-rbc-theory-wrong-rbc-factor"
+          ]
+        },
+        {
+          "id": "rbc-11",
+          "title": "Course RBC ranges, units and limits of interpretation",
+          "questionIds": [
+            "pp-rbc-theory-rbc-male-range",
+            "pp-rbc-theory-rbc-female-range",
+            "pp-rbc-theory-rbc-newborn-context",
+            "pp-rbc-theory-rbc-si-units"
+          ]
         }
       ]
     },
@@ -214,7 +2388,7 @@
       "id": "wbc",
       "title": "Count white blood cells",
       "source": "Cell Counting 1.pptx",
-      "sourceRange": "Slides 10–17",
+      "sourceRange": "Slides 10–17; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "wbc-1",
@@ -247,6 +2421,56 @@
             "pp-wbc-units",
             "pp-wbc-total-v-differential"
           ]
+        },
+        {
+          "id": "wbc-5",
+          "title": "WBC pipette, Türk's solution and dilution",
+          "questionIds": [
+            "pp-wbc-theory-wbc-pipette",
+            "pp-wbc-theory-wbc-05-11",
+            "pp-wbc-theory-turk-acid",
+            "pp-wbc-theory-turk-violet"
+          ]
+        },
+        {
+          "id": "wbc-6",
+          "title": "Four corner squares, depth and count units",
+          "questionIds": [
+            "pp-wbc-theory-wbc-area",
+            "pp-wbc-theory-wbc-four-volume",
+            "pp-wbc-theory-wbc-multiplier",
+            "pp-wbc-theory-single-square-factor"
+          ]
+        },
+        {
+          "id": "wbc-7",
+          "title": "Total-count calculations, averaging and changed dilution",
+          "questionIds": [
+            "pp-wbc-theory-wbc-four-counts",
+            "pp-wbc-theory-wbc-mean-formula",
+            "pp-wbc-theory-wbc-dilution-ten",
+            "pp-wbc-theory-wbc-unit-conversion"
+          ]
+        },
+        {
+          "id": "wbc-8",
+          "title": "Mixing, loading, border counting and safe technique",
+          "questionIds": [
+            "pp-wbc-theory-wbc-mix",
+            "pp-wbc-theory-wbc-overfill",
+            "pp-wbc-theory-wbc-boundary-double",
+            "pp-wbc-theory-pipette-safety"
+          ]
+        },
+        {
+          "id": "wbc-9",
+          "title": "What the total count can and cannot tell you",
+          "questionIds": [
+            "pp-wbc-theory-total-v-diff",
+            "pp-wbc-theory-wbc-supplied-range",
+            "pp-wbc-theory-absolute-neutrophils",
+            "pp-wbc-theory-relative-same-absolute"
+          ]
         }
       ]
     },
@@ -254,7 +2478,7 @@
       "id": "differential",
       "title": "Identify the five WBC types",
       "source": "differential count.ppt",
-      "sourceRange": "Slides 3–17, especially morphology 5 and 8–16; exercise 17",
+      "sourceRange": "Slides 3–17, especially morphology 5 and 8–16; exercise 17; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "differential-1",
@@ -287,6 +2511,66 @@
             "pp-differential-sampling",
             "pp-differential-neutrophil"
           ]
+        },
+        {
+          "id": "differential-5",
+          "title": "Recognise cells in additional course micrographs",
+          "questionIds": [
+            "pp-differential-theory-dlc-multi-neut",
+            "pp-differential-theory-dlc-multi-eos",
+            "pp-differential-theory-dlc-multi-baso",
+            "pp-differential-theory-dlc-multi-mono"
+          ]
+        },
+        {
+          "id": "differential-6",
+          "title": "Granulocytes, agranulocytes and principal functions",
+          "questionIds": [
+            "pp-differential-theory-granulocyte-group",
+            "pp-differential-theory-neut-function",
+            "pp-differential-theory-eos-function",
+            "pp-differential-theory-lymph-function-specific"
+          ]
+        },
+        {
+          "id": "differential-7",
+          "title": "Hematopoietic lineages and formed elements",
+          "questionIds": [
+            "pp-differential-theory-lymphoid-lineage",
+            "pp-differential-theory-myeloid-not-lymphoid",
+            "pp-differential-theory-platelet-origin",
+            "pp-differential-theory-rbc-nucleus"
+          ]
+        },
+        {
+          "id": "differential-8",
+          "title": "Course percentages and why size alone is insufficient",
+          "questionIds": [
+            "pp-differential-theory-dlc-most-common",
+            "pp-differential-theory-dlc-lymph-range",
+            "pp-differential-theory-dlc-mono-eos-ranges",
+            "pp-differential-theory-dlc-size-overlap"
+          ]
+        },
+        {
+          "id": "differential-9",
+          "title": "100/200-cell differentials and absolute counts",
+          "questionIds": [
+            "pp-differential-theory-dlc-twohundred",
+            "pp-differential-theory-dlc-local-grid",
+            "pp-differential-theory-dlc-absolute-eos",
+            "pp-differential-theory-dlc-check-total"
+          ]
+        },
+        {
+          "id": "differential-10",
+          "title": "Integrate morphology, relative counts and interpretation limits",
+          "questionIds": [
+            "pp-differential-theory-relative-lymphocytosis",
+            "pp-differential-theory-lymph-monocyte-distinction",
+            "pp-differential-theory-mono-function",
+            "pp-differential-theory-dlc-cause-limit"
+          ]
         }
       ]
     },
@@ -294,7 +2578,7 @@
       "id": "hematocrit",
       "title": "Read hematocrit / PCV",
       "source": "Bleeding-Time.pptx",
-      "sourceRange": "Slides 1–11",
+      "sourceRange": "Slides 1–11; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "hematocrit-1",
@@ -327,6 +2611,56 @@
             "pp-hematocrit-buffy",
             "pp-hematocrit-dehydration"
           ]
+        },
+        {
+          "id": "hematocrit-5",
+          "title": "Packed-cell volume, plasma and the buffy coat",
+          "questionIds": [
+            "pp-hematocrit-theory-pcv-definition",
+            "pp-hematocrit-theory-plasma-not-serum",
+            "pp-hematocrit-theory-buffy-constituents",
+            "pp-hematocrit-theory-hct-versus-rbc"
+          ]
+        },
+        {
+          "id": "hematocrit-6",
+          "title": "Anticoagulation, sealing, balance and centrifuge settings",
+          "questionIds": [
+            "pp-hematocrit-theory-hct-anticoagulant",
+            "pp-hematocrit-theory-hct-fill-seal",
+            "pp-hematocrit-theory-hct-balance",
+            "pp-hematocrit-theory-g-not-rpm"
+          ]
+        },
+        {
+          "id": "hematocrit-7",
+          "title": "Reader alignment, numerator and worked PCV ratios",
+          "questionIds": [
+            "pp-hematocrit-theory-hct-reader-ends",
+            "pp-hematocrit-theory-hct-18-45",
+            "pp-hematocrit-theory-hct-buffy-included",
+            "pp-hematocrit-theory-hct-denominator-seal"
+          ]
+        },
+        {
+          "id": "hematocrit-8",
+          "title": "Relative versus absolute changes and causes listed in the slides",
+          "questionIds": [
+            "pp-hematocrit-theory-hct-dehydration",
+            "pp-hematocrit-theory-hct-overhydration",
+            "pp-hematocrit-theory-hct-low-production",
+            "pp-hematocrit-theory-hct-hypoxia"
+          ]
+        },
+        {
+          "id": "hematocrit-9",
+          "title": "Course ranges and specimen validity",
+          "questionIds": [
+            "pp-hematocrit-theory-hct-male-female",
+            "pp-hematocrit-theory-hct-newborn",
+            "pp-hematocrit-theory-hct-hemolysed",
+            "pp-hematocrit-theory-hct-incomplete-pack"
+          ]
         }
       ]
     },
@@ -334,7 +2668,7 @@
       "id": "hemostasis",
       "title": "Distinguish bleeding and clotting time",
       "source": "Bleeding-Time.pptx",
-      "sourceRange": "Slides 12–25",
+      "sourceRange": "Slides 12–25; expanded theory sets include additional source pages listed below",
       "objectives": [
         {
           "id": "hemostasis-1",
@@ -367,6 +2701,76 @@
             "pp-hemostasis-conflict",
             "pp-hemostasis-normal-result"
           ]
+        },
+        {
+          "id": "hemostasis-5",
+          "title": "Vessel injury, platelet adhesion, activation and aggregation",
+          "questionIds": [
+            "pp-hemostasis-theory-exposed-collagen",
+            "pp-hemostasis-theory-platelet-order",
+            "pp-hemostasis-theory-intact-endothelium",
+            "pp-hemostasis-theory-adhesion-v-aggregation"
+          ]
+        },
+        {
+          "id": "hemostasis-6",
+          "title": "Primary versus secondary haemostasis and assay limitations",
+          "questionIds": [
+            "pp-hemostasis-theory-primary-secondary",
+            "pp-hemostasis-theory-bt-domain",
+            "pp-hemostasis-theory-ct-domain",
+            "pp-hemostasis-theory-normal-screen-limit"
+          ]
+        },
+        {
+          "id": "hemostasis-7",
+          "title": "Bleeding-time endpoint, sampling intervals and interpretation",
+          "questionIds": [
+            "pp-hemostasis-theory-bt-endpoint",
+            "pp-hemostasis-theory-bt-30seconds",
+            "pp-hemostasis-theory-bt-dont-disturb",
+            "pp-hemostasis-theory-bt-normal-course"
+          ]
+        },
+        {
+          "id": "hemostasis-8",
+          "title": "Capillary clotting time: tube, endpoint and conflicting timer instructions",
+          "questionIds": [
+            "pp-hemostasis-theory-plain-capillary",
+            "pp-hemostasis-theory-fibrin-thread",
+            "pp-hemostasis-theory-ct-timer-conflict",
+            "pp-hemostasis-theory-ct-capillary-range"
+          ]
+        },
+        {
+          "id": "hemostasis-9",
+          "title": "Slide clotting time and the two endpoint descriptions",
+          "questionIds": [
+            "pp-hemostasis-theory-slide-contact",
+            "pp-hemostasis-theory-slide-ct-endpoint",
+            "pp-hemostasis-theory-slide-course-timing",
+            "pp-hemostasis-theory-slide-range-endpoint"
+          ]
+        },
+        {
+          "id": "hemostasis-10",
+          "title": "Platelet number versus function and selective test abnormalities",
+          "questionIds": [
+            "pp-hemostasis-theory-platelets-normal-function",
+            "pp-hemostasis-theory-low-platelet-slide",
+            "pp-hemostasis-theory-bt-prolonged-ct-normal",
+            "pp-hemostasis-theory-ct-prolonged-bt-normal"
+          ]
+        },
+        {
+          "id": "hemostasis-11",
+          "title": "Timing resolution, specimen validity and practical safety",
+          "questionIds": [
+            "pp-hemostasis-theory-bt-resolution",
+            "pp-hemostasis-theory-ct-anticoagulant-contamination",
+            "pp-hemostasis-theory-unsafe-depth",
+            "pp-hemostasis-theory-bt-modern-limit"
+          ]
         }
       ]
     }
@@ -376,6 +2780,8 @@
     "The clotting-time slides disagree on the timer start: confirm the laboratory SOP.",
     "The spirometry paper trace does not justify a single precise answer from the resized image; use the original scale and document units.",
     "Reference intervals and spirometry correction factors shown are course/method conventions, not universal clinical thresholds.",
-    "Video metadata was verified, not every frame; external videos supplement the local pack and do not establish exam scope."
+    "Video metadata was verified, not every frame; external videos supplement the local pack and do not establish exam scope.",
+    "Historical dates/biographical pictures and the full hematopoietic developmental chronology are not exhaustively assessed; see the page-by-page audit.",
+    "Unkeyed ECG examples support descriptive transfer exercises, not fabricated official diagnoses. The embedded-video placeholder could not be recovered from the rendered deck."
   ]
 }
