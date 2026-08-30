@@ -2,6 +2,7 @@ import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import "./build-respiratory-anatomy.mjs";
 import "./build-respiratory-concepts.mjs";
+import "./build-physiology-practical.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const questionDirectory = resolve(root, "data/bank/questions");

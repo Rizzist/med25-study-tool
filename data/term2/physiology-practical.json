@@ -1,0 +1,1445 @@
+{
+  "title": "Physiology Practical",
+  "examId": "term2-physiology-practical",
+  "version": 1,
+  "date": "2026-08-31",
+  "dateNote": "User reported an exam tomorrow on 30 August; confirm the official timetable.",
+  "basis": "Seven unique WhatsApp files plus the existing local ECG applied-physiology assignment. This is a source-based revision circuit, not an official station blueprint or past-paper bank.",
+  "safety": "Rehearse explanations and non-invasive setup. Blood collection, reagent handling, centrifugation and capillary breaking require trained supervision and your institution’s SOP. Never mouth-pipette or perform home finger-pricks.",
+  "videoNote": "Video titles/channels were checked on 30 August 2026, not every frame audited. Some demonstrations use different equipment, language or reference intervals. External playback may require access to YouTube; images, explanations and MCQs remain usable without it.",
+  "references": [
+    {
+      "title": "Blood pressure technique checklist",
+      "url": "https://geekymedics.com/wp-content/uploads/2020/06/OSCE-Checklist-Blood-Pressure-Measurement.pdf",
+      "use": "Palpatory estimate, inflation margin and controlled deflation; correction of handwritten BP notes."
+    },
+    {
+      "title": "Recording a 12-lead ECG",
+      "url": "https://geekymedics.com/record-ecg/",
+      "use": "Electrode locations and acquisition technique."
+    },
+    {
+      "title": "Understanding an ECG",
+      "url": "https://geekymedics.com/understanding-an-ecg/",
+      "use": "Lead versus electrode, waveform meaning and anterior V3–V4 territory correction."
+    },
+    {
+      "title": "Cardiovascular examination",
+      "url": "https://geekymedics.com/cardiovascular-examination-2/",
+      "use": "Valve auscultation positions and heart-sound technique."
+    },
+    {
+      "title": "NHS spirometry",
+      "url": "https://www.nhs.uk/tests-and-treatments/spirometry/",
+      "use": "Patient-facing manoeuvre and safety context; not a replacement for the course’s paper-trace exercise."
+    },
+    {
+      "title": "IGNOU Human Physiology laboratory manual",
+      "url": "https://egyankosh.ac.in/bitstream/123456789/84525/1/BBCCL%E2%80%93116%E2%80%93Human%20Physiology%20%28E%29.pdf",
+      "use": "Cross-check of hemocytometer geometry and counting principles."
+    }
+  ],
+  "totals": {
+    "stations": 9,
+    "objectives": 36,
+    "questions": 72,
+    "imageQuestions": 9,
+    "images": 16,
+    "videos": 12,
+    "studyMinutes": 310
+  },
+  "stations": [
+    {
+      "id": "bp",
+      "title": "Measure blood pressure",
+      "subtitle": "Palpate first. Listen second. Report clearly.",
+      "minutes": 35,
+      "source": "Blood pressure measurement international.pdf",
+      "sourceRange": "Pages 7–17, 20, 25 and 37",
+      "fileOrder": "01",
+      "objectives": [
+        "Prepare the subject and cuff correctly",
+        "Sequence palpatory and auscultatory measurement",
+        "Recognise Korotkoff endpoints and the auscultatory gap",
+        "Calculate and report pulse pressure and approximate MAP"
+      ],
+      "equipment": [
+        "Appropriately sized sphygmomanometer cuff",
+        "Stethoscope",
+        "Chair and arm support",
+        "Recording sheet"
+      ],
+      "essentials": [
+        "Cuff pressure is an indirect estimate of arterial pressure, reported in mmHg.",
+        "At rest, support the bare arm at heart level; support the back and keep feet flat and legs uncrossed. Avoid conversation during measurement.",
+        "Palpation estimates systolic pressure; it does not reliably provide diastolic pressure.",
+        "For routine adult auscultation, first Korotkoff sound is systolic pressure; disappearance is diastolic pressure. If sounds persist, follow the specific protocol and document this.",
+        "An auscultatory gap is a temporary loss of sounds followed by their return. It can cause a falsely low systolic or falsely high diastolic reading if misidentified."
+      ],
+      "steps": [
+        {
+          "action": "Explain, obtain consent, allow rest and position the subject",
+          "why": "Position and muscle activity alter the measurement; comfort reduces avoidable variability."
+        },
+        {
+          "action": "Select the cuff from the arm circumference/device markings; locate the brachial artery",
+          "why": "An unsuitable cuff changes pressure transmission and can bias the result."
+        },
+        {
+          "action": "Estimate systolic pressure using the radial pulse, then fully deflate",
+          "why": "This guides the later inflation target and helps prevent missing a high systolic pressure across a silent gap."
+        },
+        {
+          "action": "Position the stethoscope over the brachial artery; reinflate to the protocol margin above the estimate",
+          "why": "A common teaching margin is 20–30 mmHg above the estimate—not a fixed 170 or 300 mmHg for everyone."
+        },
+        {
+          "action": "Deflate slowly, about 2–3 mmHg per second, and identify first sound and disappearance",
+          "why": "Fast deflation can skip the true endpoints. Watch the gauge while listening."
+        },
+        {
+          "action": "Release the cuff, record SBP/DBP, arm and position; repeat according to protocol",
+          "why": "A complete report is more useful than an isolated number; repeated measurements require an appropriate pause."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Inflate every cuff to 300 mmHg.",
+          "right": "Use the palpatory estimate and a suitable margin. The handwritten note is not a universal procedure."
+        },
+        {
+          "wrong": "The first quiet interval is always diastolic pressure.",
+          "right": "Sounds may return after an auscultatory gap; follow the full sequence."
+        }
+      ],
+      "worked": [
+        {
+          "title": "120/80 mmHg at rest",
+          "formula": "PP = SBP − DBP; MAP ≈ DBP + PP/3",
+          "working": "PP = 40 mmHg; MAP ≈ 80 + 40/3 = 93 mmHg. The MAP shortcut is approximate and most appropriate at a normal resting heart rate."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "Why do palpation before auscultation?",
+          "answer": "To estimate systolic pressure and avoid mistaking the return of sounds after a gap for the true systolic endpoint."
+        },
+        {
+          "prompt": "What should the written result include?",
+          "answer": "Systolic/diastolic pressure in mmHg, arm and position; note relevant measurement conditions and repeat readings."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/bp-setup.png",
+          "title": "Positioning and the three course tasks",
+          "locator": "BP PDF p. 37",
+          "caption": "Notice the supported arm, back support, feet and bare cuff site. Heart sounds are explicitly part of the same course assignment."
+        },
+        {
+          "path": "physiology-practical/auscultatory-gap.png",
+          "title": "A silent interval is not necessarily the endpoint",
+          "locator": "BP PDF p. 25",
+          "caption": "Read the sequence from first sounds, through silence, to reappearance and final disappearance."
+        }
+      ],
+      "videos": [
+        {
+          "id": "HMSTSZVWhMI",
+          "title": "Manual blood pressure measurement",
+          "provider": "Geeky Medics",
+          "note": "Watch the preparation, palpatory estimate and auscultatory measurement. Educational section starts at 0:00; estimate at 0:54, measurement at 1:32."
+        }
+      ],
+      "questionIds": [
+        "pp-bp-position",
+        "pp-bp-cuff",
+        "pp-bp-palpation",
+        "pp-bp-inflation",
+        "pp-bp-endpoints",
+        "pp-bp-gap",
+        "pp-bp-pp",
+        "pp-bp-map"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "bp-1",
+          "title": "Prepare the subject and cuff correctly",
+          "questionIds": [
+            "pp-bp-position",
+            "pp-bp-cuff"
+          ]
+        },
+        {
+          "id": "bp-2",
+          "title": "Sequence palpatory and auscultatory measurement",
+          "questionIds": [
+            "pp-bp-palpation",
+            "pp-bp-inflation"
+          ]
+        },
+        {
+          "id": "bp-3",
+          "title": "Recognise Korotkoff endpoints and the auscultatory gap",
+          "questionIds": [
+            "pp-bp-endpoints",
+            "pp-bp-gap"
+          ]
+        },
+        {
+          "id": "bp-4",
+          "title": "Calculate and report pulse pressure and approximate MAP",
+          "questionIds": [
+            "pp-bp-pp",
+            "pp-bp-map"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heart-sounds",
+      "title": "Find and explain heart sounds",
+      "subtitle": "Four listening areas. Two essential sounds.",
+      "minutes": 15,
+      "source": "Blood pressure measurement international.pdf",
+      "sourceRange": "Pages 27–33 and assignment p. 37",
+      "fileOrder": "01",
+      "objectives": [
+        "Locate the four standard valve auscultation areas",
+        "Explain the origin and timing of S1 and S2",
+        "Use the stethoscope and describe findings systematically",
+        "Distinguish listening areas from anatomical valve positions"
+      ],
+      "equipment": [
+        "Stethoscope with bell/diaphragm",
+        "Appropriate privacy and positioning"
+      ],
+      "essentials": [
+        "Aortic: right second intercostal space at the sternal edge. Pulmonary: left second intercostal space at the sternal edge.",
+        "Tricuspid: left lower sternal border, commonly fourth/fifth intercostal space. Mitral: apex, left fifth intercostal space at the midclavicular line in a typical adult.",
+        "S1 is associated with mitral/tricuspid closure at the beginning of ventricular systole. S2 is associated with aortic/pulmonary closure at the beginning of ventricular diastole.",
+        "These are listening areas, not a diagram of exactly where the valves lie. Sound transmission determines where particular sounds are best heard.",
+        "Know what S3 and S4 relate to—rapid filling and atrial contraction—but do not assume your file confirms a full murmur-diagnosis station."
+      ],
+      "steps": [
+        {
+          "action": "Explain, obtain consent and ensure appropriate exposure/privacy",
+          "why": "Accurate landmarking must be combined with respectful examination."
+        },
+        {
+          "action": "Find the sternal angle and count the intercostal spaces",
+          "why": "Do not estimate V1/V2 or valve areas merely from the nipples or collarbone."
+        },
+        {
+          "action": "Listen systematically at aortic, pulmonary, tricuspid and mitral areas",
+          "why": "A repeatable sequence reduces omissions."
+        },
+        {
+          "action": "Identify S1 and S2 before describing extra sounds",
+          "why": "The relationship to systole and diastole is more informative than a vague description of a noise."
+        },
+        {
+          "action": "Select the stethoscope side and apply appropriate pressure",
+          "why": "The diaphragm is used for higher-frequency sounds; a lightly applied bell helps with low-frequency sounds."
+        },
+        {
+          "action": "State your observations and limitations",
+          "why": "Do not invent a murmur diagnosis if the station only asks for normal heart sounds."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Left second intercostal space = tricuspid.",
+          "right": "It is the pulmonary area. The handwritten BP note mislabels it."
+        },
+        {
+          "wrong": "S1 means aortic valve opening.",
+          "right": "S1 is associated with AV-valve closure; ordinary valve opening is not S1."
+        }
+      ],
+      "worked": [
+        {
+          "title": "An examiner points to the left second intercostal space",
+          "formula": "Landmark → listening area → relevant valve",
+          "working": "Answer: pulmonary auscultation area. Do not call it tricuspid, and do not imply the valve itself sits directly beneath the stethoscope."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "What closes for S1? For S2?",
+          "answer": "S1: mitral and tricuspid. S2: aortic and pulmonary."
+        },
+        {
+          "prompt": "What are the four sites without looking?",
+          "answer": "Right 2nd ICS; left 2nd ICS; left lower sternal border; apex at left 5th ICS/midclavicular line."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/bp-setup.png",
+          "title": "Heart sounds are part of the practical assignment",
+          "locator": "BP PDF p. 37",
+          "caption": "Task 3 asks you to hear your classmate’s heart-valve sounds. Use the corrected site list above."
+        }
+      ],
+      "videos": [
+        {
+          "id": "XU_xeUMJ3Zc",
+          "title": "Cardiovascular examination: auscultation",
+          "provider": "Geeky Medics",
+          "note": "Focus on the heart-valve auscultation portion. The full clinical examination is broader than this practical pack."
+        },
+        {
+          "id": "Q5-0mSydRR4",
+          "title": "Heart-sound audio examples",
+          "provider": "Geeky Medics",
+          "note": "Learn normal S1/S2 first. The additional murmur examples are supplementary, not a confirmed extra exam station."
+        }
+      ],
+      "questionIds": [
+        "pp-heart-sounds-pulmonary",
+        "pp-heart-sounds-mitral",
+        "pp-heart-sounds-s1",
+        "pp-heart-sounds-s2",
+        "pp-heart-sounds-bell",
+        "pp-heart-sounds-sequence",
+        "pp-heart-sounds-area",
+        "pp-heart-sounds-aortic"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "heart-sounds-1",
+          "title": "Locate the four standard valve auscultation areas",
+          "questionIds": [
+            "pp-heart-sounds-pulmonary",
+            "pp-heart-sounds-mitral"
+          ]
+        },
+        {
+          "id": "heart-sounds-2",
+          "title": "Explain the origin and timing of S1 and S2",
+          "questionIds": [
+            "pp-heart-sounds-s1",
+            "pp-heart-sounds-s2"
+          ]
+        },
+        {
+          "id": "heart-sounds-3",
+          "title": "Use the stethoscope and describe findings systematically",
+          "questionIds": [
+            "pp-heart-sounds-bell",
+            "pp-heart-sounds-sequence"
+          ]
+        },
+        {
+          "id": "heart-sounds-4",
+          "title": "Distinguish listening areas from anatomical valve positions",
+          "questionIds": [
+            "pp-heart-sounds-area",
+            "pp-heart-sounds-aortic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecg",
+      "title": "Record and interpret an ECG",
+      "subtitle": "Placement → calibration → rate → rhythm → axis.",
+      "minutes": 70,
+      "source": "ECG Appl Physio Class 7.ppt + ECG Eng Appl Physio Assignment.ppt",
+      "sourceRange": "Main slides 5–30, 36, 52–61; all four assignment slides",
+      "fileOrder": "02 + 03",
+      "objectives": [
+        "Position ten electrodes to obtain twelve leads",
+        "Read paper speed, gain, waves and intervals",
+        "Calculate rate and assess sinus rhythm",
+        "Determine frontal axis and recognise standard lead territories"
+      ],
+      "equipment": [
+        "ECG machine and paper/display",
+        "Ten electrodes and lead cables",
+        "Skin-preparation supplies",
+        "Ruler and calculator"
+      ],
+      "essentials": [
+        "A lead is an electrical view; an electrode is a physical contact. Four limb electrodes plus six chest electrodes produce the standard 12-lead ECG.",
+        "V1: right 4th ICS; V2: left 4th ICS; V4: left 5th ICS/midclavicular line; V3 halfway between V2 and V4. V5 anterior axillary and V6 midaxillary, both level with V4.",
+        "At 25 mm/s, one small horizontal box is 0.04 s and one large box is 0.20 s. Standard gain is 10 mm/mV; always inspect the actual calibration.",
+        "P: atrial depolarisation; QRS: ventricular depolarisation; T: ventricular repolarisation. PR is measured from P onset to QRS onset; the course normal range is 0.12–0.20 s.",
+        "For normal sinus rhythm, assess rate, regularity, P-wave morphology, P-to-QRS relationship and PR consistency. One positive P wave in lead II alone is not a complete rhythm assessment.",
+        "Axis: I+/aVF+ lies in 0° to +90°. I+/aVF− requires lead II to separate a normal mildly leftward axis from left axis deviation. An equiphasic lead suggests a perpendicular axis; use another lead to choose the direction.",
+        "Standard territories: inferior II/III/aVF; septal V1/V2; anterior V3/V4; lateral I/aVL/V5/V6. A single ST/T change does not establish a clinical diagnosis in isolation."
+      ],
+      "steps": [
+        {
+          "action": "Explain, obtain consent, ensure privacy and prepare relaxed skin contact",
+          "why": "Movement and poor contact create artefact; correct identification belongs on the recording."
+        },
+        {
+          "action": "Apply labelled limb electrodes and accurately landmark V1–V6",
+          "why": "Cable colours vary between conventions; use electrode labels and your local system."
+        },
+        {
+          "action": "Check paper speed and gain before recording",
+          "why": "Timing and amplitude calculations depend on calibration."
+        },
+        {
+          "action": "Inspect quality, then identify P, QRS and T",
+          "why": "Do not interpret artefact as a rhythm disturbance."
+        },
+        {
+          "action": "Calculate rate and assess the five rhythm features",
+          "why": "For an irregular rhythm use a timed strip or a mean R–R interval, not a single short interval."
+        },
+        {
+          "action": "Determine axis and report findings in a consistent sequence",
+          "why": "Use I/aVF with lead II refinement, or the equiphasic method. State uncertainty rather than guessing."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Divide 60 by the number of small boxes.",
+          "right": "Convert boxes into seconds first: at 25 mm/s, mean RR = boxes × 0.04 s."
+        },
+        {
+          "wrong": "V3/V4 are septal because slide 60 says so.",
+          "right": "This is a slide-label error: V3/V4 are conventionally anterior."
+        },
+        {
+          "wrong": "Place limb electrodes on bony prominences because the older video shows this.",
+          "right": "The video description corrects this: avoid bony prominences and use the proper limb sites."
+        }
+      ],
+      "worked": [
+        {
+          "title": "Regular trace",
+          "formula": "Rate = 300 / large RR boxes (25 mm/s)",
+          "working": "Four large boxes between R waves: 300/4 = 75 beats/min."
+        },
+        {
+          "title": "Course irregular-rate example",
+          "formula": "Rate = 60 / mean RR in seconds",
+          "working": "Mean of 22, 14 and 18 small boxes = 18. RR = 18 × 0.04 = 0.72 s. Rate ≈ 83 beats/min. A longer suitable recording improves the estimate."
+        },
+        {
+          "title": "Equiphasic aVR",
+          "formula": "Axis lies approximately perpendicular to −150°",
+          "working": "Candidates are −60° and +120°. Predominantly positive I with negative aVF supports the −60° direction; use the actual trace rather than assuming one candidate."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "Why is V4 placed before V3?",
+          "answer": "V3 is positioned halfway between the already established V2 and V4 locations."
+        },
+        {
+          "prompt": "I is positive and aVF negative: is this always pathological LAD?",
+          "answer": "No. Check lead II; a positive II can indicate an axis between −30° and 0°, within the usual normal range."
+        },
+        {
+          "prompt": "What is the local assignment asking?",
+          "answer": "Rhythm with the five-rule approach, a recording-setting adjustment, irregular rate and equiphasic axis. Attempt all four slides without looking at the machine’s printed answer."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/ecg-placement.png",
+          "title": "Chest electrode landmarks",
+          "locator": "ECG main slide 52",
+          "caption": "V5 and V6 remain horizontally level with V4; do not follow the curve of the ribs downward."
+        },
+        {
+          "path": "physiology-practical/ecg-waves.png",
+          "title": "Waves and intervals",
+          "locator": "ECG main slide 55",
+          "caption": "Separate an interval’s endpoints from a single wave’s duration."
+        },
+        {
+          "path": "physiology-practical/ecg-irregular-exercise.png",
+          "title": "Irregular-rate exercise",
+          "locator": "ECG assignment slide 3",
+          "caption": "Compare successive RR intervals and state your assumed paper speed before calculating."
+        },
+        {
+          "path": "physiology-practical/ecg-axis-exercise.png",
+          "title": "Equiphasic-axis exercise",
+          "locator": "ECG assignment slide 4",
+          "caption": "Use the prompt’s equiphasic assumption, then choose between the two perpendicular directions. The machine header is not your reasoning."
+        }
+      ],
+      "videos": [
+        {
+          "id": "1k4B_fIX_t0",
+          "title": "How to record an ECG",
+          "provider": "Geeky Medics",
+          "note": "Important correction in the video description: avoid bony prominences for limb electrodes. Colours are convention-dependent; use labels."
+        },
+        {
+          "id": "2tLchrTacOo",
+          "title": "Cardiac axis explained",
+          "provider": "Geeky Medics",
+          "note": "Demonstration aid; follow the supervised laboratory SOP."
+        }
+      ],
+      "questionIds": [
+        "pp-ecg-electrodes",
+        "pp-ecg-v5",
+        "pp-ecg-paper-speed",
+        "pp-ecg-pr",
+        "pp-ecg-regular-rate",
+        "pp-ecg-irregular",
+        "pp-ecg-axis",
+        "pp-ecg-territory"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "ecg-1",
+          "title": "Position ten electrodes to obtain twelve leads",
+          "questionIds": [
+            "pp-ecg-electrodes",
+            "pp-ecg-v5"
+          ]
+        },
+        {
+          "id": "ecg-2",
+          "title": "Read paper speed, gain, waves and intervals",
+          "questionIds": [
+            "pp-ecg-paper-speed",
+            "pp-ecg-pr"
+          ]
+        },
+        {
+          "id": "ecg-3",
+          "title": "Calculate rate and assess sinus rhythm",
+          "questionIds": [
+            "pp-ecg-regular-rate",
+            "pp-ecg-irregular"
+          ]
+        },
+        {
+          "id": "ecg-4",
+          "title": "Determine frontal axis and recognise standard lead territories",
+          "questionIds": [
+            "pp-ecg-axis",
+            "pp-ecg-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spirometry",
+      "title": "Read a spirometry trace",
+      "subtitle": "Technique matters. Scales matter just as much.",
+      "minutes": 60,
+      "source": "Spirometery for kish class.pptx",
+      "sourceRange": "Slides 6–24; final exercise slide 24",
+      "fileOrder": "04",
+      "objectives": [
+        "Explain an acceptable forced-expiration manoeuvre",
+        "Identify measurable lung volumes on a calibrated trace",
+        "Calculate corrected VC and percentage of predicted",
+        "Calculate FEV1/FVC and interpret patterns cautiously"
+      ],
+      "equipment": [
+        "Spirometer and suitable mouthpiece/filter",
+        "Nose clip",
+        "Height/age data and reference table",
+        "Calibrated trace and ruler"
+      ],
+      "essentials": [
+        "Explain and demonstrate the manoeuvre: maximal inspiration, tight mouth seal and a rapid, forceful expiration continued to the required endpoint. A cough, leak, hesitant start or early stop may invalidate measurements.",
+        "TV is the quiet-breathing excursion; IRV is additional inspiration above a normal inspiration; ERV is additional expiration below normal expiration. VC = IRV + TV + ERV.",
+        "Simple spirometry does not measure residual volume, and therefore does not directly determine FRC or TLC.",
+        "The course trace uses 1 cm/s horizontally and 100 cc between adjacent horizontal lines in the demonstrated setup. Screen resizing is not a physical ruler calibration—use the printed grid/labelled scale.",
+        "The worked course example uses corrected VC = measured VC × 1.1. That factor is supplied for its conditions, not universal.",
+        "FEV1 is expired volume in the first second; FVC is total forced expired volume. VC and FVC are related but not interchangeable labels in every setting. Use the denominator requested by the exercise.",
+        "A reduced ratio supports airflow obstruction. A low FVC with a preserved ratio suggests possible restriction, but restriction requires confirmation of reduced TLC. Poor effort can also reduce FVC.",
+        "The slides use 80–120% predicted VC and a >75% ratio as simplified classroom conventions. These are not universal clinical cut-offs for every age and reference population."
+      ],
+      "steps": [
+        {
+          "action": "Check suitability with the supervisor and explain the test",
+          "why": "Clinical contraindications, infection control and comfort matter; do not stop medication without instructions."
+        },
+        {
+          "action": "Use the correct reference information and device calibration",
+          "why": "Predicted values depend on the chosen reference equation/table; use the one supplied in the exam."
+        },
+        {
+          "action": "Coach a maximal inspiration and forceful complete expiration with a good seal",
+          "why": "A weak start lowers early flow/volume; a leak loses measured air."
+        },
+        {
+          "action": "Check acceptability and repeatability according to the lab protocol",
+          "why": "Three attempts are not automatically three acceptable results."
+        },
+        {
+          "action": "Read the trace using its time and volume scales",
+          "why": "Do not assume a rising pen means inspiration: the device may record expired volume in that direction."
+        },
+        {
+          "action": "Calculate, show units and interpret the pattern with its limitations",
+          "why": "An apparent restrictive pattern is not proof of low TLC."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Apply 1.1 to every spirometry result.",
+          "right": "Use the stated correction for that exercise; some recordings are already corrected."
+        },
+        {
+          "wrong": "Low FVC proves restriction.",
+          "right": "It suggests possible restriction; reduced TLC is needed to confirm it, and poor manoeuvre quality must be excluded."
+        },
+        {
+          "wrong": "Use literal centimetres measured on a resized screen.",
+          "right": "Use the trace’s supplied grid calibration or the original printed scale."
+        }
+      ],
+      "worked": [
+        {
+          "title": "Course VC example",
+          "formula": "% predicted = corrected measured VC / predicted VC × 100",
+          "working": "2500 mL × 1.1 = 2750 mL. 2750/3410 × 100 = 80.6%, approximately 81%, within the course’s stated band."
+        },
+        {
+          "title": "Volume and ratio drill",
+          "formula": "VC = IRV + TV + ERV; FEV1/FVC × 100",
+          "working": "IRV 2.0 L + TV 0.5 L + ERV 1.0 L = VC 3.5 L. If forced FEV1 is 2.4 L and FVC 3.0 L, their ratio is 80%. Do not mix litres and millilitres."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "What cannot basic spirometry measure?",
+          "answer": "Residual volume, and therefore capacities containing it: FRC and TLC."
+        },
+        {
+          "prompt": "Which seven values are requested in slide 24?",
+          "answer": "TV, IRV, ERV, VC, VC/predicted VC%, FEV1 and FEV1/FVC%, followed by a judgement about lung tissue/airway resistance."
+        },
+        {
+          "prompt": "Why might an early stop be misleading?",
+          "answer": "It can underestimate FVC and distort the ratio; assess quality before interpreting physiology."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/spirometry-calibration.png",
+          "title": "How this course calibrates its tracing",
+          "locator": "Spirometry slide 21",
+          "caption": "Identify the one-second interval and the 100-cc volume spacing before reading excursions."
+        },
+        {
+          "path": "physiology-practical/spirometry-exercise.png",
+          "title": "The actual course calculation assignment",
+          "locator": "Spirometry slide 24",
+          "caption": "Female, 24 years, height 158 cm, temperature 22°C. Use the provided prediction table; explain your endpoints. No invented precise answer is supplied for this low-resolution trace."
+        }
+      ],
+      "videos": [
+        {
+          "id": "M4C8EInOMOI",
+          "title": "Peak flow and spirometry",
+          "provider": "Oxford Medical Education",
+          "note": "Focus on the spirometry manoeuvre. Peak flow is supplementary; the local pack’s calculation exercise is essential."
+        }
+      ],
+      "questionIds": [
+        "pp-spirometry-manoeuvre",
+        "pp-spirometry-early-stop",
+        "pp-spirometry-rv",
+        "pp-spirometry-vc",
+        "pp-spirometry-correction",
+        "pp-spirometry-predicted",
+        "pp-spirometry-ratio",
+        "pp-spirometry-restriction"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "spirometry-1",
+          "title": "Explain an acceptable forced-expiration manoeuvre",
+          "questionIds": [
+            "pp-spirometry-manoeuvre",
+            "pp-spirometry-early-stop"
+          ]
+        },
+        {
+          "id": "spirometry-2",
+          "title": "Identify measurable lung volumes on a calibrated trace",
+          "questionIds": [
+            "pp-spirometry-rv",
+            "pp-spirometry-vc"
+          ]
+        },
+        {
+          "id": "spirometry-3",
+          "title": "Calculate corrected VC and percentage of predicted",
+          "questionIds": [
+            "pp-spirometry-correction",
+            "pp-spirometry-predicted"
+          ]
+        },
+        {
+          "id": "spirometry-4",
+          "title": "Calculate FEV1/FVC and interpret patterns cautiously",
+          "questionIds": [
+            "pp-spirometry-ratio",
+            "pp-spirometry-restriction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rbc",
+      "title": "Count red blood cells",
+      "subtitle": "Know the volume before memorising the multiplier.",
+      "minutes": 30,
+      "source": "Cell Counting 1.pptx",
+      "sourceRange": "Slides 8–10, 13–15 and 19–23",
+      "fileOrder": "05",
+      "objectives": [
+        "Choose RBC-preserving diluent and dilution",
+        "Identify the RBC counting area and boundary convention",
+        "Derive RBC concentration from counted volume",
+        "Recognise loading and sampling errors"
+      ],
+      "equipment": [
+        "Improved Neubauer chamber and correct coverslip",
+        "Microscope",
+        "Approved RBC diluent and pipetting device",
+        "Prepared blood sample under laboratory supervision"
+      ],
+      "essentials": [
+        "Dilution makes a dense cell suspension countable; the diluent must preserve RBCs. The course names Hayem’s fluid for RBCs.",
+        "At 1:200 dilution, count five groups in the central 1-mm² square: four corner groups and the centre group. Each group contains 16 small squares.",
+        "Each group is 0.2 × 0.2 mm = 0.04 mm². Five groups give 0.20 mm²; with 0.1-mm depth, volume = 0.020 mm³ = 0.020 µL.",
+        "Concentration = N × dilution / volume. For this setup only: N × 200 / 0.020 = N × 10,000 cells/µL.",
+        "Use a consistent boundary rule: include two adjacent edges and exclude the opposite two. Otherwise cells shared by squares may be counted twice.",
+        "Locate the grid at low power, then use the course’s 40× objective for RBC counting. Total magnification includes both ocular and objective."
+      ],
+      "steps": [
+        {
+          "action": "Identify the chamber, coverslip, sample and approved diluent",
+          "why": "The correct coverslip establishes the intended chamber depth; improvised substitution alters volume."
+        },
+        {
+          "action": "Prepare the prescribed dilution using a pipetting device and mix",
+          "why": "Concentration calculations require the actual dilution, and uneven mixing biases sampling."
+        },
+        {
+          "action": "Load by capillary action without bubbles, overflow or underfilling",
+          "why": "An evenly filled known volume is necessary for a valid count."
+        },
+        {
+          "action": "Locate the central grid and select the five groups",
+          "why": "Do not confuse these groups with the four large WBC corner squares."
+        },
+        {
+          "action": "Count systematically using the same boundary convention",
+          "why": "Consistent traversal and edge rules prevent omission and double counting."
+        },
+        {
+          "action": "Calculate cells/µL, report the dilution and inspect plausibility",
+          "why": "A very unexpected value should prompt checks of dilution, grid selection and loading before biological interpretation."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Each central medium group is 0.25 mm wide.",
+          "right": "It is 0.2 mm: five groups span 1 mm. Slide 9 contains a dimension typo."
+        },
+        {
+          "wrong": "Multiply every RBC count by 10,000 regardless of dilution.",
+          "right": "Derive the multiplier from dilution and counted volume; different setups need different factors."
+        }
+      ],
+      "worked": [
+        {
+          "title": "Five-group RBC count",
+          "formula": "cells/µL = N × dilution / (area × depth)",
+          "working": "N = 480, dilution 200, area 0.20 mm², depth 0.1 mm: 480 × 200/0.020 = 4,800,000 cells/µL = 4.8 × 10^12/L."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "Why is the volume 0.020 µL?",
+          "answer": "Five groups × 0.04 mm² × 0.1 mm depth = 0.020 mm³; 1 mm³ equals 1 µL."
+        },
+        {
+          "prompt": "Why not use Türk’s fluid?",
+          "answer": "Its acetic acid lyses RBCs, which is useful for WBC counting but destroys the cells you want to count here."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/rbc-grid.png",
+          "title": "The five central counting groups",
+          "locator": "Cell Counting slide 20",
+          "caption": "Four corner groups and the middle group of the central grid are selected—not the four large WBC squares."
+        }
+      ],
+      "videos": [
+        {
+          "id": "nKn12jU-mVM",
+          "title": "RBC count practical",
+          "provider": "PATHOGENESIS",
+          "note": "Use the visual grid/dilution demonstration with your local equipment protocol. Do not reproduce blood sampling outside supervised practice."
+        }
+      ],
+      "questionIds": [
+        "pp-rbc-diluent",
+        "pp-rbc-turk",
+        "pp-rbc-squares",
+        "pp-rbc-edges",
+        "pp-rbc-volume",
+        "pp-rbc-calculation",
+        "pp-rbc-bubble",
+        "pp-rbc-mixing"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "rbc-1",
+          "title": "Choose RBC-preserving diluent and dilution",
+          "questionIds": [
+            "pp-rbc-diluent",
+            "pp-rbc-turk"
+          ]
+        },
+        {
+          "id": "rbc-2",
+          "title": "Identify the RBC counting area and boundary convention",
+          "questionIds": [
+            "pp-rbc-squares",
+            "pp-rbc-edges"
+          ]
+        },
+        {
+          "id": "rbc-3",
+          "title": "Derive RBC concentration from counted volume",
+          "questionIds": [
+            "pp-rbc-volume",
+            "pp-rbc-calculation"
+          ]
+        },
+        {
+          "id": "rbc-4",
+          "title": "Recognise loading and sampling errors",
+          "questionIds": [
+            "pp-rbc-bubble",
+            "pp-rbc-mixing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wbc",
+      "title": "Count white blood cells",
+      "subtitle": "Four corner squares. A different dilution.",
+      "minutes": 25,
+      "source": "Cell Counting 1.pptx",
+      "sourceRange": "Slides 10–17",
+      "fileOrder": "05",
+      "objectives": [
+        "Explain Türk’s fluid and WBC dilution",
+        "Identify WBC counting volume",
+        "Calculate and report total WBC concentration",
+        "Distinguish total count, differential and preventable errors"
+      ],
+      "equipment": [
+        "Neubauer chamber and correct coverslip",
+        "Microscope",
+        "Türk’s fluid and pipetting device",
+        "Prepared sample under supervision"
+      ],
+      "essentials": [
+        "Türk’s fluid uses acetic acid to lyse RBCs and a stain to make leukocyte nuclei easier to see. Do not confuse its purpose with RBC preservation.",
+        "The course’s standard example uses 1:20 dilution and counts four large corner squares. Each is 1 mm²; at 0.1-mm depth, combined volume = 0.4 µL.",
+        "For that example: WBC/µL = N × 20/0.4 = N × 50. If dilution is 1:10, the factor is 25 for the same area/depth.",
+        "The total WBC count is a concentration. The differential identifies the proportions of different WBC types; one cannot replace the other.",
+        "Check mixing, chamber loading, boundary convention and selected area before interpreting an unexpectedly high or low result."
+      ],
+      "steps": [
+        {
+          "action": "Confirm the WBC dilution and reagent",
+          "why": "Do not use the RBC procedure’s 1:200 dilution by habit."
+        },
+        {
+          "action": "Mix and load the correctly assembled chamber",
+          "why": "The coverslip and proper loading establish the known depth and even distribution."
+        },
+        {
+          "action": "Locate all four large corner squares",
+          "why": "These differ from the central RBC groups."
+        },
+        {
+          "action": "Count with consistent borders and a systematic path",
+          "why": "Avoid counting cells twice where squares share a boundary."
+        },
+        {
+          "action": "Multiply by dilution and divide by counted volume",
+          "why": "The volume, rather than memorisation alone, explains the factor."
+        },
+        {
+          "action": "Report cells/µL or ×10^9/L and review quality",
+          "why": "6000/µL equals 6.0 × 10^9/L; it does not mean 6000%. "
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "N × 50 is valid for all dilutions.",
+          "right": "It is valid for 1:20 dilution and four 1-mm² squares at 0.1-mm depth."
+        },
+        {
+          "wrong": "A differential percentage tells the total WBC concentration.",
+          "right": "A percentage needs a total WBC count to obtain an absolute subtype count."
+        }
+      ],
+      "worked": [
+        {
+          "title": "The course’s count of 120",
+          "formula": "120 × 20 / 0.4",
+          "working": "6000 WBC/µL = 6.0 × 10^9/L. Show the area, depth and dilution so the multiplier is auditable."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "Why do RBCs disappear in this preparation?",
+          "answer": "The acetic acid in Türk’s fluid lyses them so leukocytes are easier to count."
+        },
+        {
+          "prompt": "How does 1:10 dilution change the multiplier?",
+          "answer": "With the same 0.4-µL counted volume: 10/0.4 = 25, rather than 50."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/wbc-grid.png",
+          "title": "Depth and the four WBC counting squares",
+          "locator": "Cell Counting slide 14",
+          "caption": "Correct coverslip placement creates the 0.1-mm gap above the grid."
+        }
+      ],
+      "videos": [
+        {
+          "id": "q6rfJQVSals",
+          "title": "Haematology: white blood cell count",
+          "provider": "KNUST Open Educational Resources",
+          "note": "Demonstration aid; follow the supervised laboratory SOP."
+        }
+      ],
+      "questionIds": [
+        "pp-wbc-reagent",
+        "pp-wbc-dilution",
+        "pp-wbc-region",
+        "pp-wbc-volume",
+        "pp-wbc-count",
+        "pp-wbc-changed-dilution",
+        "pp-wbc-units",
+        "pp-wbc-total-v-differential"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "wbc-1",
+          "title": "Explain Türk’s fluid and WBC dilution",
+          "questionIds": [
+            "pp-wbc-reagent",
+            "pp-wbc-dilution"
+          ]
+        },
+        {
+          "id": "wbc-2",
+          "title": "Identify WBC counting volume",
+          "questionIds": [
+            "pp-wbc-region",
+            "pp-wbc-volume"
+          ]
+        },
+        {
+          "id": "wbc-3",
+          "title": "Calculate and report total WBC concentration",
+          "questionIds": [
+            "pp-wbc-count",
+            "pp-wbc-changed-dilution"
+          ]
+        },
+        {
+          "id": "wbc-4",
+          "title": "Distinguish total count, differential and preventable errors",
+          "questionIds": [
+            "pp-wbc-units",
+            "pp-wbc-total-v-differential"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential",
+      "title": "Identify the five WBC types",
+      "subtitle": "Read nucleus, cytoplasm and granules—not just colour.",
+      "minutes": 35,
+      "source": "differential count.ppt",
+      "sourceRange": "Slides 3–17, especially morphology 5 and 8–16; exercise 17",
+      "fileOrder": "06",
+      "objectives": [
+        "Recognise granulocytes by morphology",
+        "Distinguish lymphocytes and monocytes",
+        "Calculate a differential and an absolute subtype count",
+        "Explain systematic smear sampling and source limitations"
+      ],
+      "equipment": [
+        "Prepared stained peripheral-blood smear",
+        "Microscope with appropriate objective",
+        "Differential tally counter or sheet"
+      ],
+      "essentials": [
+        "Neutrophil: segmented/multilobed nucleus and relatively fine pale granules. Eosinophil: often bilobed nucleus with conspicuous orange-red granules. Basophil: coarse dark granules that may obscure the nucleus.",
+        "Lymphocyte: typically a dense round nucleus with a relatively narrow rim of cytoplasm in a small mature cell. Monocyte: larger cell, folded/kidney-shaped nucleus and more abundant grey-blue cytoplasm.",
+        "Real cells vary. Use nuclear shape, chromatin, size and granules together; a single colour cue or every large cell being called a monocyte is unreliable.",
+        "The course exercise counts 100 WBCs, so the tally for each type equals its percentage. With a different total, calculate type/total × 100.",
+        "Course reference percentages: neutrophils 45–70, lymphocytes 20–40, monocytes 3–8, eosinophils 2–4, basophils 0–2. These are the deck’s ranges, not universal reference intervals.",
+        "Absolute subtype count = total WBC × fraction. A high percentage does not necessarily imply a high absolute count.",
+        "The deck demonstrates identification more fully than smear preparation/staining. Do not infer an exact stain timing or reagent recipe that is not supplied."
+      ],
+      "steps": [
+        {
+          "action": "Check slide identity and locate a suitable monolayer",
+          "why": "Overlapping thick areas and extreme feather-edge distortion make identification less reliable."
+        },
+        {
+          "action": "Focus with the appropriate objective using the laboratory protocol",
+          "why": "Use immersion oil only with an oil-compatible objective; protect the slide and microscope."
+        },
+        {
+          "action": "Traverse systematically rather than selecting attractive cells",
+          "why": "A consistent pattern limits duplicate counting and selection bias."
+        },
+        {
+          "action": "Classify each WBC from combined morphological features",
+          "why": "Distinguish cells using nucleus and cytoplasm, not guesswork from colour alone."
+        },
+        {
+          "action": "Tally the specified number and calculate percentages",
+          "why": "The denominator is the actual number of WBCs counted."
+        },
+        {
+          "action": "Report the differential with uncertainty and absolute counts if available",
+          "why": "A percentage result must not be presented as cells/µL."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Basophils must show an easily visible nucleus.",
+          "right": "Their coarse dark granules can obscure it."
+        },
+        {
+          "wrong": "60% neutrophils always means neutrophilia.",
+          "right": "Assess the absolute count and the appropriate reference interval."
+        }
+      ],
+      "worked": [
+        {
+          "title": "Local 100-cell exercise",
+          "formula": "Type count / total count × 100",
+          "working": "Slide 17: N 59, L 28, M 8, E 4, B 1. Total 100, therefore 59%, 28%, 8%, 4%, 1%. Cover the bottom answer and recount before checking."
+        },
+        {
+          "title": "Absolute count",
+          "formula": "Total WBC × subtype fraction",
+          "working": "WBC 6000/µL with neutrophils 60% gives 6000 × 0.60 = 3600 neutrophils/µL."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "Eosinophil versus basophil?",
+          "answer": "Eosinophil: prominent orange-red granules, often bilobed nucleus. Basophil: coarse dark-purple granules, sometimes obscuring the nucleus."
+        },
+        {
+          "prompt": "Monocyte versus small mature lymphocyte?",
+          "answer": "Monocyte: larger, more cytoplasm and folded nucleus. Small lymphocyte: dense round nucleus with a narrow cytoplasmic rim."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/blood-cell-field.png",
+          "title": "Unlabelled morphology field",
+          "locator": "Differential slide 5",
+          "caption": "Try each cell before opening the comparison. Identify the upper-right granulocyte, far-right densely granulated cell, lower-left large cell and central-left round-nucleated cell."
+        },
+        {
+          "path": "physiology-practical/blood-cell-comparison.png",
+          "title": "Five-cell comparison",
+          "locator": "Differential slide 10",
+          "caption": "Compare the nucleus-to-cytoplasm relationship and granule patterns."
+        },
+        {
+          "path": "physiology-practical/differential-exercise.png",
+          "title": "100-cell tally exercise",
+          "locator": "Differential slide 17",
+          "caption": "The source includes the answer beneath the grid; hide it while practising."
+        }
+      ],
+      "videos": [
+        {
+          "id": "YFoeipV6Gqc",
+          "title": "Differential leukocyte count practical",
+          "provider": "Akhtar Saeed Medical & Dental College",
+          "note": "Use with the local morphology images. Exact staining method/timings must follow your own laboratory."
+        }
+      ],
+      "questionIds": [
+        "pp-differential-eosinophil",
+        "pp-differential-basophil",
+        "pp-differential-monocyte",
+        "pp-differential-lymphocyte",
+        "pp-differential-percentage",
+        "pp-differential-absolute",
+        "pp-differential-sampling",
+        "pp-differential-neutrophil"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "differential-1",
+          "title": "Recognise granulocytes by morphology",
+          "questionIds": [
+            "pp-differential-eosinophil",
+            "pp-differential-basophil"
+          ]
+        },
+        {
+          "id": "differential-2",
+          "title": "Distinguish lymphocytes and monocytes",
+          "questionIds": [
+            "pp-differential-monocyte",
+            "pp-differential-lymphocyte"
+          ]
+        },
+        {
+          "id": "differential-3",
+          "title": "Calculate a differential and an absolute subtype count",
+          "questionIds": [
+            "pp-differential-percentage",
+            "pp-differential-absolute"
+          ]
+        },
+        {
+          "id": "differential-4",
+          "title": "Explain systematic smear sampling and source limitations",
+          "questionIds": [
+            "pp-differential-sampling",
+            "pp-differential-neutrophil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hematocrit",
+      "title": "Read hematocrit / PCV",
+      "subtitle": "Separate the layers. Align the reader. Exclude the seal.",
+      "minutes": 20,
+      "source": "Bleeding-Time.pptx",
+      "sourceRange": "Slides 1–11",
+      "fileOrder": "07",
+      "objectives": [
+        "Explain packed-cell volume and specimen choice",
+        "Recognise layers and centrifuge safety",
+        "Read a hematocrit reader and calculate PCV",
+        "Identify causes of biased readings and interpret cautiously"
+      ],
+      "equipment": [
+        "Suitable capillary tube and approved sample",
+        "Sealant",
+        "Microhematocrit centrifuge",
+        "Hematocrit reader or ruler"
+      ],
+      "essentials": [
+        "Hematocrit is the proportion of blood volume occupied by red cells, commonly expressed as a percentage. It is not an RBC number concentration.",
+        "The source uses anticoagulated blood or an appropriate heparinised capillary for fresh capillary blood. Avoid a clotted or haemolysed specimen.",
+        "After centrifugation: packed RBCs below, a thin buffy coat of WBCs/platelets, and plasma above. The anticoagulated upper layer is plasma, not serum.",
+        "Align 0 at the base of the packed RBC column and 100 at the top of the plasma column. Read the top of packed RBCs without including the buffy coat.",
+        "For a ruler calculation: RBC-column length / total blood-column length × 100. Neither the seal nor empty air belongs in these lengths.",
+        "The deck lists adult male 42–54% and female 38–46%; these are course ranges and vary with laboratory/population. Dehydration can increase hematocrit without increasing total RBC mass."
+      ],
+      "steps": [
+        {
+          "action": "Confirm suitable anticoagulated sample and correct tube",
+          "why": "A clot prevents a representative packed-cell-volume measurement."
+        },
+        {
+          "action": "Prepare and seal the capillary under supervision",
+          "why": "A secure seal prevents leakage; exact filling and handling follow the lab SOP."
+        },
+        {
+          "action": "Balance the centrifuge and orient sealed ends outward as instructed",
+          "why": "Balanced loading and secure closure are essential; speed/time depend on the machine’s validated protocol."
+        },
+        {
+          "action": "Wait for a complete stop before accessing tubes",
+          "why": "Do not open or handle a moving rotor."
+        },
+        {
+          "action": "Identify the three layers and align the reader",
+          "why": "Base of RBCs = 0; top plasma = 100; top RBCs = result."
+        },
+        {
+          "action": "Report PCV with sample/technical limitations",
+          "why": "Do not interpret a single value without hydration, method and reference context."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "Include buffy coat in packed RBC height.",
+          "right": "Buffy coat contains WBCs and platelets, not the red-cell numerator."
+        },
+        {
+          "wrong": "The top layer must be serum.",
+          "right": "In this anticoagulated specimen it is plasma."
+        }
+      ],
+      "worked": [
+        {
+          "title": "Ruler calculation",
+          "formula": "PCV = RBC length / total blood length × 100",
+          "working": "RBC column 18 mm; total blood column 40 mm: PCV = 45%. Exclude seal and air from the measurement."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "What makes up the buffy coat?",
+          "answer": "White blood cells and platelets."
+        },
+        {
+          "prompt": "Why can dehydration raise PCV?",
+          "answer": "A reduced plasma volume raises the red-cell fraction even without an increase in total RBC mass."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/hematocrit-centrifuge.png",
+          "title": "Layers and loading orientation",
+          "locator": "Bleeding-Time slide 9",
+          "caption": "Recognise the seal, packed RBCs, buffy coat and plasma. The slide’s machine settings are not universal."
+        },
+        {
+          "path": "physiology-practical/hematocrit-reader.png",
+          "title": "Where zero and 100 belong",
+          "locator": "Bleeding-Time slide 11",
+          "caption": "Measure the fraction occupied by packed red cells; exclude the seal and the buffy coat from the RBC numerator."
+        }
+      ],
+      "videos": [
+        {
+          "id": "juyIdXQxtsw",
+          "title": "Spinning microhematocrit",
+          "provider": "Jacob Levitt",
+          "note": "Use for visual recognition of the process. Actual sample handling and centrifuge operation require supervision and the machine’s instructions."
+        }
+      ],
+      "questionIds": [
+        "pp-hematocrit-definition",
+        "pp-hematocrit-sample",
+        "pp-hematocrit-plasma",
+        "pp-hematocrit-balance",
+        "pp-hematocrit-pcv",
+        "pp-hematocrit-reader",
+        "pp-hematocrit-buffy",
+        "pp-hematocrit-dehydration"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "hematocrit-1",
+          "title": "Explain packed-cell volume and specimen choice",
+          "questionIds": [
+            "pp-hematocrit-definition",
+            "pp-hematocrit-sample"
+          ]
+        },
+        {
+          "id": "hematocrit-2",
+          "title": "Recognise layers and centrifuge safety",
+          "questionIds": [
+            "pp-hematocrit-plasma",
+            "pp-hematocrit-balance"
+          ]
+        },
+        {
+          "id": "hematocrit-3",
+          "title": "Read a hematocrit reader and calculate PCV",
+          "questionIds": [
+            "pp-hematocrit-pcv",
+            "pp-hematocrit-reader"
+          ]
+        },
+        {
+          "id": "hematocrit-4",
+          "title": "Identify causes of biased readings and interpret cautiously",
+          "questionIds": [
+            "pp-hematocrit-buffy",
+            "pp-hematocrit-dehydration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hemostasis",
+      "title": "Distinguish bleeding and clotting time",
+      "subtitle": "Different endpoints. Different parts of haemostasis.",
+      "minutes": 20,
+      "source": "Bleeding-Time.pptx",
+      "sourceRange": "Slides 12–25",
+      "fileOrder": "07",
+      "objectives": [
+        "Distinguish primary haemostasis from fibrin clot formation",
+        "Recognise the bleeding-time endpoint and course convention",
+        "Recognise capillary and slide clotting-time endpoints",
+        "Handle method dependence and ambiguous instructions safely"
+      ],
+      "equipment": [
+        "For recognition: timer, filter paper, approved lancet",
+        "Capillary or slide apparatus as specified",
+        "Protective equipment and sharps disposal under supervision"
+      ],
+      "essentials": [
+        "Bleeding time assesses cessation of bleeding after a standardised injury and reflects platelet–vessel interactions in primary haemostasis. It is not a direct platelet count.",
+        "Clotting time follows formation of a clot/fibrin under the method’s conditions. It is different from bleeding cessation and is not identical to PT or aPTT.",
+        "The course’s Duke-style BT description uses serial filter-paper observations and a 1–3 minute usual range. Do not copy the slide’s puncture depth as a safe instruction.",
+        "Capillary CT endpoint: first visible fibrin thread between separated capillary ends. The deck quotes 3–7 min. Slide CT uses a specified clot endpoint and quotes 4–10 min. Reference ranges belong to the named method.",
+        "The course slides conflict about the capillary CT timer start and contain an unclear checking interval. These are unresolved SOP questions, not details to guess for practical performance.",
+        "Temperature, technique, contact surface and endpoint selection can change results. Learn these as historical/classroom practicals; do not treat them as a comprehensive modern bleeding-risk screen."
+      ],
+      "steps": [
+        {
+          "action": "State which test and method are requested",
+          "why": "Duke-style BT, capillary CT and slide CT are not interchangeable procedures."
+        },
+        {
+          "action": "Explain what biological process and endpoint the test assesses",
+          "why": "Bleeding stops with a haemostatic plug; visible fibrin is a different observation."
+        },
+        {
+          "action": "Confirm approved equipment, safety and timing rules with the supervisor",
+          "why": "The local slide discrepancies must be resolved by the actual SOP before invasive performance."
+        },
+        {
+          "action": "Observe the specified endpoint without disrupting it",
+          "why": "Touching or disturbing the forming plug can alter the observation; do not improvise technique."
+        },
+        {
+          "action": "Record elapsed time, units and method",
+          "why": "A number without method is difficult to compare with a reference interval."
+        },
+        {
+          "action": "Discuss limitations rather than diagnosing from one result",
+          "why": "Neither a normal BT nor CT excludes every bleeding disorder."
+        }
+      ],
+      "traps": [
+        {
+          "wrong": "BT and CT measure the same endpoint.",
+          "right": "BT: bleeding cessation. CT: clot/fibrin formation under a specified method."
+        },
+        {
+          "wrong": "Follow the source’s ambiguous timer wording without clarification.",
+          "right": "Confirm the SOP start point and observation interval; they affect the result."
+        },
+        {
+          "wrong": "Practise finger-pricks or breaking blood-filled glass at home.",
+          "right": "Practise recognition and explanation at home; invasive work and sharps require supervision."
+        }
+      ],
+      "worked": [
+        {
+          "title": "Report the method, not only the number",
+          "formula": "Result = elapsed time + unit + named method",
+          "working": "For a hypothetical course capillary CT of 5 min: report the capillary method and timing convention. It lies within that deck’s 3–7 min range; this does not rule out every haemostatic disorder."
+        }
+      ],
+      "recall": [
+        {
+          "prompt": "What is the capillary clotting-time endpoint?",
+          "answer": "First visible fibrin thread at the separated capillary ends, with timing defined by the laboratory’s SOP."
+        },
+        {
+          "prompt": "Why can a heparinised tube be useful for PCV but unsuitable for CT?",
+          "answer": "PCV needs the sample not to clot. CT is observing clot formation, so an anticoagulant would interfere."
+        },
+        {
+          "prompt": "What must be clarified before this station?",
+          "answer": "The actual BT/CT method, approved equipment, timer start, checking interval and reference range."
+        }
+      ],
+      "images": [
+        {
+          "path": "physiology-practical/clotting-endpoint.png",
+          "title": "Recognise fibrin—not merely a blood drop",
+          "locator": "Bleeding-Time slide 22",
+          "caption": "Recognition only. The deck’s 3–7 min range is method-specific; its adjacent timer instructions conflict. Do not perform this unsupervised."
+        }
+      ],
+      "videos": [
+        {
+          "id": "hsVnja-VY2A",
+          "title": "Bleeding and clotting time demonstration",
+          "provider": "BHL Sciences With Asim",
+          "note": "Visual recognition only. Do not adopt puncture depth, handling, timing or ranges without your supervised laboratory SOP."
+        },
+        {
+          "id": "2kkEkUlyULc",
+          "title": "Bleeding/clotting time: practical viva",
+          "provider": "Aruna Physiology",
+          "note": "Supplementary oral-question revision; reconcile method differences with the course slides."
+        }
+      ],
+      "questionIds": [
+        "pp-hemostasis-primary",
+        "pp-hemostasis-anticoagulant",
+        "pp-hemostasis-bt-endpoint",
+        "pp-hemostasis-bt-range",
+        "pp-hemostasis-ct-endpoint",
+        "pp-hemostasis-method-range",
+        "pp-hemostasis-conflict",
+        "pp-hemostasis-normal-result"
+      ],
+      "objectiveCoverage": [
+        {
+          "id": "hemostasis-1",
+          "title": "Distinguish primary haemostasis from fibrin clot formation",
+          "questionIds": [
+            "pp-hemostasis-primary",
+            "pp-hemostasis-anticoagulant"
+          ]
+        },
+        {
+          "id": "hemostasis-2",
+          "title": "Recognise the bleeding-time endpoint and course convention",
+          "questionIds": [
+            "pp-hemostasis-bt-endpoint",
+            "pp-hemostasis-bt-range"
+          ]
+        },
+        {
+          "id": "hemostasis-3",
+          "title": "Recognise capillary and slide clotting-time endpoints",
+          "questionIds": [
+            "pp-hemostasis-ct-endpoint",
+            "pp-hemostasis-method-range"
+          ]
+        },
+        {
+          "id": "hemostasis-4",
+          "title": "Handle method dependence and ambiguous instructions safely",
+          "questionIds": [
+            "pp-hemostasis-conflict",
+            "pp-hemostasis-normal-result"
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "The official station blueprint, marking rubric and timetable have not been supplied.",
+    "The clotting-time slides disagree on the timer start: confirm the laboratory SOP.",
+    "The spirometry paper trace does not justify a single precise answer from the resized image; use the original scale and document units.",
+    "Reference intervals and spirometry correction factors shown are course/method conventions, not universal clinical thresholds.",
+    "Video metadata was verified, not every frame; external videos supplement the local pack and do not establish exam scope."
+  ]
+}

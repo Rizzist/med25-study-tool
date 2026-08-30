@@ -17,10 +17,11 @@ async function route(path, body) {
   return worker.fetch(new Request(`http://localhost${path}`, body === undefined ? undefined : { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("Term 2 catalog has four exams, unknown dates and explicit membership", () => {
-  assert.equal(term2Exams.length, 4);
-  assert.equal(examIds.length, 7);
-  assert(term2Exams.every((exam) => exam.date === null));
+test("Term 2 catalog has five exams with explicit membership and only the user-reported practical date", () => {
+  assert.equal(term2Exams.length, 5);
+  assert.equal(examIds.length, 8);
+  assert(term2Exams.filter((exam) => exam.id !== "term2-physiology-practical").every((exam) => exam.date === null));
+  assert.equal(term2Exams.find((exam) => exam.id === "term2-physiology-practical").date, "2026-08-31");
   assert(isExamId("july25"));
   assert(isTerm2Exam("term2-respiratory"));
   assert(!isExamId("toString"));
@@ -78,8 +79,8 @@ test("deployed API exposes Respiratory only in its own exam and keeps placeholde
   for (const exam of term2Exams) {
     const found = summary.exams.find((item) => item.id === exam.id);
     assert(found);
-    assert.equal(found.date, null);
-    if (exam.id !== "term2-respiratory") assert.equal(found.questionCount, 0);
+    assert.equal(found.date, exam.date);
+    if (exam.status === "planned") assert.equal(found.questionCount, 0);
   }
   const respiratory = summary.exams.find((exam) => exam.id === "term2-respiratory");
   assert(respiratory.questionCount >= 150);

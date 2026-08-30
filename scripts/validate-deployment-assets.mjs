@@ -13,6 +13,15 @@ function assert(condition, message) {
 
 const catalog = JSON.parse(readFileSync(catalogPath, "utf8"));
 const embeddedBank = JSON.parse(readFileSync(embeddedBankPath, "utf8"));
+const practicalCatalog = JSON.parse(readFileSync(resolve(root, "data/term2/physiology-practical.json"), "utf8"));
+const practicalQuestions = embeddedBank.questions.filter((q) => q.tags?.includes("exam-term2-physiology-practical"));
+const practicalSource = readFileSync(resolve(root, "data/bank/questions/term2-physiology-practical.jsonl"), "utf8").trim().split("\n").map((line) => JSON.parse(line));
+assert(JSON.stringify(practicalQuestions) === JSON.stringify(practicalSource), "Embedded physiology practical bank is stale");
+assert(practicalQuestions.length === practicalCatalog.totals.questions, "Practical question count is stale");
+for (const station of practicalCatalog.stations) {
+  for (const objective of station.objectiveCoverage) assert(objective.questionIds.every((id) => practicalQuestions.some((q) => q.id === id)), `Missing practical objective question: ${objective.id}`);
+  for (const image of station.images) assert(existsSync(resolve(root, "public/study", image.path)), `Missing practical figure: ${image.path}`);
+}
 const concepts = catalog.chapters?.flatMap((chapter) => chapter.concepts ?? []) ?? [];
 const selectedQuestionIds = concepts.flatMap((concept) => concept.selectedQuestionIds ?? []);
 const questionById = new Map((embeddedBank.questions ?? []).map((question) => [question.id, question]));

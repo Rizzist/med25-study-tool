@@ -1,7 +1,7 @@
 import type { MCQQuestion } from "./types";
-export type Term2ExamId = "term2-cvs" | "term2-respiratory" | "term2-limbs" | "term2-biochemistry";
+export type Term2ExamId = "term2-cvs" | "term2-respiratory" | "term2-limbs" | "term2-biochemistry" | "term2-physiology-practical";
 export type ExamId = "july25" | "aug22" | "july29" | Term2ExamId;
-export const term2Exams: Array<{ id: Term2ExamId; date: null; title: string; scope: string; status: string }>;
+export const term2Exams: Array<{ id: Term2ExamId; date: string | null; title: string; scope: string; status: string }>;
 export const examIds: ExamId[];
 export function isExamId(value: unknown): value is ExamId;
 export function isTerm2Exam(value: unknown): value is Term2ExamId;

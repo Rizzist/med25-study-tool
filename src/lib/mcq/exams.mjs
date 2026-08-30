@@ -4,6 +4,7 @@ export const term2Exams = [
   { id: "term2-respiratory", date: null, title: "Respiratory", scope: "Airway and thoracic anatomy, respiratory histology, lung development and respiratory physiology", status: "ready" },
   { id: "term2-limbs", date: null, title: "Upper & Lower Limbs", scope: "Both upper and lower limbs are confirmed in scope", status: "planned" },
   { id: "term2-biochemistry", date: null, title: "Biochemistry II", scope: "Second-half Lippincott and teacher slides: carbohydrate and lipid metabolism; remaining scope to reconcile", status: "planned" },
+  { id: "term2-physiology-practical", date: "2026-08-31", title: "Physiology Practical", scope: "Blood pressure, heart sounds, ECG, spirometry, RBC/WBC counts, differential count, hematocrit and bleeding/clotting time", status: "ready" },
 ];
 
 export const examIds = ["july25", "aug22", "july29", ...term2Exams.map((exam) => exam.id)];

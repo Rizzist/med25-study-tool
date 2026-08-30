@@ -7,6 +7,7 @@ import { promisify } from "node:util";
 import { biochemistryChapterIdForQuestion, biochemistryChapterIds } from "../src/lib/biochemistry/chapter-mapping.mjs";
 import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 import { selectRespiratorySprint } from "../src/lib/mcq/respiratory-selection.mjs";
+import { selectPracticalSprint } from "../src/lib/mcq/practical-selection.mjs";
 import { examIds, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, term2Exams } from "../src/lib/mcq/exams.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -221,6 +222,7 @@ function matchesExam(question, exam) {
 function isPracticalDerived(question) {
   const tags = (question.tags ?? []).map((tag) => tag.toLowerCase());
   return question.kind === "image_single_best_answer"
+    || tags.includes("physiology-practical")
     || tags.includes("biochemistry-lab")
     || tags.includes("stains")
     || ["Histological methods and stains", "Histology methods and stains", "Histology methods", "Microscopy", "Practical biochemistry"].includes(question.topic);
@@ -437,6 +439,7 @@ function coverageQuestionSet(body) {
     && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
   const selection = body.exam === "term2-respiratory"
     ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: body.studyMode === "exam" ? "exam" : "learn" })
+    : body.exam === "term2-physiology-practical" ? selectPracticalSprint(filtered, { limit, seenIds, repairIds, studyMode: body.studyMode === "exam" ? "exam" : "learn" })
     : selectCoverageSprint(filtered, { limit, seenIds, repairIds });
   return {
     availableCount: filtered.length,
@@ -465,7 +468,7 @@ function questionSetByIds(body) {
     ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, 5000)
     : [];
   const ordered = body.prioritize === true
-    ? (exam === "term2-respiratory" ? selectRespiratorySprint : selectCoverageSprint)(filtered, {
+    ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : selectCoverageSprint)(filtered, {
       limit,
       seenIds: cleanBodyIds(body.seenIds),
       repairIds: cleanBodyIds(body.repairIds),

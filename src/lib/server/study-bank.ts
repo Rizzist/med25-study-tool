@@ -9,6 +9,7 @@ import { isCuratedBiochemistryQuestion } from "@/src/lib/biochemistry/concepts";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 import { selectCoverageSprint } from "@/src/lib/mcq/sprint-selection.mjs";
 import { selectRespiratorySprint } from "@/src/lib/mcq/respiratory-selection.mjs";
+import { selectPracticalSprint } from "@/src/lib/mcq/practical-selection.mjs";
 import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
 
 export { isExamId };
@@ -290,6 +291,7 @@ export function loadFinalExamQuestions(exam: ExamId, bank: FinalExamBankId = def
 function isPracticalDerived(question: MCQQuestion): boolean {
   const tags = (question.tags ?? []).map((tag) => tag.toLowerCase());
   return question.kind === "image_single_best_answer"
+    || tags.includes("physiology-practical")
     || tags.includes("biochemistry-lab")
     || tags.includes("stains")
     || [
@@ -489,6 +491,7 @@ export function coverageQuestionSet(body: unknown) {
       && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
   const selection = exam === "term2-respiratory"
     ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
+    : exam === "term2-physiology-practical" ? selectPracticalSprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
     : selectCoverageSprint(filtered, { limit, seenIds, repairIds });
 
   return {
@@ -516,7 +519,7 @@ export function questionSetByIds(body: unknown) {
     .filter((question) => idSet.has(question.id) && matchesExam(question, exam));
   const byId = new Map(filtered.map((question) => [question.id, question]));
   const ordered = input.prioritize === true
-    ? (exam === "term2-respiratory" ? selectRespiratorySprint : selectCoverageSprint)(filtered, {
+    ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : selectCoverageSprint)(filtered, {
       limit,
       seenIds: cleanIds(input.seenIds, 5_000),
       repairIds: cleanIds(input.repairIds, 5_000),

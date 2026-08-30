@@ -1,0 +1,381 @@
+{
+  "basis": "Seven unique WhatsApp files plus the existing local ECG applied-physiology assignment. This is a source-based revision circuit, not an official station blueprint or past-paper bank.",
+  "totals": {
+    "stations": 9,
+    "objectives": 36,
+    "questions": 72,
+    "imageQuestions": 9,
+    "images": 16,
+    "videos": 12,
+    "studyMinutes": 310
+  },
+  "stations": [
+    {
+      "id": "bp",
+      "title": "Measure blood pressure",
+      "source": "Blood pressure measurement international.pdf",
+      "sourceRange": "Pages 7–17, 20, 25 and 37",
+      "objectives": [
+        {
+          "id": "bp-1",
+          "title": "Prepare the subject and cuff correctly",
+          "questionIds": [
+            "pp-bp-position",
+            "pp-bp-cuff"
+          ]
+        },
+        {
+          "id": "bp-2",
+          "title": "Sequence palpatory and auscultatory measurement",
+          "questionIds": [
+            "pp-bp-palpation",
+            "pp-bp-inflation"
+          ]
+        },
+        {
+          "id": "bp-3",
+          "title": "Recognise Korotkoff endpoints and the auscultatory gap",
+          "questionIds": [
+            "pp-bp-endpoints",
+            "pp-bp-gap"
+          ]
+        },
+        {
+          "id": "bp-4",
+          "title": "Calculate and report pulse pressure and approximate MAP",
+          "questionIds": [
+            "pp-bp-pp",
+            "pp-bp-map"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heart-sounds",
+      "title": "Find and explain heart sounds",
+      "source": "Blood pressure measurement international.pdf",
+      "sourceRange": "Pages 27–33 and assignment p. 37",
+      "objectives": [
+        {
+          "id": "heart-sounds-1",
+          "title": "Locate the four standard valve auscultation areas",
+          "questionIds": [
+            "pp-heart-sounds-pulmonary",
+            "pp-heart-sounds-mitral"
+          ]
+        },
+        {
+          "id": "heart-sounds-2",
+          "title": "Explain the origin and timing of S1 and S2",
+          "questionIds": [
+            "pp-heart-sounds-s1",
+            "pp-heart-sounds-s2"
+          ]
+        },
+        {
+          "id": "heart-sounds-3",
+          "title": "Use the stethoscope and describe findings systematically",
+          "questionIds": [
+            "pp-heart-sounds-bell",
+            "pp-heart-sounds-sequence"
+          ]
+        },
+        {
+          "id": "heart-sounds-4",
+          "title": "Distinguish listening areas from anatomical valve positions",
+          "questionIds": [
+            "pp-heart-sounds-area",
+            "pp-heart-sounds-aortic"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecg",
+      "title": "Record and interpret an ECG",
+      "source": "ECG Appl Physio Class 7.ppt + ECG Eng Appl Physio Assignment.ppt",
+      "sourceRange": "Main slides 5–30, 36, 52–61; all four assignment slides",
+      "objectives": [
+        {
+          "id": "ecg-1",
+          "title": "Position ten electrodes to obtain twelve leads",
+          "questionIds": [
+            "pp-ecg-electrodes",
+            "pp-ecg-v5"
+          ]
+        },
+        {
+          "id": "ecg-2",
+          "title": "Read paper speed, gain, waves and intervals",
+          "questionIds": [
+            "pp-ecg-paper-speed",
+            "pp-ecg-pr"
+          ]
+        },
+        {
+          "id": "ecg-3",
+          "title": "Calculate rate and assess sinus rhythm",
+          "questionIds": [
+            "pp-ecg-regular-rate",
+            "pp-ecg-irregular"
+          ]
+        },
+        {
+          "id": "ecg-4",
+          "title": "Determine frontal axis and recognise standard lead territories",
+          "questionIds": [
+            "pp-ecg-axis",
+            "pp-ecg-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spirometry",
+      "title": "Read a spirometry trace",
+      "source": "Spirometery for kish class.pptx",
+      "sourceRange": "Slides 6–24; final exercise slide 24",
+      "objectives": [
+        {
+          "id": "spirometry-1",
+          "title": "Explain an acceptable forced-expiration manoeuvre",
+          "questionIds": [
+            "pp-spirometry-manoeuvre",
+            "pp-spirometry-early-stop"
+          ]
+        },
+        {
+          "id": "spirometry-2",
+          "title": "Identify measurable lung volumes on a calibrated trace",
+          "questionIds": [
+            "pp-spirometry-rv",
+            "pp-spirometry-vc"
+          ]
+        },
+        {
+          "id": "spirometry-3",
+          "title": "Calculate corrected VC and percentage of predicted",
+          "questionIds": [
+            "pp-spirometry-correction",
+            "pp-spirometry-predicted"
+          ]
+        },
+        {
+          "id": "spirometry-4",
+          "title": "Calculate FEV1/FVC and interpret patterns cautiously",
+          "questionIds": [
+            "pp-spirometry-ratio",
+            "pp-spirometry-restriction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rbc",
+      "title": "Count red blood cells",
+      "source": "Cell Counting 1.pptx",
+      "sourceRange": "Slides 8–10, 13–15 and 19–23",
+      "objectives": [
+        {
+          "id": "rbc-1",
+          "title": "Choose RBC-preserving diluent and dilution",
+          "questionIds": [
+            "pp-rbc-diluent",
+            "pp-rbc-turk"
+          ]
+        },
+        {
+          "id": "rbc-2",
+          "title": "Identify the RBC counting area and boundary convention",
+          "questionIds": [
+            "pp-rbc-squares",
+            "pp-rbc-edges"
+          ]
+        },
+        {
+          "id": "rbc-3",
+          "title": "Derive RBC concentration from counted volume",
+          "questionIds": [
+            "pp-rbc-volume",
+            "pp-rbc-calculation"
+          ]
+        },
+        {
+          "id": "rbc-4",
+          "title": "Recognise loading and sampling errors",
+          "questionIds": [
+            "pp-rbc-bubble",
+            "pp-rbc-mixing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wbc",
+      "title": "Count white blood cells",
+      "source": "Cell Counting 1.pptx",
+      "sourceRange": "Slides 10–17",
+      "objectives": [
+        {
+          "id": "wbc-1",
+          "title": "Explain Türk’s fluid and WBC dilution",
+          "questionIds": [
+            "pp-wbc-reagent",
+            "pp-wbc-dilution"
+          ]
+        },
+        {
+          "id": "wbc-2",
+          "title": "Identify WBC counting volume",
+          "questionIds": [
+            "pp-wbc-region",
+            "pp-wbc-volume"
+          ]
+        },
+        {
+          "id": "wbc-3",
+          "title": "Calculate and report total WBC concentration",
+          "questionIds": [
+            "pp-wbc-count",
+            "pp-wbc-changed-dilution"
+          ]
+        },
+        {
+          "id": "wbc-4",
+          "title": "Distinguish total count, differential and preventable errors",
+          "questionIds": [
+            "pp-wbc-units",
+            "pp-wbc-total-v-differential"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential",
+      "title": "Identify the five WBC types",
+      "source": "differential count.ppt",
+      "sourceRange": "Slides 3–17, especially morphology 5 and 8–16; exercise 17",
+      "objectives": [
+        {
+          "id": "differential-1",
+          "title": "Recognise granulocytes by morphology",
+          "questionIds": [
+            "pp-differential-eosinophil",
+            "pp-differential-basophil"
+          ]
+        },
+        {
+          "id": "differential-2",
+          "title": "Distinguish lymphocytes and monocytes",
+          "questionIds": [
+            "pp-differential-monocyte",
+            "pp-differential-lymphocyte"
+          ]
+        },
+        {
+          "id": "differential-3",
+          "title": "Calculate a differential and an absolute subtype count",
+          "questionIds": [
+            "pp-differential-percentage",
+            "pp-differential-absolute"
+          ]
+        },
+        {
+          "id": "differential-4",
+          "title": "Explain systematic smear sampling and source limitations",
+          "questionIds": [
+            "pp-differential-sampling",
+            "pp-differential-neutrophil"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hematocrit",
+      "title": "Read hematocrit / PCV",
+      "source": "Bleeding-Time.pptx",
+      "sourceRange": "Slides 1–11",
+      "objectives": [
+        {
+          "id": "hematocrit-1",
+          "title": "Explain packed-cell volume and specimen choice",
+          "questionIds": [
+            "pp-hematocrit-definition",
+            "pp-hematocrit-sample"
+          ]
+        },
+        {
+          "id": "hematocrit-2",
+          "title": "Recognise layers and centrifuge safety",
+          "questionIds": [
+            "pp-hematocrit-plasma",
+            "pp-hematocrit-balance"
+          ]
+        },
+        {
+          "id": "hematocrit-3",
+          "title": "Read a hematocrit reader and calculate PCV",
+          "questionIds": [
+            "pp-hematocrit-pcv",
+            "pp-hematocrit-reader"
+          ]
+        },
+        {
+          "id": "hematocrit-4",
+          "title": "Identify causes of biased readings and interpret cautiously",
+          "questionIds": [
+            "pp-hematocrit-buffy",
+            "pp-hematocrit-dehydration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hemostasis",
+      "title": "Distinguish bleeding and clotting time",
+      "source": "Bleeding-Time.pptx",
+      "sourceRange": "Slides 12–25",
+      "objectives": [
+        {
+          "id": "hemostasis-1",
+          "title": "Distinguish primary haemostasis from fibrin clot formation",
+          "questionIds": [
+            "pp-hemostasis-primary",
+            "pp-hemostasis-anticoagulant"
+          ]
+        },
+        {
+          "id": "hemostasis-2",
+          "title": "Recognise the bleeding-time endpoint and course convention",
+          "questionIds": [
+            "pp-hemostasis-bt-endpoint",
+            "pp-hemostasis-bt-range"
+          ]
+        },
+        {
+          "id": "hemostasis-3",
+          "title": "Recognise capillary and slide clotting-time endpoints",
+          "questionIds": [
+            "pp-hemostasis-ct-endpoint",
+            "pp-hemostasis-method-range"
+          ]
+        },
+        {
+          "id": "hemostasis-4",
+          "title": "Handle method dependence and ambiguous instructions safely",
+          "questionIds": [
+            "pp-hemostasis-conflict",
+            "pp-hemostasis-normal-result"
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "The official station blueprint, marking rubric and timetable have not been supplied.",
+    "The clotting-time slides disagree on the timer start: confirm the laboratory SOP.",
+    "The spirometry paper trace does not justify a single precise answer from the resized image; use the original scale and document units.",
+    "Reference intervals and spirometry correction factors shown are course/method conventions, not universal clinical thresholds.",
+    "Video metadata was verified, not every frame; external videos supplement the local pack and do not establish exam scope."
+  ]
+}
