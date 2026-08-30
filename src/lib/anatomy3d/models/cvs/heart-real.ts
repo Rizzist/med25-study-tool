@@ -73,7 +73,13 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
     mesh.userData.structureId = id;
     mesh.name = id;
     const old = mesh.material;
-    mesh.material = tissueMaterial(tissue);
+    const material = tissueMaterial(tissue);
+    // The real cavity meshes are the four chamber shells (RA/LA/RV/LV) — the heart's recognizable
+    // outline. At the palette's 0.48 they stack into one muddy translucent blue mass that buries the
+    // interior. Drop them further so the septa, valves, papillary muscles, trabeculae and conduction
+    // system read cleanly through the walls in the all-layers view.
+    if (tissue === "cavity") material.opacity = 0.32;
+    mesh.material = material;
     if (old) for (const m of Array.isArray(old) ? old : [old]) (m as Material).dispose?.();
     pushMesh(id, mesh);
   }
@@ -96,14 +102,17 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
   const v = (x: number, y: number, z: number) => new Vector3(x, y, z);
   const mid = (a: Vector3, b: Vector3) => a.clone().add(b).multiplyScalar(0.5);
 
-  const addProcedural = (id: string, mesh: Mesh, translucent = false) => {
+  // `opacity` (only meaningful when `translucent`) tunes how faint a schematic shell is, so the big
+  // enclosing layers (pericardium especially) can be kept much fainter than the small interior blobs
+  // instead of every translucent mesh sharing one alpha — the same per-mesh override nasal-real.ts uses.
+  const addProcedural = (id: string, mesh: Mesh, translucent = false, opacity = 0.2) => {
     mesh.name = id;
     mesh.userData.structureId = id;
     mesh.userData.schematic = true;
     const mat = tissueMaterial(structureTissue(id));
     if (translucent) {
       mat.transparent = true;
-      mat.opacity = 0.2;
+      mat.opacity = opacity;
       mat.depthWrite = false;
       mat.side = DoubleSide;
     }
@@ -118,10 +127,10 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
     const smooth = new CatmullRomCurve3(path.getSpacedPoints(divisions), false, "centripetal", 0.5);
     addProcedural(id, new Mesh(new TubeGeometry(smooth, divisions, radius, 8, false)));
   };
-  const blob = (id: string, at: Vector3, sx: number, sy: number, sz: number, translucent = false) => {
+  const blob = (id: string, at: Vector3, sx: number, sy: number, sz: number, translucent = false, opacity = 0.2) => {
     const m = new Mesh(new SphereGeometry(1, 16, 12));
     m.position.copy(at); m.scale.set(sx, sy, sz);
-    addProcedural(id, m, translucent);
+    addProcedural(id, m, translucent, opacity);
   };
   // Thin oriented slab (a schematic septum). `normal` is the through-plane (thin) direction.
   const slab = (id: string, at: Vector3, normal: Vector3, w: number, h: number, t: number) => {
@@ -144,9 +153,12 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
     m.lookAt(at.clone().add(axis)); // torus axis is local +Z
     addProcedural(id, m);
   };
-  // Concentric translucent ellipsoid shell around a centre (a pericardial layer).
-  const shell = (id: string, at: Vector3, rx: number, ry: number, rz: number) => {
-    blob(id, at, rx, ry, rz, true);
+  // Concentric translucent ellipsoid shell around a centre (a pericardial layer). These are the
+  // largest meshes in the model — each fully encloses the heart — so they default to a very faint
+  // alpha and grade even fainter toward the outermost layer, keeping the whole heart visible through
+  // them instead of a muddy translucent fog dominating the all-layers view.
+  const shell = (id: string, at: Vector3, rx: number, ry: number, rz: number, opacity = 0.08) => {
+    blob(id, at, rx, ry, rz, true, opacity);
   };
 
   // ---- anchors (baked ~1.9u space) -------------------------------------------------------
@@ -255,12 +267,13 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
   // ==== External surfaces, borders & sulci ===============================================
   // Apex — inferolateral-left tip formed by the LV.
   blob("cardiac-apex", v(lvBox.max.x - 0.12, lvBox.min.y + 0.10, cLV.z + 0.16), 0.16, 0.14, 0.16, true);
-  // Base — posterior surface, mainly the LA.
-  blob("base-of-heart", v(cLA.x, cLA.y - 0.04, laBox.min.z + 0.08), 0.30, 0.28, 0.06, true);
+  // Base — posterior surface, mainly the LA. These broad surface films are kept fainter than the
+  // interior blobs so they read as thin face-markings rather than adding another translucent veil.
+  blob("base-of-heart", v(cLA.x, cLA.y - 0.04, laBox.min.z + 0.08), 0.30, 0.28, 0.06, true, 0.14);
   // Sternocostal (anterior) surface — mostly RV, facing the sternum.
-  blob("sternocostal-surface", v(cRV.x + 0.04, cRV.y + 0.06, rvBox.max.z - 0.06), 0.32, 0.34, 0.06, true);
+  blob("sternocostal-surface", v(cRV.x + 0.04, cRV.y + 0.06, rvBox.max.z - 0.06), 0.32, 0.34, 0.06, true, 0.14);
   // Diaphragmatic (inferior) surface — LV + part of RV, on the diaphragm.
-  blob("diaphragmatic-surface", v(heartC.x + 0.05, heartBox.min.y + 0.08, heartC.z + 0.08), 0.36, 0.06, 0.32, true);
+  blob("diaphragmatic-surface", v(heartC.x + 0.05, heartBox.min.y + 0.08, heartC.z + 0.08), 0.36, 0.06, 0.32, true, 0.14);
   // Coronary & interventricular sulci — the AV groove ring plus anterior & posterior IV grooves.
   ring("coronary-sulcus", v(heartC.x, heartC.y + 0.02, heartC.z), v(0.15, 1, 0.0), Math.max(0.55, half.x * 0.85), 0.02);
   tube("coronary-sulcus", [ // anterior interventricular sulcus
@@ -293,10 +306,12 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
 
   // ==== Pericardium ======================================================================
   // Nested translucent shells (outer → inner): fibrous, parietal serous, cavity, visceral/epicardium.
-  shell("fibrous-pericardium", heartC, half.x + 0.22, half.y + 0.24, half.z + 0.22);
-  shell("parietal-serous-pericardium", heartC, half.x + 0.15, half.y + 0.17, half.z + 0.15);
-  shell("pericardial-cavity", heartC, half.x + 0.10, half.y + 0.12, half.z + 0.10);
-  shell("visceral-serous-pericardium", heartC, half.x + 0.05, half.y + 0.06, half.z + 0.05);
+  // Alpha grades up from the outermost fibrous sac (faintest, so it never dominates) to the visceral
+  // layer hugging the myocardium — four stacked shells would otherwise compound into an opaque haze.
+  shell("fibrous-pericardium", heartC, half.x + 0.22, half.y + 0.24, half.z + 0.22, 0.05);
+  shell("parietal-serous-pericardium", heartC, half.x + 0.15, half.y + 0.17, half.z + 0.15, 0.06);
+  shell("pericardial-cavity", heartC, half.x + 0.10, half.y + 0.12, half.z + 0.10, 0.07);
+  shell("visceral-serous-pericardium", heartC, half.x + 0.05, half.y + 0.06, half.z + 0.05, 0.09);
   // Transverse pericardial sinus — behind the arterial poles (aorta/pulmonary trunk), above the atria.
   tube("transverse-pericardial-sinus", [
     v(cRA.x + 0.14, cRA.y + 0.40, cRA.z - 0.02),

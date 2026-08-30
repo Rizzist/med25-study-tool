@@ -10,7 +10,8 @@ export type AnatomySystem =
   | "skeleton"
   | "cartilage"
   | "muscle"
-  | "airspace"
+  | "airway"
+  | "cavity"
   | "vessels"
   | "nerves"
   | "fat"
@@ -24,8 +25,11 @@ export const tissueToSystem: Record<Tissue, AnatomySystem> = {
   bone: "skeleton",
   cartilage: "cartilage",
   muscle: "muscle",
-  cavity: "airspace",
-  airway: "airspace",
+  // `airway` and `cavity` are separate systems: `airway` is the respiratory conduit lining, whereas
+  // `cavity` covers non-air spaces too (joint capsules, heart-chamber lumens, the pericardial and
+  // pleural cavities), so they must not collapse into one "air spaces" label.
+  airway: "airway",
+  cavity: "cavity",
   artery: "vessels",
   vein: "vessels",
   nerve: "nerves",
@@ -48,12 +52,13 @@ export const SYSTEMS: AnatomySystemMeta[] = [
   { id: "skeleton", label: "Bone", order: 0 },
   { id: "cartilage", label: "Cartilage", order: 1 },
   { id: "muscle", label: "Muscle", order: 2 },
-  { id: "airspace", label: "Air spaces & sinuses", order: 3 },
-  { id: "vessels", label: "Blood vessels", order: 4 },
-  { id: "nerves", label: "Nerves", order: 5 },
-  { id: "fat", label: "Fat", order: 6 },
-  { id: "connective", label: "Connective tissue", order: 7 },
-  { id: "organs", label: "Organs", order: 8 },
+  { id: "airway", label: "Airways", order: 3 },
+  { id: "cavity", label: "Cavities", order: 4 },
+  { id: "vessels", label: "Blood vessels", order: 5 },
+  { id: "nerves", label: "Nerves", order: 6 },
+  { id: "fat", label: "Fat", order: 7 },
+  { id: "connective", label: "Connective tissue", order: 8 },
+  { id: "organs", label: "Organs", order: 9 },
 ];
 
 export function systemForStructure(structure: AnatomyStructure): AnatomySystem {

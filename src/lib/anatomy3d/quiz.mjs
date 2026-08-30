@@ -1,6 +1,6 @@
 import { tissueToSystem, SYSTEMS } from "./systems.ts";
 
-// Display label for each system id (e.g. "muscle" -> "Muscle", "airspace" -> "Air spaces & sinuses").
+// Display label for each system id (e.g. "muscle" -> "Muscle", "cavity" -> "Cavities").
 const SYSTEM_LABEL = new Map(SYSTEMS.map((system) => [system.id, system.label]));
 
 // The user-facing SYSTEM a structure belongs to, derived purely from its authored `tissue` tag.
