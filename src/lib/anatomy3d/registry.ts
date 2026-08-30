@@ -1,7 +1,10 @@
 import { nasalRealManifest } from "./manifests/respiratory/nasal-real.manifest.mjs";
 import { larynxRealManifest } from "./manifests/respiratory/larynx-real.manifest.mjs";
 import { tracheaLungRealManifest } from "./manifests/respiratory/trachea-lung-real.manifest.mjs";
-import { cvsManifest } from "./manifests/cvs/cvs-real.manifest.mjs";
+import { thoracicWallManifest } from "./manifests/cvs/thoracic-wall-real.manifest.mjs";
+import { heartManifest } from "./manifests/cvs/heart-real.manifest.mjs";
+import { mediastinumManifest } from "./manifests/cvs/mediastinum-real.manifest.mjs";
+import { thoracicInnervationManifest } from "./manifests/cvs/thoracic-innervation-real.manifest.mjs";
 import { upperLimbManifest } from "./manifests/upper-limb/upper-limb-real.manifest.mjs";
 import { lowerLimbManifest } from "./manifests/lower-limb/lower-limb-real.manifest.mjs";
 import type { AnatomyModelHandle, AnatomyModuleManifest } from "./types.ts";
@@ -37,10 +40,31 @@ const registrations: AnatomyModuleRegistration[] = [
     },
   },
   {
-    manifest: cvsManifest,
+    manifest: thoracicWallManifest,
     async createModel() {
-      const { createCvsModel } = await import("./models/cvs/cvs-real.ts");
-      return createCvsModel();
+      const { createThoracicWallModel } = await import("./models/cvs/thoracic-wall-real.ts");
+      return createThoracicWallModel();
+    },
+  },
+  {
+    manifest: heartManifest,
+    async createModel() {
+      const { createHeartModel } = await import("./models/cvs/heart-real.ts");
+      return createHeartModel();
+    },
+  },
+  {
+    manifest: mediastinumManifest,
+    async createModel() {
+      const { createMediastinumModel } = await import("./models/cvs/mediastinum-real.ts");
+      return createMediastinumModel();
+    },
+  },
+  {
+    manifest: thoracicInnervationManifest,
+    async createModel() {
+      const { createThoracicInnervationModel } = await import("./models/cvs/thoracic-innervation-real.ts");
+      return createThoracicInnervationModel();
     },
   },
   {
