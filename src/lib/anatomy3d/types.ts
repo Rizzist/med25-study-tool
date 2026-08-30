@@ -32,6 +32,12 @@ export type AnatomyStructure = {
   distractorIds?: string[];
   view?: CameraView;
   quizable?: boolean;
+  /**
+   * True when the mesh is drawn PROCEDURALLY (diagrammatic — anatomically placed but not
+   * scan-accurate) rather than loaded from the BodyParts3D GLB. Mirrors `userData.schematic` on the
+   * built meshes. Omitted/false means the structure is a real, scan-derived mesh.
+   */
+  schematic?: boolean;
 };
 
 export type AnatomyModuleManifest = {

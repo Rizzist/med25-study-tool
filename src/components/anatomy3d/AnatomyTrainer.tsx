@@ -342,6 +342,10 @@ export function AnatomyTrainer() {
               if (mode === "training") setTrainingStructureId(structureId);
             }}
           />
+          <p className="anatomy3d-schematic-legend">
+            <span className="anatomy3d-schematic-tag" aria-hidden="true">Schematic</span>
+            structures are diagrammatic (anatomically placed, not scan-accurate); unmarked structures are real BodyParts3D scan meshes.
+          </p>
         </div>
 
         <aside className="anatomy3d-panel">
@@ -389,6 +393,9 @@ export function AnatomyTrainer() {
                 <div className={`anatomy3d-feedback ${selectedWasCorrect ? "correct" : "wrong"}`} role="status">
                   <strong>{selectedWasCorrect ? "Correct." : `Correct answer: ${currentQuestion.label}`}</strong>
                   <p>{currentQuestion.explanation}</p>
+                  {currentQuestion.schematic && (
+                    <p className="anatomy3d-schematic-note">Schematic — diagrammatic representation, not a scan-accurate mesh.</p>
+                  )}
                 </div>
               )}
               <div className="anatomy3d-actions">
@@ -426,7 +433,12 @@ export function AnatomyTrainer() {
               <p className="anatomy3d-free-explore">Click any structure to select and frame it, or rotate the model freely.</p>
               {selectedTrainingStructure ? (
                 <article className="anatomy3d-details">
-                  <p className="eyebrow">{selectedTrainingStructure.tissue}</p>
+                  <p className="anatomy3d-details-tags">
+                    <span className="eyebrow">{selectedTrainingStructure.tissue}</span>
+                    {selectedTrainingStructure.schematic && (
+                      <span className="anatomy3d-schematic-tag" title="Diagrammatic representation — anatomically placed, but not a scan-accurate mesh.">Schematic</span>
+                    )}
+                  </p>
                   <h3>{selectedTrainingStructure.label}</h3>
                   <p>{selectedTrainingStructure.description}</p>
                   {selectedTrainingStructure.keyPoints?.length ? (

@@ -24,6 +24,8 @@ export type AnatomyQuestion = {
   difficulty: 1 | 2 | 3;
   view?: CameraView;
   label: string;
+  /** True when the highlighted target is a procedurally-drawn (schematic) mesh, not a scan mesh. */
+  schematic?: boolean;
 };
 
 export function buildAnatomyQuiz(

@@ -98,6 +98,7 @@ function buildIdentifyQuestion(target, questionId, manifest, visibleIds) {
     difficulty: target.difficulty,
     view: target.view,
     label: target.label,
+    schematic: Boolean(target.schematic),
   };
 }
 
@@ -136,6 +137,7 @@ function buildSystemQuestion(target, questionId, manifest, moduleSystems) {
     difficulty: target.difficulty,
     view: target.view,
     label: correctLabel,
+    schematic: Boolean(target.schematic),
   };
 }
 

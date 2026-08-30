@@ -41,6 +41,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "tracheal-rings",
+      schematic: true,
       label: "Tracheal cartilage rings",
       shortLabel: "C-rings",
       aliases: ["tracheal cartilages", "C-shaped rings"],
@@ -56,6 +57,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "trachealis-muscle",
+      schematic: true,
       label: "Trachealis muscle",
       shortLabel: "Trachealis",
       aliases: ["posterior membranous wall"],
@@ -71,6 +73,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "carina",
+      schematic: true,
       label: "Carina",
       shortLabel: "Carina",
       aliases: ["carina of trachea"],
@@ -221,6 +224,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "horizontal-fissure",
+      schematic: true,
       label: "Horizontal fissure",
       shortLabel: "Horiz. fissure",
       aliases: ["transverse fissure", "minor fissure"],
@@ -236,6 +240,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "oblique-fissure",
+      schematic: true,
       label: "Oblique fissure",
       shortLabel: "Oblique fissure",
       aliases: ["major fissure", "oblique fissures"],
@@ -251,6 +256,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "cardiac-notch",
+      schematic: true,
       label: "Cardiac notch",
       shortLabel: "Cardiac notch",
       aliases: ["cardiac notch of left lung"],
@@ -266,6 +272,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "lingula",
+      schematic: true,
       label: "Lingula",
       shortLabel: "Lingula",
       aliases: ["lingula of left lung"],
@@ -281,6 +288,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "hilum-root",
+      schematic: true,
       label: "Hilum (root) of lung",
       shortLabel: "Hilum",
       aliases: ["lung root", "root of lung", "pulmonary hilum"],
@@ -296,6 +304,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "vagus-nerve",
+      schematic: true,
       label: "Vagus nerve (CN X)",
       shortLabel: "Vagus (X)",
       aliases: ["CN X", "tenth cranial nerve"],
@@ -312,6 +321,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "recurrent-laryngeal-nerve",
+      schematic: true,
       label: "Recurrent laryngeal nerve",
       shortLabel: "Recurrent laryngeal n.",
       aliases: ["RLN", "inferior laryngeal nerve"],
@@ -328,6 +338,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "pulmonary-plexus",
+      schematic: true,
       label: "Pulmonary plexus",
       shortLabel: "Pulmonary plexus",
       aliases: ["anterior and posterior pulmonary plexuses"],
@@ -344,6 +355,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "bronchial-arteries",
+      schematic: true,
       label: "Bronchial arteries",
       shortLabel: "Bronchial aa.",
       aliases: ["bronchial artery"],
@@ -360,6 +372,7 @@ export const tracheaLungRealManifest = {
     },
     {
       id: "mediastinal-fat",
+      schematic: true,
       label: "Mediastinal fat",
       shortLabel: "Mediastinal fat",
       aliases: ["mediastinal adipose tissue"],

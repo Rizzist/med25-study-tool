@@ -108,6 +108,7 @@ export const nasalRealManifest = {
     },
     {
       id: "superior-concha",
+      schematic: true,
       label: "Superior nasal concha",
       shortLabel: "Sup. concha",
       aliases: ["superior turbinate", "superior concha"],
@@ -124,6 +125,7 @@ export const nasalRealManifest = {
     },
     {
       id: "middle-concha",
+      schematic: true,
       label: "Middle nasal concha",
       shortLabel: "Mid. concha",
       aliases: ["middle turbinate", "middle concha"],
@@ -156,6 +158,7 @@ export const nasalRealManifest = {
     },
     {
       id: "superior-meatus",
+      schematic: true,
       label: "Superior meatus",
       shortLabel: "Sup. meatus",
       aliases: ["superior nasal meatus"],
@@ -172,6 +175,7 @@ export const nasalRealManifest = {
     },
     {
       id: "middle-meatus",
+      schematic: true,
       label: "Middle meatus",
       shortLabel: "Mid. meatus",
       aliases: ["middle nasal meatus"],
@@ -188,6 +192,7 @@ export const nasalRealManifest = {
     },
     {
       id: "inferior-meatus",
+      schematic: true,
       label: "Inferior meatus",
       shortLabel: "Inf. meatus",
       aliases: ["inferior nasal meatus"],
@@ -204,6 +209,7 @@ export const nasalRealManifest = {
     },
     {
       id: "frontal-sinus",
+      schematic: true,
       label: "Frontal sinus",
       shortLabel: "Frontal sinus",
       aliases: ["frontal air sinus"],
@@ -220,6 +226,7 @@ export const nasalRealManifest = {
     },
     {
       id: "maxillary-sinus",
+      schematic: true,
       label: "Maxillary sinus",
       shortLabel: "Maxillary sinus",
       aliases: ["antrum of Highmore", "maxillary antrum"],
@@ -237,6 +244,7 @@ export const nasalRealManifest = {
     },
     {
       id: "ethmoidal-air-cells",
+      schematic: true,
       label: "Ethmoidal air cells",
       shortLabel: "Ethmoid cells",
       aliases: ["ethmoidal sinuses", "ethmoid air cells"],
@@ -253,6 +261,7 @@ export const nasalRealManifest = {
     },
     {
       id: "sphenoid-sinus",
+      schematic: true,
       label: "Sphenoid sinus",
       shortLabel: "Sphenoid sinus",
       aliases: ["sphenoidal sinus", "sphenoidal air sinus"],
@@ -269,6 +278,7 @@ export const nasalRealManifest = {
     },
     {
       id: "hard-palate",
+      schematic: true,
       label: "Hard palate",
       shortLabel: "Hard palate",
       aliases: ["bony palate"],
@@ -285,6 +295,7 @@ export const nasalRealManifest = {
     },
     {
       id: "choanae",
+      schematic: true,
       label: "Choanae",
       shortLabel: "Choanae",
       aliases: ["posterior nasal apertures", "posterior nasal aperture"],
@@ -301,6 +312,7 @@ export const nasalRealManifest = {
     },
     {
       id: "nasopalatine-nerve",
+      schematic: true,
       label: "Nasopalatine nerve",
       shortLabel: "Nasopalatine n.",
       aliases: ["long sphenopalatine nerve"],
@@ -317,6 +329,7 @@ export const nasalRealManifest = {
     },
     {
       id: "anterior-ethmoidal-nerve",
+      schematic: true,
       label: "Anterior ethmoidal nerve",
       shortLabel: "Ant. ethmoidal n.",
       aliases: ["anterior ethmoidal branch"],
@@ -333,6 +346,7 @@ export const nasalRealManifest = {
     },
     {
       id: "olfactory-nerve",
+      schematic: true,
       label: "Olfactory nerve (CN I)",
       shortLabel: "Olfactory (I)",
       aliases: ["CN I", "first cranial nerve", "olfactory fila"],
@@ -349,6 +363,7 @@ export const nasalRealManifest = {
     },
     {
       id: "sphenopalatine-artery",
+      schematic: true,
       label: "Sphenopalatine artery",
       shortLabel: "Sphenopalatine a.",
       aliases: ["artery of epistaxis"],
@@ -365,6 +380,7 @@ export const nasalRealManifest = {
     },
     {
       id: "anterior-ethmoidal-artery",
+      schematic: true,
       label: "Anterior ethmoidal artery",
       shortLabel: "Ant. ethmoidal a.",
       aliases: ["anterior ethmoidal branch of ophthalmic artery"],
@@ -381,6 +397,7 @@ export const nasalRealManifest = {
     },
     {
       id: "kiesselbach-plexus",
+      schematic: true,
       label: "Kiesselbach's plexus",
       shortLabel: "Little's area",
       aliases: ["Little's area", "Kiesselbach's area"],

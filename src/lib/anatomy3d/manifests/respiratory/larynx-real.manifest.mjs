@@ -315,6 +315,7 @@ export const larynxRealManifest = {
     },
     {
       id: "vagus-nerve",
+      schematic: true,
       label: "Vagus nerve (CN X)",
       shortLabel: "Vagus (X)",
       aliases: ["CN X", "tenth cranial nerve", "pneumogastric nerve"],
@@ -331,6 +332,7 @@ export const larynxRealManifest = {
     },
     {
       id: "superior-laryngeal-nerve",
+      schematic: true,
       label: "Superior laryngeal nerve",
       shortLabel: "Sup. laryngeal n.",
       aliases: ["SLN", "internal and external laryngeal nerves"],
@@ -347,6 +349,7 @@ export const larynxRealManifest = {
     },
     {
       id: "recurrent-laryngeal-nerve",
+      schematic: true,
       label: "Recurrent laryngeal nerve",
       shortLabel: "Recurrent laryngeal n.",
       aliases: ["RLN", "inferior laryngeal nerve"],
@@ -364,6 +367,7 @@ export const larynxRealManifest = {
     },
     {
       id: "superior-thyroid-artery",
+      schematic: true,
       label: "Superior thyroid artery",
       shortLabel: "Sup. thyroid a.",
       aliases: ["superior thyroid"],
@@ -380,6 +384,7 @@ export const larynxRealManifest = {
     },
     {
       id: "superior-laryngeal-artery",
+      schematic: true,
       label: "Superior laryngeal artery",
       shortLabel: "Sup. laryngeal a.",
       aliases: ["superior laryngeal"],
@@ -396,6 +401,7 @@ export const larynxRealManifest = {
     },
     {
       id: "inferior-thyroid-artery",
+      schematic: true,
       label: "Inferior thyroid artery",
       shortLabel: "Inf. thyroid a.",
       aliases: ["inferior thyroid"],
@@ -412,6 +418,7 @@ export const larynxRealManifest = {
     },
     {
       id: "pre-epiglottic-fat",
+      schematic: true,
       label: "Pre-epiglottic fat",
       shortLabel: "Pre-epiglottic fat",
       aliases: ["pre-epiglottic space"],
@@ -428,6 +435,7 @@ export const larynxRealManifest = {
     },
     {
       id: "paraglottic-fat",
+      schematic: true,
       label: "Paraglottic fat",
       shortLabel: "Paraglottic fat",
       aliases: ["paraglottic space"],
