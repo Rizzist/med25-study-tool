@@ -17,10 +17,10 @@ async function route(path, body) {
 }
 test("practical catalog maps every objective to source-linked questions and existing figures", () => {
   assert.equal(catalog.stations.length, 9);
-  assert.equal(catalog.totals.objectives, 98);
-  assert.equal(catalog.totals.theorySets, 62);
-  assert.equal(bank.length, 320);
-  assert.equal(catalog.totals.imageQuestions, 30);
+  assert.equal(catalog.totals.objectives, 129);
+  assert.equal(catalog.totals.theorySets, 93);
+  assert.equal(bank.length, 444);
+  assert.equal(catalog.totals.imageQuestions, 154);
   const ids = new Set(bank.map((q) => q.id));
   assert.equal(ids.size, bank.length);
   const mapped = catalog.stations.flatMap((station) => {
@@ -42,7 +42,7 @@ test("practical catalog maps every objective to source-linked questions and exis
     for (const option of question.options.filter((option) => option.id !== question.correctOptionId)) assert(question.distractorExplanations[option.id].length > 20);
     for (const media of question.media ?? []) assert(existsSync(new URL(`public/study/${media.path}`, root)));
   }
-  for (const letter of ["A", "B", "C", "D"]) assert.equal(bank.filter((q) => q.correctOptionId === letter).length, 80);
+  for (const letter of ["A", "B", "C", "D"]) assert.equal(bank.filter((q) => q.correctOptionId === letter).length, 111);
 });
 test("practical mocks balance stations, respect limits and do not mutate the bank", () => {
   const original = JSON.stringify(bank);
@@ -56,7 +56,7 @@ test("practical mocks balance stations, respect limits and do not mutate the ban
   assert.equal(selectPracticalSprint([], { limit: 36, studyMode: "exam" }).questions.length, 0);
   const station = bank.filter((q) => q.tags.includes("practical-station-ecg"));
   assert.equal(selectPracticalSprint(station, { limit: 36, studyMode: "exam" }).questions.length, 36);
-  assert.equal(selectPracticalSprint(station, { limit: 100, studyMode: "exam" }).questions.length, 52);
+  assert.equal(selectPracticalSprint(station, { limit: 200, studyMode: "exam" }).questions.length, 140);
   assert.equal(selectPracticalSprint(bank, { limit: 1, repairIds: [bank[5].id] }).questions[0].id, bank[5].id);
 });
 test("practical progress is isolated and older progress survives migration", () => {
@@ -69,10 +69,10 @@ test("practical progress is isolated and older progress survives migration", () 
 test("practical API supports balanced mocks, exact resume, media and strict exam separation", async () => {
   const summary = await (await route("/api/bank/summary")).json();
   const practical = summary.exams.find((exam) => exam.id === catalog.examId);
-  assert.equal(practical.questionCount, 320);
-  assert.equal(practical.imageQuestionCount, 30);
+  assert.equal(practical.questionCount, 444);
+  assert.equal(practical.imageQuestionCount, 154);
   assert.equal(practical.finalExamQuestionCount, 0);
-  assert.equal(practical.collectionCounts.practical, 320);
+  assert.equal(practical.collectionCounts.practical, 444);
   const { questions } = await (await route("/api/questions/sprint", { exam: catalog.examId, collection: "all", limit: 36, studyMode: "exam" })).json();
   assert.equal(questions.length, 36);
   for (const station of catalog.stations) assert.equal(questions.filter((q) => station.questionIds.includes(q.id)).length, 4);
@@ -133,7 +133,7 @@ test("practical lessons render substantive study, image/video and recall panels 
   assert.match(recall, /Station mock/);
   const questionSets = compiled.exports.render("questions");
   assert.match(questionSets, /Theory, one problem set at a time/);
-  assert.match(questionSets, /40 questions for this station/);
+  assert.match(questionSets, /44 questions for this station/);
   assert.match(questionSets, /Search this station/);
   assert.match(questionSets, /Preview question prompts/);
   assert.match(questionSets, /Slide-by-slide audit/);
@@ -154,8 +154,8 @@ test("theory sets and page audit account for all eight files without hiding unre
   assert.equal(catalog.pageAudit.reduce((n, source) => n + source.audit.length, 0), 198);
   const sets = catalog.stations.flatMap((s) => s.theorySets);
   const setIds = new Set(sets.map((set) => set.id));
-  assert.equal(setIds.size, 62);
-  assert.equal(sets.flatMap((s) => s.questionIds).length, 248);
+  assert.equal(setIds.size, 93);
+  assert.equal(sets.flatMap((s) => s.questionIds).length, 372);
   for (const source of catalog.pageAudit) {
     assert.deepEqual(source.audit.map((row) => row.page), Array.from({ length: source.pages }, (_, i) => i + 1));
     for (const row of source.audit) {
@@ -177,17 +177,17 @@ test("question filters give exact launch pools, combine search and progress, and
   const ids = bank.map((q) => q.id);
   const index = catalog.questionIndex;
   assert(index.every((q) => !q.answer && !q.correctOptionId && !q.explanation));
-  assert.equal(filterPracticalQuestions(index, ids, { filter: "new" }).length, 248);
-  assert.equal(filterPracticalQuestions(index, ids, { filter: "images" }).length, 30);
-  assert.equal(filterPracticalQuestions(index, ids, { filter: "calculations" }).length, 56);
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "new" }).length, 372);
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "images" }).length, 154);
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "calculations" }).length, catalog.totals.calculationQuestions);
   const attemptedIds = ids.slice(0, 40);
-  assert.equal(filterPracticalQuestions(index, ids, { filter: "unseen", attemptedIds }).length, 280);
+  assert.equal(filterPracticalQuestions(index, ids, { filter: "unseen", attemptedIds }).length, 404);
   assert.deepEqual(filterPracticalQuestions(index, ids, { filter: "repair", repairIds: [ids[5], "invalid"] }), [ids[5]]);
   assert.deepEqual(filterPracticalQuestions(index, [ids[0], ids[0], "invalid"]), [ids[0]]);
   assert.deepEqual(filterPracticalQuestions(index, ids, { query: "zzzz-nonexistent" }), []);
   const ecg = catalog.stations.find((s) => s.id === "ecg");
   const result = filterPracticalQuestions(index, ecg.questionIds, { query: "  PAPER speed ", filter: "new" });
-  assert(result.length > 0 && result.every((id) => ecg.questionIds.includes(id) && id.includes("theory-")));
+  assert(result.length > 0 && result.every((id) => ecg.questionIds.includes(id) && bank.find((q) => q.id === id).tags.includes('practical-theory-expansion')));
 });
 
 test("independent worked-value checks protect common calculation traps", () => {

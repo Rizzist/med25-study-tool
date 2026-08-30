@@ -2,17 +2,984 @@
   "basis": "Seven unique WhatsApp files plus the existing local ECG applied-physiology assignment. This is a source-based revision circuit, not an official station blueprint or past-paper bank.",
   "totals": {
     "stations": 9,
-    "objectives": 98,
-    "questions": 320,
-    "imageQuestions": 30,
-    "images": 29,
+    "objectives": 129,
+    "questions": 444,
+    "imageQuestions": 154,
+    "images": 52,
     "videos": 12,
     "studyMinutes": 310,
-    "theorySets": 62,
-    "newQuestions": 248,
+    "theorySets": 93,
+    "newQuestions": 372,
+    "visualCases": 31,
+    "ecgCases": 22,
+    "webEcgImages": 20,
+    "revisedQuestions": 51,
     "sourcePages": 198,
-    "calculationQuestions": 56
+    "calculationQuestions": 87
   },
+  "qualityAudit": {
+    "reviewedOn": "2026-08-30",
+    "baselineQuestions": 320,
+    "revisedQuestions": 51,
+    "unchangedAnswers": true,
+    "method": "Reviewed source consistency, one-best-answer logic, calibration, visible-image evidence and distractor plausibility. Re-authored weak options; retained stable correct-option IDs. Newly added cases have individual source keys and image review.",
+    "limitations": [
+      "Authoring review and automated validation are not an independent clinician review or official TUMS marking-key endorsement.",
+      "Prior attempted status is retained for revised questions; revisit them rather than treating prior attempts as proof of mastery."
+    ],
+    "revisions": [
+      {
+        "id": "pp-bp-theory-bulb-gauge",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-bp-theory-rest-repeat",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-heart-sounds-theory-bell-frequency",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-heart-sounds-theory-earpiece-direction",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-heart-sounds-theory-closed-chestpiece",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-heart-sounds-theory-sound-report-limits",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-ecg-theory-lead-view",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-ecg-theory-v3-after-v4",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-ecg-theory-sinus-p-polarity",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-ecg-theory-septal-versus-anterior",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-spirometry-theory-spiro-bell",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-spirometry-theory-spiro-water-seal",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-spirometry-theory-spiro-slow-start",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-spirometry-theory-prediction-data",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-rbc-theory-low-power-first",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-rbc-theory-iris-role",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-rbc-theory-fine-focus",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-rbc-theory-hayem-purpose",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-rbc-theory-missing-cover",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-wbc-theory-wbc-mix",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-wbc-theory-wbc-boundary-double",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-differential-theory-neut-function",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-differential-theory-eos-function",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-differential-theory-lymph-function-specific",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-differential-theory-mono-function",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-pcv-definition",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-versus-rbc",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-anticoagulant",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-fill-seal",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-balance",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-g-not-rpm",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-buffy-included",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-dehydration",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-hypoxia",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hematocrit-theory-hct-hemolysed",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-exposed-collagen",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-platelet-order",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-intact-endothelium",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-adhesion-v-aggregation",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-primary-secondary",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-bt-domain",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-ct-domain",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-bt-endpoint",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-bt-dont-disturb",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-plain-capillary",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-fibrin-thread",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-slide-contact",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-slide-ct-endpoint",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-bt-prolonged-ct-normal",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-ct-prolonged-bt-normal",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      },
+      {
+        "id": "pp-hemostasis-theory-ct-anticoagulant-contamination",
+        "revision": 2,
+        "reason": "Replaced implausible/cross-station distractors with relevant competing concepts or common procedural errors."
+      }
+    ]
+  },
+  "visualCases": [
+    {
+      "id": "ecg-01",
+      "stationId": "ecg",
+      "title": "ECG 01 · Rhythm checklist",
+      "scope": "course-transfer",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Normal_Tracing",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Nsr.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-01-1",
+        "pp-ecg-visual-ecg-01-2",
+        "pp-ecg-visual-ecg-01-3",
+        "pp-ecg-visual-ecg-01-4"
+      ]
+    },
+    {
+      "id": "ecg-02",
+      "stationId": "ecg",
+      "title": "ECG 02 · Closely spaced complexes",
+      "scope": "course-transfer",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Sinus_Tachycardia",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Sinustachycardia.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-02-1",
+        "pp-ecg-visual-ecg-02-2",
+        "pp-ecg-visual-ecg-02-3",
+        "pp-ecg-visual-ecg-02-4"
+      ]
+    },
+    {
+      "id": "ecg-03",
+      "stationId": "ecg",
+      "title": "ECG 03 · Slow organised rhythm",
+      "scope": "course-transfer",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Sinus_Bradycardia",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:E0003195.png",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-03-1",
+        "pp-ecg-visual-ecg-03-2",
+        "pp-ecg-visual-ecg-03-3",
+        "pp-ecg-visual-ecg-03-4"
+      ]
+    },
+    {
+      "id": "ecg-04",
+      "stationId": "ecg",
+      "title": "ECG 04 · Irregular rhythm, first example",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Atrial_Fibrillation",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Afib_ecg.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-04-1",
+        "pp-ecg-visual-ecg-04-2",
+        "pp-ecg-visual-ecg-04-3",
+        "pp-ecg-visual-ecg-04-4"
+      ]
+    },
+    {
+      "id": "ecg-05",
+      "stationId": "ecg",
+      "title": "ECG 05 · Irregular rhythm, faster example",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Atrial_Fibrillation",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Afib_f_VR_ecg.jpg",
+        "attribution": "R.W. Koster, MD, PhD / AMC / ECGpedia",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-05-1",
+        "pp-ecg-visual-ecg-05-2",
+        "pp-ecg-visual-ecg-05-3",
+        "pp-ecg-visual-ecg-05-4"
+      ]
+    },
+    {
+      "id": "ecg-06",
+      "stationId": "ecg",
+      "title": "ECG 06 · Repeating atrial activity",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Atrial_Flutter",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Aflutr_ecg.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-06-1",
+        "pp-ecg-visual-ecg-06-2",
+        "pp-ecg-visual-ecg-06-3",
+        "pp-ecg-visual-ecg-06-4"
+      ]
+    },
+    {
+      "id": "ecg-07",
+      "stationId": "ecg",
+      "title": "ECG 07 · Two rhythms to count",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Atrial_Flutter",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:ECG_Aflutt.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-07-1",
+        "pp-ecg-visual-ecg-07-2",
+        "pp-ecg-visual-ecg-07-3",
+        "pp-ecg-visual-ecg-07-4"
+      ]
+    },
+    {
+      "id": "ecg-08",
+      "stationId": "ecg",
+      "title": "ECG 08 · A long conduction interval",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/AV_Conduction",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Rhythm_1stAVblock.png",
+        "attribution": "Bart Duineveld / ECGpedia",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-08-1",
+        "pp-ecg-visual-ecg-08-2",
+        "pp-ecg-visual-ecg-08-3",
+        "pp-ecg-visual-ecg-08-4"
+      ]
+    },
+    {
+      "id": "ecg-09",
+      "stationId": "ecg",
+      "title": "ECG 09 · Grouped beating",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/AV_Conduction",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Wenckebach.png",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-09-1",
+        "pp-ecg-visual-ecg-09-2",
+        "pp-ecg-visual-ecg-09-3",
+        "pp-ecg-visual-ecg-09-4"
+      ]
+    },
+    {
+      "id": "ecg-10",
+      "stationId": "ecg",
+      "title": "ECG 10 · A missing ventricular response",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/AV_Conduction",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Rhythm_Mobitz.png",
+        "attribution": "Bart Duineveld / ECGpedia",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-10-1",
+        "pp-ecg-visual-ecg-10-2",
+        "pp-ecg-visual-ecg-10-3",
+        "pp-ecg-visual-ecg-10-4"
+      ]
+    },
+    {
+      "id": "ecg-11",
+      "stationId": "ecg",
+      "title": "ECG 11 · Atrial and ventricular independence",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/AV_Conduction",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Rhythm_3rdAVblock.png",
+        "attribution": "Bart Duineveld / ECGpedia",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-11-1",
+        "pp-ecg-visual-ecg-11-2",
+        "pp-ecg-visual-ecg-11-3",
+        "pp-ecg-visual-ecg-11-4"
+      ]
+    },
+    {
+      "id": "ecg-12",
+      "stationId": "ecg",
+      "title": "ECG 12 · An early complex",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Ectopic_Complexes",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Rhythm_premature.png",
+        "attribution": "Bart Duineveld / ECGpedia",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-12-1",
+        "pp-ecg-visual-ecg-12-2",
+        "pp-ecg-visual-ecg-12-3",
+        "pp-ecg-visual-ecg-12-4"
+      ]
+    },
+    {
+      "id": "ecg-13",
+      "stationId": "ecg",
+      "title": "ECG 13 · A different early complex",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Ectopic_Complexes",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Rhythm_ventricular_premature.png",
+        "attribution": "Bart Duineveld / ECGpedia",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-13-1",
+        "pp-ecg-visual-ecg-13-2",
+        "pp-ecg-visual-ecg-13-3",
+        "pp-ecg-visual-ecg-13-4"
+      ]
+    },
+    {
+      "id": "ecg-14",
+      "stationId": "ecg",
+      "title": "ECG 14 · Frontal-plane direction",
+      "scope": "course-transfer",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Heart_Axis",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:LHA.png",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-14-1",
+        "pp-ecg-visual-ecg-14-2",
+        "pp-ecg-visual-ecg-14-3",
+        "pp-ecg-visual-ecg-14-4"
+      ]
+    },
+    {
+      "id": "ecg-15",
+      "stationId": "ecg",
+      "title": "ECG 15 · Opposite frontal quadrant",
+      "scope": "course-transfer",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Heart_Axis",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:Rightaxis.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-15-1",
+        "pp-ecg-visual-ecg-15-2",
+        "pp-ecg-visual-ecg-15-3",
+        "pp-ecg-visual-ecg-15-4"
+      ]
+    },
+    {
+      "id": "ecg-16",
+      "stationId": "ecg",
+      "title": "ECG 16 · Broad ventricular activation",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Intraventricular_Conduction",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:12leadLBTB.png",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-16-1",
+        "pp-ecg-visual-ecg-16-2",
+        "pp-ecg-visual-ecg-16-3",
+        "pp-ecg-visual-ecg-16-4"
+      ]
+    },
+    {
+      "id": "ecg-17",
+      "stationId": "ecg",
+      "title": "ECG 17 · Terminal forces and axis",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Intraventricular_Conduction",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:ECG_RBTB_LAtrD.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-17-1",
+        "pp-ecg-visual-ecg-17-2",
+        "pp-ecg-visual-ecg-17-3",
+        "pp-ecg-visual-ecg-17-4"
+      ]
+    },
+    {
+      "id": "ecg-18",
+      "stationId": "ecg",
+      "title": "ECG 18 · Check the connections",
+      "scope": "course-transfer",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Technical_Problems",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:E000565.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-18-1",
+        "pp-ecg-visual-ecg-18-2",
+        "pp-ecg-visual-ecg-18-3",
+        "pp-ecg-visual-ecg-18-4"
+      ]
+    },
+    {
+      "id": "ecg-19",
+      "stationId": "ecg",
+      "title": "ECG 19 · Unexpected chest-lead progression",
+      "scope": "course-transfer",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Technical_Problems",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:E000568.jpg",
+        "attribution": "Cardionetworks Foundation / ECGpedia contributors",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-19-1",
+        "pp-ecg-visual-ecg-19-2",
+        "pp-ecg-visual-ecg-19-3",
+        "pp-ecg-visual-ecg-19-4"
+      ]
+    },
+    {
+      "id": "ecg-20",
+      "stationId": "ecg",
+      "title": "ECG 20 · A misleading monitor alert",
+      "scope": "extension",
+      "source": {
+        "title": "ECGpedia educational case",
+        "provider": "ECGpedia",
+        "url": "https://en.ecgpedia.org/wiki/Technical_Problems",
+        "fileUrl": "https://en.ecgpedia.org/wiki/File:DVA2162.jpg",
+        "attribution": "J.R. de Groot, MD, PhD / ECGpedia",
+        "license": "CC BY-NC-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "note": "Original image unchanged. MED25 questions and optional explanatory overlays are educational adaptations under the same licence. Not an official TUMS answer key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-20-1",
+        "pp-ecg-visual-ecg-20-2",
+        "pp-ecg-visual-ecg-20-3",
+        "pp-ecg-visual-ecg-20-4"
+      ]
+    },
+    {
+      "id": "ecg-21",
+      "stationId": "ecg",
+      "title": "ECG 21 · Your rapid-trace assignment",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "assignment",
+        "title": "User-provided ECG assignment · slide 2",
+        "provider": "Your course material",
+        "url": "https://litfl.com/thomas-lewis/",
+        "fileUrl": "",
+        "attribution": "User-provided ECG assignment · slide 2",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-21-1",
+        "pp-ecg-visual-ecg-21-2",
+        "pp-ecg-visual-ecg-21-3",
+        "pp-ecg-visual-ecg-21-4"
+      ]
+    },
+    {
+      "id": "ecg-22",
+      "stationId": "ecg",
+      "title": "ECG 22 · Your equiphasic-axis assignment",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "assignment",
+        "title": "User-provided ECG assignment · slide 4",
+        "provider": "Your course material",
+        "url": "https://litfl.com/ecg-axis-interpretation/",
+        "fileUrl": "",
+        "attribution": "User-provided ECG assignment · slide 4",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-ecg-visual-ecg-22-1",
+        "pp-ecg-visual-ecg-22-2",
+        "pp-ecg-visual-ecg-22-3",
+        "pp-ecg-visual-ecg-22-4"
+      ]
+    },
+    {
+      "id": "bp-gap",
+      "stationId": "bp",
+      "title": "BP image · Follow the full sound sequence",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "bp",
+        "title": "Blood pressure measurement international.pdf",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "Blood pressure measurement international.pdf",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-bp-visual-bp-gap-1",
+        "pp-bp-visual-bp-gap-2",
+        "pp-bp-visual-bp-gap-3",
+        "pp-bp-visual-bp-gap-4"
+      ]
+    },
+    {
+      "id": "sounds-cycle",
+      "stationId": "heart-sounds",
+      "title": "Heart sounds · Relate sound to pressure",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "bp",
+        "title": "Wiggers diagram · cardiac cycle",
+        "provider": "Wikimedia Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Wiggers_Diagram_2.svg",
+        "fileUrl": "https://commons.wikimedia.org/wiki/File:Wiggers_Diagram_2.svg",
+        "attribution": "adh30; DanielChangMD; DestinyQx; SVG by xavax",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "note": "Original Wikimedia PNG rendering unchanged. MED25 explanatory overlays and this diagram-based set are CC BY-SA 4.0. Physiological cross-check: OpenStax A&P, 19.3."
+      },
+      "questionIds": [
+        "pp-heart-sounds-visual-sounds-cycle-1",
+        "pp-heart-sounds-visual-sounds-cycle-2",
+        "pp-heart-sounds-visual-sounds-cycle-3",
+        "pp-heart-sounds-visual-sounds-cycle-4"
+      ]
+    },
+    {
+      "id": "spiro-scale",
+      "stationId": "spirometry",
+      "title": "Spirometry image · Calibrate before calculating",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "spiro",
+        "title": "Spirometery for kish class.pptx",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "Spirometery for kish class.pptx",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-spirometry-visual-spiro-scale-1",
+        "pp-spirometry-visual-spiro-scale-2",
+        "pp-spirometry-visual-spiro-scale-3",
+        "pp-spirometry-visual-spiro-scale-4"
+      ]
+    },
+    {
+      "id": "rbc-regions",
+      "stationId": "rbc",
+      "title": "RBC image · Area becomes concentration",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "count",
+        "title": "Cell Counting 1.pptx",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "Cell Counting 1.pptx",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-rbc-visual-rbc-regions-1",
+        "pp-rbc-visual-rbc-regions-2",
+        "pp-rbc-visual-rbc-regions-3",
+        "pp-rbc-visual-rbc-regions-4"
+      ]
+    },
+    {
+      "id": "wbc-depth",
+      "stationId": "wbc",
+      "title": "WBC image · Depth, area and dilution",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "count",
+        "title": "Cell Counting 1.pptx",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "Cell Counting 1.pptx",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-wbc-visual-wbc-depth-1",
+        "pp-wbc-visual-wbc-depth-2",
+        "pp-wbc-visual-wbc-depth-3",
+        "pp-wbc-visual-wbc-depth-4"
+      ]
+    },
+    {
+      "id": "dlc-field",
+      "stationId": "differential",
+      "title": "Blood film 01 · Identify, then explain",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "dlc",
+        "title": "differential count.ppt",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "differential count.ppt",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-differential-visual-dlc-field-1",
+        "pp-differential-visual-dlc-field-2",
+        "pp-differential-visual-dlc-field-3",
+        "pp-differential-visual-dlc-field-4"
+      ]
+    },
+    {
+      "id": "dlc-transfer",
+      "stationId": "differential",
+      "title": "Blood film 02 · Transfer to different fields",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "dlc",
+        "title": "differential count.ppt",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "differential count.ppt",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-differential-visual-dlc-transfer-1",
+        "pp-differential-visual-dlc-transfer-2",
+        "pp-differential-visual-dlc-transfer-3",
+        "pp-differential-visual-dlc-transfer-4"
+      ]
+    },
+    {
+      "id": "hct-reader",
+      "stationId": "hematocrit",
+      "title": "Hematocrit image · Choose the endpoints",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "blood",
+        "title": "Bleeding-Time.pptx",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "Bleeding-Time.pptx",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-hematocrit-visual-hct-reader-1",
+        "pp-hematocrit-visual-hct-reader-2",
+        "pp-hematocrit-visual-hct-reader-3",
+        "pp-hematocrit-visual-hct-reader-4"
+      ]
+    },
+    {
+      "id": "hemostasis-plug",
+      "stationId": "hemostasis",
+      "title": "Haemostasis image · From adhesion to reinforcement",
+      "scope": "course-transfer",
+      "source": {
+        "localKey": "blood",
+        "title": "Bleeding-Time.pptx",
+        "provider": "Your course material",
+        "url": "",
+        "fileUrl": "",
+        "attribution": "Bleeding-Time.pptx",
+        "license": "User-provided course reference",
+        "licenseUrl": "",
+        "note": "Course image unchanged; MED25 explanations are not an official marking key."
+      },
+      "questionIds": [
+        "pp-hemostasis-visual-hemostasis-plug-1",
+        "pp-hemostasis-visual-hemostasis-plug-2",
+        "pp-hemostasis-visual-hemostasis-plug-3",
+        "pp-hemostasis-visual-hemostasis-plug-4"
+      ]
+    }
+  ],
   "pageAudit": [
     {
       "key": "bp",
@@ -1911,6 +2878,16 @@
             "pp-bp-theory-rest-repeat",
             "pp-bp-theory-report-method"
           ]
+        },
+        {
+          "id": "bp-13",
+          "title": "BP image · Follow the full sound sequence",
+          "questionIds": [
+            "pp-bp-visual-bp-gap-1",
+            "pp-bp-visual-bp-gap-2",
+            "pp-bp-visual-bp-gap-3",
+            "pp-bp-visual-bp-gap-4"
+          ]
         }
       ]
     },
@@ -2000,6 +2977,16 @@
             "pp-heart-sounds-theory-sound-origin-vs-area",
             "pp-heart-sounds-theory-sound-report-limits",
             "pp-heart-sounds-theory-valves-isovolumetric"
+          ]
+        },
+        {
+          "id": "heart-sounds-10",
+          "title": "Heart sounds · Relate sound to pressure",
+          "questionIds": [
+            "pp-heart-sounds-visual-sounds-cycle-1",
+            "pp-heart-sounds-visual-sounds-cycle-2",
+            "pp-heart-sounds-visual-sounds-cycle-3",
+            "pp-heart-sounds-visual-sounds-cycle-4"
           ]
         }
       ]
@@ -2151,6 +3138,226 @@
             "pp-ecg-theory-septal-versus-anterior",
             "pp-ecg-theory-ecg-interpretation-limit"
           ]
+        },
+        {
+          "id": "ecg-16",
+          "title": "ECG 01 · Rhythm checklist",
+          "questionIds": [
+            "pp-ecg-visual-ecg-01-1",
+            "pp-ecg-visual-ecg-01-2",
+            "pp-ecg-visual-ecg-01-3",
+            "pp-ecg-visual-ecg-01-4"
+          ]
+        },
+        {
+          "id": "ecg-17",
+          "title": "ECG 02 · Closely spaced complexes",
+          "questionIds": [
+            "pp-ecg-visual-ecg-02-1",
+            "pp-ecg-visual-ecg-02-2",
+            "pp-ecg-visual-ecg-02-3",
+            "pp-ecg-visual-ecg-02-4"
+          ]
+        },
+        {
+          "id": "ecg-18",
+          "title": "ECG 03 · Slow organised rhythm",
+          "questionIds": [
+            "pp-ecg-visual-ecg-03-1",
+            "pp-ecg-visual-ecg-03-2",
+            "pp-ecg-visual-ecg-03-3",
+            "pp-ecg-visual-ecg-03-4"
+          ]
+        },
+        {
+          "id": "ecg-19",
+          "title": "ECG 04 · Irregular rhythm, first example",
+          "questionIds": [
+            "pp-ecg-visual-ecg-04-1",
+            "pp-ecg-visual-ecg-04-2",
+            "pp-ecg-visual-ecg-04-3",
+            "pp-ecg-visual-ecg-04-4"
+          ]
+        },
+        {
+          "id": "ecg-20",
+          "title": "ECG 05 · Irregular rhythm, faster example",
+          "questionIds": [
+            "pp-ecg-visual-ecg-05-1",
+            "pp-ecg-visual-ecg-05-2",
+            "pp-ecg-visual-ecg-05-3",
+            "pp-ecg-visual-ecg-05-4"
+          ]
+        },
+        {
+          "id": "ecg-21",
+          "title": "ECG 06 · Repeating atrial activity",
+          "questionIds": [
+            "pp-ecg-visual-ecg-06-1",
+            "pp-ecg-visual-ecg-06-2",
+            "pp-ecg-visual-ecg-06-3",
+            "pp-ecg-visual-ecg-06-4"
+          ]
+        },
+        {
+          "id": "ecg-22",
+          "title": "ECG 07 · Two rhythms to count",
+          "questionIds": [
+            "pp-ecg-visual-ecg-07-1",
+            "pp-ecg-visual-ecg-07-2",
+            "pp-ecg-visual-ecg-07-3",
+            "pp-ecg-visual-ecg-07-4"
+          ]
+        },
+        {
+          "id": "ecg-23",
+          "title": "ECG 08 · A long conduction interval",
+          "questionIds": [
+            "pp-ecg-visual-ecg-08-1",
+            "pp-ecg-visual-ecg-08-2",
+            "pp-ecg-visual-ecg-08-3",
+            "pp-ecg-visual-ecg-08-4"
+          ]
+        },
+        {
+          "id": "ecg-24",
+          "title": "ECG 09 · Grouped beating",
+          "questionIds": [
+            "pp-ecg-visual-ecg-09-1",
+            "pp-ecg-visual-ecg-09-2",
+            "pp-ecg-visual-ecg-09-3",
+            "pp-ecg-visual-ecg-09-4"
+          ]
+        },
+        {
+          "id": "ecg-25",
+          "title": "ECG 10 · A missing ventricular response",
+          "questionIds": [
+            "pp-ecg-visual-ecg-10-1",
+            "pp-ecg-visual-ecg-10-2",
+            "pp-ecg-visual-ecg-10-3",
+            "pp-ecg-visual-ecg-10-4"
+          ]
+        },
+        {
+          "id": "ecg-26",
+          "title": "ECG 11 · Atrial and ventricular independence",
+          "questionIds": [
+            "pp-ecg-visual-ecg-11-1",
+            "pp-ecg-visual-ecg-11-2",
+            "pp-ecg-visual-ecg-11-3",
+            "pp-ecg-visual-ecg-11-4"
+          ]
+        },
+        {
+          "id": "ecg-27",
+          "title": "ECG 12 · An early complex",
+          "questionIds": [
+            "pp-ecg-visual-ecg-12-1",
+            "pp-ecg-visual-ecg-12-2",
+            "pp-ecg-visual-ecg-12-3",
+            "pp-ecg-visual-ecg-12-4"
+          ]
+        },
+        {
+          "id": "ecg-28",
+          "title": "ECG 13 · A different early complex",
+          "questionIds": [
+            "pp-ecg-visual-ecg-13-1",
+            "pp-ecg-visual-ecg-13-2",
+            "pp-ecg-visual-ecg-13-3",
+            "pp-ecg-visual-ecg-13-4"
+          ]
+        },
+        {
+          "id": "ecg-29",
+          "title": "ECG 14 · Frontal-plane direction",
+          "questionIds": [
+            "pp-ecg-visual-ecg-14-1",
+            "pp-ecg-visual-ecg-14-2",
+            "pp-ecg-visual-ecg-14-3",
+            "pp-ecg-visual-ecg-14-4"
+          ]
+        },
+        {
+          "id": "ecg-30",
+          "title": "ECG 15 · Opposite frontal quadrant",
+          "questionIds": [
+            "pp-ecg-visual-ecg-15-1",
+            "pp-ecg-visual-ecg-15-2",
+            "pp-ecg-visual-ecg-15-3",
+            "pp-ecg-visual-ecg-15-4"
+          ]
+        },
+        {
+          "id": "ecg-31",
+          "title": "ECG 16 · Broad ventricular activation",
+          "questionIds": [
+            "pp-ecg-visual-ecg-16-1",
+            "pp-ecg-visual-ecg-16-2",
+            "pp-ecg-visual-ecg-16-3",
+            "pp-ecg-visual-ecg-16-4"
+          ]
+        },
+        {
+          "id": "ecg-32",
+          "title": "ECG 17 · Terminal forces and axis",
+          "questionIds": [
+            "pp-ecg-visual-ecg-17-1",
+            "pp-ecg-visual-ecg-17-2",
+            "pp-ecg-visual-ecg-17-3",
+            "pp-ecg-visual-ecg-17-4"
+          ]
+        },
+        {
+          "id": "ecg-33",
+          "title": "ECG 18 · Check the connections",
+          "questionIds": [
+            "pp-ecg-visual-ecg-18-1",
+            "pp-ecg-visual-ecg-18-2",
+            "pp-ecg-visual-ecg-18-3",
+            "pp-ecg-visual-ecg-18-4"
+          ]
+        },
+        {
+          "id": "ecg-34",
+          "title": "ECG 19 · Unexpected chest-lead progression",
+          "questionIds": [
+            "pp-ecg-visual-ecg-19-1",
+            "pp-ecg-visual-ecg-19-2",
+            "pp-ecg-visual-ecg-19-3",
+            "pp-ecg-visual-ecg-19-4"
+          ]
+        },
+        {
+          "id": "ecg-35",
+          "title": "ECG 20 · A misleading monitor alert",
+          "questionIds": [
+            "pp-ecg-visual-ecg-20-1",
+            "pp-ecg-visual-ecg-20-2",
+            "pp-ecg-visual-ecg-20-3",
+            "pp-ecg-visual-ecg-20-4"
+          ]
+        },
+        {
+          "id": "ecg-36",
+          "title": "ECG 21 · Your rapid-trace assignment",
+          "questionIds": [
+            "pp-ecg-visual-ecg-21-1",
+            "pp-ecg-visual-ecg-21-2",
+            "pp-ecg-visual-ecg-21-3",
+            "pp-ecg-visual-ecg-21-4"
+          ]
+        },
+        {
+          "id": "ecg-37",
+          "title": "ECG 22 · Your equiphasic-axis assignment",
+          "questionIds": [
+            "pp-ecg-visual-ecg-22-1",
+            "pp-ecg-visual-ecg-22-2",
+            "pp-ecg-visual-ecg-22-3",
+            "pp-ecg-visual-ecg-22-4"
+          ]
         }
       ]
     },
@@ -2271,6 +3478,16 @@
             "pp-spirometry-theory-early-stop-bias",
             "pp-spirometry-theory-predicted-table-lookup"
           ]
+        },
+        {
+          "id": "spirometry-13",
+          "title": "Spirometry image · Calibrate before calculating",
+          "questionIds": [
+            "pp-spirometry-visual-spiro-scale-1",
+            "pp-spirometry-visual-spiro-scale-2",
+            "pp-spirometry-visual-spiro-scale-3",
+            "pp-spirometry-visual-spiro-scale-4"
+          ]
         }
       ]
     },
@@ -2381,6 +3598,16 @@
             "pp-rbc-theory-rbc-newborn-context",
             "pp-rbc-theory-rbc-si-units"
           ]
+        },
+        {
+          "id": "rbc-12",
+          "title": "RBC image · Area becomes concentration",
+          "questionIds": [
+            "pp-rbc-visual-rbc-regions-1",
+            "pp-rbc-visual-rbc-regions-2",
+            "pp-rbc-visual-rbc-regions-3",
+            "pp-rbc-visual-rbc-regions-4"
+          ]
         }
       ]
     },
@@ -2470,6 +3697,16 @@
             "pp-wbc-theory-wbc-supplied-range",
             "pp-wbc-theory-absolute-neutrophils",
             "pp-wbc-theory-relative-same-absolute"
+          ]
+        },
+        {
+          "id": "wbc-10",
+          "title": "WBC image · Depth, area and dilution",
+          "questionIds": [
+            "pp-wbc-visual-wbc-depth-1",
+            "pp-wbc-visual-wbc-depth-2",
+            "pp-wbc-visual-wbc-depth-3",
+            "pp-wbc-visual-wbc-depth-4"
           ]
         }
       ]
@@ -2571,6 +3808,26 @@
             "pp-differential-theory-mono-function",
             "pp-differential-theory-dlc-cause-limit"
           ]
+        },
+        {
+          "id": "differential-11",
+          "title": "Blood film 01 · Identify, then explain",
+          "questionIds": [
+            "pp-differential-visual-dlc-field-1",
+            "pp-differential-visual-dlc-field-2",
+            "pp-differential-visual-dlc-field-3",
+            "pp-differential-visual-dlc-field-4"
+          ]
+        },
+        {
+          "id": "differential-12",
+          "title": "Blood film 02 · Transfer to different fields",
+          "questionIds": [
+            "pp-differential-visual-dlc-transfer-1",
+            "pp-differential-visual-dlc-transfer-2",
+            "pp-differential-visual-dlc-transfer-3",
+            "pp-differential-visual-dlc-transfer-4"
+          ]
         }
       ]
     },
@@ -2660,6 +3917,16 @@
             "pp-hematocrit-theory-hct-newborn",
             "pp-hematocrit-theory-hct-hemolysed",
             "pp-hematocrit-theory-hct-incomplete-pack"
+          ]
+        },
+        {
+          "id": "hematocrit-10",
+          "title": "Hematocrit image · Choose the endpoints",
+          "questionIds": [
+            "pp-hematocrit-visual-hct-reader-1",
+            "pp-hematocrit-visual-hct-reader-2",
+            "pp-hematocrit-visual-hct-reader-3",
+            "pp-hematocrit-visual-hct-reader-4"
           ]
         }
       ]
@@ -2771,6 +4038,16 @@
             "pp-hemostasis-theory-unsafe-depth",
             "pp-hemostasis-theory-bt-modern-limit"
           ]
+        },
+        {
+          "id": "hemostasis-12",
+          "title": "Haemostasis image · From adhesion to reinforcement",
+          "questionIds": [
+            "pp-hemostasis-visual-hemostasis-plug-1",
+            "pp-hemostasis-visual-hemostasis-plug-2",
+            "pp-hemostasis-visual-hemostasis-plug-3",
+            "pp-hemostasis-visual-hemostasis-plug-4"
+          ]
         }
       ]
     }
@@ -2782,6 +4059,9 @@
     "Reference intervals and spirometry correction factors shown are course/method conventions, not universal clinical thresholds.",
     "Video metadata was verified, not every frame; external videos supplement the local pack and do not establish exam scope.",
     "Historical dates/biographical pictures and the full hematopoietic developmental chronology are not exhaustively assessed; see the page-by-page audit.",
-    "Unkeyed ECG examples support descriptive transfer exercises, not fabricated official diagnoses. The embedded-video placeholder could not be recovered from the rendered deck."
+    "Unkeyed ECG examples support descriptive transfer exercises, not fabricated official diagnoses. The embedded-video placeholder could not be recovered from the rendered deck.",
+    "Web ECG cases marked Extension are extra interpretation practice, not confirmed items on tomorrow’s exam. Course-transfer cases apply the locally taught methods.",
+    "ECG images include both clinical recordings and source teaching strips. Missing calibration and low-resolution limitations are stated rather than inventing exact measurements.",
+    "Your equiphasic-aVR assignment has a machine QRS axis near −40°; −60° follows the question’s exact equiphasic premise and lead polarity, not an exact match to the machine value."
   ]
 }

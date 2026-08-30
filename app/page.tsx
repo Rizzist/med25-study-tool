@@ -13,7 +13,8 @@ import { FinalExam } from "@/src/components/FinalExam";
 import { AnatomyImage } from "@/src/components/AnatomyImage";
 import { Term2Guide } from "@/src/components/Term2Guide";
 import { PhysiologyPracticalHub } from "@/src/components/PhysiologyPracticalHub";
-import { cleanPracticalIds, practicalCatalog } from "@/src/lib/physiology-practical";
+import { cleanPracticalIds, practicalCatalog, practicalCaseForQuestion } from "@/src/lib/physiology-practical";
+import { PracticalCaseFigure } from '@/src/components/PracticalCaseFigure';
 import { RespiratoryConceptHub, RespiratoryConceptFeedback } from "@/src/components/RespiratoryConceptHub";
 import { respiratoryConcepts, respiratoryModules, respiratoryScope, respiratoryQuestionIndex } from "@/src/lib/respiratory/concepts";
 import { normalizeRespiratoryPractice } from "@/src/lib/respiratory/progress.mjs";
@@ -414,6 +415,8 @@ function mediaUrl(question: MCQQuestion, mediaId: string) {
 }
 
 function StudyImage({ question, media, review = false }: { question: MCQQuestion; media: MCQMedia; review?: boolean }) {
+  const practicalCase = practicalCaseForQuestion(question.id);
+  if (practicalCase) return <PracticalCaseFigure key={question.id} item={practicalCase} src={mediaUrl(question, media.id)} revealed={review} />;
   if (question.kind === "dynamic_anatomy") return <AnatomyImage key={question.id} question={question} media={media} src={mediaUrl(question, media.id)} revealed={review} />;
   return <figure className={`study-image ${review ? "review-image" : ""}`}>
     <div className="study-image-stage">

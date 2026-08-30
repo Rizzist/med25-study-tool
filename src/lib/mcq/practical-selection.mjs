@@ -17,8 +17,17 @@ export function selectPracticalSprint(items, options = {}) {
   }
   const pools = shuffled([...groups.values()], random);
   const selected = [];
+  const usedCases = new Set();
+  const caseId = (item) => item.tags?.find((tag) => tag.startsWith('practical-case-'));
   while (selected.length < limit && pools.some((pool) => pool.length)) {
-    for (const pool of pools) if (pool.length && selected.length < limit) selected.push(pool.pop());
+    for (const pool of pools) if (pool.length && selected.length < limit) {
+      // Prefer another figure before another question on a figure already used.
+      // An explicitly requested four-question case still uses all four items.
+      const fresh = pool.findLastIndex((item) => !caseId(item) || !usedCases.has(caseId(item)));
+      const [item] = pool.splice(fresh < 0 ? pool.length - 1 : fresh, 1);
+      selected.push(item);
+      if (caseId(item)) usedCases.add(caseId(item));
+    }
   }
   const questions = shuffled(selected, random);
   const repairCount = questions.filter((q) => repairIds.includes(q.id)).length;

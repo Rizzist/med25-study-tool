@@ -2,6 +2,10 @@ import catalog from "@/data/term2/physiology-practical.json";
 
 export const practicalCatalog = catalog;
 export type PracticalStation = (typeof catalog.stations)[number];
+export type PracticalVisualCase = (typeof catalog.visualCases)[number];
+export function practicalCaseForQuestion(questionId: string) {
+  return catalog.visualCases.find((item) => item.questionIds.includes(questionId));
+}
 const questionIds = new Set(catalog.stations.flatMap((station) => station.questionIds));
 export function cleanPracticalIds(exam: unknown, value: unknown): string[] | undefined {
   if (exam !== catalog.examId || !Array.isArray(value)) return undefined;

@@ -1,2 +1,2 @@
-export type PracticalQuestionFilter = "all" | "new" | "unseen" | "repair" | "images" | "calculations";
-export function filterPracticalQuestions(index: Array<{ id: string; prompt: string; objective: string; source: string; image: boolean; calculation: boolean; expanded: boolean }>, ids: string[], options?: { filter?: PracticalQuestionFilter; query?: string; attemptedIds?: string[]; repairIds?: string[] }): string[];
+export type PracticalQuestionFilter = "all" | "new" | "unseen" | "repair" | "images" | "calculations" | "revised" | "course" | "extension";
+export function filterPracticalQuestions(index: Array<{ id: string; prompt: string; objective: string; source: string; image: boolean; calculation: boolean; expanded: boolean; revised?: boolean; extension?: boolean }>, ids: string[], options?: { filter?: PracticalQuestionFilter; query?: string; attemptedIds?: string[]; repairIds?: string[] }): string[];

@@ -13,6 +13,9 @@ export function filterPracticalQuestions(index, ids, { filter = "all", query = "
     if (filter === "repair" && !repair.has(id)) return false;
     if (filter === "images" && !question.image) return false;
     if (filter === "calculations" && !question.calculation) return false;
+    if (filter === "revised" && !question.revised) return false;
+    if (filter === "course" && question.extension) return false;
+    if (filter === "extension" && !question.extension) return false;
     const text = `${question.prompt} ${question.objective} ${question.source}`.toLocaleLowerCase();
     return words.every((word) => text.includes(word));
   });
