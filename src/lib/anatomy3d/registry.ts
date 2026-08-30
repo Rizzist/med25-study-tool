@@ -1,6 +1,9 @@
 import { nasalRealManifest } from "./manifests/respiratory/nasal-real.manifest.mjs";
 import { larynxRealManifest } from "./manifests/respiratory/larynx-real.manifest.mjs";
 import { tracheaLungRealManifest } from "./manifests/respiratory/trachea-lung-real.manifest.mjs";
+import { cvsManifest } from "./manifests/cvs/cvs-real.manifest.mjs";
+import { upperLimbManifest } from "./manifests/upper-limb/upper-limb-real.manifest.mjs";
+import { lowerLimbManifest } from "./manifests/lower-limb/lower-limb-real.manifest.mjs";
 import type { AnatomyModelHandle, AnatomyModuleManifest } from "./types.ts";
 
 export type AnatomyModuleRegistration = {
@@ -31,6 +34,27 @@ const registrations: AnatomyModuleRegistration[] = [
     async createModel() {
       const { createRealTracheaLungModel } = await import("./models/respiratory/trachea-lung-real.ts");
       return createRealTracheaLungModel();
+    },
+  },
+  {
+    manifest: cvsManifest,
+    async createModel() {
+      const { createCvsModel } = await import("./models/cvs/cvs-real.ts");
+      return createCvsModel();
+    },
+  },
+  {
+    manifest: upperLimbManifest,
+    async createModel() {
+      const { createUpperLimbModel } = await import("./models/upper-limb/upper-limb-real.ts");
+      return createUpperLimbModel();
+    },
+  },
+  {
+    manifest: lowerLimbManifest,
+    async createModel() {
+      const { createLowerLimbModel } = await import("./models/lower-limb/lower-limb-real.ts");
+      return createLowerLimbModel();
     },
   },
 ];

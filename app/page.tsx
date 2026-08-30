@@ -155,6 +155,19 @@ const collectionLabel: Record<CollectionId, string> = {
 };
 type Tab = (typeof tabs)[number];
 
+// Exams that carry an interactive 3D anatomy atlas, mapped to the anatomy3d regions they surface.
+const anatomy3dRegions: Partial<Record<ExamId, string[]>> = {
+  "term2-respiratory": ["respiratory"],
+  "term2-cvs": ["cvs"],
+  "term2-limbs": ["upper-limb", "lower-limb"],
+};
+function examHasAnatomy3d(examId: ExamId): boolean {
+  return Object.hasOwn(anatomy3dRegions, examId);
+}
+function regionsFor(examId: ExamId): string[] {
+  return anatomy3dRegions[examId] ?? [];
+}
+
 function cleanIds(value: unknown) {
   if (!Array.isArray(value)) return [];
   return [...new Set(value.filter((id): id is string => typeof id === "string" && id.length > 0 && id.length <= 160))];
@@ -621,7 +634,9 @@ export default function Home() {
     setActiveRespiratoryScopeId(undefined);
     setActiveRespiratoryPracticeIds(undefined);
     setActivePracticalPracticeIds(undefined);
-    if ((tab === "Study concepts" || tab === "3D Anatomy") && nextExam !== "term2-respiratory") setTab("Overview");
+    if (tab === "Study concepts" && nextExam !== "term2-respiratory") setTab("Overview");
+    // Keep the 3D Anatomy tab when moving between 3D-anatomy exams; only leave it for exams without one.
+    if (tab === "3D Anatomy" && !examHasAnatomy3d(nextExam)) setTab("Overview");
     if (nextExam === "term2-physiology-practical") { setTab("Study concepts"); setSessionSize(36); }
     const url = new URL(window.location.href);
     url.searchParams.set("exam", nextExam);
@@ -1122,13 +1137,13 @@ export default function Home() {
     { id: "practical", title: "Practical + spotters", scope: "Still theory-relevant", detail: "Equipment, carbohydrate tests, titration and image analysis", count: examCount("practical") },
   ];
 
-  if (tab === "3D Anatomy" && exam === "term2-respiratory") {
+  if (tab === "3D Anatomy" && examHasAnatomy3d(exam)) {
     return (
       <main className="anatomy3d-immersive">
         <button type="button" className="anatomy3d-exit" onClick={() => setTab("Overview")}>
           <span aria-hidden="true">←</span> Back to study
         </button>
-        <AnatomyTrainer />
+        <AnatomyTrainer regions={regionsFor(exam)} />
       </main>
     );
   }
@@ -1198,7 +1213,11 @@ export default function Home() {
     <main className="setup-shell">
       <aside className="setup-sidebar">
         <div className="brand"><span>MED//25</span><small>Term 1 + Term 2</small><small>July 25 · Aug 22 · Aug 25</small></div>
-        <nav className="setup-nav" aria-label="Application sections">{tabs.filter((item) => (item !== "Study concepts" && item !== "3D Anatomy") || exam === "term2-respiratory" || (item === "Study concepts" && exam === "term2-physiology-practical")).map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{exam === "term2-physiology-practical" ? item === "Study concepts" ? "Practical lessons" : item === "Final exam" ? "Mock exam" : item === "Practical Atlas" ? "Figures & videos" : item : item}</button>)}</nav>
+        <nav className="setup-nav" aria-label="Application sections">{tabs.filter((item) => {
+          if (item === "3D Anatomy") return examHasAnatomy3d(exam);
+          if (item === "Study concepts") return exam === "term2-respiratory" || exam === "term2-physiology-practical";
+          return true;
+        }).map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{exam === "term2-physiology-practical" ? item === "Study concepts" ? "Practical lessons" : item === "Final exam" ? "Mock exam" : item === "Practical Atlas" ? "Figures & videos" : item : item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
       </aside>
 

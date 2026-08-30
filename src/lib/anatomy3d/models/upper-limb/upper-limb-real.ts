@@ -85,10 +85,6 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
     for (const id of ids) for (const obj of structures.get(id) ?? []) box.expandByObject(obj);
     return box;
   };
-  const cenOf = (id: string): Vector3 => {
-    const b = boxOf([id]);
-    return b.isEmpty() ? new Vector3() : b.getCenter(new Vector3());
-  };
   const addProcedural = (id: string, mesh: Mesh) => {
     mesh.name = id;
     mesh.userData.structureId = id;

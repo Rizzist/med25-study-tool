@@ -23,7 +23,6 @@ type AnatomyProgress = {
 
 const progressStorageKey = "anatomy3d.progress.v1";
 const layersStorageKey = "anatomy3d.layers.v1";
-const respiratoryModules = listAnatomyModules("respiratory");
 
 // Per-module map of HIDDEN system ids (systems the user has peeled away). Missing/empty = all shown.
 function readHiddenLayers(): Record<string, string[]> {
@@ -79,11 +78,21 @@ function progressFor(progress: AnatomyProgress, modelKey: string): ModuleProgres
   return progress.modules[modelKey] ?? { score: 0, answered: 0, wrongStructureIds: [] };
 }
 
-export function AnatomyTrainer() {
+type AnatomyTrainerProps = {
+  regions: string[];
+};
+
+export function AnatomyTrainer({ regions }: AnatomyTrainerProps) {
   const viewerRef = useRef<AnatomyViewerHandle>(null);
   const randomStateRef = useRef(0x6d2b79f5);
+  // Modules across every region this exam covers, concatenated in registration order.
+  const regionKey = useMemo(() => regions.join("|"), [regions]);
+  const modules = useMemo(
+    () => regions.flatMap((region) => listAnatomyModules(region)),
+    [regions],
+  );
   const [mode, setMode] = useState<TrainerMode>("quiz");
-  const [moduleKey, setModuleKey] = useState(respiratoryModules[0]?.manifest.modelKey ?? "");
+  const [moduleKey, setModuleKey] = useState(modules[0]?.manifest.modelKey ?? "");
   const [quizRound, setQuizRound] = useState(1);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -92,8 +101,16 @@ export function AnatomyTrainer() {
   const [progress, setProgress] = useState<AnatomyProgress>(readProgress);
   const [hiddenByModule, setHiddenByModule] = useState<Record<string, string[]>>(readHiddenLayers);
 
-  const registration = respiratoryModules.find((candidate) => candidate.manifest.modelKey === moduleKey)
-    ?? respiratoryModules[0];
+  // When the region set changes (e.g. switching exams) reset the selection to the new set's first
+  // module, adjusting state during render (React-endorsed) rather than in an effect.
+  const [lastRegionKey, setLastRegionKey] = useState(regionKey);
+  if (lastRegionKey !== regionKey) {
+    setLastRegionKey(regionKey);
+    setModuleKey(modules[0]?.manifest.modelKey ?? "");
+  }
+
+  const registration = modules.find((candidate) => candidate.manifest.modelKey === moduleKey)
+    ?? modules[0];
   const manifest = registration?.manifest;
 
   // --- Anatomical layers (systems) ---------------------------------------------------------------
@@ -265,7 +282,7 @@ export function AnatomyTrainer() {
   }
 
   if (!registration || !manifest) {
-    return <section className="anatomy3d-empty">No respiratory 3D modules are registered yet.</section>;
+    return <section className="anatomy3d-empty">No 3D modules are registered for this region yet.</section>;
   }
 
   const answered = selectedOptionId !== null;
@@ -286,7 +303,7 @@ export function AnatomyTrainer() {
       </header>
 
       <nav className="anatomy3d-module-switcher" aria-label="Anatomy module">
-        {respiratoryModules.map(({ manifest: option }) => (
+        {modules.map(({ manifest: option }) => (
           <button
             type="button"
             key={option.modelKey}
