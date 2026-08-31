@@ -2,32 +2,32 @@
 
 Respiratory was implemented on 2026-08-28 and expanded on 2026-08-29. CVS, Upper & Lower Limbs, and Biochemistry II were independently authored and independently verified on 2026-08-31. Dates remain `null` / “Date TBA” except for the user-reported Physiology Practical date; no theory-exam date, weighting, or lecturer emphasis has been invented.
 
-| Section | Verified questions | Multimodal | Source boundary |
-| --- | ---: | --- | --- |
-| CVS | 151 | 12 image SBAs + 28 interactive 3D | 93 course-grounded; 58 explicit book extensions |
-| Respiratory | 408 | 56 dynamic image variants; existing respiratory 3D trainer | Books plus local respiratory decks; physiology remains book-only |
-| Upper & Lower Limbs | 156 | 32 interactive 3D | 71 course-grounded; 85 explicit Gray’s extensions |
-| Biochemistry II | 158 | Text SBAs only | 86 course-grounded; 72 explicit Lippincott extensions |
+| Section | Verified questions | Concepts / objectives | Gap additions | Multimodal |
+| --- | ---: | ---: | ---: | --- |
+| CVS | 194 | 106 / 106 | 43 | 12 image SBAs + 28 interactive 3D |
+| Respiratory | 408 | 116 / 297 | 184 | 56 dynamic image variants; existing respiratory 3D trainer |
+| Upper & Lower Limbs | 173 | 79 / 173 | 17 | 32 interactive 3D |
+| Biochemistry II | 196 | 50 / 94 | 38 | Text SBAs only |
 
 The **Past exams** section for every Term 2 exam is deliberately empty. Only a genuine, traceable past paper may populate it. Source-derived book, slide, transcript, image, or 3D questions are study/practice material and must never be relabeled as a past paper, final bank, or official exam.
 
 ## CVS
 
-The verified bank has 52 anatomy, 51 physiology, 21 histology, and 27 embryology questions across 21 modules. It contains 111 text SBAs, 12 image SBAs using 11 visually inspected local slide images, and 28 rotatable 3D targets. All 28 model/structure references resolve through the anatomy registry.
+The verified bank now has 71 anatomy, 65 physiology, 28 histology, and 30 embryology questions. The exhaustive theory map contains 106 concepts in 18 reading modules and 106 directly sampled objectives; 43 objectives received a new SBA after the baseline cross-reference. It retains 12 image SBAs using 11 visually inspected local slide images and 28 rotatable 3D targets. All 28 model/structure references resolve through the anatomy registry.
 
-The verifier made 56 corrections. Notable corrections replaced an unsupported coronary image, rewrote a mediastinal slide question around the cardiac plexus, corrected source locators, and explicitly repaired a source typo: arterial baroreceptors sense stretch/pressure, whereas peripheral chemoreceptors respond to O2, CO2, and H+. The original source error remains disclosed in provenance.
+Of the 106 concepts, 104 have direct local course evidence and two are clearly marked book extensions. The independent verifier corrected 62 catalog concepts and all 43 additions, including three material rewrites. It reconciled swapped blood decks, ECG and recording inventory, physiology-session locators, embryology page offsets, the aortic-arch convention conflict, baroreceptor versus chemoreceptor physiology, immunoglobulin functions, V6 placement, and fetal shunts. The original source errors and every correction remain disclosed in provenance.
 
 ## Upper & Lower Limbs
 
-The verified anatomy bank has 156 questions across 14 modules: 80 upper-limb and 76 lower-limb items. It contains 124 text SBAs and 32 rotatable 3D targets; every model/structure pair resolves through the registry.
+The verified anatomy bank now has 173 questions across 14 reading modules, including 17 new gap-closing SBAs. Its 79 concepts contain 173 directly sampled objectives. It contains 141 text SBAs and 32 rotatable 3D targets; every model/structure pair resolves through the registry.
 
-The local material supports the course-tagged upper-limb modules. No local teacher hand session or lower-limb teacher source was found, so the hand and lower-limb content remains clearly labeled as Gray’s-only book extension without invented lecturer weighting. The verifier corrected 13 substantive or sourcing issues, including the adductor canal and foot-arch question set.
+The local material supports 34 concepts; 45 remain clearly labeled Gray’s-only book extensions. No local teacher hand session or lower-limb teacher source was found, so those limits are explicit rather than assigned invented lecturer weighting. The independent verifier corrected 21 concepts, six primary mappings, and all 17 additions. It caught omitted Gray chapter-end ranges and clinical cases, errors involving the palmar aponeurosis, lumbricals and windlass mechanism, and inaccurate transcript locators.
 
 ## Biochemistry II
 
-The verified bank has 158 text SBAs across 12 modules and Lippincott Chapters 8–12 and 15: 40/20/19/20/15/44 questions respectively. The local carbohydrate and dietary-lipid materials directly support 86 questions; 72 are visible Lippincott book extensions. All stems and options were rewritten into realistic single-best-answer form, with balanced answer positions and explanations for every option.
+The verified bank now has 196 text SBAs across 12 reading modules and Lippincott Chapters 8–12 and 15. Its 50 concepts contain 94 directly sampled objectives; the cross-reference added 38 SBAs, with 22 objectives receiving their first direct sample. Thirty-four concepts have direct course evidence and 16 are clearly marked Lippincott extensions. All stems use realistic single-best-answer form, with balanced answer positions and explanations for every option.
 
-No fair, clean, self-contained local course image was available for an unlabeled biochemistry visual question, so the bank intentionally contains no synthetic or decorative media. The reconstructed local note/transcript boundary is disclosed in the course catalog and source audit.
+The independent verifier corrected six substantive gap items, three locators, and 18 concept/source mappings. In particular, it honors the local Lippincott sixth-edition convention of 12 ATP per acetyl-CoA, removes unsupported mechanistic overreach, and records the missing original carbohydrate slide deck. No fair, clean, self-contained local course image was available for an unlabeled biochemistry visual question, so the bank intentionally contains no synthetic or decorative media.
 
 ## Respiratory
 
@@ -42,12 +42,12 @@ All 297 stated learning objectives have at least one direct question sample and 
 - Learn mode reveals answers, option teaching, citations, and anatomy exploration after answering. Closed-book test mode withholds feedback until grading.
 - A 3D target is highlighted before answering. Structure names, picking, and free exploration unlock only after feedback. Selection state is scoped to the current question.
 - Image anatomy labels are masked before feedback and are keyboard, hover, tap, and full-list accessible after feedback.
-- Course catalogs distinguish `course` from `book-extension` at module level. Extensions remain visible by default because confirmed exam scope can exceed the local teacher archive.
+- Concept catalogs distinguish `course` from `book-extension` per concept. Extensions remain visible by default because confirmed exam scope can exceed the local teacher archive.
 - Every verified record has four unique options, one key, a correct explanation, distractor explanations, explicit exam routing, and a page or slide locator.
 - Answer positions are balanced within each new bank. Duplicate normalized prompts, broken media, invalid 3D targets, and cross-exam leakage fail validation.
 
 “Verified” means checked against the cited local sources plus structural and independent review. It does not mean faculty-approved, psychometrically validated, an official past paper, or guaranteed complete.
 
-Question banks live in `data/bank/questions/term2-*.jsonl`. Course catalogs live in `data/term2/*-course.json`. Source audits, correction ledgers, and validation reports are preserved in `data/term2/provenance/`. CVS image bytes live in `public/study/term2/cvs/`; respiratory images live in `public/study/term2/respiratory/`.
+Question banks live in `data/bank/questions/term2-*.jsonl`. Exhaustive theory maps live in `data/term2/*-concepts.json`, with generated question indexes and coverage reports beside them. Earlier course catalogs remain as provenance. Source audits, correction ledgers, and validation reports are preserved in `data/term2/provenance/`. CVS image bytes live in `public/study/term2/cvs/`; respiratory images live in `public/study/term2/respiratory/`.
 
 Run `npm run bank:validate`, `npm run lessons:validate`, `npx tsc --noEmit`, `npm test`, and `npm run deploy:validate` before release. The user’s local books and slide excerpts are used only in this private study workflow; no right to redistribute the source library publicly is asserted. Preserve owner-only hosting access.

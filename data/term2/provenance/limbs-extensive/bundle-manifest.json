@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "examId": "term2-limbs",
+  "frozenAt": "2026-08-31",
+  "validationStatus": "passed",
+  "artifacts": [
+    {
+      "name": "term2-limbs-concept-catalog.json",
+      "bytes": 258933,
+      "sha256": "a93f99265c69df65914d6c1b90df9ed242e8f755758803f2336e1f4defefa64e"
+    },
+    {
+      "name": "term2-limbs-gap-mcqs.jsonl",
+      "bytes": 31561,
+      "sha256": "6097fa68f243d861b3dda9aaac6a3b371760d409338fa3f2d3b7923849ce7094"
+    },
+    {
+      "name": "term2-limbs-question-to-concept-index.json",
+      "bytes": 150316,
+      "sha256": "49a4f6420e2d4e6110f8ca2dde06161918512af86d66639b8196ce01c45fd27d"
+    },
+    {
+      "name": "term2-limbs-coverage.json",
+      "bytes": 5663,
+      "sha256": "feaaacc08775dfe2b8e3ffbd1f65ab0c6ebe6e612d607595cb9d8e01c6d2d664"
+    },
+    {
+      "name": "term2-limbs-source-correction-audit.md",
+      "bytes": 4537,
+      "sha256": "8bc31710ec15c0f913abcd98d287ff20a70649efc70c7cd1e7cc90f12a7cd96b"
+    },
+    {
+      "name": "term2-limbs-correction-ledger.json",
+      "bytes": 9194,
+      "sha256": "eda571bc7ae09ac7973fdd3287658cca11a5622e39351473fbb21365ce9af5bc"
+    },
+    {
+      "name": "term2-limbs-machine-validation.json",
+      "bytes": 32526,
+      "sha256": "0f36579c38621a6d02831d65dcf921eb84bbe26db16b410e21b19e58ec88f86e"
+    },
+    {
+      "name": "verify-extensive-limbs.mjs",
+      "bytes": 61706,
+      "sha256": "16d827edeac302d7bab7a19e0a9e2ed3df9c96b6f9a3637bccdd9923f439e87d"
+    }
+  ]
+}

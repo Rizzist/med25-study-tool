@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0.0",
+  "examId": "term2-biochemistry",
+  "updatedAt": "2026-08-31",
+  "authorGapCount": 38,
+  "acceptedGapCount": 38,
+  "excludedGapCount": 0,
+  "substantivelyCorrectedGapCount": 6,
+  "locatorCorrectedGapCount": 3,
+  "releaseNormalizedGapCount": 38,
+  "catalogConceptCount": 50,
+  "catalogConceptsWithTargetedSourceOrContentCorrections": 25,
+  "baselineQuestionCount": 158,
+  "baselineModifiedCount": 0,
+  "entries": [
+    {
+      "id": "catalog-schema-normalization",
+      "artifact": "concept-catalog",
+      "severity": "required",
+      "action": "corrected",
+      "detail": "Removed author-only fields; added module descriptions/orders; merged studyNotes into keyPoints and commonTraps/examDistinctions into examTraps; normalized source basis, scope, objectives, and sourceAudit."
+    },
+    {
+      "id": "gap-release-contract",
+      "artifact": "verified-gap-mcqs",
+      "severity": "required",
+      "action": "corrected",
+      "detail": "Changed all 38 gaps from draft to verified; replaced source-based/proposed-gap-closure with source-grounded/gap-audit; retained mandatory routing tags; removed pseudo-slide labels and generic course-anchor text."
+    },
+    {
+      "id": "tca-atp-convention",
+      "artifact": "bio2-ch09-yield-regulation",
+      "severity": "major",
+      "action": "corrected",
+      "detail": "The author claimed the sixth edition used about 10 ATP per acetyl-CoA. Local PDF page 218 explicitly applies 3 ATP/NADH and 2 ATP/FADH2, giving 12 with GTP; catalog now preserves that source convention."
+    },
+    {
+      "id": "course-locator-remap",
+      "artifact": "sourceAudit",
+      "severity": "major",
+      "action": "corrected",
+      "detail": "Replaced misassigned carbohydrate transcript ranges (notably lines 24-91 and 92-138) with topic-accurate segment mappings; split both course-note PDFs page by page and inventoried all six SRT companions."
+    },
+    {
+      "id": "glut3-affinity",
+      "artifact": "bio2-ch08-glucose-transport/term2-biochem-gap-005-v1",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Removed an uncited high-affinity claim for GLUT3 and rewrote the gap to the chapter-supported fact that GLUT3 is the primary neuronal isoform."
+    },
+    {
+      "id": "rbc-bpg-local-scope",
+      "artifact": "bio2-ch08-anaerobic-rbc/term2-biochem-gap-011-v1",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Reframed the local-source claim as increased oxygen delivery and cited pages 193-194; removed uncited chronic-hypoxia/deoxyhemoglobin detail from the gap."
+    },
+    {
+      "id": "pdh-deficiency-product",
+      "artifact": "bio2-ch09-pdh-regulation-clinical/term2-biochem-gap-015-v1",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Removed alanine from the cited E1-deficiency claim; pages 212-213 directly support pyruvate diversion to lactate."
+    },
+    {
+      "id": "biotin-gap",
+      "artifact": "term2-biochem-gap-018-v1",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Removed the avidin vignette because avidin occurs only in the chapter self-assessment, not cited narrative page 228; retained the biotin-dependent pyruvate-carboxylase target."
+    },
+    {
+      "id": "odd-chain-locator",
+      "artifact": "bio2-ch10-substrates/term2-biochem-gap-017-v1",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Added page 216, which explicitly links odd-chain fatty-acid propionyl-CoA to succinyl-CoA, alongside page 226 net-glucose logic."
+    },
+    {
+      "id": "hfi-sorbitol-locator",
+      "artifact": "bio2-ch12-fructose-disorders/term2-biochem-gap-028-v1",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Extended the locator through page 267, which provides the sorbitol-to-fructose reaction needed to justify sorbitol avoidance."
+    },
+    {
+      "id": "lpl-insulin-overreach",
+      "artifact": "bio2-ch15-lpl/term2-biochem-gap-037-v1",
+      "severity": "major",
+      "action": "corrected",
+      "detail": "Removed insulin-regulated adipose LPL, which is not stated in the specified chapter/transcript, and rewrote the gap around chapter-supported apoC-II activation, TAG hydrolysis, and adipose uptake."
+    },
+    {
+      "id": "chapter15-overreach",
+      "artifact": "multiple chapter 15 concepts",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Removed or narrowed unsupported abetalipoproteinemia, ApoE2 homozygosity, neonatal pancreatic immaturity, sn-3 gastric specificity, biliary secretin, and insulin-driven adipose glycerol-3-phosphate claims."
+    },
+    {
+      "id": "glucose-alanine-cycle",
+      "artifact": "bio2-ch10-cycles-clinical",
+      "severity": "moderate",
+      "action": "corrected",
+      "detail": "Removed the glucose-alanine cycle because it is not directly developed in the specified local chapters/material; preserved alanine as a gluconeogenic substrate under the substrate concept."
+    },
+    {
+      "id": "ambiguous-glycogen-distractor",
+      "artifact": "term2-biochem-gap-022-v1",
+      "severity": "minor",
+      "action": "corrected",
+      "detail": "Replaced a true-but-nonresponsive phosphorylase statement with an unambiguously false, parallel distractor."
+    },
+    {
+      "id": "baseline-integrity",
+      "artifact": "repository baseline",
+      "severity": "required",
+      "action": "preserved",
+      "detail": "All 158 repository baseline records remained byte-for-byte untouched; SHA-256 18df3da7eea257542623d965f1f8b3258c9c1709734bf0c85ec054a321f72ab3."
+    },
+    {
+      "id": "gap-exclusions",
+      "artifact": "verified-gap-mcqs",
+      "severity": "summary",
+      "action": "accepted",
+      "detail": "All 38 author gaps were retained after verification; 6 received substantive stem/option/explanation edits, 3 additional items received material locator corrections, and all 38 received release-contract/source-field normalization. Excluded count: 0."
+    }
+  ]
+}

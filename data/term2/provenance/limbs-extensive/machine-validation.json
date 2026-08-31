@@ -1,0 +1,1080 @@
+{
+  "schemaVersion": "1.0.0",
+  "examId": "term2-limbs",
+  "updatedAt": "2026-08-31",
+  "status": "passed",
+  "errors": [],
+  "ajv": {
+    "implementation": "/Users/rizzist/Documents/CODING/med-school-prep/node_modules/ajv/dist/2020.js",
+    "conceptSchema": "/Users/rizzist/Documents/CODING/med-school-prep/schemas/term2-concepts.schema.json",
+    "conceptCatalogPassed": true,
+    "conceptCatalogErrors": [],
+    "mcqSchema": "/Users/rizzist/Documents/CODING/med-school-prep/schemas/mcq-question.schema.json",
+    "gapQuestionsPassed": 17,
+    "gapQuestionsFailed": []
+  },
+  "repositoryConceptAudit": {
+    "implementation": "/Users/rizzist/Documents/CODING/med-school-prep/src/lib/term2/concept-audit.mjs",
+    "passed": true,
+    "errors": [],
+    "inputAdapter": "Added only study-practice to the in-memory baseline tag arrays because the preserved bank predates that repository audit requirement; gap records were audited exactly as emitted.",
+    "report": {
+      "schemaVersion": "1.0.0",
+      "examId": "term2-limbs",
+      "updatedAt": "2026-08-31",
+      "moduleCount": 14,
+      "conceptCount": 79,
+      "objectiveCount": 173,
+      "mcqLinkedObjectives": 173,
+      "objectivesSampledBeforeExpansion": 156,
+      "objectivesFirstSampledByExpansion": 17,
+      "questionCount": 173,
+      "addedQuestionCount": 17,
+      "imageQuestionCount": 0,
+      "interactive3dCount": 32,
+      "distinctPracticeItems": 173,
+      "unmappedQuestionIds": [],
+      "unsampledObjectiveIds": [],
+      "byModule": [
+        {
+          "id": "ul-osteology",
+          "title": "Upper limb: pectoral-girdle osteology",
+          "subject": "anatomy",
+          "conceptCount": 5,
+          "objectiveCount": 12,
+          "linkedObjectiveCount": 12,
+          "questions": 12,
+          "distinctItems": 12,
+          "newlySampledObjectives": 2
+        },
+        {
+          "id": "ul-shoulder-posterior-scapular",
+          "title": "Upper limb: shoulder and posterior scapular region",
+          "subject": "anatomy",
+          "conceptCount": 5,
+          "objectiveCount": 14,
+          "linkedObjectiveCount": 14,
+          "questions": 14,
+          "distinctItems": 14,
+          "newlySampledObjectives": 1
+        },
+        {
+          "id": "ul-axilla",
+          "title": "Upper limb: axilla and its contents",
+          "subject": "anatomy",
+          "conceptCount": 6,
+          "objectiveCount": 10,
+          "linkedObjectiveCount": 10,
+          "questions": 10,
+          "distinctItems": 10,
+          "newlySampledObjectives": 2
+        },
+        {
+          "id": "ul-brachial-plexus",
+          "title": "Upper limb: brachial plexus",
+          "subject": "anatomy",
+          "conceptCount": 6,
+          "objectiveCount": 10,
+          "linkedObjectiveCount": 10,
+          "questions": 10,
+          "distinctItems": 10,
+          "newlySampledObjectives": 0
+        },
+        {
+          "id": "ul-arm-cubital-fossa",
+          "title": "Upper limb: arm and cubital fossa",
+          "subject": "anatomy",
+          "conceptCount": 6,
+          "objectiveCount": 14,
+          "linkedObjectiveCount": 14,
+          "questions": 14,
+          "distinctItems": 14,
+          "newlySampledObjectives": 1
+        },
+        {
+          "id": "ul-forearm",
+          "title": "Upper limb: forearm compartments",
+          "subject": "anatomy",
+          "conceptCount": 6,
+          "objectiveCount": 14,
+          "linkedObjectiveCount": 14,
+          "questions": 14,
+          "distinctItems": 14,
+          "newlySampledObjectives": 2
+        },
+        {
+          "id": "ul-wrist",
+          "title": "Upper limb: wrist surface anatomy",
+          "subject": "anatomy",
+          "conceptCount": 6,
+          "objectiveCount": 7,
+          "linkedObjectiveCount": 7,
+          "questions": 7,
+          "distinctItems": 7,
+          "newlySampledObjectives": 2
+        },
+        {
+          "id": "ul-hand-extension",
+          "title": "Upper limb: hand - book-only extension",
+          "subject": "anatomy",
+          "conceptCount": 7,
+          "objectiveCount": 11,
+          "linkedObjectiveCount": 11,
+          "questions": 11,
+          "distinctItems": 11,
+          "newlySampledObjectives": 2
+        },
+        {
+          "id": "ll-hip-osteology",
+          "title": "Lower limb: hip osteology and joint",
+          "subject": "anatomy",
+          "conceptCount": 4,
+          "objectiveCount": 14,
+          "linkedObjectiveCount": 14,
+          "questions": 14,
+          "distinctItems": 14,
+          "newlySampledObjectives": 1
+        },
+        {
+          "id": "ll-gluteal",
+          "title": "Lower limb: gluteal region",
+          "subject": "anatomy",
+          "conceptCount": 4,
+          "objectiveCount": 10,
+          "linkedObjectiveCount": 10,
+          "questions": 10,
+          "distinctItems": 10,
+          "newlySampledObjectives": 0
+        },
+        {
+          "id": "ll-thigh-femoral-triangle",
+          "title": "Lower limb: thigh and femoral triangle",
+          "subject": "anatomy",
+          "conceptCount": 6,
+          "objectiveCount": 15,
+          "linkedObjectiveCount": 15,
+          "questions": 15,
+          "distinctItems": 15,
+          "newlySampledObjectives": 0
+        },
+        {
+          "id": "ll-knee-popliteal",
+          "title": "Lower limb: knee and popliteal fossa",
+          "subject": "anatomy",
+          "conceptCount": 5,
+          "objectiveCount": 13,
+          "linkedObjectiveCount": 13,
+          "questions": 13,
+          "distinctItems": 13,
+          "newlySampledObjectives": 0
+        },
+        {
+          "id": "ll-leg-compartments",
+          "title": "Lower limb: leg compartments",
+          "subject": "anatomy",
+          "conceptCount": 5,
+          "objectiveCount": 14,
+          "linkedObjectiveCount": 14,
+          "questions": 14,
+          "distinctItems": 14,
+          "newlySampledObjectives": 1
+        },
+        {
+          "id": "ll-ankle-foot",
+          "title": "Lower limb: ankle and foot",
+          "subject": "anatomy",
+          "conceptCount": 8,
+          "objectiveCount": 15,
+          "linkedObjectiveCount": 15,
+          "questions": 15,
+          "distinctItems": 15,
+          "newlySampledObjectives": 3
+        }
+      ],
+      "sourceInventory": {
+        "mapped": 139,
+        "limits": [
+          {
+            "source": "Local Term 2 teacher materials",
+            "locator": "Forearm 2 transcript lines 209-211",
+            "topic": "Promised later hand session",
+            "conceptIds": [
+              "limb-concept-ul-hand-bones-joints",
+              "limb-concept-ul-carpal-tunnel",
+              "limb-concept-ul-palmar-fascia-sheaths",
+              "limb-concept-ul-extensor-hoods",
+              "limb-concept-ul-intrinsic-hand",
+              "limb-concept-ul-hand-arteries",
+              "limb-concept-ul-hand-nerves"
+            ],
+            "status": "source-missing",
+            "note": "The local source audit did not locate this promised or expected teacher material."
+          },
+          {
+            "source": "Local Term 2 teacher materials",
+            "locator": "Audited local course-source directories",
+            "topic": "Lower-limb teacher material",
+            "conceptIds": [
+              "limb-concept-ll-surface-integration",
+              "limb-concept-ll-overview",
+              "limb-concept-ll-pelvis-femur",
+              "limb-concept-ll-hip-joint",
+              "limb-concept-ll-pelvic-gateways",
+              "limb-concept-ll-gluteal-superficial",
+              "limb-concept-ll-gluteal-deep",
+              "limb-concept-ll-gluteal-neurovascular",
+              "limb-concept-ll-gluteal-injection",
+              "limb-concept-ll-femoral-triangle",
+              "limb-concept-ll-thigh-anterior",
+              "limb-concept-ll-thigh-medial",
+              "limb-concept-ll-thigh-posterior",
+              "limb-concept-ll-thigh-arteries-canal",
+              "limb-concept-ll-thigh-veins-lymph",
+              "limb-concept-ll-knee-surfaces-capsule",
+              "limb-concept-ll-knee-cruciates",
+              "limb-concept-ll-knee-menisci-collaterals",
+              "limb-concept-ll-knee-locking",
+              "limb-concept-ll-popliteal-fossa",
+              "limb-concept-ll-leg-bones-joints",
+              "limb-concept-ll-leg-posterior",
+              "limb-concept-ll-leg-lateral",
+              "limb-concept-ll-leg-anterior",
+              "limb-concept-ll-leg-transitions-veins",
+              "limb-concept-ll-foot-bones-joints",
+              "limb-concept-ll-tarsal-tunnel",
+              "limb-concept-ll-foot-arches",
+              "limb-concept-ll-plantar-fascia-sheaths",
+              "limb-concept-ll-intrinsic-foot",
+              "limb-concept-ll-foot-vessels",
+              "limb-concept-ll-foot-nerves-surface"
+            ],
+            "status": "source-missing",
+            "note": "The local source audit did not locate this promised or expected teacher material."
+          },
+          {
+            "source": "Gray's Anatomy for Students, 3rd edition",
+            "locator": "Chapter 1, printed pp. 4-11; local PDF pp. 16-23",
+            "topic": "Imaging techniques",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "The checklist assigns imaging, but the catalog makes no standalone imaging objective and the bank contains no image-modality item."
+          },
+          {
+            "source": "Arm 1.transcript.srt",
+            "locator": "Complete timed SRT; duplicate representation of Arm 1.transcript.txt",
+            "topic": "Timed transcript representation",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+          },
+          {
+            "source": "Arm 2.transcript.srt",
+            "locator": "Complete timed SRT; duplicate representation of Arm 2.transcript.txt",
+            "topic": "Timed transcript representation",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+          },
+          {
+            "source": "Axilla 1.transcript.srt",
+            "locator": "Complete timed SRT; duplicate representation of Axilla 1.transcript.txt",
+            "topic": "Timed transcript representation",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+          },
+          {
+            "source": "Axilla 2.transcript.srt",
+            "locator": "Complete timed SRT; duplicate representation of Axilla 2.transcript.txt",
+            "topic": "Timed transcript representation",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+          },
+          {
+            "source": "Forearm 1.transcript.srt",
+            "locator": "Complete timed SRT; duplicate representation of Forearm 1.transcript.txt",
+            "topic": "Timed transcript representation",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+          },
+          {
+            "source": "Forearm 2.transcript.srt",
+            "locator": "Complete timed SRT; duplicate representation of Forearm 2.transcript.txt",
+            "topic": "Timed transcript representation",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+          },
+          {
+            "source": "Osteology of the upper limb 1.transcript.srt",
+            "locator": "Complete timed SRT; duplicate representation of Osteology of the upper limb 1.transcript.txt",
+            "topic": "Timed transcript representation",
+            "conceptIds": [],
+            "status": "outside-scope",
+            "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+          }
+        ]
+      },
+      "interpretation": "Question links sample objectives; neither link counts nor the source inventory guarantee official exam completeness or weighting."
+    }
+  },
+  "baselineIntegrity": {
+    "repositoryPath": "/Users/rizzist/Documents/CODING/med-school-prep/data/bank/questions/term2-limbs.jsonl",
+    "repositorySha256": "e75b335e8a45992959e939ef2b3f8befba89cefe70b1977307636f371b17fff3",
+    "verifiedBaselineSha256": "e75b335e8a45992959e939ef2b3f8befba89cefe70b1977307636f371b17fff3",
+    "byteIdenticalToVerifiedBaseline": true,
+    "records": 156,
+    "mappedExactlyOnce": 156
+  },
+  "gapIntegrity": {
+    "records": 17,
+    "optionKeyChecks": [
+      {
+        "id": "limb-gap-001",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "B",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-002",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-003",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "B",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-004",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "B",
+          "C"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      {
+        "id": "limb-gap-005",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "B",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-006",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-007",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "B",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "B",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-008",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "B",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-009",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "B",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-010",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-011",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "B",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "B",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-012",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "B",
+          "C"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      {
+        "id": "limb-gap-013",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "B",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-014",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-015",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "B",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "B",
+          "D"
+        ]
+      },
+      {
+        "id": "limb-gap-016",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "A",
+          "B",
+          "C"
+        ],
+        "expectedDistractorIds": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      {
+        "id": "limb-gap-017",
+        "correctOptionExists": true,
+        "uniqueOptionIds": true,
+        "uniqueOptionTexts": true,
+        "distractorExplanationIds": [
+          "B",
+          "C",
+          "D"
+        ],
+        "expectedDistractorIds": [
+          "B",
+          "C",
+          "D"
+        ]
+      }
+    ],
+    "routingChecks": [
+      {
+        "id": "limb-gap-001",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-002",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-003",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-004",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-005",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-006",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-007",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-008",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-009",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-010",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-011",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-012",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-013",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-014",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-015",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-016",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      },
+      {
+        "id": "limb-gap-017",
+        "verified": true,
+        "missingRequiredTags": [],
+        "forbiddenTags": [],
+        "preciseLocator": true
+      }
+    ]
+  },
+  "duplicateChecks": {
+    "exactPromptGroups": [],
+    "nearDuplicateThreshold": 0.72,
+    "nearDuplicatePairs": []
+  },
+  "anatomy3d": {
+    "records": 32,
+    "passed": 32,
+    "registryCheck": {
+      "upperImported": true,
+      "lowerImported": true,
+      "upperRegistered": true,
+      "lowerRegistered": true
+    },
+    "checks": [
+      {
+        "questionId": "limb-ul-3d-001",
+        "modelKey": "upper-limb",
+        "structureId": "clavicle",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Clavicle"
+      },
+      {
+        "questionId": "limb-ul-3d-002",
+        "modelKey": "upper-limb",
+        "structureId": "scapula",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Scapula"
+      },
+      {
+        "questionId": "limb-ul-3d-009",
+        "modelKey": "upper-limb",
+        "structureId": "humerus",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Humerus"
+      },
+      {
+        "questionId": "limb-ul-3d-010",
+        "modelKey": "upper-limb",
+        "structureId": "glenohumeral-joint",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Glenohumeral joint"
+      },
+      {
+        "questionId": "limb-ul-3d-011",
+        "modelKey": "upper-limb",
+        "structureId": "supraspinatus-muscle",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Supraspinatus muscle"
+      },
+      {
+        "questionId": "limb-ul-3d-003",
+        "modelKey": "upper-limb",
+        "structureId": "axillary-artery",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Axillary artery"
+      },
+      {
+        "questionId": "limb-ul-3d-012",
+        "modelKey": "upper-limb",
+        "structureId": "axillary-nerve",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Axillary nerve"
+      },
+      {
+        "questionId": "limb-ul-3d-004",
+        "modelKey": "upper-limb",
+        "structureId": "upper-trunk-brachial-plexus",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Upper trunk of brachial plexus"
+      },
+      {
+        "questionId": "limb-ul-3d-013",
+        "modelKey": "upper-limb",
+        "structureId": "posterior-cord-brachial-plexus",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Posterior cord of brachial plexus"
+      },
+      {
+        "questionId": "limb-ul-3d-005",
+        "modelKey": "upper-limb",
+        "structureId": "radial-nerve",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Radial nerve"
+      },
+      {
+        "questionId": "limb-ul-3d-006",
+        "modelKey": "upper-limb",
+        "structureId": "biceps-brachii-muscle",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Biceps brachii muscle"
+      },
+      {
+        "questionId": "limb-ul-3d-014",
+        "modelKey": "upper-limb",
+        "structureId": "brachial-artery",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Brachial artery"
+      },
+      {
+        "questionId": "limb-ul-3d-007",
+        "modelKey": "upper-limb",
+        "structureId": "pronator-teres-muscle",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Pronator teres muscle"
+      },
+      {
+        "questionId": "limb-ul-3d-008",
+        "modelKey": "upper-limb",
+        "structureId": "ulnar-artery",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Ulnar artery"
+      },
+      {
+        "questionId": "limb-ul-3d-015",
+        "modelKey": "upper-limb",
+        "structureId": "carpal-bones",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Carpal bones"
+      },
+      {
+        "questionId": "limb-ul-3d-016",
+        "modelKey": "upper-limb",
+        "structureId": "superficial-palmar-arch",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Superficial palmar arch"
+      },
+      {
+        "questionId": "limb-ll-3d-001",
+        "modelKey": "lower-limb",
+        "structureId": "femur",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Femur"
+      },
+      {
+        "questionId": "limb-ll-3d-009",
+        "modelKey": "lower-limb",
+        "structureId": "hip-bone",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Hip bone"
+      },
+      {
+        "questionId": "limb-ll-3d-010",
+        "modelKey": "lower-limb",
+        "structureId": "hip-joint",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Hip joint"
+      },
+      {
+        "questionId": "limb-ll-3d-002",
+        "modelKey": "lower-limb",
+        "structureId": "gluteus-medius",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Gluteus medius"
+      },
+      {
+        "questionId": "limb-ll-3d-011",
+        "modelKey": "lower-limb",
+        "structureId": "sciatic-nerve",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Sciatic nerve"
+      },
+      {
+        "questionId": "limb-ll-3d-003",
+        "modelKey": "lower-limb",
+        "structureId": "femoral-nerve",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Femoral nerve"
+      },
+      {
+        "questionId": "limb-ll-3d-004",
+        "modelKey": "lower-limb",
+        "structureId": "great-saphenous-vein",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Great saphenous vein"
+      },
+      {
+        "questionId": "limb-ll-3d-012",
+        "modelKey": "lower-limb",
+        "structureId": "femoral-artery",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Femoral artery"
+      },
+      {
+        "questionId": "limb-ll-3d-005",
+        "modelKey": "lower-limb",
+        "structureId": "knee-joint",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Knee joint"
+      },
+      {
+        "questionId": "limb-ll-3d-006",
+        "modelKey": "lower-limb",
+        "structureId": "common-fibular-nerve",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Common fibular nerve"
+      },
+      {
+        "questionId": "limb-ll-3d-013",
+        "modelKey": "lower-limb",
+        "structureId": "anterior-cruciate-ligament",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Anterior cruciate ligament"
+      },
+      {
+        "questionId": "limb-ll-3d-007",
+        "modelKey": "lower-limb",
+        "structureId": "tibialis-anterior",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Tibialis anterior"
+      },
+      {
+        "questionId": "limb-ll-3d-014",
+        "modelKey": "lower-limb",
+        "structureId": "deep-fibular-nerve",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Deep fibular nerve"
+      },
+      {
+        "questionId": "limb-ll-3d-015",
+        "modelKey": "lower-limb",
+        "structureId": "gastrocnemius",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Gastrocnemius"
+      },
+      {
+        "questionId": "limb-ll-3d-008",
+        "modelKey": "lower-limb",
+        "structureId": "posterior-tibial-artery",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Posterior tibial artery"
+      },
+      {
+        "questionId": "limb-ll-3d-016",
+        "modelKey": "lower-limb",
+        "structureId": "ankle-joint",
+        "manifestFound": true,
+        "structureFound": true,
+        "label": "Ankle joint"
+      }
+    ]
+  },
+  "objectiveAndInventoryIntegrity": {
+    "objectives": 173,
+    "oneQuestionPerObjective": true,
+    "everyQuestionMappedExactlyOnce": true,
+    "mappedConcepts": 79,
+    "totalConcepts": 79
+  },
+  "sourceFiles": {
+    "gray": {
+      "path": "/Users/rizzist/Documents/TUMS Term 2 Theory/90 Official Book Access/Gray's Anatomy for Students 3rd Edition - Clean.pdf",
+      "present": true,
+      "sha256": "b112cf0c47919a524dc37c32192a9fb865c85e5f04db01a75a54575d81e9ec3c",
+      "pages": 1173
+    },
+    "checklist": {
+      "path": "/Users/rizzist/Documents/TUMS Term 2 Theory/99 Carryover - Limb Anatomy/CHAPTER CHECKLIST.md",
+      "present": true,
+      "sha256": "a0de2eecf857380c3f36988095f45a53188664fe3476a53bfe293858d00d5c9a"
+    },
+    "transcripts": [
+      {
+        "file": "Arm 1.transcript.srt",
+        "sha256": "975cd3ddd5f96dcbadda1007d65a3b967f1bcc0ae19c624437c2e02332c9ba0d"
+      },
+      {
+        "file": "Arm 1.transcript.txt",
+        "sha256": "b6e6c724d7f0d1780c48d10f7e55113dd9101f57e2fe6bdbcfa86028211c6027"
+      },
+      {
+        "file": "Arm 2.transcript.srt",
+        "sha256": "2c676f6db4482d43fd51a448db4ce9e4452e9c069c9e2b66e04027c1747061a5"
+      },
+      {
+        "file": "Arm 2.transcript.txt",
+        "sha256": "04e050e775a1e9ece920819c5347ce0ea0bd6b43ee63f8df62189e6af3ca6fef"
+      },
+      {
+        "file": "Axilla 1.transcript.srt",
+        "sha256": "8d4167324aaf39dca09b5805d9ba5c3f9ba40e637d824690861d03a50bfc270e"
+      },
+      {
+        "file": "Axilla 1.transcript.txt",
+        "sha256": "c67be7bedba731cb50d1887c01451c3de6e9efcac0fa397f6a3ee8ca39fe0abd"
+      },
+      {
+        "file": "Axilla 2.transcript.srt",
+        "sha256": "e42fa8fb98b75288f96c8acb4e4cb9bba273fb86eb2d5982497974389618efe1"
+      },
+      {
+        "file": "Axilla 2.transcript.txt",
+        "sha256": "a3cb89f8642632bf50b2b6b4f010bcb93f06b17d7e445fbcf18ad10e8665edfd"
+      },
+      {
+        "file": "Forearm 1.transcript.srt",
+        "sha256": "e27ee6666ffac82c8cc7101ab919ef06b8d584635283fdda2567dd3c3d76f2af"
+      },
+      {
+        "file": "Forearm 1.transcript.txt",
+        "sha256": "a78bf93a23c924e7d95717c0dcc2a20f710d2e6c7b97871dd1094daf3fc3a121"
+      },
+      {
+        "file": "Forearm 2.transcript.srt",
+        "sha256": "0fa43ed26504669383038aa00190c646206148bb30f844981d2c3d672173b9f7"
+      },
+      {
+        "file": "Forearm 2.transcript.txt",
+        "sha256": "32969c5360c9fd8fcb1fdaa7324fb08e7ba9b44e0ffb3a5506dda91e40447e84"
+      },
+      {
+        "file": "Osteology of the upper limb 1.transcript.srt",
+        "sha256": "def57eb026f197566220d6d014fd71f3c10c5702a201aa14981474ae66f013fe"
+      },
+      {
+        "file": "Osteology of the upper limb 1.transcript.txt",
+        "sha256": "0c2abfc2be731116cf2f520a6a9a5a459da8d9899886e5de901478657fcac94e"
+      }
+    ]
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "schemaVersion": "1.0.0",
+  "examId": "term2-limbs",
+  "updatedAt": "2026-08-31",
+  "summary": {
+    "authorConceptsReviewed": 79,
+    "acceptedConceptRecords": 79,
+    "excludedConceptRecords": 0,
+    "schemaNormalizedConceptRecords": 79,
+    "conceptRecordsWithMaterialContentSourceOrScopeCorrections": 21,
+    "authorGapQuestionsReviewed": 17,
+    "acceptedGapQuestions": 17,
+    "excludedGapQuestions": 0,
+    "correctedGapRecords": 17,
+    "baselineQuestionsReviewed": 156,
+    "baselineQuestionsPreserved": 156,
+    "baselineQuestionRecordsCorrected": 0,
+    "baselinePrimaryMappingsCorrected": 6,
+    "correctionLedgerEntries": 17
+  },
+  "entries": [
+    {
+      "id": "source-boundary-lower",
+      "severity": "material",
+      "category": "source-inventory",
+      "action": "corrected",
+      "before": "Lower-limb chapter inventoried only through printed p. 672 / local p. 684.",
+      "after": "Chapter boundary corrected through printed p. 681 / local p. 693, with all seven clinical cases individually inventoried.",
+      "evidence": "Gray's 3e local PDF pp. 684-693, independently rendered and OCR-checked."
+    },
+    {
+      "id": "source-boundary-upper",
+      "severity": "material",
+      "category": "source-inventory",
+      "action": "corrected",
+      "before": "Upper-limb chapter inventoried only through printed p. 829 / local p. 841.",
+      "after": "Chapter boundary corrected through printed p. 834 / local p. 846, with all nine clinical cases individually inventoried.",
+      "evidence": "Gray's 3e local PDF pp. 841-846, independently rendered and OCR-checked."
+    },
+    {
+      "id": "source-inventory-missing-materials",
+      "severity": "material",
+      "category": "source-inventory",
+      "action": "corrected",
+      "before": "Checklist, Chapter 1 readings, SRT duplicates, and registered 3D manifests/registry were not inventoried.",
+      "after": "All were added with mapped, outside-scope, or source-missing status and non-duplication notes.",
+      "evidence": "Local checklist, transcript directory, manifests and registry."
+    },
+    {
+      "id": "palmar-aponeurosis-fascia",
+      "severity": "medical",
+      "category": "catalog-content",
+      "action": "corrected",
+      "before": "Called palmar aponeurosis superficial fascia.",
+      "after": "Correctly classified it as a condensation of deep fascia.",
+      "evidence": "Gray's 3e printed p. 800 / local p. 812."
+    },
+    {
+      "id": "palmar-sheath-claims",
+      "severity": "medical",
+      "category": "catalog-content",
+      "action": "corrected",
+      "before": "Used ambiguous bursal wording and unsupported thenar/midpalmar-space claim.",
+      "after": "Replaced with the exact common FDS/FDP carpal sheath, separate FPL sheath, digit continuity, and palmaris-brevis/deep-structure relations.",
+      "evidence": "Gray's 3e printed pp. 798, 800-802 / local pp. 810, 812-814."
+    },
+    {
+      "id": "extensor-hood-insertions",
+      "severity": "medical",
+      "category": "catalog-content",
+      "action": "corrected",
+      "before": "Stated that both lumbricals and interossei insert on proximal phalanges and hoods.",
+      "after": "Separated interosseous proximal-phalanx plus hood insertion from lumbrical hood-only insertion.",
+      "evidence": "Gray's 3e printed pp. 802-804 / local pp. 814-816."
+    },
+    {
+      "id": "plantar-windlass",
+      "severity": "source-support",
+      "category": "catalog-and-question",
+      "action": "excluded-and-replaced",
+      "before": "Attributed a toe-extension windlass mechanism to Gray's pp. 649-650 and tested it in gap 008.",
+      "after": "Removed the unsupported claim and replaced gap 008 with the directly stated proximal calcaneal attachment.",
+      "evidence": "Gray's 3e printed pp. 649-650 / local pp. 661-662."
+    },
+    {
+      "id": "foot-arches",
+      "severity": "source-support",
+      "category": "catalog-content",
+      "action": "corrected",
+      "before": "Added unsupported keystone/center/windlass wording.",
+      "after": "Rewrote the four points to Gray's directly stated relative arch heights, transverse-arch plane, passive supports and three dynamic muscles.",
+      "evidence": "Gray's 3e printed pp. 648-649 / local pp. 660-661."
+    },
+    {
+      "id": "wrist-articulation",
+      "severity": "precision",
+      "category": "catalog-content",
+      "action": "corrected",
+      "before": "Restricted triquetrum-disc contact to ulnar deviation.",
+      "after": "States the wrist articular partners without the unsupported restriction.",
+      "evidence": "Gray's 3e printed p. 795 / local p. 807."
+    },
+    {
+      "id": "upper-functional-overview",
+      "severity": "precision",
+      "category": "catalog-content",
+      "action": "corrected",
+      "before": "Claimed mobility increases distally.",
+      "after": "Describes coordinated serial joints without a false monotonic mobility gradient.",
+      "evidence": "Gray's 3e printed pp. 685-701 / local pp. 697-713."
+    },
+    {
+      "id": "gluteal-pudendal-wording",
+      "severity": "precision",
+      "category": "catalog-content",
+      "action": "corrected",
+      "before": "Said the internal pudendal artery re-enters pelvis/perineum.",
+      "after": "Correctly states it enters the perineum through the lesser sciatic foramen.",
+      "evidence": "Gray's 3e printed pp. 579-583 / local pp. 591-595."
+    },
+    {
+      "id": "transcript-locators",
+      "severity": "material",
+      "category": "source-locators",
+      "action": "corrected",
+      "before": "Several arm, cubital-fossa, anterior-forearm and wrist concepts cited line ranges covering different topics.",
+      "after": "Replaced those ranges with direct line-addressable transcript spans and added omitted vein, lymph and scapular-anastomosis support.",
+      "evidence": "Seven local upper-limb TXT transcripts."
+    },
+    {
+      "id": "course-scope-upgrades",
+      "severity": "classification",
+      "category": "scope",
+      "action": "corrected",
+      "before": "Shoulder joints, axillary vein and axillary lymph concepts were labelled book-only.",
+      "after": "Classified all three as course because the local transcripts directly teach the sampled relations.",
+      "evidence": "Osteology TXT lines 21-28, 40-42; Axilla 2 TXT lines 1-6, 123-140."
+    },
+    {
+      "id": "gap-duplicates-support",
+      "severity": "material",
+      "category": "gap-mcqs",
+      "action": "corrected",
+      "before": "Gap 003 duplicated baseline posterior-tibial-pulse content; gap 008 used an unsupported windlass claim; gap 015 asked a less direct lateral-band formulation.",
+      "after": "Replaced them with distinct, directly sourced dorsalis-pedis, plantar-aponeurosis attachment and extensor-hood apex questions.",
+      "evidence": "Baseline semantic comparison and Gray's 3e printed pp. 670, 649 and 802."
+    },
+    {
+      "id": "gap-explanations-routing",
+      "severity": "material",
+      "category": "gap-mcqs",
+      "action": "corrected",
+      "before": "All 17 were drafts; required source-grounded/gap-audit tags were absent and several keyed explanations were tautological, incorrect or contradictory.",
+      "after": "All 17 are verified revision 2 with precise locators, direct learning objectives, corrected explanations, full distractor reasoning and mandated tags.",
+      "evidence": "Final MCQ schema, Gray's and applicable transcripts."
+    },
+    {
+      "id": "baseline-primary-mappings",
+      "severity": "classification",
+      "category": "question-index",
+      "action": "corrected",
+      "before": "Six lexical primary mappings pointed at related but less directly sampled concepts.",
+      "after": "Corrected six primary mappings; retained all remaining 150 after question-by-question review.",
+      "evidence": "Baseline stems, keys and learning objectives compared against concept definitions."
+    },
+    {
+      "id": "objective-granularity",
+      "severity": "material",
+      "category": "objective-sampling",
+      "action": "corrected",
+      "before": "Seventy-nine broad objectives each bundled one or more questions, which did not prove that every broad verb was directly sampled.",
+      "after": "Created 173 question-aligned objectives, each linked to exactly one question and using its learningObjective verbatim.",
+      "evidence": "Final catalog objective links and complete index."
+    }
+  ],
+  "unresolvedLimitations": [
+    "No local lower-limb teacher slides, notes or transcript were found; all lower-limb concepts remain book-extension.",
+    "The upper-limb transcripts explicitly defer a later hand session, but that teacher source was not found; hand detail remains book-extension.",
+    "The Gray's PDF text map is malformed, so cited pages were checked by rendering and local OCR; page locators retain the verified printed-to-local offset of +12 in the limb chapters.",
+    "The seven SRT files duplicate the seven TXT transcripts and were inventoried but not counted as independent evidence.",
+    "No official examination blueprint or weighting source was available; the checklist itself warns that limb anatomy is Semester 1 carryover."
+  ]
+}

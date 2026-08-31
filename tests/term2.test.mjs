@@ -119,27 +119,27 @@ test("deployed API exposes each source-grounded Term 2 bank only in its own exam
   assert.equal(respiratory.finalExamQuestionCount, 0, "generated questions must not masquerade as past papers");
 
   const cvs = summary.exams.find((exam) => exam.id === "term2-cvs");
-  assert.equal(cvs.questionCount, 151);
-  assert.equal(cvs.collectionCounts.anatomy, 52);
-  assert.equal(cvs.collectionCounts.histology, 21);
-  assert.equal(cvs.collectionCounts.embryology, 27);
-  assert.equal(cvs.collectionCounts.physiology, 51);
+  assert.equal(cvs.questionCount, 194);
+  assert.equal(cvs.collectionCounts.anatomy, 71);
+  assert.equal(cvs.collectionCounts.histology, 28);
+  assert.equal(cvs.collectionCounts.embryology, 30);
+  assert.equal(cvs.collectionCounts.physiology, 65);
   assert.equal(cvs.collectionCounts["dynamic-anatomy"], 28);
   assert.equal(cvs.collectionCounts.images, 12);
   assert.equal(cvs.interactive3dCount, 28);
   assert.equal(cvs.finalExamQuestionCount, 0);
 
   const limbs = summary.exams.find((exam) => exam.id === "term2-limbs");
-  assert.equal(limbs.questionCount, 156);
-  assert.equal(limbs.collectionCounts.anatomy, 156);
+  assert.equal(limbs.questionCount, 173);
+  assert.equal(limbs.collectionCounts.anatomy, 173);
   assert.equal(limbs.collectionCounts["dynamic-anatomy"], 32);
   assert.equal(limbs.collectionCounts.images, 0);
   assert.equal(limbs.interactive3dCount, 32);
   assert.equal(limbs.finalExamQuestionCount, 0);
 
   const biochemistry = summary.exams.find((exam) => exam.id === "term2-biochemistry");
-  assert.equal(biochemistry.questionCount, 158);
-  assert.equal(biochemistry.collectionCounts.biochemistry, 158);
+  assert.equal(biochemistry.questionCount, 196);
+  assert.equal(biochemistry.collectionCounts.biochemistry, 196);
   assert.equal(biochemistry.collectionCounts.images, 0);
   assert.equal(biochemistry.interactive3dCount, 0);
   assert.equal(biochemistry.finalExamQuestionCount, 0);

@@ -12,7 +12,7 @@ import {
 import { FinalExam } from "@/src/components/FinalExam";
 import { AnatomyImage } from "@/src/components/AnatomyImage";
 import { Term2Guide } from "@/src/components/Term2Guide";
-import { Term2CourseHub } from "@/src/components/Term2CourseHub";
+import { Term2ConceptFeedback, Term2ConceptHub } from "@/src/components/Term2ConceptHub";
 import { PhysiologyPracticalHub } from "@/src/components/PhysiologyPracticalHub";
 import { cleanPracticalIds, practicalCatalog, practicalCaseForQuestion } from "@/src/lib/physiology-practical";
 import { PracticalCaseFigure } from '@/src/components/PracticalCaseFigure';
@@ -36,7 +36,7 @@ import { classifySessionCompletion } from "@/src/lib/mcq/sprint-selection.mjs";
 import type { CodexGrade, MCQMedia, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
 import { isExamId, isTerm2Exam, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
 import { createEmptyProgress, parseProgress, type StudyProgress } from "@/src/lib/mcq/study-progress.mjs";
-import { hasTerm2CourseCatalog, term2CourseCatalog } from "@/src/lib/term2/courses";
+import { hasTerm2ConceptDataset, term2ConceptDataset } from "@/src/lib/term2/concepts";
 
 const AnatomyTrainer = dynamic(() => import("@/src/components/anatomy3d/AnatomyTrainer"), { ssr: false });
 const AnatomyQuestion3D = dynamic(() => import("@/src/components/anatomy3d/AnatomyQuestion"), { ssr: false });
@@ -602,7 +602,7 @@ export default function Home() {
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const selectedConfig = examConfig[exam];
-  const selectedCourseCatalog = isTerm2Exam(exam) ? term2CourseCatalog(exam) : undefined;
+  const selectedConceptDataset = isTerm2Exam(exam) ? term2ConceptDataset(exam) : undefined;
   const examLabel = isTerm2Exam(exam) ? selectedConfig.title : selectedConfig.date;
   const examProgress = progress.exams[exam];
   const savedCount = (id: SavedCollectionId) => id === "wrong" ? examProgress.wrongIds.length : examProgress.flaggedIds.length;
@@ -651,7 +651,7 @@ export default function Home() {
     setActiveRespiratoryPracticeIds(undefined);
     setActivePracticalPracticeIds(undefined);
     setActiveCoursePracticeIds(undefined);
-    if (tab === "Study concepts" && nextExam !== "term2-respiratory" && nextExam !== "term2-physiology-practical" && !(isTerm2Exam(nextExam) && hasTerm2CourseCatalog(nextExam))) setTab("Overview");
+    if (tab === "Study concepts" && nextExam !== "term2-respiratory" && nextExam !== "term2-physiology-practical" && !(isTerm2Exam(nextExam) && hasTerm2ConceptDataset(nextExam))) setTab("Overview");
     // Keep the 3D Anatomy tab when moving between 3D-anatomy exams; only leave it for exams without one.
     if (tab === "3D Anatomy" && !examHasAnatomy3d(nextExam)) setTab("Overview");
     if (nextExam === "term2-physiology-practical") { setTab("Study concepts"); setSessionSize(36); }
@@ -1059,6 +1059,7 @@ export default function Home() {
 
               {hasImmediateFeedback && question.subject === "biochemistry" && <BiochemistryConceptFeedback questionId={question.id} />}
               {hasImmediateFeedback && exam === "term2-respiratory" && <RespiratoryConceptFeedback questionId={question.id} />}
+              {hasImmediateFeedback && selectedConceptDataset && <Term2ConceptFeedback dataset={selectedConceptDataset} questionId={question.id} />}
 
               <label className="reasoning-label"><span>Reasoning <em>optional · saved for review</em></span><textarea value={answer.reasoning} onChange={(event) => updateAnswer(question.id, { reasoning: event.target.value })} placeholder="Why does this answer win? What clue ruled out the alternatives?" /></label>
               <div className="answer-tools">
@@ -1117,6 +1118,7 @@ export default function Home() {
               {isWrittenPractical && <><div className="explanation"><span>{question.media?.length === 1 ? "What confirms it in this field" : "What confirms it across the fields"}</span><p>{question.explanation}</p></div><div className="written-lookalikes"><span>High-yield look-alikes</span>{question.options.filter((option) => option.id !== question.correctOptionId).map((option) => <p key={option.id} className={option.id === writtenInterpretation?.optionId ? "student-match" : ""}><b>{option.text}</b><small>{question.distractorExplanations[option.id]}</small></p>)}</div></>}
               {question.subject === "biochemistry" && <BiochemistryConceptFeedback questionId={question.id} />}
               {exam === "term2-respiratory" && <RespiratoryConceptFeedback questionId={question.id} />}
+              {selectedConceptDataset && <Term2ConceptFeedback dataset={selectedConceptDataset} questionId={question.id} />}
               {answer?.reasoning && <div className="student-reasoning"><span>Your reasoning</span><p>{answer.reasoning}</p></div>}
               {linkedLesson && <div className="linked-lesson"><button onClick={() => setExpandedLessons((current) => ({ ...current, [question.id]: !current[question.id] }))}><b>{expandedLessons[question.id] ? "Close visual lesson" : "Open 90-second visual lesson"}</b><span>{linkedLesson.title} {expandedLessons[question.id] ? "↑" : "↓"}</span></button>{expandedLessons[question.id] && <LessonSlide lesson={linkedLesson} compact />}</div>}
               {(answer?.mode === "write" || answer?.reasoning) && <div className="tutor-review">
@@ -1255,7 +1257,7 @@ export default function Home() {
         <div className="brand"><span>MED//25</span><small>Term 1 + Term 2</small><small>July 25 · Aug 22 · Aug 25</small></div>
         <nav className="setup-nav" aria-label="Application sections">{tabs.filter((item) => {
           if (item === "3D Anatomy") return examHasAnatomy3d(exam);
-          if (item === "Study concepts") return exam === "term2-respiratory" || exam === "term2-physiology-practical" || Boolean(selectedCourseCatalog);
+          if (item === "Study concepts") return exam === "term2-respiratory" || exam === "term2-physiology-practical" || Boolean(selectedConceptDataset);
           return true;
         }).map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{isTerm2Exam(exam) && item === "Final exam" ? "Past exams" : exam === "term2-physiology-practical" ? item === "Study concepts" ? "Practical lessons" : item === "Practical Atlas" ? "Figures & videos" : item : item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
@@ -1284,12 +1286,13 @@ export default function Home() {
             {phase === "loading" && <p role="status" className="resp-session-alert">Preparing your concept practice…</p>}
             {sessionError && <p role="alert" className="session-error resp-session-alert">{sessionError}</p>}
           </>}
-          {tab === "Study concepts" && selectedCourseCatalog && <Term2CourseHub
-            catalog={selectedCourseCatalog}
+          {tab === "Study concepts" && selectedConceptDataset && <Term2ConceptHub
+            key={exam}
+            dataset={selectedConceptDataset}
             attemptedIds={[...seenQuestionIds]}
             repairIds={cleanIds([...examProgress.wrongIds, ...examProgress.flaggedIds])}
             disabled={phase === "loading"}
-            onPractice={(ids, mode, limit) => void startSession("all", ids, { mode, limit })}
+            onPractice={(_scopeId, ids, mode, limit) => void startSession("all", ids, { mode, limit })}
           />}
           {tab === "Overview" && <>
             <p className="eyebrow">{isTerm2Exam(exam) ? "Term 2 exam" : "Priority exam"} · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
@@ -1297,7 +1300,7 @@ export default function Home() {
             {isTerm2Exam(exam) && <Term2Guide exam={exam} compact />}
             {exam === "term2-physiology-practical" && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Practise the slide theory, station by station</b><small>{practicalCatalog.totals.questions} MCQs · {practicalCatalog.totals.theorySets} focused theory sets · {practicalCatalog.totals.imageQuestions} image questions · {practicalCatalog.totals.videos} demonstrations</small></span><strong>Open question sets →</strong></button>}
             {exam === "term2-respiratory" && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Start with the theory</b><small>{respiratoryConcepts.length} concepts · {respiratoryModules.length} reading modules · recall prompts, linked MCQs and a source audit</small></span><strong>Open study concepts →</strong></button>}
-            {selectedCourseCatalog && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Study the reconciled curriculum first</b><small>{selectedCourseCatalog.modules.length} modules · {new Set(selectedCourseCatalog.modules.flatMap((module) => module.questionIds)).size} linked MCQs · retrieval prompts and visible source boundaries</small></span><strong>Open study concepts →</strong></button>}
+            {selectedConceptDataset && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Study the exhaustive source map first</b><small>{selectedConceptDataset.catalog.concepts.length} concepts · {selectedConceptDataset.catalog.modules.length} reading modules · {selectedConceptDataset.coverage.objectiveCount} MCQ-linked objectives and a source audit</small></span><strong>Open study concepts →</strong></button>}
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
             {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].title} · {savedScopeLabel(resumableSession)}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>Up to {Math.min(sessionSize, collectionCount)} questions · repair → unseen → mastered</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${examLabel} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {examLabel} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}

@@ -1,0 +1,1920 @@
+{
+  "schemaVersion": "1.0.0",
+  "examId": "term2-biochemistry",
+  "updatedAt": "2026-08-31",
+  "sourcePolicy": "Local Lippincott 6e Chapters 8-12 and 15, every locally present carbohydrate/dietary-lipid note and transcript format, and the verified repository baseline only. No web question bank, past paper, final paper, or official assessment source was used.",
+  "sources": [
+    {
+      "title": "Lippincott's Illustrated Reviews: Biochemistry",
+      "kind": "local reference PDF",
+      "path": "/Users/rizzist/Documents/MED SCHOOL BOOKS/Biochemistry [Lippincott's Illustrated Reviews Series] Denise R. Ferrier PhD.pdf",
+      "exists": true,
+      "coverage": "Local PDF pages 176-275 and 326-339 were reviewed page by page.",
+      "sha256": "5e2b71105e7cc9915ba2204070ad8521cfb98a46a83711296391be604840a0b4"
+    },
+    {
+      "title": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "kind": "local course note PDF",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Notes/Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "exists": true,
+      "coverage": "Seven pages were visually reviewed and dispositioned individually.",
+      "sha256": "0323b1899454785739802db66d59e314db7bc5ba6cd581644811a0bf7dec8adb"
+    },
+    {
+      "title": "Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "kind": "local reconstructed course note PDF",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Notes/Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "exists": true,
+      "coverage": "Six pages were reviewed and dispositioned individually.",
+      "sha256": "f2f448d05e07bc76f7ec05f1a09f4b38611a164c0f01e800d4741f26e5fa2d6a"
+    },
+    {
+      "title": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "kind": "local course transcript",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "exists": true,
+      "coverage": "Mapped by line segment.",
+      "sha256": "9ea41fab02fd4ebf323bd6c4914f610109a41b6e13ebe4fa21272a874e66e4c5"
+    },
+    {
+      "title": "IMG_4406.transcript.txt",
+      "kind": "local course transcript",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/IMG_4406.transcript.txt",
+      "exists": true,
+      "coverage": "Mapped by line segment.",
+      "sha256": "e1e7418e13f6de5997f8d63284603598c8b92a24d55d2e67f7e0408eb4d733ab"
+    },
+    {
+      "title": "IMG_4407.transcript.txt",
+      "kind": "local course transcript",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/IMG_4407.transcript.txt",
+      "exists": true,
+      "coverage": "Mapped by line segment.",
+      "sha256": "3d228755b02653ac1232456e94f20ec22fb97954afcea916c99ca1da219f02ad"
+    },
+    {
+      "title": "Lipid metabolism Esmaeili 1.1.transcript.txt",
+      "kind": "local course transcript",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Lipid metabolism Esmaeili 1.1.transcript.txt",
+      "exists": true,
+      "coverage": "Mapped by line segment.",
+      "sha256": "8dc4a48c3265202f7a949d6da8e7b3f7cac8f4f6824246c848ccf14fdb3f1158"
+    },
+    {
+      "title": "Lipid metabolism Esmaeili 1.2.transcript.txt",
+      "kind": "local course transcript",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Lipid metabolism Esmaeili 1.2.transcript.txt",
+      "exists": true,
+      "coverage": "Mapped by line segment.",
+      "sha256": "d147e621137c081ca3335174d3633f9a573f68625ee0ac0fbdb8c54ede55c08b"
+    },
+    {
+      "title": "Lipid metabolism1 Esmaeili 1.3.transcript.txt",
+      "kind": "local course transcript",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Lipid metabolism1 Esmaeili 1.3.transcript.txt",
+      "exists": true,
+      "coverage": "Mapped by line segment.",
+      "sha256": "f17281217d97827facee25e30f5f40f8fc257e78ad962d49d579d8f91e6f9f3b"
+    },
+    {
+      "title": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.srt",
+      "kind": "timed transcript companion",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.srt",
+      "exists": true,
+      "coverage": "Reviewed as duplicate timed content; TXT twin supplies concise line locators.",
+      "sha256": "bae4cb8bfb4d11df5f8a523f26bf5084c7ab47d6839fef486035614cfaff249c"
+    },
+    {
+      "title": "IMG_4406.transcript.srt",
+      "kind": "timed transcript companion",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/IMG_4406.transcript.srt",
+      "exists": true,
+      "coverage": "Reviewed as duplicate timed content; TXT twin supplies concise line locators.",
+      "sha256": "d0e362c95ef7bf340a91d968e86b1ef4b7a63a2072444dc9a9d1a5ffd56d9aa2"
+    },
+    {
+      "title": "IMG_4407.transcript.srt",
+      "kind": "timed transcript companion",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/IMG_4407.transcript.srt",
+      "exists": true,
+      "coverage": "Reviewed as duplicate timed content; TXT twin supplies concise line locators.",
+      "sha256": "fa76e517080a4a0161b92c8b0cadd9950fc5287eb1075aef9705cb157d2fe2c5"
+    },
+    {
+      "title": "Lipid metabolism Esmaeili 1.1.transcript.srt",
+      "kind": "timed transcript companion",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Lipid metabolism Esmaeili 1.1.transcript.srt",
+      "exists": true,
+      "coverage": "Reviewed as duplicate timed content; TXT twin supplies concise line locators.",
+      "sha256": "a966d71a131dfe21f408da00351169caeaa73d9affc72d2d4395b245ac8924a7"
+    },
+    {
+      "title": "Lipid metabolism Esmaeili 1.2.transcript.srt",
+      "kind": "timed transcript companion",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Lipid metabolism Esmaeili 1.2.transcript.srt",
+      "exists": true,
+      "coverage": "Reviewed as duplicate timed content; TXT twin supplies concise line locators.",
+      "sha256": "afbf26cda0e6aa8bfea1e05015328484214b4adc7d79f9314a8700c904521ecb"
+    },
+    {
+      "title": "Lipid metabolism1 Esmaeili 1.3.transcript.srt",
+      "kind": "timed transcript companion",
+      "path": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Lipid metabolism1 Esmaeili 1.3.transcript.srt",
+      "exists": true,
+      "coverage": "Reviewed as duplicate timed content; TXT twin supplies concise line locators.",
+      "sha256": "29fd2083d4b73f3d92beaba8973dbcb76c98b852764c6b89b25cc10e0cd40f88"
+    },
+    {
+      "title": "Original carbohydrate slide deck implied by reconstructed notes",
+      "kind": "missing course source",
+      "path": null,
+      "exists": false,
+      "coverage": "Not present locally; reconstructed-note PDF and transcript locators used instead.",
+      "sha256": null
+    }
+  ],
+  "sourceAudit": [
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 176",
+      "topic": "Chapter 8 chapter divider",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 177",
+      "topic": "Metabolic pathways, maps, catabolism and anabolism",
+      "conceptIds": [
+        "bio2-ch08-pathway-architecture"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 178",
+      "topic": "Metabolic pathways, maps, catabolism and anabolism",
+      "conceptIds": [
+        "bio2-ch08-pathway-architecture"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 179",
+      "topic": "Metabolic pathways, maps, catabolism and anabolism",
+      "conceptIds": [
+        "bio2-ch08-pathway-architecture"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 180",
+      "topic": "Metabolic pathways, maps, catabolism and anabolism",
+      "conceptIds": [
+        "bio2-ch08-pathway-architecture"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 181",
+      "topic": "Intracellular regulation and hormone–second-messenger signaling",
+      "conceptIds": [
+        "bio2-ch08-metabolic-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 182",
+      "topic": "Intracellular regulation and hormone–second-messenger signaling",
+      "conceptIds": [
+        "bio2-ch08-metabolic-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 183",
+      "topic": "Intracellular regulation and hormone–second-messenger signaling",
+      "conceptIds": [
+        "bio2-ch08-metabolic-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 184",
+      "topic": "Intracellular regulation and hormone–second-messenger signaling",
+      "conceptIds": [
+        "bio2-ch08-metabolic-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 185",
+      "topic": "Glycolysis overview, phases, products, and redox context",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 186",
+      "topic": "GLUT isoforms and sodium–monosaccharide cotransport",
+      "conceptIds": [
+        "bio2-ch08-glucose-transport"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 187",
+      "topic": "GLUT isoforms and sodium–monosaccharide cotransport",
+      "conceptIds": [
+        "bio2-ch08-glucose-transport"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 188",
+      "topic": "Glucose trapping: hexokinases, glucokinase, and GKRP; Glycolysis overview, phases, products, and redox context",
+      "conceptIds": [
+        "bio2-ch08-glucose-phosphorylation",
+        "bio2-ch08-glycolysis-overview"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 189",
+      "topic": "Glucose trapping: hexokinases, glucokinase, and GKRP",
+      "conceptIds": [
+        "bio2-ch08-glucose-phosphorylation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 190",
+      "topic": "Glucose trapping: hexokinases, glucokinase, and GKRP; PFK-1 commitment, reciprocal regulation, aldolase, and triose isomerase",
+      "conceptIds": [
+        "bio2-ch08-glucose-phosphorylation",
+        "bio2-ch08-pfk-cleavage"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 191",
+      "topic": "PFK-1 commitment, reciprocal regulation, aldolase, and triose isomerase",
+      "conceptIds": [
+        "bio2-ch08-pfk-cleavage"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 192",
+      "topic": "PFK-1 commitment, reciprocal regulation, aldolase, and triose isomerase",
+      "conceptIds": [
+        "bio2-ch08-pfk-cleavage"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 193",
+      "topic": "Glycolytic payoff reactions and substrate-level phosphorylation",
+      "conceptIds": [
+        "bio2-ch08-payoff"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 194",
+      "topic": "Lactate, tissue hypoxia, erythrocyte ATP, and the 2,3-BPG shunt; Glycolytic payoff reactions and substrate-level phosphorylation",
+      "conceptIds": [
+        "bio2-ch08-anaerobic-rbc",
+        "bio2-ch08-payoff"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 195",
+      "topic": "Glycolytic payoff reactions and substrate-level phosphorylation",
+      "conceptIds": [
+        "bio2-ch08-payoff"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 196",
+      "topic": "Lactate, tissue hypoxia, erythrocyte ATP, and the 2,3-BPG shunt; Glycolytic payoff reactions and substrate-level phosphorylation",
+      "conceptIds": [
+        "bio2-ch08-anaerobic-rbc",
+        "bio2-ch08-payoff"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 197",
+      "topic": "Lactate, tissue hypoxia, erythrocyte ATP, and the 2,3-BPG shunt",
+      "conceptIds": [
+        "bio2-ch08-anaerobic-rbc"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 198",
+      "topic": "Lactate, tissue hypoxia, erythrocyte ATP, and the 2,3-BPG shunt",
+      "conceptIds": [
+        "bio2-ch08-anaerobic-rbc"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 199",
+      "topic": "Lactate, tissue hypoxia, erythrocyte ATP, and the 2,3-BPG shunt; Glycolysis overview, phases, products, and redox context",
+      "conceptIds": [
+        "bio2-ch08-anaerobic-rbc",
+        "bio2-ch08-glycolysis-overview"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 200",
+      "topic": "Hepatic hormonal control and alternate fates of pyruvate",
+      "conceptIds": [
+        "bio2-ch08-hormonal-pyruvate"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 201",
+      "topic": "Hepatic hormonal control and alternate fates of pyruvate",
+      "conceptIds": [
+        "bio2-ch08-hormonal-pyruvate"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 202",
+      "topic": "Chapter 8 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 203",
+      "topic": "Chapter 8 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 204",
+      "topic": "Chapter 8 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 205",
+      "topic": "Chapter 8 blank",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 206",
+      "topic": "Chapter 8 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 207",
+      "topic": "Chapter 8 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 208",
+      "topic": "Chapter 8 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 209",
+      "topic": "Chapter 9 chapter divider",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 210",
+      "topic": "TCA-cycle convergence, amphibolic function, and anaplerosis",
+      "conceptIds": [
+        "bio2-ch09-cycle-role"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 211",
+      "topic": "TCA-cycle convergence, amphibolic function, and anaplerosis; PDH irreversible chemistry, enzyme components, and five coenzymes",
+      "conceptIds": [
+        "bio2-ch09-cycle-role",
+        "bio2-ch09-pdh-chemistry"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 212",
+      "topic": "PDH irreversible chemistry, enzyme components, and five coenzymes; PDH covalent regulation, deficiency, thiamine, and arsenic",
+      "conceptIds": [
+        "bio2-ch09-pdh-chemistry",
+        "bio2-ch09-pdh-regulation-clinical"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 213",
+      "topic": "PDH covalent regulation, deficiency, thiamine, and arsenic",
+      "conceptIds": [
+        "bio2-ch09-pdh-regulation-clinical"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 214",
+      "topic": "Citrate synthase, aconitase, and isocitrate dehydrogenase",
+      "conceptIds": [
+        "bio2-ch09-citrate-isocitrate"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 215",
+      "topic": "Alpha-ketoglutarate dehydrogenase and succinyl-CoA synthetase; Citrate synthase, aconitase, and isocitrate dehydrogenase",
+      "conceptIds": [
+        "bio2-ch09-akg-succinate",
+        "bio2-ch09-citrate-isocitrate"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 216",
+      "topic": "Alpha-ketoglutarate dehydrogenase and succinyl-CoA synthetase",
+      "conceptIds": [
+        "bio2-ch09-akg-succinate"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 217",
+      "topic": "Succinate oxidation, fumarate hydration, and oxaloacetate regeneration",
+      "conceptIds": [
+        "bio2-ch09-succinate-oaa"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 218",
+      "topic": "TCA stoichiometry, ATP equivalents, and integrated regulation",
+      "conceptIds": [
+        "bio2-ch09-yield-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 219",
+      "topic": "TCA stoichiometry, ATP equivalents, and integrated regulation",
+      "conceptIds": [
+        "bio2-ch09-yield-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 220",
+      "topic": "Chapter 9 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 221",
+      "topic": "Chapter 9 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 222",
+      "topic": "Chapter 9 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 223",
+      "topic": "PDH covalent regulation, deficiency, thiamine, and arsenic",
+      "conceptIds": [
+        "bio2-ch09-pdh-regulation-clinical"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as part of the chapter and used only for factual support already present in the baseline; no new gap stem was copied from the self-assessment."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 224",
+      "topic": "Chapter 10 chapter divider",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 225",
+      "topic": "Physiologic purpose, fasting sequence, organs, and compartments",
+      "conceptIds": [
+        "bio2-ch10-purpose-sites"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 226",
+      "topic": "Cori cycle and ethanol-induced hypoglycemia; Gluconeogenic precursors and carbon-entry logic",
+      "conceptIds": [
+        "bio2-ch10-cycles-clinical",
+        "bio2-ch10-substrates"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 227",
+      "topic": "Chapter 10 figure continuation",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 228",
+      "topic": "Oxaloacetate transport, cytosolic redox, and PEPCK; Pyruvate carboxylase, biotin, and acetyl-CoA signaling",
+      "conceptIds": [
+        "bio2-ch10-oaa-pepck",
+        "bio2-ch10-pyruvate-carboxylase"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 229",
+      "topic": "Cori cycle and ethanol-induced hypoglycemia; Oxaloacetate transport, cytosolic redox, and PEPCK",
+      "conceptIds": [
+        "bio2-ch10-cycles-clinical",
+        "bio2-ch10-oaa-pepck"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 230",
+      "topic": "Oxaloacetate transport, cytosolic redox, and PEPCK; Fructose 1,6-bisphosphatase and ER glucose 6-phosphatase",
+      "conceptIds": [
+        "bio2-ch10-oaa-pepck",
+        "bio2-ch10-phosphatase-bypasses"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 231",
+      "topic": "Fructose 1,6-bisphosphatase and ER glucose 6-phosphatase",
+      "conceptIds": [
+        "bio2-ch10-phosphatase-bypasses"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 232",
+      "topic": "Energetic cost of gluconeogenesis",
+      "conceptIds": [
+        "bio2-ch10-energy-cost"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 233",
+      "topic": "Glucagon, fructose 2,6-bisphosphate, substrate supply, and gene regulation",
+      "conceptIds": [
+        "bio2-ch10-reciprocal-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 234",
+      "topic": "Cori cycle and ethanol-induced hypoglycemia; Glucagon, fructose 2,6-bisphosphate, substrate supply, and gene regulation",
+      "conceptIds": [
+        "bio2-ch10-cycles-clinical",
+        "bio2-ch10-reciprocal-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 235",
+      "topic": "Chapter 10 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 236",
+      "topic": "Chapter 10 blank",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 237",
+      "topic": "Chapter 10 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 238",
+      "topic": "Chapter 10 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 239",
+      "topic": "Cori cycle and ethanol-induced hypoglycemia",
+      "conceptIds": [
+        "bio2-ch10-cycles-clinical"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as part of the chapter and used only for factual support already present in the baseline; no new gap stem was copied from the self-assessment."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 240",
+      "topic": "Chapter 11 chapter divider",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 241",
+      "topic": "Glycogen architecture and liver–muscle functional contrast",
+      "conceptIds": [
+        "bio2-ch11-structure-tissue"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 242",
+      "topic": "Glycogen architecture and liver–muscle functional contrast",
+      "conceptIds": [
+        "bio2-ch11-structure-tissue"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 243",
+      "topic": "Glycogen architecture and liver–muscle functional contrast",
+      "conceptIds": [
+        "bio2-ch11-structure-tissue"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 244",
+      "topic": "UDP-glucose activation and glycogenin priming",
+      "conceptIds": [
+        "bio2-ch11-udp-primer"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 245",
+      "topic": "UDP-glucose activation and glycogenin priming",
+      "conceptIds": [
+        "bio2-ch11-udp-primer"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 246",
+      "topic": "Glycogen synthase and branching enzyme; UDP-glucose activation and glycogenin priming",
+      "conceptIds": [
+        "bio2-ch11-synthase-branching",
+        "bio2-ch11-udp-primer"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 247",
+      "topic": "Glycogen synthase and branching enzyme",
+      "conceptIds": [
+        "bio2-ch11-synthase-branching"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 248",
+      "topic": "Glycogen phosphorylase and glucose 1-phosphate production; Debranching enzyme and lysosomal glycogen degradation",
+      "conceptIds": [
+        "bio2-ch11-cytosolic-degradation",
+        "bio2-ch11-debranching-lysosome"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 249",
+      "topic": "Debranching enzyme and lysosomal glycogen degradation; Glycogen-storage diseases: enzyme–organ–structure patterns",
+      "conceptIds": [
+        "bio2-ch11-debranching-lysosome",
+        "bio2-ch11-storage-diseases"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 250",
+      "topic": "Debranching enzyme and lysosomal glycogen degradation; Glycogen-storage diseases: enzyme–organ–structure patterns",
+      "conceptIds": [
+        "bio2-ch11-debranching-lysosome",
+        "bio2-ch11-storage-diseases"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 251",
+      "topic": "Glucagon/epinephrine cascades and reciprocal phosphorylation",
+      "conceptIds": [
+        "bio2-ch11-hormonal-covalent"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 252",
+      "topic": "Glucagon/epinephrine cascades and reciprocal phosphorylation",
+      "conceptIds": [
+        "bio2-ch11-hormonal-covalent"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 253",
+      "topic": "Allosteric control in liver/muscle and Ca2+-calmodulin activation; Glucagon/epinephrine cascades and reciprocal phosphorylation",
+      "conceptIds": [
+        "bio2-ch11-allosteric-calcium",
+        "bio2-ch11-hormonal-covalent"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 254",
+      "topic": "Allosteric control in liver/muscle and Ca2+-calmodulin activation",
+      "conceptIds": [
+        "bio2-ch11-allosteric-calcium"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 255",
+      "topic": "Allosteric control in liver/muscle and Ca2+-calmodulin activation",
+      "conceptIds": [
+        "bio2-ch11-allosteric-calcium"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 256",
+      "topic": "Chapter 11 figure continuation",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 257",
+      "topic": "Glycogen-storage diseases: enzyme–organ–structure patterns",
+      "conceptIds": [
+        "bio2-ch11-storage-diseases"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 258",
+      "topic": "Glycogen-storage diseases: enzyme–organ–structure patterns",
+      "conceptIds": [
+        "bio2-ch11-storage-diseases"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 259",
+      "topic": "Glycogen-storage diseases: enzyme–organ–structure patterns",
+      "conceptIds": [
+        "bio2-ch11-storage-diseases"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 260",
+      "topic": "Chapter 11 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 261",
+      "topic": "Chapter 11 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 262",
+      "topic": "Chapter 12 chapter divider",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 263",
+      "topic": "Dietary fructose sources, transport, and hepatic entry",
+      "conceptIds": [
+        "bio2-ch12-fructose-entry"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 264",
+      "topic": "Dietary fructose sources, transport, and hepatic entry",
+      "conceptIds": [
+        "bio2-ch12-fructose-entry"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 265",
+      "topic": "Essential fructosuria and hereditary fructose intolerance; Dietary fructose sources, transport, and hepatic entry",
+      "conceptIds": [
+        "bio2-ch12-fructose-disorders",
+        "bio2-ch12-fructose-entry"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 266",
+      "topic": "Essential fructosuria and hereditary fructose intolerance; Mannose entry and the sorbitol/polyol pathway",
+      "conceptIds": [
+        "bio2-ch12-fructose-disorders",
+        "bio2-ch12-mannose-polyol"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 267",
+      "topic": "Mannose entry and the sorbitol/polyol pathway",
+      "conceptIds": [
+        "bio2-ch12-mannose-polyol"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 268",
+      "topic": "Chapter 12 figure continuation",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 269",
+      "topic": "Leloir pathway and UDP-sugar interconversion",
+      "conceptIds": [
+        "bio2-ch12-galactose-pathway"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 270",
+      "topic": "Galactokinase deficiency and classic galactosemia; Leloir pathway and UDP-sugar interconversion",
+      "conceptIds": [
+        "bio2-ch12-galactose-disorders",
+        "bio2-ch12-galactose-pathway"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 271",
+      "topic": "Galactokinase deficiency and classic galactosemia",
+      "conceptIds": [
+        "bio2-ch12-galactose-disorders"
+      ],
+      "status": "mapped",
+      "note": "Reviewed figure/clinical continuation; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 272",
+      "topic": "Lactose synthase and lactation-specific substrate selection",
+      "conceptIds": [
+        "bio2-ch12-lactose-synthesis"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 273",
+      "topic": "Chapter 12 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 274",
+      "topic": "Chapter 12 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 275",
+      "topic": "Chapter 12 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 326",
+      "topic": "Chapter 15 unit/chapter divider",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed no examinable content; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 327",
+      "topic": "Lipid properties, physiologic roles, and dietary composition",
+      "conceptIds": [
+        "bio2-ch15-lipid-overview"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 328",
+      "topic": "Duodenal emulsification and bile-salt amphipathicity; Lipid properties, physiologic roles, and dietary composition; Source-specific dietary-lipid intake values",
+      "conceptIds": [
+        "bio2-ch15-emulsification",
+        "bio2-ch15-lipid-overview",
+        "bio2-ch15-source-specific-intake"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 329",
+      "topic": "Gastric lipid digestion, neonates, and cystic-fibrosis pancreatic insufficiency",
+      "conceptIds": [
+        "bio2-ch15-stomach-cf"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 330",
+      "topic": "Pancreatic TAG, cholesteryl-ester, and phospholipid digestion",
+      "conceptIds": [
+        "bio2-ch15-pancreatic-enzymes"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 331",
+      "topic": "CCK and secretin control of lipid digestion",
+      "conceptIds": [
+        "bio2-ch15-hormonal-control"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 332",
+      "topic": "Duodenal emulsification and bile-salt amphipathicity; Mixed micelles, unstirred water layer, and chain-length dependence",
+      "conceptIds": [
+        "bio2-ch15-emulsification",
+        "bio2-ch15-micelles-absorption"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 333",
+      "topic": "Chylomicron structure, apoB-48/MTP assembly, and lymphatic route; Enterocyte activation and re-esterification of absorbed lipids; Chylomicron remnants, apoE uptake, type III disease, and steatorrhea",
+      "conceptIds": [
+        "bio2-ch15-chylomicron-assembly",
+        "bio2-ch15-enterocyte-reesterification",
+        "bio2-ch15-remnants-malabsorption"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 334",
+      "topic": "Fates of chylomicron-derived fatty acids and glycerol; Lipoprotein lipase, apoC-II, tissue delivery, and chylomicronemia; Chylomicron remnants, apoE uptake, type III disease, and steatorrhea",
+      "conceptIds": [
+        "bio2-ch15-fa-glycerol-fates",
+        "bio2-ch15-lpl",
+        "bio2-ch15-remnants-malabsorption"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 335",
+      "topic": "Chylomicron remnants, apoE uptake, type III disease, and steatorrhea",
+      "conceptIds": [
+        "bio2-ch15-remnants-malabsorption"
+      ],
+      "status": "mapped",
+      "note": "Reviewed content; its examinable content is represented by the linked concept or concepts."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 336",
+      "topic": "Chapter 15 figure continuation",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 337",
+      "topic": "Chapter 15 content",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed supporting figure or summary; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 338",
+      "topic": "Chapter 15 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "Local book PDF p. 339",
+      "topic": "Chapter 15 self-assessment",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed and dispositioned as reviewed not used as question source; no distinct learning objective was added."
+    },
+    {
+      "source": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "locator": "PDF p. 1",
+      "topic": "Metabolic framework and major glucose pathways",
+      "conceptIds": [
+        "bio2-ch08-pathway-architecture",
+        "bio2-ch08-glycolysis-overview"
+      ],
+      "status": "mapped",
+      "note": "Visually reviewed; course emphasis is mapped, with inaccurate or incomplete statements corrected against the cited book."
+    },
+    {
+      "source": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "locator": "PDF p. 2",
+      "topic": "Glycolysis overview and gluconeogenesis introduction",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview",
+        "bio2-ch10-purpose-sites"
+      ],
+      "status": "mapped",
+      "note": "Visually reviewed; the erroneous six-carbon pyruvate note was excluded and not propagated."
+    },
+    {
+      "source": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "locator": "PDF p. 3",
+      "topic": "Early glycolysis, aldolase, and triose isomerase",
+      "conceptIds": [
+        "bio2-ch08-glucose-phosphorylation",
+        "bio2-ch08-pfk-cleavage"
+      ],
+      "status": "mapped",
+      "note": "Visually reviewed and reconciled to the book reaction sequence."
+    },
+    {
+      "source": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "locator": "PDF p. 4",
+      "topic": "Glycolytic payoff reactions",
+      "conceptIds": [
+        "bio2-ch08-payoff"
+      ],
+      "status": "mapped",
+      "note": "Visually reviewed and reconciled to the book enzyme sequence and net ATP accounting."
+    },
+    {
+      "source": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "locator": "PDF p. 5",
+      "topic": "Glycolytic redox and pyruvate fate",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview",
+        "bio2-ch08-anaerobic-rbc",
+        "bio2-ch08-hormonal-pyruvate"
+      ],
+      "status": "mapped",
+      "note": "Visually reviewed; source emphasis is retained without treating pyruvate as entering the TCA cycle directly."
+    },
+    {
+      "source": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "locator": "PDF p. 6",
+      "topic": "Irreversible glycolytic steps and lactate fermentation",
+      "conceptIds": [
+        "bio2-ch08-pfk-cleavage",
+        "bio2-ch08-anaerobic-rbc",
+        "bio2-ch08-hormonal-pyruvate"
+      ],
+      "status": "mapped",
+      "note": "Visually reviewed; the note's incorrect PFK feedback statement was rejected in favor of the book regulation."
+    },
+    {
+      "source": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "locator": "PDF p. 7",
+      "topic": "Alcoholic fermentation",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed but not promoted to a human metabolic objective in this chapter-bounded catalog."
+    },
+    {
+      "source": "Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "locator": "PDF p. 1",
+      "topic": "Glycerol and fructose entry",
+      "conceptIds": [
+        "bio2-ch10-substrates",
+        "bio2-ch12-fructose-entry"
+      ],
+      "status": "mapped",
+      "note": "Reviewed reconstructed note page and mapped only the mechanisms present on that page."
+    },
+    {
+      "source": "Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "locator": "PDF p. 2",
+      "topic": "Leloir pathway",
+      "conceptIds": [
+        "bio2-ch12-galactose-pathway"
+      ],
+      "status": "mapped",
+      "note": "Reviewed reconstructed note page and reconciled enzyme naming to Lippincott."
+    },
+    {
+      "source": "Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "locator": "PDF p. 3",
+      "topic": "Glycogen synthesis and degradation overview",
+      "conceptIds": [
+        "bio2-ch11-structure-tissue",
+        "bio2-ch11-udp-primer",
+        "bio2-ch11-cytosolic-degradation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed reconstructed note page and mapped its high-level glycogen pathway content."
+    },
+    {
+      "source": "Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "locator": "PDF p. 4",
+      "topic": "Gluconeogenic pathway and energetic cost",
+      "conceptIds": [
+        "bio2-ch10-purpose-sites",
+        "bio2-ch10-pyruvate-carboxylase",
+        "bio2-ch10-oaa-pepck",
+        "bio2-ch10-phosphatase-bypasses",
+        "bio2-ch10-energy-cost"
+      ],
+      "status": "mapped",
+      "note": "Reviewed reconstructed note page and cross-checked the complete bypass and energy accounting."
+    },
+    {
+      "source": "Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "locator": "PDF p. 5",
+      "topic": "Glycolysis versus gluconeogenesis",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview",
+        "bio2-ch10-purpose-sites"
+      ],
+      "status": "mapped",
+      "note": "Reviewed reconstructed comparison table and retained only source-supported distinctions."
+    },
+    {
+      "source": "Biochemistry metabolism notes (pt 2) slides 27-80 .pdf",
+      "locator": "PDF p. 6",
+      "topic": "TCA enzyme order and products",
+      "conceptIds": [
+        "bio2-ch09-cycle-role",
+        "bio2-ch09-pdh-chemistry",
+        "bio2-ch09-citrate-isocitrate",
+        "bio2-ch09-akg-succinate",
+        "bio2-ch09-succinate-oaa",
+        "bio2-ch09-yield-regulation"
+      ],
+      "status": "mapped",
+      "note": "Reviewed reconstructed TCA page; source-specific ATP conventions remain explicitly distinguished."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 1-7",
+      "topic": "Glycerol entry during starvation",
+      "conceptIds": [
+        "bio2-ch10-substrates"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for glycerol as a fat-derived glycolytic/gluconeogenic precursor."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 8-26",
+      "topic": "Fructose entry reactions",
+      "conceptIds": [
+        "bio2-ch12-fructose-entry"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence; a line-24 verbal slip was corrected using adjacent lines and the book."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 27-94",
+      "topic": "UDP-galactose structure and activation context",
+      "conceptIds": [
+        "bio2-ch12-galactose-pathway"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for UDP-sugar context; non-content cursor troubleshooting was reviewed but adds no objective."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 95-137",
+      "topic": "Galactose conversion pathway",
+      "conceptIds": [
+        "bio2-ch12-galactose-pathway"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence reconciled to the correct GALT and epimerase chemistry in the book."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 138-177",
+      "topic": "Glycogen storage, synthesis, degradation, GLUT2 and GLUT4",
+      "conceptIds": [
+        "bio2-ch08-glucose-transport",
+        "bio2-ch11-structure-tissue",
+        "bio2-ch11-udp-primer",
+        "bio2-ch11-cytosolic-degradation"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence; this corrects the author's misassigned lines 92-138 locator."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 178-223",
+      "topic": "Gluconeogenic purpose, precursors, and irreversible-step bypass",
+      "conceptIds": [
+        "bio2-ch10-purpose-sites",
+        "bio2-ch10-substrates"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for purpose, liver location, precursors, and distinct bypass enzymes."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 224-269",
+      "topic": "Pyruvate carboxylase, malate transport, and PEPCK",
+      "conceptIds": [
+        "bio2-ch10-pyruvate-carboxylase",
+        "bio2-ch10-oaa-pepck"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for mitochondrial/cytosolic compartmentation."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 270-319",
+      "topic": "Fructose and glucose phosphatase bypasses",
+      "conceptIds": [
+        "bio2-ch10-phosphatase-bypasses"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for the two upper gluconeogenic bypass reactions."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 320-338",
+      "topic": "Fasting purpose, lactate, amino acids, pyruvate carboxylase and PEPCK",
+      "conceptIds": [
+        "bio2-ch10-purpose-sites",
+        "bio2-ch10-substrates",
+        "bio2-ch10-pyruvate-carboxylase",
+        "bio2-ch10-oaa-pepck"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript recap of fasting gluconeogenesis and precursor routing."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 339-378",
+      "topic": "ATP/citrate feedback and lactate dehydrogenase",
+      "conceptIds": [
+        "bio2-ch08-pfk-cleavage",
+        "bio2-ch08-anaerobic-rbc"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for energy feedback and reversible lactate dehydrogenase; no glucagon claim is inferred."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 379-456",
+      "topic": "TCA location, sequence, products, and pyruvate link",
+      "conceptIds": [
+        "bio2-ch09-cycle-role",
+        "bio2-ch09-pdh-chemistry",
+        "bio2-ch09-citrate-isocitrate",
+        "bio2-ch09-akg-succinate",
+        "bio2-ch09-succinate-oaa"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for the taught TCA framework, cross-checked against the book for mechanisms and regulation."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt",
+      "locator": "lines 457-460",
+      "topic": "Lecture close",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Reviewed closing remarks; no new examinable biochemical content."
+    },
+    {
+      "source": "IMG_4406.transcript.txt",
+      "locator": "lines 1-46",
+      "topic": "Glycolysis overview, compartment, and products",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence; the claim that glycolysis itself uses oxygen was explicitly corrected against the book."
+    },
+    {
+      "source": "IMG_4406.transcript.txt",
+      "locator": "lines 47-89",
+      "topic": "Investment phase, PFK, aldolase, and triose isomerase",
+      "conceptIds": [
+        "bio2-ch08-glucose-phosphorylation",
+        "bio2-ch08-pfk-cleavage"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence cross-checked to the complete enzyme sequence."
+    },
+    {
+      "source": "IMG_4406.transcript.txt",
+      "locator": "lines 90-154",
+      "topic": "Glycolytic payoff and net ATP",
+      "conceptIds": [
+        "bio2-ch08-payoff",
+        "bio2-ch08-glycolysis-overview"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for duplicated triose reactions, ATP payoff, and pyruvate formation."
+    },
+    {
+      "source": "IMG_4407.transcript.txt",
+      "locator": "lines 1-94",
+      "topic": "Glycolytic payoff, irreversible steps, and pyruvate destination",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview",
+        "bio2-ch08-pfk-cleavage",
+        "bio2-ch08-payoff",
+        "bio2-ch08-hormonal-pyruvate"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for pathway sequence and pyruvate fates."
+    },
+    {
+      "source": "IMG_4407.transcript.txt",
+      "locator": "lines 95-138",
+      "topic": "Lactate fermentation and NAD+ regeneration",
+      "conceptIds": [
+        "bio2-ch08-anaerobic-rbc",
+        "bio2-ch08-hormonal-pyruvate"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence; contradictory aerobic/anaerobic wording was resolved using the reaction and book."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.1.transcript.txt",
+      "locator": "lines 1-98",
+      "topic": "Lipid roles, structures, and metabolic context",
+      "conceptIds": [
+        "bio2-ch08-pathway-architecture",
+        "bio2-ch15-lipid-overview"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for lipid properties and general catabolic/anabolic framing."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.1.transcript.txt",
+      "locator": "lines 99-116",
+      "topic": "Dietary lipid intake and digestion overview",
+      "conceptIds": [
+        "bio2-ch15-lipid-overview",
+        "bio2-ch15-source-specific-intake"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for the course-specific 78-g estimate and TAG predominance."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.1.transcript.txt",
+      "locator": "lines 117-142",
+      "topic": "Lingual/gastric lipase and cystic fibrosis",
+      "conceptIds": [
+        "bio2-ch15-stomach-cf"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for acid lipases and CF pancreatic obstruction."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.1.transcript.txt",
+      "locator": "lines 143-153",
+      "topic": "Pancreatic lipase and colipase",
+      "conceptIds": [
+        "bio2-ch15-pancreatic-enzymes"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for pancreatic TAG digestion and colipase."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.1.transcript.txt",
+      "locator": "lines 154-177",
+      "topic": "CCK and secretin control",
+      "conceptIds": [
+        "bio2-ch15-hormonal-control"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for hormonal control of digestive secretion."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.2.transcript.txt",
+      "locator": "lines 1-23",
+      "topic": "Cholesteryl ester and phospholipid digestion",
+      "conceptIds": [
+        "bio2-ch15-pancreatic-enzymes"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for cholesterol esterase and phospholipase A2 products."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.2.transcript.txt",
+      "locator": "lines 24-41",
+      "topic": "Duodenal emulsification",
+      "conceptIds": [
+        "bio2-ch15-emulsification"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for bile-salt and peristaltic emulsification."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.2.transcript.txt",
+      "locator": "lines 42-60",
+      "topic": "Mixed micelles and chain-length dependence",
+      "conceptIds": [
+        "bio2-ch15-micelles-absorption"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for micelle composition and short/medium-chain independence."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.2.transcript.txt",
+      "locator": "lines 61-116",
+      "topic": "Enterocyte re-esterification and chylomicron secretion",
+      "conceptIds": [
+        "bio2-ch15-enterocyte-reesterification",
+        "bio2-ch15-chylomicron-assembly"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for smooth-ER lipid resynthesis, apoB-48 particles, and lymphatic transport."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.2.transcript.txt",
+      "locator": "lines 117-143",
+      "topic": "LPL and familial chylomicronemia",
+      "conceptIds": [
+        "bio2-ch15-lpl"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for LPL location, apoC-II activation, and the type I phenotype."
+    },
+    {
+      "source": "Lipid metabolism1 Esmaeili 1.3.transcript.txt",
+      "locator": "lines 1-22",
+      "topic": "Fatty-acid uptake, albumin carriage, and tissue oxidation/storage",
+      "conceptIds": [
+        "bio2-ch15-fa-glycerol-fates"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for tissue-specific fatty-acid fate."
+    },
+    {
+      "source": "Lipid metabolism1 Esmaeili 1.3.transcript.txt",
+      "locator": "lines 23-53",
+      "topic": "Glycerol fate and chylomicron-remnant formation",
+      "conceptIds": [
+        "bio2-ch15-fa-glycerol-fates",
+        "bio2-ch15-remnants-malabsorption"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence; 'glycerol triphosphate' transcription was corrected to glycerol 3-phosphate using the book."
+    },
+    {
+      "source": "Lipid metabolism1 Esmaeili 1.3.transcript.txt",
+      "locator": "lines 54-67",
+      "topic": "Steatorrhea mechanisms",
+      "conceptIds": [
+        "bio2-ch15-remnants-malabsorption"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for bile, pancreatic, and absorptive causes of fecal fat."
+    },
+    {
+      "source": "Lipid metabolism1 Esmaeili 1.3.transcript.txt",
+      "locator": "lines 68-89",
+      "topic": "CFTR pancreatic insufficiency",
+      "conceptIds": [
+        "bio2-ch15-stomach-cf"
+      ],
+      "status": "mapped",
+      "note": "Direct transcript evidence for inheritance, secretion dehydration, duct obstruction, and enzyme-delivery failure."
+    },
+    {
+      "source": "Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.srt",
+      "locator": "cues 1-460",
+      "topic": "Timed duplicate of mapped transcript content",
+      "conceptIds": [
+        "bio2-ch10-substrates",
+        "bio2-ch12-fructose-entry",
+        "bio2-ch12-galactose-pathway",
+        "bio2-ch08-glucose-transport",
+        "bio2-ch11-structure-tissue",
+        "bio2-ch11-udp-primer",
+        "bio2-ch11-cytosolic-degradation",
+        "bio2-ch10-purpose-sites",
+        "bio2-ch10-pyruvate-carboxylase",
+        "bio2-ch10-oaa-pepck",
+        "bio2-ch10-phosphatase-bypasses",
+        "bio2-ch08-pfk-cleavage",
+        "bio2-ch08-anaerobic-rbc",
+        "bio2-ch09-cycle-role",
+        "bio2-ch09-pdh-chemistry",
+        "bio2-ch09-citrate-isocitrate",
+        "bio2-ch09-akg-succinate",
+        "bio2-ch09-succinate-oaa"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as the timestamped companion to the mapped TXT transcript; it adds timing but no unique biochemical claims."
+    },
+    {
+      "source": "IMG_4406.transcript.srt",
+      "locator": "cues 1-154",
+      "topic": "Timed duplicate of mapped transcript content",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview",
+        "bio2-ch08-glucose-phosphorylation",
+        "bio2-ch08-pfk-cleavage",
+        "bio2-ch08-payoff"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as the timestamped companion to the mapped TXT transcript; it adds timing but no unique biochemical claims."
+    },
+    {
+      "source": "IMG_4407.transcript.srt",
+      "locator": "cues 1-138",
+      "topic": "Timed duplicate of mapped transcript content",
+      "conceptIds": [
+        "bio2-ch08-glycolysis-overview",
+        "bio2-ch08-pfk-cleavage",
+        "bio2-ch08-payoff",
+        "bio2-ch08-hormonal-pyruvate",
+        "bio2-ch08-anaerobic-rbc"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as the timestamped companion to the mapped TXT transcript; it adds timing but no unique biochemical claims."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.1.transcript.srt",
+      "locator": "cues 1-177",
+      "topic": "Timed duplicate of mapped transcript content",
+      "conceptIds": [
+        "bio2-ch08-pathway-architecture",
+        "bio2-ch15-lipid-overview",
+        "bio2-ch15-source-specific-intake",
+        "bio2-ch15-stomach-cf",
+        "bio2-ch15-pancreatic-enzymes",
+        "bio2-ch15-hormonal-control"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as the timestamped companion to the mapped TXT transcript; it adds timing but no unique biochemical claims."
+    },
+    {
+      "source": "Lipid metabolism Esmaeili 1.2.transcript.srt",
+      "locator": "cues 1-143",
+      "topic": "Timed duplicate of mapped transcript content",
+      "conceptIds": [
+        "bio2-ch15-pancreatic-enzymes",
+        "bio2-ch15-emulsification",
+        "bio2-ch15-micelles-absorption",
+        "bio2-ch15-enterocyte-reesterification",
+        "bio2-ch15-chylomicron-assembly",
+        "bio2-ch15-lpl"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as the timestamped companion to the mapped TXT transcript; it adds timing but no unique biochemical claims."
+    },
+    {
+      "source": "Lipid metabolism1 Esmaeili 1.3.transcript.srt",
+      "locator": "cues 1-89",
+      "topic": "Timed duplicate of mapped transcript content",
+      "conceptIds": [
+        "bio2-ch15-fa-glycerol-fates",
+        "bio2-ch15-remnants-malabsorption",
+        "bio2-ch15-stomach-cf"
+      ],
+      "status": "mapped",
+      "note": "Reviewed as the timestamped companion to the mapped TXT transcript; it adds timing but no unique biochemical claims."
+    },
+    {
+      "source": "Original carbohydrate slide deck implied by reconstructed notes",
+      "locator": "slides 27-80",
+      "topic": "Unavailable original carbohydrate slides",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "The original slide deck is not present locally; the reconstructed-note PDF and line-located transcripts are the finest available course evidence."
+    }
+  ],
+  "coverage": {
+    "schemaVersion": "1.0.0",
+    "examId": "term2-biochemistry",
+    "updatedAt": "2026-08-31",
+    "moduleCount": 12,
+    "conceptCount": 50,
+    "objectiveCount": 94,
+    "mcqLinkedObjectives": 94,
+    "objectivesSampledBeforeExpansion": 72,
+    "objectivesFirstSampledByExpansion": 22,
+    "questionCount": 196,
+    "baselineQuestionCount": 158,
+    "addedQuestionCount": 38,
+    "imageQuestionCount": 0,
+    "interactive3dCount": 0,
+    "distinctPracticeItems": 196,
+    "unmappedQuestionIds": [],
+    "unsampledObjectiveIds": [],
+    "byChapter": {
+      "8": {
+        "concepts": 9,
+        "objectives": 18,
+        "courseConcepts": 8,
+        "bookExtensionConcepts": 1,
+        "baselineQuestions": 40,
+        "gapQuestions": 12,
+        "objectivesSampledBeforeExpansion": 10,
+        "objectivesSampledAfterExpansion": 18
+      },
+      "9": {
+        "concepts": 7,
+        "objectives": 13,
+        "courseConcepts": 5,
+        "bookExtensionConcepts": 2,
+        "baselineQuestions": 20,
+        "gapQuestions": 4,
+        "objectivesSampledBeforeExpansion": 11,
+        "objectivesSampledAfterExpansion": 13
+      },
+      "10": {
+        "concepts": 8,
+        "objectives": 15,
+        "courseConcepts": 5,
+        "bookExtensionConcepts": 3,
+        "baselineQuestions": 19,
+        "gapQuestions": 5,
+        "objectivesSampledBeforeExpansion": 13,
+        "objectivesSampledAfterExpansion": 15
+      },
+      "11": {
+        "concepts": 8,
+        "objectives": 15,
+        "courseConcepts": 3,
+        "bookExtensionConcepts": 5,
+        "baselineQuestions": 20,
+        "gapQuestions": 5,
+        "objectivesSampledBeforeExpansion": 12,
+        "objectivesSampledAfterExpansion": 15
+      },
+      "12": {
+        "concepts": 6,
+        "objectives": 11,
+        "courseConcepts": 2,
+        "bookExtensionConcepts": 4,
+        "baselineQuestions": 15,
+        "gapQuestions": 5,
+        "objectivesSampledBeforeExpansion": 8,
+        "objectivesSampledAfterExpansion": 11
+      },
+      "15": {
+        "concepts": 12,
+        "objectives": 22,
+        "courseConcepts": 11,
+        "bookExtensionConcepts": 1,
+        "baselineQuestions": 44,
+        "gapQuestions": 7,
+        "objectivesSampledBeforeExpansion": 18,
+        "objectivesSampledAfterExpansion": 22
+      }
+    },
+    "sourceInventory": {
+      "mapped": 130,
+      "outsideScope": 34,
+      "sourceMissing": 1,
+      "recordCount": 165
+    },
+    "interpretation": "Question links directly sample stated objectives; coverage does not imply official exam weighting or completeness."
+  },
+  "limitations": [
+    "The original carbohydrate slide deck implied by 'slides 27-80' is not present; the reconstructed-note PDF and transcripts are the finest available course evidence.",
+    "Transcript text does not preserve every slide transition or visual annotation, so exact line or cue ranges are used.",
+    "The immutable baseline item term2-biochem-ch08-013-v1 includes GLUT2 kinetic adjectives not stated on its cited Chapter 8 page; the medically correct baseline record was preserved and the normalized concept was narrowed to locally supported claims.",
+    "The immutable baseline item term2-biochem-ch09-019-v1 cites page 223; the more direct local mechanism support is pages 212-213. The baseline record was preserved and the locator weakness is documented.",
+    "No source figure was necessary for a fair interpretive gap item; the verified gap set contains no media."
+  ]
+}

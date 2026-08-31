@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-31T00:00:00.000Z",
+  "status": "verified",
+  "authorCounts": {
+    "concepts": 106,
+    "gapQuestions": 43,
+    "courseConcepts": 103,
+    "bookExtensionConcepts": 3
+  },
+  "verifiedCounts": {
+    "concepts": 106,
+    "courseConcepts": 104,
+    "bookExtensionConcepts": 2,
+    "baselineQuestions": 151,
+    "acceptedGapQuestions": 43,
+    "excludedGapQuestions": 0,
+    "totalIndexedQuestions": 194,
+    "correctedCatalogConcepts": 62,
+    "correctedGapQuestions": 43,
+    "materiallyRewrittenGapQuestions": 3
+  },
+  "duplicatePairs": [],
+  "entries": [
+    {
+      "target": "baseline",
+      "type": "preservation",
+      "action": "preserved byte-for-byte",
+      "reason": "no genuine baseline source error established",
+      "evidence": {
+        "sha256": "d5958885731486b825fe70fea05f15b680600e81ec84d354e2c4226144726ed6",
+        "questions": 151
+      }
+    },
+    {
+      "target": "physiology concept sources",
+      "type": "locator-correction",
+      "action": "corrected 42 concept source maps",
+      "reason": "author locators pointed to wrong circulation session/deck or swapped blood decks",
+      "evidence": "local slide extraction and deck-by-deck review"
+    },
+    {
+      "target": "histology concept sources",
+      "type": "locator-and-scope-correction",
+      "action": "corrected 8 concept maps; lymphatic vessels changed book-extension -> course",
+      "reason": "immune/MALT/thymus/node/spleen ranges were displaced; lymphatic vessels appear on slides 14-16",
+      "evidence": "Immune System and Lymphatic Organs with narration.pptx"
+    },
+    {
+      "target": "embryology concept sources",
+      "type": "page-locator-correction",
+      "action": "corrected 12 Langman page ranges",
+      "reason": "author locators drifted after the arch-development section",
+      "evidence": "local Langman's Medical Embryology 15e PDF pp. 221-236"
+    },
+    {
+      "target": "cvs-emb-arterial-remodeling and cvs-embryo-gap-001",
+      "type": "medical-source-convention-correction",
+      "action": "removed unsupported all-three-unpaired-gut-arteries claim; rewrote the SBA to ask the exact pair named locally",
+      "reason": "local Langman p. 224 names celiac and SMA as vitelline and attributes IMA to the umbilical system",
+      "evidence": "Langman's Medical Embryology 15e, PDF p. 224 (printed p. 212)"
+    },
+    {
+      "target": "all gap MCQs",
+      "type": "schema-and-provenance-normalization",
+      "action": "status verified; required gap-audit/provenance tags applied; draft-only flags removed",
+      "reason": "integration contract and repository audit requirements",
+      "evidence": "43 accepted items"
+    },
+    {
+      "target": "cvs-anat-gap-010",
+      "type": "SBA-wording-correction",
+      "action": "reworded spatial relation to “deep to”",
+      "reason": "original “crossed by” wording was less anatomically precise",
+      "evidence": "local thoracic-wall slides and Gray 42e"
+    },
+    {
+      "target": "cvs-phys-gap-005",
+      "type": "distractor-explanation-correction",
+      "action": "changed ST interval to ST segment and clarified timing",
+      "reason": "standard ECG nomenclature",
+      "evidence": "local ECG deck slide 24"
+    },
+    {
+      "target": "source inventory",
+      "type": "completeness-correction",
+      "action": "added padded original ECG artifact, 17 omitted transcript artifacts, 3 administrative documents, 8 recordings, baseline media, and 4 registered CVS models",
+      "reason": "author inventory did not cover all local evidence/media/model artifacts",
+      "evidence": {
+        "deckArtifacts": 37,
+        "readableDecks": 36,
+        "readableSlides": 759,
+        "slideStatuses": {
+          "mapped": 713,
+          "administrative": 31,
+          "outside-scope": 15
+        },
+        "transcriptArtifacts": 99,
+        "canonicalAndDerivedTranscriptRecords": 99,
+        "administrativeDocuments": 3,
+        "sourceRecordings": 8,
+        "books": 4,
+        "baselineMediaAssets": 11,
+        "registeredAnatomy3dModels": 4
+      }
+    }
+  ],
+  "unresolvedLimitations": [
+    "Transcript timestamps were used as corroboration where appropriate, but automatic transcripts remain secondary to displayed slides and canonical books when wording conflicts.",
+    "Image-only or continuation slides are recorded as deck-context rather than falsely claimed as direct objective locators.",
+    "The padded original ECG PPTX is inventoried but locators use its readable payload-equivalent copy."
+  ]
+}

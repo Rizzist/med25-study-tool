@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-31T00:00:00.000Z",
+  "status": "passed",
+  "counts": {
+    "concepts": 106,
+    "modules": 18,
+    "courseConcepts": 104,
+    "bookExtensionConcepts": 2,
+    "baselineQuestions": 151,
+    "gapQuestions": 43,
+    "totalQuestions": 194,
+    "indexEntries": 194
+  },
+  "checks": {
+    "conceptAjv": {
+      "passed": true,
+      "errors": []
+    },
+    "gapMcqAjv": {
+      "passed": true,
+      "validated": 43,
+      "errors": []
+    },
+    "repositoryConceptAudit": {
+      "passed": true,
+      "errors": []
+    },
+    "baselinePreservation": {
+      "passed": true,
+      "repoSha256": "d5958885731486b825fe70fea05f15b680600e81ec84d354e2c4226144726ed6",
+      "verifiedBaselineSha256": "d5958885731486b825fe70fea05f15b680600e81ec84d354e2c4226144726ed6",
+      "questions": 151
+    },
+    "tags": {
+      "passed": true,
+      "errors": []
+    },
+    "locators": {
+      "passed": true,
+      "errors": []
+    },
+    "status": {
+      "passed": true,
+      "errors": []
+    },
+    "idsAndDuplicates": {
+      "passed": true,
+      "duplicateIds": [],
+      "duplicateGapPrompts": []
+    },
+    "directObjectiveSampling": {
+      "passed": true,
+      "objectives": 106,
+      "errors": []
+    },
+    "completeIndex": {
+      "passed": true,
+      "entries": 194,
+      "missing": [],
+      "extra": []
+    },
+    "localSourceResolution": {
+      "passed": true,
+      "sourceTitleErrors": [],
+      "inventoryPathErrors": []
+    },
+    "baselineMedia": {
+      "passed": true,
+      "linkedAssets": 11,
+      "errors": []
+    },
+    "anatomy3dRegistry": {
+      "passed": true,
+      "registeredModels": 4,
+      "baseline3dQuestions": 28,
+      "errors": []
+    }
+  },
+  "failedChecks": []
+}
