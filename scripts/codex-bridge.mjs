@@ -8,7 +8,8 @@ import { biochemistryChapterIdForQuestion, biochemistryChapterIds } from "../src
 import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 import { selectRespiratorySprint } from "../src/lib/mcq/respiratory-selection.mjs";
 import { selectPracticalSprint } from "../src/lib/mcq/practical-selection.mjs";
-import { examIds, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, term2Exams } from "../src/lib/mcq/exams.mjs";
+import { selectTerm2Sprint } from "../src/lib/mcq/term2-selection.mjs";
+import { examIds, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, isInteractive3dQuestion, term2Exams } from "../src/lib/mcq/exams.mjs";
 
 const execFileAsync = promisify(execFile);
 const root = resolve(import.meta.dirname, "..");
@@ -232,7 +233,7 @@ function matchesCollection(question, collection) {
   if (!collection || collection === "all") return true;
   if (["anatomy", "histology", "embryology", "physiology", "biochemistry"].includes(collection)) return question.subject === collection;
   if (collection === "images") return isImageQuestion(question);
-  if (collection === "dynamic-anatomy") return question.kind === "dynamic_anatomy";
+  if (collection === "dynamic-anatomy") return question.kind === "dynamic_anatomy" || question.kind === "dynamic_anatomy_3d";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
   if (collection === "histo-identification") return (question.tags ?? []).includes("histo-identification-15");
   if (collection === "histo-transfer") return (question.tags ?? []).includes("histo-transfer-100");
@@ -311,6 +312,7 @@ function bankSummary() {
       finalExamBanks: FINAL_EXAM_BANKS.filter((bank) => bank.exam === exam.id).map((bank) => ({ id: bank.id, label: bank.label, description: bank.description, questionCount: loadFinalExamQuestions(exam.id, bank.id).length })),
       imageQuestionCount: questions.filter(isImageQuestion).length,
       dynamicImageCount: new Set(questions.filter((question) => question.kind === "dynamic_anatomy").map((question) => question.anatomy?.imageId)).size,
+      interactive3dCount: questions.filter(isInteractive3dQuestion).length,
       collectionCounts: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).length])),
       collectionQuestionIds: Object.fromEntries(EXAM_COLLECTIONS.map((collection) => [collection, questions.filter((question) => matchesCollection(question, collection)).map((question) => question.id)])),
       biochemistryChapters: chapterSummaries,
@@ -440,6 +442,7 @@ function coverageQuestionSet(body) {
   const selection = body.exam === "term2-respiratory"
     ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: body.studyMode === "exam" ? "exam" : "learn" })
     : body.exam === "term2-physiology-practical" ? selectPracticalSprint(filtered, { limit, seenIds, repairIds, studyMode: body.studyMode === "exam" ? "exam" : "learn" })
+    : isTerm2Exam(body.exam) ? selectTerm2Sprint(filtered, { limit, seenIds, repairIds, studyMode: body.studyMode === "exam" ? "exam" : "learn" })
     : selectCoverageSprint(filtered, { limit, seenIds, repairIds });
   return {
     availableCount: filtered.length,
@@ -468,7 +471,7 @@ function questionSetByIds(body) {
     ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, 5000)
     : [];
   const ordered = body.prioritize === true
-    ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : selectCoverageSprint)(filtered, {
+    ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : isTerm2Exam(exam) ? selectTerm2Sprint : selectCoverageSprint)(filtered, {
       limit,
       seenIds: cleanBodyIds(body.seenIds),
       repairIds: cleanBodyIds(body.repairIds),

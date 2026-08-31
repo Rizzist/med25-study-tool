@@ -8,3 +8,4 @@ export function isTerm2Exam(value: unknown): value is Term2ExamId;
 export function isTerm2Question(question: MCQQuestion): boolean;
 export function matchesTerm2Exam(question: MCQQuestion, exam: ExamId): boolean;
 export function isImageQuestion(question: MCQQuestion): boolean;
+export function isInteractive3dQuestion(question: MCQQuestion): boolean;

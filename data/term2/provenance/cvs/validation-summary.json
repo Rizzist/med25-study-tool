@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "questions": 151,
+  "subjects": {
+    "anatomy": 52,
+    "physiology": 51,
+    "histology": 21,
+    "embryology": 27
+  },
+  "kinds": {
+    "single_best_answer": 111,
+    "image_single_best_answer": 12,
+    "dynamic_anatomy_3d": 28
+  },
+  "verified": 151,
+  "modules": 21,
+  "moduleScopes": {
+    "course": 11,
+    "book-extension": 10
+  },
+  "mediaAssets": 11,
+  "imageQuestionReferences": 12,
+  "mappings3d": 28,
+  "unsupportedRetained": 0,
+  "schemaErrors": 0,
+  "validationErrors": 0,
+  "corrections": {
+    "sourceChanged": 53,
+    "promptChanged": 3,
+    "optionsChanged": 2,
+    "explanationChanged": 3,
+    "mediaChanged": 3,
+    "ledgerEntries": 56
+  }
+}

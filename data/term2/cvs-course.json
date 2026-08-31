@@ -1,0 +1,830 @@
+{
+  "examId": "term2-cvs",
+  "title": "Term 2 Cardiovascular source-based study/practice bank",
+  "scopeNote": "Source-based Term 2 cardiovascular study practice. Course-slide modules are marked course; modules that rely on textbook-only evidence are marked book-extension.",
+  "sources": [
+    {
+      "title": "Cardiovascular System - study index",
+      "kind": "course-index",
+      "locator": "STUDY_INDEX.md; 18 sections, 759 slides, 77 embedded-reference pages, 20.0 h transcribed narration",
+      "status": "audited"
+    },
+    {
+      "title": "Heart 1-3 and Mediastinum 1-2",
+      "kind": "course-slides",
+      "locator": "Heart 1 slides 6,8,11; Heart 2 slides 1,8-9; Heart 3 slides 1,3-4,7,9,11; Mediastinum 1 slides 2,4,6; Mediastinum 2 slides 6-7",
+      "status": "used"
+    },
+    {
+      "title": "Cairculatory System 1-6",
+      "kind": "course-slides",
+      "locator": "Sessions 1-6; specifically slides cited per question",
+      "status": "used"
+    },
+    {
+      "title": "blood 1 and blood 2",
+      "kind": "course-slides",
+      "locator": "blood 1 slides 12-28; blood 2 slides 2-31",
+      "status": "used"
+    },
+    {
+      "title": "Histology of Circulatory System",
+      "kind": "course-transcript",
+      "locator": "Histology of Circulatory System.transcript.txt; full recording 38.2 min",
+      "status": "cross-referenced"
+    },
+    {
+      "title": "Cardiovascular embryology recordings",
+      "kind": "course-transcripts",
+      "locator": "Heart formation, vessels (1), vessels (2); exact local transcript files",
+      "status": "cross-referenced"
+    },
+    {
+      "title": "Junqueira's Basic Histology",
+      "kind": "textbook",
+      "locator": "16th ed., Chapter 11, local PDF pp. 227-244 (printed pp. 216-233)",
+      "status": "used"
+    },
+    {
+      "title": "Langman's Medical Embryology",
+      "kind": "textbook",
+      "locator": "15th ed., Chapter 13, local OCR PDF pp. 193-228",
+      "status": "used"
+    },
+    {
+      "title": "Guyton and Hall Textbook of Medical Physiology",
+      "kind": "textbook",
+      "locator": "15th ed. (2026), local PDF pp. 124, 131-136",
+      "status": "used-and-cross-referenced"
+    },
+    {
+      "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "kind": "textbook",
+      "locator": "42nd ed., local PDF pp. 1709 and 1713 (printed pp. 1092-1093)",
+      "status": "used"
+    }
+  ],
+  "modules": [
+    {
+      "id": "cvs-anatomy-pericardium",
+      "subject": "anatomy",
+      "title": "Pericardium and heart relations",
+      "summary": "Pericardial layers, sinuses, innervation, and tamponade.",
+      "sourceLocator": "Heart 1.pptx slides 6, 8, 11; Mediastinum 2.pptx slide 7",
+      "scope": "course",
+      "keyPoints": [
+        "Fibrous pericardium is fixed to the central tendon.",
+        "The transverse and oblique sinuses have different surgical relationships.",
+        "Phrenic nerves descend on the fibrous pericardium."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which attachment most directly fixes the fibrous pericardium inferiorly?",
+          "answer": "Central tendon of the diaphragm"
+        },
+        {
+          "prompt": "In the displayed heart-wall diagram, which layer is identical to the visceral layer of serous pericardium?",
+          "answer": "Epicardium"
+        },
+        {
+          "prompt": "During cardiac surgery, a clamp is passed behind the ascending aorta and pulmonary trunk. Which pericardial space is being used?",
+          "answer": "Transverse pericardial sinus"
+        }
+      ],
+      "questionIds": [
+        "cvs-anat-001",
+        "cvs-anat-002",
+        "cvs-anat-003",
+        "cvs-anat-004",
+        "cvs-anat-005",
+        "cvs-anat-006",
+        "cvs-3d-001",
+        "cvs-3d-002",
+        "cvs-3d-003",
+        "cvs-3d-004",
+        "cvs-3d-028"
+      ]
+    },
+    {
+      "id": "cvs-anatomy-external",
+      "subject": "anatomy",
+      "title": "External heart anatomy",
+      "summary": "Apex, base, surfaces, and chambers seen from external views.",
+      "sourceLocator": "Heart 2.pptx, slides 1, 3, 7-9",
+      "scope": "course",
+      "keyPoints": [
+        "The left ventricle forms the apex.",
+        "The left atrium forms most of the base.",
+        "The right ventricle forms most of the sternocostal surface."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which chamber forms the apex of the adult heart?",
+          "answer": "Left ventricle"
+        },
+        {
+          "prompt": "Which chamber forms most of the posterior base of the heart?",
+          "answer": "Left atrium"
+        },
+        {
+          "prompt": "In an anterior view of the heart, which chamber occupies most of the sternocostal surface?",
+          "answer": "Right ventricle"
+        }
+      ],
+      "questionIds": [
+        "cvs-anat-007",
+        "cvs-anat-008",
+        "cvs-anat-009",
+        "cvs-anat-010",
+        "cvs-anat-011",
+        "cvs-3d-005",
+        "cvs-3d-006",
+        "cvs-3d-007",
+        "cvs-3d-008"
+      ]
+    },
+    {
+      "id": "cvs-anatomy-internal",
+      "subject": "anatomy",
+      "title": "Internal chambers and valves",
+      "summary": "Atrial and ventricular landmarks and valve apparatus.",
+      "sourceLocator": "Heart 2.pptx slide 9; Heart 3.pptx slides 1, 3-4, 7, 9",
+      "scope": "course",
+      "keyPoints": [
+        "The moderator band carries the right bundle branch.",
+        "Chordae prevent AV valve prolapse rather than opening valves.",
+        "Coronary ostia arise in the aortic sinuses."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which structure carries part of the right bundle branch to the anterior papillary muscle?",
+          "answer": "Septomarginal trabecula (moderator band)"
+        },
+        {
+          "prompt": "Why is the left ventricular myocardium substantially thicker than the right ventricular myocardium?",
+          "answer": "It pumps against the higher resistance of the systemic circulation"
+        },
+        {
+          "prompt": "In the superior valve view, the right and left coronary arteries arise from which structures?",
+          "answer": "Corresponding right and left aortic sinuses"
+        }
+      ],
+      "questionIds": [
+        "cvs-anat-012",
+        "cvs-anat-013",
+        "cvs-anat-014",
+        "cvs-anat-015",
+        "cvs-3d-009",
+        "cvs-3d-010",
+        "cvs-3d-011",
+        "cvs-3d-012",
+        "cvs-3d-013",
+        "cvs-3d-014",
+        "cvs-3d-015"
+      ]
+    },
+    {
+      "id": "cvs-anatomy-coronary",
+      "subject": "anatomy",
+      "title": "Coronary circulation",
+      "summary": "Major coronary arteries, dominance, and venous drainage.",
+      "sourceLocator": "Heart 2.pptx slide 8; Heart 3.pptx slide 11; Gray's Anatomy 42e local PDF pp. 1709, 1713",
+      "scope": "book-extension",
+      "keyPoints": [
+        "The anterior interventricular artery runs with the great cardiac vein.",
+        "Dominance is defined by origin of the posterior interventricular artery.",
+        "The coronary sinus opens into the right atrium."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which vein most consistently accompanies the anterior interventricular artery in the anterior interventricular sulcus?",
+          "answer": "Great cardiac vein"
+        },
+        {
+          "prompt": "In a right-dominant coronary circulation, the posterior interventricular artery usually arises from which artery?",
+          "answer": "Right coronary artery"
+        },
+        {
+          "prompt": "Which observation establishes that a heart is left dominant?",
+          "answer": "The posterior interventricular artery arises from the circumflex artery"
+        }
+      ],
+      "questionIds": [
+        "cvs-anat-016",
+        "cvs-anat-017",
+        "cvs-anat-018",
+        "cvs-anat-019",
+        "cvs-anat-020",
+        "cvs-3d-016",
+        "cvs-3d-017",
+        "cvs-3d-018",
+        "cvs-3d-019",
+        "cvs-3d-020"
+      ]
+    },
+    {
+      "id": "cvs-anatomy-mediastinum",
+      "subject": "anatomy",
+      "title": "Mediastinum and great vessels",
+      "summary": "Cardiac plexuses, aortic arch structures, recurrent laryngeal relation, azygos arch, and posterior mediastinal contents.",
+      "sourceLocator": "Mediastinum 1.pptx slides 2, 4, 6; Mediastinum 2.pptx slide 6",
+      "scope": "course",
+      "keyPoints": [
+        "The superficial cardiac plexus lies anterior and inferior to the aortic arch.",
+        "The left recurrent laryngeal nerve loops below the aortic arch.",
+        "The azygos vein arches over the right lung root."
+      ],
+      "retrieval": [
+        {
+          "prompt": "In panel A of the displayed mediastinal diagram, which plexus is labeled on the anterior aspect of the aortic arch?",
+          "answer": "Superficial cardiac plexus"
+        },
+        {
+          "prompt": "Which nerve loops beneath the aortic arch adjacent to the ligamentum arteriosum?",
+          "answer": "Left recurrent laryngeal nerve"
+        },
+        {
+          "prompt": "The azygos vein enters the superior vena cava after arching over which structure?",
+          "answer": "Root of the right lung"
+        }
+      ],
+      "questionIds": [
+        "cvs-anat-021",
+        "cvs-anat-022",
+        "cvs-anat-023",
+        "cvs-anat-024",
+        "cvs-3d-021",
+        "cvs-3d-022",
+        "cvs-3d-023",
+        "cvs-3d-024",
+        "cvs-3d-025",
+        "cvs-3d-026",
+        "cvs-3d-027"
+      ]
+    },
+    {
+      "id": "cvs-phys-hemodynamics",
+      "subject": "physiology",
+      "title": "Hemodynamics",
+      "summary": "Ohm, Poiseuille, Laplace, velocity, Reynolds, and Bernoulli relationships.",
+      "sourceLocator": "Cairculatory System 1.pptx slides 16-17, 27-28; Cairculatory System 2.pptx slides 5-9; Cairculatory System 3.pptx slides 7, 13-14; Cairculatory System 4.pptx slide 5",
+      "scope": "course",
+      "keyPoints": [
+        "Flow equals pressure difference divided by resistance.",
+        "Resistance is inversely proportional to radius to the fourth power.",
+        "Velocity is inversely related to total cross-sectional area."
+      ],
+      "retrieval": [
+        {
+          "prompt": "If the pressure gradient across an organ doubles while vascular resistance remains constant, what happens to blood flow?",
+          "answer": "It doubles"
+        },
+        {
+          "prompt": "A small artery's radius doubles with all other variables unchanged. According to Poiseuille's relationship, flow becomes approximately how many times greater?",
+          "answer": "16 times"
+        },
+        {
+          "prompt": "At a fixed pressure gradient and vessel geometry, an increase in blood viscosity has what immediate effect?",
+          "answer": "It decreases flow"
+        }
+      ],
+      "questionIds": [
+        "cvs-phys-001",
+        "cvs-phys-002",
+        "cvs-phys-003",
+        "cvs-phys-004",
+        "cvs-phys-005",
+        "cvs-phys-006",
+        "cvs-phys-007",
+        "cvs-phys-008",
+        "cvs-phys-009",
+        "cvs-phys-010"
+      ]
+    },
+    {
+      "id": "cvs-phys-cardiac-cycle",
+      "subject": "physiology",
+      "title": "Cardiac cycle, conduction, and pressure",
+      "summary": "Valve events, pressure-volume phases, pulse pressure, compliance, and myocardial electrophysiology.",
+      "sourceLocator": "Cairculatory System 3.pptx slides 8-12; Guyton 15e local PDF pp. 124, 131-136",
+      "scope": "course",
+      "keyPoints": [
+        "All valves are closed during isovolumic phases.",
+        "The SA node normally initiates the heartbeat.",
+        "The ventricular action-potential plateau prolongs refractoriness."
+      ],
+      "retrieval": [
+        {
+          "prompt": "The displayed slide marks the interval from mitral-valve closure to aortic-valve opening. Which statement is correct during this interval?",
+          "answer": "Ventricular pressure rises while volume remains constant"
+        },
+        {
+          "prompt": "Which valve events bound isovolumic relaxation of the left ventricle?",
+          "answer": "Aortic closure followed by mitral opening"
+        },
+        {
+          "prompt": "A patient's arterial pressure is 120/80 mmHg. What is the pulse pressure?",
+          "answer": "40 mmHg"
+        }
+      ],
+      "questionIds": [
+        "cvs-phys-011",
+        "cvs-phys-012",
+        "cvs-phys-013",
+        "cvs-phys-014",
+        "cvs-phys-015",
+        "cvs-phys-016",
+        "cvs-phys-017",
+        "cvs-phys-018"
+      ]
+    },
+    {
+      "id": "cvs-phys-microcirculation",
+      "subject": "physiology",
+      "title": "Microcirculation and edema",
+      "summary": "Vascular volume, capillary exchange, Starling forces, edema, and venous return.",
+      "sourceLocator": "Cairculatory System 4.pptx, slides 4-13",
+      "scope": "course",
+      "keyPoints": [
+        "Capillary velocity is low because total cross-sectional area is high.",
+        "Hydrostatic pressure favors filtration.",
+        "One-way venous valves support the muscle pump."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which part of the systemic circulation contains the largest fraction of blood volume at rest?",
+          "answer": "Veins and venules"
+        },
+        {
+          "prompt": "The course slide shows capillary blood velocity far below arterial velocity. Which structural property explains this?",
+          "answer": "Very large total capillary cross-sectional area"
+        },
+        {
+          "prompt": "Which capillary type is most characteristic of skeletal muscle and has an uninterrupted endothelium and basement membrane?",
+          "answer": "Continuous capillary"
+        }
+      ],
+      "questionIds": [
+        "cvs-phys-019",
+        "cvs-phys-020",
+        "cvs-phys-021",
+        "cvs-phys-022",
+        "cvs-phys-023",
+        "cvs-phys-024",
+        "cvs-phys-025"
+      ]
+    },
+    {
+      "id": "cvs-phys-regulation",
+      "subject": "physiology",
+      "title": "Reflex and local circulatory regulation",
+      "summary": "Baroreceptors, chemoreceptors, active/reactive hyperemia, metabolites, and humoral control.",
+      "sourceLocator": "Cairculatory System 4.pptx slides 16-20; Cairculatory System 5.pptx slides 7-8, 11, 15",
+      "scope": "course",
+      "keyPoints": [
+        "Carotid sinus afferents travel in CN IX.",
+        "Active hyperemia follows increased metabolism.",
+        "Angiotensin II and vasopressin are vasoconstrictors."
+      ],
+      "retrieval": [
+        {
+          "prompt": "The displayed reflex slide shows carotid sinus afferents reaching the medulla through which cranial nerve?",
+          "answer": "Glossopharyngeal nerve (CN IX)"
+        },
+        {
+          "prompt": "A sudden rise in arterial pressure increases carotid sinus firing. What is the immediate integrated response?",
+          "answer": "Reduced sympathetic and increased parasympathetic activity"
+        },
+        {
+          "prompt": "Which combination most strongly stimulates peripheral arterial chemoreceptors?",
+          "answer": "Low arterial O2, high CO2, and increased H+"
+        }
+      ],
+      "questionIds": [
+        "cvs-phys-026",
+        "cvs-phys-027",
+        "cvs-phys-028",
+        "cvs-phys-029",
+        "cvs-phys-030",
+        "cvs-phys-031",
+        "cvs-phys-032",
+        "cvs-phys-033"
+      ]
+    },
+    {
+      "id": "cvs-phys-special-circulations",
+      "subject": "physiology",
+      "title": "Special circulations and integrated responses",
+      "summary": "Pulmonary, cerebral, coronary, exercise, and hemorrhage physiology.",
+      "sourceLocator": "Cairculatory System 5.pptx slides 4, 6; Cairculatory System 6.pptx slides 5-15",
+      "scope": "course",
+      "keyPoints": [
+        "Pulmonary vascular resistance is much lower than systemic resistance.",
+        "Local metabolism is the main controller of coronary flow.",
+        "Hemorrhage unloads baroreceptors and increases sympathetic activity."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Systemic and pulmonary circulations have the same cardiac output. Why is pulmonary arterial pressure much lower?",
+          "answer": "Pulmonary vascular resistance is much lower"
+        },
+        {
+          "prompt": "Which mechanism is especially important for matching cerebral blood flow to local neuronal activity?",
+          "answer": "Local metabolic regulation"
+        },
+        {
+          "prompt": "Why is left coronary flow greatest during ventricular diastole?",
+          "answer": "Systolic myocardial compression impedes intramural vessels"
+        }
+      ],
+      "questionIds": [
+        "cvs-phys-034",
+        "cvs-phys-035",
+        "cvs-phys-036",
+        "cvs-phys-037",
+        "cvs-phys-038",
+        "cvs-phys-039",
+        "cvs-phys-040"
+      ]
+    },
+    {
+      "id": "cvs-phys-blood-cells",
+      "subject": "physiology",
+      "title": "Red-cell physiology",
+      "summary": "Erythropoiesis, maturation, iron handling, and red-cell lifespan.",
+      "sourceLocator": "blood 1.ppsx, slides 12-28",
+      "scope": "course",
+      "keyPoints": [
+        "Renal erythropoietin rises with hypoxia.",
+        "Vitamin B12 or folate deficiency causes failure of normal erythroid precursor maturation.",
+        "Senescent red cells are removed by macrophages."
+      ],
+      "retrieval": [
+        {
+          "prompt": "What is the most important physiological signal increasing erythropoietin production?",
+          "answer": "Reduced tissue oxygen availability"
+        },
+        {
+          "prompt": "Deficiency of vitamin B12 or folate produces megaloblastic anemia primarily by causing which erythrocyte-development problem?",
+          "answer": "Failure of normal erythroid precursor maturation"
+        },
+        {
+          "prompt": "Which pairing correctly matches an iron-binding protein with its principal role?",
+          "answer": "Transferrin - plasma transport"
+        }
+      ],
+      "questionIds": [
+        "cvs-phys-041",
+        "cvs-phys-042",
+        "cvs-phys-043",
+        "cvs-phys-044"
+      ]
+    },
+    {
+      "id": "cvs-phys-hemostasis",
+      "subject": "physiology",
+      "title": "Hemostasis and coagulation",
+      "summary": "Platelet plug formation, coagulation pathways, vitamin K, and fibrinolysis.",
+      "sourceLocator": "blood 2.ppsx, slides 2-31",
+      "scope": "course",
+      "keyPoints": [
+        "vWF mediates platelet adhesion to exposed collagen.",
+        "Tissue factor initiates the extrinsic pathway.",
+        "tPA activates plasminogen."
+      ],
+      "retrieval": [
+        {
+          "prompt": "What is the correct early sequence after a small blood vessel is injured?",
+          "answer": "Vasoconstriction, platelet plug formation, then coagulation"
+        },
+        {
+          "prompt": "Which plasma protein is most important for platelet adhesion to exposed subendothelial collagen?",
+          "answer": "von Willebrand factor"
+        },
+        {
+          "prompt": "Which substances released by activated platelets recruit and activate additional platelets?",
+          "answer": "ADP and thromboxane A2"
+        }
+      ],
+      "questionIds": [
+        "cvs-phys-045",
+        "cvs-phys-046",
+        "cvs-phys-047",
+        "cvs-phys-048",
+        "cvs-phys-049",
+        "cvs-phys-050",
+        "cvs-phys-051"
+      ]
+    },
+    {
+      "id": "cvs-histo-heart",
+      "subject": "histology",
+      "title": "Histology of the heart",
+      "summary": "Endocardium, myocardium, epicardium, cardiac skeleton, and Purkinje fibers.",
+      "sourceLocator": "Junqueira 16e, Chapter 11, local PDF pp. 227-230",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Purkinje fibers are pale and glycogen-rich.",
+        "The epicardium is visceral serous pericardium.",
+        "Dense connective tissue forms the cardiac skeleton."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which tissue directly lines the chambers and valves of the heart?",
+          "answer": "Endocardium"
+        },
+        {
+          "prompt": "Which heart-wall layer contains the contractile cardiac muscle responsible for pumping?",
+          "answer": "Myocardium"
+        },
+        {
+          "prompt": "Which feature is most characteristic of epicardium?",
+          "answer": "Mesothelium over connective tissue containing vessels, nerves, and fat"
+        }
+      ],
+      "questionIds": [
+        "cvs-histo-001",
+        "cvs-histo-002",
+        "cvs-histo-003",
+        "cvs-histo-004",
+        "cvs-histo-005"
+      ]
+    },
+    {
+      "id": "cvs-histo-vessels",
+      "subject": "histology",
+      "title": "Arteries and vessel-wall organization",
+      "summary": "Tunics, elastic and muscular arteries, and arterioles.",
+      "sourceLocator": "Junqueira 16e, Chapter 11, local PDF pp. 230-236",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Endothelium lines the tunica intima.",
+        "Elastic arteries contain many elastic lamellae in the media.",
+        "Arterioles have only one or a few smooth-muscle layers."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which cell type forms the luminal surface of all blood vessels?",
+          "answer": "Endothelial cell"
+        },
+        {
+          "prompt": "Which component usually dominates the tunica media of a muscular artery?",
+          "answer": "Concentric smooth-muscle layers"
+        },
+        {
+          "prompt": "Which histological feature best identifies an elastic artery?",
+          "answer": "Numerous fenestrated elastic lamellae in the tunica media"
+        }
+      ],
+      "questionIds": [
+        "cvs-histo-006",
+        "cvs-histo-007",
+        "cvs-histo-008",
+        "cvs-histo-009",
+        "cvs-histo-010",
+        "cvs-histo-011"
+      ]
+    },
+    {
+      "id": "cvs-histo-capillaries",
+      "subject": "histology",
+      "title": "Microvasculature",
+      "summary": "Capillary types, pericytes, metarterioles, and postcapillary venules.",
+      "sourceLocator": "Junqueira 16e, Chapter 11, local PDF pp. 238-241",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Continuous capillaries have tight junctions.",
+        "Fenestrations facilitate exchange.",
+        "Postcapillary venules are major sites of leukocyte exit."
+      ],
+      "retrieval": [
+        {
+          "prompt": "In the displayed comparison, which feature identifies a continuous capillary?",
+          "answer": "Uninterrupted endothelium with tight junctions and continuous basal lamina"
+        },
+        {
+          "prompt": "Fenestrated capillaries are especially common in which site?",
+          "answer": "Endocrine glands"
+        },
+        {
+          "prompt": "Which combination best characterizes a sinusoidal capillary?",
+          "answer": "Wide irregular lumen, large endothelial gaps, and discontinuous basal lamina"
+        }
+      ],
+      "questionIds": [
+        "cvs-histo-012",
+        "cvs-histo-013",
+        "cvs-histo-014",
+        "cvs-histo-015",
+        "cvs-histo-016",
+        "cvs-histo-017"
+      ]
+    },
+    {
+      "id": "cvs-histo-veins-lymphatics",
+      "subject": "histology",
+      "title": "Veins and lymphatic vessels",
+      "summary": "Venous wall organization, valves, and lymphatic capillary structure.",
+      "sourceLocator": "Junqueira 16e, Chapter 11, local PDF pp. 242-244",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Large veins have prominent adventitia.",
+        "Venous valves are folds of the intima.",
+        "Lymphatic capillaries begin blindly and lack a continuous basal lamina."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Venous valves are folds of which vessel layer?",
+          "answer": "Tunica intima"
+        },
+        {
+          "prompt": "Which wall feature is especially prominent in a large vein such as the vena cava?",
+          "answer": "Thick adventitia with longitudinal smooth-muscle bundles"
+        },
+        {
+          "prompt": "Which feature favors entry of interstitial fluid into lymphatic capillaries?",
+          "answer": "Overlapping endothelial flaps anchored to surrounding connective tissue"
+        }
+      ],
+      "questionIds": [
+        "cvs-histo-018",
+        "cvs-histo-019",
+        "cvs-histo-020",
+        "cvs-histo-021"
+      ]
+    },
+    {
+      "id": "cvs-embryo-heart-field-loop",
+      "subject": "embryology",
+      "title": "Heart fields, tube, and looping",
+      "summary": "Primary and secondary heart fields, tube formation, and cardiac looping.",
+      "sourceLocator": "Langman 15e, Chapter 13, local OCR PDF pp. 193-200",
+      "scope": "book-extension",
+      "keyPoints": [
+        "The primary heart field contributes mainly to atria and left ventricle.",
+        "The secondary heart field adds right ventricle and outflow tract.",
+        "Normal looping is rightward."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which adult component is derived predominantly from the primary heart field?",
+          "answer": "Left ventricle"
+        },
+        {
+          "prompt": "The secondary heart field contributes most directly to which structures?",
+          "answer": "Right ventricle and outflow tract"
+        },
+        {
+          "prompt": "The paired endocardial tubes arise in which embryonic tissue?",
+          "answer": "Splanchnic layer of lateral plate mesoderm"
+        }
+      ],
+      "questionIds": [
+        "cvs-embryo-001",
+        "cvs-embryo-002",
+        "cvs-embryo-003",
+        "cvs-embryo-004"
+      ]
+    },
+    {
+      "id": "cvs-embryo-venous-atrium",
+      "subject": "embryology",
+      "title": "Sinus venosus and atrial incorporation",
+      "summary": "Sinus horns, pulmonary vein incorporation, and smooth/rough atrial regions.",
+      "sourceLocator": "Langman 15e, Chapter 13, local OCR PDF pp. 201-207",
+      "scope": "book-extension",
+      "keyPoints": [
+        "The right sinus horn forms the smooth right atrial wall.",
+        "The left sinus horn forms the coronary sinus.",
+        "Pulmonary veins are incorporated into the left atrium."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which adult structure develops from the proximal bulbus cordis?",
+          "answer": "Trabeculated part of the right ventricle"
+        },
+        {
+          "prompt": "The right horn of the sinus venosus is incorporated into the right atrium to form which region?",
+          "answer": "Sinus venarum"
+        },
+        {
+          "prompt": "What is the principal adult derivative of the left horn of the sinus venosus?",
+          "answer": "Coronary sinus"
+        }
+      ],
+      "questionIds": [
+        "cvs-embryo-005",
+        "cvs-embryo-006",
+        "cvs-embryo-007",
+        "cvs-embryo-008"
+      ]
+    },
+    {
+      "id": "cvs-embryo-septation",
+      "subject": "embryology",
+      "title": "Atrial, AV, and ventricular septation",
+      "summary": "Septum primum/secundum, endocardial cushions, and ventricular septum.",
+      "sourceLocator": "Langman 15e, Chapter 13, local OCR PDF pp. 203-216",
+      "scope": "book-extension",
+      "keyPoints": [
+        "The ostium secundum forms within septum primum.",
+        "The septum primum becomes the valve of the foramen ovale.",
+        "Endocardial cushions divide the AV canal."
+      ],
+      "retrieval": [
+        {
+          "prompt": "The ostium primum normally closes when septum primum fuses with which structures?",
+          "answer": "Endocardial cushions"
+        },
+        {
+          "prompt": "How does the ostium secundum form?",
+          "answer": "Programmed cell death creates perforations in the upper septum primum"
+        },
+        {
+          "prompt": "Which embryonic septum forms the valve of the foramen ovale?",
+          "answer": "Septum primum"
+        }
+      ],
+      "questionIds": [
+        "cvs-embryo-009",
+        "cvs-embryo-010",
+        "cvs-embryo-011",
+        "cvs-embryo-012",
+        "cvs-embryo-013",
+        "cvs-embryo-014",
+        "cvs-embryo-015"
+      ]
+    },
+    {
+      "id": "cvs-embryo-outflow-defects",
+      "subject": "embryology",
+      "title": "Outflow tract and congenital defects",
+      "summary": "Neural crest, conotruncal septation, semilunar valves, and major malformations.",
+      "sourceLocator": "Langman 15e, Chapter 13, local OCR PDF pp. 214-219",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Neural crest cells contribute to conotruncal ridges.",
+        "Failure of spiral septation causes transposition.",
+        "Anterior displacement produces tetralogy of Fallot."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Cardiac neural crest cells contribute directly to which structure?",
+          "answer": "Conotruncal ridges forming the aorticopulmonary septum"
+        },
+        {
+          "prompt": "Transposition of the great arteries most directly results from which developmental error?",
+          "answer": "Failure of the aorticopulmonary septum to spiral"
+        },
+        {
+          "prompt": "In the displayed defect, which single developmental displacement underlies tetralogy of Fallot?",
+          "answer": "Anterior displacement of the conotruncal septum"
+        }
+      ],
+      "questionIds": [
+        "cvs-embryo-016",
+        "cvs-embryo-017",
+        "cvs-embryo-018",
+        "cvs-embryo-019",
+        "cvs-embryo-020",
+        "cvs-embryo-021"
+      ]
+    },
+    {
+      "id": "cvs-embryo-vascular-development",
+      "subject": "embryology",
+      "title": "Aortic arches and embryonic vessels",
+      "summary": "Aortic-arch, recurrent-laryngeal, and embryonic venous derivatives.",
+      "sourceLocator": "Langman 15e, Chapter 13, local OCR PDF pp. 220-228",
+      "scope": "book-extension",
+      "keyPoints": [
+        "The third arch forms common carotids and proximal internal carotids.",
+        "The left sixth arch persists as the ductus arteriosus.",
+        "Vitelline veins contribute to the portal system."
+      ],
+      "retrieval": [
+        {
+          "prompt": "What is the principal arterial derivative of the third aortic arch?",
+          "answer": "Common carotid and proximal internal carotid arteries"
+        },
+        {
+          "prompt": "Which pairing correctly matches a fourth aortic arch derivative?",
+          "answer": "Left fourth arch - segment of definitive aortic arch"
+        },
+        {
+          "prompt": "Which fetal vessel is derived from the distal left sixth aortic arch?",
+          "answer": "Ductus arteriosus"
+        }
+      ],
+      "questionIds": [
+        "cvs-embryo-022",
+        "cvs-embryo-023",
+        "cvs-embryo-024",
+        "cvs-embryo-025",
+        "cvs-embryo-026",
+        "cvs-embryo-027"
+      ]
+    }
+  ],
+  "unresolved": []
+}

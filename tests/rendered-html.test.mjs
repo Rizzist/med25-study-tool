@@ -38,7 +38,8 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
   assert.match(html, /Codex tutor/i);
   assert.match(html, /Visual Guide/i);
   assert.match(html, /Practical Atlas/i);
-  assert.match(html, /DYNAMIC IMAGES/i);
+  assert.match(html, /SOURCE IMAGES/i);
+  assert.match(html, /INTERACTIVE 3D/i);
   assert.match(html, /histology/i);
   assert.match(html, /embryology/i);
   assert.doesNotMatch(html, /Your site is taking shape|starter loading skeleton/i);

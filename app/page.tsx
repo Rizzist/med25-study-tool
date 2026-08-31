@@ -12,6 +12,7 @@ import {
 import { FinalExam } from "@/src/components/FinalExam";
 import { AnatomyImage } from "@/src/components/AnatomyImage";
 import { Term2Guide } from "@/src/components/Term2Guide";
+import { Term2CourseHub } from "@/src/components/Term2CourseHub";
 import { PhysiologyPracticalHub } from "@/src/components/PhysiologyPracticalHub";
 import { cleanPracticalIds, practicalCatalog, practicalCaseForQuestion } from "@/src/lib/physiology-practical";
 import { PracticalCaseFigure } from '@/src/components/PracticalCaseFigure';
@@ -35,8 +36,10 @@ import { classifySessionCompletion } from "@/src/lib/mcq/sprint-selection.mjs";
 import type { CodexGrade, MCQMedia, MCQQuestion, StudentAnswer } from "@/src/lib/mcq/types";
 import { isExamId, isTerm2Exam, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
 import { createEmptyProgress, parseProgress, type StudyProgress } from "@/src/lib/mcq/study-progress.mjs";
+import { hasTerm2CourseCatalog, term2CourseCatalog } from "@/src/lib/term2/courses";
 
 const AnatomyTrainer = dynamic(() => import("@/src/components/anatomy3d/AnatomyTrainer"), { ssr: false });
+const AnatomyQuestion3D = dynamic(() => import("@/src/components/anatomy3d/AnatomyQuestion"), { ssr: false });
 
 type BridgeHealth = {
   ok: boolean;
@@ -66,6 +69,7 @@ type BankSummary = {
     }>;
     imageQuestionCount: number;
     dynamicImageCount?: number;
+    interactive3dCount?: number;
     collectionCounts: Partial<Record<CollectionId, number>>;
     collectionQuestionIds?: Partial<Record<CollectionId, string[]>>;
     biochemistryChapters?: Array<{ id: string; questionCount: number; questionIds: string[] }>;
@@ -91,6 +95,7 @@ type ActiveSessionSnapshot = {
   respiratoryScopeId?: string;
   respiratoryPracticeIds?: string[];
   practicalPracticeIds?: string[];
+  coursePracticeIds?: string[];
 };
 type CompletedSession = ActiveSessionSnapshot & {
   id: string;
@@ -131,10 +136,10 @@ const examConfig: Record<ExamId, {
     focus: "Teacher-confirmed Lippincott chapters, chapter-by-chapter self-testing, cellular histology, membrane physiology and confirmed laboratory methods; partial, supplementary and unconfirmed chapters are labeled clearly",
     collections: ["all", "wrong", "flagged", "biochemistry", "histology", "physiology", "images", "stains", "practical"],
   },
-  "term2-cvs": { date: "Date TBA", title: "CVS", focus: term2Exams[0].scope, collections: ["all", "wrong", "flagged"] },
+  "term2-cvs": { date: "Date TBA", title: "CVS", focus: term2Exams[0].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
   "term2-respiratory": { date: "Date TBA", title: "Respiratory", focus: term2Exams[1].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
-  "term2-limbs": { date: "Date TBA", title: "Upper & Lower Limbs", focus: term2Exams[2].scope, collections: ["all", "wrong", "flagged"] },
-  "term2-biochemistry": { date: "Date TBA", title: "Biochemistry II", focus: term2Exams[3].scope, collections: ["all", "wrong", "flagged"] },
+  "term2-limbs": { date: "Date TBA", title: "Upper & Lower Limbs", focus: term2Exams[2].scope, collections: ["all", "anatomy", "dynamic-anatomy", "images", "wrong", "flagged"] },
+  "term2-biochemistry": { date: "Date TBA", title: "Biochemistry II", focus: term2Exams[3].scope, collections: ["all", "biochemistry", "images", "wrong", "flagged"] },
   "term2-physiology-practical": { date: "Aug 31 · user-reported", title: "Physiology Practical", focus: term2Exams[4].scope, collections: ["all", "images", "wrong", "flagged"] },
 };
 const collectionLabel: Record<CollectionId, string> = {
@@ -167,6 +172,9 @@ function examHasAnatomy3d(examId: ExamId): boolean {
 }
 function regionsFor(examId: ExamId): string[] {
   return anatomy3dRegions[examId] ?? [];
+}
+function isTerm2CourseExam(examId: ExamId): boolean {
+  return examId === "term2-cvs" || examId === "term2-limbs" || examId === "term2-biochemistry";
 }
 
 function cleanIds(value: unknown) {
@@ -230,6 +238,7 @@ function cleanActiveSession(value: unknown): ActiveSessionSnapshot | null {
     biochemistryChapterId: isBiochemistryChapterId(session.biochemistryChapterId) ? session.biochemistryChapterId : undefined,
     ...normalizeRespiratoryPractice(migratedExam, session.respiratoryScopeId, session.respiratoryPracticeIds, respiratoryQuestionIndex),
     practicalPracticeIds: cleanPracticalIds(migratedExam, session.practicalPracticeIds),
+    coursePracticeIds: isTerm2CourseExam(migratedExam) ? cleanIds(session.coursePracticeIds).slice(0, 500) : undefined,
   };
 }
 
@@ -439,6 +448,7 @@ function QuestionSource({ question }: { question: MCQQuestion }) {
 }
 
 function StudyMedia({ question, review = false }: { question: MCQQuestion; review?: boolean }) {
+  if (question.kind === "dynamic_anatomy_3d") return <AnatomyQuestion3D question={question} revealed={review} />;
   if (!question.media?.length) return null;
   return <div className={question.media.length > 1 ? "study-image-pair" : "study-image-single"}>{question.media.map((media) => <StudyImage question={question} media={media} review={review} key={media.id} />)}</div>;
 }
@@ -486,6 +496,7 @@ export default function Home() {
   const [activeRespiratoryScopeId, setActiveRespiratoryScopeId] = useState<string>();
   const [activeRespiratoryPracticeIds, setActiveRespiratoryPracticeIds] = useState<string[]>();
   const [activePracticalPracticeIds, setActivePracticalPracticeIds] = useState<string[]>();
+  const [activeCoursePracticeIds, setActiveCoursePracticeIds] = useState<string[]>();
   const [lastRespiratoryScopeId, setLastRespiratoryScopeId] = useState<string>();
   const [historyLoadingId, setHistoryLoadingId] = useState("");
   const [resumingSession, setResumingSession] = useState(false);
@@ -584,12 +595,14 @@ export default function Home() {
         respiratoryScopeId: activeRespiratoryScopeId,
         respiratoryPracticeIds: activeRespiratoryPracticeIds,
         practicalPracticeIds: activePracticalPracticeIds,
+        coursePracticeIds: activeCoursePracticeIds,
       },
     }));
-  }, [activeBiochemistryChapterId, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, visitedQuestionIds]);
+  }, [activeBiochemistryChapterId, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, activeCoursePracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, visitedQuestionIds]);
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const selectedConfig = examConfig[exam];
+  const selectedCourseCatalog = isTerm2Exam(exam) ? term2CourseCatalog(exam) : undefined;
   const examLabel = isTerm2Exam(exam) ? selectedConfig.title : selectedConfig.date;
   const examProgress = progress.exams[exam];
   const savedCount = (id: SavedCollectionId) => id === "wrong" ? examProgress.wrongIds.length : examProgress.flaggedIds.length;
@@ -637,7 +650,8 @@ export default function Home() {
     setActiveRespiratoryScopeId(undefined);
     setActiveRespiratoryPracticeIds(undefined);
     setActivePracticalPracticeIds(undefined);
-    if (tab === "Study concepts" && nextExam !== "term2-respiratory") setTab("Overview");
+    setActiveCoursePracticeIds(undefined);
+    if (tab === "Study concepts" && nextExam !== "term2-respiratory" && nextExam !== "term2-physiology-practical" && !(isTerm2Exam(nextExam) && hasTerm2CourseCatalog(nextExam))) setTab("Overview");
     // Keep the 3D Anatomy tab when moving between 3D-anatomy exams; only leave it for exams without one.
     if (tab === "3D Anatomy" && !examHasAnatomy3d(nextExam)) setTab("Overview");
     if (nextExam === "term2-physiology-practical") { setTab("Study concepts"); setSessionSize(36); }
@@ -660,6 +674,7 @@ export default function Home() {
     setStudyMode(nextStudyMode);
     setActiveBiochemistryChapterId(options.biochemistryChapterId);
     setActivePracticalPracticeIds(cleanPracticalIds(exam, exactIds));
+    setActiveCoursePracticeIds(isTerm2CourseExam(exam) && exactIds ? cleanIds(exactIds) : undefined);
     const respiratoryPractice = normalizeRespiratoryPractice(exam, options.respiratoryScopeId, exactIds, respiratoryQuestionIndex);
     setActiveRespiratoryScopeId(respiratoryPractice.respiratoryScopeId);
     setActiveRespiratoryPracticeIds(respiratoryPractice.respiratoryPracticeIds);
@@ -793,6 +808,7 @@ export default function Home() {
       respiratoryScopeId: activeRespiratoryScopeId,
       respiratoryPracticeIds: activeRespiratoryPracticeIds,
       practicalPracticeIds: activePracticalPracticeIds,
+      coursePracticeIds: activeCoursePracticeIds,
       completedAt,
       correctCount: correctIds.size,
       answeredCount,
@@ -842,6 +858,8 @@ export default function Home() {
     setActiveBiochemistryChapterId(undefined);
     setActiveRespiratoryScopeId(undefined);
     setActiveRespiratoryPracticeIds(undefined);
+    setActivePracticalPracticeIds(undefined);
+    setActiveCoursePracticeIds(undefined);
     setConfirmEnd(false);
     setSessionArchive((current) => ({ ...current, active: null }));
     setPhase("setup");
@@ -863,6 +881,7 @@ export default function Home() {
     setActiveRespiratoryScopeId(saved.respiratoryScopeId);
     setActiveRespiratoryPracticeIds(saved.respiratoryPracticeIds);
     setActivePracticalPracticeIds(cleanPracticalIds(saved.exam, saved.practicalPracticeIds));
+    setActiveCoursePracticeIds(saved.coursePracticeIds);
     if (saved.respiratoryScopeId) setLastRespiratoryScopeId(saved.respiratoryScopeId);
     try {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
@@ -896,6 +915,8 @@ export default function Home() {
     setActiveBiochemistryChapterId(undefined);
     setActiveRespiratoryScopeId(undefined);
     setActiveRespiratoryPracticeIds(undefined);
+    setActivePracticalPracticeIds(undefined);
+    setActiveCoursePracticeIds(undefined);
     setSessionError("");
     setPhase("setup");
   }
@@ -913,6 +934,7 @@ export default function Home() {
     setActiveRespiratoryScopeId(saved.respiratoryScopeId);
     setActiveRespiratoryPracticeIds(saved.respiratoryPracticeIds);
     setActivePracticalPracticeIds(cleanPracticalIds(saved.exam, saved.practicalPracticeIds));
+    setActiveCoursePracticeIds(saved.coursePracticeIds);
     if (saved.respiratoryScopeId) setLastRespiratoryScopeId(saved.respiratoryScopeId);
     try {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
@@ -1068,9 +1090,9 @@ export default function Home() {
     return <main className="review-shell">
       <header className="review-header"><div className="session-mark"><b>MED//25</b><span>Session review{activeRespiratoryScopeId ? ` · ${respiratoryScope(activeRespiratoryScopeId)?.title ?? "Selected concepts"}` : ""}</span></div><button onClick={resetSession}>{activeRespiratoryScopeId ? "Return to study concepts" : "Return to dashboard"}</button></header>
       <section className="review-page">
-        <div className="score-hero"><div><span className="eyebrow">{studyMode === "exam" ? exam === "term2-respiratory" ? "Practice mock complete" : "Chapter exam complete" : "Learning sprint complete"}{activeBiochemistryChapterId ? ` · ${biochemistryChapterById(activeBiochemistryChapterId)?.shortTitle}` : ""}</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Every option now explains the concept it represents, so repair the misses while your reasoning is fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
+        <div className="score-hero"><div><span className="eyebrow">{studyMode === "exam" ? isTerm2Exam(exam) ? "Source-based test complete" : "Chapter exam complete" : "Learning sprint complete"}{activeBiochemistryChapterId ? ` · ${biochemistryChapterById(activeBiochemistryChapterId)?.shortTitle}` : ""}</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Every option now explains the concept it represents, so repair the misses while your reasoning is fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
         <div className="result-stats"><div><strong>{correctCount}</strong><span>Correct</span></div><div><strong>{questions.length - correctCount}</strong><span>To repair</span></div><div><strong>{questions.length - answeredCount}</strong><span>Unanswered</span></div><div><strong>{flaggedCount}</strong><span>Flagged</span></div></div>
-        <div className="review-toolbar"><div className="review-filters">{(["wrong", "flagged", "all"] as const).map((value) => <button key={value} className={reviewFilter === value ? "active" : ""} onClick={() => setReviewFilter(value)}>{value === "wrong" ? `Wrong (${questions.length - correctCount})` : value === "flagged" ? `Flagged (${flaggedCount})` : `All (${questions.length})`}</button>)}</div><div className="review-actions">{missedIds.length > 0 && <button className="retry-button" onClick={() => void startSession("wrong", missedIds, { biochemistryChapterId: activeBiochemistryChapterId, respiratoryScopeId: activeRespiratoryScopeId, mode: "learn", limit: missedIds.length })}>Retry these {missedIds.length}</button>}<button className="primary" onClick={() => void startSession(collection, activeRespiratoryPracticeIds ?? activePracticalPracticeIds, { biochemistryChapterId: activeBiochemistryChapterId, respiratoryScopeId: activeRespiratoryScopeId, mode: studyMode, limit: sessionSize })}>New sprint</button></div></div>
+        <div className="review-toolbar"><div className="review-filters">{(["wrong", "flagged", "all"] as const).map((value) => <button key={value} className={reviewFilter === value ? "active" : ""} onClick={() => setReviewFilter(value)}>{value === "wrong" ? `Wrong (${questions.length - correctCount})` : value === "flagged" ? `Flagged (${flaggedCount})` : `All (${questions.length})`}</button>)}</div><div className="review-actions">{missedIds.length > 0 && <button className="retry-button" onClick={() => void startSession("wrong", missedIds, { biochemistryChapterId: activeBiochemistryChapterId, respiratoryScopeId: activeRespiratoryScopeId, mode: "learn", limit: missedIds.length })}>Retry these {missedIds.length}</button>}<button className="primary" onClick={() => void startSession(collection, activeRespiratoryPracticeIds ?? activePracticalPracticeIds ?? activeCoursePracticeIds, { biochemistryChapterId: activeBiochemistryChapterId, respiratoryScopeId: activeRespiratoryScopeId, mode: studyMode, limit: sessionSize })}>New sprint</button></div></div>
         <div className="review-list">
           {!visible.length && <div className="empty-review"><b>Nothing in this view.</b><span>Switch the filter to inspect all answers.</span></div>}
           {visible.map((question) => {
@@ -1114,12 +1136,26 @@ export default function Home() {
     { id: "wrong", title: "Wrong answers", detail: "Incorrect and opened-unanswered questions stay here until corrected.", count: savedCount("wrong") },
     { id: "flagged", title: "Flagged", detail: "Manual flags stay saved until you remove them.", count: savedCount("flagged") },
   ];
-  const topicCards: Array<{ id: CollectionId; title: string; scope: string; detail: string; count: number }> = isTerm2Exam(exam) ? exam === "term2-respiratory" ? [
+  const topicCards: Array<{ id: CollectionId; title: string; scope: string; detail: string; count: number }> = exam === "term2-cvs" ? [
+    { id: "anatomy", title: "Cardiovascular anatomy", scope: "Local thorax/heart decks + Gray’s", detail: "Thoracic wall, mediastinum, heart, great vessels and autonomic pathways", count: examCount("anatomy") },
+    { id: "histology", title: "Circulatory histology", scope: "Local lecture material + Junqueira", detail: "Heart, vessel classes, microcirculation and lymphatic/immune structures in the confirmed source set", count: examCount("histology") },
+    { id: "embryology", title: "Cardiovascular development", scope: "Local transcripts + Langman", detail: "Heart tube, looping, septation, arch derivatives, fetal circulation and source-confirmed defects", count: examCount("embryology") },
+    { id: "physiology", title: "Cardiovascular physiology", scope: "Local lecture pack + Guyton", detail: "Cardiac mechanics, excitation, ECG, haemodynamics and integrated circulation", count: examCount("physiology") },
+    { id: "dynamic-anatomy", title: "Interactive 3D CVS", scope: `${selectedExam?.interactive3dCount ?? 0} highlighted 3D questions`, detail: "Rotate the model before answering; labels and free exploration unlock after feedback.", count: examCount("dynamic-anatomy") },
+    { id: "images", title: "CVS image questions", scope: "Course figures and source diagrams", detail: "Only locally supported visual cases; answer-bearing labels stay gated.", count: examCount("images") },
+  ] : exam === "term2-limbs" ? [
+    { id: "anatomy", title: "Upper & lower limb anatomy", scope: "Local carryover material + Gray’s", detail: "Bones, compartments, muscles, joints, vessels, nerves and clinical relationships", count: examCount("anatomy") },
+    { id: "dynamic-anatomy", title: "Interactive 3D limbs", scope: `${selectedExam?.interactive3dCount ?? 0} highlighted 3D questions`, detail: "Right upper-limb and left lower-limb models with answer-gated labels and exploration.", count: examCount("dynamic-anatomy") },
+    { id: "images", title: "Limb image questions", scope: "Verified local visual material", detail: "Spotters and applied anatomy only where a source image is available and attributable.", count: examCount("images") },
+  ] : exam === "term2-biochemistry" ? [
+    { id: "biochemistry", title: "Biochemistry II", scope: "Reconciled Lippincott + local metabolism material", detail: "Only concepts supported by the Term 2 source set, with exclusions kept visible.", count: examCount("biochemistry") },
+    { id: "images", title: "Pathway and data questions", scope: "Local figures and diagrams", detail: "Interpretation questions use answer-gated source figures when the local material supports them.", count: examCount("images") },
+  ] : isTerm2Exam(exam) ? exam === "term2-respiratory" ? [
     { id: "anatomy", title: "Respiratory anatomy", scope: "Gray’s 3e + 11 local decks", detail: "Nasal cavity, larynx, trachea, lungs, pleura and thoracic relationships", count: examCount("anatomy") },
     { id: "histology", title: "Respiratory histology", scope: "Junqueira 16e · Chapter 17", detail: "Conducting airways, respiratory zone, cells and source micrographs", count: examCount("histology") },
     { id: "embryology", title: "Lung development", scope: "Langman 15e · Chapter 14 + E1/E2", detail: "Respiratory diverticulum, airway branching, maturation and congenital defects", count: examCount("embryology") },
     { id: "physiology", title: "Respiratory physiology", scope: "Guyton 15e · Chapters 38–42", detail: "Ventilation, pulmonary circulation, gas exchange and transport, control of breathing · book-only", count: examCount("physiology") },
-    { id: "dynamic-anatomy", title: "Dynamic anatomy lab", scope: `${selectedExam?.dynamicImageCount ?? 0} reusable source images`, detail: "Different targets and distractors on the same image. Answer first, then explore the annotated structures.", count: examCount("dynamic-anatomy") },
+    { id: "dynamic-anatomy", title: "Dynamic anatomy lab", scope: `${selectedExam?.dynamicImageCount ?? 0} source diagrams + ${selectedExam?.interactive3dCount ?? 0} 3D questions`, detail: "Different targets on images and rotatable models. Labels unlock only after feedback.", count: examCount("dynamic-anatomy") },
     { id: "images", title: "All visual questions", scope: "Source diagrams + micrographs", detail: "Mix anatomy targets with respiratory histology identification", count: examCount("images") },
   ] : [] : exam === "july25" ? [
     { id: "histology", title: "Histology I", scope: "Core tissues + reproductive", detail: "Cells, basic tissues, skin, ovary, uterus and male reproductive histology", count: examCount("histology") },
@@ -1156,7 +1192,7 @@ export default function Home() {
       const item = examConfig[value];
       const summary = bank?.exams?.find((candidate) => candidate.id === value);
       return <button key={value} className={exam === value ? "active" : ""} onClick={() => chooseExam(value)} aria-pressed={exam === value}>
-        <span>{item.date}</span><b>{item.title}</b><small>{isTerm2Exam(value) ? value === "term2-respiratory" || value === "term2-physiology-practical" ? `${summary?.questionCount ?? "—"} source-based questions` : "Section ready · bank planned" : value === "aug22" ? `${summary?.questionCount ?? "—"} practical questions` : tab === "Final exam" ? value === "july29" ? `${summary?.finalExamBanks?.length ?? "—"} final banks` : `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
+        <span>{item.date}</span><b>{item.title}</b><small>{isTerm2Exam(value) ? summary?.questionCount ? `${summary.questionCount} source-based questions` : "Section ready · bank planned" : value === "aug22" ? `${summary?.questionCount ?? "—"} practical questions` : tab === "Final exam" ? value === "july29" ? `${summary?.finalExamBanks?.length ?? "—"} final banks` : `${summary?.finalExamQuestionCount ?? "—"} past-paper questions` : `${summary?.questionCount ?? "—"} focused questions`}</small>
       </button>;
     })}
   </div></div>;
@@ -1169,12 +1205,13 @@ export default function Home() {
     ["VIDEO LINKS", practicalCatalog.totals.videos, "YouTube demonstrations"],
     ["TO REPAIR", savedCount("wrong"), "Saved for this exam"],
   ] : isTerm2Exam(exam) ? [
-    ["EXAM BANK", selectedExam?.questionCount ?? "—", exam === "term2-respiratory" ? "Slides + books only" : "Not populated yet"],
+    ["STUDY BANK", selectedExam?.questionCount ?? "—", "Slides, books and verified media"],
     ["ANATOMY", examCount("anatomy"), "Text + image targets"],
     ["HISTOLOGY", examCount("histology"), "Junqueira + micrographs"],
     ["EMBRYOLOGY", examCount("embryology"), "Langman + E1/E2"],
     ["PHYSIOLOGY", examCount("physiology"), "Guyton · book-only"],
-    ["DYNAMIC IMAGES", selectedExam?.dynamicImageCount ?? 0, "Hover / tap after answering"],
+    ["INTERACTIVE 3D", selectedExam?.interactive3dCount ?? 0, "Rotate first · labels after answering"],
+    ["SOURCE IMAGES", selectedExam?.imageQuestionCount ?? 0, "Annotations after answering"],
     ["TO REPAIR", savedCount("wrong"), "Saved for this exam"],
   ] : exam === "july25" ? [
     ["FOCUSED BANK", selectedExam?.questionCount ?? "—", "This exam only"],
@@ -1218,9 +1255,9 @@ export default function Home() {
         <div className="brand"><span>MED//25</span><small>Term 1 + Term 2</small><small>July 25 · Aug 22 · Aug 25</small></div>
         <nav className="setup-nav" aria-label="Application sections">{tabs.filter((item) => {
           if (item === "3D Anatomy") return examHasAnatomy3d(exam);
-          if (item === "Study concepts") return exam === "term2-respiratory" || exam === "term2-physiology-practical";
+          if (item === "Study concepts") return exam === "term2-respiratory" || exam === "term2-physiology-practical" || Boolean(selectedCourseCatalog);
           return true;
-        }).map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{exam === "term2-physiology-practical" ? item === "Study concepts" ? "Practical lessons" : item === "Final exam" ? "Mock exam" : item === "Practical Atlas" ? "Figures & videos" : item : item}</button>)}</nav>
+        }).map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{isTerm2Exam(exam) && item === "Final exam" ? "Past exams" : exam === "term2-physiology-practical" ? item === "Study concepts" ? "Practical lessons" : item === "Practical Atlas" ? "Figures & videos" : item : item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
       </aside>
 
@@ -1247,19 +1284,27 @@ export default function Home() {
             {phase === "loading" && <p role="status" className="resp-session-alert">Preparing your concept practice…</p>}
             {sessionError && <p role="alert" className="session-error resp-session-alert">{sessionError}</p>}
           </>}
+          {tab === "Study concepts" && selectedCourseCatalog && <Term2CourseHub
+            catalog={selectedCourseCatalog}
+            attemptedIds={[...seenQuestionIds]}
+            repairIds={cleanIds([...examProgress.wrongIds, ...examProgress.flaggedIds])}
+            disabled={phase === "loading"}
+            onPractice={(ids, mode, limit) => void startSession("all", ids, { mode, limit })}
+          />}
           {tab === "Overview" && <>
             <p className="eyebrow">{isTerm2Exam(exam) ? "Term 2 exam" : "Priority exam"} · {selectedConfig.date}</p><h1>{selectedConfig.title}</h1>
             <p className="lede">{selectedConfig.focus}. Every sprint and topic below is restricted to this exam.</p>
             {isTerm2Exam(exam) && <Term2Guide exam={exam} compact />}
             {exam === "term2-physiology-practical" && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Practise the slide theory, station by station</b><small>{practicalCatalog.totals.questions} MCQs · {practicalCatalog.totals.theorySets} focused theory sets · {practicalCatalog.totals.imageQuestions} image questions · {practicalCatalog.totals.videos} demonstrations</small></span><strong>Open question sets →</strong></button>}
             {exam === "term2-respiratory" && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Start with the theory</b><small>{respiratoryConcepts.length} concepts · {respiratoryModules.length} reading modules · recall prompts, linked MCQs and a source audit</small></span><strong>Open study concepts →</strong></button>}
+            {selectedCourseCatalog && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Study the reconciled curriculum first</b><small>{selectedCourseCatalog.modules.length} modules · {new Set(selectedCourseCatalog.modules.flatMap((module) => module.questionIds)).size} linked MCQs · retrieval prompts and visible source boundaries</small></span><strong>Open study concepts →</strong></button>}
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
             {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].title} · {savedScopeLabel(resumableSession)}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>Up to {Math.min(sessionSize, collectionCount)} questions · repair → unseen → mastered</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${examLabel} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {examLabel} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}
 
           {tab === "Final exam" && (exam === "july25" || exam === "july29") && <FinalExam key={exam} exam={exam} bridgeUrl={bridgeUrl} />}
-          {tab === "Final exam" && isTerm2Exam(exam) && <section className="term2-mock"><p className="eyebrow">Term 2 · Practice exam · {selectedConfig.date}</p><h1>{selectedConfig.title} mock exam</h1><p className="lede">{exam === "term2-respiratory" || exam === "term2-physiology-practical" ? "Source-based practice, not an official past paper or a prediction of the exam. Answers and explanations stay hidden until you finish and grade." : "This exam section is ready. Its question bank has intentionally not been populated yet."}</p>{(exam === "term2-respiratory" || exam === "term2-physiology-practical") && <><div className="choice-row length-row">{(exam === "term2-physiology-practical" ? [18, 36, 54, 72] : [20, 40, 60, 100]).map((size) => <button key={size} className={sessionSize === size ? "active" : ""} onClick={() => setSessionSize(size)}>{size} questions</button>)}</div><p>{Math.min(sessionSize, examCount("all"))} questions, {exam === "term2-physiology-practical" ? "balanced across the nine practical stations" : "across anatomy, histology, embryology and physiology"}. Untimed; your session is saved on this device.</p><button className="primary" disabled={!examCount("all") || phase === "loading"} onClick={() => void startSession("all", undefined, { mode: "exam", limit: sessionSize })}>Start {selectedConfig.title} mock →</button>{sessionError && <p className="session-error">{sessionError}</p>}</>}<Term2Guide exam={exam} /></section>}
+          {tab === "Final exam" && isTerm2Exam(exam) && <section className="term2-mock"><p className="eyebrow">Term 2 · Past exams only</p><h1>No verified {selectedConfig.title} past-paper bank yet.</h1><p className="lede">This section is deliberately empty. Book-, slide-, transcript-, image-, and 3D-derived questions remain in learning and topic practice and are never presented as past-exam questions.</p><p>When you add genuine past papers later, they will be imported here with their original provenance and kept separate from the source-based study bank.</p><button onClick={() => setTab("Overview")}>Return to source-based practice →</button></section>}
           {tab === "Final exam" && exam === "aug22" && <div className="practical-atlas-empty"><span className="eyebrow">Aug 22 microscope practical</span><h1>Use one of the focused practical modes.</h1><p>The 15-slide collection mirrors the teacher list, the 110+ transfer lab tests unfamiliar internet fields, and the full atlas adds the broader 55-specimen bank and visual lessons. Open Overview, Topics, or Practical Atlas to choose.</p></div>}
 
           {tab === "Topics" && exam !== "term2-physiology-practical" && <>
@@ -1279,8 +1324,8 @@ export default function Home() {
             <LessonGuide exam="aug22" lessons={histologyPracticalLessons} onStartLesson={(lesson) => void startSession("histo-practical", (selectedExam?.collectionQuestionIds?.["histo-practical"] ?? []).filter((id) => id.startsWith(`${lesson.id}-`)))} />
           </div>}
 
-          {tab === "Practical Atlas" && exam === "term2-respiratory" && <section className="term2-mock"><p className="eyebrow">Respiratory · Interactive image lab</p><h1>One image. Many structures.</h1><p className="lede">Each question marks a different anatomical target. Answer first, then hover, tap or keyboard-focus any highlighted region to learn its name and relationship. The structure list also works on touchscreens.</p><button className="primary" disabled={!examCount("dynamic-anatomy")} onClick={() => void startSession("dynamic-anatomy")}>Start dynamic anatomy →</button><p>{selectedExam?.dynamicImageCount ?? 0} annotated source diagrams · {examCount("dynamic-anatomy")} target-and-option variants</p>{sessionError && <p className="session-error">{sessionError}</p>}</section>}
-          {tab === "Practical Atlas" && exam !== "aug22" && exam !== "term2-respiratory" && exam !== "term2-physiology-practical" && <div className="practical-atlas-empty"><span className="eyebrow">Image study</span><h1>{isTerm2Exam(exam) ? "The image bank is planned." : "This atlas belongs to Histology Practical."}</h1><p>{isTerm2Exam(exam) ? "Use Respiratory for dynamic anatomy, or Physiology Practical for procedure figures and videos." : "Switch to Term 1 · Aug 22 above to study and test the 55 microscope specimens."}</p></div>}
+          {tab === "Practical Atlas" && examHasAnatomy3d(exam) && <section className="term2-mock"><p className="eyebrow">{selectedConfig.title} · Multimodal anatomy lab</p><h1>Images and rotatable 3D targets.</h1><p className="lede">Inspect the highlighted structure before choosing. Source-image annotations and 3D labels remain hidden until feedback; closed-book test review waits until grading.</p><button className="primary" disabled={!examCount("dynamic-anatomy")} onClick={() => void startSession("dynamic-anatomy")}>Start dynamic anatomy →</button><p>{selectedExam?.dynamicImageCount ?? 0} annotated source diagrams · {selectedExam?.interactive3dCount ?? 0} 3D questions · {examCount("dynamic-anatomy")} total dynamic questions</p>{sessionError && <p className="session-error">{sessionError}</p>}</section>}
+          {tab === "Practical Atlas" && exam !== "aug22" && !examHasAnatomy3d(exam) && exam !== "term2-physiology-practical" && <div className="practical-atlas-empty"><span className="eyebrow">Image study</span><h1>{isTerm2Exam(exam) ? "Use the verified image questions in Topics." : "This atlas belongs to Histology Practical."}</h1><p>{isTerm2Exam(exam) ? "Only source figures with clear provenance are added; no decorative or invented scientific images are used." : "Switch to Term 1 · Aug 22 above to study and test the 55 microscope specimens."}</p></div>}
 
           {tab === "Visual Guide" && !isTerm2Exam(exam) && <LessonGuide key={exam} exam={exam} lessons={allLessons} />}
           {tab === "Visual Guide" && isTerm2Exam(exam) && exam !== "term2-physiology-practical" && <Term2Guide exam={exam} />}
@@ -1295,7 +1340,7 @@ export default function Home() {
               {examHistory.map((saved) => {
                 const score = Math.round((saved.correctCount / saved.questionIds.length) * 100);
                 return <article className="saved-result" key={saved.id}>
-                  <div className="saved-result-copy"><span>{formatSessionDate(saved.completedAt)} · {saved.studyMode === "exam" ? saved.exam === "term2-respiratory" ? "Practice mock" : "Chapter exam" : "Learn"}</span><h2>{savedScopeLabel(saved)} · {saved.questionIds.length} questions</h2><p>{saved.correctCount} correct · {saved.questionIds.length - saved.correctCount} to repair · {saved.flaggedCount} flagged</p></div>
+                  <div className="saved-result-copy"><span>{formatSessionDate(saved.completedAt)} · {saved.studyMode === "exam" ? isTerm2Exam(saved.exam) ? "Source-based test" : "Chapter exam" : "Learn"}</span><h2>{savedScopeLabel(saved)} · {saved.questionIds.length} questions</h2><p>{saved.correctCount} correct · {saved.questionIds.length - saved.correctCount} to repair · {saved.flaggedCount} flagged</p></div>
                   <strong>{score}%</strong>
                   <button className="primary" disabled={historyLoadingId === saved.id} onClick={() => void openSavedReview(saved)}>{historyLoadingId === saved.id ? "Opening…" : "Open full review →"}</button>
                 </article>;

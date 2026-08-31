@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import { anatomyValidationErrors } from "../src/lib/mcq/dynamic-anatomy.mjs";
+import { getAnatomyModule } from "../src/lib/anatomy3d/registry.ts";
 
 const root = resolve(import.meta.dirname, "..");
 const manifest = JSON.parse(readFileSync(resolve(root, "data/bank/manifest.json"), "utf8"));
@@ -17,6 +18,7 @@ let count = 0;
 let finalExamCount = 0;
 let downloadedFinalExamCount = 0;
 const downloadedPrompts = new Set();
+const normalizeLabel = (value) => value?.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 
 function validate(question, location, finalMetadata) {
   if (!validateSchema(question)) {
@@ -34,6 +36,25 @@ function validate(question, location, finalMetadata) {
     if (id !== question.correctOptionId && !question.distractorExplanations?.[id]) errors.push(`${location}: missing distractor explanation for ${id}`);
   }
   if ((question.kind === "image_single_best_answer" || question.kind === "dynamic_anatomy") && !question.media?.length) errors.push(`${location}: image question has no media`);
+  if (question.kind === "dynamic_anatomy_3d") {
+    const registration = getAnatomyModule(question.anatomy3d?.modelKey);
+    if (!registration) errors.push(`${location}: unknown 3D model ${question.anatomy3d?.modelKey ?? "(missing)"}`);
+    else {
+      const namesFor = (structure) => [structure.label, structure.shortLabel, ...(structure.aliases ?? [])].map(normalizeLabel);
+      const target = registration.manifest.structures.find((structure) => structure.id === question.anatomy3d?.structureId && structure.quizable !== false);
+      if (!target) errors.push(`${location}: unknown or non-quizable 3D structure ${question.anatomy3d?.structureId ?? "(missing)"}`);
+      else {
+        const keyedText = question.options?.find((option) => option.id === question.correctOptionId)?.text;
+        if (!namesFor(target).includes(normalizeLabel(keyedText))) errors.push(`${location}: keyed option does not name the highlighted 3D target`);
+      }
+      for (const option of question.options ?? []) {
+        if (!registration.manifest.structures.some((structure) => structure.quizable !== false && namesFor(structure).includes(normalizeLabel(option.text)))) {
+          errors.push(`${location}: 3D option is not a quizable structure in ${registration.manifest.modelKey}: ${option.text}`);
+        }
+      }
+    }
+    if (question.media?.length) errors.push(`${location}: 3D question must use the registered model rather than image media`);
+  }
   for (const error of anatomyValidationErrors(question)) errors.push(`${location}: ${error}`);
   for (const media of question.media ?? []) {
     const found = assetRoots.some((assetRoot) => existsSync(resolve(assetRoot, media.path)));

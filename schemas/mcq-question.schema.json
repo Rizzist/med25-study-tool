@@ -5,12 +5,26 @@
   "type": "object",
   "additionalProperties": false,
   "required": ["schemaVersion", "id", "revision", "status", "kind", "subject", "topic", "chapter", "difficulty", "prompt", "options", "correctOptionId", "explanation", "distractorExplanations", "learningObjective", "source", "tags", "examPriority", "qualityFlags"],
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "dynamic_anatomy_3d" } }, "required": ["kind"] },
+      "then": { "required": ["anatomy3d"], "not": { "anyOf": [{ "required": ["media"] }, { "required": ["anatomy"] }] } }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "dynamic_anatomy" } }, "required": ["kind"] },
+      "then": { "required": ["media", "anatomy"] }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "image_single_best_answer" } }, "required": ["kind"] },
+      "then": { "required": ["media"] }
+    }
+  ],
   "properties": {
     "schemaVersion": { "const": "1.0.0" },
     "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "minLength": 5 },
     "revision": { "type": "integer", "minimum": 1 },
     "status": { "enum": ["draft", "verified", "retired"] },
-    "kind": { "enum": ["single_best_answer", "image_single_best_answer", "dynamic_anatomy"] },
+    "kind": { "enum": ["single_best_answer", "image_single_best_answer", "dynamic_anatomy", "dynamic_anatomy_3d"] },
     "subject": { "enum": ["anatomy", "histology", "embryology", "physiology", "biochemistry"] },
     "topic": { "type": "string", "minLength": 1 },
     "subtopic": { "type": "string" },
@@ -24,8 +38,9 @@
     "distractorExplanations": { "type": "object", "additionalProperties": { "type": "string", "minLength": 3 } },
     "learningObjective": { "type": "string", "minLength": 5 },
     "source": { "$ref": "#/$defs/source" },
-    "media": { "type": "array", "items": { "$ref": "#/$defs/media" } },
+    "media": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/media" } },
     "anatomy": { "type": "object", "additionalProperties": false, "required": ["imageId", "targetRegionId", "variant"], "properties": { "imageId": { "type": "string", "minLength": 1 }, "targetRegionId": { "type": "string", "minLength": 1 }, "variant": { "type": "integer", "minimum": 1 } } },
+    "anatomy3d": { "type": "object", "additionalProperties": false, "required": ["modelKey", "structureId"], "properties": { "modelKey": { "type": "string", "minLength": 1 }, "structureId": { "type": "string", "minLength": 1 } } },
     "tags": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
     "examPriority": { "enum": ["core", "high", "standard"] },
     "qualityFlags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }

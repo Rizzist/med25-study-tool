@@ -1,0 +1,563 @@
+{
+  "examId": "term2-biochemistry",
+  "title": "Biochemistry II - Term 2 source-based study/practice",
+  "scopeNote": "Verified source-based practice for Chapters 8-12 and 15. It is not a past-paper or final-exam bank. Course and bounded book-extension modules are explicitly separated.",
+  "sources": [
+    {
+      "title": "Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf",
+      "kind": "handwritten-note PDF",
+      "locator": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Notes/Biochemistry Metabolism (Part 1) Notes - Hawraa.pdf, PDF pp. 1-7",
+      "status": "included; course evidence"
+    },
+    {
+      "title": "Biochemistry metabolism notes (pt 2) slides 27-80.pdf",
+      "kind": "reconstructed-note PDF",
+      "locator": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Notes/Biochemistry metabolism notes (pt 2) slides 27-80 .pdf, PDF pp. 1-6",
+      "status": "included; course evidence"
+    },
+    {
+      "title": "Carbohydrate metabolism lecture transcript",
+      "kind": "teacher recording transcript",
+      "locator": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Biochemistry Metabolism Recorded Lecture - 1h04m20s.transcript.txt, lines 1-460",
+      "status": "included; exact question-level ranges recorded"
+    },
+    {
+      "title": "Glycolysis recording transcripts",
+      "kind": "teacher recording transcripts",
+      "locator": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/IMG_4406.transcript.txt, lines 1-154; IMG_4407.transcript.txt, lines 1-138",
+      "status": "included; exact question-level ranges recorded"
+    },
+    {
+      "title": "Lipid metabolism transcripts 1.1-1.3",
+      "kind": "teacher recording transcripts",
+      "locator": "/Users/rizzist/Documents/MED SLIDES/TERM 2/03 Clinical Biochemistry/Recordings/Lipid metabolism Esmaeili 1.1.transcript.txt, lines 1-177; 1.2, lines 1-143; 1.3, lines 1-89",
+      "status": "included; exact question-level ranges recorded"
+    },
+    {
+      "title": "Lippincott's Illustrated Reviews: Biochemistry",
+      "kind": "local reference book PDF",
+      "locator": "/Users/rizzist/Documents/MED SCHOOL BOOKS/Biochemistry [Lippincott's Illustrated Reviews Series] Denise R. Ferrier PhD.pdf, 6th edition, local PDF pp. 176-275 and 326-339",
+      "status": "content authority and bounded extension; expanded through p. 275 to cover the full Chapter 12"
+    }
+  ],
+  "modules": [
+    {
+      "id": "biochem2-ch08-course",
+      "subject": "biochemistry",
+      "title": "Metabolism and glycolysis",
+      "summary": "Concepts explicitly evidenced in the local Term 2 notes/transcripts.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 8.",
+      "scope": "course",
+      "keyPoints": [
+        "A metabolic pathway is a multistep sequence of enzymatic reactions in which the product of one reaction serves as the substrate for the next; together, they form an organized, directional series of chemical changes.",
+        "Catabolic pathways are degradative processes that break down complex molecules to simpler ones while capturing energy; they degrade proteins to amino acids, polysaccharides to monosaccharides, and lipids (triacylglycerols) to free fatty acids and glycerol.",
+        "Anabolic pathways are synthetic processes that build complex end products from simple precursors and require energy; an example is synthesis of glycogen from glucose.",
+        "Glycolysis is the universal pathway for the oxidation of glucose to pyruvate or lactate, providing ATP and intermediates; almost all sugars from diet or catabolism are funneled into glycolysis as or via glucose.",
+        "Glycolysis itself does not consume oxygen. With functioning mitochondria and adequate oxygen for respiratory NADH oxidation, pyruvate is the principal end product rather than lactate."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which feature best defines a metabolic pathway?",
+          "answer": "The product of one enzyme-catalyzed reaction becomes the substrate for the next."
+        },
+        {
+          "prompt": "Which change is catabolic?",
+          "answer": "Hydrolysis of triacylglycerol to fatty acids and glycerol."
+        },
+        {
+          "prompt": "Which process is anabolic?",
+          "answer": "Formation of glycogen from glucose with an energy input."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch08-001-v1",
+        "term2-biochem-ch08-002-v1",
+        "term2-biochem-ch08-003-v1",
+        "term2-biochem-ch08-008-v1",
+        "term2-biochem-ch08-009-v1",
+        "term2-biochem-ch08-012-v1",
+        "term2-biochem-ch08-015-v1",
+        "term2-biochem-ch08-016-v1",
+        "term2-biochem-ch08-017-v1",
+        "term2-biochem-ch08-019-v1",
+        "term2-biochem-ch08-023-v1",
+        "term2-biochem-ch08-024-v1",
+        "term2-biochem-ch08-027-v1",
+        "term2-biochem-ch08-028-v1",
+        "term2-biochem-ch08-029-v1",
+        "term2-biochem-ch08-030-v1",
+        "term2-biochem-ch08-031-v1",
+        "term2-biochem-ch08-033-v1",
+        "term2-biochem-ch08-034-v1",
+        "term2-biochem-ch08-037-v1",
+        "term2-biochem-ch08-039-v1",
+        "term2-biochem-ch08-040-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch08-extension",
+      "subject": "biochemistry",
+      "title": "Metabolism and glycolysis - clinical/book extension",
+      "summary": "Bounded Lippincott 6e extensions of locally taught topics; not represented as lecture detail.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 8.",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Cycles are pathways that regenerate one of their own components so that the sequence can operate in a cyclic manner, for example, the tricarboxylic acid cycle.",
+        "Catabolic pathways are typically oxidative and require oxidized coenzymes such as NAD plus and FAD to accept electrons.",
+        "Anabolic reactions are endergonic and require energy input, usually from ATP hydrolysis, and often involve reductions using electron donors such as NADPH.",
+        "Catabolism is convergent: many different molecules are broken down to a few common products such as acetyl CoA. Anabolism is divergent: a few precursors are used to synthesize a wide variety of complex products.",
+        "Anaerobic glycolysis is conversion of glucose to lactate with net ATP production but without mitochondrial oxidative phosphorylation; it occurs in tissues lacking mitochondria, such as red blood cells, and in hypoxic conditions such as ischemic tissues or exercising muscle."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which property distinguishes a metabolic cycle from a linear pathway?",
+          "answer": "A cycle regenerates one of its own intermediates."
+        },
+        {
+          "prompt": "During oxidative catabolism, which cofactors commonly accept electrons?",
+          "answer": "NAD+ and FAD."
+        },
+        {
+          "prompt": "Which pair best characterizes many anabolic reactions?",
+          "answer": "ATP consumption and reduction using NADPH."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch08-004-v1",
+        "term2-biochem-ch08-005-v1",
+        "term2-biochem-ch08-006-v1",
+        "term2-biochem-ch08-007-v1",
+        "term2-biochem-ch08-010-v1",
+        "term2-biochem-ch08-011-v1",
+        "term2-biochem-ch08-013-v1",
+        "term2-biochem-ch08-014-v1",
+        "term2-biochem-ch08-018-v1",
+        "term2-biochem-ch08-020-v1",
+        "term2-biochem-ch08-021-v1",
+        "term2-biochem-ch08-022-v1",
+        "term2-biochem-ch08-025-v1",
+        "term2-biochem-ch08-026-v1",
+        "term2-biochem-ch08-032-v1",
+        "term2-biochem-ch08-035-v1",
+        "term2-biochem-ch08-036-v1",
+        "term2-biochem-ch08-038-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch09-course",
+      "subject": "biochemistry",
+      "title": "TCA cycle and pyruvate dehydrogenase",
+      "summary": "Concepts explicitly evidenced in the local Term 2 notes/transcripts.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 9.",
+      "scope": "course",
+      "keyPoints": [
+        "Pyruvate enters the mitochondrial matrix, where PDH converts it to acetyl-CoA.",
+        "Citrate synthase begins the cycle by forming citrate from acetyl-CoA and oxaloacetate.",
+        "Succinyl-CoA synthetase captures thioester energy as GTP while producing succinate.",
+        "Succinate dehydrogenase is embedded in the inner mitochondrial membrane and transfers FADH2-derived electrons to coenzyme Q.",
+        "Fumarase stereospecifically adds water across fumarate's double bond to form L-malate."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Where does mammalian pyruvate dehydrogenase operate?",
+          "answer": "Mitochondrial matrix."
+        },
+        {
+          "prompt": "Which enzyme condenses acetyl-CoA with oxaloacetate?",
+          "answer": "Citrate synthase."
+        },
+        {
+          "prompt": "Which TCA reaction directly produces GTP?",
+          "answer": "Succinyl-CoA to succinate."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch09-002-v1",
+        "term2-biochem-ch09-006-v1",
+        "term2-biochem-ch09-009-v1",
+        "term2-biochem-ch09-010-v1",
+        "term2-biochem-ch09-011-v1",
+        "term2-biochem-ch09-013-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch09-extension",
+      "subject": "biochemistry",
+      "title": "TCA cycle and pyruvate dehydrogenase - clinical/book extension",
+      "summary": "Bounded Lippincott 6e extensions of locally taught topics; not represented as lecture detail.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 9.",
+      "scope": "book-extension",
+      "keyPoints": [
+        "PDH links glycolysis to the TCA cycle by producing acetyl-CoA while reducing NAD+ and releasing CO2.",
+        "The three-enzyme PDH complex requires thiamine pyrophosphate, lipoic acid, coenzyme A, FAD, and NAD+.",
+        "High-energy signals activate PDH kinase, and phosphorylation switches PDH off.",
+        "Calcium activates PDH phosphatase, converting PDH to its active dephosphorylated form.",
+        "Isocitrate dehydrogenase responds to low-energy and contraction signals and produces NADH and CO2."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Oxidative decarboxylation of pyruvate produces:",
+          "answer": "Acetyl-CoA, NADH, and CO2."
+        },
+        {
+          "prompt": "Which set contains all five PDH coenzymes?",
+          "answer": "TPP, lipoate, CoA, FAD, and NAD+."
+        },
+        {
+          "prompt": "PDH kinase phosphorylates E1. What is the immediate effect?",
+          "answer": "PDH becomes inactive."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch09-001-v1",
+        "term2-biochem-ch09-003-v1",
+        "term2-biochem-ch09-004-v1",
+        "term2-biochem-ch09-005-v1",
+        "term2-biochem-ch09-007-v1",
+        "term2-biochem-ch09-008-v1",
+        "term2-biochem-ch09-012-v1",
+        "term2-biochem-ch09-014-v1",
+        "term2-biochem-ch09-015-v1",
+        "term2-biochem-ch09-016-v1",
+        "term2-biochem-ch09-017-v1",
+        "term2-biochem-ch09-018-v1",
+        "term2-biochem-ch09-019-v1",
+        "term2-biochem-ch09-020-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch10-course",
+      "subject": "biochemistry",
+      "title": "Gluconeogenesis",
+      "summary": "Concepts explicitly evidenced in the local Term 2 notes/transcripts.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 10.",
+      "scope": "course",
+      "keyPoints": [
+        "The liver, and later kidney, synthesize glucose for tissues such as RBCs and parts of the brain.",
+        "These precursors enter as pyruvate, DHAP, or TCA intermediates.",
+        "Mitochondrial pyruvate carboxylase uses ATP, bicarbonate, and biotin.",
+        "PEPCK uses GTP and releases CO2 while forming phosphoenolpyruvate.",
+        "The enzyme hydrolyzes fructose 1,6-bisphosphate to fructose 6-phosphate."
+      ],
+      "retrieval": [
+        {
+          "prompt": "During fasting, the principal purpose of hepatic gluconeogenesis is to:",
+          "answer": "Maintain plasma glucose for glucose-dependent tissues."
+        },
+        {
+          "prompt": "Which set contains major human gluconeogenic precursors?",
+          "answer": "Lactate, glycerol, and glucogenic amino acids."
+        },
+        {
+          "prompt": "Which enzyme catalyzes the first reaction in the pyruvate-to-PEP bypass?",
+          "answer": "Pyruvate carboxylase."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch10-001-v1",
+        "term2-biochem-ch10-003-v1",
+        "term2-biochem-ch10-004-v1",
+        "term2-biochem-ch10-005-v1",
+        "term2-biochem-ch10-006-v1",
+        "term2-biochem-ch10-007-v1",
+        "term2-biochem-ch10-009-v1",
+        "term2-biochem-ch10-014-v1",
+        "term2-biochem-ch10-016-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch10-extension",
+      "subject": "biochemistry",
+      "title": "Gluconeogenesis - clinical/book extension",
+      "summary": "Bounded Lippincott 6e extensions of locally taught topics; not represented as lecture detail.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 10.",
+      "scope": "book-extension",
+      "keyPoints": [
+        "The liver dominates early fasting, while renal cortical production becomes increasingly important during prolonged fasting.",
+        "Muscle retains glucose 6-phosphate for its own glycolysis rather than exporting glucose.",
+        "This directs pyruvate toward oxaloacetate and glucose rather than further acetyl-CoA production.",
+        "High AMP signals low energy and suppresses the energy-consuming gluconeogenic pathway.",
+        "Fructose 2,6-bisphosphate favors glycolysis and opposes gluconeogenesis."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which organs become the major gluconeogenic sites during prolonged fasting?",
+          "answer": "Liver and kidney cortex."
+        },
+        {
+          "prompt": "Why can skeletal muscle not release glycogen-derived glucose into blood?",
+          "answer": "It lacks glucose 6-phosphatase."
+        },
+        {
+          "prompt": "During fasting, high mitochondrial acetyl-CoA redirects pyruvate by:",
+          "answer": "Activating pyruvate carboxylase and inhibiting PDH."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch10-002-v1",
+        "term2-biochem-ch10-008-v1",
+        "term2-biochem-ch10-010-v1",
+        "term2-biochem-ch10-011-v1",
+        "term2-biochem-ch10-012-v1",
+        "term2-biochem-ch10-013-v1",
+        "term2-biochem-ch10-015-v1",
+        "term2-biochem-ch10-017-v1",
+        "term2-biochem-ch10-019-v1",
+        "term2-biochem-ch10-020-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch11-course",
+      "subject": "biochemistry",
+      "title": "Glycogen metabolism",
+      "summary": "Concepts explicitly evidenced in the local Term 2 notes/transcripts.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 11.",
+      "scope": "course",
+      "keyPoints": [
+        "Liver can export glucose, whereas muscle uses its glycogen locally for ATP production.",
+        "UDP-glucose donates glucosyl residues to the growing nonreducing ends of glycogen.",
+        "Phosphorolysis conserves the bond energy in a phosphorylated glucose product."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which statement correctly contrasts liver and muscle glycogen?",
+          "answer": "Liver glycogen supports blood glucose; muscle glycogen fuels contraction."
+        },
+        {
+          "prompt": "What is the activated glucosyl donor for glycogen synthase?",
+          "answer": "UDP-glucose."
+        },
+        {
+          "prompt": "Glycogen phosphorylase cleaves alpha-1,4 bonds to release:",
+          "answer": "Glucose 1-phosphate."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch11-001-v1",
+        "term2-biochem-ch11-003-v1",
+        "term2-biochem-ch11-006-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch11-extension",
+      "subject": "biochemistry",
+      "title": "Glycogen metabolism - clinical/book extension",
+      "summary": "Bounded Lippincott 6e extensions of locally taught topics; not represented as lecture detail.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 11.",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Glycogen synthase cannot start a new particle without the glycogenin primer.",
+        "Glycogen synthase elongates linear chains at nonreducing ends through alpha-1,4 linkages.",
+        "Branching increases solubility and creates more nonreducing ends for rapid metabolism.",
+        "PLP, derived from vitamin B6, participates in the phosphorylase reaction.",
+        "The transferase shifts residues, and the glucosidase releases the branch-point glucose."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which protein autoglucosylates to prime a new glycogen particle?",
+          "answer": "Glycogenin."
+        },
+        {
+          "prompt": "Glycogen synthase forms which linkage?",
+          "answer": "Alpha-1,4 glycosidic."
+        },
+        {
+          "prompt": "What does glycogen branching enzyme do?",
+          "answer": "Transfers a chain segment to create an alpha-1,6 linkage."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch11-002-v1",
+        "term2-biochem-ch11-004-v1",
+        "term2-biochem-ch11-005-v1",
+        "term2-biochem-ch11-007-v1",
+        "term2-biochem-ch11-008-v1",
+        "term2-biochem-ch11-009-v1",
+        "term2-biochem-ch11-010-v1",
+        "term2-biochem-ch11-011-v1",
+        "term2-biochem-ch11-012-v1",
+        "term2-biochem-ch11-013-v1",
+        "term2-biochem-ch11-014-v1",
+        "term2-biochem-ch11-015-v1",
+        "term2-biochem-ch11-016-v1",
+        "term2-biochem-ch11-017-v1",
+        "term2-biochem-ch11-018-v1",
+        "term2-biochem-ch11-019-v1",
+        "term2-biochem-ch11-020-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch12-course",
+      "subject": "biochemistry",
+      "title": "Monosaccharides and disaccharides",
+      "summary": "Concepts explicitly evidenced in the local Term 2 notes/transcripts.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 12.",
+      "scope": "course",
+      "keyPoints": [
+        "Hepatic fructokinase rapidly traps dietary fructose as fructose 1-phosphate.",
+        "Galactokinase traps galactose using ATP as the first step of the Leloir pathway.",
+        "The epimerase permits galactose carbon to enter the glucose pool and supplies UDP-galactose for biosynthesis."
+      ],
+      "retrieval": [
+        {
+          "prompt": "In liver, fructose is converted to fructose 1-phosphate by:",
+          "answer": "Fructokinase."
+        },
+        {
+          "prompt": "Galactokinase converts galactose to:",
+          "answer": "Galactose 1-phosphate."
+        },
+        {
+          "prompt": "Which enzyme interconverts UDP-galactose and UDP-glucose?",
+          "answer": "UDP-hexose 4-epimerase."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch12-001-v1",
+        "term2-biochem-ch12-006-v1",
+        "term2-biochem-ch12-010-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch12-extension",
+      "subject": "biochemistry",
+      "title": "Monosaccharides and disaccharides - clinical/book extension",
+      "summary": "Bounded Lippincott 6e extensions of locally taught topics; not represented as lecture detail.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 12.",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Essential fructosuria is benign because hexokinase can metabolize part of the fructose load.",
+        "Aldolase B deficiency traps phosphate as fructose 1-phosphate after fructose ingestion.",
+        "Phosphate depletion and impaired hepatic glucose production follow fructose exposure.",
+        "Bypassing PFK-1 permits relatively unregulated production of triose phosphates and acetyl-CoA.",
+        "GALT deficiency causes galactose 1-phosphate accumulation, liver injury, cataracts, and infection risk."
+      ],
+      "retrieval": [
+        {
+          "prompt": "An asymptomatic child has a reducing sugar in urine after fruit intake but normal blood glucose. Which disorder is most likely?",
+          "answer": "Essential fructosuria."
+        },
+        {
+          "prompt": "Vomiting and hypoglycemia begin after fruit juice is introduced to an infant. Which enzyme is deficient?",
+          "answer": "Aldolase B."
+        },
+        {
+          "prompt": "What causes hypoglycemia in hereditary fructose intolerance?",
+          "answer": "Fructose 1-phosphate trapping depletes phosphate/ATP and impairs glycogenolysis and gluconeogenesis."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch12-002-v1",
+        "term2-biochem-ch12-003-v1",
+        "term2-biochem-ch12-004-v1",
+        "term2-biochem-ch12-005-v1",
+        "term2-biochem-ch12-007-v1",
+        "term2-biochem-ch12-008-v1",
+        "term2-biochem-ch12-011-v1",
+        "term2-biochem-ch12-012-v1",
+        "term2-biochem-ch12-014-v1",
+        "term2-biochem-ch12-015-v1",
+        "term2-biochem-ch12-016-v1",
+        "term2-biochem-ch12-017-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch15-course",
+      "subject": "biochemistry",
+      "title": "Dietary lipid metabolism",
+      "summary": "Concepts explicitly evidenced in the local Term 2 notes/transcripts.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 15.",
+      "scope": "course",
+      "keyPoints": [
+        "Lipids are a heterogeneous group of water-insoluble (hydrophobic) organic molecules. Because they’re insoluble in aqueous solutions, they’re compartmentalized (membranes, lipid droplets) or transported with proteins (lipoproteins, albumin).",
+        "The hydrophobic character of lipids permits membranes to form barriers between aqueous compartments.",
+        "Atherosclerosis, diabetes, obesity.",
+        "Cholesterol, cholesteryl esters, phospholipids, unesterified (“free”) fatty acids.",
+        "In the stomach; initiated by lingual lipase (from glands at back of tongue)."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Why must many lipids be compartmentalized or carried by proteins in blood?",
+          "answer": "They are poorly soluble in water."
+        },
+        {
+          "prompt": "Which property lets membrane lipids create a barrier between aqueous compartments?",
+          "answer": "Their predominant hydrophobic character."
+        },
+        {
+          "prompt": "Which set contains disorders associated with disturbed lipid metabolism in the course material?",
+          "answer": "Atherosclerosis, diabetes, and obesity."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch15-001-v1",
+        "term2-biochem-ch15-002-v1",
+        "term2-biochem-ch15-003-v1",
+        "term2-biochem-ch15-005-v1",
+        "term2-biochem-ch15-006-v1",
+        "term2-biochem-ch15-007-v1",
+        "term2-biochem-ch15-008-v1",
+        "term2-biochem-ch15-009-v1",
+        "term2-biochem-ch15-010-v1",
+        "term2-biochem-ch15-011-v1",
+        "term2-biochem-ch15-012-v1",
+        "term2-biochem-ch15-013-v1",
+        "term2-biochem-ch15-014-v1",
+        "term2-biochem-ch15-015-v1",
+        "term2-biochem-ch15-016-v1",
+        "term2-biochem-ch15-017-v1",
+        "term2-biochem-ch15-018-v1",
+        "term2-biochem-ch15-019-v1",
+        "term2-biochem-ch15-020-v1",
+        "term2-biochem-ch15-021-v1",
+        "term2-biochem-ch15-022-v1",
+        "term2-biochem-ch15-023-v1",
+        "term2-biochem-ch15-024-v1",
+        "term2-biochem-ch15-025-v1",
+        "term2-biochem-ch15-026-v1",
+        "term2-biochem-ch15-027-v1",
+        "term2-biochem-ch15-028-v1",
+        "term2-biochem-ch15-029-v1",
+        "term2-biochem-ch15-030-v1",
+        "term2-biochem-ch15-031-v1",
+        "term2-biochem-ch15-032-v1",
+        "term2-biochem-ch15-033-v1",
+        "term2-biochem-ch15-034-v1",
+        "term2-biochem-ch15-035-v1",
+        "term2-biochem-ch15-036-v1",
+        "term2-biochem-ch15-037-v1",
+        "term2-biochem-ch15-038-v1",
+        "term2-biochem-ch15-039-v1",
+        "term2-biochem-ch15-040-v1",
+        "term2-biochem-ch15-041-v1",
+        "term2-biochem-ch15-042-v1",
+        "term2-biochem-ch15-043-v1",
+        "term2-biochem-ch15-044-v1"
+      ]
+    },
+    {
+      "id": "biochem2-ch15-extension",
+      "subject": "biochemistry",
+      "title": "Dietary lipid metabolism - clinical/book extension",
+      "summary": "Bounded Lippincott 6e extensions of locally taught topics; not represented as lecture detail.",
+      "sourceLocator": "Question-level exact local PDF pages and course line/page locators are stored in each question; Lippincott Chapter 15.",
+      "scope": "book-extension",
+      "keyPoints": [
+        "Lippincott 6e gives an average intake of about 81 g/day and identifies TAG as more than 90% of dietary lipid. The local lecture says about 78 g/day, so this exact number is explicitly labeled as a book extension."
+      ],
+      "retrieval": [
+        {
+          "prompt": "Which quantitative description is given in Lippincott 6e for average U.S. adult dietary lipid intake?",
+          "answer": "About 81 g/day, with over 90% as triacylglycerol."
+        }
+      ],
+      "questionIds": [
+        "term2-biochem-ch15-004-v1"
+      ]
+    }
+  ],
+  "unresolved": [
+    "The original slide deck implied by slides 27-80 was not found; reconstructed-note PDF pages and transcript lines are used.",
+    "No clean, self-contained local course figure supported a fair unlabeled visual MCQ; media question count is intentionally zero."
+  ]
+}

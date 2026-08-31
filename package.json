@@ -9,7 +9,7 @@
     "dev": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/build-embedded-bank.mjs && WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
     "dev:local": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/build-respiratory-concepts.mjs && node scripts/dev-local.mjs",
     "bridge": "node scripts/build-biochemistry-core-concepts.mjs && node scripts/build-respiratory-concepts.mjs && node scripts/codex-bridge.mjs",
-    "bank:validate": "node scripts/validate-bank.mjs && node scripts/build-respiratory-concepts.mjs --check && node scripts/build-physiology-practical.mjs --check",
+    "bank:validate": "node scripts/validate-bank.mjs && node scripts/validate-term2-courses.mjs && node scripts/build-respiratory-concepts.mjs --check && node scripts/build-physiology-practical.mjs --check",
     "physiology:generate": "node scripts/build-physiology-practical.mjs",
     "physiology:validate": "node scripts/build-physiology-practical.mjs --check",
     "lessons:validate": "node scripts/validate-lessons.mjs",

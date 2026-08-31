@@ -10,7 +10,8 @@ import type { MCQQuestion } from "@/src/lib/mcq/types";
 import { selectCoverageSprint } from "@/src/lib/mcq/sprint-selection.mjs";
 import { selectRespiratorySprint } from "@/src/lib/mcq/respiratory-selection.mjs";
 import { selectPracticalSprint } from "@/src/lib/mcq/practical-selection.mjs";
-import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
+import { selectTerm2Sprint } from "@/src/lib/mcq/term2-selection.mjs";
+import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, isInteractive3dQuestion, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
 
 export { isExamId };
 export type { ExamId };
@@ -327,7 +328,7 @@ export function matchesCollection(question: MCQQuestion, collection: CollectionI
     return question.subject === collection;
   }
   if (collection === "images") return isImageQuestion(question);
-  if (collection === "dynamic-anatomy") return question.kind === "dynamic_anatomy";
+  if (collection === "dynamic-anatomy") return question.kind === "dynamic_anatomy" || question.kind === "dynamic_anatomy_3d";
   if (collection === "stains") return (question.tags ?? []).some((tag) => tag.toLowerCase().includes("stain"));
   if (collection === "histo-identification") return (question.tags ?? []).includes("histo-identification-15");
   if (collection === "histo-transfer") return (question.tags ?? []).includes("histo-transfer-100");
@@ -397,6 +398,7 @@ export function bankSummary() {
         })),
       imageQuestionCount: questions.filter(isImageQuestion).length,
       dynamicImageCount: new Set(questions.filter((question) => question.kind === "dynamic_anatomy").map((question) => question.anatomy?.imageId)).size,
+      interactive3dCount: questions.filter(isInteractive3dQuestion).length,
       collectionCounts: Object.fromEntries(COLLECTIONS.map((collection) => [
         collection,
         questions.filter((question) => matchesCollection(question, collection)).length,
@@ -492,6 +494,7 @@ export function coverageQuestionSet(body: unknown) {
   const selection = exam === "term2-respiratory"
     ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
     : exam === "term2-physiology-practical" ? selectPracticalSprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
+    : isTerm2Exam(exam) ? selectTerm2Sprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
     : selectCoverageSprint(filtered, { limit, seenIds, repairIds });
 
   return {
@@ -519,7 +522,7 @@ export function questionSetByIds(body: unknown) {
     .filter((question) => idSet.has(question.id) && matchesExam(question, exam));
   const byId = new Map(filtered.map((question) => [question.id, question]));
   const ordered = input.prioritize === true
-    ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : selectCoverageSprint)(filtered, {
+    ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : isTerm2Exam(exam) ? selectTerm2Sprint : selectCoverageSprint)(filtered, {
       limit,
       seenIds: cleanIds(input.seenIds, 5_000),
       repairIds: cleanIds(input.repairIds, 5_000),
