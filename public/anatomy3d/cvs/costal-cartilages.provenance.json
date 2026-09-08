@@ -1,0 +1,1010 @@
+{
+  "source": {
+    "title": "BodyParts3D 4.3",
+    "author": "Database Center for Life Science (DBCLS)",
+    "license": "CC-BY-SA 2.1 Japan",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+    "repository": "https://github.com/olivercase/body_parts_3d_api",
+    "revision": "4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b"
+  },
+  "output": {
+    "objPath": "costal-cartilages.obj",
+    "sha256": "45724a19132bc20f1d42b588962e7ba41e99c90f545290dc53638e6aabfff2fc",
+    "vertices": 28263,
+    "faces": 25920,
+    "objects": 20,
+    "changes": "Original vertices and polygon topology retained; axis permutation (X,Z,-Y), one uniform scale and translation for the entire assembly, face-index offsets; source normals/material references omitted so loader computes surface normals."
+  },
+  "transform": {
+    "scale": 0.004724285607564051,
+    "translate": [
+      0.0013743961542148101,
+      -5.595448920462774,
+      -0.505708100154971
+    ]
+  },
+  "calibration": [
+    {
+      "id": "manubrium",
+      "targetVertices": 669,
+      "medianNearestVertexDistance": 0.000057842442234832636,
+      "p95NearestVertexDistance": 0.00007921308023581386,
+      "maxNearestVertexDistance": 0.00009152753983638644,
+      "rms": 0.000057548043042541345,
+      "transformedSourceBounds": {
+        "min": [
+          -0.12831621991607275,
+          0.4529122143332538,
+          0.11223318160001439
+        ],
+        "max": [
+          0.13105461879616573,
+          0.6658830095222408,
+          0.33801623935671554
+        ]
+      },
+      "targetBounds": {
+        "min": [
+          -0.1282910704612732,
+          0.45293372869491577,
+          0.11291879415512085
+        ],
+        "max": [
+          0.13101345300674438,
+          0.6654080748558044,
+          0.3380280137062073
+        ]
+      }
+    },
+    {
+      "id": "sternal-body",
+      "targetVertices": 1828,
+      "medianNearestVertexDistance": 0.00005738509515358237,
+      "p95NearestVertexDistance": 0.00007916796792363378,
+      "maxNearestVertexDistance": 0.00009657662434294727,
+      "rms": 0.000057697348972878576,
+      "transformedSourceBounds": {
+        "min": [
+          -0.11018913603984949,
+          -0.022445403499840033,
+          0.2745785322183454
+        ],
+        "max": [
+          0.11454749245477619,
+          0.4971787704761299,
+          0.5045756527369938
+        ]
+      },
+      "targetBounds": {
+        "min": [
+          -0.10939675569534302,
+          -0.022438645362854004,
+          0.2749696373939514
+        ],
+        "max": [
+          0.11455333232879639,
+          0.4972136616706848,
+          0.504483699798584
+        ]
+      }
+    }
+  ],
+  "landmarks": {
+    "sternalAngle": {
+      "x": 0.0013611912727355957,
+      "y": 0.4750736951828003,
+      "existingZ": 0.509483699798584,
+      "sourceSurface": [
+        0.0013611912727355957,
+        0.4750736951828003,
+        0.3455637068764057
+      ]
+    },
+    "jugularNotch": {
+      "x": 0.0013611912727355957,
+      "topY": 0.6654080748558044,
+      "samples": [
+        {
+          "dy": 0.005,
+          "point": null
+        },
+        {
+          "dy": 0.01,
+          "point": null
+        },
+        {
+          "dy": 0.02,
+          "point": [
+            0.0013611912727355957,
+            0.6454080748558044,
+            0.17603548467622798
+          ]
+        },
+        {
+          "dy": 0.03,
+          "point": [
+            0.0013611912727355957,
+            0.6354080748558044,
+            0.20021112934817964
+          ]
+        },
+        {
+          "dy": 0.04,
+          "point": [
+            0.0013611912727355957,
+            0.6254080748558044,
+            0.2244690090033028
+          ]
+        },
+        {
+          "dy": 0.05,
+          "point": [
+            0.0013611912727355957,
+            0.6154080748558044,
+            0.24103354759490947
+          ]
+        }
+      ]
+    }
+  },
+  "interchondralConnections": [
+    {
+      "side": "left",
+      "level": 8,
+      "superiorLevel": 7,
+      "minVertexToSurfaceDistance": 0.0000573298334540557
+    },
+    {
+      "side": "left",
+      "level": 9,
+      "superiorLevel": 8,
+      "minVertexToSurfaceDistance": 0
+    },
+    {
+      "side": "left",
+      "level": 10,
+      "superiorLevel": 9,
+      "minVertexToSurfaceDistance": 0
+    },
+    {
+      "side": "right",
+      "level": 8,
+      "superiorLevel": 7,
+      "minVertexToSurfaceDistance": 0.000044836336106867594
+    },
+    {
+      "side": "right",
+      "level": 9,
+      "superiorLevel": 8,
+      "minVertexToSurfaceDistance": 0
+    },
+    {
+      "side": "right",
+      "level": 10,
+      "superiorLevel": 9,
+      "minVertexToSurfaceDistance": 0
+    }
+  ],
+  "meshes": [
+    {
+      "fjId": "FJ3239",
+      "representationId": "BP21373",
+      "fmaId": "FMA8005",
+      "side": "left",
+      "level": 1,
+      "label": "Left first costal cartilage",
+      "sourcePath": "meshes/FJ3239_BP21373_FMA8005_Left first costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3239_BP21373_FMA8005_Left%20first%20costal%20cartilage.obj",
+      "githubBlobSha": "a57b69de65a2c8db294252bb22dddaffba0721c2",
+      "sha256": "5ae7390557de025f0be9a3044664d2996e442013688e27dfc18e323001eb32fb",
+      "bytes": 42423,
+      "vertices": 418,
+      "faces": 642,
+      "rawBounds": {
+        "min": [
+          19.4952,
+          -150.812,
+          1296.87
+        ],
+        "max": [
+          56.1953,
+          -122.324,
+          1320.25
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.0934752889307975,
+          0.5313353554188165,
+          0.0721854125046939
+        ],
+        "max": [
+          0.26685704315695896,
+          0.641789152923665,
+          0.2067708608929787
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.00045645512234068324,
+      "minSurfaceDistanceToRibs": 0.000010620140346474229
+    },
+    {
+      "fjId": "FJ3242",
+      "representationId": "BP22752",
+      "fmaId": "FMA8031",
+      "side": "left",
+      "level": 2,
+      "label": "Left second costal cartilage",
+      "sourcePath": "meshes/FJ3242_BP22752_FMA8031_Left second costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3242_BP22752_FMA8031_Left%20second%20costal%20cartilage.obj",
+      "githubBlobSha": "99fcbdc6252172c352cb8fbac4d6d45903b202c0",
+      "sha256": "33ec240cf5e4f5dd11a5ee3b19ce2d026baa207650729be12134852a64b6a732",
+      "bytes": 35836,
+      "vertices": 330,
+      "faces": 588,
+      "rawBounds": {
+        "min": [
+          10.2025,
+          -178.245,
+          1270.17
+        ],
+        "max": [
+          48.0573,
+          -157.748,
+          1288.01
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.049573920065387043,
+          0.4051969296968574,
+          0.23953850586704284
+        ],
+        "max": [
+          0.22841080688260268,
+          0.4894781849358001,
+          0.33637218796528323
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.0000020819812981134425,
+      "minSurfaceDistanceToRibs": 0.00008765696149479252
+    },
+    {
+      "fjId": "FJ3245",
+      "representationId": "BP22750",
+      "fmaId": "FMA8058",
+      "side": "left",
+      "level": 3,
+      "label": "Left third costal cartilage",
+      "sourcePath": "meshes/FJ3245_BP22750_FMA8058_Left third costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3245_BP22750_FMA8058_Left%20third%20costal%20cartilage.obj",
+      "githubBlobSha": "37fd97ad36c4d0fb86e137bd692031c96ca60301",
+      "sha256": "bf21ca805673e90d2fa277bd369b1f9b427de0ad7aa8291144ec7248b3b689fe",
+      "bytes": 36238,
+      "vertices": 328,
+      "faces": 604,
+      "rawBounds": {
+        "min": [
+          13.0945,
+          -190.074,
+          1242.4
+        ],
+        "max": [
+          50.7226,
+          -171.438,
+          1259.99
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.06323655404246228,
+          0.27400351837480397,
+          0.30421397583459475
+        ],
+        "max": [
+          0.24100244531244314,
+          0.3571037022118553,
+          0.3922557624171584
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.000035382674025581254,
+      "minSurfaceDistanceToRibs": 0.00008403519781309187
+    },
+    {
+      "fjId": "FJ3248",
+      "representationId": "BP22751",
+      "fmaId": "FMA8167",
+      "side": "left",
+      "level": 4,
+      "label": "Left fourth costal cartilage",
+      "sourcePath": "meshes/FJ3248_BP22751_FMA8167_Left fourth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3248_BP22751_FMA8167_Left%20fourth%20costal%20cartilage.obj",
+      "githubBlobSha": "8de9a8f9f50d8d5e331dd5b73b637fc0fd459831",
+      "sha256": "9b35ba20fb4eb7f2e9f71cb71b1d3fa0bce4fa132106b9186bf624f8993d7154",
+      "bytes": 40361,
+      "vertices": 371,
+      "faces": 658,
+      "rawBounds": {
+        "min": [
+          14.3017,
+          -198.577,
+          1211.08
+        ],
+        "max": [
+          59.7768,
+          -184.326,
+          1235.57
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.0689397116279136,
+          0.1260388931458971,
+          0.36510056874488017
+        ],
+        "max": [
+          0.2837770720604496,
+          0.24173664767514058,
+          0.4324263629382755
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.000022503334249928972,
+      "minSurfaceDistanceToRibs": 0.00018709893173150046
+    },
+    {
+      "fjId": "FJ3251",
+      "representationId": "BP21380",
+      "fmaId": "FMA8112",
+      "side": "left",
+      "level": 5,
+      "label": "Left fifth costal cartilage",
+      "sourcePath": "meshes/FJ3251_BP21380_FMA8112_Left fifth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3251_BP21380_FMA8112_Left%20fifth%20costal%20cartilage.obj",
+      "githubBlobSha": "6938912f2cd62bda2ee99c33999bab919cd1f910",
+      "sha256": "46de52741e3407a108c40a584714afc0aa6201818ea4dab0fe162583d3c4bbcb",
+      "bytes": 66165,
+      "vertices": 594,
+      "faces": 1086,
+      "rawBounds": {
+        "min": [
+          17.7153,
+          -209.038,
+          1171.61
+        ],
+        "max": [
+          82.0336,
+          -189.325,
+          1215.24
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.08506653297789424,
+          -0.06042865978465617,
+          0.38871727249709287
+        ],
+        "max": [
+          0.38892455197088116,
+          0.1456919212733636,
+          0.4818471146790031
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.000047030911132034155,
+      "minSurfaceDistanceToRibs": 0.0002399493683014087
+    },
+    {
+      "fjId": "FJ3254",
+      "representationId": "BP21377",
+      "fmaId": "FMA8221",
+      "side": "left",
+      "level": 6,
+      "label": "Left sixth costal cartilage",
+      "sourcePath": "meshes/FJ3254_BP21377_FMA8221_Left sixth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3254_BP21377_FMA8221_Left%20sixth%20costal%20cartilage.obj",
+      "githubBlobSha": "fa92858163333617ddcb67f470b5ec744b6e3e9b",
+      "sha256": "53dfca2e5124c10f68f68cc4b2ef01c4edebc3124a5ed61fe06d46befa28ab68",
+      "bytes": 91328,
+      "vertices": 815,
+      "faces": 1498,
+      "rawBounds": {
+        "min": [
+          13.8622,
+          -212.161,
+          1137.58
+        ],
+        "max": [
+          93.0014,
+          -185.172,
+          1197.28
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.0668633881033892,
+          -0.22119609901006054,
+          0.3690973143688794
+        ],
+        "max": [
+          0.44073957165752214,
+          0.0608437517615128,
+          0.49660105863142556
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.000019182909841540928,
+      "minSurfaceDistanceToRibs": 0.00009212319279746449
+    },
+    {
+      "fjId": "FJ3255",
+      "representationId": "BP22753",
+      "fmaId": "FMA8275",
+      "side": "left",
+      "level": 7,
+      "label": "Left seventh costal cartilage",
+      "sourcePath": "meshes/FJ3255_BP22753_FMA8275_Left seventh costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3255_BP22753_FMA8275_Left%20seventh%20costal%20cartilage.obj",
+      "githubBlobSha": "963fbcd7a3b0e47ed00ebcd853dbbc6b6475cc8e",
+      "sha256": "80a1b623c7d3805f51d141d783bc148f3e1a216b77620a2953ca940c00784528",
+      "bytes": 150515,
+      "vertices": 1367,
+      "faces": 2314,
+      "rawBounds": {
+        "min": [
+          3.32896,
+          -213.216,
+          1102.58
+        ],
+        "max": [
+          108.457,
+          -170.904,
+          1186.41
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.017101353970371234,
+          -0.3865460952748023,
+          0.30169120732015553
+        ],
+        "max": [
+          0.5137562402937891,
+          0.009490767207292805,
+          0.5015851799474058
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.000006090156459223346,
+      "minSurfaceDistanceToRibs": 0.00000468399565739987
+    },
+    {
+      "fjId": "FJ3668",
+      "representationId": "BP22462",
+      "fmaId": "FMA8329",
+      "side": "left",
+      "level": 8,
+      "label": "Left eighth costal cartilage",
+      "sourcePath": "meshes/FJ3668_BP22462_FMA8329_Left eighth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3668_BP22462_FMA8329_Left%20eighth%20costal%20cartilage.obj",
+      "githubBlobSha": "fbb103560eef7284a2b9eaf08503485afbe7ba63",
+      "sha256": "8579345813434c27a5575dc6fb3055e7b93a43c028b518f01ef10053cf7372be",
+      "bytes": 631833,
+      "vertices": 6795,
+      "faces": 2265,
+      "rawBounds": {
+        "min": [
+          38.5311,
+          -209.872,
+          1067.02
+        ],
+        "max": [
+          117.067,
+          -152.736,
+          1131.35
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.18340631732782603,
+          -0.5545416914797796,
+          0.21586038640193184
+        ],
+        "max": [
+          0.5544323393749157,
+          -0.25062839834518513,
+          0.4857871688757116
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.22859579671913677,
+      "minSurfaceDistanceToRibs": 0.000048714323716950274
+    },
+    {
+      "fjId": "FJ3669",
+      "representationId": "BP22484",
+      "fmaId": "FMA8410",
+      "side": "left",
+      "level": 9,
+      "label": "Left ninth costal cartilage",
+      "sourcePath": "meshes/FJ3669_BP22484_FMA8410_Left ninth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3669_BP22484_FMA8410_Left%20ninth%20costal%20cartilage.obj",
+      "githubBlobSha": "4180d30fa2bbe5aa6f1491d1af7ff8b667ad31f5",
+      "sha256": "3fd162a897326bac9f391b159e10139ecdd1b1900ce989661172817b88ed8eea",
+      "bytes": 468303,
+      "vertices": 5034,
+      "faces": 1678,
+      "rawBounds": {
+        "min": [
+          63.7315,
+          -197.523,
+          1032.98
+        ],
+        "max": [
+          122.279,
+          -127.506,
+          1073.87
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.3024602043526831,
+          -0.71535637356126,
+          0.09666666052309092
+        ],
+        "max": [
+          0.5790553159615395,
+          -0.5221803350679668,
+          0.427446965907903
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.5220815983179501,
+      "minSurfaceDistanceToRibs": 0.000047679729084308465
+    },
+    {
+      "fjId": "FJ3667",
+      "representationId": "BP22463",
+      "fmaId": "FMA8491",
+      "side": "left",
+      "level": 10,
+      "label": "Left tenth costal cartilage",
+      "sourcePath": "meshes/FJ3667_BP22463_FMA8491_Left tenth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3667_BP22463_FMA8491_Left%20tenth%20costal%20cartilage.obj",
+      "githubBlobSha": "90d6bb949559719de4385750e6e7e43c27ea9aa5",
+      "sha256": "2de810fb46622f4caf916860533c97579162c0f960a495f9eba7fae2fcf3d268",
+      "bytes": 390450,
+      "vertices": 4200,
+      "faces": 1400,
+      "rawBounds": {
+        "min": [
+          84.5624,
+          -178.752,
+          1012.85
+        ],
+        "max": [
+          121.176,
+          -111.369,
+          1037.76
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          0.4008713254152891,
+          -0.8104562428415241,
+          0.020430863673829736
+        ],
+        "max": [
+          0.5738444289363963,
+          -0.6927742883571044,
+          0.33876740076831824
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.7424000018692231,
+      "minSurfaceDistanceToRibs": 0.00015028341124683135
+    },
+    {
+      "fjId": "FJ3333",
+      "representationId": "BP21366",
+      "fmaId": "FMA7875",
+      "side": "right",
+      "level": 1,
+      "label": "Right first costal cartilage",
+      "sourcePath": "meshes/FJ3333_BP21366_FMA7875_Right first costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3333_BP21366_FMA7875_Right%20first%20costal%20cartilage.obj",
+      "githubBlobSha": "562c944f1714fe0aaf7b8e71eb10ad286242c4c2",
+      "sha256": "5c8d82a785fb34d753164a0d3f5368c82c84f06821d2e3e29bbe22080d2caf33",
+      "bytes": 45235,
+      "vertices": 436,
+      "faces": 676,
+      "rawBounds": {
+        "min": [
+          -56.1874,
+          -150.757,
+          1296.91
+        ],
+        "max": [
+          -19.5121,
+          -122.171,
+          1320.22
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.26407092899222956,
+          0.5315243268431198,
+          0.07146259680673672
+        ],
+        "max": [
+          -0.09080633704913571,
+          0.6416474243554378,
+          0.20651102518456266
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.00006915132886255306,
+      "minSurfaceDistanceToRibs": 0.0000021445547547535465
+    },
+    {
+      "fjId": "FJ3335",
+      "representationId": "BP21383",
+      "fmaId": "FMA7886",
+      "side": "right",
+      "level": 2,
+      "label": "Right second costal cartilage",
+      "sourcePath": "meshes/FJ3335_BP21383_FMA7886_Right second costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3335_BP21383_FMA7886_Right%20second%20costal%20cartilage.obj",
+      "githubBlobSha": "fa28312148f7adc2bc05ba8d612b6dc0028f9c3b",
+      "sha256": "98f173ff6aa109c173cf9401fe2843cce125fbe4c37dec3cdca20b51084d94d5",
+      "bytes": 41651,
+      "vertices": 383,
+      "faces": 658,
+      "rawBounds": {
+        "min": [
+          -48.187,
+          -178.261,
+          1270.12
+        ],
+        "max": [
+          -10.2446,
+          -157.745,
+          1288.02
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.2262747544174741,
+          0.40496071541647805,
+          0.23952433301022025
+        ],
+        "max": [
+          -0.047024020181035874,
+          0.48952542779187525,
+          0.33644777653500424
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.000005488872708862632,
+      "minSurfaceDistanceToRibs": 0.000030361598583199737
+    },
+    {
+      "fjId": "FJ3337",
+      "representationId": "BP21360",
+      "fmaId": "FMA7913",
+      "side": "right",
+      "level": 3,
+      "label": "Right third costal cartilage",
+      "sourcePath": "meshes/FJ3337_BP21360_FMA7913_Right third costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3337_BP21360_FMA7913_Right%20third%20costal%20cartilage.obj",
+      "githubBlobSha": "7b2b49768a12493a50169f7b728de530f1234162",
+      "sha256": "fce39adfab01b0619df6143fc03da771e7be9e0dc2d253a0402784dead4679b1",
+      "bytes": 41763,
+      "vertices": 386,
+      "faces": 652,
+      "rawBounds": {
+        "min": [
+          -50.7242,
+          -190.108,
+          1242.38
+        ],
+        "max": [
+          -13.051,
+          -171.421,
+          1259.98
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.23826121186098564,
+          0.27390903266265276,
+          0.30413366297926614
+        ],
+        "max": [
+          -0.06028225531010362,
+          0.35705645935577923,
+          0.39241638812781565
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.00005738673162125408,
+      "minSurfaceDistanceToRibs": 0.0000491258923380205
+    },
+    {
+      "fjId": "FJ3339",
+      "representationId": "BP21410",
+      "fmaId": "FMA7976",
+      "side": "right",
+      "level": 4,
+      "label": "Right fourth costal cartilage",
+      "sourcePath": "meshes/FJ3339_BP21410_FMA7976_Right fourth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3339_BP21410_FMA7976_Right%20fourth%20costal%20cartilage.obj",
+      "githubBlobSha": "adfc13d2449d3f1172a772ea4406f3c18d35f9f6",
+      "sha256": "2e6f362cb2e2541cdd379e2d7286f5719c666e1d204076c302719b13978034ad",
+      "bytes": 43261,
+      "vertices": 391,
+      "faces": 694,
+      "rawBounds": {
+        "min": [
+          -59.9068,
+          -198.587,
+          1211.1
+        ],
+        "max": [
+          -14.3111,
+          -184.204,
+          1235.56
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.28164243688100327,
+          0.12613337885804832,
+          0.3645242059007575
+        ],
+        "max": [
+          -0.06623532760419508,
+          0.24168940481906453,
+          0.4324736057943511
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.00003140316375444794,
+      "minSurfaceDistanceToRibs": 3.931525731908193e-7
+    },
+    {
+      "fjId": "FJ3341",
+      "representationId": "BP21376",
+      "fmaId": "FMA8070",
+      "side": "right",
+      "level": 5,
+      "label": "Right fifth costal cartilage",
+      "sourcePath": "meshes/FJ3341_BP21376_FMA8070_Right fifth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3341_BP21376_FMA8070_Right%20fifth%20costal%20cartilage.obj",
+      "githubBlobSha": "840e0f8ddd9fe79dfd8422733d9b53c827d28bb8",
+      "sha256": "7d6a9cf8835d7d58e44c1029b27612432786c258e77abe5b629e01627c5abb4f",
+      "bytes": 72810,
+      "vertices": 652,
+      "faces": 1168,
+      "rawBounds": {
+        "min": [
+          -82.1658,
+          -209.036,
+          1171.61
+        ],
+        "max": [
+          -17.6996,
+          -189.316,
+          1215.25
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.3868003102197715,
+          -0.06042865978465617,
+          0.38867475392662487
+        ],
+        "max": [
+          -0.08224356938542587,
+          0.14573916412943966,
+          0.481837666107788
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.0000031697844444617054,
+      "minSurfaceDistanceToRibs": 0.00011012501015403265
+    },
+    {
+      "fjId": "FJ3343",
+      "representationId": "BP22071",
+      "fmaId": "FMA8194",
+      "side": "right",
+      "level": 6,
+      "label": "Right sixth costal cartilage",
+      "sourcePath": "meshes/FJ3343_BP22071_FMA8194_Right sixth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3343_BP22071_FMA8194_Right%20sixth%20costal%20cartilage.obj",
+      "githubBlobSha": "b1037867eb2fb431606eddf82231cfb1218e40b6",
+      "sha256": "21254bf943da0b309de0f6719cbf1c09539a65545a5e706b068f1261452bcf84",
+      "bytes": 103141,
+      "vertices": 971,
+      "faces": 1546,
+      "rawBounds": {
+        "min": [
+          -93.6974,
+          -212.187,
+          1137.56
+        ],
+        "max": [
+          -13.8655,
+          -184.749,
+          1197.25
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.4412788821319571,
+          -0.22129058472221175,
+          0.36709894155687983
+        ],
+        "max": [
+          -0.06413018593746454,
+          0.060702023193286436,
+          0.4967238900572224
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.00006967841517168992,
+      "minSurfaceDistanceToRibs": 0.000010659230901785389
+    },
+    {
+      "fjId": "FJ3345",
+      "representationId": "BP21381",
+      "fmaId": "FMA8248",
+      "side": "right",
+      "level": 7,
+      "label": "Right seventh costal cartilage",
+      "sourcePath": "meshes/FJ3345_BP21381_FMA8248_Right seventh costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3345_BP21381_FMA8248_Right%20seventh%20costal%20cartilage.obj",
+      "githubBlobSha": "0160fd407cf2e12e5fa3722e1554e36a88d76116",
+      "sha256": "62db8ee22c64127930c5c3451dcd841267d49ff8add3294f10d7a9dad9ea5b84",
+      "bytes": 167200,
+      "vertices": 1538,
+      "faces": 2450,
+      "rawBounds": {
+        "min": [
+          -109.909,
+          -213.208,
+          1102.56
+        ],
+        "max": [
+          49.5653,
+          -170.775,
+          1186.45
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.5178671106875424,
+          -0.38664058098695353,
+          0.30108177447677986
+        ],
+        "max": [
+          0.23553502957880929,
+          0.009679738631595214,
+          0.5015473856625452
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.000005016317874389536,
+      "minSurfaceDistanceToRibs": 0.0000047975264229790165
+    },
+    {
+      "fjId": "FJ3668M",
+      "representationId": "BP21439",
+      "fmaId": "FMA8302",
+      "side": "right",
+      "level": 8,
+      "label": "Right eighth costal cartilage",
+      "sourcePath": "meshes/FJ3668M_BP21439_FMA8302_Right eighth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3668M_BP21439_FMA8302_Right%20eighth%20costal%20cartilage.obj",
+      "githubBlobSha": "a0243f04c2e42df6f5d4104e4af02ee182159aad",
+      "sha256": "37e3c0c6c44db5b090699686fb67d60c46cca57678b5f111773043edf24da873",
+      "bytes": 197192,
+      "vertices": 1351,
+      "faces": 2265,
+      "rawBounds": {
+        "min": [
+          -117.022,
+          -209.826,
+          1067.05
+        ],
+        "max": [
+          -38.5311,
+          -152.736,
+          1131.35
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.5514709542141456,
+          -0.5543999629115532,
+          0.21586038640193184
+        ],
+        "max": [
+          -0.18065752501939641,
+          -0.25062839834518513,
+          0.48556985173776357
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.22916201445621293,
+      "minSurfaceDistanceToRibs": 0.00002892325039016368
+    },
+    {
+      "fjId": "FJ3669M",
+      "representationId": "BP21430",
+      "fmaId": "FMA8383",
+      "side": "right",
+      "level": 9,
+      "label": "Right ninth costal cartilage",
+      "sourcePath": "meshes/FJ3669M_BP21430_FMA8383_Right ninth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3669M_BP21430_FMA8383_Right%20ninth%20costal%20cartilage.obj",
+      "githubBlobSha": "23a76990abbd1099e389b4cc49309248d1ef4326",
+      "sha256": "421396b89396541acf22d0bd0a30a884ef4e2e852f403c704b6b39aab2ffb511",
+      "bytes": 148930,
+      "vertices": 1067,
+      "faces": 1678,
+      "rawBounds": {
+        "min": [
+          -122.279,
+          -197.515,
+          1032.98
+        ],
+        "max": [
+          -63.7443,
+          -127.506,
+          1073.87
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.5763065236531097,
+          -0.71535637356126,
+          0.09666666052309092
+        ],
+        "max": [
+          -0.2997718829000304,
+          -0.5221803350679668,
+          0.4274091716230425
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.522453543674016,
+      "minSurfaceDistanceToRibs": 0.00004381233743370609
+    },
+    {
+      "fjId": "FJ3667M",
+      "representationId": "BP21440",
+      "fmaId": "FMA8464",
+      "side": "right",
+      "level": 10,
+      "label": "Right tenth costal cartilage",
+      "sourcePath": "meshes/FJ3667M_BP21440_FMA8464_Right tenth costal cartilage.obj",
+      "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3667M_BP21440_FMA8464_Right%20tenth%20costal%20cartilage.obj",
+      "githubBlobSha": "10480ad9e863fd8e6ae7a55e097378668b1ee6b2",
+      "sha256": "db3fd2a54736116c611ec9608533607e95bab0be4bbef221d4c9237000175604",
+      "bytes": 118859,
+      "vertices": 836,
+      "faces": 1400,
+      "rawBounds": {
+        "min": [
+          -121.176,
+          -178.747,
+          1012.88
+        ],
+        "max": [
+          -84.5657,
+          -111.369,
+          1037.76
+        ]
+      },
+      "transformedBounds": {
+        "min": [
+          -0.5710956366279666,
+          -0.8103145142732977,
+          0.020430863673829736
+        ],
+        "max": [
+          -0.3981381232493645,
+          -0.6927742883571044,
+          0.33874377934028044
+        ]
+      },
+      "minSurfaceDistanceToSternum": 0.7426484437551467,
+      "minSurfaceDistanceToRibs": 0.0000756626155583299
+    }
+  ]
+}

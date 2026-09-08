@@ -4,6 +4,7 @@ import {
   Object3D,
   PerspectiveCamera,
   Sphere,
+  Spherical,
   Vector3,
 } from "three";
 import type { CameraView } from "./types.ts";
@@ -59,7 +60,18 @@ export function frameStructure(
 ): CameraPose {
   const box = new Box3();
   for (const object of objects) box.expandByObject(object, true);
-  const pose = applyView(view, box, camera.fov);
+  const horizontalFov = MathUtils.radToDeg(2 * Math.atan(Math.tan(MathUtils.degToRad(camera.fov) / 2) * camera.aspect));
+  const pose = applyView(view, box, Math.min(camera.fov, horizontalFov));
   if (controls) controls.target.copy(pose.target);
   return pose;
+}
+
+// Orbit the camera, never the anatomy. The selected world-space target remains
+// the pivot and the shared anatomical axes stay stable for slice planes.
+export function orbitCamera(camera: PerspectiveCamera, target: Vector3, deltaX: number, deltaY: number) {
+  const spherical = new Spherical().setFromVector3(camera.position.clone().sub(target));
+  spherical.theta -= deltaX * 0.008;
+  spherical.phi = MathUtils.clamp(spherical.phi + deltaY * 0.006, 0.04, Math.PI - 0.04);
+  camera.position.copy(target).add(new Vector3().setFromSpherical(spherical));
+  camera.lookAt(target);
 }

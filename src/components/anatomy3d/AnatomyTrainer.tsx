@@ -1,483 +1,161 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { listAnatomyModules } from "../../lib/anatomy3d/registry";
-import { buildAnatomyQuiz } from "../../lib/anatomy3d/quiz.mjs";
-import type { AnatomyQuestion } from "../../lib/anatomy3d/quiz.mjs";
-import type { AnatomyStructure } from "../../lib/anatomy3d/types";
-import { systemForStructure, systemsInManifest, type AnatomySystem } from "../../lib/anatomy3d/systems";
-import AnatomyViewer, { type AnatomyViewerHandle } from "./AnatomyViewer";
+import visualCatalog from "@/data/term2/anatomy-visual-images.json";
+import legacyCatalog from "@/data/term2/anatomy-images.json";
+import { buildAnatomyQuestions, type AnatomySourceImage } from "@/src/lib/mcq/dynamic-anatomy.mjs";
+import { listAnatomyModules } from "@/src/lib/anatomy3d/registry";
+import { buildAnatomyQuiz } from "@/src/lib/anatomy3d/quiz.mjs";
+import { parseAnatomySession, selectAnatomySession, type AnatomySessionItem } from "@/src/lib/anatomy3d/visual-session.mjs";
+import type { MCQQuestion } from "@/src/lib/mcq/types";
+import PairedAnatomyMedia from "./PairedAnatomyMedia";
+import AnatomyExplorer from "./AnatomyExplorer";
+import { buildLocationQuestions, buildModelLocationQuestions, isLocationQuestion, locationOptionId, locationLabel, canRevealAnatomyFigure } from "@/src/lib/mcq/anatomy-location.mjs";
+import AnatomyLabelGame from "./AnatomyLabelGame";
+import { includeAdvancedAnatomyPractice } from "@/src/lib/mcq/advanced-anatomy.mjs";
 
-type TrainerMode = "quiz" | "training";
-
-type ModuleProgress = {
-  score: number;
-  answered: number;
-  wrongStructureIds: string[];
-};
-
-type AnatomyProgress = {
-  version: 1;
-  modules: Record<string, ModuleProgress>;
-};
-
-const progressStorageKey = "anatomy3d.progress.v1";
-const layersStorageKey = "anatomy3d.layers.v1";
-
-// Per-module map of HIDDEN system ids (systems the user has peeled away). Missing/empty = all shown.
-function readHiddenLayers(): Record<string, string[]> {
-  if (typeof window === "undefined") return {};
-  try {
-    const parsed: unknown = JSON.parse(window.localStorage.getItem(layersStorageKey) ?? "null");
-    if (!parsed || typeof parsed !== "object" || !("version" in parsed) || parsed.version !== 1 || !("modules" in parsed)) {
-      return {};
-    }
-    const rawModules = parsed.modules;
-    if (!rawModules || typeof rawModules !== "object" || Array.isArray(rawModules)) return {};
-    const modules: Record<string, string[]> = {};
-    for (const [key, value] of Object.entries(rawModules)) {
-      if (Array.isArray(value)) modules[key] = [...new Set(value.filter((id): id is string => typeof id === "string"))];
-    }
-    return modules;
-  } catch {
-    return {};
-  }
-}
-
-function emptyProgress(): AnatomyProgress {
-  return { version: 1, modules: {} };
-}
-
-function readProgress(): AnatomyProgress {
-  if (typeof window === "undefined") return emptyProgress();
-  try {
-    const parsed: unknown = JSON.parse(window.localStorage.getItem(progressStorageKey) ?? "null");
-    if (!parsed || typeof parsed !== "object" || !("version" in parsed) || parsed.version !== 1 || !("modules" in parsed)) {
-      return emptyProgress();
-    }
-    const rawModules = parsed.modules;
-    if (!rawModules || typeof rawModules !== "object" || Array.isArray(rawModules)) return emptyProgress();
-    const modules: Record<string, ModuleProgress> = {};
-    for (const [key, value] of Object.entries(rawModules)) {
-      if (!value || typeof value !== "object") continue;
-      const record = value as Partial<ModuleProgress>;
-      const score = Math.max(0, Math.floor(Number(record.score) || 0));
-      const answered = Math.max(score, Math.floor(Number(record.answered) || 0));
-      const wrongStructureIds = Array.isArray(record.wrongStructureIds)
-        ? [...new Set(record.wrongStructureIds.filter((id): id is string => typeof id === "string"))]
-        : [];
-      modules[key] = { score, answered, wrongStructureIds };
-    }
-    return { version: 1, modules };
-  } catch {
-    return emptyProgress();
-  }
-}
-
-function progressFor(progress: AnatomyProgress, modelKey: string): ModuleProgress {
-  return progress.modules[modelKey] ?? { score: 0, answered: 0, wrongStructureIds: [] };
-}
-
-type AnatomyTrainerProps = {
-  regions: string[];
-};
-
-export function AnatomyTrainer({ regions }: AnatomyTrainerProps) {
-  const viewerRef = useRef<AnatomyViewerHandle>(null);
-  const randomStateRef = useRef(0x6d2b79f5);
-  // Modules across every region this exam covers, concatenated in registration order.
-  const regionKey = useMemo(() => regions.join("|"), [regions]);
-  const modules = useMemo(
-    () => regions.flatMap((region) => listAnatomyModules(region)),
-    [regions],
-  );
-  const [mode, setMode] = useState<TrainerMode>("quiz");
-  const [moduleKey, setModuleKey] = useState(modules[0]?.manifest.modelKey ?? "");
-  const [quizRound, setQuizRound] = useState(1);
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-  const [trainingStructureId, setTrainingStructureId] = useState<string | null>(null);
-  const [showLabels, setShowLabels] = useState(false);
-  const [progress, setProgress] = useState<AnatomyProgress>(readProgress);
-  const [hiddenByModule, setHiddenByModule] = useState<Record<string, string[]>>(readHiddenLayers);
-
-  // When the region set changes (e.g. switching exams) reset the selection to the new set's first
-  // module, adjusting state during render (React-endorsed) rather than in an effect.
-  const [lastRegionKey, setLastRegionKey] = useState(regionKey);
-  if (lastRegionKey !== regionKey) {
-    setLastRegionKey(regionKey);
-    setModuleKey(modules[0]?.manifest.modelKey ?? "");
-  }
-
-  const registration = modules.find((candidate) => candidate.manifest.modelKey === moduleKey)
-    ?? modules[0];
-  const manifest = registration?.manifest;
-
-  // --- Anatomical layers (systems) ---------------------------------------------------------------
-  const presentSystems = useMemo(() => (manifest ? systemsInManifest(manifest) : []), [manifest]);
-  const presentSystemIds = useMemo(() => new Set(presentSystems.map((system) => system.id)), [presentSystems]);
-  const hiddenSystems = useMemo<Set<AnatomySystem>>(() => {
-    const stored = hiddenByModule[moduleKey] ?? [];
-    return new Set(stored.filter((id): id is AnatomySystem => presentSystemIds.has(id as AnatomySystem)));
-  }, [hiddenByModule, moduleKey, presentSystemIds]);
-  const layerSignature = useMemo(() => [...hiddenSystems].sort().join(","), [hiddenSystems]);
-  const hiddenStructureIds = useMemo<Set<string>>(() => {
-    const ids = new Set<string>();
-    if (manifest) {
-      for (const structure of manifest.structures) {
-        if (hiddenSystems.has(systemForStructure(structure))) ids.add(structure.id);
+export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?: () => void }) {
+  const modules = useMemo(() => regions.flatMap((region) => listAnatomyModules(region)), [regions]);
+  const examId = regions.includes("cvs") ? "term2-cvs" : regions.includes("respiratory") ? "term2-respiratory" : "term2-limbs";
+  const title = examId === "term2-cvs" ? "CVS" : examId === "term2-respiratory" ? "Respiratory" : "Upper & Lower Limbs";
+  const storageKey = `med25.anatomy-visual.session.v2:${examId}`;
+  const pool = useMemo<MCQQuestion[]>(() => {
+    const images = [
+      ...(visualCatalog.images as AnatomySourceImage[]).filter((image) => image.examId === examId),
+      ...(examId === "term2-respiratory" ? legacyCatalog.images as AnatomySourceImage[] : []),
+    ];
+    const diagrams = buildAnatomyQuestions(images);
+    const models = modules.flatMap(({ manifest }) => buildAnatomyQuiz(manifest, { seed: "visual-atlas-v2" }).map((item) => ({
+      schemaVersion: "1.0.0", id: `atlas-${item.id}`, revision: 1, status: "verified", kind: "dynamic_anatomy_3d", subject: "anatomy",
+      topic: manifest.title, chapter: manifest.title, difficulty: item.difficulty, prompt: item.prompt,
+      options: item.options, correctOptionId: item.correctOptionId, explanation: item.explanation,
+      distractorExplanations: item.distractorExplanations, learningObjective: "Recognize the highlighted anatomical structure and its relationships.",
+      source: { title: "BodyParts3D and the regional anatomy study atlas", chapter: manifest.title },
+      anatomy3d: { modelKey: manifest.modelKey, structureId: item.structureId },
+      tags: ["term-2", `exam-${examId}`, "anatomy-visual-atlas"], examPriority: "standard", qualityFlags: [],
+    } as MCQQuestion)));
+    return [...diagrams, ...buildLocationQuestions(diagrams), ...models, ...buildModelLocationQuestions(models, modules.map(item=>item.manifest))].filter(q=>includeAdvancedAnatomyPractice(q,modules.map(item=>item.manifest)));
+  }, [examId, modules]);
+  const [initial] = useState(() => {
+    try {
+      if (typeof window !== "undefined") {
+        const saved = parseAnatomySession(window.localStorage.getItem(storageKey), pool) ?? parseAnatomySession(window.localStorage.getItem(storageKey.replace('.v2:', '.v1:')), pool);
+        if (saved) return saved;
       }
-    }
-    return ids;
-  }, [manifest, hiddenSystems]);
-  const visibleStructures = useMemo<AnatomyStructure[]>(() => (
-    manifest ? manifest.structures.filter((structure) => !hiddenStructureIds.has(structure.id)) : []
-  ), [manifest, hiddenStructureIds]);
-  const quizableVisible = useMemo(
-    () => visibleStructures.filter((structure) => structure.quizable !== false),
-    [visibleStructures],
-  );
-  // A single visible quizable structure is enough: distractor labels are borrowed from the rest of
-  // the module (see buildAnatomyQuiz), so the quiz only dead-ends when nothing quizable is visible.
-  const canQuiz = quizableVisible.length >= 1;
-
-  const questions = useMemo<AnatomyQuestion[]>(() => (
-    manifest && canQuiz
-      ? buildAnatomyQuiz(manifest, {
-        seed: `${manifest.modelKey}:${quizRound}:${layerSignature}`,
-        structureIds: quizableVisible.map((structure) => structure.id),
-      })
-      : []
-  ), [manifest, quizRound, canQuiz, quizableVisible, layerSignature]);
-
-  // Reset the quiz cursor whenever the visible quiz set changes (module / restart / layer toggle),
-  // adjusting state during render (React-endorsed) rather than in an effect.
-  const quizKey = `${moduleKey}:${quizRound}:${layerSignature}`;
-  const [lastQuizKey, setLastQuizKey] = useState(quizKey);
-  if (lastQuizKey !== quizKey) {
-    setLastQuizKey(quizKey);
-    setQuestionIndex(0);
-    setSelectedOptionId(null);
-  }
-  // A structure peeled away by a layer toggle can no longer be the selected training target.
-  if (trainingStructureId && hiddenStructureIds.has(trainingStructureId)) {
-    setTrainingStructureId(null);
-  }
-
-  const currentQuestion = questions[questionIndex] ?? null;
-  const moduleProgress = progressFor(progress, moduleKey);
-  const selectedTrainingStructure = manifest?.structures.find((structure) => structure.id === trainingStructureId) ?? null;
-  const wrongStructures = moduleProgress.wrongStructureIds.flatMap((id) => {
-    const structure = manifest?.structures.find((candidate) => candidate.id === id);
-    return structure ? [structure] : [];
+    } catch { /* Session still works without browser storage. */ }
+    return { items: selectAnatomySession(pool, { seed: "first-visual-session", count: 30 }), index: 0, answers: {} as Record<string,string>, locations: {} as Record<string,string>, graded: false, feedback: "learn" as const };
   });
+  const [items, setItems] = useState<AnatomySessionItem[]>(initial.items);
+  const [index, setIndex] = useState(initial.index);
+  const [answers, setAnswers] = useState<Record<string, string>>(initial.answers);
+  const [locations, setLocations] = useState<Record<string, string>>(initial.locations);
+  const [graded, setGraded] = useState(initial.graded);
+  const [feedback, setFeedback] = useState<"learn" | "exam">(initial.feedback);
+  const [nextFeedback, setNextFeedback] = useState<"learn" | "exam">(initial.feedback);
+  const [settings, setSettings] = useState(false);
+  const [moduleKey, setModuleKey] = useState("all");
+  const [format, setFormat] = useState<"2d" | "3d" | "mixed">("mixed");
+  const [direction, setDirection] = useState<"mixed" | "identify" | "locate">(()=>initial.items.every(item=>isLocationQuestion(item.question))?'locate':initial.items.some(item=>isLocationQuestion(item.question))?'mixed':'identify');
+  const [activeDirection, setActiveDirection] = useState(direction);
+  const [count, setCount] = useState(30);
+  const [exploring, setExploring] = useState(false);
+  const [labelGame, setLabelGame] = useState(false);
+  const [settingsContainer, setSettingsContainer] = useState<HTMLDivElement | null>(null);
+  const [reviewOpen, setReviewOpen] = useState(false);
+  const reviewRef = useRef<HTMLDialogElement>(null);
+  const questionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (reviewOpen) reviewRef.current?.showModal();
+    else reviewRef.current?.close();
+  }, [reviewOpen]);
+
+  useEffect(() => {
+    if (!items.length) return;
     try {
-      window.localStorage.setItem(progressStorageKey, JSON.stringify(progress));
-    } catch {
-      // Progress remains usable for this session when browser storage is unavailable.
-    }
-  }, [progress]);
+      const snapshot=JSON.stringify({ version: 1, ids: items.map((item) => item.question.id), views: items.map((item) => item.initialView), answers, locations, index, graded, feedback });
+      window.localStorage.setItem(storageKey,snapshot);
+      window.localStorage.setItem(`${storageKey}:mode:${activeDirection}`,snapshot);
+    } catch { /* Keep progress in memory. */ }
+  }, [items, answers, locations, index, graded, feedback, storageKey,activeDirection]);
 
-  useEffect(() => {
+  function startSession() {
+    setActiveDirection(direction);
+    setItems(selectAnatomySession(pool, { seed: `${Date.now()}`, count, moduleKey, format, direction, feedback: nextFeedback }));
+    setIndex(0); setAnswers({}); setLocations({}); setGraded(false); setFeedback(nextFeedback); setSettings(false); setReviewOpen(false);
+  }
+  function startDirection(next: "mixed" | "identify" | "locate") {
+    setDirection(next); setActiveDirection(next);
     try {
-      window.localStorage.setItem(layersStorageKey, JSON.stringify({ version: 1, modules: hiddenByModule }));
-    } catch {
-      // Layer state remains usable for this session when browser storage is unavailable.
-    }
-  }, [hiddenByModule]);
-
-  useEffect(() => {
-    if (mode === "quiz" && currentQuestion) viewerRef.current?.focusStructure(currentQuestion.structureId);
-  }, [currentQuestion, mode]);
-
-  function chooseModule(nextModelKey: string) {
-    setModuleKey(nextModelKey);
-    setQuestionIndex(0);
-    setSelectedOptionId(null);
-    setTrainingStructureId(null);
-    setQuizRound((round) => round + 1);
+      const saved=parseAnatomySession(window.localStorage.getItem(`${storageKey}:mode:${next}`),pool);
+      if(saved){setItems(saved.items);setAnswers(saved.answers);setLocations(saved.locations);setIndex(saved.index);setGraded(saved.graded);setFeedback(saved.feedback);setReviewOpen(false);return;}
+    }catch{}
+    setItems(selectAnatomySession(pool, {seed:`${Date.now()}`,count,moduleKey,format,direction:next,feedback:nextFeedback}));
+    setIndex(0); setAnswers({}); setLocations({}); setGraded(false); setFeedback(nextFeedback); setReviewOpen(false);
   }
-
-  function chooseMode(nextMode: TrainerMode) {
-    setMode(nextMode);
-    setSelectedOptionId(null);
-    if (nextMode === "training" && trainingStructureId) {
-      viewerRef.current?.focusStructure(trainingStructureId);
-    }
+  function go(next: number) {
+    setIndex(next); setReviewOpen(false);
+    if (window.matchMedia("(max-width: 700px)").matches) questionRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
   }
+  if (exploring) return <div className="anatomy-explorer-shell"><button type="button" className="anatomy-explorer-back" onClick={() => setExploring(false)}>← Back to anatomy test</button><AnatomyExplorer regions={regions} /></div>;
+  if (labelGame) return <AnatomyLabelGame examId={examId} modules={modules.map(item=>item.manifest)} onExit={() => setLabelGame(false)} />;
+  const item = items[index];
+  const question = item?.question;
+  const answered = items.filter(({ question: q }) => answers[q.id]).length;
+  const correct = items.filter(({ question: q }) => answers[q.id] === q.correctOptionId).length;
+  const figureReady = Boolean(question && canRevealAnatomyFigure(question, items.map(item => item.question), q => Boolean(answers[q.id])));
+  const revealed = graded || (feedback === "learn" && Boolean(question && answers[question.id]) && figureReady);
+  const figureCount = new Set(pool.flatMap((q) => q.anatomy ? [q.anatomy.imageId] : [])).size;
+  const imageTargets = [...new Map(pool.filter((q) => q.anatomy).map((q) => [q.anatomy!.imageId + ":" + q.anatomy!.targetRegionId, q])).values()];
+  const pairedTargets = imageTargets.filter((q) => q.anatomy3d).length;
 
-  function answerQuestion(optionId: string) {
-    if (!currentQuestion || selectedOptionId) return;
-    setSelectedOptionId(optionId);
-    const correct = optionId === currentQuestion.correctOptionId;
-    setProgress((current) => {
-      const previousModule = progressFor(current, moduleKey);
-      const wrongIds = new Set(previousModule.wrongStructureIds);
-      if (correct) wrongIds.delete(currentQuestion.structureId);
-      else wrongIds.add(currentQuestion.structureId);
-      return {
-        version: 1,
-        modules: {
-          ...current.modules,
-          [moduleKey]: {
-            score: previousModule.score + (correct ? 1 : 0),
-            answered: previousModule.answered + 1,
-            wrongStructureIds: [...wrongIds],
-          },
-        },
-      };
-    });
-  }
-
-  function restartQuiz() {
-    setQuizRound((round) => round + 1);
-    setQuestionIndex(0);
-    setSelectedOptionId(null);
-    setProgress((current) => {
-      const previousModule = progressFor(current, moduleKey);
-      return {
-        version: 1,
-        modules: {
-          ...current.modules,
-          [moduleKey]: { ...previousModule, score: 0, answered: 0 },
-        },
-      };
-    });
-  }
-
-  function nextQuestion() {
-    if (questionIndex + 1 >= questions.length) {
-      restartQuiz();
-      return;
-    }
-    setQuestionIndex((index) => index + 1);
-    setSelectedOptionId(null);
-  }
-
-  function selectTrainingStructure(structure: AnatomyStructure) {
-    setTrainingStructureId(structure.id);
-    viewerRef.current?.focusStructure(structure.id);
-  }
-
-  function showRandomLocation() {
-    if (!visibleStructures.length) return;
-    randomStateRef.current = (Math.imul(1664525, randomStateRef.current) + 1013904223) >>> 0;
-    const index = Math.floor((randomStateRef.current / 4294967296) * visibleStructures.length);
-    selectTrainingStructure(visibleStructures[index]);
-  }
-
-  function toggleSystem(systemId: AnatomySystem) {
-    setHiddenByModule((current) => {
-      const nextHidden = new Set(current[moduleKey] ?? []);
-      if (nextHidden.has(systemId)) nextHidden.delete(systemId);
-      else nextHidden.add(systemId);
-      return { ...current, [moduleKey]: [...nextHidden] };
-    });
-  }
-
-  function resetLayers() {
-    setHiddenByModule((current) => ({ ...current, [moduleKey]: [] }));
-  }
-
-  if (!registration || !manifest) {
-    return <section className="anatomy3d-empty">No 3D modules are registered for this region yet.</section>;
-  }
-
-  const answered = selectedOptionId !== null;
-  const selectedWasCorrect = answered && selectedOptionId === currentQuestion?.correctOptionId;
-
-  return (
-    <section className="anatomy3d-trainer" aria-labelledby="anatomy3d-title">
-      <header className="anatomy3d-header">
-        <div>
-          <p className="eyebrow">Interactive atlas</p>
-          <h2 id="anatomy3d-title">3D Anatomy</h2>
-          <p>{manifest.blurb}</p>
-        </div>
-        <div className="anatomy3d-mode-switch" aria-label="Study mode">
-          <button type="button" className={mode === "quiz" ? "active" : ""} onClick={() => chooseMode("quiz")}>Quiz</button>
-          <button type="button" className={mode === "training" ? "active" : ""} onClick={() => chooseMode("training")}>Training</button>
-        </div>
-      </header>
-
-      <nav className="anatomy3d-module-switcher" aria-label="Anatomy module">
-        {modules.map(({ manifest: option }) => (
-          <button
-            type="button"
-            key={option.modelKey}
-            className={option.modelKey === moduleKey ? "active" : ""}
-            aria-pressed={option.modelKey === moduleKey}
-            onClick={() => chooseModule(option.modelKey)}
-          >
-            {option.title}
-          </button>
-        ))}
-      </nav>
-
-      {presentSystems.length > 0 && (
-        <div className="anatomy3d-layers" role="group" aria-label="Anatomy layers">
-          <span className="anatomy3d-layers-title">Layers</span>
-          <div className="anatomy3d-layers-chips">
-            {presentSystems.map((system) => {
-              const shown = !hiddenSystems.has(system.id);
-              return (
-                <button
-                  type="button"
-                  key={system.id}
-                  className={`anatomy3d-layer-chip ${shown ? "active" : ""}`.trim()}
-                  aria-pressed={shown}
-                  onClick={() => toggleSystem(system.id)}
-                >
-                  {system.label}
-                </button>
-              );
-            })}
-          </div>
-          <button
-            type="button"
-            className="anatomy3d-layers-reset"
-            onClick={resetLayers}
-            disabled={hiddenSystems.size === 0}
-          >
-            {hiddenSystems.size === 0 ? "All shown" : "Show all"}
-          </button>
-        </div>
-      )}
-
-      <div className="anatomy3d-layout">
-        <div className="anatomy3d-viewer-card">
-          <AnatomyViewer
-            ref={viewerRef}
-            modelKey={moduleKey}
-            focusStructureId={mode === "quiz" ? currentQuestion?.structureId : trainingStructureId}
-            pickEnabled={mode === "training"}
-            showLabels={mode === "training" && showLabels}
-            hiddenStructureIds={hiddenStructureIds}
-            onPick={(structureId) => {
-              if (mode === "training") setTrainingStructureId(structureId);
-            }}
-          />
-          <p className="anatomy3d-schematic-legend">
-            <span className="anatomy3d-schematic-tag" aria-hidden="true">Schematic</span>
-            structures are diagrammatic (anatomically placed, not scan-accurate); unmarked structures are real BodyParts3D scan meshes.
-          </p>
-        </div>
-
-        <aside className="anatomy3d-panel">
-          {mode === "quiz" ? (
-            canQuiz && currentQuestion ? (
-            <>
-              <div className="anatomy3d-score">
-                <span>Question {questionIndex + 1}/{questions.length}</span>
-                <span>Score {moduleProgress.score}/{moduleProgress.answered}</span>
-                <span>To review {moduleProgress.wrongStructureIds.length}</span>
-              </div>
-              <div className="anatomy3d-question">
-                <p className="eyebrow">Difficulty {currentQuestion.difficulty}</p>
-                <h3>{currentQuestion.prompt}</h3>
-                <p>
-                  {currentQuestion.kind === "system"
-                    ? "Inspect the highlighted structure, then choose the system it belongs to."
-                    : "Inspect the highlighted structure, then choose its anatomical name."}
-                </p>
-              </div>
-              <div className={`anatomy3d-options ${answered ? "locked" : ""}`}>
-                {currentQuestion.options.map((option) => {
-                  const isCorrect = option.id === currentQuestion.correctOptionId;
-                  const isSelectedWrong = answered && option.id === selectedOptionId && !isCorrect;
-                  return (
-                    <button
-                      type="button"
-                      key={option.id}
-                      disabled={answered}
-                      className={`anatomy3d-option ${answered && isCorrect ? "correct" : ""} ${isSelectedWrong ? "wrong" : ""}`.trim()}
-                      onClick={() => answerQuestion(option.id)}
-                    >
-                      <span><b>{option.id}</b>{option.text}</span>
-                      {answered && (
-                        <small>
-                          <strong>{isCorrect ? "Why this is right" : "Why this is wrong"}</strong>
-                          {isCorrect ? currentQuestion.explanation : currentQuestion.distractorExplanations[option.id]}
-                        </small>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-              {answered && (
-                <div className={`anatomy3d-feedback ${selectedWasCorrect ? "correct" : "wrong"}`} role="status">
-                  <strong>{selectedWasCorrect ? "Correct." : `Correct answer: ${currentQuestion.label}`}</strong>
-                  <p>{currentQuestion.explanation}</p>
-                  {currentQuestion.schematic && (
-                    <p className="anatomy3d-schematic-note">Schematic — diagrammatic representation, not a scan-accurate mesh.</p>
-                  )}
-                </div>
-              )}
-              <div className="anatomy3d-actions">
-                <button type="button" className="secondary" onClick={restartQuiz}>Restart</button>
-                <button type="button" onClick={nextQuestion} disabled={!answered}>
-                  {questionIndex + 1 === questions.length ? "Reseed quiz" : "Next"}
-                </button>
-              </div>
-              {wrongStructures.length > 0 && (
-                <details className="anatomy3d-wrong-list">
-                  <summary>Wrong-list ({wrongStructures.length})</summary>
-                  <ul>{wrongStructures.map((structure) => <li key={structure.id}>{structure.label}</li>)}</ul>
-                </details>
-              )}
-            </>
-            ) : (
-              <div className="anatomy3d-empty">
-                <strong>Show a layer to quiz</strong>
-                <p>Every layer is hidden. Turn at least one layer back on to reveal a structure to quiz.</p>
-              </div>
-            )
-          ) : (
-            <>
-              <div className="anatomy3d-training-controls">
-                <button type="button" className="anatomy3d-random" onClick={showRandomLocation}>Show me a random location</button>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={showLabels}
-                    onChange={(event) => setShowLabels(event.target.checked)}
-                  />
-                  Labels
-                </label>
-              </div>
-              <p className="anatomy3d-free-explore">Click any structure to select and frame it, or rotate the model freely.</p>
-              {selectedTrainingStructure ? (
-                <article className="anatomy3d-details">
-                  <p className="anatomy3d-details-tags">
-                    <span className="eyebrow">{selectedTrainingStructure.tissue}</span>
-                    {selectedTrainingStructure.schematic && (
-                      <span className="anatomy3d-schematic-tag" title="Diagrammatic representation — anatomically placed, but not a scan-accurate mesh.">Schematic</span>
-                    )}
-                  </p>
-                  <h3>{selectedTrainingStructure.label}</h3>
-                  <p>{selectedTrainingStructure.description}</p>
-                  {selectedTrainingStructure.keyPoints?.length ? (
-                    <ul>{selectedTrainingStructure.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul>
-                  ) : null}
-                </article>
-              ) : (
-                <div className="anatomy3d-empty">
-                  <strong>Free explore</strong>
-                  <p>Choose the random-location prompt or click a part of the model to reveal its notes.</p>
-                </div>
-              )}
-            </>
-          )}
-        </aside>
+  return <section className="anatomy-exam" aria-label="Anatomy 2D and 3D test">
+    <header className="anatomy-exam-header">
+      <div className="anatomy-exam-title"><b>{title} · Anatomy</b><span>{question && isLocationQuestion(question) ? "Find the location" : "Identification MCQ"} · Question {items.length ? index + 1 : 0} of {items.length} · {graded ? `${correct} / ${items.length} correct` : `${answered} answered`}</span>
+        <div className="anatomy-practice-modes" aria-label="Start an anatomy activity"><button type="button" aria-pressed={activeDirection==='identify'} onClick={()=>startDirection("identify")}>Identify · MCQs</button><button type="button" aria-pressed={activeDirection==='locate'} onClick={()=>startDirection("locate")}>Find · click location</button><button type="button" aria-pressed={activeDirection==='mixed'} onClick={()=>startDirection("mixed")}>Mixed</button><button type="button" onClick={()=>setLabelGame(true)}>Drag labels</button></div>
       </div>
-
-      <p className="anatomy3d-attribution">
-        Anatomical meshes: BodyParts3D, © The Database Center for Life Science — CC BY 4.0
-      </p>
-    </section>
-  );
+      <button type="button" className="anatomy-settings-trigger" aria-expanded={settings} aria-controls="anatomy-exam-settings" onClick={() => setSettings(!settings)}>⚙ Settings</button>
+    </header>
+    {settings && <section id="anatomy-exam-settings" className="anatomy-exam-settings" aria-label="Anatomy test settings">
+      <div className="anatomy-settings-heading"><h2>Test settings</h2><button type="button" onClick={() => setSettings(false)} aria-label="Close settings">×</button></div>
+      <div className="anatomy-settings-grid">
+        <label>Region<select value={moduleKey} onChange={(event) => setModuleKey(event.target.value)}><option value="all">All {title} anatomy</option>{modules.map(({ manifest }) => <option key={manifest.modelKey} value={manifest.modelKey}>{manifest.title}</option>)}</select></label>
+        <label>Question views<select value={format} onChange={(event) => setFormat(event.target.value as typeof format)}><option value="mixed">Mostly 2D · some 3D</option><option value="2d">Source diagrams</option><option value="3d">Start in 3D</option></select></label>
+        <label>Question direction<select value={direction} onChange={(event) => setDirection(event.target.value as typeof direction)}><option value="mixed">Both directions</option><option value="identify">Name the marked structure · MCQ</option><option value="locate">Given its name · click its location</option></select></label>
+        <label>Questions<select value={count} onChange={(event) => setCount(Number(event.target.value))}>{[10,20,30,50,100,250,1000].map((n) => <option key={n} value={n}>{n === 1000 ? "All available targets" : n}</option>)}</select></label>
+        <label>Answers for new test<select value={nextFeedback} onChange={(event) => setNextFeedback(event.target.value as typeof nextFeedback)}><option value="learn">Learn · reveal after answering</option><option value="exam">Test · reveal after grading</option></select></label>
+      </div>
+      <p>{figureCount} source figures · {imageTargets.length} labeled targets. {pairedTargets} have a separate 3D target; {imageTargets.length - pairedTargets} use regional 3D context only. Schematic structures are marked. Switching views keeps the same question.</p>
+      <p>Learn uses one target per figure so revealed labels cannot answer a later question. Test mode can include more targets from each figure. Start a new test to apply these settings to a saved session.</p>
+      <p>Advanced regional spotters: elementary whole-organ/bone recognition and “which system?” questions are excluded. The full anatomy remains available for context and exploration.</p>
+      <div className="anatomy-settings-actions"><button type="button" onClick={startSession}>Start new test</button><button type="button" onClick={() => { setExploring(true); setSettings(false); }}>Explore the full 3D atlas</button>{onExit && <button type="button" onClick={onExit}>Back to study</button>}</div>
+      <div ref={setSettingsContainer} className="anatomy-settings-visual" />
+    </section>}
+    {!question ? <div className="anatomy-exam-empty"><p>No questions match these settings.</p><button type="button" onClick={() => setSettings(true)}>Change settings</button></div> : <>
+      <div ref={questionRef} className={`anatomy-exam-question ${isLocationQuestion(question) ? "is-locate" : ""}`} tabIndex={-1}>
+        {isLocationQuestion(question) && <h1>{question.prompt}</h1>}
+        <PairedAnatomyMedia key={question.id} question={question} revealed={revealed} initialView={item.initialView} settingsOpen={settings} settingsContainer={settingsContainer} testLayout locationAnswered={Boolean(answers[question.id])} savedRegionId={locations[question.id]} onLocationSubmit={(regionId) => { const outcome = locationOptionId(question, regionId); if (!revealed && outcome && regionId) { setAnswers(current => ({...current,[question.id]:outcome})); setLocations(current => ({...current,[question.id]:regionId})); } }} />
+        {!isLocationQuestion(question) && <h1>{question.prompt}</h1>}
+        {feedback === "learn" && answers[question.id] && !figureReady && !graded && <p className="anatomy-location-instruction">Answer saved. This older session reuses the figure; feedback unlocks after its other targets are answered or after grading.</p>}
+        {isLocationQuestion(question) ? <p className="anatomy-location-instruction">{revealed ? answers[question.id] === question.correctOptionId ? "✓ Correct location. Open Review answer for the explanation." : "Compare your location with the revealed target, then open Review answer." : "Choose a numbered location and submit it above. In test mode, correctness stays hidden until grading."}</p> : <div className="anatomy-exam-options" role="group" aria-label="Answer choices">
+          {question.options.map((option) => <button type="button" key={option.id} disabled={revealed} aria-pressed={answers[question.id] === option.id}
+            className={revealed ? option.id === question.correctOptionId ? "correct" : answers[question.id] === option.id ? "wrong" : "" : answers[question.id] === option.id ? "chosen" : ""}
+            onClick={() => setAnswers((current) => ({ ...current, [question.id]: option.id }))}>
+            <span>{option.id}</span><div><b>{option.text}</b>{revealed && <small>{option.id === question.correctOptionId ? "Correct answer" : answers[question.id] === option.id ? "Your answer" : ""}</small>}</div>
+          </button>)}
+        </div>}
+      </div>
+      <footer className="anatomy-exam-footer"><button type="button" disabled={index === 0} onClick={() => go(index - 1)}>← Previous</button>
+        {revealed ? <button type="button" onClick={() => setReviewOpen(true)}>Review answer</button> : <button type="button" onClick={() => setGraded(true)}>Grade test{answered < items.length ? ` (${items.length - answered} unanswered)` : ""}</button>}
+        {index < items.length - 1 ? <button type="button" className="primary" onClick={() => go(index + 1)}>Next →</button> : <button type="button" className="primary" onClick={() => setGraded(true)}>Finish & grade</button>}
+      </footer>
+      <dialog ref={reviewRef} className="anatomy-answer-review" aria-labelledby="anatomy-review-title" onClose={() => setReviewOpen(false)}>
+        <div className="anatomy-settings-heading"><h2 id="anatomy-review-title">Answer & explanation</h2><button type="button" onClick={() => setReviewOpen(false)} aria-label="Close answer review">×</button></div>
+        {revealed && <><p>{question.prompt}</p>{isLocationQuestion(question) ? <section><p><b>Your location:</b> {locationLabel(question, locations[question.id]) ?? (answers[question.id] ? "Location outcome saved; exact point unavailable in this older session." : "Not answered")}</p><p>{question.explanation}</p></section> : <div className="anatomy-review-options">{question.options.map((option) => <section key={option.id} className={option.id === question.correctOptionId ? "correct" : answers[question.id] === option.id ? "wrong" : ""}><h3>{option.id}. {option.text}{option.id === question.correctOptionId ? " · Correct" : answers[question.id] === option.id ? " · Your answer" : ""}</h3><p>{option.id === question.correctOptionId ? question.explanation : question.distractorExplanations[option.id]}</p></section>)}</div>}
+        <div className="anatomy-exam-source"><b>Source and learning objective</b><p>{question.learningObjective}</p><p>{[question.source.title, question.source.edition, question.source.chapter, question.source.figure, question.source.page && `Page ${question.source.page}`, question.source.lecture, question.source.slide && `Slide ${question.source.slide}`].filter(Boolean).join(" · ")}</p></div></>}
+      </dialog>
+    </>}
+  </section>;
 }
 
 export default AnatomyTrainer;

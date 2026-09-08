@@ -1,0 +1,1730 @@
+[
+  {
+    "id": "comp-limbs-shoulder-stability",
+    "moduleId": "comp-limbs-shoulder-stability-module",
+    "examId": "term2-limbs",
+    "title": "Shoulder suspension, capsule and stabilizers",
+    "scope": "book-extension",
+    "summary": "Shoulder stability depends on specific suspensory ligaments, cuff compression and capsular reinforcements. Joint cavities and adjacent bursae define routes for fluid spread.",
+    "keyPoints": [
+      "The coracoid can rotate around a remaining vertical conoid fulcrum. The conoid remains an almost vertical, posteromedial restraint to distraction; loss of the trapezoid permits rotation around it.",
+      "Acromioclavicular capsular ligaments damaged with coracoclavicular ligaments preserved. Acromioclavicular ligaments provide the greatest resistance to anteroposterior translation; intact coracoclavicular ligaments retain much of the vertical suspension.",
+      "Partition and soft-tissue stability of the sternoclavicular joint. The sternoclavicular disc attaches at these sites, divides the cavity and contributes stability despite limited bony congruence.",
+      "Coracohumeral and superior glenohumeral ligaments. The rotator interval is the triangular cuff gap reinforced by the coracohumeral and superior glenohumeral ligaments.",
+      "Filling of the communicating subscapularis bursa can occur without a capsular tear. The anterior opening below the coracoid connects the joint cavity to a bursa around the upper border of subscapularis."
+    ],
+    "examTraps": [
+      "Acromioclavicular ligaments chiefly resist anteroposterior displacement; coracoclavicular ligaments chiefly resist vertical translation and rotation.",
+      "The rotator interval is a gap between cuff tendons, and the subscapularis bursa can communicate with the joint."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "After an acromioclavicular injury, the trapezoid and acromioclavicular ligaments are torn but the conoid remains intact. Which residual mechanical behavior is most consistent with this pattern?",
+        "answer": "The coracoid can rotate around a remaining vertical conoid fulcrum. The conoid remains an almost vertical, posteromedial restraint to distraction; loss of the trapezoid permits rotation around it."
+      },
+      {
+        "prompt": "An intra-articular fibrocartilaginous structure is detached from the posterosuperior medial clavicle and from the first costal cartilage near the sternum. Which joint function is most directly compromised?",
+        "answer": "Partition and soft-tissue stability of the sternoclavicular joint. The sternoclavicular disc attaches at these sites, divides the cavity and contributes stability despite limited bony congruence."
+      },
+      {
+        "prompt": "During a shoulder arthrogram, contrast exits through the normal anterior capsular opening below the coracoid and surrounds the upper border of subscapularis. Which interpretation best fits the anatomy?",
+        "answer": "Filling of the communicating subscapularis bursa can occur without a capsular tear. The anterior opening below the coracoid connects the joint cavity to a bursa around the upper border of subscapularis."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-001 → Printed p. 902; local PDF p. 1385",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-002 → Printed p. 903; local PDF p. 1386",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-003 → Printed p. 900-901; local PDF p. 1383-1384",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-004 → Printed p. 906-907; local PDF p. 1390-1391",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-005 → Printed p. 906; local PDF p. 1390",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-shoulder-stability-obj-001",
+        "text": "Predict residual acromioclavicular mechanics after selective conoid, trapezoid and capsular injuries.",
+        "questionIds": [
+          "comp-limbs-001"
+        ]
+      },
+      {
+        "id": "comp-limbs-shoulder-stability-obj-002",
+        "text": "Distinguish horizontal acromioclavicular instability from failure of vertical coracoclavicular suspension.",
+        "questionIds": [
+          "comp-limbs-002"
+        ]
+      },
+      {
+        "id": "comp-limbs-shoulder-stability-obj-003",
+        "text": "Relate sternoclavicular disc attachments to joint partition and stability.",
+        "questionIds": [
+          "comp-limbs-003"
+        ]
+      },
+      {
+        "id": "comp-limbs-shoulder-stability-obj-004",
+        "text": "Localize the rotator interval and its ligamentous reinforcements.",
+        "questionIds": [
+          "comp-limbs-004"
+        ]
+      },
+      {
+        "id": "comp-limbs-shoulder-stability-obj-005",
+        "text": "Distinguish normal subscapular bursal filling from an abnormal capsular leak.",
+        "questionIds": [
+          "comp-limbs-005"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-plexus-localization",
+    "moduleId": "comp-limbs-plexus-localization-module",
+    "examId": "term2-limbs",
+    "title": "Branch-level localization in the shoulder and arm",
+    "scope": "book-extension",
+    "summary": "Selective muscle testing localizes a lesion along the brachial plexus or a terminal nerve. A lesion distal to an early motor branch can spare that muscle while affecting more distal targets.",
+    "keyPoints": [
+      "At the lateral border of the scapular spine after the supraspinatus branches. The nerve supplies supraspinatus before curving around the scapular spine to infraspinatus.",
+      "Lower subscapular nerve. The lower subscapular nerve supplies lower subscapularis and usually teres major; separate thoracodorsal and axillary branches remain functional.",
+      "Lateral pectoral nerve after it leaves the lateral cord. The lateral pectoral nerve crosses the vessels, pierces clavipectoral fascia and reaches pectoralis major. A distal branch injury spares musculocutaneous function.",
+      "Teres minor contraction with sensation over the usual upper lateral cutaneous territory. The posterior axillary branch gives the nerve to teres minor and the upper lateral cutaneous nerve, so these may remain intact.",
+      "Lateral cutaneous nerve of the forearm after the motor branches have arisen. The musculocutaneous nerve continues as this cutaneous branch after supplying arm muscles and passes lateral to the biceps tendon."
+    ],
+    "examTraps": [
+      "A distal suprascapular lesion can spare supraspinatus.",
+      "Sensory branches and motor branches do not always arise at the same point."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "External rotation is weak and infraspinatus is denervated, but supraspinatus contraction is preserved. Which location best explains an isolated suprascapular neuropathy with this pattern?",
+        "answer": "At the lateral border of the scapular spine after the supraspinatus branches. The nerve supplies supraspinatus before curving around the scapular spine to infraspinatus."
+      },
+      {
+        "prompt": "A branch crossing anterior to the axillary vessels is divided where it pierces clavipectoral fascia. Pectoralis major loses part of its innervation, but musculocutaneous motor function remains normal. Which localization is best?",
+        "answer": "Lateral pectoral nerve after it leaves the lateral cord. The lateral pectoral nerve crosses the vessels, pierces clavipectoral fascia and reaches pectoralis major. A distal branch injury spares musculocutaneous function."
+      },
+      {
+        "prompt": "A small penetrating wound lateral to the biceps tendon causes anterolateral forearm numbness. Biceps and brachialis retain normal power. Which structure is most consistent with the lesion?",
+        "answer": "Lateral cutaneous nerve of the forearm after the motor branches have arisen. The musculocutaneous nerve continues as this cutaneous branch after supplying arm muscles and passes lateral to the biceps tendon."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-006 → Printed p. 924; local PDF p. 1414",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-007 → Printed p. 924; local PDF p. 1414",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-008 → Printed p. 924; local PDF p. 1414",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-009 → Printed p. 924-925; local PDF p. 1414-1415",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 49 Shoulder girdle and arm",
+        "locator": "comp-limbs-010 → Printed p. 925 and 954; local PDF p. 1415 and 1459",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-plexus-localization-obj-001",
+        "text": "Localize suprascapular injury using discordant supraspinatus and infraspinatus findings.",
+        "questionIds": [
+          "comp-limbs-006"
+        ]
+      },
+      {
+        "id": "comp-limbs-plexus-localization-obj-002",
+        "text": "Distinguish lower subscapular injury from neighboring posterior-cord branch injuries.",
+        "questionIds": [
+          "comp-limbs-007"
+        ]
+      },
+      {
+        "id": "comp-limbs-plexus-localization-obj-003",
+        "text": "Use fascial course and spared lateral-cord functions to localize a lateral pectoral lesion.",
+        "questionIds": [
+          "comp-limbs-008"
+        ]
+      },
+      {
+        "id": "comp-limbs-plexus-localization-obj-004",
+        "text": "Distinguish anterior axillary-branch injury from injury of the whole axillary nerve.",
+        "questionIds": [
+          "comp-limbs-009"
+        ]
+      },
+      {
+        "id": "comp-limbs-plexus-localization-obj-005",
+        "text": "Separate distal musculocutaneous sensory injury from proximal motor involvement.",
+        "questionIds": [
+          "comp-limbs-010"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-forearm-mechanics",
+    "moduleId": "comp-limbs-forearm-mechanics-module",
+    "examId": "term2-limbs",
+    "title": "Elbow stability and forearm load transfer",
+    "scope": "book-extension",
+    "summary": "The radius and ulna function as a linked unit. The radial head, interosseous membrane and distal radioulnar stabilizers share longitudinal loads, while collateral ligaments control angular instability.",
+    "keyPoints": [
+      "Disruption of the interosseous membrane. The radial head, interosseous membrane and distal radioulnar joint are linked longitudinal stabilizers; their combined disruption defines the Essex-Lopresti pattern.",
+      "Anterior band of the ulnar collateral ligament complex. The anterior ulnar collateral band is the major valgus restraint; an intact complex can maintain stability when the radial head is lost.",
+      "Only the outer part of the disc has a substantial blood supply. Gray describes vascularization of approximately the outer 15-20% of the disc, with the remaining central portion avascular.",
+      "Radial head spins proximally while the distal radius and hand swing around the ulnar head. The two radioulnar pivot joints act together: proximal radial rotation accompanies a distal arc around the ulna.",
+      "Biceps brachii. Biceps contributes especially to rapid or resisted supination in flexion, while supinator can support slow unresisted rotation in extension."
+    ],
+    "examTraps": [
+      "A radial-head fracture can be part of a forearm-wide injury.",
+      "The central triangular fibrocartilage is much less vascular than its periphery."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A radial-head fracture is accompanied by distal radioulnar instability. Under axial load the radius migrates proximally. Which additional lesion best unifies the findings?",
+        "answer": "Disruption of the interosseous membrane. The radial head, interosseous membrane and distal radioulnar joint are linked longitudinal stabilizers; their combined disruption defines the Essex-Lopresti pattern."
+      },
+      {
+        "prompt": "Two equal-sized tears involve the triangular fibrocartilage: one is central and one peripheral. Why does the central lesion have less intrinsic vascular support for repair?",
+        "answer": "Only the outer part of the disc has a substantial blood supply. Gray describes vascularization of approximately the outer 15-20% of the disc, with the remaining central portion avascular."
+      },
+      {
+        "prompt": "A patient has weak rapid, resisted supination with the elbow flexed, but can still perform slow unresisted supination with the elbow extended. Which muscle's loss best explains the disproportionate deficit?",
+        "answer": "Biceps brachii. Biceps contributes especially to rapid or resisted supination in flexion, while supinator can support slow unresisted rotation in extension."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-011 → Printed p. 941.e1; local PDF p. 1441",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-012 → Printed p. 941.e1; local PDF p. 1441",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-013 → Printed p. 940; local PDF p. 1439",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-014 → Printed p. 941-941.e1; local PDF p. 1440-1441",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-015 → Printed p. 941; local PDF p. 1440",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-forearm-mechanics-obj-001",
+        "text": "Integrate radial-head injury, distal instability and longitudinal forearm load transfer.",
+        "questionIds": [
+          "comp-limbs-011"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-mechanics-obj-002",
+        "text": "Predict valgus instability after combined radial-head and medial ligament failure.",
+        "questionIds": [
+          "comp-limbs-012"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-mechanics-obj-003",
+        "text": "Relate triangular fibrocartilage tear position to its intrinsic vascular repair potential.",
+        "questionIds": [
+          "comp-limbs-013"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-mechanics-obj-004",
+        "text": "Integrate proximal and distal radioulnar movements during pronation.",
+        "questionIds": [
+          "comp-limbs-014"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-mechanics-obj-005",
+        "text": "Use load and elbow position to distinguish contributions to supination.",
+        "questionIds": [
+          "comp-limbs-015"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-forearm-pathways",
+    "moduleId": "comp-limbs-forearm-pathways-module",
+    "examId": "term2-limbs",
+    "title": "Forearm vessels and nerve relationships",
+    "scope": "book-extension",
+    "summary": "Recurrent arteries reconnect distal vessels to the brachial system around the elbow. Fascial openings and muscle heads guide nerves into compartments and explain selective deficits.",
+    "keyPoints": [
+      "Anterior ulnar recurrent artery. It ascends between brachialis and pronator teres to join the inferior ulnar collateral artery anterior to the epicondyle.",
+      "Posterior interosseous artery in the posterior forearm. This is the proximal posterior route; the artery accompanies the posterior interosseous nerve among the extensor muscles.",
+      "Ulnar head of pronator teres. The median nerve passes between the pronator heads and is separated from the ulnar artery by the ulnar head.",
+      "Digital extensors and extensor carpi ulnaris are denervated while proximal radial wrist-extensor branches are spared. The distal deep radial pathway supplies digital extensors and extensor carpi ulnaris. Preserved radial wrist extensors extend the wrist with an unopposed radial component.",
+      "A branch of the medial cutaneous nerve of the forearm crossing the incision. Branches of this separate cutaneous nerve cross near the cubital-tunnel approach and can be affected without an ulnar motor or digital deficit."
+    ],
+    "examTraps": [
+      "A nerve and artery that cross in projection may be separated by a muscle head.",
+      "Finger extension can fail while radial wrist extension remains."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Contrast in the inferior ulnar collateral artery crosses to the ulnar arterial system anterior to the medial epicondyle. Which returning branch completes this direct anastomosis?",
+        "answer": "Anterior ulnar recurrent artery. It ascends between brachialis and pronator teres to join the inferior ulnar collateral artery anterior to the epicondyle."
+      },
+      {
+        "prompt": "The median nerve crosses superficial to the ulnar artery in the proximal forearm. What usually lies between these two structures at their crossing?",
+        "answer": "Ulnar head of pronator teres. The median nerve passes between the pronator heads and is separated from the ulnar artery by the ulnar head."
+      },
+      {
+        "prompt": "After an operation near the cubital tunnel, finger abduction and ulnar digital sensation remain normal, but a patch of medial forearm skin is numb. Which injury best explains this selective new deficit?",
+        "answer": "A branch of the medial cutaneous nerve of the forearm crossing the incision. Branches of this separate cutaneous nerve cross near the cubital-tunnel approach and can be affected without an ulnar motor or digital deficit."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-016 → Printed p. 950-951; local PDF p. 1452-1453",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-017 → Printed p. 950; local PDF p. 1452",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-018 → Printed p. 941 and 950-951; local PDF p. 1440 and 1452-1453",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-019 → Printed p. 953-954; local PDF p. 1457-1459",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 50 Elbow and forearm",
+        "locator": "comp-limbs-020 → Printed p. 953.e1-954; local PDF p. 1458-1459",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-forearm-pathways-obj-001",
+        "text": "Trace an anterior medial-epicondylar arterial collateral route.",
+        "questionIds": [
+          "comp-limbs-016"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-pathways-obj-002",
+        "text": "Follow the posterior interosseous artery through the proximal membrane interval.",
+        "questionIds": [
+          "comp-limbs-017"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-pathways-obj-003",
+        "text": "Identify the muscular partition between median nerve and ulnar artery.",
+        "questionIds": [
+          "comp-limbs-018"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-pathways-obj-004",
+        "text": "Explain preserved radially deviated wrist extension in a distal deep-radial lesion.",
+        "questionIds": [
+          "comp-limbs-019"
+        ]
+      },
+      {
+        "id": "comp-limbs-forearm-pathways-obj-005",
+        "text": "Distinguish medial forearm cutaneous injury from ulnar nerve injury.",
+        "questionIds": [
+          "comp-limbs-020"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-hand-tendon-mechanics",
+    "moduleId": "comp-limbs-hand-tendon-mechanics-module",
+    "examId": "term2-limbs",
+    "title": "Finger and thumb tendon mechanics",
+    "scope": "book-extension",
+    "summary": "The extensor expansion, volar plates and flexor pulleys couple motion across finger joints. Their failure produces distinct deformities even when the main muscle and nerve remain intact.",
+    "keyPoints": [
+      "Terminal extensor disruption allows proximal migration of the extensor apparatus, increasing its PIP extension moment. A mallet lesion removes distal restraint. The remaining extensor apparatus can migrate proximally and contribute to secondary swan-neck deformity.",
+      "Palmar migration of the lateral bands past the PIP axis after central-slip failure. With central-slip failure and attenuation of the triangular ligament, the lateral bands move volarly; they flex the PIP while the tightened terminal mechanism still extends the DIP.",
+      "The adductor aponeurosis is interposed between the avulsed ligament and its distal attachment. A Stener lesion displaces the torn ligament around the free edge of the adductor aponeurosis, which prevents apposition to its insertion.",
+      "A2 and A4. A2 overlies the proximal phalanx and A4 the middle phalanx; these are the key finger pulleys resisting flexor bowstringing.",
+      "The wider palmar metacarpal head tightens MCP collateral ligaments in flexion, while PIP proper collaterals stay taut throughout motion. The changing metacarpal-head width gives position-dependent MCP collateral tension; PIP collateral restraint is maintained through flexion and extension."
+    ],
+    "examTraps": [
+      "Mallet and boutonniere deformities arise at different levels of the extensor apparatus.",
+      "Digit MCP collateral ligaments tighten in flexion; PIP collaterals remain taut across the movement arc."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Following forced flexion of an extended fingertip, active DIP extension is lost but passive extension is full. Months later the PIP joint hyperextends. What sequence best explains the progression?",
+        "answer": "Terminal extensor disruption allows proximal migration of the extensor apparatus, increasing its PIP extension moment. A mallet lesion removes distal restraint. The remaining extensor apparatus can migrate proximally and contribute to secondary swan-neck deformity."
+      },
+      {
+        "prompt": "After forced radial deviation of the thumb MCP joint, its torn ulnar collateral ligament lies superficial to the adductor aponeurosis. Why is direct ligament healing impeded?",
+        "answer": "The adductor aponeurosis is interposed between the avulsed ligament and its distal attachment. A Stener lesion displaces the torn ligament around the free edge of the adductor aponeurosis, which prevents apposition to its insertion."
+      },
+      {
+        "prompt": "An intact finger allows lateral movement at the MCP joint in extension but very little when that joint is fully flexed. The PIP remains stable in both positions. Which explanation best fits?",
+        "answer": "The wider palmar metacarpal head tightens MCP collateral ligaments in flexion, while PIP proper collaterals stay taut throughout motion. The changing metacarpal-head width gives position-dependent MCP collateral tension; PIP collateral restraint is maintained through flexion and extension."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-021 → Printed p. 972.e1; local PDF p. 1492",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-022 → Printed p. 972.e1; local PDF p. 1492",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-023 → Printed p. 972.e1; local PDF p. 1492",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-024 → Printed p. 973; local PDF p. 1493",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-025 → Printed p. 971-972; local PDF p. 1490-1491",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-hand-tendon-mechanics-obj-001",
+        "text": "Explain secondary PIP hyperextension following terminal extensor disruption.",
+        "questionIds": [
+          "comp-limbs-021"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-tendon-mechanics-obj-002",
+        "text": "Relate central-slip failure to lateral-band migration and boutonniere posture.",
+        "questionIds": [
+          "comp-limbs-022"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-tendon-mechanics-obj-003",
+        "text": "Explain impaired healing when adductor aponeurosis intervenes in a thumb UCL tear.",
+        "questionIds": [
+          "comp-limbs-023"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-tendon-mechanics-obj-004",
+        "text": "Identify the critical digital annular pulleys for preventing bowstringing.",
+        "questionIds": [
+          "comp-limbs-024"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-tendon-mechanics-obj-005",
+        "text": "Compare position-dependent MCP collateral tension with PIP collateral behavior.",
+        "questionIds": [
+          "comp-limbs-025"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-hand-neurovascular-spaces",
+    "moduleId": "comp-limbs-hand-neurovascular-spaces-module",
+    "examId": "term2-limbs",
+    "title": "Hand nerve branches, arches and tendon sheaths",
+    "scope": "book-extension",
+    "summary": "Hand symptoms depend on whether a lesion affects proximal or distal branches, and infections follow specific synovial sheaths. Palmar arches and tendon nutrient folds occupy different depths.",
+    "keyPoints": [
+      "Deep ulnar branch after its hypothenar muscular branches. The deep branch gives hypothenar branches near its origin before crossing to the interossei and adductor pollicis; superficial sensory and palmaris-brevis fibers remain separate.",
+      "The corresponding dorsal distal phalanx and nail-bed region. Proper palmar digital branches extend dorsally to supply distal finger skin; proximal dorsal and distal dorsal territories do not have identical sources.",
+      "Into the common digital-flexor sheath at the wrist. The little-finger sheath usually continues into the common sheath surrounding FDS and FDP through the carpal tunnel.",
+      "Delivery of blood vessels through the vincula. Vincula are specialized synovial folds carrying vessels to gliding flexor tendons, including short folds near the insertions.",
+      "Deep palmar arch. The deep palmar arch lies deep to flexor tendons and lumbricals, on the bases of the metacarpals and interossei, accompanying the deep ulnar branch."
+    ],
+    "examTraps": [
+      "Dorsal fingertip sensation can come from a palmar digital nerve.",
+      "The little-finger sheath usually communicates proximally; the middle three digital sheaths usually end separately."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A small deep palmar lesion causes interosseous and adductor-pollicis weakness, but hypothenar muscle function, palmaris brevis and ulnar digital sensation remain intact. Which site best fits?",
+        "answer": "Deep ulnar branch after its hypothenar muscular branches. The deep branch gives hypothenar branches near its origin before crossing to the interossei and adductor pollicis; superficial sensory and palmaris-brevis fibers remain separate."
+      },
+      {
+        "prompt": "An infection begins within the little-finger flexor synovial sheath. Which proximal route is anatomically most likely in the usual arrangement?",
+        "answer": "Into the common digital-flexor sheath at the wrist. The little-finger sheath usually continues into the common sheath surrounding FDS and FDP through the carpal tunnel."
+      },
+      {
+        "prompt": "During a palmar dissection, the digital flexor tendons and lumbricals are lifted. An arterial arch lies against the metacarpal bases and interossei with the deep ulnar nerve in its concavity. Which structure is exposed?",
+        "answer": "Deep palmar arch. The deep palmar arch lies deep to flexor tendons and lumbricals, on the bases of the metacarpals and interossei, accompanying the deep ulnar branch."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-026 → Printed p. 984-985; local PDF p. 1512 and 1515",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-027 → Printed p. 983; local PDF p. 1511",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-028 → Printed p. 973-974; local PDF p. 1493 and 1495",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-029 → Printed p. 973; local PDF p. 1493",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 51 Wrist and hand",
+        "locator": "comp-limbs-030 → Printed p. 982; local PDF p. 1509",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-hand-neurovascular-spaces-obj-001",
+        "text": "Localize a deep ulnar lesion by combining spared hypothenar and sensory findings.",
+        "questionIds": [
+          "comp-limbs-026"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-neurovascular-spaces-obj-002",
+        "text": "Predict dorsal distal-digit sensory loss after proper palmar digital nerve injury.",
+        "questionIds": [
+          "comp-limbs-027"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-neurovascular-spaces-obj-003",
+        "text": "Trace likely spread from the little-finger flexor synovial sheath.",
+        "questionIds": [
+          "comp-limbs-028"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-neurovascular-spaces-obj-004",
+        "text": "Relate the vincula to digital flexor tendon vascular support.",
+        "questionIds": [
+          "comp-limbs-029"
+        ]
+      },
+      {
+        "id": "comp-limbs-hand-neurovascular-spaces-obj-005",
+        "text": "Identify the deep palmar arch by tissue plane and associated nerve.",
+        "questionIds": [
+          "comp-limbs-030"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-hip-capsule",
+    "moduleId": "comp-limbs-hip-capsule-module",
+    "examId": "term2-limbs",
+    "title": "Hip capsule, cartilage and communicating spaces",
+    "scope": "book-extension",
+    "summary": "The capsule has asymmetric femoral attachments and contains the capital growth plate. The acetabular articular ring, central fossa and adjacent bursae explain loading and fluid distribution.",
+    "keyPoints": [
+      "Posterior attachment is proximal to the crest; anterior attachment reaches the intertrochanteric line. The capsule attaches posteriorly about 1 cm superomedial to the crest but anteriorly at the intertrochanteric line.",
+      "The position increases capsular capacity and reduces tension from wound-up capsular ligaments. Hip capacity is maximal in partial flexion and abduction; extension winds the capsule and raises restraint.",
+      "The anterosuperior lunate surface bears substantial load, while the central acetabular fossa is nonarticular. The lunate articular surface is widest and cartilage thickest where body weight is transmitted; the fossa contains fibroelastic fat.",
+      "Iliopectineal bursa. This bursa can communicate with the hip joint through the specified anterior capsular interval.",
+      "The physis is avascular, so retinacular vessels must reach the head around its edge. The capital epiphysis is intracapsular and separated by an avascular plate; retinacular vessels passing around its edge are crucial to head perfusion."
+    ],
+    "examTraps": [
+      "The acetabular fossa is nonarticular despite lying centrally in the socket.",
+      "Hip capsular capacity is greatest with partial flexion and abduction, whereas extension tightens the capsule."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A surgeon exposes the posterior femoral neck near the intertrochanteric crest. Which comparison with the anterior attachment of the hip capsule is correct?",
+        "answer": "Posterior attachment is proximal to the crest; anterior attachment reaches the intertrochanteric line. The capsule attaches posteriorly about 1 cm superomedial to the crest but anteriorly at the intertrochanteric line."
+      },
+      {
+        "prompt": "A specimen shows thick hyaline cartilage on the anterosuperior acetabular ring, but fat and synovium in its central depression. Which functional interpretation is correct?",
+        "answer": "The anterosuperior lunate surface bears substantial load, while the central acetabular fossa is nonarticular. The lunate articular surface is widest and cartilage thickest where body weight is transmitted; the fossa contains fibroelastic fat."
+      },
+      {
+        "prompt": "In an adolescent, injury crosses the capital femoral growth plate. Why can the head's circulation be endangered even when vessels within the neck remain patent below the growth plate?",
+        "answer": "The physis is avascular, so retinacular vessels must reach the head around its edge. The capital epiphysis is intracapsular and separated by an avascular plate; retinacular vessels passing around its edge are crucial to head perfusion."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-031 → Printed p. 1368; local PDF p. 2153",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-032 → Printed p. 1368; local PDF p. 2153",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-033 → Printed p. 1368; local PDF p. 2153",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-034 → Printed p. 1370; local PDF p. 2157",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-035 → Printed p. 1368 and 1370; local PDF p. 2153 and 2157",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-hip-capsule-obj-001",
+        "text": "Compare anterior and posterior femoral attachments of the hip capsule.",
+        "questionIds": [
+          "comp-limbs-031"
+        ]
+      },
+      {
+        "id": "comp-limbs-hip-capsule-obj-002",
+        "text": "Explain the posture that reduces pressure in an effused hip joint.",
+        "questionIds": [
+          "comp-limbs-032"
+        ]
+      },
+      {
+        "id": "comp-limbs-hip-capsule-obj-003",
+        "text": "Distinguish acetabular load-bearing cartilage from its nonarticular central fossa.",
+        "questionIds": [
+          "comp-limbs-033"
+        ]
+      },
+      {
+        "id": "comp-limbs-hip-capsule-obj-004",
+        "text": "Trace anterior hip-joint communication with the iliopectineal bursa.",
+        "questionIds": [
+          "comp-limbs-034"
+        ]
+      },
+      {
+        "id": "comp-limbs-hip-capsule-obj-005",
+        "text": "Relate the avascular femoral physis to the route and vulnerability of head vessels.",
+        "questionIds": [
+          "comp-limbs-035"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-thigh-circulation",
+    "moduleId": "comp-limbs-thigh-circulation-module",
+    "examId": "term2-limbs",
+    "title": "Thigh circulation and changing neurovascular planes",
+    "scope": "book-extension",
+    "summary": "The profunda femoris and its perforating branches form longitudinal collateral channels, while the femoral vein changes sides along the artery. Superficial venous and cutaneous nerve routes explain selective procedural deficits.",
+    "keyPoints": [
+      "Medial proximally and posterolateral distally. The vein lies medial at the triangle base, posterior near the apex and posterolateral in the distal adductor canal.",
+      "Inferior gluteal artery to the first perforating and circumflex femoral anastomoses. The gluteal-circumflex-perforating connections can reach the profunda system distal to a proximal femoral obstruction.",
+      "Profunda perforators anastomose with one another and with gluteal and popliteal muscular branches at the ends. The perforators cross the adductor attachment and form a linked posterior thigh chain from gluteal to popliteal territories.",
+      "Saphenous branch of the descending genicular artery. This branch accompanies the saphenous nerve through the canal roof toward the medial knee and proximal leg.",
+      "Injury of the cutaneous saphenous nerve accompanying the vein in the leg. The saphenous nerve travels with the great saphenous vein in the leg and supplies skin without motor innervation."
+    ],
+    "examTraps": [
+      "The femoral vein is medial at the triangle base but posterolateral in the distal adductor canal.",
+      "A patent collateral connection must enter the circulation downstream of an occlusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Two transverse images are obtained: one at the base of the femoral triangle and one at the distal adductor canal. Where is the femoral vein expected relative to its artery at these two levels?",
+        "answer": "Medial proximally and posterolateral distally. The vein lies medial at the triangle base, posterior near the apex and posterolateral in the distal adductor canal."
+      },
+      {
+        "prompt": "A posterior thigh exposure identifies arteries passing through tendinous arches in adductor magnus near the linea aspera. Which arrangement explains their ability to distribute blood longitudinally?",
+        "answer": "Profunda perforators anastomose with one another and with gluteal and popliteal muscular branches at the ends. The perforators cross the adductor attachment and form a linked posterior thigh chain from gluteal to popliteal territories."
+      },
+      {
+        "prompt": "Following harvesting of the great saphenous vein in the leg, a patient develops medial leg numbness but normal quadriceps strength and foot movements. Which explanation best fits?",
+        "answer": "Injury of the cutaneous saphenous nerve accompanying the vein in the leg. The saphenous nerve travels with the great saphenous vein in the leg and supplies skin without motor innervation."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-036 → Printed p. 1390; local PDF p. 2185",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-037 → Printed p. 1389-1390; local PDF p. 2184-2185",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-038 → Printed p. 1389; local PDF p. 2184",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-039 → Printed p. 1389; local PDF p. 2184",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 77 Pelvic girdle, hip, gluteal region and thigh",
+        "locator": "comp-limbs-040 → Printed p. 1390; local PDF p. 2185",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-thigh-circulation-obj-001",
+        "text": "Compare femoral artery-vein relations at two levels of the thigh.",
+        "questionIds": [
+          "comp-limbs-036"
+        ]
+      },
+      {
+        "id": "comp-limbs-thigh-circulation-obj-002",
+        "text": "Trace an internal-iliac collateral route beyond proximal femoral occlusion.",
+        "questionIds": [
+          "comp-limbs-037"
+        ]
+      },
+      {
+        "id": "comp-limbs-thigh-circulation-obj-003",
+        "text": "Explain the longitudinal anastomotic network of profunda perforating arteries.",
+        "questionIds": [
+          "comp-limbs-038"
+        ]
+      },
+      {
+        "id": "comp-limbs-thigh-circulation-obj-004",
+        "text": "Follow the saphenous branch of the descending genicular artery out of the canal.",
+        "questionIds": [
+          "comp-limbs-039"
+        ]
+      },
+      {
+        "id": "comp-limbs-thigh-circulation-obj-005",
+        "text": "Explain a cutaneous deficit after great saphenous vein harvest.",
+        "questionIds": [
+          "comp-limbs-040"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-knee-mechanics",
+    "moduleId": "comp-limbs-knee-mechanics-module",
+    "examId": "term2-limbs",
+    "title": "Knee recesses, stabilizers and load-bearing mechanics",
+    "scope": "book-extension",
+    "summary": "Knee fluid follows synovial recesses, while flexion changes cruciate tension, patellar restraint and the muscular work required to support body weight.",
+    "keyPoints": [
+      "Articularis genus. Articularis genus retracts the suprapatellar bursa/recess during extension, helping prevent synovial tissue from being caught.",
+      "The gastrocnemius-semimembranosus bursa. This posteromedial bursa may communicate with the knee and form a typical Baker cyst.",
+      "Reduced posterior restraint in flexion, when the anterolateral bundle normally becomes taut. The PCL anterolateral bundle is tight in flexion; the posteromedial bundle is preferentially tight in extension.",
+      "The body-weight line moves behind the knee axis, creating a flexion moment that quadriceps must oppose. In a flexed weight-bearing knee, the line of body weight passes behind the joint axis; sustained quadriceps activity prevents further flexion.",
+      "The medial patellofemoral ligament and medial quadriceps contribution. Trochlear geometry and medial soft-tissue restraints oppose the tendency of the patella to displace laterally."
+    ],
+    "examTraps": [
+      "The suprapatellar recess is continuous with the knee cavity, whereas a typical popliteal cyst occupies the gastrocnemius-semimembranosus bursa.",
+      "Flexing a weight-bearing knee increases the need for active quadriceps support."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A large knee effusion extends superiorly deep to quadriceps. During knee extension, which small muscle normally pulls the wall of this communicating recess away from the moving joint?",
+        "answer": "Articularis genus. Articularis genus retracts the suprapatellar bursa/recess during extension, helping prevent synovial tissue from being caught."
+      },
+      {
+        "prompt": "A reconstruction is being assessed separately in knee flexion and extension. The anterolateral bundle of the posterior cruciate ligament has failed, while the posteromedial bundle is intact. Which mechanical deficit is most directly expected?",
+        "answer": "Reduced posterior restraint in flexion, when the anterolateral bundle normally becomes taut. The PCL anterolateral bundle is tight in flexion; the posteromedial bundle is preferentially tight in extension."
+      },
+      {
+        "prompt": "Recurrent lateral patellar displacement occurs in a knee with a shallow lateral trochlear wall. Loss of which additional restraint would most compound the deficient bony guidance?",
+        "answer": "The medial patellofemoral ligament and medial quadriceps contribution. Trochlear geometry and medial soft-tissue restraints oppose the tendency of the patella to displace laterally."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-041 → Printed p. 1409; local PDF p. 2208",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-042 → Printed p. 1411; local PDF p. 2210",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-043 → Printed p. 1409; local PDF p. 2208",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-044 → Printed p. 1412; local PDF p. 2211",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-045 → Printed p. 1412; local PDF p. 2211",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-knee-mechanics-obj-001",
+        "text": "Relate articularis genus to retraction of the suprapatellar synovial recess.",
+        "questionIds": [
+          "comp-limbs-041"
+        ]
+      },
+      {
+        "id": "comp-limbs-knee-mechanics-obj-002",
+        "text": "Distinguish the typical Baker-cyst bursa from other knee bursae and recesses.",
+        "questionIds": [
+          "comp-limbs-042"
+        ]
+      },
+      {
+        "id": "comp-limbs-knee-mechanics-obj-003",
+        "text": "Predict position-specific posterior instability from selective PCL bundle failure.",
+        "questionIds": [
+          "comp-limbs-043"
+        ]
+      },
+      {
+        "id": "comp-limbs-knee-mechanics-obj-004",
+        "text": "Explain why a flexed weight-bearing knee requires sustained quadriceps activity.",
+        "questionIds": [
+          "comp-limbs-044"
+        ]
+      },
+      {
+        "id": "comp-limbs-knee-mechanics-obj-005",
+        "text": "Integrate trochlear geometry and medial soft-tissue restraints in patellar tracking.",
+        "questionIds": [
+          "comp-limbs-045"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-leg-lesion-levels",
+    "moduleId": "comp-limbs-leg-lesion-levels-module",
+    "examId": "term2-limbs",
+    "title": "Localizing leg nerve lesions by spared functions",
+    "scope": "book-extension",
+    "summary": "Distinguish nerve injury levels by combining cutaneous loss with motor functions supplied before and after the suspected lesion.",
+    "keyPoints": [
+      "Tibialis posterior receives L5 fibers through the tibial nerve and is spared by the local common fibular lesion. The spared inverter samples L5 motor function outside the common fibular nerve; a broader L5 lesion may also weaken it.",
+      "The common fibular component of the sciatic nerve proximal to its short-head branch. The short head of biceps receives the common fibular division above the fibular neck; its involvement places the lesion proximal to that branch, while tibial-division muscles are spared.",
+      "Compression of the distal deep fibular nerve after its branches to the anterior leg muscles. The distal nerve supplies the first web space and short extensors after proximal motor branches have already departed.",
+      "The branches to fibularis longus and brevis arise before the nerve becomes superficial. A distal cutaneous injury occurs beyond the motor supply to the lateral compartment.",
+      "Both weak muscles receive tibial motor branches in the leg, proximal to the tarsal tunnel. A distal tunnel lesion cannot account for denervation of these proximal extrinsic muscles; a more proximal lesion or additional pathology is needed."
+    ],
+    "examTraps": [
+      "Preserved tibialis posterior separates a common fibular lesion from a broader L5-pattern lesion.",
+      "The distal deep fibular nerve cannot explain loss of proximal anterior-compartment function."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "After compression at the fibular neck, a patient has weak ankle dorsiflexion and eversion. Inversion against resistance remains strong when tested with the ankle slightly plantarflexed. Why does this pattern favor a common fibular neuropathy over an L5 root lesion?",
+        "answer": "Tibialis posterior receives L5 fibers through the tibial nerve and is spared by the local common fibular lesion. The spared inverter samples L5 motor function outside the common fibular nerve; a broader L5 lesion may also weaken it."
+      },
+      {
+        "prompt": "A tight strap at the anterior ankle is followed by first-web-space numbness and weakness of extensor digitorum brevis. Ankle dorsiflexion and long-toe extension are normal. Which explanation best fits?",
+        "answer": "Compression of the distal deep fibular nerve after its branches to the anterior leg muscles. The distal nerve supplies the first web space and short extensors after proximal motor branches have already departed."
+      },
+      {
+        "prompt": "A patient referred for presumed tarsal-tunnel compression has plantar sensory loss, but also clear weakness of tibialis posterior and flexor hallucis longus. Which finding challenges a lesion confined behind the medial malleolus?",
+        "answer": "Both weak muscles receive tibial motor branches in the leg, proximal to the tarsal tunnel. A distal tunnel lesion cannot account for denervation of these proximal extrinsic muscles; a more proximal lesion or additional pathology is needed."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-046 → Printed p. 1423 and 1428; local PDF p. 2222 and 2227",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-047 → Printed p. 1428; local PDF p. 2227",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-048 → Printed p. 1429; local PDF p. 2228",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-049 → Printed p. 1428-1429; local PDF p. 2227-2228",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 78 Leg",
+        "locator": "comp-limbs-050 → Printed p. 1423 and 1428; local PDF p. 2222 and 2227",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-leg-lesion-levels-obj-001",
+        "text": "Use tibialis posterior function to distinguish common fibular from broader L5 injury.",
+        "questionIds": [
+          "comp-limbs-046"
+        ]
+      },
+      {
+        "id": "comp-limbs-leg-lesion-levels-obj-002",
+        "text": "Use short-head biceps involvement to localize a common-fibular-division lesion proximally.",
+        "questionIds": [
+          "comp-limbs-047"
+        ]
+      },
+      {
+        "id": "comp-limbs-leg-lesion-levels-obj-003",
+        "text": "Distinguish distal deep fibular injury from proximal anterior-compartment denervation.",
+        "questionIds": [
+          "comp-limbs-048"
+        ]
+      },
+      {
+        "id": "comp-limbs-leg-lesion-levels-obj-004",
+        "text": "Explain preserved eversion after injury of superficial fibular cutaneous branches.",
+        "questionIds": [
+          "comp-limbs-049"
+        ]
+      },
+      {
+        "id": "comp-limbs-leg-lesion-levels-obj-005",
+        "text": "Identify proximal tibial motor findings inconsistent with an isolated tarsal-tunnel lesion.",
+        "questionIds": [
+          "comp-limbs-050"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-ankle-tendon-stability",
+    "moduleId": "comp-limbs-ankle-tendon-stability-module",
+    "examId": "term2-limbs",
+    "title": "Ankle mortise, tendon restraints and surgical relations",
+    "scope": "book-extension",
+    "summary": "The ankle mortise accommodates the asymmetric talar trochlea; retinacula restrain tendons along different routes from the collateral ligaments.",
+    "keyPoints": [
+      "Slight separation and adjustment of the malleoli as the broader anterior talar trochlea enters the mortise. The trochlea is wider anteriorly; dorsiflexion requires the mortise to accommodate that wider region through small tibiofibular movements.",
+      "Disruption of the superior fibular retinaculum. The superior fibular retinaculum holds these tendons in the retromalleolar groove; its failure permits subluxation.",
+      "The tibial nerve and posterior tibial vessels lie medially to flexor hallucis longus. Flexor hallucis longus is a surgical landmark separating a lateral working interval from the medial neurovascular bundle.",
+      "Fibularis longus. An os peroneum may lie within fibularis longus near its cuboid turn; displacement can accompany tendon injury.",
+      "Anterior tibial artery at its transition to dorsalis pedis, and deep fibular nerve. At this level the anterior tibial artery lies lateral to extensor hallucis longus, with the deep fibular nerve lateral to the artery."
+    ],
+    "examTraps": [
+      "Tendon subluxation behind the lateral malleolus points to a fibular retinaculum, not simply the anterior talofibular ligament.",
+      "At the posterior ankle the neurovascular bundle is medial to flexor hallucis longus."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A healed distal tibiofibular fusion leaves normal talocrural cartilage but restricts end-range dorsiflexion. Which normal geometric accommodation has been lost?",
+        "answer": "Slight separation and adjustment of the malleoli as the broader anterior talar trochlea enters the mortise. The trochlea is wider anteriorly; dorsiflexion requires the mortise to accommodate that wider region through small tibiofibular movements."
+      },
+      {
+        "prompt": "During a posterior ankle dissection, the flexor hallucis longus muscle-tendon unit is identified. A working interval is maintained on its lateral side. Which important relationship makes that interval protective?",
+        "answer": "The tibial nerve and posterior tibial vessels lie medially to flexor hallucis longus. Flexor hallucis longus is a surgical landmark separating a lateral working interval from the medial neurovascular bundle."
+      },
+      {
+        "prompt": "At the anterior ankle a needle is placed immediately lateral to the extensor hallucis longus tendon. Arterial pulsation is encountered, and a neighboring nerve lies lateral to that artery. Which artery-nerve pair fits this arrangement?",
+        "answer": "Anterior tibial artery at its transition to dorsalis pedis, and deep fibular nerve. At this level the anterior tibial artery lies lateral to extensor hallucis longus, with the deep fibular nerve lateral to the artery."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapters 78 Leg and 79 Ankle and foot",
+        "locator": "comp-limbs-051 → Printed p. 1444; local PDF p. 2250",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapters 78 Leg and 79 Ankle and foot",
+        "locator": "comp-limbs-052 → Printed p. 1431; local PDF p. 2231",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapters 78 Leg and 79 Ankle and foot",
+        "locator": "comp-limbs-053 → Printed p. 1422; local PDF p. 2221",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapters 78 Leg and 79 Ankle and foot",
+        "locator": "comp-limbs-054 → Printed p. 1444; local PDF p. 2250",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapters 78 Leg and 79 Ankle and foot",
+        "locator": "comp-limbs-055 → Printed p. 1446; local PDF p. 2252",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-ankle-tendon-stability-obj-001",
+        "text": "Relate talar trochlear geometry to small distal tibiofibular movements.",
+        "questionIds": [
+          "comp-limbs-051"
+        ]
+      },
+      {
+        "id": "comp-limbs-ankle-tendon-stability-obj-002",
+        "text": "Distinguish fibular tendon-retinacular failure from talocrural ligament instability.",
+        "questionIds": [
+          "comp-limbs-052"
+        ]
+      },
+      {
+        "id": "comp-limbs-ankle-tendon-stability-obj-003",
+        "text": "Use flexor hallucis longus to locate the medial posterior-ankle neurovascular bundle.",
+        "questionIds": [
+          "comp-limbs-053"
+        ]
+      },
+      {
+        "id": "comp-limbs-ankle-tendon-stability-obj-004",
+        "text": "Relate an os peroneum injury to the fibularis longus tendon course.",
+        "questionIds": [
+          "comp-limbs-054"
+        ]
+      },
+      {
+        "id": "comp-limbs-ankle-tendon-stability-obj-005",
+        "text": "Use extensor hallucis longus to identify the anterior-ankle artery and nerve.",
+        "questionIds": [
+          "comp-limbs-055"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-foot-mechanics",
+    "moduleId": "comp-limbs-foot-mechanics-module",
+    "examId": "term2-limbs",
+    "title": "Foot arches, intrinsic mechanics and deep circulation",
+    "scope": "book-extension",
+    "summary": "Passive fascial tension and intrinsic muscle lines of pull shape the foot as a lever, while plantar nerve branches and vascular arches occupy distinct tissue planes.",
+    "keyPoints": [
+      "The plantar aponeurosis winds around the metatarsal head and draws the arch's pillars together. Metatarsophalangeal extension tensions the aponeurosis through the windlass mechanism, raising the arch passively.",
+      "Redirection of the long flexor's oblique pull to assist straight flexion of the lateral four toes. Quadratus plantae attaches to the long flexor tendons and helps correct their oblique line of traction.",
+      "Flexor hallucis brevis weakness. The medial plantar nerve supplies abductor hallucis, flexor digitorum brevis, flexor hallucis brevis and the first lumbrical.",
+      "The deep plantar branch of dorsalis pedis entering through the first intermetatarsal space. The lateral plantar artery forms the deep arch, completed medially by the deep plantar continuation from dorsalis pedis.",
+      "Flexor hallucis longus continuing between the sesamoids to the distal phalanx. The sesamoids lie in the two flexor hallucis brevis tendons, while flexor hallucis longus continues distally and can flex the interphalangeal joint."
+    ],
+    "examTraps": [
+      "Great-toe extension can raise the arch passively through the plantar aponeurosis.",
+      "Flexor hallucis brevis acts at the first metatarsophalangeal joint; flexor hallucis longus remains capable of interphalangeal flexion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "While the foot remains weight-bearing, an examiner passively extends the great toe. The medial longitudinal arch rises even without voluntary intrinsic-muscle contraction. Which mechanism best explains this?",
+        "answer": "The plantar aponeurosis winds around the metatarsal head and draws the arch's pillars together. Metatarsophalangeal extension tensions the aponeurosis through the windlass mechanism, raising the arch passively."
+      },
+      {
+        "prompt": "After a focal medial plantar nerve injury, abductor hallucis, flexor digitorum brevis and the first lumbrical are weak. Which additional weakness belongs to the same motor territory rather than implying lateral plantar involvement?",
+        "answer": "Flexor hallucis brevis weakness. The medial plantar nerve supplies abductor hallucis, flexor digitorum brevis, flexor hallucis brevis and the first lumbrical."
+      },
+      {
+        "prompt": "After loss of both first-metatarsophalangeal sesamoids and their attached short-flexor tendon insertions, a patient has weak flexion at that joint but can still actively flex the hallux interphalangeal joint. Which preserved structure explains the latter movement?",
+        "answer": "Flexor hallucis longus continuing between the sesamoids to the distal phalanx. The sesamoids lie in the two flexor hallucis brevis tendons, while flexor hallucis longus continues distally and can flex the interphalangeal joint."
+      }
+    ],
+    "subject": "anatomy",
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 79 Ankle and foot",
+        "locator": "comp-limbs-056 → Printed p. 1454; local PDF p. 2264",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 79 Ankle and foot",
+        "locator": "comp-limbs-057 → Printed p. 1454 and 1458; local PDF p. 2264 and 2268",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 79 Ankle and foot",
+        "locator": "comp-limbs-058 → Printed p. 1460; local PDF p. 2270",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 79 Ankle and foot",
+        "locator": "comp-limbs-059 → Printed p. 1460; local PDF p. 2270",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Chapter 79 Ankle and foot",
+        "locator": "comp-limbs-060 → Printed p. 1458; local PDF p. 2268",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-foot-mechanics-obj-001",
+        "text": "Explain passive arch elevation produced by great-toe extension.",
+        "questionIds": [
+          "comp-limbs-056"
+        ]
+      },
+      {
+        "id": "comp-limbs-foot-mechanics-obj-002",
+        "text": "Relate quadratus plantae to correction of the long toe flexor's oblique line of pull.",
+        "questionIds": [
+          "comp-limbs-057"
+        ]
+      },
+      {
+        "id": "comp-limbs-foot-mechanics-obj-003",
+        "text": "Distinguish medial from lateral plantar intrinsic motor territories.",
+        "questionIds": [
+          "comp-limbs-058"
+        ]
+      },
+      {
+        "id": "comp-limbs-foot-mechanics-obj-004",
+        "text": "Trace the medial completion and deep plane of the plantar arterial arch.",
+        "questionIds": [
+          "comp-limbs-059"
+        ]
+      },
+      {
+        "id": "comp-limbs-foot-mechanics-obj-005",
+        "text": "Distinguish first-MTP short-flexor function from hallux interphalangeal flexion.",
+        "questionIds": [
+          "comp-limbs-060"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-limb-development",
+    "moduleId": "comp-limbs-limb-development-module",
+    "examId": "term2-limbs",
+    "title": "Limb growth, compartment innervation and developmental disruptions",
+    "scope": "book-extension",
+    "summary": "Limb elongation, muscle innervation and congenital deformities arise through different developmental processes. Distinguishing loss of growth, altered pattern and reduced fetal movement clarifies otherwise similar limb findings.",
+    "keyPoints": [
+      "Loss of length contribution from that growth plate despite continued possible appositional growth and remodeling. Longitudinal growth depends on proliferating growth-plate cartilage; an intact shaft and periosteum cannot restore the lost plate's contribution to length.",
+      "Dorsal divisions of the ventral primary rami entering the brachial plexus. The limb muscle compartments receive branches of ventral primary rami; those rami divide into dorsal and ventral divisions within the developing plexus.",
+      "HOXA13 in the first family; HOXD13 in the second. Langman associates HOXA13 mutations with hand-foot-genital syndrome and HOXD13 mutations with synpolydactyly.",
+      "The first disrupts initiation of outgrowth; the second disrupts maintenance of the adjacent proliferating undifferentiated zone. FGF10 from lateral plate mesoderm initiates outgrowth, whereas ridge-derived FGF4 and FGF8 support continued proliferation after ridge establishment.",
+      "Restricted fetal movement can produce arthrogryposis despite formation of the skeletal elements. Intrauterine crowding and reduced movement are recognized routes to congenital joint contractures, distinct from failure to form the limb rays."
+    ],
+    "examTraps": [
+      "Dorsal limb muscle masses receive dorsal divisions of ventral primary rami, not dorsal primary rami.",
+      "A contracted but formed joint need not reflect failure of the early digit-patterning system."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A child has complete premature fusion of one distal radial growth plate after injury. The periosteum and shaft remain viable. Which subsequent pattern is most consistent with these findings?",
+        "answer": "Loss of length contribution from that growth plate despite continued possible appositional growth and remodeling. Longitudinal growth depends on proliferating growth-plate cartilage; an intact shaft and periosteum cannot restore the lost plate's contribution to length."
+      },
+      {
+        "prompt": "Two families have inherited distal-limb abnormalities. One has fused carpal bones and short digits together with genital-tract anomalies; the other has combined syndactyly and polydactyly without that characteristic genital pattern. Which pairing matches the cited developmental associations?",
+        "answer": "HOXA13 in the first family; HOXD13 in the second. Langman associates HOXA13 mutations with hand-foot-genital syndrome and HOXD13 mutations with synpolydactyly."
+      },
+      {
+        "prompt": "A newborn has several fixed limb-joint contractures after prolonged severe oligohydramnios. Imaging confirms that the corresponding long bones and digit rays formed. Which developmental explanation is most directly supported by that combination?",
+        "answer": "Restricted fetal movement can produce arthrogryposis despite formation of the skeletal elements. Intrauterine crowding and reduced movement are recognized routes to congenital joint contractures, distinct from failure to form the limb rays."
+      }
+    ],
+    "subject": "embryology",
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "Chapter 12 Limbs",
+        "locator": "comp-limbs-061 → Printed p. 171-172; local PDF p. 183-184; supporting periosteal/remodeling account: Junqueira 16th ed., printed p. 143, local PDF p. 154",
+        "basis": "book"
+      },
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "Chapter 12 Limbs",
+        "locator": "comp-limbs-062 → Printed p. 172; local PDF p. 184",
+        "basis": "book"
+      },
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "Chapter 12 Limbs",
+        "locator": "comp-limbs-063 → Printed p. 177; local PDF p. 189",
+        "basis": "book"
+      },
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "Chapter 12 Limbs",
+        "locator": "comp-limbs-064 → Printed p. 173-174; local PDF p. 185-186",
+        "basis": "book"
+      },
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "Chapter 12 Limbs",
+        "locator": "comp-limbs-065 → Printed p. 178; local PDF p. 190",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-limb-development-obj-001",
+        "text": "Separate the loss of growth-plate lengthening from surviving surface growth and remodeling.",
+        "questionIds": [
+          "comp-limbs-061"
+        ]
+      },
+      {
+        "id": "comp-limbs-limb-development-obj-002",
+        "text": "Distinguish dorsal plexus divisions of ventral rami from dorsal primary rami.",
+        "questionIds": [
+          "comp-limbs-062"
+        ]
+      },
+      {
+        "id": "comp-limbs-limb-development-obj-003",
+        "text": "Discriminate HOXA13-associated hand-foot-genital findings from HOXD13 synpolydactyly.",
+        "questionIds": [
+          "comp-limbs-063"
+        ]
+      },
+      {
+        "id": "comp-limbs-limb-development-obj-004",
+        "text": "Separate mesenchymal FGF10 initiation from established-ridge FGF4/8 maintenance.",
+        "questionIds": [
+          "comp-limbs-064"
+        ]
+      },
+      {
+        "id": "comp-limbs-limb-development-obj-005",
+        "text": "Distinguish movement-related fetal contracture from deletion or duplication of limb elements.",
+        "questionIds": [
+          "comp-limbs-065"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-cartilage-bone-function",
+    "moduleId": "comp-limbs-cartilage-bone-function-module",
+    "examId": "term2-limbs",
+    "title": "Cartilage resilience and bone mechanobiology",
+    "scope": "book-extension",
+    "summary": "Limb tissues share connective-tissue ancestry but have distinct nutrient routes and mechanical components. Cartilage hydration, osteocyte sensing and osteoclast resorption explain functional and disease patterns.",
+    "keyPoints": [
+      "Fixed negative charges that retain water within the collagen-proteoglycan network. Sulfated GAGs and hyaluronan bind water; this hydrated network gives cartilage much of its compressive resilience.",
+      "Articular chondrocytes depend on diffusion from synovial fluid, whereas osteocytes use the lacunar-canalicular fluid network connected to nearby vessels. Articular cartilage lacks vessels and perichondrium; bone cells communicate and exchange metabolites through canaliculi linked to vascularized bone surfaces.",
+      "Osteocyte processes in canaliculi connected by gap junctions to a wider bone-cell network. The lacunar-canalicular network allows osteocytes to detect load and microdamage and signal osteoblast and osteoclast responses.",
+      "Failure of osteoclast proton transport or supporting chloride conductance, impairing mineral resorption. Defective acidification impairs removal of hydroxyapatite; excess retained bone can narrow marrow cavities and reduce blood-cell production.",
+      "Mineral confers hardness, while the collagen framework contributes shape and resilience under load. Decalcification leaves an organic collagen framework; collagen defects remove reinforcement and resilience even when mineral is present."
+    ],
+    "examTraps": [
+      "Dense bone can be fragile and can compromise marrow space when osteoclast resorption fails.",
+      "Mineral supplies hardness while the type I collagen framework contributes resilience; they are not interchangeable."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A cartilage sample retains its collagen scaffold but loses much of its sulfated glycosaminoglycan content. It deforms more under repeated compression. Which lost matrix property best accounts for that change?",
+        "answer": "Fixed negative charges that retain water within the collagen-proteoglycan network. Sulfated GAGs and hyaluronan bind water; this hydrated network gives cartilage much of its compressive resilience."
+      },
+      {
+        "prompt": "During limb immobilization, reduced loading is followed by regional bone loss despite an adequate dietary mineral supply. Which cellular arrangement most directly links the altered mechanical environment to remodeling responses?",
+        "answer": "Osteocyte processes in canaliculi connected by gap junctions to a wider bone-cell network. The lacunar-canalicular network allows osteocytes to detect load and microdamage and signal osteoblast and osteoclast responses."
+      },
+      {
+        "prompt": "One normal bone specimen is experimentally decalcified and becomes pliable while retaining its shape. Another has defective type I collagen and fractures easily despite retaining mineral. Which interpretation explains both observations?",
+        "answer": "Mineral confers hardness, while the collagen framework contributes shape and resilience under load. Decalcification leaves an organic collagen framework; collagen defects remove reinforcement and resilience even when mineral is present."
+      }
+    ],
+    "subject": "histology",
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapters 7 Cartilage and 8 Bone",
+        "locator": "comp-limbs-066 → Printed p. 129 and 131; local PDF p. 140 and 142",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapters 7 Cartilage and 8 Bone",
+        "locator": "comp-limbs-067 → Printed p. 129 and 142; local PDF p. 140 and 153",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapters 7 Cartilage and 8 Bone",
+        "locator": "comp-limbs-068 → Printed p. 142; local PDF p. 153",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapters 7 Cartilage and 8 Bone",
+        "locator": "comp-limbs-069 → Printed p. 143; local PDF p. 154",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapters 7 Cartilage and 8 Bone",
+        "locator": "comp-limbs-070 → Printed p. 143 and 149; local PDF p. 154 and 160",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-cartilage-bone-function-obj-001",
+        "text": "Relate charged cartilage matrix molecules to water retention and compressive resilience.",
+        "questionIds": [
+          "comp-limbs-066"
+        ]
+      },
+      {
+        "id": "comp-limbs-cartilage-bone-function-obj-002",
+        "text": "Compare nutrient delivery to articular chondrocytes and embedded osteocytes.",
+        "questionIds": [
+          "comp-limbs-067"
+        ]
+      },
+      {
+        "id": "comp-limbs-cartilage-bone-function-obj-003",
+        "text": "Explain load-dependent remodeling through the osteocyte lacunar-canalicular network.",
+        "questionIds": [
+          "comp-limbs-068"
+        ]
+      },
+      {
+        "id": "comp-limbs-cartilage-bone-function-obj-004",
+        "text": "Integrate defective osteoclast acidification with dense bone and reduced marrow space.",
+        "questionIds": [
+          "comp-limbs-069"
+        ]
+      },
+      {
+        "id": "comp-limbs-cartilage-bone-function-obj-005",
+        "text": "Distinguish mineral and collagen contributions to bone mechanical behavior.",
+        "questionIds": [
+          "comp-limbs-070"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-skeletal-muscle-structure",
+    "moduleId": "comp-limbs-skeletal-muscle-structure-module",
+    "examId": "term2-limbs",
+    "title": "Muscle force transmission, excitation architecture and repair",
+    "scope": "book-extension",
+    "summary": "A skeletal muscle is a mechanically continuous tissue whose fibers transmit force through collagen. Sarcomeric accessory proteins, triads and satellite cells solve distinct structural problems.",
+    "keyPoints": [
+      "Endomysial, perimysial and epimysial collagen form a continuous force-transmitting network with tendon. Connective-tissue sheaths transmit force from individual fibers and are continuous with tendon at myotendinous junctions.",
+      "Titin. Titin provides elastic and scaffolding support linking thick filaments with the Z disc; the spared thin-filament features argue against the other listed proteins.",
+      "A surface-connected T tubule flanked by two terminal cisternae of sarcoplasmic reticulum. The central T tubule is an invagination of sarcolemma continuous with the extracellular compartment; the two flanking SR cisternae are separate intracellular calcium stores.",
+      "Activation of satellite cells to generate or contribute to skeletal muscle fibers. Satellite cells persist as reserve myogenic cells inside the external lamina and can proliferate and fuse after injury.",
+      "Hypertrophy of existing skeletal muscle fibers. The specified increase in cell size and contractile material is hypertrophy; satellite-cell contribution may accompany growth but is not evidence that mature fibers divide."
+    ],
+    "examTraps": [
+      "A T tubule is an invagination of the surface membrane, not a sarcoplasmic-reticulum cistern.",
+      "Mature multinucleated skeletal fibers do not divide to repair injury; satellite cells provide limited regeneration."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Many fibers in a long limb muscle do not extend from its proximal to distal tendon. Nevertheless, activation of these fibers contributes to tendon force. Which structural continuity best explains this?",
+        "answer": "Endomysial, perimysial and epimysial collagen form a continuous force-transmitting network with tendon. Connective-tissue sheaths transmit force from individual fibers and are continuous with tendon at myotendinous junctions."
+      },
+      {
+        "prompt": "An extracellular tracer enters narrow membrane invaginations deep within a skeletal-muscle fiber but not the two adjoining calcium-rich cisternae. Which interpretation correctly identifies the three-part structure near an A-I junction?",
+        "answer": "A surface-connected T tubule flanked by two terminal cisternae of sarcoplasmic reticulum. The central T tubule is an invagination of sarcolemma continuous with the extracellular compartment; the two flanking SR cisternae are separate intracellular calcium stores."
+      },
+      {
+        "prompt": "After progressive resistance training, biopsy shows larger muscle-fiber diameters with increased myofibrillar content. Which description fits the principal structural adaptation shown?",
+        "answer": "Hypertrophy of existing skeletal muscle fibers. The specified increase in cell size and contractile material is hypertrophy; satellite-cell contribution may accompany growth but is not evidence that mature fibers divide."
+      }
+    ],
+    "subject": "histology",
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "locator": "comp-limbs-071 → Printed p. 194; local PDF p. 205",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "locator": "comp-limbs-072 → Printed p. 197; local PDF p. 208",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "locator": "comp-limbs-073 → Printed p. 201; local PDF p. 212",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "locator": "comp-limbs-074 → Printed p. 213; local PDF p. 224",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th ed.",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "locator": "comp-limbs-075 → Printed p. 193 and 213; local PDF p. 204 and 224",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-skeletal-muscle-structure-obj-001",
+        "text": "Explain tendon force transmission from fibers that do not span the whole muscle.",
+        "questionIds": [
+          "comp-limbs-071"
+        ]
+      },
+      {
+        "id": "comp-limbs-skeletal-muscle-structure-obj-002",
+        "text": "Discriminate titin dysfunction from defects of thin-filament and M-line accessory proteins.",
+        "questionIds": [
+          "comp-limbs-072"
+        ]
+      },
+      {
+        "id": "comp-limbs-skeletal-muscle-structure-obj-003",
+        "text": "Identify the surface-connected and intracellular membrane compartments of a triad.",
+        "questionIds": [
+          "comp-limbs-073"
+        ]
+      },
+      {
+        "id": "comp-limbs-skeletal-muscle-structure-obj-004",
+        "text": "Explain limited skeletal-muscle regeneration through satellite-cell proliferation and fusion.",
+        "questionIds": [
+          "comp-limbs-074"
+        ]
+      },
+      {
+        "id": "comp-limbs-skeletal-muscle-structure-obj-005",
+        "text": "Distinguish training-associated fiber hypertrophy from mature-fiber mitosis.",
+        "questionIds": [
+          "comp-limbs-075"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-limbs-muscle-physiology",
+    "moduleId": "comp-limbs-muscle-physiology-module",
+    "examId": "term2-limbs",
+    "title": "Skeletal-muscle length, load, activation and relaxation",
+    "scope": "book-extension",
+    "summary": "Separating active from passive tension, force from shortening, and electrical excitation from calcium handling explains muscle behavior under experimental and limb-loading conditions.",
+    "keyPoints": [
+      "Active tension fell from 8 N to 5 N even though total tension increased. Active tension is total stimulated tension minus passive tension: 10-2=8 N and 12-7=5 N. Increasing passive stretch can mask a decline in cross-bridge-generated tension.",
+      "External shortening work is zero, but ATP use and heat production can continue. At a load equal to maximal isometric force, shortening velocity is zero; external work requires displacement, whereas active force maintenance still uses metabolic energy.",
+      "Calcium remains elevated between stimuli, allowing successive mechanical responses to summate. When stimuli recur before calcium is fully resequestered and tension relaxes, mechanical responses summate and can form a fused tetanus.",
+      "The end-plate depolarization no longer reaches the threshold for a muscle action potential. Receptor blockade reduces the end-plate potential; preserved direct excitability and contraction locate the deficit at neuromuscular transmission rather than the muscle's contractile apparatus.",
+      "The sarcoplasmic-reticulum calcium ATPase responsible for resequestration. Reduced SR calcium pumping delays removal of cytosolic calcium, prolonging activation and relaxation despite preserved initial excitation and release."
+    ],
+    "examTraps": [
+      "No external shortening does not mean no ATP use or force production.",
+      "Fused mechanical tension is not fusion of muscle action potentials; delayed relaxation differs from failed excitation."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A skeletal-muscle preparation is stimulated maximally at two lengths. At length 1, passive tension is 2 N and stimulated total tension is 10 N. At the longer length 2, passive tension is 7 N and stimulated total tension is 12 N. Which conclusion is justified?",
+        "answer": "Active tension fell from 8 N to 5 N even though total tension increased. Active tension is total stimulated tension minus passive tension: 10-2=8 N and 12-7=5 N. Increasing passive stretch can mask a decline in cross-bridge-generated tension."
+      },
+      {
+        "prompt": "A single motor axon is stimulated supramaximally, so the same motor unit is activated each time. Increasing stimulus frequency converts separate twitches into smooth tetanic tension. Which mechanism explains the force increase without recruitment of additional axons?",
+        "answer": "Calcium remains elevated between stimuli, allowing successive mechanical responses to summate. When stimuli recur before calcium is fully resequestered and tension relaxes, mechanical responses summate and can form a fused tetanus."
+      },
+      {
+        "prompt": "A skeletal-muscle preparation has normal membrane action potentials and an initial calcium release, but cytosolic calcium and tension decay unusually slowly afterward. Selective inhibition of which component most directly reproduces the pattern?",
+        "answer": "The sarcoplasmic-reticulum calcium ATPase responsible for resequestration. Reduced SR calcium pumping delays removal of cytosolic calcium, prolonging activation and relaxation despite preserved initial excitation and release."
+      }
+    ],
+    "subject": "physiology",
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapters 6 Contraction of Skeletal Muscle and 7 Excitation of Skeletal Muscle",
+        "locator": "comp-limbs-076 → Printed p. 85; local PDF p. 96",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapters 6 Contraction of Skeletal Muscle and 7 Excitation of Skeletal Muscle",
+        "locator": "comp-limbs-077 → Printed p. 85-87; local PDF p. 96-98",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapters 6 Contraction of Skeletal Muscle and 7 Excitation of Skeletal Muscle",
+        "locator": "comp-limbs-078 → Printed p. 89; local PDF p. 100",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapters 6 Contraction of Skeletal Muscle and 7 Excitation of Skeletal Muscle",
+        "locator": "comp-limbs-079 → Printed p. 96-97; local PDF p. 107-108",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapters 6 Contraction of Skeletal Muscle and 7 Excitation of Skeletal Muscle",
+        "locator": "comp-limbs-080 → Printed p. 98; local PDF p. 109",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-limbs-muscle-physiology-obj-001",
+        "text": "Calculate active tension from total and passive measurements at different lengths.",
+        "questionIds": [
+          "comp-limbs-076"
+        ]
+      },
+      {
+        "id": "comp-limbs-muscle-physiology-obj-002",
+        "text": "Separate isometric force production and energy use from external shortening work.",
+        "questionIds": [
+          "comp-limbs-077"
+        ]
+      },
+      {
+        "id": "comp-limbs-muscle-physiology-obj-003",
+        "text": "Explain tetanic frequency summation while excluding additional motor-unit recruitment.",
+        "questionIds": [
+          "comp-limbs-078"
+        ]
+      },
+      {
+        "id": "comp-limbs-muscle-physiology-obj-004",
+        "text": "Localize neuromuscular transmission failure using indirect and direct stimulation.",
+        "questionIds": [
+          "comp-limbs-079"
+        ]
+      },
+      {
+        "id": "comp-limbs-muscle-physiology-obj-005",
+        "text": "Distinguish failed calcium resequestration from impaired excitation or calcium release.",
+        "questionIds": [
+          "comp-limbs-080"
+        ]
+      }
+    ]
+  }
+]

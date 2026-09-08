@@ -162,7 +162,8 @@
           "height": 0.027888
         }
       ],
-      "view": "anterolateral upper-airway"
+      "view": "anterolateral upper-airway",
+      "moduleKey": "nasal-real"
     },
     {
       "id": "resp-anat-coronal-sinuses",
@@ -337,7 +338,8 @@
           "x": 0.339975,
           "y": 0.629679,
           "width": 0.022416,
-          "height": 0.024064
+          "height": 0.024064,
+          "structureId": "maxillary-sinus"
         },
         {
           "id": "ethmoidal-cells",
@@ -351,7 +353,8 @@
           "x": 0.515567,
           "y": 0.465241,
           "width": 0.009963,
-          "height": 0.010695
+          "height": 0.010695,
+          "structureId": "ethmoidal-air-cells"
         },
         {
           "id": "middle-concha",
@@ -365,7 +368,8 @@
           "x": 0.440847,
           "y": 0.552139,
           "width": 0.012453,
-          "height": 0.013369
+          "height": 0.013369,
+          "structureId": "middle-concha"
         },
         {
           "id": "inferior-concha",
@@ -379,7 +383,8 @@
           "x": 0.437111,
           "y": 0.63369,
           "width": 0.012453,
-          "height": 0.013369
+          "height": 0.013369,
+          "structureId": "inferior-concha"
         },
         {
           "id": "nasal-septum",
@@ -407,10 +412,12 @@
           "x": 0.47198,
           "y": 0.69385,
           "width": 0.014944,
-          "height": 0.016043
+          "height": 0.016043,
+          "structureId": "hard-palate"
         }
       ],
-      "view": "coronal nasal-region"
+      "view": "coronal nasal-region",
+      "moduleKey": "nasal-real"
     },
     {
       "id": "resp-anat-posterior-larynx",
@@ -495,7 +502,8 @@
           "x": 0.480649,
           "y": 0.276567,
           "width": 0.029963,
-          "height": 0.032698
+          "height": 0.032698,
+          "structureId": "epiglottis"
         },
         {
           "id": "aryepiglottic-fold",
@@ -551,7 +559,8 @@
           "x": 0.519351,
           "y": 0.570845,
           "width": 0.012484,
-          "height": 0.013624
+          "height": 0.013624,
+          "structureId": "oblique-arytenoid-muscle"
         },
         {
           "id": "transverse-arytenoid",
@@ -565,7 +574,8 @@
           "x": 0.480649,
           "y": 0.610354,
           "width": 0.012484,
-          "height": 0.013624
+          "height": 0.013624,
+          "structureId": "transverse-arytenoid-muscle"
         },
         {
           "id": "posterior-cricoarytenoid",
@@ -579,7 +589,8 @@
           "x": 0.419476,
           "y": 0.72752,
           "width": 0.022472,
-          "height": 0.024523
+          "height": 0.024523,
+          "structureId": "posterior-cricoarytenoid-muscle"
         },
         {
           "id": "cricoid-cartilage",
@@ -593,10 +604,12 @@
           "x": 0.578027,
           "y": 0.816076,
           "width": 0.012484,
-          "height": 0.013624
+          "height": 0.013624,
+          "structureId": "cricoid-cartilage"
         }
       ],
-      "view": "posterior laryngeal"
+      "view": "posterior laryngeal",
+      "moduleKey": "larynx-real"
     },
     {
       "id": "resp-anat-lung-roots",
@@ -687,7 +700,8 @@
           "x": 0.409326,
           "y": 0.26087,
           "width": 0.013817,
-          "height": 0.021739
+          "height": 0.021739,
+          "structureId": "right-main-bronchus"
         },
         {
           "id": "right-pulmonary-artery",
@@ -743,7 +757,8 @@
           "x": 0.549223,
           "y": 0.279891,
           "width": 0.013817,
-          "height": 0.021739
+          "height": 0.021739,
+          "structureId": "left-main-bronchus"
         },
         {
           "id": "left-pulmonary-artery",
@@ -788,7 +803,8 @@
           "height": 0.021739
         }
       ],
-      "view": "bilateral lung-root"
+      "view": "bilateral lung-root",
+      "moduleKey": "trachea-lung-real"
     }
   ]
 }

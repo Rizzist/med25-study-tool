@@ -9,6 +9,7 @@ import {
   Mesh,
   MeshStandardMaterial,
   Object3D,
+  Raycaster,
   SphereGeometry,
   TorusGeometry,
   TubeGeometry,
@@ -16,9 +17,11 @@ import {
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import { tissueMaterial } from "../../materials.ts";
 import type { AnatomyModelHandle, Tissue } from "../../types.ts";
 import { thoracicWallManifest } from "../../manifests/cvs/thoracic-wall-real.manifest.mjs";
+import sternocostalAnchors from "./sternocostal-anchors.json" with { type: "json" };
 
 // Same-origin assets — no cross-origin network.
 const MODEL_URL = "/anatomy3d/cvs/thoracic-wall.glb";
@@ -55,6 +58,7 @@ export async function createThoracicWallModel(): Promise<AnatomyModelHandle> {
   loader.setDRACOLoader(dracoLoader);
   const gltf = await loader.loadAsync(MODEL_URL);
   dracoLoader.dispose();
+  await attachImageMeshSupplement(gltf.scene, "thoracic-wall");
 
   const root = new Group();
   root.name = "thoracic-wall-real";
@@ -77,6 +81,26 @@ export async function createThoracicWallModel(): Promise<AnatomyModelHandle> {
     if (old) for (const m of Array.isArray(old) ? old : [old]) (m as Material).dispose?.();
     pushMesh(id, mesh);
   }
+
+  // Original BodyParts3D cartilages 1–10, calibrated as one assembly to this
+  // sternum/rib source frame. Never normalize individual cartilage objects.
+  const cartilage = await new OBJLoader().loadAsync('/anatomy3d/cvs/costal-cartilages.obj');
+  const margin: Object3D[] = [];
+  cartilage.traverse(object => {
+    if (!(object as Mesh).isMesh) return;
+    const mesh = object as Mesh;
+    const level = Number(mesh.name.match(/-(\d+)-FJ/)?.[1]);
+    const previous = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+    previous.forEach(material=>material.dispose());
+    mesh.material = tissueMaterial('cartilage');
+    mesh.userData.structureId = 'costal-cartilages';
+    mesh.userData.sourceCartilageLevel = level;
+    mesh.userData.schematic = false;
+    pushMesh('costal-cartilages',mesh);
+    if (level >= 7 && level <= 10) margin.push(mesh);
+  });
+  structures.set('costal-margin',margin);
+  gltf.scene.add(cartilage);
 
   // --- Procedural (schematic) layers -----------------------------------------------------------
   // Everything below is placed from the REAL meshes' bounding boxes so the overlays self-align to
@@ -166,32 +190,22 @@ export async function createThoracicWallModel(): Promise<AnatomyModelHandle> {
   const anteriorZ = bodyB.isEmpty() ? cageB.max.z : bodyB.max.z; // sternum front
   const postZ = cageB.isEmpty() ? 0 : cageB.min.z;               // vertebral bodies (back)
 
-  // ---- Skeleton (schematic): costal cartilages, costal margin, sternal angle, jugular notch ---
-  // Costal cartilages: hyaline bars bridging each anterior rib end to the lateral sternum edge.
-  for (const side of [1, -1]) {
-    for (let i = 0; i < 6; i++) {
-      const t = i / 5;
-      const yy = bodyB.isEmpty() ? 0 : bodyB.max.y - t * (bodyB.max.y - bodyB.min.y) - 0.02;
-      const sternPt = v(sternX + side * sternEdge, yy, anteriorZ - 0.01);
-      const ribPt = v(sternX + side * (sternEdge + 0.10 + t * 0.05), yy - 0.02, anteriorZ - 0.04 - t * 0.02);
-      tube("costal-cartilages", [sternPt, lerp(sternPt, ribPt, 0.5).add(v(side * 0.02, 0.005, 0.01)), ribPt], 0.012);
-    }
-  }
-  // Costal margin: the paired inferior arch from the xiphoid down-and-lateral along the lower ribs.
-  for (const side of [1, -1]) {
-    tube("costal-margin", [
-      v(xiphC.x, xiphC.y - 0.01, anteriorZ - 0.02),
-      v(sternX + side * 0.12, xiphC.y - 0.02, anteriorZ - 0.06),
-      v(sternX + side * (halfW * 0.62), xiphC.y - 0.06, anteriorZ - 0.16),
-      v(sternX + side * (halfW * 0.9), (lowVertC.y + xiphC.y) / 2, anteriorZ - 0.30),
-    ], 0.013);
-  }
-  // Sternal angle: a thin transverse ridge at the manubriosternal junction (front of sternum).
+  // Sternal features follow their LOCAL source surface, not bodyB.max.z. The
+  // old common anterior plane left the upper markers floating in front of bone.
+  const surfaceRay = new Raycaster();
+  const surfaceAt = (x: number, y: number, ids: string[]) => {
+    surfaceRay.set(v(x,y,cageB.max.z+1),v(0,0,-1));
+    return surfaceRay.intersectObjects(ids.flatMap(id=>structures.get(id)??[]),true)[0]?.point;
+  };
   const angleY = manuB.isEmpty() || bodyB.isEmpty() ? bodyC.y : (manuB.min.y + bodyB.max.y) / 2;
-  slab("sternal-angle", v(sternX, angleY, anteriorZ + 0.005), v(0, 0, 1), sternEdge * 2.1, 0.02, 0.03);
-  // Jugular (suprasternal) notch: the concave superior midline border of the manubrium.
-  const jugY = manuB.isEmpty() ? manuC.y : manuB.max.y;
-  ring("jugular-notch", v(sternX, jugY + 0.005, anteriorZ - 0.03), 0.05, 0.03, 0.012, v(0, 1, 0.15));
+  const anglePoints = [-1,-.5,0,.5,1].map(t=>surfaceAt(sternX+t*Math.min(sternEdge*.5,.05),angleY,['manubrium','sternal-body'])).filter((point):point is Vector3=>Boolean(point));
+  if (anglePoints.length >= 2) tube('sternal-angle',anglePoints.map(point=>point.clone().add(v(0,0,.001))),.004);
+  const notchPoints: Vector3[] = [];
+  for (const dx of [-.02,-.01,0,.01,.02]) for (let inset=0;inset<.08;inset+=.0005) {
+    const hit=surfaceAt(sternX+dx,manuB.max.y-inset,['manubrium']);
+    if (hit) { const anchor=surfaceAt(sternX+dx,hit.y-.003,['manubrium'])??hit; notchPoints.push(anchor.clone().add(v(0,0,.001))); break; }
+  }
+  if (notchPoints.length >= 2) tube('jugular-notch',notchPoints,.004);
 
   // ---- Apertures & membranes ------------------------------------------------------------------
   // Superior thoracic aperture (inlet): kidney-shaped rim at the T1 / first-rib / manubrium level,
@@ -230,14 +244,16 @@ export async function createThoracicWallModel(): Promise<AnatomyModelHandle> {
     const yy = (t1B.isEmpty() ? midVertB.max.y : t1B.max.y - 0.05) - t * 0.6 * ((midVertB.isEmpty() ? 0.6 : midVertB.max.y - midVertB.min.y) + 0.2);
     blob("costotransverse-joint", v(sternX + side * 0.14, yy, postZ + 0.02), 0.026, 0.026, 0.026);
   }
-  // Sternocostal joints: blobs down the lateral sternum edges (costal cartilage 1-7 to sternum).
-  for (const side of [1, -1]) for (let i = 0; i < 5; i++) {
-    const t = i / 4;
-    const yy = (manuB.isEmpty() ? bodyB.max.y : manuB.max.y - 0.03) - t * ((manuB.isEmpty() ? bodyB.max.y : manuB.max.y) - bodyB.min.y);
-    blob("sternocostal-joints", v(sternX + side * (sternEdge + 0.01), yy, anteriorZ - 0.02), 0.022, 0.03, 0.022);
-  }
+  // Surface markers at all fourteen original cartilage 1–7 attachment interfaces.
+  for (const anchor of sternocostalAnchors.anchors) blob('sternocostal-joints',v(anchor.point[0],anchor.point[1],anchor.point[2]),.009,.009,.009);
   // Sternoclavicular joints: paired saddle joints at the superolateral manubrium.
-  for (const side of [1, -1]) blob("sternoclavicular-joint", v(sternX + side * (sternEdge + 0.03), jugY - 0.01, anteriorZ - 0.03), 0.035, 0.035, 0.035);
+  for (const side of [1, -1]) {
+    const x = sternX + side * (manuB.max.x - manuB.min.x) * .35;
+    for (let inset = .005; inset < .15; inset += .001) {
+      const anchor = surfaceAt(x,manuB.max.y-inset,['manubrium']);
+      if (anchor) {blob('sternoclavicular-joint',anchor,.015,.015,.015);break;}
+    }
+  }
   // Radiate ligament of the head of the rib: small fans over the costovertebral joints.
   for (const side of [1, -1]) for (let i = 0; i < 3; i++) {
     const t = i / 2;
@@ -311,6 +327,85 @@ export async function createThoracicWallModel(): Promise<AnatomyModelHandle> {
     tube("intercostal-veins", [av, lerp(av, bv, 0.5).add(v(0, 0.005, 0.02)), bv], 0.008);
   }
 
+  // ---- Thoracic-wall nerves ---------------------------------------------------------------
+  // These follow the same rib-cage anchors as the vessels above.  They deliberately end at the
+  // chest wall rather than projecting beyond the real ribs (the detached "yellow comb" failure
+  // that the former standalone nerve scene produced when independently normalised).
+  const nerveTopY = t1B.isEmpty() ? cageB.max.y - 0.18 : t1B.min.y - 0.03;
+  const nerveBottomY = lowVertB.isEmpty() ? cageB.min.y + 0.18 : lowVertB.min.y + 0.10;
+  const nerveLevels = Array.from({ length: 6 }, (_, index) =>
+    nerveTopY - (index / 5) * (nerveTopY - nerveBottomY));
+  const rootX = Math.max(0.055, halfW * 0.09);
+  const axillaryX = halfW * 0.74;
+  const lateralZ = postZ + (anteriorZ - postZ) * 0.55;
+  const parasternalX = sternEdge + 0.025;
+
+  for (const side of [1, -1]) for (const yy of nerveLevels) {
+    const spinalRoot = v(sternX + side * rootX, yy, postZ + 0.045);
+    const lateral = v(sternX + side * axillaryX, yy - 0.025, lateralZ);
+    const parasternal = v(sternX + side * parasternalX, yy - 0.045, anteriorZ - 0.035);
+    tube("intercostal-nerve", [spinalRoot, v(sternX + side * halfW * 0.38, yy - 0.01, postZ + (anteriorZ - postZ) * 0.28), lateral, parasternal], 0.007);
+  }
+  // T12 anterior ramus: a paired cord below the lowest rib, kept on the inner abdominal-wall edge.
+  for (const side of [1, -1]) {
+    tube("subcostal-nerve", [
+      v(sternX + side * rootX, nerveBottomY - 0.08, postZ + 0.05),
+      v(sternX + side * halfW * 0.42, nerveBottomY - 0.10, postZ + (anteriorZ - postZ) * 0.30),
+      v(sternX + side * halfW * 0.72, nerveBottomY - 0.12, lateralZ),
+    ], 0.007);
+  }
+  // Posterior rami turn directly backward from the spinal root to the intrinsic back region.
+  for (const side of [1, -1]) for (const yy of [nerveLevels[1], nerveLevels[3]]) {
+    tube("posterior-ramus", [
+      v(sternX + side * rootX, yy, postZ + 0.04),
+      v(sternX + side * rootX * 1.5, yy - 0.01, postZ - 0.035),
+      v(sternX + side * rootX * 2.1, yy - 0.02, postZ - 0.07),
+    ], 0.006);
+  }
+  // Collateral branches parallel the parent nerves just inferior to them.
+  for (const side of [1, -1]) for (const yy of [nerveLevels[2], nerveLevels[4]]) {
+    tube("collateral-branch", [
+      v(sternX + side * halfW * 0.34, yy - 0.04, postZ + (anteriorZ - postZ) * 0.27),
+      v(sternX + side * axillaryX, yy - 0.065, lateralZ),
+      v(sternX + side * halfW * 0.38, yy - 0.08, anteriorZ - 0.10),
+    ], 0.0055);
+  }
+  // Cutaneous branches pierce locally at the mid-axillary and parasternal lines.
+  for (const side of [1, -1]) for (const yy of [nerveLevels[1], nerveLevels[3], nerveLevels[5]]) {
+    tube("lateral-cutaneous-branch", [
+      v(sternX + side * axillaryX, yy - 0.025, lateralZ),
+      v(sternX + side * halfW * 0.82, yy - 0.03, lateralZ + 0.045),
+      v(sternX + side * halfW * 0.86, yy - 0.055, lateralZ + 0.08),
+    ], 0.0055);
+    tube("anterior-cutaneous-branch", [
+      v(sternX + side * parasternalX, yy - 0.045, anteriorZ - 0.035),
+      v(sternX + side * (parasternalX + 0.045), yy - 0.055, anteriorZ + 0.025),
+    ], 0.0055);
+  }
+  // The T2 lateral cutaneous branch crosses only as far as the axillary edge in this thorax model.
+  for (const side of [1, -1]) tube("intercostobrachial-nerve", [
+    v(sternX + side * axillaryX, nerveLevels[0] - 0.02, lateralZ),
+    v(sternX + side * halfW * 0.86, nerveLevels[0] + 0.015, lateralZ + 0.03),
+    v(sternX + side * halfW * 0.93, nerveLevels[0] + 0.05, lateralZ + 0.02),
+  ], 0.006);
+  // Four landmark dermatome arcs hug the anterior thoracic contour rather than floating in front.
+  for (const yy of [nerveLevels[0], nerveLevels[2], nerveLevels[3], nerveLevels[5]]) {
+    tube("dermatomes", [
+      v(sternX - halfW * 0.58, yy, anteriorZ - 0.13),
+      v(sternX - halfW * 0.28, yy, anteriorZ - 0.045),
+      v(sternX, yy, anteriorZ - 0.018),
+      v(sternX + halfW * 0.28, yy, anteriorZ - 0.045),
+      v(sternX + halfW * 0.58, yy, anteriorZ - 0.13),
+    ], 0.0045);
+  }
+  // Rami communicantes bridge each spinal nerve root to the paravertebral sympathetic line.
+  for (const side of [1, -1]) for (const yy of [nerveLevels[1], nerveLevels[3], nerveLevels[5]]) {
+    const spinal = v(sternX + side * rootX, yy, postZ + 0.045);
+    const chain = v(sternX + side * rootX * 1.65, yy, postZ + 0.065);
+    tube("white-ramus-communicans", [spinal, v((spinal.x + chain.x) / 2, yy - 0.008, postZ + 0.075), chain], 0.0045);
+    tube("gray-ramus-communicans", [chain.clone().add(v(0, 0.018, 0)), v((spinal.x + chain.x) / 2, yy + 0.018, postZ + 0.085), spinal.clone().add(v(0, 0.018, 0))], 0.0045);
+  }
+
   // Defensive normalization to the contract (~2-unit bbox at origin). The GLB is baked normalized;
   // this stays ~no-op but also folds in the procedural overlays.
   const bbox = new Box3().setFromObject(root);
@@ -325,6 +420,7 @@ export async function createThoracicWallModel(): Promise<AnatomyModelHandle> {
   return {
     root,
     structures,
+    aliases: new Map([['costal-margin',['costal-cartilages']]]),
     dispose() {
       const geometries = new Set<{ dispose(): void }>();
       const materials = new Set<Material>();
@@ -346,3 +442,4 @@ export async function createThoracicWallModel(): Promise<AnatomyModelHandle> {
     },
   };
 }
+import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";

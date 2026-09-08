@@ -14,12 +14,14 @@ import {
 } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import { tissueMaterial } from "../../materials.ts";
 import type { AnatomyModelHandle, Tissue } from "../../types.ts";
 import { upperLimbManifest } from "../../manifests/upper-limb/upper-limb-real.manifest.mjs";
 
 // Same-origin assets — no cross-origin network.
 const MODEL_URL = "/anatomy3d/upper-limb/upper-limb.glb";
+const DETAIL_MODEL_URL = "/anatomy3d/upper-limb/upper-limb-detail.obj";
 const DRACO_DECODER_PATH = "/anatomy3d/draco/";
 const TARGET_SPAN = 1.9;
 
@@ -51,8 +53,33 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
   const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath(DRACO_DECODER_PATH);
   loader.setDRACOLoader(dracoLoader);
-  const gltf = await loader.loadAsync(MODEL_URL);
+  const [gltf, detailModel] = await Promise.all([
+    loader.loadAsync(MODEL_URL),
+    new OBJLoader().loadAsync(DETAIL_MODEL_URL),
+  ]);
   dracoLoader.dispose();
+  await attachImageMeshSupplement(gltf.scene, "upper-limb");
+
+  // The historical core GLB accidentally packed a disconnected mirrored fragment into the
+  // thenar group (its X span is ~1.64 units while the entire hand is only ~0.28 units wide).
+  // Besides being anatomically false, that island dominated camera framing and made every valid
+  // overlay appear shifted. The detail supplement carries a clean reconstruction from the three
+  // correctly lateraled BodyParts3D thenar muscles, so remove only the corrupt legacy node.
+  const corruptThenar = gltf.scene.getObjectByName("thenar-muscle-group");
+  if (corruptThenar) {
+    corruptThenar.removeFromParent();
+    corruptThenar.traverse((object) => {
+      const mesh = object as Mesh;
+      mesh.geometry?.dispose?.();
+      if (mesh.material) {
+        const list = Array.isArray(mesh.material) ? mesh.material : [mesh.material];
+        for (const material of list) (material as Material).dispose?.();
+      }
+    });
+  }
+
+  detailModel.name = "upper-limb-detail";
+  gltf.scene.add(detailModel);
 
   const root = new Group();
   root.name = "upper-limb-real";
@@ -69,6 +96,7 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
     const { id, owner } = resolved;
     const tissue = (owner.userData?.tissue as Tissue) ?? structureTissue(id);
     mesh.userData.structureId = id;
+    mesh.userData.sourceFidelity = "scan-derived";
     mesh.name = id;
     const old = mesh.material;
     mesh.material = tissueMaterial(tissue);
@@ -250,6 +278,188 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
     v(radC.x + lateral * 0.03, radC.y + 0.12, radC.z - 0.06),
   ], 0.012);
 
+  // ---- Detailed roots and divisions ----------------------------------------------------------
+  // Individual root cords enter the three trunk levels from medial/superior to lateral/inferior.
+  const rootDefs: Array<[string, number, number]> = [
+    ["c5-root", 0.1, 0.05],
+    ["c6-root", 0.055, 0.05],
+    ["c7-root", 0.005, 0],
+    ["c8-root", -0.045, -0.05],
+    ["t1-root", -0.09, -0.05],
+  ];
+  for (const [id, dy, trunkDy] of rootDefs) {
+    tube(id, [
+      v(neck.x + medial * 0.17, neck.y + dy + 0.03, neck.z - 0.02),
+      v(neck.x + medial * 0.09, neck.y + dy, neck.z - 0.005),
+      v(neck.x, neck.y + trunkDy + 0.03, neck.z),
+    ], 0.007);
+  }
+
+  const divisionBase = v(axilla.x + lateral * 0.01, axilla.y + 0.07, axilla.z - 0.015);
+  const divisionDefs: Array<[string, number, number]> = [
+    ["upper-trunk-anterior-division", 0.05, 0.025],
+    ["upper-trunk-posterior-division", 0.05, -0.035],
+    ["middle-trunk-anterior-division", 0, 0.025],
+    ["middle-trunk-posterior-division", 0, -0.035],
+    ["lower-trunk-anterior-division", -0.05, 0.025],
+    ["lower-trunk-posterior-division", -0.05, -0.035],
+  ];
+  for (const [id, dy, dz] of divisionDefs) {
+    tube(id, [
+      v(divisionBase.x + medial * 0.035, divisionBase.y + dy, divisionBase.z),
+      v(divisionBase.x, divisionBase.y + dy - 0.02, divisionBase.z + dz),
+      v(axC.x, axC.y + dy * 0.35 + 0.055, axC.z + dz),
+    ], 0.0065);
+  }
+
+  // ---- Collateral branches of the brachial plexus -------------------------------------------
+  tube("dorsal-scapular-nerve", [
+    v(neck.x + medial * 0.12, neck.y + 0.12, neck.z - 0.02),
+    v(scapC.x + medial * 0.09, scapC.y + 0.18, scapC.z - 0.08),
+    v(scapC.x + medial * 0.1, scapC.y - 0.05, scapC.z - 0.07),
+  ], 0.0065);
+  tube("long-thoracic-nerve", [
+    v(neck.x + medial * 0.1, neck.y + 0.09, neck.z + 0.005),
+    v(scapC.x + medial * 0.13, scapC.y + 0.16, scapC.z + 0.07),
+    v(scapC.x + medial * 0.15, scapC.y - 0.06, scapC.z + 0.08),
+    v(scapC.x + medial * 0.14, scapBox.isEmpty() ? scapC.y - 0.3 : scapBox.min.y, scapC.z + 0.08),
+  ], 0.0065);
+  tube("suprascapular-nerve", [
+    v(neck.x + lateral * 0.02, neck.y + 0.05, neck.z),
+    v(clavC.x + lateral * 0.08, clavC.y + 0.03, clavC.z - 0.04),
+    v(scapC.x + lateral * 0.02, scapBox.isEmpty() ? scapC.y + 0.2 : scapBox.max.y - 0.08, scapC.z - 0.07),
+    v(scapC.x, scapC.y + 0.03, scapC.z - 0.09),
+  ], 0.007);
+  tube("nerve-to-subclavius", [
+    v(neck.x + lateral * 0.01, neck.y + 0.04, neck.z + 0.01),
+    v(clavC.x, clavC.y - 0.025, clavC.z + 0.04),
+    v(clavC.x + lateral * 0.07, clavC.y - 0.04, clavC.z + 0.04),
+  ], 0.0055);
+  tube("lateral-pectoral-nerve", [
+    v(axC.x + lateral * 0.05, axC.y + 0.01, axC.z + 0.02),
+    v(axC.x + medial * 0.01, axC.y, axC.z + 0.09),
+    v(axC.x + medial * 0.11, axC.y - 0.02, axC.z + 0.13),
+  ], 0.006);
+  tube("medial-pectoral-nerve", [
+    v(axC.x + medial * 0.05, axC.y - 0.015, axC.z + 0.02),
+    v(axC.x + medial * 0.08, axC.y - 0.04, axC.z + 0.08),
+    v(axC.x + medial * 0.14, axC.y - 0.08, axC.z + 0.12),
+  ], 0.006);
+  tube("upper-subscapular-nerve", [
+    v(axC.x, axC.y + 0.03, axC.z - 0.05),
+    v(scapC.x + lateral * 0.04, scapC.y + 0.1, scapC.z - 0.08),
+    v(scapC.x + lateral * 0.01, scapC.y + 0.07, scapC.z - 0.04),
+  ], 0.006);
+  tube("thoracodorsal-nerve", [
+    v(axC.x, axC.y, axC.z - 0.055),
+    v(scapC.x + lateral * 0.08, scapC.y - 0.05, scapC.z - 0.1),
+    v(scapC.x + lateral * 0.05, scapBox.isEmpty() ? scapC.y - 0.28 : scapBox.min.y - 0.05, scapC.z - 0.08),
+  ], 0.0065);
+  tube("lower-subscapular-nerve", [
+    v(axC.x, axC.y - 0.035, axC.z - 0.05),
+    v(scapC.x + lateral * 0.08, scapC.y - 0.08, scapC.z - 0.08),
+    v(humHead.x + medial * 0.02, humHead.y - 0.12, humHead.z - 0.09),
+  ], 0.006);
+  tube("medial-cutaneous-nerve-arm", [
+    v(axC.x + medial * 0.06, axC.y - 0.02, axC.z + 0.03),
+    lerp(axilla, elbow, 0.35).add(v(medial * 0.09, 0, 0.055)),
+    lerp(axilla, elbow, 0.72).add(v(medial * 0.09, 0, 0.06)),
+  ], 0.0055);
+  tube("medial-cutaneous-nerve-forearm", [
+    v(axC.x + medial * 0.05, axC.y - 0.025, axC.z + 0.035),
+    v(elbow.x + medial * 0.1, elbow.y + 0.03, elbow.z + 0.075),
+    v(ulnC.x + medial * 0.075, lerp(elbow, wrist, 0.55).y, ulnC.z + 0.08),
+    v(carpC.x + medial * 0.07, wrist.y + 0.04, carpC.z + 0.075),
+  ], 0.0055);
+
+  // ---- Named terminal and cutaneous branches ------------------------------------------------
+  tube("lateral-cutaneous-nerve-forearm", [
+    v(elbow.x + lateral * 0.065, elbow.y + 0.025, elbow.z + 0.07),
+    v(radC.x + lateral * 0.07, lerp(elbow, wrist, 0.4).y, radC.z + 0.075),
+    v(carpC.x + lateral * 0.07, wrist.y + 0.05, carpC.z + 0.07),
+  ], 0.0055);
+  tube("anterior-interosseous-nerve", [
+    v(elbow.x, elbow.y - 0.01, elbow.z + 0.05),
+    v((radC.x + ulnC.x) / 2, lerp(elbow, wrist, 0.38).y, ((radC.z + ulnC.z) / 2) + 0.025),
+    v((radC.x + ulnC.x) / 2, lerp(elbow, wrist, 0.78).y, ((radC.z + ulnC.z) / 2) + 0.025),
+    v(carpC.x, wrist.y + 0.08, carpC.z + 0.025),
+  ], 0.006);
+  tube("palmar-cutaneous-branch-median", [
+    v(carpC.x, wrist.y + 0.11, carpC.z + 0.055),
+    v(carpC.x + medial * 0.015, wrist.y + 0.045, carpC.z + 0.09),
+    v(palm.x + medial * 0.015, palm.y + 0.055, palm.z + 0.09),
+  ], 0.005);
+  tube("recurrent-branch-median", [
+    v(palm.x, wrist.y - 0.02, palm.z + 0.055),
+    v(palm.x + lateral * 0.045, palm.y + 0.025, palm.z + 0.075),
+    v(palm.x + lateral * 0.08, palm.y + 0.055, palm.z + 0.065),
+  ], 0.005);
+  for (const spread of [-0.06, 0, 0.06]) {
+    tube("common-palmar-digital-nerves-median", [
+      v(palm.x + lateral * 0.02, palm.y, palm.z + 0.07),
+      v(palm.x + spread, palm.y - 0.09, palm.z + 0.075),
+      v(palm.x + spread * 1.25, palm.y - 0.18, palm.z + 0.07),
+    ], 0.0048);
+  }
+  tube("deep-branch-radial-nerve", [
+    v(elbow.x + lateral * 0.06, elbow.y + 0.01, elbow.z + 0.01),
+    v(radC.x + lateral * 0.055, radC.y + 0.16, radC.z - 0.02),
+    v(radC.x + lateral * 0.015, radC.y + 0.09, radC.z - 0.065),
+  ], 0.0065);
+  tube("posterior-interosseous-nerve", [
+    v(radC.x + lateral * 0.015, radC.y + 0.09, radC.z - 0.065),
+    v((radC.x + ulnC.x) / 2, lerp(elbow, wrist, 0.45).y, ((radC.z + ulnC.z) / 2) - 0.07),
+    v(carpC.x, wrist.y + 0.1, carpC.z - 0.045),
+  ], 0.006);
+  tube("superficial-branch-radial-nerve", [
+    v(elbow.x + lateral * 0.07, elbow.y, elbow.z + 0.025),
+    v(radC.x + lateral * 0.075, lerp(elbow, wrist, 0.5).y, radC.z + 0.02),
+    v(carpC.x + lateral * 0.08, wrist.y + 0.04, carpC.z - 0.02),
+    v(palm.x + lateral * 0.1, palm.y - 0.08, palm.z - 0.025),
+  ], 0.0058);
+  tube("posterior-cutaneous-nerve-arm", [
+    v(axC.x, axC.y - 0.04, axC.z - 0.055),
+    lerp(axilla, elbow, 0.25).add(v(lateral * 0.01, 0, -0.11)),
+    lerp(axilla, elbow, 0.55).add(v(lateral * 0.015, 0, -0.12)),
+  ], 0.005);
+  tube("lower-lateral-cutaneous-nerve-arm", [
+    lerp(axilla, elbow, 0.48).add(v(lateral * 0.055, 0, -0.06)),
+    lerp(axilla, elbow, 0.68).add(v(lateral * 0.085, 0, -0.04)),
+    v(elbow.x + lateral * 0.09, elbow.y + 0.055, elbow.z - 0.01),
+  ], 0.005);
+  tube("posterior-cutaneous-nerve-forearm", [
+    lerp(axilla, elbow, 0.55).add(v(lateral * 0.03, 0, -0.09)),
+    v(elbow.x + lateral * 0.09, elbow.y, elbow.z - 0.06),
+    v(radC.x + lateral * 0.08, lerp(elbow, wrist, 0.52).y, radC.z - 0.09),
+    v(carpC.x + lateral * 0.06, wrist.y + 0.05, carpC.z - 0.07),
+  ], 0.005);
+  tube("upper-lateral-cutaneous-nerve-arm", [
+    v(humHead.x, humHead.y - 0.07, humHead.z - 0.065),
+    v(humHead.x + lateral * 0.075, humHead.y - 0.11, humHead.z - 0.015),
+    v(humHead.x + lateral * 0.11, humHead.y - 0.16, humHead.z + 0.025),
+  ], 0.005);
+  tube("dorsal-cutaneous-branch-ulnar", [
+    v(ulnC.x + medial * 0.03, lerp(elbow, wrist, 0.7).y, ulnC.z + 0.025),
+    v(carpC.x + medial * 0.075, wrist.y + 0.05, carpC.z - 0.015),
+    v(palm.x + medial * 0.1, palm.y - 0.08, palm.z - 0.03),
+  ], 0.005);
+  tube("palmar-cutaneous-branch-ulnar", [
+    v(ulnC.x + medial * 0.035, lerp(elbow, wrist, 0.72).y, ulnC.z + 0.035),
+    v(carpC.x + medial * 0.075, wrist.y + 0.04, carpC.z + 0.075),
+    v(palm.x + medial * 0.09, palm.y + 0.04, palm.z + 0.085),
+  ], 0.0048);
+  tube("superficial-branch-ulnar-nerve", [
+    v(palm.x + medial * 0.055, wrist.y - 0.015, palm.z + 0.055),
+    v(palm.x + medial * 0.07, palm.y - 0.055, palm.z + 0.075),
+    v(palm.x + medial * 0.1, palm.y - 0.16, palm.z + 0.07),
+  ], 0.0055);
+  tube("deep-branch-ulnar-nerve", [
+    v(palm.x + medial * 0.055, wrist.y - 0.015, palm.z + 0.04),
+    v(palm.x + medial * 0.08, palm.y + 0.015, palm.z - 0.005),
+    v(palm.x, palm.y - 0.02, palm.z - 0.015),
+    v(palm.x + lateral * 0.08, palm.y - 0.01, palm.z - 0.005),
+  ], 0.0055);
+
   // ---- Palmar arterial arches -----------------------------------------------------------------
   // Superficial arch: convex distally, just deep to the palmar aponeurosis (slightly distal + anterior).
   const palmBaseY = metaBox.isEmpty() ? wrist.y - 0.12 : metaBox.min.y + (metaBox.max.y - metaBox.min.y) * 0.35;
@@ -277,6 +487,7 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
 
   // Defensive normalization to the contract (~2-unit bbox at origin). The GLB is baked normalized;
   // this stays ~no-op but also folds in the procedural overlays.
+  const aliases = reconcileImageMeshGroups(structures, "upper-limb");
   const bbox = new Box3().setFromObject(root);
   if (!bbox.isEmpty()) {
     const size = bbox.getSize(new Vector3());
@@ -289,6 +500,7 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
   return {
     root,
     structures,
+    aliases,
     dispose() {
       const geometries = new Set<{ dispose(): void }>();
       const materials = new Set<Material>();
@@ -310,3 +522,5 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
     },
   };
 }
+import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";
+import { reconcileImageMeshGroups } from "../image-mesh-groups.ts";

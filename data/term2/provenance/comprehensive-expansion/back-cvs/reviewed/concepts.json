@@ -1,0 +1,2250 @@
+[
+  {
+    "id": "comp-cvs-architecture",
+    "moduleId": "comp-cvs-back-structure-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Vertebral canal and foraminal architecture",
+    "scope": "book-extension",
+    "summary": "The vertebral canal and intervertebral foramina are distinct neural corridors bounded by load-bearing bodies, pedicles, laminae and facet joints. Following the direction of a screw breach, displaced body fragment or combined disc-facet lesion turns these boundaries into a useful localization tool.",
+    "keyPoints": [
+      "The pedicle forms a lateral wall of the vertebral canal, so a medial breach can enter the canal. Pedicles connect the arch to the body and bound the canal laterally. A medial breach therefore directs the screw toward the thecal sac and its neural contents.",
+      "The disc and vertebral bodies anteriorly, and the zygapophysial joint posteriorly. The disc bulge encroaches from the anterior foraminal boundary and the facet osteophyte from posteriorly; pedicle notches form the superior and inferior boundaries.",
+      "Posterior bony roof of the canal removed; anterior vertebral body retained. The laminae form the posterior arch and canal roof. The vertebral body is the major weight-bearing component.",
+      "Posterior body displacement encroaches on the anterior canal wall and may compress the thecal contents. The posterior body surface faces the canal across the posterior longitudinal ligament and epidural tissues, so retropulsion can compromise neural structures."
+    ],
+    "examTraps": [
+      "Do not equate a pedicle, lamina and facet: each contributes a different canal or foraminal boundary.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A lumbar pedicle screw breaches the medial cortex of the pedicle but remains within its vertical level. Which relationship best explains the immediate neural risk?",
+        "answer": "The pedicle forms a lateral wall of the vertebral canal, so a medial breach can enter the canal. Pedicles connect the arch to the body and bound the canal laterally. A medial breach therefore directs the screw toward the thecal sac and its neural contents."
+      },
+      {
+        "prompt": "Use the source figure to reason about the two altered boundaries. Imaging shows a posterolateral disc bulge projecting into an intervertebral foramen and an osteophyte projecting from the facet joint into that same foramen. Which opposing boundaries are jointly narrowing the nerve's exit passage?",
+        "answer": "The disc and vertebral bodies anteriorly, and the zygapophysial joint posteriorly. The disc bulge encroaches from the anterior foraminal boundary and the facet osteophyte from posteriorly; pedicle notches form the superior and inferior boundaries."
+      },
+      {
+        "prompt": "A limited lumbar laminectomy enlarges space behind the thecal sac while preserving the vertebral body. Which combination correctly describes the removed structure and the principal load-bearing structure left intact?",
+        "answer": "Posterior bony roof of the canal removed; anterior vertebral body retained. The laminae form the posterior arch and canal roof. The vertebral body is the major weight-bearing component."
+      },
+      {
+        "prompt": "A vertebral-body metastasis causes collapse and a fragment moves posteriorly. A clinician is concerned about new bilateral leg deficits. Which anatomical sequence best explains this concern?",
+        "answer": "Posterior body displacement encroaches on the anterior canal wall and may compress the thecal contents. The posterior body surface faces the canal across the posterior longitudinal ligament and epidural tissues, so retropulsion can compromise neural structures."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-001 → Printed pp. 57, 72-73, 104; local PDF pp. 69, 84-85, 116",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-002 → Printed pp. 63, 72-73; local PDF pp. 75, 84-85; Figure 2.22",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-003 → Printed pp. 57, 84, 104; local PDF pp. 69, 96, 116",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-004 → Printed pp. 77, 104; local PDF pp. 89, 116",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-architecture-obj-01",
+        "text": "Infer the direction of neural risk from the pedicle's relationship to the vertebral canal.",
+        "questionIds": [
+          "comp-cvs-back-001"
+        ]
+      },
+      {
+        "id": "comp-cvs-architecture-obj-02",
+        "text": "Integrate disc and facet pathology with the boundaries of the intervertebral foramen.",
+        "questionIds": [
+          "comp-cvs-back-002"
+        ]
+      },
+      {
+        "id": "comp-cvs-architecture-obj-03",
+        "text": "Relate decompressive laminectomy to canal architecture and axial load transmission.",
+        "questionIds": [
+          "comp-cvs-back-003"
+        ]
+      },
+      {
+        "id": "comp-cvs-architecture-obj-04",
+        "text": "Explain how vertebral-body collapse can produce a neurological lesion.",
+        "questionIds": [
+          "comp-cvs-back-004"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-craniovertebral",
+    "moduleId": "comp-cvs-back-structure-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Atlas-axis stability and head movement",
+    "scope": "book-extension",
+    "summary": "Upper cervical stability depends on several restraints with different roles. The transverse ligament secures the dens against the atlas, alar ligaments chiefly check rotation, and the tectorial membrane continues the posterior longitudinal ligament to the skull. Rotation and nodding can therefore be separated by movement and injury pattern.",
+    "keyPoints": [
+      "Transverse ligament of the atlas. This ligament passes behind the dens between the atlas lateral masses and holds the dens against the anterior arch, resisting anterior displacement of the atlas.",
+      "Alar ligaments connecting the dens to the occipital condyles. The alar ligaments check excessive rotation. Preservation of the dens-anterior arch relationship points away from primary transverse-ligament failure.",
+      "Atlanto-axial rotation is impaired; atlanto-occipital flexion-extension is preserved. The dens is the pivot for rotation of the atlas and head. The occipital condyles move on the atlas mainly for nodding.",
+      "Tectorial membrane. The superior continuation of the posterior longitudinal ligament from C2 to the intracranial skull base is the tectorial membrane."
+    ],
+    "examTraps": [
+      "There is no C1-C2 disc; do not use disc failure to explain loss of the transverse restraint.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "After upper cervical trauma, the atlas and skull translate anteriorly relative to the axis while the dens remains attached to the axis. Failure of which restraint most directly permits loss of the normal atlas-dens relationship?",
+        "answer": "Transverse ligament of the atlas. This ligament passes behind the dens between the atlas lateral masses and holds the dens against the anterior arch, resisting anterior displacement of the atlas."
+      },
+      {
+        "prompt": "A ligamentous injury permits excessive rotation of the skull and atlas relative to the axis. The dens remains appropriately held against the anterior arch of the atlas. Which structures are most directly implicated?",
+        "answer": "Alar ligaments connecting the dens to the occipital condyles. The alar ligaments check excessive rotation. Preservation of the dens-anterior arch relationship points away from primary transverse-ligament failure."
+      },
+      {
+        "prompt": "An isolated injury greatly restricts turning the face left and right, but nodding remains relatively preserved. Which joint pairing best matches the lost movement and the preserved movement?",
+        "answer": "Atlanto-axial rotation is impaired; atlanto-occipital flexion-extension is preserved. The dens is the pivot for rotation of the atlas and head. The occipital condyles move on the atlas mainly for nodding."
+      },
+      {
+        "prompt": "A sagittal scan follows the posterior longitudinal ligament upward behind the axis. The same sheet continues from C2 toward the internal surface of the skull base. What is this superior continuation called?",
+        "answer": "Tectorial membrane. The superior continuation of the posterior longitudinal ligament from C2 to the intracranial skull base is the tectorial membrane."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-005 → Printed pp. 70-71; local PDF pp. 82-83",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-006 → Printed pp. 70-71; local PDF pp. 82-83",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-007 → Printed pp. 55, 70-71; local PDF pp. 67, 82-83",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-008 → Printed pp. 70, 80; local PDF pp. 82, 92",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-craniovertebral-obj-01",
+        "text": "Predict instability from disruption of the transverse ligament of the atlas.",
+        "questionIds": [
+          "comp-cvs-back-005"
+        ]
+      },
+      {
+        "id": "comp-cvs-craniovertebral-obj-02",
+        "text": "Distinguish the rotational restraint of the alar ligaments from the transverse ligament's role.",
+        "questionIds": [
+          "comp-cvs-back-006"
+        ]
+      },
+      {
+        "id": "comp-cvs-craniovertebral-obj-03",
+        "text": "Localize a selective head-movement deficit to the appropriate craniovertebral joint.",
+        "questionIds": [
+          "comp-cvs-back-007"
+        ]
+      },
+      {
+        "id": "comp-cvs-craniovertebral-obj-04",
+        "text": "Trace the posterior longitudinal ligament into its craniovertebral continuation.",
+        "questionIds": [
+          "comp-cvs-back-008"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-regional-mechanics",
+    "moduleId": "comp-cvs-back-structure-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Regional vertebrae and their relationships",
+    "scope": "book-extension",
+    "summary": "Regional vertebral form predicts motion and adjacent structures. Thoracic and lumbar facets guide different movements, the usual vertebral artery route begins in the C6 transverse foramen, and the L5 transverse process and sacral foramina have specific ligamentous and neural relationships. Variants do not erase the usual anatomical pattern.",
+    "keyPoints": [
+      "Different orientation and curvature of the zygapophysial articular surfaces guide and limit movement. Thoracic articular surfaces are more vertically oriented, whereas lumbar articular surfaces are curved and interlocking. Regional geometry constrains the movements allowed.",
+      "The vertebral artery normally enters the transverse-foramen series at C6 and then ascends to C1. A C7 transverse foramen does not normally transmit the vertebral artery, so an isolated C7 foraminal fracture need not interrupt its usual route.",
+      "Iliolumbar ligament. The massive L5 transverse processes provide attachment for iliolumbar ligaments connecting the lumbar spine to pelvic bones.",
+      "S2 anterior ramus, contributing to structures beyond the intrinsic back. Anterior sacral foramina transmit anterior rami. These participate in plexuses and supply structures beyond the intrinsic back, unlike posterior rami."
+    ],
+    "examTraps": [
+      "A sacral anterior ramus is mixed; it is not interchangeable with a purely motor anterior root.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A student compares thoracic and lumbar motion. Thoracic vertebrae permit useful rotation, whereas lumbar facets interlock and favor flexion-extension over large axial rotation. Which explanation best accounts for the regional difference?",
+        "answer": "Different orientation and curvature of the zygapophysial articular surfaces guide and limit movement. Thoracic articular surfaces are more vertically oriented, whereas lumbar articular surfaces are curved and interlocking. Regional geometry constrains the movements allowed."
+      },
+      {
+        "prompt": "A fracture is confined to the transverse foramen of C7. Angiography shows an intact vertebral artery throughout its usual cervical course. Which anatomical fact makes these findings compatible?",
+        "answer": "The vertebral artery normally enters the transverse-foramen series at C6 and then ascends to C1. A C7 transverse foramen does not normally transmit the vertebral artery, so an isolated C7 foraminal fracture need not interrupt its usual route."
+      },
+      {
+        "prompt": "During a lumbosacral dissection, a strong ligament joins the unusually large L5 transverse process to the iliac bone. Which stabilizing connection is being preserved?",
+        "answer": "Iliolumbar ligament. The massive L5 transverse processes provide attachment for iliolumbar ligaments connecting the lumbar spine to pelvic bones."
+      },
+      {
+        "prompt": "A sacral mass extends through the anterior S2 foramen while sparing the posterior S2 foramen. Which branch is directly endangered, and which broad distribution follows from that location?",
+        "answer": "S2 anterior ramus, contributing to structures beyond the intrinsic back. Anterior sacral foramina transmit anterior rami. These participate in plexuses and supply structures beyond the intrinsic back, unlike posterior rami."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-009 → Printed pp. 77-78; local PDF pp. 89-90",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-010 → Printed pp. 61, 69; local PDF pp. 73, 81",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-011 → Printed pp. 72; local PDF pp. 84",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-012 → Printed pp. 72, 106-107; local PDF pp. 84, 118-119",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-regional-mechanics-obj-01",
+        "text": "Explain regional spinal movement from facet geometry rather than joint-type misclassification.",
+        "questionIds": [
+          "comp-cvs-back-009"
+        ]
+      },
+      {
+        "id": "comp-cvs-regional-mechanics-obj-02",
+        "text": "Use the usual C6 entry level to interpret a C7 transverse-foramen injury without ignoring vascular variants.",
+        "questionIds": [
+          "comp-cvs-back-010"
+        ]
+      },
+      {
+        "id": "comp-cvs-regional-mechanics-obj-03",
+        "text": "Relate the distinctive L5 transverse process to lumbopelvic stabilization.",
+        "questionIds": [
+          "comp-cvs-back-011"
+        ]
+      },
+      {
+        "id": "comp-cvs-regional-mechanics-obj-04",
+        "text": "Infer the affected sacral ramus from anterior versus posterior foraminal involvement.",
+        "questionIds": [
+          "comp-cvs-back-012"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-discs-ligaments",
+    "moduleId": "comp-cvs-back-structure-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Disc mechanics and spinal ligament planes",
+    "scope": "book-extension",
+    "summary": "A disc distributes compression centrally while its lamellar annulus constrains movement. Longitudinal ligaments follow the vertebral bodies, ligamenta flava connect laminae and contribute elastic recoil, and the nuchal ligament supports the head posteriorly. Their names must be read relative to the bodies or canal rather than assumed to mean the same plane.",
+    "keyPoints": [
+      "Resistance to rotation is impaired; central distribution of compressive forces is relatively retained. The annulus's lamellar fibers limit rotation. The gelatinous nucleus distributes compressive loading, although the intact annulus is still necessary for normal whole-disc mechanics.",
+      "Resistance to laminar separation and elastic assistance in returning toward extension. The ligamenta flava contain abundant elastic tissue, resist separation in flexion and assist return toward the anatomical position.",
+      "It is the posterior longitudinal ligament on the anterior boundary of the canal. The name describes its position on the bodies, while its canal relationship is anterior. These two frames of reference are compatible.",
+      "The ligamentum nuchae resists flexion and provides broad attachment surfaces for neck muscles. The nuchal ligament continues the supraspinous system superiorly as a sheet, supporting the head and resisting flexion."
+    ],
+    "examTraps": [
+      "The posterior longitudinal ligament lies on the anterior canal wall, not the posterior canal roof.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "An experimental disc retains a hydrated central nucleus but loses the normal lamellar organization of its outer ring. Which paired function is most directly impaired and relatively retained?",
+        "answer": "Resistance to rotation is impaired; central distribution of compressive forces is relatively retained. The annulus's lamellar fibers limit rotation. The gelatinous nucleus distributes compressive loading, although the intact annulus is still necessary for normal whole-disc mechanics."
+      },
+      {
+        "prompt": "During spinal flexion, adjacent laminae separate. A patient has extensive degeneration of the elastic tissue normally spanning those laminae. Which normal contribution would be reduced?",
+        "answer": "Resistance to laminar separation and elastic assistance in returning toward extension. The ligamenta flava contain abundant elastic tissue, resist separation in flexion and assist return toward the anatomical position."
+      },
+      {
+        "prompt": "A surgeon retracts the dural sac posteriorly and exposes a longitudinal ligament covering the posterior surfaces of lumbar vertebral bodies. Which statement correctly places that ligament?",
+        "answer": "It is the posterior longitudinal ligament on the anterior boundary of the canal. The name describes its position on the bodies, while its canal relationship is anterior. These two frames of reference are compatible."
+      },
+      {
+        "prompt": "A midline fibrous sheet from the external occipital region to C7 becomes taut as the patient lowers the chin. Which feature explains its contribution to supporting the head?",
+        "answer": "The ligamentum nuchae resists flexion and provides broad attachment surfaces for neck muscles. The nuchal ligament continues the supraspinous system superiorly as a sheet, supporting the head and resisting flexion."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-013 → Printed pp. 77-79; local PDF pp. 89-91",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-014 → Printed pp. 80-82; local PDF pp. 92-94",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-015 → Printed pp. 80, 104; local PDF pp. 92, 116",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-016 → Printed pp. 81-82; local PDF pp. 93-94",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-discs-ligaments-obj-01",
+        "text": "Distinguish the mechanical contributions of annulus fibrosus and nucleus pulposus.",
+        "questionIds": [
+          "comp-cvs-back-013"
+        ]
+      },
+      {
+        "id": "comp-cvs-discs-ligaments-obj-02",
+        "text": "Connect ligamentum flavum elasticity with flexion and return toward extension.",
+        "questionIds": [
+          "comp-cvs-back-014"
+        ]
+      },
+      {
+        "id": "comp-cvs-discs-ligaments-obj-03",
+        "text": "Resolve the apparently conflicting posterior-to-body and anterior-to-canal positions of the posterior longitudinal ligament.",
+        "questionIds": [
+          "comp-cvs-back-015"
+        ]
+      },
+      {
+        "id": "comp-cvs-discs-ligaments-obj-04",
+        "text": "Explain head support using the attachments and function of ligamentum nuchae.",
+        "questionIds": [
+          "comp-cvs-back-016"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-root-compression",
+    "moduleId": "comp-cvs-back-neural-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Disc location and the threatened nerve",
+    "scope": "book-extension",
+    "summary": "A disc level alone does not identify every threatened nerve. In the lumbar spine a lateral-recess lesion can contact a traversing root, while a foraminal lesion contacts the exiting nerve. Cervical naming follows a different rule, and a large central lower-lumbar lesion can affect multiple descending sacral roots below the conus.",
+    "keyPoints": [
+      "L5 root. Lumbar nerves exit below their corresponding vertebrae. The L5 root descends past the L4-L5 disc toward the L5-S1 exit, whereas the L4 root is the exiting root at L4-L5.",
+      "L4 spinal nerve. The nerve exiting the L4-L5 foramen is L4. Distinguishing foraminal from traversing-root compression prevents assigning every L4-L5 lesion to L5.",
+      "C6, because C1-C7 nerves exit above their corresponding vertebrae. The C6 nerve exits above C6 through C5-C6. The extra C8 nerve exits between C7 and T1, after which nerves exit below corresponding vertebrae.",
+      "Descending cauda equina roots within the lumbar cistern. Below the normal conus, lumbar and sacral roots continue through the canal. Central compression can involve several roots, including sacral roots serving perineal and pelvic functions."
+    ],
+    "examTraps": [
+      "Distinguish exiting from traversing roots before assigning a number; do not place sacral cord segments at the same-numbered vertebrae.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "An L4-L5 disc herniation projects posterolaterally within the lumbar canal and contacts a root descending past that disc to its exit below L5. Which root is compressed?",
+        "answer": "L5 root. Lumbar nerves exit below their corresponding vertebrae. The L5 root descends past the L4-L5 disc toward the L5-S1 exit, whereas the L4 root is the exiting root at L4-L5."
+      },
+      {
+        "prompt": "At the L4-L5 level, one patient has a disc fragment in the lateral recess contacting a descending L5 root. Another has a fragment within the L4-L5 intervertebral foramen contacting the exiting nerve. Which nerve is affected in the second patient?",
+        "answer": "L4 spinal nerve. The nerve exiting the L4-L5 foramen is L4. Distinguishing foraminal from traversing-root compression prevents assigning every L4-L5 lesion to L5."
+      },
+      {
+        "prompt": "A C5-C6 lesion narrows the intervertebral foramen. Which nerve is at risk, and why does the naming rule differ from that used below T1?",
+        "answer": "C6, because C1-C7 nerves exit above their corresponding vertebrae. The C6 nerve exits above C6 through C5-C6. The extra C8 nerve exits between C7 and T1, after which nerves exit below corresponding vertebrae."
+      },
+      {
+        "prompt": "MRI shows a large central L4-L5 disc prolapse indenting the dural sac. The conus ends normally near L1-L2. Bilateral sacral sensory and sphincter symptoms develop. Which structure best accounts for these deficits at the imaged level?",
+        "answer": "Descending cauda equina roots within the lumbar cistern. Below the normal conus, lumbar and sacral roots continue through the canal. Central compression can involve several roots, including sacral roots serving perineal and pelvic functions."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-017 → Printed pp. 79, 107-109; local PDF pp. 91, 119-121",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-018 → Printed pp. 72-73, 107-109; local PDF pp. 84-85, 119-121",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-019 → Printed pp. 79, 107-109; local PDF pp. 91, 119-121",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-020 → Printed pp. 79, 99, 103-107; local PDF pp. 91, 111, 115-119",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-root-compression-obj-01",
+        "text": "Distinguish the traversing L5 root from the exiting L4 root at an L4-L5 disc.",
+        "questionIds": [
+          "comp-cvs-back-017"
+        ]
+      },
+      {
+        "id": "comp-cvs-root-compression-obj-02",
+        "text": "Use the position of a disc fragment, not only disc level, to identify a compressed lumbar nerve.",
+        "questionIds": [
+          "comp-cvs-back-018"
+        ]
+      },
+      {
+        "id": "comp-cvs-root-compression-obj-03",
+        "text": "Apply cervical nerve-exit nomenclature to foraminal narrowing.",
+        "questionIds": [
+          "comp-cvs-back-019"
+        ]
+      },
+      {
+        "id": "comp-cvs-root-compression-obj-04",
+        "text": "Explain multi-root sacral deficits from a central lower-lumbar canal lesion below the conus.",
+        "questionIds": [
+          "comp-cvs-back-020"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-roots-rami",
+    "moduleId": "comp-cvs-back-neural-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Roots, mixed nerves and recurrent branches",
+    "scope": "book-extension",
+    "summary": "Anterior and posterior roots separate efferent and afferent traffic before forming a mixed spinal nerve. Both rami then carry mixed fibers to different territories. Comparing sensory loss with weakness across intrinsic-back and anterior-trunk distributions helps distinguish a root lesion from a ramal lesion, while recurrent meningeal branches return to structures inside the canal.",
+    "keyPoints": [
+      "The posterior root carries sensory processes, whereas the posterior ramus contains both sensory and motor fibers. A root lesion before joining can selectively interrupt sensory input. A posterior ramus lesion would also affect motor supply to intrinsic back muscles.",
+      "Posterior ramus after the spinal nerve has divided. This mixed ramus supplies intrinsic back muscles and adjacent skin. Sparing the anterior ramus accounts for preserved anterior wall function.",
+      "Motor loss may involve both ramal distributions while segmental sensory input is relatively preserved. Motor fibers leave in the anterior root and later distribute through both rami. The posterior sensory root remains intact, unlike a mixed-spinal-nerve lesion.",
+      "Recurrent meningeal (sinuvertebral) nerves re-entering the canal. These nerves return through the foramen to supply dura, ligaments, discs and blood vessels, explaining sensory access to structures inside the canal."
+    ],
+    "examTraps": [
+      "Posterior does not mean sensory-only once the nerve has divided into rami.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A focal lesion interrupts a posterior root before it joins its anterior root. Testing shows a segmental sensory deficit without primary denervation of the corresponding skeletal muscles. Which comparison best explains this pattern?",
+        "answer": "The posterior root carries sensory processes, whereas the posterior ramus contains both sensory and motor fibers. A root lesion before joining can selectively interrupt sensory input. A posterior ramus lesion would also affect motor supply to intrinsic back muscles."
+      },
+      {
+        "prompt": "After a local procedure, a narrow paraspinal skin strip loses sensation and the adjacent intrinsic back muscles become weak. Anterior trunk sensation and intercostal muscle function at that segment remain intact. Which lesion best fits?",
+        "answer": "Posterior ramus after the spinal nerve has divided. This mixed ramus supplies intrinsic back muscles and adjacent skin. Sparing the anterior ramus accounts for preserved anterior wall function."
+      },
+      {
+        "prompt": "A lesion cuts an anterior root before it joins the posterior root. Which finding most strongly distinguishes this lesion from interruption of the whole spinal nerve just distal to their union?",
+        "answer": "Motor loss may involve both ramal distributions while segmental sensory input is relatively preserved. Motor fibers leave in the anterior root and later distribute through both rami. The posterior sensory root remains intact, unlike a mixed-spinal-nerve lesion."
+      },
+      {
+        "prompt": "A patient has pain from a diseased posterior disc margin and adjacent dura. The responsible small nerves branch near the division of the spinal nerve and return through the intervertebral foramen. Which route is being described?",
+        "answer": "Recurrent meningeal (sinuvertebral) nerves re-entering the canal. These nerves return through the foramen to supply dura, ligaments, discs and blood vessels, explaining sensory access to structures inside the canal."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-021 → Printed pp. 106-107; local PDF pp. 118-119",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-022 → Printed pp. 63, 106-107; local PDF pp. 75, 118-119",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-023 → Printed pp. 106-107; local PDF pp. 118-119",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-024 → Printed pp. 103, 107; local PDF pp. 115, 119",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-roots-rami-obj-01",
+        "text": "Distinguish a sensory root lesion from a mixed posterior-ramus lesion.",
+        "questionIds": [
+          "comp-cvs-back-021"
+        ]
+      },
+      {
+        "id": "comp-cvs-roots-rami-obj-02",
+        "text": "Localize a mixed paraspinal deficit to a posterior ramus while using spared functions as evidence.",
+        "questionIds": [
+          "comp-cvs-back-022"
+        ]
+      },
+      {
+        "id": "comp-cvs-roots-rami-obj-03",
+        "text": "Compare anterior-root and mixed-spinal-nerve lesions using motor and sensory distributions.",
+        "questionIds": [
+          "comp-cvs-back-023"
+        ]
+      },
+      {
+        "id": "comp-cvs-roots-rami-obj-04",
+        "text": "Trace recurrent meningeal innervation to pain-sensitive vertebral-canal structures.",
+        "questionIds": [
+          "comp-cvs-back-024"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-nomenclature",
+    "moduleId": "comp-cvs-back-neural-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Spinal nerve numbering and segmental distribution",
+    "scope": "book-extension",
+    "summary": "Spinal nerves are numbered by their exits, with the C8 transition separating the cervical and thoracic rules. Differential cord-column growth leaves long caudally descending roots. A sensory ganglion is proximal to distribution through both rami, explaining why a segmental sensory process can involve anterior and posterior skin territories.",
+    "keyPoints": [
+      "The affected nerve is C8; T1 exits below T1. The extra eighth cervical nerve occupies the C7-T1 interval and marks the transition to the below-vertebra rule.",
+      "The corresponding thoracic wall, with intrinsic back muscles relatively spared. Thoracic anterior rami supply the trunk wall, whereas posterior rami supply intrinsic back muscles and nearby skin.",
+      "Its cord origin is substantially superior to its vertebral exit level. The cord is shorter than the vertebral column, so caudal roots descend a long distance through the canal before exiting.",
+      "The posterior root ganglion before sensory fibers distribute through the two rami. The ganglion contains sensory cell bodies for the spinal nerve. Their peripheral processes reach both ramal territories, unlike a lesion confined to one distal cutaneous branch."
+    ],
+    "examTraps": [
+      "C8 exits between C7 and T1; a dermatome must not be reduced to a single terminal cutaneous branch.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A mass fills the foramen between C7 and T1. A report labels the affected nerve T1 solely because the lower vertebra is T1. Which correction follows normal spinal-nerve nomenclature?",
+        "answer": "The affected nerve is C8; T1 exits below T1. The extra eighth cervical nerve occupies the C7-T1 interval and marks the transition to the below-vertebra rule."
+      },
+      {
+        "prompt": "A thoracic spinal nerve is identified as T6 as it leaves below the T6 pedicle. Its small posterior ramus is intact, but its larger anterior ramus is divided. Which distribution should be most affected?",
+        "answer": "The corresponding thoracic wall, with intrinsic back muscles relatively spared. Thoracic anterior rami supply the trunk wall, whereas posterior rami supply intrinsic back muscles and nearby skin."
+      },
+      {
+        "prompt": "A surgeon follows a normal S1 nerve root caudally from the lumbar cistern. Which observation is expected before it reaches its sacral exit?",
+        "answer": "Its cord origin is substantially superior to its vertebral exit level. The cord is shorter than the vertebral column, so caudal roots descend a long distance through the canal before exiting."
+      },
+      {
+        "prompt": "A painful vesicular eruption follows a single thoracic dermatome. Reactivation occurs in sensory neuron cell bodies, and symptoms extend into both anterior and posterior cutaneous territories of the segment. Which location can account for both territories?",
+        "answer": "The posterior root ganglion before sensory fibers distribute through the two rami. The ganglion contains sensory cell bodies for the spinal nerve. Their peripheral processes reach both ramal territories, unlike a lesion confined to one distal cutaneous branch."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-025 → Printed pp. 109; local PDF pp. 121",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-026 → Printed pp. 106-109; local PDF pp. 118-121",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-027 → Printed pp. 107-109; local PDF pp. 119-121",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-028 → Printed pp. 106, 109; local PDF pp. 118, 121",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-nomenclature-obj-01",
+        "text": "Apply the C8 transition to a cervicothoracic foraminal lesion.",
+        "questionIds": [
+          "comp-cvs-back-025"
+        ]
+      },
+      {
+        "id": "comp-cvs-nomenclature-obj-02",
+        "text": "Combine thoracic exit nomenclature with the functional distribution of the anterior ramus.",
+        "questionIds": [
+          "comp-cvs-back-026"
+        ]
+      },
+      {
+        "id": "comp-cvs-nomenclature-obj-03",
+        "text": "Explain the long intracanalar course of a sacral root using differential growth of cord and column.",
+        "questionIds": [
+          "comp-cvs-back-027"
+        ]
+      },
+      {
+        "id": "comp-cvs-nomenclature-obj-04",
+        "text": "Relate a dermatomal sensory disorder to dorsal-root-ganglion anatomy across ramal territories.",
+        "questionIds": [
+          "comp-cvs-back-028"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-cord-levels",
+    "moduleId": "comp-cvs-back-neural-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Cord segments, conus and meningeal endpoints",
+    "scope": "book-extension",
+    "summary": "The spinal cord, its named enlargements and the vertebral column do not share identical longitudinal coordinates. The usual adult conus ends near L1-L2, whereas the subarachnoid sac continues to S2 and contains descending roots. Developmental differences matter when translating adult anatomical reasoning to a neonate.",
+    "keyPoints": [
+      "Cauda equina roots, because the normal conus has ended more superiorly. At L4 the normal adult dural sac contains descending roots and CSF rather than spinal cord proper. A body lesion can affect these roots if it encroaches on the canal.",
+      "The enlargement is named for the nerves supplying the lower limb, whose roots descend to more caudal exits. Its segmental association is with lower-limb innervation. Differential growth separates those segments from similarly named vertebral exit levels.",
+      "Conus medullaris superiorly and termination of the subarachnoid sac inferiorly. The conus is the tapered cord end. Dura and arachnoid continue around the cauda equina to about S2.",
+      "The neonatal cord usually ends more caudally, around L3, so the adult endpoint cannot simply be assumed. The source describes a neonatal cord ending around L3, sometimes lower, compared with the typical adult L1-L2 level. Age and individual anatomy matter."
+    ],
+    "examTraps": [
+      "A spinal segment number is not its vertebral position, and S2 marks the sac endpoint rather than the usual adult cord endpoint.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Two lesions are at the same L4 vertebral level in adults. One is within a normally positioned dural sac and the other within the vertebral body. Which neural tissue is normally available for direct compression inside the sac at that level?",
+        "answer": "Cauda equina roots, because the normal conus has ended more superiorly. At L4 the normal adult dural sac contains descending roots and CSF rather than spinal cord proper. A body lesion can affect these roots if it encroaches on the canal."
+      },
+      {
+        "prompt": "An MRI report describes a lumbosacral enlargement of the spinal cord superior to the conus. Why does the word 'lumbosacral' not establish that this enlargement lies opposite the lumbar and sacral vertebrae bearing the same numbers?",
+        "answer": "The enlargement is named for the nerves supplying the lower limb, whose roots descend to more caudal exits. Its segmental association is with lower-limb innervation. Differential growth separates those segments from similarly named vertebral exit levels."
+      },
+      {
+        "prompt": "Imaging shows the cord tapering near L1-L2, but the CSF-containing meningeal sac continues to S2. Which combination best identifies these two endpoints?",
+        "answer": "Conus medullaris superiorly and termination of the subarachnoid sac inferiorly. The conus is the tapered cord end. Dura and arachnoid continue around the cauda equina to about S2."
+      },
+      {
+        "prompt": "An adult lumbar puncture rationale is copied unchanged into a description of neonatal anatomy. Which correction is most relevant to the anatomical premise of avoiding cord injury?",
+        "answer": "The neonatal cord usually ends more caudally, around L3, so the adult endpoint cannot simply be assumed. The source describes a neonatal cord ending around L3, sometimes lower, compared with the typical adult L1-L2 level. Age and individual anatomy matter."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-029 → Printed pp. 62, 99, 107; local PDF pp. 74, 111, 119",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-030 → Printed pp. 99, 106-107; local PDF pp. 111, 118-119",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-031 → Printed pp. 99, 103-104; local PDF pp. 111, 115-116",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-032 → Printed pp. 99, 106; local PDF pp. 111, 118",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-cord-levels-obj-01",
+        "text": "Distinguish vertebral level from spinal cord segment when interpreting a lumbar lesion.",
+        "questionIds": [
+          "comp-cvs-back-029"
+        ]
+      },
+      {
+        "id": "comp-cvs-cord-levels-obj-02",
+        "text": "Interpret cord enlargement names as segmental innervation relationships rather than matching vertebral levels.",
+        "questionIds": [
+          "comp-cvs-back-030"
+        ]
+      },
+      {
+        "id": "comp-cvs-cord-levels-obj-03",
+        "text": "Separate cord termination from termination of the CSF-containing spinal meningeal sac.",
+        "questionIds": [
+          "comp-cvs-back-031"
+        ]
+      },
+      {
+        "id": "comp-cvs-cord-levels-obj-04",
+        "text": "Recognize the age-dependent difference in conus position relevant to anatomical procedural reasoning.",
+        "questionIds": [
+          "comp-cvs-back-032"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-meninges",
+    "moduleId": "comp-cvs-back-canal-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Meningeal spaces, sleeves and cord anchors",
+    "scope": "book-extension",
+    "summary": "Spinal dura is separated from the canal wall by a real epidural space containing fat and veins. Arachnoid encloses the CSF-filled subarachnoid compartment outside pia, while denticulate ligaments and the filum help stabilize neural contents. Following dural sleeves laterally links the meningeal sac to peripheral nerve coverings.",
+    "keyPoints": [
+      "It occupies the fat- and vein-containing space between canal walls and spinal dura. The spinal epidural space is a real compartment outside the dura. Blood, pus or other material can collect there and compress the sac externally.",
+      "Anchoring the spinal cord within the subarachnoid space. Denticulate ligaments are lateral pial extensions whose tooth-like attachments help position the cord within the CSF-filled space.",
+      "Epineurium. Spinal dural sleeves merge with the outer connective-tissue covering of the nerve, the epineurium, as roots and nerves pass laterally.",
+      "It is the filum terminale, a connective-tissue anchoring continuation rather than a functional sacral root. The pial part begins at the conus; inferiorly dura invests it as it continues to coccygeal attachment. Cauda equina roots remain neural structures serving peripheral territories."
+    ],
+    "examTraps": [
+      "Do not transfer the fused cranial dural arrangement to the spinal epidural compartment, or confuse denticulate ligaments with the terminal filum.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "An epidural collection displaces an intact spinal dural sac inward. Which description correctly identifies the occupied compartment and explains why it can enlarge without first tearing dura?",
+        "answer": "It occupies the fat- and vein-containing space between canal walls and spinal dura. The spinal epidural space is a real compartment outside the dura. Blood, pus or other material can collect there and compress the sac externally."
+      },
+      {
+        "prompt": "During intradural exposure, a triangular process projects laterally from a longitudinal pial sheet between anterior and posterior rootlets and attaches through arachnoid to dura. What is its main anatomical role?",
+        "answer": "Anchoring the spinal cord within the subarachnoid space. Denticulate ligaments are lateral pial extensions whose tooth-like attachments help position the cord within the CSF-filled space."
+      },
+      {
+        "prompt": "A dissector follows the dural sleeve laterally along spinal roots through an intervertebral foramen. With which outer nerve covering does this sleeve become continuous?",
+        "answer": "Epineurium. Spinal dural sleeves merge with the outer connective-tissue covering of the nerve, the epineurium, as roots and nerves pass laterally."
+      },
+      {
+        "prompt": "A midline filament descends from the conus within the lumbar cistern, acquires a dural investment near the end of the sac, and continues to the coccyx. Which interpretation best distinguishes it from adjacent cauda equina structures?",
+        "answer": "It is the filum terminale, a connective-tissue anchoring continuation rather than a functional sacral root. The pial part begins at the conus; inferiorly dura invests it as it continues to coccygeal attachment. Cauda equina roots remain neural structures serving peripheral territories."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-033 → Printed pp. 59, 103-104; local PDF pp. 71, 115-116",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-034 → Printed pp. 103-104; local PDF pp. 115-116",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-035 → Printed pp. 103, 106-107; local PDF pp. 115, 118-119",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-036 → Printed pp. 99, 103-104; local PDF pp. 111, 115-116",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-meninges-obj-01",
+        "text": "Locate spinal epidural pathology relative to the meninges and canal walls.",
+        "questionIds": [
+          "comp-cvs-back-033"
+        ]
+      },
+      {
+        "id": "comp-cvs-meninges-obj-02",
+        "text": "Identify the origin, position and anchoring function of denticulate ligaments.",
+        "questionIds": [
+          "comp-cvs-back-034"
+        ]
+      },
+      {
+        "id": "comp-cvs-meninges-obj-03",
+        "text": "Trace the continuity from spinal dura to the peripheral nerve's outer covering.",
+        "questionIds": [
+          "comp-cvs-back-035"
+        ]
+      },
+      {
+        "id": "comp-cvs-meninges-obj-04",
+        "text": "Distinguish pial and dural parts of the filum terminale from cauda equina roots.",
+        "questionIds": [
+          "comp-cvs-back-036"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-lumbar-access",
+    "moduleId": "comp-cvs-back-canal-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Layered lumbar access and surface landmarks",
+    "scope": "book-extension",
+    "summary": "A posterior lumbar route traverses successive ligamentous, epidural and meningeal layers. The adult lumbar cistern permits access to CSF below the usual conus, but the cauda equina and epidural veins remain relevant. Bony landmarks and the widening of posterior intervals during flexion explain the anatomical route without replacing individualized procedural assessment.",
+    "keyPoints": [
+      "Ligamentum flavum, epidural space, dura, arachnoid, subarachnoid space. After the posterior ligamentous layers, the needle crosses the extradural tissues and then dura and arachnoid to enter CSF. Pia need not be penetrated.",
+      "CSF lies outside pia in the subarachnoid space, and the lower lumbar cistern lies below the usual conus. Piercing dura and arachnoid accesses CSF. Pia adheres to cord and neural surfaces and is not a required barrier on the intended cisternal route.",
+      "Lower lumbar laminae and spinous processes leave gaps that widen with flexion, below the usual cord termination. The bony windows widen in flexion, and the lower lumbar cistern provides access to CSF below the usual conus. The landmark is approximate, not a substitute for individual localization.",
+      "An internal vertebral venous plexus channel in the epidural space. The epidural compartment contains a vertebral venous plexus within fatty tissue; it can yield blood without entry into the subarachnoid space."
+    ],
+    "examTraps": [
+      "CSF is subarachnoid, not epidural or normally subdural; a needle can enter an epidural vein without crossing dura.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "For an anatomical model of a conventional midline lumbar puncture, which sequence correctly places the deeper tissues after the interspinous ligament and before free CSF is reached?",
+        "answer": "Ligamentum flavum, epidural space, dura, arachnoid, subarachnoid space. After the posterior ligamentous layers, the needle crosses the extradural tissues and then dura and arachnoid to enter CSF. Pia need not be penetrated."
+      },
+      {
+        "prompt": "Use the source figure's meningeal relationships; the question concerns the lower lumbar cistern below the usual conus, not the pictured cord level. A lower lumbar needle passes beyond the epidural space and pierces two closely apposed membranes, after which clear CSF flows. Why is penetration of pia unnecessary for this result?",
+        "answer": "CSF lies outside pia in the subarachnoid space, and the lower lumbar cistern lies below the usual conus. Piercing dura and arachnoid accesses CSF. Pia adheres to cord and neural surfaces and is not a required barrier on the intended cisternal route."
+      },
+      {
+        "prompt": "In a surface-anatomy exercise, the intercristal line identifies approximately L4. Flexing the lumbar spine makes a route between adjacent posterior arches easier to visualize. Which explanation links these observations to lumbar access?",
+        "answer": "Lower lumbar laminae and spinous processes leave gaps that widen with flexion, below the usual cord termination. The bony windows widen in flexion, and the lower lumbar cistern provides access to CSF below the usual conus. The landmark is approximate, not a substitute for individual localization."
+      },
+      {
+        "prompt": "Use the source figure to infer which compartment has been reached. A needle stops just beyond the ligamentum flavum. Blood is aspirated, but no CSF is obtained. Imaging confirms that dura has not been crossed. Which structure most plausibly accounts for the blood?",
+        "answer": "An internal vertebral venous plexus channel in the epidural space. The epidural compartment contains a vertebral venous plexus within fatty tissue; it can yield blood without entry into the subarachnoid space."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-037 → Printed pp. 104-106; local PDF pp. 116-118",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-038 → Printed pp. 103-106, 116; local PDF pp. 115-118, 128; Figure 2.51",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-039 → Printed pp. 73, 114-116; local PDF pp. 85, 126-128",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-040 → Printed pp. 59, 102, 104-106; local PDF pp. 71, 114, 116-118; Figure 2.52",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-lumbar-access-obj-01",
+        "text": "Order the tissue planes traversed during a midline lumbar puncture.",
+        "questionIds": [
+          "comp-cvs-back-037"
+        ]
+      },
+      {
+        "id": "comp-cvs-lumbar-access-obj-02",
+        "text": "Explain why CSF sampling does not require penetrating pia or spinal cord.",
+        "questionIds": [
+          "comp-cvs-back-038"
+        ]
+      },
+      {
+        "id": "comp-cvs-lumbar-access-obj-03",
+        "text": "Connect surface landmarks and flexion-dependent posterior spaces to the anatomical rationale for lower lumbar access.",
+        "questionIds": [
+          "comp-cvs-back-039"
+        ]
+      },
+      {
+        "id": "comp-cvs-lumbar-access-obj-04",
+        "text": "Use a needle's meningeal depth to identify an epidural vascular source.",
+        "questionIds": [
+          "comp-cvs-back-040"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-spinal-vascular",
+    "moduleId": "comp-cvs-back-canal-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Segmental spinal perfusion and vertebral veins",
+    "scope": "book-extension",
+    "summary": "Longitudinal spinal arteries are reinforced by selected segmental medullary feeders rather than relying on an uninterrupted tube alone. Radicular branches and cord-reinforcing branches have different destinations, and anterior versus posterior cord territories explain selective ischemic patterns. Communicating vertebral venous plexuses provide a separate route for pressure-dependent flow and spread.",
+    "keyPoints": [
+      "The artery of Adamkiewicz is an important reinforcing feeder, so longitudinal arterial continuity alone may not maintain lower-cord perfusion. The largest segmental medullary artery commonly arises on the left in the lower thoracic or upper lumbar region and reinforces the lower cord's longitudinal supply.",
+      "The first is radicular; the second is segmental medullary and reinforces cord supply. Radicular branches supply roots at segmental levels, whereas segmental medullary branches reach and reinforce longitudinal cord arteries at selected levels.",
+      "Anterior spinal territory is affected while posterior spinal arterial territory supplying the dorsal columns is relatively spared. Anterior cord syndrome affects the anterior spinal arterial distribution and can spare posterior columns supplied by the posterior arterial system.",
+      "Extensive largely valveless vertebral plexuses communicate with regional veins. The interconnected vertebral venous plexuses permit pressure-dependent flow and provide routes for metastatic spread between pelvic, thoracic and vertebral territories."
+    ],
+    "examTraps": [
+      "A foraminal artery is not automatically a medullary feeder; arterial continuity does not guarantee adequate perfusion after a major feeder is lost.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Use the source figure's relationship between longitudinal arteries and segmental feeders. During treatment of a descending aortic lesion, a major left lower-thoracic segmental feeder is interrupted. The longitudinal spinal arteries remain anatomically present, yet acute lower-cord ischemia follows. Which explanation is best?",
+        "answer": "The artery of Adamkiewicz is an important reinforcing feeder, so longitudinal arterial continuity alone may not maintain lower-cord perfusion. The largest segmental medullary artery commonly arises on the left in the lower thoracic or upper lumbar region and reinforces the lower cord's longitudinal supply."
+      },
+      {
+        "prompt": "At one intervertebral foramen, an arterial branch follows a posterior root and ends in its supply. At another level, a larger branch reaches a longitudinal spinal artery on the cord. Which distinction is correct?",
+        "answer": "The first is radicular; the second is segmental medullary and reinforces cord supply. Radicular branches supply roots at segmental levels, whereas segmental medullary branches reach and reinforce longitudinal cord arteries at selected levels."
+      },
+      {
+        "prompt": "After an anterior spinal arterial insult, a patient has major motor impairment while posterior-column modalities are relatively preserved. Which anatomical distribution best explains the dissociation?",
+        "answer": "Anterior spinal territory is affected while posterior spinal arterial territory supplying the dorsal columns is relatively spared. Anterior cord syndrome affects the anterior spinal arterial distribution and can spare posterior columns supplied by the posterior arterial system."
+      },
+      {
+        "prompt": "A malignancy spreads to vertebrae through communicating venous channels. Which feature of the vertebral venous system best supports a route that need not follow a single one-way peripheral-to-heart path?",
+        "answer": "Extensive largely valveless vertebral plexuses communicate with regional veins. The interconnected vertebral venous plexuses permit pressure-dependent flow and provide routes for metastatic spread between pelvic, thoracic and vertebral territories."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-041 → Printed pp. 100-102, 119-120; local PDF pp. 112-114, 131-132; Figure 2.49B",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-042 → Printed pp. 100-102; local PDF pp. 112-114",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "47 Spinal cord and spinal nerves: gross anatomy",
+        "locator": "comp-cvs-back-043 → Printed pp. 864-865, 866.e1; local PDF pp. 1309-1310, 1315",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "Back: overview and surface anatomy",
+        "locator": "comp-cvs-back-044 → Printed pp. 822; local PDF pp. 1245",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-spinal-vascular-obj-01",
+        "text": "Explain lower-cord ischemia after loss of a major segmental medullary feeder despite patent longitudinal arteries.",
+        "questionIds": [
+          "comp-cvs-back-041"
+        ]
+      },
+      {
+        "id": "comp-cvs-spinal-vascular-obj-02",
+        "text": "Differentiate radicular supply from segmental medullary reinforcement by tracing the vessel's endpoint.",
+        "questionIds": [
+          "comp-cvs-back-042"
+        ]
+      },
+      {
+        "id": "comp-cvs-spinal-vascular-obj-03",
+        "text": "Relate dissociated cord deficits to anterior versus posterior spinal arterial territories.",
+        "questionIds": [
+          "comp-cvs-back-043"
+        ]
+      },
+      {
+        "id": "comp-cvs-spinal-vascular-obj-04",
+        "text": "Explain a venous route of vertebral metastasis from communicating vertebral plexus anatomy.",
+        "questionIds": [
+          "comp-cvs-back-044"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-intrinsic-muscles",
+    "moduleId": "comp-cvs-back-muscles-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Intrinsic back columns, spans and movement",
+    "scope": "book-extension",
+    "summary": "Intrinsic back muscles can be organized by column, attachment direction and number of vertebral levels crossed. Erector-spinae columns run longitudinally, transversospinal fibers rotate the trunk contralaterally, and splenius rotates the head ipsilaterally. Short and multisegment muscles contribute different local and regional mechanical roles.",
+    "keyPoints": [
+      "Iliocostalis, longissimus, spinalis. Iliocostalis is lateral and related to rib angles, longissimus is intermediate, and spinalis is medial beside spinous processes.",
+      "The trunk rotates left with transversospinales; right splenius rotates the face right. Transversospinales pull spinous processes toward their own side and rotate the trunk to the opposite side. Splenius runs upward and laterally and rotates the head to its own side.",
+      "Multifidus. Multifidus is best developed in the lumbar region and spans roughly two to four vertebrae from lateral origins toward spinous processes.",
+      "Interspinales. Interspinales link adjacent spinous processes and assist local extension and stabilization."
+    ],
+    "examTraps": [
+      "Do not assign every short posterior muscle a universal innervation rule; attachment and regional exceptions need separate attention.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A posterior spinal exposure identifies three longitudinal erector-spinae columns. The lateral column follows rib angles, the middle column follows transverse processes, and the medial column links spinous processes. Which order is correct from lateral to medial?",
+        "answer": "Iliocostalis, longissimus, spinalis. Iliocostalis is lateral and related to rib angles, longissimus is intermediate, and spinalis is medial beside spinous processes."
+      },
+      {
+        "prompt": "With the pelvis fixed, unilateral right transversospinalis fibers pull upper spinous processes toward right transverse processes. How does this compare with unilateral right splenius action on the head?",
+        "answer": "The trunk rotates left with transversospinales; right splenius rotates the face right. Transversospinales pull spinous processes toward their own side and rotate the trunk to the opposite side. Splenius runs upward and laterally and rotates the head to its own side."
+      },
+      {
+        "prompt": "A deep lumbar muscle is especially well developed in this region and sends fibers from lateral bony origins to spinous processes two to four vertebrae above. Which muscle is most consistent with this description?",
+        "answer": "Multifidus. Multifidus is best developed in the lumbar region and spans roughly two to four vertebrae from lateral origins toward spinous processes."
+      },
+      {
+        "prompt": "A short deep muscle connects adjacent lumbar spinous processes on either side of the interspinous ligament. It contributes to local extension and stabilization rather than spanning several vertebral levels. Which muscle is being described?",
+        "answer": "Interspinales. Interspinales link adjacent spinous processes and assist local extension and stabilization."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-045 → Printed pp. 93-95; local PDF pp. 105-107",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-046 → Printed pp. 92-93, 95, 97; local PDF pp. 104-105, 107, 109",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-047 → Printed pp. 95-97; local PDF pp. 107-109",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-048 → Printed pp. 95, 97; local PDF pp. 107, 109",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-intrinsic-muscles-obj-01",
+        "text": "Use attachments to reconstruct the lateral-to-medial arrangement of erector spinae.",
+        "questionIds": [
+          "comp-cvs-back-045"
+        ]
+      },
+      {
+        "id": "comp-cvs-intrinsic-muscles-obj-02",
+        "text": "Contrast ipsilateral splenius rotation with contralateral trunk rotation by transversospinales.",
+        "questionIds": [
+          "comp-cvs-back-046"
+        ]
+      },
+      {
+        "id": "comp-cvs-intrinsic-muscles-obj-03",
+        "text": "Distinguish multifidus from neighboring intrinsic muscles using regional development and vertebral span.",
+        "questionIds": [
+          "comp-cvs-back-047"
+        ]
+      },
+      {
+        "id": "comp-cvs-intrinsic-muscles-obj-04",
+        "text": "Distinguish short intrinsic back muscles by their attachments and span.",
+        "questionIds": [
+          "comp-cvs-back-048"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-extrinsic-muscles",
+    "moduleId": "comp-cvs-back-muscles-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Extrinsic back muscles and nerve lesions",
+    "scope": "book-extension",
+    "summary": "Several muscles on the posterior trunk move the scapula or humerus and receive named anterior-ramus-derived nerves or accessory motor supply. Comparing shrug, protraction, retraction and pulling strength separates trapezius, serratus anterior, rhomboid and latissimus dysfunction. Intermediate rib-attaching muscles also remain extrinsic despite their posterior location.",
+    "keyPoints": [
+      "Accessory-nerve injury causing trapezius weakness. Trapezius elevates the scapula and its upper and lower fibers cooperate in upward rotation needed for overhead elevation. Its motor supply is the accessory nerve; preserved protraction argues against a primary serratus-anterior deficit.",
+      "Extension and adduction, with medial rotation, by latissimus dorsi. Latissimus dorsi produces this combination and contributes to pulling the body toward a fixed upper limb during climbing.",
+      "Dorsal scapular nerve injury affecting the rhomboids. Rhomboids retract the scapula and resist lateral displacement. Preserved shrug suggests that trapezius motor supply remains functional.",
+      "Serratus posterior muscles are extrinsic intermediate back muscles; location alone does not define intrinsic innervation. Serratus posterior superior and inferior belong to the intermediate extrinsic group and receive segmental anterior-ramus supply, unlike the principal intrinsic back group."
+    ],
+    "examTraps": [
+      "Back location alone does not establish posterior-ramus supply; preserved actions are important localization evidence.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "After a posterior-triangle neck injury, a patient has shoulder droop, a weak shrug and difficulty raising the arm fully overhead. Scapular protraction against resistance is preserved. Which localization best fits the combined findings?",
+        "answer": "Accessory-nerve injury causing trapezius weakness. Trapezius elevates the scapula and its upper and lower fibers cooperate in upward rotation needed for overhead elevation. Its motor supply is the accessory nerve; preserved protraction argues against a primary serratus-anterior deficit."
+      },
+      {
+        "prompt": "Following thoracodorsal-nerve injury, a climber cannot generate the usual force to pull the body upward with the hands fixed overhead. Which lost humeral actions most directly explain the deficit?",
+        "answer": "Extension and adduction, with medial rotation, by latissimus dorsi. Latissimus dorsi produces this combination and contributes to pulling the body toward a fixed upper limb during climbing."
+      },
+      {
+        "prompt": "A patient can shrug strongly but has weak scapular retraction and a resting scapula displaced laterally. Which nerve-muscle relationship best accounts for this pattern?",
+        "answer": "Dorsal scapular nerve injury affecting the rhomboids. Rhomboids retract the scapula and resist lateral displacement. Preserved shrug suggests that trapezius motor supply remains functional."
+      },
+      {
+        "prompt": "Two posterior rib-attaching muscle sheets lie deep to rhomboids and latissimus dorsi. They receive anterior-ramus branches despite their position on the back. Which conclusion is anatomically sound?",
+        "answer": "Serratus posterior muscles are extrinsic intermediate back muscles; location alone does not define intrinsic innervation. Serratus posterior superior and inferior belong to the intermediate extrinsic group and receive segmental anterior-ramus supply, unlike the principal intrinsic back group."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-049 → Printed pp. 87, 89, 99; local PDF pp. 99, 101, 111",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-050 → Printed pp. 89, 99; local PDF pp. 101, 111",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-051 → Printed pp. 89-90, 99; local PDF pp. 101-102, 111",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-052 → Printed pp. 84, 90-92; local PDF pp. 96, 102-104",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-extrinsic-muscles-obj-01",
+        "text": "Localize a combined shrug and upward-rotation deficit while using preserved protraction to distinguish scapular muscle lesions.",
+        "questionIds": [
+          "comp-cvs-back-049"
+        ]
+      },
+      {
+        "id": "comp-cvs-extrinsic-muscles-obj-02",
+        "text": "Translate latissimus dorsi actions into a functional deficit when the upper limb is fixed.",
+        "questionIds": [
+          "comp-cvs-back-050"
+        ]
+      },
+      {
+        "id": "comp-cvs-extrinsic-muscles-obj-03",
+        "text": "Differentiate rhomboid and trapezius weakness through preserved shrug and impaired retraction.",
+        "questionIds": [
+          "comp-cvs-back-051"
+        ]
+      },
+      {
+        "id": "comp-cvs-extrinsic-muscles-obj-04",
+        "text": "Distinguish extrinsic intermediate back muscles from intrinsic muscles despite overlapping posterior location.",
+        "questionIds": [
+          "comp-cvs-back-052"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-suboccipital",
+    "moduleId": "comp-cvs-back-muscles-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Suboccipital triangle and atlas-driven rotation",
+    "scope": "book-extension",
+    "summary": "The suboccipital region links the vertebral artery's final cervical course to the C1 posterior ramus and short head-moving muscles. Inferior oblique can rotate the head indirectly by moving the atlas despite having no skull attachment. Preserved greater-occipital sensation can distinguish a C1 motor lesion from injury to the C2 cutaneous pathway.",
+    "keyPoints": [
+      "Vertebral artery and posterior ramus of C1. The suboccipital triangle contains the vertebral artery, associated veins and C1 posterior ramus. Its boundaries identify a compact region with both vascular and motor-nerve risk.",
+      "Obliquus capitis inferior rotates the atlas around the dens, carrying the attached head with it. The muscle links axis to atlas. Ipsilateral contraction turns the atlas and head together, so a skull insertion is not necessary for head rotation.",
+      "Weakness of suboccipital muscles with relative preservation of the greater-occipital cutaneous territory. C1 posterior ramus supplies the suboccipital muscles; the greater occipital nerve is from C2 posterior ramus, so the two should not be conflated.",
+      "Vertebral artery and C1 posterior ramus. The vertebral artery approaches the foramen magnum via the atlas region; the C1 posterior ramus enters the suboccipital area between it and the posterior arch."
+    ],
+    "examTraps": [
+      "The suboccipital nerve is C1 posterior ramus; the greater occipital nerve chiefly arises from the C2 posterior ramus.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A surgeon exposes a triangle bounded by rectus capitis posterior major, obliquus capitis superior and obliquus capitis inferior. Which combination should be anticipated within it?",
+        "answer": "Vertebral artery and posterior ramus of C1. The suboccipital triangle contains the vertebral artery, associated veins and C1 posterior ramus. Its boundaries identify a compact region with both vascular and motor-nerve risk."
+      },
+      {
+        "prompt": "A short suboccipital muscle runs from the spinous process of C2 to the transverse process of C1 and has no direct attachment to the skull. How can it still rotate the face?",
+        "answer": "Obliquus capitis inferior rotates the atlas around the dens, carrying the attached head with it. The muscle links axis to atlas. Ipsilateral contraction turns the atlas and head together, so a skull insertion is not necessary for head rotation."
+      },
+      {
+        "prompt": "A lesion injures the C1 posterior ramus within the suboccipital triangle, while the greater occipital nerve is preserved. Which combination is most likely?",
+        "answer": "Weakness of suboccipital muscles with relative preservation of the greater-occipital cutaneous territory. C1 posterior ramus supplies the suboccipital muscles; the greater occipital nerve is from C2 posterior ramus, so the two should not be conflated."
+      },
+      {
+        "prompt": "After ascending through cervical transverse foramina, an artery turns through the deep suboccipital region before entering the skull. An injury between the artery and the posterior arch of C1 also threatens a nearby nerve. Which pairing is correct?",
+        "answer": "Vertebral artery and C1 posterior ramus. The vertebral artery approaches the foramen magnum via the atlas region; the C1 posterior ramus enters the suboccipital area between it and the posterior arch."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-053 → Printed pp. 98-99; local PDF pp. 110-111",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-054 → Printed pp. 71, 98; local PDF pp. 83, 110",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-055 → Printed pp. 85, 98-99; local PDF pp. 97, 110-111",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-056 → Printed pp. 61, 98-99; local PDF pp. 73, 110-111",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-suboccipital-obj-01",
+        "text": "Use suboccipital triangle boundaries to anticipate its neurovascular contents.",
+        "questionIds": [
+          "comp-cvs-back-053"
+        ]
+      },
+      {
+        "id": "comp-cvs-suboccipital-obj-02",
+        "text": "Explain head rotation by obliquus capitis inferior from its atlas-axis attachments.",
+        "questionIds": [
+          "comp-cvs-back-054"
+        ]
+      },
+      {
+        "id": "comp-cvs-suboccipital-obj-03",
+        "text": "Separate C1 suboccipital motor supply from C2 greater-occipital cutaneous supply.",
+        "questionIds": [
+          "comp-cvs-back-055"
+        ]
+      },
+      {
+        "id": "comp-cvs-suboccipital-obj-04",
+        "text": "Integrate the vertebral arterial route with the nearby C1 posterior-ramus relationship.",
+        "questionIds": [
+          "comp-cvs-back-056"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-clinical-localization",
+    "moduleId": "comp-cvs-back-canal-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Structural failure and clinical spinal localization",
+    "scope": "book-extension",
+    "summary": "Clinical localization depends on distinguishing bony failure, cumulative canal narrowing, cord-end disease and root disease. A pars defect can allow slip, several canal boundaries can converge in stenosis, and cord-end versus cauda-equina patterns must be interpreted alongside imaging. Vertebral infection can also leave the canal region through a continuous muscle sheath.",
+    "keyPoints": [
+      "Pars interarticularis defects weaken the posterior arch connection and can permit vertebral slip. The pars lies between the articular processes. Defects there can accompany anterior displacement, although vertebral slipping can also occur without a pars fracture.",
+      "Several boundaries converge to reduce canal dimensions from different directions. A disc protrusion from the anterior canal boundary combines with posterior interlaminar and posterolateral facet enlargement, producing a cumulative stenosing effect.",
+      "A: conus medullaris; B: cauda equina. The conus is terminal cord tissue and classically produces more symmetric deficits with early pelvic dysfunction. Cauda equina lesions involve descending roots and are often asymmetric. The imaging sites strengthen this distinction; symptoms alone are not absolute.",
+      "Spread within the psoas sheath from the lumbar region toward the groin. The psoas muscle and its fascial sheath provide a continuous route from the lumbar vertebral region beneath the inguinal ligament."
+    ],
+    "examTraps": [
+      "Do not infer a unique syndrome from timing alone; use the stated imaging location and the combined sensory, motor and sphincter pattern.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A young athlete has bilateral defects in the region between the superior and inferior articular processes of L5, followed by anterior displacement of L5 relative to the sacrum. Which sequence best describes the anatomical failure?",
+        "answer": "Pars interarticularis defects weaken the posterior arch connection and can permit vertebral slip. The pars lies between the articular processes. Defects there can accompany anterior displacement, although vertebral slipping can also occur without a pars fracture."
+      },
+      {
+        "prompt": "Lumbar imaging shows a modest posterior disc protrusion from the anterior canal wall, together with posterior ligamentum-flavum thickening and enlarged facet joints. Why can the combined lesion cause more neural compromise than the disc finding alone suggests?",
+        "answer": "Several boundaries converge to reduce canal dimensions from different directions. A disc protrusion from the anterior canal boundary combines with posterior interlaminar and posterolateral facet enlargement, producing a cumulative stenosing effect."
+      },
+      {
+        "prompt": "Patient A has an intradural lesion at the tapering end of the cord, symmetric saddle sensory loss and early sphincter dysfunction. Patient B has a large lower-lumbar disc lesion, asymmetric leg and saddle deficits and later sphincter dysfunction. Which localization best fits the combined anatomical and clinical information?",
+        "answer": "A: conus medullaris; B: cauda equina. The conus is terminal cord tissue and classically produces more symmetric deficits with early pelvic dysfunction. Cauda equina lesions involve descending roots and are often asymmetric. The imaging sites strengthen this distinction; symptoms alone are not absolute."
+      },
+      {
+        "prompt": "An infection erodes a lumbar vertebral body and adjacent disc, extends anteriorly into a muscle sheath, and later produces a groin swelling beneath the inguinal ligament. Which anatomical route best unifies the spinal and groin findings?",
+        "answer": "Spread within the psoas sheath from the lumbar region toward the groin. The psoas muscle and its fascial sheath provide a continuous route from the lumbar vertebral region beneath the inguinal ligament."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-057 → Printed pp. 82-84; local PDF pp. 94-96",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-058 → Printed pp. 78-79, 82, 104; local PDF pp. 90-91, 94, 116",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "47 Spinal cord and spinal nerves: gross anatomy",
+        "locator": "comp-cvs-back-059 → Printed pp. 856, 867; local PDF pp. 1298, 1316",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-060 → Printed pp. 119; local PDF pp. 131",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-clinical-localization-obj-01",
+        "text": "Relate a pars interarticularis defect to the potential for anterior vertebral slip without treating it as the only cause.",
+        "questionIds": [
+          "comp-cvs-back-057"
+        ]
+      },
+      {
+        "id": "comp-cvs-clinical-localization-obj-02",
+        "text": "Integrate disc, facet and ligamentum-flavum contributions to lumbar canal stenosis.",
+        "questionIds": [
+          "comp-cvs-back-058"
+        ]
+      },
+      {
+        "id": "comp-cvs-clinical-localization-obj-03",
+        "text": "Differentiate terminal-cord and cauda-equina lesions by combining imaging location, symmetry and pelvic-function timing.",
+        "questionIds": [
+          "comp-cvs-back-059"
+        ]
+      },
+      {
+        "id": "comp-cvs-clinical-localization-obj-04",
+        "text": "Use psoas fascial continuity to link a lumbar vertebral infection with a groin collection.",
+        "questionIds": [
+          "comp-cvs-back-060"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-fascia-posture",
+    "moduleId": "comp-cvs-back-muscles-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Lumbar fascial compartments and spinal curves",
+    "scope": "book-extension",
+    "summary": "Thoracolumbar fascial layers organize the intrinsic-back and quadratus-lumborum compartments and merge laterally with an abdominal aponeurotic attachment. These transverse relationships complement sagittal primary and secondary curvatures. A coronal curve with vertebral rotation is different from simply exaggerating a normal sagittal curve.",
+    "keyPoints": [
+      "Erector spinae posteriorly; quadratus lumborum more anteriorly. Posterior and middle layers enclose the erector-spinae compartment; the middle layer separates it from quadratus lumborum, whose anterior surface is covered by the anterior layer.",
+      "Transversus abdominis. The merged thoracolumbar layers provide an aponeurotic origin for transversus abdominis, linking the posterior fascial system to the abdominal wall.",
+      "Thoracic and sacral primary curvatures; cervical and lumbar secondary curvatures. Primary curvatures are concave anteriorly and persist in thoracic and sacral regions. Secondary cervical and lumbar curvatures are concave posteriorly and help balance upright posture.",
+      "A structural scoliosis pattern with a rotational component. True scoliosis combines lateral curvature with rotation. An exaggerated sagittal thoracic curve alone would describe a different deformity."
+    ],
+    "examTraps": [
+      "Primary and secondary describe developmental sagittal curves; scoliosis is not another name for thoracic kyphosis.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "On a lumbar transverse section, a muscle mass lies between the posterior and middle thoracolumbar fascial layers. A separate muscle lies between the middle and anterior layers. Which pairing correctly identifies them?",
+        "answer": "Erector spinae posteriorly; quadratus lumborum more anteriorly. Posterior and middle layers enclose the erector-spinae compartment; the middle layer separates it from quadratus lumborum, whose anterior surface is covered by the anterior layer."
+      },
+      {
+        "prompt": "A dissector follows the posterior and middle thoracolumbar fascial layers laterally until they unite, then follows the anterior layer joining near the lateral border of quadratus lumborum. Which muscle gains an aponeurotic origin from this merged structure?",
+        "answer": "Transversus abdominis. The merged thoracolumbar layers provide an aponeurotic origin for transversus abdominis, linking the posterior fascial system to the abdominal wall."
+      },
+      {
+        "prompt": "A sagittal spine model preserves the embryonic curvature in two adult regions while adding curvatures that help align body weight for upright posture. Which set correctly distinguishes them?",
+        "answer": "Thoracic and sacral primary curvatures; cervical and lumbar secondary curvatures. Primary curvatures are concave anteriorly and persist in thoracic and sacral regions. Secondary cervical and lumbar curvatures are concave posteriorly and help balance upright posture."
+      },
+      {
+        "prompt": "A patient has an abnormal lateral spinal curve accompanied by rotation of the vertebrae, rather than simply an exaggerated posterior thoracic convexity on the sagittal view. Which interpretation best fits?",
+        "answer": "A structural scoliosis pattern with a rotational component. True scoliosis combines lateral curvature with rotation. An exaggerated sagittal thoracic curve alone would describe a different deformity."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-061 → Printed pp. 92; local PDF pp. 104",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-062 → Printed pp. 92; local PDF pp. 104",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-063 → Printed pp. 54, 112; local PDF pp. 66, 124",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy for Students",
+        "edition": "3rd ed.",
+        "chapter": "2 Back",
+        "locator": "comp-cvs-back-064 → Printed pp. 75, 111-112; local PDF pp. 87, 123-124",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-fascia-posture-obj-01",
+        "text": "Reconstruct lumbar muscle compartments from the three thoracolumbar fascial layers.",
+        "questionIds": [
+          "comp-cvs-back-061"
+        ]
+      },
+      {
+        "id": "comp-cvs-fascia-posture-obj-02",
+        "text": "Trace thoracolumbar fascial continuity into the abdominal wall.",
+        "questionIds": [
+          "comp-cvs-back-062"
+        ]
+      },
+      {
+        "id": "comp-cvs-fascia-posture-obj-03",
+        "text": "Connect primary and secondary sagittal curvatures to developmental origin and upright balance.",
+        "questionIds": [
+          "comp-cvs-back-063"
+        ]
+      },
+      {
+        "id": "comp-cvs-fascia-posture-obj-04",
+        "text": "Distinguish scoliosis with rotation from sagittal kyphotic or lordotic curvature changes.",
+        "questionIds": [
+          "comp-cvs-back-064"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-cardiac-relations",
+    "moduleId": "comp-cvs-thorax-heart-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Valve support and conduction relationships",
+    "scope": "book-extension",
+    "summary": "Valve attachments and septal relationships make focal cardiac lesions anatomically predictable. Mitral chordae distribute support to both leaflets, tricuspid septal chordae differ from the left-sided arrangement, and aortic-mitral fibrous continuity contrasts with pulmonary muscular support. The septal conduction axis and posterior atrial-esophageal relation add clinically useful spatial links.",
+    "keyPoints": [
+      "Chordae from each papillary muscle diverge to attach to both leaflets. Each mitral papillary muscle supplies chordae to corresponding areas of apposition on both leaflets, so a single muscle is not assigned exclusively to one leaflet.",
+      "This can be the septal tricuspid leaflet in the right ventricle. Direct septal chordal insertions are a distinguishing feature of the tricuspid septal leaflet and are not the normal mitral arrangement.",
+      "Aortic-mitral fibrous continuity; pulmonary valve separated on the infundibulum. The aortic valve has fibrous continuity with the aortic leaflet of the mitral valve. The pulmonary valve is supported at the top of the right ventricular infundibulum and lies apart from the other valves.",
+      "The branching atrioventricular bundle lies at the crest of the muscular septum beside the membranous part. The penetrating bundle traverses the fibrous body and branches at this junction. A local lesion can interrupt ventricular activation without destroying the upstream pacemaker.",
+      "The esophagus lies posterior to the left atrium, with pericardium intervening. The esophagus descends immediately behind the fibrous pericardium covering the left atrium, explaining both compression and the nearby imaging window."
+    ],
+    "examTraps": [
+      "Do not confuse the AV node with the bundle at the muscular septal crest, or transfer mitral chordal anatomy to the septal tricuspid leaflet.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Rupture of one mitral papillary muscle compromises chordal support to regions of both mitral leaflets. Which anatomical arrangement explains why injury is not confined to just one leaflet?",
+        "answer": "Chordae from each papillary muscle diverge to attach to both leaflets. Each mitral papillary muscle supplies chordae to corresponding areas of apposition on both leaflets, so a single muscle is not assigned exclusively to one leaflet."
+      },
+      {
+        "prompt": "A ventricular specimen has a valve leaflet tethered directly to the interventricular septum by individual true chordae. Which interpretation is best supported?",
+        "answer": "This can be the septal tricuspid leaflet in the right ventricle. Direct septal chordal insertions are a distinguishing feature of the tricuspid septal leaflet and are not the normal mitral arrangement."
+      },
+      {
+        "prompt": "During aortic-root reconstruction, the surgeon preserves a fibrous curtain shared with another valve. Which pairing correctly identifies that continuity and the valve relatively separated by its muscular outflow support?",
+        "answer": "Aortic-mitral fibrous continuity; pulmonary valve separated on the infundibulum. The aortic valve has fibrous continuity with the aortic leaflet of the mitral valve. The pulmonary valve is supported at the top of the right ventricular infundibulum and lies apart from the other valves."
+      },
+      {
+        "prompt": "A small surgical lesion at the junction of the membranous and muscular interventricular septum produces atrioventricular conduction failure even though the sinuatrial node remains active. Which local relationship best explains this?",
+        "answer": "The branching atrioventricular bundle lies at the crest of the muscular septum beside the membranous part. The penetrating bundle traverses the fibrous body and branches at this junction. A local lesion can interrupt ventricular activation without destroying the upstream pacemaker."
+      },
+      {
+        "prompt": "A markedly enlarged left atrium indents the esophagus. Which spatial relationship also makes transesophageal imaging useful for examining this chamber?",
+        "answer": "The esophagus lies posterior to the left atrium, with pericardium intervening. The esophagus descends immediately behind the fibrous pericardium covering the left atrium, explaining both compression and the nearby imaging window."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-001 → Printed pp. 1084; local PDF pp. 1688",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-002 → Printed pp. 1078, 1084; local PDF pp. 1678, 1688",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-003 → Printed pp. 1078, 1085; local PDF pp. 1678, 1690",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-004 → Printed pp. 1088; local PDF pp. 1696",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "56 Mediastinum",
+        "locator": "comp-cvs-thorax-005 → Printed pp. 1058-1059; local PDF pp. 1642-1643",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-cardiac-relations-obj-01",
+        "text": "Explain mitral leaflet support by tracing chordae from each papillary muscle to both leaflets.",
+        "questionIds": [
+          "comp-cvs-thorax-001"
+        ]
+      },
+      {
+        "id": "comp-cvs-cardiac-relations-obj-02",
+        "text": "Use direct septal chordal attachments to distinguish right from left ventricular valve support.",
+        "questionIds": [
+          "comp-cvs-thorax-002"
+        ]
+      },
+      {
+        "id": "comp-cvs-cardiac-relations-obj-03",
+        "text": "Relate aortic-root surgery to aortic-mitral fibrous continuity and pulmonary infundibular separation.",
+        "questionIds": [
+          "comp-cvs-thorax-003"
+        ]
+      },
+      {
+        "id": "comp-cvs-cardiac-relations-obj-04",
+        "text": "Predict conduction injury from the relationship of the atrioventricular bundle to the membranous-muscular septal junction.",
+        "questionIds": [
+          "comp-cvs-thorax-004"
+        ]
+      },
+      {
+        "id": "comp-cvs-cardiac-relations-obj-05",
+        "text": "Connect the left atrium's posterior relation to the esophagus with compression and imaging access.",
+        "questionIds": [
+          "comp-cvs-thorax-005"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-coronary-integration",
+    "moduleId": "comp-cvs-thorax-heart-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Coronary territories, variants and conduction",
+    "scope": "book-extension",
+    "summary": "Coronary interpretation requires separating a vessel's origin, course, supply territory and dominance. Septal branches can link an anterior interventricular lesion to conduction disturbance, while left dominance changes plausible crux-related nodal supply. A conal origin variant or myocardial bridge must not be mistaken for evidence establishing posterior interventricular origin.",
+    "keyPoints": [
+      "Septal perforators of the anterior interventricular artery, including supply near bundle division. These branches supply much of the anterior two-thirds of the septum; the first septal artery commonly supplies the atrioventricular bundle at its division.",
+      "Left dominance makes a circumflex-derived atrioventricular nodal branch plausible at the crux. Dominance is defined by the origin of the posterior/inferior interventricular artery, and the AV nodal artery typically arises from the dominant artery near the crux.",
+      "Left marginal artery. The left marginal branch typically arises from circumflex and supplies the left ventricular wall along the obtuse border.",
+      "This is a possible conal origin variant and collateral ring; it does not by itself establish coronary dominance. A separately arising right conal branch can participate in Vieussens' ring. Dominance still depends on the origin of the posterior/inferior interventricular artery.",
+      "The vessel's course becomes intramyocardial for a segment while its proximal ostium remains unchanged. Myocardial bridging describes myocardium overlying a coronary arterial segment. It is a course relationship and does not require an abnormal origin."
+    ],
+    "examTraps": [
+      "Dominance is not synonymous with the largest visible artery, absence of the other artery, or a separate conal ostium.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "A proximal anterior interventricular artery occlusion occurs before its first septal perforator. New intraventricular conduction disturbance accompanies anterior septal injury. Which branch territory best links these findings?",
+        "answer": "Septal perforators of the anterior interventricular artery, including supply near bundle division. These branches supply much of the anterior two-thirds of the septum; the first septal artery commonly supplies the atrioventricular bundle at its division."
+      },
+      {
+        "prompt": "Angiography shows a circumflex artery continuing through the cardiac crux as the posterior interventricular artery. An occlusion near that crux is followed by atrioventricular nodal dysfunction. Which inference is best?",
+        "answer": "Left dominance makes a circumflex-derived atrioventricular nodal branch plausible at the crux. Dominance is defined by the origin of the posterior/inferior interventricular artery, and the AV nodal artery typically arises from the dominant artery near the crux."
+      },
+      {
+        "prompt": "An artery leaves the circumflex in the atrioventricular groove and runs toward the apex over the rounded left cardiac border. Focal occlusion chiefly threatens adjacent lateral left ventricular myocardium. Which artery is implicated?",
+        "answer": "Left marginal artery. The left marginal branch typically arises from circumflex and supplies the left ventricular wall along the obtuse border."
+      },
+      {
+        "prompt": "A conal artery arises separately from the right aortic sinus and anastomoses with a conal branch of the anterior interventricular artery around the right ventricular outflow. Which interpretation is most accurate?",
+        "answer": "This is a possible conal origin variant and collateral ring; it does not by itself establish coronary dominance. A separately arising right conal branch can participate in Vieussens' ring. Dominance still depends on the origin of the posterior/inferior interventricular artery."
+      },
+      {
+        "prompt": "A coronary segment is seen to run beneath a band of myocardium instead of remaining entirely in subepicardial fat. Which observation most directly supports myocardial bridging rather than a change in coronary origin?",
+        "answer": "The vessel's course becomes intramyocardial for a segment while its proximal ostium remains unchanged. Myocardial bridging describes myocardium overlying a coronary arterial segment. It is a course relationship and does not require an abnormal origin."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-006 → Printed pp. 1088-1089, 1091; local PDF pp. 1696, 1699, 1702",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-007 → Printed pp. 1088-1089, 1091; local PDF pp. 1696, 1699, 1702",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-008 → Printed pp. 1091; local PDF pp. 1702",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-009 → Printed pp. 1089, 1091; local PDF pp. 1699, 1702",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-010 → Printed pp. 1089; local PDF pp. 1699",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-coronary-integration-obj-01",
+        "text": "Integrate anterior septal arterial supply with the arterial vulnerability of the branching conduction bundle.",
+        "questionIds": [
+          "comp-cvs-thorax-006"
+        ]
+      },
+      {
+        "id": "comp-cvs-coronary-integration-obj-02",
+        "text": "Use demonstrated coronary dominance to infer the likely AV nodal arterial vulnerability.",
+        "questionIds": [
+          "comp-cvs-thorax-007"
+        ]
+      },
+      {
+        "id": "comp-cvs-coronary-integration-obj-03",
+        "text": "Trace the left marginal artery from its parent groove to its ventricular territory.",
+        "questionIds": [
+          "comp-cvs-thorax-008"
+        ]
+      },
+      {
+        "id": "comp-cvs-coronary-integration-obj-04",
+        "text": "Distinguish a conal arterial variant and collateral pathway from coronary dominance and fistula anatomy.",
+        "questionIds": [
+          "comp-cvs-thorax-009"
+        ]
+      },
+      {
+        "id": "comp-cvs-coronary-integration-obj-05",
+        "text": "Separate coronary course variants from origin, dominance and venous-drainage variants.",
+        "questionIds": [
+          "comp-cvs-thorax-010"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-thoracic-joints",
+    "moduleId": "comp-cvs-thorax-wall-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Rib joints, muscle extents and arterial origins",
+    "scope": "book-extension",
+    "summary": "The chest wall combines posterior rib articulations, muscular and membranous intercostal layers, and arterial groups with different parent vessels. Typical rib-head compartments contrast with floating-rib joint omissions. Tracing a deep muscle slip or proximal subclavian lesion requires matching several anatomical relationships rather than simply identifying a rib or vessel.",
+    "keyPoints": [
+      "An intra-articular ligament from the crest of the rib head to the intervening intervertebral disc. The crest separates the two articular facets, and its ligament to the disc divides the typical joint into two synovial compartments.",
+      "Rib 11 or 12 may lack a costotransverse articulation while retaining a vertebral head articulation. The eleventh and twelfth ribs lack costotransverse joints. Absence of that joint therefore need not indicate destructive disease.",
+      "External and internal intercostal muscles have different anterior and posterior extents. External intercostals continue anteriorly as a membrane near the costal cartilages. Internal intercostals extend anteriorly to the sternum and are replaced posteriorly near the angle by an internal membrane.",
+      "Subcostalis. Subcostales are posterior internal slips spanning more than one interspace. Like innermost intercostals, they separate neurovascular structures from the deeper endothoracic fascia and pleura.",
+      "Supreme intercostal supply comes through the costocervical trunk and anterior supply through the internal thoracic system; lower posterior arteries arise from thoracic aorta. The upper posterior and anterior systems are linked to subclavian branches, whereas the usual lower posterior arteries arise directly from the thoracic aorta."
+    ],
+    "examTraps": [
+      "Rib-head and costotransverse joints are distinct, and anterior intercostal supply must not be assigned wholesale to the descending aorta.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Dissection of the joint at the head of a typical rib reveals two synovial compartments. Which attachment separates them and fits the rib's articulation with adjacent vertebral bodies?",
+        "answer": "An intra-articular ligament from the crest of the rib head to the intervening intervertebral disc. The crest separates the two articular facets, and its ligament to the disc divides the typical joint into two synovial compartments."
+      },
+      {
+        "prompt": "At a lower rib, imaging shows a head articulation with the vertebral column but no joint between a tubercle and a transverse process. Which interpretation most directly fits a normal floating rib?",
+        "answer": "Rib 11 or 12 may lack a costotransverse articulation while retaining a vertebral head articulation. The eleventh and twelfth ribs lack costotransverse joints. Absence of that joint therefore need not indicate destructive disease."
+      },
+      {
+        "prompt": "Near the sternum, a surgeon encounters an external intercostal membrane overlying muscular internal intercostal tissue. Near the rib angle posteriorly, the internal layer becomes membranous. Which explanation is correct?",
+        "answer": "External and internal intercostal muscles have different anterior and posterior extents. External intercostals continue anteriorly as a membrane near the costal cartilages. Internal intercostals extend anteriorly to the sternum and are replaced posteriorly near the angle by an internal membrane."
+      },
+      {
+        "prompt": "On the internal posterior thoracic wall, a muscle slip near a rib angle crosses to the second or third rib below. The intercostal vessels and nerve lie superficial to it, and pleura lies deeper. Which structure best fits?",
+        "answer": "Subcostalis. Subcostales are posterior internal slips spanning more than one interspace. Like innermost intercostals, they separate neurovascular structures from the deeper endothoracic fascia and pleura."
+      },
+      {
+        "prompt": "A proximal subclavian lesion affects branches to the first two posterior intercostal spaces and the anterior intercostal supply, while the third through eleventh posterior intercostal origins remain patent. Which source pattern explains this?",
+        "answer": "Supreme intercostal supply comes through the costocervical trunk and anterior supply through the internal thoracic system; lower posterior arteries arise from thoracic aorta. The upper posterior and anterior systems are linked to subclavian branches, whereas the usual lower posterior arteries arise directly from the thoracic aorta."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "53 Chest wall and breast",
+        "locator": "comp-cvs-thorax-011 → Printed pp. 1005; local PDF pp. 1550",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "53 Chest wall and breast",
+        "locator": "comp-cvs-thorax-012 → Printed pp. 1005; local PDF pp. 1550",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "53 Chest wall and breast",
+        "locator": "comp-cvs-thorax-013 → Printed pp. 1006-1007; local PDF pp. 1551-1552",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "53 Chest wall and breast",
+        "locator": "comp-cvs-thorax-014 → Printed pp. 1007-1008; local PDF pp. 1552, 1555",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "53 Chest wall and breast",
+        "locator": "comp-cvs-thorax-015 → Printed pp. 1009; local PDF pp. 1557",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-thoracic-joints-obj-01",
+        "text": "Explain the two compartments of a typical rib-head joint from its intra-articular ligament.",
+        "questionIds": [
+          "comp-cvs-thorax-011"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-joints-obj-02",
+        "text": "Differentiate normal floating-rib joint anatomy from a presumed pathological absence of a costotransverse joint.",
+        "questionIds": [
+          "comp-cvs-thorax-012"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-joints-obj-03",
+        "text": "Reconstruct the layered thoracic wall from the unequal extents of the intercostal muscles and membranes.",
+        "questionIds": [
+          "comp-cvs-thorax-013"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-joints-obj-04",
+        "text": "Identify a thoracic muscle from its span, wall position and neurovascular plane.",
+        "questionIds": [
+          "comp-cvs-thorax-014"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-joints-obj-05",
+        "text": "Integrate upper posterior and anterior thoracic-wall arterial origins with a proximal subclavian lesion.",
+        "questionIds": [
+          "comp-cvs-thorax-015"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-thoracic-nerves",
+    "moduleId": "comp-cvs-thorax-wall-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Thoracoabdominal nerves and autonomic routes",
+    "scope": "book-extension",
+    "summary": "Thoracic nerves serve somatic territories and autonomic pathways that must be kept distinct. The intercostobrachial nerve accounts for medial-arm sensory loss without lower-plexus motor failure, and lower intercostal nerves continue into the abdominal wall. White and gray rami, splanchnic nerves and cardiac branches differ by destination and ganglionic stage.",
+    "keyPoints": [
+      "Intercostobrachial nerve, usually the lateral cutaneous branch of T2. This thoracic sensory branch crosses the axilla to the medial upper arm. Its injury need not involve the lower brachial plexus or hand motor supply.",
+      "Anterior rami T7-T11 continue beyond the intercostal spaces into the abdominal wall. These lower thoracic anterior rami supply both thoracic and abdominal territories, so one proximal lesion can affect both.",
+      "White ramus: chiefly preganglionic route to the trunk; gray ramus: postganglionic route to the spinal nerve. This is the standard efferent sympathetic pattern. Exact branch positions and additional connections vary, so the fiber class and route are more reliable than a fixed drawing position.",
+      "Greater thoracic splanchnic nerve, containing mainly preganglionic efferents plus visceral afferents. The greater splanchnic nerve carries many fibers through the thoracic trunk without their final peripheral synapse, then passes through the crus to prevertebral ganglia. Cardiac sympathetic efferents are postganglionic.",
+      "The sympathetic fiber is postganglionic; the vagal fiber generally still synapses in cardiac ganglia near or within atrial tissues. Cardiac sympathetic fibers arise from sympathetic ganglion neurons, whereas vagal cardiac efferents are preganglionic and synapse in intrinsic cardiac ganglia."
+    ],
+    "examTraps": [
+      "A named sympathetic pathway is not uniformly postganglionic: thoracic splanchnic and cardiac efferent routes differ.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "After axillary node surgery, a patient has numbness over the upper medial arm but normal intrinsic hand strength and normal finger sensation. Which injury best fits the distribution and spared function?",
+        "answer": "Intercostobrachial nerve, usually the lateral cutaneous branch of T2. This thoracic sensory branch crosses the axilla to the medial upper arm. Its injury need not involve the lower brachial plexus or hand motor supply."
+      },
+      {
+        "prompt": "A lesion of a lower intercostal nerve produces both thoracic-wall sensory change and weakness in part of the abdominal wall. Which explanation is anatomically appropriate?",
+        "answer": "Anterior rami T7-T11 continue beyond the intercostal spaces into the abdominal wall. These lower thoracic anterior rami supply both thoracic and abdominal territories, so one proximal lesion can affect both."
+      },
+      {
+        "prompt": "A diagram shows one communicating branch carrying myelinated sympathetic fibers from a thoracic spinal nerve toward the sympathetic trunk, and another returning unmyelinated fibers toward the spinal nerve. Which pairing is correct?",
+        "answer": "White ramus: chiefly preganglionic route to the trunk; gray ramus: postganglionic route to the spinal nerve. This is the standard efferent sympathetic pattern. Exact branch positions and additional connections vary, so the fiber class and route are more reliable than a fixed drawing position."
+      },
+      {
+        "prompt": "A nerve leaves several lower thoracic sympathetic ganglia, descends on vertebral bodies and pierces a diaphragmatic crus toward the celiac region. Which description best distinguishes it from a cardiac sympathetic nerve?",
+        "answer": "Greater thoracic splanchnic nerve, containing mainly preganglionic efferents plus visceral afferents. The greater splanchnic nerve carries many fibers through the thoracic trunk without their final peripheral synapse, then passes through the crus to prevertebral ganglia. Cardiac sympathetic efferents are postganglionic."
+      },
+      {
+        "prompt": "Two efferent fibers are traced toward the heart: one from a cervical sympathetic ganglion and one in a vagal cardiac branch. Which comparison correctly locates their next synaptic requirement?",
+        "answer": "The sympathetic fiber is postganglionic; the vagal fiber generally still synapses in cardiac ganglia near or within atrial tissues. Cardiac sympathetic fibers arise from sympathetic ganglion neurons, whereas vagal cardiac efferents are preganglionic and synapse in intrinsic cardiac ganglia."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "53 Chest wall and breast",
+        "locator": "comp-cvs-thorax-016 → Printed pp. 1011; local PDF pp. 1561",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "53 Chest wall and breast",
+        "locator": "comp-cvs-thorax-017 → Printed pp. 1011-1012; local PDF pp. 1561-1562",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "56 Mediastinum",
+        "locator": "comp-cvs-thorax-018 → Printed pp. 1052; local PDF pp. 1633",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "55 Respiratory diaphragm and phrenic nerves; 56 Mediastinum",
+        "locator": "comp-cvs-thorax-019 → Printed pp. 1041, 1052; local PDF pp. 1615, 1633",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-020 → Printed pp. 1094-1095; local PDF pp. 1715-1716",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-thoracic-nerves-obj-01",
+        "text": "Differentiate intercostobrachial sensory injury from lower-plexus and scapular motor-nerve lesions.",
+        "questionIds": [
+          "comp-cvs-thorax-016"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-nerves-obj-02",
+        "text": "Explain combined thoracic and abdominal deficits from a lower intercostal-nerve lesion.",
+        "questionIds": [
+          "comp-cvs-thorax-017"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-nerves-obj-03",
+        "text": "Distinguish white and gray rami communicantes by fiber class and route.",
+        "questionIds": [
+          "comp-cvs-thorax-018"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-nerves-obj-04",
+        "text": "Compare thoracic splanchnic and cardiac sympathetic routes using synapse level and diaphragmatic passage.",
+        "questionIds": [
+          "comp-cvs-thorax-019"
+        ]
+      },
+      {
+        "id": "comp-cvs-thoracic-nerves-obj-05",
+        "text": "Distinguish sympathetic and vagal cardiac efferents by ganglionic relay location.",
+        "questionIds": [
+          "comp-cvs-thorax-020"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-mediastinal-routes",
+    "moduleId": "comp-cvs-thorax-mediastinum-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Mediastinal continuity and crossing pathways",
+    "scope": "book-extension",
+    "summary": "Mediastinal structures change their relationships as they ascend or descend. The thoracic duct crosses toward the left venous angle, vagal fibers mix in the esophageal plexus before trunk formation, and lower esophageal veins connect portal and systemic channels. Deep cervical continuity and cardiac plexus position add routes for spread and surgical localization.",
+    "keyPoints": [
+      "Thoracic duct ascending from a right-sided lower-thoracic course to a left-sided superior course. The thoracic duct commonly follows this changing relationship, crossing posterior to the esophagus around T5-T6 before entering the left neck. The exact course can vary.",
+      "It contributes chiefly to the anterior vagal trunk, which also contains fibers from the opposite vagus. The left vagus makes a major contribution anteriorly, but plexus interconnections mean the resulting trunk is not an exclusively left-vagal structure.",
+      "Left gastric vein to lower esophageal venous plexuses to azygos-system drainage. The left gastric vein belongs to the portal system, while thoracic esophageal veins drain mainly through the azygos system to the SVC, creating a portosystemic connection.",
+      "Continuity of deep cervical spaces with superior and then inferior mediastinal tissue planes. The mediastinum communicates with neck spaces, including routes associated with retropharyngeal, danger, pretracheal and carotid-sheath regions. It is not sealed off at the thoracic inlet.",
+      "Deep part of the cardiac plexus. The deep cardiac plexus lies between the arch and tracheal bifurcation, above the pulmonary-trunk division, and receives vagal and sympathetic cardiac branches."
+    ],
+    "examTraps": [
+      "A chiefly left-vagal anterior trunk is not an exclusively left-vagal trunk; continuity across regions is not a sealed compartment.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "During esophageal surgery, a thin channel is followed from a position between the azygos vein and descending aorta, across behind the esophagus around the mid-thoracic region, then toward the left venous angle. Which combined relationship supports its identification?",
+        "answer": "Thoracic duct ascending from a right-sided lower-thoracic course to a left-sided superior course. The thoracic duct commonly follows this changing relationship, crossing posterior to the esophagus around T5-T6 before entering the left neck. The exact course can vary."
+      },
+      {
+        "prompt": "A nerve is preserved behind the left lung root, followed onto the anterior esophageal plexus, and then traced through the esophageal hiatus. Which final description is most accurate?",
+        "answer": "It contributes chiefly to the anterior vagal trunk, which also contains fibers from the opposite vagus. The left vagus makes a major contribution anteriorly, but plexus interconnections mean the resulting trunk is not an exclusively left-vagal structure."
+      },
+      {
+        "prompt": "Portal hypertension enlarges distal esophageal venous channels that connect with systemic thoracic veins. Which route best links the portal side to the superior caval side?",
+        "answer": "Left gastric vein to lower esophageal venous plexuses to azygos-system drainage. The left gastric vein belongs to the portal system, while thoracic esophageal veins drain mainly through the azygos system to the SVC, creating a portosystemic connection."
+      },
+      {
+        "prompt": "A deep neck infection tracks inferiorly along fascial planes and reaches the mediastinum despite no direct thoracic-wall wound. Which anatomical feature best explains the spread?",
+        "answer": "Continuity of deep cervical spaces with superior and then inferior mediastinal tissue planes. The mediastinum communicates with neck spaces, including routes associated with retropharyngeal, danger, pretracheal and carotid-sheath regions. It is not sealed off at the thoracic inlet."
+      },
+      {
+        "prompt": "A dissection plane is posterior to the aortic arch, anterior to the tracheal bifurcation and superior to the pulmonary-trunk division. Which autonomic network occupies this relationship?",
+        "answer": "Deep part of the cardiac plexus. The deep cardiac plexus lies between the arch and tracheal bifurcation, above the pulmonary-trunk division, and receives vagal and sympathetic cardiac branches."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "56 Mediastinum",
+        "locator": "comp-cvs-thorax-021 → Printed pp. 1051, 1059; local PDF pp. 1631, 1643",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "56 Mediastinum",
+        "locator": "comp-cvs-thorax-022 → Printed pp. 1048, 1053; local PDF pp. 1627, 1635",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "56 Mediastinum",
+        "locator": "comp-cvs-thorax-023 → Printed pp. 1059; local PDF pp. 1643",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "56 Mediastinum",
+        "locator": "comp-cvs-thorax-024 → Printed pp. 1047-1048; local PDF pp. 1626-1627",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "57 Heart",
+        "locator": "comp-cvs-thorax-025 → Printed pp. 1095; local PDF pp. 1716",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-mediastinal-routes-obj-01",
+        "text": "Identify the thoracic duct through a sequence of spatial relationships rather than a single label.",
+        "questionIds": [
+          "comp-cvs-thorax-021"
+        ]
+      },
+      {
+        "id": "comp-cvs-mediastinal-routes-obj-02",
+        "text": "Trace the left vagus through the esophageal plexus without incorrectly treating vagal trunks as unmixed unilateral nerves.",
+        "questionIds": [
+          "comp-cvs-thorax-022"
+        ]
+      },
+      {
+        "id": "comp-cvs-mediastinal-routes-obj-03",
+        "text": "Trace the distal esophageal portosystemic venous anastomosis responsible for variceal pathways.",
+        "questionIds": [
+          "comp-cvs-thorax-023"
+        ]
+      },
+      {
+        "id": "comp-cvs-mediastinal-routes-obj-04",
+        "text": "Explain descending mediastinal spread through continuous cervical and thoracic fascial spaces.",
+        "questionIds": [
+          "comp-cvs-thorax-024"
+        ]
+      },
+      {
+        "id": "comp-cvs-mediastinal-routes-obj-05",
+        "text": "Differentiate deep and superficial cardiac plexus positions from neighboring autonomic pathways.",
+        "questionIds": [
+          "comp-cvs-thorax-025"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "comp-cvs-diaphragm-integration",
+    "moduleId": "comp-cvs-thorax-mediastinum-module",
+    "examId": "term2-cvs",
+    "subject": "anatomy",
+    "title": "Diaphragmatic passages, pain and hiatal mechanics",
+    "scope": "book-extension",
+    "summary": "Diaphragmatic structures should be interpreted by tissue and course as well as by name. A tendinous caval opening behaves differently from the posterior aortic passage, crural muscle contributes to the esophageal barrier, and arcuate ligaments bridge specific posterior muscles. Regional sensory supply and the position of the gastroesophageal junction explain two further clinically relevant contrasts.",
+    "keyPoints": [
+      "Caval opening lies in central tendon; aorta passes posterior to the muscular diaphragm under the median arcuate ligament. The vena cava adheres to tendinous margins that dilate during inspiration. The aortic passage is osseo-aponeurotic and posterior to the main contractile muscle.",
+      "Crural fibers chiefly derived from the right crus that loop around the esophagus. The right crus contributes the principal muscular loop around the esophageal hiatus and acts as an external functional sphincter, complementing intrinsic lower-esophageal smooth muscle.",
+      "Medial arcuate ligament over psoas; lateral arcuate ligament over quadratus lumborum. These are the two lumbar fascial arches. The median arcuate ligament is a separate midline arch over the aorta.",
+      "Central sensory supply through phrenic nerves; peripheral sensory supply through lower intercostal nerves. The central diaphragm is supplied by phrenic sensory fibers from cervical levels, while peripheral regions receive lower intercostal sensory fibers. Regional afferent routes explain different referral patterns.",
+      "A: sliding hiatus hernia; B: paraesophageal type II hernia. Superior migration of the junction characterizes a sliding hernia. A paraesophageal type II hernia has adjacent stomach herniation with the junction retaining its position."
+    ],
+    "examTraps": [
+      "Do not treat every diaphragmatic passage as an identical muscular ring or every hiatus hernia as junction migration.",
+      "These original practice items sample book relationships; lecture coverage and official exam weighting are not established by their inclusion."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Inspiration dilates the opening around the inferior vena cava, while the aorta is normally not compressed by diaphragmatic muscle contraction. Which pairing best explains the different behavior?",
+        "answer": "Caval opening lies in central tendon; aorta passes posterior to the muscular diaphragm under the median arcuate ligament. The vena cava adheres to tendinous margins that dilate during inspiration. The aortic passage is osseo-aponeurotic and posterior to the main contractile muscle."
+      },
+      {
+        "prompt": "A patient loses part of the external diaphragmatic contribution to the antireflux barrier after division of muscle around the esophageal hiatus. Which structure is principally involved?",
+        "answer": "Crural fibers chiefly derived from the right crus that loop around the esophagus. The right crus contributes the principal muscular loop around the esophageal hiatus and acts as an external functional sphincter, complementing intrinsic lower-esophageal smooth muscle."
+      },
+      {
+        "prompt": "A posterior diaphragmatic dissection follows an arch over psoas major and another more lateral arch over quadratus lumborum. The sympathetic trunk passes into the abdomen deep to the medial arch. Which naming sequence is correct?",
+        "answer": "Medial arcuate ligament over psoas; lateral arcuate ligament over quadratus lumborum. These are the two lumbar fascial arches. The median arcuate ligament is a separate midline arch over the aorta."
+      },
+      {
+        "prompt": "Inflammation confined to the central diaphragmatic peritoneal region produces shoulder referral, whereas irritation confined to the peripheral diaphragm is felt near the lower thoracic wall. Which innervation contrast best explains the difference?",
+        "answer": "Central sensory supply through phrenic nerves; peripheral sensory supply through lower intercostal nerves. The central diaphragm is supplied by phrenic sensory fibers from cervical levels, while peripheral regions receive lower intercostal sensory fibers. Regional afferent routes explain different referral patterns."
+      },
+      {
+        "prompt": "In patient A, the gastroesophageal junction migrates above the diaphragm. In patient B, a portion of stomach herniates beside the esophagus while that junction remains normally positioned. Which anatomical classification fits?",
+        "answer": "A: sliding hiatus hernia; B: paraesophageal type II hernia. Superior migration of the junction characterizes a sliding hernia. A paraesophageal type II hernia has adjacent stomach herniation with the junction retaining its position."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "55 Respiratory diaphragm and phrenic nerves",
+        "locator": "comp-cvs-thorax-026 → Printed pp. 1040-1041; local PDF pp. 1613, 1615",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "55 Respiratory diaphragm and phrenic nerves; 56 Mediastinum",
+        "locator": "comp-cvs-thorax-027 → Printed pp. 1039-1041, 1061; local PDF pp. 1611, 1613, 1615, 1645",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "55 Respiratory diaphragm and phrenic nerves",
+        "locator": "comp-cvs-thorax-028 → Printed pp. 1039, 1041; local PDF pp. 1611, 1615",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "55 Respiratory diaphragm and phrenic nerves",
+        "locator": "comp-cvs-thorax-029 → Printed pp. 1042; local PDF pp. 1617",
+        "basis": "book"
+      },
+      {
+        "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+        "edition": "42nd ed.",
+        "chapter": "55 Respiratory diaphragm and phrenic nerves",
+        "locator": "comp-cvs-thorax-030 → Printed pp. 1041-1041.e1; local PDF pp. 1615-1616",
+        "basis": "book"
+      }
+    ],
+    "objectives": [
+      {
+        "id": "comp-cvs-diaphragm-integration-obj-01",
+        "text": "Explain different respiratory effects on caval and aortic passage from the tissue composition of their openings.",
+        "questionIds": [
+          "comp-cvs-thorax-026"
+        ]
+      },
+      {
+        "id": "comp-cvs-diaphragm-integration-obj-02",
+        "text": "Identify the crural contribution to the esophageal antireflux barrier while distinguishing it from other diaphragmatic openings.",
+        "questionIds": [
+          "comp-cvs-thorax-027"
+        ]
+      },
+      {
+        "id": "comp-cvs-diaphragm-integration-obj-03",
+        "text": "Distinguish median, medial and lateral arcuate structures using their underlying muscles and vessels.",
+        "questionIds": [
+          "comp-cvs-thorax-028"
+        ]
+      },
+      {
+        "id": "comp-cvs-diaphragm-integration-obj-04",
+        "text": "Use central versus peripheral diaphragmatic sensory supply to explain different pain distributions.",
+        "questionIds": [
+          "comp-cvs-thorax-029"
+        ]
+      },
+      {
+        "id": "comp-cvs-diaphragm-integration-obj-05",
+        "text": "Distinguish sliding from paraesophageal hiatus hernia by the position of the gastroesophageal junction.",
+        "questionIds": [
+          "comp-cvs-thorax-030"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1765 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-07",
+  "reviewStatus": "source-verified-by-authoring-agent; independent-review-pending",
+  "validationNote": "Verified here means rechecked against the cited local source, not expert or faculty validation.",
+  "sourceFiles": [
+    {
+      "title": "Junqueira's Basic Histology: Text and Atlas",
+      "edition": "16th",
+      "path": "/Users/rizzist/Documents/MED SCHOOL BOOKS/Junqueira's Basic Histology 16th Edition.pdf",
+      "audit": "Relevant Ch. 10, 11, 14, and 17 pages extracted and re-read; cited PDF/printed offsets checked."
+    },
+    {
+      "title": "CIRCUL IN ENGLISH - Transcript EN",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/01 Cardiovascular/Histology/Lecture Transcripts/CIRCUL IN ENGLISH — Transcript EN.md",
+      "audit": "Direct timestamped transcript inspected."
+    },
+    {
+      "title": "Immune System and Lymphatic Organs with narration",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/01 Cardiovascular/Histology/Immune System and Lymphatic Organs with narration.pptx",
+      "audit": "PPTX slide XML/text inspected directly."
+    },
+    {
+      "title": "Immune System and Lymphatic Organs with narration - Transcript EN",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/01 Cardiovascular/Histology/Lecture Transcripts/Immune System and Lymphatic Organs with narration — Transcript EN.md",
+      "audit": "Matching narration transcript inspected directly."
+    },
+    {
+      "title": "Respiratory ENG",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/02 Respiratory/Histology/Respiratory  ENG.rar",
+      "audit": "RAR contents listed; original 45:01 H.264 lecture video extracted, sampled visually, and checked against the timestamped transcript."
+    },
+    {
+      "title": "Respiratory ENG transcript",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/02 Respiratory/Histology/Respiratory  ENG.transcript.srt",
+      "audit": "Direct timestamped transcript inspected and checked against sampled original-video frames."
+    },
+    {
+      "title": "Practical Respiratory ENG",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/02 Respiratory/Histology/Practical Respiratory  ENG (1).transcript.srt",
+      "audit": "Direct timestamped transcript inspected."
+    }
+  ],
+  "sourceAudit": [
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 217-218; PDF pp. 228-229; Figures 11-2, 11-3, 11-5",
+      "topic": "Endocardium, valves, cardiac skeleton, and conducting tissue",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-endocardium"
+      ],
+      "note": "book inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "CIRCUL IN ENGLISH - Transcript EN",
+      "locator": "00:33:04-00:37:48",
+      "topic": "Endocardium, valves, cardiac skeleton, and conducting tissue",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-endocardium"
+      ],
+      "note": "transcript inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 206-210; PDF pp. 217-221; Figures 10-15 to 10-18",
+      "topic": "Cardiac-muscle ultrastructure, coupling, endocrine role, and repair",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-cardiac-muscle"
+      ],
+      "note": "book inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 219-220; PDF pp. 230-231; Figure 11-8",
+      "topic": "Endothelium and integrated vascular-wall biology",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-endothelium"
+      ],
+      "note": "book inspected directly; mapped to 12 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "CIRCUL IN ENGLISH - Transcript EN",
+      "locator": "00:03:01-00:17:01 and 00:27:24-00:30:00",
+      "topic": "Endothelium and integrated vascular-wall biology",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-endothelium"
+      ],
+      "note": "transcript inspected directly; mapped to 12 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 221-225; PDF pp. 232-236; Figures 11-9 to 11-13",
+      "topic": "Elastic and muscular arteries, arterioles, and vascular sensors",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-arteries"
+      ],
+      "note": "book inspected directly; mapped to 15 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "CIRCUL IN ENGLISH - Transcript EN",
+      "locator": "00:17:30-00:24:03",
+      "topic": "Elastic and muscular arteries, arterioles, and vascular sensors",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-arteries"
+      ],
+      "note": "transcript inspected directly; mapped to 15 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 225-230; PDF pp. 236-241; Figures 11-14 to 11-20",
+      "topic": "Capillary classes, pericytes, and exchange routes",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-microvasculature"
+      ],
+      "note": "book inspected directly; mapped to 17 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "CIRCUL IN ENGLISH - Transcript EN",
+      "locator": "00:24:05-00:27:20",
+      "topic": "Capillary classes, pericytes, and exchange routes",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-microvasculature"
+      ],
+      "note": "transcript inspected directly; mapped to 17 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 230-233; PDF pp. 241-244; Figures 11-21 to 11-25",
+      "topic": "Venous return and lymphatic microanatomy",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-veins-lymphatics"
+      ],
+      "note": "book inspected directly; mapped to 8 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "CIRCUL IN ENGLISH - Transcript EN",
+      "locator": "00:30:04-00:33:00",
+      "topic": "Venous return and lymphatic microanatomy",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-veins-lymphatics"
+      ],
+      "note": "transcript inspected directly; mapped to 8 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 276-281; PDF pp. 287-292; Figures 14-11 to 14-16",
+      "topic": "Thymic microenvironments and selection",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-thymus"
+      ],
+      "note": "book inspected directly; mapped to 8 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Immune System and Lymphatic Organs with narration",
+      "locator": "slides 18-31",
+      "topic": "Thymic microenvironments and selection",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-thymus"
+      ],
+      "note": "slides inspected directly; mapped to 8 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Immune System and Lymphatic Organs with narration - Transcript EN",
+      "locator": "narration corresponding to slides 18-31",
+      "topic": "Thymic microenvironments and selection",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-thymus"
+      ],
+      "note": "transcript inspected directly; mapped to 8 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 281-293; PDF pp. 292-304; Figures 14-17 to 14-30",
+      "topic": "MALT, lymph-node, and splenic architecture",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-secondary-lymphoid"
+      ],
+      "note": "book inspected directly; mapped to 7 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Immune System and Lymphatic Organs with narration",
+      "locator": "slides 32-51",
+      "topic": "MALT, lymph-node, and splenic architecture",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-secondary-lymphoid"
+      ],
+      "note": "slides inspected directly; mapped to 7 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-cvs",
+      "source": "Immune System and Lymphatic Organs with narration - Transcript EN",
+      "locator": "narration corresponding to slides 32-51",
+      "topic": "MALT, lymph-node, and splenic architecture",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-cvs-secondary-lymphoid"
+      ],
+      "note": "transcript inspected directly; mapped to 7 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 349-351; PDF pp. 360-362; Figures 17-1 to 17-3",
+      "topic": "Respiratory and olfactory mucosal specialization",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-upper-airway"
+      ],
+      "note": "book inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Respiratory ENG transcript",
+      "locator": "00:07:50-00:18:15",
+      "topic": "Respiratory and olfactory mucosal specialization",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-upper-airway"
+      ],
+      "note": "transcript inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Respiratory ENG original lecture video",
+      "locator": "00:07:50-00:18:15",
+      "topic": "Respiratory and olfactory mucosal specialization",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-upper-airway"
+      ],
+      "note": "media inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 356-358; PDF pp. 367-369; Table 17-2",
+      "topic": "Bronchial-tree wall transitions and club-cell defense",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-bronchial-tree"
+      ],
+      "note": "book inspected directly; mapped to 5 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Respiratory ENG transcript",
+      "locator": "00:28:35-00:39:11",
+      "topic": "Bronchial-tree wall transitions and club-cell defense",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-bronchial-tree"
+      ],
+      "note": "transcript inspected directly; mapped to 5 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Respiratory ENG original lecture video",
+      "locator": "00:28:35-00:39:11",
+      "topic": "Bronchial-tree wall transitions and club-cell defense",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-bronchial-tree"
+      ],
+      "note": "media inspected directly; mapped to 5 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed pp. 359-366; PDF pp. 370-377; Figures 17-12 to 17-17",
+      "topic": "Alveolar ducts, septa, blood-air barrier, and surfactant",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-alveolar-unit"
+      ],
+      "note": "book inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Respiratory ENG transcript",
+      "locator": "00:39:11-00:44:43",
+      "topic": "Alveolar ducts, septa, blood-air barrier, and surfactant",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-alveolar-unit"
+      ],
+      "note": "transcript inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Respiratory ENG original lecture video",
+      "locator": "00:39:11-00:44:43",
+      "topic": "Alveolar ducts, septa, blood-air barrier, and surfactant",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-alveolar-unit"
+      ],
+      "note": "media inspected directly; mapped to 6 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    },
+    {
+      "examId": "term2-respiratory",
+      "source": "Junqueira's Basic Histology: Text and Atlas",
+      "locator": "printed p. 367; PDF p. 378",
+      "topic": "Pulmonary vessels, lymphatics, and pleural support",
+      "status": "mapped",
+      "conceptIds": [
+        "depth-resp-lung-support"
+      ],
+      "note": "book inspected directly; mapped to 1 new questions. Detailed baseline/new-question coverage is retained in coverage-details.json."
+    }
+  ],
+  "imageAudit": [
+    {
+      "id": "depth-cvs-purkinje-fig11-3a",
+      "localStagingPath": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/term2-depth/histology/assets/cvs-purkinje-subendocardium-fig11-3a.png",
+      "intendedInstallPath": "term2/cvs/depth-histology/cvs-purkinje-subendocardium-fig11-3a.png",
+      "origin": "Junqueira's Basic Histology, 16th ed., Figure 11-3a; local educational source crop.",
+      "result": "visually-inspected-no-answer-caption"
+    },
+    {
+      "id": "depth-cvs-elastic-fig11-9",
+      "localStagingPath": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/term2-depth/histology/assets/cvs-elastic-artery-fig11-9.png",
+      "intendedInstallPath": "term2/cvs/depth-histology/cvs-elastic-artery-fig11-9.png",
+      "origin": "Junqueira's Basic Histology, 16th ed., Figure 11-9; local educational source crop.",
+      "result": "visually-inspected-no-answer-caption"
+    },
+    {
+      "id": "depth-cvs-pericyte-fig11-16b",
+      "localStagingPath": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/term2-depth/histology/assets/cvs-capillary-pericyte-fig11-16b.png",
+      "intendedInstallPath": "term2/cvs/depth-histology/cvs-capillary-pericyte-fig11-16b.png",
+      "origin": "Junqueira's Basic Histology, 16th ed., Figure 11-16b; local educational source crop.",
+      "result": "visually-inspected-no-answer-caption"
+    },
+    {
+      "id": "depth-cvs-fenestrated-fig11-19",
+      "localStagingPath": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/term2-depth/histology/assets/cvs-fenestrated-capillary-fig11-19.png",
+      "intendedInstallPath": "term2/cvs/depth-histology/cvs-fenestrated-capillary-fig11-19.png",
+      "origin": "Junqueira's Basic Histology, 16th ed., Figure 11-19; local educational source crop.",
+      "result": "visually-inspected-no-answer-caption"
+    },
+    {
+      "id": "depth-cvs-paired-vessels-fig11-22a",
+      "localStagingPath": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/term2-depth/histology/assets/cvs-small-vein-artery-fig11-22a.png",
+      "intendedInstallPath": "term2/cvs/depth-histology/cvs-small-vein-artery-fig11-22a.png",
+      "origin": "Junqueira's Basic Histology, 16th ed., Figure 11-22a; local educational source crop.",
+      "result": "visually-inspected-no-answer-caption"
+    },
+    {
+      "id": "depth-cvs-valve-fig11-23",
+      "localStagingPath": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/term2-depth/histology/assets/cvs-large-vein-valve-fig11-23.png",
+      "intendedInstallPath": "term2/cvs/depth-histology/cvs-large-vein-valve-fig11-23.png",
+      "origin": "Junqueira's Basic Histology, 16th ed., Figure 11-23; local educational source crop.",
+      "result": "visually-inspected-no-answer-caption"
+    }
+  ],
+  "questionVerification": [
+    {
+      "questionId": "depth-cvs-hist-001",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endocardium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 218; PDF p. 229, Figure 11-3a. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:36:38-00:37:48 (Subendocardial Purkinje fibers, pale staining, glycogen, peripheral myofibrils, and ventricular conduction.)",
+      "imageEvidence": {
+        "asset": "term2/cvs/depth-histology/cvs-purkinje-subendocardium-fig11-3a.png",
+        "check": "Original source crop visually inspected; identifying caption text excluded."
+      },
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-002",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endocardium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 218; PDF p. 229, Figure 11-3. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:33:04-00:35:48 (Endocardial layers, myocardium, epicardium, and subendocardial vessels, nerves, and conducting cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-003",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endocardium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 218; PDF p. 229, Figures 11-2 and 11-5. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-004",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endocardium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 217; PDF p. 228. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-005",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endocardium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 217; PDF p. 228. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-006",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endocardium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 218; PDF p. 229, Figure 11-3. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:36:38-00:37:48 (Subendocardial Purkinje fibers, pale staining, glycogen, peripheral myofibrils, and ventricular conduction.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-007",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-cardiac-muscle",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 10 - Muscle Tissue, printed p. 208; PDF p. 219, Figure 10-16. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-008",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-cardiac-muscle",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 10 - Muscle Tissue, printed p. 208; PDF p. 219, Figure 10-17a. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-009",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-cardiac-muscle",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 10 - Muscle Tissue, printed p. 208; PDF p. 219. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-010",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-cardiac-muscle",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 10 - Muscle Tissue, printed p. 208; PDF p. 219, Figure 10-17b. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-011",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-cardiac-muscle",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 10 - Muscle Tissue, printed p. 208; PDF p. 219. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-012",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-cardiac-muscle",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 10 - Muscle Tissue, printed p. 208; PDF p. 219. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-013",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 219; PDF p. 230. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:03:01-00:07:00 (Endothelial permeability, antithrombogenic balance, vasoactive functions, Weibel-Palade bodies, P-selectin, and transcytosis.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-014",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 219; PDF p. 230. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:03:01-00:07:00 (Endothelial permeability, antithrombogenic balance, vasoactive functions, Weibel-Palade bodies, P-selectin, and transcytosis.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-015",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 219; PDF p. 230. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:03:01-00:07:00 (Endothelial permeability, antithrombogenic balance, vasoactive functions, Weibel-Palade bodies, P-selectin, and transcytosis.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-016",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 219; PDF p. 230. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:27:24-00:30:00 (Endothelial vasoconstrictors, nitric oxide synthesis, smooth-muscle calcium, and hyperpolarization.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-017",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 219; PDF p. 230. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:07:10-00:10:25 (Cytokine-triggered selectin rolling, integrin adhesion, junctional loosening, and venular diapedesis.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-018",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 219; PDF p. 230. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-019",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 219; PDF p. 230. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-020",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 220; PDF p. 231. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:14:03-00:17:01 (Media, adventitia, vasa vasorum, nervi vasorum, capillary endothelium, and the three tunics.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-021",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 220; PDF p. 231, Figure 11-8. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:14:03-00:17:01 (Media, adventitia, vasa vasorum, nervi vasorum, capillary endothelium, and the three tunics.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-022",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 220; PDF p. 231. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-023",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 220; PDF p. 231. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:14:03-00:17:01 (Media, adventitia, vasa vasorum, nervi vasorum, capillary endothelium, and the three tunics.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-024",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-endothelium",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 220; PDF p. 231. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:14:03-00:17:01 (Media, adventitia, vasa vasorum, nervi vasorum, capillary endothelium, and the three tunics.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-025",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 223; PDF p. 234, Figure 11-9. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:17:30-00:20:03 (Elastic-artery dimensions, elastic lamellae, recoil, aortic wall, and vasa vasorum.)",
+      "imageEvidence": {
+        "asset": "term2/cvs/depth-histology/cvs-elastic-artery-fig11-9.png",
+        "check": "Original source crop visually inspected; identifying caption text excluded."
+      },
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-026",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 221; PDF p. 232. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:17:30-00:20:03 (Elastic-artery dimensions, elastic lamellae, recoil, aortic wall, and vasa vasorum.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-027",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 221; PDF p. 232. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:17:30-00:20:03 (Elastic-artery dimensions, elastic lamellae, recoil, aortic wall, and vasa vasorum.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-028",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 221; PDF p. 232. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:10:37-00:13:59 (Endothelial dysfunction, oxidized LDL, monocyte entry, foam cells, fatty streak, necrotic core, and fibrous cap.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-029",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 221; PDF p. 232. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:10:37-00:13:59 (Endothelial dysfunction, oxidized LDL, monocyte entry, foam cells, fatty streak, necrotic core, and fibrous cap.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-030",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 222; PDF p. 233. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:10:37-00:13:59 (Endothelial dysfunction, oxidized LDL, monocyte entry, foam cells, fatty streak, necrotic core, and fibrous cap.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-031",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 222; PDF p. 233. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-032",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 222; PDF p. 233. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-033",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 223; PDF p. 234, Figure 11-10. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-034",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 222; PDF p. 233. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-035",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 223; PDF p. 234. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:20:03-00:21:47 (Muscular arteries, smooth-muscle-rich media, internal/external elastic laminae, and vasa vasorum.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-036",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 223; PDF p. 234. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:20:03-00:21:47 (Muscular arteries, smooth-muscle-rich media, internal/external elastic laminae, and vasa vasorum.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-037",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 224; PDF p. 235, Figure 11-14. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:21:54-00:24:03 (Arteriolar smooth muscle, resistance, capillary-bed regulation, and precapillary sphincters.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-038",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 224; PDF p. 235. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:21:54-00:24:03 (Arteriolar smooth muscle, resistance, capillary-bed regulation, and precapillary sphincters.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-039",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-arteries",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 225; PDF p. 236. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:21:54-00:24:03 (Arteriolar smooth muscle, resistance, capillary-bed regulation, and precapillary sphincters.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-040",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 225; PDF p. 236, Figure 11-15. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-041",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 226; PDF p. 237, Figure 11-15. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-042",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 227; PDF p. 238, Figure 11-15. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-043",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 227; PDF p. 238, Figure 11-13. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:21:54-00:24:03 (Arteriolar smooth muscle, resistance, capillary-bed regulation, and precapillary sphincters.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-044",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 227; PDF p. 238. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-045",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 226; PDF p. 237. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:21:54-00:24:03 (Arteriolar smooth muscle, resistance, capillary-bed regulation, and precapillary sphincters.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-046",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 228; PDF p. 239. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-047",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 228; PDF p. 239, Figure 11-16b. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:24:05-00:27:20 (Continuous, fenestrated, and sinusoidal capillaries, their basal laminae, sites, and pericytes.)",
+      "imageEvidence": {
+        "asset": "term2/cvs/depth-histology/cvs-capillary-pericyte-fig11-16b.png",
+        "check": "Original source crop visually inspected; identifying caption text excluded."
+      },
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-048",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 228; PDF p. 239, Figures 11-17a and 11-18. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:24:05-00:27:20 (Continuous, fenestrated, and sinusoidal capillaries, their basal laminae, sites, and pericytes.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-049",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241, Figure 11-19. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:24:05-00:27:20 (Continuous, fenestrated, and sinusoidal capillaries, their basal laminae, sites, and pericytes.)",
+      "imageEvidence": {
+        "asset": "term2/cvs/depth-histology/cvs-fenestrated-capillary-fig11-19.png",
+        "check": "Original source crop visually inspected; identifying caption text excluded."
+      },
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-050",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 229; PDF p. 240, Figures 11-17 and 11-20. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:24:05-00:27:20 (Continuous, fenestrated, and sinusoidal capillaries, their basal laminae, sites, and pericytes.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-051",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241, Figure 11-19. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:24:05-00:27:20 (Continuous, fenestrated, and sinusoidal capillaries, their basal laminae, sites, and pericytes.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-052",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 229; PDF p. 240, Figures 11-17c and 11-20. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:24:05-00:27:20 (Continuous, fenestrated, and sinusoidal capillaries, their basal laminae, sites, and pericytes.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-053",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-054",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-055",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-056",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-microvasculature",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:07:10-00:10:25 (Cytokine-triggered selectin rolling, integrin adhesion, junctional loosening, and venular diapedesis.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-057",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241, Figure 11-21. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:30:04-00:33:00 (Venules, artery-vein comparisons, and the thin media/thick adventitia of large veins.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-058",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 231; PDF p. 242, Figure 11-21. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:30:04-00:33:00 (Venules, artery-vein comparisons, and the thin media/thick adventitia of large veins.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-059",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 232; PDF p. 243, Figure 11-22a. Course corroboration: CIRCUL IN ENGLISH - Transcript EN, 00:30:04-00:33:00 (Venules, artery-vein comparisons, and the thin media/thick adventitia of large veins.)",
+      "imageEvidence": {
+        "asset": "term2/cvs/depth-histology/cvs-small-vein-artery-fig11-22a.png",
+        "check": "Original source crop visually inspected; identifying caption text excluded."
+      },
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-061",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 233; PDF p. 244, Figure 11-23. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": {
+        "asset": "term2/cvs/depth-histology/cvs-large-vein-valve-fig11-23.png",
+        "check": "Original source crop visually inspected; identifying caption text excluded."
+      },
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-062",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 230; PDF p. 241. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-063",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 231; PDF p. 242. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-064",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 233; PDF p. 244, Figure 11-24. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-065",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-veins-lymphatics",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 11 - The Circulatory System, printed p. 233; PDF p. 244, Figure 11-24a. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-066",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 276; PDF p. 287. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-067",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 276; PDF p. 287. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-068",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 277; PDF p. 288. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-069",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 278; PDF p. 289. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-070",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 278; PDF p. 289. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-071",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 279; PDF p. 290. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-072",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 280; PDF p. 291. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-073",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-thymus",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 281; PDF p. 292. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 18-31 (Thymic cortex/medulla, epithelial-reticular cell types, corpuscles, selection, and involution.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-074",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-secondary-lymphoid",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 281; PDF p. 292. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 32-37 (Tonsils, crypt epithelium, Peyer patches, M cells, transcytosis, and mucosal IgA.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-075",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-secondary-lymphoid",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 282; PDF p. 293. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 32-37 (Tonsils, crypt epithelium, Peyer patches, M cells, transcytosis, and mucosal IgA.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-076",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-secondary-lymphoid",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 283; PDF p. 294. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 38-45 (Lymph-node flow, cortex, paracortex, HEVs, medullary cords, sinuses, and plasma cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-077",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-secondary-lymphoid",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 283; PDF p. 294. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 38-45 (Lymph-node flow, cortex, paracortex, HEVs, medullary cords, sinuses, and plasma cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-078",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-secondary-lymphoid",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 284; PDF p. 295. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 38-45 (Lymph-node flow, cortex, paracortex, HEVs, medullary cords, sinuses, and plasma cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-079",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-secondary-lymphoid",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 285; PDF p. 296. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 38-45 (Lymph-node flow, cortex, paracortex, HEVs, medullary cords, sinuses, and plasma cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-cvs-hist-080",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-secondary-lymphoid",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 14 - The Immune System and Lymphoid Organs, printed p. 289; PDF p. 300. Course corroboration: Immune System and Lymphatic Organs with narration - Transcript EN, slides 46-51 (Splenic white/red pulp, PALS, nodules, open circulation, cords, sinusoids, and stave cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-001",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-upper-airway",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 350; PDF p. 361. Course corroboration: Respiratory ENG transcript.srt, 00:07:50-00:13:28 (Respiratory epithelium, basement membrane, lamina propria, venous plexus, and epithelial cell types.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-002",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-upper-airway",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 350; PDF p. 361. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-003",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-upper-airway",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 350; PDF p. 361. Course corroboration: Respiratory ENG transcript.srt, 00:13:28-00:18:15 (Olfactory area, bipolar neurons, supporting/basal cells, Bowman glands, and lamina propria.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-004",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-upper-airway",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 350; PDF p. 361. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-005",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-upper-airway",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 351; PDF p. 362. Course corroboration: Respiratory ENG transcript.srt, 00:13:28-00:18:15 (Olfactory area, bipolar neurons, supporting/basal cells, Bowman glands, and lamina propria.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-006",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-upper-airway",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 351; PDF p. 362. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-007",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-bronchial-tree",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 356; PDF p. 367. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-008",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-bronchial-tree",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 356; PDF p. 367. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-009",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-bronchial-tree",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 356; PDF p. 367, Table 17-2. Course corroboration: Respiratory ENG transcript.srt, 00:28:35-00:39:11 (Bronchus-to-bronchiole transitions, terminal and respiratory bronchioles, and club cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-010",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-bronchial-tree",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 357; PDF p. 368. Course corroboration: Respiratory ENG transcript.srt, 00:28:35-00:39:11 (Bronchus-to-bronchiole transitions, terminal and respiratory bronchioles, and club cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-011",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-bronchial-tree",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 358; PDF p. 369. Course corroboration: Respiratory ENG transcript.srt, 00:28:35-00:39:11 (Bronchus-to-bronchiole transitions, terminal and respiratory bronchioles, and club cells.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-013",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-alveolar-unit",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 362; PDF p. 373. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-014",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-alveolar-unit",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 362; PDF p. 373. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-015",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-alveolar-unit",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 363; PDF p. 374, Figure 17-15. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-016",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-alveolar-unit",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 366; PDF p. 377, Figure 17-16. Course corroboration: Respiratory ENG transcript.srt, 00:39:11-00:44:43 (Alveolar ducts, pneumocytes, lamellar bodies, capillaries, and the blood-air barrier.)",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-017",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-alveolar-unit",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 364; PDF p. 375. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-018",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-alveolar-unit",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 364; PDF p. 375. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    },
+    {
+      "questionId": "depth-resp-hist-020",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-lung-support",
+      "status": "source-rechecked",
+      "sourceNote": "Junqueira's Basic Histology: Text and Atlas, 16th, 17 - The Respiratory System, printed p. 367; PDF p. 378. Scope is book-extension; no direct course-locator claim is made.",
+      "imageEvidence": null,
+      "checks": [
+        "four-homogeneous-options",
+        "exactly-one-best-answer",
+        "all-distractors-explained",
+        "locator-content-rechecked"
+      ]
+    }
+  ]
+}

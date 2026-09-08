@@ -1,6 +1,6 @@
-# Lower Limb — Curated 3D Anatomy Scope
+# Lower Limb — Exam-Scope 3D Anatomy
 
-High-yield Gray's Anatomy for Students / Snell scope for a med-school identification trainer. This is a deliberately curated set rather than a complete atlas: paired structures are represented by one bilateral entry, and grouped entries are used where the exam-level learning objective is the compartment or bone series. `proposedFMA` is conservatively left as `?` where an exact Foundational Model of Anatomy mapping has not been verified. `YES — real` means the structure should be backed by recognizable segmented anatomy; `NO — procedural` means a schematic mesh, line, tube, band, or highlighted region is acceptable.
+Gray's Anatomy for Students / Snell exam scope for a med-school identification trainer. This is complete for the registered Term 2 learning objectives rather than a claim to every named structure in the human body: paired structures are represented by one laterality entry, and grouped entries are used where the exam-level learning objective is the compartment or bone series. `proposedFMA` is conservatively left as `?` where an exact Foundational Model of Anatomy mapping has not been verified. `YES — real` means the structure should be backed by recognizable segmented anatomy; `NO — procedural` means a schematic mesh, line, tube, band, or highlighted region is acceptable.
 
 ## Bones
 
@@ -91,8 +91,20 @@ High-yield Gray's Anatomy for Students / Snell scope for a med-school identifica
 
 - Bones: 8
 - Joints & ligaments: 11
-- Muscles: 18
-- Nerves: 8
-- Arteries: 6
+- Muscles: 33
+- Nerves: 33
+- Arteries: 9
 - Veins: 4
-- **Total: 55 structures**
+- **Total: 98 structures**
+
+### Branch-level nerve additions
+
+The interactive manifest extends the table above with inguinal-region cutaneous nerves; femoral and
+obturator divisions; saphenous and infrapatellar branches; superior/inferior gluteal and deep-gluteal
+motor nerves; posterior femoral cutaneous nerve; the sural components; and named calcaneal, plantar,
+dorsal-cutaneous and digital foot branches. This creates 33 individually selectable nerve targets.
+All are marked procedural/schematic rather than scan-derived.
+
+### Scan-derived detail additions
+
+The Term 2 detail supplement separates tensor fasciae latae; piriformis; obturator internus; both gemelli; quadratus femoris; sartorius; pectineus; adductor brevis; plantaris; popliteus; flexor digitorum longus; flexor hallucis longus; extensor hallucis longus; fibularis tertius; dorsalis pedis; and the medial and lateral plantar arteries. These are individual BodyParts3D v4.3 meshes, not procedural approximations.

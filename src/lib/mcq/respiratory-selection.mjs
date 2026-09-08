@@ -41,7 +41,9 @@ export function selectRespiratorySprint(items, { limit = 20, seenIds = [], repai
   const targets = new Set();
   const unique = candidates.filter((item) => {
     if (!item.anatomy) return true;
-    const key = `${item.anatomy.imageId}:${item.anatomy.targetRegionId}`;
+    // Do not put both directions of the same target in one test: the named
+    // location prompt would disclose the adjacent identification answer.
+    const key = studyMode === "learn" ? item.anatomy.imageId : `${item.anatomy.imageId}:${item.anatomy.targetRegionId}`;
     if (targets.has(key)) return false;
     targets.add(key);
     return true;

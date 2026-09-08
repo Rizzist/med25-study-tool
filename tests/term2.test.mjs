@@ -119,30 +119,25 @@ test("deployed API exposes each source-grounded Term 2 bank only in its own exam
   assert.equal(respiratory.finalExamQuestionCount, 0, "generated questions must not masquerade as past papers");
 
   const cvs = summary.exams.find((exam) => exam.id === "term2-cvs");
-  assert.equal(cvs.questionCount, 194);
-  assert.equal(cvs.collectionCounts.anatomy, 71);
-  assert.equal(cvs.collectionCounts.histology, 28);
-  assert.equal(cvs.collectionCounts.embryology, 30);
-  assert.equal(cvs.collectionCounts.physiology, 65);
-  assert.equal(cvs.collectionCounts["dynamic-anatomy"], 28);
-  assert.equal(cvs.collectionCounts.images, 12);
-  assert.equal(cvs.interactive3dCount, 28);
-  assert.equal(cvs.finalExamQuestionCount, 0);
-
   const limbs = summary.exams.find((exam) => exam.id === "term2-limbs");
-  assert.equal(limbs.questionCount, 173);
-  assert.equal(limbs.collectionCounts.anatomy, 173);
-  assert.equal(limbs.collectionCounts["dynamic-anatomy"], 32);
-  assert.equal(limbs.collectionCounts.images, 0);
-  assert.equal(limbs.interactive3dCount, 32);
-  assert.equal(limbs.finalExamQuestionCount, 0);
-
   const biochemistry = summary.exams.find((exam) => exam.id === "term2-biochemistry");
-  assert.equal(biochemistry.questionCount, 196);
-  assert.equal(biochemistry.collectionCounts.biochemistry, 196);
-  assert.equal(biochemistry.collectionCounts.images, 0);
-  assert.equal(biochemistry.interactive3dCount, 0);
-  assert.equal(biochemistry.finalExamQuestionCount, 0);
+  const bank = JSON.parse(await readFile(new URL("../data/bank/embedded-bank.json", import.meta.url), "utf8")).questions;
+  const retirements = JSON.parse(await readFile(new URL("../data/term2/anatomy-practice-retirements.json", import.meta.url), "utf8")).questions;
+  for (const [exam, baseline] of [
+    [cvs, {total:564, anatomy:441, histology:28, embryology:30, physiology:65, dynamic:398, images:382, models:28}],
+    [limbs, {total:863, anatomy:863, embryology:0, dynamic:722, images:690, models:32}],
+    [biochemistry, {total:196, biochemistry:196, dynamic:0, images:0, models:0}],
+  ]) {
+    const added = bank.filter(q => q.tags.includes(`exam-${exam.id}`) && q.tags.some(tag => ["depth-expansion", "comprehensive-expansion", "anatomy-location-practice"].includes(tag)));
+    const removed=bank.filter(q=>q.tags.includes(`exam-${exam.id}`)&&retirements[q.id]);
+    assert.equal(bank.filter(q=>q.tags.includes(`exam-${exam.id}`)).length,baseline.total+added.length,'Source archive remains intact');
+    assert.equal(exam.questionCount, baseline.total + added.length-removed.length, `${exam.id}: only active practice counted`);
+    for (const subject of ["anatomy", "histology", "embryology", "physiology", "biochemistry"]) if (subject in baseline) assert.equal(exam.collectionCounts[subject] ?? 0, baseline[subject] + added.filter(q=>q.subject===subject).length-removed.filter(q=>q.subject===subject).length);
+    assert.equal(exam.collectionCounts["dynamic-anatomy"] ?? 0, baseline.dynamic + added.filter(q=>q.kind.startsWith("dynamic_anatomy")).length-removed.filter(q=>q.kind.startsWith("dynamic_anatomy")).length);
+    assert.equal(exam.collectionCounts.images, baseline.images + added.filter(q=>q.media?.length).length-removed.filter(q=>q.media?.length).length);
+    assert.equal(exam.interactive3dCount, baseline.models + added.filter(q=>q.kind === "dynamic_anatomy_3d").length-removed.filter(q=>q.kind==='dynamic_anatomy_3d').length);
+    assert.equal(exam.finalExamQuestionCount, 0);
+  }
 
   const routedIds = new Map([cvs, respiratory, limbs, biochemistry].map((exam) => [exam.id, new Set(exam.collectionQuestionIds.all)]));
   for (const [examId, ids] of routedIds) {
@@ -184,7 +179,7 @@ test("Respiratory API supports mixed mocks, dynamic media and exact resume", asy
     assert.deepEqual(anatomyValidationErrors(question), []);
     const image = await route(`/api/media?questionId=${encodeURIComponent(question.id)}&mediaId=${encodeURIComponent(question.media[0].id)}`);
     assert.equal(image.status, 307);
-    assert.match(image.headers.get("location"), /\/study\/term2\/respiratory\//);
+    assert.equal(image.headers.get("location"), new URL("/study/" + question.media[0].path, "http://localhost").href);
   }
 });
 

@@ -60,8 +60,8 @@ export type MCQQuestion = {
   learningObjective: string;
   source: MCQSource;
   media?: MCQMedia[];
-  anatomy?: { imageId: string; targetRegionId: string; variant: number };
-  anatomy3d?: { modelKey: string; structureId: string };
+  anatomy?: { imageId: string; targetRegionId: string; variant: number; markerMode?: "structure" | "label"; responseMode?: "identify" | "locate"; modelKey?: string; contextStructureIds?: string[] };
+  anatomy3d?: { modelKey: string; structureId: string; contextStructureIds?: string[]; responseMode?: "identify" | "locate"; selectableStructures?: { id: string; label: string }[] };
   tags: string[];
   examPriority: "core" | "high" | "standard";
   qualityFlags: string[];
@@ -71,6 +71,7 @@ export type StudentAnswer = {
   questionId: string;
   mode: "select" | "write";
   selectedOptionId?: string;
+  selectedRegionId?: string;
   writtenAnswer?: string;
   reasoning: string;
   confidence: "guess" | "unsure" | "confident";

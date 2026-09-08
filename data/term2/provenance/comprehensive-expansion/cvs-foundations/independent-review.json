@@ -1,0 +1,1320 @@
+{
+  "reviewType": "independent-content-source-distractor-and-resolution-audit",
+  "reviewedAt": "2026-09-08",
+  "author": "/root",
+  "reviewer": "/root/respiratory_sources",
+  "reviewerLane": "respiratory_sources",
+  "status": "approved",
+  "reviewedQuestionIds": [
+    "comp-cvs-phys-001",
+    "comp-cvs-phys-002",
+    "comp-cvs-phys-003",
+    "comp-cvs-phys-004",
+    "comp-cvs-phys-005",
+    "comp-cvs-phys-006",
+    "comp-cvs-phys-008",
+    "comp-cvs-phys-009",
+    "comp-cvs-phys-010",
+    "comp-cvs-phys-011",
+    "comp-cvs-phys-012",
+    "comp-cvs-phys-013",
+    "comp-cvs-phys-014",
+    "comp-cvs-phys-015",
+    "comp-cvs-phys-016",
+    "comp-cvs-phys-017",
+    "comp-cvs-phys-018",
+    "comp-cvs-phys-019",
+    "comp-cvs-phys-020",
+    "comp-cvs-phys-021",
+    "comp-cvs-phys-022",
+    "comp-cvs-phys-023",
+    "comp-cvs-phys-024",
+    "comp-cvs-phys-025",
+    "comp-cvs-phys-026",
+    "comp-cvs-phys-027",
+    "comp-cvs-phys-028",
+    "comp-cvs-phys-029",
+    "comp-cvs-phys-030",
+    "comp-cvs-phys-031",
+    "comp-cvs-phys-032",
+    "comp-cvs-phys-033",
+    "comp-cvs-phys-034",
+    "comp-cvs-phys-035",
+    "comp-cvs-phys-036",
+    "comp-cvs-phys-037",
+    "comp-cvs-phys-038",
+    "comp-cvs-phys-039",
+    "comp-cvs-phys-040",
+    "comp-cvs-phys-041",
+    "comp-cvs-phys-042",
+    "comp-cvs-phys-043",
+    "comp-cvs-phys-044",
+    "comp-cvs-phys-045",
+    "comp-cvs-phys-046",
+    "comp-cvs-phys-047",
+    "comp-cvs-phys-048",
+    "comp-cvs-hist-001",
+    "comp-cvs-hist-002",
+    "comp-cvs-hist-003",
+    "comp-cvs-hist-005",
+    "comp-cvs-hist-006",
+    "comp-cvs-hist-007",
+    "comp-cvs-hist-008",
+    "comp-cvs-emb-001",
+    "comp-cvs-emb-002",
+    "comp-cvs-emb-003",
+    "comp-cvs-emb-004",
+    "comp-cvs-emb-005"
+  ],
+  "counts": {
+    "questionsReviewed": 59,
+    "keyedAnswersConfirmed": 59,
+    "schemaValid": 59,
+    "concepts": 15,
+    "modules": 9,
+    "coverageRows": 15,
+    "sourceAuditRows": 60,
+    "physiology": 47,
+    "histology": 7,
+    "embryology": 5,
+    "core3": 29,
+    "challenge4": 30,
+    "openFindings": 0,
+    "withdrawnDrafts": 2
+  },
+  "baselineCounts": {
+    "physiology": 88,
+    "histology": 107,
+    "embryology": 114
+  },
+  "reviewedPayloadSha256": {
+    "questions.jsonl": "e71e1afc9b1af0130d988c9736d7336d9d6d9f1e030a6c57f01bd3afc48f75df",
+    "concepts.json": "7d68688cc7698283884a5d9ada5c12bfd0864ba9063a47df3db7d20e83d837ff",
+    "modules.json": "9b2750bf86439f781174f9fdb41b39ec33d1891a402064d989178f7d0eb697e6",
+    "coverage.json": "beea99307224426fcf6547cb89bcd926c12706d37c0d1a432fb827ddd39f4cbd",
+    "source-audit.json": "be0a8fde7981a2ae485fdd2517944d42bd77d73fd1553fc1145fbb96304bd552"
+  },
+  "summary": "Independently checked all retained keys and alternatives against the cited local source passages, recalculated quantitative answers, compared with existing CVS stems, repaired distractors, synchronized linked QAs and exact locators, and validated the final question/catalog payload. Approval applies only to the five sealed files and these 59 original practice questions.",
+  "checks": [
+    "Guyton local extracted PDF pages were read for all retained physiology items; calculations were independently recomputed. In particular, PDF144 supports calibration, PDF151 lead axes/projection, PDF172 reentry, PDF227–229 afferent/resetting inference, PDF234 renal equilibrium, PDF258–261 return curves, PDF285 EF, PDF289 and175 S4/AF, PDF291–292 valves, and PDF299/302/304/305 shock mechanisms.",
+    "Junqueira PDF286/printed275 was read for FDC retention, B-cell MHC-II processing and germinal-center variable-region changes. PDF297/300–302 (printed286/289–291) was read for splenic topology, central-arteriole eccentricity, afferent/efferent lymphatics and trabecular veins.",
+    "Langman PDF232 text and PDF233 rendered image were inspected. The continuation establishes cisterna chyli dorsal to the retroperitoneal sac; the same rendered page establishes PROX1 specification, VEGFC–VEGFR3 sprouting, and the composite thoracic duct. No generated image or unverified OCR inference was used.",
+    "Baseline stems compared: 88 physiology, 107 histology and 114 embryology. Neighboring prerequisite IDs in source-audit do not certify source support for all baseline questions. Two weak near-duplicate/elementary drafts were withdrawn.",
+    "All 59 questions pass repository MCQ schema, contain four distinct options and individual option explanations including the keyed option. Every question belongs to exactly one objective; all concept/retrieval answers and source locators match the final MCQs. Concept groups contain 3–5 questions.",
+    "The normalized CVS term2 catalog passes repository schema. CVS scope is book-extension (book-only evidence), not respiratory-only book-only schema vocabulary. All flat audit statuses conform to mapped/outside-scope/source-missing.",
+    "Editorial challenge classification was recalibrated by required reasoning, not target counts: 30 challenge4 and29 core3. Reentry drug interaction, renal curve plus intake, paired hemorrhage/capacitance and septic resistance questions include explicit assumptions and independently checked arithmetic."
+  ],
+  "resolutionOfPriorFindings": [
+    {
+      "finding": "Implausible distractors made nominal challenge items trivial.",
+      "resolution": "Replaced with adjacent mechanism, stage, timing, sign, compartment, or unit confusions across the draft. Retained numerical distractors were recalculated. Single-step items were downgraded to core3."
+    },
+    {
+      "finding": "Calibration references did not point to the actual calibration discussion.",
+      "resolution": "phys-012 and013 now cite printed137/local PDF144. Other sources narrowed or supplemented, including phys-003 PDF158 and phys-037 PDF175."
+    },
+    {
+      "finding": "Axis question imported a clinical normal-axis cutoff not established by the cited Guyton passage.",
+      "resolution": "phys-010 now asks a pure lead-projection interval and cites PDF151; it does not attribute an external cutoff to this book."
+    },
+    {
+      "finding": "Sepsis explanation included a cellular utilization gloss beyond this exact passage.",
+      "resolution": "phys-045 now uses pressure–flow arithmetic, metabolic demand and the explicitly cited microvascular sludging/clotting account; no specific utilization defect is asserted."
+    },
+    {
+      "finding": "Two small concepts fell below the key-point schema minimum after withdrawal.",
+      "resolution": "Added a fourth supported integrating key point without adding a redundant MCQ; all QAs/objectives were synchronized."
+    },
+    {
+      "finding": "Earlier six-sac positional gap remained after molecular and duct expansion.",
+      "resolution": "Reviewed and merged root-authored comp-cvs-emb-005 with exact PDF232–233 evidence, core3 difficulty, QA, objective and audit mapping."
+    }
+  ],
+  "withdrawnDrafts": [
+    {
+      "id": "comp-cvs-phys-007",
+      "reason": "The PVC item repeated the slower muscle-to-muscle conduction/broader QRS inference already retained in phys-003; remove near-duplicate rather than inflate count."
+    },
+    {
+      "id": "comp-cvs-hist-004",
+      "reason": "Elementary plasma-cell specificity item added little beyond the follicular activation/selection sequence; all original distractors were implausible. Remove rather than pad."
+    }
+  ],
+  "openFindings": [],
+  "limitations": [
+    "Independent agent review is not faculty approval or empirical item calibration.",
+    "Book-extension claims do not establish teacher emphasis or exhaustive exam coverage.",
+    "The two explicitly supplied quantitative toy models hold variables fixed for reasoning; they are not unrestricted clinical predictions.",
+    "No served assets are included. The Langman page rendering is QA-only, not a new practice asset."
+  ],
+  "perQuestion": [
+    {
+      "id": "comp-cvs-phys-001",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "10, 13",
+        "page": "Local PDF 136, 140"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-002",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "10, 13",
+        "page": "Local PDF 139–140"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-003",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "10, 13",
+        "page": "Local PDF pp. 137, 139–140, 158"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-004",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "10, 13",
+        "page": "Local PDF p. 172"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-005",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "10, 13",
+        "page": "Local PDF p. 172"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-006",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "10, 13",
+        "page": "Local PDF 167"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-008",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "10, 13",
+        "page": "Local PDF 171, 173"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-009",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Local PDF p. 151, Figure 12.3 and vector projection discussion"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-010",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Local PDF p. 151, Figure 12.3 and vector projection discussion"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-011",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Local PDF 151"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-012",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Printed p. 137; local PDF p. 144"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-013",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Printed p. 137; local PDF p. 144"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-014",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Local PDF 151, 158"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-015",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Local PDF 158"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-016",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "11–13",
+        "page": "Local PDF 155"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-017",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF 227–228"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-018",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF pp. 227, 229"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-019",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF pp. 228–229"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-020",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF 229"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-021",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF 229"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-022",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF p. 234"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-023",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF 239"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-024",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "18–19",
+        "page": "Local PDF 241"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-025",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF pp. 258–259"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-026",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF pp. 255–256, 258–259"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-027",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF pp. 258–259"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-028",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF 256"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-029",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF p. 255"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-030",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF pp. 255, 258, 260"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-031",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF pp. 260–261"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-032",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "20",
+        "page": "Local PDF pp. 259–260"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-033",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF 277, 285"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-034",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF 277, 281"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-035",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF 285"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-036",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF 285"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-037",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF p. 289; atrial fibrillation mechanism local PDF p. 175"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-038",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF 291–292"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-039",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF 292"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-040",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "22–23",
+        "page": "Local PDF 291"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-041",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF 299"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-042",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF pp. 258, 299, 304"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-043",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF 304"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-044",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF 305"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-045",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 4,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF 305"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-046",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF 302"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-047",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF 302, 304"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-phys-048",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "15th edition (local 2026 file)",
+        "chapter": "24",
+        "page": "Local PDF 305"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-hist-001",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology, 16th edition",
+        "chapter": "14",
+        "page": "Printed p. 275; local PDF p. 286"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-hist-002",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology, 16th edition",
+        "chapter": "14",
+        "page": "Printed p. 275; local PDF p. 286"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-hist-003",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology, 16th edition",
+        "chapter": "14",
+        "page": "Printed p. 275; local PDF p. 286"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-hist-005",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology, 16th edition",
+        "chapter": "14",
+        "page": "Printed pp. 286, 289–290; local PDF pp. 297, 300–301"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-hist-006",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology, 16th edition",
+        "chapter": "14",
+        "page": "Printed pp. 286, 289–290; local PDF pp. 297, 300–301"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-hist-007",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology, 16th edition",
+        "chapter": "14",
+        "page": "Printed pp. 286, 291; local PDF pp. 297, 302"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-hist-008",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology, 16th edition",
+        "chapter": "14",
+        "page": "Printed p. 290; local PDF p. 301"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-emb-001",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Langman's Medical Embryology, 15th edition",
+        "chapter": "13",
+        "page": "Printed p. 221; local PDF p. 233"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-emb-002",
+      "status": "approved",
+      "correctOptionId": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Langman's Medical Embryology, 15th edition",
+        "chapter": "13",
+        "page": "Printed p. 221; local PDF p. 233"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-emb-003",
+      "status": "approved",
+      "correctOptionId": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Langman's Medical Embryology, 15th edition",
+        "chapter": "13",
+        "page": "Printed p. 221; local PDF p. 233"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-emb-004",
+      "status": "approved",
+      "correctOptionId": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Langman's Medical Embryology, 15th edition",
+        "chapter": "13",
+        "page": "Printed p. 221; local PDF p. 233"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    },
+    {
+      "id": "comp-cvs-emb-005",
+      "status": "approved",
+      "correctOptionId": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Langman's Medical Embryology, 15th edition",
+        "chapter": "13",
+        "page": "Printed pp. 220–221; local PDF pp. 232–233"
+      },
+      "checks": [
+        "key",
+        "four-options",
+        "individual-explanations",
+        "source-support",
+        "novelty-within-retained-set",
+        "linked-QA"
+      ]
+    }
+  ]
+}

@@ -56,6 +56,7 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
 
   const gltf = await loader.loadAsync(MODEL_URL);
   dracoLoader.dispose();
+  await attachImageMeshSupplement(gltf.scene, "larynx-real");
 
   const root = new Group();
   root.name = "respiratory-larynx-real";
@@ -88,11 +89,12 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
   // these are authored here (userData.schematic = true) and routed relative to the real cartilages.
   gltf.scene.updateMatrixWorld(true);
   const pushMesh = (id: string, mesh: Object3D) => structures.set(id, [...(structures.get(id) ?? []), mesh]);
-  const centre = (id: string): Vector3 => {
+  const boxOf = (ids: string[]): Box3 => {
     const box = new Box3();
-    for (const obj of structures.get(id) ?? []) box.expandByObject(obj);
-    return box.isEmpty() ? new Vector3() : box.getCenter(new Vector3());
+    for (const id of ids) for (const obj of structures.get(id) ?? []) box.expandByObject(obj);
+    return box;
   };
+  const centre = (id: string): Vector3 => boxOf([id]).getCenter(new Vector3());
   const addProcedural = (id: string, mesh: Mesh) => {
     mesh.name = id;
     mesh.userData.structureId = id;
@@ -117,44 +119,117 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
     addProcedural(id, m);
   };
 
-  const thyroidY = centre("thyroid-cartilage").y;
-  const memb = centre("thyrohyoid-membrane");
-  const cricoY = centre("cricoid-cartilage").y;
-  for (const side of [1, -1]) {
+  const larynxBox = boxOf([
+    "thyroid-cartilage", "thyrohyoid-membrane", "cricoid-cartilage", "epiglottis",
+  ]);
+  if (!larynxBox.isEmpty()) {
+    const lc = larynxBox.getCenter(new Vector3());
+    const ls = larynxBox.getSize(new Vector3());
+    const at = (fx: number, fy: number, fz: number) => v(
+      lc.x + ls.x * fx,
+      lc.y + ls.y * fy,
+      lc.z + ls.z * fz,
+    );
+    const thyroid = centre("thyroid-cartilage");
+    const memb = centre("thyrohyoid-membrane");
+    const crico = centre("cricoid-cartilage");
+    const nerveR = Math.min(ls.x, ls.z) * 0.0105;
+    const arteryR = Math.min(ls.x, ls.z) * 0.014;
+    for (const side of [1, -1]) {
     // Vagus nerve (CN X) — descends in the carotid sheath, lateral & slightly posterior.
     tube("vagus-nerve", [
-      v(side * 0.5, 0.95, -0.14), v(side * 0.48, 0.4, -0.18),
-      v(side * 0.47, -0.1, -0.2), v(side * 0.49, -0.95, -0.2),
-    ], 0.013);
+      at(side * 0.37, 0.46, -0.08), at(side * 0.36, 0.22, -0.10),
+      at(side * 0.35, -0.05, -0.11), at(side * 0.36, -0.46, -0.10),
+    ], nerveR);
     // Superior laryngeal nerve — internal branch pierces the thyrohyoid membrane; external branch
     // runs down to the cricothyroid muscle.
     tube("superior-laryngeal-nerve", [
-      v(side * 0.46, 0.52, -0.15), v(side * 0.3, 0.49, -0.02), v(side * 0.12, memb.y, 0.0),
-    ], 0.012);
+      at(side * 0.35, 0.30, -0.09), at(side * 0.24, 0.29, -0.02),
+      v(lc.x + side * ls.x * 0.09, memb.y, memb.z + ls.z * 0.07),
+    ], nerveR);
     tube("superior-laryngeal-nerve", [
-      v(side * 0.46, 0.46, -0.15), v(side * 0.35, 0.0, -0.12), v(side * 0.2, cricoY + 0.12, -0.08),
-    ], 0.011);
+      at(side * 0.35, 0.27, -0.09), at(side * 0.27, 0.04, -0.06),
+      v(lc.x + side * ls.x * 0.16, crico.y + ls.y * 0.12, crico.z + ls.z * 0.18),
+    ], nerveR * 0.92);
     // Recurrent laryngeal nerve — ascends in the tracheo-oesophageal groove, entering behind the cricoid.
     tube("recurrent-laryngeal-nerve", [
-      v(side * 0.15, -0.95, -0.24), v(side * 0.16, -0.72, -0.3), v(side * 0.13, cricoY + 0.05, -0.34),
-    ], 0.012);
+      at(side * 0.12, -0.46, -0.17),
+      v(lc.x + side * ls.x * 0.12, crico.y - ls.y * 0.06, crico.z - ls.z * 0.04),
+      v(lc.x + side * ls.x * 0.09, crico.y + ls.y * 0.07, crico.z - ls.z * 0.03),
+    ], nerveR);
+    // The named terminal branches are separate quiz targets rather than a single generic cord.
+    // Internal SLN runs horizontally through the thyrohyoid membrane to supraglottic mucosa.
+    tube("internal-laryngeal-nerve", [
+      at(side * 0.34, 0.30, -0.09), at(side * 0.24, 0.29, -0.03),
+      v(lc.x + side * ls.x * 0.15, memb.y + ls.y * 0.01, memb.z + ls.z * 0.05),
+      v(lc.x + side * ls.x * 0.06, memb.y - ls.y * 0.01, memb.z + ls.z * 0.07),
+    ], nerveR * 0.88);
+    // External SLN descends on the outer surface of the inferior constrictor to cricothyroid.
+    tube("external-laryngeal-nerve", [
+      at(side * 0.34, 0.27, -0.09), at(side * 0.29, 0.11, -0.07),
+      v(lc.x + side * ls.x * 0.22, crico.y + ls.y * 0.14, crico.z + ls.z * 0.16),
+      v(lc.x + side * ls.x * 0.15, crico.y + ls.y * 0.10, crico.z + ls.z * 0.19),
+    ], nerveR * 0.88);
+    // Inferior laryngeal nerve is the short intralaryngeal continuation after the RLN enters
+    // immediately posterior to the cricothyroid joint.
+    tube("inferior-laryngeal-nerve", [
+      v(lc.x + side * ls.x * 0.10, crico.y - ls.y * 0.02, crico.z - ls.z * 0.04),
+      v(lc.x + side * ls.x * 0.095, crico.y + ls.y * 0.05, crico.z + ls.z * 0.02),
+      v(lc.x + side * ls.x * 0.085, crico.y + ls.y * 0.10, crico.z + ls.z * 0.12),
+      v(lc.x + side * ls.x * 0.06, crico.y + ls.y * 0.13, crico.z + ls.z * 0.19),
+    ], nerveR * 0.88);
+    // Side-specific recurrent nerves make the different looping courses and clinical relations
+    // independently selectable even though the neck segment converges on the same T-O groove.
+    const recurrentId = side > 0
+      ? "left-recurrent-laryngeal-nerve-larynx"
+      : "right-recurrent-laryngeal-nerve-larynx";
+    tube(recurrentId, [
+      at(side * 0.14, -0.46, -0.16), at(side * 0.13, -0.36, -0.18),
+      v(lc.x + side * ls.x * 0.11, crico.y - ls.y * 0.03, crico.z - ls.z * 0.04),
+      v(lc.x + side * ls.x * 0.09, crico.y + ls.y * 0.07, crico.z - ls.z * 0.03),
+    ], nerveR * 0.88);
+    // Galen's anastomosis arcs behind the larynx from the internal SLN territory to the
+    // recurrent/inferior laryngeal pathway.
+    tube("galen-anastomosis", [
+      v(lc.x + side * ls.x * 0.07, memb.y - ls.y * 0.02, memb.z - ls.z * 0.04),
+      v(lc.x + side * ls.x * 0.10, thyroid.y, thyroid.z - ls.z * 0.15),
+      v(lc.x + side * ls.x * 0.10, crico.y + ls.y * 0.13, crico.z - ls.z * 0.05),
+      v(lc.x + side * ls.x * 0.09, crico.y + ls.y * 0.07, crico.z - ls.z * 0.03),
+    ], nerveR * 0.72);
     // Superior thyroid artery — first branch of the external carotid, descending anteriorly.
     tube("superior-thyroid-artery", [
-      v(side * 0.5, 0.55, -0.04), v(side * 0.42, 0.2, 0.02), v(side * 0.32, -0.35, 0.06), v(side * 0.28, -0.6, 0.05),
-    ], 0.017);
+      at(side * 0.37, 0.31, 0.03), at(side * 0.31, 0.13, 0.10),
+      at(side * 0.24, -0.16, 0.13), at(side * 0.20, -0.29, 0.12),
+    ], arteryR);
     // Superior laryngeal artery — its branch that pierces the thyrohyoid membrane with the nerve.
     tube("superior-laryngeal-artery", [
-      v(side * 0.46, 0.5, -0.02), v(side * 0.28, memb.y + 0.02, 0.03), v(side * 0.12, memb.y, 0.02),
-    ], 0.014);
+      at(side * 0.34, 0.29, 0.05),
+      v(lc.x + side * ls.x * 0.20, memb.y + ls.y * 0.01, memb.z + ls.z * 0.10),
+      v(lc.x + side * ls.x * 0.09, memb.y, memb.z + ls.z * 0.09),
+    ], arteryR * 0.82);
     // Inferior thyroid artery — from the thyrocervical trunk, ascending to the lower larynx.
     tube("inferior-thyroid-artery", [
-      v(side * 0.5, -0.92, -0.04), v(side * 0.42, -0.72, 0.01), v(side * 0.32, cricoY + 0.02, 0.05),
-    ], 0.016);
+      at(side * 0.37, -0.44, 0.04), at(side * 0.31, -0.34, 0.09),
+      v(lc.x + side * ls.x * 0.23, crico.y + ls.y * 0.02, crico.z + ls.z * 0.18),
+    ], arteryR * 0.94);
     // Paraglottic fat — paired fat spaces lateral to the ventricle, deep to the thyroid lamina.
-    blob("paraglottic-fat", v(side * 0.22, thyroidY + 0.06, -0.02), 0.1, 0.16, 0.12);
+      blob(
+        "paraglottic-fat",
+        v(lc.x + side * ls.x * 0.16, thyroid.y + ls.y * 0.04, thyroid.z + ls.z * 0.10),
+        ls.x * 0.07,
+        ls.y * 0.085,
+        ls.z * 0.09,
+      );
+    }
+    // Pre-epiglottic fat — anterior to the epiglottis, beneath the thyrohyoid membrane.
+    blob(
+      "pre-epiglottic-fat",
+      v(lc.x, memb.y - ls.y * 0.04, memb.z + ls.z * 0.22),
+      ls.x * 0.11,
+      ls.y * 0.10,
+      ls.z * 0.075,
+    );
   }
-  // Pre-epiglottic fat — the fat body anterior to the epiglottis, under the hyoid & thyrohyoid membrane.
-  blob("pre-epiglottic-fat", v(0, memb.y - 0.06, 0.16), 0.16, 0.18, 0.1);
 
   // Defensive normalization to the contract: centre at origin and scale to a ~2-unit bbox.
   // (The GLB is baked normalized; this makes the loader idempotent and robust to re-exports.)
@@ -192,3 +267,4 @@ export async function createRealLarynxModel(): Promise<AnatomyModelHandle> {
     },
   };
 }
+import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";

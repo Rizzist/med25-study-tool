@@ -13,6 +13,8 @@ function assert(condition, message) {
 
 const catalog = JSON.parse(readFileSync(catalogPath, "utf8"));
 const embeddedBank = JSON.parse(readFileSync(embeddedBankPath, "utf8"));
+const cartilageProvenance = JSON.parse(readFileSync(resolve(root, 'public/anatomy3d/cvs/costal-cartilages.provenance.json'), 'utf8'));
+assert(createHash('sha256').update(readFileSync(resolve(root, 'public/anatomy3d/cvs/costal-cartilages.obj'))).digest('hex') === cartilageProvenance.output.sha256, 'Source-aligned cartilage asset is missing or changed');
 const practicalCatalog = JSON.parse(readFileSync(resolve(root, "data/term2/physiology-practical.json"), "utf8"));
 const practicalQuestions = embeddedBank.questions.filter((q) => q.tags?.includes("exam-term2-physiology-practical"));
 const practicalSource = readFileSync(resolve(root, "data/bank/questions/term2-physiology-practical.jsonl"), "utf8").trim().split("\n").map((line) => JSON.parse(line));
@@ -65,7 +67,9 @@ assert(JSON.stringify(respiratoryIndex) === JSON.stringify(respiratoryAudit.inde
 const respiratoryReport = JSON.parse(readFileSync(resolve(root, "data/term2/respiratory-coverage.json"), "utf8"));
 assert(JSON.stringify(respiratoryReport) === JSON.stringify(respiratoryAudit.report), "Respiratory coverage report is stale");
 const respiratoryImages = new Set(respiratory.flatMap((question) => (question.media ?? []).map((media) => media.path)));
-assert(respiratoryImages.size === 12, "Expected 4 anatomy source diagrams and 8 histology micrographs");
+const respiratoryAtlas = JSON.parse(readFileSync(resolve(root, "data/term2/anatomy-visual-images.json"), "utf8")).images.filter((image) => image.examId === "term2-respiratory");
+assert(respiratoryImages.size === 12 + respiratoryAtlas.length, "Expected baseline respiratory media plus every new source atlas figure");
+for (const image of respiratoryAtlas) assert(respiratoryImages.has(image.path), `Missing respiratory atlas figure: ${image.path}`);
 for (const path of respiratoryImages) assert(existsSync(resolve(root, "public/study", path)), `Missing Respiratory image: ${path}`);
 const imageProvenance = JSON.parse(readFileSync(resolve(root, "data/term2/provenance/histology-images.json"), "utf8"));
 for (const image of imageProvenance) {

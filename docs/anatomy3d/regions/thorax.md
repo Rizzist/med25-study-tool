@@ -5,7 +5,8 @@ transcripts** for Term 2 · Cardiovascular · Anatomy (Tehran University of Medi
 *Gray's for Students*, Snell, Moore, Netter/Zobta). This document reconciles and **expands the current
 heart-only `cvs` model into the whole thorax the course teaches**: five thoracic-bone lectures (A1–A5), two
 muscle lectures (M1–M2), the heart series (A/B/C/E), the mediastinum series (A2–A4) and the neurovascular
-series (A/B, V1/V2).
+series (A/B, V1/V2). The original fourth nerve-only viewer has been retired: nerves now live as a
+normal tissue layer inside the wall, heart and mediastinum views they anatomically belong to.
 
 Source transcripts (all under `…/01 Cardiovascular/Anatomy/Lecture Transcripts/`):
 bones A1–A5, "Muscles of thorax" M1–M2, Heart A/B/C/E, mediastinum A2–A4, "neurovascular system of thorax"
@@ -21,21 +22,21 @@ A/B and V1/V2.
 - **`proposedFMA`:** `?` = an exact BodyParts3D/FMA node has not been verified; never substitute a parent-organ ID for a specific structure.
 - **`realOrSchematic`:** `YES (real mesh)` = a real BodyParts3D segmented mesh is the right target (bones, muscles, organs, valves, great vessels, chambers); `procedural (schematic)` = drawn procedurally and placed relative to real-mesh bounding boxes (nerves & plexuses, small/wall vessels, conduction, pericardial layers & sinuses, septa, membranes/fascia, ligaments, costal cartilage, potential spaces, thoracic duct).
 
-## Module design (4 models)
+## Module design (3 integrated models)
 
-The course maps cleanly onto **four** models — each becomes its own factory + manifest, exactly as respiratory
-and `cvs` already are:
+The course maps onto **three** regional models. Each contains its own nerve layer alongside bone,
+cartilage, muscle, arteries and veins:
 
 | moduleKey | title | course source | ~count |
 |---|---|---|---:|
-| `thoracic-wall` | Thoracic skeleton, wall & diaphragm | bones A1–A5, muscles M1–M2, neurovascular A/V1 (wall vessels) | 44 |
-| `heart` | Heart, valves, coronaries, conduction & pericardium | heart A/B/C/E (refines the current `cvs` scope) | 48 |
-| `mediastinum` | Mediastinum, great vessels & viscera | mediastinum A2–A4, neurovascular B/V2 (azygos), heart A (divisions) | 32 |
-| `thoracic-innervation` | Thoracic nerves & autonomics | neurovascular A/B/V1/V2 (nerves), mediastinum A3–A4 | 25 |
+| `thoracic-wall` | Thoracic skeleton, wall & diaphragm | bones A1–A5, muscles M1–M2, neurovascular A/V1 (wall vessels + somatic nerves) | 54 |
+| `heart` | Heart, valves, coronaries, conduction, pericardium & autonomics | heart A/B/C/E | 58 |
+| `mediastinum` | Mediastinum, great vessels, viscera & nerves | mediastinum A2–A4, neurovascular B/V2, heart A | 45 |
 
 > **Neurovascular-bundle split (design note).** The intercostal neurovascular bundle is taught as one unit but
 > spans two models geometrically: its **vessels** (intercostal arteries/veins, internal thoracic) live in
-> `thoracic-wall`; its **nerve** and all the somatic/autonomic thoracic nerves live in `thoracic-innervation`.
+> `thoracic-wall`; its **nerve** lives in that same wall model. Cardiac autonomics live in `heart`,
+> while phrenic/vagal/sympathetic and visceral plexus routes live in `mediastinum`.
 > The VAN order (**V**ein→**A**rtery→**N**erve, superior→inferior in the costal groove) and the
 > "needle above the lower rib" rule are carried as key points on both sides.
 
@@ -267,61 +268,70 @@ carried in `cvs` live here.
 
 ---
 
-## Module 4 — `thoracic-innervation`
+## Integrated nerve layers
 
-The nerves of the thorax as a coherent system: the somatic intercostal nerves and their branches, the phrenic
-and vagus nerves and recurrent laryngeal branches, the sympathetic trunk with splanchnic nerves and rami
-communicantes, and the autonomic plexuses. All are drawn procedurally and placed relative to real meshes.
+The nerves of the thorax remain a coherent curriculum set, but not a separate viewer: somatic intercostal
+nerves and rami are integrated into `thoracic-wall`; cardiac plexuses and branches into `heart`; and the
+phrenic, vagal, recurrent-laryngeal, sympathetic, splanchnic, pulmonary and oesophageal routes into
+`mediastinum`. All are drawn procedurally and anchored to the real meshes in their owning model.
 
 ### Somatic — intercostal nerves & branches (10)
 
 | moduleKey | id | system / tissue | label | aliases | description | keyPoints | difficulty | distractorIds | proposedFMA | realOrSchematic |
 |---|---|---|---|---|---|---|---:|---|---|---|
-| `thoracic-innervation` | `intercostal-nerve` | nervous / `nerve` | Intercostal nerve (T1–T11) | anterior ramus of thoracic spinal nerve | Anterior ramus of a thoracic spinal nerve running in the costal groove between the internal and innermost intercostals, supplying the intercostal muscles, parietal pleura and overlying skin. | The **N** of the costal-groove VAN (lowest of the three).<br>Block/aspiration: stay near the lower rib's upper border to spare the bundle. | 1 | `subcostal-nerve`, `lateral-cutaneous-branch`, `anterior-cutaneous-branch` | ? | procedural (schematic) |
-| `thoracic-innervation` | `subcostal-nerve` | nervous / `nerve` | Subcostal nerve (T12) | ... | Anterior ramus of T12 running below the 12th rib (not in an intercostal space) into the abdominal wall. | Named "subcostal" because it lies below rib 12.<br>Contributes to anterior abdominal wall innervation. | 2 | `intercostal-nerve`, `posterior-ramus`, `lateral-cutaneous-branch` | ? | procedural (schematic) |
-| `thoracic-innervation` | `posterior-ramus` | nervous / `nerve` | Posterior ramus | dorsal ramus | Branch given off as the spinal nerve emerges, supplying the intrinsic (deep) back muscles and the skin either side of the midline. | Motor to intrinsic back muscles (deep group).<br>Does not enter the intercostal space. | 2 | `intercostal-nerve`, `collateral-branch`, `lateral-cutaneous-branch` | ? | procedural (schematic) |
-| `thoracic-innervation` | `collateral-branch` | nervous / `nerve` | Collateral branch | ... | Small branch of the intercostal nerve given near the rib angle, running along the upper border of the rib below. | Parallels the main nerve on the lower rib.<br>Supplies intercostal muscle & parietal pleura. | 3 | `lateral-cutaneous-branch`, `anterior-cutaneous-branch`, `intercostal-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `lateral-cutaneous-branch` | nervous / `nerve` | Lateral cutaneous branch | ... | Largest cutaneous branch, piercing the wall in the mid-axillary line and dividing into anterior and posterior branches for the overlying skin. | The largest branch of the intercostal nerve.<br>T1 has none; T2 branch = intercostobrachial. | 2 | `anterior-cutaneous-branch`, `collateral-branch`, `intercostobrachial-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `anterior-cutaneous-branch` | nervous / `nerve` | Anterior cutaneous branch | ... | Terminal cutaneous branch emerging parasternally (upper spaces) or on the anterior abdominal wall (T7–T12) to supply midline skin. | Upper six = thoracic; T7–T12 = thoraco-abdominal (supply abdominal skin).<br>Emerge lateral to the sternum/linea alba. | 2 | `lateral-cutaneous-branch`, `collateral-branch`, `intercostal-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `intercostobrachial-nerve` | nervous / `nerve` | Intercostobrachial nerve | ... | Lateral cutaneous branch of T2 (± T3) that joins the medial cutaneous nerve of the arm to supply the axilla and medial upper arm. | Explains axillary/medial-arm referral & post-mastectomy numbness.<br>Communicates with the brachial plexus. | 3 | `lateral-cutaneous-branch`, `intercostal-nerve`, `anterior-cutaneous-branch` | ? | procedural (schematic) |
-| `thoracic-innervation` | `dermatomes` | nervous / `nerve` | Thoracic dermatomes | thoracic sensory levels | The segmental skin fields of the thoracic anterior rami — T2 at the sternal angle/clavicle line, **T4 nipple, T6 xiphoid, T10 umbilicus**. | Classic landmark levels (T4 nipple, T10 umbilicus).<br>Overlap makes single-level loss subtle. | 2 | `anterior-cutaneous-branch`, `lateral-cutaneous-branch`, `intercostal-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `white-ramus-communicans` | nervous / `nerve` | White ramus communicans | ... | Myelinated **preganglionic** sympathetic connection from a T1–L2 anterior ramus to the sympathetic trunk. | Present **only** at T1–L2 (lateral horn levels).<br>Carries preganglionic (myelinated) fibres. | 2 | `gray-ramus-communicans`, `sympathetic-trunk`, `greater-splanchnic-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `gray-ramus-communicans` | nervous / `nerve` | Gray ramus communicans | ... | Unmyelinated **postganglionic** sympathetic connection from the trunk back to every spinal nerve for distribution to the body wall. | Present at **all** spinal levels.<br>Carries postganglionic (unmyelinated) fibres. | 2 | `white-ramus-communicans`, `sympathetic-trunk`, `intercostal-nerve` | ? | procedural (schematic) |
+| `thoracic-wall` | `intercostal-nerve` | nervous / `nerve` | Intercostal nerve (T1–T11) | anterior ramus of thoracic spinal nerve | Anterior ramus of a thoracic spinal nerve running in the costal groove between the internal and innermost intercostals, supplying the intercostal muscles, parietal pleura and overlying skin. | The **N** of the costal-groove VAN (lowest of the three).<br>Block/aspiration: stay near the lower rib's upper border to spare the bundle. | 1 | `subcostal-nerve`, `lateral-cutaneous-branch`, `anterior-cutaneous-branch` | ? | procedural (schematic) |
+| `thoracic-wall` | `subcostal-nerve` | nervous / `nerve` | Subcostal nerve (T12) | ... | Anterior ramus of T12 running below the 12th rib (not in an intercostal space) into the abdominal wall. | Named "subcostal" because it lies below rib 12.<br>Contributes to anterior abdominal wall innervation. | 2 | `intercostal-nerve`, `posterior-ramus`, `lateral-cutaneous-branch` | ? | procedural (schematic) |
+| `thoracic-wall` | `posterior-ramus` | nervous / `nerve` | Posterior ramus | dorsal ramus | Branch given off as the spinal nerve emerges, supplying the intrinsic (deep) back muscles and the skin either side of the midline. | Motor to intrinsic back muscles (deep group).<br>Does not enter the intercostal space. | 2 | `intercostal-nerve`, `collateral-branch`, `lateral-cutaneous-branch` | ? | procedural (schematic) |
+| `thoracic-wall` | `collateral-branch` | nervous / `nerve` | Collateral branch | ... | Small branch of the intercostal nerve given near the rib angle, running along the upper border of the rib below. | Parallels the main nerve on the lower rib.<br>Supplies intercostal muscle & parietal pleura. | 3 | `lateral-cutaneous-branch`, `anterior-cutaneous-branch`, `intercostal-nerve` | ? | procedural (schematic) |
+| `thoracic-wall` | `lateral-cutaneous-branch` | nervous / `nerve` | Lateral cutaneous branch | ... | Largest cutaneous branch, piercing the wall in the mid-axillary line and dividing into anterior and posterior branches for the overlying skin. | The largest branch of the intercostal nerve.<br>T1 has none; T2 branch = intercostobrachial. | 2 | `anterior-cutaneous-branch`, `collateral-branch`, `intercostobrachial-nerve` | ? | procedural (schematic) |
+| `thoracic-wall` | `anterior-cutaneous-branch` | nervous / `nerve` | Anterior cutaneous branch | ... | Terminal cutaneous branch emerging parasternally (upper spaces) or on the anterior abdominal wall (T7–T12) to supply midline skin. | Upper six = thoracic; T7–T12 = thoraco-abdominal (supply abdominal skin).<br>Emerge lateral to the sternum/linea alba. | 2 | `lateral-cutaneous-branch`, `collateral-branch`, `intercostal-nerve` | ? | procedural (schematic) |
+| `thoracic-wall` | `intercostobrachial-nerve` | nervous / `nerve` | Intercostobrachial nerve | ... | Lateral cutaneous branch of T2 (± T3) that joins the medial cutaneous nerve of the arm to supply the axilla and medial upper arm. | Explains axillary/medial-arm referral & post-mastectomy numbness.<br>Communicates with the brachial plexus. | 3 | `lateral-cutaneous-branch`, `intercostal-nerve`, `anterior-cutaneous-branch` | ? | procedural (schematic) |
+| `thoracic-wall` | `dermatomes` | nervous / `nerve` | Thoracic dermatomes | thoracic sensory levels | The segmental skin fields of the thoracic anterior rami — T2 at the sternal angle/clavicle line, **T4 nipple, T6 xiphoid, T10 umbilicus**. | Classic landmark levels (T4 nipple, T10 umbilicus).<br>Overlap makes single-level loss subtle. | 2 | `anterior-cutaneous-branch`, `lateral-cutaneous-branch`, `intercostal-nerve` | ? | procedural (schematic) |
+| `thoracic-wall` | `white-ramus-communicans` | nervous / `nerve` | White ramus communicans | ... | Myelinated **preganglionic** sympathetic connection from a T1–L2 anterior ramus to the sympathetic trunk. | Present **only** at T1–L2 (lateral horn levels).<br>Carries preganglionic (myelinated) fibres. | 2 | `gray-ramus-communicans`, `sympathetic-trunk`, `greater-splanchnic-nerve` | ? | procedural (schematic) |
+| `thoracic-wall` | `gray-ramus-communicans` | nervous / `nerve` | Gray ramus communicans | ... | Unmyelinated **postganglionic** sympathetic connection from the trunk back to every spinal nerve for distribution to the body wall. | Present at **all** spinal levels.<br>Carries postganglionic (unmyelinated) fibres. | 2 | `white-ramus-communicans`, `sympathetic-trunk`, `intercostal-nerve` | ? | procedural (schematic) |
 
 ### Phrenic & vagus (4)
 
 | moduleKey | id | system / tissue | label | aliases | description | keyPoints | difficulty | distractorIds | proposedFMA | realOrSchematic |
 |---|---|---|---|---|---|---|---:|---|---|---|
-| `thoracic-innervation` | `right-phrenic-nerve` | nervous / `nerve` | Right phrenic nerve | ... | C3–C5 nerve descending lateral to the right brachiocephalic vein, SVC and right atrium (anterior to the lung root) to the diaphragm, passing through the caval opening. | Motor to its own hemidiaphragm; sensory to fibrous/parietal pericardium & pleura.<br>Passes through the **caval opening (T8)**. | 2 | `left-phrenic-nerve`, `right-vagus-nerve`, `left-vagus-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `left-phrenic-nerve` | nervous / `nerve` | Left phrenic nerve | ... | C3–C5 nerve descending over the aortic arch, lateral to the left vagus, anterior to the lung root and over the pericardium (lateral to the LV) to pierce the diaphragm near the apex. | Lies lateral to the vagus on the arch.<br>Pierces the diaphragm near the cardiac apex (not the caval opening). | 2 | `right-phrenic-nerve`, `left-vagus-nerve`, `right-vagus-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `right-vagus-nerve` | nervous / `nerve` | Right vagus nerve | CN X (right) | Enters the thorax in front of the right subclavian artery, runs on the right of the trachea behind the SVC, gives the right recurrent laryngeal nerve, then forms the posterior oesophageal plexus → posterior gastric nerve. | Right RLN loops under the **right subclavian artery**.<br>Contributes to pulmonary, cardiac & oesophageal plexuses. | 2 | `left-vagus-nerve`, `right-phrenic-nerve`, `right-recurrent-laryngeal-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `left-vagus-nerve` | nervous / `nerve` | Left vagus nerve | CN X (left) | Descends between the left common carotid and subclavian arteries, crosses the aortic arch (giving the left recurrent laryngeal nerve), passes behind the lung root and forms the anterior oesophageal plexus → anterior gastric nerve. | Gives the left RLN at the arch.<br>Parasympathetic to thoracic & upper abdominal viscera. | 2 | `right-vagus-nerve`, `left-phrenic-nerve`, `left-recurrent-laryngeal-nerve` | ? | procedural (schematic) |
+| `mediastinum` | `right-phrenic-nerve` | nervous / `nerve` | Right phrenic nerve | ... | C3–C5 nerve descending lateral to the right brachiocephalic vein, SVC and right atrium (anterior to the lung root) to the diaphragm, passing through the caval opening. | Motor to its own hemidiaphragm; sensory to fibrous/parietal pericardium & pleura.<br>Passes through the **caval opening (T8)**. | 2 | `left-phrenic-nerve`, `right-vagus-nerve`, `left-vagus-nerve` | ? | procedural (schematic) |
+| `mediastinum` | `left-phrenic-nerve` | nervous / `nerve` | Left phrenic nerve | ... | C3–C5 nerve descending over the aortic arch, lateral to the left vagus, anterior to the lung root and over the pericardium (lateral to the LV) to pierce the diaphragm near the apex. | Lies lateral to the vagus on the arch.<br>Pierces the diaphragm near the cardiac apex (not the caval opening). | 2 | `right-phrenic-nerve`, `left-vagus-nerve`, `right-vagus-nerve` | ? | procedural (schematic) |
+| `mediastinum` | `right-vagus-nerve` | nervous / `nerve` | Right vagus nerve | CN X (right) | Enters the thorax in front of the right subclavian artery, runs on the right of the trachea behind the SVC, gives the right recurrent laryngeal nerve, then forms the posterior oesophageal plexus → posterior gastric nerve. | Right RLN loops under the **right subclavian artery**.<br>Contributes to pulmonary, cardiac & oesophageal plexuses. | 2 | `left-vagus-nerve`, `right-phrenic-nerve`, `right-recurrent-laryngeal-nerve` | ? | procedural (schematic) |
+| `mediastinum` | `left-vagus-nerve` | nervous / `nerve` | Left vagus nerve | CN X (left) | Descends between the left common carotid and subclavian arteries, crosses the aortic arch (giving the left recurrent laryngeal nerve), passes behind the lung root and forms the anterior oesophageal plexus → anterior gastric nerve. | Gives the left RLN at the arch.<br>Parasympathetic to thoracic & upper abdominal viscera. | 2 | `right-vagus-nerve`, `left-phrenic-nerve`, `left-recurrent-laryngeal-nerve` | ? | procedural (schematic) |
 
 ### Recurrent laryngeal nerves (2)
 
 | moduleKey | id | system / tissue | label | aliases | description | keyPoints | difficulty | distractorIds | proposedFMA | realOrSchematic |
 |---|---|---|---|---|---|---|---:|---|---|---|
-| `thoracic-innervation` | `left-recurrent-laryngeal-nerve` | nervous / `nerve` | Left recurrent laryngeal nerve | left RLN | Branch of the left vagus hooking **under the aortic arch** just lateral to the ligamentum arteriosum, ascending in the tracheo-oesophageal groove to the larynx. | A content of the superior mediastinum (longer than the right).<br>Compressed in the AP window (nodes, LA enlargement, aneurysm) → hoarseness. | 2 | `right-recurrent-laryngeal-nerve`, `left-vagus-nerve`, `right-vagus-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `right-recurrent-laryngeal-nerve` | nervous / `nerve` | Right recurrent laryngeal nerve | right RLN | Branch of the right vagus hooking under the **right subclavian artery** and ascending to the larynx; barely enters the thorax. | Loops at the neck root, not the mediastinum (unlike the left).<br>Shorter course than the left. | 2 | `left-recurrent-laryngeal-nerve`, `right-vagus-nerve`, `left-vagus-nerve` | ? | procedural (schematic) |
+| `mediastinum` | `left-recurrent-laryngeal-nerve` | nervous / `nerve` | Left recurrent laryngeal nerve | left RLN | Branch of the left vagus hooking **under the aortic arch** just lateral to the ligamentum arteriosum, ascending in the tracheo-oesophageal groove to the larynx. | A content of the superior mediastinum (longer than the right).<br>Compressed in the AP window (nodes, LA enlargement, aneurysm) → hoarseness. | 2 | `right-recurrent-laryngeal-nerve`, `left-vagus-nerve`, `right-vagus-nerve` | ? | procedural (schematic) |
+| `mediastinum` | `right-recurrent-laryngeal-nerve` | nervous / `nerve` | Right recurrent laryngeal nerve | right RLN | Branch of the right vagus hooking under the **right subclavian artery** and ascending to the larynx; barely enters the thorax. | Loops at the neck root, not the mediastinum (unlike the left).<br>Shorter course than the left. | 2 | `left-recurrent-laryngeal-nerve`, `right-vagus-nerve`, `left-vagus-nerve` | ? | procedural (schematic) |
 
 ### Sympathetic trunk & splanchnic nerves (5)
 
 | moduleKey | id | system / tissue | label | aliases | description | keyPoints | difficulty | distractorIds | proposedFMA | realOrSchematic |
 |---|---|---|---|---|---|---|---:|---|---|---|
-| `thoracic-innervation` | `sympathetic-trunk` | nervous / `nerve` | Thoracic sympathetic trunk & ganglia | paravertebral chain | Paired ganglionated chains on the heads of the ribs (upper) and vertebral bodies (lower), ~11–12 ganglia joined by interganglionic fibres, continuous with the cervical and lumbar trunks. | Upper ganglia lie on rib heads; lower on the vertebral bodies.<br>Upper five give cardiac/pulmonary/oesophageal branches; lower seven give the splanchnics. | 2 | `cervicothoracic-ganglion`, `greater-splanchnic-nerve`, `white-ramus-communicans` | ? | procedural (schematic) |
-| `thoracic-innervation` | `cervicothoracic-ganglion` | nervous / `nerve` | Cervicothoracic (stellate) ganglion | stellate ganglion | Fusion of the inferior cervical and first thoracic ganglia at the neck of the first rib. | Common fusion (stellate) supplying head, neck & upper limb sympathetics.<br>Lies on the neck of rib 1. | 3 | `sympathetic-trunk`, `greater-splanchnic-nerve`, `lesser-splanchnic-nerve` | ? | procedural (schematic) |
-| `thoracic-innervation` | `greater-splanchnic-nerve` | nervous / `nerve` | Greater splanchnic nerve | ... | Preganglionic sympathetic nerve from **T5–T9** ganglia, descending medially to pierce the crus and synapse in the coeliac ganglion. | Preganglionic (myelinated) to the coeliac ganglion.<br>T5–T9 origin. | 2 | `lesser-splanchnic-nerve`, `least-splanchnic-nerve`, `sympathetic-trunk` | ? | procedural (schematic) |
-| `thoracic-innervation` | `lesser-splanchnic-nerve` | nervous / `nerve` | Lesser splanchnic nerve | ... | Preganglionic nerve from **T9–T11** ganglia to the aorticorenal ganglion. | Synapses in the aorticorenal ganglion.<br>T9–T11 origin, lateral to the greater. | 3 | `greater-splanchnic-nerve`, `least-splanchnic-nerve`, `sympathetic-trunk` | ? | procedural (schematic) |
-| `thoracic-innervation` | `least-splanchnic-nerve` | nervous / `nerve` | Least (lowest) splanchnic nerve | ... | Preganglionic nerve from the **T12** (lowest) ganglion piercing the crus to the renal plexus/ganglion. | Lowest, most lateral splanchnic.<br>Joins the renal plexus. | 3 | `lesser-splanchnic-nerve`, `greater-splanchnic-nerve`, `sympathetic-trunk` | ? | procedural (schematic) |
+| `mediastinum` | `sympathetic-trunk` | nervous / `nerve` | Thoracic sympathetic trunk & ganglia | paravertebral chain | Paired ganglionated chains on the heads of the ribs (upper) and vertebral bodies (lower), ~11–12 ganglia joined by interganglionic fibres, continuous with the cervical and lumbar trunks. | Upper ganglia lie on rib heads; lower on the vertebral bodies.<br>Upper five give cardiac/pulmonary/oesophageal branches; lower seven give the splanchnics. | 2 | `cervicothoracic-ganglion`, `greater-splanchnic-nerve`, `white-ramus-communicans` | ? | procedural (schematic) |
+| `mediastinum` | `cervicothoracic-ganglion` | nervous / `nerve` | Cervicothoracic (stellate) ganglion | stellate ganglion | Fusion of the inferior cervical and first thoracic ganglia at the neck of the first rib. | Common fusion (stellate) supplying head, neck & upper limb sympathetics.<br>Lies on the neck of rib 1. | 3 | `sympathetic-trunk`, `greater-splanchnic-nerve`, `lesser-splanchnic-nerve` | ? | procedural (schematic) |
+| `mediastinum` | `greater-splanchnic-nerve` | nervous / `nerve` | Greater splanchnic nerve | ... | Preganglionic sympathetic nerve from **T5–T9** ganglia, descending medially to pierce the crus and synapse in the coeliac ganglion. | Preganglionic (myelinated) to the coeliac ganglion.<br>T5–T9 origin. | 2 | `lesser-splanchnic-nerve`, `least-splanchnic-nerve`, `sympathetic-trunk` | ? | procedural (schematic) |
+| `mediastinum` | `lesser-splanchnic-nerve` | nervous / `nerve` | Lesser splanchnic nerve | ... | Preganglionic nerve from **T9–T11** ganglia to the aorticorenal ganglion. | Synapses in the aorticorenal ganglion.<br>T9–T11 origin, lateral to the greater. | 3 | `greater-splanchnic-nerve`, `least-splanchnic-nerve`, `sympathetic-trunk` | ? | procedural (schematic) |
+| `mediastinum` | `least-splanchnic-nerve` | nervous / `nerve` | Least (lowest) splanchnic nerve | ... | Preganglionic nerve from the **T12** (lowest) ganglion piercing the crus to the renal plexus/ganglion. | Lowest, most lateral splanchnic.<br>Joins the renal plexus. | 3 | `lesser-splanchnic-nerve`, `greater-splanchnic-nerve`, `sympathetic-trunk` | ? | procedural (schematic) |
 
 ### Autonomic plexuses (4)
 
 | moduleKey | id | system / tissue | label | aliases | description | keyPoints | difficulty | distractorIds | proposedFMA | realOrSchematic |
 |---|---|---|---|---|---|---|---:|---|---|---|
-| `thoracic-innervation` | `superficial-cardiac-plexus` | nervous / `nerve` | Superficial cardiac plexus | ... | Small plexus below the aortic arch (right of the ligamentum arteriosum) from the left sympathetic cardiac branch and left vagal (inferior cervical) cardiac branch. | Lies at the inferior arch border, right of the ligamentum arteriosum.<br>Sympathetic ↑ rate/force; parasympathetic ↓. | 3 | `deep-cardiac-plexus`, `pulmonary-plexus`, `oesophageal-plexus` | ? | procedural (schematic) |
-| `thoracic-innervation` | `deep-cardiac-plexus` | nervous / `nerve` | Deep cardiac plexus | ... | Larger plexus anterior to the tracheal bifurcation, behind the arch, from both sympathetic trunks and both vagi (except the superficial contributors). | Sits in front of the carina, behind the arch.<br>Cardiac ischaemic pain refers via T1–T5 sympathetic afferents to the left chest/arm. | 3 | `superficial-cardiac-plexus`, `pulmonary-plexus`, `oesophageal-plexus` | ? | procedural (schematic) |
-| `thoracic-innervation` | `pulmonary-plexus` | nervous / `nerve` | Pulmonary plexus | ... | Anterior and (larger) posterior plexuses at each lung root from the vagus and sympathetic trunk. | Vagal = bronchoconstriction/secretion; sympathetic = bronchodilation.<br>Located at the hila, mostly posterior. | 3 | `oesophageal-plexus`, `deep-cardiac-plexus`, `superficial-cardiac-plexus` | ? | procedural (schematic) |
-| `thoracic-innervation` | `oesophageal-plexus` | nervous / `nerve` | Oesophageal plexus | esophageal plexus | Network on the lower oesophagus from both vagi (after the pulmonary plexuses) and sympathetic fibres, reforming as the anterior (left) & posterior (right) vagal trunks. | Left vagus → anterior trunk; right vagus → posterior trunk.<br>Trunks pass the oesophageal hiatus at T10. | 3 | `pulmonary-plexus`, `deep-cardiac-plexus`, `left-vagus-nerve` | ? | procedural (schematic) |
+| `heart` | `superficial-cardiac-plexus` | nervous / `nerve` | Superficial cardiac plexus | ... | Small plexus below the aortic arch (right of the ligamentum arteriosum) from the left sympathetic cardiac branch and left vagal (inferior cervical) cardiac branch. | Lies at the inferior arch border, right of the ligamentum arteriosum.<br>Sympathetic ↑ rate/force; parasympathetic ↓. | 3 | `deep-cardiac-plexus`, `pulmonary-plexus`, `oesophageal-plexus` | ? | procedural (schematic) |
+| `heart` | `deep-cardiac-plexus` | nervous / `nerve` | Deep cardiac plexus | ... | Larger plexus anterior to the tracheal bifurcation, behind the arch, from both sympathetic trunks and both vagi (except the superficial contributors). | Sits in front of the carina, behind the arch.<br>Cardiac ischaemic pain refers via T1–T5 sympathetic afferents to the left chest/arm. | 3 | `superficial-cardiac-plexus`, `pulmonary-plexus`, `oesophageal-plexus` | ? | procedural (schematic) |
+| `mediastinum` | `pulmonary-plexus` | nervous / `nerve` | Pulmonary plexus | ... | Anterior and (larger) posterior plexuses at each lung root from the vagus and sympathetic trunk. | Vagal = bronchoconstriction/secretion; sympathetic = bronchodilation.<br>Located at the hila, mostly posterior. | 3 | `oesophageal-plexus`, `deep-cardiac-plexus`, `superficial-cardiac-plexus` | ? | procedural (schematic) |
+| `mediastinum` | `oesophageal-plexus` | nervous / `nerve` | Oesophageal plexus | esophageal plexus | Network on the lower oesophagus from both vagi (after the pulmonary plexuses) and sympathetic fibres, reforming as the anterior (left) & posterior (right) vagal trunks. | Left vagus → anterior trunk; right vagus → posterior trunk.<br>Trunks pass the oesophageal hiatus at T10. | 3 | `pulmonary-plexus`, `deep-cardiac-plexus`, `left-vagus-nerve` | ? | procedural (schematic) |
+
+### Detailed cardiac autonomic routes (8)
+
+The interactive manifest further separates the superior, middle and inferior cervical cardiac nerves,
+thoracic sympathetic cardiac nerves, vagal cardiac branches, right and left coronary plexuses, and cardiac
+visceral-afferent pathways. These are individually selectable and quizable overlays over the real heart and
+great-vessel context; the separation supports pathway and clinical-correlation questions that a single
+generic “cardiac plexus” object cannot test.
 
 ---
 
@@ -331,13 +341,12 @@ communicantes, and the autonomic plexuses. All are drawn procedurally and placed
 
 | moduleKey | title | count |
 |---|---|---:|
-| `thoracic-wall` | Thoracic skeleton, wall & diaphragm | 44 |
-| `heart` | Heart, valves, coronaries, conduction & pericardium | 48 |
-| `mediastinum` | Mediastinum, great vessels & viscera | 32 |
-| `thoracic-innervation` | Thoracic nerves & autonomics | 25 |
-| **Region total** | | **149** |
+| `thoracic-wall` | Thoracic skeleton, wall, diaphragm & nerves | 54 |
+| `heart` | Heart, coronaries, pericardium & cardiac nerves | 58 |
+| `mediastinum` | Mediastinum, great vessels, viscera & nerves | 45 |
+| **Region total** | | **157** |
 
-### `thoracic-wall` (44) — by sub-group
+### `thoracic-wall` (54) — by sub-group
 
 | sub-group | count |
 |---|---:|
@@ -346,8 +355,9 @@ communicantes, and the autonomic plexuses. All are drawn procedurally and placed
 | Joints & ligaments | 6 |
 | Muscles | 13 |
 | Wall vasculature | 7 |
+| Somatic wall nerves & rami | 10 |
 
-### `heart` (48) — by sub-group
+### `heart` (58) — by sub-group
 
 | sub-group | count |
 |---|---:|
@@ -357,8 +367,9 @@ communicantes, and the autonomic plexuses. All are drawn procedurally and placed
 | Coronary vessels | 10 |
 | Conduction system | 5 |
 | Pericardium | 6 |
+| Cardiac autonomic nerves & plexuses | 10 |
 
-### `mediastinum` (32) — by sub-group
+### `mediastinum` (45) — by sub-group
 
 | sub-group | count |
 |---|---:|
@@ -366,8 +377,9 @@ communicantes, and the autonomic plexuses. All are drawn procedurally and placed
 | Arteries & arterial great vessels | 11 |
 | Venous great vessels & azygos system | 9 |
 | Visceral tubes, thymus & thoracic duct | 8 |
+| Mediastinal, visceral and sympathetic nerves | 13 |
 
-### `thoracic-innervation` (25) — by sub-group
+### Nerve distribution (33)
 
 | sub-group | count |
 |---|---:|
@@ -376,6 +388,7 @@ communicantes, and the autonomic plexuses. All are drawn procedurally and placed
 | Recurrent laryngeal nerves | 2 |
 | Sympathetic trunk & splanchnics | 5 |
 | Autonomic plexuses | 4 |
+| Detailed cardiac autonomic routes | 8 |
 
 ### Per-engine-tissue totals (whole region)
 
@@ -386,7 +399,7 @@ communicantes, and the autonomic plexuses. All are drawn procedurally and placed
 | `muscle` | 27 | wall + accessory + pectoral/serratus muscles, diaphragm, oesophagus, cardiac walls/septa/pectinate/trabeculae/conduction |
 | `ligament` | 4 | radiate ligament, ligamentum arteriosum, cardiac skeleton, chordae tendineae |
 | `membrane` | 11 | suprapleural/endothoracic, valves, IVC/coronary-sinus valves, pericardial serous layers |
-| `nerve` | 25 | all of `thoracic-innervation` |
+| `nerve` | 33 | thoracic wall 10 + heart 10 + mediastinum 13 |
 | `artery` | 20 | wall (5) + coronary (6) + arterial great vessels (9) |
 | `vein` | 16 | wall (2) + cardiac (4) + venous great vessels/azygos (9) + thoracic duct (1) |
 | `cavity` | 22 | apertures, mediastinal divisions/AP window, chambers, auricle, surfaces, conus/vestibule, pericardial spaces |
@@ -446,7 +459,7 @@ surfaces the following gaps, now filled by the four thorax modules:
    **oesophagus** (+ constrictions), **thymus**, **thoracic duct**, the **mediastinal divisions**, and the
    **aortopulmonary window** — all absent from `cvs`.
 
-7. **Thoracic innervation is an entire block `cvs` omits.** The neurovascular and mediastinum lectures give a
+7. **Thoracic innervation is now integrated instead of omitted.** The neurovascular and mediastinum lectures give a
    full nervous-system tour: **intercostal nerves** and branches (posterior ramus, collateral, lateral &
    anterior cutaneous, **intercostobrachial**), **dermatomes** (T4 nipple, T10 umbilicus), **rami
    communicantes** (white T1–L2 preganglionic vs gray at all levels), **phrenic** (C3–C5; right through the
@@ -454,10 +467,9 @@ surfaces the following gaps, now filled by the four thorax modules:
    **recurrent laryngeal** nerves (left under the arch/ligamentum arteriosum → hoarseness; right under the
    subclavian), the **sympathetic trunk** (stellate ganglion; upper-5 vs lower-7 branching), the **greater/
    lesser/least splanchnic** nerves (T5–T9 / T9–T11 / T12), and the **cardiac/pulmonary/oesophageal plexuses**
-   (superficial vs deep cardiac). This is the `thoracic-innervation` module.
+   (superficial vs deep cardiac). These targets are distributed among the wall, heart and mediastinum nerve layers.
 
 8. **Design choice for MCQ integrity.** `distractorIds` are kept **within-module** (matching the seeded
-   `quiz.mjs`, which draws distractors from the current module), and every ID is unique across all four
-   modules so the four manifests can register in one region without collision. The intercostal neurovascular
-   bundle is deliberately split (vessels in `thoracic-wall`, nerve in `thoracic-innervation`) because the two
-   halves colour differently and belong to different 3D models, with the VAN mnemonic carried on both sides.
+   `quiz.mjs`, which draws distractors from the current module), and every ID is unique across all three
+   modules. The complete intercostal neurovascular bundle now lives in `thoracic-wall`, where vein, artery
+   and nerve retain separate blue, red and yellow materials and the VAN mnemonic remains visible in context.

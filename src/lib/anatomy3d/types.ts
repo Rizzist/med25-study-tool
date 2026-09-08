@@ -4,6 +4,8 @@ export type Tissue =
   | "mucosa"
   | "muscle"
   | "ligament"
+  | "tendon"
+  | "fascia"
   | "membrane"
   | "airway"
   | "lung"
@@ -53,5 +55,6 @@ export type AnatomyModuleManifest = {
 export type AnatomyModelHandle = {
   root: import("three").Group;
   structures: Map<string, import("three").Object3D[]>;
+  aliases?: Map<string, string[]>;
   dispose(): void;
 };

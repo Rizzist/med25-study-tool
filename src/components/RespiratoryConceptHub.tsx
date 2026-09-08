@@ -8,6 +8,8 @@ import {
   respiratoryConceptsForQuestion, type RespiratoryConcept, type RespiratorySubject,
 } from "@/src/lib/respiratory/concepts";
 import { useRespiratoryReading, toggleRespiratoryRead } from "@/src/lib/respiratory/reading-store";
+import { filterDepthIds, type PracticeDepth } from "@/src/lib/term2/practice-depth.mjs";
+import { PracticeDepthSelect } from "./PracticeDepthSelect";
 
 const subjects = Object.keys(respiratorySubjectLabels) as RespiratorySubject[];
 type Practice = (scopeId: string, ids: string[], mode: "learn" | "exam", limit: number) => void;
@@ -41,6 +43,7 @@ export function RespiratoryConceptHub({ attemptedIds, repairIds, disabled, onPra
   const [view, setView] = useState<"study" | "audit">("study");
   const [mode, setMode] = useState<"learn" | "exam">("learn");
   const [limit, setLimit] = useState(20);
+  const [depth, setDepth] = useState<PracticeDepth>("all");
   const [focusRequest, setFocusRequest] = useState<{ id: string } | null>(respiratoryConcepts.some((concept) => concept.id === initialScopeId) ? { id: initialScopeId! } : null);
   const { readIds, ready, storageError } = useRespiratoryReading();
 
@@ -73,11 +76,12 @@ export function RespiratoryConceptHub({ attemptedIds, repairIds, disabled, onPra
       ...concept.retrievalPrompts.flatMap((prompt) => [prompt.prompt, prompt.answer]),
     ].join(" ").toLowerCase().includes(search);
   });
-  const selectedIds = [...new Set(visible.flatMap(conceptIds))];
+  const selectedIds = filterDepthIds(visible.flatMap(conceptIds), respiratoryQuestionIndex, depth);
   const selectedDistinct = respiratoryDistinctIds(selectedIds).length;
 
   function practice(id: string, ids: string[], requestedLimit = limit) {
-    onPractice(id, ids, mode, Math.min(requestedLimit, respiratoryDistinctIds(ids).length, 250));
+    const chosen = requestedLimit === 1 ? ids : filterDepthIds(ids, respiratoryQuestionIndex, depth);
+    if (chosen.length) onPractice(id, chosen, mode, Math.min(requestedLimit, respiratoryDistinctIds(chosen).length, 250));
   }
 
   return <div className="resp-concept-hub">
@@ -134,10 +138,11 @@ export function RespiratoryConceptHub({ attemptedIds, repairIds, disabled, onPra
           <div className="resp-practice-controls"><label><span>Practice mode</span><select value={mode} onChange={(event) => setMode(event.target.value as "learn" | "exam")}><option value="learn">Learn · immediate explanations</option><option value="exam">Mock · explanations after grading</option></select></label><label><span>Session size</span><select value={limit} onChange={(event) => setLimit(Number(event.target.value))}>{[10, 20, 40, 60, 100, 250].map((value) => <option key={value} value={value}>{value === 250 ? "All available (up to 250)" : value}</option>)}</select></label>
             <button className="primary" disabled={disabled || !selectedIds.length} onClick={() => practice(moduleId, selectedIds)}>Practice shown concepts →</button>
           </div>
-          <p className="resp-small-note">Learn prioritizes repair, then unseen items; mixed practice rotates subjects and concepts. Mock uses balanced practice sampling, not an official exam distribution. Notes and concept links stay hidden during mock questions until grading.</p>
+          <PracticeDepthSelect value={depth} onChange={setDepth} />
+          <p className="resp-small-note">Question depth filters practice, not the theory notes. Core = difficulty 1–3; challenge = 4–5 (editorial, not faculty-calibrated). Inspecting a single linked question opens it regardless of this filter. Mock is source-based practice, not a past paper.</p>
           {!visible.length && <div className="resp-empty"><h3>No concepts match these filters.</h3><p>{filter === "unsampled" ? "Every objective in this selection has at least one linked MCQ. Use the source audit to see remaining source limits." : "Try another module or clear the filters."}</p><button onClick={() => { setModuleId("all"); setQuery(""); setFilter("all"); setScopeFilter("all"); }}>Show all concepts</button></div>}
           <div className="resp-concept-list">{visible.map((concept) => {
-            const ids = conceptIds(concept);
+            const ids = filterDepthIds(conceptIds(concept), respiratoryQuestionIndex, depth);
             const stats = respiratoryQuestionProgress(ids, attemptedIds, repairIds);
             const linkedObjectives = concept.objectives.filter((objective) => objective.questionIds.length).length;
             return <details className="resp-concept-card" key={concept.id} id={concept.id}>
@@ -148,11 +153,11 @@ export function RespiratoryConceptHub({ attemptedIds, repairIds, disabled, onPra
                 <h4>Recall it before looking</h4><div className="resp-retrieval">{concept.retrievalPrompts.map((prompt, index) => <article key={index}><p>{prompt.prompt}</p><details><summary>Reveal model answer</summary><p>{prompt.answer}</p></details></article>)}</div>
                 <h4>Learning objectives ↔ MCQs</h4><p className="resp-small-note">These links identify what a question directly samples. Work through the notes and recall prompts as well; a correct MCQ does not demonstrate every detail.</p>
                 <ul className="resp-objectives">{concept.objectives.map((objective) => <li key={objective.id}><p>{objective.text}</p>
-                  <div><span>{respiratoryDistinctIds(objective.questionIds).length} distinct items</span><button disabled={disabled || !objective.questionIds.length} onClick={() => practice(concept.id, objective.questionIds)}>Practice objective</button></div>
-                  {objective.questionIds.length > 0 ? <details className="resp-question-map"><summary>Inspect linked questions ({objective.questionIds.length} records)</summary>{objective.questionIds.map((id) => <button disabled={disabled} key={id} onClick={() => practice(concept.id, [id], 1)}><span>{respiratoryQuestionIndex[id]?.prompt ?? id}</span><small>{id} · {respiratoryQuestionIndex[id]?.kind === "dynamic_anatomy" ? "dynamic anatomy variant" : respiratoryQuestionIndex[id]?.addedForGap ? "added after gap audit" : "existing bank"}</small></button>)}</details> : <small className="resp-unsampled">Study notes present; no direct MCQ yet.</small>}
+                  <div><span>{respiratoryDistinctIds(objective.questionIds).length} distinct items</span><button disabled={disabled || !filterDepthIds(objective.questionIds, respiratoryQuestionIndex, depth).length} onClick={() => practice(concept.id, objective.questionIds)}>Practice objective</button></div>
+                  {objective.questionIds.length > 0 ? <details className="resp-question-map"><summary>Inspect linked questions ({objective.questionIds.length} records)</summary>{objective.questionIds.map((id) => <button disabled={disabled} key={id} onClick={() => practice(concept.id, [id], 1)}><span>{respiratoryQuestionIndex[id]?.prompt ?? id}</span><small>{id} · {respiratoryQuestionIndex[id]?.knowledgeLevel === "challenge" ? "Challenge" : "Core"} · {respiratoryQuestionIndex[id]?.kind === "dynamic_anatomy" ? "dynamic anatomy variant" : respiratoryQuestionIndex[id]?.addedForGap ? "added after gap audit" : "existing bank"}</small></button>)}</details> : <small className="resp-unsampled">Study notes present; no direct MCQ yet.</small>}
                 </li>)}</ul>
                 <div className="resp-concept-actions"><label><input type="checkbox" checked={read.has(concept.id)} disabled={!ready} onChange={() => toggleRespiratoryRead(concept.id)} /> Mark theory as read</label><button className="primary" disabled={disabled || !ids.length} onClick={() => practice(concept.id, ids)}>Practice this concept →</button>{stats.repair > 0 && <button disabled={disabled} onClick={() => onPractice(concept.id, ids.filter((id) => repairIds.includes(id)), "learn", 250)}>Repair linked questions</button>}</div>
-                <footer className="resp-concept-sources"><h4>Read at the source</h4>{concept.sources.map((source, index) => <p key={index}><b>{source.basis === "slides" ? "Slides" : "Book"}</b> {respiratorySourceText(source)}</p>)}</footer>
+                <footer className="resp-concept-sources"><h4>Read at the source</h4>{concept.sources.map((source, index) => <p key={index}><b>{source.basis.charAt(0).toUpperCase() + source.basis.slice(1)}</b> {respiratorySourceText(source)}</p>)}</footer>
               </div>
             </details>;
           })}</div>

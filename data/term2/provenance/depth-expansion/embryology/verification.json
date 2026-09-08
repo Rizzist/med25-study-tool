@@ -1,0 +1,2146 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-07",
+  "reviewStatus": "authoring-agent source and structure self-check complete; independent review pending",
+  "validationNote": "A pass here records the authoring agent’s source-locator and single-best-answer self-check. It is not faculty, clinician, or expert validation; the independent-agent review gate remains pending.",
+  "sourceFiles": [
+    {
+      "title": "Langman's Medical Embryology",
+      "edition": "15th ed., non-OCR",
+      "path": "/Users/rizzist/Documents/MED SCHOOL BOOKS/embryology/Langman's Medical Embryology 15th Edition.pdf",
+      "audit": "Chapter starts and cited printed/PDF offsets visually checked; source used to confirm OCR-sensitive wording."
+    },
+    {
+      "title": "Langman's Medical Embryology",
+      "edition": "15th ed., OCR copy",
+      "path": "/Users/rizzist/Documents/MED SCHOOL BOOKS/embryology/Langman's Medical Embryology 15th Edition - OCR.pdf",
+      "audit": "Relevant chapter text extracted and checked against the non-OCR page images."
+    },
+    {
+      "title": "Cardiovascular - Heart formation — Transcript EN",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/01 Cardiovascular/Embryology/Lecture Transcripts/Cardiovascular - Heart formation — Transcript EN.md",
+      "audit": "Timestamped transcript read; ASR errors reconciled against the textbook and recorded in coverage.json."
+    },
+    {
+      "title": "vesseles (1) and vesseles (2) — Transcript EN",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/01 Cardiovascular/Embryology/Lecture Transcripts",
+      "audit": "Both timestamped transcripts read; venous and interrupted-arch ASR errors reconciled against the textbook."
+    },
+    {
+      "title": "Embryology of respiratory system E1/E2",
+      "path": "/Users/rizzist/Documents/Med Slides/TERM 2/02 Respiratory/Embryology",
+      "audit": "Both PPTX files parsed directly; slide locators and terminology reconciled with Langman 15e."
+    }
+  ],
+  "questionVerification": [
+    {
+      "questionId": "depth-cvs-emb-001",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 188 / PDF p. 200",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-002",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 188 / PDF p. 200",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-003",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 188 / PDF p. 200",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-004",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 188-189 / PDF pp. 200-201",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-005",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 189 / PDF p. 201",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-006",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 183-185 / PDF pp. 195-197",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-007",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 185 / PDF p. 197",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-008",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 185, 212 / PDF pp. 197, 224",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-009",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 185, 191-192 / PDF pp. 197, 203-204",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-010",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 189 / PDF p. 201",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-011",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-induction-fields",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 182 / PDF p. 194",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-012",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-looping-segments",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 185-186 / PDF pp. 197-198",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-013",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-looping-segments",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 186-187 / PDF pp. 198-199",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-014",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-looping-segments",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 187 / PDF p. 199",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-015",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-looping-segments",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 187 / PDF p. 199",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-016",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 189 / PDF p. 201",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-017",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 189-190 / PDF pp. 201-202",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-018",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 190 / PDF p. 202",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-019",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 190 / PDF p. 202",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-020",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 190, 195 / PDF pp. 202, 207",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-021",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 194 / PDF p. 206",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-022",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 194-195 / PDF pp. 206-207",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-023",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 195 / PDF p. 207",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-024",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-atrial-incorporation",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 192 / PDF p. 204",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-025",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 191-192 / PDF pp. 203-204",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-026",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 191 / PDF p. 203",
+      "scope": "course-scope",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-027",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 191-192 / PDF pp. 203-204",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-028",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 191 / PDF p. 203",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-029",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 192 / PDF p. 204",
+      "scope": "course-scope",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-030",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 192-193 / PDF pp. 204-205",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-031",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 220 / PDF p. 232",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-032",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 195-196 / PDF pp. 207-208",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-033",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 195 / PDF p. 207",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-034",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 196-197 / PDF pp. 208-209",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-035",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 200 / PDF p. 212",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-036",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-cushions-septa",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 200 / PDF p. 212",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-037",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-valves-outflow",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 200-201 / PDF pp. 212-213",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-038",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-valves-outflow",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 201 / PDF p. 213",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-039",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-valves-outflow",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 201-202 / PDF pp. 213-214",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-040",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-valves-outflow",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 202 / PDF p. 214",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-041",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-valves-outflow",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 202, 204 / PDF pp. 214, 216",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-042",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-valves-outflow",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 204-205 / PDF pp. 216-217",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-043",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 197 / PDF p. 209",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-044",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 198-199 / PDF pp. 210-211",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-045",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 198-200 / PDF pp. 210-212",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-046",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 205-206 / PDF pp. 217-218",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-047",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 205-206 / PDF pp. 217-218",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-048",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 206 / PDF p. 218",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-049",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 202, 206 / PDF pp. 214, 218",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-050",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 207 / PDF p. 219",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-051",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 207 / PDF p. 219",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-052",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-congenital-mechanisms",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 207 / PDF p. 219",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-053",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-conduction-system",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 208 / PDF p. 220",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-054",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-conduction-system",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 208 / PDF p. 220",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-055",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-conduction-system",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 208 / PDF p. 220",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-056",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-conduction-system",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 208 / PDF p. 220",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-057",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 208 / PDF p. 220",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-058",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 208-209 / PDF pp. 220-221",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-059",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 208 / PDF p. 220",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-060",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 209-211 / PDF pp. 221-223",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-061",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 209-211 / PDF pp. 221-223",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-062",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 210-211 / PDF pp. 222-223",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-063",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 210-211 / PDF pp. 222-223",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-064",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 211 / PDF p. 223",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-065",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 212 / PDF p. 224",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-066",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 212-213 / PDF pp. 224-225",
+      "scope": "course-scope",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-067",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 213-214 / PDF pp. 225-226",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-068",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-arterial-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 213-215 / PDF pp. 225-227",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-069",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 215-217 / PDF pp. 227-229",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-070",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 215-216 / PDF pp. 227-228",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-071",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 216-217 / PDF pp. 228-229",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-072",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 217-218 / PDF pp. 229-230",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-073",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 217 / PDF p. 229",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-074",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 217 / PDF p. 229",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-075",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 217-218 / PDF pp. 229-230",
+      "scope": "course-scope",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-076",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-venous-remodeling",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 218 / PDF p. 230",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-077",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 219 / PDF p. 231",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-078",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 219 / PDF p. 231",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-079",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 219-220 / PDF pp. 231-232",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-080",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 220 / PDF p. 232",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-081",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed pp. 219-220 / PDF pp. 231-232",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-082",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 220 / PDF p. 232",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-083",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 220 / PDF p. 232",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-cvs-emb-084",
+      "examId": "term2-cvs",
+      "conceptId": "depth-cvs-emb-fetal-transition",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 13 - Cardiovascular System; printed p. 220 / PDF p. 232",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-001",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E1; 15th ed. book; 14 - Respiratory System; printed p. 225 / PDF p. 237; lecture Embryology of respiratory system E1.pptx; slide 3",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-002",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E1; 15th ed. book; 14 - Respiratory System; printed p. 225 / PDF p. 237; lecture Embryology of respiratory system E1.pptx; slide 5",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-003",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E1; 15th ed. book; 14 - Respiratory System; printed pp. 225-226 / PDF pp. 237-238; lecture Embryology of respiratory system E1.pptx; slide 6",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-004",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E1; 15th ed. book; 14 - Respiratory System; printed pp. 226-227 / PDF pp. 238-239; lecture Embryology of respiratory system E1.pptx; slide 7-10",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-005",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 14 - Respiratory System; printed p. 227 / PDF p. 239; lecture Embryology of respiratory system E1.pptx; slide 11-12",
+      "scope": "course-scope",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-006",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E1; 15th ed. book; 14 - Respiratory System; printed p. 227 / PDF p. 239; lecture Embryology of respiratory system E1.pptx; slide 12",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-007",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 14 - Respiratory System; printed p. 228 / PDF p. 240",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-008",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E2; 15th ed. book; 14 - Respiratory System; printed p. 228 / PDF p. 240; lecture Embryology of respiratory system E2.pptx; slide 4",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-009",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-induction-branching",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E1; 15th ed. book; 14 - Respiratory System; printed p. 228 / PDF p. 240; lecture Embryology of respiratory system E1.pptx; slide 15-17",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-010",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-maturation-anomalies",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E2; 15th ed. book; 14 - Respiratory System; printed pp. 229-230 / PDF pp. 241-242; lecture Embryology of respiratory system E2.pptx; slide 6-7",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-011",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-maturation-anomalies",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E2; 15th ed. book; 14 - Respiratory System; printed pp. 229-230 / PDF pp. 241-242; lecture Embryology of respiratory system E2.pptx; slide 7",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-012",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-maturation-anomalies",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E2; 15th ed. book; 14 - Respiratory System; printed p. 230 / PDF p. 242; lecture Embryology of respiratory system E2.pptx; slide 7-8",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-013",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-maturation-anomalies",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E2; 15th ed. book; 14 - Respiratory System; printed p. 230 / PDF p. 242; lecture Embryology of respiratory system E2.pptx; slide 13",
+      "scope": "course-scope",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-014",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-maturation-anomalies",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E2; 15th ed. book; 14 - Respiratory System; printed pp. 228, 230-231 / PDF pp. 240, 242-243; lecture Embryology of respiratory system E2.pptx; slide 6",
+      "scope": "course-scope",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-resp-emb-015",
+      "examId": "term2-respiratory",
+      "conceptId": "depth-resp-emb-maturation-anomalies",
+      "supportingLocator": "Langman's Medical Embryology and Respiratory Embryology E2; 15th ed. book; 14 - Respiratory System; printed p. 231 / PDF p. 243; lecture Embryology of respiratory system E2.pptx; slide 11",
+      "scope": "course-scope",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-001",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 169, 171 / PDF pp. 181, 183",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-002",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 169, 173-175 / PDF pp. 181, 185-187",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-003",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 173-175 / PDF pp. 185-187",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-004",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 169-170 / PDF pp. 181-182",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-005",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 169-170 / PDF pp. 181-182",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-006",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 170-171 / PDF pp. 182-183",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-007",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed p. 170 / PDF p. 182",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-008",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 171-172 / PDF pp. 183-184",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-009",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 173, 175 / PDF pp. 185, 187",
+      "scope": "book-extension",
+      "difficulty": 3,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-010",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 174-175 / PDF pp. 186-187",
+      "scope": "book-extension",
+      "difficulty": 4,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-011",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 173-175 / PDF pp. 185-187",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    },
+    {
+      "questionId": "depth-limb-emb-012",
+      "examId": "term2-limbs",
+      "conceptId": "depth-limb-emb-development",
+      "supportingLocator": "Langman's Medical Embryology; 15th ed.; 12 - Limbs; printed pp. 174-175 / PDF pp. 186-187",
+      "scope": "book-extension",
+      "difficulty": 5,
+      "selfCheckResult": "pass-pending-independent-review",
+      "checks": [
+        "mcq-schema-valid",
+        "four-homogeneous-options",
+        "single-best-key",
+        "right-and-wrong-rationales-present",
+        "source-locator-present",
+        "scope-tag-explicit",
+        "no-exact-current-stem-match"
+      ],
+      "note": "Difficulty and scope were recalibrated during the authoring self-review; independent source and ambiguity review remains required."
+    }
+  ]
+}

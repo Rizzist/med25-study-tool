@@ -17,7 +17,7 @@ export function AnatomyQuestion({ question, revealed }: { question: MCQQuestion;
   );
   if (!question.anatomy3d || !manifest || !target) return <p role="alert">This 3D question could not load its verified model target.</p>;
   return <figure className="question-anatomy3d">
-    <div className="question-anatomy3d-head"><span>Interactive 3D anatomy</span><small>{manifest.title} · rotate and zoom before answering</small></div>
+    <div className="question-anatomy3d-head"><span>Interactive 3D anatomy</span><small>{manifest.title} · rotate, zoom and section before answering</small></div>
     <AnatomyViewer
       modelKey={question.anatomy3d.modelKey}
       focusStructureId={selected?.id ?? target.id}

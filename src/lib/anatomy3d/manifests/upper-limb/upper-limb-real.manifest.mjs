@@ -1,9 +1,12 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { upperLimbDetailStructures } from "../limb-detail-structures.mjs";
+import { upperLimbNerveDetailStructures } from "../limb-nerve-structures.mjs";
+
 /**
  * REAL (mesh-backed) upper-limb manifest.
  *
- * The bones, muscles and major arteries/veins map 1:1 to named nodes in
- * `/anatomy3d/upper-limb/upper-limb.glb`, built from BodyParts3D segmented meshes (Wavefront OBJ,
- * 99% polygon-reduction IS-A release) for the RIGHT upper limb.
+ * The bones, muscles and major arteries/veins map 1:1 to named nodes in the core GLB plus the
+ * v4.3 high-detail OBJ supplement, built from BodyParts3D segmented meshes for the RIGHT upper limb.
  *   Attribution (required, CC-BY 4.0):
  *   "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
  *
@@ -22,7 +25,7 @@ export const upperLimbManifest = {
   title: "Upper limb",
   subject: "anatomy",
   blurb:
-    "Anatomically-accurate right upper limb reconstructed from BodyParts3D segmented meshes — the pectoral-girdle, arm, forearm and hand bones, the shoulder/arm/forearm/intrinsic-hand muscles and the axial-to-hand arteries and superficial veins — with the brachial plexus, peripheral nerves, joints, ligaments and palmar arches placed as schematic overlays.",
+    "Anatomically accurate right upper limb reconstructed from BodyParts3D segmented meshes — including separable superficial and deep forearm/thumb muscles — with a root-to-digital-branch brachial-plexus and peripheral-nerve map, joints, ligaments and palmar arches placed as clearly marked schematic overlays.",
   structures: [
     // ---- Bones (real) ---------------------------------------------------------------------------
     {
@@ -964,5 +967,8 @@ export const upperLimbManifest = {
       distractorIds: ["cephalic-vein", "basilic-vein", "superficial-palmar-arch"],
       view: { azimuth: 0.2, elevation: 0.05, zoom: 1.7 },
     },
+    ...upperLimbNerveDetailStructures,
+    ...upperLimbDetailStructures,
+    ...imageMeshStructures("upper-limb"),
   ],
 };

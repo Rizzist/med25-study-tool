@@ -54,6 +54,7 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
   loader.setDRACOLoader(dracoLoader);
   const gltf = await loader.loadAsync(MODEL_URL);
   dracoLoader.dispose();
+  await attachImageMeshSupplement(gltf.scene, "heart");
 
   const root = new Group();
   root.name = "cvs-heart-real";
@@ -180,6 +181,12 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
   const cAo = centre("aortic-valve");
   const cPul = centre("pulmonary-valve");
   const cCS = centre("coronary-sinus");
+  const cRCA = centre("right-coronary-artery");
+  const cLCA = centre("left-coronary-artery");
+  const cLAD = centre("anterior-interventricular-artery");
+  const cCx = centre("circumflex-artery");
+  const cPDA = centre("posterior-interventricular-artery");
+  const cRM = centre("right-marginal-artery");
 
   // ==== Right-atrial interior ============================================================
   // Right auricle — ear-shaped pouch off the anterosuperior RA, over the aortic root.
@@ -304,6 +311,76 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
     hisBottom, v(cLV.x - 0.06, mid(cRV, cLV).y - 0.12, cLV.z), v(cLV.x - 0.04, cLV.y - 0.22, cLV.z),
   ], 0.017);
 
+  // ==== Cardiac autonomic nerves ========================================================
+  // Nerve paths are derived from the real chamber and coronary-vessel bounding boxes.  Keeping
+  // them in this same model makes "Nerves" an ordinary layer beside arteries, veins and muscle,
+  // while also ensuring the coronary plexuses sit directly on their named arteries.
+  const superficialPlexusAt = v(heartC.x + half.x * 0.03, heartBox.max.y - half.y * 0.10, heartBox.max.z - half.z * 0.22);
+  const deepPlexusAt = v(heartC.x, heartBox.max.y - half.y * 0.06, heartBox.min.z + half.z * 0.12);
+  const nervePlexus = (id: string, at: Vector3, radius: number) => {
+    blob(id, at, radius * 0.9, radius * 0.75, radius * 0.65);
+    tube(id, [
+      v(at.x - radius, at.y + radius * 0.35, at.z), at.clone().add(v(0, 0, radius * 0.25)),
+      v(at.x + radius, at.y - radius * 0.35, at.z),
+    ], radius * 0.14);
+    tube(id, [
+      v(at.x + radius * 0.8, at.y + radius * 0.45, at.z - radius * 0.2), at,
+      v(at.x - radius * 0.75, at.y - radius * 0.5, at.z + radius * 0.2),
+    ], radius * 0.13);
+  };
+  nervePlexus("superficial-cardiac-plexus", superficialPlexusAt, Math.max(0.045, half.x * 0.065));
+  nervePlexus("deep-cardiac-plexus", deepPlexusAt, Math.max(0.06, half.x * 0.085));
+
+  // Superior/middle/inferior cervical cardiac branches enter at the superior heart border.  Their
+  // proximal neck portions live in the mediastinum module; the displayed distal portions converge
+  // precisely on the superficial/deep plexuses rather than floating above the cardiac silhouette.
+  const inletY = heartBox.max.y + half.y * 0.05;
+  for (const side of [1, -1]) {
+    tube("superior-cervical-cardiac-nerve", [
+      v(heartC.x + side * half.x * 0.32, inletY, heartC.z - half.z * 0.15),
+      v(heartC.x + side * half.x * 0.20, heartBox.max.y - half.y * 0.02, heartC.z - half.z * 0.12),
+      superficialPlexusAt,
+    ], 0.007);
+    tube("middle-cervical-cardiac-nerve", [
+      v(heartC.x + side * half.x * 0.24, inletY - half.y * 0.03, heartC.z - half.z * 0.30),
+      v(heartC.x + side * half.x * 0.14, heartBox.max.y - half.y * 0.09, heartC.z - half.z * 0.30),
+      deepPlexusAt,
+    ], 0.007);
+    tube("inferior-cervical-cardiac-nerve", [
+      v(heartC.x + side * half.x * 0.42, heartBox.max.y - half.y * 0.10, heartC.z - half.z * 0.35),
+      v(heartC.x + side * half.x * 0.20, heartBox.max.y - half.y * 0.14, heartC.z - half.z * 0.25),
+      deepPlexusAt,
+    ], 0.007);
+    tube("thoracic-cardiac-nerves", [
+      v(heartC.x + side * half.x * 0.58, heartC.y + half.y * 0.30, heartBox.min.z + half.z * 0.08),
+      v(heartC.x + side * half.x * 0.36, heartC.y + half.y * 0.38, heartBox.min.z + half.z * 0.10),
+      deepPlexusAt,
+    ], 0.0065);
+  }
+  // Two short vagal contributors approach from the posterolateral superior border.
+  for (const side of [1, -1]) tube("vagal-cardiac-branches", [
+    v(heartC.x + side * half.x * 0.42, heartBox.max.y - half.y * 0.02, heartBox.min.z + half.z * 0.04),
+    v(heartC.x + side * half.x * 0.20, heartBox.max.y - half.y * 0.10, heartBox.min.z + half.z * 0.08),
+    deepPlexusAt,
+  ], 0.0065);
+
+  // Periarterial cardiac plexuses: branch directly over the centres of the real coronary meshes.
+  tube("right-coronary-plexus", [deepPlexusAt, cRCA, cRM], 0.006);
+  tube("right-coronary-plexus", [cRCA, v((cRCA.x + cPDA.x) / 2, (cRCA.y + cPDA.y) / 2, (cRCA.z + cPDA.z) / 2), cPDA], 0.0055);
+  tube("left-coronary-plexus", [deepPlexusAt, cLCA, cLAD], 0.006);
+  tube("left-coronary-plexus", [cLCA, v((cLCA.x + cCx.x) / 2, (cLCA.y + cCx.y) / 2, (cLCA.z + cCx.z) / 2), cCx], 0.0055);
+
+  // Pain afferents return from ventricular myocardium with sympathetics; reflex afferents return
+  // from the atria/great-vessel root with the vagi.  Both paths terminate within the visible heart.
+  tube("cardiac-visceral-afferents", [
+    v(cLV.x, cLV.y, lvBox.max.z - half.z * 0.04), cLAD, deepPlexusAt,
+    v(heartC.x + half.x * 0.42, heartBox.max.y - half.y * 0.02, heartBox.min.z + half.z * 0.04),
+  ], 0.0055);
+  tube("cardiac-visceral-afferents", [
+    v(cRA.x, cRA.y + half.y * 0.15, raBox.max.z - half.z * 0.04), superficialPlexusAt,
+    v(heartC.x - half.x * 0.42, heartBox.max.y - half.y * 0.02, heartBox.min.z + half.z * 0.04),
+  ], 0.0055);
+
   // ==== Pericardium ======================================================================
   // Nested translucent shells (outer → inner): fibrous, parietal serous, cavity, visceral/epicardium.
   // Alpha grades up from the outermost fibrous sac (faintest, so it never dominates) to the visceral
@@ -356,3 +433,4 @@ export async function createHeartModel(): Promise<AnatomyModelHandle> {
     },
   };
 }
+import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";

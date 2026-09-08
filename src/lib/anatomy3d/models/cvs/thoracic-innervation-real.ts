@@ -357,6 +357,75 @@ export async function createThoracicInnervationModel(): Promise<AnatomyModelHand
     v(mx0, -0.42, -0.03),
   ], 0.007);
 
+  // 26–33. Cardiac autonomic detail — the cervical/thoracic sympathetic and vagal inputs converge
+  // on the cardiac plexuses, then redistribute along the right and left coronary arterial routes.
+  for (const side of sides) {
+    tube("superior-cervical-cardiac-nerve", [
+      v(mx0 + side * 0.13, colTopY + 0.08, trunkZ),
+      v(mx0 + side * 0.16, colTopY - 0.06, 0.0),
+      v(mx0 + side * 0.11, aorTopY - 0.08, aorC.z),
+      v(mx0 + side * 0.04, aorTopY - 0.15, aorC.z - 0.02),
+    ], 0.0065);
+    tube("middle-cervical-cardiac-nerve", [
+      v(mx0 + side * 0.12, colTopY - 0.02, trunkZ),
+      v(mx0 + side * 0.13, colTopY - 0.14, 0.01),
+      v(mx0 + side * 0.07, trcBotY + 0.09, trcBackZ + 0.04),
+      v(mx0 + side * 0.03, trcBotY + 0.02, trcBackZ + 0.04),
+    ], 0.0065);
+    tube("inferior-cervical-cardiac-nerve", [
+      v(mx0 + side * 0.11, colTopY - 0.01, trunkZ),
+      v(mx0 + side * 0.1, colTopY - 0.18, trunkZ + 0.03),
+      v(mx0 + side * 0.06, trcBotY + 0.04, trcBackZ + 0.04),
+      v(mx0 + side * 0.025, trcBotY + 0.01, trcBackZ + 0.04),
+    ], 0.0065);
+    tube("thoracic-cardiac-nerves", [
+      v(trunkX(side), 0.43, trunkZ),
+      v(mx0 + side * 0.08, 0.34, 0.0),
+      v(mx0 + side * 0.045, trcBotY + 0.08, trcBackZ + 0.04),
+      v(mx0 + side * 0.02, trcBotY + 0.02, trcBackZ + 0.04),
+    ], 0.006);
+  }
+  tube("vagal-cardiac-branches", [
+    v(trcMidX - 0.06, trcTopY - 0.16, trcBackZ + 0.02),
+    v(mx0 - 0.07, aorTopY - 0.1, aorC.z - 0.02),
+    v(mx0 - 0.025, trcBotY + 0.02, trcBackZ + 0.04),
+  ], 0.006);
+  tube("vagal-cardiac-branches", [
+    v(aorLeftX + 0.02, aorTopY, aorC.z + 0.02),
+    v(mx0 + 0.08, aorTopY - 0.1, aorC.z - 0.03),
+    v(mx0 + 0.025, trcBotY + 0.02, trcBackZ + 0.04),
+  ], 0.006);
+
+  const coronaryStart = v(mx0, trcBotY - 0.01, trcBackZ + 0.05);
+  tube("right-coronary-plexus", [
+    coronaryStart,
+    v(hrtC.x - 0.04, hrtC.y + 0.13, hrtFrontZ - 0.03),
+    v(hrtC.x - 0.17, hrtC.y + 0.02, hrtFrontZ - 0.02),
+    v(hrtC.x - 0.11, hrtC.y - 0.16, hrtFrontZ - 0.02),
+  ], 0.006);
+  tube("left-coronary-plexus", [
+    coronaryStart,
+    v(hrtC.x + 0.04, hrtC.y + 0.13, hrtFrontZ - 0.03),
+    v(hrtC.x + 0.12, hrtC.y + 0.02, hrtFrontZ - 0.02),
+    v(hrtC.x + 0.04, hrtC.y - 0.18, hrtFrontZ - 0.01),
+  ], 0.006);
+  tube("left-coronary-plexus", [
+    v(hrtC.x + 0.1, hrtC.y + 0.04, hrtFrontZ - 0.02),
+    v(hrtC.x + 0.2, hrtC.y - 0.02, hrtC.z),
+    v(hrtC.x + 0.16, hrtC.y - 0.12, hrtBackZ + 0.03),
+  ], 0.0055);
+  // Pain afferents leave with sympathetic cardiac branches; reflex afferents return with the vagi.
+  tube("cardiac-visceral-afferents", [
+    v(hrtC.x - 0.1, hrtC.y, hrtFrontZ - 0.01),
+    v(mx0 - 0.04, trcBotY + 0.02, trcBackZ + 0.04),
+    v(trunkX(-1), 0.3, trunkZ),
+  ], 0.0055);
+  tube("cardiac-visceral-afferents", [
+    v(hrtC.x + 0.08, hrtC.y, hrtBackZ + 0.02),
+    v(mx0 + 0.03, trcBotY + 0.02, trcBackZ + 0.04),
+    v(trcMidX + 0.06, trcTopY - 0.16, trcBackZ + 0.02),
+  ], 0.0055);
+
   // Defensive normalization to the contract (~2-unit bbox centred at origin); the GLB is baked
   // normalized, so this stays ~no-op but also folds in the procedural nerve additions.
   const bbox = new Box3().setFromObject(root);

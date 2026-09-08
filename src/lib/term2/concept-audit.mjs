@@ -1,11 +1,13 @@
 const forbiddenAssessmentTag = /(?:^|-)past(?:-|$)|final-bank|telegram-final|downloaded-final|official-exam/;
+const isExpansion = (question) => (question.tags ?? []).some(tag => ["gap-audit", "depth-expansion", "comprehensive-expansion"].includes(tag));
+const isDepthExpansion = (question) => (question.tags ?? []).some(tag => ["depth-expansion", "comprehensive-expansion"].includes(tag));
 
 function normalizedPrompt(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
 function dedupeKey(question) {
-  if (question.anatomy) return `${question.anatomy.imageId}:${question.anatomy.targetRegionId}`;
+  if (question.anatomy) return `${question.anatomy.imageId}:${question.anatomy.targetRegionId}${question.anatomy.responseMode === "locate" ? ":locate" : ""}`;
   if (question.anatomy3d) return `${question.anatomy3d.modelKey}:${question.anatomy3d.structureId}`;
   return question.id;
 }
@@ -84,7 +86,10 @@ export function auditTerm2ConceptCatalog(catalog, questions) {
       dedupeKey: dedupeKey(question),
       prompt: question.prompt,
       learningObjective: question.learningObjective,
-      addedForGap: (question.tags ?? []).includes("gap-audit"),
+      difficulty: question.difficulty,
+      knowledgeLevel: question.tags?.includes("knowledge-challenge") || question.difficulty >= 4 ? "challenge" : "core",
+      expandedForDepth: isDepthExpansion(question),
+      addedForGap: isExpansion(question),
     }];
   }));
   const distinct = (ids) => new Set(ids.map((id) => index[id]?.dedupeKey ?? id)).size;
@@ -100,7 +105,7 @@ export function auditTerm2ConceptCatalog(catalog, questions) {
     objectivesSampledBeforeExpansion: objectives.filter(originalLink).length,
     objectivesFirstSampledByExpansion: objectives.filter((objective) => objective.questionIds.length && !originalLink(objective)).length,
     questionCount: questions.length,
-    addedQuestionCount: questions.filter((question) => (question.tags ?? []).includes("gap-audit")).length,
+    addedQuestionCount: questions.filter(isExpansion).length,
     imageQuestionCount: questions.filter((question) => question.media?.length).length,
     interactive3dCount: questions.filter((question) => question.kind === "dynamic_anatomy_3d").length,
     distinctPracticeItems: distinct(questions.map((question) => question.id)),

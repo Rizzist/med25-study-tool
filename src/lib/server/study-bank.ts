@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { includeAdvancedAnatomyPractice } from "@/src/lib/mcq/advanced-anatomy.mjs";
 import embeddedBankData from "@/data/bank/embedded-bank.json";
 import {
   biochemistryChapterIdForQuestion,
@@ -268,7 +269,7 @@ export function isCollectionId(value: unknown): value is CollectionId {
 export function loadVerifiedQuestions(): MCQQuestion[] {
   if (!verifiedCache) {
     verifiedCache = embeddedBank.questions
-      .filter((question) => question.status === "verified");
+      .filter((question) => question.status === "verified" && includeAdvancedAnatomyPractice(question));
   }
   return verifiedCache;
 }
@@ -359,7 +360,7 @@ function cleanIds(value: unknown, maximum: number): string[] {
 
 export function bankSummary() {
   const manifest = embeddedBank.manifest;
-  const allQuestions = embeddedBank.questions;
+  const allQuestions = loadVerifiedQuestions();
   const verified = loadVerifiedQuestions();
   const subjectCounts = new Map<string, number>();
   const tagCounts = new Map<string, number>();
@@ -518,7 +519,8 @@ export function questionSetByIds(body: unknown) {
   const ids = cleanIds(input.ids, exam === "term2-respiratory" ? 2_000 : 500);
   const limit = cappedLimit(input.limit, ids.length || 1);
   const idSet = new Set(ids);
-  const filtered = loadVerifiedQuestions()
+  const pool = input.purpose === "history" ? embeddedBank.questions.filter(q=>q.status === "verified") : loadVerifiedQuestions();
+  const filtered = pool
     .filter((question) => idSet.has(question.id) && matchesExam(question, exam));
   const byId = new Map(filtered.map((question) => [question.id, question]));
   const ordered = input.prioritize === true
@@ -544,7 +546,7 @@ export function questionSetByIds(body: unknown) {
 export function resolveMedia(questionId: string | null, mediaId: string | null) {
   if (!questionId || !mediaId) return null;
   const question = [
-    ...loadVerifiedQuestions(),
+    ...embeddedBank.questions.filter(q=>q.status === "verified"),
     ...loadFinalExamQuestions("july25"),
     ...loadFinalExamQuestions("july29"),
     ...loadFinalExamQuestions("july29", "downloaded-core"),

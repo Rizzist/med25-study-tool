@@ -1,18 +1,18 @@
 {
   "schemaVersion": "1.0.0",
   "examId": "term2-limbs",
-  "updatedAt": "2026-08-31",
-  "moduleCount": 14,
-  "conceptCount": 79,
-  "objectiveCount": 173,
-  "mcqLinkedObjectives": 173,
-  "objectivesSampledBeforeExpansion": 156,
-  "objectivesFirstSampledByExpansion": 17,
-  "questionCount": 173,
-  "addedQuestionCount": 17,
-  "imageQuestionCount": 0,
+  "updatedAt": "2026-09-08",
+  "moduleCount": 36,
+  "conceptCount": 122,
+  "objectiveCount": 607,
+  "mcqLinkedObjectives": 607,
+  "objectivesSampledBeforeExpansion": 501,
+  "objectivesFirstSampledByExpansion": 106,
+  "questionCount": 1321,
+  "addedQuestionCount": 130,
+  "imageQuestionCount": 1035,
   "interactive3dCount": 32,
-  "distinctPracticeItems": 173,
+  "distinctPracticeItems": 976,
   "unmappedQuestionIds": [],
   "unsampledObjectiveIds": [],
   "byModule": [
@@ -169,10 +169,252 @@
       "questions": 15,
       "distinctItems": 15,
       "newlySampledObjectives": 3
+    },
+    {
+      "id": "depth-limb-emb-book",
+      "title": "Limb development - Langman book extension",
+      "subject": "embryology",
+      "conceptCount": 1,
+      "objectiveCount": 1,
+      "linkedObjectiveCount": 1,
+      "questions": 12,
+      "distinctItems": 12,
+      "newlySampledObjectives": 1
+    },
+    {
+      "id": "depth-limbs-axilla-arm-module",
+      "title": "Axilla, arm and cubital fossa pathways",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 7,
+      "distinctItems": 7,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "depth-limbs-hand-module",
+      "title": "Wrist and hand mechanics and lesions",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 6,
+      "distinctItems": 6,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "depth-limbs-proximal-lower-module",
+      "title": "Femoral, gluteal and thigh relationships",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "depth-limbs-knee-foot-module",
+      "title": "Popliteal, ankle and foot integration",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 3,
+      "distinctItems": 3,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "comp-limbs-shoulder-stability-module",
+      "title": "Shoulder suspension, capsule and stabilizers",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-plexus-localization-module",
+      "title": "Branch-level localization in the shoulder and arm",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-forearm-mechanics-module",
+      "title": "Elbow stability and forearm load transfer",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-forearm-pathways-module",
+      "title": "Forearm vessels and nerve relationships",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-hand-tendon-mechanics-module",
+      "title": "Finger and thumb tendon mechanics",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-hand-neurovascular-spaces-module",
+      "title": "Hand nerve branches, arches and tendon sheaths",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-hip-capsule-module",
+      "title": "Hip capsule, cartilage and communicating spaces",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-thigh-circulation-module",
+      "title": "Thigh circulation and changing neurovascular planes",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-knee-mechanics-module",
+      "title": "Knee recesses, stabilizers and load-bearing mechanics",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-leg-lesion-levels-module",
+      "title": "Localizing leg nerve lesions by spared functions",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-ankle-tendon-stability-module",
+      "title": "Ankle mortise, tendon restraints and surgical relations",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-foot-mechanics-module",
+      "title": "Foot arches, intrinsic mechanics and deep circulation",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-limb-development-module",
+      "title": "Limb growth, compartment innervation and developmental disruptions",
+      "subject": "embryology",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-cartilage-bone-function-module",
+      "title": "Cartilage resilience and bone mechanobiology",
+      "subject": "histology",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-skeletal-muscle-structure-module",
+      "title": "Muscle force transmission, excitation architecture and repair",
+      "subject": "histology",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-limbs-muscle-physiology-module",
+      "title": "Skeletal-muscle length, load, activation and relaxation",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "limbs-visual-atlas",
+      "title": "Anatomy image identification & location",
+      "subject": "anatomy",
+      "conceptCount": 22,
+      "objectiveCount": 345,
+      "linkedObjectiveCount": 345,
+      "questions": 1035,
+      "distinctItems": 690,
+      "newlySampledObjectives": 0
     }
   ],
   "sourceInventory": {
-    "mapped": 139,
+    "mapped": 184,
     "limits": [
       {
         "source": "Local Term 2 teacher materials",
@@ -294,6 +536,67 @@
         "conceptIds": [],
         "status": "outside-scope",
         "note": "Inventoried for completeness but not double-counted as independent evidence because the matching TXT carries the same transcript."
+      },
+      {
+        "source": "Provided Langman 15e and assigned Term 2 lecture sources",
+        "locator": "Provided source inventory",
+        "topic": "Lecture/exam confirmation of limb embryology",
+        "conceptIds": [
+          "depth-limb-emb-development"
+        ],
+        "status": "source-missing",
+        "note": "Depth expansion · No Term 2 limb-development lecture deck or transcript was supplied. The questions are a bounded Langman extension and must not be represented as lecture-confirmed or past-question material. New depth IDs: depth-limb-emb-001, depth-limb-emb-002, depth-limb-emb-003, depth-limb-emb-004, depth-limb-emb-005, depth-limb-emb-006, depth-limb-emb-007, depth-limb-emb-008, depth-limb-emb-009, depth-limb-emb-010, depth-limb-emb-011, depth-limb-emb-012."
+      },
+      {
+        "source": "Local Term 2 lecture inventory",
+        "locator": "04 Upper Limb Carryover contains seven line-addressable upper-limb transcripts; no lower-limb lecture deck/transcript was located",
+        "topic": "Lower-limb course alignment boundary",
+        "conceptIds": [
+          "depth-limbs-proximal-lower",
+          "depth-limbs-knee-foot"
+        ],
+        "status": "source-missing",
+        "note": "Depth expansion · Lower-limb additions are explicitly book-extension. Their correctness is source-grounded, but course emphasis cannot be inferred from absent local lectures."
+      },
+      {
+        "source": "Gray's Anatomy for Students",
+        "locator": "3rd ed. clean PDF; full lower/upper limb chapter assignment in CHAPTER CHECKLIST.md",
+        "topic": "Gray 3 extraction limitation",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "Comprehensive expansion · The file exists but extracted text is encoding-corrupted. New answer claims were instead checked against the clear text of the explicitly cited Gray 42 regional pages; no unread Gray 3 page citations were invented."
+      },
+      {
+        "source": "Local course materials",
+        "locator": "04 Upper Limb Carryover/Videos: Osteology, Axilla 1/2, Arm 1/2 and Forearm 1/2 transcripts",
+        "topic": "Lecture-to-book scope boundary",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "Comprehensive expansion · Upper-limb transcript inventory exists. New questions are conservatively book-extension because exact lecture-time/slide confirmation for each new inference was not established. No slide locators were invented. Independent review: this is a scope-boundary note, not a linked mapped concept."
+      },
+      {
+        "source": "Local course materials",
+        "locator": "No confirmed lower-limb slides or dedicated limb embryology/histology/physiology lectures found in the scoped material inventory",
+        "topic": "Lower-limb and related-science lecture confirmation",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "Comprehensive expansion · The regional chapter assignment supports book study but does not establish that every new subtopic was taught in a lecture. Retain book-extension, not course-confirmed."
+      },
+      {
+        "source": "Limb-related book scope",
+        "locator": "Langman chapter 12; Junqueira chapters 7/8/10; Guyton chapters 6/7",
+        "topic": "General neuroscience, unrelated organ histology and systemic physiology",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "Comprehensive expansion · The expansion is restricted to limb development, cartilage/bone and skeletal muscle structure/function. General neuroanatomy, central pathways, autonomic systems, unrelated embryology and disease treatment are not asserted complete."
+      },
+      {
+        "source": "Audit boundary",
+        "locator": "171 active nonvisual limb single-best-answer records and 80 newly authored drafts",
+        "topic": "Exhaustiveness and deeper residual subtopics",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "Comprehensive expansion · This is a bounded gap-driven extension, not a claim that every paragraph or clinical variant in Gray42 has a question. Existing osteology, compartment and pathway foundations were retained; vascular variants, surgical treatment protocols and unsampled microscopic details remain outside this draft's completeness claim. Independent review: this is a scope-boundary note, not a linked mapped concept."
       }
     ]
   },

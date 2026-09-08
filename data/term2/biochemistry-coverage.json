@@ -1,18 +1,18 @@
 {
   "schemaVersion": "1.0.0",
   "examId": "term2-biochemistry",
-  "updatedAt": "2026-08-31",
-  "moduleCount": 12,
-  "conceptCount": 50,
-  "objectiveCount": 94,
-  "mcqLinkedObjectives": 94,
+  "updatedAt": "2026-09-07",
+  "moduleCount": 13,
+  "conceptCount": 51,
+  "objectiveCount": 103,
+  "mcqLinkedObjectives": 103,
   "objectivesSampledBeforeExpansion": 72,
-  "objectivesFirstSampledByExpansion": 22,
-  "questionCount": 196,
-  "addedQuestionCount": 38,
+  "objectivesFirstSampledByExpansion": 31,
+  "questionCount": 205,
+  "addedQuestionCount": 47,
   "imageQuestionCount": 0,
   "interactive3dCount": 0,
-  "distinctPracticeItems": 196,
+  "distinctPracticeItems": 205,
   "unmappedQuestionIds": [],
   "unsampledObjectiveIds": [],
   "byModule": [
@@ -147,10 +147,21 @@
       "questions": 1,
       "distinctItems": 1,
       "newlySampledObjectives": 0
+    },
+    {
+      "id": "depth-bio-integration-module",
+      "title": "Carbohydrate control and dietary-lipid handling: mechanism challenges",
+      "subject": "biochemistry",
+      "conceptCount": 1,
+      "objectiveCount": 9,
+      "linkedObjectiveCount": 9,
+      "questions": 9,
+      "distinctItems": 9,
+      "newlySampledObjectives": 9
     }
   ],
   "sourceInventory": {
-    "mapped": 130,
+    "mapped": 131,
     "limits": [
       {
         "source": "Lippincott's Illustrated Reviews: Biochemistry",

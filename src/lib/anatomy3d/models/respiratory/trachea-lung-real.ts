@@ -53,6 +53,7 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
   loader.setDRACOLoader(dracoLoader);
   const gltf = await loader.loadAsync(MODEL_URL);
   dracoLoader.dispose();
+  await attachImageMeshSupplement(gltf.scene, "trachea-lung-real");
 
   const root = new Group();
   root.name = "respiratory-trachea-lung-real";
@@ -110,6 +111,18 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
   const tracheaBox = boxOf(["trachea"]);
   const rightLungBox = boxOf(["right-upper-lobe", "right-middle-lobe", "right-lower-lobe"]);
   const leftLungBox = boxOf(["left-upper-lobe", "left-lower-lobe"]);
+  const thoraxBox = boxOf([
+    "trachea", "right-main-bronchus", "left-main-bronchus",
+    "right-upper-lobe", "right-middle-lobe", "right-lower-lobe",
+    "left-upper-lobe", "left-lower-lobe",
+  ]);
+  const thoraxCenter = thoraxBox.getCenter(new Vector3());
+  const thoraxSize = thoraxBox.getSize(new Vector3());
+  const at = (fx: number, fy: number, fz: number) => vec(
+    thoraxCenter.x + thoraxSize.x * fx,
+    thoraxCenter.y + thoraxSize.y * fy,
+    thoraxCenter.z + thoraxSize.z * fz,
+  );
 
   // Lobe centres (real meshes) drive fissure orientation + the lobe separation below.
   const lobeCenter = (id: string): Vector3 => {
@@ -134,6 +147,16 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     mesh.quaternion.setFromRotationMatrix(new Matrix4().makeBasis(xAxis, n, zAxis));
     mesh.position.copy(position);
     addProcedural(id, mesh);
+    // A fissure is a potential space, not an opaque plate. Keep enough surface for picking while
+    // allowing the scan-derived lobes and vessels to remain visible through it.
+    const material = mesh.material as Material & {
+      transparent: boolean;
+      opacity: number;
+      depthWrite: boolean;
+    };
+    material.transparent = true;
+    material.opacity = 0.24;
+    material.depthWrite = false;
   };
 
   if (!tracheaBox.isEmpty()) {
@@ -174,9 +197,9 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     const cRML = lobeCenter("right-middle-lobe");
     const cRLL = lobeCenter("right-lower-lobe");
     // Horizontal fissure: separates the upper lobe from the middle lobe (right lung only).
-    fissurePlane("horizontal-fissure", mid2(cRUL, cRML), HORIZONTAL_NORMAL, s.x * 0.9, s.z * 0.72);
+    fissurePlane("horizontal-fissure", mid2(cRUL, cRML), HORIZONTAL_NORMAL, s.x * 0.68, s.z * 0.52);
     // Oblique fissure (right): separates the lower lobe from the upper+middle mass.
-    fissurePlane("oblique-fissure", mid2(mid2(cRUL, cRML), cRLL), OBLIQUE_NORMAL, s.x * 0.88, Math.hypot(s.y, s.z) * 0.62);
+    fissurePlane("oblique-fissure", mid2(mid2(cRUL, cRML), cRLL), OBLIQUE_NORMAL, s.x * 0.66, Math.hypot(s.y, s.z) * 0.48);
     // Hilum / root (right): medial surface (toward the midline, +X side of the right lung).
     const hr = new Mesh(new SphereGeometry(Math.min(s.x, s.z) * 0.22, 16, 12));
     hr.position.set(c.x + s.x * 0.36, c.y + s.y * 0.05, c.z - s.z * 0.12);
@@ -188,7 +211,7 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     const c = leftLungBox.getCenter(new Vector3());
     const s = leftLungBox.getSize(new Vector3());
     // Oblique fissure (left): separates the upper lobe from the lower lobe.
-    fissurePlane("oblique-fissure", mid2(lobeCenter("left-upper-lobe"), lobeCenter("left-lower-lobe")), OBLIQUE_NORMAL, s.x * 0.88, Math.hypot(s.y, s.z) * 0.6);
+    fissurePlane("oblique-fissure", mid2(lobeCenter("left-upper-lobe"), lobeCenter("left-lower-lobe")), OBLIQUE_NORMAL, s.x * 0.66, Math.hypot(s.y, s.z) * 0.46);
     // Cardiac notch: concave scoop on the anteroinferior margin of the left lung.
     const notch = new Mesh(
       new CylinderGeometry(Math.min(s.x, s.z) * 0.5, Math.min(s.x, s.z) * 0.5, s.y * 0.4, 16, 1, true, -Math.PI / 4, Math.PI / 2),
@@ -211,63 +234,177 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
   // Routed relative to the real trachea and main bronchi. (+Z = anterior, −Z = posterior.)
   const rBronch = boxOf(["right-main-bronchus"]).getCenter(new Vector3());
   const lBronch = boxOf(["left-main-bronchus"]).getCenter(new Vector3());
+  const nerveR = Math.min(thoraxSize.x, thoraxSize.z) * 0.009;
+  const plexusR = nerveR * 0.62;
+  const topY = tracheaBox.max.y - thoraxSize.y * 0.025;
+  const bottomY = Math.min(rightLungBox.min.y, leftLungBox.min.y) + thoraxSize.y * 0.08;
   for (const side of [1, -1]) {
+    const bronch = side > 0 ? lBronch : rBronch;
     // Vagus nerve — descends beside the trachea, then posteriorly toward the hilum & oesophagus.
     tube("vagus-nerve", [
-      vec(side * 0.28, 0.9, -0.08), vec(side * 0.3, 0.5, -0.15),
-      vec(side * 0.26, 0.1, -0.25), vec(side * 0.22, -0.3, -0.3),
-    ], 0.014);
+      vec(thoraxCenter.x + side * thoraxSize.x * 0.17, topY, thoraxCenter.z - thoraxSize.z * 0.06),
+      at(side * 0.18, 0.26, -0.11),
+      vec(bronch.x * 0.72, bronch.y + thoraxSize.y * 0.09, bronch.z - thoraxSize.z * 0.12),
+      vec(bronch.x * 0.70, bronch.y - thoraxSize.y * 0.08, bronch.z - thoraxSize.z * 0.14),
+    ], nerveR);
   }
   // Recurrent laryngeal nerve — the classic asymmetric loops, then ascent in the T-O groove.
   // LEFT recurs low, under the arch of the aorta.
   tube("recurrent-laryngeal-nerve", [
-    vec(0.30, 0.5, -0.15), vec(0.18, -0.02, 0.06), vec(0.08, -0.12, 0.12),
-    vec(0.06, -0.04, -0.06), vec(0.05, 0.4, -0.16), vec(0.02, 0.9, -0.12),
-  ], 0.012);
+    at(0.18, 0.27, -0.08), at(0.12, 0.02, 0.05), at(0.055, -0.05, 0.10),
+    at(0.035, 0.01, -0.035), at(0.03, 0.25, -0.10),
+    vec(tracheaBox.getCenter(new Vector3()).x + thoraxSize.x * 0.02, topY, tracheaBox.getCenter(new Vector3()).z - thoraxSize.z * 0.06),
+  ], nerveR * 0.88);
   // RIGHT recurs higher, under the right subclavian artery.
   tube("recurrent-laryngeal-nerve", [
-    vec(-0.28, 0.55, -0.12), vec(-0.24, 0.42, 0.07), vec(-0.14, 0.36, 0.1),
-    vec(-0.1, 0.44, -0.08), vec(-0.05, 0.7, -0.12), vec(-0.03, 0.9, -0.12),
-  ], 0.012);
+    at(-0.18, 0.30, -0.07), at(-0.15, 0.22, 0.06), at(-0.08, 0.19, 0.09),
+    at(-0.06, 0.24, -0.04), at(-0.03, 0.36, -0.08),
+    vec(tracheaBox.getCenter(new Vector3()).x - thoraxSize.x * 0.01, topY, tracheaBox.getCenter(new Vector3()).z - thoraxSize.z * 0.06),
+  ], nerveR * 0.88);
   // Pulmonary plexus — autonomic network around each hilum / main bronchus.
   for (const b of [rBronch, lBronch]) {
-    for (const [ox, oy, oz] of [[0.05, 0.03, 0.03], [-0.05, 0.03, -0.03], [0.04, -0.03, 0.04], [-0.04, -0.03, -0.04]] as const) {
-      tube("pulmonary-plexus", [vec(b.x - ox, b.y - oy, b.z - oz), vec(b.x, b.y, b.z), vec(b.x + ox, b.y + oy, b.z + oz)], 0.009);
+    for (const [ox, oy, oz] of [[0.04, 0.025, 0.04], [-0.04, 0.025, -0.04], [0.035, -0.025, 0.05], [-0.035, -0.025, -0.05]] as const) {
+      tube("pulmonary-plexus", [
+        vec(b.x - thoraxSize.x * ox, b.y - thoraxSize.y * oy, b.z - thoraxSize.z * oz),
+        b.clone(),
+        vec(b.x + thoraxSize.x * ox, b.y + thoraxSize.y * oy, b.z + thoraxSize.z * oz),
+      ], plexusR);
     }
   }
-  // Bronchial arteries — run along the posterior wall of the bronchi (1 right, 2 left, typically).
-  tube("bronchial-arteries", [vec(0, -0.02, -0.28), vec(rBronch.x * 0.6, rBronch.y, rBronch.z - 0.04), vec(rBronch.x, rBronch.y - 0.06, rBronch.z - 0.02)], 0.013);
-  tube("bronchial-arteries", [vec(0.03, -0.02, -0.3), vec(lBronch.x * 0.6, lBronch.y, lBronch.z - 0.04), vec(lBronch.x, lBronch.y - 0.04, lBronch.z - 0.02)], 0.013);
-  tube("bronchial-arteries", [vec(0.02, -0.1, -0.3), vec(lBronch.x * 0.55, lBronch.y - 0.1, lBronch.z - 0.05), vec(lBronch.x * 0.95, lBronch.y - 0.12, lBronch.z - 0.03)], 0.012);
-  // Mediastinal fat — soft pads in the central mediastinum between the lungs.
-  for (const [at, sx, sy, sz] of [
-    [vec(0, 0.15, 0.05), 0.14, 0.18, 0.12], [vec(0, -0.08, -0.04), 0.13, 0.16, 0.12],
-  ] as const) {
-    const fat = new Mesh(new SphereGeometry(1, 12, 9));
-    fat.position.copy(at); fat.scale.set(sx, sy, sz);
-    addProcedural("mediastinal-fat", fat);
+  // Side-specific vagus nerves: both descend posterior to their lung root. These duplicate the
+  // gross vagus context above as individually selectable right/left exam targets.
+  tube("right-vagus-nerve-lung", [
+    vec(thoraxCenter.x - thoraxSize.x * 0.17, topY, thoraxCenter.z - thoraxSize.z * 0.06),
+    at(-0.18, 0.27, -0.11),
+    vec(rBronch.x * 0.72, rBronch.y + thoraxSize.y * 0.07, rBronch.z - thoraxSize.z * 0.12),
+    vec(rBronch.x * 0.70, rBronch.y - thoraxSize.y * 0.06, rBronch.z - thoraxSize.z * 0.14),
+  ], nerveR * 0.88);
+  tube("left-vagus-nerve-lung", [
+    vec(thoraxCenter.x + thoraxSize.x * 0.17, topY, thoraxCenter.z - thoraxSize.z * 0.06),
+    at(0.18, 0.27, -0.11),
+    vec(lBronch.x * 0.72, lBronch.y + thoraxSize.y * 0.07, lBronch.z - thoraxSize.z * 0.12),
+    vec(lBronch.x * 0.70, lBronch.y - thoraxSize.y * 0.06, lBronch.z - thoraxSize.z * 0.14),
+  ], nerveR * 0.88);
+
+  // Side-specific recurrent laryngeal nerves retain the asymmetric loops: left under the aortic
+  // arch in the mediastinum; right under the subclavian at the root of the neck.
+  tube("left-recurrent-laryngeal-nerve-lung", [
+    at(0.18, 0.27, -0.08), at(0.12, 0.02, 0.05), at(0.055, -0.05, 0.10),
+    at(0.035, 0.01, -0.035), at(0.03, 0.25, -0.10),
+    vec(tracheaBox.getCenter(new Vector3()).x + thoraxSize.x * 0.02, topY, tracheaBox.getCenter(new Vector3()).z - thoraxSize.z * 0.06),
+  ], nerveR * 0.78);
+  tube("right-recurrent-laryngeal-nerve-lung", [
+    at(-0.18, 0.30, -0.07), at(-0.15, 0.22, 0.06), at(-0.08, 0.19, 0.09),
+    at(-0.06, 0.24, -0.04), at(-0.03, 0.36, -0.08),
+    vec(tracheaBox.getCenter(new Vector3()).x - thoraxSize.x * 0.01, topY, tracheaBox.getCenter(new Vector3()).z - thoraxSize.z * 0.06),
+  ], nerveR * 0.78);
+
+  // Phrenic nerves cross ANTERIOR to the roots (vagus is posterior), then descend over fibrous
+  // pericardium toward each hemidiaphragm.
+  tube("right-phrenic-nerve-lung", [
+    vec(thoraxCenter.x - thoraxSize.x * 0.29, topY, thoraxCenter.z + thoraxSize.z * 0.12),
+    at(-0.28, 0.26, 0.15),
+    vec(rBronch.x * 0.82, rBronch.y + thoraxSize.y * 0.05, rBronch.z + thoraxSize.z * 0.18),
+    vec(thoraxCenter.x - thoraxSize.x * 0.23, bottomY, thoraxCenter.z + thoraxSize.z * 0.15),
+  ], nerveR * 0.88);
+  tube("left-phrenic-nerve-lung", [
+    vec(thoraxCenter.x + thoraxSize.x * 0.29, topY, thoraxCenter.z + thoraxSize.z * 0.12),
+    at(0.28, 0.26, 0.15),
+    vec(lBronch.x * 0.82, lBronch.y + thoraxSize.y * 0.05, lBronch.z + thoraxSize.z * 0.18),
+    vec(thoraxCenter.x + thoraxSize.x * 0.23, bottomY, thoraxCenter.z + thoraxSize.z * 0.15),
+  ], nerveR * 0.88);
+
+  // Paravertebral sympathetic chains and their postganglionic cardiopulmonary splanchnic branches.
+  for (const side of [1, -1]) {
+    tube("thoracic-sympathetic-trunks-lung", [
+      at(side * 0.28, 0.45, -0.42), at(side * 0.29, 0.23, -0.43),
+      at(side * 0.30, -0.08, -0.43), at(side * 0.31, -0.43, -0.40),
+    ], nerveR * 0.9);
+    const b = side > 0 ? lBronch : rBronch;
+    tube("cardiopulmonary-splanchnic-nerves", [
+      at(side * 0.29, 0.25, -0.43), at(side * 0.24, 0.15, -0.34),
+      vec(b.x * 0.72, b.y + thoraxSize.y * 0.04, b.z - thoraxSize.z * 0.12),
+      vec(b.x, b.y, b.z - thoraxSize.z * 0.07),
+    ], plexusR);
+    tube("cardiopulmonary-splanchnic-nerves", [
+      at(side * 0.30, 0.05, -0.43), at(side * 0.25, 0, -0.32),
+      vec(b.x * 0.8, b.y - thoraxSize.y * 0.02, b.z - thoraxSize.z * 0.10),
+    ], plexusR * 0.9);
   }
 
-  // --- Lobe separation --------------------------------------------------------------------------
-  // The real lobe meshes interdigitate along the (oblique/horizontal) fissures, so their bounding
-  // boxes overlap and the lobes read as one mass. Nudge each lobe radially outward from its lung's
-  // centroid to open a small visible gap along every fissure; the fissure slabs placed at the
-  // inter-lobe midpoints above then sit in those gaps. Lobe meshes share an identity-rotation parent
-  // with world-baked geometry, so a world-space position offset is applied directly.
-  const explodeLobes = (ids: string[], gap: number) => {
-    const centers = ids.map((id) => lobeCenter(id));
-    const centroid = new Vector3();
-    for (const cc of centers) centroid.add(cc);
-    centroid.multiplyScalar(1 / centers.length);
-    ids.forEach((id, i) => {
-      const dir = centers[i].clone().sub(centroid);
-      if (dir.lengthSq() < 1e-6) return;
-      dir.normalize().multiplyScalar(gap);
-      for (const obj of structures.get(id) ?? []) obj.position.add(dir);
-    });
-  };
-  explodeLobes(["right-upper-lobe", "right-middle-lobe", "right-lower-lobe"], 0.045);
-  explodeLobes(["left-upper-lobe", "left-lower-lobe"], 0.05);
+  // Anterior and posterior pulmonary plexuses form crossing networks around both hilar bronchi.
+  for (const b of [rBronch, lBronch]) {
+    const lateralSign = b.x >= 0 ? 1 : -1;
+    for (const offset of [-0.028, 0, 0.028]) {
+      tube("anterior-pulmonary-plexus", [
+        vec(b.x - lateralSign * thoraxSize.x * 0.055, b.y + thoraxSize.y * offset, b.z + thoraxSize.z * 0.08),
+        vec(b.x, b.y - thoraxSize.y * offset * 0.4, b.z + thoraxSize.z * 0.11),
+        vec(b.x + lateralSign * thoraxSize.x * 0.055, b.y - thoraxSize.y * offset, b.z + thoraxSize.z * 0.08),
+      ], plexusR * 0.82);
+      tube("posterior-pulmonary-plexus", [
+        vec(b.x - lateralSign * thoraxSize.x * 0.06, b.y + thoraxSize.y * offset, b.z - thoraxSize.z * 0.09),
+        vec(b.x, b.y - thoraxSize.y * offset * 0.4, b.z - thoraxSize.z * 0.12),
+        vec(b.x + lateralSign * thoraxSize.x * 0.06, b.y - thoraxSize.y * offset, b.z - thoraxSize.z * 0.09),
+      ], plexusR * 0.86);
+    }
+  }
+
+  // Mixed plexus fibres follow the main bronchi: parasympathetic fibres approach from posterior
+  // vagus, while sympathetic fibres approach from the paravertebral chain.
+  for (const b of [rBronch, lBronch]) {
+    const side = b.x >= 0 ? 1 : -1;
+    tube("vagal-bronchial-branches", [
+      vec(thoraxCenter.x + side * thoraxSize.x * 0.17, b.y + thoraxSize.y * 0.09, b.z - thoraxSize.z * 0.12),
+      vec(b.x * 0.7, b.y + thoraxSize.y * 0.03, b.z - thoraxSize.z * 0.07),
+      b.clone(),
+      vec(b.x + side * thoraxSize.x * 0.07, b.y - thoraxSize.y * 0.04, b.z + thoraxSize.z * 0.01),
+    ], plexusR * 0.9);
+    tube("sympathetic-bronchial-branches", [
+      vec(thoraxCenter.x + side * thoraxSize.x * 0.29, b.y + thoraxSize.y * 0.09, thoraxCenter.z - thoraxSize.z * 0.43),
+      vec(b.x * 0.75, b.y + thoraxSize.y * 0.025, b.z - thoraxSize.z * 0.10),
+      vec(b.x, b.y - thoraxSize.y * 0.01, b.z - thoraxSize.z * 0.03),
+      vec(b.x + side * thoraxSize.x * 0.06, b.y - thoraxSize.y * 0.05, b.z - thoraxSize.z * 0.02),
+    ], plexusR * 0.9);
+  }
+
+  // Visceral afferents converge from intrapulmonary receptor fields on the hilar plexuses, then
+  // travel mainly with vagus for reflexes and with sympathetics for nociception.
+  const visceralSources: Array<[Vector3, Vector3]> = [
+    [lobeCenter("right-upper-lobe"), rBronch], [lobeCenter("right-lower-lobe"), rBronch],
+    [lobeCenter("left-upper-lobe"), lBronch], [lobeCenter("left-lower-lobe"), lBronch],
+  ];
+  for (const [source, hilum] of visceralSources) {
+    const start = source.clone().lerp(hilum, 0.42);
+    tube("pulmonary-visceral-afferents", [
+      start, start.clone().lerp(hilum, 0.55).add(vec(0, 0.035, -0.03)),
+      hilum.clone().add(vec(0, 0, -thoraxSize.z * 0.07)),
+    ], plexusR * 0.82);
+  }
+  // Bronchial arteries — run along the posterior wall of the bronchi (1 right, 2 left, typically).
+  tube("bronchial-arteries", [
+    vec(thoraxCenter.x, rBronch.y + thoraxSize.y * 0.03, rBronch.z - thoraxSize.z * 0.14),
+    vec(rBronch.x * 0.6, rBronch.y, rBronch.z - thoraxSize.z * 0.04),
+    vec(rBronch.x, rBronch.y - thoraxSize.y * 0.03, rBronch.z - thoraxSize.z * 0.02),
+  ], nerveR * 1.05);
+  tube("bronchial-arteries", [
+    vec(thoraxCenter.x + thoraxSize.x * 0.018, lBronch.y + thoraxSize.y * 0.03, lBronch.z - thoraxSize.z * 0.14),
+    vec(lBronch.x * 0.6, lBronch.y, lBronch.z - thoraxSize.z * 0.04),
+    vec(lBronch.x, lBronch.y - thoraxSize.y * 0.02, lBronch.z - thoraxSize.z * 0.02),
+  ], nerveR * 1.05);
+  tube("bronchial-arteries", [
+    vec(thoraxCenter.x + thoraxSize.x * 0.012, lBronch.y - thoraxSize.y * 0.04, lBronch.z - thoraxSize.z * 0.14),
+    vec(lBronch.x * 0.55, lBronch.y - thoraxSize.y * 0.05, lBronch.z - thoraxSize.z * 0.05),
+    vec(lBronch.x * 0.95, lBronch.y - thoraxSize.y * 0.06, lBronch.z - thoraxSize.z * 0.03),
+  ], nerveR);
+  // Mediastinal fat — soft pads in the central mediastinum between the lungs.
+  for (const [position, sx, sy, sz] of [
+    [at(0, 0.09, 0.04), thoraxSize.x * 0.08, thoraxSize.y * 0.09, thoraxSize.z * 0.10],
+    [at(0, -0.04, -0.03), thoraxSize.x * 0.075, thoraxSize.y * 0.08, thoraxSize.z * 0.10],
+  ] as const) {
+    const fat = new Mesh(new SphereGeometry(1, 12, 9));
+    fat.position.copy(position); fat.scale.set(sx, sy, sz);
+    addProcedural("mediastinal-fat", fat);
+  }
 
   // Defensive normalization to the contract (~2-unit bbox at origin). The GLB is baked
   // normalized; this stays ~no-op but also folds in the procedural fills.
@@ -304,3 +441,4 @@ export async function createRealTracheaLungModel(): Promise<AnatomyModelHandle> 
     },
   };
 }
+import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";

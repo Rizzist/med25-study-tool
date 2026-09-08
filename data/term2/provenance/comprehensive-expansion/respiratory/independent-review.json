@@ -1,0 +1,137 @@
+{
+  "status": "approved",
+  "author": "/root/respiratory_sources",
+  "independentReviewer": "/root",
+  "reviewedQuestionIds": [
+    "comp-resp-phys-001",
+    "comp-resp-phys-002",
+    "comp-resp-phys-003",
+    "comp-resp-phys-004",
+    "comp-resp-phys-005",
+    "comp-resp-phys-006",
+    "comp-resp-phys-007",
+    "comp-resp-phys-008",
+    "comp-resp-phys-009",
+    "comp-resp-phys-010",
+    "comp-resp-phys-011",
+    "comp-resp-phys-012",
+    "comp-resp-phys-013",
+    "comp-resp-phys-014",
+    "comp-resp-phys-015",
+    "comp-resp-phys-016",
+    "comp-resp-phys-017",
+    "comp-resp-phys-018",
+    "comp-resp-phys-019",
+    "comp-resp-phys-020",
+    "comp-resp-phys-021",
+    "comp-resp-phys-022",
+    "comp-resp-phys-023",
+    "comp-resp-phys-024",
+    "comp-resp-phys-025",
+    "comp-resp-phys-026",
+    "comp-resp-phys-027",
+    "comp-resp-phys-029",
+    "comp-resp-phys-030",
+    "comp-resp-phys-031",
+    "comp-resp-phys-032",
+    "comp-resp-phys-033",
+    "comp-resp-phys-034",
+    "comp-resp-phys-035",
+    "comp-resp-phys-036",
+    "comp-resp-phys-037",
+    "comp-resp-phys-038",
+    "comp-resp-phys-039",
+    "comp-resp-anat-041",
+    "comp-resp-anat-042",
+    "comp-resp-anat-043",
+    "comp-resp-anat-044",
+    "comp-resp-anat-045",
+    "comp-resp-anat-046",
+    "comp-resp-anat-047",
+    "comp-resp-anat-048",
+    "comp-resp-anat-049",
+    "comp-resp-anat-050",
+    "comp-resp-anat-051",
+    "comp-resp-anat-052",
+    "comp-resp-anat-053",
+    "comp-resp-anat-054",
+    "comp-resp-anat-055",
+    "comp-resp-anat-056",
+    "comp-resp-hist-057",
+    "comp-resp-hist-058",
+    "comp-resp-hist-059",
+    "comp-resp-hist-060",
+    "comp-resp-hist-061",
+    "comp-resp-hist-062",
+    "comp-resp-hist-065",
+    "comp-resp-hist-067",
+    "comp-resp-hist-069",
+    "comp-resp-hist-070",
+    "comp-resp-hist-071",
+    "comp-resp-emb-073",
+    "comp-resp-emb-074",
+    "comp-resp-emb-075",
+    "comp-resp-emb-076",
+    "comp-resp-emb-077",
+    "comp-resp-emb-078"
+  ],
+  "changes": [
+    {
+      "id": "comp-resp-phys-001",
+      "change": "Difficulty 4 → 3: mechanism recall or a short calculation, not a university-calibrated challenge."
+    },
+    {
+      "id": "comp-resp-phys-002",
+      "change": "Difficulty 4 → 3: mechanism recall or a short calculation, not a university-calibrated challenge."
+    },
+    {
+      "id": "comp-resp-phys-008",
+      "change": "Difficulty 4 → 3: mechanism recall or a short calculation, not a university-calibrated challenge."
+    },
+    {
+      "id": "comp-resp-phys-013",
+      "change": "Difficulty 4 → 3: mechanism recall or a short calculation, not a university-calibrated challenge."
+    },
+    {
+      "id": "comp-resp-phys-014",
+      "change": "Difficulty 4 → 3: mechanism recall or a short calculation, not a university-calibrated challenge."
+    },
+    {
+      "id": "comp-resp-phys-018",
+      "change": "Difficulty 4 → 3: mechanism recall or a short calculation, not a university-calibrated challenge."
+    },
+    {
+      "id": "comp-resp-phys-021",
+      "change": "Difficulty 4 → 3: mechanism recall or a short calculation, not a university-calibrated challenge."
+    },
+    {
+      "id": "comp-resp-phys-018",
+      "change": "Corrected distractor A so its values actually match the stated erroneous use of final absolute pressures: 300/7 and 300/10, instead of pressure increments."
+    },
+    {
+      "id": "comp-resp-phys-019",
+      "change": "Removed an incorrect claim about inverting both ratios in a wrong-option explanation; retained the correct key and calculation."
+    }
+  ],
+  "method": [
+    "Read all 71 complete stems, options, keys and explanations. Recomputed the ventilation, gas-content mixing, shunt, compliance, Laplace and oxygen-delivery calculations.",
+    "Compared nearest existing written stems; retained multi-variable applications, reverse distinctions and extra inference steps, not simple numeric duplicates. Author removed 9 weak duplicate/obvious drafts after initial reviewer feedback.",
+    "Independently inspected relevant Guyton 15 source text: PDF493–495,499,506,508,514,519,524,526,533–535,542,544–545,547–549; exact book formulas and key chapter43 mechanisms matched.",
+    "Independently inspected Gray42 nasal nerve/artery, laryngeal pathology and pleural/hilar source text at PDF1063–1066,1125,1579–1580,1598,1601; reviewed source relationships against all 16 anatomy keys.",
+    "Read Junqueira16 respiratory/olfactory, bronchiolar, blood-air barrier, surfactant and macrophage/repair passages at PDF361–363,368,373–378.",
+    "Read Langman15 PDF237–240,242 and the extracted E1/E2 slide text cited by the embryology questions."
+  ],
+  "limits": [
+    "Independent agent source review is not faculty or specialist validation.",
+    "Regional slide inventory does not establish exact exam weighting; respiratory physiology remains book-only.",
+    "Similar prerequisite topics remain deliberately linked; these are additional applications, not a claim of newly covering an entire chapter."
+  ],
+  "questionCount": 71,
+  "difficultyCounts": {
+    "1": 0,
+    "2": 0,
+    "3": 37,
+    "4": 33,
+    "5": 1
+  }
+}

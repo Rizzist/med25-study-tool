@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1.0.0",
-  "updatedAt": "2026-08-29",
-  "moduleCount": 19,
-  "conceptCount": 116,
-  "objectiveCount": 297,
-  "mcqLinkedObjectives": 297,
-  "objectivesSampledBeforeExpansion": 153,
-  "objectivesFirstSampledByExpansion": 144,
-  "questionCount": 408,
-  "addedQuestionCount": 184,
-  "dynamicVariantCount": 56,
-  "dynamicTargetCount": 28,
-  "distinctPracticeItems": 380,
+  "updatedAt": "2026-09-08",
+  "moduleCount": 43,
+  "conceptCount": 158,
+  "objectiveCount": 528,
+  "mcqLinkedObjectives": 528,
+  "objectivesSampledBeforeExpansion": 298,
+  "objectivesFirstSampledByExpansion": 230,
+  "questionCount": 988,
+  "addedQuestionCount": 301,
+  "dynamicVariantCount": 519,
+  "dynamicTargetCount": 346,
+  "distinctPracticeItems": 815,
   "unmappedQuestionIds": [],
   "unsampledObjectiveIds": [],
   "byModule": [
@@ -22,8 +22,8 @@
       "conceptCount": 8,
       "objectiveCount": 24,
       "linkedObjectiveCount": 24,
-      "questions": 50,
-      "distinctItems": 41,
+      "questions": 59,
+      "distinctItems": 50,
       "newlySampledObjectives": 12
     },
     {
@@ -33,8 +33,8 @@
       "conceptCount": 5,
       "objectiveCount": 15,
       "linkedObjectiveCount": 15,
-      "questions": 26,
-      "distinctItems": 23,
+      "questions": 29,
+      "distinctItems": 26,
       "newlySampledObjectives": 8
     },
     {
@@ -44,8 +44,8 @@
       "conceptCount": 8,
       "objectiveCount": 21,
       "linkedObjectiveCount": 21,
-      "questions": 44,
-      "distinctItems": 36,
+      "questions": 52,
+      "distinctItems": 44,
       "newlySampledObjectives": 9
     },
     {
@@ -55,8 +55,8 @@
       "conceptCount": 12,
       "objectiveCount": 35,
       "linkedObjectiveCount": 35,
-      "questions": 69,
-      "distinctItems": 61,
+      "questions": 77,
+      "distinctItems": 69,
       "newlySampledObjectives": 18
     },
     {
@@ -223,36 +223,300 @@
       "questions": 24,
       "distinctItems": 24,
       "newlySampledObjectives": 12
+    },
+    {
+      "id": "depth-resp-airway",
+      "title": "Respiratory airway histology depth",
+      "subject": "histology",
+      "conceptCount": 2,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 11,
+      "distinctItems": 11,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "depth-resp-alveolar-support",
+      "title": "Alveolar and lung-support histology depth",
+      "subject": "histology",
+      "conceptCount": 2,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 7,
+      "distinctItems": 7,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "depth-resp-emb-mechanisms",
+      "title": "Respiratory developmental mechanisms",
+      "subject": "embryology",
+      "conceptCount": 2,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 15,
+      "distinctItems": 15,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "depth-resp-larynx-module",
+      "title": "Laryngeal lesions, spaces and airway access",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 2,
+      "linkedObjectiveCount": 2,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 2
+    },
+    {
+      "id": "depth-resp-pleura-module",
+      "title": "Bronchial return and pleural procedures",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 1,
+      "linkedObjectiveCount": 1,
+      "questions": 3,
+      "distinctItems": 3,
+      "newlySampledObjectives": 1
+    },
+    {
+      "id": "depth-resp-integration-module",
+      "title": "Ventilation, oxygen content, and control: integrated challenges",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 6,
+      "linkedObjectiveCount": 6,
+      "questions": 6,
+      "distinctItems": 6,
+      "newlySampledObjectives": 6
+    },
+    {
+      "id": "comp-resp-flow-module",
+      "title": "Forced expiration and flow-volume interpretation",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-failure-module",
+      "title": "Oxygenation, ventilation and cellular oxygen use",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-pathophysiology-module",
+      "title": "Alveolar collapse, fibrosis and pulmonary vascular loss",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-ventilator-module",
+      "title": "Assisted ventilation and competing respiratory pressures",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-mechanics-module",
+      "title": "Compliance, surface tension and pressure-volume history",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-ventilation-module",
+      "title": "Effective ventilation under changing dead space",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-vascular-module",
+      "title": "Regional blood flow and edema forces",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 3,
+      "linkedObjectiveCount": 3,
+      "questions": 3,
+      "distinctItems": 3,
+      "newlySampledObjectives": 3
+    },
+    {
+      "id": "comp-resp-vq-module",
+      "title": "Regional matching and venous admixture",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-oxygen-module",
+      "title": "Oxygen carriage, delivery and unloading",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-control-module",
+      "title": "Chemical respiratory control across time and sites",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 3,
+      "linkedObjectiveCount": 3,
+      "questions": 3,
+      "distinctItems": 3,
+      "newlySampledObjectives": 3
+    },
+    {
+      "id": "comp-resp-nasal-module",
+      "title": "Nasal neurovascular pathways and injury localization",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-laryngeal-spread-module",
+      "title": "Laryngeal tissue mechanics and routes of spread",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-pleural-planes-module",
+      "title": "Pleural compartments and procedural boundaries",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-hilar-module",
+      "title": "Shared pulmonary drainage and hilar relationships",
+      "subject": "anatomy",
+      "conceptCount": 1,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 4,
+      "distinctItems": 4,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "comp-resp-epithelial-defense-module",
+      "title": "Epithelial defense, sensory pathways and small-airway injury",
+      "subject": "histology",
+      "conceptCount": 1,
+      "objectiveCount": 6,
+      "linkedObjectiveCount": 6,
+      "questions": 6,
+      "distinctItems": 6,
+      "newlySampledObjectives": 6
+    },
+    {
+      "id": "comp-resp-exchange-interface-module",
+      "title": "Alveolar barrier, surfactant and repair",
+      "subject": "histology",
+      "conceptCount": 1,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "comp-resp-developmental-localization-module",
+      "title": "Localizing airway-development and maturation defects",
+      "subject": "embryology",
+      "conceptCount": 1,
+      "objectiveCount": 6,
+      "linkedObjectiveCount": 6,
+      "questions": 6,
+      "distinctItems": 6,
+      "newlySampledObjectives": 6
+    },
+    {
+      "id": "resp-visual-atlas",
+      "title": "Anatomy image identification & location",
+      "subject": "anatomy",
+      "conceptCount": 16,
+      "objectiveCount": 145,
+      "linkedObjectiveCount": 145,
+      "questions": 435,
+      "distinctItems": 290,
+      "newlySampledObjectives": 0
     }
   ],
   "bySubject": [
     {
       "subject": "anatomy",
-      "concepts": 33,
-      "questions": 189,
-      "addedQuestions": 77
+      "concepts": 55,
+      "questions": 675,
+      "addedQuestions": 100
     },
     {
       "subject": "histology",
-      "concepts": 25,
-      "questions": 68,
-      "addedQuestions": 36
+      "concepts": 31,
+      "questions": 97,
+      "addedQuestions": 65
     },
     {
       "subject": "embryology",
-      "concepts": 17,
-      "questions": 41,
-      "addedQuestions": 17
+      "concepts": 20,
+      "questions": 62,
+      "addedQuestions": 38
     },
     {
       "subject": "physiology",
-      "concepts": 41,
-      "questions": 110,
-      "addedQuestions": 54
+      "concepts": 52,
+      "questions": 154,
+      "addedQuestions": 98
     }
   ],
   "sourceInventory": {
-    "mapped": 415,
+    "mapped": 468,
     "limits": [
       {
         "source": "Gray's Anatomy for Students, 3rd edition — Chapter 8 — Head and Neck",
@@ -517,6 +781,30 @@
         "conceptIds": [],
         "status": "source-missing",
         "note": "No physiology teacher slides or final examination blueprint were available. No teacher emphasis or actual exam completeness is inferred."
+      },
+      {
+        "source": "Provided Langman 15e and assigned Term 2 lecture sources",
+        "locator": "Langman 15e printed pp. 229-231 / PDF pp. 241-243",
+        "topic": "Quantitative viability thresholds and neonatal management protocols",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "Depth expansion · Sources support developmental periods, surfactant biology, glucocorticoid rationale, and limited gas exchange near month 7, but not a precise institution-independent viability cutoff or management protocol."
+      },
+      {
+        "source": "Local Term 2 respiratory anatomy inventory",
+        "locator": "Nasal Bones, LARYNX, and Trachea/Lung decks present; no dedicated pharynx deck located",
+        "topic": "Pharynx lecture boundary",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "Depth expansion · The existing respiratory anatomy bank is already substantial; no speculative new pharynx questions were added without a dedicated lecture source."
+      },
+      {
+        "source": "Local Term 2 respiratory slide inventory",
+        "locator": "Several Nasal Bones, LARYNX and Trachea/Lung slides are image-dominant",
+        "topic": "Image-only slide boundary",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "Depth expansion · No relationship was inferred solely from a nearly textless slide. This package does not claim exhaustive lecture or textbook coverage."
       }
     ]
   },

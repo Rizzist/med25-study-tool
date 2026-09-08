@@ -27,7 +27,7 @@ export function buildAnatomyQuestions(images) {
     // A second variant changes the distractor set, not merely the answer letter.
     const variants = pool.length > 3 ? [1, 2] : [1];
     return variants.map((variant) => {
-      const id = `resp-dyn-${image.id}-${target.id}-v${variant}`;
+      const id = `${image.examId === "term2-respiratory" ? "resp-visual" : image.examId ? "anat-dyn" : "resp-dyn"}-${image.id}-${target.id}-v${variant}`;
       const distractors = variant === 1 ? pool.slice(0, 3) : [pool[0], pool[2], pool[3]];
       const choices = shuffled([target, ...distractors], id);
       const options = choices.map((region, index) => ({ id: String.fromCharCode(65 + index), text: region.label }));
@@ -35,7 +35,9 @@ export function buildAnatomyQuestions(images) {
       return {
         schemaVersion: "1.0.0", id, revision: 1, status: "verified", kind: "dynamic_anatomy", subject: "anatomy",
         topic: image.title, chapter: image.source.chapter, difficulty: 2,
-        prompt: `In this ${image.view ?? "anatomical"} source diagram, which structure is centered at marker A?`,
+        prompt: image.markerMode === "label"
+          ? "Which structure is indicated by callout A?"
+          : `In this ${image.view ?? "anatomical"} source diagram, which structure is centered at marker A?`,
         options, correctOptionId, acceptedFreeText: [target.label],
         explanation: `Marker A identifies the ${target.label}. ${target.description}`,
         distractorExplanations: Object.fromEntries(choices.flatMap((region, index) => region.id === target.id ? [] : [[options[index].id, `${region.label} is not the marked target. ${region.description}`]])),
@@ -43,11 +45,17 @@ export function buildAnatomyQuestions(images) {
         source: image.source,
         media: [{ id: image.id, type: "image", path: image.path, alt: image.alt, caption: image.title,
           attribution: image.attribution ?? `Source: ${image.source.title}${image.source.slide ? `, slide ${image.source.slide}` : ""}. Educational reference from the local study library.`,
-          labelMasks: image.labelMasks ?? [],
+          labelMasks: [...(image.labelMasks ?? []), ...(image.markerMode === "label" ? image.regions.map(({ x, y, width, height }) => ({ x, y, width, height })) : [])],
           annotations: image.regions.map(({ id, label, x, y, width, height, description }) => ({ id, label, x, y, width, height, description })),
         }],
-        anatomy: { imageId: image.id, targetRegionId: target.id, variant },
-        tags: ["term-2", "exam-term2-respiratory", "source-grounded", "respiratory-anatomy", "dynamic-anatomy"],
+        anatomy: { imageId: image.id, targetRegionId: target.id, variant, ...(image.markerMode ? { markerMode: image.markerMode } : {}),
+          ...(image.moduleKey ? { modelKey: target.modelKey ?? image.moduleKey, contextStructureIds: [...new Set(image.regions.filter((r) => (r.modelKey ?? image.moduleKey) === (target.modelKey ?? image.moduleKey)).map((region) => region.structureId).filter(Boolean))] } : {}),
+        },
+        ...(target.structureId && (image.anatomy3d?.modelKey || image.moduleKey) ? {
+          anatomy3d: { modelKey: target.modelKey ?? image.anatomy3d?.modelKey ?? image.moduleKey, structureId: target.structureId,
+            contextStructureIds: [...new Set(image.regions.filter((r) => (r.modelKey ?? image.moduleKey) === (target.modelKey ?? image.moduleKey)).map((region) => region.structureId).filter(Boolean))] },
+        } : {}),
+        tags: ["term-2", `exam-${image.examId ?? "term2-respiratory"}`, "source-grounded", image.examId ? "anatomy-visual-atlas" : "respiratory-anatomy", "dynamic-anatomy", ...(image.examId ? ["study-practice", `atlas-module-${image.moduleKey}`] : [])],
         examPriority: "high", qualityFlags: [],
       };
     });
@@ -66,13 +74,20 @@ export function anatomyValidationErrors(question) {
   if (new Set(regions.map((region) => region.label.toLowerCase())).size !== regions.length) errors.push("duplicate region labels");
   const target = regions.find((region) => region.id === question.anatomy?.targetRegionId);
   if (!target) errors.push("target region is missing");
-  if (target && (media.labelMasks ?? []).some((mask) => {
+  if (target && question.anatomy?.markerMode !== "label" && (media.labelMasks ?? []).some((mask) => {
     const x = target.x + target.width / 2;
     const y = target.y + target.height / 2;
     return x >= mask.x && x <= mask.x + mask.width && y >= mask.y && y <= mask.y + mask.height;
   })) errors.push("target is obscured by a label mask");
+  if (target && question.anatomy?.markerMode === "label" && !(media.labelMasks ?? []).some((mask) => (
+    mask.x <= target.x + 0.001 && mask.y <= target.y + 0.001
+    && mask.x + mask.width >= target.x + target.width - 0.001
+    && mask.y + mask.height >= target.y + target.height - 0.001
+  ))) errors.push("callout answer text is not completely masked");
   if (target && question.options?.find((option) => option.id === question.correctOptionId)?.text !== target.label) errors.push("answer does not identify target region");
-  for (const option of question.options ?? []) if (!regions.some((region) => region.label === option.text)) errors.push(`unknown anatomical option: ${option.id}`);
+  if (question.anatomy?.responseMode !== "locate") {
+    for (const option of question.options ?? []) if (!regions.some((region) => region.label === option.text)) errors.push(`unknown anatomical option: ${option.id}`);
+  } else if (question.correctOptionId !== "A" || question.options.map(o => o.id).join("") !== "ABCD") errors.push("invalid location scoring outcomes");
   for (const region of regions) if (!region.description?.trim()) errors.push(`region lacks explanation: ${region.id}`);
   for (const box of [...regions, ...(media.labelMasks ?? [])]) {
     if (![box.x, box.y, box.width, box.height].every(Number.isFinite) || box.x < 0 || box.y < 0 || box.width <= 0 || box.height <= 0 || box.x + box.width > 1.000001 || box.y + box.height > 1.000001) errors.push("annotation or mask extends outside image");

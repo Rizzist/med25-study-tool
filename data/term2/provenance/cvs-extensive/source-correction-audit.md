@@ -67,7 +67,7 @@ All 43 additions now have `status: verified`; required `term-2`, `exam-term2-cvs
 - Source recordings: **8**
 - Local textbooks: **4**
 - Linked baseline media assets: **11**, all present
-- Registered CVS anatomy3d models: **4** (`heart`, `mediastinum`, `thoracic-innervation`, `thoracic-wall`)
+- Registered CVS anatomy3d models: **3** (`heart`, `mediastinum`, `thoracic-wall`), each with its relevant nerves integrated into the same model.
 
 The authored inventory omitted the padded original ECG PPTX, 17 transcript artifacts, all 8 source recordings, linked baseline media, and the registered 3D model inventory. These are now recorded. The original ECG PPTX contains a complete CRC-valid PPTX payload followed by 4,213,670 zero bytes; it is preserved in inventory, while the readable payload-equivalent copy supplies the slide locators.
 

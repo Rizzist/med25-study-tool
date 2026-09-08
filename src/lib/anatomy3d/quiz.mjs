@@ -1,7 +1,5 @@
-import { tissueToSystem, SYSTEMS } from "./systems.ts";
-
-// Display label for each system id (e.g. "muscle" -> "Muscle", "cavity" -> "Cavities").
-const SYSTEM_LABEL = new Map(SYSTEMS.map((system) => [system.id, system.label]));
+import { tissueToSystem } from "./systems.ts";
+import { isFoundationTarget } from "../mcq/advanced-anatomy.mjs";
 
 // The user-facing SYSTEM a structure belongs to, derived purely from its authored `tissue` tag.
 function systemOf(structure) {
@@ -102,45 +100,6 @@ function buildIdentifyQuestion(target, questionId, manifest, visibleIds) {
   };
 }
 
-// Relational variant "The highlighted structure is part of which system?" — a purely-data question
-// (system derived from tissue, no geometry, no invented facts). The correct answer is the target's
-// system; the three distractors are other systems that actually exist in this module. The viewer
-// still highlights the same target structure via `structureId`.
-function buildSystemQuestion(target, questionId, manifest, moduleSystems) {
-  const targetSystem = systemOf(target);
-  const otherSystems = shuffled(
-    moduleSystems.filter((system) => system !== targetSystem),
-    `${questionId}:system-distractors`,
-  ).slice(0, 3);
-  const systemChoices = shuffled([targetSystem, ...otherSystems], `${questionId}:system-options`);
-  const optionsForQuestion = systemChoices.map((system, index) => ({
-    id: String.fromCharCode(65 + index),
-    text: SYSTEM_LABEL.get(system) ?? system,
-  }));
-  const correctIndex = systemChoices.findIndex((system) => system === targetSystem);
-  const correctLabel = SYSTEM_LABEL.get(targetSystem) ?? targetSystem;
-
-  return {
-    id: questionId,
-    kind: "system",
-    moduleId: manifest.id,
-    structureId: target.id,
-    prompt: "The highlighted structure is part of which system?",
-    options: optionsForQuestion,
-    correctOptionId: optionsForQuestion[correctIndex].id,
-    explanation: `${target.label} is ${target.tissue} tissue, so it belongs to the ${correctLabel} system.`,
-    distractorExplanations: Object.fromEntries(systemChoices.flatMap((system, index) => (
-      system === targetSystem
-        ? []
-        : [[optionsForQuestion[index].id, `${SYSTEM_LABEL.get(system) ?? system} is another system present in this module, not the one the highlighted structure belongs to.`]]
-    ))),
-    difficulty: target.difficulty,
-    view: target.view,
-    label: correctLabel,
-    schematic: Boolean(target.schematic),
-  };
-}
-
 /**
  * @param {import("./types").AnatomyModuleManifest} manifest
  * @param {{seed: string | number, count?: number, structureIds?: string[]}} options
@@ -148,7 +107,7 @@ function buildSystemQuestion(target, questionId, manifest, moduleSystems) {
 export function buildAnatomyQuiz(manifest, options) {
   const seed = String(options?.seed ?? "anatomy3d");
   const requestedIds = options?.structureIds ? new Set(options.structureIds) : null;
-  const quizable = manifest.structures.filter((structure) => structure.quizable !== false);
+  const quizable = manifest.structures.filter((structure) => structure.quizable !== false && !isFoundationTarget(structure));
   // Targets (and therefore correct answers) are only ever the visible/requested quizable structures.
   const eligible = quizable.filter((structure) => !requestedIds || requestedIds.has(structure.id));
   const orderedTargets = shuffled(eligible, `${seed}:${manifest.id}:targets`);
@@ -159,18 +118,9 @@ export function buildAnatomyQuiz(manifest, options) {
   // Visible ids = the pool that may become the correct answer or a "visible" distractor. Hidden
   // structures still live in `manifest.structures` and may lend their labels as distractors only.
   const visibleIds = new Set(eligible.map((structure) => structure.id));
-  // Distinct systems anywhere in the module. The relational variant needs four of them to offer a
-  // clean four-option question, otherwise every question stays the standard identify variant.
-  const moduleSystems = [...new Set(manifest.structures.map((structure) => tissueToSystem[structure.tissue]))];
-  const canRelational = moduleSystems.length >= 4;
-
   return orderedTargets.slice(0, requestedCount).map((target) => {
     const questionId = `${manifest.id}-${target.id}-${seed}`;
-    // Mix in the relational variant deterministically for roughly one question in four.
-    const relational = canRelational && seedOf(`${questionId}:variant`) % 4 === 0;
-    return relational
-      ? buildSystemQuestion(target, questionId, manifest, moduleSystems)
-      : buildIdentifyQuestion(target, questionId, manifest, visibleIds);
+    return buildIdentifyQuestion(target, questionId, manifest, visibleIds);
   });
 }
 

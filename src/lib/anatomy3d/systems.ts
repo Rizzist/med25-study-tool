@@ -12,7 +12,8 @@ export type AnatomySystem =
   | "muscle"
   | "airway"
   | "cavity"
-  | "vessels"
+  | "arteries"
+  | "veins"
   | "nerves"
   | "fat"
   | "connective"
@@ -30,11 +31,13 @@ export const tissueToSystem: Record<Tissue, AnatomySystem> = {
   // pleural cavities), so they must not collapse into one "air spaces" label.
   airway: "airway",
   cavity: "cavity",
-  artery: "vessels",
-  vein: "vessels",
+  artery: "arteries",
+  vein: "veins",
   nerve: "nerves",
   fat: "fat",
   ligament: "connective",
+  tendon: "connective",
+  fascia: "connective",
   membrane: "connective",
   lung: "organs",
   gland: "organs",
@@ -54,11 +57,12 @@ export const SYSTEMS: AnatomySystemMeta[] = [
   { id: "muscle", label: "Muscle", order: 2 },
   { id: "airway", label: "Airways", order: 3 },
   { id: "cavity", label: "Cavities", order: 4 },
-  { id: "vessels", label: "Blood vessels", order: 5 },
-  { id: "nerves", label: "Nerves", order: 6 },
-  { id: "fat", label: "Fat", order: 7 },
-  { id: "connective", label: "Connective tissue", order: 8 },
-  { id: "organs", label: "Organs", order: 9 },
+  { id: "arteries", label: "Arteries", order: 5 },
+  { id: "veins", label: "Veins", order: 6 },
+  { id: "nerves", label: "Nerves", order: 7 },
+  { id: "fat", label: "Fat", order: 8 },
+  { id: "connective", label: "Connective tissue", order: 9 },
+  { id: "organs", label: "Organs", order: 10 },
 ];
 
 export function systemForStructure(structure: AnatomyStructure): AnatomySystem {

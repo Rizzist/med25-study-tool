@@ -1,3 +1,6 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { mediastinalNerveStructures } from "./thoracic-innervation-real.manifest.mjs";
+
 /**
  * REAL (mesh-backed) MEDIASTINUM manifest — part of the CVS/Thorax region.
  *
@@ -547,5 +550,7 @@ export const mediastinumManifest = {
       distractorIds: ["azygos-vein", "descending-thoracic-aorta", "oesophagus"],
       view: { azimuth: 2.8, elevation: 0.1, zoom: 1.4 },
     },
+    ...mediastinalNerveStructures,
+    ...imageMeshStructures("mediastinum"),
   ],
 };

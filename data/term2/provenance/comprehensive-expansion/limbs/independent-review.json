@@ -1,0 +1,2286 @@
+{
+  "status": "approved",
+  "date": "2026-09-08",
+  "author": "/root/limb_sources",
+  "independentReviewer": "/root/back_cvs_sources",
+  "reviewType": "Independent source-grounded educational content review",
+  "counts": {
+    "questions": 80,
+    "concepts": 16,
+    "modules": 16,
+    "coverageRows": 21,
+    "sourceAuditRows": 256,
+    "correctKeysChanged": 0,
+    "questionsRemoved": 0,
+    "distractorsRevised": 66,
+    "questionsWithDistractorRevisions": 32,
+    "difficultyChanges": 29,
+    "answeredRetrievalPrompts": 48,
+    "publishAssets": 0
+  },
+  "difficultyBefore": {
+    "3": 26,
+    "4": 46,
+    "5": 8
+  },
+  "difficultyAfter": {
+    "3": 48,
+    "4": 32,
+    "5": 0
+  },
+  "methods": [
+    "Read all 80 stems, correct answers, four-option sets and complete explanations.",
+    "Checked the cited actual local Gray 42, Langman 15, Junqueira 16 and Guyton 2026 pages using primary-source text extraction, including full-page follow-up where keyword extraction omitted a passage.",
+    "Reviewed near-neighbor overlap against the active existing limb single-best-answer bank; no exact duplicates found in that bounded comparison.",
+    "Repaired weak distractors without changing keys, synchronized correct-answer concept retrieval text, and conservatively regraded one-step recognition and simple arithmetic.",
+    "Validated all 80 questions against the MCQ schema, reconstructed the flat staging records for concept-catalog schema validation, checked mapped coverage links and verified all 48 retrieval answers against final questions."
+  ],
+  "sourceEvidence": {
+    "books": [
+      "Gray's Anatomy: The Anatomical Basis of Clinical Practice, 42nd edition",
+      "Langman's Medical Embryology, 15th edition",
+      "Junqueira's Basic Histology, 16th edition",
+      "Guyton and Hall Textbook of Medical Physiology, 2026"
+    ],
+    "locatorPolicy": "Both printed and local PDF locators are retained; the exact new-question source entries were checked. Existing-bank locators remain historical provenance, not a new certification.",
+    "imagePolicy": "All questions are text-only. The three staged PNGs are author source-inspection evidence and must not be published as question assets. Independent review relied on primary text; it does not claim independent visual inspection of those PNGs."
+  },
+  "noveltyExamples": [
+    {
+      "newId": "comp-limbs-002",
+      "existingId": "limb-gap-005",
+      "distinction": "Selective anteroposterior instability with preserved vertical suspension, not simply naming the coracoclavicular ligament."
+    },
+    {
+      "newId": "comp-limbs-006",
+      "existingId": "limb-ul-006",
+      "distinction": "Suprascapular branch-level localization from infraspinatus-only deficit, not simply naming the supplied pair."
+    },
+    {
+      "newId": "comp-limbs-014",
+      "existingId": "limb-gap-011",
+      "distinction": "Coordinated proximal and distal radioulnar mechanics, not simply which bone rotates."
+    },
+    {
+      "newId": "comp-limbs-019",
+      "existingId": "limb-ul-023",
+      "distinction": "PIN motor deficit with preserved radial wrist extension and direction of deviation."
+    },
+    {
+      "newId": "comp-limbs-035",
+      "existingId": "limb-ll-004",
+      "distinction": "Adolescent physeal barrier and retinacular supply route rather than generic adult neck-fracture vascular risk."
+    },
+    {
+      "newId": "comp-limbs-039",
+      "existingId": "limb-ll-040",
+      "distinction": "Saphenous arterial branch route rather than the sensory nerve's canal exit alone."
+    },
+    {
+      "newId": "comp-limbs-049",
+      "existingId": "limb-ll-020",
+      "distinction": "Distal superficial fibular cutaneous lesion with preserved eversion versus a proximal motor lesion."
+    },
+    {
+      "newId": "comp-limbs-064",
+      "existingId": "depth-limb-emb-002",
+      "distinction": "Initiation versus maintenance in a paired FGF10/AER experiment rather than AER removal alone."
+    }
+  ],
+  "coverageRepairs": [
+    {
+      "topic": "Lecture-to-book scope boundary",
+      "from": "mapped",
+      "to": "outside-scope",
+      "reason": "A boundary note with no linked concept is not mapped curricular content."
+    },
+    {
+      "topic": "Exhaustiveness and deeper residual subtopics",
+      "from": "mapped",
+      "to": "outside-scope",
+      "reason": "Residual scope limitation is not a mapped concept; avoids false exhaustiveness."
+    }
+  ],
+  "difficultyChanges": [
+    {
+      "id": "comp-limbs-005",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-011",
+      "from": 5,
+      "to": 4,
+      "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+    },
+    {
+      "id": "comp-limbs-013",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-014",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-015",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-019",
+      "from": 5,
+      "to": 4,
+      "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+    },
+    {
+      "id": "comp-limbs-020",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-022",
+      "from": 5,
+      "to": 4,
+      "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+    },
+    {
+      "id": "comp-limbs-023",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-026",
+      "from": 5,
+      "to": 4,
+      "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+    },
+    {
+      "id": "comp-limbs-032",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-035",
+      "from": 5,
+      "to": 4,
+      "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+    },
+    {
+      "id": "comp-limbs-037",
+      "from": 5,
+      "to": 4,
+      "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+    },
+    {
+      "id": "comp-limbs-043",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-045",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-047",
+      "from": 5,
+      "to": 4,
+      "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+    },
+    {
+      "id": "comp-limbs-052",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-053",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-055",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-056",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-057",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-059",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-065",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-066",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-068",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-071",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-072",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-074",
+      "from": 4,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    },
+    {
+      "id": "comp-limbs-076",
+      "from": 5,
+      "to": 3,
+      "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+    }
+  ],
+  "unresolvedIssues": [],
+  "limitations": [
+    "Book-extension scope is intentional; exact lecture coverage and past-paper provenance are not asserted.",
+    "Novelty comparison is bounded to the relevant active limb bank, not an exhaustive proof across every image variant or all organ-system questions.",
+    "Coverage is subtopic-level and gap-driven, not every paragraph or all clinical variants.",
+    "No level-5 difficulty or arbitrary 50% challenge target is claimed after review.",
+    "All question records remain draft for the parent-controlled import; this review is not professional clinical endorsement or patient-management guidance."
+  ],
+  "mechanicalValidation": {
+    "status": "passed",
+    "errors": [],
+    "questionSchemaValidated": 80,
+    "catalogSchemaValidated": true,
+    "coverageMappedLinked": true,
+    "retrievalPromptsValidated": 48,
+    "questionMediaCount": 0,
+    "sha256": {
+      "questions.jsonl": "c3ecefb88b8c52724bc5b1efe367fc657a123a24a6ea0a351071fc62a7cbb8d0",
+      "concepts.json": "dc95acac156b79ec1d8e53ef2cc0a162e938efb0868ff27fbda04e0c7285809f",
+      "modules.json": "5351878caa76eb90115442f257ebcaac9d179b0df7df96719feeb8b5f6403396",
+      "coverage.json": "19a6e90ef93c0742216957bc799f6549c738713fc073cff234cd4fcdc357258c",
+      "source-audit.json": "2bbf082b7e28b36d5b5f31199dd906e13060a5427da28bea461e3bd4a3130a74"
+    }
+  },
+  "reviewedQuestions": [
+    {
+      "id": "comp-limbs-001",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 902; local PDF p. 1385",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Selective AC/trapezoid injury leaves the conoid as a vertical fulcrum; directional mechanics are stated on the cited page.",
+      "existingQuestionIds": [
+        "limb-gap-005",
+        "limb-ul-028",
+        "limb-ul-033",
+        "limb-ul-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-002",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 903; local PDF p. 1386",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "AC capsular ligaments resist anteroposterior translation while preserved coracoclavicular ligaments retain vertical restraint.",
+      "existingQuestionIds": [
+        "limb-gap-005",
+        "limb-ul-028",
+        "limb-ul-033",
+        "limb-ul-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-003",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 900-901; local PDF p. 1383-1384",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Sternoclavicular disc attachments, joint partition and soft-tissue stability agree with the cited pages.",
+      "existingQuestionIds": [
+        "limb-gap-005",
+        "limb-ul-028",
+        "limb-ul-033",
+        "limb-ul-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-004",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 906-907; local PDF p. 1390-1391",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Rotator interval reinforcements are coracohumeral and superior glenohumeral ligaments.",
+      "existingQuestionIds": [
+        "limb-gap-005",
+        "limb-ul-028",
+        "limb-ul-033",
+        "limb-ul-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-005",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 906; local PDF p. 1390",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-005",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Normal subscapularis bursal communication does not itself imply capsular rupture.",
+      "existingQuestionIds": [
+        "limb-gap-005",
+        "limb-ul-028",
+        "limb-ul-033",
+        "limb-ul-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-006",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 924; local PDF p. 1414",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Preserved supraspinatus with impaired infraspinatus localizes distal to the supraspinatus branches.",
+      "existingQuestionIds": [
+        "limb-ul-006",
+        "limb-ul-029",
+        "limb-ul-013",
+        "limb-ul-039",
+        "limb-ul-042"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-007",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 924; local PDF p. 1414",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Lower subscapular branch distribution accounts for teres-major involvement.",
+      "existingQuestionIds": [
+        "limb-ul-006",
+        "limb-ul-029",
+        "limb-ul-013",
+        "limb-ul-039",
+        "limb-ul-042"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-008",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 924; local PDF p. 1414",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Lateral pectoral nerve course through clavipectoral fascia is distinguished from musculocutaneous motor territory.",
+      "existingQuestionIds": [
+        "limb-ul-006",
+        "limb-ul-029",
+        "limb-ul-013",
+        "limb-ul-039",
+        "limb-ul-042"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-009",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 924-925; local PDF p. 1414-1415",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Axillary branch distribution distinguishes anterior-deltoid from posterior-deltoid/teres-minor patterns.",
+      "existingQuestionIds": [
+        "limb-ul-006",
+        "limb-ul-029",
+        "limb-ul-013",
+        "limb-ul-039",
+        "limb-ul-042"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-010",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 925 and 954; local PDF p. 1415 and 1459",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Lateral cutaneous nerve of forearm injury distal to muscular branches spares biceps and brachialis.",
+      "existingQuestionIds": [
+        "limb-ul-006",
+        "limb-ul-029",
+        "limb-ul-013",
+        "limb-ul-039",
+        "limb-ul-042"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-011",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 941.e1; local PDF p. 1441",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": {
+        "id": "comp-limbs-011",
+        "from": 5,
+        "to": 4,
+        "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Radial-head injury plus interosseous membrane disruption explains proximal radial migration and distal radioulnar instability.",
+      "existingQuestionIds": [
+        "limb-gap-010",
+        "limb-gap-011",
+        "limb-gap-013",
+        "limb-ul-064",
+        "limb-ul-048"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-012",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 941.e1; local PDF p. 1441",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Radial head acts as a secondary valgus restraint when the ulnar collateral ligament is deficient.",
+      "existingQuestionIds": [
+        "limb-gap-010",
+        "limb-gap-011",
+        "limb-gap-013",
+        "limb-ul-064",
+        "limb-ul-048"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-013",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 940; local PDF p. 1439",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-013",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "B",
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Central triangular fibrocartilage is relatively avascular compared with its outer peripheral zone.",
+      "existingQuestionIds": [
+        "limb-gap-010",
+        "limb-gap-011",
+        "limb-gap-013",
+        "limb-ul-064",
+        "limb-ul-048"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-014",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 941-941.e1; local PDF p. 1440-1441",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-014",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Pronation involves coordinated proximal and distal radioulnar movement.",
+      "existingQuestionIds": [
+        "limb-gap-010",
+        "limb-gap-011",
+        "limb-gap-013",
+        "limb-ul-064",
+        "limb-ul-048"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-015",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 941; local PDF p. 1440",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-015",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "B"
+      ],
+      "sourceCheck": "Biceps contributes especially to resisted supination with the elbow flexed; supinator supports unresisted movement.",
+      "existingQuestionIds": [
+        "limb-gap-010",
+        "limb-gap-011",
+        "limb-gap-013",
+        "limb-ul-064",
+        "limb-ul-048"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-016",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 950-951; local PDF p. 1452-1453",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Anterior ulnar recurrent and inferior ulnar collateral vessels form the anterior medial-epicondylar connection.",
+      "existingQuestionIds": [
+        "limb-ul-020",
+        "limb-ul-022",
+        "limb-ul-023",
+        "limb-ul-047",
+        "depth-limbs-anat-004",
+        "depth-limbs-anat-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-017",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 950; local PDF p. 1452",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Elbow collateral and recurrent arterial route agrees with the source course and paired branches.",
+      "existingQuestionIds": [
+        "limb-ul-020",
+        "limb-ul-022",
+        "limb-ul-023",
+        "limb-ul-047",
+        "depth-limbs-anat-004",
+        "depth-limbs-anat-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-018",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 941 and 950-951; local PDF p. 1440 and 1452-1453",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Ulnar head of pronator teres usually separates the crossing median nerve and ulnar artery.",
+      "existingQuestionIds": [
+        "limb-ul-020",
+        "limb-ul-022",
+        "limb-ul-023",
+        "limb-ul-047",
+        "depth-limbs-anat-004",
+        "depth-limbs-anat-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-019",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 953-954; local PDF p. 1457-1459",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": {
+        "id": "comp-limbs-019",
+        "from": 5,
+        "to": 4,
+        "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "D"
+      ],
+      "sourceCheck": "PIN-pattern finger/ulnar wrist extensor deficits coexist with spared more proximal radial wrist extensors; branch variability is not treated as invariant.",
+      "existingQuestionIds": [
+        "limb-ul-020",
+        "limb-ul-022",
+        "limb-ul-023",
+        "limb-ul-047",
+        "depth-limbs-anat-004",
+        "depth-limbs-anat-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-020",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 953.e1-954; local PDF p. 1458-1459",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-020",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Medial forearm cutaneous loss with intact ulnar digital sensation and intrinsic hand power separates the cutaneous nerve from ulnar neuropathy.",
+      "existingQuestionIds": [
+        "limb-ul-020",
+        "limb-ul-022",
+        "limb-ul-023",
+        "limb-ul-047",
+        "depth-limbs-anat-004",
+        "depth-limbs-anat-007"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-021",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 972.e1; local PDF p. 1492",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Terminal extensor failure produces mallet deformity and can progress to PIP hyperextension/swan-neck mechanics.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-009",
+        "limb-gap-014",
+        "limb-gap-015",
+        "limb-ul-050",
+        "limb-ul-051"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-022",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 972.e1; local PDF p. 1492",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": {
+        "id": "comp-limbs-022",
+        "from": 5,
+        "to": 4,
+        "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "D"
+      ],
+      "sourceCheck": "Central-slip failure with volar lateral-band migration produces boutonniere mechanics.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-009",
+        "limb-gap-014",
+        "limb-gap-015",
+        "limb-ul-050",
+        "limb-ul-051"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-023",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 972.e1; local PDF p. 1492",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-023",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "B",
+        "D"
+      ],
+      "sourceCheck": "Adductor-aponeurosis interposition obstructs apposition of a displaced thumb ulnar collateral ligament.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-009",
+        "limb-gap-014",
+        "limb-gap-015",
+        "limb-ul-050",
+        "limb-ul-051"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-024",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 973; local PDF p. 1493",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "A2 and A4 pulley roles in preventing tendon bowstringing are supported.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-009",
+        "limb-gap-014",
+        "limb-gap-015",
+        "limb-ul-050",
+        "limb-ul-051"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-025",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 971-972; local PDF p. 1490-1491",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "MCP collateral tightening in flexion is contrasted with PIP proper collateral restraint across position.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-009",
+        "limb-gap-014",
+        "limb-gap-015",
+        "limb-ul-050",
+        "limb-ul-051"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-026",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 984-985; local PDF p. 1512 and 1515",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": {
+        "id": "comp-limbs-026",
+        "from": 5,
+        "to": 4,
+        "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Deep ulnar lesion distal to hypothenar branches explains interosseous/adductor weakness with spared hypothenar and superficial functions.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-012",
+        "depth-limbs-anat-014",
+        "limb-ul-055",
+        "limb-ul-056",
+        "limb-ul-057"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-027",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 983; local PDF p. 1511",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Proper digital nerve supply includes dorsal distal phalanx and nail-bed territory.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-012",
+        "depth-limbs-anat-014",
+        "limb-ul-055",
+        "limb-ul-056",
+        "limb-ul-057"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-028",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 973-974; local PDF p. 1493 and 1495",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Usual little-finger synovial sheath continuity with the common flexor sheath supplies the proposed spread route.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-012",
+        "depth-limbs-anat-014",
+        "limb-ul-055",
+        "limb-ul-056",
+        "limb-ul-057"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-029",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 973; local PDF p. 1493",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Vincula provide vascular connections to digital flexor tendons.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-012",
+        "depth-limbs-anat-014",
+        "limb-ul-055",
+        "limb-ul-056",
+        "limb-ul-057"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-030",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 982; local PDF p. 1509",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "A"
+      ],
+      "sourceCheck": "Deep palmar arch lies against metacarpal bases/interossei with the deep ulnar nerve in its concavity.",
+      "existingQuestionIds": [
+        "depth-limbs-anat-012",
+        "depth-limbs-anat-014",
+        "limb-ul-055",
+        "limb-ul-056",
+        "limb-ul-057"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-031",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1368; local PDF p. 2153",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Anterior capsular attachment at the intertrochanteric line contrasts with posterior attachment proximal to the crest.",
+      "existingQuestionIds": [
+        "limb-ll-004",
+        "limb-ll-005",
+        "limb-ll-027",
+        "limb-ll-029",
+        "depth-limbs-anat-018"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-032",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1368; local PDF p. 2153",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-032",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "B",
+        "C"
+      ],
+      "sourceCheck": "Partial hip flexion and abduction increase capsular capacity in effusion; revised distractor no longer invokes an implausible vascular drainage route.",
+      "existingQuestionIds": [
+        "limb-ll-004",
+        "limb-ll-005",
+        "limb-ll-027",
+        "limb-ll-029",
+        "depth-limbs-anat-018"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-033",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1368; local PDF p. 2153",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Acetabular lunate cartilage bears load; the central acetabular fossa is not the principal cartilage-bearing articular surface.",
+      "existingQuestionIds": [
+        "limb-ll-004",
+        "limb-ll-005",
+        "limb-ll-027",
+        "limb-ll-029",
+        "depth-limbs-anat-018"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-034",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1370; local PDF p. 2157",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Iliopectineal bursa can communicate with the hip joint; full page checked despite hyphenated extraction.",
+      "existingQuestionIds": [
+        "limb-ll-004",
+        "limb-ll-005",
+        "limb-ll-027",
+        "limb-ll-029",
+        "depth-limbs-anat-018"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-035",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1368 and 1370; local PDF p. 2153 and 2157",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": {
+        "id": "comp-limbs-035",
+        "from": 5,
+        "to": 4,
+        "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "B",
+        "D"
+      ],
+      "sourceCheck": "Adolescent head supply must reach the epiphysis around the growth plate through retinacular routes; neck-vessel patency alone is insufficient.",
+      "existingQuestionIds": [
+        "limb-ll-004",
+        "limb-ll-005",
+        "limb-ll-027",
+        "limb-ll-029",
+        "depth-limbs-anat-018"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-036",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1390; local PDF p. 2185",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Femoral vein relation changes from medial proximally to posterior/posterolateral distally.",
+      "existingQuestionIds": [
+        "limb-ll-008",
+        "limb-ll-011",
+        "limb-ll-039",
+        "limb-ll-040",
+        "depth-limbs-anat-019"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-037",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1389-1390; local PDF p. 2184-2185",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": {
+        "id": "comp-limbs-037",
+        "from": 5,
+        "to": 4,
+        "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+      },
+      "revisedDistractorIds": [
+        "B",
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Gluteal/circumflex/profunda collateral relationships support the proposed proximal occlusion route.",
+      "existingQuestionIds": [
+        "limb-ll-008",
+        "limb-ll-011",
+        "limb-ll-039",
+        "limb-ll-040",
+        "depth-limbs-anat-019"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-038",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1389; local PDF p. 2184",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Perforating arteries traverse adductor-magnus arches and join longitudinal posterior-thigh connections.",
+      "existingQuestionIds": [
+        "limb-ll-008",
+        "limb-ll-011",
+        "limb-ll-039",
+        "limb-ll-040",
+        "depth-limbs-anat-019"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-039",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1389; local PDF p. 2184",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Saphenous branch of the descending genicular artery leaves through the adductor-canal roof rather than the adductor hiatus.",
+      "existingQuestionIds": [
+        "limb-ll-008",
+        "limb-ll-011",
+        "limb-ll-039",
+        "limb-ll-040",
+        "depth-limbs-anat-019"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-040",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1390; local PDF p. 2185",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Great saphenous vein and saphenous nerve proximity in the leg explains sensory loss without a femoral motor deficit.",
+      "existingQuestionIds": [
+        "limb-ll-008",
+        "limb-ll-011",
+        "limb-ll-039",
+        "limb-ll-040",
+        "depth-limbs-anat-019"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-041",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1409; local PDF p. 2208",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Articularis genus retracts the suprapatellar recess during extension.",
+      "existingQuestionIds": [
+        "limb-ll-013",
+        "limb-ll-014",
+        "limb-ll-015",
+        "limb-ll-018",
+        "limb-ll-043",
+        "limb-ll-044",
+        "limb-ll-045",
+        "depth-limbs-anat-022"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-042",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1411; local PDF p. 2210",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Semimembranosus-gastrocnemius bursal enlargement supplies the Baker-cyst relationship.",
+      "existingQuestionIds": [
+        "limb-ll-013",
+        "limb-ll-014",
+        "limb-ll-015",
+        "limb-ll-018",
+        "limb-ll-043",
+        "limb-ll-044",
+        "limb-ll-045",
+        "depth-limbs-anat-022"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-043",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1409; local PDF p. 2208",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-043",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "B"
+      ],
+      "sourceCheck": "PCL anterolateral bundle is emphasized in flexion; posteromedial bundle is emphasized in extension.",
+      "existingQuestionIds": [
+        "limb-ll-013",
+        "limb-ll-014",
+        "limb-ll-015",
+        "limb-ll-018",
+        "limb-ll-043",
+        "limb-ll-044",
+        "limb-ll-045",
+        "depth-limbs-anat-022"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-044",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1412; local PDF p. 2211",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "B",
+        "C"
+      ],
+      "sourceCheck": "Posterior weight line in a flexed knee creates a flexion tendency opposed by quadriceps.",
+      "existingQuestionIds": [
+        "limb-ll-013",
+        "limb-ll-014",
+        "limb-ll-015",
+        "limb-ll-018",
+        "limb-ll-043",
+        "limb-ll-044",
+        "limb-ll-045",
+        "depth-limbs-anat-022"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-045",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1412; local PDF p. 2211",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-045",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Medial patellofemoral and medial quadriceps restraints compound deficient lateral trochlear guidance.",
+      "existingQuestionIds": [
+        "limb-ll-013",
+        "limb-ll-014",
+        "limb-ll-015",
+        "limb-ll-018",
+        "limb-ll-043",
+        "limb-ll-044",
+        "limb-ll-045",
+        "depth-limbs-anat-022"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-046",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1423 and 1428; local PDF p. 2222 and 2227",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Tibialis posterior tests tibial-nerve L4/L5 function, helping distinguish fibular neuropathy from broader L5 root involvement.",
+      "existingQuestionIds": [
+        "limb-ll-017",
+        "limb-ll-019",
+        "limb-ll-020",
+        "limb-ll-049",
+        "limb-ll-051",
+        "limb-ll-022",
+        "limb-ll-041"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-047",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1428; local PDF p. 2227",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": {
+        "id": "comp-limbs-047",
+        "from": 5,
+        "to": 4,
+        "reason": "Substantive integration, but a level-5 rating is not warranted by the bounded reasoning required."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Short head of biceps femoris branches proximally and is spared by an isolated fibular-neck lesion.",
+      "existingQuestionIds": [
+        "limb-ll-017",
+        "limb-ll-019",
+        "limb-ll-020",
+        "limb-ll-049",
+        "limb-ll-051",
+        "limb-ll-022",
+        "limb-ll-041"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-048",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1429; local PDF p. 2228",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Distal deep fibular injury can impair extensor digitorum brevis and first-web sensation while sparing proximal long extensors.",
+      "existingQuestionIds": [
+        "limb-ll-017",
+        "limb-ll-019",
+        "limb-ll-020",
+        "limb-ll-049",
+        "limb-ll-051",
+        "limb-ll-022",
+        "limb-ll-041"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-049",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1428-1429; local PDF p. 2227-2228",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "B",
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Distal superficial fibular cutaneous injury spares already-issued motor branches to fibular muscles.",
+      "existingQuestionIds": [
+        "limb-ll-017",
+        "limb-ll-019",
+        "limb-ll-020",
+        "limb-ll-049",
+        "limb-ll-051",
+        "limb-ll-022",
+        "limb-ll-041"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-050",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1423 and 1428; local PDF p. 2222 and 2227",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "A",
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Tibialis posterior and flexor hallucis longus receive motor branches proximal to the tarsal tunnel.",
+      "existingQuestionIds": [
+        "limb-ll-017",
+        "limb-ll-019",
+        "limb-ll-020",
+        "limb-ll-049",
+        "limb-ll-051",
+        "limb-ll-022",
+        "limb-ll-041"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-051",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1444; local PDF p. 2250",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "A",
+        "B"
+      ],
+      "sourceCheck": "The wider anterior talar trochlea requires mortise accommodation during dorsiflexion.",
+      "existingQuestionIds": [
+        "limb-gap-007",
+        "limb-ll-057",
+        "limb-ll-058",
+        "depth-limbs-anat-024"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-052",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1431; local PDF p. 2231",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-052",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Superior fibular retinaculum restrains the fibular tendons behind the lateral malleolus.",
+      "existingQuestionIds": [
+        "limb-gap-007",
+        "limb-ll-057",
+        "limb-ll-058",
+        "depth-limbs-anat-024"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-053",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1422; local PDF p. 2221",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-053",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Posterior tibial neurovascular bundle lies medial to flexor hallucis longus, supporting the stated protective interval.",
+      "existingQuestionIds": [
+        "limb-gap-007",
+        "limb-ll-057",
+        "limb-ll-058",
+        "depth-limbs-anat-024"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-054",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1444; local PDF p. 2250",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Os peroneum is associated with fibularis longus near the cuboid.",
+      "existingQuestionIds": [
+        "limb-gap-007",
+        "limb-ll-057",
+        "limb-ll-058",
+        "depth-limbs-anat-024"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-055",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1446; local PDF p. 2252",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-055",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Anterior tibial-to-dorsalis-pedis transition and the adjacent deep fibular nerve relation are explicitly qualified in the stem/options.",
+      "existingQuestionIds": [
+        "limb-gap-007",
+        "limb-ll-057",
+        "limb-ll-058",
+        "depth-limbs-anat-024"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-056",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1454; local PDF p. 2264",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-056",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "B",
+        "C"
+      ],
+      "sourceCheck": "Great-toe extension winds the plantar aponeurosis and raises the longitudinal arch without requiring active intrinsic contraction.",
+      "existingQuestionIds": [
+        "limb-ll-024",
+        "limb-ll-055",
+        "limb-ll-059",
+        "limb-ll-060",
+        "limb-gap-009",
+        "depth-limbs-anat-025"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-057",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1454 and 1458; local PDF p. 2264 and 2268",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-057",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "B",
+        "C",
+        "D"
+      ],
+      "sourceCheck": "Quadratus plantae/flexor accessorius counters the oblique pull of flexor digitorum longus.",
+      "existingQuestionIds": [
+        "limb-ll-024",
+        "limb-ll-055",
+        "limb-ll-059",
+        "limb-ll-060",
+        "limb-gap-009",
+        "depth-limbs-anat-025"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-058",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1460; local PDF p. 2270",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Medial plantar motor territory includes flexor hallucis brevis with the stated three other muscles.",
+      "existingQuestionIds": [
+        "limb-ll-024",
+        "limb-ll-055",
+        "limb-ll-059",
+        "limb-ll-060",
+        "limb-gap-009",
+        "depth-limbs-anat-025"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-059",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1460; local PDF p. 2270",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-059",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "B"
+      ],
+      "sourceCheck": "Plantar arterial arch lies plantar to metatarsal bases/interossei and dorsal to the oblique adductor component, completed through the first intermetatarsal route.",
+      "existingQuestionIds": [
+        "limb-ll-024",
+        "limb-ll-055",
+        "limb-ll-059",
+        "limb-ll-060",
+        "limb-gap-009",
+        "depth-limbs-anat-025"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-060",
+      "status": "approved",
+      "subject": "anatomy",
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Printed p. 1458; local PDF p. 2268",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Flexor hallucis longus preserves interphalangeal flexion after short-flexor sesamoid insertion loss.",
+      "existingQuestionIds": [
+        "limb-ll-024",
+        "limb-ll-055",
+        "limb-ll-059",
+        "limb-ll-060",
+        "limb-gap-009",
+        "depth-limbs-anat-025"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-061",
+      "status": "approved",
+      "subject": "embryology",
+      "source": "Langman's Medical Embryology",
+      "locator": "Printed p. 171-172; local PDF p. 183-184; supporting periosteal/remodeling account: Junqueira 16th ed., printed p. 143, local PDF p. 154",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "D"
+      ],
+      "sourceCheck": "Growth-plate closure impairs length growth, while viable periosteum supports continued appositional growth; secondary Junqueira locator checked.",
+      "existingQuestionIds": [
+        "depth-limb-emb-001",
+        "depth-limb-emb-002",
+        "depth-limb-emb-003",
+        "depth-limb-emb-004",
+        "depth-limb-emb-005",
+        "depth-limb-emb-006",
+        "depth-limb-emb-007",
+        "depth-limb-emb-008",
+        "depth-limb-emb-009",
+        "depth-limb-emb-010",
+        "depth-limb-emb-011",
+        "depth-limb-emb-012"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-062",
+      "status": "approved",
+      "subject": "embryology",
+      "source": "Langman's Medical Embryology",
+      "locator": "Printed p. 172; local PDF p. 184",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "D"
+      ],
+      "sourceCheck": "Dorsal/ventral divisions supplying limb muscle masses are divisions of ventral rami, not dorsal primary rami.",
+      "existingQuestionIds": [
+        "depth-limb-emb-001",
+        "depth-limb-emb-002",
+        "depth-limb-emb-003",
+        "depth-limb-emb-004",
+        "depth-limb-emb-005",
+        "depth-limb-emb-006",
+        "depth-limb-emb-007",
+        "depth-limb-emb-008",
+        "depth-limb-emb-009",
+        "depth-limb-emb-010",
+        "depth-limb-emb-011",
+        "depth-limb-emb-012"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-063",
+      "status": "approved",
+      "subject": "embryology",
+      "source": "Langman's Medical Embryology",
+      "locator": "Printed p. 177; local PDF p. 189",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "HOXA13 hand-foot-genital and HOXD13 synpolydactyly associations agree with the cited developmental material.",
+      "existingQuestionIds": [
+        "depth-limb-emb-001",
+        "depth-limb-emb-002",
+        "depth-limb-emb-003",
+        "depth-limb-emb-004",
+        "depth-limb-emb-005",
+        "depth-limb-emb-006",
+        "depth-limb-emb-007",
+        "depth-limb-emb-008",
+        "depth-limb-emb-009",
+        "depth-limb-emb-010",
+        "depth-limb-emb-011",
+        "depth-limb-emb-012"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-064",
+      "status": "approved",
+      "subject": "embryology",
+      "source": "Langman's Medical Embryology",
+      "locator": "Printed p. 173-174; local PDF p. 185-186",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "FGF10 initiation is distinguished from apical ectodermal ridge FGF4/8 maintenance, with the source read across the page break.",
+      "existingQuestionIds": [
+        "depth-limb-emb-001",
+        "depth-limb-emb-002",
+        "depth-limb-emb-003",
+        "depth-limb-emb-004",
+        "depth-limb-emb-005",
+        "depth-limb-emb-006",
+        "depth-limb-emb-007",
+        "depth-limb-emb-008",
+        "depth-limb-emb-009",
+        "depth-limb-emb-010",
+        "depth-limb-emb-011",
+        "depth-limb-emb-012"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-065",
+      "status": "approved",
+      "subject": "embryology",
+      "source": "Langman's Medical Embryology",
+      "locator": "Printed p. 178; local PDF p. 190",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-065",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "D"
+      ],
+      "sourceCheck": "Mechanical restriction with oligohydramnios can cause contractures despite formation of bones and digit rays.",
+      "existingQuestionIds": [
+        "depth-limb-emb-001",
+        "depth-limb-emb-002",
+        "depth-limb-emb-003",
+        "depth-limb-emb-004",
+        "depth-limb-emb-005",
+        "depth-limb-emb-006",
+        "depth-limb-emb-007",
+        "depth-limb-emb-008",
+        "depth-limb-emb-009",
+        "depth-limb-emb-010",
+        "depth-limb-emb-011",
+        "depth-limb-emb-012"
+      ],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-066",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 129 and 131; local PDF p. 140 and 142",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-066",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Sulfated glycosaminoglycan fixed charge and associated water support cartilage compression resistance.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-067",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 129 and 142; local PDF p. 140 and 153",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Articular cartilage relies on diffusion from synovial fluid, distinguished from the bone lacunocanalicular network.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-068",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 142; local PDF p. 153",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-068",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "B",
+        "C"
+      ],
+      "sourceCheck": "Osteocyte network provides load sensing and coordinates remodeling responses.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-069",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 143; local PDF p. 154",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "C"
+      ],
+      "sourceCheck": "Defective osteoclast acidification explains dense but abnormal bone and reduced marrow space in osteopetrosis.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-070",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 143 and 149; local PDF p. 154 and 160",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Mineral supports rigidity while type I collagen contributes tensile integrity and pliability after decalcification.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-071",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 194; local PDF p. 205",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-071",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "B",
+        "D"
+      ],
+      "sourceCheck": "Continuous intramuscular connective-tissue sheaths transmit force from fibers that do not span the full muscle.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-072",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 197; local PDF p. 208",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-072",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Titin, alpha-actinin, nebulin and myomesin functions are not conflated.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-073",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 201; local PDF p. 212",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "C",
+        "D"
+      ],
+      "sourceCheck": "T tubule is surface-connected membrane between separate calcium-storing SR terminal cisternae; triad at A-I junction.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-074",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 213; local PDF p. 224",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-074",
+        "from": 4,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [
+        "A",
+        "D"
+      ],
+      "sourceCheck": "Satellite cells supply regeneration; mature skeletal muscle fibers are not treated as freely dividing cells.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-075",
+      "status": "approved",
+      "subject": "histology",
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p. 193 and 213; local PDF p. 204 and 224",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "A",
+        "B"
+      ],
+      "sourceCheck": "Increased fiber diameter and myofibrils demonstrate hypertrophy rather than new-fiber hyperplasia.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-076",
+      "status": "approved",
+      "subject": "physiology",
+      "source": "Guyton and Hall Textbook of Medical Physiology",
+      "locator": "Printed p. 85; local PDF p. 96",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 3,
+      "difficultyChange": {
+        "id": "comp-limbs-076",
+        "from": 5,
+        "to": 3,
+        "reason": "Direct contextual recall, a single relation or simple arithmetic; clinical wording alone does not justify challenge grading."
+      },
+      "revisedDistractorIds": [],
+      "sourceCheck": "Active tension is total minus passive: 8 N versus 5 N; a simple calculation is conservatively level 3.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-077",
+      "status": "approved",
+      "subject": "physiology",
+      "source": "Guyton and Hall Textbook of Medical Physiology",
+      "locator": "Printed p. 85-87; local PDF p. 96-98",
+      "key": "A",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "Isometric external work is zero when length is unchanged, but ATP use and heat production can continue.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-078",
+      "status": "approved",
+      "subject": "physiology",
+      "source": "Guyton and Hall Textbook of Medical Physiology",
+      "locator": "Printed p. 89; local PDF p. 100",
+      "key": "B",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "A"
+      ],
+      "sourceCheck": "Frequency summation in the same motor unit is distinguished from recruiting additional axons.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-079",
+      "status": "approved",
+      "subject": "physiology",
+      "source": "Guyton and Hall Textbook of Medical Physiology",
+      "locator": "Printed p. 96-97; local PDF p. 107-108",
+      "key": "C",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [
+        "B"
+      ],
+      "sourceCheck": "Curare-like transmission failure is separated from muscle membrane failure by preserved direct stimulation.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    },
+    {
+      "id": "comp-limbs-080",
+      "status": "approved",
+      "subject": "physiology",
+      "source": "Guyton and Hall Textbook of Medical Physiology",
+      "locator": "Printed p. 98; local PDF p. 109",
+      "key": "D",
+      "keyChanged": false,
+      "difficulty": 4,
+      "difficultyChange": null,
+      "revisedDistractorIds": [],
+      "sourceCheck": "SERCA inhibition delays calcium resequestration and relaxation despite initial excitation and release.",
+      "existingQuestionIds": [],
+      "optionReview": "All four options and their explanations checked for a single best answer; revised alternatives target nearby structures, mechanisms or lesion levels.",
+      "scope": "book-extension"
+    }
+  ],
+  "reviewedPayloadSha256": {
+    "questions.jsonl": "c3ecefb88b8c52724bc5b1efe367fc657a123a24a6ea0a351071fc62a7cbb8d0",
+    "concepts.json": "dc95acac156b79ec1d8e53ef2cc0a162e938efb0868ff27fbda04e0c7285809f",
+    "modules.json": "5351878caa76eb90115442f257ebcaac9d179b0df7df96719feeb8b5f6403396",
+    "coverage.json": "19a6e90ef93c0742216957bc799f6549c738713fc073cff234cd4fcdc357258c",
+    "source-audit.json": "2bbf082b7e28b36d5b5f31199dd906e13060a5427da28bea461e3bd4a3130a74"
+  }
+}

@@ -1,0 +1,582 @@
+"use client";
+
+import { useEffect, useMemo, useRef, useState } from "react";
+import { listAnatomyModules } from "../../lib/anatomy3d/registry";
+import { buildAnatomyQuiz } from "../../lib/anatomy3d/quiz.mjs";
+import { isFoundationTarget } from "../../lib/mcq/advanced-anatomy.mjs";
+import type { AnatomyQuestion } from "../../lib/anatomy3d/quiz.mjs";
+import type { AnatomyStructure } from "../../lib/anatomy3d/types";
+import { systemForStructure, systemsInManifest, type AnatomySystem } from "../../lib/anatomy3d/systems";
+import AnatomyViewer, { type AnatomyViewerHandle } from "./AnatomyViewer";
+
+type TrainerMode = "quiz" | "training";
+
+type ModuleProgress = {
+  score: number;
+  answered: number;
+  wrongStructureIds: string[];
+};
+
+type AnatomyProgress = {
+  version: 1;
+  modules: Record<string, ModuleProgress>;
+};
+
+const progressStorageKey = "anatomy3d.progress.v1";
+const layersStorageKey = "anatomy3d.layers.v1";
+
+// Per-module map of HIDDEN system ids (systems the user has peeled away). Missing/empty = all shown.
+function readHiddenLayers(): Record<string, string[]> {
+  if (typeof window === "undefined") return {};
+  try {
+    const parsed: unknown = JSON.parse(window.localStorage.getItem(layersStorageKey) ?? "null");
+    if (!parsed || typeof parsed !== "object" || !("version" in parsed) || parsed.version !== 1 || !("modules" in parsed)) {
+      return {};
+    }
+    const rawModules = parsed.modules;
+    if (!rawModules || typeof rawModules !== "object" || Array.isArray(rawModules)) return {};
+    const modules: Record<string, string[]> = {};
+    for (const [key, value] of Object.entries(rawModules)) {
+      if (Array.isArray(value)) modules[key] = [...new Set(value.filter((id): id is string => typeof id === "string"))];
+    }
+    return modules;
+  } catch {
+    return {};
+  }
+}
+
+function emptyProgress(): AnatomyProgress {
+  return { version: 1, modules: {} };
+}
+
+function readProgress(): AnatomyProgress {
+  if (typeof window === "undefined") return emptyProgress();
+  try {
+    const parsed: unknown = JSON.parse(window.localStorage.getItem(progressStorageKey) ?? "null");
+    if (!parsed || typeof parsed !== "object" || !("version" in parsed) || parsed.version !== 1 || !("modules" in parsed)) {
+      return emptyProgress();
+    }
+    const rawModules = parsed.modules;
+    if (!rawModules || typeof rawModules !== "object" || Array.isArray(rawModules)) return emptyProgress();
+    const modules: Record<string, ModuleProgress> = {};
+    for (const [key, value] of Object.entries(rawModules)) {
+      if (!value || typeof value !== "object") continue;
+      const record = value as Partial<ModuleProgress>;
+      const score = Math.max(0, Math.floor(Number(record.score) || 0));
+      const answered = Math.max(score, Math.floor(Number(record.answered) || 0));
+      const wrongStructureIds = Array.isArray(record.wrongStructureIds)
+        ? [...new Set(record.wrongStructureIds.filter((id): id is string => typeof id === "string"))]
+        : [];
+      modules[key] = { score, answered, wrongStructureIds };
+    }
+    return { version: 1, modules };
+  } catch {
+    return emptyProgress();
+  }
+}
+
+function progressFor(progress: AnatomyProgress, modelKey: string): ModuleProgress {
+  return progress.modules[modelKey] ?? { score: 0, answered: 0, wrongStructureIds: [] };
+}
+
+type AnatomyTrainerProps = {
+  regions: string[];
+};
+
+export function AnatomyExplorer({ regions }: AnatomyTrainerProps) {
+  const viewerRef = useRef<AnatomyViewerHandle>(null);
+  const randomStateRef = useRef(0x6d2b79f5);
+  // Modules across every region this exam covers, concatenated in registration order.
+  const regionKey = useMemo(() => regions.join("|"), [regions]);
+  const modules = useMemo(
+    () => regions.flatMap((region) => listAnatomyModules(region)),
+    [regions],
+  );
+  const [mode, setMode] = useState<TrainerMode>("training");
+  const [moduleKey, setModuleKey] = useState(modules[0]?.manifest.modelKey ?? "");
+  const [quizRound, setQuizRound] = useState(1);
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [trainingStructureId, setTrainingStructureId] = useState<string | null>(null);
+  const [showLabels, setShowLabels] = useState(false);
+  const [structureQuery, setStructureQuery] = useState("");
+  const [realMeshesOnly, setRealMeshesOnly] = useState(false);
+  const [isolateSelection, setIsolateSelection] = useState(false);
+  const [progress, setProgress] = useState<AnatomyProgress>(readProgress);
+  const [hiddenByModule, setHiddenByModule] = useState<Record<string, string[]>>(readHiddenLayers);
+
+  // When the region set changes (e.g. switching exams) reset the selection to the new set's first
+  // module, adjusting state during render (React-endorsed) rather than in an effect.
+  const [lastRegionKey, setLastRegionKey] = useState(regionKey);
+  if (lastRegionKey !== regionKey) {
+    setLastRegionKey(regionKey);
+    setModuleKey(modules[0]?.manifest.modelKey ?? "");
+    setStructureQuery("");
+  }
+
+  const registration = modules.find((candidate) => candidate.manifest.modelKey === moduleKey)
+    ?? modules[0];
+  const manifest = registration?.manifest;
+
+  // --- Anatomical layers (systems) ---------------------------------------------------------------
+  const presentSystems = useMemo(() => (manifest ? systemsInManifest(manifest) : []), [manifest]);
+  const presentSystemIds = useMemo(() => new Set(presentSystems.map((system) => system.id)), [presentSystems]);
+  const hiddenSystems = useMemo<Set<AnatomySystem>>(() => {
+    const stored = hiddenByModule[moduleKey] ?? [];
+    return new Set(stored.filter((id): id is AnatomySystem => presentSystemIds.has(id as AnatomySystem)));
+  }, [hiddenByModule, moduleKey, presentSystemIds]);
+  const layerVisibleStructures = useMemo<AnatomyStructure[]>(() => (
+    manifest
+      ? manifest.structures.filter((structure) => !hiddenSystems.has(systemForStructure(structure)))
+      : []
+  ), [manifest, hiddenSystems]);
+  const browseableStructures = useMemo<AnatomyStructure[]>(() => (
+    realMeshesOnly
+      ? layerVisibleStructures.filter((structure) => !structure.schematic)
+      : layerVisibleStructures
+  ), [layerVisibleStructures, realMeshesOnly]);
+  const hiddenStructureIds = useMemo<Set<string>>(() => {
+    const ids = new Set<string>();
+    if (manifest) {
+      for (const structure of manifest.structures) {
+        if (hiddenSystems.has(systemForStructure(structure)) || (realMeshesOnly && structure.schematic)) {
+          ids.add(structure.id);
+        }
+        if (mode === "training" && isolateSelection && trainingStructureId && structure.id !== trainingStructureId) {
+          ids.add(structure.id);
+        }
+      }
+    }
+    return ids;
+  }, [manifest, hiddenSystems, realMeshesOnly, mode, isolateSelection, trainingStructureId]);
+  const visibleStructures = useMemo<AnatomyStructure[]>(() => (
+    manifest ? manifest.structures.filter((structure) => !hiddenStructureIds.has(structure.id)) : []
+  ), [manifest, hiddenStructureIds]);
+  const quizableVisible = useMemo(
+    () => visibleStructures.filter((structure) => structure.quizable !== false && !isFoundationTarget(structure)),
+    [visibleStructures],
+  );
+  // A single visible quizable structure is enough: distractor labels are borrowed from the rest of
+  // the module (see buildAnatomyQuiz), so the quiz only dead-ends when nothing quizable is visible.
+  const canQuiz = quizableVisible.length >= 1;
+
+  const quizVisibilitySignature = useMemo(
+    () => `${[...hiddenSystems].sort().join(",")}:${realMeshesOnly ? "real" : "all"}`,
+    [hiddenSystems, realMeshesOnly],
+  );
+  const questions = useMemo<AnatomyQuestion[]>(() => (
+    manifest && canQuiz
+      ? buildAnatomyQuiz(manifest, {
+        seed: `${manifest.modelKey}:${quizRound}:${quizVisibilitySignature}`,
+        structureIds: quizableVisible.map((structure) => structure.id),
+      })
+      : []
+  ), [manifest, quizRound, canQuiz, quizableVisible, quizVisibilitySignature]);
+
+  // Reset the quiz cursor whenever the visible quiz set changes (module / restart / layer toggle),
+  // adjusting state during render (React-endorsed) rather than in an effect.
+  const quizKey = `${moduleKey}:${quizRound}:${quizVisibilitySignature}`;
+  const [lastQuizKey, setLastQuizKey] = useState(quizKey);
+  if (lastQuizKey !== quizKey) {
+    setLastQuizKey(quizKey);
+    setQuestionIndex(0);
+    setSelectedOptionId(null);
+  }
+  // A structure peeled away by a layer toggle can no longer be the selected training target.
+  if (trainingStructureId && hiddenStructureIds.has(trainingStructureId)) {
+    setTrainingStructureId(null);
+  }
+
+  const currentQuestion = questions[questionIndex] ?? null;
+  const moduleProgress = progressFor(progress, moduleKey);
+  const selectedTrainingStructure = manifest?.structures.find((structure) => structure.id === trainingStructureId) ?? null;
+  const fidelityCounts = useMemo(() => {
+    const quizable = manifest?.structures.filter((structure) => structure.quizable !== false) ?? [];
+    const real = quizable.filter((structure) => !structure.schematic).length;
+    return { total: quizable.length, real, schematic: quizable.length - real };
+  }, [manifest]);
+  const atlasCounts = useMemo(() => {
+    const structures = modules.flatMap((candidate) => candidate.manifest.structures)
+      .filter((structure) => structure.quizable !== false);
+    const real = structures.filter((structure) => !structure.schematic).length;
+    return { total: structures.length, real, schematic: structures.length - real };
+  }, [modules]);
+  const filteredStructureList = useMemo(() => {
+    const query = structureQuery.trim().toLocaleLowerCase();
+    if (!query) return browseableStructures;
+    return browseableStructures.filter((structure) => [
+      structure.label,
+      structure.shortLabel,
+      structure.tissue,
+      structure.description,
+      ...(structure.aliases ?? []),
+      ...(structure.keyPoints ?? []),
+    ].filter(Boolean).join(" ").toLocaleLowerCase().includes(query));
+  }, [browseableStructures, structureQuery]);
+  const wrongStructures = moduleProgress.wrongStructureIds.flatMap((id) => {
+    const structure = manifest?.structures.find((candidate) => candidate.id === id);
+    return structure ? [structure] : [];
+  });
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(progressStorageKey, JSON.stringify(progress));
+    } catch {
+      // Progress remains usable for this session when browser storage is unavailable.
+    }
+  }, [progress]);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(layersStorageKey, JSON.stringify({ version: 1, modules: hiddenByModule }));
+    } catch {
+      // Layer state remains usable for this session when browser storage is unavailable.
+    }
+  }, [hiddenByModule]);
+
+  useEffect(() => {
+    if (mode === "quiz" && currentQuestion) viewerRef.current?.focusStructure(currentQuestion.structureId);
+    if (mode === "training" && trainingStructureId) viewerRef.current?.focusStructure(trainingStructureId);
+  }, [currentQuestion, mode, trainingStructureId, hiddenStructureIds]);
+
+  function chooseModule(nextModelKey: string) {
+    setModuleKey(nextModelKey);
+    setQuestionIndex(0);
+    setSelectedOptionId(null);
+    setTrainingStructureId(null);
+    setStructureQuery("");
+    setIsolateSelection(false);
+    setQuizRound((round) => round + 1);
+  }
+
+  function chooseMode(nextMode: TrainerMode) {
+    setMode(nextMode);
+    setSelectedOptionId(null);
+    if (nextMode === "training" && trainingStructureId) {
+      viewerRef.current?.focusStructure(trainingStructureId);
+    }
+  }
+
+  function answerQuestion(optionId: string) {
+    if (!currentQuestion || selectedOptionId) return;
+    setSelectedOptionId(optionId);
+    const correct = optionId === currentQuestion.correctOptionId;
+    setProgress((current) => {
+      const previousModule = progressFor(current, moduleKey);
+      const wrongIds = new Set(previousModule.wrongStructureIds);
+      if (correct) wrongIds.delete(currentQuestion.structureId);
+      else wrongIds.add(currentQuestion.structureId);
+      return {
+        version: 1,
+        modules: {
+          ...current.modules,
+          [moduleKey]: {
+            score: previousModule.score + (correct ? 1 : 0),
+            answered: previousModule.answered + 1,
+            wrongStructureIds: [...wrongIds],
+          },
+        },
+      };
+    });
+  }
+
+  function restartQuiz() {
+    setQuizRound((round) => round + 1);
+    setQuestionIndex(0);
+    setSelectedOptionId(null);
+    setProgress((current) => {
+      const previousModule = progressFor(current, moduleKey);
+      return {
+        version: 1,
+        modules: {
+          ...current.modules,
+          [moduleKey]: { ...previousModule, score: 0, answered: 0 },
+        },
+      };
+    });
+  }
+
+  function nextQuestion() {
+    if (questionIndex + 1 >= questions.length) {
+      restartQuiz();
+      return;
+    }
+    setQuestionIndex((index) => index + 1);
+    setSelectedOptionId(null);
+  }
+
+  function selectTrainingStructure(structure: AnatomyStructure) {
+    setTrainingStructureId(structure.id);
+    viewerRef.current?.focusStructure(structure.id);
+  }
+
+  function showRandomLocation() {
+    if (!browseableStructures.length) return;
+    randomStateRef.current = (Math.imul(1664525, randomStateRef.current) + 1013904223) >>> 0;
+    const index = Math.floor((randomStateRef.current / 4294967296) * browseableStructures.length);
+    selectTrainingStructure(browseableStructures[index]);
+  }
+
+  function toggleSystem(systemId: AnatomySystem) {
+    setHiddenByModule((current) => {
+      const nextHidden = new Set(current[moduleKey] ?? []);
+      if (nextHidden.has(systemId)) nextHidden.delete(systemId);
+      else nextHidden.add(systemId);
+      return { ...current, [moduleKey]: [...nextHidden] };
+    });
+  }
+
+  function resetLayers() {
+    setHiddenByModule((current) => ({ ...current, [moduleKey]: [] }));
+  }
+
+  if (!registration || !manifest) {
+    return <section className="anatomy3d-empty">No 3D modules are registered for this region yet.</section>;
+  }
+
+  const answered = selectedOptionId !== null;
+  const selectedWasCorrect = answered && selectedOptionId === currentQuestion?.correctOptionId;
+
+  return (
+    <section className="anatomy3d-trainer" aria-labelledby="anatomy3d-title">
+      <header className="anatomy3d-header">
+        <div>
+          <p className="eyebrow">Interactive atlas</p>
+          <h2 id="anatomy3d-title">3D Anatomy</h2>
+          <p>{manifest.blurb}</p>
+          <p className="anatomy3d-coverage-summary">
+            <strong>{atlasCounts.total} selectable exam structures</strong> across this exam · {atlasCounts.real} scan-derived · {atlasCounts.schematic} diagrammatic
+          </p>
+        </div>
+        <div className="anatomy3d-mode-switch" aria-label="Study mode">
+          <button type="button" className={mode === "quiz" ? "active" : ""} onClick={() => chooseMode("quiz")}>Quiz</button>
+          <button type="button" className={mode === "training" ? "active" : ""} onClick={() => chooseMode("training")}>Training</button>
+        </div>
+      </header>
+
+      <nav className="anatomy3d-module-switcher" aria-label="Anatomy module">
+        {modules.map(({ manifest: option }) => (
+          <button
+            type="button"
+            key={option.modelKey}
+            className={option.modelKey === moduleKey ? "active" : ""}
+            aria-pressed={option.modelKey === moduleKey}
+            onClick={() => chooseModule(option.modelKey)}
+          >
+            {option.title}
+          </button>
+        ))}
+      </nav>
+
+      {presentSystems.length > 0 && (
+        <div className="anatomy3d-layers" role="group" aria-label="Anatomy layers">
+          <span className="anatomy3d-layers-title">Layers</span>
+          <div className="anatomy3d-layers-chips">
+            {presentSystems.map((system) => {
+              const shown = !hiddenSystems.has(system.id);
+              return (
+                <button
+                  type="button"
+                  key={system.id}
+                  className={`anatomy3d-layer-chip anatomy3d-layer-${system.id} ${shown ? "active" : ""}`.trim()}
+                  aria-pressed={shown}
+                  onClick={() => toggleSystem(system.id)}
+                >
+                  {system.label}
+                </button>
+              );
+            })}
+          </div>
+          <button
+            type="button"
+            className="anatomy3d-layers-reset"
+            onClick={resetLayers}
+            disabled={hiddenSystems.size === 0}
+          >
+            {hiddenSystems.size === 0 ? "All shown" : "Show all"}
+          </button>
+          <label className="anatomy3d-fidelity-toggle">
+            <input
+              type="checkbox"
+              checked={realMeshesOnly}
+              onChange={(event) => setRealMeshesOnly(event.target.checked)}
+            />
+            Scan-derived only
+          </label>
+        </div>
+      )}
+
+      <div className="anatomy3d-layout">
+        <div className="anatomy3d-viewer-card">
+          <AnatomyViewer
+            ref={viewerRef}
+            modelKey={moduleKey}
+            focusStructureId={mode === "quiz" ? currentQuestion?.structureId : trainingStructureId}
+            pickEnabled={mode === "training"}
+            showLabels={mode === "training" && showLabels}
+            hiddenStructureIds={hiddenStructureIds}
+            onPick={(structureId) => {
+              if (mode === "training") setTrainingStructureId(structureId);
+            }}
+          />
+          <p className="anatomy3d-schematic-legend">
+            <span className="anatomy3d-schematic-tag" aria-hidden="true">Schematic</span>
+            structures are diagrammatic (anatomically placed, not scan-accurate); unmarked structures are real BodyParts3D meshes. Current module: {fidelityCounts.total} targets · {fidelityCounts.real} scan-derived · {fidelityCounts.schematic} schematic.
+          </p>
+        </div>
+
+        <aside className="anatomy3d-panel">
+          {mode === "quiz" ? (
+            canQuiz && currentQuestion ? (
+            <>
+              <div className="anatomy3d-score">
+                <span>Question {questionIndex + 1}/{questions.length}</span>
+                <span>Score {moduleProgress.score}/{moduleProgress.answered}</span>
+                <span>To review {moduleProgress.wrongStructureIds.length}</span>
+              </div>
+              <div className="anatomy3d-question">
+                <p className="eyebrow">Difficulty {currentQuestion.difficulty}</p>
+                <h3>{currentQuestion.prompt}</h3>
+                <p>
+                  {currentQuestion.kind === "system"
+                    ? "Inspect the highlighted structure, then choose the system it belongs to."
+                    : "Inspect the highlighted structure, then choose its anatomical name."}
+                </p>
+              </div>
+              <div className={`anatomy3d-options ${answered ? "locked" : ""}`}>
+                {currentQuestion.options.map((option) => {
+                  const isCorrect = option.id === currentQuestion.correctOptionId;
+                  const isSelectedWrong = answered && option.id === selectedOptionId && !isCorrect;
+                  return (
+                    <button
+                      type="button"
+                      key={option.id}
+                      disabled={answered}
+                      className={`anatomy3d-option ${answered && isCorrect ? "correct" : ""} ${isSelectedWrong ? "wrong" : ""}`.trim()}
+                      onClick={() => answerQuestion(option.id)}
+                    >
+                      <span><b>{option.id}</b>{option.text}</span>
+                      {answered && (
+                        <small>
+                          <strong>{isCorrect ? "Why this is right" : "Why this is wrong"}</strong>
+                          {isCorrect ? currentQuestion.explanation : currentQuestion.distractorExplanations[option.id]}
+                        </small>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+              {answered && (
+                <div className={`anatomy3d-feedback ${selectedWasCorrect ? "correct" : "wrong"}`} role="status">
+                  <strong>{selectedWasCorrect ? "Correct." : `Correct answer: ${currentQuestion.label}`}</strong>
+                  <p>{currentQuestion.explanation}</p>
+                  {currentQuestion.schematic && (
+                    <p className="anatomy3d-schematic-note">Schematic — diagrammatic representation, not a scan-accurate mesh.</p>
+                  )}
+                </div>
+              )}
+              <div className="anatomy3d-actions">
+                <button type="button" className="secondary" onClick={restartQuiz}>Restart</button>
+                <button type="button" onClick={nextQuestion} disabled={!answered}>
+                  {questionIndex + 1 === questions.length ? "Reseed quiz" : "Next"}
+                </button>
+              </div>
+              {wrongStructures.length > 0 && (
+                <details className="anatomy3d-wrong-list">
+                  <summary>Wrong-list ({wrongStructures.length})</summary>
+                  <ul>{wrongStructures.map((structure) => <li key={structure.id}>{structure.label}</li>)}</ul>
+                </details>
+              )}
+            </>
+            ) : (
+              <div className="anatomy3d-empty">
+                <strong>Show a layer to quiz</strong>
+                <p>Every layer is hidden. Turn at least one layer back on to reveal a structure to quiz.</p>
+              </div>
+            )
+          ) : (
+            <>
+              <div className="anatomy3d-training-controls">
+                <button type="button" className="anatomy3d-random" onClick={showRandomLocation}>Show me a random location</button>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={showLabels}
+                    onChange={(event) => setShowLabels(event.target.checked)}
+                  />
+                  Labels
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={isolateSelection}
+                    disabled={!trainingStructureId}
+                    onChange={(event) => setIsolateSelection(event.target.checked)}
+                  />
+                  Isolate
+                </label>
+              </div>
+              <p className="anatomy3d-free-explore">Click, search, isolate, peel layers, or slice the model in sagittal, coronal and transverse planes.</p>
+              {selectedTrainingStructure ? (
+                <article className="anatomy3d-details">
+                  <p className="anatomy3d-details-tags">
+                    <span className="eyebrow">{selectedTrainingStructure.tissue}</span>
+                    {selectedTrainingStructure.schematic && (
+                      <span className="anatomy3d-schematic-tag" title="Diagrammatic representation — anatomically placed, but not a scan-accurate mesh.">Schematic</span>
+                    )}
+                  </p>
+                  <h3>{selectedTrainingStructure.label}</h3>
+                  <p>{selectedTrainingStructure.description}</p>
+                  {selectedTrainingStructure.keyPoints?.length ? (
+                    <ul>{selectedTrainingStructure.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul>
+                  ) : null}
+                </article>
+              ) : (
+                <div className="anatomy3d-empty">
+                  <strong>Free explore</strong>
+                  <p>Choose any structure below, use the random-location prompt, or click a part of the model to reveal its notes.</p>
+                </div>
+              )}
+              <section className="anatomy3d-structure-browser" aria-labelledby="anatomy3d-structure-browser-title">
+                <div className="anatomy3d-structure-browser-head">
+                  <div>
+                    <strong id="anatomy3d-structure-browser-title">Complete exam-scope index</strong>
+                    <small>{filteredStructureList.length} of {browseableStructures.length} visible structures</small>
+                  </div>
+                  <input
+                    type="search"
+                    value={structureQuery}
+                    onChange={(event) => setStructureQuery(event.target.value)}
+                    placeholder="Search structure, alias or fact"
+                    aria-label="Search anatomy structures"
+                  />
+                </div>
+                <div className="anatomy3d-structure-list">
+                  {filteredStructureList.map((structure) => (
+                    <button
+                      type="button"
+                      key={structure.id}
+                      className={trainingStructureId === structure.id ? "active" : ""}
+                      aria-pressed={trainingStructureId === structure.id}
+                      onClick={() => selectTrainingStructure(structure)}
+                    >
+                      <span>{structure.label}</span>
+                      <small>{structure.tissue}{structure.schematic ? " · schematic" : " · scan-derived"}</small>
+                    </button>
+                  ))}
+                  {filteredStructureList.length === 0 && <p>No visible structures match that search.</p>}
+                </div>
+              </section>
+            </>
+          )}
+        </aside>
+      </div>
+
+      <p className="anatomy3d-attribution">
+        Anatomical meshes: BodyParts3D, © The Database Center for Life Science · licensed atlas assets
+      </p>
+    </section>
+  );
+}
+
+export default AnatomyExplorer;

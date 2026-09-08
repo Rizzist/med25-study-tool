@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "examId": "term2-biochemistry",
   "title": "Biochemistry II: source-verified concepts for Lippincott Chapters 8-12 and 15",
-  "updatedAt": "2026-08-31",
+  "updatedAt": "2026-09-07",
   "scopeNote": "Independent local-source curriculum audit of Lippincott's Illustrated Reviews: Biochemistry, 6th edition, Chapters 8-12 and 15, all locally available Term 2 carbohydrate and dietary-lipid notes/transcripts, and the immutable 158-question verified baseline. Course concepts require direct local teaching evidence; book-extension concepts are explicitly labeled. New questions are study practice, not past, final, or official assessment items.",
   "modules": [
     {
@@ -88,6 +88,13 @@
       "title": "Dietary Lipid Metabolism — bounded book extension",
       "description": "Defensible details within the reconciled chapter whose course evidence is only a chapter/topic anchor; kept explicitly labeled as book extension.",
       "order": 12
+    },
+    {
+      "id": "depth-bio-integration-module",
+      "subject": "biochemistry",
+      "title": "Carbohydrate control and dietary-lipid handling: mechanism challenges",
+      "description": "Core mechanisms and demanding applications from reconciled Lippincott chapters.",
+      "order": 505
     }
   ],
   "concepts": [
@@ -3165,6 +3172,137 @@
           ]
         }
       ]
+    },
+    {
+      "id": "depth-bio-integration",
+      "moduleId": "depth-bio-integration-module",
+      "subject": "biochemistry",
+      "title": "Carbohydrate control and dietary-lipid handling: mechanism challenges",
+      "summary": "This module links carbohydrate control and dietary-lipid handling: mechanism challenges to explicit causal reasoning and calculations. Study the source-grounded checkpoints, retrieve the answers without options, then solve the linked original scenarios. Difficulty ratings are editorial, not university-calibrated. These are book extensions within reconciled chapter scope, not claims that every detailed mechanism appeared in the available lecture material.",
+      "keyPoints": [
+        "Hepatic fructose 2,6-bisphosphate activates PFK-1 and inhibits fructose 1,6-bisphosphatase; glucagon lowers it and favors glucose production.",
+        "PDH kinase inactivates PDH by phosphorylation when energy/product signals are abundant; calcium can activate PDH phosphatase during muscle contraction.",
+        "Pyruvate carboxylase makes oxaloacetate using ATP and biotin and is activated by acetyl-CoA. This does not mean acetyl-CoA carbon provides net glucose in humans.",
+        "Glucose 6-phosphatase is the shared terminal free-glucose-producing step used by hepatic glycogen breakdown and gluconeogenesis.",
+        "Pancreatic lipase/colipase acts in the intestinal lumen, micelles deliver digestion products to the brush border, and chylomicrons export reassembled lipids through lymph.",
+        "Lipoprotein lipase acts on circulating TAG-rich particles at capillary surfaces; it is distinct from pancreatic lipase used during digestion."
+      ],
+      "examTraps": [
+        "Restrict this lane to reconciled Lippincott chapters 8–12 and 15; detailed pathway applications are original book-derived practice, not copied end-of-chapter questions."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "In liver, glucagon lowers fructose 2,6-bisphosphate. Which paired response most directly reduces futile cycling between glycolysis and gluconeogenesis?",
+          "answer": "PFK-1 activity decreases while fructose 1,6-bisphosphatase activity increases. F-2,6-BP activates PFK-1 and inhibits F-1,6-bisphosphatase. Lowering it shifts both control points toward gluconeogenesis, rather than strongly activating both opposing pathways."
+        },
+        {
+          "prompt": "Mitochondrial NADH/NAD+ and acetyl-CoA/CoA ratios are high in a resting cell. Which covalent response helps reduce further pyruvate oxidation?",
+          "answer": "Activation of PDH kinase, causing inhibitory phosphorylation of PDH. High-energy and product signals activate PDH kinase, which phosphorylates and inactivates E1. This limits further acetyl-CoA generation from pyruvate."
+        },
+        {
+          "prompt": "During skeletal-muscle contraction, rising calcium helps match carbohydrate oxidation to ATP demand by which PDH-related mechanism?",
+          "answer": "Activating PDH phosphatase and increasing active dephosphorylated PDH. Calcium activates the phosphatase, which dephosphorylates E1. Increased PDH activity supports conversion of pyruvate to acetyl-CoA during energetic demand."
+        },
+        {
+          "prompt": "A toxin binds the sulfhydryl groups of lipoic acid. Which pair of reactions is directly vulnerable, unlike the biotin-dependent carboxylation of pyruvate?",
+          "answer": "PDH and alpha-ketoglutarate dehydrogenase reactions. Both oxidative decarboxylation complexes use lipoic acid. Pyruvate carboxylase instead uses biotin and ATP; confusing these cofactors obscures why pyruvate/lactate can accumulate."
+        },
+        {
+          "prompt": "A fasting liver has abundant acetyl-CoA but must replace oxaloacetate diverted toward glucose production. Which statement correctly links regulation and carbon balance?",
+          "answer": "Acetyl-CoA activates pyruvate carboxylase, but does not itself provide net glucose carbon through reversal of PDH. Acetyl-CoA is an allosteric activator of pyruvate carboxylase. Carbon from pyruvate can replenish OAA; the irreversible PDH step and TCA carbon balance prevent net glucose synthesis from acetyl-CoA in humans."
+        },
+        {
+          "prompt": "A hepatic glucose 6-phosphatase defect prevents fasting free-glucose export. Why can intact glycogen phosphorylase not fully compensate?",
+          "answer": "Glycogen breakdown still feeds glucose 6-phosphate into the same blocked final release step. Most glycogen-derived residues enter as glucose 1-phosphate and then glucose 6-phosphate. Gluconeogenesis also reaches glucose 6-phosphate, so both pathways share the blocked terminal step."
+        },
+        {
+          "prompt": "A patient has adequate luminal bile salts but severely deficient colipase. Which step is most directly compromised?",
+          "answer": "Anchoring pancreatic lipase at the lipid–water interface in the presence of bile salts. Colipase supports pancreatic lipase binding/function at the interface despite bile-salt interference. This occurs before enterocyte reassembly and lymphatic export of lipid."
+        },
+        {
+          "prompt": "Intestinal lipid hydrolysis and uptake are normal, but microsomal triglyceride transfer protein is absent in enterocytes. Which immediate defect best matches that location?",
+          "answer": "Failure to assemble/export normal apoB-containing chylomicrons into lymph. MTP is required for assembling TAG-rich apoB particles in the endoplasmic reticulum. A block here is downstream of luminal digestion and uptake but upstream of lymphatic chylomicron export."
+        },
+        {
+          "prompt": "Which comparison distinguishes the principal route for absorbed long-chain lipid from short-/medium-chain fatty acids?",
+          "answer": "Long-chain lipid is mainly reassembled into chylomicrons for lymphatic transport; shorter fatty acids can enter portal blood without chylomicrons. Enterocytes package much absorbed long-chain lipid into chylomicrons and export it via lacteals. Short/medium-chain fatty acids are more water-soluble and do not require this route."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Lippincott's Illustrated Reviews: Biochemistry",
+          "edition": "6th edition",
+          "chapter": "8–12, 15",
+          "locator": "PDF 191–334; shared terminal glucose-release step: PDF231,248–250; intestinal lipid transport: PDF332–333",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "depth-bio-integration-obj-1",
+          "text": "Explain and apply: PFK-1 activity decreases while fructose 1,6-bisphosphatase activity increases.",
+          "questionIds": [
+            "depth-bio-biochem-001"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-2",
+          "text": "Explain and apply: Activation of PDH kinase, causing inhibitory phosphorylation of PDH.",
+          "questionIds": [
+            "depth-bio-biochem-002"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-3",
+          "text": "Explain and apply: Activating PDH phosphatase and increasing active dephosphorylated PDH.",
+          "questionIds": [
+            "depth-bio-biochem-003"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-4",
+          "text": "Explain and apply: PDH and alpha-ketoglutarate dehydrogenase reactions.",
+          "questionIds": [
+            "depth-bio-biochem-004"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-5",
+          "text": "Explain and apply: Acetyl-CoA activates pyruvate carboxylase, but does not itself provide net glucose carbon through reversal of PDH.",
+          "questionIds": [
+            "depth-bio-biochem-005"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-6",
+          "text": "Explain and apply: Glycogen breakdown still feeds glucose 6-phosphate into the same blocked final release step.",
+          "questionIds": [
+            "depth-bio-biochem-006"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-7",
+          "text": "Explain and apply: Anchoring pancreatic lipase at the lipid–water interface in the presence of bile salts.",
+          "questionIds": [
+            "depth-bio-biochem-007"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-8",
+          "text": "Explain and apply: Failure to assemble/export normal apoB-containing chylomicrons into lymph.",
+          "questionIds": [
+            "depth-bio-biochem-008"
+          ]
+        },
+        {
+          "id": "depth-bio-integration-obj-9",
+          "text": "Explain and apply: Long-chain lipid is mainly reassembled into chylomicrons for lymphatic transport; shorter fatty acids can enter portal blood without chylomicrons.",
+          "questionIds": [
+            "depth-bio-biochem-009"
+          ]
+        }
+      ]
     }
   ],
   "sourceAudit": [
@@ -4854,6 +4992,16 @@
       "conceptIds": [],
       "status": "source-missing",
       "note": "The original slide deck is not present locally; the reconstructed-note PDF and line-located transcripts are the finest available course evidence."
+    },
+    {
+      "source": "Lippincott's Illustrated Reviews: Biochemistry",
+      "locator": "PDF 191–334; shared terminal glucose-release step: PDF231,248–250; intestinal lipid transport: PDF332–333",
+      "topic": "Carbohydrate control and dietary-lipid handling: mechanism challenges",
+      "conceptIds": [
+        "depth-bio-integration"
+      ],
+      "status": "mapped",
+      "note": "Depth expansion · Original source-grounded practice. Course links support the base mechanism; novel scenarios are not actual exam questions. Detailed book-only applications are tagged book-extension per question."
     }
   ]
 }

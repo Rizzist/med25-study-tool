@@ -1,0 +1,312 @@
+[
+  {
+    "examId": "term2-cvs",
+    "source": "Local cardiovascular anatomy slides plus Gray's Anatomy, 42nd ed.",
+    "locator": "Heart 2 slides 8-9; Heart 3 slides 1-11; Heart 4 slide 3; Gray printed 1074-1094 / local PDF 1671-1715",
+    "topic": "Intracardiac landmarks and coronary routes",
+    "conceptIds": [
+      "depth-cvs-intracardiac"
+    ],
+    "existingQuestionIds": [
+      "cvs-anat-011",
+      "cvs-anat-012",
+      "cvs-anat-014",
+      "cvs-anat-016",
+      "cvs-anat-018",
+      "cvs-anat-019",
+      "cvs-anat-020"
+    ],
+    "newQuestionIds": [
+      "depth-cvs-anat-001",
+      "depth-cvs-anat-002",
+      "depth-cvs-anat-003",
+      "depth-cvs-anat-005",
+      "depth-cvs-anat-006",
+      "depth-cvs-anat-007",
+      "depth-cvs-anat-008",
+      "depth-cvs-anat-009",
+      "depth-cvs-anat-004",
+      "depth-cvs-anat-010"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-cvs",
+    "source": "Local cardiovascular anatomy slides plus Gray's Anatomy, 42nd ed.",
+    "locator": "Heart 1 slides 3-11; Mediastinum 1 slides 1 and 4; Gray printed 1043-1044 and 1068-1071 / local PDF 1619-1620 and 1654-1666",
+    "topic": "Pericardial access and cardiophrenic relations",
+    "conceptIds": [
+      "depth-cvs-pericardial"
+    ],
+    "existingQuestionIds": [
+      "cvs-anat-001",
+      "cvs-anat-002",
+      "cvs-anat-003",
+      "cvs-anat-004",
+      "cvs-anat-005",
+      "cvs-anat-006"
+    ],
+    "newQuestionIds": [
+      "depth-cvs-anat-011",
+      "depth-cvs-anat-012",
+      "depth-cvs-anat-013",
+      "depth-cvs-anat-014"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-cvs",
+    "source": "Local mediastinum/neurovascular slides plus Gray's Anatomy, 42nd ed.",
+    "locator": "Mediastinum 1 slides 2-6; Mediastinum 2 slides 2-7; Veins & Arteries 2 slides 2-5; Gray printed 1010, 1049, 1051.e1 / local PDF 1559, 1628, 1632",
+    "topic": "Mediastinal pathways and collateral routes",
+    "conceptIds": [
+      "depth-cvs-mediastinal"
+    ],
+    "existingQuestionIds": [
+      "cvs-anat-022",
+      "cvs-anat-023",
+      "cvs-anat-024",
+      "cvs-anat-gap-016",
+      "cvs-anat-gap-018",
+      "cvs-anat-gap-019"
+    ],
+    "newQuestionIds": [
+      "depth-cvs-anat-019",
+      "depth-cvs-anat-015",
+      "depth-cvs-anat-016",
+      "depth-cvs-anat-017",
+      "depth-cvs-anat-018",
+      "depth-cvs-anat-020"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-cvs",
+    "source": "Local thoracic-wall/mediastinum slides plus Gray's Anatomy, 42nd ed.",
+    "locator": "Muscles 1 slides 7-10; Neurovascular V1 slides 3-11; Neurovascular V2 slide 11; Mediastinum 3 slides 1-3; Gray printed 1007-1013 and 1064 / local PDF 1552-1565 and 1649",
+    "topic": "Thoracic wall, breast and axial spaces",
+    "conceptIds": [
+      "depth-cvs-wall"
+    ],
+    "existingQuestionIds": [
+      "cvs-anat-gap-013",
+      "cvs-anat-gap-015",
+      "cvs-anat-gap-017",
+      "cvs-anat-gap-018"
+    ],
+    "newQuestionIds": [
+      "depth-cvs-anat-021",
+      "depth-cvs-anat-022",
+      "depth-cvs-anat-024",
+      "depth-cvs-anat-023",
+      "depth-cvs-anat-025"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-limbs",
+    "source": "Local upper-limb transcripts plus Gray's Anatomy, 42nd ed.",
+    "locator": "Axilla 1 lines 100-109; Axilla 2 lines 117-137; Arm 2 lines 14-42; Gray printed 874, 927 / local PDF 1328, 1424",
+    "topic": "Axilla, arm and cubital fossa pathways",
+    "conceptIds": [
+      "depth-limbs-axilla-arm"
+    ],
+    "existingQuestionIds": [
+      "limb-ul-009",
+      "limb-ul-010",
+      "limb-ul-015",
+      "limb-ul-017",
+      "limb-ul-018",
+      "limb-ul-042",
+      "limb-gap-017"
+    ],
+    "newQuestionIds": [
+      "depth-limbs-anat-001",
+      "depth-limbs-anat-003",
+      "depth-limbs-anat-004",
+      "depth-limbs-anat-005",
+      "depth-limbs-anat-006",
+      "depth-limbs-anat-002",
+      "depth-limbs-anat-007"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-limbs",
+    "source": "Local Forearm 2 transcript plus Gray's Anatomy, 42nd ed.",
+    "locator": "Forearm 2 lines 148-204; Gray printed 952, 972, 984.e1 / local PDF 1455, 1491, 1513",
+    "topic": "Wrist and hand mechanics and lesions",
+    "conceptIds": [
+      "depth-limbs-hand"
+    ],
+    "existingQuestionIds": [
+      "limb-ul-024",
+      "limb-ul-054",
+      "limb-ul-059",
+      "limb-ul-063",
+      "limb-gap-015"
+    ],
+    "newQuestionIds": [
+      "depth-limbs-anat-010",
+      "depth-limbs-anat-012",
+      "depth-limbs-anat-009",
+      "depth-limbs-anat-011",
+      "depth-limbs-anat-013",
+      "depth-limbs-anat-014"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-limbs",
+    "source": "Gray's Anatomy, 42nd ed.",
+    "locator": "Printed 1353, 1367, 1386, 1389 / local PDF 2132, 2151, 2178, 2184",
+    "topic": "Femoral, gluteal and thigh relationships",
+    "conceptIds": [
+      "depth-limbs-proximal-lower"
+    ],
+    "existingQuestionIds": [
+      "limb-ll-004",
+      "limb-ll-006",
+      "limb-ll-007",
+      "limb-ll-038",
+      "limb-ll-040"
+    ],
+    "newQuestionIds": [
+      "depth-limbs-anat-016",
+      "depth-limbs-anat-019",
+      "depth-limbs-anat-015",
+      "depth-limbs-anat-017",
+      "depth-limbs-anat-018"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-limbs",
+    "source": "Gray's Anatomy, 42nd ed.",
+    "locator": "Printed 1416, 1419, 1449-1450 / local PDF 2215, 2218, 2256-2257",
+    "topic": "Popliteal, ankle and foot integration",
+    "conceptIds": [
+      "depth-limbs-knee-foot"
+    ],
+    "existingQuestionIds": [
+      "limb-ll-018",
+      "limb-ll-024",
+      "limb-ll-055"
+    ],
+    "newQuestionIds": [
+      "depth-limbs-anat-025",
+      "depth-limbs-anat-022",
+      "depth-limbs-anat-024"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-respiratory",
+    "source": "Gray's Anatomy, 42nd ed.",
+    "locator": "Printed 724.e1, 730-731, 1025 / local PDF 1123, 1130-1131, 1585",
+    "topic": "Laryngeal lesions, spaces and airway access",
+    "conceptIds": [
+      "depth-resp-larynx"
+    ],
+    "existingQuestionIds": [
+      "resp-anat-021",
+      "resp-anat-022",
+      "resp-anat-043",
+      "resp-anat-056"
+    ],
+    "newQuestionIds": [
+      "depth-resp-anat-002",
+      "depth-resp-anat-001",
+      "depth-resp-anat-003",
+      "depth-resp-anat-004"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-respiratory",
+    "source": "Local trachea/lung slide plus Gray's Anatomy, 42nd ed.",
+    "locator": "trachea and lung 3 slide 7; Gray printed 1007, 1021, 1023.e1, 1030, 1043-1044 / local PDF 1552, 1579, 1582, 1596, 1619-1620",
+    "topic": "Bronchial return and pleural procedures",
+    "conceptIds": [
+      "depth-resp-pleura"
+    ],
+    "existingQuestionIds": [
+      "resp-anat-042",
+      "resp-anat-045",
+      "resp-anat-046",
+      "resp-anat-047"
+    ],
+    "newQuestionIds": [
+      "depth-resp-anat-007",
+      "depth-resp-anat-005",
+      "depth-resp-anat-006"
+    ],
+    "status": "mapped",
+    "note": "Existing IDs show the nearest base coverage; new IDs test a distinct relation, mechanism or integration. Per-question locators remain in concepts.json and questions.jsonl."
+  },
+  {
+    "examId": "term2-limbs",
+    "source": "Local Term 2 lecture inventory",
+    "locator": "04 Upper Limb Carryover contains seven line-addressable upper-limb transcripts; no lower-limb lecture deck/transcript was located",
+    "topic": "Lower-limb course alignment boundary",
+    "conceptIds": [
+      "depth-limbs-proximal-lower",
+      "depth-limbs-knee-foot"
+    ],
+    "existingQuestionIds": [],
+    "newQuestionIds": [],
+    "status": "source-missing",
+    "note": "Lower-limb additions are explicitly book-extension. Their correctness is source-grounded, but course emphasis cannot be inferred from absent local lectures."
+  },
+  {
+    "examId": "term2-respiratory",
+    "source": "Local Term 2 respiratory anatomy inventory",
+    "locator": "Nasal Bones, LARYNX, and Trachea/Lung decks present; no dedicated pharynx deck located",
+    "topic": "Pharynx lecture boundary",
+    "conceptIds": [],
+    "existingQuestionIds": [
+      "resp-anat-011",
+      "resp-anat-012",
+      "resp-anat-013",
+      "resp-anat-014",
+      "resp-anat-015",
+      "resp-anat-016",
+      "resp-anat-017",
+      "resp-anat-018"
+    ],
+    "newQuestionIds": [],
+    "status": "source-missing",
+    "note": "The existing respiratory anatomy bank is already substantial; no speculative new pharynx questions were added without a dedicated lecture source."
+  },
+  {
+    "examId": "term2-cvs",
+    "source": "Local Term 2 cardiovascular slide inventory",
+    "locator": "Several anatomy decks are image-dominant and yield sparse XML text",
+    "topic": "Image-only slide boundary",
+    "conceptIds": [],
+    "existingQuestionIds": [],
+    "newQuestionIds": [],
+    "status": "source-missing",
+    "note": "No relationship was inferred solely from a nearly textless slide. This package does not claim exhaustive lecture or textbook coverage."
+  },
+  {
+    "examId": "term2-respiratory",
+    "source": "Local Term 2 respiratory slide inventory",
+    "locator": "Several Nasal Bones, LARYNX and Trachea/Lung slides are image-dominant",
+    "topic": "Image-only slide boundary",
+    "conceptIds": [],
+    "existingQuestionIds": [],
+    "newQuestionIds": [],
+    "status": "source-missing",
+    "note": "No relationship was inferred solely from a nearly textless slide. This package does not claim exhaustive lecture or textbook coverage."
+  }
+]

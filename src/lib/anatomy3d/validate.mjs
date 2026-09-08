@@ -1,7 +1,7 @@
 /** Every valid `Tissue` string (keep in sync with the `Tissue` union in types.ts). */
 export const TISSUES = [
   "cartilage", "bone", "mucosa", "muscle", "ligament", "membrane", "airway",
-  "lung", "nerve", "artery", "vein", "gland", "cavity", "fat",
+  "lung", "nerve", "artery", "vein", "gland", "cavity", "fat", "tendon", "fascia",
 ];
 
 const tissues = new Set(TISSUES);

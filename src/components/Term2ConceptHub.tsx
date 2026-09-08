@@ -8,6 +8,8 @@ import type {
   Term2ConceptSubject,
 } from "@/src/lib/term2/concept-types";
 import { toggleTerm2ConceptRead, useTerm2ConceptReading } from "@/src/lib/term2/concept-reading";
+import { filterDepthIds, type PracticeDepth } from "@/src/lib/term2/practice-depth.mjs";
+import { PracticeDepthSelect } from "./PracticeDepthSelect";
 
 type Practice = (scopeId: string, ids: string[], mode: "learn" | "exam", limit: number) => void;
 const subjectLabels: Record<Term2ConceptSubject, string> = {
@@ -94,6 +96,7 @@ export function Term2ConceptHub({ dataset, attemptedIds, repairIds, disabled, on
   const [view, setView] = useState<"study" | "audit">("study");
   const [mode, setMode] = useState<"learn" | "exam">("learn");
   const [limit, setLimit] = useState(20);
+  const [depth, setDepth] = useState<PracticeDepth>("all");
   const validConceptIds = useMemo(() => catalog.concepts.map((concept) => concept.id), [catalog.concepts]);
   const { readIds, ready: readingReady, storageError } = useTerm2ConceptReading(catalog.examId, validConceptIds);
 
@@ -120,11 +123,12 @@ export function Term2ConceptHub({ dataset, attemptedIds, repairIds, disabled, on
       ...concept.retrievalPrompts.flatMap((prompt) => [prompt.prompt, prompt.answer]),
     ].join(" ").toLowerCase().includes(search);
   });
-  const selectedIds = [...new Set(visible.flatMap(conceptQuestionIds))];
+  const selectedIds = filterDepthIds(visible.flatMap(conceptQuestionIds), index, depth);
   const subjects = [...new Set(modules.map((courseModule) => courseModule.subject))];
 
   function practice(scopeId: string, ids: string[], requestedLimit = limit) {
-    onPractice(scopeId, ids, mode, Math.min(requestedLimit, distinctIds(ids, dataset).length, 250));
+    const chosen = requestedLimit === 1 ? ids : filterDepthIds(ids, index, depth);
+    if (chosen.length) onPractice(scopeId, chosen, mode, Math.min(requestedLimit, distinctIds(chosen, dataset).length, 250));
   }
 
   function toggleRead(id: string) {
@@ -152,7 +156,7 @@ export function Term2ConceptHub({ dataset, attemptedIds, repairIds, disabled, on
     {view === "audit" ? <section className="resp-audit">
       <h2>Source → concept → question map</h2>
       <p><b>{coverage.addedQuestionCount} gap questions</b> were added after cross-referencing the original bank. <b>{coverage.objectivesFirstSampledByExpansion} objectives</b> received their first direct sample. <b>{coverage.unsampledObjectiveIds.length} objectives</b> remain unsampled.</p>
-      <p>These are source-coverage counts, never a claim of faculty weighting or a past-paper distribution.</p>
+      <p>Historical additions are source-coverage counts, not faculty weighting. Current practice links exclude elementary anatomy recognition; all source theory remains available.</p>
       <div className="resp-table-scroll"><table><caption>Module coverage</caption><thead><tr><th>Reading module</th><th>Concepts</th><th>Linked objectives</th><th>Distinct items</th><th>Read</th></tr></thead><tbody>
         {modules.map((courseModule) => {
           const concepts = catalog.concepts.filter((concept) => concept.moduleId === courseModule.id);
@@ -172,6 +176,7 @@ export function Term2ConceptHub({ dataset, attemptedIds, repairIds, disabled, on
         <label className="resp-search"><span>Find a concept, mechanism, structure, or source</span><input type="search" value={query} onChange={(event) => { setQuery(event.target.value); setModuleId("all"); }} placeholder="Search the complete theory map…" /></label>
         <label><span>Show</span><select value={filter} onChange={(event) => setFilter(event.target.value)}><option value="all">All concepts</option><option value="unread">Not marked read</option><option value="repair">Questions to repair / flagged</option><option value="gap-added">Concepts with gap additions</option></select></label>
         <label><span>Source scope</span><select value={scopeFilter} onChange={(event) => setScopeFilter(event.target.value)}><option value="all">Course + book extensions</option><option value="course">Course-supported</option><option value="book-extension">Book extension</option></select></label>
+        <PracticeDepthSelect value={depth} onChange={setDepth} />
       </div>
       <div className="resp-study-layout">
         <nav className="resp-module-nav" aria-label={`${catalog.title} reading modules`}><button aria-current={moduleId === "all" ? "true" : undefined} onClick={() => setModuleId("all")}>All modules <small>{catalog.concepts.length} concepts</small></button>
@@ -183,13 +188,13 @@ export function Term2ConceptHub({ dataset, attemptedIds, repairIds, disabled, on
         <section className="resp-study-main">
           <header className="resp-module-head"><h2>{selectedModule?.title ?? "All reading modules"}</h2><p>{selectedModule?.description ?? "Search or select a module to narrow the study map."}</p><small>{visible.length} concepts · {distinctIds(selectedIds, dataset).length} distinct practice items</small></header>
           <div className="resp-practice-controls"><label><span>Practice mode</span><select value={mode} onChange={(event) => setMode(event.target.value as "learn" | "exam")}><option value="learn">Learn · immediate explanations</option><option value="exam">Source-based test · feedback after grading</option></select></label><label><span>Session size</span><select value={limit} onChange={(event) => setLimit(Number(event.target.value))}>{[10, 20, 40, 60, 100, 250].map((value) => <option key={value} value={value}>{value === 250 ? "All available (up to 250)" : value}</option>)}</select></label><button className="primary" disabled={disabled || !selectedIds.length} onClick={() => practice(moduleId, selectedIds)}>Practice shown concepts →</button></div>
-          <p className="resp-small-note">Learn prioritizes repair, then unseen questions. Source-based tests balance practice; they are not past papers or an official blueprint.</p>
+          <p className="resp-small-note">Question depth filters practice, not the theory notes. Core = difficulty 1–3; challenge = 4–5 (editorial, not faculty-calibrated). Inspecting a single linked question opens it regardless of this filter. Source-based tests are not past papers.</p>
           {!visible.length && <div className="resp-empty"><h3>No concepts match these filters.</h3><button onClick={() => { setModuleId("all"); setQuery(""); setFilter("all"); setScopeFilter("all"); }}>Show all concepts</button></div>}
           <div className="resp-concept-list">{visible.map((concept) => {
-            const ids = conceptQuestionIds(concept);
+            const ids = filterDepthIds(conceptQuestionIds(concept), index, depth);
             const stats = progress(ids, attemptedIds, repairIds, dataset);
             return <details className="resp-concept-card" key={concept.id} id={concept.id}><summary><div><span>{subjectLabels[concept.subject]} · {concept.scope === "course" ? "Course-supported" : "Book extension"}{read.has(concept.id) ? " · Read ✓" : ""}</span><h3>{concept.title}</h3><small>{concept.objectives.length} linked objectives · {stats.total} distinct items · {stats.attempted} answered{stats.repair ? ` · ${stats.repair} to repair / flagged` : ""}</small></div></summary>
-              <div className="resp-concept-body"><p className="resp-concept-summary">{concept.summary}</p><h4>Understand & remember</h4><ul className="resp-key-points">{concept.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul><aside className="resp-exam-traps"><h4>Distinctions exam questions can exploit</h4><ul>{concept.examTraps.map((trap) => <li key={trap}>{trap}</li>)}</ul></aside><h4>Recall it before looking</h4><div className="resp-retrieval">{concept.retrievalPrompts.map((item) => <article key={item.prompt}><p>{item.prompt}</p><details><summary>Reveal model answer</summary><p>{item.answer}</p></details></article>)}</div><h4>Learning objectives ↔ MCQs</h4><ul className="resp-objectives">{concept.objectives.map((objective) => <li key={objective.id}><p>{objective.text}</p><div><span>{distinctIds(objective.questionIds, dataset).length} distinct items</span><button disabled={disabled} onClick={() => practice(concept.id, objective.questionIds)}>Practice objective</button></div><details className="resp-question-map"><summary>Inspect linked questions ({objective.questionIds.length})</summary>{objective.questionIds.map((id) => <button disabled={disabled} key={id} onClick={() => practice(concept.id, [id], 1)}><span>{index[id]?.prompt ?? id}</span><small>{id} · {index[id]?.addedForGap ? "added after gap audit" : index[id]?.kind === "dynamic_anatomy_3d" ? "interactive 3D" : "existing verified bank"}</small></button>)}</details></li>)}</ul><div className="resp-concept-actions"><label><input type="checkbox" checked={read.has(concept.id)} disabled={!readingReady} onChange={() => toggleRead(concept.id)} /> Mark theory as read</label><button className="primary" disabled={disabled || !ids.length} onClick={() => practice(concept.id, ids)}>Practice this concept →</button>{stats.repair > 0 && <button disabled={disabled} onClick={() => onPractice(concept.id, ids.filter((id) => repairIds.includes(id)), "learn", 250)}>Repair linked questions</button>}</div><footer className="resp-concept-sources"><h4>Read at the source</h4>{concept.sources.map((source) => <p key={`${source.title}:${source.locator}`}><b>{basisLabels[source.basis]}</b> {sourceText(source)}</p>)}</footer></div>
+              <div className="resp-concept-body"><p className="resp-concept-summary">{concept.summary}</p><h4>Understand & remember</h4><ul className="resp-key-points">{concept.keyPoints.map((point) => <li key={point}>{point}</li>)}</ul><aside className="resp-exam-traps"><h4>Distinctions exam questions can exploit</h4><ul>{concept.examTraps.map((trap) => <li key={trap}>{trap}</li>)}</ul></aside><h4>Recall it before looking</h4><div className="resp-retrieval">{concept.retrievalPrompts.map((item) => <article key={item.prompt}><p>{item.prompt}</p><details><summary>Reveal model answer</summary><p>{item.answer}</p></details></article>)}</div><h4>Learning objectives ↔ MCQs</h4><ul className="resp-objectives">{concept.objectives.map((objective) => <li key={objective.id}><p>{objective.text}</p><div><span>{distinctIds(objective.questionIds, dataset).length} distinct items</span><button disabled={disabled || !filterDepthIds(objective.questionIds, index, depth).length} onClick={() => practice(concept.id, objective.questionIds)}>Practice objective</button></div><details className="resp-question-map"><summary>Inspect linked questions ({objective.questionIds.length})</summary>{objective.questionIds.map((id) => <button disabled={disabled} key={id} onClick={() => practice(concept.id, [id], 1)}><span>{index[id]?.prompt ?? id}</span><small>{id} · {index[id]?.knowledgeLevel === "challenge" ? "Challenge" : "Core"} · {index[id]?.addedForGap ? "added after gap audit" : index[id]?.kind === "dynamic_anatomy_3d" ? "interactive 3D" : "existing verified bank"}</small></button>)}</details></li>)}</ul><div className="resp-concept-actions"><label><input type="checkbox" checked={read.has(concept.id)} disabled={!readingReady} onChange={() => toggleRead(concept.id)} /> Mark theory as read</label><button className="primary" disabled={disabled || !ids.length} onClick={() => practice(concept.id, ids)}>Practice this concept →</button>{stats.repair > 0 && <button disabled={disabled} onClick={() => onPractice(concept.id, ids.filter((id) => repairIds.includes(id)), "learn", 250)}>Repair linked questions</button>}</div><footer className="resp-concept-sources"><h4>Read at the source</h4>{concept.sources.map((source) => <p key={`${source.title}:${source.locator}`}><b>{basisLabels[source.basis]}</b> {sourceText(source)}</p>)}</footer></div>
             </details>;
           })}</div>
         </section>

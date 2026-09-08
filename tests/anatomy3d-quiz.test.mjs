@@ -2,13 +2,14 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { larynxRealManifest as larynxManifest } from "../src/lib/anatomy3d/manifests/respiratory/larynx-real.manifest.mjs";
 import { buildAnatomyQuiz, validateQuizQuestion } from "../src/lib/anatomy3d/quiz.mjs";
-import { tissueToSystem, SYSTEMS } from "../src/lib/anatomy3d/systems.ts";
+import { isFoundationTarget } from "../src/lib/mcq/advanced-anatomy.mjs";
+import { listAnatomyModules } from "../src/lib/anatomy3d/registry.ts";
 
 test("anatomy quiz generation is deterministic for the same seed", () => {
   const first = buildAnatomyQuiz(larynxManifest, { seed: "resp-larynx-seed" });
   const second = buildAnatomyQuiz(larynxManifest, { seed: "resp-larynx-seed" });
   assert.deepEqual(first, second);
-  assert.equal(first.length, larynxManifest.structures.filter((structure) => structure.quizable !== false).length);
+  assert.equal(first.length, larynxManifest.structures.filter((structure) => structure.quizable !== false && !isFoundationTarget(structure)).length);
 });
 
 test("anatomy questions have four unique options and identify the highlighted target", () => {
@@ -35,6 +36,7 @@ test("anatomy questions have four unique options and identify the highlighted ta
 test("a two-to-three structure visible set still yields valid four-option questions", () => {
   const nerveIds = larynxManifest.structures
     .filter((structure) => structure.tissue === "nerve")
+    .slice(0, 3)
     .map((structure) => structure.id);
   assert.ok(nerveIds.length >= 2 && nerveIds.length < 4, "expected a small (2-3) visible nerve set");
   const visible = new Set(nerveIds);
@@ -100,29 +102,16 @@ test("distractors prefer the same system as the target when available", () => {
   );
 });
 
-// TASK 3 — the relational "which system?" variant is mixed in, deterministic, and clean.
-test("relational system-variant questions are well-formed and derived from module data", () => {
-  const systemLabels = new Set(SYSTEMS.map((system) => system.label));
-  const moduleSystemLabels = new Set(
-    larynxManifest.structures.map((structure) => SYSTEMS.find((s) => s.id === tissueToSystem[structure.tissue]).label),
-  );
-  const questions = buildAnatomyQuiz(larynxManifest, { seed: "resp-larynx-seed" });
-  const systemQuestions = questions.filter((question) => question.kind === "system");
-  assert.ok(systemQuestions.length > 0, "expected at least one relational system question");
-
-  for (const question of systemQuestions) {
-    assert.deepEqual(validateQuizQuestion(question), []);
-    assert.equal(question.prompt, "The highlighted structure is part of which system?");
-    // Every option is a real system label, and each is actually present in this module.
-    for (const option of question.options) {
-      assert.ok(systemLabels.has(option.text));
-      assert.ok(moduleSystemLabels.has(option.text));
+test("all advanced targets get identification questions, never elementary system classification", () => {
+  for (const {manifest} of listAnatomyModules()) {
+    const questions=buildAnatomyQuiz(manifest,{seed:"advanced-regression"});
+    const targets=manifest.structures.filter(s=>s.quizable!==false&&!isFoundationTarget(s));
+    assert.deepEqual(questions.map(q=>q.structureId).sort(),targets.map(s=>s.id).sort());
+    for (const question of questions) {
+      assert.deepEqual(validateQuizQuestion(question),[]);
+      assert.equal(question.kind,"identify");
+      assert(!isFoundationTarget(question.label));
+      assert.equal(question.options.find(o=>o.id===question.correctOptionId).text,targets.find(s=>s.id===question.structureId).label);
     }
-    // The correct answer is the highlighted structure's own system.
-    const target = larynxManifest.structures.find((s) => s.id === question.structureId);
-    const expected = SYSTEMS.find((s) => s.id === tissueToSystem[target.tissue]).label;
-    assert.equal(question.label, expected);
-    const correct = question.options.find((option) => option.id === question.correctOptionId);
-    assert.equal(correct.text, expected);
   }
 });

@@ -1,3 +1,6 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { nasalNerveDetailStructures } from "../thorax-airway-nerve-structures.mjs";
+
 /**
  * REAL (mesh-backed) + PROCEDURAL nasal / paranasal manifest — additive prototype, NOT registered.
  *
@@ -412,5 +415,7 @@ export const nasalRealManifest = {
       distractorIds: ["sphenopalatine-artery", "anterior-ethmoidal-artery", "nasal-septum"],
       view: { azimuth: 1.5, elevation: -0.05, zoom: 1.7 },
     },
+    ...nasalNerveDetailStructures,
+    ...imageMeshStructures("nasal-real"),
   ],
 };

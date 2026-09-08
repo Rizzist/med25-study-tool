@@ -9,6 +9,7 @@ import { selectCoverageSprint } from "../src/lib/mcq/sprint-selection.mjs";
 import { selectRespiratorySprint } from "../src/lib/mcq/respiratory-selection.mjs";
 import { selectPracticalSprint } from "../src/lib/mcq/practical-selection.mjs";
 import { selectTerm2Sprint } from "../src/lib/mcq/term2-selection.mjs";
+import { includeAdvancedAnatomyPractice } from "../src/lib/mcq/advanced-anatomy.mjs";
 import { examIds, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, isInteractive3dQuestion, term2Exams } from "../src/lib/mcq/exams.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -285,6 +286,7 @@ function bankSummary() {
         if (!line.trim()) continue;
         try {
           const question = JSON.parse(line);
+          if (question.status !== 'verified' || !includeAdvancedAnatomyPractice(question)) continue;
           questionCount += 1;
           if (isImageQuestion(question)) imageQuestionCount += 1;
           counts.set(question.subject, (counts.get(question.subject) ?? 0) + 1);
@@ -330,7 +332,7 @@ function bankSummary() {
   };
 }
 
-function loadVerifiedQuestions() {
+function loadVerifiedQuestions(includeArchived = false) {
   const questionDir = resolve(root, manifest.questionDirectory);
   const questions = [];
   if (!existsSync(questionDir)) return questions;
@@ -340,7 +342,7 @@ function loadVerifiedQuestions() {
       if (!line.trim()) continue;
       try {
         const question = JSON.parse(line);
-        if (question.status === "verified") questions.push(question);
+        if (question.status === "verified" && (includeArchived || includeAdvancedAnatomyPractice(question))) questions.push(question);
       } catch {
         console.warn(`Skipped malformed question at ${filename}:${index + 1}`);
       }
@@ -465,7 +467,7 @@ function questionSetByIds(body) {
   const requestedLimit = Number(body.limit ?? ids.length);
   const limit = Number.isFinite(requestedLimit) ? Math.max(1, Math.min(250, Math.floor(requestedLimit))) : Math.min(250, ids.length);
   const idSet = new Set(ids);
-  const filtered = loadVerifiedQuestions().filter((question) => idSet.has(question.id) && matchesExam(question, exam));
+  const filtered = loadVerifiedQuestions(body.purpose === 'history').filter((question) => idSet.has(question.id) && matchesExam(question, exam));
   const byId = new Map(filtered.map((question) => [question.id, question]));
   const cleanBodyIds = (value) => Array.isArray(value)
     ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))].slice(0, 5000)
@@ -505,7 +507,7 @@ function resolveImages(question) {
 
 function resolveQuestionMedia(questionId, mediaId) {
   const question = [
-    ...loadVerifiedQuestions(),
+    ...loadVerifiedQuestions(true),
     ...loadFinalExamQuestions("july25"),
     ...loadFinalExamQuestions("july29"),
     ...loadFinalExamQuestions("july29", "downloaded-core"),

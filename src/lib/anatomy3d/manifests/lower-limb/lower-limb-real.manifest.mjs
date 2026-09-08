@@ -1,15 +1,19 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { lowerLimbDetailStructures } from "../limb-detail-structures.mjs";
+import { lowerLimbNerveDetailStructures } from "../limb-nerve-structures.mjs";
+
 /**
  * REAL (mesh-backed) + procedural LOWER-LIMB manifest — additive prototype, NOT registered in the
  * live app (mirrors the respiratory "-real" prototypes).
  *
- * The 35 real structures (bones, muscles, major arteries and veins) map 1:1 to named nodes in
- * `/anatomy3d/lower-limb/lower-limb.glb`, built from BodyParts3D IS-A tree element meshes of the
- * LEFT lower limb (Wavefront OBJ, 99% polygon-reduction release), remapped to the engine's
+ * The 53 real structures (bones, muscles, major arteries and veins) map 1:1 to named nodes in the
+ * core GLB plus the v4.3 high-detail OBJ supplement, built from BodyParts3D meshes of the LEFT
+ * lower limb and remapped to the engine's
  * +Y superior / +Z anterior / +X subject-left frame, merged per structure, decimated and Draco-packed.
  *   Attribution (required, CC-BY 4.0):
  *   "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
  *
- * The 20 procedural structures (schematic:true) have no dedicated BodyParts3D mesh at this scope —
+ * The procedural structures (schematic:true) have no dedicated BodyParts3D mesh at this scope —
  * the knee ligaments / menisci / joint capsules, the nerves of the lumbosacral plexus and the small
  * fibular artery — so they are authored in the factory (userData.schematic = true) as tubes / bands /
  * rings routed relative to the real bones and muscles. Menisci are diagrammatic here (BodyParts3D has
@@ -24,7 +28,7 @@ export const lowerLimbManifest = {
   title: "Lower limb",
   subject: "anatomy",
   blurb:
-    "Anatomically-accurate human left lower limb from BodyParts3D segmented meshes — hip bone, femur, patella, tibia, fibula and foot skeleton, the gluteal, thigh, leg and foot muscles, and the femoral–popliteal–tibial arteries and saphenous–femoral–popliteal veins — layered with schematic knee/hip/ankle joints, ligaments, menisci and the lumbosacral-plexus nerves in true anatomical relationship.",
+    "Anatomically accurate left lower limb from BodyParts3D segmented meshes — including separable deep gluteal, thigh and leg muscles plus dorsal and plantar foot arteries — layered with a branch-level lumbosacral and peripheral-nerve map plus clearly marked schematic joints, ligaments and menisci.",
   structures: [
     {
       id: "hip-bone",
@@ -871,5 +875,8 @@ export const lowerLimbManifest = {
       distractorIds: ["femoral-vein", "small-saphenous-vein", "great-saphenous-vein"],
       view: { azimuth: 3.14159, elevation: 0.05, zoom: 1.5 },
     },
+    ...lowerLimbNerveDetailStructures,
+    ...lowerLimbDetailStructures,
+    ...imageMeshStructures("lower-limb"),
   ],
 };

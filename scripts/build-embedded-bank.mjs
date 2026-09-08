@@ -1,6 +1,10 @@
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { anatomyPracticeExclusion } from "../src/lib/mcq/advanced-anatomy.mjs";
 import "./build-respiratory-anatomy.mjs";
+import "./build-anatomy-visual.mjs";
+import "./build-anatomy-location.mjs";
+import "./build-term2-concepts.mjs";
 import "./build-respiratory-concepts.mjs";
 import "./build-physiology-practical.mjs";
 
@@ -33,4 +37,5 @@ const embeddedBank = {
 };
 
 writeFileSync(outputPath, `${JSON.stringify(embeddedBank)}\n`);
+writeFileSync(resolve(root, 'data/term2/anatomy-practice-retirements.json'), JSON.stringify({version:1,policy:'Remove elementary recognition from practice; preserve source records and historical review.',questions:Object.fromEntries(questions.flatMap(q=>{const reason=anatomyPracticeExclusion(q);return reason?[[q.id,reason]]:[];}))},null,2)+'\n');
 console.log(`Embedded ${questions.length} study questions and ${Object.values(embeddedBank.finalExams).reduce((total, bank) => total + bank.length, 0)} final-exam questions across ${Object.keys(embeddedBank.finalExams).length} banks.`);

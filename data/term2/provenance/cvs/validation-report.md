@@ -103,8 +103,8 @@ The repository registry imports `heartManifest`, `mediastinumManifest`, and `tho
 | cvs-3d-024 | mediastinum | left-subclavian-artery | Left subclavian artery |
 | cvs-3d-025 | mediastinum | azygos-vein | Azygos vein |
 | cvs-3d-026 | mediastinum | thoracic-duct | Thoracic duct |
-| cvs-3d-027 | thoracic-innervation | left-recurrent-laryngeal-nerve | Left recurrent laryngeal nerve |
-| cvs-3d-028 | thoracic-innervation | left-phrenic-nerve | Left phrenic nerve |
+| cvs-3d-027 | mediastinum | left-recurrent-laryngeal-nerve | Left recurrent laryngeal nerve |
+| cvs-3d-028 | mediastinum | left-phrenic-nerve | Left phrenic nerve |
 
 ## Source and claim audit
 

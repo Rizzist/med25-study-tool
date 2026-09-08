@@ -9,6 +9,7 @@ import limbsCoverage from "@/data/term2/limbs-coverage.json";
 import limbsIndex from "@/data/term2/limbs-question-index.json";
 import type { Term2ExamId } from "@/src/lib/mcq/exams.mjs";
 import type { Term2ConceptDataset } from "./concept-types";
+import { livePracticeDataset } from "@/src/lib/mcq/practice-catalog";
 
 const datasets: Partial<Record<Term2ExamId, Term2ConceptDataset>> = {
   "term2-cvs": { catalog: cvsCatalog, index: cvsIndex, coverage: cvsCoverage } as Term2ConceptDataset,
@@ -19,6 +20,7 @@ const datasets: Partial<Record<Term2ExamId, Term2ConceptDataset>> = {
     coverage: biochemistryCoverage,
   } as Term2ConceptDataset,
 };
+for (const [id, dataset] of Object.entries(datasets)) datasets[id as Term2ExamId] = livePracticeDataset(dataset!);
 
 export function term2ConceptDataset(examId: Term2ExamId): Term2ConceptDataset | undefined {
   return datasets[examId];

@@ -51,6 +51,7 @@ export async function createMediastinumModel(): Promise<AnatomyModelHandle> {
   loader.setDRACOLoader(dracoLoader);
   const gltf = await loader.loadAsync(MODEL_URL);
   dracoLoader.dispose();
+  await attachImageMeshSupplement(gltf.scene, "mediastinum");
 
   const root = new Group();
   root.name = "cvs-mediastinum-real";
@@ -136,6 +137,14 @@ export async function createMediastinumModel(): Promise<AnatomyModelHandle> {
   const cLMB = centre("left-main-bronchus");
   const cOeso = centre("oesophagus");
   const oesoBox = boxOf(["oesophagus"]);
+  const tracheaBox = boxOf(["trachea"]);
+  const cTrachea = centre("trachea");
+  const cLSub = centre("left-subclavian-artery");
+  const overallSize = overall.isEmpty() ? v(0.8, 1.7, 0.8) : overall.getSize(new Vector3());
+  const topY = overall.isEmpty() ? 0.8 : overall.max.y;
+  const bottomY = overall.isEmpty() ? -0.8 : overall.min.y;
+  const posteriorZ = overall.isEmpty() ? -0.35 : overall.min.z;
+  const anteriorZ = overall.isEmpty() ? 0.35 : overall.max.z;
 
   // 1-4. Mediastinal divisions — faint translucent compartment volumes. The sternal-angle plane
   //      (T4/T5) at ~y = cArch.y - 0.06 splits the superior mediastinum from the inferior three.
@@ -223,8 +232,103 @@ export async function createMediastinumModel(): Promise<AnatomyModelHandle> {
     addProcedural("oesophageal-constrictions", band);
   }
 
+  // ---- Thoracic autonomic and somatic nerves -----------------------------------------------
+  // All paths use the real trachea, bronchi, oesophagus and great-vessel centres as anchors.  The
+  // model therefore presents nerves as a normal tissue layer in the same anatomical scene and
+  // avoids the alignment drift caused by separately normalising the old nerve-only module.
+  const sideSpan = Math.max(0.16, overallSize.x * 0.28);
+  const frontOfRootZ = Math.min(anteriorZ - 0.02, Math.max(cRMB.z, cLMB.z) + overallSize.z * 0.11);
+  const behindRootZ = Math.max(posteriorZ + 0.02, Math.min(cRMB.z, cLMB.z) - overallSize.z * 0.09);
+
+  // Phrenic nerves descend anterior to each lung root and along the fibrous pericardium.
+  tube("right-phrenic-nerve", [
+    v(cSVC.x - overallSize.x * 0.035, topY - overallSize.y * 0.08, cSVC.z + overallSize.z * 0.04),
+    v(cSVC.x - overallSize.x * 0.045, cSVC.y, cSVC.z + overallSize.z * 0.05),
+    v(cRMB.x - overallSize.x * 0.035, cRMB.y, frontOfRootZ),
+    v(oc.x - sideSpan * 0.62, bottomY + overallSize.y * 0.10, frontOfRootZ),
+  ], 0.009);
+  tube("left-phrenic-nerve", [
+    v(cLSub.x + overallSize.x * 0.04, topY - overallSize.y * 0.08, cLSub.z + overallSize.z * 0.04),
+    v(cArch.x + overallSize.x * 0.10, cArch.y, cArch.z + overallSize.z * 0.08),
+    v(cLMB.x + overallSize.x * 0.035, cLMB.y, frontOfRootZ),
+    v(oc.x + sideSpan * 0.70, bottomY + overallSize.y * 0.10, frontOfRootZ),
+  ], 0.009);
+
+  // Vagi pass posterior to the lung roots, then break into pulmonary/oesophageal networks.
+  const rightVagusAtRoot = v(cRMB.x - overallSize.x * 0.025, cRMB.y, behindRootZ);
+  const leftVagusAtRoot = v(cLMB.x + overallSize.x * 0.025, cLMB.y, behindRootZ);
+  tube("right-vagus-nerve", [
+    v(cTrachea.x - sideSpan * 0.45, topY - overallSize.y * 0.04, cTrachea.z - overallSize.z * 0.06),
+    v(cTrachea.x - sideSpan * 0.38, cTrachea.y, cTrachea.z - overallSize.z * 0.08),
+    rightVagusAtRoot,
+    v(cOeso.x - overallSize.x * 0.03, cOeso.y - overallSize.y * 0.22, cOeso.z - overallSize.z * 0.035),
+  ], 0.0095);
+  tube("left-vagus-nerve", [
+    v(cTrachea.x + sideSpan * 0.45, topY - overallSize.y * 0.04, cTrachea.z - overallSize.z * 0.06),
+    v(cArch.x + overallSize.x * 0.06, cArch.y, cArch.z - overallSize.z * 0.055),
+    leftVagusAtRoot,
+    v(cOeso.x + overallSize.x * 0.03, cOeso.y - overallSize.y * 0.22, cOeso.z + overallSize.z * 0.015),
+  ], 0.0095);
+
+  // Recurrent laryngeal nerves: left hooks under the real arch; right hooks at the thoracic inlet.
+  const trachealGrooveZ = Math.max(posteriorZ + 0.02, cTrachea.z - overallSize.z * 0.075);
+  tube("left-recurrent-laryngeal-nerve", [
+    v(cArch.x + overallSize.x * 0.08, cArch.y + overallSize.y * 0.02, cArch.z - overallSize.z * 0.03),
+    v(cArch.x + overallSize.x * 0.07, cArch.y - overallSize.y * 0.06, cArch.z - overallSize.z * 0.04),
+    v(cTrachea.x + overallSize.x * 0.035, cArch.y - overallSize.y * 0.04, trachealGrooveZ),
+    v(cTrachea.x + overallSize.x * 0.03, tracheaBox.max.y - overallSize.y * 0.03, trachealGrooveZ),
+  ], 0.007);
+  tube("right-recurrent-laryngeal-nerve", [
+    v(cTrachea.x - sideSpan * 0.45, topY - overallSize.y * 0.04, cTrachea.z - overallSize.z * 0.06),
+    v(cTrachea.x - sideSpan * 0.40, topY - overallSize.y * 0.10, trachealGrooveZ),
+    v(cTrachea.x - overallSize.x * 0.03, tracheaBox.max.y - overallSize.y * 0.03, trachealGrooveZ),
+  ], 0.007);
+
+  // Sympathetic trunks and stellate ganglia are paravertebral, not posterolateral free cords.
+  const trunkZ = posteriorZ + overallSize.z * 0.06;
+  const trunkX = (side: number) => oc.x + side * sideSpan * 0.65;
+  for (const side of [1, -1]) {
+    tube("sympathetic-trunk", [
+      v(trunkX(side), topY - overallSize.y * 0.04, trunkZ),
+      v(trunkX(side), oc.y, trunkZ),
+      v(trunkX(side) - side * overallSize.x * 0.02, bottomY + overallSize.y * 0.04, trunkZ),
+    ], 0.008);
+    for (let index = 0; index < 7; index++) {
+      const t = index / 6;
+      blob("sympathetic-trunk", v(trunkX(side), topY - overallSize.y * (0.07 + t * 0.84), trunkZ), 0.014, 0.021, 0.014);
+    }
+    blob("cervicothoracic-ganglion", v(trunkX(side), topY - overallSize.y * 0.045, trunkZ), 0.026, 0.034, 0.025);
+    tube("greater-splanchnic-nerve", [
+      v(trunkX(side), oc.y + overallSize.y * 0.05, trunkZ),
+      v(oc.x + side * sideSpan * 0.48, oc.y - overallSize.y * 0.18, trunkZ + overallSize.z * 0.015),
+      v(oc.x + side * sideSpan * 0.24, bottomY + overallSize.y * 0.06, posteriorZ + overallSize.z * 0.12),
+    ], 0.007);
+    tube("lesser-splanchnic-nerve", [
+      v(trunkX(side), oc.y - overallSize.y * 0.14, trunkZ),
+      v(oc.x + side * sideSpan * 0.52, oc.y - overallSize.y * 0.30, trunkZ + overallSize.z * 0.02),
+      v(oc.x + side * sideSpan * 0.32, bottomY + overallSize.y * 0.04, posteriorZ + overallSize.z * 0.14),
+    ], 0.0065);
+    tube("least-splanchnic-nerve", [
+      v(trunkX(side), bottomY + overallSize.y * 0.20, trunkZ),
+      v(oc.x + side * sideSpan * 0.42, bottomY + overallSize.y * 0.04, posteriorZ + overallSize.z * 0.16),
+    ], 0.006);
+  }
+
+  // Pulmonary plexuses wrap the real main bronchi at each hilum; the oesophageal plexus hugs the
+  // real oesophageal mesh and reforms inferiorly into the vagal trunks.
+  for (const [bronchus, vagus, side] of [[cLMB, leftVagusAtRoot, 1], [cRMB, rightVagusAtRoot, -1]] as const) {
+    const p = v(bronchus.x, bronchus.y, bronchus.z);
+    blob("pulmonary-plexus", p, 0.025, 0.036, 0.025);
+    tube("pulmonary-plexus", [vagus, v(p.x + side * overallSize.x * 0.025, p.y + 0.025, p.z - overallSize.z * 0.03), v(p.x - side * overallSize.x * 0.025, p.y - 0.025, p.z + overallSize.z * 0.03)], 0.0055);
+  }
+  const oesoUpper = v(cOeso.x, cOeso.y + overallSize.y * 0.18, cOeso.z);
+  const oesoLower = v(cOeso.x, Math.max(oesoBot + overallSize.y * 0.06, cOeso.y - overallSize.y * 0.36), cOeso.z);
+  tube("oesophageal-plexus", [leftVagusAtRoot, oesoUpper, v(cOeso.x - overallSize.x * 0.025, cOeso.y, cOeso.z + overallSize.z * 0.02), oesoLower], 0.006);
+  tube("oesophageal-plexus", [rightVagusAtRoot, oesoUpper, v(cOeso.x + overallSize.x * 0.025, cOeso.y, cOeso.z - overallSize.z * 0.02), oesoLower], 0.006);
+
   // Defensive normalization to the contract (~1.9-unit bbox centred at origin). The GLB is baked
   // normalized; this stays ~no-op but also folds in the procedural additions.
+  const aliases = reconcileImageMeshGroups(structures, "mediastinum");
   const bbox = new Box3().setFromObject(root);
   if (!bbox.isEmpty()) {
     const size = bbox.getSize(new Vector3());
@@ -237,6 +341,7 @@ export async function createMediastinumModel(): Promise<AnatomyModelHandle> {
   return {
     root,
     structures,
+    aliases,
     dispose() {
       const geometries = new Set<{ dispose(): void }>();
       const materials = new Set<Material>();
@@ -258,3 +363,5 @@ export async function createMediastinumModel(): Promise<AnatomyModelHandle> {
     },
   };
 }
+import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";
+import { reconcileImageMeshGroups } from "../image-mesh-groups.ts";

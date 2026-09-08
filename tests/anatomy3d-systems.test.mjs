@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { BoxGeometry, Mesh } from "three";
 import { TISSUES } from "../src/lib/anatomy3d/validate.mjs";
 import { tissueToSystem, SYSTEMS, systemsInManifest } from "../src/lib/anatomy3d/systems.ts";
+import { applyHighlight, clearHighlight, tissueMaterial } from "../src/lib/anatomy3d/materials.ts";
 import { larynxRealManifest } from "../src/lib/anatomy3d/manifests/respiratory/larynx-real.manifest.mjs";
 
 test("tissueToSystem classifies every Tissue into a known system", () => {
@@ -22,4 +24,24 @@ test("systemsInManifest returns present systems in canonical order without dupli
   assert.equal(new Set(systems.map((system) => system.id)).size, systems.length, "no duplicates");
   const expected = new Set(larynxRealManifest.structures.map((structure) => tissueToSystem[structure.tissue]));
   assert.deepEqual(new Set(systems.map((system) => system.id)), expected);
+});
+
+test("arteries, veins and nerves retain distinct anatomical colours when highlighted", () => {
+  const expected = new Map([
+    ["artery", "c0392b"],
+    ["vein", "2b5fa0"],
+    ["nerve", "e8d24a"],
+  ]);
+  const geometry = new BoxGeometry(1, 1, 1);
+  for (const [tissue, colour] of expected) {
+    const material = tissueMaterial(tissue);
+    const mesh = new Mesh(geometry, material);
+    assert.equal(material.color.getHexString(), colour);
+    applyHighlight([mesh]);
+    assert.equal(material.emissive.getHexString(), colour, `${tissue} highlight must preserve its hue`);
+    clearHighlight([mesh]);
+    assert.equal(material.emissive.getHex(), 0);
+    material.dispose();
+  }
+  geometry.dispose();
 });

@@ -1,3 +1,6 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { heartNerveStructures } from "./thoracic-innervation-real.manifest.mjs";
+
 /**
  * REAL (mesh-backed) HEART manifest — CVS/Thorax region, `heart` module.
  *
@@ -833,5 +836,7 @@ export const heartManifest = {
       distractorIds: ["transverse-pericardial-sinus", "pericardial-cavity", "base-of-heart"],
       view: { azimuth: 3.14159, elevation: 0.05, zoom: 1.5 },
     },
+    ...heartNerveStructures,
+    ...imageMeshStructures("heart"),
   ],
 };

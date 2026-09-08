@@ -1,3 +1,6 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { larynxNerveDetailStructures } from "../thorax-airway-nerve-structures.mjs";
+
 /**
  * REAL (mesh-backed) larynx manifest — additive prototype, NOT registered in the live app.
  *
@@ -450,5 +453,7 @@ export const larynxRealManifest = {
       distractorIds: ["pre-epiglottic-fat", "vocalis-muscle", "thyroarytenoid-muscle"],
       view: { azimuth: 1.2, elevation: 0.05, zoom: 1.5 },
     },
+    ...larynxNerveDetailStructures,
+    ...imageMeshStructures("larynx-real"),
   ],
 };

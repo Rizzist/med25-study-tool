@@ -12,7 +12,10 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 const catalog = JSON.parse(await readFile(new URL("../data/term2/respiratory-concepts.json", import.meta.url), "utf8"));
 const index = JSON.parse(await readFile(new URL("../data/term2/respiratory-question-index.json", import.meta.url), "utf8"));
 const dir = new URL("../data/bank/questions/", import.meta.url);
-const questions = (await Promise.all((await readdir(dir)).filter((name) => name.startsWith("term2-respiratory-") && name.endsWith(".jsonl")).sort().map(async (name) => (await readFile(new URL(name, dir), "utf8")).trim().split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line))))).flat();
+const questions = (await Promise.all((await readdir(dir)).filter((name) => name.endsWith(".jsonl")).sort().map(async (name) => (await readFile(new URL(name, dir), "utf8")).trim().split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line))))).flat().filter((q) => q.tags.includes("exam-term2-respiratory"));
+const visualQuestions = questions.filter((q) => q.tags.includes("anatomy-visual-atlas") && !q.tags.includes("anatomy-location-practice"));
+const locationQuestions = questions.filter(q => q.tags.includes("anatomy-location-practice"));
+const visualTargets = new Set(visualQuestions.map((q) => q.anatomy.imageId + ":" + q.anatomy.targetRegionId)).size;
 
 async function route(path, body) {
   const { default: worker } = await import("../dist/server/index.js");
@@ -26,10 +29,10 @@ test("respiratory source inventory, concept objectives and every question cross-
   assert.deepEqual(JSON.parse(await readFile(new URL("../data/term2/respiratory-coverage.json", import.meta.url), "utf8")), report);
   assert(report.conceptCount >= 70);
   assert(report.addedQuestionCount > 60);
-  assert.equal(report.questionCount - report.addedQuestionCount, 224, "all original respiratory records retained");
-  assert.equal(report.dynamicTargetCount, 28);
-  assert.equal(report.dynamicVariantCount, 56);
-  assert.equal(report.distinctPracticeItems, report.questionCount - 28);
+  assert.equal(report.questionCount - report.addedQuestionCount - visualQuestions.length - locationQuestions.length, 224, "all original respiratory records retained");
+  assert.equal(report.dynamicTargetCount, 28 + visualTargets + locationQuestions.length);
+  assert.equal(report.dynamicVariantCount, 56 + visualQuestions.length + locationQuestions.length);
+  assert.equal(report.distinctPracticeItems, report.questionCount - 28 - visualQuestions.length + visualTargets);
   assert.deepEqual(report.unmappedQuestionIds, []);
   assert.deepEqual(report.unsampledObjectiveIds, []);
   assert(report.objectivesFirstSampledByExpansion > 30);
@@ -84,6 +87,10 @@ test("anatomy variants share concept homes and a seen target is not relabeled un
     grouped.get(key).push(question);
   }
   for (const variants of grouped.values()) {
+    if (variants[0].anatomy.responseMode === "locate") {
+      assert.equal(variants.length, 1);
+      continue;
+    }
     assert.equal(variants.length, 2);
     assert.deepEqual(index[variants[0].id].conceptIds, index[variants[1].id].conceptIds);
     const result = selectRespiratorySprint([variants[1]], { limit: 1, seenIds: [variants[0].id] });
@@ -94,19 +101,23 @@ test("anatomy variants share concept homes and a seen target is not relabeled un
 
 test("scoped respiratory API uses deduplicated mode-aware sampling and exact resume", async () => {
   const ids = questions.filter((question) => question.anatomy).map((question) => question.id);
+  const {includeAdvancedAnatomyPractice}=await import('../src/lib/mcq/advanced-anatomy.mjs');
+  const active=questions.filter(q=>q.anatomy&&includeAdvancedAnatomyPractice(q));
   for (const studyMode of ["learn", "exam"]) {
     const response = await route("/api/questions/by-ids", { exam: "term2-respiratory", ids, limit: 250, prioritize: true, studyMode });
     assert.equal(response.status, 200);
     const payload = await response.json();
-    assert.equal(payload.questions.length, 28);
-    assert.equal(new Set(payload.questions.map((question) => index[question.id].dedupeKey)).size, 28);
+    const expected = new Set(active.map(q=>studyMode==='learn'?q.anatomy.imageId:q.anatomy.imageId+':'+q.anatomy.targetRegionId)).size;
+    assert.equal(payload.questions.length, expected);
+    assert.equal(new Set(payload.questions.map((question) => index[question.id].dedupeKey)).size, expected);
+    if(studyMode === "learn") assert.equal(new Set(payload.questions.map(q=>q.anatomy.imageId)).size,expected);
     const chosenIds = payload.questions.map((question) => question.id).reverse();
     const restored = await (await route("/api/questions/by-ids", { exam: "term2-respiratory", ids: chosenIds, limit: 250, preserveOrder: true })).json();
     assert.deepEqual(restored.questions.map((question) => question.id), chosenIds);
   }
   const phys = questions.filter((question) => question.subject === "physiology");
   const mock = selectRespiratorySprint(phys, { limit: 20, studyMode: "exam", random: () => 0.31 });
-  assert.equal(new Set(mock.questions.map((question) => index[question.id].moduleId)).size, 5);
+  assert.equal(new Set(mock.questions.map((question) => index[question.id].moduleId)).size, new Set(phys.map(question=>index[question.id].moduleId)).size);
   const hidden = await (await route("/api/questions/by-ids", { exam: "term2-cvs", ids, limit: 250, prioritize: true })).json();
   assert.deepEqual(hidden.questions, []);
 });

@@ -11,8 +11,10 @@ import {
 } from "@/src/components/BiochemistryChapterHub";
 import { FinalExam } from "@/src/components/FinalExam";
 import { AnatomyImage } from "@/src/components/AnatomyImage";
+import { isLocationQuestion, locationOptionId, locationLabel, restoredLocationResponse, canRevealAnatomyFigure } from "@/src/lib/mcq/anatomy-location.mjs";
 import { Term2Guide } from "@/src/components/Term2Guide";
 import { Term2ConceptFeedback, Term2ConceptHub } from "@/src/components/Term2ConceptHub";
+import { DepthPracticePanel } from "@/src/components/DepthPracticePanel";
 import { PhysiologyPracticalHub } from "@/src/components/PhysiologyPracticalHub";
 import { cleanPracticalIds, practicalCatalog, practicalCaseForQuestion } from "@/src/lib/physiology-practical";
 import { PracticalCaseFigure } from '@/src/components/PracticalCaseFigure';
@@ -39,7 +41,7 @@ import { createEmptyProgress, parseProgress, type StudyProgress } from "@/src/li
 import { hasTerm2ConceptDataset, term2ConceptDataset } from "@/src/lib/term2/concepts";
 
 const AnatomyTrainer = dynamic(() => import("@/src/components/anatomy3d/AnatomyTrainer"), { ssr: false });
-const AnatomyQuestion3D = dynamic(() => import("@/src/components/anatomy3d/AnatomyQuestion"), { ssr: false });
+const PairedAnatomyMedia = dynamic(() => import("@/src/components/anatomy3d/PairedAnatomyMedia"), { ssr: false });
 
 type BridgeHealth = {
   ok: boolean;
@@ -138,7 +140,7 @@ const examConfig: Record<ExamId, {
   },
   "term2-cvs": { date: "Date TBA", title: "CVS", focus: term2Exams[0].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
   "term2-respiratory": { date: "Date TBA", title: "Respiratory", focus: term2Exams[1].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
-  "term2-limbs": { date: "Date TBA", title: "Upper & Lower Limbs", focus: term2Exams[2].scope, collections: ["all", "anatomy", "dynamic-anatomy", "images", "wrong", "flagged"] },
+  "term2-limbs": { date: "Date TBA", title: "Upper & Lower Limbs", focus: term2Exams[2].scope, collections: ["all", "anatomy", "embryology", "dynamic-anatomy", "images", "wrong", "flagged"] },
   "term2-biochemistry": { date: "Date TBA", title: "Biochemistry II", focus: term2Exams[3].scope, collections: ["all", "biochemistry", "images", "wrong", "flagged"] },
   "term2-physiology-practical": { date: "Aug 31 · user-reported", title: "Physiology Practical", focus: term2Exams[4].scope, collections: ["all", "images", "wrong", "flagged"] },
 };
@@ -199,6 +201,7 @@ function cleanAnswers(value: unknown, questionIds: string[]) {
       flagged: Boolean(answer.flagged),
     };
     if (typeof answer.selectedOptionId === "string") normalized.selectedOptionId = answer.selectedOptionId.slice(0, 8);
+    if (typeof answer.selectedRegionId === "string") normalized.selectedRegionId = answer.selectedRegionId.slice(0, 160);
     if (typeof answer.writtenAnswer === "string") normalized.writtenAnswer = answer.writtenAnswer.slice(0, 6000);
     if (typeof answer.writtenSubmitted === "boolean") normalized.writtenSubmitted = answer.writtenSubmitted;
     return [questionId, normalized];
@@ -331,6 +334,10 @@ function isWrittenPracticalQuestion(question: MCQQuestion) {
 }
 
 function answerForQuestion(question: MCQQuestion, saved?: SessionAnswer, flagged = false): SessionAnswer {
+  if (isLocationQuestion(question)) {
+    const response = restoredLocationResponse(question, saved?.selectedRegionId);
+    return { ...emptyAnswer(question.id, flagged), ...saved, mode: "select", selectedOptionId: response?.selectedOptionId, selectedRegionId: response?.selectedRegionId };
+  }
   if (!isWrittenPracticalQuestion(question)) return saved ?? emptyAnswer(question.id, flagged);
   if (saved?.mode === "write") return { ...saved, mode: "write", writtenSubmitted: saved.writtenSubmitted ?? Boolean(saved.writtenAnswer?.trim()) };
   return emptyAnswer(question.id, saved?.flagged ?? flagged, "write");
@@ -406,6 +413,7 @@ function writtenOptionId(question: MCQQuestion, answer: SessionAnswer) {
 
 function selectedOptionId(question: MCQQuestion, answer?: SessionAnswer) {
   if (!answer) return undefined;
+  if (isLocationQuestion(question)) return restoredLocationResponse(question, answer.selectedRegionId)?.selectedOptionId;
   return answer.mode === "select" ? answer.selectedOptionId : writtenOptionId(question, answer);
 }
 
@@ -447,8 +455,9 @@ function QuestionSource({ question }: { question: MCQQuestion }) {
   return <p className="question-source"><b>Source</b> {[source.title, source.edition, source.chapter, source.page, source.figure, source.lecture, source.slide ? `Slide ${source.slide}` : null].filter(Boolean).join(" · ")}</p>;
 }
 
-function StudyMedia({ question, review = false }: { question: MCQQuestion; review?: boolean }) {
-  if (question.kind === "dynamic_anatomy_3d") return <AnatomyQuestion3D question={question} revealed={review} />;
+function StudyMedia({ question, review = false, onLocationSubmit, locationAnswered, savedRegionId }: { question: MCQQuestion; review?: boolean; onLocationSubmit?: (regionId?: string) => void; locationAnswered?: boolean; savedRegionId?: string }) {
+  if (question.kind === "dynamic_anatomy" || (question.subject === "anatomy" && question.tags.some((tag) => tag.startsWith("exam-term2-")) && question.media?.length === 1 && question.media[0].type === "image")) return <PairedAnatomyMedia key={question.id} question={question} revealed={review} imageSrc={question.media?.[0] ? mediaUrl(question, question.media[0].id) : undefined} onLocationSubmit={onLocationSubmit} locationAnswered={locationAnswered} savedRegionId={savedRegionId} />;
+  if (question.kind === "dynamic_anatomy_3d") return <PairedAnatomyMedia key={question.id} question={question} revealed={review} initialView="3d" />;
   if (!question.media?.length) return null;
   return <div className={question.media.length > 1 ? "study-image-pair" : "study-image-single"}>{question.media.map((media) => <StudyImage question={question} media={media} review={review} key={media.id} />)}</div>;
 }
@@ -519,15 +528,14 @@ export default function Home() {
     }
   }, []);
 
-  const loadQuestionsByIds = useCallback(async (examId: ExamId, questionIds: string[]) => {
+  const loadQuestionsByIds = useCallback(async (examId: ExamId, questionIds: string[], purpose = "practice") => {
     const response = await fetch(`${bridgeUrl}/api/questions/by-ids`, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ exam: examId, ids: questionIds, limit: questionIds.length, preserveOrder: true }),
+      body: JSON.stringify({ exam: examId, ids: questionIds, limit: questionIds.length, preserveOrder: true, purpose }),
     });
     if (!response.ok) throw new Error("Could not reload the saved questions.");
     const payload = await response.json() as { questions: MCQQuestion[] };
-    if (!payload.questions.length) throw new Error("The saved questions are no longer available.");
     return payload.questions;
   }, []);
 
@@ -885,11 +893,19 @@ export default function Home() {
     if (saved.respiratoryScopeId) setLastRespiratoryScopeId(saved.respiratoryScopeId);
     try {
       const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
+      if (!restoredQuestions.length) {
+        setSessionArchive(current=>({...current,active:null}));
+        setSessionError("This unfinished sprint contained questions removed from practice. Start a new advanced anatomy session; completed results are preserved.");
+        setPhase("setup");
+        return;
+      }
       const restoredIds = new Set(restoredQuestions.map((question) => question.id));
       setQuestions(restoredQuestions);
       setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, answerForQuestion(question, saved.answers[question.id])])));
       setVisitedQuestionIds(saved.visitedQuestionIds.filter((id) => restoredIds.has(id)));
-      setQuestionIndex(Math.min(saved.questionIndex, restoredQuestions.length - 1));
+      const previousId=saved.questionIds[saved.questionIndex];
+      const survivingIndex=restoredQuestions.findIndex(question=>question.id===previousId);
+      setQuestionIndex(survivingIndex>=0?survivingIndex:Math.min(saved.questionIds.slice(0,saved.questionIndex).filter(id=>restoredIds.has(id)).length,restoredQuestions.length-1));
       setGrades({});
       setGradeErrors({});
       setExpandedLessons({});
@@ -937,7 +953,8 @@ export default function Home() {
     setActiveCoursePracticeIds(saved.coursePracticeIds);
     if (saved.respiratoryScopeId) setLastRespiratoryScopeId(saved.respiratoryScopeId);
     try {
-      const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds);
+      const restoredQuestions = await loadQuestionsByIds(saved.exam, saved.questionIds, "history");
+      if (!restoredQuestions.length) throw new Error("The saved questions are no longer available.");
       setQuestions(restoredQuestions);
       setAnswers(Object.fromEntries(restoredQuestions.map((question) => [question.id, answerForQuestion(question, saved.answers[question.id])])));
       setVisitedQuestionIds(restoredQuestions.map((question) => question.id));
@@ -984,7 +1001,8 @@ export default function Home() {
     const correct = question.options.find((option) => option.id === question.correctOptionId);
     const isWrittenPractical = isWrittenPracticalQuestion(question);
     const hasAnswer = answer.mode === "select" ? Boolean(answer.selectedOptionId) : answer.writtenSubmitted === true;
-    const hasImmediateFeedback = studyMode === "learn" && hasAnswer;
+    const figureReady = canRevealAnatomyFigure(question, questions, q => isAnswered(answers[q.id]));
+    const hasImmediateFeedback = studyMode === "learn" && hasAnswer && figureReady;
     const hasSavedWrittenAnswer = answer.mode === "write" && answer.writtenSubmitted === true;
     const activeChapter = biochemistryChapterById(activeBiochemistryChapterId);
     const sessionLabel = activeRespiratoryScopeId ? respiratoryScope(activeRespiratoryScopeId)?.title ?? "Selected respiratory concepts" : activeChapter ? `${activeChapter.chapterLabel} · ${activeChapter.shortTitle}` : collectionLabel[collection];
@@ -1008,16 +1026,19 @@ export default function Home() {
               <div className="question-meta">
                 <span>{question.subject}</span><span>{question.topic}</span><span>Difficulty {question.difficulty}/5</span>
               </div>
-              <h1>{question.prompt}</h1>
-              <StudyMedia question={question} review={hasImmediateFeedback} />
+              {isLocationQuestion(question) && <h1>{question.prompt}</h1>}
+              {question.subject === "anatomy" && <StudyMedia question={question} review={hasImmediateFeedback} locationAnswered={hasAnswer} savedRegionId={answer.selectedRegionId} onLocationSubmit={(regionId) => { if (!hasImmediateFeedback) updateAnswer(question.id, { mode: "select", selectedOptionId: locationOptionId(question, regionId), selectedRegionId: regionId }); }} />}
+              {studyMode === "learn" && hasAnswer && !figureReady && <p className="anatomy-location-instruction">Answer saved. Feedback waits until the other targets on this figure are answered, or until session review, so labels do not give away later answers.</p>}
+              {!isLocationQuestion(question) && <h1>{question.prompt}</h1>}
+              {question.subject !== "anatomy" && <StudyMedia question={question} review={hasImmediateFeedback} />}
 
               {hasImmediateFeedback && <QuestionSource question={question} />}
-              {!isWrittenPractical && <div className="mode-switch" aria-label="Answer mode">
+              {!isWrittenPractical && !isLocationQuestion(question) && <div className="mode-switch" aria-label="Answer mode">
                 <button disabled={hasImmediateFeedback} className={answer.mode === "select" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "select" })}>Choose option</button>
                 <button disabled={hasImmediateFeedback} className={answer.mode === "write" ? "selected" : ""} onClick={() => updateAnswer(question.id, { mode: "write" })}>Type my answer</button>
               </div>}
 
-              {answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked has-explanations" : ""}`}>
+              {isLocationQuestion(question) ? <p className="anatomy-location-instruction">Answer by selecting a location on the image and submitting it. Numbered areas are authored hotspots or masked callouts, not whole-structure segmentation.</p> : answer.mode === "select" ? <div className={`options ${hasImmediateFeedback ? "locked has-explanations" : ""}`}>
                 {question.options.map((option) => {
                   const state = hasImmediateFeedback
                     ? option.id === question.correctOptionId ? "correct" : option.id === answer.selectedOptionId ? "wrong" : ""
@@ -1052,8 +1073,8 @@ export default function Home() {
 
               {hasImmediateFeedback && !isWrittenPractical && <section className={`instant-feedback ${isCorrect(question, answer) ? "correct" : "wrong"}`} aria-live="polite">
                 <div className="instant-feedback-title"><b>{isCorrect(question, answer) ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · ${question.source.page}` : ""}</span></div>
-                <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : chosenId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
-                <p className="feedback-key-rule"><b>Fast rule:</b> Read the green option as the key concept, then compare each red/neutral option with the chapter checkpoint it actually describes.</p>
+                <div className="answer-comparison"><div><span>Your answer</span><b>{isLocationQuestion(question) ? locationLabel(question, answer.selectedRegionId) ?? chosen?.text ?? "No location recorded" : chosen ? `${chosen.id}. ${chosen.text}` : chosenId}</b></div><div><span>Correct answer</span><b>{correct ? isLocationQuestion(question) ? correct.text : `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
+                <p className="feedback-key-rule"><b>Key explanation:</b> {question.explanation}</p>
                 {answer.mode === "write" && <div className="explanation"><span>Why this answer is correct</span><p>{question.explanation}</p></div>}
               </section>}
 
@@ -1108,10 +1129,11 @@ export default function Home() {
             return <article className={`review-item ${isCorrect(question, answer) ? "correct" : "wrong"}`} key={question.id}>
               <div className="review-item-head"><span>{isCorrect(question, answer) ? "✓ Correct" : "× Repair"}</span><div><small>{question.subject} · {question.topic}</small><button className={answer?.flagged ? "active" : ""} onClick={() => toggleFlag(question.id)}>{answer?.flagged ? "★ Unflag" : "☆ Flag"}</button></div></div>
               <h2>{question.prompt}</h2>
-              <StudyMedia question={question} review />
+              <StudyMedia question={question} review savedRegionId={answer?.selectedRegionId} />
               <QuestionSource question={question} />
-              <div className="answer-comparison"><div><span>Your answer</span><b>{answer?.mode === "write" ? answer.writtenAnswer || "No answer" : chosen ? `${chosen.id}. ${chosen.text}` : "No answer"}</b>{writtenInterpretation?.label && <small>Interpreted as {writtenInterpretation.label}</small>}</div><div><span>Correct answer</span><b>{correct ? correct.text : question.correctOptionId}</b></div></div>
-              {!isWrittenPractical && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
+              <div className="answer-comparison"><div><span>Your answer</span><b>{isLocationQuestion(question) ? locationLabel(question, answer?.selectedRegionId) ?? chosen?.text ?? "No location recorded" : answer?.mode === "write" ? answer.writtenAnswer || "No answer" : chosen ? `${chosen.id}. ${chosen.text}` : "No answer"}</b>{writtenInterpretation?.label && <small>Interpreted as {writtenInterpretation.label}</small>}</div><div><span>Correct answer</span><b>{correct ? correct.text : question.correctOptionId}</b></div></div>
+              {isLocationQuestion(question) && <p className="feedback-key-rule">{question.explanation}</p>}
+              {!isWrittenPractical && !isLocationQuestion(question) && <div className="options locked has-explanations review-inline-options">{question.options.map((option) => <button disabled key={option.id} className={option.id === question.correctOptionId ? "correct" : option.id === chosenId ? "wrong" : ""}>
                 <span className="option-letter">{option.id}</span>
                 <span className="option-copy"><b>{option.text}</b><small className={`option-inline-explanation ${option.id === question.correctOptionId ? "right" : "wrong"}`}><em>{option.id === question.correctOptionId ? "Why this is right" : "Why this is wrong"}</em>{option.id === question.correctOptionId ? question.explanation : question.distractorExplanations[option.id]}</small></span>
               </button>)}</div>}
@@ -1180,11 +1202,8 @@ export default function Home() {
 
   if (tab === "3D Anatomy" && examHasAnatomy3d(exam)) {
     return (
-      <main className="anatomy3d-immersive">
-        <button type="button" className="anatomy3d-exit" onClick={() => setTab("Overview")}>
-          <span aria-hidden="true">←</span> Back to study
-        </button>
-        <AnatomyTrainer regions={regionsFor(exam)} />
+      <main className="anatomy-test-immersive">
+        <AnatomyTrainer key={exam} regions={regionsFor(exam)} onExit={() => setTab("Overview")} />
       </main>
     );
   }
@@ -1212,8 +1231,8 @@ export default function Home() {
     ["HISTOLOGY", examCount("histology"), "Junqueira + micrographs"],
     ["EMBRYOLOGY", examCount("embryology"), "Langman + E1/E2"],
     ["PHYSIOLOGY", examCount("physiology"), "Guyton · book-only"],
-    ["INTERACTIVE 3D", selectedExam?.interactive3dCount ?? 0, "Rotate first · labels after answering"],
-    ["SOURCE IMAGES", selectedExam?.imageQuestionCount ?? 0, "Annotations after answering"],
+    ["3D-FIRST QUESTIONS", selectedExam?.interactive3dCount ?? 0, "Plus paired 3D in image questions"],
+    ["IMAGE QUESTIONS", selectedExam?.imageQuestionCount ?? 0, "Annotations after answering"],
     ["TO REPAIR", savedCount("wrong"), "Saved for this exam"],
   ] : exam === "july25" ? [
     ["FOCUSED BANK", selectedExam?.questionCount ?? "—", "This exam only"],
@@ -1259,7 +1278,7 @@ export default function Home() {
           if (item === "3D Anatomy") return examHasAnatomy3d(exam);
           if (item === "Study concepts") return exam === "term2-respiratory" || exam === "term2-physiology-practical" || Boolean(selectedConceptDataset);
           return true;
-        }).map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{isTerm2Exam(exam) && item === "Final exam" ? "Past exams" : exam === "term2-physiology-practical" ? item === "Study concepts" ? "Practical lessons" : item === "Practical Atlas" ? "Figures & videos" : item : item}</button>)}</nav>
+        }).map((item) => <button key={item} className={`${tab === item ? "active" : ""} ${item === "Final exam" ? "final-tab" : ""}`} onClick={() => setTab(item)}>{item === "3D Anatomy" ? "Anatomy · 2D / 3D" : isTerm2Exam(exam) && item === "Final exam" ? "Past exams" : exam === "term2-physiology-practical" ? item === "Study concepts" ? "Practical lessons" : item === "Practical Atlas" ? "Figures & videos" : item : item}</button>)}</nav>
         <div className="session-rule"><span>SESSION RULE</span><b>Tabs disappear during MCQs</b><p>Once the sprint starts, only the question, progress, answer controls and end-session action remain.</p></div>
       </aside>
 
@@ -1302,6 +1321,7 @@ export default function Home() {
             {exam === "term2-respiratory" && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Start with the theory</b><small>{respiratoryConcepts.length} concepts · {respiratoryModules.length} reading modules · recall prompts, linked MCQs and a source audit</small></span><strong>Open study concepts →</strong></button>}
             {selectedConceptDataset && <button className="resp-overview-entry" onClick={() => setTab("Study concepts")}><span><b>Study the exhaustive source map first</b><small>{selectedConceptDataset.catalog.concepts.length} concepts · {selectedConceptDataset.catalog.modules.length} reading modules · {selectedConceptDataset.coverage.objectiveCount} MCQ-linked objectives and a source audit</small></span><strong>Open study concepts →</strong></button>}
             <div className="metric-grid">{metricCards.map(([label, value, detail]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{detail}</small></article>)}</div>
+            {(selectedConceptDataset || exam === "term2-respiratory") && <DepthPracticePanel index={exam === "term2-respiratory" ? respiratoryQuestionIndex : selectedConceptDataset!.index} disabled={phase === "loading" || Boolean(resumableSession)} onPractice={(ids) => void startSession("all", ids, { mode: "learn", limit: sessionSize })} />}
             {resumableSession ? <div className="resume-sprint"><div><span>UNFINISHED {resumableSession.studyMode === "exam" ? "EXAM" : "SPRINT"} SAVED</span><h2>{examConfig[resumableSession.exam].title} · {savedScopeLabel(resumableSession)}</h2><p>{resumableAnsweredCount} of {resumableSession.questionIds.length} answered · last position question {resumableSession.questionIndex + 1}</p></div><div><button className="primary" disabled={resumingSession} onClick={() => void continueSavedSprint()}>{resumingSession ? "Restoring…" : "Continue sprint →"}</button><button className="delete-sprint" onClick={deleteSavedSprint}>Delete unfinished sprint</button></div></div> : <div className="sprint-builder"><div><span className="builder-label">Collection</span><div className="choice-row collection-row">{selectedConfig.collections.map((value) => <button key={value} className={collection === value ? "active" : ""} onClick={() => setCollection(value)}>{collectionLabel[value]}</button>)}</div></div><div><span className="builder-label">Sprint length</span><div className="choice-row length-row">{sprintLengths.map((value) => <button key={value} className={sessionSize === value ? "active" : ""} onClick={() => setSessionSize(value)}>{value}</button>)}</div></div><div className="builder-summary"><div className="builder-coverage"><article><span>Total</span><strong>{collectionCount}</strong></article><article><span>Seen</span><strong>{seenCollectionCount}</strong></article><article><span>Unseen</span><strong>{unseenCollectionCount}</strong></article></div><span>Up to {Math.min(sessionSize, collectionCount)} questions · repair → unseen → mastered</span><button className="primary start-sprint" disabled={!collectionCount || phase === "loading"} onClick={() => void startSession()}>{phase === "loading" ? "Loading sprint…" : `Start ${examLabel} sprint →`}</button><button className="clear-progress" disabled={!savedCount("wrong") && !savedCount("flagged")} onClick={clearSavedProgress}>Clear {examLabel} saved progress</button></div></div>}
             {sessionError && <p className="session-error">{sessionError}</p>}
           </>}

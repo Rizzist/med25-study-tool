@@ -1,3 +1,6 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { tracheaLungNerveDetailStructures } from "../thorax-airway-nerve-structures.mjs";
+
 /**
  * REAL (mesh-backed) + PROCEDURAL trachea / bronchi / lungs manifest — additive prototype,
  * NOT registered in the live app.
@@ -387,5 +390,7 @@ export const tracheaLungRealManifest = {
       distractorIds: ["hilum-root", "pulmonary-artery", "carina"],
       view: { azimuth: 0.1, elevation: 0.05, zoom: 1.2 },
     },
+    ...tracheaLungNerveDetailStructures,
+    ...imageMeshStructures("trachea-lung-real"),
   ],
 };

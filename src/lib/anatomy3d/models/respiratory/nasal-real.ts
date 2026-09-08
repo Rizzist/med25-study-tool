@@ -61,6 +61,7 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
   loader.setDRACOLoader(dracoLoader);
   const gltf = await loader.loadAsync(MODEL_URL);
   dracoLoader.dispose();
+  await attachImageMeshSupplement(gltf.scene, "nasal-real");
 
   const root = new Group();
   root.name = "respiratory-nasal-real";
@@ -118,12 +119,26 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
     const smooth = new CatmullRomCurve3(path.getSpacedPoints(divisions), false, "centripetal", 0.5);
     addProcedural(id, new Mesh(new TubeGeometry(smooth, divisions, radius, 10, false)));
   };
+  const blob = (id: string, at: Vector3, sx: number, sy: number, sz: number) => {
+    const mesh = new Mesh(new SphereGeometry(1, 16, 12));
+    mesh.position.copy(at);
+    mesh.scale.set(sx, sy, sz);
+    addProcedural(id, mesh);
+  };
 
   const nasalBox = boxOf(["nasal-bone", "nasal-septum", "lateral-nasal-cartilage", "vomer", "inferior-concha", "ethmoid-bone"]);
   const infConchaBox = boxOf(["inferior-concha"]);
   if (!nasalBox.isEmpty()) {
     const c = nasalBox.getCenter(new Vector3());
     const s = nasalBox.getSize(new Vector3());
+    // Fractional coordinates are always resolved inside the REAL osteocartilaginous envelope.
+    // Keeping every overlay tied to this box prevents one long schematic route from shrinking the
+    // scan-derived nose to a tiny cluster when the viewer frames the completed model.
+    const at = (fx: number, fy: number, fz: number) => vec(
+      c.x + s.x * fx,
+      c.y + s.y * fy,
+      c.z + s.z * fz,
+    );
     const infY = infConchaBox.isEmpty() ? c.y - s.y * 0.18 : infConchaBox.getCenter(new Vector3()).y;
     const zMid = c.z - s.z * 0.02;         // conchae/meatuses sit just behind the anterior cartilages
     // Stack the conchae with clear vertical air-gaps so each shelf + its meatus reads separately
@@ -157,8 +172,8 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
       // Maxillary sinus (paired) — the largest sinus: pushed lateral & inferior into the maxillary
       // body so its medial edge stays off the conchae/central cavity; kept faintest so bone reads.
       const maxS = new Mesh(new SphereGeometry(1, 20, 14));
-      maxS.position.set(side * s.x * 0.52, c.y - s.y * 0.16, c.z + s.z * 0.02);
-      maxS.scale.set(s.x * 0.19, s.y * 0.23, s.z * 0.18);
+      maxS.position.copy(at(side * 0.39, -0.16, 0.01));
+      maxS.scale.set(s.x * 0.12, s.y * 0.18, s.z * 0.13);
       addProcedural("maxillary-sinus", maxS, 0.3);
 
       // Choanae (paired posterior nasal apertures) — rings at the back of each cavity.
@@ -168,8 +183,8 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
 
       // Frontal sinus (paired) — superior & anterior, sitting just above the nasal bones.
       const frontal = new Mesh(new SphereGeometry(1, 20, 14));
-      frontal.position.set(side * s.x * 0.135, c.y + s.y * 0.60, c.z + s.z * 0.16);
-      frontal.scale.set(s.x * 0.12, s.y * 0.10, s.z * 0.10);
+      frontal.position.copy(at(side * 0.12, 0.40, 0.13));
+      frontal.scale.set(s.x * 0.09, s.y * 0.075, s.z * 0.07);
       addProcedural("frontal-sinus", frontal, 0.5);
 
       // Ethmoidal air cells — a tidy, small medial cluster between the orbits (2 per side),
@@ -183,8 +198,8 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
 
     // Sphenoid sinus — a single deep cavity, posterior & superior in the midline.
     const sphenoid = new Mesh(new SphereGeometry(1, 22, 16));
-    sphenoid.position.set(0, c.y + s.y * 0.14, c.z - s.z * 0.44);
-    sphenoid.scale.set(s.x * 0.20, s.y * 0.17, s.z * 0.14);
+    sphenoid.position.copy(at(0, 0.14, -0.37));
+    sphenoid.scale.set(s.x * 0.16, s.y * 0.12, s.z * 0.085);
     addProcedural("sphenoid-sinus", sphenoid, 0.44);
 
     // Hard palate — horizontal bony plate at the floor of the cavity / roof of the mouth.
@@ -197,27 +212,27 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
     for (const side of [1, -1]) {
       // Nasopalatine nerve: from the sphenopalatine foramen forward & down along the septum.
       tube("nasopalatine-nerve", [
-        vec(side * 0.05, c.y + s.y * 0.12, c.z - s.z * 0.32),
-        vec(side * 0.04, c.y - s.y * 0.05, c.z - s.z * 0.02),
-        vec(side * 0.03, c.y - s.y * 0.28, c.z + s.z * 0.32),
+        at(side * 0.06, 0.12, -0.32),
+        at(side * 0.05, -0.05, -0.02),
+        at(side * 0.04, -0.28, 0.32),
       ], 0.012);
       // Anterior ethmoidal nerve: enters the roof anteriorly, runs down the internal nose.
       tube("anterior-ethmoidal-nerve", [
-        vec(side * s.x * 0.18, c.y + s.y * 0.34, c.z - s.z * 0.04),
-        vec(side * s.x * 0.15, c.y + s.y * 0.12, c.z + s.z * 0.18),
-        vec(side * s.x * 0.12, c.y - s.y * 0.05, c.z + s.z * 0.40),
+        at(side * 0.18, 0.34, -0.04),
+        at(side * 0.15, 0.12, 0.18),
+        at(side * 0.12, -0.05, 0.40),
       ], 0.011);
       // Sphenopalatine artery: from the sphenopalatine foramen, fanning antero-medially.
       tube("sphenopalatine-artery", [
-        vec(side * s.x * 0.30, c.y + s.y * 0.04, c.z - s.z * 0.32),
-        vec(side * s.x * 0.22, c.y - s.y * 0.05, c.z - s.z * 0.04),
-        vec(side * s.x * 0.14, c.y - s.y * 0.16, c.z + s.z * 0.20),
+        at(side * 0.30, 0.04, -0.32),
+        at(side * 0.22, -0.05, -0.04),
+        at(side * 0.14, -0.16, 0.20),
       ], 0.016);
       // Anterior ethmoidal artery: accompanies its nerve along the roof.
       tube("anterior-ethmoidal-artery", [
-        vec(side * s.x * 0.21, c.y + s.y * 0.36, c.z - s.z * 0.07),
-        vec(side * s.x * 0.15, c.y + s.y * 0.14, c.z + s.z * 0.16),
-        vec(side * s.x * 0.10, c.y, c.z + s.z * 0.38),
+        at(side * 0.21, 0.36, -0.07),
+        at(side * 0.15, 0.14, 0.16),
+        at(side * 0.10, 0, 0.38),
       ], 0.014);
     }
     // Olfactory nerve (CN I): fine fila piercing the cribriform plate of the ethmoid (the roof).
@@ -225,9 +240,78 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
       const fx = (-0.16 + (i % 5) * 0.08) * s.x;
       const fz = (i < 5 ? -0.06 : 0.06) * s.z;
       tube("olfactory-nerve", [
-        vec(fx, c.y + s.y * 0.46, c.z + fz),
-        vec(fx, c.y + s.y * 0.33, c.z + fz),
+        vec(c.x + fx, c.y + s.y * 0.46, c.z + fz),
+        vec(c.x + fx, c.y + s.y * 0.33, c.z + fz),
       ], 0.008);
+    }
+
+    // Detailed trigeminal + autonomic routes. These are paired where the anatomical structure is
+    // paired, but remain one exam target per named pathway so laterality never changes the answer.
+    for (const side of [1, -1]) {
+      const ganglion = at(side * 0.34, 0.08, -0.34);
+      blob("pterygopalatine-ganglion", ganglion, s.x * 0.035, s.y * 0.045, s.z * 0.035);
+      tube("maxillary-nerve-v2", [
+        at(side * 0.47, 0.23, -0.42),
+        at(side * 0.42, 0.16, -0.38),
+        ganglion,
+      ], 0.009);
+      tube("nasociliary-nerve", [
+        at(side * 0.44, 0.39, -0.08),
+        at(side * 0.30, 0.38, -0.02),
+        at(side * 0.18, 0.34, -0.04),
+      ], 0.008);
+      tube("nerve-of-pterygoid-canal", [
+        at(side * 0.42, 0.08, -0.47),
+        at(side * 0.39, 0.08, -0.41),
+        ganglion,
+      ], 0.008);
+      tube("greater-petrosal-nerve", [
+        at(side * 0.22, 0.47, -0.44),
+        at(side * 0.31, 0.32, -0.45),
+        at(side * 0.42, 0.08, -0.47),
+      ], 0.007);
+      tube("deep-petrosal-nerve", [
+        at(side * 0.47, 0.30, -0.45),
+        at(side * 0.45, 0.18, -0.46),
+        at(side * 0.42, 0.08, -0.47),
+      ], 0.007);
+      tube("posterior-superior-lateral-nasal-nerves", [
+        ganglion,
+        at(side * 0.30, 0.12, -0.28),
+        at(side * 0.28, 0.30, -0.05),
+        at(side * 0.27, 0.17, 0.18),
+      ], 0.007);
+      tube("posterior-superior-medial-nasal-nerves", [
+        ganglion,
+        at(side * 0.18, 0.18, -0.25),
+        at(side * 0.07, 0.20, -0.08),
+      ], 0.0065);
+      tube("posterior-inferior-lateral-nasal-nerves", [
+        ganglion,
+        at(side * 0.36, -0.08, -0.20),
+        at(side * 0.31, -0.20, 0.02),
+        at(side * 0.29, -0.23, 0.25),
+      ], 0.0065);
+      tube("greater-palatine-nerve", [
+        ganglion,
+        at(side * 0.38, -0.15, -0.20),
+        vec(c.x + side * s.x * 0.32, nasalBox.min.y + s.y * 0.07, c.z + s.z * 0.02),
+        vec(c.x + side * s.x * 0.20, nasalBox.min.y + s.y * 0.04, c.z + s.z * 0.34),
+      ], 0.007);
+      tube("external-nasal-nerve", [
+        at(side * 0.12, -0.05, 0.38),
+        at(side * 0.18, -0.10, 0.43),
+        at(side * 0.20, -0.18, 0.47),
+      ], 0.0065);
+    }
+    // Bulbs lie immediately above the cribriform plate and the paired tracts continue posteriorly.
+    for (const side of [1, -1]) {
+      blob("olfactory-bulb-and-tract", at(side * 0.09, 0.47, 0), s.x * 0.05, s.y * 0.025, s.z * 0.06);
+      tube("olfactory-bulb-and-tract", [
+        at(side * 0.09, 0.47, 0),
+        at(side * 0.08, 0.47, -0.22),
+        at(side * 0.07, 0.46, -0.43),
+      ], 0.009);
     }
     // Kiesselbach plexus (Little's area): anastomotic vascular patch on the anteroinferior septum.
     const kx = c.z + s.z * 0.42, ky = c.y - s.y * 0.15;
@@ -272,3 +356,4 @@ export async function createRealNasalModel(): Promise<AnatomyModelHandle> {
     },
   };
 }
+import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";

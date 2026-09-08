@@ -4,10 +4,10 @@ import { tracheaLungRealManifest } from "./manifests/respiratory/trachea-lung-re
 import { thoracicWallManifest } from "./manifests/cvs/thoracic-wall-real.manifest.mjs";
 import { heartManifest } from "./manifests/cvs/heart-real.manifest.mjs";
 import { mediastinumManifest } from "./manifests/cvs/mediastinum-real.manifest.mjs";
-import { thoracicInnervationManifest } from "./manifests/cvs/thoracic-innervation-real.manifest.mjs";
 import { upperLimbManifest } from "./manifests/upper-limb/upper-limb-real.manifest.mjs";
 import { lowerLimbManifest } from "./manifests/lower-limb/lower-limb-real.manifest.mjs";
 import type { AnatomyModelHandle, AnatomyModuleManifest } from "./types.ts";
+import { getThoraxComposite } from "./composite.ts";
 
 export type AnatomyModuleRegistration = {
   manifest: AnatomyModuleManifest;
@@ -61,13 +61,6 @@ const registrations: AnatomyModuleRegistration[] = [
     },
   },
   {
-    manifest: thoracicInnervationManifest,
-    async createModel() {
-      const { createThoracicInnervationModel } = await import("./models/cvs/thoracic-innervation-real.ts");
-      return createThoracicInnervationModel();
-    },
-  },
-  {
     manifest: upperLimbManifest,
     async createModel() {
       const { createUpperLimbModel } = await import("./models/upper-limb/upper-limb-real.ts");
@@ -88,5 +81,6 @@ export function listAnatomyModules(region?: string): AnatomyModuleRegistration[]
 }
 
 export function getAnatomyModule(id: string): AnatomyModuleRegistration | undefined {
+  if (id === "thorax-image-composite") return getThoraxComposite(registrations);
   return registrations.find(({ manifest }) => manifest.modelKey === id || manifest.id === id);
 }

@@ -24,6 +24,7 @@ import vm from "node:vm";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { createRequire } from "node:module";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+import { Box3, Vector3 } from "three";
 
 const require = createRequire(import.meta.url);
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -211,7 +212,7 @@ DRACOLoader.prototype.decodeGeometry = function decodeGeometryHeadless(buffer, t
 
 // --- 3. Validation (registry + per-model mesh coverage) ------------------------------------------
 
-const { listAnatomyModules } = await import(
+const { listAnatomyModules, getAnatomyModule } = await import(
   pathToFileURL(path.join(REPO_ROOT, "src/lib/anatomy3d/registry.ts")).href
 );
 const { validateManifest } = await import(
@@ -226,10 +227,20 @@ function requestedModel(argv) {
   return modelKey;
 }
 
+function requestedStructureBounds(argv) {
+  const index = argv.indexOf("--bounds");
+  if (index === -1) return null;
+  const structureId = argv[index + 1];
+  if (!structureId || structureId.startsWith("--")) throw new Error("--bounds requires a structure id");
+  return structureId;
+}
+
 const modelKey = requestedModel(process.argv.slice(2));
+const boundsStructureId = requestedStructureBounds(process.argv.slice(2));
 const registrations = listAnatomyModules().filter((registration) => (
   modelKey === null || registration.manifest.modelKey === modelKey || registration.manifest.id === modelKey
 ));
+if (modelKey && registrations.length === 0 && getAnatomyModule(modelKey)) registrations.push(getAnatomyModule(modelKey));
 
 if (modelKey !== null && registrations.length === 0) {
   throw new Error(`Unknown anatomy model: ${modelKey}`);
@@ -248,11 +259,23 @@ for (const registration of registrations) {
   let meshCount = 0;
 
   try {
+    if (boundsStructureId) {
+      const objects = handle.structures.get(boundsStructureId) ?? [];
+      const bounds = new Box3();
+      for (const object of objects) bounds.expandByObject(object, true);
+      if (!bounds.isEmpty()) {
+        console.log(`${manifest.modelKey}/${boundsStructureId} bounds`, {
+          min: bounds.min.toArray(),
+          max: bounds.max.toArray(),
+          center: bounds.getCenter(new Vector3()).toArray(),
+        });
+      }
+    }
     for (const structure of manifest.structures.filter((candidate) => candidate.quizable !== false)) {
       const objects = handle.structures.get(structure.id) ?? [];
       if (objects.length === 0) failures.push(`${manifest.modelKey}: ${structure.id} has no model objects`);
       for (const object of objects) {
-        if (object.userData.structureId !== structure.id) {
+        if (object.userData.structureId !== structure.id && !handle.aliases?.get(structure.id)?.includes(object.userData.structureId)) {
           failures.push(`${manifest.modelKey}: structure map mismatch for ${structure.id}`);
         }
       }

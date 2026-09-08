@@ -1,10 +1,12 @@
+import { cvsNerveDetailStructures } from "../thorax-airway-nerve-structures.mjs";
+
 /**
  * THORACIC INNERVATION manifest — Module 4 of the CVS/Thorax region (`docs/anatomy3d/regions/thorax.md`).
  *
- * The 25 quizable structures are the thoracic nerves & autonomics: the somatic intercostal nerves and
+ * The quizable structures are the thoracic nerves & autonomics: the somatic intercostal nerves and
  * their branches, the phrenic and vagus nerves with the recurrent laryngeal branches, the sympathetic
  * trunk with its ganglia and splanchnic nerves and rami communicantes, and the autonomic plexuses.
- * ALL 25 are PROCEDURAL (schematic) — BodyParts3D has no separable mesh for them, so they are drawn as
+ * All quizable targets are PROCEDURAL (schematic) — BodyParts3D has no separable mesh for them, so they are drawn as
  * smooth TubeGeometry cords in `thoracic-innervation-real.ts`, routed relative to the real context.
  *
  * The 7 `context-*` structures (quizable:false) ARE real BodyParts3D segmented meshes, rendered faint
@@ -21,7 +23,7 @@ export const thoracicInnervationManifest = {
   id: "thoracic-innervation",
   region: "cvs",
   modelKey: "thoracic-innervation",
-  title: "Thoracic nerves & autonomics",
+  title: "Nerves: thorax, cardiac & autonomics",
   subject: "anatomy",
   blurb:
     "The nerves of the thorax as a coherent system — the somatic intercostal nerves and their branches, the phrenic and vagus nerves with the recurrent laryngeal branches, the sympathetic trunk with its ganglia and splanchnic nerves, and the cardiac, pulmonary and oesophageal autonomic plexuses — drawn schematically and routed relative to a faint real thoracic skeleton, great vessels, heart silhouette and airway.",
@@ -416,6 +418,8 @@ export const thoracicInnervationManifest = {
       difficulty: 3,
       distractorIds: ["pulmonary-plexus", "deep-cardiac-plexus", "left-vagus-nerve"],
     },
+    ...cvsNerveDetailStructures,
+
     // ---- FAINT REAL CONTEXT (7) — scene-only reference meshes, quizable:false --------
     // Real BodyParts3D meshes rendered low-prominence so the schematic nerves have an anatomical
     // frame. NOT part of the quiz; authored here (they are not rows in docs/anatomy3d thorax.md).
@@ -491,3 +495,37 @@ export const thoracicInnervationManifest = {
     },
   ],
 };
+
+// The registered CVS modules consume these three exam-scope groups directly.  Keeping the source
+// definitions here avoids three divergent copies of the descriptions and distractor metadata while
+// allowing nerves to behave like an ordinary tissue layer inside the anatomy they innervate.
+const WALL_NERVE_IDS = new Set([
+  "intercostal-nerve", "subcostal-nerve", "posterior-ramus", "collateral-branch",
+  "lateral-cutaneous-branch", "anterior-cutaneous-branch", "intercostobrachial-nerve",
+  "dermatomes", "white-ramus-communicans", "gray-ramus-communicans",
+]);
+const HEART_NERVE_IDS = new Set([
+  "superficial-cardiac-plexus", "deep-cardiac-plexus", "superior-cervical-cardiac-nerve",
+  "middle-cervical-cardiac-nerve", "inferior-cervical-cardiac-nerve", "thoracic-cardiac-nerves",
+  "vagal-cardiac-branches", "right-coronary-plexus", "left-coronary-plexus",
+  "cardiac-visceral-afferents",
+]);
+const MEDIASTINAL_NERVE_IDS = new Set([
+  "right-phrenic-nerve", "left-phrenic-nerve", "right-vagus-nerve", "left-vagus-nerve",
+  "left-recurrent-laryngeal-nerve", "right-recurrent-laryngeal-nerve", "sympathetic-trunk",
+  "cervicothoracic-ganglion", "greater-splanchnic-nerve", "lesser-splanchnic-nerve",
+  "least-splanchnic-nerve", "pulmonary-plexus", "oesophageal-plexus",
+]);
+
+function structuresForModule(ids) {
+  const structures = thoracicInnervationManifest.structures.filter((structure) => ids.has(structure.id));
+  return structures.map((structure) => {
+    const retained = (structure.distractorIds ?? []).filter((id) => ids.has(id));
+    const replacements = structures.map(({ id }) => id).filter((id) => id !== structure.id && !retained.includes(id));
+    return { ...structure, distractorIds: [...retained, ...replacements].slice(0, 3) };
+  });
+}
+
+export const thoracicWallNerveStructures = structuresForModule(WALL_NERVE_IDS);
+export const heartNerveStructures = structuresForModule(HEART_NERVE_IDS);
+export const mediastinalNerveStructures = structuresForModule(MEDIASTINAL_NERVE_IDS);

@@ -1,0 +1,3849 @@
+{
+  "source": {
+    "title": "BodyParts3D 4.3",
+    "author": "Database Center for Life Science (DBCLS)",
+    "license": "CC-BY-SA 2.1 Japan",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+    "repository": "https://github.com/olivercase/body_parts_3d_api",
+    "revision": "4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b",
+    "changes": "Selected original mesh components, axis permutation (X,Z,-Y), uniform scaling and translation into the existing atlas; no invented surface geometry."
+  },
+  "modules": {
+    "heart": [
+      {
+        "structureId": "cvs-right-ventricular-anterior-papillary-muscle",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2419_BP22413_FMA7260_Anterior%20papillary%20muscle%20of%20right%20ventricle.obj",
+        "sourcePath": "meshes/FJ2419_BP22413_FMA7260_Anterior papillary muscle of right ventricle.obj",
+        "sha256": "25bc8c4fb742955f31bb4c7a3281d194c2c55f8fe3cd5e9b179ac4c2cf788ffc",
+        "transform": {
+          "scale": 0.016726191426671082,
+          "translate": [
+            -0.3779140724606418,
+            -20.50664519920904,
+            -2.048569555490203
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-ventricular-posterior-papillary-muscle",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2430_BP21414_FMA7261_Posterior%20papillary%20muscle%20of%20right%20ventricle.obj",
+        "sourcePath": "meshes/FJ2430_BP21414_FMA7261_Posterior papillary muscle of right ventricle.obj",
+        "sha256": "8e7b9d7e574673905d701d0e78afb3cea8941832476eab24160c8e504ad1dd5f",
+        "transform": {
+          "scale": 0.016726191426671082,
+          "translate": [
+            -0.3779140724606418,
+            -20.50664519920904,
+            -2.048569555490203
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-septal-papillary-muscle",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2437_BP21554_FMA7262_Septal%20papillary%20muscle%20of%20right%20ventricle.obj",
+        "sourcePath": "meshes/FJ2437_BP21554_FMA7262_Septal papillary muscle of right ventricle.obj",
+        "sha256": "b638fdffb640ecb02e95fbd2c08d983c0a122e71ae6b0d83de6cd0adaf22b2ea",
+        "transform": {
+          "scale": 0.016726191426671082,
+          "translate": [
+            -0.3779140724606418,
+            -20.50664519920904,
+            -2.048569555490203
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-ventricular-posterior-papillary-muscle",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2429_BP22988_FMA7266_Posterior%20papillary%20muscle%20of%20left%20ventricle.obj",
+        "sourcePath": "meshes/FJ2429_BP22988_FMA7266_Posterior papillary muscle of left ventricle.obj",
+        "sha256": "cdce718990828a4311f5d274141f33b67e0508672a4e504cda372334f464194d",
+        "transform": {
+          "scale": 0.016726191426671082,
+          "translate": [
+            -0.3779140724606418,
+            -20.50664519920904,
+            -2.048569555490203
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-anterior-cusp-of-mitral-valve",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2420_BP22549_FMA7242_Anterior%20leaflet%20of%20mitral%20valve.obj",
+        "sourcePath": "meshes/FJ2420_BP22549_FMA7242_Anterior leaflet of mitral valve.obj",
+        "sha256": "5cbe2d2d949ba7463f353ba7755131a0446d36a85573cb066f22e98ad2413613",
+        "transform": {
+          "scale": 0.016726191426671082,
+          "translate": [
+            -0.3779140724606418,
+            -20.50664519920904,
+            -2.048569555490203
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-posterior-cusp-of-mitral-valve",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2432_BP22942_FMA7243_Posterior%20leaflet%20of%20mitral%20valve.obj",
+        "sourcePath": "meshes/FJ2432_BP22942_FMA7243_Posterior leaflet of mitral valve.obj",
+        "sha256": "7bf4f66e3081b7021a87cf778155e84ceee7994306723be62bfc712f79806591",
+        "transform": {
+          "scale": 0.016726191426671082,
+          "translate": [
+            -0.3779140724606418,
+            -20.50664519920904,
+            -2.048569555490203
+          ]
+        }
+      }
+    ],
+    "mediastinum": [
+      {
+        "structureId": "cvs-left-superior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2925_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2925_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "579561c14121856fb0518e33d97ba7d39a533fa13bfb2931beab1d90e0a08192",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-superior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2933_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2933_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "f5999e21ab13202781be359397d9b78069da0dfba97df702803f5878d7b91330",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-superior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ5994_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ5994_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "35dbb01964b8b688a56d974b526ff18791d0be736dfcc14751e66c6199c93401",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-superior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6002_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6002_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "17095e2251f3740b7f699ac88dde4e9ec0e3951808952ad4f505f0bbc38476ec",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-inferior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2944_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2944_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "6e463bf46a0ee86eab57a4456355b64992b6996d5b1dd9a1273c3c1cd521fec8",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-inferior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2950_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2950_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "7fa6712e3970995e7439eb9888f5bde4886b56cb934ed90407170006a8638fe4",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-inferior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2955_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2955_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "94b035dd2716a44e963e3b125f938cb1e349562a84448921ca1fb9160f4ffaea",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-inferior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6013_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6013_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "deed5e09c3d14b487391cb46f129d23be767086d5973b0f1da2979000e9f129e",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-inferior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6019_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6019_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "4105c170861db10203c46624cb489a6abb69d6989e941ab9c8041c66538f43d8",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-inferior-pulmonary-vein",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6024_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6024_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "16b84740ca79137239c97ede4586be36e5cd80d1caf208f010135408ddf76dde",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2925_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2925_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "579561c14121856fb0518e33d97ba7d39a533fa13bfb2931beab1d90e0a08192",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2933_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2933_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "f5999e21ab13202781be359397d9b78069da0dfba97df702803f5878d7b91330",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ5994_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ5994_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "35dbb01964b8b688a56d974b526ff18791d0be736dfcc14751e66c6199c93401",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6002_BP22893_FMA50305_Trunk%20of%20left%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6002_BP22893_FMA50305_Trunk of left superior pulmonary vein.obj",
+        "sha256": "17095e2251f3740b7f699ac88dde4e9ec0e3951808952ad4f505f0bbc38476ec",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2944_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2944_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "6e463bf46a0ee86eab57a4456355b64992b6996d5b1dd9a1273c3c1cd521fec8",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2950_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2950_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "7fa6712e3970995e7439eb9888f5bde4886b56cb934ed90407170006a8638fe4",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2955_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ2955_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "94b035dd2716a44e963e3b125f938cb1e349562a84448921ca1fb9160f4ffaea",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6013_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6013_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "deed5e09c3d14b487391cb46f129d23be767086d5973b0f1da2979000e9f129e",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6019_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6019_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "4105c170861db10203c46624cb489a6abb69d6989e941ab9c8041c66538f43d8",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-left-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6024_BP22896_FMA50306_Trunk%20of%20left%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6024_BP22896_FMA50306_Trunk of left inferior pulmonary vein.obj",
+        "sha256": "16b84740ca79137239c97ede4586be36e5cd80d1caf208f010135408ddf76dde",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3020_BP23802_FMA50302_Trunk%20of%20right%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ3020_BP23802_FMA50302_Trunk of right superior pulmonary vein.obj",
+        "sha256": "1950414c9d2faa611ad619cd34f4adf658265b3e26146a8c403018c426215f67",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6089_BP23802_FMA50302_Trunk%20of%20right%20superior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ6089_BP23802_FMA50302_Trunk of right superior pulmonary vein.obj",
+        "sha256": "97f29e619f4265d86a24b40239c83c85fb5eaf50a4bd618962cce7db64059851",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-pulmonary-veins",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3040_BP22871_FMA50303_Trunk%20of%20right%20inferior%20pulmonary%20vein.obj",
+        "sourcePath": "meshes/FJ3040_BP22871_FMA50303_Trunk of right inferior pulmonary vein.obj",
+        "sha256": "da6674074ac28a735013aaefa030685719b7fcd61ca787c8f909af7f0a9bc6a3",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-common-carotid-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3564_BP23191_FMA69325_Trunk%20of%20right%20common%20carotid%20artery.obj",
+        "sourcePath": "meshes/FJ3564_BP23191_FMA69325_Trunk of right common carotid artery.obj",
+        "sha256": "1a12829b8a46ac3b0dd098e80f5568c5a0f49e3d748b7419d3517bf46a8013b6",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-common-carotid-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ4986_BP23191_FMA69325_Trunk%20of%20right%20common%20carotid%20artery.obj",
+        "sourcePath": "meshes/FJ4986_BP23191_FMA69325_Trunk of right common carotid artery.obj",
+        "sha256": "ca755ed77030afa1913f6ebc0ab88a8c16799a3e99d07a09275c54ea208bc1d7",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-subclavian-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3579_BP23187_FMA69318_Trunk%20of%20right%20subclavian%20artery.obj",
+        "sourcePath": "meshes/FJ3579_BP23187_FMA69318_Trunk of right subclavian artery.obj",
+        "sha256": "685211dba96c9cdcef4c04b35daff86317fd4d3a28f7b123b9e8f45d4b150175",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      },
+      {
+        "structureId": "cvs-right-subclavian-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ5006_BP29714_FMA82595_Trunk%20proper%20of%20right%20subclavian%20artery.obj",
+        "sourcePath": "meshes/FJ5006_BP29714_FMA82595_Trunk proper of right subclavian artery.obj",
+        "sha256": "637ecad10ab03d2e056af30433ce268d7c9a22f806685a42225591601ce069f2",
+        "transform": {
+          "scale": 0.003970733457500377,
+          "translate": [
+            -0.10148261584862463,
+            -4.709407006784659,
+            -0.3876303046047861
+          ]
+        }
+      }
+    ],
+    "upper-limb": [
+      {
+        "structureId": "visual-coracobrachialis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1488_BP22511_FMA37665_Right%20coracobrachialis.obj",
+        "sourcePath": "meshes/FJ1488_BP22511_FMA37665_Right coracobrachialis.obj",
+        "sha256": "9c0ba3de65833fb7a835880742af9bc0ebce2ddeab4f92533d535401c4b6a66d",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-pectoralis-major",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1446_BP23178_FMA45874_Abdominal%20part%20of%20right%20pectoralis%20major.obj",
+        "sourcePath": "meshes/FJ1446_BP23178_FMA45874_Abdominal part of right pectoralis major.obj",
+        "sha256": "df4d9d0e3a3826543dd97bcd5ed1d0c686001a22da84a97b7a236f02b289b497",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-pectoralis-major",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1447_BP23304_FMA34690_Clavicular%20part%20of%20right%20pectoralis%20major.obj",
+        "sourcePath": "meshes/FJ1447_BP23304_FMA34690_Clavicular part of right pectoralis major.obj",
+        "sha256": "8946eb62e954e216065235ed2fd434137b5a0b7d9c53663eccb429bbcec1191a",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-pectoralis-major",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1464_BP23276_FMA79979_Sternocostal%20part%20of%20right%20pectoralis%20major.obj",
+        "sourcePath": "meshes/FJ1464_BP23276_FMA79979_Sternocostal part of right pectoralis major.obj",
+        "sha256": "89f0094691e07d11ce3be57ad19dc986b83aa822b74a6a7b22fe2e3af4f8939c",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-serratus-anterior",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1459_BP22464_FMA13398_Right%20serratus%20anterior.obj",
+        "sourcePath": "meshes/FJ1459_BP22464_FMA13398_Right serratus anterior.obj",
+        "sha256": "865a605b4ca288d15b4afcb46b82ce73e80c9efaf8d8dc648f55eeccfdbc5697",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-teres-major",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1507_BP20591_FMA32551_Right%20teres%20major.obj",
+        "sourcePath": "meshes/FJ1507_BP20591_FMA32551_Right teres major.obj",
+        "sha256": "f5106fe5571614f6d4a569095303a970ea17ac8441f237d6b29af813538b2e77",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-pectoralis-minor",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1456_BP23886_FMA13375_Right%20pectoralis%20minor.obj",
+        "sourcePath": "meshes/FJ1456_BP23886_FMA13375_Right pectoralis minor.obj",
+        "sha256": "4eceec72b2a829972f3d78828b4118b12360d4259933be9829586e5ee733ae60",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-subclavius",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1460_BP22333_FMA13412_Right%20subclavius.obj",
+        "sourcePath": "meshes/FJ1460_BP22333_FMA13412_Right subclavius.obj",
+        "sha256": "e79041d5996f4129b15955770a28d54e0ee93537d610d161a3b1a03c0acf1ee3",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-levator-scapulae",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1532_BP21819_FMA32540_Right%20levator%20scapulae.obj",
+        "sourcePath": "meshes/FJ1532_BP21819_FMA32540_Right levator scapulae.obj",
+        "sha256": "26fb59861e20456f80be648f9e2424049e9a94154439060c0740693fc6b6e063",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-trapezius",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1520_BP21493_FMA33581_Ascending%20part%20of%20right%20trapezius.obj",
+        "sourcePath": "meshes/FJ1520_BP21493_FMA33581_Ascending part of right trapezius.obj",
+        "sha256": "33c4a8b6eed3581aa5d1ff94ae4cd034a928fe8f8ecfba9c9b5d9bb0abb5fb43",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-trapezius",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1521_BP21469_FMA33586_Descending%20part%20of%20right%20trapezius.obj",
+        "sourcePath": "meshes/FJ1521_BP21469_FMA33586_Descending part of right trapezius.obj",
+        "sha256": "a8986422c04e3048d01d62febc7d9dbf4983c947a90d82db4428f3c97abef022",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-trapezius",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1554_BP23026_FMA33584_Transverse%20part%20of%20right%20trapezius.obj",
+        "sourcePath": "meshes/FJ1554_BP23026_FMA33584_Transverse part of right trapezius.obj",
+        "sha256": "05f7027a0c0bba85bdb90c9ef634a96d618bf90e59f691643cec26b577a80eb9",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-profunda-brachii-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ2277_BP20827_FMA22696_Right%20deep%20brachial%20artery.obj",
+        "sourcePath": "meshes/FJ2277_BP20827_FMA22696_Right deep brachial artery.obj",
+        "sha256": "1c576e55699e55e715793cde28ee9ac942b14a3107af64dcac54053844906f49",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-suprascapular-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ2303_BP22473_FMA10698_Right%20suprascapular%20artery.obj",
+        "sourcePath": "meshes/FJ2303_BP22473_FMA10698_Right suprascapular artery.obj",
+        "sha256": "7de97207d945ae95ef48682ed185867ac0c46a7546f2a060884abcd54e784894",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-posterior-circumflex-humeral-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ2291_BP22429_FMA22685_Right%20posterior%20circumflex%20humeral%20artery.obj",
+        "sourcePath": "meshes/FJ2291_BP22429_FMA22685_Right posterior circumflex humeral artery.obj",
+        "sha256": "11141f61236b8f8c64de82f2856fd0ce45a25ce508731312a105799c6a7979ef",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-posterior-circumflex-humeral-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ2292_BP22429_FMA22685_Right%20posterior%20circumflex%20humeral%20artery.obj",
+        "sourcePath": "meshes/FJ2292_BP22429_FMA22685_Right posterior circumflex humeral artery.obj",
+        "sha256": "fc7c7241c2230eb76d5b37d6ca8cbf30699d43b7fac95809449ac047fa321723",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-circumflex-scapular-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ2273_BP22477_FMA23180_Right%20circumflex%20scapular%20artery.obj",
+        "sourcePath": "meshes/FJ2273_BP22477_FMA23180_Right circumflex scapular artery.obj",
+        "sha256": "3b98c41dc56213af1126ec545fd11f295f680020077e6503c1a0f1628838f43e",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-anconeus",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1485_BP20746_FMA37705_Right%20anconeus.obj",
+        "sourcePath": "meshes/FJ1485_BP20746_FMA37705_Right anconeus.obj",
+        "sha256": "2eecd5e799ed23cbaac350021f73ac63012acc4b27c2bdac58b88f32b93e9aa3",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-flexor-retinaculum",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1471_BP23035_FMA40120_Flexor%20retinaculum%20of%20right%20wrist.obj",
+        "sourcePath": "meshes/FJ1471_BP23035_FMA40120_Flexor retinaculum of right wrist.obj",
+        "sha256": "5f29f5d8b5b150a8b48b63188703653a473bf06cd031ec00294a44ed7691f689",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-abductor-pollicis-brevis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1483_BP20944_FMA37386_Right%20abductor%20pollicis%20brevis.obj",
+        "sourcePath": "meshes/FJ1483_BP20944_FMA37386_Right abductor pollicis brevis.obj",
+        "sha256": "03ed971dc69110f76c5425742b4ed6c8fcdd37b73d010faaf295e6cdc83d3a97",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-flexor-pollicis-brevis-superficial-head",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1514_BP23262_FMA65198_Superficial%20head%20of%20right%20flexor%20pollicis%20brevis.obj",
+        "sourcePath": "meshes/FJ1514_BP23262_FMA65198_Superficial head of right flexor pollicis brevis.obj",
+        "sha256": "696a25bf3bb9408421fb9475505c78975ba04f8dd71a89ea8f2e15047394b013",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-opponens-pollicis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1501_BP21042_FMA37390_Right%20opponens%20pollicis.obj",
+        "sourcePath": "meshes/FJ1501_BP21042_FMA37390_Right opponens pollicis.obj",
+        "sha256": "9bf93b30b465e6acbec42c628b0d41bcce2684df9edd4250e944e732f67e06f7",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-adductor-pollicis-transverse-head",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1515_BP20577_FMA46123_Transverse%20head%20of%20right%20adductor%20pollicis.obj",
+        "sourcePath": "meshes/FJ1515_BP20577_FMA46123_Transverse head of right adductor pollicis.obj",
+        "sha256": "865ab994d1aec36a68cebdb2f436f1f14218195f1491baedecd64457a32ef179",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-dorsal-interossei",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1509_BP22795_FMA42404_Set%20of%20dorsal%20interossei%20of%20right%20hand.obj",
+        "sourcePath": "meshes/FJ1509_BP22795_FMA42404_Set of dorsal interossei of right hand.obj",
+        "sha256": "7fa726a89b957f258b2a3b02473322dab0c42f2494cd4dfe96c7ec5b463d1ff2",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-pisiform",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3382_BP21756_FMA24441_Right%20pisiform.obj",
+        "sourcePath": "meshes/FJ3382_BP21756_FMA24441_Right pisiform.obj",
+        "sha256": "e1d59617164a40057a48c7bdf4cd8e0b0df565661ca83b090da80a0877591607",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-abductor-digiti-minimi",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1466_BP22694_FMA37396_Abductor%20digiti%20minimi%20of%20right%20hand.obj",
+        "sourcePath": "meshes/FJ1466_BP22694_FMA37396_Abductor digiti minimi of right hand.obj",
+        "sha256": "a6178d9236a856d5fb47fcaa6d067a4f55e70c1ce1b2a22aa65cdc1758ea744f",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-flexor-digiti-minimi-brevis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1470_BP20839_FMA37398_Flexor%20digiti%20minimi%20brevis%20of%20right%20hand.obj",
+        "sourcePath": "meshes/FJ1470_BP20839_FMA37398_Flexor digiti minimi brevis of right hand.obj",
+        "sha256": "49bf49748e8b2b5e32317584c32d7d41df1f0ec0aef9ce0f6a4762fbc101fe59",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-opponens-digiti-minimi",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1482_BP21052_FMA37400_Opponens%20digiti%20minimi%20of%20right%20hand.obj",
+        "sourcePath": "meshes/FJ1482_BP21052_FMA37400_Opponens digiti minimi of right hand.obj",
+        "sha256": "a3dadcc9029724d9f7758c7e17f982910dbe90c02599f458a8158db41ebe9e90",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-lumbricals",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1510_BP22946_FMA42398_Set%20of%20lumbricals%20of%20right%20hand.obj",
+        "sourcePath": "meshes/FJ1510_BP22946_FMA42398_Set of lumbricals of right hand.obj",
+        "sha256": "faf6944d366861360196e48f81e511a74b65028318770b54fe144c07732549e0",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      },
+      {
+        "structureId": "visual-palmar-interossei",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1511_BP22900_FMA42402_Set%20of%20palmar%20interossei%20of%20right%20hand.obj",
+        "sourcePath": "meshes/FJ1511_BP22900_FMA42402_Set of palmar interossei of right hand.obj",
+        "sha256": "0796b6675a59e1784224a52a7fab1cc497d4a0cf548619358d7d38691ed58a6c",
+        "transform": {
+          "scale": 0.00270371,
+          "translate": [
+            0.03027,
+            -2.71448,
+            -0.2574
+          ]
+        }
+      }
+    ],
+    "lower-limb": [
+      {
+        "structureId": "visual-talus",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3280_BP23443_FMA24483_Left%20talus.obj",
+        "sourcePath": "meshes/FJ3280_BP23443_FMA24483_Left talus.obj",
+        "sha256": "64cedd57d301c3560dac1b22a7d2cf6ef26b6658d3bdf467faf7521fa8600e0f",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-navicular",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3307_BP23683_FMA24501_Navicular%20bone%20of%20left%20foot.obj",
+        "sourcePath": "meshes/FJ3307_BP23683_FMA24501_Navicular bone of left foot.obj",
+        "sha256": "d54b4d83671d4bcaa989c7b4ba4383845e0d3a4aa32e609b34ca4eaef60275cf",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-medial-cuneiform",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3271_BP21821_FMA24522_Left%20medial%20cuneiform%20bone.obj",
+        "sourcePath": "meshes/FJ3271_BP21821_FMA24522_Left medial cuneiform bone.obj",
+        "sha256": "d294a701f354deda023a40eb735c86edefaf171c9250ebac7031b5c52fb3e12d",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-calcaneus",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3256_BP23796_FMA24498_Left%20calcaneus.obj",
+        "sourcePath": "meshes/FJ3256_BP23796_FMA24498_Left calcaneus.obj",
+        "sha256": "fd76df3ee64615b681f23cea5e18e7f62e4246dcfa4ffc2d463074ffe877a9af",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-psoas-major",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1431M_BP23361_FMA22343_Left%20psoas%20major.obj",
+        "sourcePath": "meshes/FJ1431M_BP23361_FMA22343_Left psoas major.obj",
+        "sha256": "ac05bcf6802314ec3f6f91cf9ccdc44fc26ee4e08c26fdf4664457a2d0f0d47c",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-iliacus",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1422M_BP23542_FMA22323_Left%20iliacus.obj",
+        "sourcePath": "meshes/FJ1422M_BP23542_FMA22323_Left iliacus.obj",
+        "sha256": "f41064b3bbebee1bdbc579ef46bd03d875c8371fe4204d121c1b3f7d24156487",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-inguinal-ligament",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ7211_BP29441_FMA21965_Left%20inguinal%20ligament.obj",
+        "sourcePath": "meshes/FJ7211_BP29441_FMA21965_Left inguinal ligament.obj",
+        "sha256": "479e89b56f52f542ddaa5d38f2ee916e73b8b6cc72fcf586dbff1880d5b3ce8e",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-rectus-femoris",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1433M_BP23766_FMA38929_Left%20rectus%20femoris.obj",
+        "sourcePath": "meshes/FJ1433M_BP23766_FMA38929_Left rectus femoris.obj",
+        "sha256": "219d9704a843490c7c9d120008458f1255cf83062d3b4442ac1e778260206249",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-vastus-lateralis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1442M_BP23367_FMA38931_Left%20vastus%20lateralis.obj",
+        "sourcePath": "meshes/FJ1442M_BP23367_FMA38931_Left vastus lateralis.obj",
+        "sha256": "d110cbc015ed185e2571a4594ae808c325e04341991e664071a0448ec34856b2",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-vastus-medialis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1443M_BP23244_FMA38933_Left%20vastus%20medialis.obj",
+        "sourcePath": "meshes/FJ1443M_BP23244_FMA38933_Left vastus medialis.obj",
+        "sha256": "d233fe2f8214a8860f79e868616e26701095f841a204f3e371d7d5eb386d1816",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-iliotibial-tract",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1423M_BP22008_FMA58777_Left%20iliotibial%20tract.obj",
+        "sourcePath": "meshes/FJ1423M_BP22008_FMA58777_Left iliotibial tract.obj",
+        "sha256": "86f86088bd13642cac652b58e99f45b186db1f4f5fbf759688cbe8ce24e311b7",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-profunda-femoris-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ2090_BP29051_FMA20797_Left%20deep%20femoral%20artery.obj",
+        "sourcePath": "meshes/FJ2090_BP29051_FMA20797_Left deep femoral artery.obj",
+        "sha256": "795e528723c2d50ecd4fafee6f6ba8bca4b0bf55a1e0ee45b3b5b56964b130d4",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-profunda-femoris-artery",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ2094_BP29051_FMA20797_Left%20deep%20femoral%20artery.obj",
+        "sourcePath": "meshes/FJ2094_BP29051_FMA20797_Left deep femoral artery.obj",
+        "sha256": "882cfa9b283f33d8346d89fb2d350d1b4ce9ed9f8327048cde4b5986c30de828",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-fibularis-longus",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1410M_BP22506_FMA22553_Left%20fibularis%20longus.obj",
+        "sourcePath": "meshes/FJ1410M_BP22506_FMA22553_Left fibularis longus.obj",
+        "sha256": "1da355dcd7467a6d0e1b2c3ce8d768664101d6636edeb29f0daa46876db08b41",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-fibularis-brevis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1409M_BP20493_FMA22555_Left%20fibularis%20brevis.obj",
+        "sourcePath": "meshes/FJ1409M_BP20493_FMA22555_Left fibularis brevis.obj",
+        "sha256": "71a03539cca416463451059e56a1c37031496a03ced94e3c2fd9824baa143d99",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-extensor-hallucis-brevis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1407M_BP21977_FMA51145_Left%20extensor%20hallucis%20brevis.obj",
+        "sourcePath": "meshes/FJ1407M_BP21977_FMA51145_Left extensor hallucis brevis.obj",
+        "sha256": "2476bff897ab3f90de879a6b8b76c280693a84894464f63e27845fbcce56aa85",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-calcaneal-tendon",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1405M_BP23161_FMA264844_Left%20calcaneal%20tendon.obj",
+        "sourcePath": "meshes/FJ1405M_BP23161_FMA264844_Left calcaneal tendon.obj",
+        "sha256": "5c0f8f47c1eb7608ff0847a5973d578f057a72a443f3597bbd10aa7f35f926f5",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-intermediate-cuneiform",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3264_BP20273_FMA24524_Left%20intermediate%20cuneiform%20bone.obj",
+        "sourcePath": "meshes/FJ3264_BP20273_FMA24524_Left intermediate cuneiform bone.obj",
+        "sha256": "35384e460ea22de93f9d642ac34015bac73bafe03f23c2b1f9ac08efcc96b343",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-lateral-cuneiform",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3267_BP23844_FMA24526_Left%20lateral%20cuneiform%20bone.obj",
+        "sourcePath": "meshes/FJ3267_BP23844_FMA24526_Left lateral cuneiform bone.obj",
+        "sha256": "800d5c6d4dc9de239836b7d52b22f74a065e5b3935dcb7f31232c5795e03c4fb",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-cuboid",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ3258_BP23392_FMA24529_Left%20cuboid%20bone.obj",
+        "sourcePath": "meshes/FJ3258_BP23392_FMA24529_Left cuboid bone.obj",
+        "sha256": "53ae458c943b2fa30aa967506b9413fb953ff5200ee5f5466bcb4fed0b6b3280",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-long-plantar-ligament",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1424M_BP23763_FMA44250_Left%20long%20plantar%20ligament.obj",
+        "sourcePath": "meshes/FJ1424M_BP23763_FMA44250_Left long plantar ligament.obj",
+        "sha256": "2df1a8d5f7555d0ec0d335d2835e631905d54f652d69c53c3db4fcccb7617b8b",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-abductor-digiti-minimi",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1390M_BP20950_FMA37464_Abductor%20digiti%20minimi%20of%20left%20foot.obj",
+        "sourcePath": "meshes/FJ1390M_BP20950_FMA37464_Abductor digiti minimi of left foot.obj",
+        "sha256": "d824b72881bb8605f6fd20c549d81faeb065e496e4534b2c1612a1a70cd924f2",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-flexor-accessorius",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1412M_BP20525_FMA37466_Left%20flexor%20accessorius.obj",
+        "sourcePath": "meshes/FJ1412M_BP20525_FMA37466_Left flexor accessorius.obj",
+        "sha256": "bc1a5acb530c0ac62bac0e501e773fc8ebc6e7445ca5496208f753f091f8431a",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-abductor-hallucis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1400M_BP22702_FMA37460_Left%20abductor%20hallucis.obj",
+        "sourcePath": "meshes/FJ1400M_BP22702_FMA37460_Left abductor hallucis.obj",
+        "sha256": "c015c97be68601cc6fe352a8f35c5aa7736cfa06ffab033fb277c65ec54adf47",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-flexor-hallucis-brevis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1393M_BP23509_FMA45974_Lateral%20head%20of%20left%20flexor%20hallucis%20brevis.obj",
+        "sourcePath": "meshes/FJ1393M_BP23509_FMA45974_Lateral head of left flexor hallucis brevis.obj",
+        "sha256": "f485fdf97e8bd36df6a8108c6349954526da8dd66d8f23291705b2fe855177bc",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-flexor-hallucis-brevis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1396M_BP23668_FMA45972_Medial%20head%20of%20left%20flexor%20hallucis%20brevis.obj",
+        "sourcePath": "meshes/FJ1396M_BP23668_FMA45972_Medial head of left flexor hallucis brevis.obj",
+        "sha256": "dd6905c4505154b032891c9051571b20fc619a08377182d56dde7cfbdca6f70f",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      },
+      {
+        "structureId": "visual-flexor-digitorum-brevis",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/FJ1413M_BP21002_FMA37462_Left%20flexor%20digitorum%20brevis.obj",
+        "sourcePath": "meshes/FJ1413M_BP21002_FMA37462_Left flexor digitorum brevis.obj",
+        "sha256": "939c9d43109986935aa89243cb9b0e646cf147b41437352ad16991f5d02feb39",
+        "transform": {
+          "scale": 0.00162186,
+          "translate": [
+            -0.13614,
+            -0.83198,
+            -0.176
+          ]
+        }
+      }
+    ],
+    "nasal-real": [
+      {
+        "structureId": "perpendicular-plate-of-ethmoid",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6412_BP29766_FMA52891_Perpendicular%20plate%20of%20ethmoid.obj",
+        "sourcePath": "meshes/FJ6412_BP29766_FMA52891_Perpendicular plate of ethmoid.obj",
+        "sha256": "c4a40512b568a86e2d7cffdcc660920f8f7e0a5c423b3fdafc89bafe44bed1e3",
+        "transform": {
+          "scale": 0.01944549254523749,
+          "translate": [
+            0.012722195852135788,
+            -29.246798264664026,
+            -3.1035298556247954
+          ]
+        }
+      },
+      {
+        "structureId": "major-alar-cartilages",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6616_BP23263_FMA59505_Right%20major%20alar%20cartilage.obj",
+        "sourcePath": "meshes/FJ6616_BP23263_FMA59505_Right major alar cartilage.obj",
+        "sha256": "a35d74fae66b22de8c650eb59935486f6726d94cea5cde83cfb79ef5f2cc6694",
+        "transform": {
+          "scale": 0.01944549254523749,
+          "translate": [
+            0.012722195852135788,
+            -29.246798264664026,
+            -3.1035298556247954
+          ]
+        }
+      },
+      {
+        "structureId": "major-alar-cartilages",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6614_BP23944_FMA59506_Left%20major%20alar%20cartilage.obj",
+        "sourcePath": "meshes/FJ6614_BP23944_FMA59506_Left major alar cartilage.obj",
+        "sha256": "f541ec667a2612a97c66aa1fd49c0adce51c043628bfd197eac89989114d9614",
+        "transform": {
+          "scale": 0.01944549254523749,
+          "translate": [
+            0.012722195852135788,
+            -29.246798264664026,
+            -3.1035298556247954
+          ]
+        }
+      }
+    ],
+    "larynx-real": [
+      {
+        "structureId": "thyroepiglottic-ligament",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2807_BP23708_FMA55230_Thyro-epiglottic%20ligament.obj",
+        "sourcePath": "meshes/FJ2807_BP23708_FMA55230_Thyro-epiglottic ligament.obj",
+        "sha256": "7da59675e339cf28ccb83426f27a155b8d75c6708c5790d84b69aff1a8c3b110",
+        "transform": {
+          "scale": 0.03540810885220742,
+          "translate": [
+            0.022976321834197375,
+            -50.068125475547994,
+            -3.903851984963437
+          ]
+        }
+      }
+    ],
+    "trachea-lung-real": [
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2454_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2454_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "b184aae77fac9b0b83634885bd0e941fd8696b5d83ae0542d57892b4b496e70c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2520_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2520_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "2b57c1d7f7b6044d4ff3aef438d21e38e4bc8078f94d06cf8862a11db6b8a0cb",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2521_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2521_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "b9b3bfdaaeebfd5fc2e15d9fde663a622203843d9ca39790d47168368ba47aa9",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2522_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2522_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "02aad0d9c8db466d4434cf0bbe894d966389f87f9ec59e2dc2e0bf87e946da0b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2523_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2523_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "75766308f98d849256cc691c5407941ee1bea5bb69b9cc814a8a773ef2fa66bb",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2524_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2524_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "0c061f45d5ad52eaaab6a855823682abc4c3e5d8c005491e0d644d6d1fbe291e",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2525_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2525_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "23b437bce57f4ea50d1ebb4bd02d47607132649e08b06c177392b3533ddba5bf",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2526_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2526_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "b8d9680e0caa6c83e67643fb97ada6218832297b8ce124aab49fbcf62ff97791",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6548_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6548_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "1e28f15b9190178e7b807d39440f9ab16730f24f1bff32a99e0d121777c0f754",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6549_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6549_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "59c8c00809f4c22f1d56c6d8a19260cbf2d2ba86faec39b66368a785d4f8f7bc",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6550_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6550_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "3603b67a9347d48811cf638eabe4b5f85f8c0828afcb0ade9dca994c9750969c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6551_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6551_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "9da4f3892f6398fe951bdc93e0a74d846aa098510b8475b3ba5b1c6b8ad6e475",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6552_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6552_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "a912f67cf2cca8ad10ff1b41e96e3b48de9f6ef05844a89e3de1f2b50cd1c39c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6553_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6553_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "adf3421da3988ba8f53fcd25189564e5b30bcbe337d284aa851189063fd6c2dc",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6554_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6554_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "6df8f37bb7d49eb08f5911d280d93fc2b16fc7545786f3f845b71a0e327a83ac",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-apical-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6555_BP23435_FMA68211_Right%20apical%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6555_BP23435_FMA68211_Right apical segmental bronchial tree.obj",
+        "sha256": "0a2b132538a729d31dc9b322a7acc714d1203eb924aae2823071696824892dcd",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2453_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2453_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "e6b03c1781dee944d335bf5a0ac522ae764b22a8bf1a1e8c64f221f706cb7940",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2509_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2509_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "af2ed2215117be046edd2ebc35a164715975179efbaa34c1e7fa84e91aa50686",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2510_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2510_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "cd20a33a8a6de752dd54bdbd9d2b8954e8d4a27348148bd521e54161910ec1f9",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2511_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2511_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "89c978557e37dcdc50566d9fb2c37f422e0244c4de4f597055de45cbf149570b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2512_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2512_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "0e6e27f5f603d4c69c653871de8f3c505dd819ca1daca147841c0ced9959db0a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2513_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2513_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "510090b801fb8a319b609cb87e5e35f5587a537c923c7da199666e0d9122a942",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2514_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2514_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "5c9abd5f54f8b7793ec7b4b0d1a424dc2fa11d0a728c9c14fed1a8786efe031a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6541_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6541_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "1466b5b0dddeb7a10056c8797290ca5b972854a1655b7880605c3ec607c662cb",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6542_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6542_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "fbb04fce9d8f7dea855301d72146be8b2b11dc91a189b798874f17f214b2a491",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6543_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6543_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "1f3cb5fbddca85b28023242564e9c8eb8c2b0902654d0017b0c05f10c2036d13",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6544_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6544_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "ba5affb7c194412045df4e7b792603d1199fedefe1f64ba6a2c75da46e80cf9b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6545_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6545_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "882f1055909e91afadff70bdfa884916e0379c143e3cb06b04e3210693897d63",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6546_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6546_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "b7a808b9cb5a7985160e4403185f9a70bfff5bd3d83c4eb8143f0d857df68a3c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6547_BP24079_FMA68212_Right%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6547_BP24079_FMA68212_Right anterior segmental bronchial tree.obj",
+        "sha256": "137704dc1c6f9a6e4000479e50fdad688dfa528f90ef8ce678a05b02cc339dc2",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2458_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2458_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "640a6c0e332c23921784fd5b4937477c743b310044ddacd642744ef3ce3ef180",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2515_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2515_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "f87fb6f123272fe665eeba5cd7d5c54e26001871347c97af66d137493448e964",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2516_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2516_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "5b9600476b8423816f5c14d01c3009837c954ff44bd8e1d0490fb1d6b4043283",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2517_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2517_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "3bb2b2dc80e02f446c78fbdbaa4c9e1f384e9c0d447e50d8a4be5487f0799c62",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2518_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2518_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "d9bcbda69b5f88be790c26d07f49b96447cfded0e3a61c29de538201681385d5",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2519_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2519_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "ea63fe7b50b1b557684d0599dbc8ab9f0346658e9f961066d11162006b37d67d",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6568_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6568_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "687821b1b1a884b6a9b52a657f0f26780efdc7b2fb5f48c0bfb53f0263f5a730",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6569_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6569_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "d2e97597b7df37a65dd3b7da922be31b1ba85840b0869d764656fb6dc7682132",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6570_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6570_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "9802a2aa66ca116cd9d754c2962be62b8e95147dbce4e9ea5151977ee0045482",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6571_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6571_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "9d35837f838ac7fc75c65a268db11fcfc927ea9a6006927e142ffddf4c9451d7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6572_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6572_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "ef4641dff79f4b53eb1de58fae4b2d6bc6ac064aedfe820e308d15ea39d3059c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6573_BP23453_FMA68213_Right%20posterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6573_BP23453_FMA68213_Right posterior segmental bronchial tree.obj",
+        "sha256": "588c2355c046dbf02229ed5c8c26e4b187e38a988e32a38a4c4ae6f9d2fa1a1f",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2451_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2451_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "4f817c3a78659c6e370c2964605b2666edff819c7028d84aad47228190681f70",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2506_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2506_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "528f58343b5e92a08d825cb9ba56ea518f4f60ca2b6a6778f5d34b834d49dd3f",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2507_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2507_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "23d6532fb5af87fef6b545fa4001b22acae6d54e10d0ad5d4c33352da163c2bf",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2508_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2508_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "4ce5d8ac80aa89a363819849bd992026e86eaf4070f9dda7291b131acd066f3c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6534_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6534_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "377129ef4226ccd2fe6526b1786236b77f69ada4b27113a5fe9d8a6103ccf9c2",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6535_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6535_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "bf32dbe3ac21633d11f5c0fbced44a1535834a436357ac996b814e6f2063cea3",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6536_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6536_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "31fed5136faf028f7b0f46e3938804d683bbbb6b798fe688ff56e494cb1f717a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-medial-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6537_BP23098_FMA68214_Medial%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6537_BP23098_FMA68214_Medial segmental bronchial tree.obj",
+        "sha256": "ce60b15923ac145543aa5008de5f9b242edb0a765e6a512dd52bda19e4a02418",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2449_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2449_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "942db653e843bddb057f8c55e384c92c6ab6ac9acc1089f5f0987fa0e30f3b78",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2503_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2503_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "23d7ac5279cc1a1a3a892fa7278aa6c1823a6444fe023e78d8b8051bc69101db",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2504_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2504_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "23a5d36e158266268b8f7fb94a57a7712989c2bd8de9a20ec85acf4124fbe44b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2505_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2505_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "473eddcf55e5217d89eade34272e097c18b68fb1e60c64ff33f2eb95c97475dc",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6529_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6529_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "ec30860b3f6e017cacac6204c046a808693a2f325aecf678027378fbdf62d3e0",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6530_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6530_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "f3eb4dd4a3b22172e2dfef1ef91dd48e0a57f0db2159ad51d1849e6b2f7993b5",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6531_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6531_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "5bdab9c2e19223d024f07a7c01e131920272bf14ab24fab9b8279c636ff4204c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-lateral-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6532_BP23125_FMA68215_Lateral%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6532_BP23125_FMA68215_Lateral segmental bronchial tree.obj",
+        "sha256": "4deeb94f774fce1e1dc4cdefa7c4fc8c56943b2db1d612cd41ce538934c7b76d",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2459_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2459_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "bfe2af157bd436d1d0e701685634da4a8009a588996c309ffba14803a6fac61e",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2495_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2495_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "308d4bc473a761026958b93158a11052349c4e5b2242d1a3fe5d4b2961c08a71",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2496_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2496_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "4f45916b1f9b812191678a44b9cac4ffbdf45ea9715fc41c81d54f79da16f173",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2497_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2497_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "0db6435db135416b038df9fced5b26eec55c09e545a0b674b1d5692bec1a40ec",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2498_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2498_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "d6727e7789a8263f6c32aed1a83b2b75bf53d252ce72c5aac608e15976d4a877",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2499_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2499_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "82285a0aff2c2bee638805b89c6495695d8f6d3750dc7bbe8b3d3f643eec0d01",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2500_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2500_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "4e4ffdb7a547dc04c7c202df5d19e7751088f7eb0fb43095fd1a328a196f43ff",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2501_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2501_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "ab10147f95997bb09613ab85ba2cdb8fd4bdcc640c168c0a46a0b6bc88459a26",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2502_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2502_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "1e0aa63acefe2e29adba4a5395f7410b9897f22fd730318aaf2d06a94da23e3a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6574_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6574_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "7ff2aa98b79ae4f1da8e8271f1dfbee57f2b578333ce7db38bd24eff0695580c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6575_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6575_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "729ad2ff679b0bbcbba741a6c71a4ae3520d8679201765af0c96caebd6d1421e",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6576_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6576_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "d0afb817989677e0f13f2e62ffafd8e88d857f893449d62f326e7ce1ad985649",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6577_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6577_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "ea1179ff714538b2b6c706419bd47c19681065029617587f3c486226e61b07a5",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6578_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6578_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "88c083f65b2dbf66cebb927a24a3bf7fd095e6aaf5bfd8b366b740dbf8cc59bb",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6579_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6579_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "20d7fa4ed4809410e74de3a9caa3851b5fe027cec64529fc184b792664cfdc8a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6580_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6580_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "b1be51d365f4287ac00960938f6f1cb801b8f856d9d8da8cd03f171ee5211a90",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6581_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6581_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "6c15c02a4cc71147aab1efeff174b20254fb39b0a429f1b2394ca5e83e43ed4b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6582_BP23999_FMA68216_Right%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6582_BP23999_FMA68216_Right superior segmental bronchial tree.obj",
+        "sha256": "c77a979ca4da37fbcc675e73cf4617482de9be73aadbf06430b26afda8e826f8",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-medial-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2456_BP23914_FMA68218_Right%20medial%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2456_BP23914_FMA68218_Right medial basal segmental bronchial tree.obj",
+        "sha256": "1190a4fd9a051debe132cfffb13497bc77f4a5cdef810dad1d5636c75ecf14bc",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-medial-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2488_BP23914_FMA68218_Right%20medial%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2488_BP23914_FMA68218_Right medial basal segmental bronchial tree.obj",
+        "sha256": "da7c80130c0fe5a5ceebed7f2dcf55604ecb86e218572451926a49054d32c679",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2455_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2455_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "6afe144d2ee7b29fd743eec05545e2016b9fc341c7de81b163f47133576e7424",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2490_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2490_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "79ca769557a529c0c504fcbc7d6b4c2cc9cd6a7d563aa2246a311a8bd4c7e0eb",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2491_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2491_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "7e3c056589dc4b6b1462b0ffbfe23636713d58b99470d6a9bfeaa4392d3fb2f1",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2492_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2492_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "b25b71a0c506d8421af378c0e5499ff1b61c8aa10e5a772b7f7e0803a5d5e6ac",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6556_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6556_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "bf6b192058623c2e98a215eafef0698993aaef7bd58a1286c459040a6f1751fb",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6557_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6557_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "5665d16280ace594a327ccddbfab0056df2e4b87903030b8d029137d2928f9db",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6558_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6558_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "9b566b8c4a51f01e121e3c225e6c89eaa7fef3c87eaf681023ac3e8aa59b28dd",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6559_BP22414_FMA68220_Right%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6559_BP22414_FMA68220_Right lateral basal segmental bronchial tree.obj",
+        "sha256": "149b532e97a460913fb4a2e05318fb6c44a74da107a5082b7f75098588d69ae3",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2457_BP23851_FMA68221_Right%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2457_BP23851_FMA68221_Right posterior basal segmental bronchial tree.obj",
+        "sha256": "eb2fe87eb8f33539c33e546aaefec4f7702f920919ca51c48adbaefdab4befcd",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2470_BP23851_FMA68221_Right%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2470_BP23851_FMA68221_Right posterior basal segmental bronchial tree.obj",
+        "sha256": "db9f575042e48df09ea185f308ebf9d8cac47b8c5bcf003d77f8016e1282d8fe",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2481_BP23851_FMA68221_Right%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2481_BP23851_FMA68221_Right posterior basal segmental bronchial tree.obj",
+        "sha256": "8fab81daffbcfb9a3c7eaf9c8b693704b337be48e998e4c3a706ce0440872745",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2486_BP23851_FMA68221_Right%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2486_BP23851_FMA68221_Right posterior basal segmental bronchial tree.obj",
+        "sha256": "5d793f4dfc78fe66ead93ad95b7b8219758951dfd5747072300707256712ff48",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2487_BP23851_FMA68221_Right%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2487_BP23851_FMA68221_Right posterior basal segmental bronchial tree.obj",
+        "sha256": "24d273753a3e9bac6625af8b86e1e86b8ae52b7f87b9c0fd8a63a2a798834d2e",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2489_BP23851_FMA68221_Right%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2489_BP23851_FMA68221_Right posterior basal segmental bronchial tree.obj",
+        "sha256": "bee2128e23f8e4e63945aee6248fa003ea1dda3b0a4cc5e36e5d7596be85195f",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2443_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2443_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "9c665cd83bfd639de61ca5249bc2f6c55735710cd3223f60df8b442b73f3b012",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2467_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2467_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "442dac7b3396283c4911bc50b785d6e13e13da67339c3a99458552345036fb90",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2468_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2468_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "21583643e343169ac7f8c6e6abfd9766c79779939abd3eb6757475085bc8045d",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2469_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2469_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "d1bf89cdaac7ca4187dbb9268343665419d87483103b7a6816235a0cd779b78f",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2471_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2471_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "ce25ea9abe3df95b86d2305103f00a967df9f56f4816f500d8a030f8c1e85f21",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2472_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2472_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "c5543368d6037fd8f8c15fec8ce38f5ba7c2b5a4029f15fc746f6a0e6ee842f7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2473_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2473_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "94f05406c61d18a2a512839cb0bb64be4d54aa02abaae4c1bde1267e72fc73e1",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2474_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2474_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "117a692a79616ed0d14934b1c4ebccf3c8d283e60b27e40003cb1aa224a361ec",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6495_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6495_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "f4eb02f539ae73aa9aded6bf7bdd8ba688fc406262170d8abf2cecde6ba77590",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6496_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6496_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "60ea3f66a2ce8383082d922987dc6d3e460ad7d15b3d5b6bfcf67f9b5478d9bf",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6497_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6497_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "da136f3c9c77ba7578f291103b2908fc07a4a29656d9cdaa327dfbbb6d3b9738",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6498_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6498_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "04901e0d6f454b92cdf0adc418e1ca7b7557b228ad42f73a1fad3c6ca4115c9e",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6499_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6499_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "672ef24ac3f8c1109e5a2dc6295bbe261ded1ab6d26ab3721317da31ac6a9702",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6500_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6500_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "81afa5c81e7c3633195415d613d0cf0bdf1239e5a38b8114f8d2b246f51f8df7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6501_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6501_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "b6094eb51f61cb861f980b825b2b3662d2efe2e83d049c88fb04c0ed7601ffd5",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6502_BP23746_FMA68222_Left%20anterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6502_BP23746_FMA68222_Left anterior segmental bronchial tree.obj",
+        "sha256": "947f42e572af0ed662b1826abdb95c9d0172396d86b7e5a9c14a0c1763a9ac90",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6503_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6503_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "f9f2946fc0facf8a68a1ec9f6ba02382589ff5782cb0f0779af5e9443ef6f90c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6504_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6504_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "84f19b831ba31eb8987baf49f85144353dc9a7c40aae547680fa4217d53ae0b1",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6505_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6505_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "9375eff12d8d7f0f2a8fe5ab28b976c9dd18a3f170f3016ee7ca380a732503f1",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6506_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6506_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "b68d01179d835e9c2e2fa96acf697254bf257214cfce67dcb0b6742284767250",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6507_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6507_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "0d7ef5d17e7e38d77dd7ad7c06a1001988529c8927a5513895c191523b3968f0",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6508_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6508_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "b6604d5c79c27d3a5fbf44da2e575f1deafa0727dd120da4f6e9ab04aaa49573",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6519_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6519_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "c1de2c2d663b81adb257d1a60bc4a5e9d474f87538c5a3d2b76795a0c69c813b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6520_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6520_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "7dbf0886fbd7dc0f29c6db2417dff71016abc12d9e372ce025935734d1693017",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-apicoposterior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6521_BP29728_FMA68224_Apicoposterior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6521_BP29728_FMA68224_Apicoposterior segmental bronchial tree.obj",
+        "sha256": "9e0076f3d7c4f1207987b27726a139f0dcb015dd27320118a2b8aad95dd2668b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2476_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2476_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "3424744538db6fcf9d3efe0e2a336238d3131ca1c9751bffff9fd17de477648e",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2477_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2477_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "393c87aa131ad34e8d9976c4ec3d56242aadf95cdd486add58e53b914d073083",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2478_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2478_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "cbf893e6ac54aabfb06d2f6739fd210f3e0ec3d0d54462d9bd9a8f4a11bf1888",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2540_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2540_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "a8878db36e7ef3d055f1df757acc00ca4d30a3c4560046cc9a6c7eba55084c50",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6584_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6584_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "2fb9ab91d7b5cd3785c6bdbe78d35e26f73936a6056ff8d6fd16b348b10e10ae",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6585_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6585_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "dd1f774462737cb97e02fd74aa24ebf9ad11cefeb8cf5489334427369738ede6",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6586_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6586_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "2b9c1f88a64720fadb4b0f62b93f575af13be528215a339e887b01bdcc582f22",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-superior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6587_BP23363_FMA68226_Superior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6587_BP23363_FMA68226_Superior lingular bronchial tree.obj",
+        "sha256": "78264b6e300227e8d2989c5c523b9d96d63b5fd8392d3fd9c07676361ce8b6c6",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-inferior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2441_BP23127_FMA68227_Inferior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2441_BP23127_FMA68227_Inferior lingular bronchial tree.obj",
+        "sha256": "cfbcec07c767a66bbf593e8f7768bf5c8763767fb4e25d09921227f290cffa24",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-inferior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2475_BP23127_FMA68227_Inferior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2475_BP23127_FMA68227_Inferior lingular bronchial tree.obj",
+        "sha256": "205cfabf7fd0dded24825d3efce94da8b6f8b05f7cc61294356761b89f4af3d5",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-inferior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6488_BP23127_FMA68227_Inferior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6488_BP23127_FMA68227_Inferior lingular bronchial tree.obj",
+        "sha256": "ba4637774b98492e65526bf63b78d13862ad143be9cb8d6f77e73c9eb67209ff",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-inferior-lingular-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6489_BP23127_FMA68227_Inferior%20lingular%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6489_BP23127_FMA68227_Inferior lingular bronchial tree.obj",
+        "sha256": "82c785ccf375343ac0d98c83ad8b4510bf8558804c9d151556645f76945d4088",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2448_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2448_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "cdb967de82dc8a4fcce510e893b626e853998e4cd369deec1e3e8d78c5e92f32",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2479_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2479_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "a7af8cfa702bb24b0b429871158f3c207ea658641ea24e91b97a7695c5ae8934",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2480_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2480_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "3ab3c00cac9ca555781952eef485fab7da83dbb3cb3c1937ccbf3c6267d02177",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2482_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2482_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "3291231654e18b19e0a8726dedc0d1d2f790e4f4d0d11463c631ca5bdc888c5b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2483_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2483_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "bcbebe21d184414cd33ae835cf9e4b7a1bf2762f455fd3ae67d38c7c8b11b0a9",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2484_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2484_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "11d14adf3fb76d17bb08a09e7d3859e7ef30a99a2fb6042d469d76ed16230ec6",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2485_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2485_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "11f57df40bcc950d034402edc69625e76f442e61e48f784b1d1682aff7379f7b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6522_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6522_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "7de70abdee3a964a93c5c91dc12bca9e26d37cb98716b7cb01f74cc44cb28da0",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6523_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6523_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "a7e27a50d905ce98ae09f86338213528695c964a0cf2e037c5fd13590a56c8d8",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6524_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6524_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "374bca583d1dda5e2386ccba41b4d55b5c241898cf77a785b704282a0d646347",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6525_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6525_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "8a60fbef059b912bffdd54b4818f15a00bc7eaae8a4870daf142814940e8329f",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6526_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6526_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "1843f450e1e1d3f1e5cc585567db1ccceaf13e32c9ef76cfbe1745927c5259f7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6527_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6527_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "8fdc9b015b590c7bdfef9ae49e2a8939372f52bef7a2e2a6eaee04b350eec4d7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-superior-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6528_BP23530_FMA68228_Left%20superior%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6528_BP23530_FMA68228_Left superior segmental bronchial tree.obj",
+        "sha256": "16b9fcbe679f1efcb168999a8690d206df0c8708830a3d717f3f6cf2a005a813",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-medial-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2442_BP23836_FMA68230_Left%20medial%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2442_BP23836_FMA68230_Left medial basal segmental bronchial tree.obj",
+        "sha256": "c2c5cac1afc94533e2f6c550dbc85b1c39aba9450359a4016221d77cf69d9eb8",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-medial-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2537_BP23836_FMA68230_Left%20medial%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2537_BP23836_FMA68230_Left medial basal segmental bronchial tree.obj",
+        "sha256": "c44ac80248ef999242b50a99b421de79f15ba205e9c103812e33ee66dafec30a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2535_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2535_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "4c273ead124b2dab6615c8fe899a07dcfd07d040d548c5e44506660c0f6c05fb",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2536_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2536_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "251977798632847b06afa471c4133848f5cfe0b43bd38fea2e82d869eeec4b96",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2538_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2538_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "45f79bf5fb504471050140e55cc9d501d6f8d33ab91f4e05590235a60e0e7cf5",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6490_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6490_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "b4c8f8ea1dc6af94252ca645b8d99cc9768f543a2bb7946ba840f0c59813aba4",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6491_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6491_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "8a0b5526824564f9483abd5f46116592fff449482a1804f9ca66f30d25ff68ba",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6492_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6492_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "3ecec7ed15ad2d96e7977a04f809c3687bc022ea5d6766cc469fa28ffd9e6de4",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6493_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6493_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "28dc094334f55b034463960b05bd7537e01e28e43ab4dac74d462ac806b8174b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6494_BP22399_FMA68231_Left%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6494_BP22399_FMA68231_Left anterior basal segmental bronchial tree.obj",
+        "sha256": "22422aee16fce88d7d380906bbb3ad714d32341e967db106bb7f1294adfa29f7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2445_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2445_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "9f04ef0c7719d46fd4a4d38251272cec85385f88bf15e28d7f9ab771a8d7b2a7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2532_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2532_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "4751c2c4da1ba8659432298e67d9ea58c0f39b7f4ebea5e75dcb3edd99238601",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2533_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2533_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "812dc049f41f66363255e45991d4aaf2ab6f0cd7435211c8ff4ff04997db8193",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2534_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2534_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "f89cec2fb84cfe26260a3a8f27dde8520055eba505c8919286d39d5bcf9775c4",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6509_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6509_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "b05c328d51f1afa5e3e9d0555921498afa587506f63c7c70034b15977a1385f9",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6510_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6510_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "968db2d08299b5138fc5b9c606a6a2349b32269037bb7f5eeb4e02152094b594",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6511_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6511_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "c4c0fcaed15abde49831482a9a8abefdf9259b9cb6e7ee8a72569e106cea53a7",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-lateral-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6512_BP22396_FMA68232_Left%20lateral%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6512_BP22396_FMA68232_Left lateral basal segmental bronchial tree.obj",
+        "sha256": "b782cc5b158d60dae3776ec44e0c73d77e75c580aaa9f48cc1d8533904244d37",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2446_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2446_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "c866647e5a6063e86adf03e564928d9c2d6ada38a08698bc105893c397994249",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2527_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2527_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "666c9119186775346b479aaf13d9c51ffdac2b78d87dda300305504391f9c1b3",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2528_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2528_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "eca4feccc23ad42042ec79c1d9d65e88893b3be2598713090156f635de6b0d9c",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2529_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2529_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "b26ab8926579faaed6ab949876043dfacb04369c76e4c79bbd25622f4db9440d",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2530_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2530_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "0cd785113daefa7a23a34ee93ea9a1302c02cd987a4a1d336b79c934d9352197",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2531_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2531_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "c1cd43e5bafe6377f3b8e2510be12b538d53529d0418f771c604ccf65d8dcc26",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6513_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6513_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "ce85ecb3f85b23fb90dfd6f5338e1d70f6d1c24d50a05f6a06cded4a0a28809b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6514_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6514_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "99fa68e1a83c49e9f2a1a50a7269aac44cb0bdd433606b726231ad5dfbb14d77",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6515_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6515_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "49812984f844050649a0c349733c1c13c768ffeaab722e2d253044f72ff1b19e",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6516_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6516_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "bd45e7108287b77bd71bcbff0886351a9dc52a44a3f8c5608fdf821f57619ed0",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6517_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6517_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "d861e5570f39c25a9f437606478387d2bee05176ba74f28dd4a5c56fd27d2b51",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-left-posterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6518_BP22359_FMA68233_Left%20posterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6518_BP22359_FMA68233_Left posterior basal segmental bronchial tree.obj",
+        "sha256": "d046dd98eaa298defb210a477d898787a6a9235f71e97ce34e5ac6bb4fbcc3b5",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2452_BP21654_FMA68321_Right%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2452_BP21654_FMA68321_Right anterior basal segmental bronchial tree.obj",
+        "sha256": "bc82ef6960b8f792065f3361b459439b59528db7e8c474abb88b5cfc9cff571f",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2493_BP21654_FMA68321_Right%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2493_BP21654_FMA68321_Right anterior basal segmental bronchial tree.obj",
+        "sha256": "1e89fd8a992752f83260fa168e15e088ca55d4dc1543f9b48838fa5dcd30ce25",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ2494_BP21654_FMA68321_Right%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ2494_BP21654_FMA68321_Right anterior basal segmental bronchial tree.obj",
+        "sha256": "5a450853ee9551b10b4174f7e3d676b52c80ddfcb8136b7057ecb3462d18f56a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6538_BP21654_FMA68321_Right%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6538_BP21654_FMA68321_Right anterior basal segmental bronchial tree.obj",
+        "sha256": "dd5dbda5a60c903def90ab55c0ce71008a893a7956c1989563671aa0b80e3ef2",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6539_BP21654_FMA68321_Right%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6539_BP21654_FMA68321_Right anterior basal segmental bronchial tree.obj",
+        "sha256": "7aab4006bb2115e58ace382013528203a2d514e48b4f0e652ac4fd55b22ed44b",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      },
+      {
+        "structureId": "bp3d-43-right-anterior-basal-segmental-bronchial-tree",
+        "sourceUrl": "https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ6540_BP21654_FMA68321_Right%20anterior%20basal%20segmental%20bronchial%20tree.obj",
+        "sourcePath": "meshes/FJ6540_BP21654_FMA68321_Right anterior basal segmental bronchial tree.obj",
+        "sha256": "89017179681fd1dfec8e1f58f96326b376618ded4fe1e579670af4e141057f2a",
+        "transform": {
+          "scale": 0.006975111827815056,
+          "translate": [
+            -0.031030452802346283,
+            -8.78353087190849,
+            -0.6907512516252033
+          ]
+        }
+      }
+    ]
+  }
+}

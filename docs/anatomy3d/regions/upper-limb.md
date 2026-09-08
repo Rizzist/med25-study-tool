@@ -1,4 +1,4 @@
-# Upper Limb — curated 3D anatomy scope
+# Upper Limb — exam-scope 3D anatomy
 
 High-yield identification scope for a single upper-limb trainer, based on the regional emphasis of *Gray's Anatomy for Students* and Snell. IDs are laterality-neutral; a model may depict either side, but every listed target should remain individually selectable unless the row deliberately names a group. `YES` means a real segmented mesh is an appropriate target; `NO — procedural` means the relationship is better taught with a simplified generated structure or overlay. `?` in `proposedFMA` means that an exact identifier should be verified against the FMA release used during asset mapping rather than inferred.
 
@@ -91,8 +91,21 @@ High-yield identification scope for a single upper-limb trainer, based on the re
 
 - Bones: 8
 - Joints and ligaments: 8 (5 cartilage, 3 ligament)
-- Muscles: 18
-- Nerves: 11
+- Muscles: 31
+- Nerves: 49
 - Arteries: 7
 - Veins: 3
-- **Total: 55 structures**
+- **Total: 106 structures**
+
+### Branch-level nerve additions
+
+The interactive manifest extends the table above with the C5-T1 roots; all six anterior/posterior
+divisions; the dorsal scapular, long thoracic, suprascapular, subclavian, pectoral, subscapular and
+thoracodorsal branches; medial arm/forearm cutaneous nerves; and the named terminal sensory and motor
+branches of the axillary, musculocutaneous, median, ulnar and radial nerves through the hand. This
+creates 49 individually selectable nerve targets. All are honest procedural teaching paths because
+the local BodyParts3D source does not contain separable peripheral-nerve meshes.
+
+### Scan-derived detail additions
+
+The Term 2 detail supplement separates brachioradialis, palmaris longus, pronator quadratus, flexor pollicis longus, ECRL, ECRB, extensor digiti minimi, supinator, APL, EPB, EPL, extensor indicis, and both heads of adductor pollicis. These are individual BodyParts3D v4.3 meshes, not procedural approximations.

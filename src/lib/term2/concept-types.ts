@@ -57,6 +57,9 @@ export type Term2QuestionConceptIndex = Record<string, {
   dedupeKey: string;
   prompt: string;
   learningObjective: string;
+  difficulty?: number;
+  knowledgeLevel?: "core" | "challenge";
+  expandedForDepth?: boolean;
   addedForGap: boolean;
 }>;
 export type Term2ConceptCoverage = {

@@ -12,7 +12,7 @@
     "sourceAudit": { "type": "array", "minItems": 4, "items": { "$ref": "#/$defs/audit" } }
   },
   "$defs": {
-    "id": { "type": "string", "pattern": "^resp-[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "id": { "type": "string", "pattern": "^(?:resp|depth-resp|locate-resp|comp-resp)-[a-z0-9]+(?:-[a-z0-9]+)*$" },
     "subject": { "enum": ["anatomy", "histology", "embryology", "physiology"] },
     "note": { "type": "string", "minLength": 15 },
     "module": {
@@ -28,7 +28,7 @@
       "required": ["title", "locator", "basis"],
       "properties": {
         "title": { "type": "string", "minLength": 5 }, "edition": { "type": "string" }, "chapter": { "type": "string" },
-        "locator": { "type": "string", "minLength": 3 }, "basis": { "enum": ["book", "slides"] }
+        "locator": { "type": "string", "minLength": 3 }, "basis": { "enum": ["book", "slides", "transcript", "notes", "media"] }
       }
     },
     "objective": {
@@ -48,7 +48,7 @@
           "properties": { "prompt": { "$ref": "#/$defs/note" }, "answer": { "$ref": "#/$defs/note" } }
         } },
         "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } },
-        "scope": { "enum": ["book-and-slides", "book-only", "slide-only"] },
+        "scope": { "enum": ["book-and-slides", "book-only", "slide-only", "book-and-course", "course-only"] },
         "objectives": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/objective" } }
       }
     },

@@ -1,3 +1,6 @@
+import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { thoracicWallNerveStructures } from "./thoracic-innervation-real.manifest.mjs";
+
 /**
  * REAL (mesh-backed) + procedural THORACIC-WALL manifest — module 1 of the CVS/Thorax region.
  *
@@ -11,7 +14,10 @@
  * meshes give a natural layered-dissection look (intercostals on one side, transversus/pectoral/
  * serratus on the other).
  *
- * The 22 SCHEMATIC (procedural) structures — costal cartilages/margin, the sternal angle & jugular
+ * The costal cartilages/margin now reuse 20 original BodyParts3D 4.3 source meshes,
+ * calibrated together to the rib/sternum frame. See costal-cartilages.provenance.json
+ * for source attribution and CC-BY-SA 2.1 Japan licensing of this added asset.
+ * The remaining SCHEMATIC (procedural) structures include the sternal angle & jugular
  * notch (features of the sternum, not separable BodyParts3D meshes), the two thoracic apertures,
  * the suprapleural membrane & endothoracic fascia, the costovertebral / costotransverse / sterno-
  * costal / sternoclavicular joints, intervertebral discs, the radiate ligament, the subcostal muscles
@@ -35,7 +41,7 @@ export const thoracicWallManifest = {
   title: "Thoracic wall & diaphragm",
   subject: "anatomy",
   blurb:
-    "Anatomically-accurate human thoracic cage from BodyParts3D segmented meshes — the thoracic vertebrae, ribs and sternum with the intercostal, transversus thoracis, serratus, pectoral and subclavius muscles and the diaphragm — layered with schematic costal cartilages, thoracic apertures, costovertebral/costotransverse/sternocostal joints and the intercostal neurovascular vessels in true anatomical relationship.",
+    "BodyParts3D source meshes of ribs, sternum, costal cartilages, thoracic muscles and diaphragm, with explicitly schematic surface landmarks, apertures, joints and neurovascular teaching overlays.",
   structures: [
     {
       id: "typical-thoracic-vertebra",
@@ -144,7 +150,7 @@ export const thoracicWallManifest = {
     },
     {
       id: "costal-cartilages",
-      schematic: true,
+      schematic: false,
       label: "Costal cartilages",
       tissue: "cartilage",
       aliases: ["costochondral cartilage"],
@@ -160,7 +166,7 @@ export const thoracicWallManifest = {
     },
     {
       id: "costal-margin",
-      schematic: true,
+      schematic: false,
       label: "Costal margin",
       tissue: "cartilage",
       aliases: ["costal arch"],
@@ -709,5 +715,7 @@ export const thoracicWallManifest = {
       distractorIds: ["musculophrenic-artery", "internal-thoracic-artery", "anterior-intercostal-arteries"],
       view: { azimuth: 0.1, elevation: -0.4, zoom: 1.5 },
     },
+    ...thoracicWallNerveStructures,
+    ...imageMeshStructures("thoracic-wall"),
   ],
 };

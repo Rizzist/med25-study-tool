@@ -51,9 +51,17 @@ export function selectTerm2Sprint(items, {
   const seen = new Set(seenIds);
   const repair = new Set(repairIds);
   const priority = (item) => studyMode === "exam" ? 0 : repair.has(item.id) ? 0 : !seen.has(item.id) ? 1 : 2;
+  const targets = new Set();
+  const unique = shuffle(items, random).sort((a,b) => priority(a)-priority(b)).filter(item => {
+    if (!item.anatomy) return true;
+    // Name-to-location and location-to-name must not disclose one another in a test.
+    const key = studyMode === "learn" ? item.anatomy.imageId : `${item.anatomy.imageId}:${item.anatomy.targetRegionId}`;
+    if (targets.has(key)) return false;
+    targets.add(key); return true;
+  });
   const ordered = studyMode === "exam"
-    ? balanced(items, random)
-    : [0, 1, 2].flatMap((level) => balanced(items.filter((item) => priority(item) === level), random));
+    ? balanced(unique, random)
+    : [0, 1, 2].flatMap((level) => balanced(unique.filter((item) => priority(item) === level), random));
   const questions = ordered.slice(0, cappedLimit);
   const repairCount = questions.filter((item) => repair.has(item.id)).length;
   const unseenCount = questions.filter((item) => !repair.has(item.id) && !seen.has(item.id)).length;

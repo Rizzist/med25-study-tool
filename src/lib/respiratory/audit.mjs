@@ -1,6 +1,6 @@
 // Referential validation is separate from the medical/source review. A valid
 // link proves that a question exists, not that it tests every sentence in notes.
-const isGapQuestion = (id) => /^resp-(anat|hist|emb|phys)-gap-\d+$/.test(id);
+const isGapQuestion = (id) => /^resp-(anat|hist|emb|phys)-gap-\d+$/.test(id) || /^(?:depth|comp)-resp-/.test(id);
 
 export function auditRespiratoryCatalog(catalog, questions) {
   const errors = [];
@@ -19,6 +19,8 @@ export function auditRespiratoryCatalog(catalog, questions) {
   for (const concept of catalog.concepts) {
     if (modules.get(concept.moduleId)?.subject !== concept.subject) errors.push(`${concept.id}: module missing or subject mismatch`);
     const basis = new Set(concept.sources.map((source) => source.basis));
+    if (concept.scope === "book-and-course" && (!basis.has("book") || ![...basis].some((value) => value !== "book"))) errors.push(`${concept.id}: book-and-course needs book and course evidence`);
+    if (concept.scope === "course-only" && (basis.has("book") || !basis.size)) errors.push(`${concept.id}: invalid course-only evidence`);
     if (concept.scope === "book-and-slides" && (!basis.has("book") || !basis.has("slides"))) errors.push(`${concept.id}: book-and-slides needs both cited sources`);
     if (concept.scope === "book-only" && (basis.size !== 1 || !basis.has("book"))) errors.push(`${concept.id}: invalid book-only evidence`);
     if (concept.scope === "slide-only" && (basis.size !== 1 || !basis.has("slides"))) errors.push(`${concept.id}: invalid slide-only evidence`);
@@ -63,8 +65,11 @@ export function auditRespiratoryCatalog(catalog, questions) {
     return [question.id, {
       subject: question.subject, kind: question.kind, moduleId: moduleIds[0] ?? "unmapped", moduleIds,
       primaryConceptId: conceptIds[0] ?? "unmapped", conceptIds,
-      dedupeKey: question.anatomy ? `${question.anatomy.imageId}:${question.anatomy.targetRegionId}` : question.id,
+      dedupeKey: question.anatomy ? `${question.anatomy.imageId}:${question.anatomy.targetRegionId}${question.anatomy.responseMode === "locate" ? ":locate" : ""}` : question.id,
       prompt: question.prompt, learningObjective: question.learningObjective, addedForGap: isGapQuestion(question.id),
+      difficulty: question.difficulty,
+      knowledgeLevel: question.tags?.includes("knowledge-challenge") || question.difficulty >= 4 ? "challenge" : "core",
+      expandedForDepth: question.tags?.some(tag => ["depth-expansion", "comprehensive-expansion"].includes(tag)) ?? false,
     }];
   }));
   const distinct = (ids) => new Set(ids.map((id) => index[id]?.dedupeKey ?? id)).size;
