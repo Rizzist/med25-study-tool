@@ -1,0 +1,1154 @@
+{
+  "modelKey": "lower-limb",
+  "coordinateSpace": "baked atlas, parent under the same gltf.scene as bone meshes, before runtime centering/scaling",
+  "anchors": {
+    "iliac-crest": {
+      "boneId": "hip-bone",
+      "position": [
+        0.027278631925582886,
+        0.718632161617279,
+        -0.07531975209712982
+      ],
+      "vertexIndex": 126
+    },
+    "asis": {
+      "boneId": "hip-bone",
+      "position": [
+        0.08027869462966919,
+        0.6122841238975525,
+        0.04471319913864136
+      ],
+      "vertexIndex": 89
+    },
+    "aiis": {
+      "boneId": "hip-bone",
+      "position": [
+        0.04049965739250183,
+        0.5381768345832825,
+        -0.0002846568822860718
+      ],
+      "vertexIndex": 224
+    },
+    "psis": {
+      "boneId": "hip-bone",
+      "position": [
+        -0.04880023002624512,
+        0.6362907290458679,
+        -0.1675189882516861
+      ],
+      "vertexIndex": 144
+    },
+    "pubic-tubercle": {
+      "boneId": "hip-bone",
+      "position": [
+        -0.11270183324813843,
+        0.47288352251052856,
+        0.04575696587562561
+      ],
+      "vertexIndex": 18
+    },
+    "ischial-tuberosity": {
+      "boneId": "hip-bone",
+      "position": [
+        -0.06190527230501175,
+        0.3896142840385437,
+        -0.10152985155582428
+      ],
+      "vertexIndex": 692
+    },
+    "femoral-head": {
+      "boneId": "femur",
+      "position": [
+        -0.025025583803653717,
+        0.4949185252189636,
+        -0.0276544988155365
+      ],
+      "vertexIndex": 153
+    },
+    "femoral-neck": {
+      "boneId": "femur",
+      "position": [
+        0.03261344134807587,
+        0.46580904722213745,
+        -0.025798916816711426
+      ],
+      "vertexIndex": 450
+    },
+    "greater-trochanter": {
+      "boneId": "femur",
+      "position": [
+        0.10312555730342865,
+        0.45374780893325806,
+        -0.04481862485408783
+      ],
+      "vertexIndex": 342
+    },
+    "lesser-trochanter": {
+      "boneId": "femur",
+      "position": [
+        0.012897878885269165,
+        0.38439542055130005,
+        -0.06998495757579803
+      ],
+      "vertexIndex": 459
+    },
+    "femoral-medial-condyle": {
+      "boneId": "femur",
+      "position": [
+        -0.05425100028514862,
+        -0.23432523012161255,
+        -0.04400680959224701
+      ],
+      "vertexIndex": 872
+    },
+    "femoral-lateral-condyle": {
+      "boneId": "femur",
+      "position": [
+        0.027858510613441467,
+        -0.22678691148757935,
+        -0.05374862253665924
+      ],
+      "vertexIndex": 637
+    },
+    "femoral-medial-epicondyle": {
+      "boneId": "femur",
+      "position": [
+        -0.08428823202848434,
+        -0.17715007066726685,
+        -0.058387577533721924
+      ],
+      "vertexIndex": 950
+    },
+    "femoral-lateral-epicondyle": {
+      "boneId": "femur",
+      "position": [
+        0.04363095760345459,
+        -0.18758773803710938,
+        -0.03728032112121582
+      ],
+      "vertexIndex": 590
+    },
+    "femoral-patellar-surface": {
+      "boneId": "femur",
+      "position": [
+        -0.008209362626075745,
+        -0.18990719318389893,
+        -0.0005166083574295044
+      ],
+      "vertexIndex": 796
+    },
+    "patellar-base": {
+      "boneId": "patella",
+      "position": [
+        -0.0046141743659973145,
+        -0.18248486518859863,
+        0.007021695375442505
+      ],
+      "vertexIndex": 49
+    },
+    "patellar-apex": {
+      "boneId": "patella",
+      "position": [
+        -0.006353780627250671,
+        -0.2441830039024353,
+        0.0015709251165390015
+      ],
+      "vertexIndex": 116
+    },
+    "tibial-medial-condyle": {
+      "boneId": "tibia",
+      "position": [
+        -0.04914814978837967,
+        -0.2441830039024353,
+        -0.05989523231983185
+      ],
+      "vertexIndex": 166
+    },
+    "tibial-lateral-condyle": {
+      "boneId": "tibia",
+      "position": [
+        0.03412109613418579,
+        -0.22887444496154785,
+        -0.04586239159107208
+      ],
+      "vertexIndex": 452
+    },
+    "tibial-tuberosity": {
+      "boneId": "tibia",
+      "position": [
+        -0.005426004528999329,
+        -0.28512173891067505,
+        0.007485583424568176
+      ],
+      "vertexIndex": 424
+    },
+    "medial-malleolus": {
+      "boneId": "tibia",
+      "position": [
+        -0.04822035878896713,
+        -0.8349539041519165,
+        -0.046906158328056335
+      ],
+      "vertexIndex": 4
+    },
+    "fibular-head": {
+      "boneId": "fibula",
+      "position": [
+        0.05128522217273712,
+        -0.27155280113220215,
+        -0.05456043779850006
+      ],
+      "vertexIndex": 57
+    },
+    "fibular-neck": {
+      "boneId": "fibula",
+      "position": [
+        0.036788493394851685,
+        -0.3036775588989258,
+        -0.061634838581085205
+      ],
+      "vertexIndex": 78
+    },
+    "lateral-malleolus": {
+      "boneId": "fibula",
+      "position": [
+        0.015449300408363342,
+        -0.8625556826591492,
+        -0.07404404878616333
+      ],
+      "vertexIndex": 263
+    },
+    "calcaneal-tuberosity": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        -0.03941827267408371,
+        -0.9408771991729736,
+        -0.11074040830135345
+      ],
+      "vertexIndex": 24
+    },
+    "sustentaculum-tali": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        -0.04246039316058159,
+        -0.8709065914154053,
+        -0.04327184706926346
+      ],
+      "vertexIndex": 318
+    },
+    "talar-head": {
+      "boneId": "visual-talus",
+      "position": [
+        -0.018429456278681755,
+        -0.8435667753219604,
+        -0.008156954310834408
+      ],
+      "vertexIndex": 634
+    },
+    "talar-neck": {
+      "boneId": "visual-talus",
+      "position": [
+        -0.020239287987351418,
+        -0.8398643732070923,
+        -0.03285123035311699
+      ],
+      "vertexIndex": 608
+    },
+    "talar-trochlea": {
+      "boneId": "visual-talus",
+      "position": [
+        -0.014606890268623829,
+        -0.8303741812705994,
+        -0.0747523084282875
+      ],
+      "vertexIndex": 498
+    },
+    "navicular-tuberosity": {
+      "boneId": "visual-navicular",
+      "position": [
+        -0.03873676434159279,
+        -0.8675422072410583,
+        0.004808200057595968
+      ],
+      "vertexIndex": 70
+    },
+    "fifth-metatarsal-tuberosity": {
+      "boneId": "practical-metatarsal-5",
+      "position": [
+        0.04826223827999998,
+        -0.911989759706,
+        -0.02754450457400001
+      ],
+      "vertexIndex": 53
+    },
+    "atfl-fibula": {
+      "boneId": "fibula",
+      "position": [
+        0.015913203358650208,
+        -0.8378532528877258,
+        -0.05572018027305603
+      ],
+      "vertexIndex": 203,
+      "targetDistance": 0.0048976122812036255
+    },
+    "atfl-talus": {
+      "boneId": "visual-talus",
+      "position": [
+        0.0010010747937485576,
+        -0.8543999195098877,
+        -0.03334362059831619
+      ],
+      "vertexIndex": 623,
+      "targetDistance": 0.0034492145090442698
+    },
+    "cfl-fibula": {
+      "boneId": "fibula",
+      "position": [
+        0.015449300408363342,
+        -0.8625556826591492,
+        -0.07404404878616333
+      ],
+      "vertexIndex": 263,
+      "targetDistance": 0.007979213615783432
+    },
+    "cfl-calcaneus": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        0.016374358907341957,
+        -0.8980270028114319,
+        -0.07398711144924164
+      ],
+      "vertexIndex": 464,
+      "targetDistance": 0.002047582491892715
+    },
+    "ptfl-fibula": {
+      "boneId": "fibula",
+      "position": [
+        0.0024602264165878296,
+        -0.8423762321472168,
+        -0.08564142882823944
+      ],
+      "vertexIndex": 292,
+      "targetDistance": 0.003827522680140555
+    },
+    "ptfl-talus": {
+      "boneId": "visual-talus",
+      "position": [
+        -0.02080223336815834,
+        -0.8622670769691467,
+        -0.09347537904977798
+      ],
+      "vertexIndex": 136,
+      "targetDistance": 0.0015123442361586854
+    },
+    "spring-calcaneus": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        -0.0432930551469326,
+        -0.8802710175514221,
+        -0.04333072155714035
+      ],
+      "vertexIndex": 269,
+      "targetDistance": 0.001971313395667869
+    },
+    "spring-navicular": {
+      "boneId": "visual-navicular",
+      "position": [
+        -0.02517104335129261,
+        -0.8809152245521545,
+        -0.0012591860722750425
+      ],
+      "vertexIndex": 43,
+      "targetDistance": 0.0030061380694694924
+    },
+    "flexor-retinaculum-tibia": {
+      "boneId": "tibia",
+      "position": [
+        -0.062485143542289734,
+        -0.8160501718521118,
+        -0.05235692858695984
+      ],
+      "vertexIndex": 47,
+      "targetDistance": 0.008937877876666916
+    },
+    "flexor-retinaculum-calcaneus": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        -0.05011735484004021,
+        -0.9171876311302185,
+        -0.08700724691152573
+      ],
+      "vertexIndex": 50,
+      "targetDistance": 0.006675929219629322
+    },
+    "superior-extensor-retinaculum-tibia": {
+      "boneId": "tibia",
+      "position": [
+        -0.040218159556388855,
+        -0.7928553819656372,
+        -0.026610732078552246
+      ],
+      "vertexIndex": 80,
+      "targetDistance": 0.008898347810198616
+    },
+    "superior-extensor-retinaculum-fibula": {
+      "boneId": "fibula",
+      "position": [
+        0.014753460884094238,
+        -0.8014374375343323,
+        -0.06511405110359192
+      ],
+      "vertexIndex": 198,
+      "targetDistance": 0.010795121897299495
+    },
+    "inferior-extensor-retinaculum-calcaneus": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        0.024070732295513153,
+        -0.876833975315094,
+        -0.03904592990875244
+      ],
+      "vertexIndex": 711,
+      "targetDistance": 0.0025977644857242493
+    },
+    "inferior-extensor-retinaculum-tibia": {
+      "boneId": "tibia",
+      "position": [
+        -0.05807814002037048,
+        -0.8192974328994751,
+        -0.03229345381259918
+      ],
+      "vertexIndex": 50,
+      "targetDistance": 0.008313648339621818
+    },
+    "inferior-extensor-retinaculum-medial-foot": {
+      "boneId": "visual-medial-cuneiform",
+      "position": [
+        -0.025364037603139877,
+        -0.8788327574729919,
+        0.024397017434239388
+      ],
+      "vertexIndex": 120,
+      "targetDistance": 0.0015007187012331374
+    },
+    "superior-fibular-retinaculum-fibula": {
+      "boneId": "fibula",
+      "position": [
+        0.008490875363349915,
+        -0.8357657194137573,
+        -0.09364362806081772
+      ],
+      "vertexIndex": 312,
+      "targetDistance": 0.008592804725072845
+    },
+    "superior-fibular-retinaculum-calcaneus": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        0.001987650990486145,
+        -0.9060793519020081,
+        -0.09461117535829544
+      ],
+      "vertexIndex": 226,
+      "targetDistance": 0.005122427822444042
+    },
+    "inferior-fibular-retinaculum-upper": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        0.025499597191810608,
+        -0.8830046653747559,
+        -0.047956906259059906
+      ],
+      "vertexIndex": 701,
+      "targetDistance": 0.0023270853058971297
+    },
+    "inferior-fibular-retinaculum-lower": {
+      "boneId": "visual-calcaneus",
+      "position": [
+        0.015967432409524918,
+        -0.9053930044174194,
+        -0.059233542531728745
+      ],
+      "vertexIndex": 523,
+      "targetDistance": 0.00630685733500043
+    }
+  },
+  "structures": [
+    {
+      "id": "practical-patellar-ligament",
+      "label": "Patellar ligament",
+      "tissue": "ligament",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "The distal part of the quadriceps apparatus from patellar apex to tibial tuberosity.",
+      "paths": [
+        [
+          [
+            -0.006353780627250671,
+            -0.2441830039024353,
+            0.0015709251165390015
+          ],
+          [
+            -0.005,
+            -0.265,
+            0.009
+          ],
+          [
+            -0.005426004528999329,
+            -0.28512173891067505,
+            0.007485583424568176
+          ]
+        ]
+      ],
+      "radius": 0.006,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2200,
+          2204
+        ],
+        "figure": "78.10; knee joint section"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-quadriceps-tendon",
+      "label": "Quadriceps tendon",
+      "tissue": "tendon",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Common quadriceps tendon inserting into the superior base of the patella. The proximal end is a diagrammatic continuation toward the quadriceps, not an identified myotendinous junction.",
+      "paths": [
+        [
+          [
+            -0.003,
+            -0.132,
+            0.009
+          ],
+          [
+            -0.005,
+            -0.158,
+            0.01
+          ],
+          [
+            -0.0046141743659973145,
+            -0.18248486518859863,
+            0.007021695375442505
+          ]
+        ]
+      ],
+      "radius": 0.008,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2200,
+          2204
+        ],
+        "figure": "78.10; knee joint section"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-anterior-talofibular-ligament",
+      "label": "Anterior talofibular ligament",
+      "tissue": "ligament",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Anterior lateral-ankle ligament from the anterior margin of the lateral malleolus to the lateral talus anterior to the fibular articular facet.",
+      "paths": [
+        [
+          [
+            0.015913203358650208,
+            -0.8378532528877258,
+            -0.05572018027305603
+          ],
+          [
+            0.014,
+            -0.846,
+            -0.042
+          ],
+          [
+            0.0010010747937485576,
+            -0.8543999195098877,
+            -0.03334362059831619
+          ]
+        ]
+      ],
+      "radius": 0.003,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2251,
+          2252
+        ],
+        "figure": "79.14C"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-calcaneofibular-ligament",
+      "label": "Calcaneofibular ligament",
+      "tissue": "ligament",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Oblique ligament from the depression anterior to the lateral-malleolar apex, passing posteroinferiorly to the lateral calcaneus; crosses the ankle and subtalar joints.",
+      "paths": [
+        [
+          [
+            0.02426330745,
+            -0.85107427835,
+            -0.05792367458
+          ],
+          [
+            0.025,
+            -0.87455064058,
+            -0.06595539301
+          ],
+          [
+            0.016374358907341957,
+            -0.8980270028114319,
+            -0.07398711144924164
+          ]
+        ]
+      ],
+      "radius": 0.003,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2251,
+          2252
+        ],
+        "figure": "79.14A,C"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-posterior-talofibular-ligament",
+      "label": "Posterior talofibular ligament",
+      "tissue": "ligament",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Nearly horizontal posterior lateral-ankle ligament from the malleolar fossa to the posterior talus.",
+      "paths": [
+        [
+          [
+            0.0024602264165878296,
+            -0.8423762321472168,
+            -0.08564142882823944
+          ],
+          [
+            -0.007,
+            -0.855,
+            -0.096
+          ],
+          [
+            -0.02080223336815834,
+            -0.8622670769691467,
+            -0.09347537904977798
+          ]
+        ]
+      ],
+      "radius": 0.003,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2251,
+          2252
+        ],
+        "figure": "79.14A,C"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-plantar-calcaneonavicular-ligament",
+      "label": "Plantar calcaneonavicular ligament",
+      "tissue": "ligament",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Spring ligament complex linking sustentaculum tali to the plantar-medial navicular and supporting the head of the talus. One simplified band represents the complex here.",
+      "paths": [
+        [
+          [
+            -0.0432930551469326,
+            -0.8802710175514221,
+            -0.04333072155714035
+          ],
+          [
+            -0.034,
+            -0.892,
+            -0.028
+          ],
+          [
+            -0.02517104335129261,
+            -0.8809152245521545,
+            -0.0012591860722750425
+          ]
+        ]
+      ],
+      "radius": 0.005,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2251,
+          2255
+        ],
+        "figure": "79.14B"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-flexor-retinaculum-ankle",
+      "label": "Flexor retinaculum of ankle",
+      "tissue": "fascia",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Fibrous roof of the tarsal tunnel extending from the medial malleolus to the medial calcaneus over the flexor tendons and tibial neurovascular bundle.",
+      "paths": [
+        [
+          [
+            -0.062485143542289734,
+            -0.8160501718521118,
+            -0.05235692858695984
+          ],
+          [
+            -0.065,
+            -0.855,
+            -0.073
+          ],
+          [
+            -0.05011735484004021,
+            -0.9171876311302185,
+            -0.08700724691152573
+          ]
+        ]
+      ],
+      "radius": 0.005,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2231,
+          2266,
+          2267
+        ],
+        "figure": "79.22; fascia and flexor-tendon sections"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-superior-extensor-retinaculum-ankle",
+      "label": "Superior extensor retinaculum",
+      "tissue": "fascia",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Transverse fibrous band across the anterior distal leg between the tibia and fibula, retaining the extensor tendons.",
+      "paths": [
+        [
+          [
+            -0.040218159556388855,
+            -0.7928553819656372,
+            -0.026610732078552246
+          ],
+          [
+            -0.015,
+            -0.787,
+            -0.006
+          ],
+          [
+            0.022,
+            -0.788,
+            -0.023
+          ],
+          [
+            0.014753460884094238,
+            -0.8014374375343323,
+            -0.06511405110359192
+          ]
+        ]
+      ],
+      "radius": 0.004,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2231,
+          2232
+        ],
+        "figure": "Ankle fascia section"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-inferior-extensor-retinaculum-ankle",
+      "label": "Inferior extensor retinaculum",
+      "tissue": "fascia",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Y-shaped retaining band with a lateral calcaneal stem and two medial limbs over the anterior ankle and dorsum. The lower limb blends with medial foot fascia; this diagram uses a nearby cuneiform anchor.",
+      "paths": [
+        [
+          [
+            0.024070732295513153,
+            -0.876833975315094,
+            -0.03904592990875244
+          ],
+          [
+            0.018,
+            -0.852,
+            -0.017
+          ],
+          [
+            -0.002,
+            -0.834,
+            -0.014
+          ],
+          [
+            -0.05807814002037048,
+            -0.8192974328994751,
+            -0.03229345381259918
+          ]
+        ],
+        [
+          [
+            -0.002,
+            -0.834,
+            -0.014
+          ],
+          [
+            -0.014,
+            -0.849,
+            0.012
+          ],
+          [
+            -0.025364037603139877,
+            -0.8788327574729919,
+            0.024397017434239388
+          ]
+        ]
+      ],
+      "radius": 0.004,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2231,
+          2232
+        ],
+        "figure": "Ankle fascia section"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-superior-fibular-retinaculum",
+      "label": "Superior fibular retinaculum",
+      "tissue": "fascia",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Fibrous retaining band from the posterior lateral malleolus to the lateral calcaneus, holding fibularis longus and brevis tendons in their retromalleolar groove.",
+      "paths": [
+        [
+          [
+            0.008490875363349915,
+            -0.8357657194137573,
+            -0.09364362806081772
+          ],
+          [
+            0.032,
+            -0.87,
+            -0.092
+          ],
+          [
+            0.001987650990486145,
+            -0.9060793519020081,
+            -0.09461117535829544
+          ]
+        ]
+      ],
+      "radius": 0.004,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2231,
+          2232
+        ],
+        "figure": "Ankle fascia section"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    },
+    {
+      "id": "practical-inferior-fibular-retinaculum",
+      "label": "Inferior fibular retinaculum",
+      "tissue": "fascia",
+      "schematic": true,
+      "sourceFidelity": "diagrammatic",
+      "description": "Fibrous retaining tissue over the lateral calcaneal surface around the fibular tendons near the fibular trochlea; one broad band simplifies its separate tendon compartments.",
+      "paths": [
+        [
+          [
+            0.025499597191810608,
+            -0.8830046653747559,
+            -0.047956906259059906
+          ],
+          [
+            0.04,
+            -0.896,
+            -0.055
+          ],
+          [
+            0.015967432409524918,
+            -0.9053930044174194,
+            -0.059233542531728745
+          ]
+        ]
+      ],
+      "radius": 0.0035,
+      "primitive": "band",
+      "source": {
+        "title": "Gray Anatomy 42",
+        "pdfPages": [
+          2231,
+          2232
+        ],
+        "figure": "Ankle fascia section"
+      },
+      "limitations": "Schematic route with educational thickness. Bone endpoints are snapped to actual atlas vertices; intermediary points and band width are approximate, and they are not scanned attachment footprints. Rendered integration QA is required."
+    }
+  ],
+  "cartilage": [
+    {
+      "id": "practical-femoral-head-cartilage",
+      "label": "Femoral-head cartilage · superior sample",
+      "boneId": "femur",
+      "bounds": {
+        "min": [
+          -0.05,
+          0.455,
+          -0.09
+        ],
+        "max": [
+          0.032,
+          0.526,
+          0
+        ]
+      },
+      "sphere": {
+        "center": [
+          0.008,
+          0.486,
+          -0.049
+        ],
+        "radius": 0.047
+      },
+      "normalConstraint": null,
+      "source": {
+        "pdfPage": 2146,
+        "figure": "77.16"
+      },
+      "tissue": "cartilage",
+      "schematic": true,
+      "representation": "bone-surface-overlay",
+      "normalOffset": 0.0015,
+      "opacity": 0.82,
+      "description": "Diagrammatic articular cartilage patch following the underlying bone surface; anatomical coverage margins and thickness are approximations.",
+      "selectionMethod": "Select existing bone triangles by centroid within bounds (and optional sphere) plus average outward-normal constraint; copy positions/normals and offset along surface normal. Do not create a joint-cavity sphere. Include only if the integration yields a coherent visible articular patch.",
+      "limitations": "Partial superior articular sample only, excluding the posteroinferior fovea region. Not the complete cartilage surface or a segmented foveal margin. Gray 42 Chapter 77.",
+      "vertexRegions": [
+        {
+          "axis": 1,
+          "greaterThanOrEqual": 0.49
+        }
+      ]
+    },
+    {
+      "id": "practical-femoral-condylar-cartilage",
+      "label": "Articular cartilage of femoral condyles",
+      "boneId": "femur",
+      "bounds": {
+        "min": [
+          -0.09,
+          -0.242,
+          -0.1
+        ],
+        "max": [
+          0.05,
+          -0.199,
+          0.015
+        ]
+      },
+      "normalConstraint": {
+        "axis": 1,
+        "lessThan": -0.15
+      },
+      "source": {
+        "pdfPage": 2203,
+        "figure": "78.12-78.13; knee articular-surface section"
+      },
+      "tissue": "cartilage",
+      "schematic": true,
+      "representation": "bone-surface-overlay",
+      "normalOffset": 0.0015,
+      "opacity": 0.82,
+      "description": "Diagrammatic articular cartilage patch following the underlying bone surface; anatomical coverage margins and thickness are approximations.",
+      "selectionMethod": "Select existing bone triangles by centroid within bounds (and optional sphere) plus average outward-normal constraint; copy positions/normals and offset along surface normal. Do not create a joint-cavity sphere. Include only if the integration yields a coherent visible articular patch.",
+      "limitations": "No segmented cartilage source exists in this bundle. This surface-mask proposal needs integrated visual QA and may be omitted if the reduced mesh gives an incoherent patch."
+    },
+    {
+      "id": "practical-tibial-plateau-cartilage",
+      "label": "Tibial plateau cartilage · medial/lateral samples",
+      "boneId": "tibia",
+      "bounds": {
+        "min": [
+          -0.08,
+          -0.257,
+          -0.092
+        ],
+        "max": [
+          0.045,
+          -0.222,
+          0.003
+        ]
+      },
+      "normalConstraint": {
+        "axis": 1,
+        "greaterThan": 0.5
+      },
+      "source": {
+        "pdfPage": 2203,
+        "figure": "78.13"
+      },
+      "tissue": "cartilage",
+      "schematic": true,
+      "representation": "bone-surface-overlay",
+      "normalOffset": 0.0015,
+      "opacity": 0.82,
+      "description": "Diagrammatic articular cartilage patch following the underlying bone surface; anatomical coverage margins and thickness are approximations.",
+      "selectionMethod": "Select existing bone triangles by centroid within bounds (and optional sphere) plus average outward-normal constraint; copy positions/normals and offset along surface normal. Do not create a joint-cavity sphere. Include only if the integration yields a coherent visible articular patch.",
+      "limitations": "Two conservative articular-facet samples. Every vertex excludes the central intercondylar eminence and attachment area; exact cartilage margins are not segmented. Gray 42 Figure 78.13.",
+      "vertexRegions": [
+        {
+          "axis": 0,
+          "lessThanOrEqual": -0.033
+        },
+        {
+          "axis": 0,
+          "greaterThanOrEqual": -0.002
+        }
+      ]
+    },
+    {
+      "id": "practical-patellar-articular-cartilage",
+      "label": "Patellar cartilage · posterior sample",
+      "boneId": "patella",
+      "bounds": {
+        "min": [
+          -0.038,
+          -0.233,
+          -0.014
+        ],
+        "max": [
+          0.03,
+          -0.181,
+          0.004
+        ]
+      },
+      "normalConstraint": {
+        "axis": 2,
+        "lessThan": -0.45
+      },
+      "source": {
+        "pdfPage": 2200,
+        "figure": "78.10"
+      },
+      "tissue": "cartilage",
+      "schematic": true,
+      "representation": "bone-surface-overlay",
+      "normalOffset": 0.0015,
+      "opacity": 0.82,
+      "description": "Diagrammatic articular cartilage patch following the underlying bone surface; anatomical coverage margins and thickness are approximations.",
+      "selectionMethod": "Select existing bone triangles by centroid within bounds (and optional sphere) plus average outward-normal constraint; copy positions/normals and offset along surface normal. Do not create a joint-cavity sphere. Include only if the integration yields a coherent visible articular patch.",
+      "limitations": "Representative posterior articular-surface sample, not the complete medial/lateral/odd facet cartilage margins."
+    },
+    {
+      "id": "practical-talar-trochlear-cartilage",
+      "label": "Articular cartilage of talar trochlea",
+      "boneId": "visual-talus",
+      "bounds": {
+        "min": [
+          -0.052,
+          -0.845,
+          -0.087
+        ],
+        "max": [
+          0.006,
+          -0.824,
+          -0.039
+        ]
+      },
+      "normalConstraint": {
+        "axis": 1,
+        "greaterThan": 0.45
+      },
+      "source": {
+        "pdfPage": 2240,
+        "figure": "79.9C"
+      },
+      "tissue": "cartilage",
+      "schematic": true,
+      "representation": "bone-surface-overlay",
+      "normalOffset": 0.0015,
+      "opacity": 0.82,
+      "description": "Diagrammatic articular cartilage patch following the underlying bone surface; anatomical coverage margins and thickness are approximations.",
+      "selectionMethod": "Select existing bone triangles by centroid within bounds (and optional sphere) plus average outward-normal constraint; copy positions/normals and offset along surface normal. Do not create a joint-cavity sphere. Include only if the integration yields a coherent visible articular patch.",
+      "limitations": "No segmented cartilage source exists in this bundle. This surface-mask proposal needs integrated visual QA and may be omitted if the reduced mesh gives an incoherent patch."
+    },
+    {
+      "id": "practical-distal-tibial-cartilage",
+      "label": "Articular cartilage of distal tibia",
+      "boneId": "tibia",
+      "bounds": {
+        "min": [
+          -0.046,
+          -0.839,
+          -0.077
+        ],
+        "max": [
+          0.014,
+          -0.8,
+          -0.035
+        ]
+      },
+      "normalConstraint": {
+        "axis": 1,
+        "lessThan": -0.45
+      },
+      "source": {
+        "pdfPage": 2240,
+        "figure": "79.9C; ankle mortise section"
+      },
+      "tissue": "cartilage",
+      "schematic": true,
+      "representation": "bone-surface-overlay",
+      "normalOffset": 0.0015,
+      "opacity": 0.82,
+      "description": "Diagrammatic articular cartilage patch following the underlying bone surface; anatomical coverage margins and thickness are approximations.",
+      "selectionMethod": "Select existing bone triangles by centroid within bounds (and optional sphere) plus average outward-normal constraint; copy positions/normals and offset along surface normal. Do not create a joint-cavity sphere. Include only if the integration yields a coherent visible articular patch.",
+      "limitations": "No segmented cartilage source exists in this bundle. This surface-mask proposal needs integrated visual QA and may be omitted if the reduced mesh gives an incoherent patch."
+    }
+  ],
+  "omitted": [
+    {
+      "label": "Acetabular labrum and transverse acetabular ligament",
+      "reason": "A correctly bounded rim was not identified; support with Gray figures 77.3 and 77.16."
+    },
+    {
+      "label": "Hip pubofemoral/ischiofemoral capsular bands",
+      "reason": "Insertion footprints and capsule wrap have not been surface-reviewed in this pass."
+    }
+  ]
+}

@@ -2,8 +2,7 @@
 /* eslint-disable @next/next/no-img-element -- original anatomy source figures */
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import visual from "@/data/term2/anatomy-visual-images.json";
-import legacy from "@/data/term2/anatomy-images.json";
+import { anatomyImagesForExam } from "@/src/lib/anatomy3d/study-catalog";
 import type { AnatomySourceImage } from "@/src/lib/mcq/dynamic-anatomy.mjs";
 import type { AnatomyModuleManifest } from "@/src/lib/anatomy3d/types";
 import { placeAnatomyLabel, gradeAnatomyLabels, restoreLabelBoard } from "@/src/lib/anatomy3d/label-game.mjs";
@@ -12,18 +11,18 @@ import { regionAtPoint } from "@/src/lib/mcq/anatomy-location.mjs";
 import AnatomyViewer, { type AnatomyViewerHandle } from "./AnatomyViewer";
 import { systemsInManifest, systemForStructure } from "@/src/lib/anatomy3d/systems";
 import { isFoundationTarget } from "@/src/lib/mcq/advanced-anatomy.mjs";
+import { layoutCalloutBadges } from "@/src/lib/anatomy3d/callout-layout.mjs";
 
 type Board={id:string;title:string;image?:AnatomySourceImage;model?:AnatomyModuleManifest;labels:{id:string;label:string;description:string}[]};
 export default function AnatomyLabelGame({examId,modules,onExit}:{examId:string;modules:AnatomyModuleManifest[];onExit:()=>void}) {
+  const [rememberedBoardId]=useState(()=>{try{return typeof window==='undefined'?null:window.localStorage.getItem(`med25.label-board:${examId}`);}catch{return null;}});
   const boards=useMemo<Board[]>(()=>[
-    ...([...visual.images,...legacy.images] as AnatomySourceImage[]).filter(image=>image.examId===examId || !image.examId&&examId==='term2-respiratory').map(image=>({id:image.id,title:image.title,image,labels:image.regions.filter(region=>!isFoundationTarget(region))})).filter(board=>board.labels.length),
+    ...anatomyImagesForExam(examId,true).filter(image=>anatomyImagesForExam(examId).some(current=>current.id===image.id)||image.id===rememberedBoardId).filter(image=>!image.galleryOnly&&!image.studyOnly).map(image=>({id:image.id,title:image.title,image,labels:image.regions.filter(region=>!isFoundationTarget(region))})).filter(board=>board.labels.length),
     ...modules.flatMap(model=>{
       const targets=model.structures.filter(item=>item.quizable!==false&&!isFoundationTarget(item));
       return Array.from({length:Math.ceil(targets.length/12)},(_,index)=>({id:`${model.modelKey}:round:${index}`,title:`${model.title} · labels ${index*12+1}–${Math.min(targets.length,(index+1)*12)}`,model,labels:targets.slice(index*12,(index+1)*12)}));
-    })],[examId,modules]);
-  const [boardId,setBoardId]=useState(()=>{
-    try {return typeof window==='undefined'?boards[0]?.id:window.localStorage.getItem(`med25.label-board:${examId}`)??boards[0]?.id;}catch{return boards[0]?.id;}
-  });
+    })],[examId,modules,rememberedBoardId]);
+  const [boardId,setBoardId]=useState(rememberedBoardId??boards[0]?.id);
   const board=boards.find(item=>item.id===boardId)??boards[0];
   useEffect(()=>{try{window.localStorage.setItem(`med25.label-board:${examId}`,board.id);}catch{}},[board,examId]);
   return <section className="anatomy-label-game">
@@ -48,6 +47,13 @@ function LabelBoard({board,examId,onNext}:{board:Board;examId:string;onNext:()=>
   const [keyboardLocation,setKeyboardLocation]=useState<string>();
   const viewer=useRef<AnatomyViewerHandle>(null);
   const boardRef=useRef<HTMLDivElement>(null);
+  const [frame,setFrame]=useState({width:0,height:0});
+  useEffect(()=>{
+    const stage=boardRef.current;if(!stage)return;
+    const observer=new ResizeObserver(()=>{const rect=stage.getBoundingClientRect();setFrame(previous=>previous.width===rect.width&&previous.height===rect.height?previous:{width:rect.width,height:rect.height});});
+    observer.observe(stage);return()=>observer.disconnect();
+  },[board.id,failed]);
+  const badges=board.image?.markerMode==='label'?layoutCalloutBadges(board.image.regions,frame.width,frame.height):[];
   const labels=useMemo(()=>shuffleAnatomy(board.labels,board.id+':labels'),[board]);
   const results=gradeAnatomyLabels(assignments,locations,board.labels);
   const masks=[...(board.image?.labelMasks??[]),...(board.image?.markerMode==='label'?board.image.regions:[])];
@@ -77,10 +83,12 @@ function LabelBoard({board,examId,onNext}:{board:Board;examId:string;onNext:()=>
           {failed?<p role="alert">Image unavailable. Choose another figure; do not guess from missing anatomy.</p>:<div ref={boardRef} className="anatomy-game-image" onClick={event=>{if(event.detail>0)place(locationAt(event.clientX,event.clientY));}}>
             <img src={'/study/'+board.image.path} alt={graded?board.image.alt:'Anatomy figure with hidden labels and numbered drop locations.'} onError={()=>setFailed(true)} />
             {!graded&&masks.map((mask,index)=><span key={index} className="source-label-mask" style={{left:`${mask.x*100}%`,top:`${mask.y*100}%`,width:`${mask.width*100}%`,height:`${mask.height*100}%`}} />)}
+            {badges.length>0&&<svg className="anatomy-badge-leaders" viewBox={`0 0 ${frame.width} ${frame.height}`} aria-hidden="true">{badges.map(badge=><g key={badge.id}><line x1={badge.anchorX} y1={badge.anchorY} x2={badge.x} y2={badge.y}/><circle cx={badge.anchorX} cy={badge.anchorY} r="1.5"/></g>)}</svg>}
             {board.image.regions.map((region,index)=>{
               const label=labels.find(item=>item.id===assignments[region.id]);
               const result=results.find(item=>item.labelId===label?.id);
-              return <button type="button" key={region.id} className={`anatomy-game-target ${label?'placed':''} ${graded?(label?(result?.correct?'correct':'wrong'):board.labels.some(item=>item.id===region.id)?'unanswered':''):''} ${(graded?reviewId:keyboardLocation)===region.id?'preview':''}`} style={{left:`${region.x*100}%`,top:`${region.y*100}%`,width:`${region.width*100}%`,height:`${region.height*100}%`}} aria-label={graded?`${region.label}: ${label?.label??'unassigned'}`:`Location ${index+1}${label?', assigned':''}`} onClick={event=>{if(event.detail===0){event.stopPropagation();place(region.id);}if(graded)setReviewId(region.id);}}><span>{index+1}{label?' ●':''}</span></button>;
+              const badge=badges[index];
+              return <button type="button" key={region.id} className={`anatomy-game-target ${badge?'anatomy-location-badge':''} ${label?'placed':''} ${graded?(label?(result?.correct?'correct':'wrong'):board.labels.some(item=>item.id===region.id)?'unanswered':''):''} ${(graded?reviewId:keyboardLocation)===region.id?'preview':''}`} style={badge?{left:badge.x-badge.size/2,top:badge.y-badge.size/2,width:badge.size,height:badge.size}:{left:`${region.x*100}%`,top:`${region.y*100}%`,width:`${region.width*100}%`,height:`${region.height*100}%`}} aria-label={graded?`${region.label}: ${label?.label??'unassigned'}`:`Location ${index+1}${label?', assigned':''}`} onClick={event=>{event.stopPropagation();if(graded)setReviewId(region.id);else place(region.id);}} onDrop={event=>{event.preventDefault();event.stopPropagation();place(region.id,event.dataTransfer.getData('application/x-med25-label'));}}><span>{index+1}{label?' ●':''}</span></button>;
             })}
           </div>}
         </div></>:<>

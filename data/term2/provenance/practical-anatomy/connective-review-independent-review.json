@@ -1,0 +1,89 @@
+{
+  "status": "source-and-runtime-geometry-review-passed-with-disclosed-schematic-limits",
+  "scope": "Independent read-only review of lower-limb connective proposals, six cartilage masks, 31 bone pins, source figures, decoded source mesh triangles and final runtime integration. No checkout edits and no browser session used.",
+  "source": {
+    "file": "/Users/rizzist/Documents/MED SCHOOL BOOKS/Greys Anatomy - Anatomical Basis of Clinical Practice 42nd Edition.pdf",
+    "edition": "42nd, copyright 2021",
+    "coordinateSpace": "+X subject-left/lateral, +Y superior, +Z anterior; LEFT limb. Baked positions before shared runtime centering/scaling.",
+    "importantLimit": "Textbook figures establish the anatomical identity and topological relationships. They do not establish precise coordinates, attachment footprints or cartilage boundaries on this reduced atlas mesh. Those remain diagrammatic, and no complete anatomical segmentation claim is justified."
+  },
+  "resolvedCorrections": [
+    {
+      "id": "practical-tibial-plateau-cartilage",
+      "severity": "blocking-before-correction",
+      "finding": "Original single mask selected 200 connected triangles coating the central intercondylar region, including rough ligament and meniscal attachment territory, as cartilage.",
+      "source": "Gray 42 Fig. 78.13, PDF 2203: separate articular condyles and intercondylar/ACL/PCL/meniscal attachment regions.",
+      "implementedCorrection": "Keep original bounds and normal constraint but accept a triangle only when every vertex has x <= -0.033, or every vertex has x >= -0.002. A centroid-only exclusion is insufficient because coarse triangles bridge the excluded region.",
+      "finalResult": "108 actual runtime triangles, separate source-mesh components of 73 and 35 triangles. No vertex-region violations. Label explicitly says medial/lateral samples; margins are not exact.",
+      "evidenceImage": "reviewed-tibial-plateau-cartilage.png"
+    },
+    {
+      "id": "practical-calcaneofibular-ligament",
+      "severity": "attachment-and-direction-correction",
+      "finding": "Original path began on the exact malleolar apex and had essentially zero posterior endpoint displacement, inconsistent with the stated posteroinferior course.",
+      "source": "Gray 42 Fig. 79.14A,C and lateral collateral ligament text, PDF 2251: origin is a depression anterior to the lateral-malleolar apex, insertion is on lateral calcaneus.",
+      "implementedCorrection": {
+        "originVertex": 259,
+        "originBone": "fibula",
+        "origin": [0.02426330745, -0.85107427835, -0.05792367458],
+        "middle": [0.025, -0.87455064058, -0.06595539301],
+        "insertion": [0.016374358907341957, -0.8980270028114319, -0.07398711144924164]
+      },
+      "finalResult": "Anteroinferior lateral-malleolar surface origin matches a decoded real vertex. Final endpoint displacement Y=-0.04695272446, Z=-0.01606343687 is inferior and posterior; lateral bow reduced. This validates the regional route, not the exact attachment footprint."
+    },
+    {
+      "id": "practical-femoral-head-cartilage",
+      "severity": "coverage-scope-correction",
+      "finding": "Original whole-head-like patch did not exclude the fovea, which the source mesh does not reliably resolve.",
+      "source": "Gray 42 femoral head text, PDF 2143, explicitly locates the fovea posteroinferior to the head center; Fig. 77.16 PDF 2146 shows head cartilage and ligament/fovea relationship.",
+      "implementedCorrection": "Original selection plus every triangle vertex y >= 0.490. Label changed to superior sample and limitation says incomplete cartilage, not a segmented foveal margin.",
+      "finalResult": "140 connected source triangles in the superior cap; zero runtime vertex-region violations. This is a partial articular sample, not the whole cartilage surface.",
+      "evidenceImage": "reviewed-femoral-head-superior-cartilage.png"
+    },
+    {
+      "id": "practical-patellar-articular-cartilage",
+      "severity": "coverage-scope-correction",
+      "finding": "Normal-based mask is a posterior sample, with substantial lateral facet territory omitted. It must not be presented as a complete patellar cartilage segmentation.",
+      "source": "Gray 42 Fig. 78.10B and patella text PDF 2200: posterior medial/lateral facets, larger lateral facet, odd facet, and non-articular distal apex.",
+      "implementedCorrection": "Runtime label and limitations now identify it as a posterior sample, not complete facet margins.",
+      "finalResult": "73 connected triangles on the posterior face; anterior surface and distal apex remain uncoated."
+    }
+  ],
+  "routeReview": [
+    {"id":"practical-patellar-ligament","result":"Accepted as schematic: anterior patellar apex to anterior tibial tuberosity, no laterality inversion.","source":"Fig. 78.10 PDF 2200; patellar ligament text and Fig. 78.12 PDF 2203."},
+    {"id":"practical-quadriceps-tendon","result":"Accepted as schematic: anterior distal thigh to superior patellar base. Proximal continuation is expressly not a verified myotendinous junction.","source":"Fig. 78.10 PDF 2200; Fig. 78.12 PDF 2203."},
+    {"id":"practical-anterior-talofibular-ligament","result":"Accepted as schematic: anterior lateral malleolus to lateral talar neck anterior to fibular facet; +Z endpoint progression is anterior and -X is medial.","source":"Fig. 79.14C PDF 2251."},
+    {"id":"practical-calcaneofibular-ligament","result":"Accepted after correction recorded above; original apex-origin route not approved.","source":"Fig. 79.14A,C PDF 2251."},
+    {"id":"practical-posterior-talofibular-ligament","result":"Accepted as schematic: posterior malleolar fossa to posterior talar region, not anterior talar neck. Nearly horizontal wording is anatomical; reduced mesh/posture gives a modest inferior component.","source":"Fig. 79.14A PDF 2251; axial section Fig. 79.15 PDF 2252."},
+    {"id":"practical-plantar-calcaneonavicular-ligament","result":"Accepted as one simplified spring-complex band: medial sustentacular region to plantar-medial navicular, inferior to talar head.","source":"Fig. 79.14B PDF 2251; sustentacular attachments text PDF 2244."},
+    {"id":"practical-flexor-retinaculum-ankle","result":"Accepted as schematic medial retinaculum: medial malleolar area to medial calcaneus; does not run down the lateral/fibular side. A single narrow strip does not depict the complete tarsal-tunnel roof.","source":"Flexor retinaculum text PDF 2231; Fig. 79.2B PDF 2232."},
+    {"id":"practical-superior-extensor-retinaculum-ankle","result":"Accepted as schematic transverse anterior distal-leg band between tibia and fibula. Requires shaded QA for extruded ribbon orientation and extensor clearance.","source":"Fig. 79.1 PDF 2231."},
+    {"id":"practical-inferior-extensor-retinaculum-ankle","result":"Accepted only with existing explicit surrogate-anchor disclosure: lateral calcaneal stem with superior and inferior medial limbs. The lower limb blends into fascia/aponeurosis, not a true medial-cuneiform bony insertion. Current cuneiform-neighborhood endpoint is a drawing aid, not anatomical attachment evidence.","source":"Inferior extensor retinaculum continuation text PDF 2231; Figs. 79.1 and 79.2 PDF 2231-2232."},
+    {"id":"practical-superior-fibular-retinaculum","result":"Accepted as schematic posterior-lateral band from lateral malleolus to lateral calcaneus. Correct side relative to fibular tendon mesh; full retromalleolar roof and tendon relationships still require shaded integration QA.","source":"Fibular retinacula text PDF 2231; Fig. 79.2A PDF 2232."},
+    {"id":"practical-inferior-fibular-retinaculum","result":"Accepted as simplified lateral calcaneal retaining band, not separate longus/brevis compartments or exact fibular-trochlear septum.","source":"Inferior fibular retinaculum text PDF 2231; Fig. 79.2A PDF 2232."}
+  ],
+  "otherCartilage": [
+    {"id":"practical-femoral-condylar-cartilage","triangles":308,"result":"Coherent inferior U-shaped source-surface sample; no joint-cavity sphere. Posterior/proximal cartilage coverage and exact margins are incomplete.","preferredSource":"Fig. 77.14 and distal femoral articular-surface text, PDF 2145; more direct than currently cited Fig. 78.12-78.13."},
+    {"id":"practical-talar-trochlear-cartilage","triangles":72,"result":"Coherent superior talar dome sample; does not claim separate complete malleolar facets.","source":"Fig. 79.9C PDF 2240; ankle articulating-surfaces text PDF 2250."},
+    {"id":"practical-distal-tibial-cartilage","triangles":58,"result":"Coherent inferior tibial plafond sample. It does not identify the complete medial-malleolar facet.","preferredSource":"Ankle articulating-surfaces text PDF 2250 and Fig. 79.15 PDF 2252 directly show/support tibial cartilage; Fig. 79.9C PDF 2240 depicts the talus."}
+  ],
+  "landmarkReview": {
+    "count":31,
+    "surfaceVertexChecks":"All positions lie on their declared decoded source bone vertices; maximum nearest-vertex discrepancy 1.3263510499595315e-8 (float32 packing).",
+    "visualChecks":"Reviewed anterior/lateral/superior projections of hip, femur, patella, tibia, fibula, calcaneus, talus and navicular, plus actual fifth-metatarsal packed coordinates. Broad regional positions are anatomically consistent. No medial/lateral or anterior/posterior label swap found.",
+    "sourceCorrection":"Medial femoral epicondyle citation should be Fig. 77.11A key 6 (PDF 2143) or Fig. 77.14 (PDF 2145), both explicitly name it; Fig. 77.12 (PDF 2144) is a less direct posterior view.",
+    "limits":"Pins identify a broad approximate region on real bone, not separately segmented landmarks or precise attachment footprints. Omitting unresolved fovea, adductor tubercle, small grooves, notches and cavity centers is appropriate."
+  },
+  "runtimeVerification": {
+    "report":"runtime-checks.json",
+    "allModelsValidated":8,
+    "lowerLimbStructures":211,
+    "lowerLimbMeshes":215,
+    "allCartilageFinite":true,
+    "cartilageVertexRegionViolations":0,
+    "sharedNormalization":"Pins and connective tissues are added beneath the same gltf.scene before centering/scaling; current initial mesh/scene transforms are identity, so copied world coordinates agree with scene-local baked coordinates.",
+    "nonblockingCodeObservation":"add() overwrites mesh.userData, so the geometryRole assigned immediately before add() for cartilage is discarded. schematic/sourceFidelity survive; preserve geometryRole by merging if this metadata is useful."
+  },
+  "remainingRequiredQA":"Browser shaded-surface inspection for ribbon orientation, occlusion and visual depth with neighboring real tendons. Source/geometry review is not browser QA and does not certify exact anatomical segmentation.",
+  "deliverables":["runtime-checks.json","mask-triangle-checks.json","geometry.json","current-connective-snapshot.json","ankle-lateral.png","ankle-medial.png","ankle-anterior.png","knee-tendons.png","reviewed-tibial-plateau-cartilage.png","reviewed-femoral-head-superior-cartilage.png"]
+}

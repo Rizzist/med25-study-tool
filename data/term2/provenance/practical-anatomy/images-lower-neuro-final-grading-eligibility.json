@@ -1,0 +1,27 @@
+{
+  "status": "approved-native-callout-targets",
+  "scope": "Only the 92 curated regions in the six gap5 neuro figures. This is not approval of other images or all generated bank questions.",
+  "studyOnly": false,
+  "galleryOnly": false,
+  "validPracticeModes": ["multiple-choice label identification", "click the mapped printed callout", "hide/reveal source-label recall"],
+  "unapprovedExtensions": ["arbitrary anatomical-surface hit regions", "whole lumbar plexus target inferred only from title", "whole sacral plexus target inferred only from title", "tarsal tunnel target inferred only from title"],
+  "checks": {
+    "nativeExactOrBraceQualifiedLabels": 92,
+    "uniqueLabelsWithinEachImage": true,
+    "uniqueRegionIds": true,
+    "normalizedBoxesValid": true,
+    "fullSourceLabelsAndCaptionsVisuallyInspected": true,
+    "syntheticWholePlexusOrTunnelRegionCount": 0,
+    "gradedFlagAgreementAcrossGalleryAndProvenanceManifest": true
+  },
+  "images": [
+    {"id":"gap5-2d-lumbar-plexus-psoas-relations","regions":16},
+    {"id":"gap5-2d-lumbar-plexus-branches","regions":19},
+    {"id":"gap5-2d-sacral-plexus-pelvis","regions":19},
+    {"id":"gap5-2d-sciatic-foramina-pelvic-gateways","regions":8},
+    {"id":"gap5-2d-plantar-digital-nerve-branches","regions":11},
+    {"id":"gap5-2d-ankle-tarsal-tunnel-cross-section","regions":19}
+  ],
+  "originalFlagExplanation": "studyOnly:true was a conservative delivery hold pending explicit integration review, not a permanent exclusion. It is now false in both manifests and the generator output.",
+  "separateSafetyNote": "An entry that remains studyOnly:true elsewhere should still be excluded from graded entrypoints; do not interpret this six-image approval as permission to discard the flag globally."
+}

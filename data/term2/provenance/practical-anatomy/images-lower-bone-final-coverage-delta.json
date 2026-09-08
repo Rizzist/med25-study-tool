@@ -1,0 +1,735 @@
+{
+  "priorBookOnlyExactTargetCount": 101,
+  "addedOsteologyNamingCoverage": 24,
+  "remainingWithoutExactNamedGalleryTarget": 77,
+  "added": [
+    {
+      "id": "gap-iliac-fossa",
+      "label": "Iliac fossa",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-hip-bone-internal",
+          "regionId": "hip-bone-internal-a-8",
+          "label": "Iliac fossa",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2137",
+            "figure": "77.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-auricular-surface",
+      "label": "Auricular surface",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-hip-bone-internal",
+          "regionId": "hip-bone-internal-a-2",
+          "label": "Auricular surface",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2137",
+            "figure": "77.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-superior-pubic-ramus",
+      "label": "Superior pubic ramus",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-hip-bone-internal",
+          "regionId": "hip-bone-internal-a-12",
+          "label": "Superior pubic ramus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2137",
+            "figure": "77.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-inferior-pubic-ramus",
+      "label": "Inferior pubic ramus",
+      "tissue": "bone",
+      "matchType": "source-key-equivalent-name",
+      "matches": [
+        {
+          "imageId": "gap3-2d-hip-bone-internal",
+          "regionId": "hip-bone-internal-a-7",
+          "label": "Ischiopubic (inferior pubic) ramus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2137",
+            "figure": "77.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-pecten-pubis",
+      "label": "Pecten pubis",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-hip-bone-internal",
+          "regionId": "hip-bone-internal-a-13",
+          "label": "Pecten pubis",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2137",
+            "figure": "77.5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-intertrochanteric-line",
+      "label": "Intertrochanteric line",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-femur-anterior-complete",
+          "regionId": "femur-anterior-complete-a-3",
+          "label": "Intertrochanteric line",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2143",
+            "figure": "77.11"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-linea-aspera",
+      "label": "Linea aspera",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-femur-posterior-complete",
+          "regionId": "femur-posterior-complete-a-14",
+          "label": "Linea aspera",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2144",
+            "figure": "77.12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-medial-supracondylar-line",
+      "label": "Medial supracondylar line",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-femur-posterior-complete",
+          "regionId": "femur-posterior-complete-a-15",
+          "label": "Medial supracondylar line",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2144",
+            "figure": "77.12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-lateral-supracondylar-line",
+      "label": "Lateral supracondylar line",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-femur-posterior-complete",
+          "regionId": "femur-posterior-complete-a-5",
+          "label": "Lateral supracondylar line",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2144",
+            "figure": "77.12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-adductor-tubercle",
+      "label": "Adductor tubercle",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-femur-anterior-complete",
+          "regionId": "femur-anterior-complete-a-5",
+          "label": "Adductor tubercle",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2143",
+            "figure": "77.11"
+          }
+        },
+        {
+          "imageId": "gap3-2d-femur-posterior-complete",
+          "regionId": "femur-posterior-complete-a-16",
+          "label": "Adductor tubercle",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "77",
+            "page": "PDF page 2144",
+            "figure": "77.12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-intercondylar-eminence",
+      "label": "Intercondylar eminence",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-tibia-fibula-posterior",
+          "regionId": "tibia-fibula-posterior-a-10",
+          "label": "Intercondylar eminence",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2197",
+            "figure": "78.8"
+          }
+        },
+        {
+          "imageId": "gap3-2d-tibial-plateau-osteology",
+          "regionId": "tibial-plateau-osteology-a-8",
+          "label": "Intercondylar eminence",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2203",
+            "figure": "78.13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-soleal-line",
+      "label": "Soleal line",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-tibia-fibula-posterior",
+          "regionId": "tibia-fibula-posterior-a-12",
+          "label": "Soleal line",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2197",
+            "figure": "78.8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-apex-of-fibular-head",
+      "label": "Apex of fibular head",
+      "tissue": "bone",
+      "matchType": "source-key-equivalent-name",
+      "matches": [
+        {
+          "imageId": "gap3-2d-tibia-fibula-posterior",
+          "regionId": "tibia-fibula-posterior-a-2",
+          "label": "Apex of head of fibula",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2197",
+            "figure": "78.8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-medial-articular-facet-of-patella",
+      "label": "Medial articular facet of patella",
+      "tissue": "bone",
+      "matchType": "explicitly-labelled-subdivisions-of-checklist-family",
+      "matches": [
+        {
+          "imageId": "gap3-2d-patella-surfaces",
+          "regionId": "patella-surfaces-b-4",
+          "label": "Upper medial articular facet of patella",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2200",
+            "figure": "78.10"
+          }
+        },
+        {
+          "imageId": "gap3-2d-patella-surfaces",
+          "regionId": "patella-surfaces-b-6",
+          "label": "Lower medial articular facet of patella",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2200",
+            "figure": "78.10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-lateral-articular-facet-of-patella",
+      "label": "Lateral articular facet of patella",
+      "tissue": "bone",
+      "matchType": "explicitly-labelled-subdivisions-of-checklist-family",
+      "matches": [
+        {
+          "imageId": "gap3-2d-patella-surfaces",
+          "regionId": "patella-surfaces-b-2",
+          "label": "Lower lateral articular facet of patella",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2200",
+            "figure": "78.10"
+          }
+        },
+        {
+          "imageId": "gap3-2d-patella-surfaces",
+          "regionId": "patella-surfaces-b-1",
+          "label": "Upper lateral articular facet of patella",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2200",
+            "figure": "78.10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-vertical-ridge-of-patella",
+      "label": "Vertical ridge of patella",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-patella-surfaces",
+          "regionId": "patella-surfaces-b-7",
+          "label": "Vertical ridge of patella",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2200",
+            "figure": "78.10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-sulcus-tali",
+      "label": "Sulcus tali",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-talus-surfaces",
+          "regionId": "talus-surfaces-sulcus-tali",
+          "label": "Sulcus tali",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-talar-articular-facets",
+      "label": "Talar articular facets",
+      "tissue": "bone",
+      "matchType": "explicitly-labelled-subdivisions-of-checklist-family",
+      "matches": [
+        {
+          "imageId": "gap3-2d-talus-surfaces",
+          "regionId": "talus-surfaces-navicular-articular-surface-of-talar-head",
+          "label": "Navicular articular surface of talar head",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9C"
+          }
+        },
+        {
+          "imageId": "gap3-2d-talus-surfaces",
+          "regionId": "talus-surfaces-anterior-calcaneal-articular-surface-of-talus",
+          "label": "Anterior calcaneal articular surface of talus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9C"
+          }
+        },
+        {
+          "imageId": "gap3-2d-talus-surfaces",
+          "regionId": "talus-surfaces-posterior-calcaneal-articular-surface-of-talus",
+          "label": "Posterior calcaneal articular surface of talus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9C"
+          }
+        },
+        {
+          "imageId": "gap3-2d-talus-surfaces",
+          "regionId": "talus-surfaces-medial-malleolar-articular-surface-of-talus",
+          "label": "Medial malleolar articular surface of talus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9C"
+          }
+        },
+        {
+          "imageId": "gap3-2d-talus-surfaces",
+          "regionId": "talus-surfaces-lateral-malleolar-articular-surface-of-talus",
+          "label": "Lateral malleolar articular surface of talus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9C"
+          }
+        },
+        {
+          "imageId": "gap3-2d-talus-surfaces",
+          "regionId": "talus-surfaces-trochlear-surface-of-talus-for-distal-tibia",
+          "label": "Trochlear surface of talus for distal tibia",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9C"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-calcaneal-sulcus",
+      "label": "Calcaneal sulcus",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-calcaneus-surfaces",
+          "regionId": "calcaneus-surfaces-calcaneal-sulcus",
+          "label": "Calcaneal sulcus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-medial-process-of-calcaneal-tuberosity",
+      "label": "Medial process of calcaneal tuberosity",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-calcaneus-surfaces",
+          "regionId": "calcaneus-surfaces-medial-process-of-calcaneal-tuberosity",
+          "label": "Medial process of calcaneal tuberosity",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-lateral-process-of-calcaneal-tuberosity",
+      "label": "Lateral process of calcaneal tuberosity",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-calcaneus-surfaces",
+          "regionId": "calcaneus-surfaces-lateral-process-of-calcaneal-tuberosity",
+          "label": "Lateral process of calcaneal tuberosity",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-anterior-articular-facet-of-calcaneus",
+      "label": "Anterior articular facet of calcaneus",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-calcaneus-surfaces",
+          "regionId": "calcaneus-surfaces-anterior-articular-facet-of-calcaneus",
+          "label": "Anterior articular facet of calcaneus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-middle-articular-facet-of-calcaneus",
+      "label": "Middle articular facet of calcaneus",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-calcaneus-surfaces",
+          "regionId": "calcaneus-surfaces-middle-articular-facet-of-calcaneus",
+          "label": "Middle articular facet of calcaneus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9B"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-posterior-articular-facet-of-calcaneus",
+      "label": "Posterior articular facet of calcaneus",
+      "tissue": "bone",
+      "matchType": "exact-label",
+      "matches": [
+        {
+          "imageId": "gap3-2d-calcaneus-surfaces",
+          "regionId": "calcaneus-surfaces-posterior-articular-facet-of-calcaneus",
+          "label": "Posterior articular facet of calcaneus",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "79",
+            "page": "PDF page 2240",
+            "figure": "79.9B"
+          }
+        }
+      ]
+    }
+  ],
+  "attachmentContext": [
+    {
+      "id": "gap-medial-meniscus-anterior-horn",
+      "label": "Medial meniscus anterior horn",
+      "matchType": "bone-attachment-context-only-not-in-situ-horn-surface",
+      "matches": [
+        {
+          "imageId": "gap3-2d-tibial-plateau-osteology",
+          "regionId": "tibial-plateau-osteology-a-5",
+          "label": "Anterior horn of medial meniscus attachment",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2203",
+            "figure": "78.13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-medial-meniscus-posterior-horn",
+      "label": "Medial meniscus posterior horn",
+      "matchType": "bone-attachment-context-only-not-in-situ-horn-surface",
+      "matches": [
+        {
+          "imageId": "gap3-2d-tibial-plateau-osteology",
+          "regionId": "tibial-plateau-osteology-a-9",
+          "label": "Posterior horn of medial meniscus attachment",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2203",
+            "figure": "78.13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-lateral-meniscus-anterior-horn",
+      "label": "Lateral meniscus anterior horn",
+      "matchType": "bone-attachment-context-only-not-in-situ-horn-surface",
+      "matches": [
+        {
+          "imageId": "gap3-2d-tibial-plateau-osteology",
+          "regionId": "tibial-plateau-osteology-a-2",
+          "label": "Anterior horn of lateral meniscus attachment",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2203",
+            "figure": "78.13"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gap-lateral-meniscus-posterior-horn",
+      "label": "Lateral meniscus posterior horn",
+      "matchType": "bone-attachment-context-only-not-in-situ-horn-surface",
+      "matches": [
+        {
+          "imageId": "gap3-2d-tibial-plateau-osteology",
+          "regionId": "tibial-plateau-osteology-a-4",
+          "label": "Posterior horn of lateral meniscus attachment",
+          "source": {
+            "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+            "edition": "42nd",
+            "chapter": "78",
+            "page": "PDF page 2203",
+            "figure": "78.13"
+          }
+        }
+      ]
+    }
+  ],
+  "remainingBoneTargets": [
+    {
+      "label": "Arcuate line",
+      "bookChapters": [
+        77
+      ]
+    },
+    {
+      "label": "Pubic crest",
+      "bookChapters": [
+        77
+      ]
+    },
+    {
+      "label": "Ischial ramus",
+      "bookChapters": [
+        77
+      ]
+    },
+    {
+      "label": "Anterior intercondylar area",
+      "bookChapters": [
+        78
+      ]
+    },
+    {
+      "label": "Posterior intercondylar area",
+      "bookChapters": [
+        78
+      ]
+    },
+    {
+      "label": "Fibular notch",
+      "bookChapters": [
+        78
+      ]
+    },
+    {
+      "label": "Malleolar fossa",
+      "bookChapters": [
+        78
+      ]
+    },
+    {
+      "label": "Lateral process of talus",
+      "bookChapters": [
+        79
+      ]
+    },
+    {
+      "label": "Groove for flexor hallucis longus on talus",
+      "bookChapters": [
+        79
+      ]
+    }
+  ],
+  "limits": [
+    "This is an additive eight-figure osteology delta against the earlier report, not a snapshot of other concurrent source additions.",
+    "Named upper/lower patellar facets and the several named talar facets supply finer subdivisions of the checklist family; the report distinguishes these from a single exact-label target.",
+    "The four meniscal horn sites are now shown as bone attachment context, but are not claimed as in-situ horn surface identification.",
+    "Arcuate line, pubic crest, ischial ramus, anterior/posterior intercondylar areas, fibular notch, malleolar fossa and talar lateral process were not assigned guessed callouts. Generic metatarsal base/shaft/head repetitions were intentionally not pursued."
+  ]
+}

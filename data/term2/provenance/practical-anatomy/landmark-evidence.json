@@ -1,0 +1,1698 @@
+{
+  "upper": {
+    "asset": "/Users/rizzist/Documents/CODING/med-school-prep/public/anatomy3d/upper-limb/upper-limb.glb",
+    "assetSha256": "f229af384dee28eb3bcc8e400a9fd5693584a6bf57bb45cabcd8ff2d946a65c5",
+    "anchors": [
+      {
+        "id": "humeral-head",
+        "label": "Head of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The articular proximal humeral head faces medially, superiorly and posteriorly.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "posterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 288,
+        "triangleVertexIndices": [
+          124,
+          125,
+          350
+        ],
+        "barycentric": [
+          0.08052212563017185,
+          0.9056777406291892,
+          0.013800133740639042
+        ],
+        "point": [
+          -0.389,
+          0.857,
+          -0.10440413063625649
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1381,
+          "figure": "49.12"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-anatomical-neck",
+        "label": "Anatomical neck of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The constriction immediately surrounding the articular head; it separates the head from the tubercles.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 607,
+        "triangleVertexIndices": [
+          600,
+          537,
+          601
+        ],
+        "barycentric": [
+          0.02419416037307357,
+          0.6160362822210385,
+          0.359769557405888
+        ],
+        "point": [
+          -0.407,
+          0.816,
+          -0.0004904871252593438
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1381,
+          "figure": "49.12"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-surgical-neck",
+        "label": "Surgical neck of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The narrowed region distal to the tubercles where the proximal end meets the shaft.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 905,
+        "triangleVertexIndices": [
+          738,
+          739,
+          759
+        ],
+        "barycentric": [
+          0.605060847556391,
+          0.38614884199951466,
+          0.00879031044409434
+        ],
+        "point": [
+          -0.467,
+          0.78,
+          -0.02199061976123018
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1381,
+          "figure": "49.12"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-greater-tubercle",
+        "label": "Greater tubercle of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The lateral proximal prominence, with superior and posterior facets for the rotator cuff.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 533,
+        "triangleVertexIndices": [
+          559,
+          558,
+          560
+        ],
+        "barycentric": [
+          0.20887460473573183,
+          0.14145278037686607,
+          0.6496726148874021
+        ],
+        "point": [
+          -0.47,
+          0.875,
+          -0.03430477889603094
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1381,
+          "figure": "49.12"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-lesser-tubercle",
+        "label": "Lesser tubercle of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The anterior proximal tubercle that receives subscapularis, medial to the intertubercular sulcus.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 389,
+        "triangleVertexIndices": [
+          328,
+          329,
+          450
+        ],
+        "barycentric": [
+          0.33151792040183964,
+          0.6273734037072664,
+          0.04110867589089395
+        ],
+        "point": [
+          -0.42,
+          0.848,
+          0.011669333228450117
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1381,
+          "figure": "49.12"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-intertubercular-sulcus",
+        "label": "Intertubercular sulcus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The groove between greater and lesser tubercles traversed by the long-head biceps tendon.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 717,
+        "triangleVertexIndices": [
+          665,
+          610,
+          666
+        ],
+        "barycentric": [
+          0.16715315455914367,
+          0.8157648426040707,
+          0.017082002836785626
+        ],
+        "point": [
+          -0.441,
+          0.832,
+          -0.011197018316688625
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1381,
+          "figure": "49.12"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-deltoid-tuberosity",
+        "label": "Deltoid tuberosity",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The rough lateral midshaft attachment region of deltoid.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1006,
+        "triangleVertexIndices": [
+          809,
+          789,
+          810
+        ],
+        "barycentric": [
+          0.10861495853698361,
+          0.3097255955140709,
+          0.5816594459489455
+        ],
+        "point": [
+          -0.524,
+          0.49,
+          -0.047045905545260086
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1382,
+          "figure": "49.11"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-radial-groove",
+        "label": "Radial groove of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The shallow oblique posterior shaft groove associated with the radial nerve and profunda brachii vessels.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "posterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1182,
+        "triangleVertexIndices": [
+          914,
+          818,
+          915
+        ],
+        "barycentric": [
+          0.4930497734102054,
+          0.01426030672972042,
+          0.4926899198600742
+        ],
+        "point": [
+          -0.502,
+          0.515,
+          -0.09683529446867434
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1382,
+          "figure": "49.12"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-medial-epicondyle",
+        "label": "Medial epicondyle of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The prominent medial non-articular projection giving attachment to the common flexor origin.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1091,
+        "triangleVertexIndices": [
+          867,
+          847,
+          868
+        ],
+        "barycentric": [
+          0.07392057483321689,
+          0.44455301867351743,
+          0.48152640649326567
+        ],
+        "point": [
+          -0.468,
+          0.122,
+          -0.05597777734269978
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-lateral-epicondyle",
+        "label": "Lateral epicondyle of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The lateral non-articular region associated with the common extensor origin.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1806,
+        "triangleVertexIndices": [
+          1229,
+          1209,
+          1230
+        ],
+        "barycentric": [
+          0.06690328345518276,
+          0.1093419978993886,
+          0.8237547186454286
+        ],
+        "point": [
+          -0.612,
+          0.128,
+          -0.05384135660917697
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-capitulum",
+        "label": "Capitulum of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The rounded lateral articular part of the distal humerus that articulates with the radial head.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1802,
+        "triangleVertexIndices": [
+          1228,
+          1207,
+          1229
+        ],
+        "barycentric": [
+          0.8989514336735481,
+          0.050676181550102985,
+          0.05037238477634889
+        ],
+        "point": [
+          -0.59,
+          0.111,
+          -0.05146323367941506
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-trochlea",
+        "label": "Trochlea of humerus",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The pulley-shaped medial articular part that articulates with the trochlear notch of the ulna.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1549,
+        "triangleVertexIndices": [
+          1068,
+          1069,
+          1105
+        ],
+        "barycentric": [
+          0.5665972596360551,
+          0.16445455944419665,
+          0.26894818091974826
+        ],
+        "point": [
+          -0.526,
+          0.096,
+          -0.04059093732291226
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-radial-fossa",
+        "label": "Radial fossa",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The shallow anterior depression proximal to the capitulum, accommodating the radial-head margin in flexion.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1701,
+        "triangleVertexIndices": [
+          1179,
+          1146,
+          1183
+        ],
+        "barycentric": [
+          0.025536193114712318,
+          0.9083275283720654,
+          0.06613627851322224
+        ],
+        "point": [
+          -0.585,
+          0.149,
+          -0.075869839838307
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-coronoid-fossa",
+        "label": "Coronoid fossa",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The anterior depression proximal to the trochlea that receives the coronoid process in flexion.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1372,
+        "triangleVertexIndices": [
+          1024,
+          968,
+          1025
+        ],
+        "barycentric": [
+          0.04311159880122372,
+          0.9313000794578019,
+          0.025588321740974362
+        ],
+        "point": [
+          -0.534,
+          0.146,
+          -0.07088091362923918
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-olecranon-fossa",
+        "label": "Olecranon fossa",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The deep posterior depression above the trochlea that receives the olecranon in extension.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "posterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1432,
+        "triangleVertexIndices": [
+          1053,
+          998,
+          1054
+        ],
+        "barycentric": [
+          0.8902987216432271,
+          0.011313927073827706,
+          0.09838735128294519
+        ],
+        "point": [
+          -0.536,
+          0.144,
+          -0.08192315910945099
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-medial-supracondylar-ridge",
+        "label": "Medial supracondylar ridge",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The distal medial border of the shaft that leads to the medial epicondyle.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1277,
+        "triangleVertexIndices": [
+          901,
+          902,
+          977
+        ],
+        "barycentric": [
+          0.7547762982676415,
+          0.22148018343428003,
+          0.023743518298078498
+        ],
+        "point": [
+          -0.504,
+          0.213,
+          -0.07891753378720982
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-lateral-supracondylar-ridge",
+        "label": "Lateral supracondylar ridge",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The distal lateral border of the shaft, associated with brachioradialis and extensor carpi radialis longus.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "anterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1577,
+        "triangleVertexIndices": [
+          1117,
+          1084,
+          1119
+        ],
+        "barycentric": [
+          0.4017559279470143,
+          0.1857036685560636,
+          0.4125404034969221
+        ],
+        "point": [
+          -0.594,
+          0.197,
+          -0.1065056267056061
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      },
+      {
+        "id": "humeral-ulnar-nerve-sulcus",
+        "label": "Sulcus for ulnar nerve",
+        "tissue": "bone",
+        "parentStructureId": "humerus",
+        "description": "The posterior groove behind the medial epicondyle traversed by the ulnar nerve.",
+        "schematic": true,
+        "sourceFidelity": "schematic",
+        "geometryRole": "surface-anchored landmark point; not a separate segmented bone or anatomical extent",
+        "coordinateSpace": "existing core GLB baked coordinates before factory normalization",
+        "viewHemisphere": "posterior",
+        "markerRadius": 0.007,
+        "triangleIndex": 1222,
+        "triangleVertexIndices": [
+          922,
+          884,
+          933
+        ],
+        "barycentric": [
+          0.39999658500246554,
+          0.1957370275312842,
+          0.4042663874662502
+        ],
+        "point": [
+          -0.482,
+          0.115,
+          -0.0895839145096831
+        ],
+        "sourceEvidence": {
+          "book": "Gray 42",
+          "pdfPage": 1429,
+          "figure": "50.3"
+        },
+        "review": "Anatomical region selected manually against the book and anterior/posterior decoded-core mesh projections; triangle point computed exactly. Grooves/neck/ridges denote representative points within a broader region."
+      }
+    ]
+  },
+  "lower": {
+    "modelKey": "lower-limb",
+    "coordinateSpace": "All positions use the actual baked vertex coordinates and must be parented under gltf.scene with the bone meshes so runtime centering/scaling applies equally.",
+    "landmarks": [
+      {
+        "id": "practical-landmark-iliac-crest",
+        "label": "Iliac crest",
+        "tissue": "bone",
+        "parentId": "hip-bone",
+        "description": "Superior curved border of the ilium.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.027278631925582886,
+          0.718632161617279,
+          -0.07531975209712982
+        ],
+        "radius": 0.004,
+        "view": "superior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2135,
+          "printedPage": "1355",
+          "figure": "77.4"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 126,
+          "targetDistance": 0.015476721041822156,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-asis",
+        "label": "Anterior superior iliac spine",
+        "tissue": "bone",
+        "parentId": "hip-bone",
+        "description": "Anterior end of the iliac crest; sartorius and inguinal-ligament attachment.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.08027869462966919,
+          0.6122841238975525,
+          0.04471319913864136
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2135,
+          "printedPage": "1355",
+          "figure": "77.4"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 89,
+          "targetDistance": 0.004198603439049424,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-aiis",
+        "label": "Anterior inferior iliac spine",
+        "tissue": "bone",
+        "parentId": "hip-bone",
+        "description": "Projection below the ASIS, above the acetabulum; rectus-femoris attachment.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.04049965739250183,
+          0.5381768345832825,
+          -0.0002846568822860718
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2135,
+          "printedPage": "1355",
+          "figure": "77.4"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 224,
+          "targetDistance": 0.003555371325621295,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-psis",
+        "label": "Posterior superior iliac spine",
+        "tissue": "bone",
+        "parentId": "hip-bone",
+        "description": "Posterior end of the iliac crest.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.04880023002624512,
+          0.6362907290458679,
+          -0.1675189882516861
+        ],
+        "radius": 0.004,
+        "view": "posterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2135,
+          "printedPage": "1355",
+          "figure": "77.4"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 144,
+          "targetDistance": 0.0046674785270837855,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-pubic-tubercle",
+        "label": "Pubic tubercle",
+        "tissue": "bone",
+        "parentId": "hip-bone",
+        "description": "Anterior pubic prominence for the medial inguinal-ligament attachment.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.11270183324813843,
+          0.47288352251052856,
+          0.04575696587562561
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2135,
+          "printedPage": "1355",
+          "figure": "77.4"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 18,
+          "targetDistance": 0.002171579085786982,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-ischial-tuberosity",
+        "label": "Ischial tuberosity",
+        "tissue": "bone",
+        "parentId": "hip-bone",
+        "description": "Rough inferior ischial prominence bearing weight in sitting.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.06190527230501175,
+          0.3896142840385437,
+          -0.10152985155582428
+        ],
+        "radius": 0.004,
+        "view": "inferior-posterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2135,
+          "printedPage": "1355",
+          "figure": "77.4"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 692,
+          "targetDistance": 0.004753342999264755,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-femoral-head",
+        "label": "Head of femur",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Rounded proximal articular end directed medially and superiorly.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.025025583803653717,
+          0.4949185252189636,
+          -0.0276544988155365
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2143,
+          "printedPage": "1361",
+          "figure": "77.11"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 153,
+          "targetDistance": 0.00815622713705351,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-femoral-neck",
+        "label": "Neck of femur",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Constricted segment between head and trochanters.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.03261344134807587,
+          0.46580904722213745,
+          -0.025798916816711426
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2143,
+          "printedPage": "1361",
+          "figure": "77.11"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 450,
+          "targetDistance": 0.010531965088362736,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-greater-trochanter",
+        "label": "Greater trochanter",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Large lateral proximal femoral projection.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.10312555730342865,
+          0.45374780893325806,
+          -0.04481862485408783
+        ],
+        "radius": 0.004,
+        "view": "lateral",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2144,
+          "printedPage": "1362",
+          "figure": "77.12-77.13"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 342,
+          "targetDistance": 0.009230737871539054,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-lesser-trochanter",
+        "label": "Lesser trochanter",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Posteromedial proximal projection at the base of the neck for iliopsoas attachment.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.012897878885269165,
+          0.38439542055130005,
+          -0.06998495757579803
+        ],
+        "radius": 0.004,
+        "view": "posteromedial",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2144,
+          "printedPage": "1362",
+          "figure": "77.12-77.13"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 459,
+          "targetDistance": 0.00556042355592776,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-femoral-medial-condyle",
+        "label": "Medial condyle of femur",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Medial distal femoral articular prominence.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.05425100028514862,
+          -0.23432523012161255,
+          -0.04400680959224701
+        ],
+        "radius": 0.004,
+        "view": "inferior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2145,
+          "printedPage": "1363",
+          "figure": "77.14"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 872,
+          "targetDistance": 0.015417560375023181,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-femoral-lateral-condyle",
+        "label": "Lateral condyle of femur",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Lateral distal femoral articular prominence.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.027858510613441467,
+          -0.22678691148757935,
+          -0.05374862253665924
+        ],
+        "radius": 0.004,
+        "view": "inferior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2145,
+          "printedPage": "1363",
+          "figure": "77.14"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 637,
+          "targetDistance": 0.009324529048347083,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-femoral-medial-epicondyle",
+        "label": "Medial epicondyle of femur",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Non-articular medial distal prominence proximal to the condyle.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.08428823202848434,
+          -0.17715007066726685,
+          -0.058387577533721924
+        ],
+        "radius": 0.004,
+        "view": "medial",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2144,
+          "printedPage": "1362",
+          "figure": "77.12"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 950,
+          "targetDistance": 0.011014392788572842,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-femoral-lateral-epicondyle",
+        "label": "Lateral epicondyle of femur",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Non-articular lateral distal prominence proximal to the condyle.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.04363095760345459,
+          -0.18758773803710938,
+          -0.03728032112121582
+        ],
+        "radius": 0.004,
+        "view": "lateral",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2145,
+          "printedPage": "1363",
+          "figure": "77.15"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 590,
+          "targetDistance": 0.007998674813202948,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-femoral-patellar-surface",
+        "label": "Patellar surface of femur",
+        "tissue": "bone",
+        "parentId": "femur",
+        "description": "Anterior distal trochlear surface between the femoral condyles; underlying bone marker.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.008209362626075745,
+          -0.18990719318389893,
+          -0.0005166083574295044
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 77,
+          "pdfPage": 2143,
+          "printedPage": "1361",
+          "figure": "77.11"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 796,
+          "targetDistance": 0.005035267265883124,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-patellar-base",
+        "label": "Base of patella",
+        "tissue": "bone",
+        "parentId": "patella",
+        "description": "Broad superior border of the patella receiving quadriceps tendon.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.0046141743659973145,
+          -0.18248486518859863,
+          0.007021695375442505
+        ],
+        "radius": 0.004,
+        "view": "superior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2200,
+          "printedPage": "1402",
+          "figure": "78.10"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 49,
+          "targetDistance": 0.0014786301941635222,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-patellar-apex",
+        "label": "Apex of patella",
+        "tissue": "bone",
+        "parentId": "patella",
+        "description": "Inferior pointed end of the patella continuing into the patellar ligament.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.006353780627250671,
+          -0.2441830039024353,
+          0.0015709251165390015
+        ],
+        "radius": 0.004,
+        "view": "inferior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2200,
+          "printedPage": "1402",
+          "figure": "78.10"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 116,
+          "targetDistance": 0.002587092604665492,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-tibial-medial-condyle",
+        "label": "Medial condyle of tibia",
+        "tissue": "bone",
+        "parentId": "tibia",
+        "description": "Medial proximal tibial articular plateau.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.04914814978837967,
+          -0.2441830039024353,
+          -0.05989523231983185
+        ],
+        "radius": 0.004,
+        "view": "superior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2197,
+          "printedPage": "1399",
+          "figure": "78.7"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 166,
+          "targetDistance": 0.009785007156551648,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-tibial-lateral-condyle",
+        "label": "Lateral condyle of tibia",
+        "tissue": "bone",
+        "parentId": "tibia",
+        "description": "Lateral proximal tibial articular plateau.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.03412109613418579,
+          -0.22887444496154785,
+          -0.04586239159107208
+        ],
+        "radius": 0.004,
+        "view": "superior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2197,
+          "printedPage": "1399",
+          "figure": "78.7"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 452,
+          "targetDistance": 0.016711856621416613,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-tibial-tuberosity",
+        "label": "Tibial tuberosity",
+        "tissue": "bone",
+        "parentId": "tibia",
+        "description": "Anterior proximal tibial prominence receiving the patellar ligament.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.005426004528999329,
+          -0.28512173891067505,
+          0.007485583424568176
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2197,
+          "printedPage": "1399",
+          "figure": "78.7"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 424,
+          "targetDistance": 0.0026972417604946815,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-medial-malleolus",
+        "label": "Medial malleolus",
+        "tissue": "bone",
+        "parentId": "tibia",
+        "description": "Distal medial tibial projection forming the medial side of the ankle mortise.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.04822035878896713,
+          -0.8349539041519165,
+          -0.046906158328056335
+        ],
+        "radius": 0.004,
+        "view": "medial",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2197,
+          "printedPage": "1399",
+          "figure": "78.7"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 4,
+          "targetDistance": 0.0055443817186577905,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-fibular-head",
+        "label": "Head of fibula",
+        "tissue": "bone",
+        "parentId": "fibula",
+        "description": "Expanded proximal end articulating with the lateral tibial condyle.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.05128522217273712,
+          -0.27155280113220215,
+          -0.05456043779850006
+        ],
+        "radius": 0.004,
+        "view": "lateral",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2197,
+          "printedPage": "1399",
+          "figure": "78.7-78.8"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 57,
+          "targetDistance": 0.0054973787305528645,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-fibular-neck",
+        "label": "Neck of fibula",
+        "tissue": "bone",
+        "parentId": "fibula",
+        "description": "Narrow segment below the fibular head, around which the common fibular nerve winds.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.036788493394851685,
+          -0.3036775588989258,
+          -0.061634838581085205
+        ],
+        "radius": 0.004,
+        "view": "lateral",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2197,
+          "printedPage": "1399",
+          "figure": "78.8"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 78,
+          "targetDistance": 0.006560979274156465,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-lateral-malleolus",
+        "label": "Lateral malleolus",
+        "tissue": "bone",
+        "parentId": "fibula",
+        "description": "Distal fibular projection forming the lateral ankle mortise; reaches below the medial malleolus.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.015449300408363342,
+          -0.8625556826591492,
+          -0.07404404878616333
+        ],
+        "radius": 0.004,
+        "view": "lateral",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 78,
+          "pdfPage": 2197,
+          "printedPage": "1399",
+          "figure": "78.7-78.8"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 263,
+          "targetDistance": 0.004877006866373964,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-calcaneal-tuberosity",
+        "label": "Calcaneal tuberosity",
+        "tissue": "bone",
+        "parentId": "visual-calcaneus",
+        "description": "Posteroinferior heel prominence; broad tuberosity region.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.03941827267408371,
+          -0.9408771991729736,
+          -0.11074040830135345
+        ],
+        "radius": 0.004,
+        "view": "plantar",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 79,
+          "pdfPage": 2240,
+          "printedPage": "1437",
+          "figure": "79.9B"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 24,
+          "targetDistance": 0.003149622820901923,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-sustentaculum-tali",
+        "label": "Sustentaculum tali",
+        "tissue": "bone",
+        "parentId": "visual-calcaneus",
+        "description": "Medial calcaneal shelf supporting the talus; flexor hallucis longus passes beneath it.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.04246039316058159,
+          -0.8709065914154053,
+          -0.04327184706926346
+        ],
+        "radius": 0.004,
+        "view": "medial",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 79,
+          "pdfPage": 2240,
+          "printedPage": "1437",
+          "figure": "79.9B"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 318,
+          "targetDistance": 0.001812846727342498,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-talar-head",
+        "label": "Head of talus",
+        "tissue": "bone",
+        "parentId": "visual-talus",
+        "description": "Anterior rounded talar end articulating with the navicular.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.018429456278681755,
+          -0.8435667753219604,
+          -0.008156954310834408
+        ],
+        "radius": 0.004,
+        "view": "anterior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 79,
+          "pdfPage": 2240,
+          "printedPage": "1437",
+          "figure": "79.9C"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 634,
+          "targetDistance": 0.006069460557519678,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-talar-neck",
+        "label": "Neck of talus",
+        "tissue": "bone",
+        "parentId": "visual-talus",
+        "description": "Constricted region between the talar head and body.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.020239287987351418,
+          -0.8398643732070923,
+          -0.03285123035311699
+        ],
+        "radius": 0.004,
+        "view": "dorsal",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 79,
+          "pdfPage": 2240,
+          "printedPage": "1437",
+          "figure": "79.9C"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 608,
+          "targetDistance": 0.003123586970157671,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-talar-trochlea",
+        "label": "Trochlea of talus",
+        "tissue": "bone",
+        "parentId": "visual-talus",
+        "description": "Superior articular dome of the talar body fitting the ankle mortise; underlying bone marker.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.014606890268623829,
+          -0.8303741812705994,
+          -0.0747523084282875
+        ],
+        "radius": 0.004,
+        "view": "superior",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 79,
+          "pdfPage": 2240,
+          "printedPage": "1437",
+          "figure": "79.9C"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 498,
+          "targetDistance": 0.010019568465465907,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-navicular-tuberosity",
+        "label": "Navicular tuberosity",
+        "tissue": "bone",
+        "parentId": "visual-navicular",
+        "description": "Medial navicular prominence receiving the principal tibialis-posterior insertion.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          -0.03873676434159279,
+          -0.8675422072410583,
+          0.004808200057595968
+        ],
+        "radius": 0.004,
+        "view": "medial",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 79,
+          "pdfPage": 2244,
+          "printedPage": "1440",
+          "figure": "79.12"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 70,
+          "targetDistance": 0.0036063056449349568,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      },
+      {
+        "id": "practical-landmark-fifth-metatarsal-tuberosity",
+        "label": "Tuberosity of fifth metatarsal",
+        "tissue": "bone",
+        "parentId": "practical-metatarsal-5",
+        "description": "Proximal lateral projection of the fifth metatarsal receiving fibularis brevis.",
+        "schematic": true,
+        "representation": "approximate-surface-pin",
+        "position": [
+          0.04826223827999998,
+          -0.911989759706,
+          -0.02754450457400001
+        ],
+        "radius": 0.004,
+        "view": "lateral",
+        "evidence": {
+          "source": "Gray Anatomy 42",
+          "chapter": 79,
+          "pdfPage": 2244,
+          "printedPage": "1440",
+          "figure": "79.12"
+        },
+        "placement": {
+          "method": "Anatomical region selected after reviewing Gray figures and orthographic mesh projections; nearest actual vertex to the reviewed regional target.",
+          "vertexIndex": 53,
+          "targetDistance": 0.004021797119476003,
+          "coordinateSpace": "baked atlas, before runtime normalization",
+          "surfaceGrounded": true,
+          "anatomicalBoundarySegmented": false,
+          "precision": "approximate",
+          "needsIntegratedVisualQA": true
+        }
+      }
+    ],
+    "omitted": [
+      {
+        "label": "Acetabulum",
+        "reason": "Socket cavity itself has no surface vertex at its center; preserve source diagram identification rather than placing an ambiguous rim pin."
+      },
+      {
+        "label": "Fovea of femoral head",
+        "reason": "The small foveal surface depression is not reliably resolved in the decoded reduced core mesh."
+      },
+      {
+        "label": "Adductor tubercle",
+        "reason": "Small prominence is not reliably separable from adjacent medial epicondyle on the reduced mesh."
+      },
+      {
+        "label": "Trochanteric fossa, intertrochanteric line/crest, linea aspera",
+        "reason": "Ridges and fossae need a closer shaded-surface review before precise pin placement; source diagram coverage is safer for this pass."
+      },
+      {
+        "label": "Soleal line and intercondylar eminence of tibia",
+        "reason": "Low-resolution surface detail prevents a confident local pin."
+      },
+      {
+        "label": "Greater/lesser sciatic notches, obturator foramen and acetabular notch",
+        "reason": "These are not solid surface structures; a surface vertex would misleadingly identify an edge as the entire space."
+      },
+      {
+        "label": "Talar/calcaneal grooves, facets and fibular trochlea",
+        "reason": "Subregions are too small to place confidently from these projections."
+      }
+    ],
+    "limitation": "Approximate educational pins anchored on real bone vertices. These are schematic markers, not scanned or separately segmented landmarks. Pending integrated visual QA; no marker should be marketed as a realistic anatomical surface."
+  }
+}

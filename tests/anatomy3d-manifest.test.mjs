@@ -29,8 +29,8 @@ test("the Term 2 anatomy atlas exposes the full registered cardiovascular, respi
 
   assert.deepEqual(counts.get("cvs"), { total: 169, real: 74, schematic: 95 });
   assert.deepEqual(counts.get("respiratory"), { total: 106, real: 37, schematic: 69 });
-  assert.deepEqual(counts.get("upper-limb"), { total: 131, real: 71, schematic: 60 });
-  assert.deepEqual(counts.get("lower-limb"), { total: 123, real: 78, schematic: 45 });
+  assert.deepEqual(counts.get("upper-limb"), { total: 164, real: 86, schematic: 78 });
+  assert.deepEqual(counts.get("lower-limb"), { total: 211, real: 118, schematic: 93 });
 
   const cvsModules = manifests.filter((manifest) => manifest.region === "cvs");
   assert.deepEqual(cvsModules.map((manifest) => manifest.modelKey), ["thoracic-wall", "heart", "mediastinum"]);

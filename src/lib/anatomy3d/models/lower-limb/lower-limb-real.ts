@@ -64,6 +64,7 @@ export async function createLowerLimbModel(): Promise<AnatomyModelHandle> {
   ]);
   dracoLoader.dispose();
   await attachImageMeshSupplement(gltf.scene, "lower-limb");
+  await attachPracticalMeshSupplement(gltf.scene, "lower-limb");
 
   detailModel.name = "lower-limb-detail";
   gltf.scene.add(detailModel);
@@ -314,6 +315,9 @@ export async function createLowerLimbModel(): Promise<AnatomyModelHandle> {
   // Defensive normalization to the contract: centre at origin and scale to a ~2-unit bbox.
   // (The GLB is baked normalized; this makes the loader idempotent and robust to re-exports.)
   const aliases = reconcileImageMeshGroups(structures, "lower-limb");
+  reconcilePracticalGroups(structures, aliases, "lower-limb");
+  addPracticalLandmarks(gltf.scene, structures, "lower-limb");
+  addLowerPracticalConnective(gltf.scene, structures);
   const bbox = new Box3().setFromObject(root);
   if (!bbox.isEmpty()) {
     const size = bbox.getSize(new Vector3());
@@ -351,3 +355,6 @@ export async function createLowerLimbModel(): Promise<AnatomyModelHandle> {
 }
 import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";
 import { reconcileImageMeshGroups } from "../image-mesh-groups.ts";
+import { attachPracticalMeshSupplement, reconcilePracticalGroups } from "../practical-mesh-supplement.ts";
+import { addPracticalLandmarks } from "../practical-landmarks.ts";
+import { addLowerPracticalConnective } from "../practical-connective.ts";

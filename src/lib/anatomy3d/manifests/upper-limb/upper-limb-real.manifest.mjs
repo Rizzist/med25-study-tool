@@ -1,4 +1,6 @@
 import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { practicalMeshStructures } from "../practical-mesh-structures.mjs";
+import { practicalLandmarkStructures } from "../practical-landmarks.mjs";
 import { upperLimbDetailStructures } from "../limb-detail-structures.mjs";
 import { upperLimbNerveDetailStructures } from "../limb-nerve-structures.mjs";
 
@@ -25,7 +27,7 @@ export const upperLimbManifest = {
   title: "Upper limb",
   subject: "anatomy",
   blurb:
-    "Anatomically accurate right upper limb reconstructed from BodyParts3D segmented meshes — including separable superficial and deep forearm/thumb muscles — with a root-to-digital-branch brachial-plexus and peripheral-nerve map, joints, ligaments and palmar arches placed as clearly marked schematic overlays.",
+    "Right upper limb: individually selectable carpals and muscle components from BodyParts3D. Bone-landmark pins, nerves, joints and ligament overlays are diagrammatic; use the labeled book figures for fine surface anatomy and structures not separately segmented.",
   structures: [
     // ---- Bones (real) ---------------------------------------------------------------------------
     {
@@ -970,5 +972,7 @@ export const upperLimbManifest = {
     ...upperLimbNerveDetailStructures,
     ...upperLimbDetailStructures,
     ...imageMeshStructures("upper-limb"),
+    ...practicalMeshStructures("upper-limb"),
+    ...practicalLandmarkStructures("upper-limb"),
   ],
 };

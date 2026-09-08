@@ -4,7 +4,10 @@ import { anatomyValidationErrors, buildAnatomyQuestions } from "../src/lib/mcq/d
 import { getAnatomyModule } from "../src/lib/anatomy3d/registry.ts";
 
 const root = resolve(import.meta.dirname, "..");
-const { images } = JSON.parse(readFileSync(resolve(root, "data/term2/anatomy-visual-images.json"), "utf8"));
+const images = [
+  ...JSON.parse(readFileSync(resolve(root, "data/term2/anatomy-visual-images.json"), "utf8")).images,
+  ...JSON.parse(readFileSync(resolve(root, "data/term2/anatomy-practical-images.json"), "utf8")).images.filter(image => image.regions.length >= 4 && !image.galleryOnly && !image.studyOnly),
+];
 const questions = buildAnatomyQuestions(images);
 const seen = new Set();
 for (const image of images) {

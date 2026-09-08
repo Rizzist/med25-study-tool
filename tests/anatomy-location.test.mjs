@@ -142,7 +142,7 @@ test('rendered locate questions offer neutral locations and reveal the saved sel
   }
 });
 
-test('rendered hotspot pointer clicks reach coordinate resolution while keyboard chooses the focused location',async()=>{
+test('visible hotspot buttons accept pointer and keyboard activation; free-image clicks use nearest-region resolution',async()=>{
   const root=fileURLToPath(new URL('../',import.meta.url));
   const result=await build({stdin:{contents:`export {AnatomyImage} from './src/components/AnatomyImage';`,loader:'tsx',resolveDir:root},platform:'node',format:'cjs',bundle:true,packages:'external',write:false,alias:{'@':root}});
   const require=createRequire(import.meta.url);
@@ -150,14 +150,16 @@ test('rendered hotspot pointer clicks reach coordinate resolution while keyboard
   new Function('require','module','exports',result.outputFiles[0].text)(require,compiled,compiled.exports);
   const React=require('react');
   const realUseState=React.useState;
+  const realUseEffect=React.useEffect,realUseRef=React.useRef;
   const updates=[];
   const regions=[{id:'wide',label:'Wide',x:.1,y:.1,width:.4,height:.4},{id:'small',label:'Small',x:.3,y:.3,width:.1,height:.1}];
   const q={...reverse[0],anatomy:{...reverse[0].anatomy,targetRegionId:'wide'}};
   let element;
   try {
     React.useState=initial=>[initial,value=>updates.push(value)];
+    React.useEffect=()=>{};React.useRef=()=>({current:null});
     element=compiled.exports.AnatomyImage({question:q,media:{...q.media[0],annotations:regions},src:'/source.png',revealed:false});
-  } finally {React.useState=realUseState;}
+  } finally {React.useState=realUseState;React.useEffect=realUseEffect;React.useRef=realUseRef;}
   const descendants=node=>Array.isArray(node)?node.flatMap(descendants):node&&typeof node==='object'?[node,...descendants(node.props?.children)]:[];
   const nodes=descendants(element);
   const stage=nodes.find(node=>node.props?.className==='anatomy-stage');
@@ -165,7 +167,9 @@ test('rendered hotspot pointer clicks reach coordinate resolution while keyboard
   let stopped=false;
   const event={detail:1,clientX:30.5,clientY:30.5,stopPropagation:()=>{stopped=true;}};
   small.props.onClick(event);
-  assert.equal(stopped,false,'Pointer must bubble, even when the topmost box is not nearest');
+  assert.equal(stopped,true,'An explicit visible button must not be rejected by a second raw-coordinate hit test');
+  assert.deepEqual(updates,['small',false]);
+  updates.length=0;
   stage.props.onClick({...event,currentTarget:{getBoundingClientRect:()=>({left:0,top:0,width:100,height:100})}});
   assert.deepEqual(updates,['wide',false]);
   updates.length=0;

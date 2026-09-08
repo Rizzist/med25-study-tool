@@ -16,7 +16,9 @@ function shuffled(items, key) {
 }
 
 export function buildAnatomyQuestions(images) {
-  return images.flatMap((image) => image.regions.flatMap((target) => {
+  // A source can be useful for reading before its callouts are safe to grade.
+  // Keep that hold authoritative for every caller, not just the bank builder.
+  return images.filter(image => !image.galleryOnly && !image.studyOnly).flatMap((image) => image.regions.flatMap((target) => {
     const others = image.regions.filter((region) => region.id !== target.id);
     if (others.length < 3) throw new Error(`${image.id} needs at least four identified structures`);
     const preferredIds = target.distractorRegionIds ?? [];
@@ -55,7 +57,7 @@ export function buildAnatomyQuestions(images) {
           anatomy3d: { modelKey: target.modelKey ?? image.anatomy3d?.modelKey ?? image.moduleKey, structureId: target.structureId,
             contextStructureIds: [...new Set(image.regions.filter((r) => (r.modelKey ?? image.moduleKey) === (target.modelKey ?? image.moduleKey)).map((region) => region.structureId).filter(Boolean))] },
         } : {}),
-        tags: ["term-2", `exam-${image.examId ?? "term2-respiratory"}`, "source-grounded", image.examId ? "anatomy-visual-atlas" : "respiratory-anatomy", "dynamic-anatomy", ...(image.examId ? ["study-practice", `atlas-module-${image.moduleKey}`] : [])],
+        tags: ["term-2", `exam-${image.examId ?? "term2-respiratory"}`, "source-grounded", image.examId ? "anatomy-visual-atlas" : "respiratory-anatomy", "dynamic-anatomy", ...(image.practicalExpansion ? ["practical-anatomy-expansion"] : []), ...(image.examId ? ["study-practice", `atlas-module-${image.moduleKey}`] : [])],
         examPriority: "high", qualityFlags: [],
       };
     });

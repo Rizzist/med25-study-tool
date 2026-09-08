@@ -40,6 +40,8 @@ export type AnatomyStructure = {
    * built meshes. Omitted/false means the structure is a real, scan-derived mesh.
    */
   schematic?: boolean;
+  /** A surface-pinned study marker. Retain its supporting bone when isolating it. */
+  landmarkOf?: string;
 };
 
 export type AnatomyModuleManifest = {

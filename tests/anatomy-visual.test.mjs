@@ -23,7 +23,8 @@ test("anatomy exam reserves viewport space for all choices and keeps teaching in
   assert.match(styles, /@media\(min-width:701px\)/);
   assert.match(styles, /grid-template-rows:auto minmax\(0,1fr\) auto/);
   assert.match(styles, /\.anatomy-exam-options\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
-  assert.match(styles, /max-height:100cqh/, "Diagrams fit their remaining visual space");
+  assert.match(styles, /max-height:max\(280px,calc\(100dvh - 350px\)\)/, "Diagrams remain legible without forcing a clipped viewport");
+  assert.match(styles, /\.anatomy-test-immersive\{height:auto;min-height:100dvh/, "Desktop page scroll remains available");
 });
 
 test("all original figure callouts have valid answer variants, masks, sources and a 3D context", () => {

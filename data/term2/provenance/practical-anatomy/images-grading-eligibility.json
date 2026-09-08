@@ -1,0 +1,323 @@
+{
+  "status": "approved-native-callout-targets",
+  "scope": "Only the 198 existing curated callouts on 17 figures in the three named bundles; not all book labels or arbitrary anatomical surfaces.",
+  "reviewDate": "2026-09-08",
+  "approvedImageCount": 17,
+  "approvedRegionCount": 198,
+  "heldImageCount": 6,
+  "validPracticeModes": [
+    "multiple-choice label identification",
+    "click mapped printed callout or its linked display badge",
+    "hide/reveal source-label recall"
+  ],
+  "unapprovedExtensions": [
+    "arbitrary anatomical-surface hit regions",
+    "3D mesh accuracy or completeness claims",
+    "additional targets not listed in the reviewed region arrays"
+  ],
+  "checks": {
+    "assertions": 1602,
+    "nativeSourceTextInsideRecordedCalloutBoxes": 198,
+    "uniqueRegionIds": true,
+    "uniqueLabelsWithinEachImage": true,
+    "normalizedRegionsAndMasksValid": true,
+    "verifiedMasks": 612,
+    "pngDimensionsMatch": true,
+    "fullSourceCropsAndCaptionsVisuallyReviewed": true,
+    "sourceAndGalleryRegionAndMaskAgreement": true,
+    "metadataOnlyStudyOnlyFlagChanges": true
+  },
+  "images": [
+    {
+      "id": "gap-2d-carpal-palmar",
+      "figure": "51.13",
+      "sourcePdfPage": 1472,
+      "labelStyle": "direct-labels",
+      "regions": 13,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "dc689d6a3181ceeb69cd7629dd5a092892a6472167e49c4115c9622cf5b60557",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-carpal-dorsal",
+      "figure": "51.14",
+      "sourcePdfPage": 1475,
+      "labelStyle": "direct-labels",
+      "regions": 13,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "ac9d13963690af60b69744b70fd920fd01bf9e8c2062fea8ca622720334f924a",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-femur-proximal",
+      "figure": "77.13",
+      "sourcePdfPage": 2144,
+      "labelStyle": "direct-labels",
+      "regions": 11,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "0af7a0eb5b92bb7b4f3cdfa6e9897d845d72d83857b0b7e45876f6b471fac8a1",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-femur-distal",
+      "figure": "77.14",
+      "sourcePdfPage": 2145,
+      "labelStyle": "direct-labels",
+      "regions": 6,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "cd909a7c57571f2df72b496f6cca7ddae7162b5c17a45756748299403a797ad4",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-posterior-thigh-muscles",
+      "figure": "77.42",
+      "sourcePdfPage": 2170,
+      "labelStyle": "direct-labels",
+      "regions": 14,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "102ab6f0c7a400a5d87abeec37bcc67435831c4579558e7935963cdd407779f4",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-thigh-adductors",
+      "figure": "77.45",
+      "sourcePdfPage": 2174,
+      "labelStyle": "direct-labels",
+      "regions": 16,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "3bfcfcfc10026631abc0ebca0df5df99dbd2af4fbcab7caa495674edfee8e83a",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-calf-superficial",
+      "figure": "78.3",
+      "sourcePdfPage": 2193,
+      "labelStyle": "direct-labels",
+      "regions": 14,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "a2195ae2b6b30b20d8b02d86b14b3a2f13c052dcf1ea5b239dba3a794cadb8ee",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-plantar-muscles-layers-1-2",
+      "figure": "79.21",
+      "sourcePdfPage": 2266,
+      "labelStyle": "direct-labels",
+      "regions": 12,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "db74889113e910ed7664934c6e3fe924ad2e37d2e077d6b3538380dd3373acb3",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-plantar-ligaments",
+      "figure": "79.18",
+      "sourcePdfPage": 2258,
+      "labelStyle": "direct-labels",
+      "regions": 14,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "1053a0aa8ee6f9e1baea91ff8d7a4064b0b520565c682ed98205fb6807fb8f28",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap-2d-intercostal-nerve-muscles",
+      "figure": "53.21",
+      "sourcePdfPage": 1562,
+      "labelStyle": "direct-labels",
+      "regions": 16,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "5a7b65c5a9067a5dbccdb858ed4ef6f8b74ece76c24bd4e97b560ea51ac9d122",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap2-2d-ankle-tendon-sheaths-retinacula",
+      "figure": "79.2",
+      "sourcePdfPage": 2232,
+      "labelStyle": "direct-labels",
+      "regions": 11,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "687d3103ab090c5c151419c8afb602ff995f5234516edea4782ab715e4dbb8da",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap2-2d-foot-dorsal-plantar-interossei",
+      "figure": "79.24",
+      "sourcePdfPage": 2269,
+      "labelStyle": "ordinal-labels",
+      "regions": 7,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "28cf33cb388c9e9ed6615f0fc0cde8fae40ceb23a8736c22edc0b28c63772e54",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap2-2d-plantar-muscles-third-layer",
+      "figure": "79.23",
+      "sourcePdfPage": 2268,
+      "labelStyle": "direct-labels",
+      "regions": 14,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "9748472e734d265c3a072c221d209e20c5209add93d3cf56fcb477bb6fe39eb9",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap2-2d-knee-menisci-superior",
+      "figure": "78.14",
+      "sourcePdfPage": 2204,
+      "labelStyle": "direct-labels",
+      "regions": 11,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "33f6d1135218bc388cbb606e252b25afe86243f740f705b7090bacd408454d37",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap2-2d-hip-ligaments-anterior-posterior",
+      "figure": "77.25",
+      "sourcePdfPage": 2155,
+      "labelStyle": "direct-labels",
+      "regions": 10,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "586ad4f440a97f4a6c0d7ebf7c65605b9246d47e76efe20975b37781a39f30e7",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap2-2d-hip-articular-cartilage-labrum",
+      "figure": "77.16",
+      "sourcePdfPage": 2146,
+      "labelStyle": "direct-labels",
+      "regions": 10,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "d2acdc6f3564e2291f542fe69402fd7da9acc7b60deeff20133c63895a028798",
+      "nativeCalloutTextVerified": true
+    },
+    {
+      "id": "gap3-2d-palmaris-brevis-palmar-digital-fascia",
+      "figure": "51.12",
+      "sourcePdfPage": 1471,
+      "labelStyle": "direct-labels",
+      "regions": 6,
+      "studyOnly": false,
+      "galleryOnly": false,
+      "sourcePngSha256": "0a4699f9620db6b3fc3efd47e48a4890a34b17351b61ab74d99d6d44a19ea8ae",
+      "nativeCalloutTextVerified": true
+    }
+  ],
+  "excluded": [
+    {
+      "id": "gap-2d-humerus-proximal",
+      "figure": "49.12",
+      "sourcePdfPage": 1381,
+      "studyOnly": true,
+      "galleryOnly": true,
+      "reason": "Original numbered source remains held until separately approved lower/reviewed-numbered-image-regions.json override."
+    },
+    {
+      "id": "gap-2d-humerus-distal",
+      "figure": "50.3",
+      "sourcePdfPage": 1429,
+      "studyOnly": true,
+      "galleryOnly": true,
+      "reason": "Original numbered source remains held until separately approved lower/reviewed-numbered-image-regions.json override."
+    },
+    {
+      "id": "gap-2d-humerus-attachments",
+      "figure": "49.11",
+      "sourcePdfPage": 1381,
+      "studyOnly": true,
+      "galleryOnly": true,
+      "reason": "Original numbered source remains held until separately approved lower/reviewed-numbered-image-regions.json override."
+    },
+    {
+      "id": "gap-2d-hip-bone",
+      "figure": "77.4",
+      "sourcePdfPage": 2135,
+      "studyOnly": true,
+      "galleryOnly": true,
+      "reason": "Original numbered source remains held until separately approved lower/reviewed-numbered-image-regions.json override."
+    },
+    {
+      "id": "gap-2d-tibia-fibula",
+      "figure": "78.7",
+      "sourcePdfPage": 2197,
+      "studyOnly": true,
+      "galleryOnly": true,
+      "reason": "Original numbered source remains held until separately approved lower/reviewed-numbered-image-regions.json override."
+    },
+    {
+      "id": "gap2-2d-knee-articular-cartilage-mri",
+      "figure": "78.15",
+      "sourcePdfPage": 2204,
+      "studyOnly": true,
+      "galleryOnly": true,
+      "reason": "Keyed knee MRI remains gallery-only; no assessed regions."
+    }
+  ],
+  "evidence": [
+    "AUDIT.md",
+    "qa-contact-1.jpg",
+    "qa-contact-2.jpg",
+    "qa-contact-3.jpg",
+    "lower-supplement/AUDIT.md",
+    "lower-supplement/qa-contact-1.jpg",
+    "lower-supplement/qa-contact-2.jpg",
+    "upper-supplement/palmaris-brevis-palmar-digital-fascia.png",
+    "figure-manifest.json",
+    "lower-supplement/figure-manifest.json",
+    "upper-supplement/figure-manifest.json"
+  ],
+  "qualifications": [
+    "Fig. 79.24 ordinals are approved: original panel A is the four dorsal interossei, original panel B the three plantar interossei; metadata expands each native ordinal with its panel group. These are not the five held numbered-key photographic sources.",
+    "Figs. 51.13B and 51.14B show muscle attachment sites on bones; their callouts must not be described as in-situ muscle surfaces.",
+    "Fig. 78.14 includes a directly labeled MRI panel; its explicitly named mapped callouts are approved. The separate keyed MRI Fig. 78.15 remains gallery-only.",
+    "The old Fig. 79.18 view remains safe for historical callout questions; expanded superseding views should continue to hide it from fresh gallery/training pools.",
+    "Grouped native labels retain their group meaning; approval does not split them into unprinted individual structures."
+  ],
+  "originalFlagExplanation": "studyOnly:true was a conservative delivery hold pending explicit integration review. This review lifts it only for these 17 figures in both outside-repo manifests. The six excluded flags remain authoritative until their separate reviewed override, where applicable.",
+  "regenerationNote": "Extraction generators were not changed in this metadata-only task; regeneration must reapply this explicit eligibility decision.",
+  "expectedManifestState": [
+    {
+      "path": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-practical-audit/images/gallery-images.json",
+      "expectedFlagsChanged": 10,
+      "expectedPostReviewJsonSha256": "cfa85d59f3d8fe48b898569f31c6536784638276cd829b2eb7b6f380b53bf9f6"
+    },
+    {
+      "path": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-practical-audit/images/figure-manifest.json",
+      "expectedFlagsChanged": 10,
+      "expectedPostReviewJsonSha256": "4444c79a67f612fc812ad9ee05b6ff6aa542d0a3d0c91a7e95225778bd5bfc95"
+    },
+    {
+      "path": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-practical-audit/images/lower-supplement/gallery-images.json",
+      "expectedFlagsChanged": 6,
+      "expectedPostReviewJsonSha256": "8c0213eef0651e1b3a0ec402b7d070be58d056d3e3d157bcf38b763351642e59"
+    },
+    {
+      "path": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-practical-audit/images/lower-supplement/figure-manifest.json",
+      "expectedFlagsChanged": 6,
+      "expectedPostReviewJsonSha256": "16944eb189222b37e0c2a5d1a458666a48f731e19f52701a5ae5a2bc49d9d12b"
+    },
+    {
+      "path": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-practical-audit/images/upper-supplement/gallery-images.json",
+      "expectedFlagsChanged": 1,
+      "expectedPostReviewJsonSha256": "437495db84fc507552a45cb1264f36aa454c69d6d3eeb67d02bbb797e955e8dd"
+    },
+    {
+      "path": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-practical-audit/images/upper-supplement/figure-manifest.json",
+      "expectedFlagsChanged": 1,
+      "expectedPostReviewJsonSha256": "f40bf392c40cd7394647b37b9b7fe71fc7a830b4a1f1c85847e1dd87da8aa4ed"
+    }
+  ]
+}

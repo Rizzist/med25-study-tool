@@ -1,0 +1,640 @@
+{
+  "book": {
+    "path": "/Users/rizzist/Documents/MED SCHOOL BOOKS/Greys Anatomy - Anatomical Basis of Clinical Practice 42nd Edition.pdf",
+    "chapters": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "upperLimbStartPdfPage": 1322
+  },
+  "compartments": [
+    {
+      "name": "Shoulder girdle",
+      "source": {
+        "pdfPages": [
+          1392,
+          1395,
+          1396,
+          1400
+        ],
+        "figure": "49.28"
+      },
+      "ids": [
+        "visual-trapezius",
+        "visual-levator-scapulae",
+        "rhomboid-major-muscle",
+        "rhomboid-minor-muscle",
+        "visual-serratus-anterior",
+        "visual-pectoralis-major",
+        "visual-pectoralis-minor",
+        "visual-subclavius",
+        "latissimus-dorsi-muscle"
+      ],
+      "structures": [
+        {
+          "id": "visual-trapezius",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-levator-scapulae",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "rhomboid-major-muscle",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "rhomboid-minor-muscle",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "visual-serratus-anterior",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-pectoralis-major",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-pectoralis-minor",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-subclavius",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "latissimus-dorsi-muscle",
+          "status": "No exact segmented source available in inspected inventory"
+        }
+      ]
+    },
+    {
+      "name": "Scapulohumeral muscles",
+      "source": {
+        "pdfPages": [
+          1397,
+          1398,
+          1400
+        ],
+        "figure": "49.28"
+      },
+      "ids": [
+        "deltoid-muscle",
+        "supraspinatus-muscle",
+        "infraspinatus-muscle",
+        "teres-minor-muscle",
+        "subscapularis-muscle",
+        "visual-teres-major"
+      ],
+      "structures": [
+        {
+          "id": "deltoid-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "supraspinatus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "infraspinatus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "teres-minor-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "subscapularis-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-teres-major",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Anterior arm",
+      "source": {
+        "pdfPages": [
+          1403
+        ],
+        "figure": "49.29"
+      },
+      "ids": [
+        "biceps-brachii-long-head",
+        "biceps-brachii-short-head",
+        "brachialis-muscle",
+        "visual-coracobrachialis"
+      ],
+      "structures": [
+        {
+          "id": "biceps-brachii-long-head",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "biceps-brachii-short-head",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "brachialis-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-coracobrachialis",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Posterior arm",
+      "source": {
+        "pdfPages": [
+          1405,
+          1412
+        ],
+        "figure": "49.33"
+      },
+      "ids": [
+        "triceps-brachii-long-head",
+        "triceps-brachii-lateral-head",
+        "triceps-brachii-medial-head",
+        "visual-anconeus"
+      ],
+      "structures": [
+        {
+          "id": "triceps-brachii-long-head",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "triceps-brachii-lateral-head",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "triceps-brachii-medial-head",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "visual-anconeus",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Superficial anterior forearm",
+      "source": {
+        "pdfPages": [
+          1440,
+          1442,
+          1443
+        ],
+        "figures": [
+          "50.20",
+          "50.21"
+        ]
+      },
+      "ids": [
+        "pronator-teres-muscle",
+        "flexor-carpi-radialis-muscle",
+        "palmaris-longus-muscle",
+        "flexor-carpi-ulnaris-muscle"
+      ],
+      "structures": [
+        {
+          "id": "pronator-teres-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "flexor-carpi-radialis-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "palmaris-longus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "flexor-carpi-ulnaris-muscle",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Intermediate anterior forearm",
+      "source": {
+        "pdfPages": [
+          1442
+        ],
+        "figure": "50.20"
+      },
+      "ids": [
+        "flexor-digitorum-superficialis-muscle"
+      ],
+      "note": "Gray groups FDS with superficial flexor compartment; the intermediate-layer presentation is a teaching dissection convention.",
+      "structures": [
+        {
+          "id": "flexor-digitorum-superficialis-muscle",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Deep anterior forearm",
+      "source": {
+        "pdfPages": [
+          1444
+        ],
+        "figure": "50.21 on PDF1442"
+      },
+      "ids": [
+        "flexor-digitorum-profundus-muscle",
+        "flexor-pollicis-longus-muscle",
+        "pronator-quadratus-muscle"
+      ],
+      "structures": [
+        {
+          "id": "flexor-digitorum-profundus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "flexor-pollicis-longus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "pronator-quadratus-muscle",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Posterior forearm, superficial and radial mobile wad",
+      "source": {
+        "pdfPages": [
+          1444,
+          1445,
+          1447
+        ],
+        "figure": "50.23"
+      },
+      "ids": [
+        "brachioradialis-muscle",
+        "extensor-carpi-radialis-longus-muscle",
+        "extensor-carpi-radialis-brevis-muscle",
+        "extensor-digitorum-muscle",
+        "extensor-digiti-minimi-muscle",
+        "extensor-carpi-ulnaris-muscle",
+        "visual-anconeus"
+      ],
+      "structures": [
+        {
+          "id": "brachioradialis-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-carpi-radialis-longus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-carpi-radialis-brevis-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-digitorum-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-digiti-minimi-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-carpi-ulnaris-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-anconeus",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Deep posterior forearm",
+      "source": {
+        "pdfPages": [
+          1448,
+          1449
+        ],
+        "figure": "50.24"
+      },
+      "ids": [
+        "supinator-muscle",
+        "abductor-pollicis-longus-muscle",
+        "extensor-pollicis-brevis-muscle",
+        "extensor-pollicis-longus-muscle",
+        "extensor-indicis-muscle"
+      ],
+      "structures": [
+        {
+          "id": "supinator-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "abductor-pollicis-longus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-pollicis-brevis-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-pollicis-longus-muscle",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "extensor-indicis-muscle",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Thenar and thumb intrinsic muscles",
+      "source": {
+        "pdfPages": [
+          1498,
+          1500
+        ],
+        "figure": "51.31"
+      },
+      "ids": [
+        "visual-abductor-pollicis-brevis",
+        "visual-flexor-pollicis-brevis-superficial-head",
+        "flexor-pollicis-brevis-deep-head",
+        "visual-opponens-pollicis",
+        "adductor-pollicis-oblique-head",
+        "visual-adductor-pollicis-transverse-head"
+      ],
+      "structures": [
+        {
+          "id": "visual-abductor-pollicis-brevis",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-flexor-pollicis-brevis-superficial-head",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "flexor-pollicis-brevis-deep-head",
+          "status": "No exact segmented source available in inspected inventory"
+        },
+        {
+          "id": "visual-opponens-pollicis",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "adductor-pollicis-oblique-head",
+          "status": "Ready new exact named source"
+        },
+        {
+          "id": "visual-adductor-pollicis-transverse-head",
+          "status": "Existing exact named structure"
+        }
+      ]
+    },
+    {
+      "name": "Hypothenar and remaining intrinsic hand",
+      "source": {
+        "pdfPages": [
+          1500,
+          1501,
+          1502
+        ],
+        "figures": [
+          "51.31",
+          "51.32",
+          "51.33",
+          "51.34"
+        ]
+      },
+      "ids": [
+        "visual-abductor-digiti-minimi",
+        "visual-flexor-digiti-minimi-brevis",
+        "visual-opponens-digiti-minimi",
+        "palmaris-brevis-muscle",
+        "visual-lumbricals",
+        "visual-palmar-interossei",
+        "visual-dorsal-interossei"
+      ],
+      "note": "Current interossei/lumbrical meshes represent named sets; individual numbered muscles remain grouped.",
+      "structures": [
+        {
+          "id": "visual-abductor-digiti-minimi",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-flexor-digiti-minimi-brevis",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-opponens-digiti-minimi",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "palmaris-brevis-muscle",
+          "status": "No exact segmented source available in inspected inventory"
+        },
+        {
+          "id": "visual-lumbricals",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-palmar-interossei",
+          "status": "Existing exact named structure"
+        },
+        {
+          "id": "visual-dorsal-interossei",
+          "status": "Existing exact named structure"
+        }
+      ]
+    }
+  ],
+  "missingHumeralBefore": [
+    "humeral-head",
+    "humeral-anatomical-neck",
+    "humeral-surgical-neck",
+    "humeral-greater-tubercle",
+    "humeral-lesser-tubercle",
+    "humeral-intertubercular-sulcus",
+    "humeral-deltoid-tuberosity",
+    "humeral-radial-groove",
+    "humeral-medial-epicondyle",
+    "humeral-lateral-epicondyle",
+    "humeral-capitulum",
+    "humeral-trochlea",
+    "humeral-radial-fossa",
+    "humeral-coronoid-fossa",
+    "humeral-olecranon-fossa",
+    "humeral-medial-supracondylar-ridge",
+    "humeral-lateral-supracondylar-ridge",
+    "humeral-ulnar-nerve-sulcus"
+  ],
+  "missingCarpalsBefore": [
+    "scaphoid",
+    "lunate",
+    "triquetrum",
+    "trapezium",
+    "trapezoid",
+    "capitate",
+    "hamate"
+  ],
+  "remainingSourceGaps": [
+    {
+      "id": "latissimus-dorsi-muscle",
+      "evidence": {
+        "pdfPage": 1400
+      },
+      "reason": "No named latissimus dorsi OBJ in complete inspected repository tree."
+    },
+    {
+      "id": "palmaris-brevis-muscle",
+      "evidence": {
+        "pdfPage": 1501
+      },
+      "reason": "No named palmaris brevis OBJ in complete inspected repository tree."
+    },
+    {
+      "id": "flexor-pollicis-brevis-deep-head",
+      "evidence": {
+        "pdfPage": 1498,
+        "figure": "51.31 on PDF1500"
+      },
+      "reason": "No distinct deep-head source. Mirrored whole FPB candidate FJ1469M is rejected; superficial head is not a substitute."
+    }
+  ],
+  "registrationDiagnostics": [
+    {
+      "id": "humerus",
+      "coreBounds": {
+        "min": [
+          -0.6208484172821045,
+          0.06813229620456696,
+          -0.11938627809286118
+        ],
+        "max": [
+          -0.3484729826450348,
+          0.8988735675811768,
+          0.013651041314005852
+        ]
+      },
+      "replacementBounds": {
+        "min": [
+          -0.62089422011,
+          0.06817833200000001,
+          -0.11940507493900004
+        ],
+        "max": [
+          -0.34849273389999996,
+          0.8991365633999995,
+          0.013563112489999973
+        ]
+      },
+      "maxBoundsDifference": 0.00026299581882271994,
+      "interpretation": "Same coordinate frame and side; bounds differences consistent with the legacy simplified mesh and source detail, not a demonstrated global translation error."
+    },
+    {
+      "id": "biceps-brachii-muscle",
+      "coreBounds": {
+        "min": [
+          -0.5909460186958313,
+          -0.02754202112555504,
+          -0.07402203232049942
+        ],
+        "max": [
+          -0.3352612257003784,
+          0.9066643118858337,
+          0.03819454833865166
+        ]
+      },
+      "replacementBounds": {
+        "min": [
+          -0.5912047805999999,
+          -0.026797592880000387,
+          -0.07406439898100003
+        ],
+        "max": [
+          -0.3353716292699999,
+          0.9069232482,
+          0.03809387331999997
+        ]
+      },
+      "maxBoundsDifference": 0.0007444282455546514,
+      "interpretation": "Same coordinate frame and side; bounds differences consistent with the legacy simplified mesh and source detail, not a demonstrated global translation error."
+    },
+    {
+      "id": "triceps-brachii-muscle",
+      "coreBounds": {
+        "min": [
+          -0.5861255526542664,
+          0.06802431493997574,
+          -0.20670633018016815
+        ],
+        "max": [
+          -0.33370035886764526,
+          0.8020573854446411,
+          -0.06300951540470123
+        ]
+      },
+      "replacementBounds": {
+        "min": [
+          -0.58618939855,
+          0.06858388849999963,
+          -0.20667975225500002
+        ],
+        "max": [
+          -0.33389540361,
+          0.8023707824999997,
+          -0.06305759557100002
+        ]
+      },
+      "maxBoundsDifference": 0.000559573560023896,
+      "interpretation": "Same coordinate frame and side; bounds differences consistent with the legacy simplified mesh and source detail, not a demonstrated global translation error."
+    },
+    {
+      "id": "carpal-bones",
+      "coreBounds": {
+        "min": [
+          -0.7314361929893494,
+          -0.6031337976455688,
+          0.041554294526576996
+        ],
+        "max": [
+          -0.596813440322876,
+          -0.5206360220909119,
+          0.11474663019180298
+        ]
+      },
+      "replacementBounds": {
+        "min": [
+          -0.7314245886199998,
+          -0.6020903029700002,
+          0.04145188113999998
+        ],
+        "max": [
+          -0.5968717567599999,
+          -0.5196352591000002,
+          0.1147873111799999
+        ]
+      },
+      "maxBoundsDifference": 0.0010434946755686347,
+      "interpretation": "Same coordinate frame and side; bounds differences consistent with the legacy simplified mesh and source detail, not a demonstrated global translation error."
+    }
+  ],
+  "renderingAcceptance": [
+    "Exactly eight selectable carpals; pisiform palmar to triquetrum; thumb-side trapezium in distal row.",
+    "Each replacement group uses one set of surfaces and composite aliases; ECRL/ECRB grouped core surface removed.",
+    "All 18 humeral markers lie on the decoded existing humerus and are labeled schematic surface anchors.",
+    "Anterior forearm, posterior forearm and mobile-wad muscle subsets separately inspectable; hiding superficial layers reveals deep layer.",
+    "Do not advertise all practical muscles as fully represented while latissimus, palmaris brevis and deep FPB lack segmented sources.",
+    "Keep right-model versus predominantly left-book-view laterality explicit."
+  ]
+}

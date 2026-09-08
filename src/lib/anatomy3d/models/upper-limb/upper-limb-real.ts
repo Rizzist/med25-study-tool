@@ -59,6 +59,7 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
   ]);
   dracoLoader.dispose();
   await attachImageMeshSupplement(gltf.scene, "upper-limb");
+  await attachPracticalMeshSupplement(gltf.scene, "upper-limb");
 
   // The historical core GLB accidentally packed a disconnected mirrored fragment into the
   // thenar group (its X span is ~1.64 units while the entire hand is only ~0.28 units wide).
@@ -167,18 +168,23 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
   const medial = Math.sign((ulnC.x - radC.x) || 1) || 1;   // +1 or -1 along X toward medial
   const lateral = -medial;
   const superiorY = humBox.isEmpty() ? 0.9 : humBox.max.y;   // shoulder/glenoid level
-  const humHead = v(humC.x, superiorY - 0.02, humC.z);
-  const humDistal = v(humC.x, humBox.isEmpty() ? -0.2 : humBox.min.y, humC.z);
-  const foreTop = v((radC.x + ulnC.x) / 2, Math.max(radBox.max.y, ulnBox.max.y), (radC.z + ulnC.z) / 2);
+  // Reviewed local-end references in this pinned GLB's baked frame. Whole-bone
+  // centers displaced the shoulder/elbow because the shafts are oblique.
+  // These locate schematic overlays, not segmented articular surfaces.
+  const humHead = v(-0.41408145, 0.84282867, -0.05258099);
+  const humDistal = v(-0.53548232, 0.11810455, -0.07557498);
+  const radialHead = v(-0.59361902, 0.05331424, -0.06076897);
+  const ulnarNotch = v(-0.53785861, 0.08172843, -0.08773985);
+  const foreTop = lerp(radialHead, ulnarNotch, 0.5);
   const elbow = lerp(humDistal, foreTop, 0.5);
   const wrist = v(carpC.x, carpBox.isEmpty() ? -0.85 : carpBox.max.y, carpC.z);
   const palm = metaBox.isEmpty() ? v(carpC.x, carpC.y - 0.1, carpC.z + 0.03) : metaC.clone();
   const axilla = v(humC.x + medial * 0.06, superiorY - 0.04, humC.z - 0.02);
-  const glenoid = lerp(humHead, scapC, 0.35);
+  const glenoid = v(-0.36037166, 0.83255184, -0.07856143);
 
   // ---- Joints (cartilage) ---------------------------------------------------------------------
-  blob("glenohumeral-joint", glenoid, 0.055, 0.06, 0.055);
-  ring("glenoid-labrum", glenoid, 0.062, 0.012, humHead.clone().sub(scapC));
+  blob("glenohumeral-joint", lerp(humHead, glenoid, 0.6), 0.028, 0.045, 0.035);
+  ring("glenoid-labrum", glenoid, 0.04, 0.006, humHead.clone().sub(glenoid));
   blob("elbow-joint", elbow, 0.06, 0.05, 0.06);
   // Proximal + distal radioulnar joints (two markers under one id).
   blob("radioulnar-joints", v((radBox.max.x + ulnBox.min.x) / 2 || elbow.x, foreTop.y - 0.03, foreTop.z), 0.03, 0.035, 0.03);
@@ -200,7 +206,7 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
   ucl.position.set(elbow.x + medial * 0.06, elbow.y, elbow.z);
   addProcedural("ulnar-collateral-ligament-elbow", ucl);
   // Annular ligament: a ring encircling the radial head, axis along the forearm (Y).
-  ring("annular-ligament-radius", v(radC.x, foreTop.y - 0.04, radC.z), 0.045, 0.012, v(0, 1, 0));
+  ring("annular-ligament-radius", radialHead, 0.025, 0.006, v(0, 1, 0));
 
   // ---- Brachial plexus: trunks then cords -----------------------------------------------------
   // Trunks (upper/middle/lower) stacked supero-medial to the clavicle, sloping infero-laterally.
@@ -488,6 +494,8 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
   // Defensive normalization to the contract (~2-unit bbox at origin). The GLB is baked normalized;
   // this stays ~no-op but also folds in the procedural overlays.
   const aliases = reconcileImageMeshGroups(structures, "upper-limb");
+  reconcilePracticalGroups(structures, aliases, "upper-limb");
+  addPracticalLandmarks(gltf.scene, structures, "upper-limb");
   const bbox = new Box3().setFromObject(root);
   if (!bbox.isEmpty()) {
     const size = bbox.getSize(new Vector3());
@@ -524,3 +532,5 @@ export async function createUpperLimbModel(): Promise<AnatomyModelHandle> {
 }
 import { attachImageMeshSupplement } from "../image-mesh-supplement.ts";
 import { reconcileImageMeshGroups } from "../image-mesh-groups.ts";
+import { attachPracticalMeshSupplement, reconcilePracticalGroups } from "../practical-mesh-supplement.ts";
+import { addPracticalLandmarks } from "../practical-landmarks.ts";

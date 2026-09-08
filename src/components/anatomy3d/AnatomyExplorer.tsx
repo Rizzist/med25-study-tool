@@ -8,6 +8,7 @@ import type { AnatomyQuestion } from "../../lib/anatomy3d/quiz.mjs";
 import type { AnatomyStructure } from "../../lib/anatomy3d/types";
 import { systemForStructure, systemsInManifest, type AnatomySystem } from "../../lib/anatomy3d/systems";
 import AnatomyViewer, { type AnatomyViewerHandle } from "./AnatomyViewer";
+import AnatomyCoverageChecklist from './AnatomyCoverageChecklist';
 
 type TrainerMode = "quiz" | "training";
 
@@ -81,9 +82,10 @@ function progressFor(progress: AnatomyProgress, modelKey: string): ModuleProgres
 
 type AnatomyTrainerProps = {
   regions: string[];
+  initialModelKey?:string;
 };
 
-export function AnatomyExplorer({ regions }: AnatomyTrainerProps) {
+export function AnatomyExplorer({ regions, initialModelKey }: AnatomyTrainerProps) {
   const viewerRef = useRef<AnatomyViewerHandle>(null);
   const randomStateRef = useRef(0x6d2b79f5);
   // Modules across every region this exam covers, concatenated in registration order.
@@ -93,7 +95,7 @@ export function AnatomyExplorer({ regions }: AnatomyTrainerProps) {
     [regions],
   );
   const [mode, setMode] = useState<TrainerMode>("training");
-  const [moduleKey, setModuleKey] = useState(modules[0]?.manifest.modelKey ?? "");
+  const [moduleKey, setModuleKey] = useState(modules.find(item=>item.manifest.modelKey===initialModelKey)?.manifest.modelKey ?? modules[0]?.manifest.modelKey ?? "");
   const [quizRound, setQuizRound] = useState(1);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -142,7 +144,7 @@ export function AnatomyExplorer({ regions }: AnatomyTrainerProps) {
         if (hiddenSystems.has(systemForStructure(structure)) || (realMeshesOnly && structure.schematic)) {
           ids.add(structure.id);
         }
-        if (mode === "training" && isolateSelection && trainingStructureId && structure.id !== trainingStructureId) {
+        if (mode === "training" && isolateSelection && trainingStructureId && structure.id !== trainingStructureId && structure.id !== manifest.structures.find(item => item.id === trainingStructureId)?.landmarkOf) {
           ids.add(structure.id);
         }
       }
@@ -345,7 +347,7 @@ export function AnatomyExplorer({ regions }: AnatomyTrainerProps) {
           <h2 id="anatomy3d-title">3D Anatomy</h2>
           <p>{manifest.blurb}</p>
           <p className="anatomy3d-coverage-summary">
-            <strong>{atlasCounts.total} selectable exam structures</strong> across this exam · {atlasCounts.real} scan-derived · {atlasCounts.schematic} diagrammatic
+            <strong>{atlasCounts.total} selectable study structures</strong> across these regions · {atlasCounts.real} scan-derived · {atlasCounts.schematic} diagrammatic
           </p>
         </div>
         <div className="anatomy3d-mode-switch" aria-label="Study mode">
@@ -353,6 +355,8 @@ export function AnatomyExplorer({ regions }: AnatomyTrainerProps) {
           <button type="button" className={mode === "training" ? "active" : ""} onClick={() => chooseMode("training")}>Training</button>
         </div>
       </header>
+
+      <AnatomyCoverageChecklist moduleKey={moduleKey} />
 
       <nav className="anatomy3d-module-switcher" aria-label="Anatomy module">
         {modules.map(({ manifest: option }) => (
@@ -540,7 +544,7 @@ export function AnatomyExplorer({ regions }: AnatomyTrainerProps) {
               <section className="anatomy3d-structure-browser" aria-labelledby="anatomy3d-structure-browser-title">
                 <div className="anatomy3d-structure-browser-head">
                   <div>
-                    <strong id="anatomy3d-structure-browser-title">Complete exam-scope index</strong>
+                    <strong id="anatomy3d-structure-browser-title">Available structure index</strong>
                     <small>{filteredStructureList.length} of {browseableStructures.length} visible structures</small>
                   </div>
                   <input

@@ -1,0 +1,361 @@
+{
+  "reviewer": "Independent lower-limb lane",
+  "assetHashMatches": true,
+  "anchorChecks": [
+    {
+      "id": "humeral-head",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 1.1102230246251565e-16,
+      "point": [
+        -0.389,
+        0.857,
+        -0.10440413063625649
+      ]
+    },
+    {
+      "id": "humeral-anatomical-neck",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.407,
+        0.816,
+        -0.0004904871252593438
+      ]
+    },
+    {
+      "id": "humeral-surgical-neck",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.467,
+        0.78,
+        -0.02199061976123018
+      ]
+    },
+    {
+      "id": "humeral-greater-tubercle",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.47,
+        0.875,
+        -0.03430477889603094
+      ]
+    },
+    {
+      "id": "humeral-lesser-tubercle",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 1.1102230246251565e-16,
+      "point": [
+        -0.42,
+        0.848,
+        0.011669333228450117
+      ]
+    },
+    {
+      "id": "humeral-intertubercular-sulcus",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.441,
+        0.832,
+        -0.011197018316688625
+      ]
+    },
+    {
+      "id": "humeral-deltoid-tuberosity",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.524,
+        0.49,
+        -0.047045905545260086
+      ]
+    },
+    {
+      "id": "humeral-radial-groove",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.502,
+        0.515,
+        -0.09683529446867434
+      ]
+    },
+    {
+      "id": "humeral-medial-epicondyle",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.468,
+        0.122,
+        -0.05597777734269978
+      ]
+    },
+    {
+      "id": "humeral-lateral-epicondyle",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.612,
+        0.128,
+        -0.05384135660917697
+      ]
+    },
+    {
+      "id": "humeral-capitulum",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.59,
+        0.111,
+        -0.05146323367941506
+      ]
+    },
+    {
+      "id": "humeral-trochlea",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.526,
+        0.096,
+        -0.04059093732291226
+      ]
+    },
+    {
+      "id": "humeral-radial-fossa",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 1.1102230246251565e-16,
+      "point": [
+        -0.585,
+        0.149,
+        -0.075869839838307
+      ]
+    },
+    {
+      "id": "humeral-coronoid-fossa",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 1.1443916996305594e-16,
+      "point": [
+        -0.534,
+        0.146,
+        -0.07088091362923918
+      ]
+    },
+    {
+      "id": "humeral-olecranon-fossa",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 2.7755575615628914e-17,
+      "point": [
+        -0.536,
+        0.144,
+        -0.08192315910945099
+      ]
+    },
+    {
+      "id": "humeral-medial-supracondylar-ridge",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.504,
+        0.213,
+        -0.07891753378720982
+      ]
+    },
+    {
+      "id": "humeral-lateral-supracondylar-ridge",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 0,
+      "point": [
+        -0.594,
+        0.197,
+        -0.1065056267056061
+      ]
+    },
+    {
+      "id": "humeral-ulnar-nerve-sulcus",
+      "triangleIndicesMatch": true,
+      "barycentricValid": true,
+      "pointError": 5.721958498152797e-17,
+      "point": [
+        -0.482,
+        0.115,
+        -0.0895839145096831
+      ]
+    }
+  ],
+  "sourceFiles": [
+    {
+      "id": "scaphoid",
+      "path": "meshes/FJ3383_BP21772_FMA24435_Right scaphoid.obj",
+      "hashMatches": true,
+      "rawXMax": -249.332,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "lunate",
+      "path": "meshes/FJ3374_BP23841_FMA24437_Right lunate.obj",
+      "hashMatches": true,
+      "rawXMax": -236.202,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "triquetrum",
+      "path": "meshes/FJ3390_BP21751_FMA24439_Right triquetral.obj",
+      "hashMatches": true,
+      "rawXMax": -232.157,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "trapezium",
+      "path": "meshes/FJ3388_BP20135_FMA24443_Right trapezium.obj",
+      "hashMatches": true,
+      "rawXMax": -264.938,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "trapezoid",
+      "path": "meshes/FJ3389_BP23964_FMA23725_Right trapezoid.obj",
+      "hashMatches": true,
+      "rawXMax": -262.14,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "capitate",
+      "path": "meshes/FJ3361_BP21773_FMA24446_Right capitate.obj",
+      "hashMatches": true,
+      "rawXMax": -248.401,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "hamate",
+      "path": "meshes/FJ3367_BP23822_FMA24448_Right hamate.obj",
+      "hashMatches": true,
+      "rawXMax": -236.6,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "rhomboid-major-muscle",
+      "path": "meshes/FJ1536_BP20938_FMA13381_Right rhomboid major.obj",
+      "hashMatches": true,
+      "rawXMax": 0.776757,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "rhomboid-minor-muscle",
+      "path": "meshes/FJ1537_BP21687_FMA13383_Right rhomboid minor.obj",
+      "hashMatches": true,
+      "rawXMax": 0.91605,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "biceps-brachii-long-head",
+      "path": "meshes/FJ1478_BP23056_FMA37686_Long head of right biceps brachii.obj",
+      "hashMatches": true,
+      "rawXMax": -135.268,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "biceps-brachii-short-head",
+      "path": "meshes/FJ1512_BP23133_FMA37684_Short head of right biceps brachii.obj",
+      "hashMatches": true,
+      "rawXMax": -135.237,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "triceps-brachii-long-head",
+      "path": "meshes/FJ1479_BP23146_FMA37699_Long head of right triceps brachii.obj",
+      "hashMatches": true,
+      "rawXMax": -134.691,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "triceps-brachii-lateral-head",
+      "path": "meshes/FJ1477_BP21319_FMA37697_Lateral head of right triceps brachii.obj",
+      "hashMatches": true,
+      "rawXMax": -174.456,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "triceps-brachii-medial-head",
+      "path": "meshes/FJ1480_BP23121_FMA37695_Medial head of right triceps brachii.obj",
+      "hashMatches": true,
+      "rawXMax": -167.373,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    },
+    {
+      "id": "adductor-pollicis-oblique-head",
+      "path": "meshes/FJ1481_BP23077_FMA46121_Oblique head of right adductor pollicis.obj",
+      "hashMatches": true,
+      "rawXMax": -256.534,
+      "rightSourceTitle": true,
+      "transformMatches": true
+    }
+  ],
+  "carpals": {
+    "members": [
+      "scaphoid",
+      "lunate",
+      "triquetrum",
+      "visual-pisiform",
+      "trapezium",
+      "trapezoid",
+      "capitate",
+      "hamate"
+    ],
+    "count": 8,
+    "uniqueCount": 8,
+    "pisiformSource": "meshes/FJ3382_BP21756_FMA24441_Right pisiform.obj",
+    "pisiformRight": true
+  },
+  "anatomicalReview": {
+    "sourcesReviewed": [
+      "Gray 42 PDF1381 Fig49.12, printed898",
+      "Gray 42 PDF1472 Fig51.13, printed960",
+      "Gray 42 PDF1475 Figs51.14-51.15, printed961"
+    ],
+    "findings": [
+      "Right upper-limb transform is consistent; increasing negative X is lateral on this specimen. Medial epicondyle/head positions are medial to lateral epicondyle/capitulum.",
+      "Coronoid and radial fossae are anterior to olecranon fossa in the decoded geometry; labels and fossa heights match the reviewed projections.",
+      "Carpal ordering matches proximal row scaphoid-lunate-triquetrum-pisiform and distal row trapezium-trapezoid-capitate-hamate. Existing right pisiform completes the eight bones.",
+      "All 18 anchors are mathematically on declared core triangles and remain schematic representative pins, not named surface segmentations.",
+      "Rhomboid major/minor extend approximately 0.78/0.92 raw units across X=0 at their spinal origins. This small midline crossing is expected for near-midline soft tissue and is not evidence of wrong laterality; all other staged sources have negative raw X throughout."
+    ],
+    "corrections": [],
+    "limitations": [
+      "This verifies core geometry, source identity and labels; it does not replace integrated camera/occlusion QA.",
+      "Ridges, grooves and neck markers indicate representative regions and should retain their approximate-marker disclosure."
+    ]
+  }
+}

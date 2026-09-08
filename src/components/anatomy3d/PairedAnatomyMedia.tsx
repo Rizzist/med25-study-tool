@@ -6,16 +6,14 @@ import { AnatomyImage } from "../AnatomyImage";
 import AnatomyViewer from "./AnatomyViewer";
 import { getAnatomyModule } from "@/src/lib/anatomy3d/registry";
 import { systemsInManifest, systemForStructure } from "@/src/lib/anatomy3d/systems";
-import { buildAnatomyQuestions, type AnatomySourceImage } from "@/src/lib/mcq/dynamic-anatomy.mjs";
-import sourceCatalog from "@/data/term2/anatomy-visual-images.json";
-import legacyCatalog from "@/data/term2/anatomy-images.json";
+import { buildAnatomyQuestions } from "@/src/lib/mcq/dynamic-anatomy.mjs";
+import { allStudyImages as images } from "@/src/lib/anatomy3d/study-catalog";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 import type { CameraView } from "@/src/lib/anatomy3d/types";
 import { compositeStructureId } from "@/src/lib/anatomy3d/composite";
 import { isLocationQuestion } from "@/src/lib/mcq/anatomy-location.mjs";
 import ModelLocationQuestion from "./ModelLocationQuestion";
 
-const images = [...sourceCatalog.images, ...legacyCatalog.images] as AnatomySourceImage[];
 const existingFigureModels: Record<string, string> = {
   "term2/cvs/heart1-slide6-pericardium-wall.png": "heart",
   "term2/cvs/heart2-slide8-coronary-anterior.png": "heart",

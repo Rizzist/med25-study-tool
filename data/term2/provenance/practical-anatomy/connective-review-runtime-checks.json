@@ -1,0 +1,234 @@
+{
+  "status": "passed-runtime-geometry-checks",
+  "cartilage": [
+    {
+      "id": "practical-femoral-head-cartilage",
+      "label": "Femoral-head cartilage · superior sample",
+      "triangles": 140,
+      "wrongVertexRegion": 0,
+      "nonFinite": 0
+    },
+    {
+      "id": "practical-femoral-condylar-cartilage",
+      "label": "Articular cartilage of femoral condyles",
+      "triangles": 308,
+      "wrongVertexRegion": 0,
+      "nonFinite": 0
+    },
+    {
+      "id": "practical-tibial-plateau-cartilage",
+      "label": "Tibial plateau cartilage · medial/lateral samples",
+      "triangles": 108,
+      "wrongVertexRegion": 0,
+      "nonFinite": 0
+    },
+    {
+      "id": "practical-patellar-articular-cartilage",
+      "label": "Patellar cartilage · posterior sample",
+      "triangles": 73,
+      "wrongVertexRegion": 0,
+      "nonFinite": 0
+    },
+    {
+      "id": "practical-talar-trochlear-cartilage",
+      "label": "Articular cartilage of talar trochlea",
+      "triangles": 72,
+      "wrongVertexRegion": 0,
+      "nonFinite": 0
+    },
+    {
+      "id": "practical-distal-tibial-cartilage",
+      "label": "Articular cartilage of distal tibia",
+      "triangles": 58,
+      "wrongVertexRegion": 0,
+      "nonFinite": 0
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "practical-landmark-iliac-crest",
+      "parentId": "hip-bone",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-asis",
+      "parentId": "hip-bone",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-aiis",
+      "parentId": "hip-bone",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-psis",
+      "parentId": "hip-bone",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-pubic-tubercle",
+      "parentId": "hip-bone",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-ischial-tuberosity",
+      "parentId": "hip-bone",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-femoral-head",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-femoral-neck",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-greater-trochanter",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-lesser-trochanter",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-femoral-medial-condyle",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-femoral-lateral-condyle",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-femoral-medial-epicondyle",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-femoral-lateral-epicondyle",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-femoral-patellar-surface",
+      "parentId": "femur",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-patellar-base",
+      "parentId": "patella",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-patellar-apex",
+      "parentId": "patella",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-tibial-medial-condyle",
+      "parentId": "tibia",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-tibial-lateral-condyle",
+      "parentId": "tibia",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-tibial-tuberosity",
+      "parentId": "tibia",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-medial-malleolus",
+      "parentId": "tibia",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-fibular-head",
+      "parentId": "fibula",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-fibular-neck",
+      "parentId": "fibula",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-lateral-malleolus",
+      "parentId": "fibula",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-calcaneal-tuberosity",
+      "parentId": "visual-calcaneus",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-sustentaculum-tali",
+      "parentId": "visual-calcaneus",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-talar-head",
+      "parentId": "visual-talus",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-talar-neck",
+      "parentId": "visual-talus",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-talar-trochlea",
+      "parentId": "visual-talus",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-navicular-tuberosity",
+      "parentId": "visual-navicular",
+      "nearestVertexDistance": 0
+    },
+    {
+      "id": "practical-landmark-fifth-metatarsal-tuberosity",
+      "parentId": "practical-metatarsal-5",
+      "nearestVertexDistance": 1.3263510499595315e-8
+    }
+  ],
+  "cfl": {
+    "path": [
+      [
+        0.02426330745,
+        -0.85107427835,
+        -0.05792367458
+      ],
+      [
+        0.025,
+        -0.87455064058,
+        -0.06595539301
+      ],
+      [
+        0.016374358907341957,
+        -0.8980270028114319,
+        -0.07398711144924164
+      ]
+    ],
+    "endpointDelta": [
+      -0.007888948542658043,
+      -0.04695272446143184,
+      -0.016063436869241637
+    ],
+    "anatomicalDirection": "inferior and posterior from anteroinferior lateral malleolus to lateral calcaneus",
+    "note": "Candidate attachment neighborhood only; exact anatomical footprint is not segmented."
+  },
+  "runtimeModel": {
+    "structures": 211
+  },
+  "browserVisualQA": false
+}

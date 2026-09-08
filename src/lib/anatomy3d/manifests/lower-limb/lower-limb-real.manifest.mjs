@@ -1,4 +1,7 @@
 import { imageMeshStructures } from "../image-mesh-structures.mjs";
+import { practicalMeshStructures } from "../practical-mesh-structures.mjs";
+import { practicalLandmarkStructures } from "../practical-landmarks.mjs";
+import { lowerPracticalConnectiveStructures } from "../practical-connective.mjs";
 import { lowerLimbDetailStructures } from "../limb-detail-structures.mjs";
 import { lowerLimbNerveDetailStructures } from "../limb-nerve-structures.mjs";
 
@@ -28,7 +31,7 @@ export const lowerLimbManifest = {
   title: "Lower limb",
   subject: "anatomy",
   blurb:
-    "Anatomically accurate left lower limb from BodyParts3D segmented meshes — including separable deep gluteal, thigh and leg muscles plus dorsal and plantar foot arteries — layered with a branch-level lumbosacral and peripheral-nerve map plus clearly marked schematic joints, ligaments and menisci.",
+    "Left lower limb: separate bones and muscle components from BodyParts3D, with practical landmark pins and diagrammatic nerves, ligaments, retinacula and cartilage. The labeled book figures cover fine anatomy and structures unavailable as individual source meshes.",
   structures: [
     {
       id: "hip-bone",
@@ -878,5 +881,8 @@ export const lowerLimbManifest = {
     ...lowerLimbNerveDetailStructures,
     ...lowerLimbDetailStructures,
     ...imageMeshStructures("lower-limb"),
+    ...practicalMeshStructures("lower-limb"),
+    ...practicalLandmarkStructures("lower-limb"),
+    ...lowerPracticalConnectiveStructures,
   ],
 };

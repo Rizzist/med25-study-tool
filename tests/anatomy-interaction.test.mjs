@@ -76,7 +76,7 @@ test('camera orbits the selected world target without moving anatomy, and fits p
 });
 
 test('all registered model targets support name-to-location grading, including aggregate aliases',()=>{
-  assert.equal(modelLocations.length,529);
+  assert.equal(modelLocations.length,650);
   for(const q of modelLocations){
     const target=manifests.find(m=>m.modelKey===q.anatomy3d.modelKey).structures.find(s=>s.id===q.anatomy3d.structureId);
     assert(q.prompt.includes(target.label));assert(!q.prompt.includes('irrelevant system label'));

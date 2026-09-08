@@ -1,0 +1,887 @@
+{
+  "method": "Fresh full-page PDF text re-extraction and fresh source crop rasterization; compare native source labels/number bounds, normalized center positions, PNG pixel equality, overlap and name uniqueness. Original exported source PNGs remain unaltered; QA overlays are separate.",
+  "images": [
+    {
+      "id": "gap3-2d-hip-bone-internal",
+      "sourceFigure": "77.5",
+      "sourcePdfPage": 2137,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "1fa547d27641ca1a4a04049e9a85275a0af64bfcba94fd8c416b1ed97c04178d",
+      "targets": 16,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "hip-bone-internal-a-1",
+          "sourceLabel": "Iliac tuberosity",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.7052508270546407e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-2",
+          "sourceLabel": "Auricular surface",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 6.547752732475028e-06,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-3",
+          "sourceLabel": "Greater sciatic notch",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.1715905167209687e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-4",
+          "sourceLabel": "Ischial spine",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.664563512850163e-06,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-5",
+          "sourceLabel": "Lesser sciatic notch",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.325961124850009e-06,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-6",
+          "sourceLabel": "Ischial tuberosity",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.8648017179605535e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-7",
+          "sourceLabel": "Ischiopubic (inferior pubic) ramus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.0558573697240998e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-16",
+          "sourceLabel": "Symphysial surface of pubis",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.4734449164164613e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-15",
+          "sourceLabel": "Pubic tubercle",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.293639627760266e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-14",
+          "sourceLabel": "Obturator foramen",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.4591638871815045e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-13",
+          "sourceLabel": "Pecten pubis",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.150735264435543e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-12",
+          "sourceLabel": "Superior pubic ramus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.2001583354811632e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-11",
+          "sourceLabel": "Iliopubic (iliopectineal) eminence",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.8935748587952937e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-10",
+          "sourceLabel": "Anterior inferior iliac spine",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.150798399855752e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-9",
+          "sourceLabel": "Anterior superior iliac spine",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.03069376786056e-05,
+          "insideImage": true
+        },
+        {
+          "id": "hip-bone-internal-a-8",
+          "sourceLabel": "Iliac fossa",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.9516492640587864e-05,
+          "insideImage": true
+        }
+      ]
+    },
+    {
+      "id": "gap3-2d-femur-anterior-complete",
+      "sourceFigure": "77.11",
+      "sourcePdfPage": 2143,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "81741fbbda3bdb5687231571f3941fe5e90d5d532f6691522af1a5f1cdc53837",
+      "targets": 12,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "femur-anterior-complete-a-1",
+          "sourceLabel": "Head of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.6321055196936833e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-2",
+          "sourceLabel": "Neck of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.2376573563295437e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-3",
+          "sourceLabel": "Intertrochanteric line",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.0975922033225955e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-4",
+          "sourceLabel": "Lesser trochanter",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.0610585218718317e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-5",
+          "sourceLabel": "Adductor tubercle",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.72622088473025e-06,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-6",
+          "sourceLabel": "Medial epicondyle of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.504605824811247e-06,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-7",
+          "sourceLabel": "Medial condyle of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 4.983519713812189e-06,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-12",
+          "sourceLabel": "Patellar surface of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 3.047891904313488e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-11",
+          "sourceLabel": "Lateral epicondyle of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.0386448603463626e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-10",
+          "sourceLabel": "Lateral condyle of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.1460369167542476e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-9",
+          "sourceLabel": "Shaft of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.4301131131819745e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-anterior-complete-a-8",
+          "sourceLabel": "Greater trochanter",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.703466386569128e-05,
+          "insideImage": true
+        }
+      ]
+    },
+    {
+      "id": "gap3-2d-femur-posterior-complete",
+      "sourceFigure": "77.12",
+      "sourcePdfPage": 2144,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "3973c87c22bf32310faa2b81412a07f8267b609b6a4cdc3836b73c6f58007d72",
+      "targets": 17,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "femur-posterior-complete-a-10",
+          "sourceLabel": "Neck of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.7048490771335503e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-9",
+          "sourceLabel": "Head of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.5455461641726904e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-1",
+          "sourceLabel": "Trochanteric fossa",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.639202897083784e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-2",
+          "sourceLabel": "Greater trochanter",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.5979543740845257e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-3",
+          "sourceLabel": "Quadrate tubercle",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.439500282170306e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-4",
+          "sourceLabel": "Gluteal tuberosity",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.6717595377517692e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-5",
+          "sourceLabel": "Lateral supracondylar line",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.0307998787392253e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-6",
+          "sourceLabel": "Popliteal surface of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.5270017940635994e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-7",
+          "sourceLabel": "Intercondylar fossa",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.503345177778752e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-8",
+          "sourceLabel": "Lateral condyle of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.7395980014261568e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-11",
+          "sourceLabel": "Intertrochanteric crest",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.6389772029722453e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-12",
+          "sourceLabel": "Lesser trochanter",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 3.898224333880519e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-14",
+          "sourceLabel": "Linea aspera",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.476399501997204e-06,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-13",
+          "sourceLabel": "Spiral (pectineal) line of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 7.110162745018479e-06,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-15",
+          "sourceLabel": "Medial supracondylar line",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.153896945384445e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-16",
+          "sourceLabel": "Adductor tubercle",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.1148081982909097e-05,
+          "insideImage": true
+        },
+        {
+          "id": "femur-posterior-complete-a-17",
+          "sourceLabel": "Medial condyle of femur",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.025265520232534e-05,
+          "insideImage": true
+        }
+      ]
+    },
+    {
+      "id": "gap3-2d-tibia-fibula-posterior",
+      "sourceFigure": "78.8",
+      "sourcePdfPage": 2197,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "4f1f98e8a57102df83823d255cab39c92cc4ad820ccd402fa23953ba20dc18b5",
+      "targets": 17,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "tibia-fibula-posterior-a-1",
+          "sourceLabel": "Groove for tendon of popliteus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.893681737888787e-06,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-2",
+          "sourceLabel": "Apex of head of fibula",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.3249549131296266e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-3",
+          "sourceLabel": "Head of fibula",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.2493815010205683e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-4",
+          "sourceLabel": "Neck of fibula",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.471579653078579e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-5",
+          "sourceLabel": "Medial crest of fibula",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.0310233692635145e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-6",
+          "sourceLabel": "Interosseous border of tibia",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.0244975668674039e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-7",
+          "sourceLabel": "Posterior border of fibula",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.924889378778413e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-8",
+          "sourceLabel": "Groove for fibular tendons",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.6393303543445195e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-9",
+          "sourceLabel": "Lateral malleolus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.1813097946861822e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-10",
+          "sourceLabel": "Intercondylar eminence",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.6904947113765927e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-11",
+          "sourceLabel": "Groove for semimembranosus attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.924622616250691e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-12",
+          "sourceLabel": "Soleal line",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.8312183651826622e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-13",
+          "sourceLabel": "Nutrient foramen of tibia",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 3.2061412297401166e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-14",
+          "sourceLabel": "Vertical line of tibia",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.6447918390772495e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-15",
+          "sourceLabel": "Medial border of tibia",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.518465150036871e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-16",
+          "sourceLabel": "Medial malleolus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.0460134632394335e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibia-fibula-posterior-a-17",
+          "sourceLabel": "Groove for tibialis posterior tendon",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.7295537707976275e-05,
+          "insideImage": true
+        }
+      ]
+    },
+    {
+      "id": "gap3-2d-patella-surfaces",
+      "sourceFigure": "78.10",
+      "sourcePdfPage": 2200,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "f869ef29d99662d1720bd91f4e91e6f51e09a0a648cf3b1a636e071aedc6a299",
+      "targets": 15,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "patella-surfaces-b-4",
+          "sourceLabel": "Upper medial articular facet of patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.59711767156557e-06,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-5",
+          "sourceLabel": "Medial vertical (odd) facet of patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 8.418176303887543e-06,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-6",
+          "sourceLabel": "Lower medial articular facet of patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.3239319400652036e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-7",
+          "sourceLabel": "Vertical ridge of patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.5955051267621402e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-8",
+          "sourceLabel": "Area covered by infrapatellar fat pad",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.667114395814474e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-9",
+          "sourceLabel": "Patellar ligament attachment area on patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.1676059253228258e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-3",
+          "sourceLabel": "Area overlain by circumferential fat pad",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.7541118679002203e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-2",
+          "sourceLabel": "Lower lateral articular facet of patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.6486868102565826e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-b-1",
+          "sourceLabel": "Upper lateral articular facet of patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.887456450153709e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-a-1",
+          "sourceLabel": "Rectus femoris attachment area on patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.2362686184512636e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-a-2",
+          "sourceLabel": "Medial border of patella: medial retinaculum attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.3356817088028488e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-a-3",
+          "sourceLabel": "Apex of patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.5315151108127233e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-a-6",
+          "sourceLabel": "Lateral border of patella: lateral retinaculum attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.562476181064422e-06,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-a-5",
+          "sourceLabel": "Quadriceps femoris tendon attachment markings",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.3377501729104272e-05,
+          "insideImage": true
+        },
+        {
+          "id": "patella-surfaces-a-4",
+          "sourceLabel": "Vastus intermedius attachment area on patella",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.3408359705702155e-05,
+          "insideImage": true
+        }
+      ]
+    },
+    {
+      "id": "gap3-2d-tibial-plateau-osteology",
+      "sourceFigure": "78.13",
+      "sourcePdfPage": 2203,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "092bc16aa15be5d4fed01e8b4a33ab5276c50ffa554979a310147e68fc4f56dc",
+      "targets": 10,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "tibial-plateau-osteology-a-1",
+          "sourceLabel": "Tibial tuberosity",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 3.489579905610901e-06,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-2",
+          "sourceLabel": "Anterior horn of lateral meniscus attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 5.314191311084428e-06,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-3",
+          "sourceLabel": "Lateral condyle of tibia",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 4.242802295458096e-06,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-4",
+          "sourceLabel": "Posterior horn of lateral meniscus attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 6.555904749854458e-06,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-5",
+          "sourceLabel": "Anterior horn of medial meniscus attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.7247272360922924e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-6",
+          "sourceLabel": "Anterior cruciate ligament attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.1525971526092687e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-7",
+          "sourceLabel": "Medial condyle of tibia",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.840528926228195e-06,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-8",
+          "sourceLabel": "Intercondylar eminence",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.704741327403658e-06,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-9",
+          "sourceLabel": "Posterior horn of medial meniscus attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.0336035903468706e-05,
+          "insideImage": true
+        },
+        {
+          "id": "tibial-plateau-osteology-a-10",
+          "sourceLabel": "Posterior cruciate ligament attachment",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.6224331133166168e-05,
+          "insideImage": true
+        }
+      ]
+    },
+    {
+      "id": "gap3-2d-calcaneus-surfaces",
+      "sourceFigure": "79.9B",
+      "sourcePdfPage": 2240,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "8747c388781cea7f2f95392f675cad8feb7ac79eacd050d8f46fb03a62b15ee6",
+      "targets": 14,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "calcaneus-surfaces-articular-surface-of-calcaneus-for-cuboid",
+          "sourceLabel": "For cuboid",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 7.311925154027769e-06,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-sustentaculum-tali",
+          "sourceLabel": "Sustentaculum tali",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 6.720293071431854e-06,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-anterior-tubercle-of-calcaneus",
+          "sourceLabel": "Anterior tubercle",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.2379094997443032e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-groove-for-flexor-hallucis-longus-on-calcaneus",
+          "sourceLabel": "Groove for tendon of flexor hallucis longus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.1071527981032758e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-medial-process-of-calcaneal-tuberosity",
+          "sourceLabel": "Medial process",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.5869121897261626e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-lateral-process-of-calcaneal-tuberosity",
+          "sourceLabel": "Lateral process",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.542285686962658e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-calcaneal-tuberosity",
+          "sourceLabel": "Calcaneal tuberosity",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.54857113438456e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-anterior-articular-facet-of-calcaneus",
+          "sourceLabel": "Anterior articular surface for talus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 3.0177615952652618e-06,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-middle-articular-facet-of-calcaneus",
+          "sourceLabel": "Middle articular surface for talus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.3874070563294389e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-posterior-articular-facet-of-calcaneus",
+          "sourceLabel": "Posterior articular surface for talus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 9.715446433757804e-07,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-calcaneal-sulcus",
+          "sourceLabel": "Calcaneal sulcus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.5887301824568684e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-fibular-trochlea",
+          "sourceLabel": "Fibular trochlea",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.2304166249165269e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-posterior-surface-of-calcaneus",
+          "sourceLabel": "Posterior surface",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.858913089724634e-05,
+          "insideImage": true
+        },
+        {
+          "id": "calcaneus-surfaces-calcaneofibular-ligament-attachment-on-calcaneus",
+          "sourceLabel": "For calcaneofibular ligament",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.3015303271903799e-05,
+          "insideImage": true
+        }
+      ]
+    },
+    {
+      "id": "gap3-2d-talus-surfaces",
+      "sourceFigure": "79.9C",
+      "sourcePdfPage": 2240,
+      "pixelIdenticalToFreshSourceCrop": true,
+      "sha256": "74feda699c0b5106b378db30c3f32f425010a03e7d683d532ddb39210bd495aa",
+      "targets": 11,
+      "labelsUnique": true,
+      "overlappingTargets": [],
+      "checks": [
+        {
+          "id": "talus-surfaces-navicular-articular-surface-of-talar-head",
+          "sourceLabel": "For navicular",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 7.717526478487409e-06,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-anterior-calcaneal-articular-surface-of-talus",
+          "sourceLabel": "For anterior calcaneal surface",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.7701984550380128e-05,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-posterior-calcaneal-articular-surface-of-talus",
+          "sourceLabel": "Posterior calcaneal surface",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.8808248860690392e-05,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-sulcus-tali",
+          "sourceLabel": "Sulcus tali",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 2.3599247232364723e-05,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-surface-of-talus-for-plantar-calcaneonavicular-ligament",
+          "sourceLabel": "For calcaneonavicular ligament",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 8.829138281175259e-06,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-medial-malleolar-articular-surface-of-talus",
+          "sourceLabel": "For medial malleolus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 6.675159045746322e-06,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-lateral-malleolar-articular-surface-of-talus",
+          "sourceLabel": "For lateral malleolus",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.69873663620745e-05,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-trochlear-surface-of-talus-for-distal-tibia",
+          "sourceLabel": "For distal end of tibia",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.2202096709869267e-05,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-neck-of-talus",
+          "sourceLabel": "Neck",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 3.0083344581981302e-05,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-head-of-talus",
+          "sourceLabel": "Head",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 3.0302082863296352e-05,
+          "insideImage": true
+        },
+        {
+          "id": "talus-surfaces-body-of-talus",
+          "sourceLabel": "Body",
+          "allFreshNativeLinesMatch": true,
+          "centerErrorSourcePoints": 1.1406900366080404e-05,
+          "insideImage": true
+        }
+      ]
+    }
+  ],
+  "totalTargets": 112,
+  "allPass": true
+}

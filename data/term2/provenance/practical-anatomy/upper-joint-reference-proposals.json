@@ -1,0 +1,19 @@
+{
+  "coordinateSpace": "Existing upper-limb core GLB baked coordinates, before factory normalization",
+  "sourceFidelity": "schematic",
+  "warning": "These are reproducible local-region reference centers, not segmented articular surfaces or validated joint axes. They support replacing whole-long-bone bounding-box proxies only. Do not translate real meshes or claim clinical accuracy.",
+  "evidence": [
+    {"book":"Gray's Anatomy 42","pdfPage":1381,"figure":"49.12","supports":"Head is the medial/superior/posterior proximal articular surface; tubercles are adjacent, not part of the articular head."},
+    {"book":"Gray's Anatomy 42","pdfPage":1429,"figure":"50.3","supports":"Capitulum is lateral over the radial head; trochlea is medial against the ulna; olecranon reaches above the articular joint plane."}
+  ],
+  "references": {
+    "proximalHumerus": {"method":"BBox center of humerus vertices within 0.12 of superior y bound","vertices":713,"point":[-0.4144181013,0.8402049839,-0.0481168553],"role":"Stable whole-proximal-end proxy including tubercles"},
+    "humeralHeadSphereFit": {"method":"Least-squares sphere fit, manually restricted medial proximal vertices x > -0.42 and y > 0.81","vertices":426,"point":[-0.41408145,0.84282867,-0.05258099],"radius":0.05982099,"radialRmsResidual":0.00351677,"role":"Secondary numerical check, not a segmented articular head"},
+    "glenoidRegion": {"method":"BBox center of scapula vertices x < -0.34; y 0.79 to 0.875; z -0.11 to -0.015, manually selected region excluding most blade/acromion/coracoid","vertices":327,"point":[-0.3603716642,0.8325518370,-0.0785614327],"role":"Approximate lateral scapular articular-region proxy requiring visual anatomical judgment"},
+    "distalHumerus": {"method":"BBox center of humerus vertices within 0.10 of inferior y bound","vertices":358,"point":[-0.5354823172,0.1181045547,-0.0755749792],"role":"Distal end including epicondyles; not exact joint axis"},
+    "proximalRadius": {"method":"BBox center of radius vertices within 0.06 of superior y bound","vertices":58,"point":[-0.5936190188,0.0533142388,-0.0607689694],"role":"Radial head and neck region; excludes most shaft"},
+    "proximalUlna": {"method":"BBox center of ulna vertices within 0.10 of superior y bound","vertices":121,"point":[-0.5378586054,0.0817284286,-0.0877398513],"role":"Trochlear notch/olecranon region, not the articular joint plane"}
+  },
+  "diagnosis": "Existing humHead uses whole-humerus bbox x=-0.484648, roughly 0.07 lateral to the local proximal center; whole scapular center also pulls the glenoid proxy into the blade. Distal radius/ulna shaft centers similarly diverge from their proximal articular regions because the long bones are oblique. Repair procedural reference points, not all scan meshes.",
+  "projection": "joint-core-projections.png"
+}

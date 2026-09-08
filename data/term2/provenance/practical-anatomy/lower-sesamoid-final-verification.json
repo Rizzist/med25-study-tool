@@ -1,0 +1,103 @@
+{
+  "method": "Independently reread local OBJ bytes and recomputed SHA-256; fetched fresh pinned Git LFS pointers, verified their Git blob SHA-1 against the source tree and their asset OID/size against local OBJ bytes; recomputed baked coordinates with the established lower transform. Medial/lateral geometry is evaluated relative to the first-to-second ray vector, not filename.",
+  "pinnedTree": "4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b",
+  "transform": {
+    "scale": 0.00162186,
+    "translate": [
+      -0.13614,
+      -0.83198,
+      -0.176
+    ]
+  },
+  "firstMetatarsalDistal20PercentCentroid": [
+    0.0177453632005263,
+    -0.925987859229453,
+    0.12612899249389467
+  ],
+  "secondMetatarsalDistal20PercentCentroid": [
+    0.05163422384051281,
+    -0.9273962999488206,
+    0.11833397452564107
+  ],
+  "approximateLocalLateralUnitXZ": [
+    0.9745515428725289,
+    0,
+    -0.2241635346901311
+  ],
+  "files": [
+    {
+      "id": "practical-medial-hallux-sesamoid",
+      "label": "Medial sesamoid of hallux",
+      "vertices": 78,
+      "sha256": "4764ff663da6adf2b4068469ffd386d1e984a1cd100d1da1b0be98dd9f3b9834",
+      "descriptorSha256Matches": true,
+      "pinnedTreeSha1": "420d69f81e8e92f417a8a920967a57b6f5b63eb6",
+      "pinnedTreeBlobMatches": true,
+      "transformMatches": true,
+      "center": [
+        0.012146422758923062,
+        -0.9369100565468463,
+        0.11630032149923078
+      ],
+      "descriptorCenterMaxError": 0,
+      "plantarOffsetFromFirstMetatarsalDistalPart": 0.0109221973173933,
+      "lateralProjectionRelativeFirstMetatarsal": -0.0032532264143456096,
+      "min": [
+        0.00576431632799998,
+        -0.9422622631640001,
+        0.10869481696
+      ],
+      "max": [
+        0.016767663311999997,
+        -0.9318424614080001,
+        0.12364187871999999
+      ],
+      "assetGitBlobSha1": "c656aee59c49b2b80e89e5dfa70881a8986bec1f",
+      "pinnedPointerUrl": "https://raw.githubusercontent.com/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3266_BP23738_FMA45098_Sesamoid%20bone%20of%20left%20foot.obj",
+      "pinnedPointerSha256": "4764ff663da6adf2b4068469ffd386d1e984a1cd100d1da1b0be98dd9f3b9834",
+      "pinnedPointerGitBlobSha1": "420d69f81e8e92f417a8a920967a57b6f5b63eb6",
+      "pinnedLfsObjectMatches": true,
+      "sourceHashNote": "The repository tree hashes the Git LFS pointer, not the OBJ asset. Both pointer Git SHA-1 and referenced asset SHA-256 were independently verified."
+    },
+    {
+      "id": "practical-lateral-hallux-sesamoid",
+      "label": "Lateral sesamoid of hallux",
+      "vertices": 96,
+      "sha256": "bb2fc0cf69329d276d0272d2537e225ca73ad35e4b0d9ba71016883128b5ec69",
+      "descriptorSha256Matches": true,
+      "pinnedTreeSha1": "83703c25841ed797a050f32a482020d1d15499fe",
+      "pinnedTreeBlobMatches": true,
+      "transformMatches": true,
+      "center": [
+        0.02401522516862498,
+        -0.9382318380083129,
+        0.11065735203187498
+      ],
+      "descriptorCenterMaxError": 0,
+      "plantarOffsetFromFirstMetatarsalDistalPart": 0.012243978778859854,
+      "lateralProjectionRelativeFirstMetatarsal": 0.009578481268029546,
+      "min": [
+        0.017441059583999996,
+        -0.944363707166,
+        0.10075905598000001
+      ],
+      "max": [
+        0.031180808759999984,
+        -0.9324136805000001,
+        0.12160482255999999
+      ],
+      "assetGitBlobSha1": "5e4e5c1167d937768bddbc7a6a46670ded84474d",
+      "pinnedPointerUrl": "https://raw.githubusercontent.com/olivercase/body_parts_3d_api/4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b/meshes/FJ3270_BP23738_FMA45098_Sesamoid%20bone%20of%20left%20foot.obj",
+      "pinnedPointerSha256": "bb2fc0cf69329d276d0272d2537e225ca73ad35e4b0d9ba71016883128b5ec69",
+      "pinnedPointerGitBlobSha1": "83703c25841ed797a050f32a482020d1d15499fe",
+      "pinnedLfsObjectMatches": true,
+      "sourceHashNote": "The repository tree hashes the Git LFS pointer, not the OBJ asset. Both pointer Git SHA-1 and referenced asset SHA-256 were independently verified."
+    }
+  ],
+  "medialLateralAssignmentConfirmed": true,
+  "limitations": [
+    "First-ray head centroid and local medial/lateral direction are geometric approximations used as a consistency check, not an anatomical segmentation.",
+    "Files are left foot per pinned source metadata; medial/lateral names are assigned from geometry.",
+    "Both points are below the distal first metatarsal, supporting plantar sesamoid location; final integrated visual QA is still appropriate."
+  ]
+}

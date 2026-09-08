@@ -1,0 +1,63 @@
+{
+  "status": "passed-source-and-runtime-checks-browser-qa-pending",
+  "scope": "Read-only independent review of upper/lower mesh descriptors, exported GLBs, integration code, and local Gray42 source figures. No checkout edits.",
+  "blockingCorrections": [],
+  "sourceGeometryReport": "mesh-source-verification.json",
+  "verified": {
+    "newUpperStructures": 15,
+    "newLowerStructures": 38,
+    "sourceFilesHashMatch": true,
+    "sourceVertices": 46697,
+    "exportedVertices": 46697,
+    "unmatchedExportedVertices": 0,
+    "transform": "Exported Float32 coordinates match source OBJ vertices under x=rawX*s+tx, y=rawZ*s+ty, z=-rawY*s+tz. Nodes add no independent translation, rotation or scaling.",
+    "laterality": "Every new upper source name identifies right anatomy and has a negative raw-X center; every new lower source identifies left anatomy and has a positive raw-X center. Rhomboid vertebral origins cross the midline slightly but scapular bodies remain on the correct right side.",
+    "runtimeRegistration": "Supplement loads into the core scene before shared normalization; the attachment function does not independently normalize new meshes.",
+    "completeGroupReplacements": {
+      "upper": {
+        "carpal-bones": "All eight carpals, reusing existing pisiform plus seven new named bones.",
+        "biceps-brachii-muscle": "Long and short heads.",
+        "triceps-brachii-muscle": "Long, lateral and medial heads.",
+        "adductor-pollicis-muscle": "New oblique head plus existing transverse head.",
+        "extensor-carpi-radialis-muscles": "Existing longus and brevis named component meshes."
+      },
+      "lower": {
+        "quadriceps-femoris": "Rectus femoris and all three vasti, including new vastus intermedius.",
+        "biceps-femoris": "Long and short heads.",
+        "gastrocnemius": "Medial and lateral heads.",
+        "visual-flexor-hallucis-brevis": "Medial and lateral heads.",
+        "metatarsal-bones": "Five metatarsals.",
+        "toe-phalanges": "Fourteen phalanges, with no middle phalanx for the hallux."
+      }
+    },
+    "incompleteGroupHandling": "Intrinsic-foot-muscles is explicitly partial and preserveResidual=true in lower descriptors. Export generator only includes groups whose coverage starts with complete. It therefore does not delete the legacy intrinsic-foot residual.",
+    "sourceFigureChecks": [
+      "Gray42 PDF1472 and PDF1476: carpal relations and named carpal bones.",
+      "Gray42 PDF1400: rhomboids and shoulder-girdle musculature.",
+      "Gray42 PDF1403 and PDF1412: arm muscle heads and related anatomy.",
+      "Gray42 PDF2169 and PDF2170: obturator externus, posterior thigh and gluteal musculature.",
+      "Gray42 PDF2193: gastrocnemius heads and popliteal boundaries.",
+      "Gray42 PDF2266, PDF2268 and PDF2269: lumbricals, plantar interossei, adductor hallucis and flexor hallucis brevis."
+    ],
+    "headlessRuntimeValidation": {
+      "command": "node scripts/validate-anatomy3d.mjs",
+      "exitCode": 0,
+      "registeredModels": 8,
+      "upperLimb": {"structures": 146, "meshes": 147},
+      "lowerLimb": {"structures": 161, "meshes": 165}
+    }
+  },
+  "importantLimitations": [
+    "The 53 structures are verified source-derived surfaces, not a claim of clinical segmentation accuracy or complete anatomy.",
+    "Upper lane correctly leaves latissimus dorsi, palmaris brevis and the deep head of flexor pollicis brevis without a new independent model. The rejected mirrored whole FPB is not reused as its deep head.",
+    "Lower lane lacks independently verified extensor digitorum brevis and all four dorsal foot interossei; retaining an existing intrinsic-foot aggregate is not proof those components are present.",
+    "A source muscle mesh may contain its tendon portion, but that does not make the tendon a separately selectable validated structure.",
+    "Existing capsular, ligament, meniscal, neural and surface-landmark layers remain schematic where explicitly marked. Real-mesh counts are selectable source-derived targets, including group aliases, rather than a count of unique independently segmented anatomical organs.",
+    "This review establishes source identity, laterality and numerical registration. Final rendered visibility, occlusion, camera framing, selection highlighting and desktop scrolling still require browser verification."
+  ],
+  "nonBlockingRecommendations": [
+    "Expose the remaining source gaps in the user-facing study coverage and pair them with labeled 2D source figures.",
+    "Keep schematic labels visible for procedural geometry and avoid describing the overall atlas as completely modeled.",
+    "During browser QA, isolate a named carpal, gastrocnemius head, toe phalanx and intrinsic-foot component to verify the shared group aliases behave as intended."
+  ]
+}

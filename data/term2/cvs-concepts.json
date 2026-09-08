@@ -14338,6 +14338,257 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles",
+      "moduleId": "cvs-visual-atlas",
+      "subject": "anatomy",
+      "title": "Intercostal nerve and thoracic wall muscle layers",
+      "summary": "Name and locate the labeled anatomy in Intercostal nerve and thoracic wall muscle layers. Follow each original callout to its structure and explain its anatomical relationships. Reverse practice uses the authored callout boxes rather than pretending the whole structure is pixel-segmented. The original source figure identifies external intercostal in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+      "keyPoints": [
+        "External intercostal: The original source figure identifies external intercostal in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "External intercostal membrane: The original source figure identifies external intercostal membrane in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Internal intercostal membrane: The original source figure identifies internal intercostal membrane in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Anterior cutaneous branch of intercostal nerve: The original source figure identifies anterior cutaneous branch of intercostal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Transversus thoracis: The original source figure identifies transversus thoracis in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Internal intercostal: The original source figure identifies internal intercostal in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Innermost intercostal: The original source figure identifies innermost intercostal in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Sympathetic trunk: The original source figure identifies sympathetic trunk in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Grey ramus communicans: The original source figure identifies grey ramus communicans in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "White ramus communicans: The original source figure identifies white ramus communicans in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Spinal nerve: The original source figure identifies spinal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Lateral cutaneous branch of intercostal nerve: The original source figure identifies lateral cutaneous branch of intercostal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Serratus anterior: The original source figure identifies serratus anterior in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Intercostal nerve: The original source figure identifies intercostal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Dorsal ramus of spinal nerve: The original source figure identifies dorsal ramus of spinal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure.",
+        "Costal parietal pleura: The original source figure identifies costal parietal pleura in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+      ],
+      "examTraps": [
+        "Follow the complete leader line to its endpoint; a nearby structure can be a plausible distractor.",
+        "Check the viewing direction and laterality before naming a structure. The 3D view may show the other side of the same anatomical relationship."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Locate External intercostal and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies external intercostal in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate External intercostal membrane and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies external intercostal membrane in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Internal intercostal membrane and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies internal intercostal membrane in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Anterior cutaneous branch of intercostal nerve and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies anterior cutaneous branch of intercostal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Transversus thoracis and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies transversus thoracis in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Internal intercostal and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies internal intercostal in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Innermost intercostal and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies innermost intercostal in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Sympathetic trunk and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies sympathetic trunk in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Grey ramus communicans and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies grey ramus communicans in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate White ramus communicans and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies white ramus communicans in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Spinal nerve and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies spinal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Lateral cutaneous branch of intercostal nerve and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies lateral cutaneous branch of intercostal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Serratus anterior and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies serratus anterior in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Intercostal nerve and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies intercostal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Dorsal ramus of spinal nerve and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies dorsal ramus of spinal nerve in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        },
+        {
+          "prompt": "Locate Costal parietal pleura and describe its relationship to surrounding structures.",
+          "answer": "The original source figure identifies costal parietal pleura in intercostal nerve and thoracic wall muscle layers. Follow its retained leader line to locate the structure."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+          "edition": "42nd",
+          "chapter": "53",
+          "locator": "Page PDF page 1562 · 53.21",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal",
+          "text": "Name and locate External intercostal in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal-membrane",
+          "text": "Name and locate External intercostal membrane in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal-membrane-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal-membrane-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-external-intercostal-membrane"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal-membrane",
+          "text": "Name and locate Internal intercostal membrane in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal-membrane-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal-membrane-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal-membrane"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-anterior-cutaneous-branch-of-intercostal-nerve",
+          "text": "Name and locate Anterior cutaneous branch of intercostal nerve in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-anterior-cutaneous-branch-of-intercostal-nerve-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-anterior-cutaneous-branch-of-intercostal-nerve-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-anterior-cutaneous-branch-of-intercostal-nerve"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-transversus-thoracis",
+          "text": "Name and locate Transversus thoracis in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-transversus-thoracis-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-transversus-thoracis-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-transversus-thoracis"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal",
+          "text": "Name and locate Internal intercostal in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-internal-intercostal"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-innermost-intercostal",
+          "text": "Name and locate Innermost intercostal in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-innermost-intercostal-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-innermost-intercostal-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-innermost-intercostal"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-sympathetic-trunk",
+          "text": "Name and locate Sympathetic trunk in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-sympathetic-trunk-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-sympathetic-trunk-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-sympathetic-trunk"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-grey-ramus-communicans",
+          "text": "Name and locate Grey ramus communicans in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-grey-ramus-communicans-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-grey-ramus-communicans-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-grey-ramus-communicans"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-white-ramus-communicans",
+          "text": "Name and locate White ramus communicans in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-white-ramus-communicans-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-white-ramus-communicans-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-white-ramus-communicans"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-spinal-nerve",
+          "text": "Name and locate Spinal nerve in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-spinal-nerve-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-spinal-nerve-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-spinal-nerve"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-lateral-cutaneous-branch-of-intercostal-nerve",
+          "text": "Name and locate Lateral cutaneous branch of intercostal nerve in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-lateral-cutaneous-branch-of-intercostal-nerve-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-lateral-cutaneous-branch-of-intercostal-nerve-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-lateral-cutaneous-branch-of-intercostal-nerve"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-serratus-anterior",
+          "text": "Name and locate Serratus anterior in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-serratus-anterior-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-serratus-anterior-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-serratus-anterior"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-intercostal-nerve",
+          "text": "Name and locate Intercostal nerve in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-intercostal-nerve-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-intercostal-nerve-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-intercostal-nerve"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-dorsal-ramus-of-spinal-nerve",
+          "text": "Name and locate Dorsal ramus of spinal nerve in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-dorsal-ramus-of-spinal-nerve-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-dorsal-ramus-of-spinal-nerve-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-dorsal-ramus-of-spinal-nerve"
+          ]
+        },
+        {
+          "id": "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-costal-parietal-pleura",
+          "text": "Name and locate Costal parietal pleura in the original source figure and distinguish it from neighboring structures.",
+          "questionIds": [
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-costal-parietal-pleura-v1",
+            "anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-costal-parietal-pleura-v2",
+            "locate-anat-dyn-gap-2d-intercostal-nerve-muscles-intercostal-nerve-muscles-costal-parietal-pleura"
+          ]
+        }
+      ]
     }
   ],
   "sourceAudit": [
@@ -17592,6 +17843,16 @@
       "topic": "Valves and vessels at the ventricular base",
       "conceptIds": [
         "cvs-visual-atlas-cvs-2d-gray-valvular-base"
+      ],
+      "status": "mapped",
+      "note": "Original labeled figure inspected; each authored target has its own image identification questions and source locator."
+    },
+    {
+      "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",
+      "locator": "Page PDF page 1562 · 53.21",
+      "topic": "Intercostal nerve and thoracic wall muscle layers",
+      "conceptIds": [
+        "cvs-visual-atlas-gap-2d-intercostal-nerve-muscles"
       ],
       "status": "mapped",
       "note": "Original labeled figure inspected; each authored target has its own image identification questions and source locator."

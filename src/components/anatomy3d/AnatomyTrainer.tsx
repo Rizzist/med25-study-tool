@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import visualCatalog from "@/data/term2/anatomy-visual-images.json";
-import legacyCatalog from "@/data/term2/anatomy-images.json";
-import { buildAnatomyQuestions, type AnatomySourceImage } from "@/src/lib/mcq/dynamic-anatomy.mjs";
+import { anatomyImagesForExam } from "@/src/lib/anatomy3d/study-catalog";
+import { buildAnatomyQuestions } from "@/src/lib/mcq/dynamic-anatomy.mjs";
 import { listAnatomyModules } from "@/src/lib/anatomy3d/registry";
 import { buildAnatomyQuiz } from "@/src/lib/anatomy3d/quiz.mjs";
 import { parseAnatomySession, selectAnatomySession, type AnatomySessionItem } from "@/src/lib/anatomy3d/visual-session.mjs";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 import PairedAnatomyMedia from "./PairedAnatomyMedia";
 import AnatomyExplorer from "./AnatomyExplorer";
+import AnatomyStudyGallery from "./AnatomyStudyGallery";
 import { buildLocationQuestions, buildModelLocationQuestions, isLocationQuestion, locationOptionId, locationLabel, canRevealAnatomyFigure } from "@/src/lib/mcq/anatomy-location.mjs";
 import AnatomyLabelGame from "./AnatomyLabelGame";
 import { includeAdvancedAnatomyPractice } from "@/src/lib/mcq/advanced-anatomy.mjs";
@@ -19,11 +19,8 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
   const examId = regions.includes("cvs") ? "term2-cvs" : regions.includes("respiratory") ? "term2-respiratory" : "term2-limbs";
   const title = examId === "term2-cvs" ? "CVS" : examId === "term2-respiratory" ? "Respiratory" : "Upper & Lower Limbs";
   const storageKey = `med25.anatomy-visual.session.v2:${examId}`;
-  const pool = useMemo<MCQQuestion[]>(() => {
-    const images = [
-      ...(visualCatalog.images as AnatomySourceImage[]).filter((image) => image.examId === examId),
-      ...(examId === "term2-respiratory" ? legacyCatalog.images as AnatomySourceImage[] : []),
-    ];
+  const restorePool = useMemo<MCQQuestion[]>(() => {
+    const images = anatomyImagesForExam(examId, true).filter(image => image.regions.length >= 4);
     const diagrams = buildAnatomyQuestions(images);
     const models = modules.flatMap(({ manifest }) => buildAnatomyQuiz(manifest, { seed: "visual-atlas-v2" }).map((item) => ({
       schemaVersion: "1.0.0", id: `atlas-${item.id}`, revision: 1, status: "verified", kind: "dynamic_anatomy_3d", subject: "anatomy",
@@ -36,10 +33,14 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
     } as MCQQuestion)));
     return [...diagrams, ...buildLocationQuestions(diagrams), ...models, ...buildModelLocationQuestions(models, modules.map(item=>item.manifest))].filter(q=>includeAdvancedAnatomyPractice(q,modules.map(item=>item.manifest)));
   }, [examId, modules]);
+  const pool=useMemo(()=>{
+    const currentIds=new Set(anatomyImagesForExam(examId).map(image=>image.id));
+    return restorePool.filter(question=>!question.anatomy||currentIds.has(question.anatomy.imageId));
+  },[restorePool,examId]);
   const [initial] = useState(() => {
     try {
       if (typeof window !== "undefined") {
-        const saved = parseAnatomySession(window.localStorage.getItem(storageKey), pool) ?? parseAnatomySession(window.localStorage.getItem(storageKey.replace('.v2:', '.v1:')), pool);
+        const saved = parseAnatomySession(window.localStorage.getItem(storageKey), restorePool) ?? parseAnatomySession(window.localStorage.getItem(storageKey.replace('.v2:', '.v1:')), restorePool);
         if (saved) return saved;
       }
     } catch { /* Session still works without browser storage. */ }
@@ -59,6 +60,9 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
   const [activeDirection, setActiveDirection] = useState(direction);
   const [count, setCount] = useState(30);
   const [exploring, setExploring] = useState(false);
+  const [studying, setStudying] = useState(false);
+  const [galleryImageId,setGalleryImageId]=useState('');
+  const [exploreModelKey,setExploreModelKey]=useState<string>();
   const [labelGame, setLabelGame] = useState(false);
   const [settingsContainer, setSettingsContainer] = useState<HTMLDivElement | null>(null);
   const [reviewOpen, setReviewOpen] = useState(false);
@@ -87,7 +91,7 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
   function startDirection(next: "mixed" | "identify" | "locate") {
     setDirection(next); setActiveDirection(next);
     try {
-      const saved=parseAnatomySession(window.localStorage.getItem(`${storageKey}:mode:${next}`),pool);
+      const saved=parseAnatomySession(window.localStorage.getItem(`${storageKey}:mode:${next}`),restorePool);
       if(saved){setItems(saved.items);setAnswers(saved.answers);setLocations(saved.locations);setIndex(saved.index);setGraded(saved.graded);setFeedback(saved.feedback);setReviewOpen(false);return;}
     }catch{}
     setItems(selectAnatomySession(pool, {seed:`${Date.now()}`,count,moduleKey,format,direction:next,feedback:nextFeedback}));
@@ -97,7 +101,12 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
     setIndex(next); setReviewOpen(false);
     if (window.matchMedia("(max-width: 700px)").matches) questionRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
   }
-  if (exploring) return <div className="anatomy-explorer-shell"><button type="button" className="anatomy-explorer-back" onClick={() => setExploring(false)}>← Back to anatomy test</button><AnatomyExplorer regions={regions} /></div>;
+  const exploreRegion=listAnatomyModules().find(item=>item.manifest.modelKey===exploreModelKey)?.manifest.region;
+  const explorer=<div className="anatomy-explorer-shell"><div className="anatomy-study-modes"><button type="button" className="anatomy-explorer-back" onClick={() => {setExploring(false);setStudying(false);}}>← Back to anatomy test</button><button type="button" onClick={() => {setExploring(false);setStudying(true);}}>Study 2D · labeled figures</button></div><AnatomyExplorer regions={exploreRegion&&!regions.includes(exploreRegion)?[exploreRegion]:regions} initialModelKey={exploreModelKey} /></div>;
+  // Keep the gallery mounted while exploring: filters, masked labels and the
+  // current practice target/answer survive a 2D → 3D → 2D round trip.
+  if (studying) return <><div hidden={exploring}><AnatomyStudyGallery examId={examId} initialImageId={galleryImageId} onImageChange={setGalleryImageId} onExit={() => setStudying(false)} onExplore={key => {setExploreModelKey(key);setExploring(true);}} /></div>{exploring&&explorer}</>;
+  if (exploring) return explorer;
   if (labelGame) return <AnatomyLabelGame examId={examId} modules={modules.map(item=>item.manifest)} onExit={() => setLabelGame(false)} />;
   const item = items[index];
   const question = item?.question;
@@ -114,7 +123,7 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
       <div className="anatomy-exam-title"><b>{title} · Anatomy</b><span>{question && isLocationQuestion(question) ? "Find the location" : "Identification MCQ"} · Question {items.length ? index + 1 : 0} of {items.length} · {graded ? `${correct} / ${items.length} correct` : `${answered} answered`}</span>
         <div className="anatomy-practice-modes" aria-label="Start an anatomy activity"><button type="button" aria-pressed={activeDirection==='identify'} onClick={()=>startDirection("identify")}>Identify · MCQs</button><button type="button" aria-pressed={activeDirection==='locate'} onClick={()=>startDirection("locate")}>Find · click location</button><button type="button" aria-pressed={activeDirection==='mixed'} onClick={()=>startDirection("mixed")}>Mixed</button><button type="button" onClick={()=>setLabelGame(true)}>Drag labels</button></div>
       </div>
-      <button type="button" className="anatomy-settings-trigger" aria-expanded={settings} aria-controls="anatomy-exam-settings" onClick={() => setSettings(!settings)}>⚙ Settings</button>
+      <div className="anatomy-study-modes"><button type="button" onClick={() => setStudying(true)}>Study 2D figures</button><button type="button" className="anatomy-settings-trigger" aria-expanded={settings} aria-controls="anatomy-exam-settings" onClick={() => setSettings(!settings)}>⚙ Settings</button></div>
     </header>
     {settings && <section id="anatomy-exam-settings" className="anatomy-exam-settings" aria-label="Anatomy test settings">
       <div className="anatomy-settings-heading"><h2>Test settings</h2><button type="button" onClick={() => setSettings(false)} aria-label="Close settings">×</button></div>

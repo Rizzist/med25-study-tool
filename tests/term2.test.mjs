@@ -128,7 +128,7 @@ test("deployed API exposes each source-grounded Term 2 bank only in its own exam
     [limbs, {total:863, anatomy:863, embryology:0, dynamic:722, images:690, models:32}],
     [biochemistry, {total:196, biochemistry:196, dynamic:0, images:0, models:0}],
   ]) {
-    const added = bank.filter(q => q.tags.includes(`exam-${exam.id}`) && q.tags.some(tag => ["depth-expansion", "comprehensive-expansion", "anatomy-location-practice"].includes(tag)));
+    const added = bank.filter(q => q.tags.includes(`exam-${exam.id}`) && q.tags.some(tag => ["depth-expansion", "comprehensive-expansion", "anatomy-location-practice", "practical-anatomy-expansion"].includes(tag)));
     const removed=bank.filter(q=>q.tags.includes(`exam-${exam.id}`)&&retirements[q.id]);
     assert.equal(bank.filter(q=>q.tags.includes(`exam-${exam.id}`)).length,baseline.total+added.length,'Source archive remains intact');
     assert.equal(exam.questionCount, baseline.total + added.length-removed.length, `${exam.id}: only active practice counted`);

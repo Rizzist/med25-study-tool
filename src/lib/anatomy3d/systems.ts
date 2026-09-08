@@ -17,6 +17,8 @@ export type AnatomySystem =
   | "nerves"
   | "fat"
   | "connective"
+  | "ligaments"
+  | "tendons"
   | "organs";
 
 // Every Tissue maps to exactly one system. Typed as `Record<Tissue, …>` so `tsc` refuses to compile
@@ -35,8 +37,8 @@ export const tissueToSystem: Record<Tissue, AnatomySystem> = {
   vein: "veins",
   nerve: "nerves",
   fat: "fat",
-  ligament: "connective",
-  tendon: "connective",
+  ligament: "ligaments",
+  tendon: "tendons",
   fascia: "connective",
   membrane: "connective",
   lung: "organs",
@@ -62,6 +64,8 @@ export const SYSTEMS: AnatomySystemMeta[] = [
   { id: "nerves", label: "Nerves", order: 7 },
   { id: "fat", label: "Fat", order: 8 },
   { id: "connective", label: "Connective tissue", order: 9 },
+  { id: "ligaments", label: "Ligaments", order: 9.1 },
+  { id: "tendons", label: "Tendons", order: 9.2 },
   { id: "organs", label: "Organs", order: 10 },
 ];
 

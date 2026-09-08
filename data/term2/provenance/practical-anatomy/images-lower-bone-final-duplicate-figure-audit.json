@@ -1,0 +1,82 @@
+{
+  "baselineAndCurrentImageCount": 80,
+  "proposedImageCount": 8,
+  "allExactSourceFiguresNew": true,
+  "rows": [
+    {
+      "imageId": "gap3-2d-hip-bone-internal",
+      "figure": "77.5",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [],
+      "supersedesImageIds": [],
+      "finding": "No baseline/current source-figure duplicate."
+    },
+    {
+      "imageId": "gap3-2d-femur-anterior-complete",
+      "figure": "77.11",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [],
+      "supersedesImageIds": [],
+      "finding": "No baseline/current source-figure duplicate."
+    },
+    {
+      "imageId": "gap3-2d-femur-posterior-complete",
+      "figure": "77.12",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [],
+      "supersedesImageIds": [],
+      "finding": "No baseline/current source-figure duplicate."
+    },
+    {
+      "imageId": "gap3-2d-tibia-fibula-posterior",
+      "figure": "78.8",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [],
+      "supersedesImageIds": [],
+      "finding": "No baseline/current source-figure duplicate."
+    },
+    {
+      "imageId": "gap3-2d-patella-surfaces",
+      "figure": "78.10",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [],
+      "supersedesImageIds": [],
+      "finding": "No baseline/current source-figure duplicate."
+    },
+    {
+      "imageId": "gap3-2d-tibial-plateau-osteology",
+      "figure": "78.13",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [],
+      "supersedesImageIds": [],
+      "finding": "No baseline/current source-figure duplicate."
+    },
+    {
+      "imageId": "gap3-2d-calcaneus-surfaces",
+      "figure": "79.9B",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [
+        {
+          "id": "limbs-2d-foot-bones",
+          "figure": "79.9A"
+        }
+      ],
+      "supersedesImageIds": [],
+      "finding": "New complementary B or C panel. Existing limbs-2d-foot-bones is panel A; do not suppress it."
+    },
+    {
+      "imageId": "gap3-2d-talus-surfaces",
+      "figure": "79.9C",
+      "exactSourceFigureMatches": [],
+      "sameParentFigureDifferentPanel": [
+        {
+          "id": "limbs-2d-foot-bones",
+          "figure": "79.9A"
+        }
+      ],
+      "supersedesImageIds": [],
+      "finding": "New complementary B or C panel. Existing limbs-2d-foot-bones is panel A; do not suppress it."
+    }
+  ],
+  "conclusion": "No supersession is needed for these eight images. The only common parent figure is 79.9: baseline is A, new separate crops are B and C. Different images on the same PDF page (e.g. femur 77.12 versus 77.13) are not duplicate figures."
+}

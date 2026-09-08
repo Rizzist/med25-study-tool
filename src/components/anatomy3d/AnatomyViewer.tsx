@@ -87,6 +87,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
   const labelsLayerRef = useRef<HTMLDivElement>(null);
   const statusRef = useRef<HTMLParagraphElement>(null);
   const runtimeRef = useRef<RuntimeApi | null>(null);
+  const zoomRef = useRef<((delta: number) => void) | null>(null);
   const queuedModelRef = useRef(modelKey);
   const queuedFocusRef = useRef<string | null>(focusStructureId);
   const pickEnabledRef = useRef(pickEnabled);
@@ -318,7 +319,8 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
       // because three's raycaster ignores `.visible`.
       function applyHiddenVisibility() {
         if (!currentHandle) return;
-        const visibleObjects = new Set([...currentHandle.structures].filter(([id]) => !hiddenIds.has(id) && (!isolatedRef.current || !focusedId || id === focusedId)).flatMap(([, objects]) => objects));
+        const landmarkParent = activeManifest?.structures.find(structure => structure.id === focusedId)?.landmarkOf;
+        const visibleObjects = new Set([...currentHandle.structures].filter(([id]) => !hiddenIds.has(id) && (!isolatedRef.current || !focusedId || id === focusedId || id === landmarkParent)).flatMap(([, objects]) => objects));
         for (const objects of currentHandle.structures.values()) {
           for (const object of objects) object.visible = visibleObjects.has(object) && (!object.userData.studyGuideEnvelope || showCoversRef.current || surfaceModeRef.current === "xray" || Boolean(currentHandle.structures.get(focusedId ?? "")?.includes(object)));
         }
@@ -661,17 +663,24 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
       }
 
       function onWheel(event: WheelEvent) {
+        // Ordinary trackpad scrolling must reach the document, even over the large canvas.
+        // Pinch gestures (ctrlKey) and Option-scroll deliberately zoom the model.
+        if (!event.ctrlKey && !event.altKey) return;
         event.preventDefault();
+        zoomModel(event.deltaY);
+      }
+      function zoomModel(delta: number) {
         if (flight) {
           camera.position.copy(flight.toPosition);
           orbitTarget.copy(flight.toTarget);
           flight = null;
         }
         const offset = camera.position.clone().sub(orbitTarget);
-        const distance = THREE.MathUtils.clamp(offset.length() * Math.exp(event.deltaY * 0.001), 0.025, 20);
+        const distance = THREE.MathUtils.clamp(offset.length() * Math.exp(delta * 0.001), 0.025, 20);
         camera.position.copy(orbitTarget).add(offset.setLength(distance));
         lastActivity = performance.now();
       }
+      zoomRef.current = zoomModel;
 
       canvas.addEventListener("pointerdown", onPointerDown);
       canvas.addEventListener("pointermove", onPointerMove);
@@ -745,6 +754,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
       cancelled = true;
       loadToken += 1;
       runtimeRef.current = null;
+      zoomRef.current = null;
       cancelAnimationFrame(animationFrame);
       resizeObserver?.disconnect();
       removeEvents();
@@ -771,10 +781,11 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
 
   return (
     <div className={`anatomy3d-stage ${className}`.trim()}>
-      <canvas ref={canvasRef} className="anatomy3d-canvas" tabIndex={0} aria-label="Interactive 3D anatomy model. Drag or use arrow keys to orbit; scroll to zoom." />
+      <canvas ref={canvasRef} className="anatomy3d-canvas" tabIndex={0} aria-label="Interactive 3D anatomy model. Drag or use arrow keys to orbit. Pinch, Option-scroll, or use the zoom buttons to zoom. Ordinary scrolling moves the page." />
       <div ref={labelsLayerRef} className="anatomy3d-labels" aria-hidden="true" />
       <p ref={statusRef} className="anatomy3d-status" role="status">Loading anatomy model…</p>
       <div className="anatomy3d-clarity" aria-label="Model clarity">
+        <button type="button" aria-label="Zoom in on anatomy" onClick={() => zoomRef.current?.(-180)}>＋</button><button type="button" aria-label="Zoom out of anatomy" onClick={() => zoomRef.current?.(180)}>−</button>
         <button type="button" aria-pressed={surfaceMode === "xray"} onClick={() => setSurfaceMode(mode => mode === "solid" ? "xray" : "solid")}>{surfaceMode === "solid" ? "Solid · X-ray off" : "X-ray on"}</button>
         {focusStructureId && <><button type="button" aria-pressed={isolated} onClick={() => setIsolated(value => !value)}>{isolated ? "Show context" : "Isolate target"}</button><button type="button" onClick={() => runtimeRef.current?.focusStructure(focusStructureId)}>Center target</button></>}
         <button type="button" aria-pressed={autoOrbit} onClick={() => setAutoOrbit(value => !value)}>{autoOrbit ? "Pause orbit" : "Auto orbit"}</button>
@@ -820,7 +831,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
           </div>
         )}
       </div>
-      {controlsVisible && <p className="anatomy3d-viewer-hint">Drag to rotate · Scroll to zoom · Slice in anatomical planes{pickEnabled ? " · Click a structure" : ""}</p>}
+      {controlsVisible && <p className="anatomy3d-viewer-hint">Drag to rotate · Pinch / Option-scroll to zoom · Scroll moves page{pickEnabled ? " · Click a structure" : ""}</p>}
       {modelKey.includes("thoracic-wall") && <p className="anatomy3d-asset-credit">Cartilage: BodyParts3D / DBCLS · <a href="https://creativecommons.org/licenses/by-sa/2.1/jp/" target="_blank" rel="noreferrer">CC BY-SA 2.1 JP</a> · <a href="/anatomy3d/cvs/costal-cartilages.provenance.json" target="_blank" rel="noreferrer">Aligned source meshes</a></p>}
     </div>
   );

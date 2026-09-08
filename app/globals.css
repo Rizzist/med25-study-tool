@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* Study mode is a document, not a fixed-height exam: every source and control stays reachable. */
+.anatomy-study-gallery{max-width:1320px;margin:auto;padding:18px 0 32px;font-size:1rem}
+.anatomy-study-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.anatomy-study-header h1{font-size:1.65rem;margin:0 0 6px}.anatomy-study-header p{margin:0;color:#50635b}
+.anatomy-study-context-note{font-size:.8rem;color:#50635b;line-height:1.5;margin:10px 0}
+.anatomy-study-gallery button,.anatomy-study-modes button{font:inherit;font-size:.9rem;min-height:38px;padding:8px 12px;background:white;color:#1c4232;border:1px solid #aebfb6;border-radius:6px;cursor:pointer}
+.anatomy-study-gallery button[aria-pressed=true]{background:#224d40;color:white}
+.anatomy-coverage-checklist{border:1px solid #bdccc3;border-radius:8px;background:#fff;padding:14px;margin:14px 0;font-size:.9rem;line-height:1.5}.anatomy-coverage-checklist summary{cursor:pointer;font-weight:700}.anatomy-coverage-checklist p{max-width:1000px;margin:12px 0;color:#475e51}.anatomy-coverage-filters{display:flex;align-items:end;flex-wrap:wrap;gap:14px;margin:14px 0}.anatomy-coverage-filters label{display:grid;gap:4px}.anatomy-coverage-filters input,.anatomy-coverage-filters select{padding:8px;border:1px solid #aebfb6;border-radius:5px;max-width:100%;font:inherit}.anatomy-coverage-table{max-width:100%;overflow:auto}.anatomy-coverage-table table{width:100%;min-width:560px;border-collapse:collapse;text-align:left}.anatomy-coverage-table th,.anatomy-coverage-table td{padding:10px;vertical-align:top;border-bottom:1px solid #d8e0db}.anatomy-coverage-table th{width:28%}.anatomy-coverage-table small,.anatomy-coverage-table a{display:block;font-size:.8rem;font-weight:400;margin-top:5px}.anatomy-coverage-table a{color:#126b4b;text-decoration:underline}
+.anatomy-study-gallery .anatomy-location-hotspot,.anatomy-study-gallery .anatomy-hotspot{min-height:0;min-width:0;padding:0;border-radius:2px;font-size:clamp(9px,1vw,13px)}
+.anatomy-study-controls{display:grid;grid-template-columns:180px 1fr 1.4fr;gap:14px}
+.anatomy-study-controls label{display:grid;gap:5px;font-size:.9rem;min-width:0}.anatomy-study-controls input,.anatomy-study-controls select{width:100%;font:inherit;padding:10px;border:1px solid #aebfb6;background:white;border-radius:5px;color:#19382b}
+.anatomy-study-navigation,.anatomy-study-modes,.anatomy-study-prompt{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.anatomy-study-navigation{justify-content:space-between;padding:14px 0}.anatomy-study-modes{margin:8px 0}.anatomy-study-prompt{justify-content:space-between}
+.anatomy-study-figure{background:white;padding:18px;border:1px solid #d0dcd5;border-radius:8px}.anatomy-study-figure h2{font-size:1.3rem;margin:0 0 12px}.anatomy-study-prompt h3{font-size:1.1rem;line-height:1.5;margin:12px 0}
+.anatomy-study-image-scroll{overflow:auto;overscroll-behavior:auto;padding:8px 0}.anatomy-study-image{position:relative;width:fit-content;margin:auto;max-width:100%;line-height:0}.anatomy-study-image img{display:block;max-width:100%;max-height:78dvh;width:auto;height:auto}.anatomy-study-image-scroll.large{max-height:82dvh}.anatomy-study-image-scroll.large .anatomy-study-image{width:1400px;max-width:none}.anatomy-study-image-scroll.large img{max-height:none;width:100%}
+.anatomy-study-source{font-size:.875rem;line-height:1.5;color:#50635b;overflow-wrap:anywhere;border-top:1px solid #d8e0db;padding-top:14px;margin-top:16px}.anatomy-study-result{padding:14px;background:#eff5ef;line-height:1.6}.anatomy-study-figure details{margin-top:16px}.anatomy-study-figure summary{cursor:pointer}.anatomy-study-figure dt{font-weight:700;margin-top:14px}.anatomy-study-figure dd{margin:4px 0;line-height:1.6;color:#45594f}
+.anatomy-explorer-shell .anatomy3d-header{padding:12px 16px}.anatomy-explorer-shell .anatomy3d-header h2{font-size:1.6rem}.anatomy-explorer-shell .anatomy3d-header p:not(.eyebrow):not(.anatomy3d-coverage-summary){font-size:.9rem;line-height:1.5;max-width:900px}
+.anatomy-explorer-shell .anatomy3d-panel{max-height:none;overflow:visible}.anatomy-explorer-shell .anatomy3d-structure-list{max-height:480px;overscroll-behavior:auto}
+@media(max-width:760px){.anatomy-study-controls{grid-template-columns:1fr}.anatomy-study-header{align-items:flex-start}.anatomy-study-header h1{font-size:1.3rem}.anatomy-study-figure{padding:10px}.anatomy-study-gallery{padding:12px 0}.anatomy-study-header>button{flex-shrink:0;max-width:110px}}
+
 .anatomy-paired-media > .anatomy-model-location { flex: 1; min-height: 0; display: flex; flex-direction: column; }
 .anatomy3d-asset-credit { position: absolute; bottom: 3px; right: 8px; margin: 0; padding: 2px 5px; font-size: 9px; color: #eff5ef; background: #18392ccc; z-index: 4; }
 .anatomy3d-asset-credit a { text-decoration: underline; }
@@ -381,6 +400,7 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 .source-label-mask { position:absolute; background:#fff; z-index:1; pointer-events:none; }
 .anatomy-location-hotspot{position:absolute;z-index:3;min-width:0;min-height:0;border:1px solid #486a89;border-radius:3px;background:#edf4f9e8;color:#173b59;padding:0;line-height:1;cursor:crosshair;font-size:clamp(9px,1vw,13px)}
 .anatomy-location-hotspot:hover,.anatomy-location-hotspot:focus-visible{outline:2px solid #173b59;outline-offset:2px}.anatomy-location-hotspot.picked{background:#bcd7ed;border:2px solid #173b59}
+.anatomy-badge-leaders{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;overflow:visible}.anatomy-badge-leaders line{stroke:#254d70;stroke-width:1}.anatomy-badge-leaders circle{fill:#254d70}.anatomy-location-hotspot.anatomy-location-badge{border-radius:4px;font-size:11px;background:#edf4f9;color:#173b59;line-height:1;display:grid;place-items:center}
 .anatomy-location-response{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:0 0 auto;padding:8px 0;font-size:.85rem;line-height:1.3}.anatomy-location-response button{flex-shrink:0;padding:8px 12px;border:1px solid #173b59;border-radius:5px;background:#173b59;color:#fff}.anatomy-location-response button:disabled{opacity:.45}.anatomy-location-instruction,.anatomy-location-feedback{font-size:.875rem;line-height:1.4;margin:4px 0;color:#315448}
 .anatomy-exam .anatomy-image-test.anatomy-location-image:not(.expanded) .anatomy-stage>img{max-height:calc(100cqh - 70px)}
 .anatomy-target { position:absolute; transform:translate(-50%,-50%); width:16px; height:16px; border:2px solid #b63922; border-radius:50%; background:transparent; box-shadow:0 0 0 1px white; pointer-events:none; z-index:3; }
@@ -388,6 +408,8 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 
 /* Source figures and matching models share one uncluttered examination surface. */
 .anatomy-test-immersive{min-height:100dvh;background:#f4f6f7;color:#172823;padding:0 24px 30px}
+/* The dashboard locks its own desktop viewport; the stand-alone atlas must scroll. */
+html:has(.anatomy-test-immersive),body:has(.anatomy-test-immersive){height:auto;min-height:100%;overflow-x:clip;overflow-y:auto}
 .depth-practice-panel{margin:24px 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .depth-practice-panel h2{font-size:1.25rem;margin:0 0 8px}.depth-practice-panel p{max-width:850px;font-size:1rem;line-height:1.6;color:var(--muted)}
 .depth-practice-panel table{width:100%;border-collapse:collapse;font-size:.9rem}.depth-practice-panel th,.depth-practice-panel td{padding:12px;text-align:left;border-bottom:1px solid var(--line)}
@@ -453,22 +475,22 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 .anatomy-review-options h3{font-size:1rem;margin:0 0 8px}
 .anatomy-review-options p{font-size:.95rem;line-height:1.6;margin:0}
 @media(min-width:701px){
-  .anatomy-test-immersive{height:100dvh;min-height:0;padding:0 18px;overflow:hidden}
+  .anatomy-test-immersive{height:auto;min-height:100dvh;padding:0 18px 24px;overflow:visible}
   .anatomy-test-immersive:has(.anatomy-explorer-shell){height:auto;min-height:100dvh;overflow:visible}
-  .anatomy-exam{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto;max-width:1320px}
+  .anatomy-exam{min-height:100dvh;display:grid;grid-template-rows:auto minmax(400px,1fr) auto;max-width:1320px}
   .anatomy-exam-header{padding:8px 0;margin:0;gap:12px;border:0;min-height:52px}
   .anatomy-settings-trigger{padding:7px 12px;font-size:.85rem;white-space:nowrap}
-  .anatomy-exam-question{min-height:0;display:grid;grid-template-rows:minmax(0,1fr) auto auto;gap:9px;padding:0 18px 12px;overflow:hidden}
-  .anatomy-exam-question>.anatomy-paired-media{min-height:0;display:flex;flex-direction:column;overflow:hidden}
+  .anatomy-exam-question{min-height:0;display:grid;grid-template-rows:minmax(280px,1fr) auto auto;gap:9px;padding:0 18px 12px;overflow:visible}
+  .anatomy-exam-question>.anatomy-paired-media{min-height:0;display:flex;flex-direction:column;overflow:visible}
   .anatomy-exam .anatomy-view-bar{min-height:34px;flex-shrink:0}
   .anatomy-exam .anatomy-view-bar>div>button{padding:7px 12px;font-size:.8rem;border-bottom-width:2px}
-  .anatomy-exam .anatomy-image-test{flex:1;min-height:0;padding:26px 0 0;display:flex;flex-direction:column;container-type:size}
+  .anatomy-exam .anatomy-image-test{flex:1;min-height:280px;padding:26px 0 0;display:flex;flex-direction:column;container-type:normal}
   .anatomy-exam .anatomy-image-test .anatomy-toolbar button{min-height:24px;font-size:.72rem}
-  .anatomy-exam .anatomy-image-test .anatomy-scroll{flex:1;min-height:0;max-height:none;display:flex;align-items:center}
+  .anatomy-exam .anatomy-image-test .anatomy-scroll{flex:1;min-height:0;max-height:none;display:flex;align-items:center;overscroll-behavior:auto}
   .anatomy-exam .anatomy-image-test:not(.expanded) .anatomy-stage{flex:0 1 auto;max-height:100%}
-  .anatomy-exam .anatomy-image-test:not(.expanded) .anatomy-stage>img{max-height:100cqh;max-width:100%;width:auto;height:auto}
+  .anatomy-exam .anatomy-image-test:not(.expanded) .anatomy-stage>img{max-height:max(280px,calc(100dvh - 350px));max-width:100%;width:auto;height:auto}
   .anatomy-exam .anatomy-image-test.expanded .anatomy-scroll{display:block}
-  .anatomy-exam .anatomy-exam-viewer{flex:1;min-height:0;height:auto;margin-top:6px}
+  .anatomy-exam .anatomy-exam-viewer{flex:1;min-height:320px;height:48dvh;margin-top:6px}
   .anatomy-exam .anatomy-fidelity{flex-shrink:0;font-size:.72rem;line-height:1.25;margin:4px 0 0}
   .anatomy-exam-question h1{font-size:clamp(1rem,1.8dvh,1.25rem);line-height:1.3;margin:0}
   .anatomy-exam-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}

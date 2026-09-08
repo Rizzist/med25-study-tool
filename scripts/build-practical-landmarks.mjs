@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+const [upperPath,lowerPath]=process.argv.slice(2);
+if(!upperPath||!lowerPath)throw new Error('Supply reviewed upper and lower landmark JSON');
+const upper=JSON.parse(fs.readFileSync(upperPath,'utf8')),lower=JSON.parse(fs.readFileSync(lowerPath,'utf8'));
+const views={anterior:{azimuth:0,elevation:0},posterior:{azimuth:Math.PI,elevation:0},medial:{azimuth:-Math.PI/2,elevation:0},lateral:{azimuth:Math.PI/2,elevation:0},superior:{azimuth:0,elevation:1.15},inferior:{azimuth:0,elevation:-1.15}};
+const modules=Object.fromEntries([['upper-limb',upper.anchors],['lower-limb',lower.landmarks]].map(([key,items])=>[key,items.map(item=>({id:item.id,label:item.label,tissue:'bone',landmarkOf:item.parentStructureId??item.parentId,description:item.description,keyPoints:[item.description,'Surface-pinned landmark marker. Use the labeled book figure to learn the full shape and extent; this is not an independently segmented anatomical surface.'],difficulty:2,schematic:true,position:item.point??item.position,radius:item.markerRadius??item.radius??.004,view:views[item.viewHemisphere??item.view]??views.anterior,sourceEvidence:item.sourceEvidence??item.evidence}))]));
+fs.writeFileSync(path.join(root,'src/lib/anatomy3d/manifests/practical-landmarks.mjs'),`// Reviewed surface locations on the original source skeleton; schematic study markers.\nexport const practicalLandmarkModules = ${JSON.stringify(modules,null,2)};\nexport const practicalLandmarkStructures = key => practicalLandmarkModules[key]?.map(({position,radius,...structure})=>{void position;void radius;return structure;}) ?? [];\n`);
+fs.mkdirSync(path.join(root,'data/term2/provenance/practical-anatomy'),{recursive:true});
+fs.writeFileSync(path.join(root,'data/term2/provenance/practical-anatomy/landmark-evidence.json'),JSON.stringify({upper,lower},null,2)+'\n');
+console.log(Object.entries(modules).map(([key,entries])=>`${key}: ${entries.length} landmark pins`).join('\n'));
