@@ -83,8 +83,8 @@
     },
     {
       "id": "cvs-undated-student-2023",
-      "title": "TUMS student paper · filename “2023”",
-      "note": "A different paper from January 2023. Original pages are out of order and several right edges are cropped. Date and missing questions remain unconfirmed.",
+      "title": "CVS Final · February 2023 semester · clearer copy (IZAM)",
+      "note": "Clearer alternate paper supplied by IZAM; February 2023 semester cover but internally inconsistent printed examination date (Jun 03, 2021). Same 99-question paper as existing cvs-undated-student-2023. No new exam identity or question count invented. The 99 MCQs are not duplicated. Eleven previously unanswerable cropped items now have worked answers; two pre-existing defective questions remain qualified/ungraded. Eight short-answer questions named on the cover are absent.",
       "count": 99,
       "keyed": 0,
       "file": "/study/cvs-past-papers/cvs-undated-student-2023/paper.json",
@@ -110,6 +110,56 @@
       "file": "/study/cvs-past-papers/cvs-undated-answered-fragment/paper.json",
       "fingerprint": "bba92222eae2e99be04953286a3cfb2351d94f21b055a4663d114001e51640c3",
       "category": "Undated supplied paper / fragment"
+    },
+    {
+      "id": "cvs-izam-circulation",
+      "title": "IUMS circulation test · photographed fragment (IZAM)",
+      "note": "26 question screenshots plus one status screen, supplied by IZAM. The visible platform is Iran University of Medical Sciences (IUMS), not TUMS; screenshots show 14 December 2021. Original question order retained where legible. Two ambiguous items withheld from automatic questions; see import notes.",
+      "count": 24,
+      "keyed": 0,
+      "file": "/study/cvs-past-papers/cvs-izam-circulation/paper.json",
+      "fingerprint": "e8075649bbc71995e8db5536692d9f9355de3edb9c88c8ce4580bd68ea237a6d",
+      "category": "IZAM · supplied test fragments (institution noted)"
+    },
+    {
+      "id": "cvs-izam-cardiac-screens-a",
+      "title": "IUMS cardiac physiology · screenshot set A (IZAM)",
+      "note": "Supplied past-test screenshot collection from ve.iums.ac.ir (IUMS), not a complete TUMS final. Duplicate page 4 is represented once by clearer page 16. Ambiguous/unkeyable items are retained in the local archive, not auto-graded.",
+      "count": 13,
+      "keyed": 0,
+      "file": "/study/cvs-past-papers/cvs-izam-cardiac-screens-a/paper.json",
+      "fingerprint": "5580a18e1300ec9aac65efa40d3dc39d46a895acf1191b197794a95057d72b1c",
+      "category": "IZAM · supplied test fragments (institution noted)"
+    },
+    {
+      "id": "cvs-izam-cardiac-screens-b",
+      "title": "IUMS cardiac physiology · screenshot set B (IZAM)",
+      "note": "Separate supplied IUMS online-test screenshots. Kept distinct from set A because question wording and choice order differ. Blank screen and questions without a reliable single answer are documented separately.",
+      "count": 10,
+      "keyed": 0,
+      "file": "/study/cvs-past-papers/cvs-izam-cardiac-screens-b/paper.json",
+      "fingerprint": "83a98f0a4fe4dec583fa01672b35a0ec77c624337dc93d424e53b2564ed6f5bd",
+      "category": "IZAM · supplied test fragments (institution noted)"
+    },
+    {
+      "id": "cvs-izam-cardiac-ions",
+      "title": "Cardiac physiology test · ionic/ECG fragment (IZAM)",
+      "note": "15 numbered supplied test screenshots with no visible institution/date on the cropped question panels. Original source pages retained; no official answer key claimed. Four ambiguous questions are archived separately.",
+      "count": 11,
+      "keyed": 0,
+      "file": "/study/cvs-past-papers/cvs-izam-cardiac-ions/paper.json",
+      "fingerprint": "c37b99386d8e649a3afbaada3b7d0c6788b0daee89111e4ab516053f429f9bcb",
+      "category": "IZAM · supplied test fragments (institution noted)"
+    },
+    {
+      "id": "cvs-izam-mixed-cvs-fragments",
+      "title": "CVS & blood questions · mixed photographed fragments (IZAM)",
+      "note": "Mixed supplied exam pages, not asserted to be one complete sitting. CVS/blood items only; respiratory and skeletal-muscle questions stay in the source archive. Printed question numbers are retained with PDF page identifiers to distinguish separate sequences.",
+      "count": 12,
+      "keyed": 0,
+      "file": "/study/cvs-past-papers/cvs-izam-mixed-cvs-fragments/paper.json",
+      "fingerprint": "936b54ed4b21a9dfec09e0c7f1fd618d6025717f08a02d78e8f466269fc0e02b",
+      "category": "IZAM · supplied test fragments (institution noted)"
     }
   ],
   "referenceNote": "Snell textbook MCQs, cvs_doc1, Sarmad, Alzahraa and unmatched mixed-photo fragments are preserved in the medical archive, not asserted to be confirmed past exams. Source transcripts include all pages; unresolved OCR and key provenance are disclosed per paper."

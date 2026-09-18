@@ -1,0 +1,1049 @@
+{
+  "revision": "2026-09-19-izam-v1",
+  "sets": [
+    {
+      "id": "cvs-izam-circulation",
+      "title": "IUMS circulation test · photographed fragment (IZAM)",
+      "source": "8bac67ca72b0",
+      "note": "26 question screenshots plus one status screen, supplied by IZAM. The visible platform is Iran University of Medical Sciences (IUMS), not TUMS; screenshots show 14 December 2021. Original question order retained where legible. Two ambiguous items withheld from automatic questions; see import notes.",
+      "excluded": {
+        "12": "Abdominal edema pressure lacks vessel/compartment and physiological context; no universal threshold can be keyed.",
+        "18": "High blood pressure alone does not guarantee increased GFR or ANP; autoregulation and volume status make the all-of-the-above answer conditional.",
+        "27": "No question: status screen."
+      },
+      "qs": [
+        [
+          1,
+          "If a flow of 10 mL/sec passes through a vessel with an area of 2 cm², what is the blood velocity?",
+          [
+            "2 cm/sec",
+            "10 cm/sec",
+            "5 cm/sec",
+            "1 cm/sec"
+          ],
+          "C",
+          "velocity-turbulence",
+          "Mean velocity = volume flow / cross-sectional area = 10/2 = 5 cm/sec. Units reduce from cm³/sec divided by cm² to cm/sec."
+        ],
+        [
+          2,
+          "Chemoreceptor signals activate when blood pressure reaches which level?",
+          [
+            "Less than 100 mmHg",
+            "Less than 50 mmHg",
+            "Less than 30 mmHg",
+            "Less than 80 mmHg"
+          ],
+          "D",
+          "neural-pressure",
+          "In the Guyton low-perfusion model, peripheral chemoreceptor cardiovascular reflexes become especially important below about 80 mmHg. Reduced carotid/aortic-body perfusion lowers oxygen and raises CO₂/H⁺.",
+          "moderate",
+          "A textbook approximate threshold for the circulatory chemoreflex, not an on/off blood-pressure threshold for all chemoreceptor activity."
+        ],
+        [
+          3,
+          "Turbulent blood flow is more likely if:",
+          [
+            "Vessel diameter decreases",
+            "Blood viscosity increases",
+            "Blood velocity increases",
+            "Blood density decreases"
+          ],
+          "C",
+          "velocity-turbulence",
+          "Reynolds number rises with velocity, diameter and density, and falls with viscosity. Increased velocity therefore favors turbulence."
+        ],
+        [
+          4,
+          "Which is a sign of short-term control of blood flow?",
+          [
+            "Angiogenesis",
+            "Active hyperemia",
+            "Decrease in PO₂",
+            "Renin–angiotensin system"
+          ],
+          "B",
+          "local-regulation",
+          "Active hyperemia is the immediate increase in flow accompanying increased tissue activity. Angiogenesis is structural long-term adaptation; low oxygen is a stimulus rather than the named flow response."
+        ],
+        [
+          5,
+          "Increasing arteriolar diameter in a muscle vascular bed causes:",
+          [
+            "A decrease in capillary hydrostatic pressure",
+            "None of the above",
+            "An increase in lymph flow",
+            "A decrease in capillary filtration"
+          ],
+          "C",
+          "microexchange",
+          "Lower precapillary resistance transmits more upstream pressure to capillaries, increasing filtration. Increased interstitial fluid formation raises lymph return while drainage capacity remains adequate."
+        ],
+        [
+          6,
+          "A healthy young woman moves from supine to standing. Which compensatory pattern is correct?",
+          [
+            "Decreased plasma renin; increased renal blood flow; decreased total vascular resistance",
+            "Increased plasma renin; decreased renal blood flow; increased total vascular resistance",
+            "Decreased plasma renin; decreased renal blood flow; decreased total vascular resistance",
+            "Increased plasma renin; increased renal blood flow; increased total vascular resistance"
+          ],
+          "B",
+          "neural-pressure",
+          "Orthostatic pooling reduces central filling. Baroreflex sympathetic activation raises vascular resistance and can lower renal perfusion; renin rises as renal sympathetic/low-perfusion signals develop.",
+          "moderate",
+          "The time courses differ: neural compensation is rapid, whereas the hormonal response develops later."
+        ],
+        [
+          7,
+          "Which factor does NOT increase lymph flow?",
+          [
+            "Increased capillary permeability",
+            "Decreased plasma colloid osmotic pressure",
+            "Elevated capillary pressure",
+            "Decreased interstitial-fluid colloid osmotic pressure"
+          ],
+          "D",
+          "microexchange",
+          "Reducing interstitial oncotic pressure reduces the outward oncotic driving force in the conventional Starling model. The other choices increase fluid/protein escape and lymph formation."
+        ],
+        [
+          8,
+          "Which change occurs with aortic regurgitation?",
+          [
+            "Aortic compliance increases",
+            "The aortic notch disappears",
+            "All of the above",
+            "Pulse pressure decreases"
+          ],
+          "B",
+          "shock-failure",
+          "An incompetent aortic valve blunts or removes the normal closure-related incisura. Regurgitation typically widens, rather than narrows, pulse pressure; it does not require increased aortic compliance."
+        ],
+        [
+          9,
+          "Which reflects an active role of endothelium?",
+          [
+            "Production of nitric oxide",
+            "Production of potassium ions",
+            "Production of hydrogen ions",
+            "Production of acetate ions"
+          ],
+          "A",
+          "local-regulation",
+          "Endothelial nitric oxide is synthesized by endothelial NO synthase and relaxes adjacent vascular smooth muscle via soluble guanylyl cyclase/cGMP."
+        ],
+        [
+          10,
+          "What is the main regulator of blood flow in active skeletal muscle?",
+          [
+            "Metabolism",
+            "Sympathetic innervation",
+            "Vasopressin",
+            "Oncotic pressure in muscle capillaries"
+          ],
+          "A",
+          "coronary-exercise",
+          "Local metabolic demand produces vasodilation and matches muscle perfusion to activity. Sympathetic tone remains important systemically but is not the principal local matching signal."
+        ],
+        [
+          11,
+          "How does venous distensibility compare with arterial distensibility?",
+          [
+            "About 8 times greater",
+            "About 6 times greater",
+            "About 3 times greater",
+            "About 2 times greater"
+          ],
+          "A",
+          "arterial-pressure",
+          "Guyton's approximate comparison gives veins about eight times the distensibility of corresponding arteries. Compliance additionally depends on starting volume, so it is not the same ratio.",
+          "moderate",
+          "An approximate textbook comparison, not a fixed ratio for every vessel."
+        ],
+        [
+          13,
+          "Which finding can result from heart failure?",
+          [
+            "Decreased central venous pressure",
+            "Distended neck veins",
+            "Increased plasma potassium",
+            "Increased extracellular oncotic pressure"
+          ],
+          "B",
+          "shock-failure",
+          "Systemic venous congestion, particularly with right-sided failure, raises jugular venous pressure. Hyperkalemia depends on renal function and treatment and is not the defining consequence."
+        ],
+        [
+          14,
+          "Which contains the greatest volume of blood?",
+          [
+            "Capillaries",
+            "Veins",
+            "Heart",
+            "Arteries"
+          ],
+          "B",
+          "venous-return",
+          "Systemic veins and venules are the major capacitance reservoir and contain the largest share of circulating blood at rest."
+        ],
+        [
+          15,
+          "Which factor increases coronary arterial resistance?",
+          [
+            "Endothelin",
+            "Adenosine",
+            "Prostacyclin",
+            "Acetylcholine"
+          ],
+          "A",
+          "coronary-exercise",
+          "Endothelin is a potent vasoconstrictor. Adenosine and prostacyclin dilate; acetylcholine normally promotes endothelial NO-mediated dilation when endothelium is intact.",
+          "moderate",
+          "Acetylcholine can constrict when endothelial function is impaired; the normal intact-endothelium assumption is intended."
+        ],
+        [
+          16,
+          "Which are termed nutritional vessels and contain approximately the stated percentage of blood?",
+          [
+            "Arteries — 13%",
+            "Pulmonary vessels — 9%",
+            "Capillaries — 7%",
+            "Veins — 27%"
+          ],
+          "C",
+          "microexchange",
+          "Capillaries are the principal exchange vessels. The course's simplified distribution pairs them with approximately 7%; the precise fraction varies with whether small arterioles are grouped with the microcirculation.",
+          "moderate",
+          "The key is capillary exchange function. Do not treat 7% as an exact isolated capillary volume in every classification."
+        ],
+        [
+          17,
+          "How does sympathetic inhibition affect the pressure–volume curves of arteries and veins?",
+          [
+            "No relationship",
+            "More pressure is generated at a lower volume",
+            "Both shift to the right",
+            "Both shift to the left"
+          ],
+          "C",
+          "arterial-pressure",
+          "Relaxation allows a greater volume at a given pressure: the pressure–volume relation shifts rightward (or downward when pressure is plotted vertically)."
+        ],
+        [
+          19,
+          "Hemorrhage triggers all the following compensatory reactions EXCEPT:",
+          [
+            "Increased catecholamine secretion",
+            "Bradycardia",
+            "Venous vasoconstriction",
+            "Arterial vasoconstriction"
+          ],
+          "B",
+          "shock-failure",
+          "The usual acute baroreflex response includes tachycardia, sympathetic arteriolar and venous constriction, and catecholamine release.",
+          "moderate",
+          "Paradoxical bradycardia can occur in special/severe hemorrhagic settings; the question asks for the usual compensatory pattern."
+        ],
+        [
+          20,
+          "A 30-year-old has taken a high dose of furosemide. Which listed treatment best addresses the expected fluid loss?",
+          [
+            "Plasma injection",
+            "Blood transfusion",
+            "Normal saline with electrolytes",
+            "Adrenaline injection"
+          ],
+          "C",
+          "longterm-pressure",
+          "For the question's implied diuretic-induced volume/electrolyte depletion, replacement fluid and monitored correction of electrolytes address the mechanism; blood/plasma/adrenaline do not replace the specific losses.",
+          "moderate",
+          "Educational best choice only. Actual treatment depends on volume status, renal function, electrolytes and the reason furosemide was prescribed; saline is not appropriate automatically after every large dose."
+        ],
+        [
+          21,
+          "Reduced carotid sinus pressure causes a decrease in:",
+          [
+            "Heart rate",
+            "Myocardial contractility",
+            "Venous capacitance",
+            "Cardiac output"
+          ],
+          "C",
+          "neural-pressure",
+          "Reduced stretch reduces baroreceptor firing, increasing sympathetic output. Venoconstriction reduces capacitance; heart rate and contractility rise."
+        ],
+        [
+          22,
+          "Which has an inverse relationship with blood flow through a vessel?",
+          [
+            "Vascular resistance",
+            "Vessel diameter",
+            "Amount of elastic fibers in the vessel wall",
+            "Pressure difference across the vessel"
+          ],
+          "A",
+          "flow-laws",
+          "At a given pressure gradient, flow = ΔP/R. Higher resistance means lower flow."
+        ],
+        [
+          23,
+          "During exercise in a healthy student, which pattern occurs in active muscle?",
+          [
+            "Increased arteriolar diameter; increased adenosine; increased blood flow",
+            "Decreased arteriolar diameter; increased adenosine; increased blood flow",
+            "Increased arteriolar diameter; decreased adenosine; decreased blood flow",
+            "Decreased arteriolar diameter; decreased adenosine; increased blood flow"
+          ],
+          "A",
+          "coronary-exercise",
+          "Metabolite accumulation accompanies activity and contributes to arteriolar dilation and increased perfusion. Adenosine is one contributor, not the sole regulator."
+        ],
+        [
+          24,
+          "Which is an endothelial growth/angiogenesis factor?",
+          [
+            "EDRF",
+            "Nitric oxide",
+            "Angiogenin",
+            "Angiotensin"
+          ],
+          "C",
+          "local-regulation",
+          "Angiogenin promotes new-vessel formation. EDRF/NO mainly names a rapid vasodilator signal rather than the listed angiogenic growth factor."
+        ],
+        [
+          25,
+          "Which tends to decrease cardiac output?",
+          [
+            "Myocardial infarction",
+            "Beriberi",
+            "Anemia",
+            "Increased thyroid activity"
+          ],
+          "A",
+          "shock-failure",
+          "Myocardial injury can reduce pumping capacity. Beriberi, anemia and hyperthyroidism classically produce high-output states before secondary decompensation."
+        ],
+        [
+          26,
+          "A drug increases myocardial contractility. Which change is expected?",
+          [
+            "Central venous pressure and pulse pressure increase",
+            "Central venous pressure decreases and cardiac output increases",
+            "Central venous pressure and arterial compliance increase",
+            "Central venous pressure and mean arterial pressure decrease"
+          ],
+          "B",
+          "advanced-return-pressure",
+          "A stronger cardiac function curve empties the venous side more effectively: at an unchanged venous-return curve, the equilibrium moves toward higher output and lower right-atrial pressure."
+        ]
+      ]
+    },
+    {
+      "id": "cvs-izam-cardiac-screens-a",
+      "title": "IUMS cardiac physiology · screenshot set A (IZAM)",
+      "source": "0dc98395b327",
+      "note": "Supplied past-test screenshot collection from ve.iums.ac.ir (IUMS), not a complete TUMS final. Duplicate page 4 is represented once by clearer page 16. Ambiguous/unkeyable items are retained in the local archive, not auto-graded.",
+      "excluded": {
+        "1": "The ECG term 'isovolumic area' is not a valid lead-region term; likely a mistranslation of transition zone but cannot silently substitute it.",
+        "3": "Cardiac conductive time is undefined: PR versus total depolarization cannot be established from the question.",
+        "4": "Duplicate of page 16.",
+        "5": "All four choices use 'always'; S3/S4 clinical exceptions make an unqualified key unsafe.",
+        "10": "SA inactivation timing/escape site not specified; sudden AV activity versus syncope cannot be guaranteed.",
+        "17": "No listed valid general relationship: sympathetic stimulation is not simply 20% more/less than parasympathetic.",
+        "20": "Peak calcium-pump activity is not fixed to a universal named phase; ambiguous handwritten alternatives."
+      },
+      "qs": [
+        [
+          2,
+          "Which ion is responsible for fast-fiber depolarization?",
+          [
+            "Calcium",
+            "Potassium/calcium/sodium",
+            "Sodium",
+            "Potassium"
+          ],
+          "C",
+          "cardiac-ap",
+          "Phase 0 of a working atrial/ventricular myocyte is produced mainly by rapid inward sodium current through fast voltage-gated sodium channels."
+        ],
+        [
+          6,
+          "Ventricular Purkinje-fiber impulse transmission velocity is:",
+          [
+            "Increased by parasympathetic stimulation",
+            "Decreased by parasympathetic stimulation",
+            "Not appreciably affected by parasympathetic stimulation",
+            "None of the above"
+          ],
+          "C",
+          "conduction-phys",
+          "In the basic course model, vagal effects concentrate in atrial and nodal tissue; they are not a major controller of ventricular Purkinje conduction.",
+          "moderate",
+          "This is the simplified teaching distinction, not a claim that all ventricular parasympathetic effects are impossible."
+        ],
+        [
+          7,
+          "At the beginning of diastole, ventricular blood volumes are approximately:",
+          [
+            "Both zero",
+            "50 mL each",
+            "Different",
+            "120 mL each"
+          ],
+          "B",
+          "pv-loop",
+          "Diastole begins after ejection, so each ventricle contains its end-systolic volume, commonly approximated as 50 mL. About 120 mL is the usual end-diastolic teaching value.",
+          "moderate",
+          "Normal right/left volumes and ejection fractions need not be numerically identical; the question uses a simplified paired-ventricle model."
+        ],
+        [
+          8,
+          "In order to induce an action potential in slow fibers, which type of calcium channel is necessary?",
+          [
+            "Transient",
+            "Latent (slow)",
+            "Both A and B",
+            "Specific calcium channel"
+          ],
+          "B",
+          "conduction-phys",
+          "The slow-response nodal phase-0 upstroke is produced by L-type calcium current. T-type current can help late phase-4 depolarization but is not the principal current producing the action-potential upstroke.",
+          "moderate",
+          "The source says 'latent (slow)', interpreted as long-lasting L-type channels. Distinguish inducing phase 0 from currents contributing to pacemaker depolarization."
+        ],
+        [
+          9,
+          "Inhibition of the Na⁺/K⁺-ATPase pump will:",
+          [
+            "Increase myocyte contraction force",
+            "Decrease myocyte contraction force",
+            "Inhibit the calcium pump directly",
+            "Have no effect on cardiac contractility"
+          ],
+          "A",
+          "cardiac-ap",
+          "Pump inhibition raises intracellular sodium, reducing calcium extrusion through Na⁺/Ca²⁺ exchange. More available calcium can increase contractility, the classic cardiac-glycoside mechanism.",
+          "moderate",
+          "Assumes a viable, ATP-supplied myocyte and a pharmacological range, not profound poisoning or ischemia."
+        ],
+        [
+          11,
+          "The calcium used for cardiac contraction comes:",
+          [
+            "Mostly from extracellular fluid",
+            "Only from inside the cell",
+            "Mostly from inside the cell",
+            "Only from outside the cell"
+          ],
+          "C",
+          "cardiac-ap",
+          "Most activator calcium is released from the sarcoplasmic reticulum, triggered by a smaller but essential extracellular calcium influx. Neither source alone describes normal excitation–contraction coupling."
+        ],
+        [
+          12,
+          "AV delay duration is normally?",
+          [
+            "0.09 seconds",
+            "0.21 seconds",
+            "0.03 seconds",
+            "0.16 seconds"
+          ],
+          "A",
+          "conduction-phys",
+          "Guyton separates about 0.09 s in the AV node from additional penetrating-bundle delay. About 0.16 s is the broader atrial-to-ventricular timing, not the node-only component.",
+          "moderate",
+          "The original says 'AV delay'; the keyed interpretation is the AV-node component. Total AV junction delay is about 0.13 s and is not offered."
+        ],
+        [
+          13,
+          "Which listed leads best evaluate the left cardiac border?",
+          [
+            "II and III",
+            "I and aVL",
+            "V2 and V3",
+            "V4 and V5"
+          ],
+          "B",
+          "ecg-foundations",
+          "I and aVL are the high-lateral limb leads. II/III are inferior and V2/V3 are predominantly septal/anterior. V4/V5 include anterior/lateral information but are not the best listed paired high-lateral leads.",
+          "moderate",
+          "‘Border’ is imprecise surface-anatomy wording; interpret it as high-lateral electrical territory."
+        ],
+        [
+          14,
+          "Which wave occurs during isovolumetric contraction?",
+          [
+            "Dicrotic notch",
+            "Atrial a wave",
+            "Atrial c wave",
+            "Atrial v wave"
+          ],
+          "C",
+          "cycle",
+          "The c wave is produced partly by bulging of the closed AV valve into the atrium as ventricular pressure rises. The a wave reflects atrial systole; the arterial notch follows semilunar closure."
+        ],
+        [
+          15,
+          "The arterial (semilunar) valves close at:",
+          [
+            "90 mmHg",
+            "80 mmHg",
+            "120 mmHg",
+            "Different pressures"
+          ],
+          "D",
+          "cycle",
+          "Aortic and pulmonary closure occur when their respective arterial pressure exceeds ventricular pressure. The pulmonary and systemic pressure ranges differ; no single pressure applies to both."
+        ],
+        [
+          16,
+          "At what approximate ventricular pressure does the aortic valve open in the usual resting 120/80 mmHg example?",
+          [
+            "80 mmHg",
+            "8 mmHg",
+            "90 mmHg",
+            "12 mmHg"
+          ],
+          "A",
+          "cycle",
+          "Opening begins when left-ventricular pressure slightly exceeds aortic diastolic pressure, approximately 80 mmHg in this example. This is a pressure crossover, not a fixed valve threshold."
+        ],
+        [
+          18,
+          "In the ventricles, plateau duration:",
+          [
+            "Is identical in all regions",
+            "Is longer in the subendocardial muscular layer",
+            "Is longer in the subepicardial muscular layer",
+            "None of the above"
+          ],
+          "B",
+          "cardiac-ap",
+          "The standard transmural teaching model gives epicardial cells shorter action potentials than endocardial cells, helping explain epicardial-first repolarization despite endocardial-first activation.",
+          "moderate",
+          "Real regional action-potential durations vary, including midmyocardial cells; this is the intended simplified comparison."
+        ],
+        [
+          19,
+          "Sympathetic stimulation of the heart will:",
+          [
+            "Increase stroke volume",
+            "Increase heart rate",
+            "Increase ventricular contractile force",
+            "All of the above"
+          ],
+          "D",
+          "conduction-phys",
+          "The conventional physiological response is positive chronotropy and inotropy, usually with increased stroke volume when filling is adequate.",
+          "moderate",
+          "Stroke volume is load/rate dependent; the original 'definitely' is an overstatement at extreme tachycardia."
+        ]
+      ]
+    },
+    {
+      "id": "cvs-izam-cardiac-screens-b",
+      "title": "IUMS cardiac physiology · screenshot set B (IZAM)",
+      "source": "ccb7c3f8e9cc",
+      "note": "Separate supplied IUMS online-test screenshots. Kept distinct from set A because question wording and choice order differ. Blank screen and questions without a reliable single answer are documented separately.",
+      "excluded": {
+        "1": "Dicrotic notch is aortic valve closure/recoil, not coronary filling; none of the listed options accurately defines it.",
+        "3": "Right and left ejection fractions are not necessarily equal and neither is universally larger.",
+        "5": "Preload is variously expressed as end-diastolic volume or pressure; multiple offered proxies can fit.",
+        "6": "Aortic closure is a pressure crossover, not a universal fixed 5/80/120/90 mmHg.",
+        "11": "No question: status screen.",
+        "12": "SA-node inactivation can cause an escape rhythm or a pause; both rhythm timing and functional consequences vary.",
+        "16": "The numeric typical cardiac index and the statement that cardiac index varies can both be true; not a clean single-answer item."
+      },
+      "qs": [
+        [
+          2,
+          "In a normal heart, the atrial depolarization wave in aVR is usually:",
+          [
+            "Negative",
+            "Not recorded",
+            "Positive",
+            "Absent"
+          ],
+          "A",
+          "ecg-axis",
+          "Normal atrial depolarization is directed away from the right-shoulder positive electrode of aVR, producing a negative P wave."
+        ],
+        [
+          4,
+          "The atrial repolarization wave is:",
+          [
+            "The P wave",
+            "Always visible in the normal ECG",
+            "Usually not separately visible in the normal ECG",
+            "A positive wave in lead II"
+          ],
+          "C",
+          "ecg-foundations",
+          "Atrial repolarization (Ta) is small and is normally obscured by the much larger QRS complex. P represents atrial depolarization."
+        ],
+        [
+          7,
+          "The Frank–Starling law:",
+          [
+            "Works only when diastolic pressure is below 160 mmHg",
+            "Works when mean blood pressure is between 60 and 160 mmHg",
+            "Works only when systolic pressure is below 160 mmHg",
+            "None of the above"
+          ],
+          "D",
+          "pv-loop",
+          "Frank–Starling describes how greater ventricular filling increases developed force/stroke volume within the physiological range. A systemic-pressure interval of 60–160 mmHg describes a common autoregulation teaching range, not this law."
+        ],
+        [
+          8,
+          "In slow cardiac fibers, the resting/maximal diastolic potential:",
+          [
+            "None of the above",
+            "Implies an impulse rate always 70/sec",
+            "Is −90 mV",
+            "Is more positive than in fast fibers"
+          ],
+          "D",
+          "conduction-phys",
+          "Nodal pacemaker cells have a less negative maximum diastolic potential (roughly −60 mV) and no stable resting potential. Working ventricular myocytes rest near −90 mV."
+        ],
+        [
+          9,
+          "Plateau duration is longest among these in:",
+          [
+            "Pacemaker cells",
+            "Subepicardial muscle",
+            "Atrial muscle",
+            "Subendocardial ventricular muscle"
+          ],
+          "D",
+          "cardiac-ap",
+          "Compared with the listed atrial and epicardial cells, endocardial ventricular cells have a longer plateau in the conventional course model. Nodal pacemaker cells lack a prominent ventricular-type plateau.",
+          "moderate",
+          "Regional heterogeneity exists; this comparison does not establish one maximum for every cell throughout the heart."
+        ],
+        [
+          10,
+          "Hyperkalemia typically:",
+          [
+            "Has a negative inotropic effect",
+            "Increases cardiac contractility",
+            "Has the same effect as hypercalcemia",
+            "Increases intracellular calcium release"
+          ],
+          "A",
+          "cardiac-ap",
+          "Sufficient extracellular potassium elevation depolarizes the membrane, reduces available fast sodium channels and impairs excitation/conduction, tending to weaken contraction. Severe hyperkalemia can arrest the heart."
+        ],
+        [
+          13,
+          "Which listed channel is ligand-gated?",
+          [
+            "Dihydropyridine (L-type calcium) channel",
+            "Inward-rectifier potassium channel",
+            "Ryanodine receptor channel",
+            "Transient (T-type) calcium channel"
+          ],
+          "C",
+          "cardiac-ap",
+          "Cardiac RyR2 is activated by cytosolic calcium, the ligand that triggers SR calcium release. DHP/L-type and T-type calcium channels are voltage-gated."
+        ],
+        [
+          14,
+          "During the ejection phase of systole:",
+          [
+            "Ventricles stop contracting during rapid ejection",
+            "Ventricular relaxation begins during reduced ejection",
+            "All of the above are incorrect",
+            "Ventricles contract continuously throughout"
+          ],
+          "B",
+          "cycle",
+          "During reduced ejection, active tension begins falling and repolarization/relaxation begins, although forward flow continues briefly. Isovolumetric relaxation follows semilunar closure."
+        ],
+        [
+          15,
+          "In the usual ventricular activation/recovery pattern:",
+          [
+            "Depolarization and repolarization start at the same points",
+            "Depolarization and repolarization end at the same points",
+            "Repolarization starts subendocardially",
+            "Repolarization starts subepicardially"
+          ],
+          "D",
+          "ecg-foundations",
+          "Epicardial action potentials are shorter in the standard model, so repolarization proceeds generally epicardium-to-endocardium despite the opposite transmural activation sequence."
+        ],
+        [
+          17,
+          "Between S1 and S2 there is:",
+          [
+            "None of the above",
+            "Isovolumetric contraction, ejection and isovolumetric relaxation",
+            "Isovolumetric contraction and ejection",
+            "Diastole"
+          ],
+          "C",
+          "cycle",
+          "S1 marks AV closure/start of ventricular systole, and S2 marks semilunar closure. Isovolumetric relaxation begins after S2."
+        ]
+      ]
+    },
+    {
+      "id": "cvs-izam-cardiac-ions",
+      "title": "Cardiac physiology test · ionic/ECG fragment (IZAM)",
+      "source": "cac159604328",
+      "note": "15 numbered supplied test screenshots with no visible institution/date on the cropped question panels. Original source pages retained; no official answer key claimed. Four ambiguous questions are archived separately.",
+      "excluded": {
+        "4": "Ejection time alone does not determine stroke work; the offered options do not yield a context-independent answer.",
+        "5": "Hypokalemia/hyperkalemia and ejection fraction depend on severity and context; no reliable simple direction.",
+        "10": "Both RV end-diastolic pressure (3 mmHg) and volume (120 mL) are preload proxies; question does not specify which.",
+        "14": "No chamber/conduction group has universally identical plateau duration in all its cells."
+      },
+      "qs": [
+        [
+          1,
+          "What is the role of potassium channels in fast cardiac fibers?",
+          [
+            "Induction of threshold potential",
+            "Induction of repolarization",
+            "Both depolarization and repolarization",
+            "None of the above"
+          ],
+          "B",
+          "cardiac-ap",
+          "Outward potassium currents restore the membrane toward a negative potential, especially in phase 3. The rapid phase-0 upstroke is carried mainly by sodium."
+        ],
+        [
+          2,
+          "Calcium current is responsible for:",
+          [
+            "Slow-fiber depolarization",
+            "Slow-fiber repolarization",
+            "Fast-fiber phase-0 depolarization",
+            "Fast-fiber repolarization"
+          ],
+          "A",
+          "conduction-phys",
+          "In nodal slow-response tissue, L-type calcium influx produces phase 0. Potassium efflux repolarizes; fast working-myocyte phase 0 is sodium-mediated."
+        ],
+        [
+          3,
+          "In normal limb leads, P and the predominant QRS deflection are usually:",
+          [
+            "In the same direction/polarity",
+            "In opposite directions/polarities",
+            "Unpredictable",
+            "Determined by the S-wave direction"
+          ],
+          "A",
+          "ecg-foundations",
+          "Normal atrial and ventricular mean depolarization vectors both point generally leftward and inferiorly, so their main deflections commonly share polarity.",
+          "moderate",
+          "The source calls the ventricular deflection 'R'; an R wave is positive by definition. Interpret this as predominant QRS polarity; aVR and equiphasic leads require care."
+        ],
+        [
+          6,
+          "Which contains slow-response cardiac fibers?",
+          [
+            "Atrial working muscle",
+            "AV node",
+            "Ventricular working muscle",
+            "Purkinje fibers"
+          ],
+          "B",
+          "conduction-phys",
+          "The AV node uses a calcium-dependent slow upstroke. Atrial/ventricular working cells and Purkinje fibers have fast sodium-dependent phase 0."
+        ],
+        [
+          7,
+          "The atrioventricular valves close:",
+          [
+            "After isovolumetric contraction",
+            "After isovolumetric relaxation",
+            "Just before isovolumetric contraction",
+            "Just before isovolumetric relaxation"
+          ],
+          "C",
+          "cycle",
+          "AV closure is the boundary starting isovolumetric contraction; semilunar valves remain closed until ejection begins."
+        ],
+        [
+          8,
+          "When heart rate increases:",
+          [
+            "Only systole shortens",
+            "Only diastole shortens",
+            "Systole shortens more than diastole",
+            "Diastole shortens more than systole"
+          ],
+          "D",
+          "cycle",
+          "Both phases can shorten, but diastole loses proportionately more time. Very fast rates compromise filling and coronary perfusion time."
+        ],
+        [
+          9,
+          "Which has the fastest impulse conduction?",
+          [
+            "Internodal atrial fibers",
+            "His bundle",
+            "Purkinje fibers",
+            "Ventricular working muscle"
+          ],
+          "C",
+          "conduction-phys",
+          "The Purkinje network conducts very rapidly to synchronize ventricular activation; AV nodal tissue is the slowest important normal conduction segment."
+        ],
+        [
+          11,
+          "A typical normal left-ventricular ejection fraction is:",
+          [
+            "80%",
+            "60%",
+            "60 mL",
+            "80 mL"
+          ],
+          "B",
+          "pv-loop",
+          "Ejection fraction is SV/EDV, a dimensionless fraction commonly about 60%. A volume in mL is not an ejection fraction."
+        ],
+        [
+          12,
+          "The sympathetic system:",
+          [
+            "Increases atrial contraction force",
+            "Increases AV delay",
+            "Increases plateau duration",
+            "All of the above"
+          ],
+          "A",
+          "conduction-phys",
+          "β1 stimulation increases atrial contractile force and usually accelerates AV conduction, shortening delay. A universal plateau prolongation is not the defining response."
+        ],
+        [
+          13,
+          "During the ejection phase:",
+          [
+            "Ventricles are always actively contracting",
+            "Ventricles are always relaxed",
+            "Blood flow stops for a while",
+            "Forward outflow continues during the phase"
+          ],
+          "D",
+          "cycle",
+          "Ejection denotes forward flow through open semilunar valves; active ventricular tension begins declining during reduced ejection before outflow ends."
+        ],
+        [
+          15,
+          "Ventricular repolarization generally starts in:",
+          [
+            "Subendocardial muscle",
+            "Subepicardial muscle",
+            "The same site where depolarization starts",
+            "None of the above"
+          ],
+          "B",
+          "ecg-foundations",
+          "Shorter epicardial action potentials permit earlier epicardial recovery even though endocardial activation occurs first in the simplified transmural model."
+        ]
+      ]
+    },
+    {
+      "id": "cvs-izam-mixed-cvs-fragments",
+      "title": "CVS & blood questions · mixed photographed fragments (IZAM)",
+      "source": "02204ba513a3",
+      "note": "Mixed supplied exam pages, not asserted to be one complete sitting. CVS/blood items only; respiratory and skeletal-muscle questions stay in the source archive. Printed question numbers are retained with PDF page identifiers to distinguish separate sequences.",
+      "excluded": {
+        "1": "Q21 has an era-dependent hypertension definition and Q25 overstates arrhythmia as necessarily irregular; retained in source notes.",
+        "2": "Q29–32 respiratory items are outside the CVS import. Q27 was not supplied.",
+        "4": "Skeletal-muscle/nerve questions and cropped text, not CVS.",
+        "5": "Q31 is incomplete on this page (its fourth option appears on page 3); handled as one source question.",
+        "6": "Q19–24 are skeletal/smooth-muscle items. Q25 continues onto page 5 but incorrectly implies no erythropoiesis in the humerus; proximal humeral red marrow may remain active, so it is not given a false absolute key."
+      },
+      "qs": [
+        [
+          1,
+          "All arteries carry blood:",
+          [
+            "To the liver",
+            "To the brain",
+            "Away from the lungs",
+            "Away from the heart"
+          ],
+          "D",
+          "flow-laws",
+          "Arteries are defined by carrying blood away from the heart, not by oxygen content. Pulmonary arteries carry deoxygenated blood away from the right ventricle.",
+          "high",
+          "Printed Q22."
+        ],
+        [
+          1,
+          "The arteries supplying the tissue of the heart are:",
+          [
+            "Renal arteries",
+            "Myocardial arteries",
+            "Coronary arteries",
+            "Venae cavae"
+          ],
+          "C",
+          "coronary",
+          "Right and left coronary arteries supply the myocardium. Venae cavae are veins returning systemic blood to the right atrium.",
+          "high",
+          "Printed Q23."
+        ],
+        [
+          1,
+          "Nervous control of the heart is exerted by:",
+          [
+            "Nerves from the thoracic region of the spinal column",
+            "The second and third cranial nerves",
+            "Fibers of the sensory somatic system",
+            "Fibers of the autonomic nervous system"
+          ],
+          "D",
+          "cardiac-nerves",
+          "The complete system is autonomic: sympathetic and parasympathetic efferents alter cardiac rate, conduction and force. A names only part of the sympathetic origin.",
+          "high",
+          "Printed Q24."
+        ],
+        [
+          1,
+          "Vasoconstriction refers to:",
+          [
+            "Increasing vessel lumen size",
+            "Decreasing vessel lumen size",
+            "Delivering oxygen and nutrients",
+            "Delivering waste products to the kidney"
+          ],
+          "B",
+          "flow-laws",
+          "Vascular smooth-muscle contraction reduces luminal radius and usually increases resistance; it does not name a transport function.",
+          "high",
+          "Printed Q26."
+        ],
+        [
+          2,
+          "Which factor most strongly favors movement of fluid into capillary blood from interstitial fluid in the conventional Starling model?",
+          [
+            "Tissue hydrostatic pressure",
+            "Tissue osmotic pressure",
+            "Blood colloid osmotic pressure",
+            "Blood hydrostatic pressure"
+          ],
+          "C",
+          "microexchange",
+          "Plasma proteins, particularly albumin, generate plasma oncotic pressure, which opposes filtration. Modern glycocalyx-aware physiology does not assume sustained venous-end reabsorption in every systemic capillary.",
+          "high",
+          "Printed Q28. Conventional course force-balance model."
+        ],
+        [
+          3,
+          "Which has a powerful role in lysis of a blood clot?",
+          [
+            "Plasmin",
+            "Trypsin",
+            "Fibrinogen",
+            "Vitamin K"
+          ],
+          "A",
+          "coagulation",
+          "Plasmin cleaves fibrin. Plasminogen is activated to plasmin by activators such as tPA; fibrinogen is the precursor of fibrin, and vitamin K supports synthesis of several coagulation factors.",
+          "high",
+          "Printed Q32."
+        ],
+        [
+          5,
+          "During RBC differentiation, which cell retains remnants of organelles/RNA?",
+          [
+            "Proerythroblast",
+            "Basophilic erythroblast",
+            "Colony-forming-unit blast",
+            "Reticulocyte"
+          ],
+          "D",
+          "erythropoiesis",
+          "The reticulocyte is an enucleated immature RBC with residual ribosomal RNA and organelle remnants that disappear as it matures.",
+          "high",
+          "Printed Q26; the source specifically mentions Golgi/mitochondrial remnants."
+        ],
+        [
+          5,
+          "Which decreases renal erythropoietin production?",
+          [
+            "Pulmonary disease",
+            "Anemia",
+            "Tissue oxygenation",
+            "Chronic blood loss"
+          ],
+          "C",
+          "erythropoiesis",
+          "Improved tissue oxygen availability reduces hypoxia-driven renal EPO signaling. The other choices generally increase EPO if they reduce oxygen delivery and renal EPO production is intact.",
+          "high",
+          "Printed Q27."
+        ],
+        [
+          5,
+          "Which genotype produces neither A nor B red-cell agglutinogens?",
+          [
+            "OB",
+            "OA",
+            "OO",
+            "BB"
+          ],
+          "C",
+          "blood-groups",
+          "An OO genotype gives group O, which lacks A and B antigens on red cells. It still has other membrane antigens, including H substance.",
+          "high",
+          "Printed Q28."
+        ],
+        [
+          5,
+          "A pig heart valve transplanted into a human is a:",
+          [
+            "Xenograft",
+            "Allograft",
+            "Isograft",
+            "Autograft"
+          ],
+          "A",
+          "immune-foundations",
+          "A xenograft crosses species. An allograft is between genetically different members of one species, an isograft between genetically identical individuals, and an autograft within one person.",
+          "high",
+          "Printed Q29."
+        ],
+        [
+          5,
+          "In a best-possible tissue-matched kidney transplant, which listed component is most associated with rejection?",
+          [
+            "Antibodies",
+            "Platelets",
+            "Rh antigens",
+            "T cells"
+          ],
+          "D",
+          "immune-foundations",
+          "T cells recognize donor antigens and drive major cellular rejection mechanisms even after good matching.",
+          "moderate",
+          "Printed Q30. Antibody-mediated rejection also exists; T cells are the intended general cellular-rejection answer, not an exclusive mechanism. The source's fanciful 240-year-old vignette is not a biological age assumption."
+        ],
+        [
+          5,
+          "What is the rate-limiting step in the conventional blood-coagulation cascade?",
+          [
+            "Fibrin polymerization",
+            "Formation of prothrombin activator",
+            "Calcium-ion concentration",
+            "Thrombin concentration"
+          ],
+          "B",
+          "coagulation",
+          "The textbook cascade describes formation of the prothrombin-activator complex as the slow initiating step; subsequent thrombin generation and fibrin formation proceed rapidly.",
+          "moderate",
+          "Printed Q31, fourth option continues on PDF page 3. This is the simplified cascade model, not a full cell-based kinetics model."
+        ]
+      ]
+    }
+  ]
+}

@@ -33,16 +33,17 @@ test('CVS: topic sidecar covers every source item without invalidating saved att
   assert.match(css,/setup-shell:has\(\[data-cvs-paper-session="active"\]\) \.setup-topbar \{ display: none; \}/);
 });
 
-test('CVS: eleven source papers/fragments, numbered without duplicated copies',()=>{
-  assert.equal(papers.length,11);
-  assert.equal(new Set(papers.map(p=>p.id)).size,11);
-  assert.equal(papers.reduce((n,p)=>n+p.questions.length,0),942);
+test('CVS: sixteen source papers/fragments, numbered without duplicated copies',()=>{
+  assert.equal(papers.length,16);
+  assert.equal(new Set(papers.map(p=>p.id)).size,16);
+  assert.equal(papers.reduce((n,p)=>n+p.questions.length,0),1012);
   for(const [index,p] of papers.entries()){
     assert.equal(p.questions.length,catalog.papers[index].count);
     assert.equal(p.questions.filter(q=>q.scoringKey).length,catalog.papers[index].keyed);
     assert.equal(p.fingerprint,catalog.papers[index].fingerprint);
     assert.equal(new Set(p.questions.map(q=>q.id)).size,p.questions.length);
-    assert.deepEqual(p.questions.map(q=>Number(q.number)),Array.from({length:p.questions.length},(_,i)=>i+1));
+    // IZAM fragments retain printed numbers/gaps and PDF-page disambiguation.
+    if(!p.id.startsWith('cvs-izam-')) assert.deepEqual(p.questions.map(q=>Number(q.number)),Array.from({length:p.questions.length},(_,i)=>i+1));
     for(const q of p.questions){
       assert(q.prompt.length>=12, q.id);
       assert(q.page>0 && q.sourcePage);

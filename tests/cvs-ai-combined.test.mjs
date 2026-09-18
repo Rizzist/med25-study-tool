@@ -150,6 +150,6 @@ test('every missing-key question has a second-reviewed, current, source-referenc
       if(review.correctedOptions) assert.equal(review.sourcePageVerified,true,question.id);
     }
   }
-  assert.equal(missing.length,587);
+  assert.equal(missing.length,657);
   assert.deepEqual(Object.keys(data.questions).sort(),missing.sort());
 });

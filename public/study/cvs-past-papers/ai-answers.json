@@ -1,6 +1,6 @@
 {
-  "revision": "2026-09-18-ai-reviewed-v1",
-  "note": "AI-proposed educational answer review, independently checked by a second AI agent; not an official university key. Original papers unchanged.",
+  "revision": "2026-09-19-izam-v1",
+  "note": "Reference-based teaching answers, separate from supplied source marks. IZAM additions have source/course-reference review; no independent human or university certification is claimed.",
   "questions": {
     "cvs-2025-february-q1": {
       "answer": "A",
@@ -4402,11 +4402,23 @@
         {
           "title": "OpenStax — Blood Flow, Blood Pressure and Resistance",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-2-blood-flow-blood-pressure-and-resistance?query=stroke+volume"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 2",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/002.jpg"
         }
       ],
       "questionHash": "19853ac28d5130139ed69fbad70c777dcef1e7669293485b7c09d3d3b9d24112",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The ... have the largest total cross-sectional area of the circulation.",
+      "correctedOptions": [
+        "capillaries",
+        "aorta",
+        "veins",
+        "arteries"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q2": {
       "answer": "A",
@@ -4416,11 +4428,23 @@
         {
           "title": "OpenStax — Blood Flow, Blood Pressure and Resistance",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-2-blood-flow-blood-pressure-and-resistance?query=stroke+volume"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 2",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/002.jpg"
         }
       ],
       "questionHash": "de6de220fdc28f25da1eb976cca419e4f1815cf011b22dfa1da16f9c6b1a4234",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which vessel has greatest blood velocity?",
+      "correctedOptions": [
+        "Aorta",
+        "Vena cava",
+        "Arterioles",
+        "Capillaries"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q3": {
       "answer": "D",
@@ -4430,11 +4454,23 @@
         {
           "title": "CV Physiology — Venous Return: Hemodynamics",
           "url": "https://cvphysiology.com/cardiac-function/cf016"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 2",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/002.jpg"
         }
       ],
       "questionHash": "7d9481873a462b242ae53400696fc80347498b1c0ca144d065e59aadd6cf0a5e",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In which one, huge volume of blood could has little effect on pressure changes?",
+      "correctedOptions": [
+        "Aorta",
+        "Bronchi",
+        "Arteries",
+        "Veins"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q4": {
       "answer": "D",
@@ -4444,11 +4480,23 @@
         {
           "title": "CV Physiology — Hemodynamics: Pressure, Flow and Resistance",
           "url": "https://cvphysiology.com/hemodynamics/h001"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 2",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/002.jpg"
         }
       ],
       "questionHash": "f7331a2f8931840ed2c498032192b31b7f0d6bca20fb6c8ecfec8fdaaef1b4c1",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "How would a decrease in vascular resistance affect blood flow?",
+      "correctedOptions": [
+        "Reduce blood flow",
+        "Has no role",
+        "May be reduce blood flow",
+        "Increase blood flow"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q5": {
       "answer": "C",
@@ -4458,11 +4506,23 @@
         {
           "title": "OpenStax — Blood Flow, Blood Pressure and Resistance",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-2-blood-flow-blood-pressure-and-resistance?query=stroke+volume"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 2",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/002.jpg"
         }
       ],
       "questionHash": "ba9103c4f9bfc0615e9dd6c7c50b9ae7a8b69f799a0b8f1ffb46d9f0bdb51b80",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "... is the quantity of blood that passes a given point in the circulation in a given period of time.",
+      "correctedOptions": [
+        "Resistance",
+        "Blood pressure",
+        "Blood flow",
+        "Capacitance"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q6": {
       "answer": "C",
@@ -4472,11 +4532,23 @@
         {
           "title": "CV Physiology — Turbulent Flow",
           "url": "https://cvphysiology.com/hemodynamics/h007"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 3",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/003.jpg"
         }
       ],
       "questionHash": "7d076b46ec402ebce7aeebd4c0c0c2f2229b7a01da819a83951be4898b24f591",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Laminar flow is ..., whereas turbulent flow tend to cause murmurs.",
+      "correctedOptions": [
+        "happened by high velocity",
+        "reverse blood flow",
+        "silent",
+        "has no parabolic profile"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q7": {
       "answer": "A",
@@ -4486,11 +4558,23 @@
         {
           "title": "CV Physiology — Resistance to Blood Flow",
           "url": "https://cvphysiology.com/hemodynamics/h002"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 3",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/003.jpg"
         }
       ],
       "questionHash": "73da3e6559582d0682b56a52bb13c79cf3c1334b17944514306b8a4e2c84d105",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Based on Poiseuille's law, which factor has more effect on blood flow?",
+      "correctedOptions": [
+        "Radius of vessel",
+        "Viscosity of blood",
+        "Length of vessel",
+        "Pressure of blood"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q8": {
       "answer": "A",
@@ -4500,11 +4584,23 @@
         {
           "title": "OpenStax — Blood Flow, Blood Pressure and Resistance",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-2-blood-flow-blood-pressure-and-resistance?query=stroke+volume"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 3",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/003.jpg"
         }
       ],
       "questionHash": "3d146cb6748c5e97645b758b8784a6398f99ca6583cfd9debb4785dca3c312c6",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In auscultatory method for measuring blood pressure, which sound is consireded as systolic pressure sound?",
+      "correctedOptions": [
+        "First",
+        "last",
+        "none",
+        "third"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q9": {
       "answer": "C",
@@ -4514,11 +4610,23 @@
         {
           "title": "CV Physiology — Venous Return: Hemodynamics",
           "url": "https://cvphysiology.com/cardiac-function/cf016"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 3",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/003.jpg"
         }
       ],
       "questionHash": "c129b5451483155fd28fc43f1cc532453c55d444348c1c942228b8774e167f18",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Pressure in the ... is called central venous pressure.",
+      "correctedOptions": [
+        "aorta",
+        "capillaries",
+        "right atrium",
+        "large arteries"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q10": {
       "answer": "D",
@@ -4528,12 +4636,24 @@
         {
           "title": "CV Physiology — Venous Return: Hemodynamics",
           "url": "https://cvphysiology.com/cardiac-function/cf016"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 3",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/003.jpg"
         }
       ],
       "caveat": "Assumes other driving-pressure and cardiac determinants are maintained.",
       "questionHash": "c9402a6c8e10dac982dfc8bd373df51e4fc25092a821bdd73b253e7d6bd1fee7",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which factor could increase venous return?",
+      "correctedOptions": [
+        "Reduced blood volume",
+        "Reduced large vessel tone resulting",
+        "Reduced peripheral venous pressure",
+        "Dilation of the arterioles"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q11": {
       "answer": "B",
@@ -4543,19 +4663,23 @@
         {
           "title": "CV Physiology — Factors Promoting Venous Return",
           "url": "https://cvphysiology.com/cardiac-function/cf018"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 4",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/004.jpg"
         }
       ],
       "questionHash": "574c93b30a25382914be25cd066038a276d3391c98eb28e5ef3f567d929fdfea",
       "correctedOptions": [
-        "Legs",
-        "Heart",
-        "Hands",
-        "Feet"
+        "legs",
+        "heart",
+        "hands",
+        "feet"
       ],
       "sourcePageVerified": true,
-      "caveat": "The end of the stem is cropped; B is identifiable under its conventional question about the direction allowed by venous valves.",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Valves are arranged so that so that the direction of blood flow can only be toward the ..."
     },
     "cvs-undated-student-2023-q12": {
       "answer": "A",
@@ -4565,11 +4689,23 @@
         {
           "title": "OpenStax — Blood Flow, Blood Pressure and Resistance",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-2-blood-flow-blood-pressure-and-resistance?query=stroke+volume"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 4",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/004.jpg"
         }
       ],
       "questionHash": "be7b2b112c5a6a0c2cc5ddd00c87ce33b9464d674826415f1b9eaff93e6dbd5c",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which one could increase cardiac output?",
+      "correctedOptions": [
+        "Anemia",
+        "Cardiac shock",
+        "Traumatic shock",
+        "Heart valves disease"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q13": {
       "answer": "A",
@@ -4579,18 +4715,23 @@
         {
           "title": "StatPearls — Cardiovascular Physiology",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK493197/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 4",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/004.jpg"
         }
       ],
       "questionHash": "823bf604eb0bd251ed319bc3826441f90e0dba14c49a1ad65841415abb298acf",
       "correctedOptions": [
         "Arterial pressure reduction",
-        "Venous pressure reduction",
+        "Veins pressure reduction",
         "Arterial pressure enhancement",
-        "Venous pressure enhancement"
+        "Veins pressure enhancement"
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Renin-angiotensin II-aldosterone is responding to ...."
     },
     "cvs-undated-student-2023-q14": {
       "answer": "C",
@@ -4600,26 +4741,57 @@
         {
           "title": "CV Physiology — Resistance to Blood Flow",
           "url": "https://cvphysiology.com/hemodynamics/h002"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 4",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/004.jpg"
         }
       ],
       "questionHash": "7ae8725e95ce549c0a422d34c2e367de0a129be5d229b0d84fbd14a7c290f8d0",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Innervation of small arteries and arterioles allow sympathetic nerves to ....",
+      "correctedOptions": [
+        "reduce viscosity",
+        "increase viscosity",
+        "increase vascular resistance",
+        "reduce vascular resistance"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q15": {
-      "answer": null,
-      "explanation": "Sympathetic vasoconstrictor nerves normally release norepinephrine, but the candidate drug names are cropped.",
-      "confidence": "unresolved",
+      "answer": "C",
+      "explanation": "Sympathetic vasoconstrictor fibers release norepinephrine, acting predominantly at vascular α receptors. The new scan restores the previously cropped option C.",
+      "confidence": "high",
       "references": [
         {
           "title": "CV Physiology — Resistance to Blood Flow",
           "url": "https://cvphysiology.com/hemodynamics/h002"
+        },
+        {
+          "title": "Course/book review locator: Baroreceptors, chemoreceptors and central pressure regulation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#neural-pressure"
+        },
+        {
+          "title": "OpenStax: Regulation of the vascular system",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-4-homeostatic-regulation-of-the-vascular-system"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 4",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/004.jpg"
         }
       ],
-      "caveat": "Source inspection confirms that options C and D extend beyond the photograph; do not infer a letter from student marks.",
       "questionHash": "e9e1a9baf7e5a4d8faa63b4cdb39e68444ff9ebadccae1ec91addbbab0853c76",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In vessels, the neurotransmitter for the vasoconstrictor nerves is ....",
+      "correctedOptions": [
+        "Acetylcholine",
+        "Histamin",
+        "Norepinephrine",
+        "Endorphine"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q16": {
       "answer": "A",
@@ -4629,11 +4801,23 @@
         {
           "title": "OpenStax — Leukocytes and Platelets",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-4-leukocytes-and-platelets"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 4",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/004.jpg"
         }
       ],
       "questionHash": "ebd7ffae9e2a48c161166ab5ee8f98194e258761eef6dc6c600fbabdfe03a713",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of following is NOT correct about platelets?",
+      "correctedOptions": [
+        "They have no ability for ATP production",
+        "They have contraction filaments",
+        "They are able to become sticky",
+        "They are able to form pseudopods"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q17": {
       "answer": "D",
@@ -4643,11 +4827,23 @@
         {
           "title": "StatPearls — Embryology of Hematopoiesis",
           "url": "https://ncbi.nlm.nih.gov/books/NBK544245/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 5",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/005.jpg"
         }
       ],
       "questionHash": "30b7e63f4702ae0d046f63806efc43c2712b0321fd4396b8ddd1fce04638bc39",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In 80-year-old person, which part of body produce RBC?",
+      "correctedOptions": [
+        "Lymph nodes",
+        "Femur",
+        "Liver",
+        "ribs"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q18": {
       "answer": "A",
@@ -4657,18 +4853,23 @@
         {
           "title": "Immunobiology — Induced Innate Responses to Infection",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK27122/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 5",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/005.jpg"
         }
       ],
       "questionHash": "9be9cd104c6c39b8ffcb47cc184c34a86c5f5366d7dc8e354e0c089524661ce0",
       "correctedOptions": [
         "Amount of phagocytized particles",
-        "Formation of pseudopodia",
-        "Have proteolytic enzymes",
-        "Have chemotaxis"
+        "formation of pseudopodia",
+        "have proteolytic enzym",
+        "have chemotaxis"
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "All of followings are same at both neutrophil and macrophage, except ......?"
     },
     "cvs-undated-student-2023-q19": {
       "answer": "C",
@@ -4678,26 +4879,53 @@
         {
           "title": "CV Physiology — Histamine and Bradykinin",
           "url": "https://cvphysiology.com/blood-flow/bf014"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 5",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/005.jpg"
         }
       ],
       "questionHash": "6f73a02f8daa949211fc25cca93dad7dd30d162ad27972b95ac367c327c963d3",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Inflammation is characterized by all of following signs, except .......•.",
+      "correctedOptions": [
+        "swelling",
+        "Heat",
+        "decrease capillary permeability",
+        "redness"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q20": {
-      "answer": null,
-      "explanation": "Hypoxia increases EPO expression and erythropoiesis, but the cropped endings prevent distinguishing options C and D.",
-      "confidence": "unresolved",
+      "answer": "C",
+      "explanation": "Hypoxia increases renal EPO expression; EPO stimulates marrow erythropoiesis. The clearer copy restores the opposite RBC-production endings of C and D.",
+      "confidence": "high",
       "references": [
         {
           "title": "OpenStax — Erythrocytes",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/18-3-erythrocytes"
+        },
+        {
+          "title": "Course/book review locator: Erythropoiesis, iron and anemia mechanisms",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#erythropoiesis"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 5",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/005.jpg"
         }
       ],
-      "caveat": "The source photograph also cuts off the distinguishing option text.",
       "questionHash": "d30812d8938d9da2544e0455b7c5231b5357a07e7a1f348f9cc8669dccd68fa1",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "What is the relationship between hypoxia, EPO and RBC?",
+      "correctedOptions": [
+        "Hypoxia decreases gene expression of EPO and finally RBC production is increased",
+        "Hypoxia decreases gene expression of EPO and finally RBC production is decreased",
+        "Hypoxia increases gene expression of EPO and finally RBC production is increased",
+        "Hypoxia increases gene expression of EPO and finally RBC production is decreased"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q21": {
       "answer": "C",
@@ -4707,12 +4935,23 @@
         {
           "title": "Institute of Medicine — Vitamin B12",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK114302/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 5",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/005.jpg"
         }
       ],
-      "caveat": "The end of C is cropped, but its visible mechanism is identifiable; intestinal absorption occurs in the terminal ileum.",
       "questionHash": "33bbb1f6e23a02c17acaf4945f8ff47117bce0c07722a499e50b26c72ff352a4",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Vitamin B12.....",
+      "correctedOptions": [
+        "Produced by normal flor at larg intestine is absorbed at small intestine",
+        "Provided by diet is absorbed at fiest segment of small intestine",
+        "is protected from gastric digestion by attachment to R-BINDER",
+        "don't store at body cells"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q22": {
       "answer": "A",
@@ -4722,18 +4961,23 @@
         {
           "title": "OpenStax — Hemostasis",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-5-hemostasis"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 5",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/005.jpg"
         }
       ],
       "questionHash": "9a83a5584bfd83514aaf3089b22a1ce82b3de8e443f66799313e0ffd08f762b8",
       "correctedOptions": [
         "Protein C",
-        "Activated factor XII",
-        "Activated factor X",
-        "Activated factor VIII"
+        "Factor XII active",
+        "Factor X active",
+        "Factor VIII active"
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of following actsas anti-coagulant factor?"
     },
     "cvs-undated-student-2023-q23": {
       "answer": "C",
@@ -4743,11 +4987,23 @@
         {
           "title": "OpenStax — Production and Functions of Blood Cells",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-chapter-review"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 6",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/006.jpg"
         }
       ],
       "questionHash": "96646e8b4b7b81854e481da1813f53f3486dc573f04929e9c7fcf49b3cbb4d1a",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Production site of neutrophil is ....",
+      "correctedOptions": [
+        "Only lymphatic nodes",
+        "Liver",
+        "Bone marrow",
+        "Only spleen"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q24": {
       "answer": "C",
@@ -4757,11 +5013,23 @@
         {
           "title": "OpenStax — Erythrocytes",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/18-3-erythrocytes"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 6",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/006.jpg"
         }
       ],
       "questionHash": "9031c87dd140e9625fcb49993a874e76099da75f1524bb37bd2539eec4c0a1dd",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following cell exist at bloodstream?",
+      "correctedOptions": [
+        "Proerythroblast",
+        "Orthochromatic erythroblast",
+        "Reticulocyte",
+        "Basophil erythroblast"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q25": {
       "answer": "D",
@@ -4771,11 +5039,23 @@
         {
           "title": "OpenStax — Erythrocytes",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/18-3-erythrocytes"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 6",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/006.jpg"
         }
       ],
       "questionHash": "025e36e39690ab40d944fe01a5a3bb3ea6e0830b35d1172def499ddf7c2832eb",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following statement is true?",
+      "correctedOptions": [
+        "Polycythemia means decrease in hemoglobin content.",
+        "Polycythemia lead to decrease in blood viscosity.",
+        "Polycythemia increase cardiac output sharply.",
+        "Polycythemia may occurs at healthy persons."
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q26": {
       "answer": "B",
@@ -4785,12 +5065,24 @@
         {
           "title": "Immunobiology — Induced Innate Responses to Infection",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK27122/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 6",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/006.jpg"
         }
       ],
       "caveat": "This is the first cellular inflammatory defense; skin and mucosal barriers are the broader immune system's first line.",
       "questionHash": "aecf94d697b478750bf7589c8646beb16b00a2d3913153b17442800071728681",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In which option, the \"first line defense\" of the immunity system is mentioned?",
+      "correctedOptions": [
+        "Increased production of granulocyte be bone marrow",
+        "Tissue macrophages",
+        "Neutrophil diapedesis & chemotaxis",
+        "Secondary invasion of macrophages"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q27": {
       "answer": "C",
@@ -4800,27 +5092,54 @@
         {
           "title": "OpenStax — Leukocytes and Platelets",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-4-leukocytes-and-platelets"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 6",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/006.jpg"
         }
       ],
       "caveat": "Classical blood-life estimates favor neutrophils; measured survival varies with methods and physiological state.",
       "questionHash": "416f2100152a88ee841a3c3aab80e4dc55a915a284a6e9f147b5f142dc5da0c8",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of has shorter life span?",
+      "correctedOptions": [
+        "Mature healtyh RBC",
+        "Mature healthy monocyte",
+        "Mature healthy neutrophil at blood",
+        "Lymphocytes"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q28": {
-      "answer": null,
-      "explanation": "Men generally have higher red-cell counts, but the cropped causal phrases prevent distinguishing options A and B.",
-      "confidence": "unresolved",
+      "answer": "B",
+      "explanation": "Androgens promote erythropoiesis and help explain higher average RBC counts in men. The restored options distinguish androgen effects from muscle mass.",
+      "confidence": "high",
       "references": [
         {
           "title": "OpenStax — Erythrocytes",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/18-3-erythrocytes"
+        },
+        {
+          "title": "Course/book review locator: Erythrocytes, hematocrit and oxygen delivery",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#rbc"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 6",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/006.jpg"
         }
       ],
-      "caveat": "The full option endings are missing from the source photograph.",
       "questionHash": "862e0b152cf0af0ad470af2ab3fa952999d5fd0e94988a865b4374597fe00249",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "What do you know about difference between RBC count among male and female?",
+      "correctedOptions": [
+        "RBC number is higher in men in comparison to women due to high muscle mass at male",
+        "RBC number is higher in men in comparison to women due to male sexuall hormones",
+        "RBC number is higher in women in comparison to men due to male sexuall hormones",
+        "RBC number is higher in women in comparison to men due to low muscle mass at women."
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q29": {
       "answer": "D",
@@ -4830,6 +5149,10 @@
         {
           "title": "Immunobiology — Induced Innate Responses to Infection",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK27122/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 7",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/007.jpg"
         }
       ],
       "caveat": "This is the source's simplified textbook description of avoiding phagocytosis.",
@@ -4842,7 +5165,8 @@
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Native cells in our body are protected from phagocytosis by...."
     },
     "cvs-undated-student-2023-q30": {
       "answer": "A",
@@ -4852,11 +5176,23 @@
         {
           "title": "OpenStax — Leukocytes and Platelets",
           "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/18-4-leukocytes-and-platelets"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 7",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/007.jpg"
         }
       ],
       "questionHash": "ac67dc27cacf4e9fe8145bc9d7bd9ef19fcc0b5b050bc01c2f59dbf0ff37a732",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which type of cell produced from megakaryocytes?",
+      "correctedOptions": [
+        "Platelets",
+        "RBCs",
+        "neutrophils",
+        "macrophages"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q31": {
       "answer": null,
@@ -4866,12 +5202,24 @@
         {
           "title": "CV Physiology — Non-Pacemaker Action Potentials",
           "url": "https://cvphysiology.com/arrhythmias/a006"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 7",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/007.jpg"
         }
       ],
       "caveat": "A could mean a decreased magnitude, but the signed potassium equilibrium potential becomes less negative; no option is clearly correct.",
       "questionHash": "6c5d43705ce576975626d44d6497ce47475aa3ec81602e38e353b0c3129b9891",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Inhibition of the activity of the sarcolemmal Na+/K+-ATPase pump in cardiac cells leads",
+      "correctedOptions": [
+        "decreased potassium equilibrium potential",
+        "increased intracellular potassium concentration",
+        "increased sodium loss from the cell",
+        "membrane hyperpolarization"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q32": {
       "answer": "D",
@@ -4881,11 +5229,23 @@
         {
           "title": "CV Physiology — Non-Pacemaker Action Potentials",
           "url": "https://cvphysiology.com/arrhythmias/a006"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 7",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/007.jpg"
         }
       ],
       "questionHash": "6d603583bbbe5638459f089dd2fb9ee841c85f6ca697b24958d50b3df45df38b",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The initial depolarization during a cardiac muscle action potential results from",
+      "correctedOptions": [
+        "a large decrease in intracellular potassium concentration",
+        "a large increase in intracellular sodium concentration",
+        "an increase in the relative conductance of potassium",
+        "opening of fast sodium channels"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q33": {
       "answer": "D",
@@ -4895,26 +5255,54 @@
         {
           "title": "CV Physiology — Non-Pacemaker Action Potentials",
           "url": "https://cvphysiology.com/arrhythmias/a006"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 7",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/007.jpg"
         }
       ],
       "questionHash": "16923324b72e0c6518e35e02996b8a869db2e715be6a2136e01fb90f2fdeba3e",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Phase 3 of non-pacemaker action potentials results primarily from",
+      "correctedOptions": [
+        "decreased activity of the Nat/K+-ATPase pump",
+        "inactivation of fast sodium channels",
+        "increased calcium influx through L-type channels",
+        "increased potassium conductance"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q34": {
-      "answer": null,
-      "explanation": "The cropped stem omits whether refractory duration should increase or decrease, which determines the answer.",
-      "confidence": "unresolved",
+      "answer": "A",
+      "explanation": "Inhibiting repolarizing potassium channels prolongs the action potential and effective refractory period, the classic class III antiarrhythmic mechanism.",
+      "confidence": "moderate",
       "references": [
         {
-          "title": "CV Physiology — Non-Pacemaker Action Potentials",
+          "title": "CV Physiology: Non-pacemaker action potentials",
           "url": "https://cvphysiology.com/arrhythmias/a006"
+        },
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 7",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/007.jpg"
         }
       ],
-      "caveat": "Potassium-channel inhibition prolongs repolarization, whereas shortening phases 2 or 3 can shorten refractoriness.",
       "questionHash": "37b555e340de2cb6455c26195b409c60d3defbdf9269ee0d9cbb0c07fe348862",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The duration of the effective refractory period in cardiac cells can by increased by",
+      "correctedOptions": [
+        "inhibiting potassium channels",
+        "opening L-type calcium channels",
+        "shortening phase 2",
+        "shortening phase 3"
+      ],
+      "sourcePageVerified": true,
+      "caveat": "The restored stem asks for an increase. Sustained enhancement of L-type current can also prolong an action potential in some circumstances; A is the conventional best pharmacological mechanism."
     },
     "cvs-undated-student-2023-q35": {
       "answer": "C",
@@ -4924,11 +5312,23 @@
         {
           "title": "CV Physiology — Normal and Abnormal Electrical Conduction",
           "url": "https://cvphysiology.com/arrhythmias/a003"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 8",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/008.jpg"
         }
       ],
       "questionHash": "7e07be7726e8b6f248121f343c6202022ef1110fee02ae3ffe201b7821bed3d8",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Conduction velocity in non-nodal cardiac cells is decreased by",
+      "correctedOptions": [
+        "Activation of fast sodium channels",
+        "Sympathetic nerve activation",
+        "Decreasing the slope of phase 0",
+        "Activation of SERCA 2a"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q36": {
       "answer": "C",
@@ -4938,11 +5338,23 @@
         {
           "title": "CV Physiology — Cardiac Excitation–Contraction Coupling",
           "url": "https://cvphysiology.com/cardiac-function/cf022"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 8",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/008.jpg"
         }
       ],
       "questionHash": "ad33832f982e227d952bff5284b04c58af9977ab9184f2b5cd2781ba7695e58d",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Binding of calcium to _ is a primary mechanism involved in regulating cardiac muscle tension development.",
+      "correctedOptions": [
+        "Actin",
+        "Myosin",
+        "troponin-C",
+        "Tropomyosin"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q37": {
       "answer": "D",
@@ -4952,11 +5364,23 @@
         {
           "title": "CV Physiology — Cardiac Excitation–Contraction Coupling",
           "url": "https://cvphysiology.com/cardiac-function/cf022"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 8",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/008.jpg"
         }
       ],
       "questionHash": "4299fab0eba063c48b857f31ea440043fb6055c2c168cf09d26f772db69f0b26",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "During the process of cardiac excitation-contraction coupling",
+      "correctedOptions": [
+        "ATPase bound to actin hydrolyzes ATP to supply energy",
+        "ATP is required for contraction but not relaxation",
+        "calcium enters the cell through ryanodine receptors",
+        "calcium enters the cell and stimulates calcium release by the sarcoplasmic reticulum"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q38": {
       "answer": "C",
@@ -4966,11 +5390,23 @@
         {
           "title": "CV Physiology — Cardiac Excitation–Contraction Coupling",
           "url": "https://cvphysiology.com/cardiac-function/cf022"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 8",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/008.jpg"
         }
       ],
       "questionHash": "a37a52d8c6cc899aeb8b0e6cee022f601652d322bdcd81dbec4dfb07e682469e",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Calcium is transported out of the cardiac cell by",
+      "correctedOptions": [
+        "Passive diffusion down its concentration gradient",
+        "The Ca²⁺-ATPase pump directly coupled to the Na⁺/K⁺-ATPase pump",
+        "The Na⁺/Ca²⁺ exchanger",
+        "The Na⁺/K⁺-ATPase pump"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q39": {
       "answer": "D",
@@ -4980,11 +5416,23 @@
         {
           "title": "CV Physiology — Cardiac Cycle",
           "url": "https://cvphysiology.com/heart-disease/hd002"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 8",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/008.jpg"
         }
       ],
       "questionHash": "b3bcc5d2d6fd68aee07b4672365845802bb825c9591dc55680407abc9a8017b7",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The T wave of the electrocardiogram begins to oceur during",
+      "correctedOptions": [
+        "early diastole",
+        "isovolumetric contraction",
+        "isovolumetric relaxation",
+        "systolic ejection"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q40": {
       "answer": "B",
@@ -4994,11 +5442,23 @@
         {
           "title": "CV Physiology — Cardiac Cycle",
           "url": "https://cvphysiology.com/heart-disease/hd002"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 8",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/008.jpg"
         }
       ],
       "questionHash": "c3dd055128b4c8e540eaf0462f167ed2ecddf5a2f4216940ebd365756df03661",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The \"C\" wave of atrial pressure curve is due to",
+      "correctedOptions": [
+        "atrial systole",
+        "ventricular systole",
+        "atrial diastole",
+        "ventricular diastole"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q41": {
       "answer": "B",
@@ -5008,6 +5468,10 @@
         {
           "title": "CV Physiology — Cardiac Cycle",
           "url": "https://cvphysiology.com/heart-disease/hd002"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 9",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/009.jpg"
         }
       ],
       "questionHash": "03b5255edd84b35ebe9a6c89237304e4fe73871e00c70dd80c9821783978ad7d",
@@ -5019,7 +5483,8 @@
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Ventricular systole is defined as the time between the"
     },
     "cvs-undated-student-2023-q42": {
       "answer": "C",
@@ -5029,6 +5494,10 @@
         {
           "title": "CV Physiology — Ventricular Pressure–Volume Relationship",
           "url": "https://cvphysiology.com/cardiac-function/cf024"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 9",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/009.jpg"
         }
       ],
       "questionHash": "35b91270d1eddb0d500011b36e878f61480d26bdf38ef2d14b84809b29aa2ef5",
@@ -5040,7 +5509,8 @@
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "A hospitalized patient has an ejection fraction of 0.4, a heart rate of 100 beats/min, and a cardiac output of 3.5 L/min. What is the patient's end-diastolic volume?"
     },
     "cvs-undated-student-2023-q43": {
       "answer": "C",
@@ -5050,11 +5520,23 @@
         {
           "title": "CV Physiology — Ventricular Pressure–Volume Relationship",
           "url": "https://cvphysiology.com/cardiac-function/cf024"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 9",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/009.jpg"
         }
       ],
       "questionHash": "e7f80f19abb0b5edae7a6b94166ecf6aac9c4b48fbcdf09348f5226d791514b4",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "All cardiac valves are normally closed during which of the following phases of the cardiac cycle?",
+      "correctedOptions": [
+        "atrial contraction",
+        "systolic ejection",
+        "isovolumetric relaxation",
+        "ventricular filling"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q44": {
       "answer": "A",
@@ -5064,11 +5546,23 @@
         {
           "title": "CV Physiology — Ventricular Pressure–Volume Relationship",
           "url": "https://cvphysiology.com/cardiac-function/cf024"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 9",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/009.jpg"
         }
       ],
       "questionHash": "0abcf605de4fd319830c9f50b3a86bed79a1a9650bbe9332eb062eb196c0f1d3",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The maximal rate of pressure development within the left ventricle occurs",
+      "correctedOptions": [
+        "during isovolumetric contraction",
+        "during rapid ventricular ejection",
+        "at peak left ventricular systolic pressure",
+        "during rapid ventricular filling"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q45": {
       "answer": "B",
@@ -5078,11 +5572,23 @@
         {
           "title": "CV Physiology — Cardiac Cycle",
           "url": "https://cvphysiology.com/heart-disease/hd002"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 9",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/009.jpg"
         }
       ],
       "questionHash": "9aad8f76a6b4856d56d14d4546fb7214f9038a31848ea1aaf6e7b3bf8b7763d3",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Closure of the aortic and pulmonic valves produces which heart sound?",
+      "correctedOptions": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q46": {
       "answer": "B",
@@ -5092,11 +5598,23 @@
         {
           "title": "CV Physiology — Rapid Filling",
           "url": "https://cvphysiology.com/heart-disease/hd002f"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 10",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/010.jpg"
         }
       ],
       "questionHash": "59fd7a0788edd45fb468211315e039b6993648655e44d65a1e9c3dd942b049ea",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The mitral valve normally opens at the beginning of diastolic filling because",
+      "correctedOptions": [
+        "left atrial contraction forces open the valve",
+        "left ventricular pressure falls below the left atrial pressure",
+        "the papillary muscles contract",
+        "the papillary muscles relax"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q47": {
       "answer": "A",
@@ -5106,12 +5624,23 @@
         {
           "title": "CV Physiology — Ventricular Pressure–Volume Relationship",
           "url": "https://cvphysiology.com/cardiac-function/cf024"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 10",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/010.jpg"
         }
       ],
       "questionHash": "8ab2d5c0b4a49280f9b5cb729747ebadce4721f306b4a9bacad1eb707d25b7b1",
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The following figure represents a normal left ventricular pressure–volume loop. The arrow points to what event in the cardiac cycle?",
+      "correctedOptions": [
+        "aortic valve opening",
+        "end-systolic volume",
+        "end of systolic ejection",
+        "mitral valve opening"
+      ]
     },
     "cvs-undated-student-2023-q48": {
       "answer": "C",
@@ -5121,19 +5650,24 @@
         {
           "title": "Regulation of Cardiac Contractility — Pressure–Volume Loops",
           "url": "https://ncbi.nlm.nih.gov/books/NBK54080/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 10",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/010.jpg"
         }
       ],
       "caveat": "This assumes continuing filling and unchanged other loading conditions.",
       "questionHash": "bf1858b6b0015b52d8d08afb533cf3bd5b0b32fd2f4e578ca50a127f5267f11b",
       "correctedOptions": [
-        "Decreased atrial contractility",
-        "Decreased blood volume",
-        "Decreased ventricular inotropy",
-        "Increased venous compliance"
+        "decreased atrial contractility",
+        "decreased blood volume",
+        "decreased ventricular inotropy",
+        "increased venous compliance"
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Ventricular preload is increased in response to"
     },
     "cvs-undated-student-2023-q49": {
       "answer": "C",
@@ -5143,12 +5677,23 @@
         {
           "title": "CV Physiology — Venous Return: Hemodynamics",
           "url": "https://cvphysiology.com/cardiac-function/cf016"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 11",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/011.jpg"
         }
       ],
       "questionHash": "d590887c3a1fa29f1d4854774acee0d45485bc1f83f8d9560bf756efa8502d9d",
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In the figure, left ventricular stroke volume is plotted against left ventricular end-diastolic volume. Relative to the normal control point, which point represents the independent effects of a decrease in blood volume?",
+      "correctedOptions": [
+        "point A",
+        "point B",
+        "point C",
+        "pointD"
+      ]
     },
     "cvs-undated-student-2023-q50": {
       "answer": "B",
@@ -5158,28 +5703,54 @@
         {
           "title": "Regulation of Cardiac Contractility — Pressure–Volume Loops",
           "url": "https://ncbi.nlm.nih.gov/books/NBK54080/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 11",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/011.jpg"
         }
       ],
       "caveat": "Graph comparison supports decreased preload; it is a qualitative diagram and not a unique quantitative estimate.",
       "questionHash": "35c0ebbd84f3ccfd29e40cc254e619f28a34f40dc5b7321f77341a86a0cca034",
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Compared with the normal left ventricular pressure–volume loop (grey), the loop indicated by the arrow represents:",
+      "correctedOptions": [
+        "Increased preload, afterload, and inotropy",
+        "Increased inotropy and afterload, and decreased preload",
+        "Increased stroke volume with increased end-systolic volume",
+        "Increased stroke volume and decreased ejection fraction"
+      ]
     },
     "cvs-undated-student-2023-q51": {
-      "answer": null,
-      "explanation": "At fixed preload and inotropy, lower afterload increases shortening velocity, but the stem's changed variable is cropped.",
-      "confidence": "unresolved",
+      "answer": "C",
+      "explanation": "The recovered stem explicitly decreases afterload at fixed preload and inotropy. Lower load permits faster fiber shortening; it does not increase the unloaded maximum velocity Vmax.",
+      "confidence": "high",
       "references": [
         {
-          "title": "CV Physiology — Ventricular Pressure–Volume Relationship",
+          "title": "CV Physiology: Ventricular pressure–volume relationships",
           "url": "https://cvphysiology.com/cardiac-function/cf024"
+        },
+        {
+          "title": "Course/book review locator: Pressure-volume loops, preload, afterload and contractility",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#pv-loop"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 12",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/012.jpg"
         }
       ],
-      "caveat": "C would fit decreased afterload; the missing source text must be restored before assigning it.",
       "questionHash": "8677bc1bcd2dc23059165a4cb36163cfb866cfe2902a770c8c500dfd50b09d5e",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Ventricular muscle is isolated and set up in an apparatus to study shortening contractions. At a fixed preload and inotropic state, decreasing the afterload on the ventricular muscle fiber",
+      "correctedOptions": [
+        "decreases the amount of fiber shortening during contraction",
+        "increases active tension development by the fiber",
+        "increases the rate of fiber shortening",
+        "increases Vmax when shortening velocity is plotted against afterload"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q52": {
       "answer": "A",
@@ -5189,11 +5760,23 @@
         {
           "title": "CV Physiology — Sinoatrial Node Action Potentials",
           "url": "https://cvphysiology.com/arrhythmias/a004"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 12",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/012.jpg"
         }
       ],
       "questionHash": "da1ddb73bf4ab38ae36cac6648dd1633ecdb0b7557a5fab04e2090a41b2f5104",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Phase 4 of SA nodal action potentials is generated in part by",
+      "correctedOptions": [
+        "\"funny\" currents produced by inward movement of positively charged ions",
+        "increased activity of the Na+/K+-ATPase pump",
+        "increased outward movement of calcium ions",
+        "opening of potassium channels"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q53": {
       "answer": "B",
@@ -5203,11 +5786,23 @@
         {
           "title": "CV Physiology — Normal and Abnormal Electrical Conduction",
           "url": "https://cvphysiology.com/arrhythmias/a003"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 12",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/012.jpg"
         }
       ],
       "questionHash": "7a40e7368e9d1b2a0875ed971f905d3478fd82252faf8037858308c578dbd979",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The region of the heart with the slowest conduction velocity is the",
+      "correctedOptions": [
+        "atrial muscle",
+        "AV node",
+        "His bundle",
+        "ventricular Purkinje fiber"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q54": {
       "answer": "D",
@@ -5217,11 +5812,23 @@
         {
           "title": "CV Physiology — Electrocardiogram",
           "url": "https://cvphysiology.com/arrhythmias/a009"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 12",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/012.jpg"
         }
       ],
       "questionHash": "2570df9bdaa709829acc9491df1d508a250cdda75dad9c6115e963a337ea96fb",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The T wave of the electrocardiogram is an electrical representation of",
+      "correctedOptions": [
+        "atrial depolarization",
+        "atrial repolarization",
+        "ventricular depolarization",
+        "ventricular repolarization"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q55": {
       "answer": "B",
@@ -5231,6 +5838,10 @@
         {
           "title": "CV Physiology — Electrocardiogram",
           "url": "https://cvphysiology.com/arrhythmias/a009"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 12",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/012.jpg"
         }
       ],
       "caveat": "Clinical definitions sometimes allow slightly wider values; the source's teaching convention is 0.10 seconds.",
@@ -5243,7 +5854,8 @@
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "A normal QRS complex has a duration no greater than"
     },
     "cvs-undated-student-2023-q56": {
       "answer": "C",
@@ -5253,11 +5865,23 @@
         {
           "title": "CV Physiology — Ventricular Depolarization and Mean Electrical Axis",
           "url": "https://cvphysiology.com/arrhythmias/a016"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 13",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/013.jpg"
         }
       ],
       "questionHash": "44120add751e648f4219b336588ceafb63389cb08237f7a5740083a6dc87b548",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following leads has an electrical axis of -30 degrees",
+      "correctedOptions": [
+        "Lead I",
+        "Lead III",
+        "Lead aVL",
+        "Lead aVF"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q57": {
       "answer": "C",
@@ -5267,11 +5891,23 @@
         {
           "title": "CV Physiology — Mean Electrical Vector",
           "url": "https://cvphysiology.com/arrhythmias/a015"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 13",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/013.jpg"
         }
       ],
       "questionHash": "9f45cfd6e1816ad034cee5880fe1f94a84823363177748b20429932206a98bb6",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "If the mean electrical axis is 90°, then the net amplitude of the QRS will be greatest in",
+      "correctedOptions": [
+        "Lead I",
+        "Lead III",
+        "aVF",
+        "aVL"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q58": {
       "answer": "D",
@@ -5281,18 +5917,23 @@
         {
           "title": "CV Physiology — Ventricular Depolarization and Mean Electrical Axis",
           "url": "https://cvphysiology.com/arrhythmias/a016"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 13",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/013.jpg"
         }
       ],
       "questionHash": "9351edf155a76608256ebd16b4bdfe08342e5dc5131877dab0db40976bc4b510",
       "correctedOptions": [
-        "The entire outer surface of the apex",
-        "The endocardial areas",
-        "The inner surface of the apex",
-        "Posterobasal portion of the left ventricle and the pulmonary conus"
+        "the entire outer surface of the apex",
+        "the endocardial areas",
+        "the inner surface of the apex",
+        "posterobasal portion of the left ventricle and the pulmonary conus"
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The last portion of the heart to depolarize is"
     },
     "cvs-undated-student-2023-q59": {
       "answer": "B",
@@ -5302,11 +5943,23 @@
         {
           "title": "CV Physiology — Ventricular Depolarization and Mean Electrical Axis",
           "url": "https://cvphysiology.com/arrhythmias/a016"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 13",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/013.jpg"
         }
       ],
       "questionHash": "0d431271768f744631cb677a27c38c15516d9c279797987421cc818cbc9c19aa",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In a Lead I ECG recording, the first small negative deflection of the QRS (the Q-wave) represents",
+      "correctedOptions": [
+        "Atrial repolarization",
+        "Depolarization of the interventricular septum from left to right",
+        "A wave of depolarization traveling towards the left leg",
+        "Ventricular repolarization"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q60": {
       "answer": "B",
@@ -5316,11 +5969,23 @@
         {
           "title": "CV Physiology — Electrocardiogram",
           "url": "https://cvphysiology.com/arrhythmias/a009"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 13",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/013.jpg"
         }
       ],
       "questionHash": "e56519eafddb5db7d9bc3a6d22042fcecbe39e2e19f9614e7cf5c885e0ece064",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Leads V5-V6 overlie which region of the left ventricle",
+      "correctedOptions": [
+        "Anteroapical",
+        "Anterolateral",
+        "Anteroseptal",
+        "Inferior"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q61": {
       "answer": "C",
@@ -5330,12 +5995,23 @@
         {
           "title": "Costovertebral Joint Ligaments",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5154401/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 14",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/014.jpg"
         }
       ],
-      "caveat": "The noun at the end of the stem is cropped, but the described attachment is distinctive.",
       "questionHash": "5e8f2265ba2b4f4b4d242ff79ee5f0accf3cbc6c5dbb72186b318d6028977d37",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following ligaments is connected to the non-articular part of the tubercle in rib?",
+      "correctedOptions": [
+        "Posterior longitudinal .Lig",
+        "Interspinous.Lig",
+        "Lateral costotransverse.Lig",
+        "Flavoum.Lig"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q62": {
       "answer": "D",
@@ -5345,11 +6021,23 @@
         {
           "title": "StatPearls — Heart and Pericardial Cavity",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482452/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 14",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/014.jpg"
         }
       ],
       "questionHash": "adf2dd16f2f795d004f58bacd8bf6d3af0f0bdcf4d459c5e297517462a6ce55f",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "All the following related to the left ventricle except...?",
+      "correctedOptions": [
+        "Papillary muscles",
+        "Chorda tendino",
+        "Aрex",
+        "Septo marginal"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q63": {
       "answer": null,
@@ -5359,6 +6047,10 @@
         {
           "title": "StatPearls — Thoracotomy and Intercostal Anatomy",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK544368/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 14",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/014.jpg"
         }
       ],
       "caveat": "No option fits the source's explicit fibrocartilage wording.",
@@ -5366,12 +6058,13 @@
       "correctedOptions": [
         "Third costovertebral",
         "Third costotransverse",
-        "First costosternal",
+        "First costo sternal",
         "Zygapophysial"
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following joint is fibrocartilage type?"
     },
     "cvs-undated-student-2023-q64": {
       "answer": "C",
@@ -5381,11 +6074,23 @@
         {
           "title": "StatPearls — Thoracic Wall",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK535414/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 14",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/014.jpg"
         }
       ],
       "questionHash": "4870d404e5b476d440b925b3abfdee0c026021bde05f2c6f0bd2cfe3bde4d9e0",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The ninth posterior intercostal vein on the left side drains into which of the following veins?",
+      "correctedOptions": [
+        "Azygos",
+        "Accessory hemizygous",
+        "Hemizygous",
+        "Internal thoracic"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q65": {
       "answer": "A",
@@ -5395,11 +6100,23 @@
         {
           "title": "StatPearls — Thoracic Wall",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK535414/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 14",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/014.jpg"
         }
       ],
       "questionHash": "588a3410983ba166d7975dd301012659e92a794e7f9f0df7f63a9657e9aa4dcf",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The ninth anterior intercostal artery is branches from which of the following arteries?",
+      "correctedOptions": [
+        "Musclophrenic",
+        "Internal thoracic",
+        "Superior epigastric",
+        "Ascending aorta"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q66": {
       "answer": "D",
@@ -5409,12 +6126,24 @@
         {
           "title": "StatPearls — Heart Great Vessels",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK547680/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 15",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/015.jpg"
         }
       ],
       "caveat": "Interprets the wording as asking for a posterior relation of the ascending aorta.",
       "questionHash": "c52de61919c18dd99bf5983beed2d155afac9cce662d580412bab1a9d4097494",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The ascending aorta is posteriorly adjacent to which of the following elements?",
+      "correctedOptions": [
+        "Vena cava Superior",
+        "Left ventricle",
+        "Coronary sinus",
+        "Right pulmonary artery"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q67": {
       "answer": "C",
@@ -5424,11 +6153,23 @@
         {
           "title": "StatPearls — Aortic Arch Anatomy",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK499911/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 15",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/015.jpg"
         }
       ],
       "questionHash": "5df29b578eed1dbfdce0d7461ff392b1a543d3cd7ad1918b0c4bcbe5a520be0e",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following structures is adjacent to the posterior and right surface of the aortic arch?",
+      "correctedOptions": [
+        "Right phrenic",
+        "left vagus",
+        "Left recurrent laryngeal nerve",
+        "Ligamentum arteriosum"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q68": {
       "answer": "A",
@@ -5438,11 +6179,23 @@
         {
           "title": "StatPearls — Thorax",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK557710/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 15",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/015.jpg"
         }
       ],
       "questionHash": "6fd0bf440d7fd27fb83415146757eb6dd8adcf8145e87d7a8b19fce1695affd4",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following sentences is correct about the sympathetic chain?",
+      "correctedOptions": [
+        "Nerve fibers in the greater splanchnic nerve have myelination",
+        "The fourth sympathetic ganglia is involved in the formation of the small splanchnic nerve",
+        "White communication rami is visible in cervical portion of sympathetic chain",
+        "Impar ganglion is visible in thoracic portion of sympathetic chain."
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q69": {
       "answer": "B",
@@ -5452,26 +6205,54 @@
         {
           "title": "StatPearls — Heart and Pericardial Cavity",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482452/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 15",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/015.jpg"
         }
       ],
       "questionHash": "37a9eecf3155ae0ada4675d1969fd33e44487a928e8d4358d453acd5fc83315b",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the cardiac cavities is in the posterior position compared to the other cavities in the chest?",
+      "correctedOptions": [
+        "Right atrium",
+        "Left atrium",
+        "Left ventricle",
+        "right ventricle"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q70": {
-      "answer": null,
-      "explanation": "The transverse sinus lies posterior to the pulmonary trunk and anterior to the SVC; the wording can ask either relation.",
-      "confidence": "unresolved",
+      "answer": "A",
+      "explanation": "The pulmonary trunk (with the ascending aorta) forms the anterior relation of the transverse pericardial sinus. The SVC is posterior to the sinus.",
+      "confidence": "moderate",
       "references": [
         {
           "title": "StatPearls — Pericardium",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482256/?report=classic"
+        },
+        {
+          "title": "Course/book review locator: Pericardial layers, sinuses and tamponade",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#pericardium"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 15",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/015.jpg"
         }
       ],
-      "caveat": "A fits its anterior boundary; D fits the structure it lies anterior to. Source wording remains ambiguous.",
       "questionHash": "38a8300010beb414750a8b0949d6c490f0a995926c17b7d871ad1fd4384dd01e",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The transverse pericardial sinus is anteriorly adjacent to which of the following elements?",
+      "correctedOptions": [
+        "Pulmonary artery trunk",
+        "Vena cava inferior",
+        "Descending aorta",
+        "Vena cava Superior"
+      ],
+      "sourcePageVerified": true,
+      "caveat": "The source's 'anteriorly adjacent' is interpreted as asking what lies anterior to the sinus. If read as asking what the sinus lies anterior to, SVC would instead fit; retain this wording qualification."
     },
     "cvs-undated-student-2023-q71": {
       "answer": "D",
@@ -5481,11 +6262,23 @@
         {
           "title": "StatPearls — Mediastinum",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK539819/?report=classic"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 16",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/016.jpg"
         }
       ],
       "questionHash": "9b860ef84ce27959986e4a0db5d8db4d89d67da86d726ca0f3b7f0b316e3d009",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "All the following structures are seen in the superior mediastinum except",
+      "correctedOptions": [
+        "Left phrenic",
+        "Thymus",
+        "Right phrenic",
+        "Ascending aorta"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q72": {
       "answer": "D",
@@ -5495,11 +6288,23 @@
         {
           "title": "StatPearls — Heart and Pericardial Cavity",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482452/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 16",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/016.jpg"
         }
       ],
       "questionHash": "3a909a5d90473c46f7424b74026008057a8638889620e273ec47cb0caa5c25f5",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Where is the auscultation of the pulmonary valve in the surface anatomy?",
+      "correctedOptions": [
+        "apex of the heart",
+        "The second right intercostal space",
+        "the fifth left intercostal space",
+        "The second left intercostal space"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q73": {
       "answer": "D",
@@ -5509,11 +6314,23 @@
         {
           "title": "StatPearls — Thoracotomy and Intercostal Anatomy",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK544368/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 16",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/016.jpg"
         }
       ],
       "questionHash": "496346e35d4889e46717ed77dc92c7e0e943653ad3441adfe413b404b79d07d6",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following muscles are active in elevation of the ribs?",
+      "correctedOptions": [
+        "Serratus Posterior Inferior",
+        "Transverse thoracis",
+        "Subcostal",
+        "External intercostal"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q74": {
       "answer": "C",
@@ -5523,56 +6340,113 @@
         {
           "title": "StatPearls — Heart and Pericardial Cavity",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482452/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 16",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/016.jpg"
         }
       ],
       "questionHash": "64c500fb2ffeecc9d0dc9543c5d696de0bb10d27e7b23b5de179ce4cafb3a14e",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "All the following veins drain into the right atrium except",
+      "correctedOptions": [
+        "Coronary sinus",
+        "Vena cava inferior",
+        "Right pulmonary veins",
+        "Vena Cava Superior"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q75": {
-      "answer": null,
-      "explanation": "The sinus name is cropped; the left atrium forms the anterior wall of the oblique pericardial sinus.",
-      "confidence": "unresolved",
+      "answer": "A",
+      "explanation": "The clearer stem specifies the oblique pericardial sinus, whose anterior wall is the posterior surface of the left atrium.",
+      "confidence": "high",
       "references": [
         {
           "title": "StatPearls — Pericardium",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482256/?report=classic"
+        },
+        {
+          "title": "Course/book review locator: Pericardial layers, sinuses and tamponade",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#pericardium"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 16",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/016.jpg"
         }
       ],
-      "caveat": "A is plausible only if the missing term is ‘oblique’; the visible source does not confirm it.",
       "questionHash": "e89fb06fb8847d29f6c2e8c89d1bc7901b053b1f7cb9116dbde817af617c7d78",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following areas can be seen in the anterior wall of the pericardial oblique sinus?",
+      "correctedOptions": [
+        "Left atrium",
+        "Right atrium",
+        "Esophagus",
+        "Right pulmonary veins"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q76": {
-      "answer": null,
-      "explanation": "The heart's vertebral projection changes with posture; the source crops off the specified position.",
-      "confidence": "unresolved",
+      "answer": "B",
+      "explanation": "The recovered posture is supine: Gray's Anatomy describes the cardiac base opposite T5–T8 when supine, descending approximately to T6–T9 when erect.",
+      "confidence": "high",
       "references": [
         {
           "title": "StatPearls — Heart and Pericardial Cavity",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482452/"
+        },
+        {
+          "title": "Course/book review locator: Heart surfaces, borders, grooves and imaging silhouette",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#heart-external"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 16",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/016.jpg"
         }
       ],
-      "caveat": "The missing posture prevents a reliable choice between commonly taught vertebral levels.",
       "questionHash": "2675dfbde244b46c43bba13d31ba6a852908b638ac76e2f08148a5aa2c4fdddd",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the thoracic vertebraes are posterior of the base of the heart in the supine position",
+      "correctedOptions": [
+        "3 to 7",
+        "5 to 8",
+        "6 to 9",
+        "7 to 10"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q77": {
-      "answer": null,
-      "explanation": "The inferior thoracic aperture includes T12, ribs 11–12 and the costal margin; the stem's final qualifier is missing.",
-      "confidence": "unresolved",
+      "answer": "A",
+      "explanation": "The recovered stem says EXCEPT. The inferior thoracic aperture is bounded posteriorly by T12, not T11; ribs 11–12 and the costal margin contribute.",
+      "confidence": "high",
       "references": [
         {
           "title": "StatPearls — Thorax",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK557710/"
+        },
+        {
+          "title": "Course/book review locator: Thoracic boundaries, apertures and surface planes",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#thoracic-map"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 17",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/017.jpg"
         }
       ],
-      "caveat": "If the omitted word is ‘except’, A fits; several options fit a positive stem.",
       "questionHash": "39ffdfc199aedc32c619f0dba04cedff03c1cb03823aea9b6ec0d455d7a84acf",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "All of the following are involved in the formation of the lower thoracic opening except",
+      "correctedOptions": [
+        "11 vertebrae",
+        "12 ribs",
+        "11 ribs",
+        "Costal margin"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q78": {
       "answer": "A",
@@ -5582,11 +6456,23 @@
         {
           "title": "StatPearls — Back Muscles",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK537074/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 17",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/017.jpg"
         }
       ],
       "questionHash": "8c657284bddc47f0ccaf6eb037f57c66595a57bbc75fcb533b3659c9dcc596d2",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following muscles are innervated by the posterior branch of the spinal nerves?",
+      "correctedOptions": [
+        "Longissimus thoracic",
+        "Serratus posterior inferior",
+        "Sub costal",
+        "Rhomboid minor"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q79": {
       "answer": "B",
@@ -5596,11 +6482,23 @@
         {
           "title": "StatPearls — Superior Intercostal Arteries and Nerves",
           "url": "https://ncbi.nlm.nih.gov/books/NBK549847/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 17",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/017.jpg"
         }
       ],
       "questionHash": "9dc0bdb798f9b3b91e5eefde1d02f54dc0577b2cc58a2f06fb0be0aacca95a59",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Intercostal nerve innervates all areas below except...",
+      "correctedOptions": [
+        "External intercostal muscles",
+        "Visceral pericardium",
+        "Transverse thoracic",
+        "Intima intercostal muscles"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q80": {
       "answer": "A",
@@ -5610,11 +6508,23 @@
         {
           "title": "StatPearls — Heart and Pericardial Cavity",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482452/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 17",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/017.jpg"
         }
       ],
       "questionHash": "9c0224d5d5839775ad7ffa0c73f263d211c3c9cd7787f032c69946220ae146d2",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The Diagonal artery branches from which of the following arteries?",
+      "correctedOptions": [
+        "Anterior interventricular",
+        "Circumflex",
+        "Marginal",
+        "Right coronary"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q81": {
       "answer": "A",
@@ -5624,12 +6534,24 @@
         {
           "title": "StatPearls — Heart Great Vessels",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK547680/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 17",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/017.jpg"
         }
       ],
       "caveat": "Interprets ‘posteriorly adjacent’ as asking for a posterior relation of the aorta.",
       "questionHash": "ca4c902c8901d670d13420e73978b688ae04d3365c00a20172b19365d8839a87",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The descending aorta posteriorly is adjacent to which of the following?",
+      "correctedOptions": [
+        "Hemiazygos vein",
+        "Esophagus",
+        "Pericard",
+        "Left ventricle"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q82": {
       "answer": "B",
@@ -5639,11 +6561,23 @@
         {
           "title": "StatPearls — Thoracic Duct",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK513227/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 17",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/017.jpg"
         }
       ],
       "questionHash": "7b5ff8aacee8792fd7dcf3325b242c7b64646e880a16df7f1b7eb74850367237",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following statement is not correct?",
+      "correctedOptions": [
+        "Phrenic nerve inervate fibrous pericard",
+        "Thoracic duct is passing from anterior mediastinum",
+        "Left upper limb lymph draien into thoracic duct",
+        "Parasympathic nerve in thorax coming from vagus nerve"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q83": {
       "answer": "A",
@@ -5653,11 +6587,23 @@
         {
           "title": "StatPearls — Heart and Pericardial Cavity",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK482452/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 18",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/018.jpg"
         }
       ],
       "questionHash": "7415841914852696c3fe5ff6f090d870cf9aaba35d2508de27d0bcdb40576481",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "In the radiology image, the shadow on the right side of the heart belongs to which heart cavity",
+      "correctedOptions": [
+        "Right atrium",
+        "Left atrium",
+        "Right ventricle",
+        "Left ventricle"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q84": {
       "answer": "C",
@@ -5667,11 +6613,23 @@
         {
           "title": "StatPearls — Pelvic Bones",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK519524/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 18",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/018.jpg"
         }
       ],
       "questionHash": "31e26823b71988492af0781385709d390d88f94ff9fe1377bbdcb127455c7e60",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Pectineal line belong to which of the following bone?",
+      "correctedOptions": [
+        "Sacrum",
+        "Соссух",
+        "Pubis",
+        "Ilium"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q85": {
       "answer": "C",
@@ -5681,11 +6639,23 @@
         {
           "title": "StatPearls — Back Muscles",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK537074/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 18",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/018.jpg"
         }
       ],
       "questionHash": "40076711fa3b6d7a57b4cbb2ddcf77278753950aa7ef0f1630eb1055e53fda74",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "All the following muscles are attached to the spinous process except...?",
+      "correctedOptions": [
+        "Trapezius",
+        "Serratus posterior inferior",
+        "serratus anterior",
+        "serratus posterior superior"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q86": {
       "answer": "C",
@@ -5695,11 +6665,23 @@
         {
           "title": "OpenStax — Blood Flow, Blood Pressure and Resistance",
           "url": "https://openstax.org/books/anatomy-and-physiology/pages/20-2-blood-flow-blood-pressure-and-resistance?query=stroke+volume"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 18",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/018.jpg"
         }
       ],
       "questionHash": "122e7006a976482e5fff7fe6f535b6a05b82721162b54082d1cd33bffbefb25c",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Most numerous vessels in our body are ...?",
+      "correctedOptions": [
+        "small arteries",
+        "veins",
+        "capillaries",
+        "large arteries"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q87": {
       "answer": "C",
@@ -5709,11 +6691,23 @@
         {
           "title": "University of Leeds — Arterial Histology",
           "url": "https://histology.leeds.ac.uk/home/circulatory/arteries/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 18",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/018.jpg"
         }
       ],
       "questionHash": "2d85f16d908d4ed15a93382b3829b3e6fa40a3fd664600c12b78a1ce349ca1b1",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The thickest layer in the wall of arteries are ......?",
+      "correctedOptions": [
+        "adventitia",
+        "intima",
+        "media",
+        "seroza"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q88": {
       "answer": "D",
@@ -5723,12 +6717,24 @@
         {
           "title": "Dynamics of thymus organogenesis and colonization in early human development",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3631974/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 19",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/019.jpg"
         }
       ],
       "caveat": "‘Dual origin’ is the conventional teaching description; other supporting tissues have additional embryonic contributions.",
       "questionHash": "21331d21f025d8136bc25843a01ebf8a51bfaad66bbd234b073a808bacc8d7a1",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which one has dual embryonie origin ?",
+      "correctedOptions": [
+        "lymphnode",
+        "spleen",
+        "tonsil",
+        "thymus"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q89": {
       "answer": "D",
@@ -5738,11 +6744,23 @@
         {
           "title": "University of Leeds — Spleen Histology",
           "url": "https://histology.leeds.ac.uk/home/lymphoid/lymph_spleen/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 19",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/019.jpg"
         }
       ],
       "questionHash": "bf5eb4c9aab60f2af887fb399e71ac12c693ed9b0df8d505cbd972adfbd549f8",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "We observe this type of capillaries in bone marrow and spleen ?",
+      "correctedOptions": [
+        "continuous",
+        "fenestrated with diaphragm",
+        "fenestrated without diaphragm",
+        "sinusoids"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q90": {
       "answer": "A",
@@ -5752,12 +6770,24 @@
         {
           "title": "Immunobiology — Mucosal Immune System",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK27169/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 19",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/019.jpg"
         }
       ],
       "caveat": "Serum IgA is often monomeric; the answer assumes secretory IgA.",
       "questionHash": "0b361f00183d1b6ab985ccc1eefc51425fff0c11d13c0c1e7c0cf290e8130038",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which one is not monomer ?",
+      "correctedOptions": [
+        "IgA",
+        "IgE",
+        "IgD",
+        "IgG"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q91": {
       "answer": "C",
@@ -5767,11 +6797,23 @@
         {
           "title": "University of Leeds — Tonsil Histology",
           "url": "https://histology.leeds.ac.uk/home/lymphoid/tonsils/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 19",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/019.jpg"
         }
       ],
       "questionHash": "64362ad6b448edb771db9242172644ec6fa56e0f2d5699519db67052ecb46a06",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which one is partially capsulated?",
+      "correctedOptions": [
+        "thymus",
+        "spleen",
+        "tonsil",
+        "lymphnode"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q92": {
       "answer": "A",
@@ -5781,23 +6823,42 @@
         {
           "title": "University of Leeds — Spleen Histology",
           "url": "https://histology.leeds.ac.uk/home/lymphoid/lymph_spleen/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 19",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/019.jpg"
         }
       ],
       "questionHash": "cd1c4519090a9601100b02e9190d0032ef283fd9c2329297e6aa1faaa97b6b6a",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Where is the site of destruction of aged erythrocytes ?",
+      "correctedOptions": [
+        "spleen",
+        "thymus",
+        "lyphnode",
+        "tonsil"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q93": {
-      "answer": null,
-      "explanation": "The missing pulmonary structure is decisive: truncus arteriosus forms the pulmonary trunk, while conus contributes ventricular outflow tracts.",
-      "confidence": "unresolved",
+      "answer": "D",
+      "explanation": "The clearer stem specifies pulmonary artery and aorta. The truncus arteriosus gives rise to the proximal ascending aorta and pulmonary trunk after outflow septation.",
+      "confidence": "high",
       "references": [
         {
           "title": "StatPearls — Embryology of the Heart Tube",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK499934/"
+        },
+        {
+          "title": "Course/book review locator: Cardiogenic fields, folding and heart-tube derivatives",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#heart-fields"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 19",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/019.jpg"
         }
       ],
-      "caveat": "The source crops the stem after ‘pulmon…’; recovering the options alone does not resolve the question.",
       "questionHash": "a9305b1e3f99a25f8610d4d4a145e4aedebe78945509f3e80c01ad81797da7ef",
       "correctedOptions": [
         "Bulbus cordis",
@@ -5807,7 +6868,8 @@
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which part of the primitive heart tube gives rise to the pulmonary artery and the aorta?"
     },
     "cvs-undated-student-2023-q94": {
       "answer": "A",
@@ -5817,33 +6879,53 @@
         {
           "title": "StatPearls — Coronary Sinus Anatomy",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK557566/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 19",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/019.jpg"
         }
       ],
       "questionHash": "32fb89081ad4bde805b0bfc959a8d961cd0be90b4ea9a2b8aa57712df747febb",
       "correctedOptions": [
-        "Coronary sinus",
+        "Coronary sinus.",
         "Inferior vena cava",
         "Oblique vein of the right atrium",
         "Main inflow of the right atrium"
       ],
       "sourcePageVerified": true,
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The left sinus horn becomes the"
     },
     "cvs-undated-student-2023-q95": {
-      "answer": null,
-      "explanation": "Septum primum forms the foramen-ovale valve, but ostium secundum also forms through septum-primum perforation and resorption.",
-      "confidence": "unresolved",
+      "answer": "C",
+      "explanation": "Septum primum persists as the flap valve of the foramen ovale. The source's option B says septum secundum, whereas the ostium secundum develops by resorption in septum primum.",
+      "confidence": "high",
       "references": [
         {
           "title": "StatPearls — Embryology of the Heart Tube",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK499934/"
+        },
+        {
+          "title": "Course/book review locator: Atrial septation, sinus venosus and pulmonary veins",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#atrial-septation"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 20",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/020.jpg"
         }
       ],
-      "caveat": "Option endings and option order are corrupted; the source can contain more than one correct assertion.",
       "questionHash": "40115afdd327727ec88ad3e4e0092e2a4421cd745f026ef2b5291d69380730bf",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "Which of the following statements concerning the partitioning of the atria is CORRECT?",
+      "correctedOptions": [
+        "The septum secundum is a transient structure which degenerates by the end of the fourth week",
+        "The ostium secundum forms by apoptosis in the central part of the septum secundum",
+        "The septum primum forms the valve of the oval foramen",
+        "The ostium primum is a common atrial-septal defect"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q96": {
       "answer": "B",
@@ -5853,11 +6935,23 @@
         {
           "title": "StatPearls — Embryology of the Heart Tube",
           "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK499934/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 20",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/020.jpg"
         }
       ],
       "questionHash": "f7cd8733a6c8103da88d53fc3c37f0e2ac05edfaee67c508fbd62c8315b57b60",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "A newborn infant presents with cyanotic heart disease and fails to thrive. On examination of the heart, it was revealed that the aorta arose from the right ventricle and the pulmonary trunk arose from the left ventricle. What is the name given to this type of cardiac malformation?",
+      "correctedOptions": [
+        "Persistent truncus arteriosus",
+        "Transposition of the great vessels",
+        "Tetralogy of Fallot",
+        "Ventricular septal defect (VSD)"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q97": {
       "answer": "C",
@@ -5867,11 +6961,23 @@
         {
           "title": "StatPearls — Coronary Sinus Anatomy",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK557566/"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 20",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/020.jpg"
         }
       ],
       "questionHash": "b67da33e9fa9c231f8f1429364e034cec4acebc53cfd2e1494d2eddae0adaeff",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The sinus venarum is",
+      "correctedOptions": [
+        "Formed from the right auricle.",
+        "The trabeculated part of the right atrium.",
+        "Formed from tissue of the right sinus horn",
+        "Formed from the pulmonary veins."
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q98": {
       "answer": "A",
@@ -5881,12 +6987,23 @@
         {
           "title": "StatPearls — Embryology of the Aortic Arches",
           "url": "https://ncbi.nlm.nih.gov/books/NBK553173/?report=reader"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 20",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/020.jpg"
         }
       ],
-      "caveat": "The option's final word is cropped, but its visible two-source formulation is the most complete answer.",
       "questionHash": "c074a3ad85bafe092689cbdbc97b6612775c3142265c60cba04332422db906ab",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The internal carotid artery is derived from",
+      "correctedOptions": [
+        "the distal part of the third arch artery and cranial most part of the dorsal aorta.",
+        "Third aortic arch",
+        "Dorsal aorta",
+        "Second and third aortic archs"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-student-2023-q99": {
       "answer": "C",
@@ -5896,12 +7013,24 @@
         {
           "title": "StatPearls — Superior Vena Cava",
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK545255/?report=printable"
+        },
+        {
+          "title": "Clearer IZAM source, PDF page 20",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/cvs-undated-student-2023/izam-clearer-pages/020.jpg"
         }
       ],
       "caveat": "The source omits ‘anterior’ before the first cardinal vein in C.",
       "questionHash": "38a87e789c8b99d74fb7f5225bc6a47a843bc140bdf960bc59e735451efae3cf",
       "reviewStatus": "verified",
-      "reviewer": "cvs_answers_a"
+      "reviewer": "primary-agent: clearer IZAM source reconciliation; prior answer review retained except explicit repairs",
+      "correctedPrompt": "The SVC is derived from:",
+      "correctedOptions": [
+        "Rhight cardinal vein",
+        "Right posterior cardinal vein",
+        "Right cardinal and right common cardinal",
+        "Right common cardinal"
+      ],
+      "sourcePageVerified": true
     },
     "cvs-undated-histology-first-q1": {
       "answer": "A",
@@ -8926,6 +10055,1167 @@
       "caveat": "Fainting is not an inevitable consequence of standing with varicose veins.",
       "reviewStatus": "verified",
       "reviewer": "cvs_answers_b"
+    },
+    "cvs-izam-circulation-item1": {
+      "answer": "C",
+      "explanation": "Mean velocity = volume flow / cross-sectional area = 10/2 = 5 cm/sec. Units reduce from cm³/sec divided by cm² to cm/sec.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Velocity, Bernoulli, Reynolds and flow measurement",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#velocity-turbulence"
+        }
+      ],
+      "questionHash": "fdd315a15aae2ea376986a3352ee5e8ca571b924d340a0effb83902990a7e4ce",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item2": {
+      "answer": "D",
+      "explanation": "In the Guyton low-perfusion model, peripheral chemoreceptor cardiovascular reflexes become especially important below about 80 mmHg. Reduced carotid/aortic-body perfusion lowers oxygen and raises CO₂/H⁺.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Baroreceptors, chemoreceptors and central pressure regulation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#neural-pressure"
+        },
+        {
+          "title": "OpenStax: Regulation of the vascular system",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-4-homeostatic-regulation-of-the-vascular-system"
+        }
+      ],
+      "questionHash": "3a7ba55fce66062d3fef50a71d59beeed124cc00d2a1e73198a13f9920c9862f",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "A textbook approximate threshold for the circulatory chemoreflex, not an on/off blood-pressure threshold for all chemoreceptor activity."
+    },
+    "cvs-izam-circulation-item3": {
+      "answer": "C",
+      "explanation": "Reynolds number rises with velocity, diameter and density, and falls with viscosity. Increased velocity therefore favors turbulence.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Velocity, Bernoulli, Reynolds and flow measurement",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#velocity-turbulence"
+        }
+      ],
+      "questionHash": "e612c482e5ab3b6dfa169d5973a04ec23f00edc5fcede546400ba62d119673eb",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item4": {
+      "answer": "B",
+      "explanation": "Active hyperemia is the immediate increase in flow accompanying increased tissue activity. Angiogenesis is structural long-term adaptation; low oxygen is a stimulus rather than the named flow response.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Local blood-flow control, autoregulation and special circuits",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#local-regulation"
+        }
+      ],
+      "questionHash": "e85ac053aa5d75fbac53e14c42abaa2c8a223f9e5e1d429bfc3ae94a55cf3291",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item5": {
+      "answer": "C",
+      "explanation": "Lower precapillary resistance transmits more upstream pressure to capillaries, increasing filtration. Increased interstitial fluid formation raises lymph return while drainage capacity remains adequate.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Microcirculation, Starling forces, lymph and edema",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#microexchange"
+        },
+        {
+          "title": "OpenStax: Capillary exchange",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-3-capillary-exchange"
+        }
+      ],
+      "questionHash": "33865726a44fce99f324cfc1b98661bdec3aceb3f43a90eeb0ccb160e076834c",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item6": {
+      "answer": "B",
+      "explanation": "Orthostatic pooling reduces central filling. Baroreflex sympathetic activation raises vascular resistance and can lower renal perfusion; renin rises as renal sympathetic/low-perfusion signals develop.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Baroreceptors, chemoreceptors and central pressure regulation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#neural-pressure"
+        },
+        {
+          "title": "OpenStax: Regulation of the vascular system",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-4-homeostatic-regulation-of-the-vascular-system"
+        }
+      ],
+      "questionHash": "119f1755c50920524bbe85d0e94e43705bc2dcbce967b40882272b8caabf868d",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "The time courses differ: neural compensation is rapid, whereas the hormonal response develops later."
+    },
+    "cvs-izam-circulation-item7": {
+      "answer": "D",
+      "explanation": "Reducing interstitial oncotic pressure reduces the outward oncotic driving force in the conventional Starling model. The other choices increase fluid/protein escape and lymph formation.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Microcirculation, Starling forces, lymph and edema",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#microexchange"
+        },
+        {
+          "title": "OpenStax: Capillary exchange",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-3-capillary-exchange"
+        }
+      ],
+      "questionHash": "42dfa12808d4fe151808d803d42a99d013086a8a50d794b25c67307ed82e29f2",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item8": {
+      "answer": "B",
+      "explanation": "An incompetent aortic valve blunts or removes the normal closure-related incisura. Regurgitation typically widens, rather than narrows, pulse pressure; it does not require increased aortic compliance.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Shock, heart failure and valve lesions: integrated physiology",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#shock-failure"
+        }
+      ],
+      "questionHash": "56bd770c1a153220b57db60089b37d03bae3580004f687c866122b42395a267e",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item9": {
+      "answer": "A",
+      "explanation": "Endothelial nitric oxide is synthesized by endothelial NO synthase and relaxes adjacent vascular smooth muscle via soluble guanylyl cyclase/cGMP.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Local blood-flow control, autoregulation and special circuits",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#local-regulation"
+        }
+      ],
+      "questionHash": "edcdd67c39cd1d2ac5f2eff733c45d20240be923241e35980fcfdcca0da7ae84",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item10": {
+      "answer": "A",
+      "explanation": "Local metabolic demand produces vasodilation and matches muscle perfusion to activity. Sympathetic tone remains important systemically but is not the principal local matching signal.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Coronary perfusion, exercise and oxygen demand",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#coronary-exercise"
+        }
+      ],
+      "questionHash": "dc1ab76e25922507ff3546393b89436f8fc685c49757fd19f3f0fda185a58ab3",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item11": {
+      "answer": "A",
+      "explanation": "Guyton's approximate comparison gives veins about eight times the distensibility of corresponding arteries. Compliance additionally depends on starting volume, so it is not the same ratio.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Compliance, pulse pressure, MAP and measurement",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#arterial-pressure"
+        }
+      ],
+      "questionHash": "5337109623ccbbb40d1961d88225f8761ff0e5a3c17102e16148daddbb8e3d43",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "An approximate textbook comparison, not a fixed ratio for every vessel."
+    },
+    "cvs-izam-circulation-item12": {
+      "answer": "B",
+      "explanation": "Systemic venous congestion, particularly with right-sided failure, raises jugular venous pressure. Hyperkalemia depends on renal function and treatment and is not the defining consequence.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Shock, heart failure and valve lesions: integrated physiology",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#shock-failure"
+        }
+      ],
+      "questionHash": "3123e69f96cfc8218998ab83693c35a51bab6ce79048de6b66bcd83b80adf006",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item13": {
+      "answer": "B",
+      "explanation": "Systemic veins and venules are the major capacitance reservoir and contain the largest share of circulating blood at rest.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Venous return, capacitance, posture and cardiac output",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#venous-return"
+        }
+      ],
+      "questionHash": "3987fee7b2f2c05b1f944b0d9f948bbc06173f0910bf15292438560432e36114",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item14": {
+      "answer": "A",
+      "explanation": "Endothelin is a potent vasoconstrictor. Adenosine and prostacyclin dilate; acetylcholine normally promotes endothelial NO-mediated dilation when endothelium is intact.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Coronary perfusion, exercise and oxygen demand",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#coronary-exercise"
+        }
+      ],
+      "questionHash": "213a9e6decabcff1fe7eb80f6e4d6d9c19b4156c425ac9d10f1e921ab32f5146",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Acetylcholine can constrict when endothelial function is impaired; the normal intact-endothelium assumption is intended."
+    },
+    "cvs-izam-circulation-item15": {
+      "answer": "C",
+      "explanation": "Capillaries are the principal exchange vessels. The course's simplified distribution pairs them with approximately 7%; the precise fraction varies with whether small arterioles are grouped with the microcirculation.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Microcirculation, Starling forces, lymph and edema",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#microexchange"
+        },
+        {
+          "title": "OpenStax: Capillary exchange",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-3-capillary-exchange"
+        }
+      ],
+      "questionHash": "5b468a2bf93b1b37a687c88dd7d4ac04ac33b051b27086346343f17c020cc19f",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "The key is capillary exchange function. Do not treat 7% as an exact isolated capillary volume in every classification."
+    },
+    "cvs-izam-circulation-item16": {
+      "answer": "C",
+      "explanation": "Relaxation allows a greater volume at a given pressure: the pressure–volume relation shifts rightward (or downward when pressure is plotted vertically).",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Compliance, pulse pressure, MAP and measurement",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#arterial-pressure"
+        }
+      ],
+      "questionHash": "d1f15bef44b1df60c193d51b55d48e20bbf5f9c503b691c478dfc2f870c7f51c",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item17": {
+      "answer": "B",
+      "explanation": "The usual acute baroreflex response includes tachycardia, sympathetic arteriolar and venous constriction, and catecholamine release.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Shock, heart failure and valve lesions: integrated physiology",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#shock-failure"
+        }
+      ],
+      "questionHash": "907170036bb1a82347f78851d39d6586649de64ad0ea3cac6be34c47155a7e95",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Paradoxical bradycardia can occur in special/severe hemorrhagic settings; the question asks for the usual compensatory pattern."
+    },
+    "cvs-izam-circulation-item18": {
+      "answer": "C",
+      "explanation": "For the question's implied diuretic-induced volume/electrolyte depletion, replacement fluid and monitored correction of electrolytes address the mechanism; blood/plasma/adrenaline do not replace the specific losses.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Renal-body fluid feedback and hormonal pressure control",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#longterm-pressure"
+        }
+      ],
+      "questionHash": "35835c77da6cecaebe197692203bf160ef9a1026a037471c0cc1ca6968e862e1",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Educational best choice only. Actual treatment depends on volume status, renal function, electrolytes and the reason furosemide was prescribed; saline is not appropriate automatically after every large dose."
+    },
+    "cvs-izam-circulation-item19": {
+      "answer": "C",
+      "explanation": "Reduced stretch reduces baroreceptor firing, increasing sympathetic output. Venoconstriction reduces capacitance; heart rate and contractility rise.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Baroreceptors, chemoreceptors and central pressure regulation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#neural-pressure"
+        },
+        {
+          "title": "OpenStax: Regulation of the vascular system",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-4-homeostatic-regulation-of-the-vascular-system"
+        }
+      ],
+      "questionHash": "dd1b21a39f856a678562a79dc5fb7c34a0b5bc200e1cdab39fa4bf5f9eb6b704",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item20": {
+      "answer": "A",
+      "explanation": "At a given pressure gradient, flow = ΔP/R. Higher resistance means lower flow.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pressure, flow, resistance and vascular networks",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#flow-laws"
+        },
+        {
+          "title": "CV Physiology: Resistance to blood flow",
+          "url": "https://cvphysiology.com/hemodynamics/h002"
+        }
+      ],
+      "questionHash": "26391514cd5a9f6058e74fc1ad68db824918a82b4499ec56cff446d069cd31c0",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item21": {
+      "answer": "A",
+      "explanation": "Metabolite accumulation accompanies activity and contributes to arteriolar dilation and increased perfusion. Adenosine is one contributor, not the sole regulator.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Coronary perfusion, exercise and oxygen demand",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#coronary-exercise"
+        }
+      ],
+      "questionHash": "f4e3a414eb987047aad6cb833cd66388044746870ce1b4302350414b53070e15",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item22": {
+      "answer": "C",
+      "explanation": "Angiogenin promotes new-vessel formation. EDRF/NO mainly names a rapid vasodilator signal rather than the listed angiogenic growth factor.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Local blood-flow control, autoregulation and special circuits",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#local-regulation"
+        }
+      ],
+      "questionHash": "a98744364c4bde1b11d7f2e9ca2e81d1dc9ada7349a90501e1c6b4b45f28caa9",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item23": {
+      "answer": "A",
+      "explanation": "Myocardial injury can reduce pumping capacity. Beriberi, anemia and hyperthyroidism classically produce high-output states before secondary decompensation.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Shock, heart failure and valve lesions: integrated physiology",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#shock-failure"
+        }
+      ],
+      "questionHash": "d8127af099041901131974ca08544971c9ec0b909ed17a3879eace1b840045ec",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-circulation-item24": {
+      "answer": "B",
+      "explanation": "A stronger cardiac function curve empties the venous side more effectively: at an unchanged venous-return curve, the equilibrium moves toward higher output and lower right-atrial pressure.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Venous-return curves, transmural pressure and feedback timing",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#advanced-return-pressure"
+        }
+      ],
+      "questionHash": "dbfa42e82aa02ea07925a466166f0f85fb70d444634a1e92cde4aec4413c3c60",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-a-item1": {
+      "answer": "C",
+      "explanation": "Phase 0 of a working atrial/ventricular myocyte is produced mainly by rapid inward sodium current through fast voltage-gated sodium channels.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "a356f5e4442dae73c9a8cbf432b9cee4a6bccd758a251d5d5531e5f4bcfbea73",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-a-item2": {
+      "answer": "C",
+      "explanation": "In the basic course model, vagal effects concentrate in atrial and nodal tissue; they are not a major controller of ventricular Purkinje conduction.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "68877cc39191ee142cfa64ea0da933c79c239514af16aceea419bccb0f07e136",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "This is the simplified teaching distinction, not a claim that all ventricular parasympathetic effects are impossible."
+    },
+    "cvs-izam-cardiac-screens-a-item3": {
+      "answer": "B",
+      "explanation": "Diastole begins after ejection, so each ventricle contains its end-systolic volume, commonly approximated as 50 mL. About 120 mL is the usual end-diastolic teaching value.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Pressure-volume loops, preload, afterload and contractility",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#pv-loop"
+        },
+        {
+          "title": "CV Physiology: Ventricular pressure–volume relationships",
+          "url": "https://cvphysiology.com/cardiac-function/cf024"
+        }
+      ],
+      "questionHash": "532e8c6d06b3bc4be2df52f8b416c2c1305bdc38c94558fcc6ce4ad8ce429c11",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Normal right/left volumes and ejection fractions need not be numerically identical; the question uses a simplified paired-ventricle model."
+    },
+    "cvs-izam-cardiac-screens-a-item4": {
+      "answer": "B",
+      "explanation": "The slow-response nodal phase-0 upstroke is produced by L-type calcium current. T-type current can help late phase-4 depolarization but is not the principal current producing the action-potential upstroke.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "8752507619eeba901623740e33101a8b74c929685f68be54d6fd8dff31db18ca",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "The source says 'latent (slow)', interpreted as long-lasting L-type channels. Distinguish inducing phase 0 from currents contributing to pacemaker depolarization."
+    },
+    "cvs-izam-cardiac-screens-a-item5": {
+      "answer": "A",
+      "explanation": "Pump inhibition raises intracellular sodium, reducing calcium extrusion through Na⁺/Ca²⁺ exchange. More available calcium can increase contractility, the classic cardiac-glycoside mechanism.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "cdd4c33e557b51eb3797093ca142279c554b6872cf7699856b0d818a1e9b7d44",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Assumes a viable, ATP-supplied myocyte and a pharmacological range, not profound poisoning or ischemia."
+    },
+    "cvs-izam-cardiac-screens-a-item6": {
+      "answer": "C",
+      "explanation": "Most activator calcium is released from the sarcoplasmic reticulum, triggered by a smaller but essential extracellular calcium influx. Neither source alone describes normal excitation–contraction coupling.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "deb048b973b55e4877cf4873745bb4570ff702d55e3c0fe3abb73d1c5c68949e",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-a-item7": {
+      "answer": "A",
+      "explanation": "Guyton separates about 0.09 s in the AV node from additional penetrating-bundle delay. About 0.16 s is the broader atrial-to-ventricular timing, not the node-only component.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "121c4165dfce35816433aaf8b3b4bb9d23bab27e6bd83e2b2869f42eb3dfc29a",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "The original says 'AV delay'; the keyed interpretation is the AV-node component. Total AV junction delay is about 0.13 s and is not offered."
+    },
+    "cvs-izam-cardiac-screens-a-item8": {
+      "answer": "B",
+      "explanation": "I and aVL are the high-lateral limb leads. II/III are inferior and V2/V3 are predominantly septal/anterior. V4/V5 include anterior/lateral information but are not the best listed paired high-lateral leads.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: ECG calibration, lead geometry and a systematic interpretation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#ecg-foundations"
+        }
+      ],
+      "questionHash": "8e72783b373c3b466e6bfdeb1b5d862452ff840e16ff5bf028e166e6b2add6a5",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "‘Border’ is imprecise surface-anatomy wording; interpret it as high-lateral electrical territory."
+    },
+    "cvs-izam-cardiac-screens-a-item9": {
+      "answer": "C",
+      "explanation": "The c wave is produced partly by bulging of the closed AV valve into the atrium as ventricular pressure rises. The a wave reflects atrial systole; the arterial notch follows semilunar closure.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "80f51db39c2bbcf96ed2115deda240f407aa10cb7eb302115e9b9e6e1a1a7e8c",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-a-item10": {
+      "answer": "D",
+      "explanation": "Aortic and pulmonary closure occur when their respective arterial pressure exceeds ventricular pressure. The pulmonary and systemic pressure ranges differ; no single pressure applies to both.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "ee51b600aedf9067bf4bf8cb9ed433ab9657d69b20d5695bf5cf6ab781703974",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-a-item11": {
+      "answer": "A",
+      "explanation": "Opening begins when left-ventricular pressure slightly exceeds aortic diastolic pressure, approximately 80 mmHg in this example. This is a pressure crossover, not a fixed valve threshold.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "5f049ef3ae0e288cc2d71d3d799fe85211579dc999db680a5c801c24f7fb4841",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-a-item12": {
+      "answer": "B",
+      "explanation": "The standard transmural teaching model gives epicardial cells shorter action potentials than endocardial cells, helping explain epicardial-first repolarization despite endocardial-first activation.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "c4851b72015d719100b9c41ce827e94b4187a8802da1521a46c5e42d9bfc5066",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Real regional action-potential durations vary, including midmyocardial cells; this is the intended simplified comparison."
+    },
+    "cvs-izam-cardiac-screens-a-item13": {
+      "answer": "D",
+      "explanation": "The conventional physiological response is positive chronotropy and inotropy, usually with increased stroke volume when filling is adequate.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "9472b835c0b6f2336f9a60f6b7620c086c0b021a607261faa5b33c615a31535e",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Stroke volume is load/rate dependent; the original 'definitely' is an overstatement at extreme tachycardia."
+    },
+    "cvs-izam-cardiac-screens-b-item1": {
+      "answer": "A",
+      "explanation": "Normal atrial depolarization is directed away from the right-shoulder positive electrode of aVR, producing a negative P wave.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac axis and vector interpretation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#ecg-axis"
+        }
+      ],
+      "questionHash": "90629150b57fddd7c5ab76e0aa53fdf15b739bfc49cfeff3bbce89b4d8bb680f",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item2": {
+      "answer": "C",
+      "explanation": "Atrial repolarization (Ta) is small and is normally obscured by the much larger QRS complex. P represents atrial depolarization.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: ECG calibration, lead geometry and a systematic interpretation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#ecg-foundations"
+        }
+      ],
+      "questionHash": "46011a17c94ba38fe159480092b793295dffe8c934850b5f56d2e757851536b0",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item3": {
+      "answer": "D",
+      "explanation": "Frank–Starling describes how greater ventricular filling increases developed force/stroke volume within the physiological range. A systemic-pressure interval of 60–160 mmHg describes a common autoregulation teaching range, not this law.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pressure-volume loops, preload, afterload and contractility",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#pv-loop"
+        },
+        {
+          "title": "CV Physiology: Ventricular pressure–volume relationships",
+          "url": "https://cvphysiology.com/cardiac-function/cf024"
+        }
+      ],
+      "questionHash": "63f502cb3533cc013e7adc564ae4f2bbec274c66108fc7c8cc831ba827fbc9b6",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item4": {
+      "answer": "D",
+      "explanation": "Nodal pacemaker cells have a less negative maximum diastolic potential (roughly −60 mV) and no stable resting potential. Working ventricular myocytes rest near −90 mV.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "567e60a14c862b73862662dae0edc865fabeb0d5598fb40b93effc2f03c21638",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item5": {
+      "answer": "D",
+      "explanation": "Compared with the listed atrial and epicardial cells, endocardial ventricular cells have a longer plateau in the conventional course model. Nodal pacemaker cells lack a prominent ventricular-type plateau.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "88a534eb32b719d5933892f3483ed42419f98fe95f14927daf94bab5fcd91bb6",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Regional heterogeneity exists; this comparison does not establish one maximum for every cell throughout the heart."
+    },
+    "cvs-izam-cardiac-screens-b-item6": {
+      "answer": "A",
+      "explanation": "Sufficient extracellular potassium elevation depolarizes the membrane, reduces available fast sodium channels and impairs excitation/conduction, tending to weaken contraction. Severe hyperkalemia can arrest the heart.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "2db95d9ebbd0bd6b7f5aa90049d7679d17d1305a57cca64c405adebe7b2afa72",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item7": {
+      "answer": "C",
+      "explanation": "Cardiac RyR2 is activated by cytosolic calcium, the ligand that triggers SR calcium release. DHP/L-type and T-type calcium channels are voltage-gated.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "a106362c25187beb4ab80c2d8551161400c1d8674583c104b418e471979dc910",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item8": {
+      "answer": "B",
+      "explanation": "During reduced ejection, active tension begins falling and repolarization/relaxation begins, although forward flow continues briefly. Isovolumetric relaxation follows semilunar closure.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "a94191cf447da64c1e9ea5481aa11e9a161565f6f062e95979dc95b101461c4f",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item9": {
+      "answer": "D",
+      "explanation": "Epicardial action potentials are shorter in the standard model, so repolarization proceeds generally epicardium-to-endocardium despite the opposite transmural activation sequence.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: ECG calibration, lead geometry and a systematic interpretation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#ecg-foundations"
+        }
+      ],
+      "questionHash": "fc822f0c926483922bb6733b7ae672a83e22b04c18664df25e44c5dbd2edcc0f",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-screens-b-item10": {
+      "answer": "C",
+      "explanation": "S1 marks AV closure/start of ventricular systole, and S2 marks semilunar closure. Isovolumetric relaxation begins after S2.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "ef540b6f180fa73771f986c178775ae803438eac96d43c2aa479d840cd8337ba",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item1": {
+      "answer": "B",
+      "explanation": "Outward potassium currents restore the membrane toward a negative potential, especially in phase 3. The rapid phase-0 upstroke is carried mainly by sodium.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac action potentials and excitation-contraction coupling",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-ap"
+        },
+        {
+          "title": "CV Physiology: Non-pacemaker action potentials",
+          "url": "https://cvphysiology.com/arrhythmias/a006"
+        }
+      ],
+      "questionHash": "2c2feee37e57ec666c1735f1633f2642f559ba70f62abf0efda0166a629d73b7",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item2": {
+      "answer": "A",
+      "explanation": "In nodal slow-response tissue, L-type calcium influx produces phase 0. Potassium efflux repolarizes; fast working-myocyte phase 0 is sodium-mediated.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "bb79a2d744dc9193df8522c160b91ebf1ab6f6f969b2cc4bcd10af501f30272b",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item3": {
+      "answer": "A",
+      "explanation": "Normal atrial and ventricular mean depolarization vectors both point generally leftward and inferiorly, so their main deflections commonly share polarity.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: ECG calibration, lead geometry and a systematic interpretation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#ecg-foundations"
+        }
+      ],
+      "questionHash": "a28bab69abbb5e6173f3b2f2141b62a7df0632548eb1cfbc2a5a087d7ab0a07c",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "The source calls the ventricular deflection 'R'; an R wave is positive by definition. Interpret this as predominant QRS polarity; aVR and equiphasic leads require care."
+    },
+    "cvs-izam-cardiac-ions-item4": {
+      "answer": "B",
+      "explanation": "The AV node uses a calcium-dependent slow upstroke. Atrial/ventricular working cells and Purkinje fibers have fast sodium-dependent phase 0.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "af03876b8a291c208681a20e2621f8101da20daa5b6837e33250ee118f39b3c6",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item5": {
+      "answer": "C",
+      "explanation": "AV closure is the boundary starting isovolumetric contraction; semilunar valves remain closed until ejection begins.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "777f677be4b2f104dbbb19a94e094b63d08ab5b1f9dace54c9bd765c8c9b7f8d",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item6": {
+      "answer": "D",
+      "explanation": "Both phases can shorten, but diastole loses proportionately more time. Very fast rates compromise filling and coronary perfusion time.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "37dd8ae30ab02ab2389fdac5fcb7294d41237ffab5925f427c2e22aa1f0256ef",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item7": {
+      "answer": "C",
+      "explanation": "The Purkinje network conducts very rapidly to synchronize ventricular activation; AV nodal tissue is the slowest important normal conduction segment.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "05b5a0b791a2c0c537f6262aa20cc3132a08d0c58433bf96dae73d984595d6e2",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item8": {
+      "answer": "B",
+      "explanation": "Ejection fraction is SV/EDV, a dimensionless fraction commonly about 60%. A volume in mL is not an ejection fraction.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pressure-volume loops, preload, afterload and contractility",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#pv-loop"
+        },
+        {
+          "title": "CV Physiology: Ventricular pressure–volume relationships",
+          "url": "https://cvphysiology.com/cardiac-function/cf024"
+        }
+      ],
+      "questionHash": "bce00ec915893abb9852dd3afdde342fb0675b37ef182672b0b5b780330dd89f",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item9": {
+      "answer": "A",
+      "explanation": "β1 stimulation increases atrial contractile force and usually accelerates AV conduction, shortening delay. A universal plateau prolongation is not the defining response.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pacemakers, AV delay and conduction failure",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#conduction-phys"
+        },
+        {
+          "title": "CV Physiology: Pacemaker activity",
+          "url": "https://cvphysiology.com/arrhythmias/a005"
+        }
+      ],
+      "questionHash": "5164cf3d1356f1f69ee865aaaa95e65457f28901c34200232e71653010d9c6c9",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item10": {
+      "answer": "D",
+      "explanation": "Ejection denotes forward flow through open semilunar valves; active ventricular tension begins declining during reduced ejection before outflow ends.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Cardiac cycle, pressure crossings and heart sounds",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cycle"
+        },
+        {
+          "title": "OpenStax: Cardiac cycle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle"
+        }
+      ],
+      "questionHash": "ce65787c8f05f58040c2820f762ed0e4909874897e3c5b24dd81cc6815b4448b",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-cardiac-ions-item11": {
+      "answer": "B",
+      "explanation": "Shorter epicardial action potentials permit earlier epicardial recovery even though endocardial activation occurs first in the simplified transmural model.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: ECG calibration, lead geometry and a systematic interpretation",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#ecg-foundations"
+        }
+      ],
+      "questionHash": "cc06ca3063330ae50c92e2d577bc08982d964dd4e27f90d5fa1896c2bc70d1dc",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner"
+    },
+    "cvs-izam-mixed-cvs-fragments-item1": {
+      "answer": "D",
+      "explanation": "Arteries are defined by carrying blood away from the heart, not by oxygen content. Pulmonary arteries carry deoxygenated blood away from the right ventricle.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pressure, flow, resistance and vascular networks",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#flow-laws"
+        },
+        {
+          "title": "CV Physiology: Resistance to blood flow",
+          "url": "https://cvphysiology.com/hemodynamics/h002"
+        }
+      ],
+      "questionHash": "c13061488b9904db0e2b81fa2850e7458801d483f190078cf6d5793e0c950173",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q22."
+    },
+    "cvs-izam-mixed-cvs-fragments-item2": {
+      "answer": "C",
+      "explanation": "Right and left coronary arteries supply the myocardium. Venae cavae are veins returning systemic blood to the right atrium.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Coronary arterial territories and venous drainage",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#coronary"
+        }
+      ],
+      "questionHash": "921e6224011d1f94d7687e95a79f9bd2bb68bd1c47933b1bc3da045e3dbfedba",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q23."
+    },
+    "cvs-izam-mixed-cvs-fragments-item3": {
+      "answer": "D",
+      "explanation": "The complete system is autonomic: sympathetic and parasympathetic efferents alter cardiac rate, conduction and force. A names only part of the sympathetic origin.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Autonomic cardiac and mediastinal nerves",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#cardiac-nerves"
+        }
+      ],
+      "questionHash": "e3a8a1b8b2a8a964d139e4e7cb63bc66b772c18c01593ab054b918b05195516e",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q24."
+    },
+    "cvs-izam-mixed-cvs-fragments-item4": {
+      "answer": "B",
+      "explanation": "Vascular smooth-muscle contraction reduces luminal radius and usually increases resistance; it does not name a transport function.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Pressure, flow, resistance and vascular networks",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#flow-laws"
+        },
+        {
+          "title": "CV Physiology: Resistance to blood flow",
+          "url": "https://cvphysiology.com/hemodynamics/h002"
+        }
+      ],
+      "questionHash": "06ad2a029da940538778b45951aae1aac3f43b78c159350c24198302894a8d6c",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q26."
+    },
+    "cvs-izam-mixed-cvs-fragments-item5": {
+      "answer": "C",
+      "explanation": "Plasma proteins, particularly albumin, generate plasma oncotic pressure, which opposes filtration. Modern glycocalyx-aware physiology does not assume sustained venous-end reabsorption in every systemic capillary.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Microcirculation, Starling forces, lymph and edema",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#microexchange"
+        },
+        {
+          "title": "OpenStax: Capillary exchange",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-3-capillary-exchange"
+        }
+      ],
+      "questionHash": "c19fe2b4ad0b486fe7a1b5fb9e0a5095f115fdf41375d6ddae91e8a5bdc719dc",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q28. Conventional course force-balance model."
+    },
+    "cvs-izam-mixed-cvs-fragments-item6": {
+      "answer": "A",
+      "explanation": "Plasmin cleaves fibrin. Plasminogen is activated to plasmin by activators such as tPA; fibrinogen is the precursor of fibrin, and vitamin K supports synthesis of several coagulation factors.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Coagulation cascade, anticoagulants and fibrinolysis",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#coagulation"
+        }
+      ],
+      "questionHash": "6e5cd353c6f063c77c23e40b925f5436a360bf0d81bc7dffd319ba1d93fa1084",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q32."
+    },
+    "cvs-izam-mixed-cvs-fragments-item7": {
+      "answer": "D",
+      "explanation": "The reticulocyte is an enucleated immature RBC with residual ribosomal RNA and organelle remnants that disappear as it matures.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Erythropoiesis, iron and anemia mechanisms",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#erythropoiesis"
+        }
+      ],
+      "questionHash": "04c3fdca73d5a6b3e01efc3a2231de2a89537f9d8c34cdf5816a135e42727919",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q26; the source specifically mentions Golgi/mitochondrial remnants."
+    },
+    "cvs-izam-mixed-cvs-fragments-item8": {
+      "answer": "C",
+      "explanation": "Improved tissue oxygen availability reduces hypoxia-driven renal EPO signaling. The other choices generally increase EPO if they reduce oxygen delivery and renal EPO production is intact.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Erythropoiesis, iron and anemia mechanisms",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#erythropoiesis"
+        }
+      ],
+      "questionHash": "a411854a8f6800507eb044dbe23e2eb02e4cc6c948648354173766724c7128fe",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q27."
+    },
+    "cvs-izam-mixed-cvs-fragments-item9": {
+      "answer": "C",
+      "explanation": "An OO genotype gives group O, which lacks A and B antigens on red cells. It still has other membrane antigens, including H substance.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: ABO, Rh and transfusion concepts",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#blood-groups"
+        }
+      ],
+      "questionHash": "62a6266dd3df99ed29b48cca07a252a1c9c1c0ecb31ccf632d4cf06ae457b2fd",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q28."
+    },
+    "cvs-izam-mixed-cvs-fragments-item10": {
+      "answer": "A",
+      "explanation": "A xenograft crosses species. An allograft is between genetically different members of one species, an isograft between genetically identical individuals, and an autograft within one person.",
+      "confidence": "high",
+      "references": [
+        {
+          "title": "Course/book review locator: Lymphocytes, antigen presentation and antibody responses",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#immune-foundations"
+        }
+      ],
+      "questionHash": "c3c8206f415f9ce70daf2e42297cd03dd884d4a939a13b31e5f1f1801ebd6f2f",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q29."
+    },
+    "cvs-izam-mixed-cvs-fragments-item11": {
+      "answer": "D",
+      "explanation": "T cells recognize donor antigens and drive major cellular rejection mechanisms even after good matching.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Lymphocytes, antigen presentation and antibody responses",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#immune-foundations"
+        }
+      ],
+      "questionHash": "8fc7c8e8fc5549d772bfa20ef0f6d072276e6c88bece558ed4eba6803df8e097",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q30. Antibody-mediated rejection also exists; T cells are the intended general cellular-rejection answer, not an exclusive mechanism. The source's fanciful 240-year-old vignette is not a biological age assumption."
+    },
+    "cvs-izam-mixed-cvs-fragments-item12": {
+      "answer": "B",
+      "explanation": "The textbook cascade describes formation of the prothrombin-activator complex as the slow initiating step; subsequent thrombin generation and fibrin formation proceed rapidly.",
+      "confidence": "moderate",
+      "references": [
+        {
+          "title": "Course/book review locator: Coagulation cascade, anticoagulants and fibrinolysis",
+          "url": "https://med25-study-tool.vercel.app/study/cvs-past-papers/izam-reference-guide.md#coagulation"
+        }
+      ],
+      "questionHash": "85d0552f4d82ee11366ad471608b1a02d71d70d830cfe373ffebcabe7eb3f916",
+      "reviewStatus": "verified",
+      "reviewer": "primary-agent: source-text and course-reference review; not an independent human examiner",
+      "caveat": "Printed Q31, fourth option continues on PDF page 3. This is the simplified cascade model, not a full cell-based kinetics model."
     }
   }
 }
