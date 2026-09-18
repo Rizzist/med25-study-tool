@@ -16,7 +16,7 @@ export function createCoreExam(manifest, papers, scope='all') {
   });
   if (new Set(questions.map(q => q.id)).size !== questions.length) throw new Error('Duplicate Core Exam question.');
   // No sourcePaperIds: core attempts must not be restored as all-questions aggregates.
-  return {id:coreExamId(scope),title:scope === 'anatomy' ? 'Core Exam · Anatomy 50' : 'Core Exam · 100 questions',
+  return {id:coreExamId(scope),title:scope === 'anatomy' ? `Core Exam · Anatomy ${questions.length}` : `Core Exam · ${questions.length} questions`,
     fingerprint:manifest.fingerprint+':'+scope+':'+[...sources.values()].map(p=>p.id+':'+p.fingerprint).sort().join('|'),
     questions, aiRevision:papers.map(p=>p.aiRevision||'').join('|'),
     note:'Curated past-paper revision, not a new historical exam or a prediction.',keyStatus:'mixed',sourceUrl:'',transcriptUrl:''};

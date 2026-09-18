@@ -9,13 +9,14 @@ const read = p => JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
 const manifest = read('core-exam.json'), overlay = read('ai-answers.json'), topics = read('topic-map.json');
 const papers = await Promise.all(read('index.json').papers.map(async e => applyAnswerOverlay(read(e.id+'/paper.json'),overlay)));
 
-test('Core Exam retains 100 sourced, answerable questions, with 50 anatomy items',()=>{
+test('Core Exam expands beyond 100 without dropping sourced, answerable repeated questions',()=>{
   const core = createCoreExam(manifest,papers);
-  assert.equal(core.questions.length,100);
-  assert.equal(new Set(core.questions.map(q=>q.id)).size,100);
+  assert(core.questions.length>100);
+  assert.equal(core.questions.length,manifest.questions.length);
+  assert.equal(new Set(core.questions.map(q=>q.id)).size,core.questions.length);
   assert.equal(core.id,coreExamId());
   assert(!core.sourcePaperIds,'Core is not restored as a full-source aggregate');
-  assert.equal(core.questions.filter(q=>topics.questions[q.id].subjectId==='anatomy').length,50);
+  assert(core.questions.filter(q=>topics.questions[q.id].subjectId==='anatomy').length>=50);
   for(const q of core.questions){
     const original = papers.find(p=>p.id===q.originPaper.id)?.questions.find(item=>item.id===q.id);
     assert(original);
@@ -38,7 +39,7 @@ test('Recurrence counts are reproducible per-topic/per-paper, not duplicate-file
 
 test('Anatomy-only core has a separate attempt and section report',()=>{
   const core = createCoreExam(manifest,papers,'anatomy');
-  assert.equal(core.questions.length,50);
+  assert.equal(core.questions.length,manifest.subjects.find(s=>s.id==='anatomy').count);
   assert(core.questions.every(q=>topics.questions[q.id].subjectId==='anatomy'));
   let attempt = newPaperAttempt(core);
   const q=core.questions[0];
@@ -50,6 +51,17 @@ test('Anatomy-only core has a separate attempt and section report',()=>{
   assert.equal(report.subjects.length,1);
   assert.equal(report.subjects[0].id,'anatomy');
   assert.notEqual(core.id,coreExamId('all'));
+});
+
+test('Repeated patterns are prioritized before supplemental coverage, with explicit source counts',()=>{
+  const firstCoverage=manifest.questions.findIndex(q=>q.repeatSourceIds.length<2);
+  assert(firstCoverage>0);
+  assert(manifest.questions.slice(firstCoverage).every(q=>q.repeatSourceIds.length<2));
+  for(const row of manifest.questions){
+    const counted=[...new Set(row.repeatMatches.map(m=>m.paperId))].sort();
+    assert.deepEqual([...row.repeatSourceIds].sort(),counted);
+    assert.deepEqual([...row.questionRepeatPaperIds].sort(),counted.filter(id=>manifest.evidencePaperIds.includes(id)));
+  }
 });
 
 test('Missing or ungraded sources fail explicitly instead of diluting the core',()=>{

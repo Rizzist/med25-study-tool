@@ -4,18 +4,23 @@ An anatomy-heavy revision composite of existing sourced past-paper questions, **
 
 | Scope | Questions |
 |---|---:|
-| Anatomy | 50 |
-| Physiology | 25 |
-| Embryology | 10 |
-| Blood & immunity | 8 |
-| Histology | 7 |
-| Total | 100 |
+| Anatomy | 56 |
+| Physiology | 78 |
+| Embryology | 19 |
+| Blood & immunity | 14 |
+| Histology | 16 |
+| Total | 183 |
 
-Anatomy 50 is also available separately. Both reuse the existing instant/deferred feedback, source provenance, locally saved attempts/results, and subject/topic weakness reporting. Core attempt IDs are distinct from individual-paper and aggregate attempts.
+The anatomy subset is also available separately. Both reuse the existing instant/deferred feedback, source provenance, locally saved attempts/results, and subject/topic weakness reporting. Core attempt IDs are distinct from individual-paper and aggregate attempts. Expanding the selection preserves answers already entered for retained core question IDs; completed results stay available as historical results.
 
 ## Selection and evidence
 
-The selection is manually curated for a spread of core knowledge and recurring anatomy concepts. All entries retain original question IDs, source pages, answer provenance and explanations where available. No unresolved questions are substituted to reach 100.
+The initial 100-question selection is a manually curated foundation, not a cap. The expansion adds a representative for each conservatively detected, answerable repeated-question group not already represented. All entries retain original question IDs, source pages, answer provenance and explanations where available. No unresolved questions are substituted to reach a target length. Repeated patterns rank before supplemental coverage, prioritizing dated-paper frequency and anatomy at ties.
+
+Two different counts are shown:
+
+- **Repeated question patterns:** closely matching stems/choices with a consistent answer, or explicitly reviewed anatomy variants. The evidence lists each matching source panel after answering. Each source collection counts once. Undated fragments and IZAM/IUMS tests are labeled as such, not counted as additional dated TUMS exams. Figure-dependent matches with different image files are not assumed equivalent merely from similar wording; missing-figure items are withheld. Different developmental subdivisions are not merged because their distractors overlap.
+- **Historical topic coverage:** the separate per-topic count across six dated theory papers, described below. This must not be read as the frequency of the exact question.
 
 Historical topic coverage counts six dated theory sources: April/September/October 2021, May 2022, January 2023 and February 2025. Each topic counts once per paper. IUMS/IZAM collections, practicals, undated fragments and alternate file copies do not inflate that denominator. Some core questions are selected from undated TUMS fragments to cover additional anatomy; their displayed recurrence still refers to the six-paper **topic**, not that exact wording.
 

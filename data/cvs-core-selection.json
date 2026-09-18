@@ -1,6 +1,16 @@
 {
-  "revision": "2026-09-19-core-v1",
+  "revision": "2026-09-19-core-v2-uncapped",
   "evidencePaperIds": ["cvs-2021-april", "cvs-2021-september", "cvs-2021-october", "cvs-2022-may", "cvs-2023-january", "cvs-2025-february"],
+  "manualRepeatGroups": [
+    ["cvs-2021-april-q67", "cvs-2021-september-q75", "cvs-2021-october-q70", "cvs-undated-histology-first-q70"],
+    ["cvs-2021-september-q65", "cvs-2021-october-q72", "cvs-2022-may-q65"],
+    ["cvs-2021-september-q78", "cvs-2022-may-q48", "cvs-2023-january-q61"],
+    ["cvs-2021-september-q83", "cvs-2021-october-q67", "cvs-2023-january-q60"],
+    ["cvs-2021-september-q69", "cvs-2022-may-q60", "cvs-2025-february-q21", "cvs-undated-photo-paper-q66"],
+    ["cvs-2021-april-q69", "cvs-2023-january-q67"],
+    ["cvs-2021-september-q66", "cvs-2022-may-q54", "cvs-undated-histology-first-q89"],
+    ["cvs-2021-september-q67", "cvs-2022-may-q61"]
+  ],
   "selection": {
     "anatomy": {
       "cvs-2025-february": [1,2,4,5,6,7,8,9,12,13,17,19,20,21,22,23,24],
