@@ -43,6 +43,29 @@
 .selfMark legend{font-size:.8rem;padding:0 6px}
 .selfMark button{font-size:.85rem}
 .modePicker{display:flex;flex-wrap:wrap;gap:10px}
+.coreCard{position:relative;isolation:isolate;overflow:hidden;display:grid;gap:14px;padding:clamp(20px,3vw,32px);border:1px solid #c69428;border-radius:18px;color:#34250b;background:linear-gradient(120deg,#fff7d7 0%,#ffe5a0 55%,#f4c75b 100%);box-shadow:0 5px 24px #b9801718}
+.coreCard::before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 20%,#ffffff70 45%,transparent 70%);transform:translateX(-140%);animation:coreShine 6s ease-in-out infinite}
+@keyframes coreShine{0%,65%{transform:translateX(-140%)}100%{transform:translateX(140%)}}
+.coreHeading{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;font-size:.875rem;font-weight:650}
+.coreBadge{display:inline-block;border:1px solid #c99a35;background:#fffcdf;border-radius:30px;padding:6px 12px}
+.coreCard h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:0;line-height:1.2;letter-spacing:-.035em}
+.coreCard p{margin:0;max-width:80ch}
+.coreCard .coreLead{font-size:1.125rem;font-weight:600}
+.coreCounts{display:flex;gap:8px;flex-wrap:wrap}
+.coreCounts span{padding:7px 11px;border:1px solid #bf922745;background:#fffaf09c;border-radius:8px;font-size:.9rem}
+.root .coreStart{background:#392b10;border-color:#392b10;color:#fff7d7;font-weight:700;padding:13px 22px}
+.root .coreSecondary{background:#fffaf0;border-color:#a7791d;color:#392b10;font-weight:700;padding:13px 22px}
+.coreCard .coreCaution{font-size:.875rem;color:#624914;line-height:1.6}
+.coreCard summary{cursor:pointer;font-size:.9rem;font-weight:650;padding:8px 0}
+.coreEvidence{border-top:1px solid #a6792540;padding-top:6px}
+.coreEvidence p{font-size:.9rem;margin:10px 0}
+.coreTopicList{display:grid;gap:0;margin:12px 0}
+.coreTopicList>div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid #a679252b;padding:9px 0;font-size:.875rem}
+.coreTopicList b{white-space:nowrap}
+.coreSaved{display:grid;gap:12px;padding:12px 0;border-top:1px solid #a6792540}
+.question .coreQuestionNote{display:inline-block;background:#fff2c6;border:1px solid #e5ca7d;border-radius:7px;padding:7px 11px;font-size:.8125rem;color:#654c10;margin:0 0 10px}
+@media(prefers-reduced-motion:reduce){.coreCard::before{animation:none;display:none}}
+@media(max-width:650px){.coreCard{padding:20px 16px}.coreCard .actions{display:grid;grid-template-columns:1fr;width:100%}.coreTopicList>div{gap:8px}}
 .aggregator{display:grid;gap:16px;padding:clamp(16px,3vw,26px);border:1px solid var(--line);border-radius:16px;background:var(--paper,#fff)}
 .aggregator h2{font-size:1.4rem;margin:0 0 10px}
 .paperSelection{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:8px}

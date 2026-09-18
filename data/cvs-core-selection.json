@@ -1,0 +1,31 @@
+{
+  "revision": "2026-09-19-core-v1",
+  "evidencePaperIds": ["cvs-2021-april", "cvs-2021-september", "cvs-2021-october", "cvs-2022-may", "cvs-2023-january", "cvs-2025-february"],
+  "selection": {
+    "anatomy": {
+      "cvs-2025-february": [1,2,4,5,6,7,8,9,12,13,17,19,20,21,22,23,24],
+      "cvs-2023-january": [60,64,67,70,72,74,76,80],
+      "cvs-2022-may": [48,49,61,65,66],
+      "cvs-2021-september": [82],
+      "cvs-undated-student-2023": [68,70,75,76,80],
+      "cvs-undated-histology-first": [69,70,75,76,77,80,83,88,90],
+      "cvs-undated-answered-fragment": [1,2,4,11,22]
+    },
+    "physiology": {
+      "cvs-2025-february": [44,45,46,50,51,52,53,54,58,61,77,82,84,86,88,89,90,91],
+      "cvs-2023-january": [19,22,27,28,48,50],
+      "cvs-undated-histology-first": [68]
+    },
+    "embryology": {
+      "cvs-2025-february": [35,36,38,39,40,41],
+      "cvs-2023-january": [94,95,96,97]
+    },
+    "blood-immune": {
+      "cvs-2025-february": [26,30,62,63,64,67,69,72]
+    },
+    "histology": {
+      "cvs-2025-february": [25,27,29,31,34,83],
+      "cvs-2023-january": [88]
+    }
+  }
+}

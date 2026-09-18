@@ -11,8 +11,13 @@ import { CvsWeaknessReport } from './CvsWeaknessReport';
 import { answerResolution, applyAnswerOverlay, combinedPaperId, createCombinedPaper, type AnswerOverlay } from '@/src/lib/mcq/cvs-paper-enhancements.mjs';
 import styles from './CvsPastExams.module.css';
 import reviewedCounts from '../../public/study/cvs-past-papers/ai-summary.json';
+import coreData from '../../public/study/cvs-past-papers/core-exam.json';
+import {coreExamId, createCoreExam, type CoreExamManifest} from '@/src/lib/mcq/cvs-core-exam.mjs';
 
 const answerCounts: Record<string, {proposed:number;unresolved:number;corrections:number}> = reviewedCounts;
+const coreManifest: CoreExamManifest = coreData;
+const coreTopics = [...new Map(coreManifest.questions.map(row => [row.topicId, row])).values()]
+    .sort((a,b) => b.topicPaperCount-a.topicPaperCount);
 
 type Entry = { id: string; title: string; note: string; count: number; keyed: number; file: string; fingerprint: string; category: string };
 type Index = { papers: Entry[]; referenceNote: string };
@@ -137,6 +142,20 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
         } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not combine papers.'); }
         finally { if (id === request.current) setLoading(false); }
     }
+    async function openCore(scope: 'all' | 'anatomy', restart = false) {
+        if (!catalog) return;
+        if (restart && !window.confirm('Start a new Core Exam attempt? Your latest completed result stays saved.')) return;
+        const id = ++request.current;
+        setLoading(true); setError('');
+        try {
+            const rows = coreManifest.questions.filter(row => scope !== 'anatomy' || row.subjectId === 'anatomy');
+            const ids = new Set(rows.map(row => row.paperId));
+            const sources = await Promise.all(catalog.papers.filter(entry => ids.has(entry.id)).map(loadPaper));
+            if (id !== request.current) return;
+            enter(createCoreExam(coreManifest, sources, scope), restart);
+        } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not open Core Exam.'); }
+        finally { if (id === request.current) setLoading(false); }
+    }
     function submit(value: string) {
         if (!paper || !q) return;
         const current = progressRef.current.attempts[paper.id];
@@ -191,6 +210,34 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
         <details className={styles.note}><summary>About the answers</summary><p>Slightly stronger colors distinguish reference-reviewed answers from supplied keys. Review provenance and references are available with each answer. These are study answers, not certified university keys. Feedback mode applies to new attempts.</p></details>
         {storageWarning && <p role="alert">{storageWarning}</p>}{error && <p role="alert">{error}</p>}
         {loading && <p role="status">Opening your past paper…</p>}
+        <article className={styles.coreCard} aria-labelledby="cvs-core-title">
+            <div className={styles.coreHeading}><span className={styles.coreBadge}>★ Start here</span><span>Curated PYQs · anatomy first</span></div>
+            <h2 id="cvs-core-title">Core Exam</h2>
+            <p className={styles.coreLead}>Repeated concepts. The core to know before you go in.</p>
+            <div className={styles.coreCounts}>{coreManifest.subjects.map(subject => <span key={subject.id}><b>{subject.count}</b> {subject.title}</span>)}</div>
+            <p>100 selected past-paper questions, not another full paper to grind through. Original PYQs are included; duplicate question variants are limited to keep the coverage broad.</p>
+            <div className={styles.actions}>{(['all','anatomy'] as const).map(scope => {
+                const saved = progress.attempts[coreExamId(scope)];
+                return <button key={scope} className={scope === 'all' ? styles.coreStart : styles.coreSecondary} disabled={loading} onClick={() => void openCore(scope)}>
+                    {saved ? saved.completedAt ? 'Results' : 'Resume' : 'Start'} · {scope === 'all' ? 'Core 100' : 'Anatomy 50'}
+                </button>;
+            })}</div>
+            {(['all','anatomy'] as const).some(scope => progress.attempts[coreExamId(scope)]) && <details>
+                <summary>Saved Core Exam attempts</summary>
+                {(['all','anatomy'] as const).filter(scope => progress.attempts[coreExamId(scope)]).map(scope => <div className={styles.coreSaved} key={scope}>
+                    <b>{scope === 'all' ? 'Core 100' : 'Anatomy 50'}</b>
+                    {progress.latest[coreExamId(scope)] && <Result result={progress.latest[coreExamId(scope)]} />}
+                    <button disabled={loading} onClick={() => void openCore(scope,true)}>New attempt</button>
+                </div>)}
+            </details>}
+            <p className={styles.coreCaution}>Priority, not a prediction: repeated topics may return with different wording. We cannot promise 20–30 identical questions or assign a reliable probability to your upcoming exam.</p>
+            <details className={styles.coreEvidence}><summary>Why these questions? See past-paper recurrence</summary>
+                <p>{coreManifest.methodology}</p>
+                <p><b>Counts below mean topic coverage, not identical-question repeats or predicted probabilities.</b></p>
+                <div className={styles.coreTopicList}>{coreTopics.map(row => <div key={row.topicId}><span>{row.topicTitle}</span><b>{row.topicPaperCount}/{coreManifest.evidencePaperIds.length} papers</b></div>)}</div>
+                <p>{coreManifest.limitation}</p>
+            </details>
+        </article>
         <section className={styles.aggregator} aria-label="Combine past papers">
             <header><h2>Combine past papers</h2><p>One continuous session, with a combined subject and review-section report. Your individual-paper attempts stay separate. Repeated questions from different papers are retained.</p></header>
             <div className={styles.actions}><button disabled={loading} onClick={() => setSelectedPapers(catalog.papers.map(p => p.id))}>Select all</button><button disabled={loading || !selectedPapers.length} onClick={() => setSelectedPapers([])}>Clear selection</button></div>
@@ -233,6 +280,7 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
     const mapped = topics?.questions[q.id];
     const topic = topics?.topics.find(item => item.id === mapped?.topicId);
     const subject = topics?.subjects.find(item => item.id === mapped?.subjectId);
+    const coreEvidence = paper.id.startsWith('cvs-core-exam:') ? coreManifest.questions.find(row => row.questionId === q.id) : null;
     const visibleQuestions = filter ? paper.questions.filter(item => filter.ids.includes(item.id)) : paper.questions;
     const visibleIndex = visibleQuestions.findIndex(item => item.id === q.id);
     const result = finished && attempt.completedAt ? { ...gradePaper(paper, attempt, attempt.completedAt), sectionStats: breakdown ?? undefined } : progress.latest[paper.id];
@@ -264,6 +312,7 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
             {filter && <div className={styles.filter}><span>{filter.title}</span><button onClick={() => setFilter(null)}>Show all</button></div>}
             <article className={styles.question}>
                 <div className={styles.topic}><span>{subject?.title ?? subject?.label ?? 'CVS'}</span><span>{topic?.title ?? topic?.label ?? 'Source question'}</span></div>
+                {coreEvidence && <p className={styles.coreQuestionNote}>Core topic · seen in {coreEvidence.topicPaperCount}/{coreManifest.evidencePaperIds.length} dated theory papers. Topic recurrence, not a prediction of this exact question.</p>}
                 <span className={styles.meta}>{q.originPaper && <>{q.originPaper.title} · </>}Original Q{q.number} · source page {q.page}</span>
                 <h2 ref={questionHeading} tabIndex={-1} dir="auto">{q.prompt}</h2>
                 {q.issues.length > 0 && <details className={styles.sourceWarning}><summary>{q.originalOptions ? 'Source-checked transcription correction' : 'Original source / transcription flags'}{!reliableKey ? ' · ungraded' : ''}</summary><p>{q.issues.join('. ')}</p>{q.originalOptions && <p>Displayed choices were corrected against the source scan. The original file is unchanged. Previous answers to changed choices must be entered again.</p>}</details>}
