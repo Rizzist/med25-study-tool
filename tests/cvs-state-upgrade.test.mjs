@@ -163,11 +163,11 @@ test('optional section reports persist with existing results, and damaged report
   assert.deepEqual(loaded.latest.sample, result);
 });
 
-test('old final score semantics are unchanged', () => {
+test('source scores are unchanged and unanswered questions cannot receive self-marks', () => {
   const attempt = newPaperAttempt(sample, now);
   attempt.answers = { a: ' a ', b: 'D', c: 'any text' };
   attempt.manual = { a: 'incorrect', c: 'correct', d: 'incorrect' };
-  assert.deepEqual(gradePaper(sample, attempt, now), { paperId: 'sample', fingerprint: 'revision-1', completedAt: now, total: 4, keyed: 2, matched: 1, unanswered: 1, manualCorrect: 1, manualGraded: 2, ungraded: 0, percentage: 50 });
+  assert.deepEqual(gradePaper(sample, attempt, now), { paperId: 'sample', fingerprint: 'revision-1', completedAt: now, total: 4, keyed: 2, matched: 1, unanswered: 1, manualCorrect: 1, manualGraded: 1, ungraded: 1, percentage: 50 });
   assert.equal(gradePaper({ ...sample, questions: [sample.questions[2]] }, attempt, now).percentage, null);
 });
 

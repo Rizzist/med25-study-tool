@@ -1,3 +1,4 @@
+import { answerResolution } from './cvs-paper-enhancements.mjs';
 export const CVS_PAPER_STORAGE_KEY = 'med25-cvs-papers-v1';
 export function emptyPaperProgress() { return { version: 1, attempts: {}, latest: {} }; }
 
@@ -16,13 +17,17 @@ function validAttempt(p, id) {
 }
 
 function validCounts(value) {
+  const aiKeyed = value?.aiKeyed ?? 0;
   return record(value) && countFields.every(field => nonnegativeInteger(value[field]))
+    && ['aiKeyed', 'aiCorrect', 'aiIncorrect'].every(field => nonnegativeInteger(value[field] ?? 0))
+    && (value.aiCorrect ?? 0) <= value.correct && (value.aiIncorrect ?? 0) <= value.incorrect
+    && (value.aiCorrect ?? 0) + (value.aiIncorrect ?? 0) <= aiKeyed
     && value.answered + value.unanswered === value.total
     && value.correct + value.incorrect + value.ungraded === value.answered
     && value.manualCorrect <= value.correct && value.manualIncorrect <= value.incorrect
-    && value.sourceKeyed <= value.total
-    && value.correct - value.manualCorrect + value.incorrect - value.manualIncorrect <= value.sourceKeyed
-    && value.manualCorrect + value.manualIncorrect <= value.total - value.sourceKeyed
+    && value.sourceKeyed + aiKeyed <= value.total
+    && value.correct - value.manualCorrect + value.incorrect - value.manualIncorrect <= value.sourceKeyed + aiKeyed
+    && value.manualCorrect + value.manualIncorrect <= value.total - value.sourceKeyed - aiKeyed
     && value.percentage === percentage(value);
 }
 
@@ -48,7 +53,7 @@ function validBreakdown(value, total) {
   const questionSets = [];
   for (const [rows, topic] of [[value.subjects, false], [value.topics, true]]) {
     if (!rows.every(row => validSection(row, topic)) || new Set(rows.map(row => row.id)).size !== rows.length) return false;
-    if (!countFields.every(field => rows.reduce((sum, row) => sum + row[field], 0) === value.overall[field])) return false;
+    if (![...countFields, 'aiKeyed', 'aiCorrect', 'aiIncorrect'].every(field => rows.reduce((sum, row) => sum + (row[field] ?? 0), 0) === (value.overall[field] ?? 0))) return false;
     const allIds = rows.flatMap(row => row.questionIds);
     if (allIds.length !== total || new Set(allIds).size !== total) return false;
     questionSets.push(new Set(allIds));
@@ -80,11 +85,17 @@ export function readPaperProgress(raw) {
       attempts: Object.fromEntries(Object.entries(p.attempts).filter(([id, a]) => validAttempt(a, id)).map(([id, attempt]) => {
         const safe = { ...attempt };
         if (!feedbackMode(safe.feedbackMode)) delete safe.feedbackMode;
+        if (!ids(safe.sourcePaperIds)) delete safe.sourcePaperIds;
+        if (!record(safe.correctionRevisions) || Object.values(safe.correctionRevisions).some(value => typeof value !== 'string')) delete safe.correctionRevisions;
         return [id, safe];
       })),
       latest: Object.fromEntries(Object.entries(p.latest).filter(([id, r]) => validResult(r, id)).map(([id, result]) => {
         const safe = { ...result };
         if (!validBreakdown(safe.sectionStats, safe.total)) delete safe.sectionStats;
+        if (!ids(safe.sourcePaperIds)) delete safe.sourcePaperIds;
+        if (!nonnegativeInteger(safe.aiKeyed) || !nonnegativeInteger(safe.aiMatched) || safe.aiMatched > safe.aiKeyed || safe.aiKeyed > safe.total - safe.keyed) {
+          delete safe.aiKeyed; delete safe.aiMatched; delete safe.aiRevision;
+        }
         return [id, safe];
       })),
     };
@@ -92,7 +103,10 @@ export function readPaperProgress(raw) {
 }
 
 export function newPaperAttempt(paper, now = new Date().toISOString(), mode = 'instant') {
-  return { paperId: paper.id, fingerprint: paper.fingerprint, answers: {}, index: 0, startedAt: now, completedAt: null, manual: {}, feedbackMode: feedbackMode(mode) ? mode : 'instant' };
+  return { paperId: paper.id, fingerprint: paper.fingerprint, answers: {}, index: 0, startedAt: now, completedAt: null, manual: {}, feedbackMode: feedbackMode(mode) ? mode : 'instant',
+    ...(paper.sourcePaperIds ? { sourcePaperIds: paper.sourcePaperIds } : {}),
+    correctionRevisions: Object.fromEntries(paper.questions.filter(q => q.correctionRevision).map(q => [q.id, q.correctionRevision])),
+  };
 }
 
 function normalizeAnswer(question, value) {
@@ -108,13 +122,18 @@ function normalizeAnswer(question, value) {
 export function restorePaperAttempt(saved, paper) {
   if (!validAttempt(saved, paper.id) || saved.fingerprint !== paper.fingerprint) return null;
   const questions = new Map(paper.questions.map(q => [q.id, q]));
+  const changed = new Set(paper.questions.filter(q => (saved.correctionRevisions?.[q.id] ?? '') !== (q.correctionRevision ?? '')).map(q => q.id));
   const answers = Object.fromEntries(Object.entries(saved.answers).flatMap(([id, value]) => {
     const question = questions.get(id);
+    if (changed.has(id)) return [];
     const answer = question ? normalizeAnswer(question, value) : '';
     return answer ? [[id, answer]] : [];
   }));
-  const manual = Object.fromEntries(Object.entries(saved.manual ?? {}).filter(([id, value]) => questions.has(id) && ['correct', 'incorrect', 'ungraded'].includes(value)));
-  return { ...saved, answers, manual, feedbackMode: feedbackMode(saved.feedbackMode) ? saved.feedbackMode : 'instant', index: Math.max(0, Math.min(paper.questions.length - 1, Number.isInteger(saved.index) ? saved.index : 0)) };
+  const manual = Object.fromEntries(Object.entries(saved.manual ?? {}).filter(([id, value]) => questions.has(id) && !changed.has(id) && ['correct', 'incorrect', 'ungraded'].includes(value)));
+  const correctionsReset = [...changed].some(id => saved.answers[id]);
+  return { ...saved, answers, manual, ...(correctionsReset ? { completedAt: null } : {}),
+    correctionRevisions: Object.fromEntries(paper.questions.filter(q => q.correctionRevision).map(q => [q.id, q.correctionRevision])),
+    feedbackMode: feedbackMode(saved.feedbackMode) ? saved.feedbackMode : 'instant', index: Math.max(0, Math.min(paper.questions.length - 1, Number.isInteger(saved.index) ? saved.index : 0)) };
 }
 
 // Committing an answer locks the first response; navigation and optional self-marks remain separate.
@@ -128,7 +147,7 @@ export function answerPaperQuestion(paper, attempt, questionId, value) {
 }
 
 function reliableKey(question) {
-  return Array.isArray(question.issues) && question.issues.length === 0 ? text(question.scoringKey).toUpperCase() : '';
+  return answerResolution(question).key || '';
 }
 
 export function questionFeedback(question, answer) {
@@ -155,7 +174,13 @@ function label(entry, fallback) { return text(entry?.label) || text(entry?.title
 
 function increment(counts, question, status, manualMark) {
   counts.total++;
-  if (reliableKey(question)) counts.sourceKeyed++;
+  const kind = answerResolution(question).kind;
+  if (kind === 'source') counts.sourceKeyed++;
+  if (kind === 'ai') {
+    counts.aiKeyed = (counts.aiKeyed ?? 0) + 1;
+    if (status === 'correct') counts.aiCorrect = (counts.aiCorrect ?? 0) + 1;
+    if (status === 'incorrect') counts.aiIncorrect = (counts.aiIncorrect ?? 0) + 1;
+  }
   if (status === 'unanswered') counts.unanswered++;
   else {
     counts.answered++;
@@ -212,7 +237,11 @@ export function gradePaper(paper, attempt, now = new Date().toISOString()) {
     const answer = (attempt.answers[q.id] ?? '').trim();
     if (!answer) unanswered++;
     if (q.scoringKey && !q.issues.length) { keyed++; if (answer.toUpperCase() === q.scoringKey) matched++; }
-    else if (['correct', 'incorrect'].includes(attempt.manual?.[q.id])) { manualGraded++; if (attempt.manual[q.id] === 'correct') manualCorrect++; }
+    else if (answer && answerResolution(q).kind === 'unresolved' && ['correct', 'incorrect'].includes(attempt.manual?.[q.id])) { manualGraded++; if (attempt.manual[q.id] === 'correct') manualCorrect++; }
   }
-  return { paperId: paper.id, fingerprint: paper.fingerprint, completedAt: now, total: paper.questions.length, keyed, matched, unanswered, manualCorrect, manualGraded, ungraded: paper.questions.length - keyed - manualGraded, percentage: keyed ? Math.round(matched / keyed * 100) : null };
+  const ai = paper.questions.filter(q => answerResolution(q).kind === 'ai');
+  return { paperId: paper.id, fingerprint: paper.fingerprint, completedAt: now, total: paper.questions.length, keyed, matched, unanswered, manualCorrect, manualGraded, ungraded: paper.questions.length - keyed - manualGraded, percentage: keyed ? Math.round(matched / keyed * 100) : null,
+    ...(ai.length ? { aiKeyed: ai.length, aiMatched: ai.filter(q => questionFeedback(q, attempt.answers[q.id]) === 'correct').length, aiRevision: paper.aiRevision } : {}),
+    ...(paper.sourcePaperIds ? { sourcePaperIds: paper.sourcePaperIds } : {}),
+  };
 }

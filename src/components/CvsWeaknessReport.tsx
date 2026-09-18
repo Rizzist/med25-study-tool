@@ -17,7 +17,7 @@ export function CvsWeaknessReport({ breakdown, topics, onReview }: {
         .sort((a, b) => b.incorrect - a.incorrect || b.unanswered - a.unanswered || b.ungraded - a.ungraded || a.title.localeCompare(b.title));
     return <section className={styles.report} aria-label="CVS section weakness report">
         <header><p className="eyebrow">Your review priorities</p><h2>What should I revise next?</h2>
-            <p>Start with mistakes, then unanswered topics. Accuracy is correct ÷ graded answers; unverified keys are excluded. A small sample or 100% on a few questions does not prove mastery.</p></header>
+            <p>Start with mistakes, then unanswered topics. Accuracy is correct ÷ graded answers, including separately identified AI-proposed answers and self-marks; unresolved questions are excluded. A small sample or 100% on a few questions does not prove mastery.</p></header>
         <div className={styles.actions}>
             <button className="primary" disabled={!breakdown.wrongQuestionIds.length} onClick={() => onReview(breakdown.wrongQuestionIds, 'Wrong answers')}>Review wrong ({breakdown.wrongQuestionIds.length})</button>
             <button disabled={!breakdown.missedQuestionIds.length} onClick={() => onReview(breakdown.missedQuestionIds, 'Unanswered questions')}>Unanswered ({breakdown.missedQuestionIds.length})</button>
@@ -28,6 +28,7 @@ export function CvsWeaknessReport({ breakdown, topics, onReview }: {
             <b>{row.title}</b><strong>{row.percentage === null ? 'Not graded' : row.percentage + '%'}</strong>
             <span>{row.answered}/{row.total} answered · {row.correct + row.incorrect} graded</span>
             <span>{row.incorrect} wrong · {row.unanswered} unanswered · {row.ungraded} ungraded</span>
+            {!!row.aiKeyed && <small>{row.aiCorrect ?? 0} correct / {(row.aiCorrect ?? 0) + (row.aiIncorrect ?? 0)} answered using AI-proposed answers</small>}
             {(row.manualCorrect + row.manualIncorrect > 0) && <small>Includes {row.manualCorrect + row.manualIncorrect} self-marks</small>}
         </button>)}</div>
         <p className={styles.meta}>Lymphoid organ architecture is under Histology; blood cells, hemostasis and immune function are under Blood / lymph / immune. These are study categories, not official exam weightings.</p>
@@ -48,6 +49,7 @@ function TopicRow({ row, onReview }: { row: PaperSectionStats; onReview: (ids: s
     return <article><div><span className={styles.meta}>{status}</span><h3>{row.title}</h3>
         <p><b>{row.percentage === null ? 'No score yet' : row.percentage + '% accuracy'}</b> · {row.correct}/{graded} graded correct · {row.answered}/{row.total} answered</p>
         <p className={styles.meta}>{row.incorrect} wrong · {row.unanswered} unanswered · {row.ungraded} ungraded{row.manualCorrect + row.manualIncorrect ? ' · includes ' + (row.manualCorrect + row.manualIncorrect) + ' self-marks' : ''}</p>
+        {!!row.aiKeyed && <p className={styles.meta}>AI-proposed: {row.aiCorrect ?? 0} correct · {row.aiIncorrect ?? 0} wrong · not an official key</p>}
     </div><div className={styles.actions}>
         {row.wrongQuestionIds.length > 0 && <button onClick={() => onReview(row.wrongQuestionIds, row.title + ' · mistakes')}>Review mistakes</button>}
         <button onClick={() => onReview(row.questionIds, row.title)}>Open {row.total} questions</button>
