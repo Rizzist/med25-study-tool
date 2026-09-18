@@ -1,0 +1,767 @@
+[
+  {
+    "id": "limb-audit-hist-concept-connective-recognition",
+    "moduleId": "limb-audit-hist-module-connective-cartilage",
+    "subject": "histology",
+    "title": "Connective tissue recognition and repair",
+    "summary": "A tendon is identified by its aligned collagen and sparse fibrocytes, while mixed cartilage and fibrous regions identify fibrocartilage at selected insertion sites. Cell appearance and preparation must be interpreted alongside matrix organization.",
+    "keyPoints": [
+      "Dense regular tissue has parallel type I collagen bundles, elongated fibrocyte nuclei and little ground substance.",
+      "Dense irregular tissue has collagen bundles oriented in several directions, supporting multidirectional tensile loads.",
+      "Active fibroblasts have abundant rough ER and Golgi, with larger euchromatic nuclei than quiescent fibrocytes.",
+      "Tendons and ligaments are relatively poorly vascularized and repair slowly through fibroblast activity.",
+      "Fibrocartilage at some insertions combines type II collagen-rich chondrocyte regions with dense type I collagen-rich fibrous regions.",
+      "A clear rim around a processed chondrocyte can reflect shrinkage; living cells normally fill their lacunae."
+    ],
+    "examTraps": [
+      "Type I collagen alone cannot identify tendon, fibrocartilage or bone without cellular and architectural context.",
+      "The selected insertion question does not establish a universal four-zone enthesis, and no fine zonal enthesis map is claimed."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What distinguishes a tendon fibrocyte from a cartilage cell?",
+        "answer": "A fibrocyte has an elongated nucleus among collagen bundles; a chondrocyte is rounded and occupies a cartilage lacuna."
+      },
+      {
+        "prompt": "Why can a halo around a chondrocyte be misleading?",
+        "answer": "Retraction during processing can create a space that was absent around the living cell."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "5 Connective Tissue",
+        "locator": "Printed pp.97, 115-118; PDF pp.108, 126-129",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "7 Cartilage",
+        "locator": "Printed pp.131-134; PDF pp.142-145",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-connective-patterns",
+        "text": "Recognize collagen arrangement and distinguish processing artifacts from normal tissue features.",
+        "questionIds": [
+          "limb-audit-hist-001",
+          "limb-audit-hist-002",
+          "limb-audit-hist-013"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-connective-repair",
+        "text": "Explain fibroblast activation and the relative limitations of tendon repair.",
+        "questionIds": [
+          "limb-audit-hist-003",
+          "limb-audit-hist-004"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-fibrocartilage-insertion",
+        "text": "Interpret a fibrocartilaginous insertion from its mixed cellular and matrix components.",
+        "questionIds": [
+          "limb-audit-hist-005"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-cartilage-cells",
+    "moduleId": "limb-audit-hist-module-connective-cartilage",
+    "subject": "histology",
+    "title": "Cartilage cells and matrix",
+    "summary": "Lecture-supported carryover; exam inclusion unconfirmed. Cartilage recognition depends on chondrocytes in lacunae and the surrounding matrix. The original bone-and-joint teaching file supports the distinctions among hyaline, elastic and fibrocartilage and introduces territorial matrix and isogenous groups.",
+    "keyPoints": [
+      "Hyaline cartilage contains rounded lacunar cells and fine type II collagen fibrils within a relatively homogeneous matrix.",
+      "Territorial matrix near lacunae is relatively rich in sulfated GAGs and often stains more basophilically.",
+      "Isogenous groups arise from local division of a cartilage cell, followed by separation as matrix accumulates.",
+      "Fibrocartilage shows chondrocyte rows among dense collagen-rich fibrous regions and lacks a distinct perichondrium.",
+      "Elastic cartilage contains an elastic-fiber network and perichondrium; it is a comparator rather than ordinary limb articular cartilage.",
+      "The supplied fibrocartilage micrograph is a disc specimen illustrating a tissue category also present in knee menisci."
+    ],
+    "examTraps": [
+      "Fibrocartilage contains both type I and type II collagen; it is not defined by type I alone.",
+      "An original disc image must not be presented as an actual knee biopsy."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Which finding favors fibrocartilage over ordinary tendon?",
+        "answer": "Rows of chondrocytes in lacunae within cartilage-like matrix between dense fibrous regions."
+      },
+      {
+        "prompt": "Why is territorial matrix relatively basophilic?",
+        "answer": "Its relatively high sulfated GAG content gives it many negatively charged groups."
+      }
+    ],
+    "sources": [
+      {
+        "title": "BONE&JOINT TISSUE.pdf",
+        "locator": "PDF pp.3-7, 9-13",
+        "basis": "slides"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "7 Cartilage",
+        "locator": "Printed pp.129, 131-134; PDF pp.140, 142-145",
+        "basis": "book"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-cartilage-recognition",
+        "text": "Distinguish hyaline, elastic and fibrocartilage from their cells and matrix.",
+        "questionIds": [
+          "limb-audit-hist-007",
+          "limb-audit-hist-012",
+          "limb-audit-hist-014"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-cartilage-microdomains",
+        "text": "Interpret territorial staining and isogenous cell groups.",
+        "questionIds": [
+          "limb-audit-hist-008",
+          "limb-audit-hist-009"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-cartilage-growth",
+    "moduleId": "limb-audit-hist-module-connective-cartilage",
+    "subject": "histology",
+    "title": "Cartilage growth and covering",
+    "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The perichondrium provides a fibrous outer layer and a chondrogenic cell population. Appositional growth from this covering must be separated from interstitial growth within cartilage, and from later replacement of cartilage by bone.",
+    "keyPoints": [
+      "Perichondrium contains an outer fibrous region with type I collagen and fibroblasts.",
+      "Its inner progenitor population can differentiate into matrix-producing chondroblasts.",
+      "Appositional cartilage growth adds matrix and cells beneath the perichondrium at the surface.",
+      "Interstitial cartilage growth involves division of cells already enclosed within the cartilage and deposition of matrix.",
+      "Articular cartilage and fibrocartilage lack a distinct perichondrium, limiting direct transfer of the covering-based model to them."
+    ],
+    "examTraps": [
+      "The lecture statement that cartilage simply stops growing in the late teens is too broad; growth-plate closure is not cessation of all cartilage matrix maintenance."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "How does appositional cartilage growth differ from interstitial growth?",
+        "answer": "Apposition adds cartilage from perichondrial progenitors at the surface; interstitial growth expands cartilage from cells already in its matrix."
+      }
+    ],
+    "sources": [
+      {
+        "title": "BONE&JOINT TISSUE.pdf",
+        "locator": "PDF pp.8, 15-16",
+        "basis": "slides"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "7 Cartilage",
+        "locator": "Printed pp.131, 133-135; PDF pp.142, 144-146",
+        "basis": "book"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-cartilage-cover-growth",
+        "text": "Identify perichondrial layers and distinguish surface addition from interstitial cartilage expansion.",
+        "questionIds": [
+          "limb-audit-hist-010",
+          "limb-audit-hist-011"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-synoviocytes",
+    "moduleId": "limb-audit-hist-module-joints",
+    "subject": "histology",
+    "title": "Synovial joint lining cells",
+    "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The lecture identifies synoviocyte A as phagocytic and synoviocyte B as a GAG-secreting cell. Junqueira provides the cellular morphology and specifies hyaluronan production and the connective-tissue nature of the lining.",
+    "keyPoints": [
+      "Type A synoviocytes have a macrophage-like phenotype.",
+      "Type A cells engulf and remove wear debris from synovial fluid.",
+      "Type B synoviocytes have a fibroblast-like synthetic phenotype.",
+      "Type B cells produce hyaluronan and other components that replenish synovial fluid.",
+      "These are lining cells in synovial tissue rather than chondrocytes embedded in articular cartilage lacunae."
+    ],
+    "examTraps": [
+      "Type A and type B names must not be reversed; a phagocytic lining cell is not automatically an osteoclast."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Which synovial cells remove debris and which produce hyaluronan?",
+        "answer": "Macrophage-like type A cells remove debris; fibroblast-like type B cells produce hyaluronan."
+      }
+    ],
+    "sources": [
+      {
+        "title": "BONE&JOINT TISSUE.pdf",
+        "locator": "PDF pp.54-55",
+        "basis": "slides"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "8 Bone",
+        "locator": "Printed p.157; PDF p.168, Figure 8-22",
+        "basis": "book"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-synoviocyte-functions",
+        "text": "Distinguish the morphology and functions of synoviocyte A and B.",
+        "questionIds": [
+          "limb-audit-hist-015"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-joint-microstructure",
+    "moduleId": "limb-audit-hist-module-joints",
+    "subject": "histology",
+    "title": "Synovial lining and articular surface",
+    "summary": "Joint sections place vascular synovial connective tissue beside avascular articular cartilage. Their different matrix and surface organization explain why an epithelial-looking lining is not a true epithelium and why collagenous repair does not prove normal cartilage restoration.",
+    "keyPoints": [
+      "Synovium is specialized connective tissue, with no continuous epithelial basal lamina or typical epithelial junctional pattern.",
+      "Synovial folds contain numerous capillaries, commonly fenestrated, that support exchange with synovial fluid.",
+      "Articular hyaline cartilage lacks vessels and perichondrium; its cells receive nutrients by diffusion.",
+      "Articular type II collagen arches from a mainly superficial parallel direction toward a deeper perpendicular direction.",
+      "Cartilage repair is often incomplete and can yield collagenous scar that lacks the architecture of the original hyaline surface."
+    ],
+    "examTraps": [
+      "The absence of perichondrium over articular cartilage does not imply that cartilage is acellular.",
+      "Finding type I collagen after repair does not establish lamellar bone or normal hyaline cartilage."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Why is synovium not a true epithelium?",
+        "answer": "Its surface cells lack a continuous epithelial basement membrane and the typical epithelial junctional organization."
+      },
+      {
+        "prompt": "What makes fibrous repair different from restoration of an articular surface?",
+        "answer": "Normal articular cartilage requires an organized type II collagen-proteoglycan matrix with appropriate chondrocytes, not simply any collagen."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "8 Bone",
+        "locator": "Printed pp.157-158; PDF pp.168-169",
+        "basis": "book"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "7 Cartilage",
+        "locator": "Printed pp.131, 134, 136; PDF pp.142, 145, 147",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-synovial-structure",
+        "text": "Recognize the connective-tissue nature and microvascular organization of synovium.",
+        "questionIds": [
+          "limb-audit-hist-016",
+          "limb-audit-hist-018"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-articular-structure-repair",
+        "text": "Interpret depth-dependent articular collagen and distinguish fibrous repair from normal hyaline cartilage.",
+        "questionIds": [
+          "limb-audit-hist-017",
+          "limb-audit-hist-019"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-bone-cells",
+    "moduleId": "limb-audit-hist-module-bone",
+    "subject": "histology",
+    "title": "Bone cells and architecture",
+    "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The bone lecture supports osteoblast, osteocyte and osteoclast recognition, bone coverings and compact versus cancellous organization. The source correction is that mature trabecular bone is lamellar without requiring a complete osteon in each trabecula.",
+    "keyPoints": [
+      "Active osteoblasts line forming surfaces and deposit unmineralized osteoid before mineralization.",
+      "Osteoclasts are large multinucleated cells with a ruffled border at resorbing bone surfaces.",
+      "An osteon has concentric lamellae around a central Haversian canal containing vessels and nerves.",
+      "Perforating Volkmann canals link vascular channels and do not usually have a complete concentric lamellar sleeve.",
+      "Trabecular bone consists of branching endosteum-covered bone plates or struts adjacent to marrow spaces.",
+      "Periosteum covers external nonarticular bone surfaces; endosteum covers internal surfaces."
+    ],
+    "examTraps": [
+      "Compact/trabecular and lamellar/woven describe different dimensions of bone organization.",
+      "The lecture phrase irregular Haversian systems should not be used as the definition of cancellous bone."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What identifies a resorptive osteoclast?",
+        "answer": "A large multinucleated cell in a scalloped surface depression, with a ruffled matrix-facing border."
+      },
+      {
+        "prompt": "Can mature trabecular bone be lamellar without osteons?",
+        "answer": "Yes. Thin trabeculae may have ordered lamellae without complete central-canal systems."
+      }
+    ],
+    "sources": [
+      {
+        "title": "BONE&JOINT TISSUE.pdf",
+        "locator": "PDF pp.19-29, 33",
+        "basis": "slides"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "8 Bone",
+        "locator": "Printed pp.140-147; PDF pp.151-158",
+        "basis": "book"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-bone-cell-recognition",
+        "text": "Identify matrix-forming and matrix-resorbing bone cells from their position and morphology.",
+        "questionIds": [
+          "limb-audit-hist-020",
+          "limb-audit-hist-021"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-bone-canal-architecture",
+        "text": "Distinguish cortical vascular channels, trabecular organization and bone surface coverings.",
+        "questionIds": [
+          "limb-audit-hist-022",
+          "limb-audit-hist-024",
+          "limb-audit-hist-026"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-bone-growth-repair",
+    "moduleId": "limb-audit-hist-module-bone",
+    "subject": "histology",
+    "title": "Growth plate and fracture histology",
+    "summary": "Lecture-supported carryover; exam inclusion unconfirmed. Growth plates and fracture callus are identified by their cellular and matrix patterns. This concept stays at the tissue level: it does not assign developmental dates, limb patterning signals or exam-specific ossification timetables.",
+    "keyPoints": [
+      "Proliferating growth-plate chondrocytes divide and form columns along the long axis of a bone.",
+      "Hypertrophic chondrocytes enlarge and leave thinner intervening matrix septa.",
+      "At an ossification front, calcified cartilage remnants form scaffolds on which osteoblasts deposit new bone matrix.",
+      "A typical secondary fracture repair contains an initial soft fibrocartilage-like callus followed by a woven-bone hard callus.",
+      "Later remodeling replaces temporary woven callus with organized lamellar bone.",
+      "Repair appearance depends on mechanical stability and vascularity; a large cartilage callus is not obligatory in every fixation setting."
+    ],
+    "examTraps": [
+      "The reserve-zone wording in the lecture should not displace the proliferative zone as the characteristic site of rapid column-forming mitoses.",
+      "Calcified cartilage is not identical to newly deposited bone; histology shows both matrices at the ossification front."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What distinguishes a hypertrophic from a proliferative growth-plate zone?",
+        "answer": "Hypertrophy gives strikingly enlarged chondrocytes and thinned septa, while proliferation gives dividing cells organized into columns."
+      },
+      {
+        "prompt": "What is the tissue sequence from soft to hard fracture callus?",
+        "answer": "A fibrocartilage-like bridge is followed by a temporary woven-bone bridge, then lamellar remodeling."
+      }
+    ],
+    "sources": [
+      {
+        "title": "BONE&JOINT TISSUE.pdf",
+        "locator": "PDF pp.34, 37, 39, 44",
+        "basis": "slides"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "8 Bone",
+        "locator": "Printed pp.151-154; PDF pp.162-165",
+        "basis": "book"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-growth-plate-zones",
+        "text": "Identify proliferative and hypertrophic cartilage zones and distinguish cartilage scaffold from new bone.",
+        "questionIds": [
+          "limb-audit-hist-027",
+          "limb-audit-hist-028",
+          "limb-audit-hist-029"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-fracture-callus",
+        "text": "Distinguish soft callus, woven hard callus and later lamellar remodeling.",
+        "questionIds": [
+          "limb-audit-hist-030"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-bone-remodeling",
+    "moduleId": "limb-audit-hist-module-bone",
+    "subject": "histology",
+    "title": "Bone architecture and remodeling",
+    "summary": "Bone microscopy reveals the history of matrix deposition and resorption. Anchoring collagen bundles, residual osteons, polarized lamellae and sequential mineral labels distinguish connective attachment, static architecture and ongoing surface apposition.",
+    "keyPoints": [
+      "Sharpey fibers are collagen bundles that penetrate bone and anchor periosteum to the matrix.",
+      "Interstitial lamellae are remnants of partly resorbed older osteons between complete newer systems.",
+      "Changing collagen orientation in successive lamellae produces alternating birefringence under polarized light.",
+      "An osteoclast cutting cone creates a tunnel that osteoblasts refill with concentric bone layers around a vascular canal.",
+      "The distance between sequential fluorescent mineralization labels divided by elapsed time estimates local mineral apposition rate.",
+      "A local linear apposition rate does not itself establish the percentage of the whole cortex or skeleton remodeled."
+    ],
+    "examTraps": [
+      "Perforating fibers are collagen bundles; perforating canals are vascular pathways.",
+      "Bright polarized rings are ordered matrix, not rings of vessels or proof of woven bone."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What remains between newer osteons after older osteons are partly resorbed?",
+        "answer": "Fragments of the older lamellar systems remain as interstitial lamellae."
+      },
+      {
+        "prompt": "What does a 20-micrometer label spacing over ten days estimate?",
+        "answer": "A local mineral apposition rate of approximately two micrometers per day."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "8 Bone",
+        "locator": "Printed pp.139, 143, 145-148, 158; PDF pp.150, 154, 156-159, 169",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-bone-attachment-lamellae",
+        "text": "Interpret anchoring fibers, residual lamellae and birefringence in bone.",
+        "questionIds": [
+          "limb-audit-hist-006",
+          "limb-audit-hist-023",
+          "limb-audit-hist-025"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-bone-remodeling-dynamic",
+        "text": "Explain secondary osteon formation and interpret sequential mineralization labels.",
+        "questionIds": [
+          "limb-audit-hist-031",
+          "limb-audit-hist-032"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-muscle-architecture",
+    "moduleId": "limb-audit-hist-module-muscle",
+    "subject": "histology",
+    "title": "Skeletal muscle microstructure",
+    "summary": "Skeletal muscle recognition changes with the plane of section. Individual fibers, fascicles, external laminae and intracellular sarcomeres are different scales of organization, and the myotendinous junction is a specialized contact with connective tissue.",
+    "keyPoints": [
+      "Mature skeletal muscle fibers are long multinucleated cells with peripheral myonuclei.",
+      "Cross sections show polygonal fiber outlines and peripheral nuclei, while longitudinal sections reveal repeated bands.",
+      "Endomysium surrounds individual fibers, perimysium surrounds fascicles and epimysium surrounds the whole muscle.",
+      "Laminin highlights the external lamina around each fiber; the lamina is not the whole endomysial connective-tissue compartment.",
+      "Z discs bisect I bands and define sarcomere boundaries; the H zone lies centrally within the A band.",
+      "Myotendinous junctions include complex sarcolemmal infoldings associated with tendon collagen."
+    ],
+    "examTraps": [
+      "Failure to see cross-striations in a transverse section is not sufficient to identify smooth muscle.",
+      "A myotendinous attachment, a T-tubule and a motor-end-plate fold are different membrane specializations."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What does a laminin-positive ring around each muscle fiber outline?",
+        "answer": "The external lamina immediately surrounding the individual muscle fiber."
+      },
+      {
+        "prompt": "Which connective sheath surrounds a fascicle?",
+        "answer": "Perimysium surrounds a muscle fascicle; endomysium is around the individual fibers inside it."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "10 Muscle Tissue",
+        "locator": "Printed pp.193-199; PDF pp.204-210",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-muscle-recognition-boundaries",
+        "text": "Recognize skeletal-muscle section planes and distinguish fascicular from cellular boundaries.",
+        "questionIds": [
+          "limb-audit-hist-033",
+          "limb-audit-hist-034",
+          "limb-audit-hist-035"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-muscle-sarcomere-attachment",
+        "text": "Identify static sarcomere regions and the structural myotendinous attachment.",
+        "questionIds": [
+          "limb-audit-hist-036",
+          "limb-audit-hist-037"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-muscle-interfaces",
+    "moduleId": "limb-audit-hist-module-muscle",
+    "subject": "histology",
+    "title": "Muscle interfaces and tissue response",
+    "summary": "Nerve terminals and proprioceptive receptors have distinct tissue architectures. Muscle phenotype and repair must be judged from cells, organelles and extracellular matrix without equating a surviving reserve population with complete restoration.",
+    "keyPoints": [
+      "At a motor end plate, a vesicle-rich axon terminal faces folded postsynaptic muscle sarcolemma across a cleft.",
+      "A muscle spindle encloses intrafusal fibers with nuclear bag or chain arrangements and relatively few myofibrils.",
+      "Golgi tendon organs associate sensory axons with collagen bundles rather than with intrafusal muscle fibers.",
+      "Abundant mitochondria, myoglobin and capillaries support an oxidative muscle-fiber phenotype.",
+      "A single muscle may contain several fiber phenotypes, and oxidative features alone do not uniquely define fast versus slow identity.",
+      "Major injury can leave collagenous scar that impedes regeneration despite survival of some satellite cells."
+    ],
+    "examTraps": [
+      "The presence of satellite cells does not guarantee restoration across a large scar.",
+      "Receptor morphology can be examined without substituting reflex physiology questions for histology."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What makes a muscle spindle a distinctive microscopic receptor?",
+        "answer": "Its capsule encloses thin intrafusal muscle fibers with conspicuous nuclear bag or chain regions and associated sensory axons."
+      },
+      {
+        "prompt": "Which microscopic features favor oxidative metabolism?",
+        "answer": "Numerous mitochondria, abundant myoglobin and a dense nearby capillary network."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "10 Muscle Tissue",
+        "locator": "Printed pp.204-207, 213; PDF pp.215-218, 224",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-muscle-nerve-receptor-interface",
+        "text": "Identify postsynaptic motor-end-plate folds and intrafusal spindle fibers.",
+        "questionIds": [
+          "limb-audit-hist-038",
+          "limb-audit-hist-039"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-muscle-phenotype-repair",
+        "text": "Interpret oxidative fiber morphology and the limitation imposed by extensive muscle scar.",
+        "questionIds": [
+          "limb-audit-hist-040",
+          "limb-audit-hist-041"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-nerve-organization",
+    "moduleId": "limb-audit-hist-module-nerve",
+    "subject": "histology",
+    "title": "Peripheral nerve organization",
+    "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The nervous-tissue lecture supports Schwann-cell covering, myelin, nodal gaps and the connective-tissue organization of peripheral nerves. The fascicle and the individual axon-Schwann-cell unit must be kept distinct.",
+    "keyPoints": [
+      "One myelinating Schwann cell forms one internodal segment along one peripheral axon.",
+      "Small unmyelinated peripheral axons remain enclosed in Schwann-cell folds without compact myelin wraps.",
+      "Endoneurium is a delicate reticular connective-tissue network around individual axon-Schwann-cell units.",
+      "Perineurium encloses a nerve fascicle, while epineurium encloses the whole nerve and extends between fascicles.",
+      "Larger nerve vessels lie in epineurial tissue, while small capillaries supply endoneurial compartments.",
+      "A node of Ranvier is a normal gap between neighboring compact myelin internodes along a continuous axon."
+    ],
+    "examTraps": [
+      "Unmyelinated does not mean unsupported by Schwann cells in the PNS.",
+      "Epineurium, perineurium and endoneurium are connective tissues and must not be equated with compact myelin."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What can a nonmyelinating Schwann cell enclose?",
+        "answer": "Portions of several small peripheral axons, each in a surface fold, without concentric compact myelin wrapping."
+      },
+      {
+        "prompt": "What surrounds the whole nerve and extends between fascicles?",
+        "answer": "The epineurium forms that common connective-tissue coat."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NERVOUS TISSUE MEDICINE (1).pptx",
+        "locator": "Slides 50, 52, 54, 56-58",
+        "basis": "slides"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "9 Nerve Tissue and the Nervous System",
+        "locator": "Printed pp.182-187; PDF pp.193-198",
+        "basis": "book"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-schwann-nodal-organization",
+        "text": "Distinguish myelinating and nonmyelinating Schwann-cell units and recognize a normal nodal gap.",
+        "questionIds": [
+          "limb-audit-hist-042",
+          "limb-audit-hist-043",
+          "limb-audit-hist-048"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-nerve-connective-layers",
+        "text": "Identify the endoneurial and epineurial compartments from their cellular scale and contents.",
+        "questionIds": [
+          "limb-audit-hist-046",
+          "limb-audit-hist-047"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-nerve-ultrastructure",
+    "moduleId": "limb-audit-hist-module-nerve",
+    "subject": "histology",
+    "title": "Peripheral nerve ultrastructure and barriers",
+    "summary": "Preparation, barrier cells and small cytoplasmic channels affect the appearance of a peripheral nerve. These finer distinctions extend the lecture covering beyond names of the principal nerve sheaths.",
+    "keyPoints": [
+      "Routine histological processing can partly extract the lipid-rich myelin sheath and leave pale periaxonal spaces.",
+      "Perineurial cells are joined by tight junctions and restrict diffusion across the fascicle covering.",
+      "Tightly joined endoneurial capillary endothelial cells also contribute to the blood-nerve barrier.",
+      "Compact myelin is formed from repeated Schwann-cell membrane layers rather than collagen or mineral.",
+      "Schmidt-Lanterman clefts retain Schwann-cell cytoplasm within a single myelin internode and support sheath maintenance.",
+      "A nodal gap is located between neighboring internodes, while a myelin cleft lies within one internode."
+    ],
+    "examTraps": [
+      "A pale ring in a paraffin section alone does not establish demyelinating disease.",
+      "The perineurium is a barrier contributor but is not the only component of the blood-nerve barrier."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Which normal myelin channels contain Schwann-cell cytoplasm?",
+        "answer": "Schmidt-Lanterman clefts within an internode contain retained Schwann-cell cytoplasm."
+      },
+      {
+        "prompt": "Why can paraffin and TEM specimens show different myelin preservation?",
+        "answer": "Routine processing can extract lipid-rich myelin, whereas appropriate ultrastructural preservation retains its membrane layers."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "9 Nerve Tissue and the Nervous System",
+        "locator": "Printed pp.182-184, 186-187; PDF pp.193-195, 197-198",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-nerve-artifact-barrier-clefts",
+        "text": "Distinguish myelin extraction artifact, the perineurial barrier and normal intramyelin cytoplasmic clefts.",
+        "questionIds": [
+          "limb-audit-hist-044",
+          "limb-audit-hist-045",
+          "limb-audit-hist-049"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-hist-concept-nerve-repair",
+    "moduleId": "limb-audit-hist-module-nerve",
+    "subject": "histology",
+    "title": "Peripheral nerve injury and repair",
+    "summary": "Lecture-supported carryover; exam inclusion unconfirmed. A severed axon produces related but distinct changes in its disconnected distal segment, surviving cell body and supporting Schwann cells. The lecture and book support guided regrowth while preserving its limitations.",
+    "keyPoints": [
+      "The disconnected distal axon and its myelin undergo Wallerian degeneration after a peripheral axonal injury.",
+      "Schwann cells and recruited macrophages participate in the injury response and debris clearance.",
+      "Chromatolysis describes soma swelling, Nissl dispersion or diminution and eccentric nuclear displacement.",
+      "Proliferating Schwann cells align within preserved external-lamina pathways and can guide growing proximal axonal sprouts.",
+      "A surviving neuronal soma is necessary for regrowth of its axon, but scar, misalignment and target access can limit recovery.",
+      "Schwann cells support axonal repair and remyelination rather than becoming new motor-neuron cell bodies."
+    ],
+    "examTraps": [
+      "Chromatolysis is a soma response, not a synonym for the distal axon degeneration.",
+      "A preserved guidance tube favors regrowth but cannot guarantee successful functional reinnervation."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "How do chromatolysis and Wallerian degeneration differ?",
+        "answer": "Chromatolysis changes the neuronal soma; Wallerian degeneration affects the axon and myelin distal to the injury."
+      },
+      {
+        "prompt": "What makes a preserved Schwann-cell tube useful after injury?",
+        "answer": "It provides an aligned external-lamina pathway for Schwann cells and a regrowing proximal axonal sprout."
+      }
+    ],
+    "sources": [
+      {
+        "title": "NERVOUS TISSUE MEDICINE (1).pptx",
+        "locator": "Slides 50, 54, 69, 71",
+        "basis": "slides"
+      },
+      {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "9 Nerve Tissue and the Nervous System",
+        "locator": "Printed pp.187, 190; PDF pp.198, 201",
+        "basis": "book"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-hist-objective-nerve-injury-compartments",
+        "text": "Distinguish distal axon degeneration from the cell-body chromatolytic response.",
+        "questionIds": [
+          "limb-audit-hist-050",
+          "limb-audit-hist-052"
+        ]
+      },
+      {
+        "id": "limb-audit-hist-objective-nerve-guidance-repair",
+        "text": "Explain how preserved Schwann-cell pathways favor, but do not guarantee, axonal regrowth.",
+        "questionIds": [
+          "limb-audit-hist-051"
+        ]
+      }
+    ]
+  }
+]

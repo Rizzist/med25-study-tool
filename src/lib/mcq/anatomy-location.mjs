@@ -38,10 +38,12 @@ export function buildModelLocationQuestions(questions, manifests) {
     const key = modelKey+':'+structureId;
     const manifest = manifests.find(item => item.modelKey === modelKey);
     const target = manifest?.structures.find(item=>item.id===structureId);
-    if (!target || seen.has(key)) return [];
+    // A focus-only surface annotation cannot be located while its answer is hidden.
+    // It remains available in identification MCQs and the source-image find-label drills.
+    if (!target || target.focusOnly || seen.has(key)) return [];
     seen.add(key);
     return [{...question,id:'locate3d-'+question.id,prompt:`Find ${target.label}. Click the structure in the 3D model, then submit your location.`,
-      anatomy3d:{...question.anatomy3d,responseMode:'locate',selectableStructures:manifest.structures.map(({id,label})=>({id,label}))},
+      anatomy3d:{...question.anatomy3d,responseMode:'locate',selectableStructures:manifest.structures.filter(item=>!item.focusOnly).map(({id,label})=>({id,label}))},
       options:[{id:'A',text:target.label},{id:'B',text:'A different structure'},{id:'C',text:'No mapped structure selected'},{id:'D',text:'Location not identified'}],correctOptionId:'A',
       explanation:target.description,distractorExplanations:{B:'Compare the selected structure with the correct target after feedback.',C:'Click a visible, mapped structure before submitting.',D:'The target was not located.'},
       learningObjective:`Locate ${target.label} in the regional 3D model.`,tags:[...question.tags,'anatomy-location-practice'],

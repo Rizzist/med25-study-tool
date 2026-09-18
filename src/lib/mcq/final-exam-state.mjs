@@ -4,6 +4,8 @@ export const FINAL_EXAM_SESSION_KEYS = {
   july25Telegram: "july25:telegram-past-papers",
   july29Telegram: "july29:telegram-past-papers",
   july29Downloaded: "july29:downloaded-core",
+  nutrition: "term2-nutrition:nutrition-past-papers",
+  religion: "term2-religion:religion-past-papers",
   july29TelegramWithoutCarbLipidMetabolism: "july29:telegram-past-papers:no-carb-lipid-metabolism",
   july29DownloadedWithoutCarbLipidMetabolism: "july29:downloaded-core:no-carb-lipid-metabolism",
 };
@@ -15,6 +17,8 @@ export function emptyFinalExamProgress() {
       [FINAL_EXAM_SESSION_KEYS.july25Telegram]: null,
       [FINAL_EXAM_SESSION_KEYS.july29Telegram]: null,
       [FINAL_EXAM_SESSION_KEYS.july29Downloaded]: null,
+      [FINAL_EXAM_SESSION_KEYS.nutrition]: null,
+      [FINAL_EXAM_SESSION_KEYS.religion]: null,
       [FINAL_EXAM_SESSION_KEYS.july29TelegramWithoutCarbLipidMetabolism]: null,
       [FINAL_EXAM_SESSION_KEYS.july29DownloadedWithoutCarbLipidMetabolism]: null,
     },

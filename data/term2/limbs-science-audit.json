@@ -1,0 +1,2244 @@
+{
+  "schemaVersion": "1.0.0",
+  "examId": "term2-limbs",
+  "updatedAt": "2026-09-13",
+  "totalAdded": 136,
+  "conceptsAdded": 37,
+  "modulesAdded": 15,
+  "scopeNote": "Both limbs are confirmed exam regions. Available upper-limb transcripts support regional anatomy; dedicated later-hand and lower-limb lecture detail remains incomplete. Related sciences are now mapped to the local review, Langman 15e, Junqueira 16e and Guyton (2026), with Foundations slides labelled lecture-supported carryover, exam inclusion unconfirmed. Book extensions are not evidence of a separate faculty syllabus. Question links sample the audited objectives, not every paragraph or official exam weighting; genuine past papers remain separate.",
+  "subjects": [
+    {
+      "subject": "embryology",
+      "author": "/root/limb_embryology_audit",
+      "independentReviewer": "/root/limb_physiology_audit",
+      "before": 17,
+      "added": 40,
+      "after": 57,
+      "core": 38,
+      "challenge": 19,
+      "courseCarryoverAdded": 0,
+      "bookExtensionAdded": 40,
+      "imageQuestionsAdded": 0,
+      "questionIds": [
+        "limb-audit-emb-001",
+        "limb-audit-emb-002",
+        "limb-audit-emb-003",
+        "limb-audit-emb-004",
+        "limb-audit-emb-005",
+        "limb-audit-emb-006",
+        "limb-audit-emb-007",
+        "limb-audit-emb-008",
+        "limb-audit-emb-009",
+        "limb-audit-emb-010",
+        "limb-audit-emb-011",
+        "limb-audit-emb-012",
+        "limb-audit-emb-013",
+        "limb-audit-emb-014",
+        "limb-audit-emb-015",
+        "limb-audit-emb-016",
+        "limb-audit-emb-017",
+        "limb-audit-emb-018",
+        "limb-audit-emb-019",
+        "limb-audit-emb-020",
+        "limb-audit-emb-021",
+        "limb-audit-emb-022",
+        "limb-audit-emb-023",
+        "limb-audit-emb-024",
+        "limb-audit-emb-025",
+        "limb-audit-emb-026",
+        "limb-audit-emb-027",
+        "limb-audit-emb-028",
+        "limb-audit-emb-029",
+        "limb-audit-emb-030",
+        "limb-audit-emb-031",
+        "limb-audit-emb-032",
+        "limb-audit-emb-033",
+        "limb-audit-emb-034",
+        "limb-audit-emb-035",
+        "limb-audit-emb-036",
+        "limb-audit-emb-037",
+        "limb-audit-emb-038",
+        "limb-audit-emb-039",
+        "limb-audit-emb-040"
+      ],
+      "coverage": [
+        {
+          "id": "limb-audit-emb-coverage-001",
+          "conceptId": "limb-audit-emb-concept-milestones",
+          "title": "Place initial upper- and lower-limb emergence on the developmental timetable.",
+          "objective": "Place initial upper- and lower-limb emergence on the developmental timetable.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 169; physical PDF p. 181; Figure 12.1",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-001"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-002",
+          "conceptId": "limb-audit-emb-concept-milestones",
+          "title": "Distinguish the plate stage from later separation of digits.",
+          "objective": "Distinguish the plate stage from later separation of digits.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 169–170; physical PDF pp. 181–182; Figure 12.1, 12.3",
+          "existingQuestionIds": [
+            "depth-limb-emb-004"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-002"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing digit-apoptosis question supplies ages in its stem but does not ask the learner to distinguish the earlier plate stage from completed separation. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-003",
+          "conceptId": "limb-audit-emb-concept-skeletal-maturation",
+          "title": "Distinguish a cartilage template from an ossified long bone during early limb development.",
+          "objective": "Distinguish a cartilage template from an ossified long bone during early limb development.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 170–171; physical PDF pp. 182–183; Figure 12.4",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-003"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-004",
+          "conceptId": "limb-audit-emb-concept-skeletal-maturation",
+          "title": "Locate and time the primary ossification centers of limb long bones.",
+          "objective": "Locate and time the primary ossification centers of limb long bones.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 170; physical PDF p. 182",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-004"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-005",
+          "conceptId": "limb-audit-emb-concept-skeletal-maturation",
+          "title": "Compare epiphyseal-plate distribution in long limb bones and phalanges.",
+          "objective": "Compare epiphyseal-plate distribution in long limb bones and phalanges.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 171; physical PDF p. 183",
+          "existingQuestionIds": [
+            "comp-limbs-061"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-005"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing growth-plate loss question tests function after fusion; it does not compare plate distribution in a major long bone and a phalanx. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-006",
+          "conceptId": "limb-audit-emb-concept-skeletal-maturation",
+          "title": "Interpret the developmental information supplied by hand and wrist ossification centers.",
+          "objective": "Interpret the developmental information supplied by hand and wrist ossification centers.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 176; physical PDF p. 188",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-006"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-007",
+          "conceptId": "limb-audit-emb-concept-field-and-bone-pattern",
+          "title": "Separate axial limb-field positioning from forelimb-versus-hindlimb specification.",
+          "objective": "Separate axial limb-field positioning from forelimb-versus-hindlimb specification.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 173; physical PDF p. 185",
+          "existingQuestionIds": [
+            "depth-limb-emb-009"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-007"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing TBX switch tests limb identity at a fixed axial position; the new item tests HOXB8-linked movement of the field with identity preserved. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-008",
+          "conceptId": "limb-audit-emb-concept-ridge-boundary",
+          "title": "Identify the ventral ectoderm signal that helps induce the apical ectodermal ridge.",
+          "objective": "Identify the ventral ectoderm signal that helps induce the apical ectodermal ridge.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 173–174; physical PDF pp. 185–186; Figure 12.8A",
+          "existingQuestionIds": [
+            "comp-limbs-064"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-008"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing FGF10 versus FGF4/8 item distinguishes initiation from maintenance. BMP–MSX2 induction of the ridge is a separate intervening step. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-009",
+          "conceptId": "limb-audit-emb-concept-ridge-boundary",
+          "title": "Explain how an ectodermal expression boundary localizes the AER.",
+          "objective": "Explain how an ectodermal expression boundary localizes the AER.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 173–174; physical PDF pp. 185–186; Figure 12.8A",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-009"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-010",
+          "conceptId": "limb-audit-emb-concept-ridge-boundary",
+          "title": "Recognize AP2 as a marker of undifferentiated mesenchyme beneath an active AER.",
+          "objective": "Recognize AP2 as a marker of undifferentiated mesenchyme beneath an active AER.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 175; physical PDF p. 187; Figure 12.9B–C",
+          "existingQuestionIds": [
+            "depth-limb-emb-003"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-010"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing regional-marker item assesses MEIS1, HOXA11 and HOXA13; the new target is the active undifferentiated-zone AP2 marker, with causal uncertainty preserved. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-011",
+          "conceptId": "limb-audit-emb-concept-ridge-boundary",
+          "title": "Follow the differentiation front and distinguish normal terminal differentiation from premature AER removal.",
+          "objective": "Follow the differentiation front and distinguish normal terminal differentiation from premature AER removal.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 175; physical PDF p. 187; Figure 12.9",
+          "existingQuestionIds": [
+            "depth-limb-emb-002",
+            "depth-limb-emb-003"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-011"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing ridge-removal and regional-marker items do not assess the normal differentiation-front sequence and terminal FGF cessation shown in Figure 12.9. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-012",
+          "conceptId": "limb-audit-emb-concept-field-and-bone-pattern",
+          "title": "Track the ZPA's location during continued limb outgrowth.",
+          "objective": "Track the ZPA's location during continued limb outgrowth.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 174; physical PDF p. 186; Figure 12.8B",
+          "existingQuestionIds": [
+            "depth-limb-emb-010"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-012"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing ectopic-SHH item assesses mirror duplication. This item assesses maintenance of the moving ZPA's spatial relationship to the AER. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-013",
+          "conceptId": "limb-audit-emb-concept-field-and-bone-pattern",
+          "title": "Distinguish limb-axis signaling from the HOX programs that shape regional skeletal elements.",
+          "objective": "Distinguish limb-axis signaling from the HOX programs that shape regional skeletal elements.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 175; physical PDF p. 187",
+          "existingQuestionIds": [
+            "depth-limb-emb-003",
+            "comp-limbs-063"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-013"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing items assess regional markers and HOX syndrome associations; this item asks the learner to identify the skeletal-pattern role of the HOXA/D programs. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-014",
+          "conceptId": "limb-audit-emb-concept-ridge-boundary",
+          "title": "Predict the boundary defect caused by loss of ventral repression of RADICAL FRINGE.",
+          "objective": "Predict the boundary defect caused by loss of ventral repression of RADICAL FRINGE.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 173–174; physical PDF pp. 185–186; Figure 12.8A",
+          "existingQuestionIds": [
+            "depth-limb-emb-011"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-014"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing EN1 question tests WNT7a-mediated dorsalization. The new item tests the separate EN1–RADICAL FRINGE boundary role. Closely linked to new item 009, but the upstream regulator is a different retrieval target. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-015",
+          "conceptId": "limb-audit-emb-concept-myogenic-domains",
+          "title": "Define the abaxial domain using cell movement across the lateral somitic frontier.",
+          "objective": "Define the abaxial domain using cell movement across the lateral somitic frontier.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "11 - Muscular System; Printed pp. 162–163; physical PDF pp. 174–175; Figure 11.1",
+          "existingQuestionIds": [
+            "depth-limb-emb-001"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-015"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing lineage item distinguishes somite muscle from lateral plate skeleton. It does not define the abaxial domain or crossing of the lateral somitic frontier. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-016",
+          "conceptId": "limb-audit-emb-concept-myogenic-domains",
+          "title": "Recognize the primaxial shoulder-girdle exceptions to a blanket abaxial description of upper-limb-associated muscles.",
+          "objective": "Recognize the primaxial shoulder-girdle exceptions to a blanket abaxial description of upper-limb-associated muscles.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "11 - Muscular System; Printed p. 164; physical PDF p. 176; Table 11.1",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-016"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-017",
+          "conceptId": "limb-audit-emb-concept-myogenic-domains",
+          "title": "Distinguish the inductive environment of ventrolateral myogenic precursors from that of dorsomedial precursors.",
+          "objective": "Distinguish the inductive environment of ventrolateral myogenic precursors from that of dorsomedial precursors.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "11 - Muscular System; Printed pp. 162, 164–165; physical PDF pp. 174, 176–177; Figure 11.3",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-017"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-018",
+          "conceptId": "limb-audit-emb-concept-muscle-assembly",
+          "title": "Identify a transcription factor regulating tendon development independently of myogenic specification.",
+          "objective": "Identify a transcription factor regulating tendon development independently of myogenic specification.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "11 - Muscular System; Printed p. 165; physical PDF p. 177",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-018"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-019",
+          "conceptId": "limb-audit-emb-concept-muscle-assembly",
+          "title": "Explain how multinucleated skeletal muscle fibers arise during differentiation.",
+          "objective": "Explain how multinucleated skeletal muscle fibers arise during differentiation.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "11 - Muscular System; Printed p. 165; physical PDF p. 177",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-019"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-020",
+          "conceptId": "limb-audit-emb-concept-muscle-assembly",
+          "title": "Explain why correct myogenic origin and connective-tissue pattern do not alone guarantee full functional differentiation.",
+          "objective": "Explain why correct myogenic origin and connective-tissue pattern do not alone guarantee full functional differentiation.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 172; physical PDF p. 184; Figure 12.6",
+          "existingQuestionIds": [
+            "depth-limb-emb-008"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-020"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing connective-template scenario stipulates normal innervation. The new item removes innervation and asks about its distinct requirement for functional differentiation. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-021",
+          "conceptId": "limb-audit-emb-concept-muscle-assembly",
+          "title": "Explain how one mature limb muscle can receive contributions from more than one original segment.",
+          "objective": "Explain how one mature limb muscle can receive contributions from more than one original segment.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 171–172; physical PDF pp. 183–184",
+          "existingQuestionIds": [
+            "depth-limb-emb-008"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-021"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing connective-template question mentions splitting/fusion in its explanation. The new item directly tests how a single mature muscle acquires more than one segmental contribution. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-022",
+          "conceptId": "limb-audit-emb-concept-muscle-assembly",
+          "title": "Relate altered limb skin geometry to preserved segmental sensory relationships.",
+          "objective": "Relate altered limb skin geometry to preserved segmental sensory relationships.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 172–173; physical PDF pp. 184–185; Figure 12.7",
+          "existingQuestionIds": [
+            "depth-limb-emb-005"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-022"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing opposite-rotation question assesses adult extensor and first-digit positions. The new item directly assesses preserved sensory segmental order despite changed dermatome geometry. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-023",
+          "conceptId": "limb-audit-emb-concept-defect-morphology",
+          "title": "Distinguish complete absence, partial absence, and the phocomelia subtype.",
+          "objective": "Distinguish complete absence, partial absence, and the phocomelia subtype.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 176; physical PDF p. 188; Figure 12.11",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-023"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-024",
+          "conceptId": "limb-audit-emb-concept-defect-morphology",
+          "title": "Separate generalized limb shortening from isolated digit shortening.",
+          "objective": "Separate generalized limb shortening from isolated digit shortening.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 176; physical PDF p. 188; Figure 12.12A",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-024"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-025",
+          "conceptId": "limb-audit-emb-concept-defect-morphology",
+          "title": "Recognize the central-ray deficiency in the illustrated cleft-hand or cleft-foot pattern.",
+          "objective": "Recognize the central-ray deficiency in the illustrated cleft-hand or cleft-foot pattern.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 177; physical PDF p. 189; Figure 12.12D",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-025"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-026",
+          "conceptId": "limb-audit-emb-concept-defect-morphology",
+          "title": "Distinguish the presence of an extra digit from normal functional muscle integration.",
+          "objective": "Distinguish the presence of an extra digit from normal functional muscle integration.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 176–177; physical PDF pp. 188–189; Figure 12.12C",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-026"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-027",
+          "conceptId": "limb-audit-emb-concept-developmental-disruption",
+          "title": "Identify the especially sensitive developmental interval for thalidomide-associated limb defects.",
+          "objective": "Identify the especially sensitive developmental interval for thalidomide-associated limb defects.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 176; physical PDF p. 188",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-027"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-028",
+          "conceptId": "limb-audit-emb-concept-developmental-disruption",
+          "title": "Recognize amniotic-band disruption from constriction and amputation morphology.",
+          "objective": "Recognize amniotic-band disruption from constriction and amputation morphology.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 178; physical PDF p. 190",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-028"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-029",
+          "conceptId": "limb-audit-emb-concept-developmental-disruption",
+          "title": "Avoid assigning a unique cause to the morphology of transverse limb deficiency.",
+          "objective": "Avoid assigning a unique cause to the morphology of transverse limb deficiency.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 178–179; physical PDF pp. 190–191; Figure 12.16",
+          "existingQuestionIds": [
+            "depth-limb-emb-002"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-029"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing experimental AER removal provides a known cause of truncation. This item deliberately withholds causal evidence and assesses why a transverse morphology is not a unique etiologic diagnosis. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-030",
+          "conceptId": "limb-audit-emb-concept-syndromic-limbs",
+          "title": "Connect radial-side upper-limb malformation with the cardiac manifestations of Holt–Oram syndrome.",
+          "objective": "Connect radial-side upper-limb malformation with the cardiac manifestations of Holt–Oram syndrome.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 177; physical PDF p. 189",
+          "existingQuestionIds": [
+            "comp-limbs-063"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-030"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "TBX5 appears in an existing distractor explanation, but there is no direct Holt–Oram phenotype-to-association question. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-031",
+          "conceptId": "limb-audit-emb-concept-syndromic-limbs",
+          "title": "Recognize the association of radial aplasia with premature cranial-suture fusion.",
+          "objective": "Recognize the association of radial aplasia with premature cranial-suture fusion.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 178; physical PDF p. 190",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-031"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-032",
+          "conceptId": "limb-audit-emb-concept-syndromic-limbs",
+          "title": "Relate osteogenesis imperfecta limb findings to type I collagen genes.",
+          "objective": "Relate osteogenesis imperfecta limb findings to type I collagen genes.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed pp. 177–178; physical PDF pp. 189–190; Figure 12.13",
+          "existingQuestionIds": [
+            "comp-limbs-063"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-032"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Type I collagen genes appear in existing distractor explanations, but there is no direct fragile-bone/blue-sclera association question. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-033",
+          "conceptId": "limb-audit-emb-concept-syndromic-limbs",
+          "title": "Connect long slender limbs and associated findings with fibrillin abnormality.",
+          "objective": "Connect long slender limbs and associated findings with fibrillin abnormality.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 178; physical PDF p. 190",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-033"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-034",
+          "conceptId": "limb-audit-emb-concept-joint-muscle-conditions",
+          "title": "Separate prenatal abnormal joint formation from the timing when hip dislocation becomes evident.",
+          "objective": "Separate prenatal abnormal joint formation from the timing when hip dislocation becomes evident.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 178; physical PDF p. 190",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-034"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-035",
+          "conceptId": "limb-audit-emb-concept-joint-muscle-conditions",
+          "title": "Interpret PITX1-related clubfoot as one etiologic association without treating it as a universal mechanism.",
+          "objective": "Interpret PITX1-related clubfoot as one etiologic association without treating it as a universal mechanism.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "12 - Limbs; Printed p. 178; physical PDF p. 190",
+          "existingQuestionIds": [
+            "depth-limb-emb-009"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-035"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing TBX4/PITX1 identity manipulation does not assess the limits of PITX1 inference in a family with clubfoot. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-036",
+          "conceptId": "limb-audit-emb-concept-joint-muscle-conditions",
+          "title": "Recognize Poland sequence from the combination of pectoral and ipsilateral hand defects.",
+          "objective": "Recognize Poland sequence from the combination of pectoral and ipsilateral hand defects.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "11 - Muscular System; Printed pp. 166–167; physical PDF pp. 178–179; Figure 11.5",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-036"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-037",
+          "conceptId": "limb-audit-emb-concept-joint-muscle-conditions",
+          "title": "Differentiate muscle absence from impaired muscle function as routes to congenital contractures.",
+          "objective": "Differentiate muscle absence from impaired muscle function as routes to congenital contractures.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "11 - Muscular System; Printed p. 167; physical PDF p. 179",
+          "existingQuestionIds": [
+            "comp-limbs-065"
+          ],
+          "newQuestionIds": [
+            "limb-audit-emb-037"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "assessment-depth-expanded",
+          "residualNote": "Existing contracture item assesses oligohydramnios-related movement restriction. This item distinguishes muscle absence from contractile dysfunction. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-038",
+          "conceptId": "limb-audit-emb-concept-skeletal-dysplasia",
+          "title": "Connect short-limb skeletal dysplasia with FGFR3-associated disturbance of endochondral development.",
+          "objective": "Connect short-limb skeletal dysplasia with FGFR3-associated disturbance of endochondral development.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "10 - The Axial Skeleton; Printed pp. 154–155; physical PDF pp. 166–167; Table 10.1",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-038"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-039",
+          "conceptId": "limb-audit-emb-concept-skeletal-dysplasia",
+          "title": "Recognize the appendicular clavicular findings of RUNX2-associated cleidocranial dysplasia.",
+          "objective": "Recognize the appendicular clavicular findings of RUNX2-associated cleidocranial dysplasia.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "10 - The Axial Skeleton; Printed pp. 154–155; physical PDF pp. 166–167; Table 10.1",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-039"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-040",
+          "conceptId": "limb-audit-emb-concept-skeletal-dysplasia",
+          "title": "Use hand and foot involvement to distinguish the FGFR2-associated patterns tabulated by Langman.",
+          "objective": "Use hand and foot involvement to distinguish the FGFR2-associated patterns tabulated by Langman.",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "10 - The Axial Skeleton; Printed p. 155; physical PDF p. 167; Table 10.1",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-emb-040"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "previously-unassessed-objective",
+          "residualNote": "No existing embryo-limb question directly assesses this objective. New item has passed independent content/source review and remains draft for parent integration. Course teaching is unconfirmed."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-lineage",
+          "title": "Lateral plate skeleton versus somite muscle",
+          "objective": "Lateral plate skeleton versus somite muscle",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 169, 171; physical PDF pp. 181, 183",
+          "existingQuestionIds": [
+            "depth-limb-emb-001"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing tracer scenario already assesses the principal tissue-lineage distinction. New myogenic-domain items add a separate domain mechanism."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-ridge-loss",
+          "title": "AER loss and proximodistal truncation",
+          "objective": "AER loss and proximodistal truncation",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 169, 173–175; physical PDF pp. 181, 185–187",
+          "existingQuestionIds": [
+            "depth-limb-emb-002"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Retain the existing experimental truncation question; no same-outcome paraphrase added."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-regional-markers",
+          "title": "MEIS1, HOXA11 and HOXA13 regional markers",
+          "objective": "MEIS1, HOXA11 and HOXA13 regional markers",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 173–175; physical PDF pp. 185–187",
+          "existingQuestionIds": [
+            "depth-limb-emb-003"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing marker-to-region application retained. AP2 is an additional undifferentiated-zone target."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-digit-apoptosis",
+          "title": "AER subdivision versus interdigital apoptosis",
+          "objective": "AER subdivision versus interdigital apoptosis",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 169–170; physical PDF pp. 181–182",
+          "existingQuestionIds": [
+            "depth-limb-emb-004"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing two-stage apoptosis mechanism retained. No extra generic syndactyly mechanism question added."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-rotation",
+          "title": "Opposite rotation and adult compartment orientation",
+          "objective": "Opposite rotation and adult compartment orientation",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 169–170; physical PDF pp. 181–182",
+          "existingQuestionIds": [
+            "depth-limb-emb-005"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing week-7 adult orientation question retained; sensory-map continuity is assessed separately."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-interzone",
+          "title": "Joint interzone derivatives and likely WNT14 signal",
+          "objective": "Joint interzone derivatives and likely WNT14 signal",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 170–171; physical PDF pp. 182–183",
+          "existingQuestionIds": [
+            "depth-limb-emb-006",
+            "depth-limb-emb-007"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Both interzone differentiation and proposed induction are already tested. Exact joint-position regulation remains qualified in the source."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-muscle-template",
+          "title": "Connective-tissue control of muscle pattern",
+          "objective": "Connective-tissue control of muscle pattern",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 171–172; physical PDF pp. 183–184",
+          "existingQuestionIds": [
+            "depth-limb-emb-008"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing template-disruption application retained; new items ask about distinct maturation and segmental-contribution outcomes."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-identity",
+          "title": "TBX5 versus TBX4/PITX1 limb identity",
+          "objective": "TBX5 versus TBX4/PITX1 limb identity",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 173, 175; physical PDF pp. 185, 187",
+          "existingQuestionIds": [
+            "depth-limb-emb-009"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing identity-switch question retained. Positional HOXB8 and clubfoot association are separate additions."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-shh-duplication",
+          "title": "Anterior ectopic SHH and mirror duplication",
+          "objective": "Anterior ectopic SHH and mirror duplication",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 174–175; physical PDF pp. 186–187",
+          "existingQuestionIds": [
+            "depth-limb-emb-010"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing mirror-duplication application retained; no same-result ZPA graft paraphrase added."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-dorsoventral",
+          "title": "EN1–WNT7a–LMX1 dorsoventral identity",
+          "objective": "EN1–WNT7a–LMX1 dorsoventral identity",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 174–175; physical PDF pp. 186–187",
+          "existingQuestionIds": [
+            "depth-limb-emb-011"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing dorsalization question retained. EN1's ridge-border action is a distinct molecular output."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-feedback",
+          "title": "WNT7a support of SHH and linked FGF feedback",
+          "objective": "WNT7a support of SHH and linked FGF feedback",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed p. 175; physical PDF p. 187",
+          "existingQuestionIds": [
+            "depth-limb-emb-012",
+            "comp-limbs-064"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing signaling-maintenance questions retained. New ridge questions address induction, boundary localization and maturation."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-growth-loss",
+          "title": "Growth-plate length contribution versus apposition",
+          "objective": "Growth-plate length contribution versus apposition",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed pp. 171–172; physical PDF pp. 183–184",
+          "existingQuestionIds": [
+            "comp-limbs-061"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing injury/growth question retained. Growth-plate cell-zone detail is reserved for the histology audit."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-ventral-rami",
+          "title": "Dorsal divisions of ventral rami versus dorsal primary rami",
+          "objective": "Dorsal divisions of ventral rami versus dorsal primary rami",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed p. 172; physical PDF p. 184",
+          "existingQuestionIds": [
+            "comp-limbs-062"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing precise pathway question retained. No universal lower-limb root-range memorization question added."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-hox-syndromes",
+          "title": "HOXA13 versus HOXD13 syndrome discrimination",
+          "objective": "HOXA13 versus HOXD13 syndrome discrimination",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed p. 177; physical PDF p. 189",
+          "existingQuestionIds": [
+            "comp-limbs-063"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing hand-foot-genital versus synpolydactyly discrimination retained; additional syndrome questions target previously distractor-only or absent patterns."
+        },
+        {
+          "id": "limb-audit-emb-coverage-retained-contracture",
+          "title": "Restricted fetal movement and congenital contractures",
+          "objective": "Restricted fetal movement and congenital contractures",
+          "primarySource": "Langman's Medical Embryology (15th ed.)",
+          "locator": "Printed p. 178; physical PDF p. 190",
+          "existingQuestionIds": [
+            "comp-limbs-065"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "existing-assessment-retained",
+          "residualNote": "Existing oligohydramnios application retained. New contracture question distinguishes muscle absence and muscle dysfunction."
+        },
+        {
+          "id": "limb-audit-emb-coverage-course-unavailable",
+          "title": "Teacher-specific limb embryology objectives",
+          "objective": "Confirm exactly which limb embryology objectives were taught and how they are weighted.",
+          "primarySource": "Dedicated limb embryology lecture/slides/syllabus",
+          "locator": "Searched local Med Slides inventory and seven Upper Limb Carryover transcript TXT files",
+          "existingQuestionIds": [],
+          "newQuestionIds": [],
+          "sourceScope": "unconfirmed-course",
+          "gapStatus": "source-unavailable",
+          "residualNote": "No dedicated primary limb embryology course material was found. All 40 new questions are textbook extensions. The saved review's book-support section is not evidence of lecturer coverage."
+        }
+      ]
+    },
+    {
+      "subject": "histology",
+      "author": "/root/limb_histology_audit",
+      "independentReviewer": "/root",
+      "before": 10,
+      "added": 52,
+      "after": 62,
+      "core": 50,
+      "challenge": 12,
+      "courseCarryoverAdded": 25,
+      "bookExtensionAdded": 27,
+      "imageQuestionsAdded": 4,
+      "questionIds": [
+        "limb-audit-hist-001",
+        "limb-audit-hist-002",
+        "limb-audit-hist-003",
+        "limb-audit-hist-004",
+        "limb-audit-hist-005",
+        "limb-audit-hist-006",
+        "limb-audit-hist-007",
+        "limb-audit-hist-008",
+        "limb-audit-hist-009",
+        "limb-audit-hist-010",
+        "limb-audit-hist-011",
+        "limb-audit-hist-012",
+        "limb-audit-hist-013",
+        "limb-audit-hist-014",
+        "limb-audit-hist-015",
+        "limb-audit-hist-016",
+        "limb-audit-hist-017",
+        "limb-audit-hist-018",
+        "limb-audit-hist-019",
+        "limb-audit-hist-020",
+        "limb-audit-hist-021",
+        "limb-audit-hist-022",
+        "limb-audit-hist-023",
+        "limb-audit-hist-024",
+        "limb-audit-hist-025",
+        "limb-audit-hist-026",
+        "limb-audit-hist-027",
+        "limb-audit-hist-028",
+        "limb-audit-hist-029",
+        "limb-audit-hist-030",
+        "limb-audit-hist-031",
+        "limb-audit-hist-032",
+        "limb-audit-hist-033",
+        "limb-audit-hist-034",
+        "limb-audit-hist-035",
+        "limb-audit-hist-036",
+        "limb-audit-hist-037",
+        "limb-audit-hist-038",
+        "limb-audit-hist-039",
+        "limb-audit-hist-040",
+        "limb-audit-hist-041",
+        "limb-audit-hist-042",
+        "limb-audit-hist-043",
+        "limb-audit-hist-044",
+        "limb-audit-hist-045",
+        "limb-audit-hist-046",
+        "limb-audit-hist-047",
+        "limb-audit-hist-048",
+        "limb-audit-hist-049",
+        "limb-audit-hist-050",
+        "limb-audit-hist-051",
+        "limb-audit-hist-052"
+      ],
+      "coverage": [
+        {
+          "id": "limb-audit-hist-objective-connective-patterns",
+          "objective": "Recognize collagen arrangement and distinguish processing artifacts from normal tissue features.",
+          "conceptId": "limb-audit-hist-concept-connective-recognition",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-001",
+            "limb-audit-hist-002",
+            "limb-audit-hist-013"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (5 Connective Tissue): Printed pp.97, 115-118; PDF pp.108, 126-129; Junqueira's Basic Histology (7 Cartilage): Printed pp.131-134; PDF pp.142-145",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-connective-repair",
+          "objective": "Explain fibroblast activation and the relative limitations of tendon repair.",
+          "conceptId": "limb-audit-hist-concept-connective-recognition",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-003",
+            "limb-audit-hist-004"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (5 Connective Tissue): Printed pp.97, 115-118; PDF pp.108, 126-129; Junqueira's Basic Histology (7 Cartilage): Printed pp.131-134; PDF pp.142-145",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-fibrocartilage-insertion",
+          "objective": "Interpret a fibrocartilaginous insertion from its mixed cellular and matrix components.",
+          "conceptId": "limb-audit-hist-concept-connective-recognition",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-005"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (5 Connective Tissue): Printed pp.97, 115-118; PDF pp.108, 126-129; Junqueira's Basic Histology (7 Cartilage): Printed pp.131-134; PDF pp.142-145",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-cartilage-recognition",
+          "objective": "Distinguish hyaline, elastic and fibrocartilage from their cells and matrix.",
+          "conceptId": "limb-audit-hist-concept-cartilage-cells",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-007",
+            "limb-audit-hist-012",
+            "limb-audit-hist-014"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.3-7, 9-13; Junqueira's Basic Histology (7 Cartilage): Printed pp.129, 131-134; PDF pp.140, 142-145",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-cartilage-microdomains",
+          "objective": "Interpret territorial staining and isogenous cell groups.",
+          "conceptId": "limb-audit-hist-concept-cartilage-cells",
+          "existingQuestionIds": [
+            "comp-limbs-066"
+          ],
+          "newQuestionIds": [
+            "limb-audit-hist-008",
+            "limb-audit-hist-009"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.3-7, 9-13; Junqueira's Basic Histology (7 Cartilage): Printed pp.129, 131-134; PDF pp.140, 142-145",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-cartilage-cover-growth",
+          "objective": "Identify perichondrial layers and distinguish surface addition from interstitial cartilage expansion.",
+          "conceptId": "limb-audit-hist-concept-cartilage-growth",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-010",
+            "limb-audit-hist-011"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.8, 15-16; Junqueira's Basic Histology (7 Cartilage): Printed pp.131, 133-135; PDF pp.142, 144-146",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-synoviocyte-functions",
+          "objective": "Distinguish the morphology and functions of synoviocyte A and B.",
+          "conceptId": "limb-audit-hist-concept-synoviocytes",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-015"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.54-55; Junqueira's Basic Histology (8 Bone): Printed p.157; PDF p.168, Figure 8-22",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-synovial-structure",
+          "objective": "Recognize the connective-tissue nature and microvascular organization of synovium.",
+          "conceptId": "limb-audit-hist-concept-joint-microstructure",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-016",
+            "limb-audit-hist-018"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (8 Bone): Printed pp.157-158; PDF pp.168-169; Junqueira's Basic Histology (7 Cartilage): Printed pp.131, 134, 136; PDF pp.142, 145, 147",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-articular-structure-repair",
+          "objective": "Interpret depth-dependent articular collagen and distinguish fibrous repair from normal hyaline cartilage.",
+          "conceptId": "limb-audit-hist-concept-joint-microstructure",
+          "existingQuestionIds": [
+            "comp-limbs-067"
+          ],
+          "newQuestionIds": [
+            "limb-audit-hist-017",
+            "limb-audit-hist-019"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (8 Bone): Printed pp.157-158; PDF pp.168-169; Junqueira's Basic Histology (7 Cartilage): Printed pp.131, 134, 136; PDF pp.142, 145, 147",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-bone-cell-recognition",
+          "objective": "Identify matrix-forming and matrix-resorbing bone cells from their position and morphology.",
+          "conceptId": "limb-audit-hist-concept-bone-cells",
+          "existingQuestionIds": [
+            "comp-limbs-068",
+            "comp-limbs-069",
+            "comp-limbs-070"
+          ],
+          "newQuestionIds": [
+            "limb-audit-hist-020",
+            "limb-audit-hist-021"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.19-29, 33; Junqueira's Basic Histology (8 Bone): Printed pp.140-147; PDF pp.151-158",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-bone-canal-architecture",
+          "objective": "Distinguish cortical vascular channels, trabecular organization and bone surface coverings.",
+          "conceptId": "limb-audit-hist-concept-bone-cells",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-022",
+            "limb-audit-hist-024",
+            "limb-audit-hist-026"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.19-29, 33; Junqueira's Basic Histology (8 Bone): Printed pp.140-147; PDF pp.151-158",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-growth-plate-zones",
+          "objective": "Identify proliferative and hypertrophic cartilage zones and distinguish cartilage scaffold from new bone.",
+          "conceptId": "limb-audit-hist-concept-bone-growth-repair",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-027",
+            "limb-audit-hist-028",
+            "limb-audit-hist-029"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.34, 37, 39, 44; Junqueira's Basic Histology (8 Bone): Printed pp.151-154; PDF pp.162-165",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-fracture-callus",
+          "objective": "Distinguish soft callus, woven hard callus and later lamellar remodeling.",
+          "conceptId": "limb-audit-hist-concept-bone-growth-repair",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-030"
+          ],
+          "primarySource": "BONE&JOINT TISSUE.pdf; Junqueira's Basic Histology",
+          "locator": "BONE&JOINT TISSUE.pdf: PDF pp.34, 37, 39, 44; Junqueira's Basic Histology (8 Bone): Printed pp.151-154; PDF pp.162-165",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-bone-attachment-lamellae",
+          "objective": "Interpret anchoring fibers, residual lamellae and birefringence in bone.",
+          "conceptId": "limb-audit-hist-concept-bone-remodeling",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-006",
+            "limb-audit-hist-023",
+            "limb-audit-hist-025"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (8 Bone): Printed pp.139, 143, 145-148, 158; PDF pp.150, 154, 156-159, 169",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-bone-remodeling-dynamic",
+          "objective": "Explain secondary osteon formation and interpret sequential mineralization labels.",
+          "conceptId": "limb-audit-hist-concept-bone-remodeling",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-031",
+            "limb-audit-hist-032"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (8 Bone): Printed pp.139, 143, 145-148, 158; PDF pp.150, 154, 156-159, 169",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-muscle-recognition-boundaries",
+          "objective": "Recognize skeletal-muscle section planes and distinguish fascicular from cellular boundaries.",
+          "conceptId": "limb-audit-hist-concept-muscle-architecture",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-033",
+            "limb-audit-hist-034",
+            "limb-audit-hist-035"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (10 Muscle Tissue): Printed pp.193-199; PDF pp.204-210",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-muscle-sarcomere-attachment",
+          "objective": "Identify static sarcomere regions and the structural myotendinous attachment.",
+          "conceptId": "limb-audit-hist-concept-muscle-architecture",
+          "existingQuestionIds": [
+            "comp-limbs-071",
+            "comp-limbs-072",
+            "comp-limbs-073"
+          ],
+          "newQuestionIds": [
+            "limb-audit-hist-036",
+            "limb-audit-hist-037"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (10 Muscle Tissue): Printed pp.193-199; PDF pp.204-210",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-muscle-nerve-receptor-interface",
+          "objective": "Identify postsynaptic motor-end-plate folds and intrafusal spindle fibers.",
+          "conceptId": "limb-audit-hist-concept-muscle-interfaces",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-038",
+            "limb-audit-hist-039"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (10 Muscle Tissue): Printed pp.204-207, 213; PDF pp.215-218, 224",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-muscle-phenotype-repair",
+          "objective": "Interpret oxidative fiber morphology and the limitation imposed by extensive muscle scar.",
+          "conceptId": "limb-audit-hist-concept-muscle-interfaces",
+          "existingQuestionIds": [
+            "comp-limbs-074",
+            "comp-limbs-075"
+          ],
+          "newQuestionIds": [
+            "limb-audit-hist-040",
+            "limb-audit-hist-041"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (10 Muscle Tissue): Printed pp.204-207, 213; PDF pp.215-218, 224",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-schwann-nodal-organization",
+          "objective": "Distinguish myelinating and nonmyelinating Schwann-cell units and recognize a normal nodal gap.",
+          "conceptId": "limb-audit-hist-concept-nerve-organization",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-042",
+            "limb-audit-hist-043",
+            "limb-audit-hist-048"
+          ],
+          "primarySource": "NERVOUS TISSUE MEDICINE (1).pptx; Junqueira's Basic Histology",
+          "locator": "NERVOUS TISSUE MEDICINE (1).pptx: Slides 50, 52, 54, 56-58; Junqueira's Basic Histology (9 Nerve Tissue and the Nervous System): Printed pp.182-187; PDF pp.193-198",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-nerve-connective-layers",
+          "objective": "Identify the endoneurial and epineurial compartments from their cellular scale and contents.",
+          "conceptId": "limb-audit-hist-concept-nerve-organization",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-046",
+            "limb-audit-hist-047"
+          ],
+          "primarySource": "NERVOUS TISSUE MEDICINE (1).pptx; Junqueira's Basic Histology",
+          "locator": "NERVOUS TISSUE MEDICINE (1).pptx: Slides 50, 52, 54, 56-58; Junqueira's Basic Histology (9 Nerve Tissue and the Nervous System): Printed pp.182-187; PDF pp.193-198",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-nerve-artifact-barrier-clefts",
+          "objective": "Distinguish myelin extraction artifact, the perineurial barrier and normal intramyelin cytoplasmic clefts.",
+          "conceptId": "limb-audit-hist-concept-nerve-ultrastructure",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-044",
+            "limb-audit-hist-045",
+            "limb-audit-hist-049"
+          ],
+          "primarySource": "Junqueira's Basic Histology",
+          "locator": "Junqueira's Basic Histology (9 Nerve Tissue and the Nervous System): Printed pp.182-184, 186-187; PDF pp.193-195, 197-198",
+          "sourceScope": "book-extension",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice; exact exam inclusion unconfirmed. Textbook extension only."
+        },
+        {
+          "id": "limb-audit-hist-objective-nerve-injury-compartments",
+          "objective": "Distinguish distal axon degeneration from the cell-body chromatolytic response.",
+          "conceptId": "limb-audit-hist-concept-nerve-repair",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-050",
+            "limb-audit-hist-052"
+          ],
+          "primarySource": "NERVOUS TISSUE MEDICINE (1).pptx; Junqueira's Basic Histology",
+          "locator": "NERVOUS TISSUE MEDICINE (1).pptx: Slides 50, 54, 69, 71; Junqueira's Basic Histology (9 Nerve Tissue and the Nervous System): Printed pp.187, 190; PDF pp.198, 201",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-nerve-guidance-repair",
+          "objective": "Explain how preserved Schwann-cell pathways favor, but do not guarantee, axonal regrowth.",
+          "conceptId": "limb-audit-hist-concept-nerve-repair",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-hist-051"
+          ],
+          "primarySource": "NERVOUS TISSUE MEDICINE (1).pptx; Junqueira's Basic Histology",
+          "locator": "NERVOUS TISSUE MEDICINE (1).pptx: Slides 50, 54, 69, 71; Junqueira's Basic Histology (9 Nerve Tissue and the Nervous System): Printed pp.187, 190; PDF pp.198, 201",
+          "sourceScope": "course",
+          "gapStatus": "addressed-independently-reviewed",
+          "residual": "Independently reviewed original practice. Lecture-supported carryover; exam inclusion unconfirmed."
+        },
+        {
+          "id": "limb-audit-hist-objective-residual-specialist-scope",
+          "objective": "Recognize the remaining limits in enthesis zonation, meniscal vascular repair and teacher-specific practical specimens.",
+          "conceptId": null,
+          "existingQuestionIds": [],
+          "newQuestionIds": [],
+          "primarySource": "Dedicated teacher materials or an explicitly assigned specialist source",
+          "locator": "Not present in inspected local limb histology material",
+          "sourceScope": "unconfirmed",
+          "gapStatus": "residual-source-gap",
+          "residual": "Basic fibrocartilaginous insertion and meniscus tissue category covered, but four-zone enthesis detail, red/white meniscal healing gradients and a complete practical image atlas were not asserted."
+        }
+      ]
+    },
+    {
+      "subject": "physiology",
+      "author": "/root/limb_physiology_audit",
+      "independentReviewer": "/root/limb_embryology_audit",
+      "before": 5,
+      "added": 44,
+      "after": 49,
+      "core": 33,
+      "challenge": 16,
+      "courseCarryoverAdded": 8,
+      "bookExtensionAdded": 36,
+      "imageQuestionsAdded": 0,
+      "questionIds": [
+        "limb-audit-phys-001",
+        "limb-audit-phys-002",
+        "limb-audit-phys-003",
+        "limb-audit-phys-004",
+        "limb-audit-phys-005",
+        "limb-audit-phys-006",
+        "limb-audit-phys-007",
+        "limb-audit-phys-008",
+        "limb-audit-phys-009",
+        "limb-audit-phys-010",
+        "limb-audit-phys-011",
+        "limb-audit-phys-012",
+        "limb-audit-phys-013",
+        "limb-audit-phys-014",
+        "limb-audit-phys-015",
+        "limb-audit-phys-016",
+        "limb-audit-phys-017",
+        "limb-audit-phys-018",
+        "limb-audit-phys-019",
+        "limb-audit-phys-020",
+        "limb-audit-phys-021",
+        "limb-audit-phys-022",
+        "limb-audit-phys-023",
+        "limb-audit-phys-024",
+        "limb-audit-phys-025",
+        "limb-audit-phys-026",
+        "limb-audit-phys-027",
+        "limb-audit-phys-028",
+        "limb-audit-phys-029",
+        "limb-audit-phys-030",
+        "limb-audit-phys-031",
+        "limb-audit-phys-032",
+        "limb-audit-phys-033",
+        "limb-audit-phys-034",
+        "limb-audit-phys-036",
+        "limb-audit-phys-037",
+        "limb-audit-phys-038",
+        "limb-audit-phys-039",
+        "limb-audit-phys-040",
+        "limb-audit-phys-041",
+        "limb-audit-phys-042",
+        "limb-audit-phys-043",
+        "limb-audit-phys-044",
+        "limb-audit-phys-045"
+      ],
+      "coverage": [
+        {
+          "objectiveId": "limb-audit-phys-001-objective",
+          "objective": "Distinguish stimulus strength from action-potential amplitude in a single recovered motor axon.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 8,12",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-001"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-002-objective",
+          "objective": "Predict bidirectional propagation after stimulation of the middle of a resting isolated axon.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 9-10",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-002"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-003-objective",
+          "objective": "Predict how delayed potassium-channel activation affects repolarization of a fast nerve action potential.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 4-6",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-003"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-004-objective",
+          "objective": "Explain failure of a second stimulus during the absolute refractory period.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 17",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-004"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-005-objective",
+          "objective": "Explain passive internodal spread and active nodal regeneration in saltatory conduction.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 18-20",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-005"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-006-objective",
+          "objective": "Relate saltatory conduction to the metabolic cost of restoring ion gradients.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 20",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-006"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-007-objective",
+          "objective": "Calculate axonal transit time while separating it from synaptic and muscular delays.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 21",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-007"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed. The supplied distance and velocity are an authored application, not recovered lecture measurements."
+        },
+        {
+          "objectiveId": "limb-audit-phys-008-objective",
+          "objective": "Separate rapid spike generation from the longer-term maintenance of ionic gradients.",
+          "source": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "locator": "Slides 13",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-008"
+          ],
+          "sourceScope": "course",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Lecture-supported carryover; limb-exam inclusion and weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-009-objective",
+          "objective": "Calculate the potassium equilibrium-potential shift produced by doubling extracellular potassium in a stated selective-membrane model.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 64; local PDF p. 76",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-009"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-010-objective",
+          "objective": "Calculate electrochemical driving forces and predict the directions of sodium and potassium flux.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 65; local PDF p. 77",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-010"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-011-objective",
+          "objective": "Convert an absolute refractory period into a theoretical maximum firing frequency without claiming a sustainable physiological rate.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 76; local PDF p. 88",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-011"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-012-objective",
+          "objective": "Localize a presynaptic calcium-entry defect to impaired acetylcholine exocytosis.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 93,96; local PDF p. 104,107",
+          "existingQuestionIds": [
+            "comp-limbs-079"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-012"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-013-objective",
+          "objective": "Explain why a nonselective cation channel produces a depolarizing end-plate potential.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 94-95; local PDF p. 105-106",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-013"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-014-objective",
+          "objective": "Explain how acetylcholinesterase terminates the transmitter signal independently of muscle-channel recovery.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 95-96; local PDF p. 106-107",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-014"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-015-objective",
+          "objective": "Identify the T-tubule voltage-sensor to SR-release-channel link in skeletal-muscle excitation-contraction coupling.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 98; local PDF p. 109",
+          "existingQuestionIds": [
+            "comp-limbs-080"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-015"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-016-objective",
+          "objective": "Connect transverse-tubule conduction to the spatial coordination of calcium release in a large skeletal-muscle fiber.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 97-98; local PDF p. 108-109",
+          "existingQuestionIds": [
+            "comp-limbs-080"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-016"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-017-objective",
+          "objective": "Explain how calcium binding to troponin C permits actin-myosin interaction.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 83-84; local PDF p. 94-95",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-017"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-018-objective",
+          "objective": "Distinguish ATP-dependent myosin detachment from calcium-dependent activation of thin filaments.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 84; local PDF p. 95",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-018"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-019-objective",
+          "objective": "Identify the primed ADP-phosphate myosin state and distinguish it from ATP-binding detachment.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 84-85; local PDF p. 95-96",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-019"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-020-objective",
+          "objective": "Relate motor-unit size to the fineness of force control.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 88-89; local PDF p. 99-100",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-020"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-021-objective",
+          "objective": "Apply the size principle to recruitment during graded voluntary muscle activation.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 89; local PDF p. 100",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-021"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-022-objective",
+          "objective": "Distinguish asynchronous motor-unit force smoothing from tetanus within a single motor unit.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 89; local PDF p. 100",
+          "existingQuestionIds": [
+            "comp-limbs-078"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-022"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-023-objective",
+          "objective": "Use stimulus interval and twitch duration to compare frequency summation across motor units.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 87-89; local PDF p. 98-100",
+          "existingQuestionIds": [
+            "comp-limbs-078"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-023"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-024-objective",
+          "objective": "Recognize treppe while distinguishing it from fused tetanus, recruitment, and passive tension.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 89; local PDF p. 100",
+          "existingQuestionIds": [
+            "comp-limbs-078"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-024"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-025-objective",
+          "objective": "Explain the loss of active force when actin-myosin overlap is absent.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 85; local PDF p. 96",
+          "existingQuestionIds": [
+            "comp-limbs-076"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-025"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-026-objective",
+          "objective": "Predict shortening velocity across submaximal loads without confusing maximal activation with fixed velocity.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 85-86; local PDF p. 96-97",
+          "existingQuestionIds": [
+            "comp-limbs-077"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-026"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-027-objective",
+          "objective": "Calculate external mechanical work for a constant load displaced in the force direction.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 86; local PDF p. 97",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-027"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-028-objective",
+          "objective": "Compare external power from force-velocity data and recognize why neither maximal speed nor maximal force alone determines power.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Chapter 6 printed pp. 85–87, local PDF pp. 96–98; Chapter 85 printed p. 1102, local PDF p. 1059",
+          "existingQuestionIds": [
+            "comp-limbs-077"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-028"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-029-objective",
+          "objective": "Calculate muscle force from static torque balance using perpendicular moment arms.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 90; local PDF p. 101",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-029"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-030-objective",
+          "objective": "Predict the force consequence of a changing muscle moment arm at fixed required joint torque.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 90; local PDF p. 101",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-030"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-031-objective",
+          "objective": "Apply torque balance when antagonist coactivation changes at a stationary limb joint.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 87,90; local PDF p. 98,101",
+          "existingQuestionIds": [
+            "comp-limbs-077"
+          ],
+          "newQuestionIds": [
+            "limb-audit-phys-031"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-032-objective",
+          "objective": "Identify phosphocreatine as an immediate ATP-regeneration buffer during brief intense contraction.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 86; local PDF p. 97",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-032"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-033-objective",
+          "objective": "Distinguish small immediate energy stores from ongoing oxidative ATP supply during sustained muscle activity.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 86; local PDF p. 97",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-033"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-034-objective",
+          "objective": "Interpret preserved muscle electrical excitation during fatigue without attributing all force loss to one unmeasured mechanism.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 90; local PDF p. 101",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-034"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-035-objective",
+          "objective": "Link oxidative muscle-fiber specializations to endurance without treating every type-II subtype as identical.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 88; local PDF p. 99",
+          "existingQuestionIds": [],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "covered-in-parallel-histology-audit",
+          "residual": "The unpublished physiology draft limb-audit-phys-035 was removed as a semantic near-repeat of limb-audit-hist-041 in the parallel histology audit. The original draft is recoverable in independent-review.json. Existing published questions were preserved; exam weighting remains unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-036-objective",
+          "objective": "Distinguish dynamic and static components of spindle afferent discharge during ramp-and-hold stretch.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 699-700; local PDF p. 677-678",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-036"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-037-objective",
+          "objective": "Explain the role of alpha-gamma coactivation in maintaining spindle sensitivity during voluntary muscle shortening.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 701; local PDF p. 679",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-037"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-038-objective",
+          "objective": "Predict how gamma activation can change spindle discharge without changing total muscle length.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 699; local PDF p. 677",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-038"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-039-objective",
+          "objective": "Trace the monosynaptic excitatory limb of the stretch reflex without treating all associated reflex circuits as monosynaptic.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 697-700; local PDF p. 675-678",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-039"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-040-objective",
+          "objective": "Identify the sensory receptor in a tendon jerk and distinguish a stretch reflex from the Golgi tendon reflex.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 702; local PDF p. 680",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-040"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-041-objective",
+          "objective": "Trace the classic Ib inhibitory circuit while distinguishing it from the Ia stretch reflex.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 702-703; local PDF p. 680-681",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-041"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-042-objective",
+          "objective": "Use preserved direct motor activation to distinguish sensory-feedback loss from loss of the muscle efferent pathway.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 700-701; local PDF p. 678-679",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-042"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-043-objective",
+          "objective": "Explain coordinated withdrawal through polysynaptic excitation and reciprocal inhibition.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 703-705; local PDF p. 681-683",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-043"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-044-objective",
+          "objective": "Explain the spinal organization and supporting role of the crossed extensor response.",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Printed p. 704-705; local PDF p. 682-683",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-044"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objectiveId": "limb-audit-phys-045-objective",
+          "objective": "Distinguish eccentric force production from concentric shortening, isometric action, and passive stretch.",
+          "source": "Upper and Lower Limbs Review (personal review synthesis), corroborated by Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Review PDF p. 86; Guyton printed p. 1102, local PDF p. 1059",
+          "existingQuestionIds": [],
+          "newQuestionIds": [
+            "limb-audit-phys-045"
+          ],
+          "sourceScope": "book-extension",
+          "gapStatus": "filled-independent-review-approved",
+          "residual": "Textbook-supported practice; dedicated limb teaching and examination weighting remain unconfirmed."
+        },
+        {
+          "objective": "Separate active from passive tension by subtraction",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Chapter 6; printed p. 85; local PDF p. 96",
+          "existingQuestionIds": [
+            "comp-limbs-076"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "already-covered-no-paraphrase-added",
+          "residual": "New overlap question addresses a distinct mechanism; another numerical active-minus-passive clone was not needed."
+        },
+        {
+          "objective": "Explain calcium-dependent summation at fixed motor-unit recruitment",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Chapter 6; printed p. 89; local PDF p. 100",
+          "existingQuestionIds": [
+            "comp-limbs-078"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "already-covered-no-paraphrase-added",
+          "residual": "New questions separately address asynchronous units, twitch-duration comparisons, and treppe."
+        },
+        {
+          "objective": "Localize postsynaptic end-plate transmission failure",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Chapter 7; printed pp. 96-97; local PDF pp. 107-108",
+          "existingQuestionIds": [
+            "comp-limbs-079"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "already-covered-no-paraphrase-added",
+          "residual": "New NMJ questions target presynaptic calcium, channel currents, and transmitter clearance."
+        },
+        {
+          "objective": "Identify delayed SERCA-mediated relaxation",
+          "source": "Guyton and Hall Textbook of Medical Physiology",
+          "locator": "Chapter 7; printed p. 98; local PDF p. 109",
+          "existingQuestionIds": [
+            "comp-limbs-080"
+          ],
+          "newQuestionIds": [],
+          "sourceScope": "book-extension",
+          "gapStatus": "already-covered-no-paraphrase-added",
+          "residual": "The new coupling items test signal penetration, initial release, and thin-filament activation."
+        },
+        {
+          "objective": "Confirm a teacher-defined limb physiology syllabus and experimental practical scope",
+          "source": "Dedicated limb physiology teaching materials",
+          "locator": "Not located in inspected Med Slides inventory",
+          "existingQuestionIds": [],
+          "newQuestionIds": [],
+          "sourceScope": "course",
+          "gapStatus": "source-missing",
+          "residual": "Need a teacher syllabus, dedicated muscle/nerve lectures, and practical apparatus/protocols before claiming course completeness."
+        }
+      ]
+    }
+  ],
+  "sourceGaps": [
+    {
+      "source": "Upper Limb Carryover/Videos/*.transcript.txt",
+      "locator": "Seven files: Osteology of the upper limb 1; Axilla 1–2; Arm 1–2; Forearm 1–2. Full-file developmental-term search with context inspection.",
+      "topic": "Primary lecture evidence for embryology",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Available transcripts concern regional anatomy. Search hits for cartilage and rotation concern adult structures/actions. 'Embryo' at Osteology line 99 is an ASR corruption in a scapula discussion, not an embryology lecture statement. No new item is claimed course-grounded from these transcripts."
+    },
+    {
+      "source": "Dedicated limb embryology slides, lecture notes, recordings, or syllabus",
+      "locator": "Local /Users/rizzist/Documents/Med Slides inventory; no matching dedicated primary limb embryology material found",
+      "topic": "Unconfirmed primary course coverage",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "Cannot determine teacher-specific embryology content, exam weighting, or a lecturer's preferred terminology from unavailable files. A comprehensive textbook audit is not a claim of complete course recovery."
+    },
+    {
+      "source": "Langman's Medical Embryology, Chapter 12",
+      "locator": "Printed p.172/PDF184 versus printed p.179/PDF191",
+      "topic": "Limb-field position versus innervation ranges",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "The main text gives lower-limb muscle innervation as L4–S3, while the chapter summary gives lower-limb field position as L2–S2. These are different stated contexts and should not be collapsed into one root map; no universal-range MCQ was authored from them."
+    },
+    {
+      "source": "Langman's Medical Embryology, Chapters 10–11",
+      "locator": "Outside selected limb-relevant excerpts: cranial vault, vertebral column, ribs, head, cardiac and smooth muscle",
+      "topic": "Bounded chapter-extension scope",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Included only appendicular skeletal dysplasia and limb-associated muscle development/defects. Craniofacial material is used only when the hand, foot, radius, or clavicle finding distinguishes the selected syndrome; no general axial or organ-system expansion added."
+    },
+    {
+      "source": "/Users/rizzist/Downloads/Embryology 1-9.pdf",
+      "locator": "Physical p.10, teratogen table; Varicella row",
+      "topic": "Infectious teratology beyond the bounded limb chapter audit",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "The notes mention varicella-associated limb hypoplasia together with skin and eye/CNS findings. No new infectious-teratology question is added from this abbreviated row without auditing the primary infection passage; it remains a clearly identified residual extension rather than an implied covered objective."
+    },
+    {
+      "source": "INTRODUCTION.pptx",
+      "locator": "24-slide local deck; slides 15-16, 19 inspected for staining context",
+      "topic": "General histology preparation and staining",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Introductory course evidence exists for general staining and preparation. No new generic histotechnology drill was added; specific cartilage and myelin processing artifacts are book extensions."
+    },
+    {
+      "source": "Dedicated limb histology lecture or practical checklist",
+      "locator": "Not located in inspected Med Slides tree",
+      "topic": "Limb-specific teaching and exam weighting",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "Lecture-supported carryover; exam inclusion unconfirmed. No teacher-specific limb histology weighting, specimen checklist or dedicated lower-limb histology deck was found."
+    },
+    {
+      "source": "Standalone connective-tissue, cartilage or skeletal-muscle teaching decks",
+      "locator": "No matching standalone deck found under /Users/rizzist/Documents/Med Slides",
+      "topic": "Additional primary teaching evidence",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "The local BONE&JOINT TISSUE file covers cartilage. Tendon and skeletal-muscle content is drawn from Junqueira and labeled book-extension."
+    },
+    {
+      "source": "Junqueira's Basic Histology and local lecture files",
+      "locator": "Scope audit of selected limb tissue chapters and carryover slides",
+      "topic": "Residual specialist detail",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "Fine four-zone enthesis architecture, meniscal vascular-zone healing, pathology grading and a large novel image-spotter set remain outside this bounded source-based expansion. No missing material is claimed covered by question count."
+    },
+    {
+      "source": "Arm 1.transcript.txt and companion SRT",
+      "locator": "TXT lines 85-95, sensory feedback discussion; complete transcript inventory searched",
+      "topic": "Limited upper-limb lecture physiology evidence",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "The passage supports a general need for muscle sensory information, but ASR and statements about exclusive brachialis/radial sensory supply are problematic. It does not establish spindle subtypes, Ib circuitry, or gamma control. No new physiology question relies on those questionable statements."
+    },
+    {
+      "source": "Upper Limb Carryover — seven lecture transcripts",
+      "locator": "Osteology 1, Axilla 1-2, Arm 1-2, Forearm 1-2; .transcript.txt inventory and physiological-term search",
+      "topic": "Regional anatomy lecture scope",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "These are principally regional anatomical teaching. They do not confirm a dedicated muscle-physiology syllabus; anatomical nerve-deficit questions remain with the anatomy audit."
+    },
+    {
+      "source": "Dedicated limb physiology lecture, practical protocol, or teacher syllabus",
+      "locator": "No dedicated limb-specific physiology teaching file located in inspected Med Slides inventory",
+      "topic": "Unconfirmed limb physiology course weighting",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "Teacher-defined limb physiology objectives, muscle/nerve experimental protocols, and practical apparatus details remain unavailable. Do not present book extensions or calculated model values as recovered lecture or official examination content."
+    }
+  ],
+  "media": [
+    {
+      "file": "limb-audit-hist-tendon-129.png",
+      "publicPath": "study/limb-science-audit/limb-audit-hist-tendon-129.png",
+      "source": "Junqueira 16th ed., Figure 5-20a, printed p.118, PDF p.129. Panel crop; source pixels unchanged.",
+      "locator": "Printed pp. 115, 116, 118; local PDF pp. 126, 127, 129; Figure 5-20a",
+      "reviewNote": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Only source panel letters, if present, remain; no answer-bearing labels. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer.",
+      "sha256": "8c200bf5cf65262e6cdf084c54d8df577ea836dba2fb3f9f2d513e0414797db3"
+    },
+    {
+      "file": "limb-audit-hist-fibrocartilage-145.png",
+      "publicPath": "study/limb-science-audit/limb-audit-hist-fibrocartilage-145.png",
+      "source": "Junqueira 16th ed., Figure 7-5, printed p.134, PDF p.145. Panel crop; not a knee specimen.",
+      "locator": "Printed pp. 131, 134; local PDF pp. 142, 145; Figure 7-5",
+      "reviewNote": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Original C labels and arrows retained; no tissue answer is spelled out. Source specimen explicitly identified as disc, not knee. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer.",
+      "sha256": "aaa3bc6f9f5419b7265d209f9df209bd6f14eb9b7fc72bb0356ecad67a2db084"
+    },
+    {
+      "file": "limb-audit-hist-lamellar-157.png",
+      "publicPath": "study/limb-science-audit/limb-audit-hist-lamellar-157.png",
+      "source": "Junqueira 16th ed., Figure 8-8a,b, printed p.146, PDF p.157. Original credit: Dr Matt Allen, Indiana University School of Medicine. Panel crop.",
+      "locator": "Printed pp. 145, 146; local PDF pp. 156, 157; Figure 8-8a,b",
+      "reviewNote": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Only source panel letters, if present, remain; no answer-bearing labels. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer.",
+      "sha256": "db6b024e4391035be346df72f8b3560e4252b61d29fd33e2101db0c21cb92062"
+    },
+    {
+      "file": "limb-audit-hist-laminin-207.png",
+      "publicPath": "study/limb-science-audit/limb-audit-hist-laminin-207.png",
+      "source": "Junqueira 16th ed., Figure 10-4b, printed p.196, PDF p.207. Panel crop; source pixels unchanged.",
+      "locator": "Printed pp. 196; local PDF pp. 207; Figure 10-4b",
+      "reviewNote": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Only source panel letters, if present, remain; no answer-bearing labels. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer.",
+      "sha256": "905ad821c942065e3647f4f37d0d8774855a056c3611326d58c0f769ece131a1"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "revision": "4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b",
+  "truncated": false,
+  "totalTreeEntries": 3220,
+  "searches": [
+    {
+      "name": "latissimus",
+      "pattern": "latissimus",
+      "matches": []
+    },
+    {
+      "name": "palmarisBrevis",
+      "pattern": "palmaris brevis",
+      "matches": []
+    },
+    {
+      "name": "deepFPB",
+      "pattern": "deep.*flexor pollicis brevis|flexor pollicis brevis.*deep",
+      "matches": []
+    },
+    {
+      "name": "wholeFPB",
+      "pattern": "flexor pollicis brevis",
+      "matches": [
+        "meshes/FJ1469M_BP20912_FMA37388_Right flexor pollicis brevis.obj",
+        "meshes/FJ1469_BP20816_FMA37389_Left flexor pollicis brevis.obj",
+        "meshes/FJ1514M_BP23275_FMA65199_Superficial head of left flexor pollicis brevis.obj",
+        "meshes/FJ1514_BP23262_FMA65198_Superficial head of right flexor pollicis brevis.obj"
+      ]
+    },
+    {
+      "name": "EDB",
+      "pattern": "extensor digitorum brevis",
+      "matches": []
+    },
+    {
+      "name": "footDorsalInterossei",
+      "pattern": "dorsal interosse.*foot",
+      "matches": []
+    },
+    {
+      "name": "articularis",
+      "pattern": "articularis",
+      "matches": []
+    },
+    {
+      "name": "psoasMinor",
+      "pattern": "psoas minor",
+      "matches": []
+    },
+    {
+      "name": "hamstringAdductor",
+      "pattern": "ischiocondylar|hamstring.*adductor|adductor.*hamstring",
+      "matches": []
+    },
+    {
+      "name": "lowerNerves",
+      "pattern": "sacral plexus|lumbar plexus|lumbosacral trunk|plantar nerve|calcaneal nerve|fibular communicating|sural nerve|dorsal digital.*toe",
+      "matches": []
+    }
+  ],
+  "conclusion": "No dedicated mesh for any of the 25 lower target rows or 3 upper gaps in this pinned tree. Whole FPB is not evidence for a separate deep head. Reference spine/sacrum meshes anchor the reconstructions, not prove scanned nerve or muscle surfaces."
+}

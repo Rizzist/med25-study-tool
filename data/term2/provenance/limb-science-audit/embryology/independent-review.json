@@ -1,0 +1,925 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "reviewedAt": "2026-09-13",
+  "author": "/root/limb_embryology_audit",
+  "independentReviewer": "/root/limb_physiology_audit",
+  "reviewBasis": "Independent read of all 40 new questions, their complete option reasoning, all 17 pre-existing embryo-limb questions, all 11 concepts and objective links, all coverage/source-audit rows, and complete mapped primary textbook passages. Primary documents and repository were read-only.",
+  "sourceVerification": [
+    {
+      "source": "Langman's Medical Embryology, 15th edition, local original and OCR PDFs",
+      "locator": "Chapter 12, printed 169–180 / physical PDF 181–192",
+      "method": "Complete chapter pages freshly extracted/read; original page images inspected for OCR-sensitive gene labels, Figure 12.8 and Figure 12.9.",
+      "result": "All new Chapter 12 keys and exact printed/PDF locators supported."
+    },
+    {
+      "source": "Langman's Medical Embryology, 15th edition, local original and OCR PDFs",
+      "locator": "Chapter 11, printed 162–168 / physical PDF 174–180",
+      "method": "Complete selected muscle-development/clinical pages freshly read; original Table 11.1 on PDF176 visually checked using reviewer-langman-original-pdf-176.png.",
+      "result": "Cell domains, VLL induction, fusion, tendon regulator and selected congenital muscle disorders supported. Regional tendon and pelvic-lineage limits retained."
+    },
+    {
+      "source": "Langman's Medical Embryology, 15th edition, local original and OCR PDFs",
+      "locator": "Chapter 10, printed 154–155 / physical PDF 166–167, Table 10.1",
+      "method": "Fresh text reading plus original Table 10.1 visual check to avoid OCR column/gene errors.",
+      "result": "FGFR3, RUNX2, and selected FGFR2 appendicular phenotype pairings supported."
+    },
+    {
+      "source": "02 - Upper and Lower Limbs Review.pdf",
+      "locator": "Physical/printed 79–82 and source-scope section p89",
+      "method": "Fresh read of secondary development/congenital review and scope boundary.",
+      "result": "Review is secondary textbook support; it does not establish primary lecturer coverage."
+    },
+    {
+      "source": "/Users/rizzist/Downloads/Embryology 1-9.pdf",
+      "locator": "Cover and relevant physical pp6–7,9–10,12",
+      "method": "Fresh reading of local condensed notes and title/provenance.",
+      "result": "General secondary embryology notes without established lecturer provenance; no course-scope promotion. Varicella extension remains unaudited/excluded."
+    }
+  ],
+  "summary": {
+    "existingEmbryology": 17,
+    "newQuestions": 40,
+    "combinedEmbryology": 57,
+    "core": 32,
+    "challenge": 8,
+    "course": 0,
+    "bookExtension": 40,
+    "modules": 5,
+    "concepts": 11,
+    "coverageRows": 56,
+    "sourceAuditRows": 24,
+    "answerKeysChanged": 0,
+    "removedQuestions": 0,
+    "revisedItems": 25,
+    "questionStatus": "draft",
+    "sourceScope": "40 book-extension; no primary course recovery claimed",
+    "remainingApprovalBlockers": 0
+  },
+  "globalChanges": [
+    "Replaced distant or conspicuously false alternatives with closer developmental-domain, signaling, chronology, causal-inference, and phenotype competitors where needed.",
+    "Recalibrated 14 originally difficulty-4 items to difficulty 3; current knowledge tags match difficulty >= 4.",
+    "Replaced pending-review metadata with independent-review-complete language while keeping every question draft.",
+    "Source-qualified the amyoplasia concept and clarified item 037's limb-muscle structural-versus-functional distinction.",
+    "No source locators or scientific answer keys required correction; no module or objective-ID remapping was required."
+  ],
+  "duplicateReview": {
+    "status": "passed",
+    "existingQuestionsRead": [
+      {
+        "id": "comp-limbs-061",
+        "objective": "Separate the loss of growth-plate lengthening from surviving surface growth and remodeling."
+      },
+      {
+        "id": "comp-limbs-062",
+        "objective": "Distinguish dorsal plexus divisions of ventral rami from dorsal primary rami."
+      },
+      {
+        "id": "comp-limbs-063",
+        "objective": "Discriminate HOXA13-associated hand-foot-genital findings from HOXD13 synpolydactyly."
+      },
+      {
+        "id": "comp-limbs-064",
+        "objective": "Separate mesenchymal FGF10 initiation from established-ridge FGF4/8 maintenance."
+      },
+      {
+        "id": "comp-limbs-065",
+        "objective": "Distinguish movement-related fetal contracture from deletion or duplication of limb elements."
+      },
+      {
+        "id": "depth-limb-emb-001",
+        "objective": "Differentiate lateral-plate and somite contributions to the developing limb."
+      },
+      {
+        "id": "depth-limb-emb-002",
+        "objective": "Predict proximodistal truncation from the timing of AER loss."
+      },
+      {
+        "id": "depth-limb-emb-003",
+        "objective": "Integrate AER-FGF withdrawal, retinoic acid, and segment-specific markers."
+      },
+      {
+        "id": "depth-limb-emb-004",
+        "objective": "Distinguish AER subdivision from interdigital apoptosis in digit formation."
+      },
+      {
+        "id": "depth-limb-emb-005",
+        "objective": "Use embryonic limb rotations to explain adult compartment and digit orientation."
+      },
+      {
+        "id": "depth-limb-emb-006",
+        "objective": "Trace the synovial-joint interzone into its major derivatives."
+      },
+      {
+        "id": "depth-limb-emb-007",
+        "objective": "Identify the cited inductive signal for joint-interzone formation while preserving source uncertainty."
+      },
+      {
+        "id": "depth-limb-emb-008",
+        "objective": "Separate muscle-cell origin from connective-tissue control of limb muscle pattern."
+      },
+      {
+        "id": "depth-limb-emb-009",
+        "objective": "Apply TBX5 versus TBX4-PITX1 to limb-type specification."
+      },
+      {
+        "id": "depth-limb-emb-010",
+        "objective": "Predict the digit pattern produced by ectopic anterior SHH."
+      },
+      {
+        "id": "depth-limb-emb-011",
+        "objective": "Trace EN1, WNT7a, and LMX1 in dorsoventral limb patterning."
+      },
+      {
+        "id": "depth-limb-emb-012",
+        "objective": "Integrate AER-FGF, ZPA-SHH, and dorsal WNT7a feedback."
+      }
+    ],
+    "retainedRelatedPairs": [
+      {
+        "newQuestionIds": [
+          "limb-audit-emb-009",
+          "limb-audit-emb-014"
+        ],
+        "existingQuestionIds": [
+          "depth-limb-emb-011"
+        ],
+        "decision": "Retain",
+        "reason": "009 is the SER2/AER location at the RFNG expression interface; 014 is EN1 repression creating that interface; the existing item is EN1 restriction of WNT7a. Related successive steps, not renamed copies. Both new boundary items are difficulty 3."
+      },
+      {
+        "newQuestionIds": [
+          "limb-audit-emb-020",
+          "limb-audit-emb-021"
+        ],
+        "existingQuestionIds": [
+          "depth-limb-emb-008"
+        ],
+        "decision": "Retain",
+        "reason": "Functional requirement for innervation and mixed segmental cell contribution are distinct from connective-tissue control of muscle pattern."
+      },
+      {
+        "newQuestionIds": [
+          "limb-audit-emb-007",
+          "limb-audit-emb-035"
+        ],
+        "existingQuestionIds": [
+          "depth-limb-emb-009"
+        ],
+        "decision": "Retain",
+        "reason": "Axial field position and limits of a PITX1 clinical association are distinct from the forelimb/hindlimb identity-switch experiment."
+      },
+      {
+        "newQuestionIds": [
+          "limb-audit-emb-011",
+          "limb-audit-emb-029"
+        ],
+        "existingQuestionIds": [
+          "depth-limb-emb-002"
+        ],
+        "decision": "Retain",
+        "reason": "Normal terminal differentiation and nonunique causes of transverse morphology differ from the known timing of experimental ridge removal."
+      }
+    ],
+    "exactPromptDuplicates": 0,
+    "semanticDuplicatesRequiringRemoval": 0
+  },
+  "itemReviews": [
+    {
+      "questionId": "limb-audit-emb-001",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 169; physical PDF p. 181",
+      "sourceFigure": "12.1",
+      "medicalAndSourceCheck": "Initial buds are visible at the end of week 4, with upper limbs preceding lower limbs by 1–2 days.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 2,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-002",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 169–170; physical PDF pp. 181–182",
+      "sourceFigure": "12.1, 12.3",
+      "medicalAndSourceCheck": "Week-6 plate formation is distinguished from later digital separation; the source's illustrated 48/51/56-day stages do not imply that full separation occurs at plate formation.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-004"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-003",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 170–171; physical PDF pp. 182–183",
+      "sourceFigure": "12.4",
+      "medicalAndSourceCheck": "Hyaline cartilage models precede endochondral bone formation; the week-6 template is not already an ossified bone.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-004",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 170; physical PDF p. 182",
+      "medicalAndSourceCheck": "The cited chapter locates primary centers in the diaphyses and states that all long bones have primary centers by week 12.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-005",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 171; physical PDF p. 183",
+      "medicalAndSourceCheck": "The text contrasts growth plates at both ends of major long bones with one extremity of phalanges; no universal birth-time epiphyseal claim was introduced.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "comp-limbs-061"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-006",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 176; physical PDF p. 188",
+      "medicalAndSourceCheck": "Hand/wrist center appearance supports skeletal-maturation assessment, not unique chronological age, gene diagnosis, or external size alone.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced unrelated gene/lineage distractors with competing interpretations of skeletal maturity; recalibrated applied recall to difficulty 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-007",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 173; physical PDF p. 185",
+      "medicalAndSourceCheck": "The shifted-field experiment distinguishes HOXB8-linked axial positioning from TBX5 forelimb identity; it is not the existing fixed-position TBX identity-switch scenario.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-009"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced distant alternatives with competing axial, identity, and local patterning functions; retained difficulty 4."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-008",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 173–174; physical PDF pp. 185–186",
+      "sourceFigure": "12.8A",
+      "medicalAndSourceCheck": "The cited BMP–MSX2 action concerns ridge induction, distinct from mesenchymal FGF10 initiation and established-ridge FGF4/8 maintenance.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "comp-limbs-064"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-009",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 173–174; physical PDF pp. 185–186",
+      "sourceFigure": "12.8A",
+      "medicalAndSourceCheck": "SER2/AER location at the RADICAL FRINGE-positive/negative interface is supported by the figure/text. This is the downstream spatial objective, not item 014's upstream repressor action.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Retained as the downstream spatial-boundary objective distinct from item 014; made all alternatives spatially comparable and reduced difficulty to 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-010",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 175; physical PDF p. 187",
+      "sourceFigure": "12.9B–C",
+      "medicalAndSourceCheck": "Figure 12.9 identifies AP2 in the undifferentiated zone; the possible FGF-maintenance role remains qualified rather than treated as established causation.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-003"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-011",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 175; physical PDF p. 187",
+      "sourceFigure": "12.9",
+      "medicalAndSourceCheck": "Figure 12.9 supports the normal proximal-to-distal differentiation-front sequence and terminal cessation of ridge FGFs, not an early-removal experiment.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-002",
+        "depth-limb-emb-003"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced anatomically implausible ridge migration/permanent-arrest alternatives with competing direction and timing models; reduced figure-sequence recall to difficulty 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-012",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 174; physical PDF p. 186",
+      "sourceFigure": "12.8B",
+      "medicalAndSourceCheck": "The ZPA moves distally during outgrowth while retaining its posterior relationship to the AER; this differs from the existing ectopic anterior SHH duplication test.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-010"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-013",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 175; physical PDF p. 187",
+      "medicalAndSourceCheck": "Coordinated HOXA/HOXD programs determine regional bone types/shapes in the cited model; the question does not reduce them to one upstream signaling source.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-003",
+        "comp-limbs-063"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Removed 'only' distractor cues and recalibrated direct role attribution to difficulty 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-014",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 173–174; physical PDF pp. 185–186",
+      "sourceFigure": "12.8A",
+      "medicalAndSourceCheck": "Ventral EN1 repression of RADICAL FRINGE establishes a boundary; the existing EN1 question tests the separate WNT7a output. Retained with item 009 as related but distinct.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-011"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Retained as EN1's upstream repression mechanism distinct from item 009 and the existing EN1–WNT7a question; replaced distant alternatives with competing local signaling functions and reduced difficulty to 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-015",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 162–163; physical PDF pp. 174–175",
+      "sourceFigure": "11.1",
+      "medicalAndSourceCheck": "Crossing the lateral somitic frontier places a somite-derived myogenic cell in the mixed lateral-plate/somite abaxial environment without changing its origin.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-001"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced gross germ-layer conversions with developmental-domain and lineage distinctions."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-016",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 164; physical PDF p. 176",
+      "sourceFigure": "Table 11.1",
+      "medicalAndSourceCheck": "Original Table 11.1 visually confirms primaxial rhomboids, levator scapulae and latissimus dorsi, with distal limb and pectoral muscles abaxial; pelvic uncertainty is not generalized away.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced a striation-based category error with the commonly confused innervation/domain distinction; reduced table recall to difficulty 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-017",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 162, 164–165; physical PDF pp. 174, 176–177",
+      "sourceFigure": "11.3",
+      "medicalAndSourceCheck": "The VLL MyoD account uses lateral plate BMP4 and adjacent ectodermal WNT signals, distinct from DML and sclerotomal environments. Revised alternatives match the cited text/figure without claiming BMP4 acts alone.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Made the alternatives compare nearby VLL, DML, sclerotomal, and interzone induction programs; retained difficulty 4."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-018",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 165; physical PDF p. 177",
+      "medicalAndSourceCheck": "SCLERAXIS regulates tendon development in the cited passage; no claim that every limb tendon derives from sclerotome is made.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-019",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 165; physical PDF p. 177",
+      "medicalAndSourceCheck": "Cell fusion creates multinucleated skeletal fibers; simple adhesion, cell growth or nuclear division without fusion is not the described assembly mechanism.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced bone/joint distractors with competing cellular mechanisms of skeletal-muscle assembly."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-020",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 172; physical PDF p. 184",
+      "sourceFigure": "12.6",
+      "medicalAndSourceCheck": "The source requires innervation for complete functional differentiation, separate from correct cell origin and connective-tissue pattern.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-008"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced bone conversion and epidermal distractors with competing interpretations of patterning, lineage, and functional maturation."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-021",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 171–172; physical PDF pp. 183–184",
+      "medicalAndSourceCheck": "Splitting and fusion of initially segmented masses explains several somite contributions to one final muscle; this is distinct from the existing connective-template-patterning target.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-008"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced sensory-ganglion fusion and other distant alternatives with lineage-versus-innervation and splitting-versus-fusion mechanisms; reduced difficulty to 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-022",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 172–173; physical PDF pp. 184–185",
+      "sourceFigure": "12.7",
+      "medicalAndSourceCheck": "Growth/rotation change surface geometry while recognizable segmental sensory relationships persist; named peripheral-nerve territories are not equated with dermatomes.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-005"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced germ-layer conversion/random reconnection with competing dermatome–peripheral-nerve and surface-geometry models; retained difficulty 4."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-023",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 176; physical PDF p. 188",
+      "sourceFigure": "12.11",
+      "medicalAndSourceCheck": "The phocomelia description matches rudimentary distal structures attached near the trunk with intervening long-bone absence; complete amelia and general meromelia are distinguished.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-024",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 176; physical PDF p. 188",
+      "sourceFigure": "12.12A",
+      "medicalAndSourceCheck": "Micromelia is generalized shortening of present limb segments, whereas brachydactyly concerns short digits.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-025",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 177; physical PDF p. 189",
+      "sourceFigure": "12.12D",
+      "medicalAndSourceCheck": "The illustrated cleft pattern has central-ray deficiency, with the third ray almost always absent in the text; the item does not universalize every cleft hand.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-026",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 176–177; physical PDF pp. 188–189",
+      "sourceFigure": "12.12C",
+      "medicalAndSourceCheck": "Extra skeletal digits can lack proper muscle connections; digit count and normal independent motor function are separate findings.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced whole-limb duplication distractor with the clinically closer error of equating skeletal presence and functional integration; reduced difficulty to 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-027",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 176; physical PDF p. 188",
+      "medicalAndSourceCheck": "The fourth/fifth developmental-week interval is the source's especially sensitive window for the stated thalidomide limb defects, not an obstetric gestational-age conversion.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced postnatal/late-gestation alternatives with nearby developmental intervals; retained the source-qualified timing."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-028",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 178; physical PDF p. 190",
+      "medicalAndSourceCheck": "The documented constricting strand and ring support amniotic-band disruption; the alternatives are not confused with movement-related deformation or longitudinal deficiency.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced implausible ZPA/apoptosis/growth-plate amputation mechanisms with competing reduction and deformation processes; reduced supported pattern recognition to difficulty 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-029",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 178–179; physical PDF pp. 190–191",
+      "sourceFigure": "12.16",
+      "medicalAndSourceCheck": "The chapter lists both AER disruption and vascular causes of transverse deficiencies; final morphology alone does not uniquely establish etiology.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-002"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced a distant HOXA13 diagnosis with closer competing causal inferences; retained difficulty 4 for distinguishing morphology from uniquely established etiology."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-030",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 177; physical PDF p. 189",
+      "medicalAndSourceCheck": "TBX5/Holt–Oram is supported by radial-side upper-limb and cardiac findings. Previous TBX5 distractor mention was not a direct assessment of this phenotype.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "comp-limbs-063"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Recalibrated a source-supported syndrome/process association from difficulty 4 to 3; answer key and medical content unchanged."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-031",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 178; physical PDF p. 190",
+      "medicalAndSourceCheck": "The cited Baller–Gerold association combines radial aplasia and craniosynostosis.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Recalibrated a source-supported syndrome/process association from difficulty 4 to 3; answer key and medical content unchanged."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-032",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 177–178; physical PDF pp. 189–190",
+      "sourceFigure": "12.13",
+      "medicalAndSourceCheck": "The osteogenesis-imperfecta phenotype and usual COL1A1/COL1A2 type-I collagen association are supported; the source's gene labels were checked against original-page rendering.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [
+        "comp-limbs-063"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-033",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 178; physical PDF p. 190",
+      "medicalAndSourceCheck": "The Marfan/FBN1 association is supported by long slender limbs, hypermobility, lens and ascending-aorta findings; no treatment or diagnostic-certainty instruction is added.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-034",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 178; physical PDF p. 190",
+      "medicalAndSourceCheck": "Prenatal acetabular/femoral-head underdevelopment can precede postnatal displacement or recognition; timing of recognition does not establish developmental onset.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Replaced unrelated PITX1/universal cartilage failure alternatives with competing temporal and causal interpretations; reduced difficulty to 3."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-035",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 178; physical PDF p. 190",
+      "medicalAndSourceCheck": "PITX1 contributes to hindlimb development and is linked to some clubfoot families, but the source does not make it a universal cause or establish complete forelimb identity conversion.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [
+        "depth-limb-emb-009"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Tightened competing interpretations to the limits of phenotype/genotype inference while retaining the distinction from the existing identity-switch item."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-036",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 166–167; physical PDF pp. 178–179",
+      "sourceFigure": "11.5",
+      "medicalAndSourceCheck": "Poland sequence's pectoral and ipsilateral digital findings match the cited chapter; it is not an isolated normal palmaris variation or a radial-cardiac syndrome.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Recalibrated a source-supported syndrome/process association from difficulty 4 to 3; answer key and medical content unchanged."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-037",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "A",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 167; physical PDF p. 179",
+      "medicalAndSourceCheck": "The book's abbreviated amyoplasia muscle-absence example is distinguished from present but contractile-defective muscle in distal arthrogryposis. Wording no longer implies complete absence of all body muscle; the concept is explicitly source-qualified.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [
+        "comp-limbs-065"
+      ],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Avoided implying complete absence of all body muscle; replaced unrelated limb/digit alternatives with competing structural, contractile, articular, and mechanical causes of contracture."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-038",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "B",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 154–155; physical PDF pp. 166–167",
+      "sourceFigure": "Table 10.1",
+      "medicalAndSourceCheck": "FGFR3-associated short-limb dysplasia is connected to abnormal endochondral bone formation using the original skeletal-dysplasia table/text.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Recalibrated a source-supported syndrome/process association from difficulty 4 to 3; answer key and medical content unchanged."
+      ]
+    },
+    {
+      "questionId": "limb-audit-emb-039",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "keyVerified": true,
+      "sourceLocator": "Printed pp. 154–155; physical PDF pp. 166–167",
+      "sourceFigure": "Table 10.1",
+      "medicalAndSourceCheck": "Original Table 10.1 confirms RUNX2-related cleidocranial dysplasia, including hypoplastic clavicles, delayed skull closure and dental abnormalities.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 3,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": []
+    },
+    {
+      "questionId": "limb-audit-emb-040",
+      "verdict": "approved-with-revisions",
+      "correctOptionId": "D",
+      "keyVerified": true,
+      "sourceLocator": "Printed p. 155; physical PDF p. 167",
+      "sourceFigure": "Table 10.1",
+      "medicalAndSourceCheck": "Original Table 10.1 confirms Apert hand/foot syndactyly versus Crouzon absence of hand/foot defects. Revised parallel pairs correctly distinguish Jackson–Weiss and Pfeiffer alternatives.",
+      "optionReasoning": "Four options and exactly three option-specific incorrect rationales independently reviewed; one best answer retained.",
+      "sourceScope": "book-extension",
+      "difficulty": 4,
+      "relatedExistingQuestionIds": [],
+      "mappingVerdict": "One concept objective and one new coverage row; supported learning target.",
+      "revisions": [
+        "Made every answer a parallel two-syndrome pairing and removed explanatory giveaways; retained difficulty 4 for paired discrimination among FGFR-related phenotypes."
+      ]
+    }
+  ],
+  "residualLimitations": [
+    "Dedicated primary limb-embryology slides, lecturer notes, recordings, and exam weighting remain unavailable; comprehensive textbook extension is not complete course recovery.",
+    "Selected developmental models are attributed to the inspected 15th-edition Langman account; they are not a claim of current research consensus beyond that source.",
+    "The general notes' varicella-associated limb hypoplasia row was not expanded without primary-source inspection.",
+    "Historical author self-audit files retain the pre-review snapshot; independent_validate.cjs and this report cover current signed payload."
+  ],
+  "validation": {
+    "status": "independent-post-revision-validation-passed",
+    "independentReview": true,
+    "counts": {
+      "existingEmbryology": 17,
+      "newQuestions": 40,
+      "combinedEmbryology": 57,
+      "core": 32,
+      "challenge": 8,
+      "course": 0,
+      "bookExtension": 40,
+      "modules": 5,
+      "concepts": 11,
+      "coverageRows": 56,
+      "sourceAuditRows": 24
+    },
+    "answerCounts": {
+      "A": 10,
+      "B": 10,
+      "C": 10,
+      "D": 10
+    },
+    "sha256": {
+      "questions.jsonl": "8a676ddfc081c669037d52205108ff9e8f3ba8f06d89221b170bda2b7a2b9583",
+      "concepts.json": "c81b43a29c4d250c92c7549a9154322d4817fe3077c27be66c369b249929a836",
+      "modules.json": "35f69c22a9603b72894981a7e41bb7829fb971163efd7975654c9b1b9fbe6e7e",
+      "coverage.json": "9ad84c038830ed4a60ea2b401b86c013e7db296c8ac868535b3e9d4fd905fae1",
+      "source-audit.json": "47dd58b59aa3ea02ec011ef1773b7cfd5e06d63522c29cab93f74715bf8da21d"
+    },
+    "errors": [],
+    "mappedAuditValidation": "passed"
+  },
+  "sha256": {
+    "questions.jsonl": "8a676ddfc081c669037d52205108ff9e8f3ba8f06d89221b170bda2b7a2b9583",
+    "concepts.json": "c81b43a29c4d250c92c7549a9154322d4817fe3077c27be66c369b249929a836",
+    "modules.json": "35f69c22a9603b72894981a7e41bb7829fb971163efd7975654c9b1b9fbe6e7e",
+    "coverage.json": "9ad84c038830ed4a60ea2b401b86c013e7db296c8ac868535b3e9d4fd905fae1",
+    "source-audit.json": "47dd58b59aa3ea02ec011ef1773b7cfd5e06d63522c29cab93f74715bf8da21d"
+  },
+  "integrationCorrections": [
+    {
+      "target": "source-audit.json: Review provenance and source-range correction",
+      "issue": "Mapped provenance entry had an empty conceptIds array, violating the app's mapped-source integration rule.",
+      "resolution": "Linked the same nine Chapter 12-derived concepts supported by the referenced secondary-review development and congenital-growth sections. Retained mapped status because this is provenance for those mapped review concepts, not out-of-scope material.",
+      "conceptIds": [
+        "limb-audit-emb-concept-milestones",
+        "limb-audit-emb-concept-skeletal-maturation",
+        "limb-audit-emb-concept-field-and-bone-pattern",
+        "limb-audit-emb-concept-ridge-boundary",
+        "limb-audit-emb-concept-muscle-assembly",
+        "limb-audit-emb-concept-defect-morphology",
+        "limb-audit-emb-concept-developmental-disruption",
+        "limb-audit-emb-concept-syndromic-limbs",
+        "limb-audit-emb-concept-joint-muscle-conditions"
+      ],
+      "validation": "All mapped source-audit entries now have at least one valid concept reference. No questions, keys, concept content, modules, or coverage changed."
+    }
+  ]
+}

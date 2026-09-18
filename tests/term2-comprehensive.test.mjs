@@ -82,7 +82,8 @@ test('new source images are pinned and genuine past papers are byte-for-byte unc
     assert(isImageQuestion(q), `${q.id}: image is missing from the Images collection`);
   }
   const bank = read('data/bank/embedded-bank.json');
-  assert.equal(createHash('sha256').update(JSON.stringify(bank.finalExams)).digest('hex'), '68c584c09b5216980e882145039bd0d76bb5736991ded6949a7d348e77331051');
-  assert.equal(Object.values(bank.finalExams).flat().length, 518);
+  const originalFinalBanks = Object.fromEntries(Object.entries(bank.finalExams).filter(([key]) => key !== 'term2-nutrition:nutrition-past-papers'));
+  assert.equal(createHash('sha256').update(JSON.stringify(originalFinalBanks)).digest('hex'), '68c584c09b5216980e882145039bd0d76bb5736991ded6949a7d348e77331051');
+  assert.equal(Object.values(originalFinalBanks).flat().length, 518);
   for (const q of questions) assert(bank.questions.some(row => row.id === q.id), `${q.id}: not shipped in active bank`);
 });

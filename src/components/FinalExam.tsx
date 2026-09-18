@@ -14,8 +14,8 @@ import {
 } from "@/src/lib/mcq/final-exam-state.mjs";
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
-type ExamId = "july25" | "july29";
-type FinalExamBankId = "telegram-past-papers" | "downloaded-core";
+type ExamId = "july25" | "july29" | "term2-nutrition" | "term2-religion";
+type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers";
 type FinalBaseSessionKey = `${ExamId}:${FinalExamBankId}`;
 type FinalSessionKey = FinalBaseSessionKey
   | "july29:telegram-past-papers:no-carb-lipid-metabolism"
@@ -41,6 +41,8 @@ type FinalProgress = { version: 2; sessions: Record<FinalSessionKey, FinalSessio
 const examLabels: Record<ExamId, { date: string; title: string }> = {
   july25: { date: "July 25", title: "Tissue Development & Function" },
   july29: { date: "Aug 25", title: "Cell & Molecules" },
+  "term2-nutrition": { date: "Nutrition · date TBA", title: "Nutrition · downloaded past papers" },
+  "term2-religion": { date: "Religion · date TBA", title: "Religion · downloaded past papers" },
 };
 
 function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
@@ -49,10 +51,10 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
 }
 
 export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string }) {
-  const [bank, setBank] = useState<FinalExamBankId>("telegram-past-papers");
+  const [bank, setBank] = useState<FinalExamBankId>(exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
-  const [bankLabel, setBankLabel] = useState("Telegram Past Papers");
+  const [bankLabel, setBankLabel] = useState(exam === "term2-religion" ? "Religion · Downloaded Past Papers" : exam === "term2-nutrition" ? "Nutrition · Downloaded Past Papers" : "Telegram Past Papers");
   const [bankDescription, setBankDescription] = useState("The original source-traceable past-paper bank.");
   const [excludeCarbohydrateLipidMetabolism, setExcludeCarbohydrateLipidMetabolism] = useState(true);
   const [filteredOutCount, setFilteredOutCount] = useState(0);
@@ -78,7 +80,7 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
   const correctCount = session ? Object.values(session.answers).filter((item) => item.correct).length : 0;
   const wrongCount = answeredCount - correctCount;
   const completed = Boolean(session?.completedAt);
-  const linkedLesson = question && bank !== "downloaded-core" ? lessonForQuestion(question, exam, allLessons) : undefined;
+  const linkedLesson = question && (exam === "july25" || exam === "july29") && bank !== "downloaded-core" ? lessonForQuestion(question, exam, allLessons) : undefined;
 
   useEffect(() => {
     let cancelled = false;
@@ -237,6 +239,8 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
           <article className="final-question-card">
             <div className="question-meta"><span>{bank === "downloaded-core" ? "Distilled core" : "Past paper"}</span><span>{question.subject}</span><span>{question.topic}</span></div>
             <h1>{question.prompt}</h1>
+            {exam === "term2-religion" && <p className="term2-scope-note">Original wording · source-reviewed editorial key, not an official answer. Interpret within the source framework; qualifications and corrections appear with feedback.</p>}
+            {exam === "term2-nutrition" && question.qualityFlags.includes("qualified-source-wording") && <p className="term2-scope-note">Historical / qualified wording: scoring uses the source's intended convention. Read the explanation for its limits; a marked answer is not an official key.</p>}
             {question.media?.map((media) => <figure className="study-image" key={media.id}><img src={mediaUrl(bridgeUrl, question, media.id)} alt={media.alt} /><figcaption>{media.caption ?? "Past-paper image"}</figcaption></figure>)}
             <div className={`final-options ${answer ? "locked" : ""}`}>
               {question.options.map((option) => {
@@ -289,7 +293,7 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
       <span className="final-metabolism-filter-copy"><small>EXAM-SCOPE FILTER</small><b>Exclude carbohydrate, lipid + oxidative metabolism</b><em>{excludeCarbohydrateLipidMetabolism ? `${filteredOutCount} off-syllabus questions hidden` : "All topics included"}</em></span>
       <i aria-hidden="true"><span /></i>
     </button>}
-    {loading && <div className="final-exam-empty"><b>Loading verified past papers…</b><span>Filtering to the confirmed syllabus.</span></div>}
+    {loading && <div className="final-exam-empty"><b>Loading checked past-paper questions…</b><span>Keeping source-based practice separate.</span></div>}
     {!loading && error && <div className="final-exam-empty error"><b>Final exam bank is unavailable.</b><span>{error}</span></div>}
     {!loading && !error && !questions.length && <div className="final-exam-empty"><b>No verified past-paper questions have been imported yet.</b><span>The ordinary study bank is still available in Overview and Topics.</span></div>}
     {!loading && !error && questions.length > 0 && <div className="final-exam-launch">

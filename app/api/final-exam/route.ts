@@ -15,7 +15,7 @@ export function GET(request: Request) {
     const exam = searchParams.get("exam");
     if (!isExamId(exam)) throw new Error("A valid exam is required");
     const requestedBank = searchParams.get("bank");
-    const bank = requestedBank === null ? defaultFinalExamBank() : requestedBank;
+    const bank = requestedBank === null ? defaultFinalExamBank(exam) : requestedBank;
     if (!isFinalExamBankId(bank)) throw new Error("A valid final-exam bank is required");
     return json(finalExamSet(exam, bank));
   } catch (error) {

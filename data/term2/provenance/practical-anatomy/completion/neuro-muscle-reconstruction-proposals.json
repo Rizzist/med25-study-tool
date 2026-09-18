@@ -1,0 +1,6090 @@
+{
+  "schemaVersion": 1,
+  "modelKey": "lower-limb",
+  "coordinateSpace": "BodyParts3D baked lower-limb local coordinates before shared runtime centering/scaling; +X lateral, +Y superior, +Z anterior",
+  "transform": {
+    "scale": 0.00162186,
+    "translate": [
+      -0.13614,
+      -0.83198,
+      -0.176
+    ],
+    "formula": "x=X*s+tx;y=Z*s+ty;z=-Y*s+tz"
+  },
+  "sourceInventoryRevision": "4fd65571dd078ddcb2ceba9f9e3b02cffcb5774b",
+  "anchors": {
+    "asis": {
+      "meshId": "hip-bone",
+      "vertexIndex": 89,
+      "sourcePosition": [
+        0.08027869462966919,
+        0.6122841238975525,
+        0.04471319913864136
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.08027869462966919,
+        0.6122841238975525,
+        0.04471319913864136
+      ],
+      "requestedTarget": [
+        0.0803,
+        0.6123,
+        0.0447
+      ],
+      "targetDistance": 0.000029667940520519792,
+      "meaning": "Anterior superior iliac spine, regional anchor",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "pubic-tubercle": {
+      "meshId": "hip-bone",
+      "vertexIndex": 18,
+      "sourcePosition": [
+        -0.11270183324813843,
+        0.47288352251052856,
+        0.04575696587562561
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.11270183324813843,
+        0.47288352251052856,
+        0.04575696587562561
+      ],
+      "requestedTarget": [
+        -0.1127,
+        0.4729,
+        0.0458
+      ],
+      "targetDistance": 0.000046117288717880894,
+      "meaning": "Pubic tubercle, regional anchor",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "ischial-tuberosity": {
+      "meshId": "hip-bone",
+      "vertexIndex": 692,
+      "sourcePosition": [
+        -0.06190527230501175,
+        0.3896142840385437,
+        -0.10152985155582428
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.06190527230501175,
+        0.3896142840385437,
+        -0.10152985155582428
+      ],
+      "requestedTarget": [
+        -0.0619,
+        0.3896,
+        -0.1015
+      ],
+      "targetDistance": 0.000033510391558209524,
+      "meaning": "Ischial tuberosity, regional anchor",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "ischial-spine": {
+      "meshId": "hip-bone",
+      "vertexIndex": 628,
+      "sourcePosition": [
+        -0.035811156034469604,
+        0.45734304189682007,
+        -0.1213613897562027
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.035811156034469604,
+        0.45734304189682007,
+        -0.1213613897562027
+      ],
+      "requestedTarget": [
+        -0.045,
+        0.468,
+        -0.145
+      ],
+      "targetDistance": 0.027509807409248715,
+      "meaning": "Ischial spine candidate, regional vertex; reduced mesh limits exact tip",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "sciatic-notch-superior": {
+      "meshId": "hip-bone",
+      "vertexIndex": 307,
+      "sourcePosition": [
+        -0.038710497319698334,
+        0.5770279765129089,
+        -0.1234489157795906
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.038710497319698334,
+        0.5770279765129089,
+        -0.1234489157795906
+      ],
+      "requestedTarget": [
+        -0.026,
+        0.57,
+        -0.131
+      ],
+      "targetDistance": 0.016369730263012118,
+      "meaning": "Superior margin of greater sciatic notch candidate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "sciatic-notch-anterior": {
+      "meshId": "hip-bone",
+      "vertexIndex": 512,
+      "sourcePosition": [
+        -0.015283778309822083,
+        0.5257676243782043,
+        -0.10141387581825256
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.015283778309822083,
+        0.5257676243782043,
+        -0.10141387581825256
+      ],
+      "requestedTarget": [
+        -0.013,
+        0.509,
+        -0.099
+      ],
+      "targetDistance": 0.01709373180797308,
+      "meaning": "Anterior curved margin of greater sciatic notch candidate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "lesser-notch": {
+      "meshId": "hip-bone",
+      "vertexIndex": 629,
+      "sourcePosition": [
+        -0.03755076229572296,
+        0.4350760579109192,
+        -0.12704411149024963
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.03755076229572296,
+        0.4350760579109192,
+        -0.12704411149024963
+      ],
+      "requestedTarget": [
+        -0.039,
+        0.437,
+        -0.124
+      ],
+      "targetDistance": 0.0038818111559817885,
+      "meaning": "Lesser sciatic notch candidate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "sacral-ligament-upper": {
+      "meshId": "reference-sacrum",
+      "vertexIndex": 4486,
+      "sourcePosition": [
+        -0.07390371747600002,
+        0.5782029421,
+        -0.15210675848
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.07390371747600002,
+        0.5782029421,
+        -0.15210675848
+      ],
+      "requestedTarget": [
+        -0.061,
+        0.578,
+        -0.158
+      ],
+      "targetDistance": 0.014187226854090722,
+      "meaning": "Lateral sacral attachment region for schematic sacrotuberous boundary",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "sacral-ligament-lower": {
+      "meshId": "reference-sacrum",
+      "vertexIndex": 3586,
+      "sourcePosition": [
+        -0.11267720012400001,
+        0.4693453207599999,
+        -0.158350270736
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.11267720012400001,
+        0.4693453207599999,
+        -0.158350270736
+      ],
+      "requestedTarget": [
+        -0.093,
+        0.458,
+        -0.147
+      ],
+      "targetDistance": 0.02539167488858757,
+      "meaning": "Lower lateral sacral region for schematic sacrospinous boundary",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "obturator-roof": {
+      "meshId": "hip-bone",
+      "vertexIndex": 497,
+      "sourcePosition": [
+        -0.08370836079120636,
+        0.47961002588272095,
+        0.019314929842948914
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.08370836079120636,
+        0.47961002588272095,
+        0.019314929842948914
+      ],
+      "requestedTarget": [
+        -0.082,
+        0.477,
+        0.017
+      ],
+      "targetDistance": 0.003884537537362723,
+      "meaning": "Superior obturator foramen/pubic groove region, not the whole obturator foramen",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "medial-malleolus": {
+      "meshId": "tibia",
+      "vertexIndex": 47,
+      "sourcePosition": [
+        -0.062485143542289734,
+        -0.8160501718521118,
+        -0.05235692858695984
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.062485143542289734,
+        -0.8160501718521118,
+        -0.05235692858695984
+      ],
+      "requestedTarget": [
+        -0.054,
+        -0.817,
+        -0.055
+      ],
+      "targetDistance": 0.008937877876666916,
+      "meaning": "Medial malleolus posterior attachment region",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "medial-calcaneus": {
+      "meshId": "visual-calcaneus",
+      "vertexIndex": 50,
+      "sourcePosition": [
+        -0.05011735484004021,
+        -0.9171876311302185,
+        -0.08700724691152573
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.05011735484004021,
+        -0.9171876311302185,
+        -0.08700724691152573
+      ],
+      "requestedTarget": [
+        -0.055,
+        -0.915,
+        -0.091
+      ],
+      "targetDistance": 0.006675929219629322,
+      "meaning": "Medial calcaneus, flexor-retinaculum attachment region",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "lateral-calcaneus": {
+      "meshId": "visual-calcaneus",
+      "vertexIndex": 226,
+      "sourcePosition": [
+        0.001987650990486145,
+        -0.9060793519020081,
+        -0.09461117535829544
+      ],
+      "offset": [
+        0.005,
+        0,
+        0
+      ],
+      "position": [
+        0.006987650990486145,
+        -0.9060793519020081,
+        -0.09461117535829544
+      ],
+      "requestedTarget": [
+        0.018,
+        -0.917,
+        -0.108
+      ],
+      "targetDistance": 0.023556665743881718,
+      "meaning": "Lateral heel skin lies superficial to this lateral calcaneal reference",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "calcaneal-edb-origin": {
+      "meshId": "visual-calcaneus",
+      "vertexIndex": 708,
+      "sourcePosition": [
+        0.019727228209376335,
+        -0.8718957304954529,
+        -0.03562218323349953
+      ],
+      "offset": [
+        0,
+        0.002,
+        0
+      ],
+      "position": [
+        0.019727228209376335,
+        -0.8698957304954529,
+        -0.03562218323349953
+      ],
+      "requestedTarget": [
+        0.018,
+        -0.875,
+        -0.037
+      ],
+      "targetDistance": 0.0038102736760207154,
+      "meaning": "Superolateral distal calcaneus, one of the EDB origin surfaces",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-1-base": {
+      "meshId": "practical-metatarsal-1",
+      "vertexIndex": 202,
+      "sourcePosition": [
+        0.014140576124191284,
+        -0.8766546249389648,
+        0.046269435435533524
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.014140576124191284,
+        -0.8766546249389648,
+        0.046269435435533524
+      ],
+      "requestedTarget": [
+        0.009190816897898912,
+        -0.8768889274597168,
+        0.04679475528001785
+      ],
+      "targetDistance": 0.004983068834413812,
+      "meaning": "Metatarsal 1 base regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-1-shaft": {
+      "meshId": "practical-metatarsal-1",
+      "vertexIndex": 503,
+      "sourcePosition": [
+        0.011106394231319427,
+        -0.8897418975830078,
+        0.08803880959749222
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.011106394231319427,
+        -0.8897418975830078,
+        0.08803880959749222
+      ],
+      "requestedTarget": [
+        0.009190816897898912,
+        -0.8818889274597168,
+        0.08529136702418327
+      ],
+      "targetDistance": 0.008537389353382337,
+      "meaning": "Metatarsal 1 midshaft regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-1-base-dorsal": {
+      "meshId": "practical-toe-1-proximal-phalanx",
+      "vertexIndex": 156,
+      "sourcePosition": [
+        0.025778712704777718,
+        -0.916128933429718,
+        0.13178522884845734
+      ],
+      "offset": [
+        0,
+        0.003,
+        0
+      ],
+      "position": [
+        0.025778712704777718,
+        -0.913128933429718,
+        0.13178522884845734
+      ],
+      "requestedTarget": [
+        0.029115615179762244,
+        -0.9155904650688171,
+        0.13372434544563294
+      ],
+      "targetDistance": 0.0038967986194684266,
+      "meaning": "Dorsal proximal phalangeal base 1",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-1-base-medial": {
+      "meshId": "practical-toe-1-proximal-phalanx",
+      "vertexIndex": 18,
+      "sourcePosition": [
+        0.005724096205085516,
+        -0.9311063289642334,
+        0.13341845571994781
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.005724096205085516,
+        -0.9311063289642334,
+        0.13341845571994781
+      ],
+      "requestedTarget": [
+        0.004480614792555571,
+        -0.929265171289444,
+        0.13272434544563294
+      ],
+      "targetDistance": 0.0023276375748069013,
+      "meaning": "medial proximal phalangeal base 1",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-1-base-lateral": {
+      "meshId": "practical-toe-1-proximal-phalanx",
+      "vertexIndex": 137,
+      "sourcePosition": [
+        0.036404822021722794,
+        -0.9295580983161926,
+        0.1320447325706482
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.036404822021722794,
+        -0.9295580983161926,
+        0.1320447325706482
+      ],
+      "requestedTarget": [
+        0.05375061556696892,
+        -0.929265171289444,
+        0.13272434544563294
+      ],
+      "targetDistance": 0.017361573477572445,
+      "meaning": "lateral proximal phalangeal base 1",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-2-base": {
+      "meshId": "practical-metatarsal-2",
+      "vertexIndex": 299,
+      "sourcePosition": [
+        0.03637399896979332,
+        -0.870088517665863,
+        0.033228058367967606
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.03637399896979332,
+        -0.870088517665863,
+        0.033228058367967606
+      ],
+      "requestedTarget": [
+        0.03572639636695385,
+        -0.8706712093353272,
+        0.034660007700324055
+      ],
+      "targetDistance": 0.0016761257719226862,
+      "meaning": "Metatarsal 2 base regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-2-shaft": {
+      "meshId": "practical-metatarsal-2",
+      "vertexIndex": 303,
+      "sourcePosition": [
+        0.0364372543990612,
+        -0.8829197287559509,
+        0.06768446415662766
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.0364372543990612,
+        -0.8829197287559509,
+        0.06768446415662766
+      ],
+      "requestedTarget": [
+        0.03572639636695385,
+        -0.8756712093353272,
+        0.07527476828545332
+      ],
+      "targetDistance": 0.010519461473908224,
+      "meaning": "Metatarsal 2 midshaft regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-2-base-dorsal": {
+      "meshId": "practical-toe-2-proximal-phalanx",
+      "vertexIndex": 108,
+      "sourcePosition": [
+        0.06337310373783112,
+        -0.9211646318435669,
+        0.13088347017765045
+      ],
+      "offset": [
+        0,
+        0.003,
+        0
+      ],
+      "position": [
+        0.06337310373783112,
+        -0.9181646318435669,
+        0.13088347017765045
+      ],
+      "requestedTarget": [
+        0.06249081343412399,
+        -0.9203228950500488,
+        0.12958698588609696
+      ],
+      "targetDistance": 0.0017798394668684697,
+      "meaning": "Dorsal proximal phalangeal base 2",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-2-base-medial": {
+      "meshId": "practical-toe-2-proximal-phalanx",
+      "vertexIndex": 4,
+      "sourcePosition": [
+        0.04558616504073143,
+        -0.9282477498054504,
+        0.12890644371509552
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.04558616504073143,
+        -0.9282477498054504,
+        0.12890644371509552
+      ],
+      "requestedTarget": [
+        0.04461467266082764,
+        -0.9303540885448456,
+        0.12858698588609696
+      ],
+      "targetDistance": 0.002341476806162368,
+      "meaning": "medial proximal phalangeal base 2",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-2-base-lateral": {
+      "meshId": "practical-toe-2-proximal-phalanx",
+      "vertexIndex": 100,
+      "sourcePosition": [
+        0.06684226542711258,
+        -0.9278760552406311,
+        0.1353355050086975
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.06684226542711258,
+        -0.9278760552406311,
+        0.1353355050086975
+      ],
+      "requestedTarget": [
+        0.08036695420742035,
+        -0.9303540885448456,
+        0.12858698588609696
+      ],
+      "targetDistance": 0.01531666954690491,
+      "meaning": "lateral proximal phalangeal base 2",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-3-base": {
+      "meshId": "practical-metatarsal-3",
+      "vertexIndex": 241,
+      "sourcePosition": [
+        0.05235094949603081,
+        -0.8819365501403809,
+        0.027752647176384926
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.05235094949603081,
+        -0.8819365501403809,
+        0.027752647176384926
+      ],
+      "requestedTarget": [
+        0.05193891376256943,
+        -0.8793663349151611,
+        0.027608160756528378
+      ],
+      "targetDistance": 0.002607039714911008,
+      "meaning": "Metatarsal 3 base regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-3-shaft": {
+      "meshId": "practical-metatarsal-3",
+      "vertexIndex": 264,
+      "sourcePosition": [
+        0.05192440003156662,
+        -0.8928347826004028,
+        0.06344329565763474
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.05192440003156662,
+        -0.8928347826004028,
+        0.06344329565763474
+      ],
+      "requestedTarget": [
+        0.05193891376256943,
+        -0.8843663349151611,
+        0.06641616998240352
+      ],
+      "targetDistance": 0.008975121090934225,
+      "meaning": "Metatarsal 3 midshaft regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-3-base-dorsal": {
+      "meshId": "practical-toe-3-proximal-phalanx",
+      "vertexIndex": 133,
+      "sourcePosition": [
+        0.0812670961022377,
+        -0.9265033006668091,
+        0.11391235142946243
+      ],
+      "offset": [
+        0,
+        0.003,
+        0
+      ],
+      "position": [
+        0.0812670961022377,
+        -0.9235033006668091,
+        0.11391235142946243
+      ],
+      "requestedTarget": [
+        0.08357337489724159,
+        -0.922663688659668,
+        0.11520433294773103
+      ],
+      "targetDistance": 0.0046616261636058315,
+      "meaning": "Dorsal proximal phalangeal base 3",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-3-base-medial": {
+      "meshId": "practical-toe-3-proximal-phalanx",
+      "vertexIndex": 28,
+      "sourcePosition": [
+        0.06740991026163101,
+        -0.9333853125572205,
+        0.11574991047382355
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.06740991026163101,
+        -0.9333853125572205,
+        0.11574991047382355
+      ],
+      "requestedTarget": [
+        0.06680659204721451,
+        -0.9322204291820526,
+        0.11420433294773102
+      ],
+      "targetDistance": 0.0020272533227871244,
+      "meaning": "medial proximal phalangeal base 3",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-3-base-lateral": {
+      "meshId": "practical-toe-3-proximal-phalanx",
+      "vertexIndex": 101,
+      "sourcePosition": [
+        0.08414752036333084,
+        -0.9334172606468201,
+        0.11501196026802063
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.08414752036333084,
+        -0.9334172606468201,
+        0.11501196026802063
+      ],
+      "requestedTarget": [
+        0.10034015774726868,
+        -0.9322204291820526,
+        0.11420433294773102
+      ],
+      "targetDistance": 0.016256880786031394,
+      "meaning": "lateral proximal phalangeal base 3",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-4-base": {
+      "meshId": "practical-metatarsal-4",
+      "vertexIndex": 244,
+      "sourcePosition": [
+        0.05559467151761055,
+        -0.893639087677002,
+        0.010474972426891327
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.05559467151761055,
+        -0.893639087677002,
+        0.010474972426891327
+      ],
+      "requestedTarget": [
+        0.06206021551042795,
+        -0.8929137554168701,
+        0.009483882354572416
+      ],
+      "targetDistance": 0.0065811568543907425,
+      "meaning": "Metatarsal 4 base regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-4-shaft": {
+      "meshId": "practical-metatarsal-4",
+      "vertexIndex": 304,
+      "sourcePosition": [
+        0.06008397415280342,
+        -0.9017220735549927,
+        0.04598721116781235
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.06008397415280342,
+        -0.9017220735549927,
+        0.04598721116781235
+      ],
+      "requestedTarget": [
+        0.06206021551042795,
+        -0.8979137554168701,
+        0.04813375847879797
+      ],
+      "targetDistance": 0.00479754961444261,
+      "meaning": "Metatarsal 4 midshaft regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-4-base-dorsal": {
+      "meshId": "practical-toe-4-proximal-phalanx",
+      "vertexIndex": 134,
+      "sourcePosition": [
+        0.09947733581066132,
+        -0.925754189491272,
+        0.09995786100625992
+      ],
+      "offset": [
+        0,
+        0.003,
+        0
+      ],
+      "position": [
+        0.09947733581066132,
+        -0.922754189491272,
+        0.09995786100625992
+      ],
+      "requestedTarget": [
+        0.09919918328523636,
+        -0.9236558079719543,
+        0.09867918360233308
+      ],
+      "targetDistance": 0.002472971842000455,
+      "meaning": "Dorsal proximal phalangeal base 4",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-4-base-medial": {
+      "meshId": "practical-toe-4-proximal-phalanx",
+      "vertexIndex": 15,
+      "sourcePosition": [
+        0.08253699541091919,
+        -0.9330515265464783,
+        0.09941452741622925
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.08253699541091919,
+        -0.9330515265464783,
+        0.09941452741622925
+      ],
+      "requestedTarget": [
+        0.08169040083885193,
+        -0.9343440234661102,
+        0.09767918360233308
+      ],
+      "targetDistance": 0.0023235078672428815,
+      "meaning": "medial proximal phalangeal base 4",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-4-base-lateral": {
+      "meshId": "practical-toe-4-proximal-phalanx",
+      "vertexIndex": 149,
+      "sourcePosition": [
+        0.10319462418556213,
+        -0.9335710406303406,
+        0.10517700761556625
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.10319462418556213,
+        -0.9335710406303406,
+        0.10517700761556625
+      ],
+      "requestedTarget": [
+        0.11670796573162079,
+        -0.9343440234661102,
+        0.09767918360233308
+      ],
+      "targetDistance": 0.015473372842992104,
+      "meaning": "lateral proximal phalangeal base 4",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-5-base": {
+      "meshId": "practical-metatarsal-5",
+      "vertexIndex": 135,
+      "sourcePosition": [
+        0.060685690492391586,
+        -0.9130871295928955,
+        -0.01710573025047779
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.060685690492391586,
+        -0.9130871295928955,
+        -0.01710573025047779
+      ],
+      "requestedTarget": [
+        0.07373841293156147,
+        -0.9054857459068298,
+        -0.019180234625935554
+      ],
+      "targetDistance": 0.015246578810362264,
+      "meaning": "Metatarsal 5 base regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "meta-5-shaft": {
+      "meshId": "practical-metatarsal-5",
+      "vertexIndex": 239,
+      "sourcePosition": [
+        0.07295667380094528,
+        -0.9127359986305237,
+        0.024611109867691994
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.07295667380094528,
+        -0.9127359986305237,
+        0.024611109867691994
+      ],
+      "requestedTarget": [
+        0.07373841293156147,
+        -0.9104857459068298,
+        0.02217377256602049
+      ],
+      "targetDistance": 0.003408132408071525,
+      "meaning": "Metatarsal 5 midshaft regional coordinate",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-5-base-dorsal": {
+      "meshId": "practical-toe-5-proximal-phalanx",
+      "vertexIndex": 74,
+      "sourcePosition": [
+        0.1122446060180664,
+        -0.9316372871398926,
+        0.0703086256980896
+      ],
+      "offset": [
+        0,
+        0.003,
+        0
+      ],
+      "position": [
+        0.1122446060180664,
+        -0.9286372871398926,
+        0.0703086256980896
+      ],
+      "requestedTarget": [
+        0.11340586468577385,
+        -0.9292706847190857,
+        0.07329220938682557
+      ],
+      "targetDistance": 0.003981344036777782,
+      "meaning": "Dorsal proximal phalangeal base 5",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-5-base-medial": {
+      "meshId": "practical-toe-5-proximal-phalanx",
+      "vertexIndex": 0,
+      "sourcePosition": [
+        0.09742405265569687,
+        -0.9389526844024658,
+        0.07331231981515884
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.09742405265569687,
+        -0.9389526844024658,
+        0.07331231981515884
+      ],
+      "requestedTarget": [
+        0.0956854298710823,
+        -0.9372357130050659,
+        0.07229220938682557
+      ],
+      "targetDistance": 0.0026479096005461687,
+      "meaning": "medial proximal phalangeal base 5",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "toe-5-base-lateral": {
+      "meshId": "practical-toe-5-proximal-phalanx",
+      "vertexIndex": 124,
+      "sourcePosition": [
+        0.11530343443155289,
+        -0.9386289715766907,
+        0.07195481657981873
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.11530343443155289,
+        -0.9386289715766907,
+        0.07195481657981873
+      ],
+      "requestedTarget": [
+        0.1311262995004654,
+        -0.9372357130050659,
+        0.07229220938682557
+      ],
+      "targetDistance": 0.015887670135757394,
+      "meaning": "lateral proximal phalangeal base 5",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di1-head-medial-met": {
+      "meshId": "practical-metatarsal-1",
+      "vertexIndex": 461,
+      "sourcePosition": [
+        0.014248748309910297,
+        -0.8863251209259033,
+        0.07712855190038681
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.014248748309910297,
+        -0.8863251209259033,
+        0.07712855190038681
+      ],
+      "requestedTarget": [
+        0.023771824315190315,
+        -0.8863308131694794,
+        0.07786163687705994
+      ],
+      "targetDistance": 0.009551252409344065,
+      "meaning": "Facing side of metatarsal 1 for dorsal interosseous 1",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di1-head-lateral-met": {
+      "meshId": "practical-metatarsal-2",
+      "vertexIndex": 282,
+      "sourcePosition": [
+        0.03084184043109417,
+        -0.8901656866073608,
+        0.07530395686626434
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.03084184043109417,
+        -0.8901656866073608,
+        0.07530395686626434
+      ],
+      "requestedTarget": [
+        0.023771824315190315,
+        -0.8863308131694794,
+        0.07786163687705994
+      ],
+      "targetDistance": 0.008439970924199467,
+      "meaning": "Facing side of metatarsal 2 for dorsal interosseous 1",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di1-belly": {
+      "position": [
+        0.022545294370502234,
+        -0.8872454037666321,
+        0.07621625438332558
+      ],
+      "derivedFrom": [
+        "di1-head-medial-met",
+        "di1-head-lateral-met"
+      ],
+      "meaning": "Bipennate belly lies between adjacent metatarsals, not underneath all metatarsals",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "di1-tendon": {
+      "position": [
+        0.03982594737317413,
+        -0.9169971632957459,
+        0.11573389638215303
+      ],
+      "derivedFrom": [
+        "di1-belly",
+        "toe-2-base-medial"
+      ],
+      "meaning": "Distal tendon to phalangeal base and adjacent dorsal expansion",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "di2-head-medial-met": {
+      "meshId": "practical-metatarsal-2",
+      "vertexIndex": 304,
+      "sourcePosition": [
+        0.04068166762590408,
+        -0.8896912932395935,
+        0.07027781754732132
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.04068166762590408,
+        -0.8896912932395935,
+        0.07027781754732132
+      ],
+      "requestedTarget": [
+        0.04418082721531391,
+        -0.8878772556781769,
+        0.0655638799071312
+      ],
+      "targetDistance": 0.006144595851802654,
+      "meaning": "Facing side of metatarsal 2 for dorsal interosseous 2",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di2-head-lateral-met": {
+      "meshId": "practical-metatarsal-3",
+      "vertexIndex": 262,
+      "sourcePosition": [
+        0.04786163195967674,
+        -0.8956660628318787,
+        0.06386499106884003
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.04786163195967674,
+        -0.8956660628318787,
+        0.06386499106884003
+      ],
+      "requestedTarget": [
+        0.04418082721531391,
+        -0.8878772556781769,
+        0.0655638799071312
+      ],
+      "targetDistance": 0.008780664196320818,
+      "meaning": "Facing side of metatarsal 3 for dorsal interosseous 2",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di2-belly": {
+      "position": [
+        0.04427164979279041,
+        -0.8916786780357361,
+        0.06707140430808067
+      ],
+      "derivedFrom": [
+        "di2-head-medial-met",
+        "di2-head-lateral-met"
+      ],
+      "meaning": "Bipennate belly lies between adjacent metatarsals, not underneath all metatarsals",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "di2-tendon": {
+      "position": [
+        0.06119961151853204,
+        -0.9178267109394074,
+        0.1182694798335433
+      ],
+      "derivedFrom": [
+        "di2-belly",
+        "toe-2-base-lateral"
+      ],
+      "meaning": "Distal tendon to phalangeal base and adjacent dorsal expansion",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "di3-head-medial-met": {
+      "meshId": "practical-metatarsal-3",
+      "vertexIndex": 254,
+      "sourcePosition": [
+        0.05463128164410591,
+        -0.8898820281028748,
+        0.052398428320884705
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.05463128164410591,
+        -0.8898820281028748,
+        0.052398428320884705
+      ],
+      "requestedTarget": [
+        0.05600418709218502,
+        -0.8972784280776978,
+        0.05471525341272354
+      ],
+      "targetDistance": 0.007871421756144246,
+      "meaning": "Facing side of metatarsal 3 for dorsal interosseous 3",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di3-head-lateral-met": {
+      "meshId": "practical-metatarsal-4",
+      "vertexIndex": 286,
+      "sourcePosition": [
+        0.05998991057276726,
+        -0.9043464064598083,
+        0.04902658984065056
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.05998991057276726,
+        -0.9043464064598083,
+        0.04902658984065056
+      ],
+      "requestedTarget": [
+        0.05600418709218502,
+        -0.8972784280776978,
+        0.05471525341272354
+      ],
+      "targetDistance": 0.00990975293889194,
+      "meaning": "Facing side of metatarsal 4 for dorsal interosseous 3",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di3-belly": {
+      "position": [
+        0.057310596108436584,
+        -0.8961142172813416,
+        0.05071250908076763
+      ],
+      "derivedFrom": [
+        "di3-head-medial-met",
+        "di3-head-lateral-met"
+      ],
+      "meaning": "Bipennate belly lies between adjacent metatarsals, not underneath all metatarsals",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "di3-tendon": {
+      "position": [
+        0.07743828929960728,
+        -0.9230914998054505,
+        0.09893709747120738
+      ],
+      "derivedFrom": [
+        "di3-belly",
+        "toe-3-base-lateral"
+      ],
+      "meaning": "Distal tendon to phalangeal base and adjacent dorsal expansion",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "di4-head-medial-met": {
+      "meshId": "practical-metatarsal-4",
+      "vertexIndex": 276,
+      "sourcePosition": [
+        0.06477439403533936,
+        -0.9113461971282959,
+        0.03681723028421402
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.06477439403533936,
+        -0.9113461971282959,
+        0.03681723028421402
+      ],
+      "requestedTarget": [
+        0.06652032397687435,
+        -0.9072290360927582,
+        0.03529916051775217
+      ],
+      "targetDistance": 0.0047226922585686185,
+      "meaning": "Facing side of metatarsal 4 for dorsal interosseous 4",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di4-head-lateral-met": {
+      "meshId": "practical-metatarsal-5",
+      "vertexIndex": 238,
+      "sourcePosition": [
+        0.06793702393770218,
+        -0.9112913608551025,
+        0.026357846334576607
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.06793702393770218,
+        -0.9112913608551025,
+        0.026357846334576607
+      ],
+      "requestedTarget": [
+        0.06652032397687435,
+        -0.9072290360927582,
+        0.03529916051775217
+      ],
+      "targetDistance": 0.009922530956163465,
+      "meaning": "Facing side of metatarsal 5 for dorsal interosseous 4",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "di4-belly": {
+      "position": [
+        0.06635570898652077,
+        -0.9103187789916992,
+        0.03158753830939531
+      ],
+      "derivedFrom": [
+        "di4-head-medial-met",
+        "di4-head-lateral-met"
+      ],
+      "meaning": "Bipennate belly lies between adjacent metatarsals, not underneath all metatarsals",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "di4-tendon": {
+      "position": [
+        0.09398489538580179,
+        -0.9267579752206803,
+        0.08677964028902352
+      ],
+      "derivedFrom": [
+        "di4-belly",
+        "toe-4-base-lateral"
+      ],
+      "meaning": "Distal tendon to phalangeal base and adjacent dorsal expansion",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "edb-belly": {
+      "position": [
+        0.050041066359728575,
+        -0.8633289126634598,
+        -0.005659032054245471
+      ],
+      "derivedFrom": [
+        "calcaneal-edb-origin",
+        "meta-4-base"
+      ],
+      "meaning": "EDB belly on dorsolateral foot, distal to superolateral calcaneal origin",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "edb-slip-2": {
+      "position": [
+        0.06297353140305728,
+        -0.8880688445141316,
+        0.0858244444411248
+      ],
+      "derivedFrom": [
+        "edb-belly",
+        "toe-2-base-dorsal"
+      ],
+      "meaning": "Reconstructed EDB slip deep to EDL, joining its lateral tendon margin; no toe-5 slip in typical configuration",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "edb-join-2": {
+      "position": [
+        0.06837310373783112,
+        -0.9181646318435669,
+        0.13088347017765045
+      ],
+      "derivedFrom": [
+        "toe-2-base-dorsal"
+      ],
+      "meaning": "Soft-tissue EDL tendon junction lateral to toe 2 dorsal base; NOT a bony EDB insertion",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "edb-slip-3": {
+      "position": [
+        0.0749625062872097,
+        -0.8916457526257038,
+        0.07445379487983883
+      ],
+      "derivedFrom": [
+        "edb-belly",
+        "toe-3-base-dorsal"
+      ],
+      "meaning": "Reconstructed EDB slip deep to EDL, joining its lateral tendon margin; no toe-5 slip in typical configuration",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "edb-join-3": {
+      "position": [
+        0.0862670961022377,
+        -0.9235033006668091,
+        0.11391235142946243
+      ],
+      "derivedFrom": [
+        "toe-3-base-dorsal"
+      ],
+      "meaning": "Soft-tissue EDL tendon junction lateral to toe 3 dorsal base; NOT a bony EDB insertion",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "edb-slip-4": {
+      "position": [
+        0.08716336689185351,
+        -0.891143848138094,
+        0.06510428629629314
+      ],
+      "derivedFrom": [
+        "edb-belly",
+        "toe-4-base-dorsal"
+      ],
+      "meaning": "Reconstructed EDB slip deep to EDL, joining its lateral tendon margin; no toe-5 slip in typical configuration",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "edb-join-4": {
+      "position": [
+        0.10447733581066132,
+        -0.922754189491272,
+        0.09995786100625992
+      ],
+      "derivedFrom": [
+        "toe-4-base-dorsal"
+      ],
+      "meaning": "Soft-tissue EDL tendon junction lateral to toe 4 dorsal base; NOT a bony EDB insertion",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "artgen-origin-0": {
+      "meshId": "femur",
+      "vertexIndex": 757,
+      "sourcePosition": [
+        -0.015515722334384918,
+        -0.1117408275604248,
+        0.0011070221662521362
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.015515722334384918,
+        -0.1117408275604248,
+        0.0011070221662521362
+      ],
+      "requestedTarget": [
+        -0.015515722334384918,
+        -0.1117408275604248,
+        0.0011070221662521362
+      ],
+      "targetDistance": 0,
+      "meaning": "Anterior lower femoral shaft; three distinct anterior-facing source vertices (normal Z > 0.87)",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint",
+      "normal": [
+        -0.28599855303764343,
+        0.004888846073299646,
+        0.9582175612449646
+      ]
+    },
+    "artgen-insertion-0": {
+      "position": [
+        -0.015515722334384918,
+        -0.165,
+        0.006107022166252136
+      ],
+      "derivedFrom": [
+        "artgen-origin-0"
+      ],
+      "meaning": "Proximal synovial reflection of suprapatellar recess, superior to patellar base; soft-tissue placement, not patellar attachment",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "artgen-origin-1": {
+      "meshId": "femur",
+      "vertexIndex": 802,
+      "sourcePosition": [
+        -0.006585732102394104,
+        -0.12148261070251465,
+        0.0023827403783798218
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.006585732102394104,
+        -0.12148261070251465,
+        0.0023827403783798218
+      ],
+      "requestedTarget": [
+        -0.006585732102394104,
+        -0.12148261070251465,
+        0.0023827403783798218
+      ],
+      "targetDistance": 0,
+      "meaning": "Anterior lower femoral shaft; three distinct anterior-facing source vertices (normal Z > 0.87)",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint",
+      "normal": [
+        -0.13664326071739197,
+        -0.05789976194500923,
+        0.988926887512207
+      ]
+    },
+    "artgen-insertion-1": {
+      "position": [
+        -0.006585732102394104,
+        -0.167,
+        0.007382740378379822
+      ],
+      "derivedFrom": [
+        "artgen-origin-1"
+      ],
+      "meaning": "Proximal synovial reflection of suprapatellar recess, superior to patellar base; soft-tissue placement, not patellar attachment",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "artgen-origin-2": {
+      "meshId": "femur",
+      "vertexIndex": 702,
+      "sourcePosition": [
+        0.014173582196235657,
+        -0.13597935438156128,
+        -0.0009804964065551758
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        0.014173582196235657,
+        -0.13597935438156128,
+        -0.0009804964065551758
+      ],
+      "requestedTarget": [
+        0.014173582196235657,
+        -0.13597935438156128,
+        -0.0009804964065551758
+      ],
+      "targetDistance": 0,
+      "meaning": "Anterior lower femoral shaft; three distinct anterior-facing source vertices (normal Z > 0.87)",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint",
+      "normal": [
+        0.47704052925109863,
+        -0.021561149507761,
+        0.8786168098449707
+      ]
+    },
+    "artgen-insertion-2": {
+      "position": [
+        0.014173582196235657,
+        -0.169,
+        0.004019503593444824
+      ],
+      "derivedFrom": [
+        "artgen-origin-2"
+      ],
+      "meaning": "Proximal synovial reflection of suprapatellar recess, superior to patellar base; soft-tissue placement, not patellar attachment",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "psoas-minor-t12": {
+      "meshId": "reference-twelfth-thoracic-vertebra",
+      "vertexIndex": 157,
+      "sourcePosition": [
+        -0.10904147656200001,
+        0.9082433428,
+        -0.03137339166200001
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.003
+      ],
+      "position": [
+        -0.10404147656200001,
+        0.9082433428,
+        -0.02837339166200001
+      ],
+      "requestedTarget": [
+        -0.108,
+        0.881,
+        -0.026
+      ],
+      "targetDistance": 0.02778772639675215,
+      "meaning": "Left anterolateral lower T12 body region",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "psoas-minor-l1": {
+      "meshId": "reference-first-lumbar-vertebra",
+      "vertexIndex": 1229,
+      "sourcePosition": [
+        -0.11003859609000001,
+        0.8805095368000001,
+        -0.024894709705999996
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.003
+      ],
+      "position": [
+        -0.10503859609,
+        0.8805095368000001,
+        -0.021894709705999996
+      ],
+      "requestedTarget": [
+        -0.103,
+        0.882,
+        -0.016
+      ],
+      "targetDistance": 0.011440243713432332,
+      "meaning": "Left anterolateral upper L1 body region",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "psoas-minor-insertion": {
+      "meshId": "hip-bone",
+      "vertexIndex": 455,
+      "sourcePosition": [
+        -0.05738229304552078,
+        0.4793780446052551,
+        0.015835702419281006
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.05738229304552078,
+        0.4793780446052551,
+        0.015835702419281006
+      ],
+      "requestedTarget": [
+        -0.06,
+        0.497,
+        0.028
+      ],
+      "targetDistance": 0.02157210785403672,
+      "meaning": "Pecten pubis/iliopubic eminence regional insertion, with fascia blending not segmented",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "psoas-minor-belly": {
+      "position": [
+        -0.0873766806828802,
+        0.8010270182513137,
+        0.017678881858320245
+      ],
+      "derivedFrom": [
+        "psoas-minor-t12",
+        "psoas-minor-insertion"
+      ],
+      "meaning": "Slender psoas minor belly anterior to psoas major",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "psoas-minor-tendon": {
+      "position": [
+        -0.06538004810046455,
+        0.6080376340636786,
+        0.030572974194896695
+      ],
+      "derivedFrom": [
+        "psoas-minor-t12",
+        "psoas-minor-insertion"
+      ],
+      "meaning": "Long tendon anterior to psoas major, terminating at pelvis and fascia, not lesser trochanter",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "adductor-tubercle-region": {
+      "meshId": "femur",
+      "vertexIndex": 915,
+      "sourcePosition": [
+        -0.07025539129972458,
+        -0.16242140531539917,
+        -0.05931536853313446
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.07025539129972458,
+        -0.16242140531539917,
+        -0.05931536853313446
+      ],
+      "requestedTarget": [
+        -0.072,
+        -0.163,
+        -0.059
+      ],
+      "targetDistance": 0.0018649098202906218,
+      "meaning": "Superior medial epicondylar/adductor-tubercle region; exact tubercle is unresolved in the reduced mesh",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "hamstring-adductor-belly": {
+      "position": [
+        -0.0779133294224739,
+        0.12463715314865115,
+        -0.05826689970493317
+      ],
+      "derivedFrom": [
+        "ischial-tuberosity",
+        "adductor-tubercle-region"
+      ],
+      "meaning": "Medial, near-vertical ischiocondylar part within the whole adductor-magnus envelope",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "hamstring-adductor-tendon": {
+      "position": [
+        -0.07458536750078201,
+        -0.05201426744461063,
+        -0.052758265137672414
+      ],
+      "derivedFrom": [
+        "ischial-tuberosity",
+        "adductor-tubercle-region"
+      ],
+      "meaning": "Distal rounded ischiocondylar tendon",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "L1": {
+      "meshId": "reference-first-lumbar-vertebra",
+      "vertexIndex": 1351,
+      "sourcePosition": [
+        -0.10855475637600001,
+        0.8550301161999999,
+        -0.047240858972000005
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.006
+      ],
+      "position": [
+        -0.103554756376,
+        0.8550301161999999,
+        -0.04124085897200001
+      ],
+      "requestedTarget": [
+        -0.094,
+        0.841532272,
+        -0.05
+      ],
+      "targetDistance": 0.020041097535428952,
+      "meaning": "L1 ventral ramus neighborhood at left intervertebral exit; approximate, not a foramen centroid",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "L1-psoas": {
+      "position": [
+        -0.08055475637600001,
+        0.8470301161999999,
+        -0.033240858972000006
+      ],
+      "derivedFrom": [
+        "L1"
+      ],
+      "meaning": "Intramuscular lumbar-plexus route in posterior psoas major",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "L2": {
+      "meshId": "reference-second-lumbar-vertebra",
+      "vertexIndex": 170,
+      "sourcePosition": [
+        -0.10617938022000001,
+        0.8060661628,
+        -0.03775589732000001
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.006
+      ],
+      "position": [
+        -0.10117938022,
+        0.8060661628,
+        -0.03175589732000001
+      ],
+      "requestedTarget": [
+        -0.094,
+        0.8044176277599999,
+        -0.05
+      ],
+      "targetDistance": 0.017348574026697944,
+      "meaning": "L2 ventral ramus neighborhood at left intervertebral exit; approximate, not a foramen centroid",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "L2-psoas": {
+      "position": [
+        -0.07817938022000001,
+        0.7980661628,
+        -0.02375589732000001
+      ],
+      "derivedFrom": [
+        "L2"
+      ],
+      "meaning": "Intramuscular lumbar-plexus route in posterior psoas major",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "L3": {
+      "meshId": "reference-third-lumbar-vertebra",
+      "vertexIndex": 1477,
+      "sourcePosition": [
+        -0.10164125375400002,
+        0.7745923476399997,
+        -0.05795405520199999
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.006
+      ],
+      "position": [
+        -0.09664125375400001,
+        0.7745923476399997,
+        -0.05195405520199999
+      ],
+      "requestedTarget": [
+        -0.094,
+        0.7644825689799999,
+        -0.05
+      ],
+      "targetDistance": 0.014962064618349659,
+      "meaning": "L3 ventral ramus neighborhood at left intervertebral exit; approximate, not a foramen centroid",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "L3-psoas": {
+      "position": [
+        -0.07364125375400002,
+        0.7665923476399997,
+        -0.04395405520199999
+      ],
+      "derivedFrom": [
+        "L3"
+      ],
+      "meaning": "Intramuscular lumbar-plexus route in posterior psoas major",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "L4": {
+      "meshId": "reference-fourth-lumbar-vertebra",
+      "vertexIndex": 1356,
+      "sourcePosition": [
+        -0.10070852206800002,
+        0.7150733293599999,
+        -0.04777526184200001
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.006
+      ],
+      "position": [
+        -0.09570852206800001,
+        0.7150733293599999,
+        -0.04177526184200001
+      ],
+      "requestedTarget": [
+        -0.094,
+        0.7174015950399999,
+        -0.05
+      ],
+      "targetDistance": 0.007441407748885306,
+      "meaning": "L4 ventral ramus neighborhood at left intervertebral exit; approximate, not a foramen centroid",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "L4-psoas": {
+      "position": [
+        -0.07270852206800002,
+        0.7070733293599999,
+        -0.03377526184200001
+      ],
+      "derivedFrom": [
+        "L4"
+      ],
+      "meaning": "Intramuscular lumbar-plexus route in posterior psoas major",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "L5": {
+      "meshId": "reference-fifth-lumbar-vertebra",
+      "vertexIndex": 1527,
+      "sourcePosition": [
+        -0.10312314723600002,
+        0.66366847666,
+        -0.052754696414000005
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.006
+      ],
+      "position": [
+        -0.09812314723600002,
+        0.66366847666,
+        -0.046754696414000006
+      ],
+      "requestedTarget": [
+        -0.094,
+        0.6621464467,
+        -0.05
+      ],
+      "targetDistance": 0.009650737952207427,
+      "meaning": "L5 ventral ramus neighborhood at left intervertebral exit; approximate, not a foramen centroid",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "L5-psoas": {
+      "position": [
+        -0.07512314723600003,
+        0.6556684766599999,
+        -0.038754696414000006
+      ],
+      "derivedFrom": [
+        "L5"
+      ],
+      "meaning": "Intramuscular lumbar-plexus route in posterior psoas major",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lp-iliohypogastric": {
+      "position": [
+        0.002,
+        0.819,
+        0.012
+      ],
+      "derivedFrom": [
+        "L1-psoas"
+      ],
+      "meaning": "Proximal iliohypogastric branch, schematic route from known root contributors",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lp-ilioinguinal": {
+      "position": [
+        0.003,
+        0.789,
+        0.021
+      ],
+      "derivedFrom": [
+        "L1-psoas"
+      ],
+      "meaning": "Proximal ilioinguinal branch, schematic route from known root contributors",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lp-genitofemoral": {
+      "position": [
+        -0.057,
+        0.756,
+        0.035
+      ],
+      "derivedFrom": [
+        "L1-psoas",
+        "L2-psoas"
+      ],
+      "meaning": "Proximal genitofemoral branch, schematic route from known root contributors",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lp-lateral-femoral-cutaneous": {
+      "position": [
+        0.052,
+        0.653,
+        0.043
+      ],
+      "derivedFrom": [
+        "L2-psoas",
+        "L3-psoas"
+      ],
+      "meaning": "Proximal lateral femoral cutaneous branch, schematic route from known root contributors",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lp-femoral": {
+      "position": [
+        0.038,
+        0.57,
+        0.027
+      ],
+      "derivedFrom": [
+        "L2-psoas",
+        "L3-psoas",
+        "L4-psoas"
+      ],
+      "meaning": "Proximal femoral branch, schematic route from known root contributors",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lp-obturator": {
+      "position": [
+        -0.074,
+        0.528,
+        -0.005
+      ],
+      "derivedFrom": [
+        "L2-psoas",
+        "L3-psoas",
+        "L4-psoas"
+      ],
+      "meaning": "Proximal obturator branch, schematic route from known root contributors",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lumbosacral-crossing": {
+      "meshId": "reference-sacrum",
+      "vertexIndex": 4371,
+      "sourcePosition": [
+        -0.07871366767800002,
+        0.6236361062799999,
+        -0.07619722304
+      ],
+      "offset": [
+        0.005,
+        0,
+        0.008
+      ],
+      "position": [
+        -0.07371366767800001,
+        0.6236361062799999,
+        -0.06819722304
+      ],
+      "requestedTarget": [
+        -0.072,
+        0.632,
+        -0.054
+      ],
+      "targetDistance": 0.024652479845597413,
+      "meaning": "Anterior sacral ala/SI region crossed by lumbosacral trunk",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "ls-trunk-join": {
+      "position": [
+        -0.075,
+        0.669,
+        -0.03
+      ],
+      "derivedFrom": [
+        "L4-psoas",
+        "L5-psoas"
+      ],
+      "meaning": "Union of descending L4 contribution with L5 ventral ramus",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "S1": {
+      "meshId": "reference-sacrum",
+      "vertexIndex": 4372,
+      "sourcePosition": [
+        -0.07963277574000001,
+        0.5950151428599998,
+        -0.08325426027199999
+      ],
+      "offset": [
+        0.004,
+        0,
+        0.009
+      ],
+      "position": [
+        -0.07563277574,
+        0.5950151428599998,
+        -0.074254260272
+      ],
+      "requestedTarget": [
+        -0.081,
+        0.589,
+        -0.074
+      ],
+      "targetDistance": 0.011121716548503507,
+      "meaning": "Anterior sacral S1 ventral-ramus region, approximate surface exit",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "S2": {
+      "meshId": "reference-sacrum",
+      "vertexIndex": 4439,
+      "sourcePosition": [
+        -0.07567397766600001,
+        0.5719003941399999,
+        -0.10994310187399998
+      ],
+      "offset": [
+        0.004,
+        0,
+        0.009
+      ],
+      "position": [
+        -0.071673977666,
+        0.5719003941399999,
+        -0.10094310187399999
+      ],
+      "requestedTarget": [
+        -0.091,
+        0.545,
+        -0.095
+      ],
+      "targetDistance": 0.03437752840281495,
+      "meaning": "Anterior sacral S2 ventral-ramus region, approximate surface exit",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "S3": {
+      "meshId": "reference-sacrum",
+      "vertexIndex": 4051,
+      "sourcePosition": [
+        -0.09861372769200002,
+        0.5137226540799998,
+        -0.143967616256
+      ],
+      "offset": [
+        0.004,
+        0,
+        0.009
+      ],
+      "position": [
+        -0.09461372769200002,
+        0.5137226540799998,
+        -0.13496761625599998
+      ],
+      "requestedTarget": [
+        -0.109,
+        0.505,
+        -0.116
+      ],
+      "targetDistance": 0.031082903752676323,
+      "meaning": "Anterior sacral S3 ventral-ramus region, approximate surface exit",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "S4": {
+      "meshId": "reference-sacrum",
+      "vertexIndex": 3142,
+      "sourcePosition": [
+        -0.12149330671200001,
+        0.4694231700399999,
+        -0.156318566714
+      ],
+      "offset": [
+        0.004,
+        0,
+        0.009
+      ],
+      "position": [
+        -0.117493306712,
+        0.4694231700399999,
+        -0.14731856671399998
+      ],
+      "requestedTarget": [
+        -0.119,
+        0.47,
+        -0.135
+      ],
+      "targetDistance": 0.021471623084949258,
+      "meaning": "Anterior sacral S4 ventral-ramus region, approximate surface exit",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "sciatic-convergence": {
+      "position": [
+        -0.018,
+        0.49,
+        -0.117
+      ],
+      "derivedFrom": [
+        "lumbosacral-crossing",
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "meaning": "Sciatic convergence at lower greater-sciatic-foramen region; anterior to piriformis within pelvis",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "sp-superior-gluteal": {
+      "position": [
+        0.008,
+        0.548,
+        -0.135
+      ],
+      "derivedFrom": [
+        "lumbosacral-crossing",
+        "S1"
+      ],
+      "meaning": "Schematic proximal superior-gluteal branch",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "sp-inferior-gluteal": {
+      "position": [
+        0.016,
+        0.485,
+        -0.14
+      ],
+      "derivedFrom": [
+        "L5-psoas",
+        "S1",
+        "S2"
+      ],
+      "meaning": "Schematic proximal inferior-gluteal branch",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "sp-posterior-femoral-cutaneous": {
+      "position": [
+        -0.012,
+        0.443,
+        -0.131
+      ],
+      "derivedFrom": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "meaning": "Schematic proximal posterior-femoral-cutaneous branch",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "sp-pudendal": {
+      "position": [
+        -0.056,
+        0.456,
+        -0.134
+      ],
+      "derivedFrom": [
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "meaning": "Schematic proximal pudendal branch",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "sp-nerve-to-lev-ani": {
+      "position": [
+        -0.095,
+        0.435,
+        -0.076
+      ],
+      "derivedFrom": [
+        "S4"
+      ],
+      "meaning": "Schematic proximal nerve-to-lev-ani branch",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "fibular-comm-origin": {
+      "meshId": "fibula",
+      "vertexIndex": 92,
+      "sourcePosition": [
+        0.04884977638721466,
+        -0.29486358165740967,
+        -0.06894119083881378
+      ],
+      "offset": [
+        0.012,
+        0,
+        -0.02
+      ],
+      "position": [
+        0.06084977638721466,
+        -0.29486358165740967,
+        -0.08894119083881379
+      ],
+      "requestedTarget": [
+        0.047,
+        -0.29,
+        -0.07
+      ],
+      "targetDistance": 0.00531010132302584,
+      "meaning": "Common-fibular branch region near head/neck",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "fibular-comm-mid": {
+      "meshId": "practical-gastrocnemius-lateral-head",
+      "vertexIndex": 534,
+      "sourcePosition": [
+        0.029484348371624947,
+        -0.40133562684059143,
+        -0.11731932312250137
+      ],
+      "offset": [
+        0,
+        0,
+        -0.005
+      ],
+      "position": [
+        0.029484348371624947,
+        -0.40133562684059143,
+        -0.12231932312250138
+      ],
+      "requestedTarget": [
+        0.041,
+        -0.4,
+        -0.116
+      ],
+      "targetDistance": 0.011667679503010528,
+      "meaning": "Overlying lateral gastrocnemius posterior surface",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "sural-union": {
+      "meshId": "soleus",
+      "vertexIndex": 865,
+      "sourcePosition": [
+        0.003967881202697754,
+        -0.5565006732940674,
+        -0.1213613897562027
+      ],
+      "offset": [
+        0,
+        0,
+        -0.008
+      ],
+      "position": [
+        0.003967881202697754,
+        -0.5565006732940674,
+        -0.1293613897562027
+      ],
+      "requestedTarget": [
+        0.005,
+        -0.56,
+        -0.128
+      ],
+      "targetDistance": 0.007575071126771599,
+      "meaning": "Variable communicating union at mid posterior calf",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "sural-lateral-heel": {
+      "meshId": "fibula",
+      "vertexIndex": 319,
+      "sourcePosition": [
+        0.03226551413536072,
+        -0.8542055487632751,
+        -0.0840177983045578
+      ],
+      "offset": [
+        0.01,
+        -0.008,
+        -0.015
+      ],
+      "position": [
+        0.04226551413536072,
+        -0.8622055487632752,
+        -0.0990177983045578
+      ],
+      "requestedTarget": [
+        0.025,
+        -0.856,
+        -0.086
+      ],
+      "targetDistance": 0.00774189088359708,
+      "meaning": "Sural nerve behind lateral malleolus",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "lateral-heel-skin-0": {
+      "position": [
+        0.006987650990486145,
+        -0.9060793519020081,
+        -0.11061117535829544
+      ],
+      "derivedFrom": [
+        "lateral-calcaneus"
+      ],
+      "meaning": "Lateral calcaneal cutaneous territory sample, not medial heel",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lateral-heel-skin-1": {
+      "position": [
+        0.006987650990486145,
+        -0.9090793519020081,
+        -0.09461117535829544
+      ],
+      "derivedFrom": [
+        "lateral-calcaneus"
+      ],
+      "meaning": "Lateral calcaneal cutaneous territory sample, not medial heel",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "lateral-heel-skin-2": {
+      "position": [
+        0.006987650990486145,
+        -0.9120793519020081,
+        -0.07861117535829544
+      ],
+      "derivedFrom": [
+        "lateral-calcaneus"
+      ],
+      "meaning": "Lateral calcaneal cutaneous territory sample, not medial heel",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "tibial-tunnel": {
+      "meshId": "visual-talus",
+      "vertexIndex": 5,
+      "sourcePosition": [
+        -0.05378551408648491,
+        -0.866970956325531,
+        -0.0625038668513298
+      ],
+      "offset": [
+        -0.012,
+        0,
+        -0.008
+      ],
+      "position": [
+        -0.0657855140864849,
+        -0.866970956325531,
+        -0.07050386685132981
+      ],
+      "requestedTarget": [
+        -0.05,
+        -0.865,
+        -0.064
+      ],
+      "targetDistance": 0.004522521435513178,
+      "meaning": "Tibial nerve in posteromedial tunnel neighborhood",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "lateral-plantar-prox": {
+      "meshId": "visual-flexor-accessorius",
+      "vertexIndex": 675,
+      "sourcePosition": [
+        -0.02445433847606182,
+        -0.9155443906784058,
+        -0.04837226867675781
+      ],
+      "offset": [
+        0,
+        -0.003,
+        0
+      ],
+      "position": [
+        -0.02445433847606182,
+        -0.9185443906784058,
+        -0.04837226867675781
+      ],
+      "requestedTarget": [
+        -0.027,
+        -0.917,
+        -0.046
+      ],
+      "targetDistance": 0.0037718496478912926,
+      "meaning": "Proximal lateral plantar nerve between plantar muscle layers",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "lateral-plantar-split": {
+      "meshId": "practical-metatarsal-5",
+      "vertexIndex": 76,
+      "sourcePosition": [
+        0.05261368304491043,
+        -0.9238640666007996,
+        -0.0014911084435880184
+      ],
+      "offset": [
+        0,
+        -0.01,
+        0
+      ],
+      "position": [
+        0.05261368304491043,
+        -0.9338640666007996,
+        -0.0014911084435880184
+      ],
+      "requestedTarget": [
+        0.054,
+        -0.92,
+        -0.003
+      ],
+      "targetDistance": 0.004373744291153125,
+      "meaning": "Lateral plantar division near base of fifth metatarsal",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "superficial-lp-5-lateral": {
+      "position": [
+        0.11530343443155289,
+        -0.9466289715766907,
+        0.07195481657981873
+      ],
+      "derivedFrom": [
+        "toe-5-base-lateral"
+      ],
+      "meaning": "Plantar digital branch to lateral side of toe 5",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "superficial-lp-5-medial": {
+      "position": [
+        0.09742405265569687,
+        -0.9469526844024658,
+        0.07331231981515884
+      ],
+      "derivedFrom": [
+        "toe-5-base-medial"
+      ],
+      "meaning": "Plantar digital branch to medial side of toe 5",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "superficial-lp-4-lateral": {
+      "position": [
+        0.10319462418556213,
+        -0.9415710406303406,
+        0.10517700761556625
+      ],
+      "derivedFrom": [
+        "toe-4-base-lateral"
+      ],
+      "meaning": "Plantar digital branch to lateral side of toe 4",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "deep-lp-arch-4": {
+      "position": [
+        0.05559467151761055,
+        -0.918639087677002,
+        0.030474972426891327
+      ],
+      "derivedFrom": [
+        "meta-4-base"
+      ],
+      "meaning": "Deep lateral plantar course below interossei and deep to flexor tendons/adductor hallucis",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "deep-lp-arch-3": {
+      "position": [
+        0.05235094949603081,
+        -0.9069365501403809,
+        0.04775264717638493
+      ],
+      "derivedFrom": [
+        "meta-3-base"
+      ],
+      "meaning": "Deep lateral plantar course below interossei and deep to flexor tendons/adductor hallucis",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "deep-lp-arch-2": {
+      "position": [
+        0.03637399896979332,
+        -0.8950885176658631,
+        0.05322805836796761
+      ],
+      "derivedFrom": [
+        "meta-2-base"
+      ],
+      "meaning": "Deep lateral plantar course below interossei and deep to flexor tendons/adductor hallucis",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "deep-lp-arch-1": {
+      "position": [
+        0.014140576124191284,
+        -0.9016546249389649,
+        0.06626943543553353
+      ],
+      "derivedFrom": [
+        "meta-1-base"
+      ],
+      "meaning": "Deep lateral plantar course below interossei and deep to flexor tendons/adductor hallucis",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "baxter-deep-abdh": {
+      "meshId": "visual-abductor-hallucis",
+      "vertexIndex": 58,
+      "sourcePosition": [
+        -0.0275151114910841,
+        -0.9198917746543884,
+        -0.058487650007009506
+      ],
+      "offset": [
+        0.004,
+        0.004,
+        0
+      ],
+      "position": [
+        -0.0235151114910841,
+        -0.9158917746543884,
+        -0.058487650007009506
+      ],
+      "requestedTarget": [
+        -0.028,
+        -0.923,
+        -0.058
+      ],
+      "targetDistance": 0.0031833919322819012,
+      "meaning": "Deep surface neighborhood of abductor hallucis; Baxter pathway",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "baxter-lateral-end": {
+      "meshId": "visual-abductor-digiti-minimi",
+      "vertexIndex": 1089,
+      "sourcePosition": [
+        0.0033895913511514664,
+        -0.9291771054267883,
+        -0.05004408210515976
+      ],
+      "offset": [
+        0,
+        0.005,
+        0
+      ],
+      "position": [
+        0.0033895913511514664,
+        -0.9241771054267883,
+        -0.05004408210515976
+      ],
+      "requestedTarget": [
+        0.001,
+        -0.929,
+        -0.044
+      ],
+      "targetDistance": 0.006501726051719513,
+      "meaning": "Proximal abductor digiti minimi motor target",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "dorsal-digit-1-medial-prox": {
+      "position": [
+        0.005106394231319427,
+        -0.8777418975830078,
+        0.09603880959749223
+      ],
+      "derivedFrom": [
+        "meta-1-shaft"
+      ],
+      "meaning": "Distal medial-dorsal-cutaneous-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-1-medial-dist": {
+      "position": [
+        0.005724096205085516,
+        -0.9211063289642334,
+        0.1514184557199478
+      ],
+      "derivedFrom": [
+        "toe-1-base-medial"
+      ],
+      "meaning": "Dorsal digital territory on medial of toe 1; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-2-lateral-prox": {
+      "position": [
+        0.0424372543990612,
+        -0.8709197287559509,
+        0.07568446415662766
+      ],
+      "derivedFrom": [
+        "meta-2-shaft"
+      ],
+      "meaning": "Distal medial-dorsal-cutaneous-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-2-lateral-dist": {
+      "position": [
+        0.06684226542711258,
+        -0.9178760552406311,
+        0.1533355050086975
+      ],
+      "derivedFrom": [
+        "toe-2-base-lateral"
+      ],
+      "meaning": "Dorsal digital territory on lateral of toe 2; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-3-medial-prox": {
+      "position": [
+        0.04592440003156662,
+        -0.8808347826004028,
+        0.07144329565763474
+      ],
+      "derivedFrom": [
+        "meta-3-shaft"
+      ],
+      "meaning": "Distal medial-dorsal-cutaneous-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-3-medial-dist": {
+      "position": [
+        0.06740991026163101,
+        -0.9233853125572205,
+        0.13374991047382354
+      ],
+      "derivedFrom": [
+        "toe-3-base-medial"
+      ],
+      "meaning": "Dorsal digital territory on medial of toe 3; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-3-lateral-prox": {
+      "position": [
+        0.05792440003156662,
+        -0.8808347826004028,
+        0.07144329565763474
+      ],
+      "derivedFrom": [
+        "meta-3-shaft"
+      ],
+      "meaning": "Distal intermediate-dorsal-cutaneous-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-3-lateral-dist": {
+      "position": [
+        0.08414752036333084,
+        -0.9234172606468201,
+        0.13301196026802062
+      ],
+      "derivedFrom": [
+        "toe-3-base-lateral"
+      ],
+      "meaning": "Dorsal digital territory on lateral of toe 3; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-4-medial-prox": {
+      "position": [
+        0.05408397415280342,
+        -0.8897220735549927,
+        0.05398721116781235
+      ],
+      "derivedFrom": [
+        "meta-4-shaft"
+      ],
+      "meaning": "Distal intermediate-dorsal-cutaneous-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-4-medial-dist": {
+      "position": [
+        0.08253699541091919,
+        -0.9230515265464783,
+        0.11741452741622925
+      ],
+      "derivedFrom": [
+        "toe-4-base-medial"
+      ],
+      "meaning": "Dorsal digital territory on medial of toe 4; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-4-lateral-prox": {
+      "position": [
+        0.06608397415280343,
+        -0.8897220735549927,
+        0.05398721116781235
+      ],
+      "derivedFrom": [
+        "meta-4-shaft"
+      ],
+      "meaning": "Distal intermediate-dorsal-cutaneous-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-4-lateral-dist": {
+      "position": [
+        0.10319462418556213,
+        -0.9235710406303406,
+        0.12317700761556626
+      ],
+      "derivedFrom": [
+        "toe-4-base-lateral"
+      ],
+      "meaning": "Dorsal digital territory on lateral of toe 4; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-5-medial-prox": {
+      "position": [
+        0.06695667380094528,
+        -0.9007359986305237,
+        0.032611109867691994
+      ],
+      "derivedFrom": [
+        "meta-5-shaft"
+      ],
+      "meaning": "Distal intermediate-dorsal-cutaneous-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-5-medial-dist": {
+      "position": [
+        0.09742405265569687,
+        -0.9289526844024658,
+        0.09131231981515885
+      ],
+      "derivedFrom": [
+        "toe-5-base-medial"
+      ],
+      "meaning": "Dorsal digital territory on medial of toe 5; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-1-lateral-prox": {
+      "position": [
+        0.017106394231319426,
+        -0.8777418975830078,
+        0.09603880959749223
+      ],
+      "derivedFrom": [
+        "meta-1-shaft"
+      ],
+      "meaning": "Distal deep-fibular-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-1-lateral-dist": {
+      "position": [
+        0.036404822021722794,
+        -0.9195580983161926,
+        0.15004473257064818
+      ],
+      "derivedFrom": [
+        "toe-1-base-lateral"
+      ],
+      "meaning": "Dorsal digital territory on lateral of toe 1; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-2-medial-prox": {
+      "position": [
+        0.030437254399061205,
+        -0.8709197287559509,
+        0.07568446415662766
+      ],
+      "derivedFrom": [
+        "meta-2-shaft"
+      ],
+      "meaning": "Distal deep-fibular-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-2-medial-dist": {
+      "position": [
+        0.04558616504073143,
+        -0.9182477498054504,
+        0.1469064437150955
+      ],
+      "derivedFrom": [
+        "toe-2-base-medial"
+      ],
+      "meaning": "Dorsal digital territory on medial of toe 2; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-5-lateral-prox": {
+      "position": [
+        0.07895667380094529,
+        -0.9007359986305237,
+        0.032611109867691994
+      ],
+      "derivedFrom": [
+        "meta-5-shaft"
+      ],
+      "meaning": "Distal sural-nerve branch start; schematic, not traced from nerve scan",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "dorsal-digit-5-lateral-dist": {
+      "position": [
+        0.11530343443155289,
+        -0.9286289715766907,
+        0.08995481657981873
+      ],
+      "derivedFrom": [
+        "toe-5-base-lateral"
+      ],
+      "meaning": "Dorsal digital territory on lateral of toe 5; no plantar nail-bed claim",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "femoral-apex": {
+      "position": [
+        -0.030790400981903093,
+        0.33421978712081907,
+        0.04929770851135254
+      ],
+      "derivedFrom": [
+        "asis",
+        "pubic-tubercle"
+      ],
+      "meaning": "Sartorius/adductor-longus crossover, approximate apex of femoral triangle",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "adductor-hiatus-medial": {
+      "meshId": "adductor-magnus",
+      "vertexIndex": 371,
+      "sourcePosition": [
+        -0.05993372201919556,
+        -0.1293688416481018,
+        -0.039135903120040894
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.05993372201919556,
+        -0.1293688416481018,
+        -0.039135903120040894
+      ],
+      "requestedTarget": [
+        -0.06,
+        -0.12,
+        -0.047
+      ],
+      "targetDistance": 0.012232072855216696,
+      "meaning": "Adductor magnus distal tendon region bordering hiatus",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "adductor-hiatus-lateral": {
+      "meshId": "femur",
+      "vertexIndex": 851,
+      "sourcePosition": [
+        -0.04056607931852341,
+        -0.12148261070251465,
+        -0.04354292154312134
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.04056607931852341,
+        -0.12148261070251465,
+        -0.04354292154312134
+      ],
+      "requestedTarget": [
+        -0.043,
+        -0.115,
+        -0.055
+      ],
+      "targetDistance": 0.013387040680118591,
+      "meaning": "Distal medial supracondylar femoral margin adjacent to hiatus",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "adductor-hiatus-superior": {
+      "position": [
+        -0.05024990066885948,
+        -0.10042572617530823,
+        -0.041339412331581116
+      ],
+      "derivedFrom": [
+        "adductor-hiatus-medial",
+        "adductor-hiatus-lateral"
+      ],
+      "meaning": "Superior tendinous hiatus arch approximation",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "adductor-hiatus-inferior": {
+      "position": [
+        -0.05024990066885948,
+        -0.14342572617530822,
+        -0.041339412331581116
+      ],
+      "derivedFrom": [
+        "adductor-hiatus-medial",
+        "adductor-hiatus-lateral"
+      ],
+      "meaning": "Inferior tendinous hiatus arch approximation",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-prox": {
+      "position": [
+        -0.031957970963120474,
+        0.30814105632305144,
+        0.03685948126077652
+      ],
+      "derivedFrom": [
+        "femoral-apex",
+        "adductor-hiatus-superior"
+      ],
+      "meaning": "Proximal adductor canal just distal to femoral triangle apex",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-dist": {
+      "position": [
+        -0.049082330687642096,
+        -0.07434699537754058,
+        -0.035901185081005094
+      ],
+      "derivedFrom": [
+        "femoral-apex",
+        "adductor-hiatus-superior"
+      ],
+      "meaning": "Distal canal near adductor hiatus",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-center-0": {
+      "position": [
+        -0.031957970963120474,
+        0.30814105632305144,
+        0.03685948126077652
+      ],
+      "derivedFrom": [
+        "canal-prox",
+        "canal-dist"
+      ],
+      "meaning": "Center reference only, no solid canal",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-0-0": {
+      "position": [
+        -0.041957970963120476,
+        0.30814105632305144,
+        0.04885948126077652
+      ],
+      "derivedFrom": [
+        "canal-center-0"
+      ],
+      "meaning": "Subsartorial fascial roof",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-0-1": {
+      "position": [
+        -0.017957970963120476,
+        0.30814105632305144,
+        0.04385948126077652
+      ],
+      "derivedFrom": [
+        "canal-center-0"
+      ],
+      "meaning": "Vastus medialis anterolateral wall",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-0-2": {
+      "position": [
+        -0.03595797096312048,
+        0.30814105632305144,
+        0.026859481260776516
+      ],
+      "derivedFrom": [
+        "canal-center-0"
+      ],
+      "meaning": "Adductor longus/magnus posterior wall",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-center-1": {
+      "position": [
+        -0.04052015082538128,
+        0.11689703047275543,
+        0.0004791480898857156
+      ],
+      "derivedFrom": [
+        "canal-prox",
+        "canal-dist"
+      ],
+      "meaning": "Center reference only, no solid canal",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-1-0": {
+      "position": [
+        -0.050520150825381284,
+        0.11689703047275543,
+        0.012479148089885716
+      ],
+      "derivedFrom": [
+        "canal-center-1"
+      ],
+      "meaning": "Subsartorial fascial roof",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-1-1": {
+      "position": [
+        -0.026520150825381283,
+        0.11689703047275543,
+        0.007479148089885716
+      ],
+      "derivedFrom": [
+        "canal-center-1"
+      ],
+      "meaning": "Vastus medialis anterolateral wall",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-1-2": {
+      "position": [
+        -0.044520150825381286,
+        0.11689703047275543,
+        -0.009520851910114285
+      ],
+      "derivedFrom": [
+        "canal-center-1"
+      ],
+      "meaning": "Adductor longus/magnus posterior wall",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-center-2": {
+      "position": [
+        -0.049082330687642096,
+        -0.07434699537754058,
+        -0.03590118508100509
+      ],
+      "derivedFrom": [
+        "canal-prox",
+        "canal-dist"
+      ],
+      "meaning": "Center reference only, no solid canal",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-2-0": {
+      "position": [
+        -0.0590823306876421,
+        -0.07434699537754058,
+        -0.023901185081005086
+      ],
+      "derivedFrom": [
+        "canal-center-2"
+      ],
+      "meaning": "Subsartorial fascial roof",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-2-1": {
+      "position": [
+        -0.0350823306876421,
+        -0.07434699537754058,
+        -0.028901185081005087
+      ],
+      "derivedFrom": [
+        "canal-center-2"
+      ],
+      "meaning": "Vastus medialis anterolateral wall",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "canal-2-2": {
+      "position": [
+        -0.05308233068764209,
+        -0.07434699537754058,
+        -0.04590118508100509
+      ],
+      "derivedFrom": [
+        "canal-center-2"
+      ],
+      "meaning": "Adductor longus/magnus posterior wall",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "popliteal-upper": {
+      "meshId": "semimembranosus",
+      "vertexIndex": 1069,
+      "sourcePosition": [
+        -0.04833632707595825,
+        -0.14351767301559448,
+        -0.10106595605611801
+      ],
+      "offset": [
+        0,
+        0,
+        -0.009
+      ],
+      "position": [
+        -0.04833632707595825,
+        -0.14351767301559448,
+        -0.110065956056118
+      ],
+      "requestedTarget": [
+        -0.025,
+        -0.15,
+        -0.135
+      ],
+      "targetDistance": 0.04169081509054685,
+      "meaning": "Upper medial hamstring boundary region of popliteal fossa",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "popliteal-medial": {
+      "meshId": "semimembranosus",
+      "vertexIndex": 898,
+      "sourcePosition": [
+        -0.07674992829561234,
+        -0.21576941013336182,
+        -0.082626111805439
+      ],
+      "offset": [
+        0,
+        0,
+        -0.008
+      ],
+      "position": [
+        -0.07674992829561234,
+        -0.21576941013336182,
+        -0.090626111805439
+      ],
+      "requestedTarget": [
+        -0.059,
+        -0.238,
+        -0.107
+      ],
+      "targetDistance": 0.0374612533965298,
+      "meaning": "Superomedial semimembranosus/semitendinosus boundary",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "popliteal-lateral": {
+      "meshId": "practical-biceps-femoris-long-head",
+      "vertexIndex": 666,
+      "sourcePosition": [
+        0.05214821919798851,
+        -0.23351529240608215,
+        -0.09079412370920181
+      ],
+      "offset": [
+        0,
+        0,
+        -0.008
+      ],
+      "position": [
+        0.05214821919798851,
+        -0.23351529240608215,
+        -0.09879412370920182
+      ],
+      "requestedTarget": [
+        0.052,
+        -0.233,
+        -0.096
+      ],
+      "targetDistance": 0.005233416011508448,
+      "meaning": "Superolateral biceps femoris boundary",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "popliteal-lower": {
+      "meshId": "practical-gastrocnemius-medial-head",
+      "vertexIndex": 1028,
+      "sourcePosition": [
+        -0.02807481773197651,
+        -0.340932697057724,
+        -0.10534123331308365
+      ],
+      "offset": [
+        0,
+        0,
+        -0.015
+      ],
+      "position": [
+        -0.02807481773197651,
+        -0.340932697057724,
+        -0.12034123331308365
+      ],
+      "requestedTarget": [
+        -0.008,
+        -0.34,
+        -0.108
+      ],
+      "targetDistance": 0.020271587778687233,
+      "meaning": "Approximate meeting of inferior gastrocnemius boundaries",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "tunnel-roof": {
+      "position": [
+        -0.06430124919116498,
+        -0.8666189014911652,
+        -0.06968208774924278
+      ],
+      "derivedFrom": [
+        "medial-malleolus",
+        "medial-calcaneus"
+      ],
+      "meaning": "Flexor-retinaculum roof of posteromedial ankle tunnel",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "tunnel-floor": {
+      "meshId": "visual-talus",
+      "vertexIndex": 9,
+      "sourcePosition": [
+        -0.04641902819275856,
+        -0.8735857605934143,
+        -0.07012449949979782
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "position": [
+        -0.04641902819275856,
+        -0.8735857605934143,
+        -0.07012449949979782
+      ],
+      "requestedTarget": [
+        -0.044,
+        -0.875,
+        -0.07
+      ],
+      "targetDistance": 0.0028048655265360796,
+      "meaning": "Talus/calcaneus medial osseous floor neighborhood",
+      "method": "nearest actual atlas vertex plus explicit offset; regional placement, not a segmented attachment footprint"
+    },
+    "obturator-frame-0": {
+      "position": [
+        -0.07570836079120635,
+        0.47961002588272095,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-1": {
+      "position": [
+        -0.07805150654171397,
+        0.4838526665698402,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-2": {
+      "position": [
+        -0.08370836079120636,
+        0.48561002588272095,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-3": {
+      "position": [
+        -0.08936521504069873,
+        0.4838526665698402,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-4": {
+      "position": [
+        -0.09170836079120637,
+        0.47961002588272095,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-5": {
+      "position": [
+        -0.08936521504069875,
+        0.4753673851956017,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-6": {
+      "position": [
+        -0.08370836079120636,
+        0.47361002588272094,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-7": {
+      "position": [
+        -0.07805150654171399,
+        0.4753673851956017,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    },
+    "obturator-frame-8": {
+      "position": [
+        -0.07570836079120635,
+        0.47961002588272095,
+        0.017314929842948912
+      ],
+      "derivedFrom": [
+        "obturator-roof"
+      ],
+      "meaning": "Small superior obturator-canal frame; not the entire obturator foramen",
+      "method": "anatomically guided construction from referenced atlas anchors; not a scanned point"
+    }
+  },
+  "structures": [
+    {
+      "id": "gap-first-dorsal-interosseous-of-foot",
+      "label": "First dorsal interosseous of foot",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "bipennate-muscle-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.014248748309910297,
+            -0.8863251209259033,
+            0.07712855190038681
+          ],
+          [
+            0.022545294370502234,
+            -0.8872454037666321,
+            0.07621625438332558
+          ],
+          [
+            0.03982594737317413,
+            -0.9169971632957459,
+            0.11573389638215303
+          ],
+          [
+            0.04558616504073143,
+            -0.9282477498054504,
+            0.12890644371509552
+          ]
+        ],
+        [
+          [
+            0.03084184043109417,
+            -0.8901656866073608,
+            0.07530395686626434
+          ],
+          [
+            0.022545294370502234,
+            -0.8872454037666321,
+            0.07621625438332558
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "di1-head-medial-met",
+          "di1-belly",
+          "di1-tendon",
+          "toe-2-base-medial"
+        ],
+        [
+          "di1-head-lateral-met",
+          "di1-belly"
+        ]
+      ],
+      "pathRoles": [
+        "Head from metatarsal 1",
+        "Head from metatarsal 2"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2269,
+          2270
+        ],
+        "figure": "79.24A"
+      },
+      "description": "Two heads from adjacent metatarsals 1 and 2; insertion on the medial side of toe 2.",
+      "limitations": "Thin educational fascicle paths, not a segmented muscle outline. Attachment breadth and expansion are simplified.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "insertedToe": 2,
+      "insertionSide": "medial",
+      "originMetatarsals": [
+        1,
+        2
+      ],
+      "recommendedRendering": "tapered muscle ribbons; preserve the two heads"
+    },
+    {
+      "id": "gap-second-dorsal-interosseous-of-foot",
+      "label": "Second dorsal interosseous of foot",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "bipennate-muscle-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.04068166762590408,
+            -0.8896912932395935,
+            0.07027781754732132
+          ],
+          [
+            0.04427164979279041,
+            -0.8916786780357361,
+            0.06707140430808067
+          ],
+          [
+            0.06119961151853204,
+            -0.9178267109394074,
+            0.1182694798335433
+          ],
+          [
+            0.06684226542711258,
+            -0.9278760552406311,
+            0.1353355050086975
+          ]
+        ],
+        [
+          [
+            0.04786163195967674,
+            -0.8956660628318787,
+            0.06386499106884003
+          ],
+          [
+            0.04427164979279041,
+            -0.8916786780357361,
+            0.06707140430808067
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "di2-head-medial-met",
+          "di2-belly",
+          "di2-tendon",
+          "toe-2-base-lateral"
+        ],
+        [
+          "di2-head-lateral-met",
+          "di2-belly"
+        ]
+      ],
+      "pathRoles": [
+        "Head from metatarsal 2",
+        "Head from metatarsal 3"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2269,
+          2270
+        ],
+        "figure": "79.24A"
+      },
+      "description": "Two heads from adjacent metatarsals 2 and 3; insertion on the lateral side of toe 2.",
+      "limitations": "Thin educational fascicle paths, not a segmented muscle outline. Attachment breadth and expansion are simplified.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "insertedToe": 2,
+      "insertionSide": "lateral",
+      "originMetatarsals": [
+        2,
+        3
+      ],
+      "recommendedRendering": "tapered muscle ribbons; preserve the two heads"
+    },
+    {
+      "id": "gap-third-dorsal-interosseous-of-foot",
+      "label": "Third dorsal interosseous of foot",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "bipennate-muscle-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.05463128164410591,
+            -0.8898820281028748,
+            0.052398428320884705
+          ],
+          [
+            0.057310596108436584,
+            -0.8961142172813416,
+            0.05071250908076763
+          ],
+          [
+            0.07743828929960728,
+            -0.9230914998054505,
+            0.09893709747120738
+          ],
+          [
+            0.08414752036333084,
+            -0.9334172606468201,
+            0.11501196026802063
+          ]
+        ],
+        [
+          [
+            0.05998991057276726,
+            -0.9043464064598083,
+            0.04902658984065056
+          ],
+          [
+            0.057310596108436584,
+            -0.8961142172813416,
+            0.05071250908076763
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "di3-head-medial-met",
+          "di3-belly",
+          "di3-tendon",
+          "toe-3-base-lateral"
+        ],
+        [
+          "di3-head-lateral-met",
+          "di3-belly"
+        ]
+      ],
+      "pathRoles": [
+        "Head from metatarsal 3",
+        "Head from metatarsal 4"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2269,
+          2270
+        ],
+        "figure": "79.24A"
+      },
+      "description": "Two heads from adjacent metatarsals 3 and 4; insertion on the lateral side of toe 3.",
+      "limitations": "Thin educational fascicle paths, not a segmented muscle outline. Attachment breadth and expansion are simplified.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "insertedToe": 3,
+      "insertionSide": "lateral",
+      "originMetatarsals": [
+        3,
+        4
+      ],
+      "recommendedRendering": "tapered muscle ribbons; preserve the two heads"
+    },
+    {
+      "id": "gap-fourth-dorsal-interosseous-of-foot",
+      "label": "Fourth dorsal interosseous of foot",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "bipennate-muscle-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.06477439403533936,
+            -0.9113461971282959,
+            0.03681723028421402
+          ],
+          [
+            0.06635570898652077,
+            -0.9103187789916992,
+            0.03158753830939531
+          ],
+          [
+            0.09398489538580179,
+            -0.9267579752206803,
+            0.08677964028902352
+          ],
+          [
+            0.10319462418556213,
+            -0.9335710406303406,
+            0.10517700761556625
+          ]
+        ],
+        [
+          [
+            0.06793702393770218,
+            -0.9112913608551025,
+            0.026357846334576607
+          ],
+          [
+            0.06635570898652077,
+            -0.9103187789916992,
+            0.03158753830939531
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "di4-head-medial-met",
+          "di4-belly",
+          "di4-tendon",
+          "toe-4-base-lateral"
+        ],
+        [
+          "di4-head-lateral-met",
+          "di4-belly"
+        ]
+      ],
+      "pathRoles": [
+        "Head from metatarsal 4",
+        "Head from metatarsal 5"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2269,
+          2270
+        ],
+        "figure": "79.24A"
+      },
+      "description": "Two heads from adjacent metatarsals 4 and 5; insertion on the lateral side of toe 4.",
+      "limitations": "Thin educational fascicle paths, not a segmented muscle outline. Attachment breadth and expansion are simplified.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "insertedToe": 4,
+      "insertionSide": "lateral",
+      "originMetatarsals": [
+        4,
+        5
+      ],
+      "recommendedRendering": "tapered muscle ribbons; preserve the two heads"
+    },
+    {
+      "id": "gap-extensor-digitorum-brevis",
+      "label": "Extensor digitorum brevis",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "muscle-tendon-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.019727228209376335,
+            -0.8698957304954529,
+            -0.03562218323349953
+          ],
+          [
+            0.050041066359728575,
+            -0.8633289126634598,
+            -0.005659032054245471
+          ],
+          [
+            0.06297353140305728,
+            -0.8880688445141316,
+            0.0858244444411248
+          ],
+          [
+            0.06837310373783112,
+            -0.9181646318435669,
+            0.13088347017765045
+          ]
+        ],
+        [
+          [
+            0.019727228209376335,
+            -0.8698957304954529,
+            -0.03562218323349953
+          ],
+          [
+            0.050041066359728575,
+            -0.8633289126634598,
+            -0.005659032054245471
+          ],
+          [
+            0.0749625062872097,
+            -0.8916457526257038,
+            0.07445379487983883
+          ],
+          [
+            0.0862670961022377,
+            -0.9235033006668091,
+            0.11391235142946243
+          ]
+        ],
+        [
+          [
+            0.019727228209376335,
+            -0.8698957304954529,
+            -0.03562218323349953
+          ],
+          [
+            0.050041066359728575,
+            -0.8633289126634598,
+            -0.005659032054245471
+          ],
+          [
+            0.08716336689185351,
+            -0.891143848138094,
+            0.06510428629629314
+          ],
+          [
+            0.10447733581066132,
+            -0.922754189491272,
+            0.09995786100625992
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "calcaneal-edb-origin",
+          "edb-belly",
+          "edb-slip-2",
+          "edb-join-2"
+        ],
+        [
+          "calcaneal-edb-origin",
+          "edb-belly",
+          "edb-slip-3",
+          "edb-join-3"
+        ],
+        [
+          "calcaneal-edb-origin",
+          "edb-belly",
+          "edb-slip-4",
+          "edb-join-4"
+        ]
+      ],
+      "pathRoles": [
+        "EDB tendon joining EDL to toe 2",
+        "EDB tendon joining EDL to toe 3",
+        "EDB tendon joining EDL to toe 4"
+      ],
+      "radius": 0.004,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2232,
+          2269
+        ],
+        "figure": "79.2A; extensor-muscle attachments"
+      },
+      "description": "The three EDB slips reach the lateral margins of EDL tendons for toes 2–4. EHB is already separately represented.",
+      "limitations": "Other origin contributions from the talocalcaneal ligament and inferior extensor retinaculum are described, not drawn. Tendon junction positions are approximate; no fifth-toe tendon invented.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "recommendedRendering": "tapered three-slip muscle, no fourth hallux duplicate"
+    },
+    {
+      "id": "gap-articularis-genus",
+      "label": "Articularis genus",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "muscle-fascicle-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.015515722334384918,
+            -0.1117408275604248,
+            0.0011070221662521362
+          ],
+          [
+            -0.015515722334384918,
+            -0.165,
+            0.006107022166252136
+          ]
+        ],
+        [
+          [
+            -0.006585732102394104,
+            -0.12148261070251465,
+            0.0023827403783798218
+          ],
+          [
+            -0.006585732102394104,
+            -0.167,
+            0.007382740378379822
+          ]
+        ],
+        [
+          [
+            0.014173582196235657,
+            -0.13597935438156128,
+            -0.0009804964065551758
+          ],
+          [
+            0.014173582196235657,
+            -0.169,
+            0.004019503593444824
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "artgen-origin-0",
+          "artgen-insertion-0"
+        ],
+        [
+          "artgen-origin-1",
+          "artgen-insertion-1"
+        ],
+        [
+          "artgen-origin-2",
+          "artgen-insertion-2"
+        ]
+      ],
+      "pathRoles": [
+        "Thin bundle 1",
+        "Thin bundle 2",
+        "Thin bundle 3"
+      ],
+      "radius": 0.0025,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2143,
+          2175
+        ],
+        "figure": "77.11B attachment key10; Articularis genus text"
+      },
+      "description": "Several small bundles arise on the anterior distal femoral shaft and attach to the proximal knee synovial reflection.",
+      "limitations": "The synovial reflection has no segmented source mesh; distal endpoints are approximate. This is not a quadriceps-tendon or patellar insertion.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "recommendedRendering": "three slender tapered muscle slips; source-marked schematic"
+    },
+    {
+      "id": "gap-psoas-minor",
+      "label": "Psoas minor",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "muscle-tendon-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.10404147656200001,
+            0.9082433428,
+            -0.02837339166200001
+          ],
+          [
+            -0.0873766806828802,
+            0.8010270182513137,
+            0.017678881858320245
+          ],
+          [
+            -0.06538004810046455,
+            0.6080376340636786,
+            0.030572974194896695
+          ],
+          [
+            -0.05738229304552078,
+            0.4793780446052551,
+            0.015835702419281006
+          ]
+        ],
+        [
+          [
+            -0.10503859609,
+            0.8805095368000001,
+            -0.021894709705999996
+          ],
+          [
+            -0.0873766806828802,
+            0.8010270182513137,
+            0.017678881858320245
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "psoas-minor-t12",
+          "psoas-minor-belly",
+          "psoas-minor-tendon",
+          "psoas-minor-insertion"
+        ],
+        [
+          "psoas-minor-l1",
+          "psoas-minor-belly"
+        ]
+      ],
+      "pathRoles": [
+        "T12 origin, belly and long pelvic tendon",
+        "L1 origin"
+      ],
+      "radius": 0.004,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          1803,
+          2165,
+          2166
+        ],
+        "figure": "61.15; Psoas minor text"
+      },
+      "description": "Optional slender muscle from T12–L1 bodies/disc to the iliopubic region and iliac fascia. It does not cross the hip joint.",
+      "limitations": "Presence varies. Its belly and tendon are reconstructed; the source has no psoas-minor surface. It must not be counted as a constituent of iliopsoas.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "recommendedRendering": "short superior belly plus long thin tendon"
+    },
+    {
+      "id": "gap-hamstring-part-of-adductor-magnus",
+      "label": "Hamstring part of adductor magnus",
+      "tissue": "muscle",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "muscle-part-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.06190527230501175,
+            0.3896142840385437,
+            -0.10152985155582428
+          ],
+          [
+            -0.0779133294224739,
+            0.12463715314865115,
+            -0.05826689970493317
+          ],
+          [
+            -0.07458536750078201,
+            -0.05201426744461063,
+            -0.052758265137672414
+          ],
+          [
+            -0.07025539129972458,
+            -0.16242140531539917,
+            -0.05931536853313446
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "ischial-tuberosity",
+          "hamstring-adductor-belly",
+          "hamstring-adductor-tendon",
+          "adductor-tubercle-region"
+        ]
+      ],
+      "pathRoles": [
+        "Ischiocondylar fascicle"
+      ],
+      "radius": 0.009,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2176,
+          2177
+        ],
+        "figure": "77.47; Adductor magnus attachments"
+      },
+      "description": "Medial ischiocondylar part descends from the ischial tuberosity to the adductor tubercle and is supplied by the tibial division of the sciatic nerve.",
+      "limitations": "A schematic fascicle over the existing whole adductor magnus; not a new separated scan. Do not delete or claim complete segmentation of the whole muscle.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "overlayParentId": "adductor-magnus",
+      "recommendedRendering": "tapered fascicle, distinguish from parent whole-muscle mesh"
+    },
+    {
+      "id": "gap-lumbar-plexus",
+      "label": "Lumbar plexus",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-network-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.103554756376,
+            0.8550301161999999,
+            -0.04124085897200001
+          ],
+          [
+            -0.08055475637600001,
+            0.8470301161999999,
+            -0.033240858972000006
+          ]
+        ],
+        [
+          [
+            -0.10117938022,
+            0.8060661628,
+            -0.03175589732000001
+          ],
+          [
+            -0.07817938022000001,
+            0.7980661628,
+            -0.02375589732000001
+          ]
+        ],
+        [
+          [
+            -0.09664125375400001,
+            0.7745923476399997,
+            -0.05195405520199999
+          ],
+          [
+            -0.07364125375400002,
+            0.7665923476399997,
+            -0.04395405520199999
+          ]
+        ],
+        [
+          [
+            -0.09570852206800001,
+            0.7150733293599999,
+            -0.04177526184200001
+          ],
+          [
+            -0.07270852206800002,
+            0.7070733293599999,
+            -0.03377526184200001
+          ]
+        ],
+        [
+          [
+            -0.08055475637600001,
+            0.8470301161999999,
+            -0.033240858972000006
+          ],
+          [
+            0.002,
+            0.819,
+            0.012
+          ]
+        ],
+        [
+          [
+            -0.08055475637600001,
+            0.8470301161999999,
+            -0.033240858972000006
+          ],
+          [
+            0.003,
+            0.789,
+            0.021
+          ]
+        ],
+        [
+          [
+            -0.08055475637600001,
+            0.8470301161999999,
+            -0.033240858972000006
+          ],
+          [
+            -0.057,
+            0.756,
+            0.035
+          ]
+        ],
+        [
+          [
+            -0.07817938022000001,
+            0.7980661628,
+            -0.02375589732000001
+          ],
+          [
+            -0.057,
+            0.756,
+            0.035
+          ]
+        ],
+        [
+          [
+            -0.07817938022000001,
+            0.7980661628,
+            -0.02375589732000001
+          ],
+          [
+            0.052,
+            0.653,
+            0.043
+          ]
+        ],
+        [
+          [
+            -0.07364125375400002,
+            0.7665923476399997,
+            -0.04395405520199999
+          ],
+          [
+            0.052,
+            0.653,
+            0.043
+          ]
+        ],
+        [
+          [
+            -0.07817938022000001,
+            0.7980661628,
+            -0.02375589732000001
+          ],
+          [
+            0.038,
+            0.57,
+            0.027
+          ]
+        ],
+        [
+          [
+            -0.07364125375400002,
+            0.7665923476399997,
+            -0.04395405520199999
+          ],
+          [
+            0.038,
+            0.57,
+            0.027
+          ]
+        ],
+        [
+          [
+            -0.07270852206800002,
+            0.7070733293599999,
+            -0.03377526184200001
+          ],
+          [
+            0.038,
+            0.57,
+            0.027
+          ]
+        ],
+        [
+          [
+            -0.07817938022000001,
+            0.7980661628,
+            -0.02375589732000001
+          ],
+          [
+            -0.074,
+            0.528,
+            -0.005
+          ]
+        ],
+        [
+          [
+            -0.07364125375400002,
+            0.7665923476399997,
+            -0.04395405520199999
+          ],
+          [
+            -0.074,
+            0.528,
+            -0.005
+          ]
+        ],
+        [
+          [
+            -0.07270852206800002,
+            0.7070733293599999,
+            -0.03377526184200001
+          ],
+          [
+            -0.074,
+            0.528,
+            -0.005
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "L1",
+          "L1-psoas"
+        ],
+        [
+          "L2",
+          "L2-psoas"
+        ],
+        [
+          "L3",
+          "L3-psoas"
+        ],
+        [
+          "L4",
+          "L4-psoas"
+        ],
+        [
+          "L1-psoas",
+          "lp-iliohypogastric"
+        ],
+        [
+          "L1-psoas",
+          "lp-ilioinguinal"
+        ],
+        [
+          "L1-psoas",
+          "lp-genitofemoral"
+        ],
+        [
+          "L2-psoas",
+          "lp-genitofemoral"
+        ],
+        [
+          "L2-psoas",
+          "lp-lateral-femoral-cutaneous"
+        ],
+        [
+          "L3-psoas",
+          "lp-lateral-femoral-cutaneous"
+        ],
+        [
+          "L2-psoas",
+          "lp-femoral"
+        ],
+        [
+          "L3-psoas",
+          "lp-femoral"
+        ],
+        [
+          "L4-psoas",
+          "lp-femoral"
+        ],
+        [
+          "L2-psoas",
+          "lp-obturator"
+        ],
+        [
+          "L3-psoas",
+          "lp-obturator"
+        ],
+        [
+          "L4-psoas",
+          "lp-obturator"
+        ]
+      ],
+      "pathRoles": [
+        "L1 ventral ramus",
+        "L2 ventral ramus",
+        "L3 ventral ramus",
+        "L4 ventral ramus",
+        "iliohypogastric: contribution L1",
+        "ilioinguinal: contribution L1",
+        "genitofemoral: contribution L1",
+        "genitofemoral: contribution L2",
+        "lateral femoral cutaneous: contribution L2",
+        "lateral femoral cutaneous: contribution L3",
+        "femoral: contribution L2",
+        "femoral: contribution L3",
+        "femoral: contribution L4",
+        "obturator: contribution L2",
+        "obturator: contribution L3",
+        "obturator: contribution L4"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          1803,
+          1804,
+          2165
+        ],
+        "figure": "61.15–61.16"
+      },
+      "description": "Network of L1–L4 ventral rami in posterior psoas major with the major named lumbar branches. L4 also contributes to the lumbosacral trunk.",
+      "limitations": "Diagrammatic root-to-branch connectivity, not a solid plexus surface. Contributions may share a nerve trunk in life; displayed connectors are not separately dissectible cables. T12 contribution and smaller muscular branches are not drawn.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "network": {
+        "roots": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "branches": [
+          {
+            "name": "iliohypogastric",
+            "roots": [
+              "L1"
+            ]
+          },
+          {
+            "name": "ilioinguinal",
+            "roots": [
+              "L1"
+            ]
+          },
+          {
+            "name": "genitofemoral",
+            "roots": [
+              "L1",
+              "L2"
+            ]
+          },
+          {
+            "name": "lateral femoral cutaneous",
+            "roots": [
+              "L2",
+              "L3"
+            ]
+          },
+          {
+            "name": "femoral",
+            "roots": [
+              "L2",
+              "L3",
+              "L4"
+            ]
+          },
+          {
+            "name": "obturator",
+            "roots": [
+              "L2",
+              "L3",
+              "L4"
+            ]
+          }
+        ],
+        "includesWholeAnatomicalVariability": false
+      },
+      "legacyGroupReplacement": {
+        "id": "lumbosacral-plexus",
+        "policy": "Use composite selection of new lumbar network, lumbosacral trunk and sacral network; hide the legacy generic three-strand plexus approximation."
+      }
+    },
+    {
+      "id": "gap-lumbosacral-trunk",
+      "label": "Lumbosacral trunk",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-route-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.07270852206800002,
+            0.7070733293599999,
+            -0.03377526184200001
+          ],
+          [
+            -0.075,
+            0.669,
+            -0.03
+          ],
+          [
+            -0.07371366767800001,
+            0.6236361062799999,
+            -0.06819722304
+          ]
+        ],
+        [
+          [
+            -0.07512314723600003,
+            0.6556684766599999,
+            -0.038754696414000006
+          ],
+          [
+            -0.075,
+            0.669,
+            -0.03
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "L4-psoas",
+          "ls-trunk-join",
+          "lumbosacral-crossing"
+        ],
+        [
+          "L5-psoas",
+          "ls-trunk-join"
+        ]
+      ],
+      "pathRoles": [
+        "L4 contribution",
+        "L5 contribution"
+      ],
+      "radius": 0.004,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          1975,
+          1803
+        ],
+        "figure": "71.10;61.15"
+      },
+      "description": "Part of L4 and all of L5 descend medial to psoas and across the anterior sacroiliac region to join the sacral plexus.",
+      "limitations": "Trunk caliber and root joining positions are approximate; no independent nerve scan exists.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "network": {
+        "roots": [
+          "part of L4",
+          "L5"
+        ],
+        "joins": "S1 and sacral plexus"
+      }
+    },
+    {
+      "id": "gap-sacral-plexus",
+      "label": "Sacral plexus",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-network-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.07371366767800001,
+            0.6236361062799999,
+            -0.06819722304
+          ],
+          [
+            -0.018,
+            0.49,
+            -0.117
+          ]
+        ],
+        [
+          [
+            -0.07563277574,
+            0.5950151428599998,
+            -0.074254260272
+          ],
+          [
+            -0.018,
+            0.49,
+            -0.117
+          ]
+        ],
+        [
+          [
+            -0.071673977666,
+            0.5719003941399999,
+            -0.10094310187399999
+          ],
+          [
+            -0.018,
+            0.49,
+            -0.117
+          ]
+        ],
+        [
+          [
+            -0.09461372769200002,
+            0.5137226540799998,
+            -0.13496761625599998
+          ],
+          [
+            -0.018,
+            0.49,
+            -0.117
+          ]
+        ],
+        [
+          [
+            -0.07371366767800001,
+            0.6236361062799999,
+            -0.06819722304
+          ],
+          [
+            0.008,
+            0.548,
+            -0.135
+          ]
+        ],
+        [
+          [
+            -0.07563277574,
+            0.5950151428599998,
+            -0.074254260272
+          ],
+          [
+            0.008,
+            0.548,
+            -0.135
+          ]
+        ],
+        [
+          [
+            -0.07512314723600003,
+            0.6556684766599999,
+            -0.038754696414000006
+          ],
+          [
+            -0.07371366767800001,
+            0.6236361062799999,
+            -0.06819722304
+          ],
+          [
+            0.016,
+            0.485,
+            -0.14
+          ]
+        ],
+        [
+          [
+            -0.07563277574,
+            0.5950151428599998,
+            -0.074254260272
+          ],
+          [
+            0.016,
+            0.485,
+            -0.14
+          ]
+        ],
+        [
+          [
+            -0.071673977666,
+            0.5719003941399999,
+            -0.10094310187399999
+          ],
+          [
+            0.016,
+            0.485,
+            -0.14
+          ]
+        ],
+        [
+          [
+            -0.07563277574,
+            0.5950151428599998,
+            -0.074254260272
+          ],
+          [
+            -0.012,
+            0.443,
+            -0.131
+          ]
+        ],
+        [
+          [
+            -0.071673977666,
+            0.5719003941399999,
+            -0.10094310187399999
+          ],
+          [
+            -0.012,
+            0.443,
+            -0.131
+          ]
+        ],
+        [
+          [
+            -0.09461372769200002,
+            0.5137226540799998,
+            -0.13496761625599998
+          ],
+          [
+            -0.012,
+            0.443,
+            -0.131
+          ]
+        ],
+        [
+          [
+            -0.071673977666,
+            0.5719003941399999,
+            -0.10094310187399999
+          ],
+          [
+            -0.056,
+            0.456,
+            -0.134
+          ]
+        ],
+        [
+          [
+            -0.09461372769200002,
+            0.5137226540799998,
+            -0.13496761625599998
+          ],
+          [
+            -0.056,
+            0.456,
+            -0.134
+          ]
+        ],
+        [
+          [
+            -0.117493306712,
+            0.4694231700399999,
+            -0.14731856671399998
+          ],
+          [
+            -0.056,
+            0.456,
+            -0.134
+          ]
+        ],
+        [
+          [
+            -0.117493306712,
+            0.4694231700399999,
+            -0.14731856671399998
+          ],
+          [
+            -0.095,
+            0.435,
+            -0.076
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "lumbosacral-crossing",
+          "sciatic-convergence"
+        ],
+        [
+          "S1",
+          "sciatic-convergence"
+        ],
+        [
+          "S2",
+          "sciatic-convergence"
+        ],
+        [
+          "S3",
+          "sciatic-convergence"
+        ],
+        [
+          "lumbosacral-crossing",
+          "sp-superior-gluteal"
+        ],
+        [
+          "S1",
+          "sp-superior-gluteal"
+        ],
+        [
+          "L5-psoas",
+          "lumbosacral-crossing",
+          "sp-inferior-gluteal"
+        ],
+        [
+          "S1",
+          "sp-inferior-gluteal"
+        ],
+        [
+          "S2",
+          "sp-inferior-gluteal"
+        ],
+        [
+          "S1",
+          "sp-posterior-femoral-cutaneous"
+        ],
+        [
+          "S2",
+          "sp-posterior-femoral-cutaneous"
+        ],
+        [
+          "S3",
+          "sp-posterior-femoral-cutaneous"
+        ],
+        [
+          "S2",
+          "sp-pudendal"
+        ],
+        [
+          "S3",
+          "sp-pudendal"
+        ],
+        [
+          "S4",
+          "sp-pudendal"
+        ],
+        [
+          "S4",
+          "sp-nerve-to-lev-ani"
+        ]
+      ],
+      "pathRoles": [
+        "Lumbosacral contribution",
+        "S1 contribution to sciatic",
+        "S2 contribution to sciatic",
+        "S3 contribution to sciatic",
+        "superior-gluteal contribution lumbosacral-crossing",
+        "superior-gluteal contribution S1",
+        "inferior-gluteal contribution L5-psoas",
+        "inferior-gluteal contribution S1",
+        "inferior-gluteal contribution S2",
+        "posterior-femoral-cutaneous contribution S1",
+        "posterior-femoral-cutaneous contribution S2",
+        "posterior-femoral-cutaneous contribution S3",
+        "pudendal contribution S2",
+        "pudendal contribution S3",
+        "pudendal contribution S4",
+        "nerve-to-lev-ani contribution S4"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          1975
+        ],
+        "figure": "71.10 and Table71.1"
+      },
+      "description": "Network of the lumbosacral trunk and S1–S4 ventral rami on the anterior surface of piriformis, with major sciatic, gluteal, posterior-femoral-cutaneous and pudendal pathways.",
+      "limitations": "This partial teaching network does not depict every small branch. Ventral and dorsal fibre divisions are not rendered as physically separated roots. It is not an opaque solid organ.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "network": {
+        "roots": [
+          "L4 contribution",
+          "L5",
+          "S1",
+          "S2",
+          "S3",
+          "part of S4"
+        ],
+        "shownBranches": [
+          "superior-gluteal",
+          "inferior-gluteal",
+          "posterior-femoral-cutaneous",
+          "pudendal",
+          "nerve-to-lev-ani"
+        ],
+        "notShown": [
+          "nerve to quadratus femoris",
+          "nerve to obturator internus",
+          "nerve to piriformis",
+          "perforating cutaneous nerve",
+          "coccygeal plexus"
+        ]
+      }
+    },
+    {
+      "id": "gap-fibular-communicating-branch",
+      "label": "Fibular communicating branch",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-route-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.06084977638721466,
+            -0.29486358165740967,
+            -0.08894119083881379
+          ],
+          [
+            0.029484348371624947,
+            -0.40133562684059143,
+            -0.12231932312250138
+          ],
+          [
+            0.003967881202697754,
+            -0.5565006732940674,
+            -0.1293613897562027
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "fibular-comm-origin",
+          "fibular-comm-mid",
+          "sural-union"
+        ]
+      ],
+      "pathRoles": [
+        "Sural communicating branch"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2188,
+          2227
+        ],
+        "figure": "77.50;78.41"
+      },
+      "description": "Common-fibular communicating contribution crosses lateral gastrocnemius to join the sural/medial-sural pathway.",
+      "limitations": "Union level and origin vary. This is a common teaching pattern; it must not be equated with the entire lateral sural cutaneous nerve.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "connectsTo": [
+        "common-fibular-nerve",
+        "sural-nerve"
+      ],
+      "connectionNote": "Existing procedural parent routes must meet the documented regional origin/union, rather than leaving a disconnected cable."
+    },
+    {
+      "id": "gap-lateral-calcaneal-branches",
+      "label": "Lateral calcaneal branches",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-branch-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.04226551413536072,
+            -0.8622055487632752,
+            -0.0990177983045578
+          ],
+          [
+            0.006987650990486145,
+            -0.9060793519020081,
+            -0.11061117535829544
+          ]
+        ],
+        [
+          [
+            0.04226551413536072,
+            -0.8622055487632752,
+            -0.0990177983045578
+          ],
+          [
+            0.006987650990486145,
+            -0.9090793519020081,
+            -0.09461117535829544
+          ]
+        ],
+        [
+          [
+            0.04226551413536072,
+            -0.8622055487632752,
+            -0.0990177983045578
+          ],
+          [
+            0.006987650990486145,
+            -0.9120793519020081,
+            -0.07861117535829544
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "sural-lateral-heel",
+          "lateral-heel-skin-0"
+        ],
+        [
+          "sural-lateral-heel",
+          "lateral-heel-skin-1"
+        ],
+        [
+          "sural-lateral-heel",
+          "lateral-heel-skin-2"
+        ]
+      ],
+      "pathRoles": [
+        "Lateral calcaneal cutaneous branch 1",
+        "Lateral calcaneal cutaneous branch 2",
+        "Lateral calcaneal cutaneous branch 3"
+      ],
+      "radius": 0.0024,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2188,
+          2227
+        ],
+        "figure": "77.50;78.41"
+      },
+      "description": "Cutaneous branches of the sural nerve to the lateral heel.",
+      "limitations": "Branch number and cutaneous arborization are illustrative. Not the medial calcaneal tibial branches and not the inferior calcaneal (Baxter) nerve.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "connectsTo": [
+        "sural-nerve"
+      ]
+    },
+    {
+      "id": "gap-superficial-branch-of-lateral-plantar-nerve",
+      "label": "Superficial branch of lateral plantar nerve",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-branch-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.05261368304491043,
+            -0.9338640666007996,
+            -0.0014911084435880184
+          ],
+          [
+            0.11530343443155289,
+            -0.9466289715766907,
+            0.07195481657981873
+          ]
+        ],
+        [
+          [
+            0.05261368304491043,
+            -0.9338640666007996,
+            -0.0014911084435880184
+          ],
+          [
+            0.09742405265569687,
+            -0.9469526844024658,
+            0.07331231981515884
+          ]
+        ],
+        [
+          [
+            0.05261368304491043,
+            -0.9338640666007996,
+            -0.0014911084435880184
+          ],
+          [
+            0.10319462418556213,
+            -0.9415710406303406,
+            0.10517700761556625
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "lateral-plantar-split",
+          "superficial-lp-5-lateral"
+        ],
+        [
+          "lateral-plantar-split",
+          "superficial-lp-5-medial"
+        ],
+        [
+          "lateral-plantar-split",
+          "superficial-lp-4-lateral"
+        ]
+      ],
+      "pathRoles": [
+        "Superficial branch to toe 5 lateral",
+        "Superficial branch to toe 5 medial",
+        "Superficial branch to toe 4 lateral"
+      ],
+      "radius": 0.0026,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2267,
+          2272
+        ],
+        "figure": "79.22;79.27"
+      },
+      "description": "Distal superficial lateral-plantar branch supplies lateral one-and-a-half toes and associated lateral intrinsic targets.",
+      "limitations": "Digital branch courses are illustrative; muscular twigs and communication with medial plantar nerve are described, not all drawn.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "connectsTo": [
+        "lateral-plantar-nerve"
+      ],
+      "parentConnectionAnchor": "lateral-plantar-split"
+    },
+    {
+      "id": "gap-deep-branch-of-lateral-plantar-nerve",
+      "label": "Deep branch of lateral plantar nerve",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-route-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.05261368304491043,
+            -0.9338640666007996,
+            -0.0014911084435880184
+          ],
+          [
+            0.05559467151761055,
+            -0.918639087677002,
+            0.030474972426891327
+          ],
+          [
+            0.05235094949603081,
+            -0.9069365501403809,
+            0.04775264717638493
+          ],
+          [
+            0.03637399896979332,
+            -0.8950885176658631,
+            0.05322805836796761
+          ],
+          [
+            0.014140576124191284,
+            -0.9016546249389649,
+            0.06626943543553353
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "lateral-plantar-split",
+          "deep-lp-arch-4",
+          "deep-lp-arch-3",
+          "deep-lp-arch-2",
+          "deep-lp-arch-1"
+        ]
+      ],
+      "pathRoles": [
+        "Deep transverse plantar branch"
+      ],
+      "radius": 0.0028,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2267,
+          2272
+        ],
+        "figure": "79.22; lateral plantar nerve text"
+      },
+      "description": "Deep branch turns medially with the lateral plantar artery, deep to the flexor tendons and adductor hallucis, toward central intrinsic muscles.",
+      "limitations": "A simplified deep course; it does not assert exact branching to every lumbrical/interosseous. The fourth intermetatarsal-space interossei are supplied by the superficial branch in this source.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "connectsTo": [
+        "lateral-plantar-nerve"
+      ],
+      "parentConnectionAnchor": "lateral-plantar-split"
+    },
+    {
+      "id": "gap-inferior-calcaneal-nerve",
+      "label": "Inferior calcaneal nerve",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-route-reconstruction",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.02445433847606182,
+            -0.9185443906784058,
+            -0.04837226867675781
+          ],
+          [
+            -0.0235151114910841,
+            -0.9158917746543884,
+            -0.058487650007009506
+          ],
+          [
+            0.0033895913511514664,
+            -0.9241771054267883,
+            -0.05004408210515976
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "lateral-plantar-prox",
+          "baxter-deep-abdh",
+          "baxter-lateral-end"
+        ]
+      ],
+      "pathRoles": [
+        "First lateral-plantar branch to abductor digiti minimi"
+      ],
+      "radius": 0.0022,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2272
+        ],
+        "figure": "Nerve entrapment syndromes: first lateral-plantar branch (Baxter)"
+      },
+      "description": "First branch of the lateral plantar nerve, passing deep to abductor hallucis toward abductor digiti minimi.",
+      "limitations": "Source text verifies identity and abductor-hallucis relation; no native detailed route figure or nerve scan was found. This short regional route cannot be used to localize an entrapment or surgical corridor.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "connectsTo": [
+        "lateral-plantar-nerve"
+      ],
+      "parentConnectionAnchor": "lateral-plantar-prox",
+      "aliases": [
+        "Baxter nerve",
+        "first branch of lateral plantar nerve"
+      ],
+      "neverAlias": [
+        "medial calcaneal branches",
+        "lateral calcaneal branches"
+      ]
+    },
+    {
+      "id": "gap-dorsal-digital-nerves",
+      "label": "Dorsal digital nerves",
+      "tissue": "nerve",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "nerve-territory-branches",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.005106394231319427,
+            -0.8777418975830078,
+            0.09603880959749223
+          ],
+          [
+            0.005724096205085516,
+            -0.9211063289642334,
+            0.1514184557199478
+          ]
+        ],
+        [
+          [
+            0.0424372543990612,
+            -0.8709197287559509,
+            0.07568446415662766
+          ],
+          [
+            0.06684226542711258,
+            -0.9178760552406311,
+            0.1533355050086975
+          ]
+        ],
+        [
+          [
+            0.04592440003156662,
+            -0.8808347826004028,
+            0.07144329565763474
+          ],
+          [
+            0.06740991026163101,
+            -0.9233853125572205,
+            0.13374991047382354
+          ]
+        ],
+        [
+          [
+            0.05792440003156662,
+            -0.8808347826004028,
+            0.07144329565763474
+          ],
+          [
+            0.08414752036333084,
+            -0.9234172606468201,
+            0.13301196026802062
+          ]
+        ],
+        [
+          [
+            0.05408397415280342,
+            -0.8897220735549927,
+            0.05398721116781235
+          ],
+          [
+            0.08253699541091919,
+            -0.9230515265464783,
+            0.11741452741622925
+          ]
+        ],
+        [
+          [
+            0.06608397415280343,
+            -0.8897220735549927,
+            0.05398721116781235
+          ],
+          [
+            0.10319462418556213,
+            -0.9235710406303406,
+            0.12317700761556626
+          ]
+        ],
+        [
+          [
+            0.06695667380094528,
+            -0.9007359986305237,
+            0.032611109867691994
+          ],
+          [
+            0.09742405265569687,
+            -0.9289526844024658,
+            0.09131231981515885
+          ]
+        ],
+        [
+          [
+            0.017106394231319426,
+            -0.8777418975830078,
+            0.09603880959749223
+          ],
+          [
+            0.036404822021722794,
+            -0.9195580983161926,
+            0.15004473257064818
+          ]
+        ],
+        [
+          [
+            0.030437254399061205,
+            -0.8709197287559509,
+            0.07568446415662766
+          ],
+          [
+            0.04558616504073143,
+            -0.9182477498054504,
+            0.1469064437150955
+          ]
+        ],
+        [
+          [
+            0.07895667380094529,
+            -0.9007359986305237,
+            0.032611109867691994
+          ],
+          [
+            0.11530343443155289,
+            -0.9286289715766907,
+            0.08995481657981873
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "dorsal-digit-1-medial-prox",
+          "dorsal-digit-1-medial-dist"
+        ],
+        [
+          "dorsal-digit-2-lateral-prox",
+          "dorsal-digit-2-lateral-dist"
+        ],
+        [
+          "dorsal-digit-3-medial-prox",
+          "dorsal-digit-3-medial-dist"
+        ],
+        [
+          "dorsal-digit-3-lateral-prox",
+          "dorsal-digit-3-lateral-dist"
+        ],
+        [
+          "dorsal-digit-4-medial-prox",
+          "dorsal-digit-4-medial-dist"
+        ],
+        [
+          "dorsal-digit-4-lateral-prox",
+          "dorsal-digit-4-lateral-dist"
+        ],
+        [
+          "dorsal-digit-5-medial-prox",
+          "dorsal-digit-5-medial-dist"
+        ],
+        [
+          "dorsal-digit-1-lateral-prox",
+          "dorsal-digit-1-lateral-dist"
+        ],
+        [
+          "dorsal-digit-2-medial-prox",
+          "dorsal-digit-2-medial-dist"
+        ],
+        [
+          "dorsal-digit-5-lateral-prox",
+          "dorsal-digit-5-lateral-dist"
+        ]
+      ],
+      "pathRoles": [
+        "medial-dorsal-cutaneous-nerve: toe 1 medial",
+        "medial-dorsal-cutaneous-nerve: toe 2 lateral",
+        "medial-dorsal-cutaneous-nerve: toe 3 medial",
+        "intermediate-dorsal-cutaneous-nerve: toe 3 lateral",
+        "intermediate-dorsal-cutaneous-nerve: toe 4 medial",
+        "intermediate-dorsal-cutaneous-nerve: toe 4 lateral",
+        "intermediate-dorsal-cutaneous-nerve: toe 5 medial",
+        "deep-fibular-nerve: toe 1 lateral",
+        "deep-fibular-nerve: toe 2 medial",
+        "sural-nerve: toe 5 lateral"
+      ],
+      "radius": 0.0019,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2228,
+          2250
+        ],
+        "figure": "Superficial fibular nerve and digital nerve text"
+      },
+      "description": "Dorsal digital branches from superficial fibular nerves supply most dorsum; deep fibular supplies the first web space; sural supplies the lateral fifth toe.",
+      "limitations": "Distal sample branches with preserved parent territories, not a continuous source-segmented network. Variation is common. Nail beds and distal dorsal tips receive plantar digital contributions, not shown here.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "recommendedRendering": "group selectable distal branches; show source parent in part labels; do not merge all origins"
+    },
+    {
+      "id": "gap-femoral-triangle",
+      "label": "Femoral triangle",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-boundary-frame",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            0.08027869462966919,
+            0.6122841238975525,
+            0.04471319913864136
+          ],
+          [
+            -0.11270183324813843,
+            0.47288352251052856,
+            0.04575696587562561
+          ]
+        ],
+        [
+          [
+            0.08027869462966919,
+            0.6122841238975525,
+            0.04471319913864136
+          ],
+          [
+            -0.030790400981903093,
+            0.33421978712081907,
+            0.04929770851135254
+          ]
+        ],
+        [
+          [
+            -0.11270183324813843,
+            0.47288352251052856,
+            0.04575696587562561
+          ],
+          [
+            -0.030790400981903093,
+            0.33421978712081907,
+            0.04929770851135254
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "asis",
+          "pubic-tubercle"
+        ],
+        [
+          "asis",
+          "femoral-apex"
+        ],
+        [
+          "pubic-tubercle",
+          "femoral-apex"
+        ]
+      ],
+      "pathRoles": [
+        "Inguinal base",
+        "Sartorius medial border",
+        "Adductor longus medial border"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2171
+        ],
+        "figure": "77.44"
+      },
+      "description": "Inverted triangle bounded by inguinal ligament, sartorius and adductor longus; floor iliopsoas/pectineus, roof fascia lata.",
+      "limitations": "Only the boundary is drawn. The apex is a soft-tissue reconstruction and the frame is not the femoral sheath.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "boundaryNames": [
+        "inguinal ligament",
+        "medial border sartorius",
+        "medial border adductor longus"
+      ],
+      "renderOpacity": 0.55
+    },
+    {
+      "id": "gap-adductor-hiatus",
+      "label": "Adductor hiatus",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-boundary-frame",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.05024990066885948,
+            -0.10042572617530823,
+            -0.041339412331581116
+          ],
+          [
+            -0.05993372201919556,
+            -0.1293688416481018,
+            -0.039135903120040894
+          ],
+          [
+            -0.05024990066885948,
+            -0.14342572617530822,
+            -0.041339412331581116
+          ],
+          [
+            -0.04056607931852341,
+            -0.12148261070251465,
+            -0.04354292154312134
+          ],
+          [
+            -0.05024990066885948,
+            -0.10042572617530823,
+            -0.041339412331581116
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "adductor-hiatus-superior",
+          "adductor-hiatus-medial",
+          "adductor-hiatus-inferior",
+          "adductor-hiatus-lateral",
+          "adductor-hiatus-superior"
+        ]
+      ],
+      "pathRoles": [
+        "Hiatus margin"
+      ],
+      "radius": 0.0025,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2174,
+          2177,
+          2178
+        ],
+        "figure": "77.45;77.47; adductor canal text"
+      },
+      "description": "Distal opening beside the femur in the adductor-magnus aponeurotic attachment allows femoral vessels to enter the popliteal fossa.",
+      "limitations": "Reduced mesh does not segment the tendinous hole. A regional open frame is shown, not a measured lumen; this is not the entire obturator foramen.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "renderOpacity": 0.5
+    },
+    {
+      "id": "gap-adductor-canal",
+      "label": "Adductor canal",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-cross-section-frames",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.041957970963120476,
+            0.30814105632305144,
+            0.04885948126077652
+          ],
+          [
+            -0.017957970963120476,
+            0.30814105632305144,
+            0.04385948126077652
+          ],
+          [
+            -0.03595797096312048,
+            0.30814105632305144,
+            0.026859481260776516
+          ],
+          [
+            -0.041957970963120476,
+            0.30814105632305144,
+            0.04885948126077652
+          ]
+        ],
+        [
+          [
+            -0.050520150825381284,
+            0.11689703047275543,
+            0.012479148089885716
+          ],
+          [
+            -0.026520150825381283,
+            0.11689703047275543,
+            0.007479148089885716
+          ],
+          [
+            -0.044520150825381286,
+            0.11689703047275543,
+            -0.009520851910114285
+          ],
+          [
+            -0.050520150825381284,
+            0.11689703047275543,
+            0.012479148089885716
+          ]
+        ],
+        [
+          [
+            -0.0590823306876421,
+            -0.07434699537754058,
+            -0.023901185081005086
+          ],
+          [
+            -0.0350823306876421,
+            -0.07434699537754058,
+            -0.028901185081005087
+          ],
+          [
+            -0.05308233068764209,
+            -0.07434699537754058,
+            -0.04590118508100509
+          ],
+          [
+            -0.0590823306876421,
+            -0.07434699537754058,
+            -0.023901185081005086
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "canal-0-0",
+          "canal-0-1",
+          "canal-0-2",
+          "canal-0-0"
+        ],
+        [
+          "canal-1-0",
+          "canal-1-1",
+          "canal-1-2",
+          "canal-1-0"
+        ],
+        [
+          "canal-2-0",
+          "canal-2-1",
+          "canal-2-2",
+          "canal-2-0"
+        ]
+      ],
+      "pathRoles": [
+        "Triangular cross-section 1",
+        "Triangular cross-section 2",
+        "Triangular cross-section 3"
+      ],
+      "radius": 0.002,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2178
+        ],
+        "figure": "77.43B reference; Adductor canal text"
+      },
+      "description": "Intermuscular canal from femoral triangle apex toward distal adductor magnus, bounded by vastus medialis, adductors and subsartorial fascia.",
+      "limitations": "Three open triangular section frames are instructional, not segmented lumen walls or a traversable catheter path. Saphenous nerve leaves before the adductor hiatus.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "recommendedRendering": "open separated wire sections, no filled tube",
+      "renderOpacity": 0.45
+    },
+    {
+      "id": "gap-popliteal-fossa",
+      "label": "Popliteal fossa",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-boundary-frame",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.04833632707595825,
+            -0.14351767301559448,
+            -0.110065956056118
+          ],
+          [
+            0.05214821919798851,
+            -0.23351529240608215,
+            -0.09879412370920182
+          ],
+          [
+            -0.02807481773197651,
+            -0.340932697057724,
+            -0.12034123331308365
+          ],
+          [
+            -0.07674992829561234,
+            -0.21576941013336182,
+            -0.090626111805439
+          ],
+          [
+            -0.04833632707595825,
+            -0.14351767301559448,
+            -0.110065956056118
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "popliteal-upper",
+          "popliteal-lateral",
+          "popliteal-lower",
+          "popliteal-medial",
+          "popliteal-upper"
+        ]
+      ],
+      "pathRoles": [
+        "Diamond-shaped posterior-knee region"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2193
+        ],
+        "figure": "78.2–78.3; Popliteal fossa text"
+      },
+      "description": "Posterior knee region bounded superiorly by hamstrings and inferiorly by the gastrocnemius heads.",
+      "limitations": "Posterior surface frame only. Depth, fat, floor and roof are not volumetrically segmented; vessel positions should come from their own meshes.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "renderOpacity": 0.5
+    },
+    {
+      "id": "gap-tarsal-tunnel",
+      "label": "Tarsal tunnel",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-boundary-frame",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.062485143542289734,
+            -0.8160501718521118,
+            -0.05235692858695984
+          ],
+          [
+            -0.06430124919116498,
+            -0.8666189014911652,
+            -0.06968208774924278
+          ],
+          [
+            -0.05011735484004021,
+            -0.9171876311302185,
+            -0.08700724691152573
+          ],
+          [
+            -0.04641902819275856,
+            -0.8735857605934143,
+            -0.07012449949979782
+          ],
+          [
+            -0.062485143542289734,
+            -0.8160501718521118,
+            -0.05235692858695984
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "medial-malleolus",
+          "tunnel-roof",
+          "medial-calcaneus",
+          "tunnel-floor",
+          "medial-malleolus"
+        ]
+      ],
+      "pathRoles": [
+        "Roof and floor cross-sectional loop"
+      ],
+      "radius": 0.0028,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2252,
+          2266,
+          2267,
+          2272
+        ],
+        "figure": "79.15;79.22; entrapment text"
+      },
+      "description": "Posteromedial ankle passage deep to the flexor retinaculum carrying the tibial neurovascular bundle and flexor tendons.",
+      "limitations": "Open regional cross-section, not an exact lumen or compressed-nerve model. No other medial-heel nerve is substituted for the tibial bundle.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "renderOpacity": 0.5
+    },
+    {
+      "id": "gap-greater-sciatic-foramen",
+      "label": "Greater sciatic foramen",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-boundary-frame",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.038710497319698334,
+            0.5770279765129089,
+            -0.1234489157795906
+          ],
+          [
+            -0.015283778309822083,
+            0.5257676243782043,
+            -0.10141387581825256
+          ],
+          [
+            -0.035811156034469604,
+            0.45734304189682007,
+            -0.1213613897562027
+          ],
+          [
+            -0.11267720012400001,
+            0.4693453207599999,
+            -0.158350270736
+          ],
+          [
+            -0.07390371747600002,
+            0.5782029421,
+            -0.15210675848
+          ],
+          [
+            -0.038710497319698334,
+            0.5770279765129089,
+            -0.1234489157795906
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "sciatic-notch-superior",
+          "sciatic-notch-anterior",
+          "ischial-spine",
+          "sacral-ligament-lower",
+          "sacral-ligament-upper",
+          "sciatic-notch-superior"
+        ]
+      ],
+      "pathRoles": [
+        "Notch and ligament boundaries"
+      ],
+      "radius": 0.003,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2099,
+          2139,
+          2140,
+          1975
+        ],
+        "figure": "76.1;71.10; hip bone text"
+      },
+      "description": "Opening formed by the greater sciatic notch and sacrospinous/sacrotuberous boundaries. Piriformis passes through it and separates supra- and infrapiriform routes.",
+      "limitations": "Frame follows regional bone/ligament references; it does not segment the exact foramen edge. Sacral portions are external reference meshes rather than existing hip-bone vertices.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "renderOpacity": 0.45,
+      "boundaryNames": [
+        "greater sciatic notch",
+        "sacrospinous ligament",
+        "sacrotuberous ligament"
+      ]
+    },
+    {
+      "id": "gap-lesser-sciatic-foramen",
+      "label": "Lesser sciatic foramen",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-boundary-frame",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.035811156034469604,
+            0.45734304189682007,
+            -0.1213613897562027
+          ],
+          [
+            -0.03755076229572296,
+            0.4350760579109192,
+            -0.12704411149024963
+          ],
+          [
+            -0.06190527230501175,
+            0.3896142840385437,
+            -0.10152985155582428
+          ],
+          [
+            -0.11267720012400001,
+            0.4693453207599999,
+            -0.158350270736
+          ],
+          [
+            -0.035811156034469604,
+            0.45734304189682007,
+            -0.1213613897562027
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "ischial-spine",
+          "lesser-notch",
+          "ischial-tuberosity",
+          "sacral-ligament-lower",
+          "ischial-spine"
+        ]
+      ],
+      "pathRoles": [
+        "Lesser notch and ligament boundaries"
+      ],
+      "radius": 0.0028,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2099,
+          2139,
+          2140
+        ],
+        "figure": "76.1; hip bone text"
+      },
+      "description": "Lesser sciatic notch closed by sacrospinous and sacrotuberous ligament boundaries; obturator internus tendon turns through the opening.",
+      "limitations": "Regional wire outline, not an exact lumen. The boundary using the sacral ligament anchor is a schematic closure, not a new bony notch.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "renderOpacity": 0.45
+    },
+    {
+      "id": "gap-obturator-canal",
+      "label": "Obturator canal",
+      "tissue": "region",
+      "modelKey": "lower-limb",
+      "side": "left",
+      "kind": "open-boundary-frame",
+      "schematic": true,
+      "sourceFidelity": "anatomically-guided-reconstruction",
+      "paths": [
+        [
+          [
+            -0.07570836079120635,
+            0.47961002588272095,
+            0.017314929842948912
+          ],
+          [
+            -0.07805150654171397,
+            0.4838526665698402,
+            0.017314929842948912
+          ],
+          [
+            -0.08370836079120636,
+            0.48561002588272095,
+            0.017314929842948912
+          ],
+          [
+            -0.08936521504069873,
+            0.4838526665698402,
+            0.017314929842948912
+          ],
+          [
+            -0.09170836079120637,
+            0.47961002588272095,
+            0.017314929842948912
+          ],
+          [
+            -0.08936521504069875,
+            0.4753673851956017,
+            0.017314929842948912
+          ],
+          [
+            -0.08370836079120636,
+            0.47361002588272094,
+            0.017314929842948912
+          ],
+          [
+            -0.07805150654171399,
+            0.4753673851956017,
+            0.017314929842948912
+          ],
+          [
+            -0.07570836079120635,
+            0.47961002588272095,
+            0.017314929842948912
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "obturator-frame-0",
+          "obturator-frame-1",
+          "obturator-frame-2",
+          "obturator-frame-3",
+          "obturator-frame-4",
+          "obturator-frame-5",
+          "obturator-frame-6",
+          "obturator-frame-7",
+          "obturator-frame-8"
+        ]
+      ],
+      "pathRoles": [
+        "Superior obturator groove/membrane passage"
+      ],
+      "radius": 0.002,
+      "source": {
+        "title": "Gray Anatomy 42nd edition",
+        "pdfPages": [
+          2099,
+          2133,
+          2134,
+          2155
+        ],
+        "figure": "76.1;77.25; pubis text"
+      },
+      "description": "Small passage at the superior obturator foramen between the pubic groove and obturator membrane, transmitting obturator nerve and vessels.",
+      "limitations": "The membrane is not segmented. Small open regional ring; exact shape and lumen diameter are not measured.",
+      "notScanned": true,
+      "referenceOnly": false,
+      "qaStatus": "requires-independent-review",
+      "renderOpacity": 0.5
+    }
+  ],
+  "parentRouteCorrections": [
+    {
+      "id": "lateral-plantar-nerve",
+      "reason": "The new superficial/deep branch origin is at the fifth-metatarsal base; the existing bounds-only nerve terminates too far toward the forefoot to connect exactly.",
+      "paths": [
+        [
+          [
+            -0.0657855140864849,
+            -0.866970956325531,
+            -0.07050386685132981
+          ],
+          [
+            -0.02445433847606182,
+            -0.9185443906784058,
+            -0.04837226867675781
+          ],
+          [
+            0.05261368304491043,
+            -0.9338640666007996,
+            -0.0014911084435880184
+          ]
+        ]
+      ],
+      "pathAnchorIds": [
+        [
+          "tibial-tunnel",
+          "lateral-plantar-prox",
+          "lateral-plantar-split"
+        ]
+      ],
+      "source": {
+        "pdfPages": [
+          2272
+        ],
+        "figure": "79.22;79.27"
+      },
+      "sourceFidelity": "anatomically-guided-reconstruction"
+    }
+  ],
+  "sourceGeometrySha256": "c0c7b70bebdb38ffbe65b294bc854f94b0fb4c67bc5e4df648d560a76c379b7c",
+  "integrationRules": [
+    "Do not describe reconstructed geometry as a scan.",
+    "Render plexuses as selectable branch networks, never opaque solids.",
+    "Render regions as open frames, never solid organs.",
+    "Keep existing whole adductor magnus when adding its fascicle overlay.",
+    "Baxter nerve is not either calcaneal cutaneous branch family.",
+    "An independent reviewer must validate regional placement and rendered geometry before enabling these targets."
+  ]
+}

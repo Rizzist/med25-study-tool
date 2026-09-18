@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
   "examId": "term2-biochemistry",
-  "title": "Biochemistry II: source-verified concepts for Lippincott Chapters 8-12 and 15",
-  "updatedAt": "2026-09-07",
-  "scopeNote": "Independent local-source curriculum audit of Lippincott's Illustrated Reviews: Biochemistry, 6th edition, Chapters 8-12 and 15, all locally available Term 2 carbohydrate and dietary-lipid notes/transcripts, and the immutable 158-question verified baseline. Course concepts require direct local teaching evidence; book-extension concepts are explicitly labeled. New questions are study practice, not past, final, or official assessment items.",
+  "title": "Biochemistry II: metabolism theory and local practical concepts",
+  "updatedAt": "2026-09-13",
+  "scopeNote": "Independent local-source curriculum audit of Lippincott's Illustrated Reviews: Biochemistry, 6th edition, Chapters 8-12 and 15, all locally available Term 2 carbohydrate and dietary-lipid notes/transcripts, and the immutable 158-question verified baseline. Course concepts require direct local teaching evidence; book-extension concepts are explicitly labeled. New questions are study practice, not past, final, or official assessment items. Practical coverage additionally reconciles all six local laboratory stations with the saved Biochemistry Practical Review, including both qualitative-test lecturer versions. Numerical scenarios are authored practice; the past-exam bank is unchanged.",
   "modules": [
     {
       "id": "biochem2-ch08-course",
@@ -95,6 +95,48 @@
       "title": "Carbohydrate control and dietary-lipid handling: mechanism challenges",
       "description": "Core mechanisms and demanding applications from reconciled Lippincott chapters.",
       "order": 505
+    },
+    {
+      "id": "biochem2-practical-lab",
+      "subject": "biochemistry",
+      "title": "Practical · Safety & laboratory equipment",
+      "description": "Choose equipment by what it measures or controls, then identify technique errors before they become analytical errors. The review clarifies precision, centrifuge balancing and safe chemical handling.",
+      "order": 100
+    },
+    {
+      "id": "biochem2-practical-titration",
+      "subject": "biochemistry",
+      "title": "Practical · Titration & equivalent calculations",
+      "description": "Calculate the delivered titre before applying equivalent balance. Distinguish the indicator endpoint from the chemical equivalence point, and predict the direction of common burette and dilution errors.",
+      "order": 101
+    },
+    {
+      "id": "biochem2-practical-photometry",
+      "subject": "biochemistry",
+      "title": "Practical · Spectrophotometry & serum protein",
+      "description": "Move from light transmission to a defensible concentration result: choose the wavelength, blank correctly, construct standards, check linearity and apply the appropriate calibration or Biuret ratio.",
+      "order": 102
+    },
+    {
+      "id": "biochem2-practical-proteins",
+      "subject": "biochemistry",
+      "title": "Practical · Amino-acid & protein identification tests",
+      "description": "Interpret a pattern of reactions rather than treating any single colour as a complete protein identification. Keep chemical targets, positive appearances, controls and the two lecturer protocols distinct.",
+      "order": 103
+    },
+    {
+      "id": "biochem2-practical-enzymes",
+      "subject": "biochemistry",
+      "title": "Practical · Enzyme experiments & controls",
+      "description": "Read the actual rennin and urease tube plans, identify the variable being changed, and separate expected direction of reaction from measured results. Do not infer a detailed inhibition mechanism from one colour observation.",
+      "order": 104
+    },
+    {
+      "id": "biochem2-practical-flame",
+      "subject": "biochemistry",
+      "title": "Practical · Flame photometry & electrolytes",
+      "description": "Understand flame emission and calibration without mistaking visible flame colour for a complete quantitative analysis. The local deck does not supply a full numerical standard-preparation SOP, so the calculation cases state their own teaching data.",
+      "order": 105
     }
   ],
   "concepts": [
@@ -3303,6 +3345,1165 @@
           ]
         }
       ]
+    },
+    {
+      "id": "biochem2-practical-lab-concept",
+      "moduleId": "biochem2-practical-lab",
+      "subject": "biochemistry",
+      "title": "Safety & laboratory equipment",
+      "summary": "Choose equipment by what it measures or controls, then identify technique errors before they become analytical errors. The review clarifies precision, centrifuge balancing and safe chemical handling.",
+      "keyPoints": [
+        "A volumetric flask contains one calibrated final volume; a volumetric pipette delivers a fixed calibrated aliquot. A beaker is not precision volumetric glassware.",
+        "Read the bottom of a clear aqueous meniscus at eye level; dispense with a pipette aid and obey the delivery markings.",
+        "Balance centrifuge tubes by mass in opposite positions; a water bath controls temperature and a fume hood removes hazardous vapours.",
+        "Use the local chemical SOP: no mouth pipetting, no ignition source near acetone, and use the eyewash immediately for an eye splash."
+      ],
+      "examTraps": [
+        "A flask marked to contain and a pipette marked to deliver are not interchangeable.",
+        "Equipment names alone do not establish safe handling or measurement precision."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "You need to prepare exactly 100.0 mL of a stock solution and then transfer a precise 10.00 mL aliquot. Which equipment pair best matches these two operations?",
+          "answer": "The flask defines the final volume to contain, and the pipette delivers the fixed aliquot. Dissolve first, then make up to the flask mark."
+        },
+        {
+          "prompt": "A student dissolves solute in 100 mL of water to make a “100 mL standard.” What is the most important correction?",
+          "answer": "Stock concentration uses final solution volume, which need not equal the volume of solvent added."
+        },
+        {
+          "prompt": "A clear aqueous solution has a concave meniscus. Which reading technique minimises parallax?",
+          "answer": "The meniscus bottom is the usual reading point for a clear aqueous solution; eye-level viewing avoids parallax."
+        },
+        {
+          "prompt": "In the pictured comparison, a student uses the upper pipette to deliver a volume between two graduation marks, then expels the remaining liquid below the last mark into the receiver. What is the likely error?",
+          "answer": "The upper Mohr pipette has graduations ending before the tip. Deliver the selected calibrated interval; do not add the residual tip liquid to that measured volume."
+        },
+        {
+          "prompt": "Two centrifuge tubes contain equal volumes of liquids with different densities. What must be checked before spinning?",
+          "answer": "Equal volume does not guarantee equal mass. Balance complete tube assemblies by mass and place them symmetrically."
+        },
+        {
+          "prompt": "You must handle a reagent producing irritating vapour and separately incubate enzyme tubes at 37°C. Which equipment pairing is appropriate?",
+          "answer": "These solve different problems: local extraction limits inhalation exposure, while a water bath maintains the experimental temperature."
+        },
+        {
+          "prompt": "A pipette filler is missing while a student needs to transfer a biological sample. What is the appropriate response?",
+          "answer": "Never mouth-pipette biological or chemical material. Use compatible delivery equipment and the prescribed safety procedure."
+        },
+        {
+          "prompt": "A reagent splashes into a student’s eye. Which action takes priority?",
+          "answer": "Prompt irrigation is the priority. Alert the supervisor and follow the chemical-specific emergency protocol rather than delaying to complete the experiment."
+        },
+        {
+          "prompt": "A suspension contains insoluble particles and dissolved sodium chloride. What should ordinary filter paper be expected to remove?",
+          "answer": "Filtration separates particles according to the filter, not dissolved small ions; the salt remains in the filtrate."
+        },
+        {
+          "prompt": "An empty weighing vessel is 12.364 g. Vessel plus solute is 12.614 g. Which mass belongs in the stock-solution calculation?",
+          "answer": "Subtract the container mass: 12.614 − 12.364 = 0.250 g of solute. Taring performs this subtraction electronically."
+        },
+        {
+          "prompt": "A prescribed protocol requires dilution of concentrated acid. Which technique best controls the heat released?",
+          "answer": "Acid dilution can release substantial heat. Slow acid addition to the larger water volume helps dissipate it; follow the supervised chemical SOP."
+        },
+        {
+          "prompt": "The ninhydrin reagent contains acetone and the protocol calls for a boiling-water bath. Which proposed change is unsafe?",
+          "answer": "Acetone is flammable. The prescribed controlled bath does not authorise direct flame heating; follow the laboratory solvent-heating precautions."
+        }
+      ],
+      "sources": [
+        {
+          "title": "01 - Laboratory safety and equipment.pdf",
+          "locator": "PDF pp. 3–44",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Safety & laboratory equipment",
+          "basis": "notes"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "biochem2-practical-lab-stock-flask-v1-objective",
+          "text": "Safety & laboratory equipment: You need to prepare exactly 100.0 mL of a stock solution and then transfer a precise 10.00 mL aliquot. Which equipment pair best matches these two operations?",
+          "questionIds": [
+            "biochem2-practical-lab-stock-flask-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-final-volume-v1-objective",
+          "text": "Safety & laboratory equipment: A student dissolves solute in 100 mL of water to make a “100 mL standard.” What is the most important correction?",
+          "questionIds": [
+            "biochem2-practical-lab-final-volume-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-meniscus-v1-objective",
+          "text": "Safety & laboratory equipment: A clear aqueous solution has a concave meniscus. Which reading technique minimises parallax?",
+          "questionIds": [
+            "biochem2-practical-lab-meniscus-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-mohr-delivery-v1-objective",
+          "text": "Safety & laboratory equipment: In the pictured comparison, a student uses the upper pipette to deliver a volume between two graduation marks, then expels the remaining liquid below the last mark into the receiver. What is the likely error?",
+          "questionIds": [
+            "biochem2-practical-lab-mohr-delivery-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-centrifuge-balance-v1-objective",
+          "text": "Safety & laboratory equipment: Two centrifuge tubes contain equal volumes of liquids with different densities. What must be checked before spinning?",
+          "questionIds": [
+            "biochem2-practical-lab-centrifuge-balance-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-fumehood-v1-objective",
+          "text": "Safety & laboratory equipment: You must handle a reagent producing irritating vapour and separately incubate enzyme tubes at 37°C. Which equipment pairing is appropriate?",
+          "questionIds": [
+            "biochem2-practical-lab-fumehood-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-pipette-aid-v1-objective",
+          "text": "Safety & laboratory equipment: A pipette filler is missing while a student needs to transfer a biological sample. What is the appropriate response?",
+          "questionIds": [
+            "biochem2-practical-lab-pipette-aid-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-eye-splash-v1-objective",
+          "text": "Safety & laboratory equipment: A reagent splashes into a student’s eye. Which action takes priority?",
+          "questionIds": [
+            "biochem2-practical-lab-eye-splash-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-filter-versus-salt-v1-objective",
+          "text": "Safety & laboratory equipment: A suspension contains insoluble particles and dissolved sodium chloride. What should ordinary filter paper be expected to remove?",
+          "questionIds": [
+            "biochem2-practical-lab-filter-versus-salt-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-balance-tare-v1-objective",
+          "text": "Safety & laboratory equipment: An empty weighing vessel is 12.364 g. Vessel plus solute is 12.614 g. Which mass belongs in the stock-solution calculation?",
+          "questionIds": [
+            "biochem2-practical-lab-balance-tare-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-acid-dilution-v1-objective",
+          "text": "Safety & laboratory equipment: A prescribed protocol requires dilution of concentrated acid. Which technique best controls the heat released?",
+          "questionIds": [
+            "biochem2-practical-lab-acid-dilution-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-lab-acetone-bath-v1-objective",
+          "text": "Safety & laboratory equipment: The ninhydrin reagent contains acetone and the protocol calls for a boiling-water bath. Which proposed change is unsafe?",
+          "questionIds": [
+            "biochem2-practical-lab-acetone-bath-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochem2-practical-titration-concept",
+      "moduleId": "biochem2-practical-titration",
+      "subject": "biochemistry",
+      "title": "Titration & equivalent calculations",
+      "summary": "Calculate the delivered titre before applying equivalent balance. Distinguish the indicator endpoint from the chemical equivalence point, and predict the direction of common burette and dilution errors.",
+      "keyPoints": [
+        "Delivered titre = final burette reading minus initial reading; a nonzero initial reading is not an error if subtracted correctly.",
+        "At equivalence, acid normality × acid volume = base normality × base volume. Normality counts reactive equivalents per litre.",
+        "The local titrant is 0.1 N NaOH; the endpoint is a faint pink persisting at least 30 seconds after mixing with phenolphthalein.",
+        "Add titrant slowly near the endpoint and swirl. Diluting a measured acid aliquot with water does not change its amount of acid."
+      ],
+      "examTraps": [
+        "Endpoint overshoot, an initially air-filled burette tip, and using the final reading alone can overestimate acid normality.",
+        "Equivalence does not always mean pH 7, and normality does not always equal molarity."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "A 10.00 mL acid aliquot is titrated with 0.100 N NaOH. The burette changes from 0.60 to 12.80 mL. What is the acid normality?",
+          "answer": "Delivered volume = 12.80 − 0.60 = 12.20 mL. Nacid = 0.100 × 12.20 / 10.00 = 0.122 N."
+        },
+        {
+          "prompt": "An acid is 0.122 N for a reaction that fully neutralises two acidic protons per molecule. What is its molarity?",
+          "answer": "For this specified reaction, N = 2M. Therefore M = 0.122/2 = 0.061 mol/L. The equivalence factor depends on the reaction."
+        },
+        {
+          "prompt": "A pink streak appears exactly where a NaOH drop lands but disappears after swirling. What should the student do?",
+          "answer": "A local excess of base can briefly colour the indicator. The course endpoint requires faint pink throughout the mixed solution persisting at least 30 seconds."
+        },
+        {
+          "prompt": "The solution is titrated past faint pink to a strong persistent pink, and the entire recorded titre is used in NacidVacid = NbaseVbase. What is the likely bias?",
+          "answer": "Excess titrant increases Vbase beyond what the acid actually required, so the calculated acid normality is too high."
+        },
+        {
+          "prompt": "After transferring an accurately measured 10.00 mL acid aliquot into the conical flask, you add 20 mL distilled water. What changes in the theoretical NaOH requirement?",
+          "answer": "Water lowers concentration in the flask but does not alter acid amount. Use the original aliquot volume to report the original acid concentration."
+        },
+        {
+          "prompt": "Residual water in an unrinsed burette dilutes the 0.100 N NaOH placed into it. The student nevertheless calculates using 0.100 N. What is the likely effect on the reported acid normality?",
+          "answer": "Actual titrant normality is below nominal. A larger volume reaches the endpoint, but the calculation incorrectly assigns 0.100 equivalents/L to it."
+        },
+        {
+          "prompt": "An air bubble initially fills the burette tip. During titration, part of the recorded volume fills that tip instead of entering the flask. If uncorrected, what happens?",
+          "answer": "The burette reading includes liquid used to fill the tip. That liquid did not neutralise acid in the flask but is counted in the calculation."
+        },
+        {
+          "prompt": "Which statement correctly distinguishes equivalence from the phenolphthalein endpoint?",
+          "answer": "The endpoint estimates equivalence. The pH at equivalence depends on the acid/base system and need not be 7."
+        },
+        {
+          "prompt": "A student pours “about 10 mL” of acid into the flask without measuring it, then obtains a precise titre. What limits the calculated acid concentration?",
+          "answer": "Both volumes enter the equation. A precise burette reading cannot repair an unmeasured denominator."
+        },
+        {
+          "prompt": "A burette reads 3.25 mL initially and 18.65 mL at the endpoint. With 20.00 mL acid and 0.100 N NaOH, what is Nacid?",
+          "answer": "Titre = 18.65 − 3.25 = 15.40 mL; Nacid = 0.100 × 15.40/20.00 = 0.0770 N."
+        },
+        {
+          "prompt": "Two carefully measured aliquots give titres of 12.18 and 12.22 mL. A third, visibly overshot, gives 14.80 mL. Which reporting approach is defensible?",
+          "answer": "A known procedural failure should be documented and repeated according to the lab acceptance criteria. Retain the raw record; do not conceal or average away a known error."
+        },
+        {
+          "prompt": "For neutralisation by NaOH, how many millimoles of OH− are delivered by 12.20 mL of 0.100 N titrant?",
+          "answer": "NaOH supplies one equivalent per mole. 0.100 mol/L × 0.01220 L = 0.001220 mol = 1.220 mmol."
+        }
+      ],
+      "sources": [
+        {
+          "title": "02 - Titration practical and calculations.pdf",
+          "locator": "PDF pp. 3–9",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Titration & equivalent calculations",
+          "basis": "notes"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "biochem2-practical-titration-nonzero-burette-v1-objective",
+          "text": "Titration & equivalent calculations: A 10.00 mL acid aliquot is titrated with 0.100 N NaOH. The burette changes from 0.60 to 12.80 mL. What is the acid normality?",
+          "questionIds": [
+            "biochem2-practical-titration-nonzero-burette-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-diprotic-normality-v1-objective",
+          "text": "Titration & equivalent calculations: An acid is 0.122 N for a reaction that fully neutralises two acidic protons per molecule. What is its molarity?",
+          "questionIds": [
+            "biochem2-practical-titration-diprotic-normality-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-endpoint-observation-v1-objective",
+          "text": "Titration & equivalent calculations: A pink streak appears exactly where a NaOH drop lands but disappears after swirling. What should the student do?",
+          "questionIds": [
+            "biochem2-practical-titration-endpoint-observation-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-overshoot-direction-v1-objective",
+          "text": "Titration & equivalent calculations: The solution is titrated past faint pink to a strong persistent pink, and the entire recorded titre is used in NacidVacid = NbaseVbase. What is the likely bias?",
+          "questionIds": [
+            "biochem2-practical-titration-overshoot-direction-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-flask-dilution-v1-objective",
+          "text": "Titration & equivalent calculations: After transferring an accurately measured 10.00 mL acid aliquot into the conical flask, you add 20 mL distilled water. What changes in the theoretical NaOH requirement?",
+          "questionIds": [
+            "biochem2-practical-titration-flask-dilution-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-wet-burette-v1-objective",
+          "text": "Titration & equivalent calculations: Residual water in an unrinsed burette dilutes the 0.100 N NaOH placed into it. The student nevertheless calculates using 0.100 N. What is the likely effect on the reported acid normality?",
+          "questionIds": [
+            "biochem2-practical-titration-wet-burette-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-tip-air-v1-objective",
+          "text": "Titration & equivalent calculations: An air bubble initially fills the burette tip. During titration, part of the recorded volume fills that tip instead of entering the flask. If uncorrected, what happens?",
+          "questionIds": [
+            "biochem2-practical-titration-tip-air-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-equivalence-ph-v1-objective",
+          "text": "Titration & equivalent calculations: Which statement correctly distinguishes equivalence from the phenolphthalein endpoint?",
+          "questionIds": [
+            "biochem2-practical-titration-equivalence-ph-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-unknown-aliquot-v1-objective",
+          "text": "Titration & equivalent calculations: A student pours “about 10 mL” of acid into the flask without measuring it, then obtains a precise titre. What limits the calculated acid concentration?",
+          "questionIds": [
+            "biochem2-practical-titration-unknown-aliquot-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-titre-difference-v1-objective",
+          "text": "Titration & equivalent calculations: A burette reads 3.25 mL initially and 18.65 mL at the endpoint. With 20.00 mL acid and 0.100 N NaOH, what is Nacid?",
+          "questionIds": [
+            "biochem2-practical-titration-titre-difference-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-duplicate-titres-v1-objective",
+          "text": "Titration & equivalent calculations: Two carefully measured aliquots give titres of 12.18 and 12.22 mL. A third, visibly overshot, gives 14.80 mL. Which reporting approach is defensible?",
+          "questionIds": [
+            "biochem2-practical-titration-duplicate-titres-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-titration-base-molarity-v1-objective",
+          "text": "Titration & equivalent calculations: For neutralisation by NaOH, how many millimoles of OH− are delivered by 12.20 mL of 0.100 N titrant?",
+          "questionIds": [
+            "biochem2-practical-titration-base-molarity-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochem2-practical-photometry-concept",
+      "moduleId": "biochem2-practical-photometry",
+      "subject": "biochemistry",
+      "title": "Spectrophotometry & serum protein",
+      "summary": "Move from light transmission to a defensible concentration result: choose the wavelength, blank correctly, construct standards, check linearity and apply the appropriate calibration or Biuret ratio.",
+      "keyPoints": [
+        "T = I/I₀, A = −log₁₀(T), and %T = 100 × 10^(−A). Absorbance is dimensionless, not the absorbed light intensity I₀ − I.",
+        "At fixed wavelength, path length and chemistry, A = εbc. Absorbance is linear with concentration in the valid range; transmittance is not.",
+        "The dye experiment uses bromophenol-blue standards prepared from 10 mg/L stock to a final 10 mL, a distilled-water blank, and a 480–620 nm wavelength scan.",
+        "The protein protocol uses 0.5 mL sample or 7 g/dL standard plus 2 mL Biuret reagent, a saline blank, 15 minutes at room temperature and measurement at 540 nm.",
+        "Protein = Atest/Astandard × 7 g/dL when sample and standard follow the same assay. Apply a separate pre-dilution factor only if the original sample was pre-diluted."
+      ],
+      "examTraps": [
+        "The dye wavelength scan, dye calibration and protein assay are separate experiments; their OD readings are not interchangeable.",
+        "A concentration result fixes an OD ratio, not a unique pair of raw readings. Numerical teaching cases are not claimed as student measurements."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Incident light intensity is 200 units and transmitted intensity is 50 units. Which pair is correct?",
+          "answer": "T = 50/200 = 0.25 and A = −log₁₀(0.25) = 0.602. Percent transmittance is 25%."
+        },
+        {
+          "prompt": "A protein reaction has a blank-corrected absorbance of 0.225. What is its transmittance relative to that blank?",
+          "answer": "%T = 100 × 10^(−0.225) = 59.57%. This is transmission relative to the instrument blank, not a protein concentration."
+        },
+        {
+          "prompt": "The source graphs assume Beer–Lambert behaviour. A solution initially transmits 50% of the light. If its concentration doubles at the same path length, what is the new %T?",
+          "answer": "Doubling concentration doubles A. Since T = 10^(−A), the new T is the square of 0.50: 0.25, or 25%."
+        },
+        {
+          "prompt": "A standard has A = 0.300 in a 1 cm cuvette. Under the same Beer–Lambert conditions, what is expected in a 2 cm cuvette?",
+          "answer": "A = εbc: doubling path length b doubles absorbance if concentration and molar absorptivity are unchanged."
+        },
+        {
+          "prompt": "A dye scan gives A = 0.497 at 560 nm, 0.709 at 580 nm and 0.591 at 600 nm. Which choice best supports sensitive subsequent measurements of this dye?",
+          "answer": "Choose the observed absorbance maximum for this preparation. The scan establishes a measured maximum at 580 nm, not a universal wavelength for every analyte."
+        },
+        {
+          "prompt": "You transfer 4.00 mL of 10 mg/L bromophenol-blue stock and make the final volume 10.00 mL with water. What is the standard concentration?",
+          "answer": "C₂ = C₁V₁/V₂ = 10 × 4/10 = 4 mg/L. Water added is 6 mL, but the denominator is the final 10 mL."
+        },
+        {
+          "prompt": "Which blank pairing matches the local dye and total-protein protocols?",
+          "answer": "The blank should match the non-analyte components of its assay. The protein blank is treated with reagent like the standard and sample."
+        },
+        {
+          "prompt": "A Biuret assay gives blank-corrected Atest = 0.225 and Astandard = 0.243 for a 7.00 g/dL standard. What protein concentration should be calculated?",
+          "answer": "Ctest = (0.225/0.243) × 7.00 = 6.4815 g/dL, rounded to 6.48. These readings do not yield 6.83."
+        },
+        {
+          "prompt": "Only a protein result of 6.83 g/dL and standard concentration of 7 g/dL survive in a notebook. What can be recovered mathematically?",
+          "answer": "6.83/7 = 0.975714. Infinitely many OD pairs have that ratio, so the original readings cannot be reconstructed uniquely."
+        },
+        {
+          "prompt": "The protein sample and standard each use 0.5 mL plus 2.0 mL reagent. After computing Atest/Astandard × 7, should the student multiply by 5 for the assay mixture dilution?",
+          "answer": "Both original solutions are diluted in the same way during the assay. Multiplying by 5 again would overestimate the original serum concentration."
+        },
+        {
+          "prompt": "Before the matched Biuret assay, serum is separately diluted using 1 volume serum plus 1 volume saline. The assay ratio reports 4.20 g/dL for this diluted specimen. What is the original concentration?",
+          "answer": "The separate pre-dilution factor is (1+1)/1 = 2. Original serum = 4.20 × 2 = 8.40 g/dL."
+        },
+        {
+          "prompt": "For a teaching calibration, A = 0.070C + 0.010, with C in mg/L. An unknown gives A = 0.290 under identical conditions. What is C?",
+          "answer": "Subtract the intercept first: C = (0.290 − 0.010)/0.070 = 4.00 mg/L."
+        },
+        {
+          "prompt": "An unknown gives an absorbance well above the highest validated calibration standard. What is the best next measurement step?",
+          "answer": "The existing calibration has not established accuracy outside its range. A valid remeasurement is preferable to extrapolating an untested line."
+        },
+        {
+          "prompt": "A standard is measured in a 1 cm cuvette and an unknown in a 2 cm cuvette. Their true concentrations are equal and both obey Beer–Lambert law. Using their raw absorbance ratio, what would be reported?",
+          "answer": "The unknown has twice the absorbance because its path is twice as long. The ratio method assumes matched path lengths; violating that assumption doubles the result."
+        },
+        {
+          "prompt": "A visibly turbid sample gives high apparent OD. Why is immediate attribution to high analyte concentration unsafe?",
+          "answer": "The detector sees reduced transmission from more than the intended absorbing species. Follow the assay SOP for an interfering specimen; do not assume all apparent OD is analyte signal."
+        },
+        {
+          "prompt": "The instrument has been blanked and calibrated with a known standard. Why run an independent control specimen?",
+          "answer": "A control tests performance independently of the material used to set calibration. Successful blanking and calibration alone do not prove acceptable analytical performance."
+        },
+        {
+          "prompt": "Which complete setup follows the local quantitative serum-protein protocol?",
+          "answer": "The local slide protocol specifies these volumes, incubation and wavelength. Treat sample and 7 g/dL standard identically."
+        },
+        {
+          "prompt": "A correctly obtained result of 6.48 g/dL is compared with the practical’s stated 6.0–8.3 g/dL interval. Which conclusion is justified?",
+          "answer": "6.48 is inside the course interval. Reference intervals are method/laboratory dependent, and total protein alone does not establish global health."
+        }
+      ],
+      "sources": [
+        {
+          "title": "03 - Spectrophotometry and Beer-Lambert law.pptx",
+          "locator": "Slides 3–31",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Spectrophotometry & serum protein",
+          "basis": "notes"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "biochem2-practical-photometry-transmittance-ratio-v1-objective",
+          "text": "Spectrophotometry & serum protein: Incident light intensity is 200 units and transmitted intensity is 50 units. Which pair is correct?",
+          "questionIds": [
+            "biochem2-practical-photometry-transmittance-ratio-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-protein-transmittance-v1-objective",
+          "text": "Spectrophotometry & serum protein: A protein reaction has a blank-corrected absorbance of 0.225. What is its transmittance relative to that blank?",
+          "questionIds": [
+            "biochem2-practical-photometry-protein-transmittance-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-doubling-concentration-v1-objective",
+          "text": "Spectrophotometry & serum protein: The source graphs assume Beer–Lambert behaviour. A solution initially transmits 50% of the light. If its concentration doubles at the same path length, what is the new %T?",
+          "questionIds": [
+            "biochem2-practical-photometry-doubling-concentration-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-pathlength-v1-objective",
+          "text": "Spectrophotometry & serum protein: A standard has A = 0.300 in a 1 cm cuvette. Under the same Beer–Lambert conditions, what is expected in a 2 cm cuvette?",
+          "questionIds": [
+            "biochem2-practical-photometry-pathlength-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-lambda-max-v1-objective",
+          "text": "Spectrophotometry & serum protein: A dye scan gives A = 0.497 at 560 nm, 0.709 at 580 nm and 0.591 at 600 nm. Which choice best supports sensitive subsequent measurements of this dye?",
+          "questionIds": [
+            "biochem2-practical-photometry-lambda-max-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-dye-standard-v1-objective",
+          "text": "Spectrophotometry & serum protein: You transfer 4.00 mL of 10 mg/L bromophenol-blue stock and make the final volume 10.00 mL with water. What is the standard concentration?",
+          "questionIds": [
+            "biochem2-practical-photometry-dye-standard-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-blank-selection-v1-objective",
+          "text": "Spectrophotometry & serum protein: Which blank pairing matches the local dye and total-protein protocols?",
+          "questionIds": [
+            "biochem2-practical-photometry-blank-selection-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-biuret-calculation-v1-objective",
+          "text": "Spectrophotometry & serum protein: A Biuret assay gives blank-corrected Atest = 0.225 and Astandard = 0.243 for a 7.00 g/dL standard. What protein concentration should be calculated?",
+          "questionIds": [
+            "biochem2-practical-photometry-biuret-calculation-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-ratio-not-raw-v1-objective",
+          "text": "Spectrophotometry & serum protein: Only a protein result of 6.83 g/dL and standard concentration of 7 g/dL survive in a notebook. What can be recovered mathematically?",
+          "questionIds": [
+            "biochem2-practical-photometry-ratio-not-raw-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-shared-dilution-v1-objective",
+          "text": "Spectrophotometry & serum protein: The protein sample and standard each use 0.5 mL plus 2.0 mL reagent. After computing Atest/Astandard × 7, should the student multiply by 5 for the assay mixture dilution?",
+          "questionIds": [
+            "biochem2-practical-photometry-shared-dilution-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-predilution-v1-objective",
+          "text": "Spectrophotometry & serum protein: Before the matched Biuret assay, serum is separately diluted using 1 volume serum plus 1 volume saline. The assay ratio reports 4.20 g/dL for this diluted specimen. What is the original concentration?",
+          "questionIds": [
+            "biochem2-practical-photometry-predilution-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-intercept-v1-objective",
+          "text": "Spectrophotometry & serum protein: For a teaching calibration, A = 0.070C + 0.010, with C in mg/L. An unknown gives A = 0.290 under identical conditions. What is C?",
+          "questionIds": [
+            "biochem2-practical-photometry-intercept-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-above-linearity-v1-objective",
+          "text": "Spectrophotometry & serum protein: An unknown gives an absorbance well above the highest validated calibration standard. What is the best next measurement step?",
+          "questionIds": [
+            "biochem2-practical-photometry-above-linearity-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-cuvette-mismatch-v1-objective",
+          "text": "Spectrophotometry & serum protein: A standard is measured in a 1 cm cuvette and an unknown in a 2 cm cuvette. Their true concentrations are equal and both obey Beer–Lambert law. Using their raw absorbance ratio, what would be reported?",
+          "questionIds": [
+            "biochem2-practical-photometry-cuvette-mismatch-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-turbid-sample-v1-objective",
+          "text": "Spectrophotometry & serum protein: A visibly turbid sample gives high apparent OD. Why is immediate attribution to high analyte concentration unsafe?",
+          "questionIds": [
+            "biochem2-practical-photometry-turbid-sample-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-blank-standard-control-v1-objective",
+          "text": "Spectrophotometry & serum protein: The instrument has been blanked and calibrated with a known standard. Why run an independent control specimen?",
+          "questionIds": [
+            "biochem2-practical-photometry-blank-standard-control-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-timing-wavelength-v1-objective",
+          "text": "Spectrophotometry & serum protein: Which complete setup follows the local quantitative serum-protein protocol?",
+          "questionIds": [
+            "biochem2-practical-photometry-timing-wavelength-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-photometry-reference-meaning-v1-objective",
+          "text": "Spectrophotometry & serum protein: A correctly obtained result of 6.48 g/dL is compared with the practical’s stated 6.0–8.3 g/dL interval. Which conclusion is justified?",
+          "questionIds": [
+            "biochem2-practical-photometry-reference-meaning-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochem2-practical-proteins-concept",
+      "moduleId": "biochem2-practical-proteins",
+      "subject": "biochemistry",
+      "title": "Amino-acid & protein identification tests",
+      "summary": "Interpret a pattern of reactions rather than treating any single colour as a complete protein identification. Keep chemical targets, positive appearances, controls and the two lecturer protocols distinct.",
+      "keyPoints": [
+        "Ninhydrin tests free amino groups: most α-amino acids give purple, while proline/hydroxyproline give yellow. Ebrahimi heats 5 minutes; Emamgholipour specifies 10 minutes.",
+        "Xanthoproteic nitration gives yellow, enhanced to orange on alkalinisation. Tyr and Trp respond strongly; phenylalanine can respond weakly or negatively under usual conditions.",
+        "Pauly detects tyrosine or histidine by red azo coupling; Hopkins–Cole detects the tryptophan indole group as a violet interface.",
+        "Qualitative Biuret requires at least two peptide bonds and alkaline Cu²⁺. Denaturation alone need not destroy its peptide-bond response.",
+        "TCA precipitates protein: 1+1 mL of protein and 15% TCA in Ebrahimi, versus 2+2 mL in Emamgholipour; both retain a 1:1 volume ratio."
+      ],
+      "examTraps": [
+        "A negative residue-specific test does not prove absence of protein.",
+        "Do not merge the ninhydrin heating times or TCA volumes into a nonexistent universal protocol."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "An amino-acid sample produces yellow rather than the usual purple after ninhydrin treatment. With valid controls, which interpretation best fits?",
+          "answer": "Proline and hydroxyproline follow different ninhydrin chemistry and typically yield yellow; yellow is not automatically assay failure."
+        },
+        {
+          "prompt": "A sample is ninhydrin-positive but Biuret-negative under valid conditions. Which conclusion is most defensible?",
+          "answer": "Ninhydrin responds to amino groups and can detect free amino acids. Biuret requires multiple peptide bonds and sufficient analyte; the tests do not measure the same feature."
+        },
+        {
+          "prompt": "Two course handouts disagree about ninhydrin heating time. Which reconciliation preserves the actual protocols?",
+          "answer": "Both versions exist locally. State and follow the assigned lecturer protocol rather than averaging the incubation times."
+        },
+        {
+          "prompt": "In the usual ninhydrin reaction of a primary α-amino acid, why does the resulting aldehyde have one fewer carbon than the starting amino acid?",
+          "answer": "The reaction removes the α-amino acid’s carboxyl carbon as CO₂ and releases nitrogen used in colour formation."
+        },
+        {
+          "prompt": "In the Emamgholipour xanthoproteic protocol, heating with nitric acid produces yellow. After cooling, adding NaOH intensifies it toward orange. What is being demonstrated?",
+          "answer": "The nitric-acid step nitrates susceptible aromatic residues; alkalinisation enhances the colour. Cooling precedes the concentrated alkali step in this version."
+        },
+        {
+          "prompt": "Phenylalanine is aromatic but gives a weak or negative xanthoproteic reaction under the usual teaching conditions. Which statement avoids a false conclusion?",
+          "answer": "Tyr and Trp react more readily in the usual assay. Chemical reactivity under a test condition and structural classification are distinct."
+        },
+        {
+          "prompt": "A red Pauly reaction alone cannot distinguish which pair of amino acids?",
+          "answer": "Tyrosine’s phenol and histidine’s imidazole can form coloured azo products in Pauly’s test. Use additional evidence to distinguish them."
+        },
+        {
+          "prompt": "Why does the Pauly procedure include sodium carbonate after preparing the diazotised sulphanilic-acid reagent?",
+          "answer": "Nitrite and sulphanilic acid form the diazonium reagent under acidic conditions; carbonate supports the subsequent coupling reaction. The stages have different chemical requirements."
+        },
+        {
+          "prompt": "In Hopkins–Cole testing, why is concentrated sulfuric acid carefully layered down the tube wall after the amino-acid/glyoxylic-acid mixture?",
+          "answer": "The expected positive appearance is a violet interface involving the tryptophan indole group. Careful layering also limits uncontrolled mixing of concentrated acid."
+        },
+        {
+          "prompt": "A solution is strongly Biuret-positive but Hopkins–Cole-negative. Positive controls work. What remains possible?",
+          "answer": "Biuret detects peptide bonds, whereas Hopkins–Cole tests a particular residue. A polypeptide need not give every residue-specific reaction."
+        },
+        {
+          "prompt": "Which smallest ordinary peptide meets the usual requirement for the qualitative Biuret reaction?",
+          "answer": "At least two peptide bonds are required by the teaching criterion. A tripeptide contains two, whereas a dipeptide has one."
+        },
+        {
+          "prompt": "Using the coordination chemistry in the figure, what change best explains loss of a protein’s Biuret response after complete hydrolysis to free amino acids?",
+          "answer": "Complete hydrolysis destroys the linked peptide backbone needed for the conventional Biuret complex. It does not merely change protein folding."
+        },
+        {
+          "prompt": "A Biuret tube remains the same blue as the reagent blank without developing violet. What should be reported?",
+          "answer": "Copper reagent has its own blue colour. Compare with the blank and positive control; blue alone is not proof of a positive protein complex."
+        },
+        {
+          "prompt": "Ebrahimi combines 1 mL protein solution with 1 mL 15% TCA; Emamgholipour combines 2 mL with 2 mL. Assuming additive volumes, which comparison is correct?",
+          "answer": "Both dilute the 15% reagent 1:1, giving 7.5%. Final volumes are 2 and 4 mL; the protocols should still be named separately."
+        },
+        {
+          "prompt": "A white precipitate appears after TCA addition. Which interpretation stays within the test’s specificity?",
+          "answer": "TCA can precipitate proteins by disrupting their solubility. This differs from a residue-specific colour test and does not by itself prove peptide hydrolysis."
+        },
+        {
+          "prompt": "An isolated amino acid is strongly xanthoproteic-positive, Pauly-positive and Hopkins–Cole-negative. Among the options, which fits best?",
+          "answer": "Tyrosine has a nitration-responsive aromatic phenol and gives Pauly coupling, but lacks the tryptophan indole target of Hopkins–Cole."
+        },
+        {
+          "prompt": "An unknown and a known positive protein control both fail to develop the expected Biuret violet colour. What is the most defensible next action?",
+          "answer": "Failure of the positive control means the run has not demonstrated its ability to detect the target. The unknown’s apparent negative is not interpretable as a reliable absence."
+        },
+        {
+          "prompt": "A protein unfolds without cleavage of peptide bonds. Which change is NOT necessarily expected solely from unfolding?",
+          "answer": "The peptide bonds remain, so unfolding alone need not eliminate Biuret reactivity. Solubility and biological activity may change substantially."
+        }
+      ],
+      "sources": [
+        {
+          "title": "04A - Amino acid and protein qualitative tests - Ebrahimi.pptx",
+          "locator": "Ebrahimi slides 15–29; Emamgholipour PDF pp. 13–27",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Amino-acid & protein identification tests",
+          "basis": "notes"
+        },
+        {
+          "title": "04B - Amino acid and protein qualitative tests - Emamgholipour.pdf",
+          "locator": "PDF pp. 13–27",
+          "basis": "slides"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "biochem2-practical-proteins-ninhydrin-yellow-v1-objective",
+          "text": "Amino-acid & protein identification tests: An amino-acid sample produces yellow rather than the usual purple after ninhydrin treatment. With valid controls, which interpretation best fits?",
+          "questionIds": [
+            "biochem2-practical-proteins-ninhydrin-yellow-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-ninhydrin-not-protein-v1-objective",
+          "text": "Amino-acid & protein identification tests: A sample is ninhydrin-positive but Biuret-negative under valid conditions. Which conclusion is most defensible?",
+          "questionIds": [
+            "biochem2-practical-proteins-ninhydrin-not-protein-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-ninhydrin-times-v1-objective",
+          "text": "Amino-acid & protein identification tests: Two course handouts disagree about ninhydrin heating time. Which reconciliation preserves the actual protocols?",
+          "questionIds": [
+            "biochem2-practical-proteins-ninhydrin-times-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-decarboxylation-v1-objective",
+          "text": "Amino-acid & protein identification tests: In the usual ninhydrin reaction of a primary α-amino acid, why does the resulting aldehyde have one fewer carbon than the starting amino acid?",
+          "questionIds": [
+            "biochem2-practical-proteins-decarboxylation-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-xantho-orange-v1-objective",
+          "text": "Amino-acid & protein identification tests: In the Emamgholipour xanthoproteic protocol, heating with nitric acid produces yellow. After cooling, adding NaOH intensifies it toward orange. What is being demonstrated?",
+          "questionIds": [
+            "biochem2-practical-proteins-xantho-orange-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-phenylalanine-v1-objective",
+          "text": "Amino-acid & protein identification tests: Phenylalanine is aromatic but gives a weak or negative xanthoproteic reaction under the usual teaching conditions. Which statement avoids a false conclusion?",
+          "questionIds": [
+            "biochem2-practical-proteins-phenylalanine-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-pauly-pair-v1-objective",
+          "text": "Amino-acid & protein identification tests: A red Pauly reaction alone cannot distinguish which pair of amino acids?",
+          "questionIds": [
+            "biochem2-practical-proteins-pauly-pair-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-pauly-reagent-order-v1-objective",
+          "text": "Amino-acid & protein identification tests: Why does the Pauly procedure include sodium carbonate after preparing the diazotised sulphanilic-acid reagent?",
+          "questionIds": [
+            "biochem2-practical-proteins-pauly-reagent-order-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-hopkins-interface-v1-objective",
+          "text": "Amino-acid & protein identification tests: In Hopkins–Cole testing, why is concentrated sulfuric acid carefully layered down the tube wall after the amino-acid/glyoxylic-acid mixture?",
+          "questionIds": [
+            "biochem2-practical-proteins-hopkins-interface-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-negative-hopkins-v1-objective",
+          "text": "Amino-acid & protein identification tests: A solution is strongly Biuret-positive but Hopkins–Cole-negative. Positive controls work. What remains possible?",
+          "questionIds": [
+            "biochem2-practical-proteins-negative-hopkins-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-tripeptide-v1-objective",
+          "text": "Amino-acid & protein identification tests: Which smallest ordinary peptide meets the usual requirement for the qualitative Biuret reaction?",
+          "questionIds": [
+            "biochem2-practical-proteins-tripeptide-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-hydrolysis-figure-v1-objective",
+          "text": "Amino-acid & protein identification tests: Using the coordination chemistry in the figure, what change best explains loss of a protein’s Biuret response after complete hydrolysis to free amino acids?",
+          "questionIds": [
+            "biochem2-practical-proteins-hydrolysis-figure-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-blue-versus-violet-v1-objective",
+          "text": "Amino-acid & protein identification tests: A Biuret tube remains the same blue as the reagent blank without developing violet. What should be reported?",
+          "questionIds": [
+            "biochem2-practical-proteins-blue-versus-violet-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-tca-protocols-v1-objective",
+          "text": "Amino-acid & protein identification tests: Ebrahimi combines 1 mL protein solution with 1 mL 15% TCA; Emamgholipour combines 2 mL with 2 mL. Assuming additive volumes, which comparison is correct?",
+          "questionIds": [
+            "biochem2-practical-proteins-tca-protocols-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-tca-meaning-v1-objective",
+          "text": "Amino-acid & protein identification tests: A white precipitate appears after TCA addition. Which interpretation stays within the test’s specificity?",
+          "questionIds": [
+            "biochem2-practical-proteins-tca-meaning-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-tyrosine-pattern-v1-objective",
+          "text": "Amino-acid & protein identification tests: An isolated amino acid is strongly xanthoproteic-positive, Pauly-positive and Hopkins–Cole-negative. Among the options, which fits best?",
+          "questionIds": [
+            "biochem2-practical-proteins-tyrosine-pattern-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-control-failure-v1-objective",
+          "text": "Amino-acid & protein identification tests: An unknown and a known positive protein control both fail to develop the expected Biuret violet colour. What is the most defensible next action?",
+          "questionIds": [
+            "biochem2-practical-proteins-control-failure-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-proteins-denaturation-v1-objective",
+          "text": "Amino-acid & protein identification tests: A protein unfolds without cleavage of peptide bonds. Which change is NOT necessarily expected solely from unfolding?",
+          "questionIds": [
+            "biochem2-practical-proteins-denaturation-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochem2-practical-enzymes-concept",
+      "moduleId": "biochem2-practical-enzymes",
+      "subject": "biochemistry",
+      "title": "Enzyme experiments & controls",
+      "summary": "Read the actual rennin and urease tube plans, identify the variable being changed, and separate expected direction of reaction from measured results. Do not infer a detailed inhibition mechanism from one colour observation.",
+      "keyPoints": [
+        "Rennin/chymosin clots milk; renal renin is a different enzyme. Pre-equilibrate milk and enzyme separately before mixing and starting the timer.",
+        "Enzyme-concentration experiment: 2 mL milk with 1, 0.5 or 0.25 mL rennin and enough water to make 3 mL total. More active enzyme generally shortens clotting time.",
+        "Substrate experiment: 2, 1 or 0.5 mL milk with compensating water, plus 1 mL rennin in every tube. Dilution changes milk substrate and physical clot formation.",
+        "Urease converts urea to ammonia and CO₂; ammonia increases pH, changing phenol red. Compare urea alone, urea plus zinc sulfate, and thiourea under matched conditions.",
+        "Temperature and pH affect activity; high temperature can denature enzyme. A fixed-time colour or clot endpoint is not automatically an initial-rate measurement."
+      ],
+      "examTraps": [
+        "The slide’s “renin” spelling does not make the milk-clotting enzyme the renal angiotensinogen-cleaving enzyme.",
+        "Reduced colour in zinc sulfate does not prove competitive inhibition, and three milk-clot times do not establish a valid Km."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "The milk experiment labels an enzyme “rennin” and in one table “renin.” Which interpretation matches the actual experiment?",
+          "answer": "The experiment follows casein clotting by the stomach enzyme chymosin. Renal renin acts on angiotensinogen and is not the enzyme intended here."
+        },
+        {
+          "prompt": "Using the pictured enzyme-concentration tube plan, why is water added to B2 and B3?",
+          "answer": "Every combined tube contains 2 mL milk plus 1 mL enzyme/water mixture. The compensation controls volume so enzyme concentration is the intended variable."
+        },
+        {
+          "prompt": "In the pictured plan, stock rennin concentration is the same for B1–B3. What is the ratio of final enzyme concentrations in the combined tubes 1:2:3?",
+          "answer": "Final volume is 3 mL in each tube. Enzyme amounts are proportional to 1, 0.5 and 0.25 mL stock, giving 4:2:1."
+        },
+        {
+          "prompt": "With milk substrate available and all other conditions matched, which tube in the enzyme-concentration experiment is generally expected to clot first?",
+          "answer": "More active enzyme at matched substrate and volume generally produces the clotting endpoint sooner. Actual times still must be measured."
+        },
+        {
+          "prompt": "According to the pictured substrate-concentration plan, which property is kept constant after matching and mixing the A and B tubes?",
+          "answer": "Each receives 1 mL enzyme and has 3 mL final volume. Milk amount changes, while water compensates for the missing milk volume."
+        },
+        {
+          "prompt": "Why are milk and enzyme kept separately at the selected temperature before mixing?",
+          "answer": "Separate pre-equilibration reduces uncontrolled reaction during warm-up. Mixing defines a more consistent time zero."
+        },
+        {
+          "prompt": "The 80°C rennin experiment clots much more slowly than the 37°C tube. What is the most reasonable interpretation?",
+          "answer": "Higher temperature does not indefinitely accelerate an enzyme. At high temperature structural damage can dominate, and heated milk can also change physically."
+        },
+        {
+          "prompt": "A student proposes testing all enzymes only at pH 7 because “all enzymes have the same optimum.” Why is that flawed?",
+          "answer": "pH changes substrate and catalytic-group ionisation and can change enzyme structure. Different enzymes have different pH profiles."
+        },
+        {
+          "prompt": "In the pictured urease plan, which comparison best isolates the effect of adding zinc sulfate in place of water?",
+          "answer": "Both contain the same urea and urease volumes; tube 2 replaces 2 mL water with 2 mL zinc sulfate. Interpret with attention to reagent pH and suitable controls."
+        },
+        {
+          "prompt": "Tube 1 contains urea and tube 3 contains thiourea, with matching urease and water. Tube 1 develops the alkaline indicator response but tube 3 does not. What does this support?",
+          "answer": "Urease acts on urea in this demonstration; structural resemblance alone does not guarantee productive catalysis of thiourea."
+        },
+        {
+          "prompt": "Which chain of events explains the phenol-red response in the active urea–urease tube?",
+          "answer": "Urease catalyses urea + water → CO₂ + 2 NH₃. Ammonia contributes to alkalinisation; the indicator reports the resulting pH change."
+        },
+        {
+          "prompt": "Zinc sulfate reduces the urease tube’s colour change at one substrate concentration. Which claim goes beyond the available experiment?",
+          "answer": "A single indicator endpoint cannot establish Km/Vmax changes or competitive kinetics. Multiple substrate concentrations and controlled initial-rate measurements would be needed."
+        },
+        {
+          "prompt": "With a fixed amount of enzyme, an initial-rate curve approaches a plateau as substrate concentration becomes very high. What best explains the plateau?",
+          "answer": "At high substrate, further additions have diminishing effects because available enzyme approaches its maximum turnover capacity."
+        },
+        {
+          "prompt": "An enzyme makes a reaction reach equilibrium more quickly. Which property does the enzyme change?",
+          "answer": "Catalysis offers a lower-barrier pathway and accelerates equilibration without changing the thermodynamic equilibrium or overall ΔG."
+        },
+        {
+          "prompt": "Three diluted-milk tubes yield three clotting times. Why should a precise Michaelis constant not be reported directly from those times?",
+          "answer": "Milk dilution also changes casein concentration and clot-forming properties. A valid kinetic analysis needs an appropriate rate assay, substrate concentrations and model."
+        },
+        {
+          "prompt": "To check whether zinc sulfate changes phenol-red colour independently of urease catalysis, which additional control is most informative?",
+          "answer": "These examine nonenzymatic reagent/indicator effects. They complement, rather than replace, the active-enzyme comparison."
+        }
+      ],
+      "sources": [
+        {
+          "title": "05 - Enzyme practical.pptx",
+          "locator": "Slides 3–21",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Enzyme experiments & controls",
+          "basis": "notes"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "biochem2-practical-enzymes-rennin-identity-v1-objective",
+          "text": "Enzyme experiments & controls: The milk experiment labels an enzyme “rennin” and in one table “renin.” Which interpretation matches the actual experiment?",
+          "questionIds": [
+            "biochem2-practical-enzymes-rennin-identity-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-enzyme-table-control-v1-objective",
+          "text": "Enzyme experiments & controls: Using the pictured enzyme-concentration tube plan, why is water added to B2 and B3?",
+          "questionIds": [
+            "biochem2-practical-enzymes-enzyme-table-control-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-enzyme-relative-v1-objective",
+          "text": "Enzyme experiments & controls: In the pictured plan, stock rennin concentration is the same for B1–B3. What is the ratio of final enzyme concentrations in the combined tubes 1:2:3?",
+          "questionIds": [
+            "biochem2-practical-enzymes-enzyme-relative-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-enzyme-time-v1-objective",
+          "text": "Enzyme experiments & controls: With milk substrate available and all other conditions matched, which tube in the enzyme-concentration experiment is generally expected to clot first?",
+          "questionIds": [
+            "biochem2-practical-enzymes-enzyme-time-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-substrate-table-v1-objective",
+          "text": "Enzyme experiments & controls: According to the pictured substrate-concentration plan, which property is kept constant after matching and mixing the A and B tubes?",
+          "questionIds": [
+            "biochem2-practical-enzymes-substrate-table-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-pre-equilibration-v1-objective",
+          "text": "Enzyme experiments & controls: Why are milk and enzyme kept separately at the selected temperature before mixing?",
+          "questionIds": [
+            "biochem2-practical-enzymes-pre-equilibration-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-temperature-denaturation-v1-objective",
+          "text": "Enzyme experiments & controls: The 80°C rennin experiment clots much more slowly than the 37°C tube. What is the most reasonable interpretation?",
+          "questionIds": [
+            "biochem2-practical-enzymes-temperature-denaturation-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-ph-specificity-v1-objective",
+          "text": "Enzyme experiments & controls: A student proposes testing all enzymes only at pH 7 because “all enzymes have the same optimum.” Why is that flawed?",
+          "questionIds": [
+            "biochem2-practical-enzymes-ph-specificity-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-urease-comparison-v1-objective",
+          "text": "Enzyme experiments & controls: In the pictured urease plan, which comparison best isolates the effect of adding zinc sulfate in place of water?",
+          "questionIds": [
+            "biochem2-practical-enzymes-urease-comparison-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-urease-specificity-v1-objective",
+          "text": "Enzyme experiments & controls: Tube 1 contains urea and tube 3 contains thiourea, with matching urease and water. Tube 1 develops the alkaline indicator response but tube 3 does not. What does this support?",
+          "questionIds": [
+            "biochem2-practical-enzymes-urease-specificity-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-ammonia-indicator-v1-objective",
+          "text": "Enzyme experiments & controls: Which chain of events explains the phenol-red response in the active urea–urease tube?",
+          "questionIds": [
+            "biochem2-practical-enzymes-ammonia-indicator-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-zinc-mechanism-limit-v1-objective",
+          "text": "Enzyme experiments & controls: Zinc sulfate reduces the urease tube’s colour change at one substrate concentration. Which claim goes beyond the available experiment?",
+          "questionIds": [
+            "biochem2-practical-enzymes-zinc-mechanism-limit-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-enzyme-saturation-v1-objective",
+          "text": "Enzyme experiments & controls: With a fixed amount of enzyme, an initial-rate curve approaches a plateau as substrate concentration becomes very high. What best explains the plateau?",
+          "questionIds": [
+            "biochem2-practical-enzymes-enzyme-saturation-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-activation-equilibrium-v1-objective",
+          "text": "Enzyme experiments & controls: An enzyme makes a reaction reach equilibrium more quickly. Which property does the enzyme change?",
+          "questionIds": [
+            "biochem2-practical-enzymes-activation-equilibrium-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-clot-not-km-v1-objective",
+          "text": "Enzyme experiments & controls: Three diluted-milk tubes yield three clotting times. Why should a precise Michaelis constant not be reported directly from those times?",
+          "questionIds": [
+            "biochem2-practical-enzymes-clot-not-km-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-enzymes-indicator-control-v1-objective",
+          "text": "Enzyme experiments & controls: To check whether zinc sulfate changes phenol-red colour independently of urease catalysis, which additional control is most informative?",
+          "questionIds": [
+            "biochem2-practical-enzymes-indicator-control-v1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biochem2-practical-flame-concept",
+      "moduleId": "biochem2-practical-flame",
+      "subject": "biochemistry",
+      "title": "Flame photometry & electrolytes",
+      "summary": "Understand flame emission and calibration without mistaking visible flame colour for a complete quantitative analysis. The local deck does not supply a full numerical standard-preparation SOP, so the calculation cases state their own teaching data.",
+      "keyPoints": [
+        "Flame photometry detects characteristic light emitted as excited species relax; it is not a measurement of transmitted light through a coloured solution.",
+        "Within a validated calibration range, emission intensity can quantify selected elements. Blank, calibrators, quality controls and sample matrix matter.",
+        "The local wavelength table lists Na near 589 nm and K near 766 nm. A visually lilac potassium flame is not the same thing as a single violet 766 nm emission line.",
+        "mEq/L = mmol/L × absolute ionic charge: monovalent Na⁺/K⁺ retain the number, while Ca²⁺ doubles it.",
+        "Electrode methods measure ion activity and can be automated without a flame. Performance depends on method and sample conditions; no universal “ISE is less precise” rule is justified."
+      ],
+      "examTraps": [
+        "A visual flame colour alone is not a concentration measurement or a reliable identification of every component in a mixture.",
+        "Do not invent laboratory calibration readings or apply a calibration outside its validated range."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which detector signal is central to flame photometry rather than ordinary solution absorption spectrophotometry?",
+          "answer": "Flame photometry is an emission technique. Selected wavelengths and calibrated intensity support analysis of suitable elements."
+        },
+        {
+          "prompt": "A table lists the potassium analytical emission near 766 nm while describing its visible flame as lilac. Which interpretation is correct?",
+          "answer": "766 nm lies near the deep-red/near-infrared boundary, not violet. A visible flame description and the wavelength selected by an instrument answer different questions."
+        },
+        {
+          "prompt": "In a teaching flame-emission calibration, blank-corrected intensity is proportional to sodium concentration. A 100 mmol/L standard gives 40 units and a similarly prepared unknown gives 56 units. What is the unknown concentration within that validated range?",
+          "answer": "Cunknown = 56/40 × 100 = 140 mmol/L, assuming the stated linear, blank-corrected, matched calibration. These are supplied teaching data, not actual lab readings."
+        },
+        {
+          "prompt": "A teaching flame experiment gives raw signals: blank 5, standard 45 and unknown 61 units. The standard is 100 mmol/L and the corrected calibration is linear through zero. What is the unknown?",
+          "answer": "Subtract the blank from both: (61 − 5)/(45 − 5) × 100 = 56/40 × 100 = 140 mmol/L."
+        },
+        {
+          "prompt": "An aqueous calibrator and a viscous sample have the same analyte concentration but different aspiration/nebulisation behaviour. Why can their flame signals differ?",
+          "answer": "The measured signal depends on how much analyte reaches and behaves in the flame, not merely its nominal concentration. Use validated preparation and matrix/interference controls."
+        },
+        {
+          "prompt": "Why should a simple clinical flame photometer not be treated as a universal analyser for every element in an unknown mixture?",
+          "answer": "The method is useful for selected analytes such as sodium and potassium; detector/filter configuration, flame conditions and interferences limit generalisation."
+        },
+        {
+          "prompt": "A sample contains Ca²⁺ at 2.5 mmol/L and K⁺ at 4.0 mmol/L. What are their concentrations in mEq/L?",
+          "answer": "Multiply mmol/L by absolute charge: calcium ×2, potassium ×1."
+        },
+        {
+          "prompt": "A 0.9% w/v NaCl solution contains 9 g/L. Using a molar mass of 58.44 g/mol and complete dissociation, approximately how much sodium does it contain?",
+          "answer": "9/58.44 = 0.1540 mol/L NaCl. Each mole supplies one mole of Na⁺, so sodium is about 154 mmol/L (also 154 mEq/L)."
+        },
+        {
+          "prompt": "What makes an ion-selective electrode a fundamentally different measurement approach from flame photometry?",
+          "answer": "ISE methods can support automated electrolyte analysis without a flame. Their performance must be judged for the actual method and sample, not by a blanket precision claim."
+        },
+        {
+          "prompt": "A mixed-salt specimen produces a strong yellow flame. What should NOT be concluded from visual inspection alone?",
+          "answer": "A dominant colour can mask weaker emissions, and perceived colour is not a calibrated intensity measurement. Use the selected analytical method and standards."
+        }
+      ],
+      "sources": [
+        {
+          "title": "06 - Flame photometry and body electrolytes.pptx",
+          "locator": "Slides 2–11; review: flame photometry",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Flame photometry & electrolytes",
+          "basis": "notes"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "biochem2-practical-flame-emission-versus-absorption-v1-objective",
+          "text": "Flame photometry & electrolytes: Which detector signal is central to flame photometry rather than ordinary solution absorption spectrophotometry?",
+          "questionIds": [
+            "biochem2-practical-flame-emission-versus-absorption-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-potassium-wavelength-v1-objective",
+          "text": "Flame photometry & electrolytes: A table lists the potassium analytical emission near 766 nm while describing its visible flame as lilac. Which interpretation is correct?",
+          "questionIds": [
+            "biochem2-practical-flame-potassium-wavelength-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-sodium-calibration-v1-objective",
+          "text": "Flame photometry & electrolytes: In a teaching flame-emission calibration, blank-corrected intensity is proportional to sodium concentration. A 100 mmol/L standard gives 40 units and a similarly prepared unknown gives 56 units. What is the unknown concentration within that validated range?",
+          "questionIds": [
+            "biochem2-practical-flame-sodium-calibration-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-flame-intercept-v1-objective",
+          "text": "Flame photometry & electrolytes: A teaching flame experiment gives raw signals: blank 5, standard 45 and unknown 61 units. The standard is 100 mmol/L and the corrected calibration is linear through zero. What is the unknown?",
+          "questionIds": [
+            "biochem2-practical-flame-flame-intercept-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-matrix-effect-v1-objective",
+          "text": "Flame photometry & electrolytes: An aqueous calibrator and a viscous sample have the same analyte concentration but different aspiration/nebulisation behaviour. Why can their flame signals differ?",
+          "questionIds": [
+            "biochem2-practical-flame-matrix-effect-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-selected-elements-v1-objective",
+          "text": "Flame photometry & electrolytes: Why should a simple clinical flame photometer not be treated as a universal analyser for every element in an unknown mixture?",
+          "questionIds": [
+            "biochem2-practical-flame-selected-elements-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-electrolyte-charge-v1-objective",
+          "text": "Flame photometry & electrolytes: A sample contains Ca²⁺ at 2.5 mmol/L and K⁺ at 4.0 mmol/L. What are their concentrations in mEq/L?",
+          "questionIds": [
+            "biochem2-practical-flame-electrolyte-charge-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-saline-molarity-v1-objective",
+          "text": "Flame photometry & electrolytes: A 0.9% w/v NaCl solution contains 9 g/L. Using a molar mass of 58.44 g/mol and complete dissociation, approximately how much sodium does it contain?",
+          "questionIds": [
+            "biochem2-practical-flame-saline-molarity-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-ise-alternative-v1-objective",
+          "text": "Flame photometry & electrolytes: What makes an ion-selective electrode a fundamentally different measurement approach from flame photometry?",
+          "questionIds": [
+            "biochem2-practical-flame-ise-alternative-v1"
+          ]
+        },
+        {
+          "id": "biochem2-practical-flame-colour-mixture-v1-objective",
+          "text": "Flame photometry & electrolytes: A mixed-salt specimen produces a strong yellow flame. What should NOT be concluded from visual inspection alone?",
+          "questionIds": [
+            "biochem2-practical-flame-colour-mixture-v1"
+          ]
+        }
+      ]
     }
   ],
   "sourceAudit": [
@@ -5002,6 +6203,136 @@
       ],
       "status": "mapped",
       "note": "Depth expansion · Original source-grounded practice. Course links support the base mechanism; novel scenarios are not actual exam questions. Detailed book-only applications are tagged book-extension per question."
+    },
+    {
+      "source": "01 - Laboratory safety and equipment.pdf",
+      "locator": "PDF pp. 3–44",
+      "topic": "Safety & laboratory equipment",
+      "conceptIds": [
+        "biochem2-practical-lab-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "06 - Biochemistry Practical Review.pdf",
+      "locator": "Section: Safety & laboratory equipment",
+      "topic": "Safety & laboratory equipment",
+      "conceptIds": [
+        "biochem2-practical-lab-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "02 - Titration practical and calculations.pdf",
+      "locator": "PDF pp. 3–9",
+      "topic": "Titration & equivalent calculations",
+      "conceptIds": [
+        "biochem2-practical-titration-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "06 - Biochemistry Practical Review.pdf",
+      "locator": "Section: Titration & equivalent calculations",
+      "topic": "Titration & equivalent calculations",
+      "conceptIds": [
+        "biochem2-practical-titration-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "03 - Spectrophotometry and Beer-Lambert law.pptx",
+      "locator": "Slides 3–31",
+      "topic": "Spectrophotometry & serum protein",
+      "conceptIds": [
+        "biochem2-practical-photometry-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "06 - Biochemistry Practical Review.pdf",
+      "locator": "Section: Spectrophotometry & serum protein",
+      "topic": "Spectrophotometry & serum protein",
+      "conceptIds": [
+        "biochem2-practical-photometry-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "04A - Amino acid and protein qualitative tests - Ebrahimi.pptx",
+      "locator": "Ebrahimi slides 15–29; Emamgholipour PDF pp. 13–27",
+      "topic": "Amino-acid & protein identification tests",
+      "conceptIds": [
+        "biochem2-practical-proteins-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "06 - Biochemistry Practical Review.pdf",
+      "locator": "Section: Amino-acid & protein identification tests",
+      "topic": "Amino-acid & protein identification tests",
+      "conceptIds": [
+        "biochem2-practical-proteins-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "04B - Amino acid and protein qualitative tests - Emamgholipour.pdf",
+      "locator": "PDF pp. 13–27",
+      "topic": "Amino-acid & protein identification tests",
+      "conceptIds": [
+        "biochem2-practical-proteins-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "05 - Enzyme practical.pptx",
+      "locator": "Slides 3–21",
+      "topic": "Enzyme experiments & controls",
+      "conceptIds": [
+        "biochem2-practical-enzymes-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "06 - Biochemistry Practical Review.pdf",
+      "locator": "Section: Enzyme experiments & controls",
+      "topic": "Enzyme experiments & controls",
+      "conceptIds": [
+        "biochem2-practical-enzymes-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "06 - Flame photometry and body electrolytes.pptx",
+      "locator": "Slides 2–11; review: flame photometry",
+      "topic": "Flame photometry & electrolytes",
+      "conceptIds": [
+        "biochem2-practical-flame-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
+    },
+    {
+      "source": "06 - Biochemistry Practical Review.pdf",
+      "locator": "Section: Flame photometry & electrolytes",
+      "topic": "Flame photometry & electrolytes",
+      "conceptIds": [
+        "biochem2-practical-flame-concept"
+      ],
+      "status": "mapped",
+      "note": "Newly authored study practice from the local slides and saved review; no question is presented as a past or official exam item. Calculation stems state their own input data."
     }
   ]
 }

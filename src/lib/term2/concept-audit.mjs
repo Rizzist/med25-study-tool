@@ -1,6 +1,6 @@
 const forbiddenAssessmentTag = /(?:^|-)past(?:-|$)|final-bank|telegram-final|downloaded-final|official-exam/;
-const isExpansion = (question) => (question.tags ?? []).some(tag => ["gap-audit", "depth-expansion", "comprehensive-expansion"].includes(tag));
-const isDepthExpansion = (question) => (question.tags ?? []).some(tag => ["depth-expansion", "comprehensive-expansion"].includes(tag));
+const isExpansion = (question) => (question.tags ?? []).some(tag => ["gap-audit", "depth-expansion", "comprehensive-expansion", "limb-science-audit"].includes(tag));
+const isDepthExpansion = (question) => (question.tags ?? []).some(tag => ["depth-expansion", "comprehensive-expansion", "limb-science-audit"].includes(tag));
 
 function normalizedPrompt(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();

@@ -77,7 +77,10 @@ function validate(question, location, finalMetadata) {
 for (const source of [
   { directory: questionDir },
   { directory: finalExamDir, metadataFor: (filename) => ({ exam: filename.replace(/\.jsonl$/, ""), requiredTag: "telegram-final", bank: "telegram-past-papers" }) },
-  { directory: downloadedFinalExamDir, metadataFor: () => ({ exam: "july29", requiredTag: "final-bank-aug25-downloaded-core", bank: "downloaded-core" }) },
+  { directory: downloadedFinalExamDir, metadataFor: (filename) => filename === "nutrition-past-papers.jsonl"
+    ? { exam: "term2-nutrition", requiredTag: "final-bank-nutrition-past-papers", bank: "nutrition-past-papers" }
+    : filename === "religion-past-papers.jsonl" ? { exam: "term2-religion", requiredTag: "final-bank-religion-past-papers", bank: "religion-past-papers" }
+    : { exam: "july29", requiredTag: "final-bank-aug25-downloaded-core", bank: "downloaded-core" } },
 ]) {
   if (!existsSync(source.directory)) continue;
   for (const filename of readdirSync(source.directory).filter((name) => name.endsWith(".jsonl")).sort()) {

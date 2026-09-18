@@ -1,18 +1,18 @@
 {
   "schemaVersion": "1.0.0",
   "examId": "term2-biochemistry",
-  "updatedAt": "2026-09-07",
-  "moduleCount": 13,
-  "conceptCount": 51,
-  "objectiveCount": 103,
-  "mcqLinkedObjectives": 103,
-  "objectivesSampledBeforeExpansion": 72,
+  "updatedAt": "2026-09-13",
+  "moduleCount": 19,
+  "conceptCount": 57,
+  "objectiveCount": 189,
+  "mcqLinkedObjectives": 189,
+  "objectivesSampledBeforeExpansion": 158,
   "objectivesFirstSampledByExpansion": 31,
-  "questionCount": 205,
+  "questionCount": 291,
   "addedQuestionCount": 47,
-  "imageQuestionCount": 0,
+  "imageQuestionCount": 7,
   "interactive3dCount": 0,
-  "distinctPracticeItems": 205,
+  "distinctPracticeItems": 291,
   "unmappedQuestionIds": [],
   "unsampledObjectiveIds": [],
   "byModule": [
@@ -158,10 +158,76 @@
       "questions": 9,
       "distinctItems": 9,
       "newlySampledObjectives": 9
+    },
+    {
+      "id": "biochem2-practical-lab",
+      "title": "Practical · Safety & laboratory equipment",
+      "subject": "biochemistry",
+      "conceptCount": 1,
+      "objectiveCount": 12,
+      "linkedObjectiveCount": 12,
+      "questions": 12,
+      "distinctItems": 12,
+      "newlySampledObjectives": 0
+    },
+    {
+      "id": "biochem2-practical-titration",
+      "title": "Practical · Titration & equivalent calculations",
+      "subject": "biochemistry",
+      "conceptCount": 1,
+      "objectiveCount": 12,
+      "linkedObjectiveCount": 12,
+      "questions": 12,
+      "distinctItems": 12,
+      "newlySampledObjectives": 0
+    },
+    {
+      "id": "biochem2-practical-photometry",
+      "title": "Practical · Spectrophotometry & serum protein",
+      "subject": "biochemistry",
+      "conceptCount": 1,
+      "objectiveCount": 18,
+      "linkedObjectiveCount": 18,
+      "questions": 18,
+      "distinctItems": 18,
+      "newlySampledObjectives": 0
+    },
+    {
+      "id": "biochem2-practical-proteins",
+      "title": "Practical · Amino-acid & protein identification tests",
+      "subject": "biochemistry",
+      "conceptCount": 1,
+      "objectiveCount": 18,
+      "linkedObjectiveCount": 18,
+      "questions": 18,
+      "distinctItems": 18,
+      "newlySampledObjectives": 0
+    },
+    {
+      "id": "biochem2-practical-enzymes",
+      "title": "Practical · Enzyme experiments & controls",
+      "subject": "biochemistry",
+      "conceptCount": 1,
+      "objectiveCount": 16,
+      "linkedObjectiveCount": 16,
+      "questions": 16,
+      "distinctItems": 16,
+      "newlySampledObjectives": 0
+    },
+    {
+      "id": "biochem2-practical-flame",
+      "title": "Practical · Flame photometry & electrolytes",
+      "subject": "biochemistry",
+      "conceptCount": 1,
+      "objectiveCount": 10,
+      "linkedObjectiveCount": 10,
+      "questions": 10,
+      "distinctItems": 10,
+      "newlySampledObjectives": 0
     }
   ],
   "sourceInventory": {
-    "mapped": 131,
+    "mapped": 144,
     "limits": [
       {
         "source": "Lippincott's Illustrated Reviews: Biochemistry",

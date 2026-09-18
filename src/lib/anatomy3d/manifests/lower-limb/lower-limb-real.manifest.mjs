@@ -2,6 +2,7 @@ import { imageMeshStructures } from "../image-mesh-structures.mjs";
 import { practicalMeshStructures } from "../practical-mesh-structures.mjs";
 import { practicalLandmarkStructures } from "../practical-landmarks.mjs";
 import { lowerPracticalConnectiveStructures } from "../practical-connective.mjs";
+import { practicalCompletionStructures } from "../practical-completion.mjs";
 import { lowerLimbDetailStructures } from "../limb-detail-structures.mjs";
 import { lowerLimbNerveDetailStructures } from "../limb-nerve-structures.mjs";
 
@@ -884,5 +885,6 @@ export const lowerLimbManifest = {
     ...practicalMeshStructures("lower-limb"),
     ...practicalLandmarkStructures("lower-limb"),
     ...lowerPracticalConnectiveStructures,
+    ...practicalCompletionStructures,
   ],
 };

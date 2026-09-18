@@ -1,5 +1,7 @@
 import { execFile, spawn } from "node:child_process";
 import { createHash } from "node:crypto";
+import { nutritionFinalBank } from "../src/lib/mcq/nutrition-final-bank.mjs";
+import { religionFinalBank } from "../src/lib/mcq/religion-final-bank.mjs";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { createServer } from "node:http";
 import { extname, resolve, sep } from "node:path";
@@ -188,12 +190,14 @@ const JULY_29_BIOCHEMISTRY_TOPICS = new Set([
 const EXAM_COLLECTIONS = ["all", "anatomy", "dynamic-anatomy", "histology", "embryology", "physiology", "biochemistry", "images", "stains", "histo-practical", "histo-identification", "histo-transfer", "practical"];
 const EXAM_IDS = examIds;
 const FINAL_EXAM_BANKS = [
+  { ...nutritionFinalBank, filepath: resolve(downloadedFinalExamDirectory, "nutrition-past-papers.jsonl") },
+  { ...religionFinalBank, filepath: resolve(downloadedFinalExamDirectory, "religion-past-papers.jsonl") },
   { id: "telegram-past-papers", exam: "july25", label: "Telegram Past Papers", description: "The original source-traceable July 25 past-paper bank.", requiredTag: "telegram-final", filepath: resolve(finalExamDirectory, "july25.jsonl") },
   { id: "telegram-past-papers", exam: "july29", label: "Telegram Past Papers", description: "The original 199-question August 25 Telegram archive.", requiredTag: "telegram-final", filepath: resolve(finalExamDirectory, "july29.jsonl") },
   { id: "downloaded-core", exam: "july29", label: "New Downloads · Core Distilled", description: "Scientifically re-keyed core questions distilled from the newly downloaded past papers and exam photos.", requiredTag: "final-bank-aug25-downloaded-core", filepath: resolve(downloadedFinalExamDirectory, "aug25-downloaded-core.jsonl") },
 ];
 
-function finalExamBankDefinition(exam, bank = "telegram-past-papers") {
+function finalExamBankDefinition(exam, bank = exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers") {
   if (!EXAM_IDS.includes(exam)) throw new Error("A valid exam is required");
   const definition = FINAL_EXAM_BANKS.find((candidate) => candidate.exam === exam && candidate.id === bank);
   if (!definition) throw new Error("That final-exam bank is not available for this exam");
@@ -223,6 +227,7 @@ function matchesExam(question, exam) {
 
 function isPracticalDerived(question) {
   const tags = (question.tags ?? []).map((tag) => tag.toLowerCase());
+  if (tags.includes("exam-term2-biochemistry")) return tags.includes("biochemistry-practical");
   return question.kind === "image_single_best_answer"
     || tags.includes("physiology-practical")
     || tags.includes("biochemistry-lab")
@@ -351,7 +356,7 @@ function loadVerifiedQuestions(includeArchived = false) {
   return questions;
 }
 
-function loadFinalExamQuestions(exam, bank = "telegram-past-papers") {
+function loadFinalExamQuestions(exam, bank = exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers") {
   const definition = finalExamBankDefinition(exam, bank);
   const filepath = definition.filepath;
   if (!existsSync(filepath)) return [];
@@ -375,7 +380,7 @@ function loadFinalExamQuestions(exam, bank = "telegram-past-papers") {
 
 function finalExamSet(searchParams) {
   const exam = searchParams.get("exam");
-  const bank = searchParams.get("bank") ?? "telegram-past-papers";
+  const bank = searchParams.get("bank") ?? (exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
   const definition = finalExamBankDefinition(exam, bank);
   const questions = loadFinalExamQuestions(exam, bank);
   const fingerprint = createHash("sha256")
@@ -511,6 +516,8 @@ function resolveQuestionMedia(questionId, mediaId) {
     ...loadFinalExamQuestions("july25"),
     ...loadFinalExamQuestions("july29"),
     ...loadFinalExamQuestions("july29", "downloaded-core"),
+    ...loadFinalExamQuestions("term2-nutrition", "nutrition-past-papers"),
+    ...loadFinalExamQuestions("term2-religion", "religion-past-papers"),
   ].find((item) => item.id === questionId);
   const media = question?.media?.find((item) => item.id === mediaId);
   if (!question || !media || media.type !== "image") return null;

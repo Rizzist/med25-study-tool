@@ -3,6 +3,9 @@
 /* Study mode is a document, not a fixed-height exam: every source and control stays reachable. */
 .anatomy-study-gallery{max-width:1320px;margin:auto;padding:18px 0 32px;font-size:1rem}
 .anatomy-study-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.anatomy-atlas-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:12px 0}.anatomy-atlas-header h1{font-size:1.8rem;margin:4px 0}.anatomy-atlas-header p{margin:4px 0;color:#52625b}
+.anatomy-atlas-view-switch{display:flex;gap:6px;position:sticky;top:0;z-index:8;background:#edf2ef;border:1px solid #cbd7cf;padding:7px;border-radius:12px;margin:16px 0}.anatomy-atlas-view-switch button{flex:1;border:0;background:transparent;color:#254434;padding:13px;font:inherit;font-weight:750;border-radius:8px;cursor:pointer}.anatomy-atlas-view-switch button[aria-pressed=true]{background:#123327;color:white;box-shadow:0 2px 8px #14332720}.anatomy-unified-atlas>.anatomy3d-trainer .anatomy3d-header h2{font-size:1.5rem}
+@media(max-width:600px){.anatomy-atlas-header{align-items:flex-start}.anatomy-atlas-header h1{font-size:1.35rem}.anatomy-atlas-header .anatomy-explorer-back{max-width:140px;margin:0}.anatomy-atlas-view-switch button{font-size:.9rem;padding:11px 7px}}
 .anatomy-study-header h1{font-size:1.65rem;margin:0 0 6px}.anatomy-study-header p{margin:0;color:#50635b}
 .anatomy-study-context-note{font-size:.8rem;color:#50635b;line-height:1.5;margin:10px 0}
 .anatomy-study-gallery button,.anatomy-study-modes button{font:inherit;font-size:.9rem;min-height:38px;padding:8px 12px;background:white;color:#1c4232;border:1px solid #aebfb6;border-radius:6px;cursor:pointer}
@@ -359,7 +362,7 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 @media (max-width:1100px) { .resp-study-layout { grid-template-columns:175px minmax(0,1fr); gap:14px; }.resp-hub-metrics { grid-template-columns:1fr 1fr; }.resp-study-controls { grid-template-columns:1fr 1fr; }.resp-search { grid-column:1 / -1; } }
 @media (max-width:800px) { .resp-overview-entry { align-items:flex-start; flex-direction:column; }.resp-study-layout { grid-template-columns:1fr; }.resp-module-nav { grid-template-columns:1fr 1fr; gap:10px; }.resp-module-nav>button { grid-column:1 / -1; }.resp-module-nav>div { align-content:start; }.resp-concept-body { padding:16px; }.resp-concept-card>summary { padding:15px; }.resp-hub-metrics>div { padding:12px; }.resp-practice-controls { align-items:stretch; }.resp-practice-controls>.primary { width:100%; }.resp-audit table { min-width:620px; } }
 @media (max-width:420px) { .resp-study-controls { grid-template-columns:1fr; }.resp-module-nav { grid-template-columns:1fr; }.resp-concept-actions { align-items:stretch; flex-direction:column; }.resp-concept-actions label { margin-bottom:5px; } }
-.setup-topbar { height:110px; grid-template-columns:minmax(0,1fr) auto; gap:16px; }
+.setup-topbar { height:auto; min-height:110px; padding-block:12px; grid-template-columns:minmax(0,1fr) auto; gap:16px; }
 .setup-topbar .topbar-label { display:none; }
 .exam-switcher-shell { display:grid; gap:7px; }
 .term-switcher { display:flex; gap:5px; }
@@ -522,7 +525,9 @@ html:has(.anatomy-test-immersive),body:has(.anatomy-test-immersive){height:auto;
 .anatomy-image figcaption { margin-top:10px; color:var(--muted); font-size:11px; line-height:1.6; text-align:left; }
 .anatomy-hotspot:focus-visible,.anatomy-region-list button:focus-visible,.term-switcher button:focus-visible,.exam-switcher button:focus-visible { outline:3px solid #b4772f; outline-offset:3px; }
 @media (min-width:801px) {
-  .setup-content { height:calc(100dvh - 110px); }
+  .setup-workspace { display:flex; flex-direction:column; }
+  .setup-topbar { flex-shrink:0; }
+  .setup-content { height:auto; flex:1; min-height:0; }
   .setup-content.term2-view { overflow:auto; scrollbar-gutter:stable; display:block; }
 }
 @media (max-width:1100px) { .setup-topbar { padding-inline:16px; }.setup-topbar .connection { display:none; }.setup-topbar { grid-template-columns:minmax(0,1fr); } }
@@ -714,3 +719,24 @@ html:has(.anatomy-test-immersive),body:has(.anatomy-test-immersive){height:auto;
   .anatomy3d-immersive .anatomy3d-stage { flex:none; height:56vh; min-height:360px; }
   .anatomy3d-immersive .anatomy3d-panel { height:auto; overflow:visible; }
 }
+/* Past-paper sessions use the same focused shell as practice MCQs. */
+.setup-shell.cvs-paper-active,
+.setup-shell:has([data-cvs-paper-session="active"]) { display: block; min-height: 100dvh; }
+.cvs-paper-active > .setup-sidebar,
+.cvs-paper-active .setup-topbar,
+.setup-shell:has([data-cvs-paper-session="active"]) > .setup-sidebar,
+.setup-shell:has([data-cvs-paper-session="active"]) .setup-topbar { display: none; }
+.cvs-paper-active .setup-workspace,
+.setup-shell:has([data-cvs-paper-session="active"]) .setup-workspace { height: 100dvh; display: block; overflow: auto; width: 100%; min-height: 0; }
+.cvs-paper-active .setup-content.final-exam-view,
+.setup-shell:has([data-cvs-paper-session="active"]) .setup-content.final-exam-view { width: 100%; max-width: none; height: auto; min-height: 100dvh; margin: 0; padding: 0; display: block; overflow: visible; }
+.bank-load-status{display:flex;align-items:center;gap:14px;padding:14px 18px;margin-bottom:18px;border:1px solid var(--line);border-radius:12px;background:var(--soft,#edf4ef);font-size:1rem}
+.bank-load-status b{font-size:1rem}.bank-load-status p{margin:3px 0 0;font-size:.875rem;color:var(--muted)}
+.bank-load-status button{margin-left:auto;min-height:44px;padding:10px 14px;border:1px solid var(--green);border-radius:8px;background:var(--paper);font:inherit;cursor:pointer}
+.bank-loading-spinner{width:22px;height:22px;flex:0 0 auto;border:3px solid var(--line);border-top-color:var(--green);border-radius:50%;animation:bank-spin .8s linear infinite}
+.loading-stat{display:inline-block;min-width:2.5ch;border-radius:6px;background:var(--soft,#edf4ef);color:var(--muted);animation:bank-pulse 1.3s ease-in-out infinite}
+@keyframes bank-spin{to{transform:rotate(360deg)}}
+@keyframes bank-pulse{50%{opacity:.4}}
+@media(prefers-reduced-motion:reduce){.bank-loading-spinner,.loading-stat{animation:none}}
+@media(max-width:650px){.bank-load-status{flex-wrap:wrap;padding:12px}.bank-load-status>div{flex:1;min-width:180px}}
+.setup-shell:has([data-cvs-paper-session="active"]) .bank-load-status{display:none}

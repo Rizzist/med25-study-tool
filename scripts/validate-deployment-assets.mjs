@@ -13,6 +13,22 @@ function assert(condition, message) {
 
 const catalog = JSON.parse(readFileSync(catalogPath, "utf8"));
 const embeddedBank = JSON.parse(readFileSync(embeddedBankPath, "utf8"));
+const religionCatalog = JSON.parse(readFileSync(resolve(root, 'data/religion/catalog.json'), 'utf8'));
+const religionPractice = readFileSync(resolve(root, 'data/bank/questions/term2-religion.jsonl'), 'utf8').trim().split('\n').map(JSON.parse);
+const religionFinal = readFileSync(resolve(root, 'data/final-exams/religion-past-papers.jsonl'), 'utf8').trim().split('\n').map(JSON.parse);
+assert(JSON.stringify(embeddedBank.questions.filter(q => q.tags.includes('exam-term2-religion'))) === JSON.stringify(religionPractice), 'Embedded Religion practice is stale');
+assert(JSON.stringify(embeddedBank.finalExams['term2-religion:religion-past-papers']) === JSON.stringify(religionFinal), 'Embedded Religion final papers are stale');
+assert(religionCatalog.archive.length === 180, 'Religion archive must preserve all source occurrences');
+for (const paper of religionCatalog.papers) assert(createHash('sha256').update(readFileSync(resolve(root, 'public', paper.file.slice(1)))).digest('hex') === paper.sha256, `Religion source PDF changed: ${paper.id}`);
+for (const q of religionFinal) for (const media of q.media ?? []) assert(existsSync(resolve(root, 'public/study', media.path)), `Missing Religion source image: ${media.path}`);
+const biochemistryPractical = JSON.parse(readFileSync(resolve(root, 'data/term2/biochemistry-practical.json'), 'utf8'));
+const biochemistryPracticalSource = readFileSync(resolve(root, 'data/bank/questions/term2-biochemistry-practical.jsonl'), 'utf8').trim().split('\n').map(line => JSON.parse(line));
+const biochemistryPracticalEmbedded = embeddedBank.questions.filter(q => q.tags?.includes('biochemistry-practical'));
+assert(JSON.stringify(biochemistryPracticalEmbedded) === JSON.stringify(biochemistryPracticalSource), 'Embedded biochemistry practical bank is stale');
+assert(biochemistryPracticalEmbedded.length === biochemistryPractical.totals.questions, 'Biochemistry practical catalog count is stale');
+for (const question of biochemistryPracticalEmbedded) {
+  for (const media of question.media ?? []) assert(existsSync(resolve(root, 'public/study', media.path)), `Missing biochemistry practical figure: ${media.path}`);
+}
 const cartilageProvenance = JSON.parse(readFileSync(resolve(root, 'public/anatomy3d/cvs/costal-cartilages.provenance.json'), 'utf8'));
 assert(createHash('sha256').update(readFileSync(resolve(root, 'public/anatomy3d/cvs/costal-cartilages.obj'))).digest('hex') === cartilageProvenance.output.sha256, 'Source-aligned cartilage asset is missing or changed');
 const practicalCatalog = JSON.parse(readFileSync(resolve(root, "data/term2/physiology-practical.json"), "utf8"));

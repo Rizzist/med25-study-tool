@@ -318,6 +318,7 @@ export async function createLowerLimbModel(): Promise<AnatomyModelHandle> {
   reconcilePracticalGroups(structures, aliases, "lower-limb");
   addPracticalLandmarks(gltf.scene, structures, "lower-limb");
   addLowerPracticalConnective(gltf.scene, structures);
+  await addPracticalCompletion(gltf.scene, structures, aliases);
   const bbox = new Box3().setFromObject(root);
   if (!bbox.isEmpty()) {
     const size = bbox.getSize(new Vector3());
@@ -358,3 +359,4 @@ import { reconcileImageMeshGroups } from "../image-mesh-groups.ts";
 import { attachPracticalMeshSupplement, reconcilePracticalGroups } from "../practical-mesh-supplement.ts";
 import { addPracticalLandmarks } from "../practical-landmarks.ts";
 import { addLowerPracticalConnective } from "../practical-connective.ts";
+import { addPracticalCompletion } from "../practical-completion.ts";

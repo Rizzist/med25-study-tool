@@ -1,6 +1,6 @@
 export const MCQ_SCHEMA_VERSION = "1.0.0" as const;
 
-export type SubjectId = "anatomy" | "histology" | "embryology" | "physiology" | "biochemistry";
+export type SubjectId = "anatomy" | "histology" | "embryology" | "physiology" | "biochemistry" | "religion";
 export type QuestionKind = "single_best_answer" | "image_single_best_answer" | "dynamic_anatomy" | "dynamic_anatomy_3d";
 export type QuestionStatus = "draft" | "verified" | "retired";
 export type Difficulty = 1 | 2 | 3 | 4 | 5;

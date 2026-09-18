@@ -1,4 +1,6 @@
 import { createHash } from "node:crypto";
+import { nutritionFinalBank } from "@/src/lib/mcq/nutrition-final-bank.mjs";
+import { religionFinalBank } from "@/src/lib/mcq/religion-final-bank.mjs";
 import { includeAdvancedAnatomyPractice } from "@/src/lib/mcq/advanced-anatomy.mjs";
 import embeddedBankData from "@/data/bank/embedded-bank.json";
 import {
@@ -16,7 +18,7 @@ import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuesti
 
 export { isExamId };
 export type { ExamId };
-export type FinalExamBankId = "telegram-past-papers" | "downloaded-core";
+export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers";
 type FinalExamBankKey = `${ExamId}:${FinalExamBankId}`;
 export type CollectionId =
   | "all"
@@ -225,6 +227,8 @@ let verifiedCache: MCQQuestion[] | null = null;
 const finalCache: Partial<Record<FinalExamBankKey, MCQQuestion[]>> = {};
 
 const FINAL_EXAM_BANKS = [
+  nutritionFinalBank,
+  religionFinalBank,
   {
     id: "telegram-past-papers" as const,
     exam: "july25" as const,
@@ -249,11 +253,11 @@ const FINAL_EXAM_BANKS = [
 ] as const;
 
 export function isFinalExamBankId(value: unknown): value is FinalExamBankId {
-  return value === "telegram-past-papers" || value === "downloaded-core";
+  return value === "telegram-past-papers" || value === "downloaded-core" || value === "nutrition-past-papers" || value === "religion-past-papers";
 }
 
-export function defaultFinalExamBank(): FinalExamBankId {
-  return "telegram-past-papers";
+export function defaultFinalExamBank(exam?: ExamId): FinalExamBankId {
+  return exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers";
 }
 
 function finalExamBankDefinition(exam: ExamId, bank: FinalExamBankId) {
@@ -274,7 +278,7 @@ export function loadVerifiedQuestions(): MCQQuestion[] {
   return verifiedCache;
 }
 
-export function loadFinalExamQuestions(exam: ExamId, bank: FinalExamBankId = defaultFinalExamBank()): MCQQuestion[] {
+export function loadFinalExamQuestions(exam: ExamId, bank: FinalExamBankId = defaultFinalExamBank(exam)): MCQQuestion[] {
   const definition = finalExamBankDefinition(exam, bank);
   const key: FinalExamBankKey = `${exam}:${bank}`;
   if (!finalCache[key]) {
@@ -292,6 +296,8 @@ export function loadFinalExamQuestions(exam: ExamId, bank: FinalExamBankId = def
 
 function isPracticalDerived(question: MCQQuestion): boolean {
   const tags = (question.tags ?? []).map((tag) => tag.toLowerCase());
+  // Keep the Biochemistry II practical collection separate from its pathway images.
+  if (tags.includes("exam-term2-biochemistry")) return tags.includes("biochemistry-practical");
   return question.kind === "image_single_best_answer"
     || tags.includes("physiology-practical")
     || tags.includes("biochemistry-lab")
@@ -427,7 +433,7 @@ export function bankSummary() {
   };
 }
 
-export function finalExamSet(exam: ExamId, bank: FinalExamBankId = defaultFinalExamBank()) {
+export function finalExamSet(exam: ExamId, bank: FinalExamBankId = defaultFinalExamBank(exam)) {
   const definition = finalExamBankDefinition(exam, bank);
   const questions = loadFinalExamQuestions(exam, bank);
   const fingerprint = createHash("sha256")
@@ -550,6 +556,8 @@ export function resolveMedia(questionId: string | null, mediaId: string | null) 
     ...loadFinalExamQuestions("july25"),
     ...loadFinalExamQuestions("july29"),
     ...loadFinalExamQuestions("july29", "downloaded-core"),
+    ...loadFinalExamQuestions("term2-nutrition", "nutrition-past-papers"),
+    ...loadFinalExamQuestions("term2-religion", "religion-past-papers"),
   ].find((candidate) => candidate.id === questionId);
   const media = question?.media?.find((candidate) => candidate.id === mediaId);
   if (!media || media.type !== "image") return null;

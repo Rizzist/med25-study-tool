@@ -1,0 +1,84 @@
+{
+  "status": "technical-and-source-relationship-checks-pass-pending-independent-review",
+  "issues": [],
+  "targets": 25,
+  "counts": {
+    "muscle": 8,
+    "nerve": 9,
+    "region": 8
+  },
+  "realVertexAnchors": 80,
+  "maxSourceVertexError": 0,
+  "articularisAnteriorVertices": [
+    {
+      "vertexIndex": 757,
+      "normal": [
+        -0.28599855303764343,
+        0.004888846073299646,
+        0.9582175612449646
+      ],
+      "position": [
+        -0.015515722334384918,
+        -0.1117408275604248,
+        0.0011070221662521362
+      ]
+    },
+    {
+      "vertexIndex": 802,
+      "normal": [
+        -0.13664326071739197,
+        -0.05789976194500923,
+        0.988926887512207
+      ],
+      "position": [
+        -0.006585732102394104,
+        -0.12148261070251465,
+        0.0023827403783798218
+      ]
+    },
+    {
+      "vertexIndex": 702,
+      "normal": [
+        0.47704052925109863,
+        -0.021561149507761,
+        0.8786168098449707
+      ],
+      "position": [
+        0.014173582196235657,
+        -0.13597935438156128,
+        -0.0009804964065551758
+      ]
+    }
+  ],
+  "interosseousInsertionPairs": [
+    [
+      2,
+      "medial"
+    ],
+    [
+      2,
+      "lateral"
+    ],
+    [
+      3,
+      "lateral"
+    ],
+    [
+      4,
+      "lateral"
+    ]
+  ],
+  "regionMeshes": "open wire paths; no filled boundaries or volume solids",
+  "references": "7 genuine pinned spine/sacrum reference meshes, explicitly non-quiz",
+  "anatomicalPrecision": "Regional schematic approximations only; no new scanned nerve/muscle surfaces",
+  "projectionReview": [
+    "foot-muscles.png",
+    "foot-nerves.png",
+    "pelvis-networks.png",
+    "pelvis-regions.png",
+    "thigh-regions.png",
+    "knee-calf.png",
+    "tarsal-tunnel.png"
+  ],
+  "independentReviewOutstanding": true
+}

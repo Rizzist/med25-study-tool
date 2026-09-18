@@ -83,9 +83,11 @@ function progressFor(progress: AnatomyProgress, modelKey: string): ModuleProgres
 type AnatomyTrainerProps = {
   regions: string[];
   initialModelKey?:string;
+  onModuleChange?:(modelKey:string)=>void;
+  embedded?:boolean;
 };
 
-export function AnatomyExplorer({ regions, initialModelKey }: AnatomyTrainerProps) {
+export function AnatomyExplorer({ regions, initialModelKey, onModuleChange, embedded=false }: AnatomyTrainerProps) {
   const viewerRef = useRef<AnatomyViewerHandle>(null);
   const randomStateRef = useRef(0x6d2b79f5);
   // Modules across every region this exam covers, concatenated in registration order.
@@ -243,6 +245,7 @@ export function AnatomyExplorer({ regions, initialModelKey }: AnatomyTrainerProp
 
   function chooseModule(nextModelKey: string) {
     setModuleKey(nextModelKey);
+    onModuleChange?.(nextModelKey);
     setQuestionIndex(0);
     setSelectedOptionId(null);
     setTrainingStructureId(null);
@@ -343,8 +346,8 @@ export function AnatomyExplorer({ regions, initialModelKey }: AnatomyTrainerProp
     <section className="anatomy3d-trainer" aria-labelledby="anatomy3d-title">
       <header className="anatomy3d-header">
         <div>
-          <p className="eyebrow">Interactive atlas</p>
-          <h2 id="anatomy3d-title">3D Anatomy</h2>
+          {!embedded && <p className="eyebrow">Interactive atlas</p>}
+          <h2 id="anatomy3d-title">{embedded ? `${manifest.title} · 3D model` : "3D Anatomy"}</h2>
           <p>{manifest.blurb}</p>
           <p className="anatomy3d-coverage-summary">
             <strong>{atlasCounts.total} selectable study structures</strong> across these regions · {atlasCounts.real} scan-derived · {atlasCounts.schematic} diagrammatic

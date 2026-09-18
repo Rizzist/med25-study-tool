@@ -1,0 +1,1876 @@
+{
+  "version": 1,
+  "imported": "2026-09-14",
+  "book": {
+    "title": "Nutrition & Diet Therapy",
+    "authors": "DeBruyne, Pinna & Whitney",
+    "edition": "9th (2016)",
+    "sha256": "95959e457fdb6bf375b1fc68232c85d7922ea19bc7cc3a1df90c741b251921ed"
+  },
+  "review": {
+    "title": "11 - Nutrition Review.pdf",
+    "sourceHash": "5b1eb1e9715f3df45fbdc7f54c10aa5db53919255ec8731b0609b9f5bb75371e",
+    "scope": "Review/book-derived; Nutrition lecture slides and official syllabus not yet confirmed."
+  },
+  "sections": [
+    {
+      "id": "foundations",
+      "title": "Nutrients, DRIs and food choices",
+      "reviewSection": "02",
+      "bookLocator": "PDF pp. 29-32, 35-46 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "carbohydrate",
+      "title": "Carbohydrate, fiber and glycemic control",
+      "reviewSection": "03",
+      "bookLocator": "PDF pp. 57-63, 67-74, 77-79 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "lipids",
+      "title": "Lipids, essential fatty acids and eicosanoids",
+      "reviewSection": "04",
+      "bookLocator": "PDF pp. 83-94, 97-99 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "protein",
+      "title": "Protein, amino acids and nitrogen balance",
+      "reviewSection": "05",
+      "bookLocator": "PDF pp. 109-120, 487-490 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "digestion",
+      "title": "Digestion and absorption: predict the deficiency",
+      "reviewSection": "06",
+      "bookLocator": "PDF pp. 130-144, 231 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "energy",
+      "title": "Energy calculations, BMR and fasting",
+      "reviewSection": "07",
+      "bookLocator": "PDF pp. 29-30, 158-170 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "assessment",
+      "title": "Assessment, BMI and body composition",
+      "reviewSection": "08",
+      "bookLocator": "PDF pp. 169-174, 419-428 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "ASPEN — Visceral proteins as nutrition markers",
+          "url": "https://aspenjournals.onlinelibrary.wiley.com/doi/10.1002/ncp.10588"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "malnutrition",
+      "title": "Protein-energy malnutrition and refeeding",
+      "reviewSection": "09",
+      "bookLocator": "PDF pp. 116-118, 424-426, 480 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "vitamin-a",
+      "title": "Vitamin A: vision, epithelium and toxicity",
+      "reviewSection": "10",
+      "bookLocator": "PDF pp. 212-218 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "vitamin-d",
+      "title": "Vitamin D, calcium and mineralization",
+      "reviewSection": "11",
+      "bookLocator": "PDF pp. 218-221, 254-257 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NIH ODS — VitaminD",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "vitamin-ek",
+      "title": "Vitamins E and K: antioxidant versus clotting roles",
+      "reviewSection": "12",
+      "bookLocator": "PDF pp. 221-224, 267 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "b-vitamins",
+      "title": "B vitamins: enzymes and deficiency patterns",
+      "reviewSection": "13",
+      "bookLocator": "PDF pp. 225-228, 235-236 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "folate-b12",
+      "title": "B6, folate and B12: connect the pathways",
+      "reviewSection": "14",
+      "bookLocator": "PDF pp. 228-232, 316-317 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NIH ODS — VitaminB12",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/"
+        },
+        {
+          "title": "NIH ODS — Folate",
+          "url": "https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "vitamin-c",
+      "title": "Vitamin C, connective tissue and antioxidant logic",
+      "reviewSection": "15",
+      "bookLocator": "PDF pp. 232-234, 513-514 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": false
+    },
+    {
+      "id": "iron",
+      "title": "Iron: intake, transport, stores and anemia",
+      "reviewSection": "16",
+      "bookLocator": "PDF pp. 261-265, 318-319 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NIH ODS — Iron",
+          "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "minerals",
+      "title": "Water, major minerals and trace elements",
+      "reviewSection": "17",
+      "bookLocator": "PDF pp. 248-260, 266-271 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NIH ODS — Zinc",
+          "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"
+        },
+        {
+          "title": "NIH ODS — Chromium",
+          "url": "https://ods.od.nih.gov/factsheets/Chromium-Consumer/"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "pregnancy",
+      "title": "Pregnancy and lactation",
+      "reviewSection": "18",
+      "bookLocator": "PDF pp. 311-319, 327-335 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NIH ODS — Iron",
+          "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
+        },
+        {
+          "title": "NIH ODS — Folate",
+          "url": "https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/"
+        },
+        {
+          "title": "FDA — Advice about eating fish",
+          "url": "https://www.fda.gov/food/consumers/advice-about-eating-fish"
+        },
+        {
+          "title": "NICHD — Healthy pregnancy",
+          "url": "https://www.nichd.nih.gov/health/topics/preconceptioncare/conditioninfo/healthy-pregnancy"
+        },
+        {
+          "title": "CDC — Breastfeeding contraindications",
+          "url": "https://www.cdc.gov/breastfeeding-special-circumstances/hcp/contraindications/index.html"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "infancy",
+      "title": "Infant and child nutrition",
+      "reviewSection": "19",
+      "bookLocator": "PDF pp. 342-353, 362-375 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "CDC — Foods and drinks to avoid or limit",
+          "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/foods-and-drinks-to-avoid-or-limit.html"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "ageing",
+      "title": "Ageing: muscle, hydration, B12 and D",
+      "reviewSection": "20",
+      "bookLocator": "PDF pp. 390-398 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NIH ODS — VitaminB12",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "clinical-diets",
+      "title": "CVD, diabetes and renal diet principles",
+      "reviewSection": "21",
+      "bookLocator": "PDF pp. 576-585, 596-616, 630-643 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NHLBI — DASH",
+          "url": "https://www.nhlbi.nih.gov/health/dash-eating-plan"
+        },
+        {
+          "title": "NIDDK — Healthy eating in CKD",
+          "url": "https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/healthy-eating-adults-chronic-kidney-disease"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "oral",
+      "title": "Supplement: nutrition and oral health",
+      "reviewSection": "22",
+      "bookLocator": "PDF pp. 512-516, 269-270 (PDF counter, not printed folio)",
+      "references": [],
+      "supplementary": true
+    },
+    {
+      "id": "numbers",
+      "title": "Numerical checkpoint sheet",
+      "reviewSection": "23",
+      "bookLocator": "PDF pp. 29-32, 119, 169-170, 216, 230-234, 256, 266, 315-319, 396 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "NIH ODS — VitaminB12",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/"
+        },
+        {
+          "title": "NIH ODS — Folate",
+          "url": "https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/"
+        },
+        {
+          "title": "NIH ODS — Iron",
+          "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
+        },
+        {
+          "title": "NIH ODS — Zinc",
+          "url": "https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"
+        },
+        {
+          "title": "NIH ODS — VitaminD",
+          "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"
+        }
+      ],
+      "supplementary": false
+    },
+    {
+      "id": "integrated-recall",
+      "title": "Integrated active recall: mechanism, not recognition",
+      "reviewSection": "24",
+      "bookLocator": "PDF pp. 29-32, 111-120, 161-170, 218-234, 261-271, 315-319 (PDF counter, not printed folio)",
+      "references": [
+        {
+          "title": "MedlinePlus Genetics — X-linked adrenoleukodystrophy",
+          "url": "https://www.medlineplus.gov/genetics/condition/x-linked-adrenoleukodystrophy/"
+        }
+      ],
+      "supplementary": false
+    }
+  ],
+  "papers": [
+    {
+      "id": "F",
+      "title": "English nutrition final",
+      "file": "/study/nutrition/past-papers/english-final.pdf",
+      "itemCount": 24,
+      "sha256": "f28a6124409602fa991d38e5c1de5ed6389f8327c8dda28fb26525f925cf4980",
+      "originalFilename": "nutrition final exam.pdf",
+      "courseConfirmed": false
+    },
+    {
+      "id": "N",
+      "title": "Mixed-language nutrition scans",
+      "file": "/study/nutrition/past-papers/nutrition-scans.pdf",
+      "itemCount": 28,
+      "sha256": "8e4fc6fa3f9cff3b257cacb9c46985bec3faaa8418b625e72fa44a33668539ed",
+      "originalFilename": "Nutrition .pdf",
+      "courseConfirmed": false
+    },
+    {
+      "id": "D",
+      "title": "Bilingual nutrition compilation",
+      "file": "/study/nutrition/past-papers/bilingual-compilation.pdf",
+      "itemCount": 40,
+      "sha256": "bf2cc2e6f971fc70ad6a9a0320b249e7aaf5ef83d459a64b25818845b9751e06",
+      "originalFilename": "تغذیه.docx (locally rendered to PDF)",
+      "courseConfirmed": false
+    },
+    {
+      "id": "O",
+      "title": "Nutrition in Oral Health · course match unconfirmed",
+      "file": "/study/nutrition/past-papers/oral-health.pdf",
+      "itemCount": 36,
+      "sha256": "9c87b0600db62f1249ccc39579e6ff47851c334d73ecd72f9b01ff8eb6853b4b",
+      "originalFilename": "تغذیه.pdf",
+      "courseConfirmed": false
+    }
+  ],
+  "records": [
+    {
+      "id": "F1",
+      "paperId": "F",
+      "number": 1,
+      "locator": "PDF p. 1",
+      "topic": "Pregnancy iron",
+      "explanation": "27 mg/day in the adult pregnancy DRI; distinguish dietary intake from a therapeutic dose.",
+      "sectionId": "iron",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 1
+    },
+    {
+      "id": "F2",
+      "paperId": "F",
+      "number": 2,
+      "locator": "PDF p. 2",
+      "topic": "Energy in fat",
+      "explanation": "9 kcal/g; carbohydrate and protein supply 4 kcal/g.",
+      "sectionId": "energy",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 2
+    },
+    {
+      "id": "F3",
+      "paperId": "F",
+      "number": 3,
+      "locator": "PDF p. 3",
+      "topic": "Insulin-associated trace element",
+      "explanation": "Chromium is the historical intended answer. Its essentiality and physiological role are uncertain in current NIH discussion; this is not a supplement recommendation.",
+      "sectionId": "minerals",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 3
+    },
+    {
+      "id": "F4",
+      "paperId": "F",
+      "number": 4,
+      "locator": "PDF p. 4",
+      "topic": "Oligosaccharide length",
+      "explanation": "Commonly 3-10 residues, but boundaries vary. The offered intervals do not give that conventional range exactly. Obtain the lecture definition rather than force an official key.",
+      "sectionId": "carbohydrate",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 4
+    },
+    {
+      "id": "F5",
+      "paperId": "F",
+      "number": 5,
+      "locator": "PDF p. 5",
+      "topic": "Not a monosaccharide",
+      "explanation": "Lactose is a disaccharide: glucose plus galactose.",
+      "sectionId": "carbohydrate",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 5
+    },
+    {
+      "id": "F6",
+      "paperId": "F",
+      "number": 6,
+      "locator": "PDF p. 6",
+      "topic": "Mineral cooperating with E",
+      "explanation": "Selenium: peroxide-removing selenoenzymes complement vitamin E membrane antioxidant activity.",
+      "sectionId": "vitamin-ek",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 6
+    },
+    {
+      "id": "F7",
+      "paperId": "F",
+      "number": 7,
+      "locator": "PDF p. 7",
+      "topic": "Visual form of vitamin A",
+      "explanation": "Retinal; distinguish retinoic-acid gene regulation.",
+      "sectionId": "vitamin-a",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 7
+    },
+    {
+      "id": "F8",
+      "paperId": "F",
+      "number": 8,
+      "locator": "PDF p. 8",
+      "topic": "Thermic effect of food",
+      "explanation": "Approximately 10% for a mixed diet. Composition and individual physiology modify the value.",
+      "sectionId": "energy",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 8
+    },
+    {
+      "id": "F9",
+      "paperId": "F",
+      "number": 9,
+      "locator": "PDF p. 9",
+      "topic": "Vitamin derived from cholesterol-related precursor",
+      "explanation": "Vitamin D; skin 7-dehydrocholesterol is the immediate precursor for D3 synthesis.",
+      "sectionId": "vitamin-d",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 9
+    },
+    {
+      "id": "F10",
+      "paperId": "F",
+      "number": 10,
+      "locator": "PDF p. 10",
+      "topic": "Antioxidant vitamin",
+      "explanation": "E is the classic lipid-phase antioxidant among these choices. This does not mean other vitamins or carotenoids never participate in antioxidant processes.",
+      "sectionId": "vitamin-ek",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 10
+    },
+    {
+      "id": "F11",
+      "paperId": "F",
+      "number": 11,
+      "locator": "PDF p. 11",
+      "topic": "Adult B12 amount",
+      "explanation": "Current adult DRI is 2.4 micrograms/day. The offered 2 micrograms is a rounded/older choice; 2 milligrams is not equivalent.",
+      "sectionId": "folate-b12",
+      "status": "corrected",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 11
+    },
+    {
+      "id": "F12",
+      "paperId": "F",
+      "number": 12,
+      "locator": "PDF p. 12",
+      "topic": "Thromboxane function",
+      "explanation": "Platelet aggregation and vasoconstriction; the option “blood clotting” captures the intended association.",
+      "sectionId": "lipids",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 12
+    },
+    {
+      "id": "F13",
+      "paperId": "F",
+      "number": 13,
+      "locator": "PDF p. 13",
+      "topic": "Adult zinc amount",
+      "explanation": "11 mg/day for men, 8 for women. 40 mg is the adult UL. The sex-unspecified stem is incomplete.",
+      "sectionId": "minerals",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 13
+    },
+    {
+      "id": "F14",
+      "paperId": "F",
+      "number": 14,
+      "locator": "PDF p. 14",
+      "topic": "Mineral in DNA/RNA",
+      "explanation": "Phosphorus in the phosphate backbone, also present in ATP and phospholipids.",
+      "sectionId": "minerals",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 14
+    },
+    {
+      "id": "F15",
+      "paperId": "F",
+      "number": 15,
+      "locator": "PDF p. 15",
+      "topic": "Beriberi",
+      "explanation": "Thiamin (B1) deficiency; neurological and cardiac manifestations differ by phenotype.",
+      "sectionId": "b-vitamins",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 15
+    },
+    {
+      "id": "F16",
+      "paperId": "F",
+      "number": 16,
+      "locator": "PDF p. 16",
+      "topic": "Cyclic amino acid",
+      "explanation": "Proline is likely intended because its side chain closes onto its amino nitrogen. Phenylalanine and tryptophan also have rings, so “cyclic” alone is ambiguous.",
+      "sectionId": "protein",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 16
+    },
+    {
+      "id": "F17",
+      "paperId": "F",
+      "number": 17,
+      "locator": "PDF p. 17",
+      "topic": "Sweetest common sugar",
+      "explanation": "Fructose among the listed sugars; perceived sweetness depends on test conditions.",
+      "sectionId": "carbohydrate",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 17
+    },
+    {
+      "id": "F18",
+      "paperId": "F",
+      "number": 18,
+      "locator": "PDF p. 18",
+      "topic": "Neural tube defects",
+      "explanation": "Folate inadequacy is the nutrient association; periconceptional folic acid reduces risk but does not explain every defect.",
+      "sectionId": "pregnancy",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 18
+    },
+    {
+      "id": "F19",
+      "paperId": "F",
+      "number": 19,
+      "locator": "PDF p. 19",
+      "topic": "Ceruloplasmin-associated mineral",
+      "explanation": "Copper. Ceruloplasmin is a major circulating copper-containing protein; the “stored by” wording is misleading.",
+      "sectionId": "minerals",
+      "status": "corrected",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 19
+    },
+    {
+      "id": "F20",
+      "paperId": "F",
+      "number": 20,
+      "locator": "PDF p. 20",
+      "topic": "Phospholipid",
+      "explanation": "Lecithin, commonly phosphatidylcholine. A fatty acid by itself is not a phospholipid.",
+      "sectionId": "lipids",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 20
+    },
+    {
+      "id": "F21",
+      "paperId": "F",
+      "number": 21,
+      "locator": "PDF p. 21",
+      "topic": "Renal vitamin D activation",
+      "explanation": "1-alpha hydroxylation of 25(OH)D. Liver hydroxylation is at carbon 25; 24-hydroxylation is a distinct regulatory/catabolic pathway.",
+      "sectionId": "vitamin-d",
+      "status": "corrected",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 21
+    },
+    {
+      "id": "F22",
+      "paperId": "F",
+      "number": 22,
+      "locator": "PDF p. 22",
+      "topic": "Smallest amino acid",
+      "explanation": "Glycine; the side chain is hydrogen.",
+      "sectionId": "protein",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 22
+    },
+    {
+      "id": "F23",
+      "paperId": "F",
+      "number": 23,
+      "locator": "PDF p. 23",
+      "topic": "Pigeon-chest deformity",
+      "explanation": "Vitamin D deficiency/rickets is the intended association. The shape alone is not specific for a nutritional diagnosis.",
+      "sectionId": "vitamin-d",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 23
+    },
+    {
+      "id": "F24",
+      "paperId": "F",
+      "number": 24,
+      "locator": "PDF p. 24",
+      "topic": "Night blindness",
+      "explanation": "Vitamin A deficiency is the classic nutritional cause.",
+      "sectionId": "vitamin-a",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 24
+    },
+    {
+      "id": "N1",
+      "paperId": "N",
+      "number": 1,
+      "locator": "PDF p. 1",
+      "topic": "Protein percentage of energy",
+      "explanation": "10-15% is a conventional teaching distribution; the adult AMDR is 10-35%. No offered choice gives the full AMDR, so the intended lecture convention is unresolved.",
+      "sectionId": "foundations",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 1
+    },
+    {
+      "id": "N2",
+      "paperId": "N",
+      "number": 2,
+      "locator": "PDF p. 2",
+      "topic": "Older-adult protein assessment",
+      "explanation": "Albumin is selected, but it is not a reliable standalone measure of intake or muscle stores. Use dietary history, trajectory, examination and illness context.",
+      "sectionId": "assessment",
+      "status": "corrected",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 2
+    },
+    {
+      "id": "N3",
+      "paperId": "N",
+      "number": 3,
+      "locator": "PDF p. 3",
+      "topic": "Use of nonessential amino acids",
+      "explanation": "Glucogenic amino-acid carbon can contribute to glucose synthesis. There is no dedicated inert amino-acid storage depot.",
+      "sectionId": "protein",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 3
+    },
+    {
+      "id": "N4",
+      "paperId": "N",
+      "number": 4,
+      "locator": "PDF p. 4",
+      "topic": "Anthropometry and CVD risk",
+      "explanation": "Waist assesses central adiposity; BMI plus fat distribution adds context. No anthropometric measure alone is a complete CVD-risk assessment. Exact “best” option depends on the course comparison.",
+      "sectionId": "assessment",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 4
+    },
+    {
+      "id": "N5",
+      "paperId": "N",
+      "number": 5,
+      "locator": "PDF p. 5",
+      "topic": "Costochondral beading",
+      "explanation": "Rachitic rosary in rickets; defective mineralization in a growing skeleton.",
+      "sectionId": "vitamin-d",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 5
+    },
+    {
+      "id": "N6",
+      "paperId": "N",
+      "number": 6,
+      "locator": "PDF p. 6",
+      "topic": "Fiber and cholesterol excretion",
+      "explanation": "Pectin, a viscous soluble fiber, among the given choices. Bile-acid losses help explain the cholesterol effect.",
+      "sectionId": "carbohydrate",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 6
+    },
+    {
+      "id": "N7",
+      "paperId": "N",
+      "number": 7,
+      "locator": "PDF p. 7",
+      "topic": "Lower energy needs with ageing",
+      "explanation": "Loss of lean/muscle tissue reduces resting expenditure; lower physical activity often contributes.",
+      "sectionId": "ageing",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 7
+    },
+    {
+      "id": "N8",
+      "paperId": "N",
+      "number": 8,
+      "locator": "PDF p. 8",
+      "topic": "Nutrient concerns in older people",
+      "explanation": "Vitamin D risk/need is important, particularly with reduced exposure/synthesis. Do not infer universally higher iron needs or lower fluid needs.",
+      "sectionId": "ageing",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 8
+    },
+    {
+      "id": "N9",
+      "paperId": "N",
+      "number": 9,
+      "locator": "PDF p. 9",
+      "topic": "CVD dietary target",
+      "explanation": "Saturated fat below 7% of energy is a historical therapeutic convention among the options. Overall risk, lipid management and the replacement nutrient matter; it is not a complete modern treatment target.",
+      "sectionId": "clinical-diets",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 9
+    },
+    {
+      "id": "N10",
+      "paperId": "N",
+      "number": 10,
+      "locator": "PDF p. 10",
+      "topic": "Normal-BMI pregnancy weight gain",
+      "explanation": "Approximately 11.5-16 kg for a singleton pregnancy. The selected 11.3-15.8 kg is an approximate conversion of 25-35 lb.",
+      "sectionId": "pregnancy",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 10
+    },
+    {
+      "id": "N11",
+      "paperId": "N",
+      "number": 11,
+      "locator": "PDF p. 11",
+      "topic": "Central obesity at normal BMI",
+      "explanation": "Abdominal fat distribution can confer elevated risk even when BMI is in the reference range. Individualize the response.",
+      "sectionId": "assessment",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 11
+    },
+    {
+      "id": "N12",
+      "paperId": "N",
+      "number": 12,
+      "locator": "PDF p. 12",
+      "topic": "DASH pattern",
+      "explanation": "A fruit/vegetable/whole-grain/appropriate-dairy pattern rich in fiber and key minerals. Relative protein/fat comparisons depend on the diet used for comparison.",
+      "sectionId": "clinical-diets",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 12
+    },
+    {
+      "id": "N13",
+      "paperId": "N",
+      "number": 13,
+      "locator": "PDF p. 13",
+      "topic": "Fish during pregnancy",
+      "explanation": "Current FDA/EPA guidance: 2-3 servings weekly from lower-mercury Best Choices, 8-12 oz total. A historical “twice” answer must not become an all-species rule.",
+      "sectionId": "pregnancy",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 13
+    },
+    {
+      "id": "N14",
+      "paperId": "N",
+      "number": 14,
+      "locator": "PDF p. 14",
+      "topic": "First dietary response in diabetes",
+      "explanation": "Assess and improve the existing diet/lifestyle. Do not automatically prescribe high protein, unlimited nuts or weight loss regardless of the patient.",
+      "sectionId": "clinical-diets",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 14
+    },
+    {
+      "id": "N15",
+      "paperId": "N",
+      "number": 15,
+      "locator": "PDF p. 15",
+      "topic": "Iron deficiency outcome",
+      "explanation": "Iron-deficiency anemia, not an inherited globin disorder such as sickle-cell disease or thalassemia.",
+      "sectionId": "iron",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 15
+    },
+    {
+      "id": "N16",
+      "paperId": "N",
+      "number": 16,
+      "locator": "PDF p. 16",
+      "topic": "Community health indicators",
+      "explanation": "Indirect nutritional assessment: morbidity, mortality and social context do not directly measure an individual nutrient concentration.",
+      "sectionId": "assessment",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 16
+    },
+    {
+      "id": "N17",
+      "paperId": "N",
+      "number": 17,
+      "locator": "PDF p. 17",
+      "topic": "Conditionally essential amino acid in PKU",
+      "explanation": "Tyrosine, because phenylalanine-to-tyrosine conversion is impaired. Phenylalanine still requires controlled provision.",
+      "sectionId": "protein",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 17
+    },
+    {
+      "id": "N18",
+      "paperId": "N",
+      "number": 18,
+      "locator": "PDF p. 18",
+      "topic": "Fiber and cholesterol excretion",
+      "explanation": "Duplicate of N6: pectin. Retained only for source traceability.",
+      "sectionId": "carbohydrate",
+      "status": "duplicate",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 18
+    },
+    {
+      "id": "N19",
+      "paperId": "N",
+      "number": 19,
+      "locator": "PDF p. 19",
+      "topic": "Kidney disease diet",
+      "explanation": "Extra fluid is not universally appropriate. Supervised protein moderation may fit nondialysis CKD, but creatinine alone does not specify protein/fluid needs.",
+      "sectionId": "clinical-diets",
+      "status": "corrected",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 19
+    },
+    {
+      "id": "N20",
+      "paperId": "N",
+      "number": 20,
+      "locator": "PDF p. 20",
+      "topic": "Meaning of RDA",
+      "explanation": "Intake sufficient for approximately 97-98% of healthy people in a defined group. EAR addresses 50%.",
+      "sectionId": "foundations",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 20
+    },
+    {
+      "id": "N21",
+      "paperId": "N",
+      "number": 21,
+      "locator": "PDF p. 21",
+      "topic": "Dialysis and fluids",
+      "explanation": "Avoid fluid accumulation; actual allowance depends on urine output, treatment and volume status. Dialysis may also increase protein needs.",
+      "sectionId": "clinical-diets",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 21
+    },
+    {
+      "id": "N22",
+      "paperId": "N",
+      "number": 22,
+      "locator": "PDF p. 22",
+      "topic": "Physiological anemia",
+      "explanation": "Pregnancy hemodilution: plasma volume expands more than red-cell mass. Athletes can also have dilutional patterns, so exact options/context matter.",
+      "sectionId": "iron",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 22
+    },
+    {
+      "id": "N23",
+      "paperId": "N",
+      "number": 23,
+      "locator": "PDF p. 23",
+      "topic": "Preconception multivitamin benefit",
+      "explanation": "Neural-tube-defect risk reduction through adequate folic acid. Do not generalize to prevention of every neurological disorder.",
+      "sectionId": "pregnancy",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 23
+    },
+    {
+      "id": "N24",
+      "paperId": "N",
+      "number": 24,
+      "locator": "PDF p. 24",
+      "topic": "Use of nonessential amino acids",
+      "explanation": "Duplicate of N3: amino-acid carbon and gluconeogenesis.",
+      "sectionId": "protein",
+      "status": "duplicate",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 24
+    },
+    {
+      "id": "N25",
+      "paperId": "N",
+      "number": 25,
+      "locator": "PDF p. 25",
+      "topic": "Third-trimester energy increment",
+      "explanation": "About +450 kcal/day above baseline (roughly +452 in the older calculation). This is an increment, not total daily energy.",
+      "sectionId": "pregnancy",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 25
+    },
+    {
+      "id": "N26",
+      "paperId": "N",
+      "number": 26,
+      "locator": "PDF p. 26",
+      "topic": "Most accurate basal-energy assessment",
+      "explanation": "A formula is a prediction. Direct calorimetry measures heat; indirect calorimetry uses respiratory gas exchange. Which measured method is intended depends on the wording.",
+      "sectionId": "energy",
+      "status": "corrected",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 26
+    },
+    {
+      "id": "N27",
+      "paperId": "N",
+      "number": 27,
+      "locator": "PDF p. 27",
+      "topic": "Exception among causes of iron-deficiency anemia",
+      "explanation": "Chronic infection more typically causes anemia of inflammation. The marked chronic occult fecal bleeding is wrong: sustained blood loss is a classic iron-deficiency cause. Coexistence remains possible.",
+      "sectionId": "iron",
+      "status": "corrected",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 27
+    },
+    {
+      "id": "N28",
+      "paperId": "N",
+      "number": 28,
+      "locator": "PDF p. 28",
+      "topic": "Preventing iron-deficiency anemia",
+      "explanation": "Suitable iron-rich foods plus vitamin C; separate tea from iron-rich meals where relevant. Do not give everyone iron supplements or prohibit all dairy.",
+      "sectionId": "iron",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 28
+    },
+    {
+      "id": "D1",
+      "paperId": "D",
+      "number": 1,
+      "locator": "Q1",
+      "topic": "Energy-yielding nutrients",
+      "explanation": "Carbohydrate, fat and protein. Vitamins/minerals enable metabolism but do not yield calories.",
+      "sectionId": "foundations",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 1
+    },
+    {
+      "id": "D2",
+      "paperId": "D",
+      "number": 2,
+      "locator": "Q2",
+      "topic": "Influence on food preference",
+      "explanation": "Cultural heritage/family tradition is the expected category in this stem.",
+      "sectionId": "foundations",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 1
+    },
+    {
+      "id": "D3",
+      "paperId": "D",
+      "number": 3,
+      "locator": "Q3",
+      "topic": "Whole grains, legumes, fruit and vegetables",
+      "explanation": "These choices suggest a relatively low-fat, fiber-rich pattern among the options. Added fats and processing can change the composition.",
+      "sectionId": "foundations",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 2
+    },
+    {
+      "id": "D4",
+      "paperId": "D",
+      "number": 4,
+      "locator": "Q4",
+      "topic": "Polysaccharides",
+      "explanation": "Starch, glycogen and many fibers. Fiber also includes lignin, which is not a carbohydrate polymer.",
+      "sectionId": "carbohydrate",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 2
+    },
+    {
+      "id": "D5",
+      "paperId": "D",
+      "number": 5,
+      "locator": "Q5",
+      "topic": "Fuel after severe depletion of other stores",
+      "explanation": "Body protein is the intended answer. Protein already contributes earlier in fasting; the body does not wait for complete fat depletion.",
+      "sectionId": "protein",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 3
+    },
+    {
+      "id": "D6",
+      "paperId": "D",
+      "number": 6,
+      "locator": "Q6",
+      "topic": "Basal metabolism",
+      "explanation": "Heartbeat and temperature maintenance, not walking or running.",
+      "sectionId": "energy",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 3
+    },
+    {
+      "id": "D7",
+      "paperId": "D",
+      "number": 7,
+      "locator": "Q7",
+      "topic": "Largest expenditure component",
+      "explanation": "Basal/resting metabolism usually dominates in sedentary adults; highly active people can differ.",
+      "sectionId": "energy",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 4
+    },
+    {
+      "id": "D8",
+      "paperId": "D",
+      "number": 8,
+      "locator": "Q8",
+      "topic": "Index calculated from height and weight",
+      "explanation": "BMI = kg/m². This does not measure fat distribution.",
+      "sectionId": "assessment",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 4
+    },
+    {
+      "id": "D9",
+      "paperId": "D",
+      "number": 9,
+      "locator": "Q9",
+      "topic": "Incorrect dietary guideline",
+      "explanation": "Replacing liquid unsaturated oils with solid saturated fats reverses the usual favorable substitution.",
+      "sectionId": "lipids",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 4
+    },
+    {
+      "id": "D10",
+      "paperId": "D",
+      "number": 10,
+      "locator": "Q10",
+      "topic": "Portion versus serving",
+      "explanation": "A portion is an amount served/eaten; a serving is a defined reference amount. A portion is not necessarily standardized.",
+      "sectionId": "foundations",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 5
+    },
+    {
+      "id": "D11",
+      "paperId": "D",
+      "number": 11,
+      "locator": "Q11",
+      "topic": "Poor zinc source among choices",
+      "explanation": "Banana, compared with the stronger protein/mineral sources listed.",
+      "sectionId": "minerals",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 6
+    },
+    {
+      "id": "D12",
+      "paperId": "D",
+      "number": 12,
+      "locator": "Q12",
+      "topic": "Vitamin promoting calcium/phosphate absorption",
+      "explanation": "Vitamin D, through active hormonal effects.",
+      "sectionId": "vitamin-d",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 6
+    },
+    {
+      "id": "D13",
+      "paperId": "D",
+      "number": 13,
+      "locator": "Q13",
+      "topic": "Vitamin linked to photophobia",
+      "explanation": "Riboflavin (B2) is the classic association among the options; the symptom is nonspecific.",
+      "sectionId": "b-vitamins",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 6
+    },
+    {
+      "id": "D14",
+      "paperId": "D",
+      "number": 14,
+      "locator": "Q14",
+      "topic": "Vitamin most affected by drugs",
+      "explanation": "Folate is marked. No universal ranking is established without naming the drug; learn folate/antifolate, B6/isoniazid and B12/metformin relationships.",
+      "sectionId": "folate-b12",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 7
+    },
+    {
+      "id": "D15",
+      "paperId": "D",
+      "number": 15,
+      "locator": "Q15",
+      "topic": "Rich preformed vitamin A food",
+      "explanation": "Liver. Compare meaningful serving sizes and consider pregnancy toxicity risk.",
+      "sectionId": "vitamin-a",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 7
+    },
+    {
+      "id": "D16",
+      "paperId": "D",
+      "number": 16,
+      "locator": "Q16",
+      "topic": "Fatigue, anorexia, arrhythmia and distal tingling",
+      "explanation": "Thiamin is the likely intended deficiency among the options. The cluster is not a diagnostic rule.",
+      "sectionId": "b-vitamins",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 8
+    },
+    {
+      "id": "D17",
+      "paperId": "D",
+      "number": 17,
+      "locator": "Q17",
+      "topic": "Vitamin E role",
+      "explanation": "Antioxidant protection of lipids/membranes.",
+      "sectionId": "vitamin-ek",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 8
+    },
+    {
+      "id": "D18",
+      "paperId": "D",
+      "number": 18,
+      "locator": "Q18",
+      "topic": "Teratogenic excess",
+      "explanation": "Preformed vitamin A/retinoids, not an instruction to avoid ordinary carotenoid-containing vegetables.",
+      "sectionId": "vitamin-a",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 9
+    },
+    {
+      "id": "D19",
+      "paperId": "D",
+      "number": 19,
+      "locator": "Q19",
+      "topic": "Taste changes, alopecia and poor healing",
+      "explanation": "Zinc deficiency is a classic association.",
+      "sectionId": "minerals",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 9
+    },
+    {
+      "id": "D20",
+      "paperId": "D",
+      "number": 20,
+      "locator": "Q20",
+      "topic": "Lowest-potassium option",
+      "explanation": "Cucumber is lower among these choices. Absolute food rankings require serving size and preparation.",
+      "sectionId": "minerals",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 10
+    },
+    {
+      "id": "D21",
+      "paperId": "D",
+      "number": 21,
+      "locator": "Q21",
+      "topic": "Vitamin associated with adrenoleukodystrophy",
+      "explanation": "Vitamin A is marked, but the association is not supported by the supplied explanatory material. X-linked disease is ABCD1-related, not established to be caused by a vitamin deficiency. Ask for the lecturer’s original source.",
+      "sectionId": "integrated-recall",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 10
+    },
+    {
+      "id": "D22",
+      "paperId": "D",
+      "number": 22,
+      "locator": "Q22",
+      "topic": "Carnitine-synthesis vitamin",
+      "explanation": "Vitamin C supports relevant hydroxylation reactions.",
+      "sectionId": "vitamin-c",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 11
+    },
+    {
+      "id": "D23",
+      "paperId": "D",
+      "number": 23,
+      "locator": "Q23",
+      "topic": "Mineral deficiency and attention symptoms",
+      "explanation": "Zinc/iron is marked. Associations do not establish that all attention disorders are deficiencies or that supplements treat them; the intended study requires confirmation.",
+      "sectionId": "minerals",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 11
+    },
+    {
+      "id": "D24",
+      "paperId": "D",
+      "number": 24,
+      "locator": "Q24",
+      "topic": "Supplement and older-adult memory",
+      "explanation": "Folate is marked. Routine supplementation is not a guaranteed cognitive preventive treatment; assess deficiency and exclude B12 problems. Course-specific study needed.",
+      "sectionId": "ageing",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 11
+    },
+    {
+      "id": "D25",
+      "paperId": "D",
+      "number": 25,
+      "locator": "Q25",
+      "topic": "Why excessive liver is a pregnancy concern",
+      "explanation": "High preformed vitamin A exposure.",
+      "sectionId": "pregnancy",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 12
+    },
+    {
+      "id": "D26",
+      "paperId": "D",
+      "number": 26,
+      "locator": "Q26",
+      "topic": "Earliest complementary food among choices",
+      "explanation": "Almond porridge is marked, likely reflecting a local traditional sequence. No matching lecture schedule was supplied. Safe texture and age readiness are separate issues.",
+      "sectionId": "infancy",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 12
+    },
+    {
+      "id": "D27",
+      "paperId": "D",
+      "number": 27,
+      "locator": "Q27",
+      "topic": "High-frequency hearing loss nutrient association",
+      "explanation": "B12 is marked. A nutrient association does not establish a specific diagnosis or universal benefit from supplements. Confirm the lecturer’s evidence.",
+      "sectionId": "ageing",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 13
+    },
+    {
+      "id": "D28",
+      "paperId": "D",
+      "number": 28,
+      "locator": "Q28",
+      "topic": "Exception to breastfeeding contraindications",
+      "explanation": "Active extrapulmonary TB is marked. Disease site/infectivity, treatment and expressed-versus-direct feeding matter; lithium also needs individual specialist assessment. Do not treat the options as blanket rules.",
+      "sectionId": "pregnancy",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 14
+    },
+    {
+      "id": "D29",
+      "paperId": "D",
+      "number": 29,
+      "locator": "Q29",
+      "topic": "Least allergenic fruit at 10 months",
+      "explanation": "Pineapple is marked, but this universal ranking is unverified. Use the source only to identify the lecturer-specific question; do not infer an allergy guarantee.",
+      "sectionId": "infancy",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 14
+    },
+    {
+      "id": "D30",
+      "paperId": "D",
+      "number": 30,
+      "locator": "Q30",
+      "topic": "Supplement preventing auditory-brainstem decline",
+      "explanation": "B12 is marked. Prevention claim/study is unverified in the supplied course material. Correcting deficiency is not equivalent to universal supplementation.",
+      "sectionId": "ageing",
+      "status": "unresolved",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 15
+    },
+    {
+      "id": "D31",
+      "paperId": "D",
+      "number": 31,
+      "locator": "Q31",
+      "topic": "Healthy adult protein RDA",
+      "explanation": "0.8 g/kg/day. Multiply by body mass; clinical requirements may differ.",
+      "sectionId": "protein",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 15
+    },
+    {
+      "id": "D32",
+      "paperId": "D",
+      "number": 32,
+      "locator": "Q32",
+      "topic": "Severe protein/antioxidant malnutrition",
+      "explanation": "Kwashiorkor is intended. Modern explanation is multifactorial rather than isolated protein deficiency alone.",
+      "sectionId": "malnutrition",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 15
+    },
+    {
+      "id": "D33",
+      "paperId": "D",
+      "number": 33,
+      "locator": "Q33",
+      "topic": "Amino acid precursor of niacin",
+      "explanation": "Tryptophan.",
+      "sectionId": "b-vitamins",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 16
+    },
+    {
+      "id": "D34",
+      "paperId": "D",
+      "number": 34,
+      "locator": "Q34",
+      "topic": "Homocysteine in amino-acid metabolism",
+      "explanation": "Methionine metabolism to cysteine via transsulfuration; B6 is relevant. Remethylation to methionine requires folate/B12.",
+      "sectionId": "folate-b12",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 16
+    },
+    {
+      "id": "D35",
+      "paperId": "D",
+      "number": 35,
+      "locator": "Q35",
+      "topic": "Fatty liver with immune impairment",
+      "explanation": "Kwashiorkor is the intended malnutrition pattern; context distinguishes it from other fatty-liver diseases.",
+      "sectionId": "malnutrition",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 17
+    },
+    {
+      "id": "D36",
+      "paperId": "D",
+      "number": 36,
+      "locator": "Q36",
+      "topic": "Not an omega-3 fatty acid",
+      "explanation": "Oleic acid is omega-9. Alpha-linolenic acid is omega-3; “linolenic” without alpha/gamma is imprecise.",
+      "sectionId": "lipids",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 17
+    },
+    {
+      "id": "D37",
+      "paperId": "D",
+      "number": 37,
+      "locator": "Q37",
+      "topic": "Energy in 7 g fat plus 7 g protein",
+      "explanation": "63 + 28 = 91 kcal.",
+      "sectionId": "energy",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 18
+    },
+    {
+      "id": "D38",
+      "paperId": "D",
+      "number": 38,
+      "locator": "Q38",
+      "topic": "Lipid-rich arterial plaque disease",
+      "explanation": "Atherosclerosis.",
+      "sectionId": "clinical-diets",
+      "status": "supported",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 18
+    },
+    {
+      "id": "D39",
+      "paperId": "D",
+      "number": 39,
+      "locator": "Q39",
+      "topic": "Fatty acid prominent in sunflower/safflower oils",
+      "explanation": "Linoleic acid in conventional high-linoleic varieties. High-oleic cultivars are exceptions.",
+      "sectionId": "lipids",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 19
+    },
+    {
+      "id": "D40",
+      "paperId": "D",
+      "number": 40,
+      "locator": "Q40",
+      "topic": "Very-low-fat diet and essential-fat deficiency",
+      "explanation": "Below 20% is marked and lies below the adult fat AMDR. Actual linoleic/alpha-linolenic intake determines adequacy; 20% is not a precise deficiency threshold.",
+      "sectionId": "lipids",
+      "status": "qualified",
+      "courseMatch": "general nutrition topics; current syllabus unconfirmed",
+      "page": 19
+    },
+    {
+      "id": "O1",
+      "paperId": "O",
+      "number": 1,
+      "locator": "Q1",
+      "topic": "Exception among weight-gain disorders",
+      "explanation": "Sjögren syndrome is the likely comparison with Cushing syndrome, hypothyroidism and adult growth-hormone deficiency. It is better known here for dry-mouth risk.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 1
+    },
+    {
+      "id": "O2",
+      "paperId": "O",
+      "number": 2,
+      "locator": "Q2",
+      "topic": "Remineralizing compound / product",
+      "explanation": "Recaldent is CPP-ACP (casein phosphopeptide-amorphous calcium phosphate). Product identity is supported; this does not rank products or prescribe treatment.",
+      "sectionId": "oral",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 1
+    },
+    {
+      "id": "O3",
+      "paperId": "O",
+      "number": 3,
+      "locator": "Q3",
+      "topic": "Cariogenic food among choices",
+      "explanation": "Dried mulberries: fermentable carbohydrate plus retention. Preparation and exposure frequency matter.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 1
+    },
+    {
+      "id": "O4",
+      "paperId": "O",
+      "number": 4,
+      "locator": "Q4",
+      "topic": "Nutrient not essential for tooth development",
+      "explanation": "B3 is marked, alongside options C, A and iodine. The “not essential” wording is too absolute: normal development depends on general nutrient adequacy. No secure developmental exception is supplied.",
+      "sectionId": "oral",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 2
+    },
+    {
+      "id": "O5",
+      "paperId": "O",
+      "number": 5,
+      "locator": "Q5",
+      "topic": "Iron in reproductive-age women versus men",
+      "explanation": "18 and 8 mg/day respectively for the conventional healthy-adult groups. Pregnancy uses a different value.",
+      "sectionId": "iron",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 2
+    },
+    {
+      "id": "O6",
+      "paperId": "O",
+      "number": 6,
+      "locator": "Q6",
+      "topic": "Oral effects of protein-energy malnutrition",
+      "explanation": "Delayed eruption and salivary-gland dysfunction can occur; overall development and defense are impaired.",
+      "sectionId": "malnutrition",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 2
+    },
+    {
+      "id": "O7",
+      "paperId": "O",
+      "number": 7,
+      "locator": "Q7",
+      "topic": "Protective milk/cheese property",
+      "explanation": "Buffering/reduction of oral acidity, alongside mineral and salivary effects.",
+      "sectionId": "oral",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 2
+    },
+    {
+      "id": "O8",
+      "paperId": "O",
+      "number": 8,
+      "locator": "Q8",
+      "topic": "Pregnancy supplement and neural-tube development",
+      "explanation": "Folic acid; distinguish preventive folic-acid guidance from total folate DFE.",
+      "sectionId": "pregnancy",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 3
+    },
+    {
+      "id": "O9",
+      "paperId": "O",
+      "number": 9,
+      "locator": "Q9",
+      "topic": "Caries-associated organism",
+      "explanation": "Streptococcus, classically S. mutans among the options. Caries is a biofilm/ecological process, not proof that one organism alone is sufficient.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 3
+    },
+    {
+      "id": "O10",
+      "paperId": "O",
+      "number": 10,
+      "locator": "Q10",
+      "topic": "Age of infantile beriberi",
+      "explanation": "2-5 months is marked, but the exact age window is a course convention rather than a universal boundary. Learn maternal/infant thiamin deficiency; verify the age key.",
+      "sectionId": "b-vitamins",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 3
+    },
+    {
+      "id": "O11",
+      "paperId": "O",
+      "number": 11,
+      "locator": "Q11",
+      "topic": "Drug associated with weight gain",
+      "explanation": "Prednisolone is the expected comparison. Glucocorticoids can increase appetite and alter metabolism; no drug should be changed from this study note.",
+      "sectionId": "assessment",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 3
+    },
+    {
+      "id": "O12",
+      "paperId": "O",
+      "number": 12,
+      "locator": "Q12",
+      "topic": "Keshan disease mineral",
+      "explanation": "Selenium deficiency association.",
+      "sectionId": "minerals",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 4
+    },
+    {
+      "id": "O13",
+      "paperId": "O",
+      "number": 13,
+      "locator": "Q13",
+      "topic": "Less cariogenic fruit among choices",
+      "explanation": "Watermelon is marked, plausibly reflecting water content/less retention than dried dates. No fruit ranking is independent of preparation, amount and exposure.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 4
+    },
+    {
+      "id": "O14",
+      "paperId": "O",
+      "number": 14,
+      "locator": "Q14",
+      "topic": "Nutrients in periodontal health",
+      "explanation": "Folate, zinc and vitamin C is the marked combination. These support cell turnover, healing and connective tissue; this is not a treatment recipe or an exclusive nutrient list.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 4
+    },
+    {
+      "id": "O15",
+      "paperId": "O",
+      "number": 15,
+      "locator": "Q15",
+      "topic": "Wernicke-Korsakoff nutrient",
+      "explanation": "Thiamin (B1).",
+      "sectionId": "b-vitamins",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 4
+    },
+    {
+      "id": "O16",
+      "paperId": "O",
+      "number": 16,
+      "locator": "Q16",
+      "topic": "Trace element and insulin sensitivity",
+      "explanation": "Chromium is the historical answer; current essentiality/benefit is uncertain.",
+      "sectionId": "minerals",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 5
+    },
+    {
+      "id": "O17",
+      "paperId": "O",
+      "number": 17,
+      "locator": "Q17",
+      "topic": "Components of DRI framework",
+      "explanation": "EAR, RDA, AI and UL among the listed reference standards.",
+      "sectionId": "foundations",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 5
+    },
+    {
+      "id": "O18",
+      "paperId": "O",
+      "number": 18,
+      "locator": "Q18",
+      "topic": "C deficiency during tooth development",
+      "explanation": "Odontoblast degeneration is marked. Collagen/dentin support is a defensible mechanism, but the exact histological key needs the dental lecture reference.",
+      "sectionId": "oral",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 5
+    },
+    {
+      "id": "O19",
+      "paperId": "O",
+      "number": 19,
+      "locator": "Q19",
+      "topic": "Protective components in cheese",
+      "explanation": "Calcium, phosphorus and casein-related components contribute to the explanation, with saliva/buffering.",
+      "sectionId": "oral",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 5
+    },
+    {
+      "id": "O20",
+      "paperId": "O",
+      "number": 20,
+      "locator": "Q20",
+      "topic": "Cariostatic food",
+      "explanation": "Fish among the options, assuming no added fermentable coating/sugar.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 6
+    },
+    {
+      "id": "O21",
+      "paperId": "O",
+      "number": 21,
+      "locator": "Q21",
+      "topic": "Saccharin and caries",
+      "explanation": "Noncariogenic sweetener; distinguish from fermentable sugar.",
+      "sectionId": "oral",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 6
+    },
+    {
+      "id": "O22",
+      "paperId": "O",
+      "number": 22,
+      "locator": "Q22",
+      "topic": "Group at B12-deficiency risk",
+      "explanation": "Older adults, particularly with impaired food-bound absorption. Other risk groups also exist.",
+      "sectionId": "ageing",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 6
+    },
+    {
+      "id": "O23",
+      "paperId": "O",
+      "number": 23,
+      "locator": "Q23",
+      "topic": "Angular cheilitis nutrient exception",
+      "explanation": "Zinc is marked, but oral lesions have overlapping nutritional/non-nutritional causes and the proposed exception is not secure. Ask for the original dental teaching table.",
+      "sectionId": "oral",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 6
+    },
+    {
+      "id": "O24",
+      "paperId": "O",
+      "number": 24,
+      "locator": "Q24",
+      "topic": "Xerostomia context",
+      "explanation": "Poorly controlled diabetes can contribute to dry mouth and oral disease.",
+      "sectionId": "oral",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 7
+    },
+    {
+      "id": "O25",
+      "paperId": "O",
+      "number": 25,
+      "locator": "Q25",
+      "topic": "Exception among enamel-solubility modifiers",
+      "explanation": "Magnesium is marked. The precise contrast and mechanism are not adequately supported by the supplied explanatory sources; do not invent a universal enamel rule.",
+      "sectionId": "oral",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 7
+    },
+    {
+      "id": "O26",
+      "paperId": "O",
+      "number": 26,
+      "locator": "Q26",
+      "topic": "Cause of iron deficiency",
+      "explanation": "Parasitic disease causing chronic blood loss, depending on organism and burden.",
+      "sectionId": "iron",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 7
+    },
+    {
+      "id": "O27",
+      "paperId": "O",
+      "number": 27,
+      "locator": "Q27",
+      "topic": "Weight-loss drug approval exception",
+      "explanation": "Sibutramine is marked and was withdrawn in the U.S. for cardiovascular risk. The FDA-approved phentermine/topiramate combination is not the same as topiramate alone. Thus date/formulation make the single-answer wording ambiguous.",
+      "sectionId": "clinical-diets",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 7
+    },
+    {
+      "id": "O28",
+      "paperId": "O",
+      "number": 28,
+      "locator": "Q28",
+      "topic": "Cariostatic food",
+      "explanation": "Broccoli among the options; preparation matters.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 8
+    },
+    {
+      "id": "O29",
+      "paperId": "O",
+      "number": 29,
+      "locator": "Q29",
+      "topic": "Dental development in C deficiency",
+      "explanation": "Pulp changes are marked. General connective-tissue impairment is supported; the specific developmental histology needs the dental lecturer’s source.",
+      "sectionId": "oral",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 8
+    },
+    {
+      "id": "O30",
+      "paperId": "O",
+      "number": 30,
+      "locator": "Q30",
+      "topic": "Cariogenic substrate",
+      "explanation": "Fermentable carbohydrate, supporting bacterial acid production.",
+      "sectionId": "oral",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 8
+    },
+    {
+      "id": "O31",
+      "paperId": "O",
+      "number": 31,
+      "locator": "Q31",
+      "topic": "Largest calcium source",
+      "explanation": "Dairy is marked. Amounts depend on serving size and whether fish bones are eaten; compare matched portions instead of assigning an absolute food winner.",
+      "sectionId": "minerals",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 8
+    },
+    {
+      "id": "O32",
+      "paperId": "O",
+      "number": 32,
+      "locator": "Q32",
+      "topic": "Anticariogenic option",
+      "explanation": "Xylitol is marked. It is not fermented like sucrose by cariogenic bacteria; sugar-free gum can also stimulate saliva. This does not guarantee prevention or replace hygiene.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 9
+    },
+    {
+      "id": "O33",
+      "paperId": "O",
+      "number": 33,
+      "locator": "Q33",
+      "topic": "Vitamin whose deficiency is not first noticed orally",
+      "explanation": "A is marked. “First” presentation is variable and no oral sign alone diagnoses a deficiency. Learn the characteristic syndromes, not a rigid chronology.",
+      "sectionId": "oral",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 9
+    },
+    {
+      "id": "O34",
+      "paperId": "O",
+      "number": 34,
+      "locator": "Q34",
+      "topic": "Infant gum bleeding and maternal vitamin C",
+      "explanation": "Excess maternal C is marked. Do not accept this as a diagnostic rule or established causal answer; neonatal bleeding requires proper assessment. Historical rebound-scurvy explanation needs evidence.",
+      "sectionId": "vitamin-c",
+      "status": "unresolved",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 9
+    },
+    {
+      "id": "O35",
+      "paperId": "O",
+      "number": 35,
+      "locator": "Q35",
+      "topic": "Anticariogenic food among bread, cheese, apple, pasta",
+      "explanation": "Cheese: saliva/buffering and mineral contributions.",
+      "sectionId": "oral",
+      "status": "supported",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 10
+    },
+    {
+      "id": "O36",
+      "paperId": "O",
+      "number": 36,
+      "locator": "Q36",
+      "topic": "Most cariogenic food group",
+      "explanation": "Grains is marked. Refined/sticky starches can be cariogenic, but frequency, retention, processing and added sugar prevent a universal ranking of entire food groups.",
+      "sectionId": "oral",
+      "status": "qualified",
+      "courseMatch": "unconfirmed oral-health supplement",
+      "page": 10
+    }
+  ]
+}

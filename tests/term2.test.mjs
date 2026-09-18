@@ -18,9 +18,9 @@ async function route(path, body) {
   return worker.fetch(new Request(`http://localhost${path}`, body === undefined ? undefined : { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
-test("Term 2 catalog has five exams with explicit membership and only the user-reported practical date", () => {
-  assert.equal(term2Exams.length, 5);
-  assert.equal(examIds.length, 8);
+test("Term 2 catalog has eight exams with explicit membership and only the user-reported practical date", () => {
+  assert.equal(term2Exams.length, 8);
+  assert.equal(examIds.length, 11);
   assert(term2Exams.filter((exam) => exam.id !== "term2-physiology-practical").every((exam) => exam.date === null));
   assert.equal(term2Exams.find((exam) => exam.id === "term2-physiology-practical").date, "2026-08-31");
   assert(isExamId("july25"));
@@ -128,7 +128,7 @@ test("deployed API exposes each source-grounded Term 2 bank only in its own exam
     [limbs, {total:863, anatomy:863, embryology:0, dynamic:722, images:690, models:32}],
     [biochemistry, {total:196, biochemistry:196, dynamic:0, images:0, models:0}],
   ]) {
-    const added = bank.filter(q => q.tags.includes(`exam-${exam.id}`) && q.tags.some(tag => ["depth-expansion", "comprehensive-expansion", "anatomy-location-practice", "practical-anatomy-expansion"].includes(tag)));
+    const added = bank.filter(q => q.tags.includes(`exam-${exam.id}`) && q.tags.some(tag => ["depth-expansion", "comprehensive-expansion", "anatomy-location-practice", "practical-anatomy-expansion", "biochemistry-practical", "limb-science-audit"].includes(tag)));
     const removed=bank.filter(q=>q.tags.includes(`exam-${exam.id}`)&&retirements[q.id]);
     assert.equal(bank.filter(q=>q.tags.includes(`exam-${exam.id}`)).length,baseline.total+added.length,'Source archive remains intact');
     assert.equal(exam.questionCount, baseline.total + added.length-removed.length, `${exam.id}: only active practice counted`);

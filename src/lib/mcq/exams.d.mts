@@ -1,5 +1,5 @@
 import type { MCQQuestion } from "./types";
-export type Term2ExamId = "term2-cvs" | "term2-respiratory" | "term2-limbs" | "term2-biochemistry" | "term2-physiology-practical";
+export type Term2ExamId = "term2-cvs" | "term2-respiratory" | "term2-limbs" | "term2-biochemistry" | "term2-physiology-practical" | "term2-nutrition" | "term2-religion" | "term2-divine-ethics";
 export type ExamId = "july25" | "aug22" | "july29" | Term2ExamId;
 export const term2Exams: Array<{ id: Term2ExamId; date: string | null; title: string; scope: string; status: string }>;
 export const examIds: ExamId[];

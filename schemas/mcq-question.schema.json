@@ -25,7 +25,7 @@
     "revision": { "type": "integer", "minimum": 1 },
     "status": { "enum": ["draft", "verified", "retired"] },
     "kind": { "enum": ["single_best_answer", "image_single_best_answer", "dynamic_anatomy", "dynamic_anatomy_3d"] },
-    "subject": { "enum": ["anatomy", "histology", "embryology", "physiology", "biochemistry"] },
+    "subject": { "enum": ["anatomy", "histology", "embryology", "physiology", "biochemistry", "religion"] },
     "topic": { "type": "string", "minLength": 1 },
     "subtopic": { "type": "string" },
     "chapter": { "type": "string", "minLength": 1 },

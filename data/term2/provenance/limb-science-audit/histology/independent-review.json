@@ -1,0 +1,1363 @@
+{
+  "status": "approved",
+  "author": "/root/limb_histology_audit",
+  "independentReviewer": "/root",
+  "date": "2026-09-13",
+  "method": "Parent independently read all 52 stems, keys and distractor rationales plus the existing ten items; cross-checked primary-source text, original lecture corrections, concept/objective locators and all four rendered source crops. This is an AI source review, not faculty validation or calibrated difficulty.",
+  "sourceChecks": [
+    {
+      "source": "Junqueira 16e Ch5",
+      "pages": "PDF108,126–129",
+      "findings": "Dense regular vs irregular organization, active fibroblasts, tendinocytes, sparse vascularity and slow repair match; tendon micrograph visually identified."
+    },
+    {
+      "source": "Junqueira 16e Ch7",
+      "pages": "PDF142–147",
+      "findings": "Table7-1, territorial GAGs, isogenous groups, shrinkage artifacts, perichondrium, fibrocartilage mixture and limited repair match; disc specimen is not misrepresented as knee."
+    },
+    {
+      "source": "Junqueira 16e Ch8",
+      "pages": "PDF154,157–159,162,164,168–169",
+      "findings": "Peri-/endosteum, Sharpey fibers, osteonal architecture/remodeling, polarized collagen, local apposition arithmetic, growth-plate scaffold, callus, synoviocytes and articular collagen match. Direct primary PDF extraction separately corroborated157/168."
+    },
+    {
+      "source": "BONE&JOINT TISSUE.pdf",
+      "pages": "39,44,54–55; remaining primary text cross-reference in author audit",
+      "findings": "Proliferative-zone columns distinguished from misleading reserve-zone wording; synoviocyte A/B roles and fracture/callus scope checked. Lecture-supported carryover is not exam confirmation."
+    },
+    {
+      "source": "Junqueira 16e Ch9",
+      "pages": "PDF193–199,201",
+      "findings": "Schwann internode vs nonmyelinating support, lipid extraction, clefts/nodes, connective sheaths, perineurial tight junctions and regrowth guidance match. Direct primary PDF193 independently extracted."
+    },
+    {
+      "source": "NERVOUS TISSUE MEDICINE (1).pptx",
+      "pages": "50,54,58,69,71",
+      "findings": "External-lamina guidance, whole-nerve/fascicle/fiber sheaths, chromatolysis and distal degeneration cross-checked. No guarantee of regeneration introduced."
+    },
+    {
+      "source": "Junqueira 16e Ch10",
+      "pages": "PDF204–208,215,217–218,224",
+      "findings": "Muscle section orientation, external lamina, sarcomeric architecture, myotendinous/NMJ surfaces, spindle, fiber phenotype and scar-limited regeneration match. Direct PDF207 extraction and laminin micrograph checked."
+    }
+  ],
+  "corrections": [
+    {
+      "ids": [
+        "limb-audit-hist-013",
+        "limb-audit-hist-017",
+        "limb-audit-hist-025",
+        "limb-audit-hist-029",
+        "limb-audit-hist-031",
+        "limb-audit-hist-032",
+        "limb-audit-hist-035",
+        "limb-audit-hist-040",
+        "limb-audit-hist-044",
+        "limb-audit-hist-051"
+      ],
+      "action": "Author resolved independent feedback with close alternatives; eight straightforward interpretations recalibrated to3 before final freeze."
+    },
+    {
+      "ids": [
+        "limb-audit-hist-019"
+      ],
+      "action": "Reviewer replaced two weak distractors by nearby tissue-classification and functional-inference errors; correct key unchanged.",
+      "previous": {
+        "schemaVersion": "1.0.0",
+        "id": "limb-audit-hist-019",
+        "revision": 1,
+        "status": "draft",
+        "kind": "single_best_answer",
+        "subject": "histology",
+        "topic": "Synovial lining and articular surface",
+        "subtopic": "Cartilage repair quality",
+        "chapter": "Chapter 7 Cartilage",
+        "difficulty": 4,
+        "prompt": "After damage to an articular surface, a repaired region contains predominantly dense type I collagen-rich tissue with few cells. Which conclusion is best supported histologically?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Normal hyaline cartilage has necessarily regenerated because a collagen matrix is present"
+          },
+          {
+            "id": "B",
+            "text": "The repaired region must be lamellar bone because its matrix contains type I collagen"
+          },
+          {
+            "id": "C",
+            "text": "The region is elastic cartilage because elastic and collagen-rich repair tissue are histologically equivalent"
+          },
+          {
+            "id": "D",
+            "text": "The defect has acquired fibrous repair tissue, without demonstrating restoration of normal hyaline cartilage"
+          }
+        ],
+        "correctOptionId": "D",
+        "explanation": "Repair of cartilage can be slow and incomplete and may yield fibrous tissue. Dense type I collagen-rich tissue does not reproduce the organized type II collagen-proteoglycan matrix with chondrocytes of a normal articular surface.",
+        "distractorExplanations": {
+          "A": "Collagen type, organization and cell phenotype matter; merely detecting collagen cannot establish restoration of hyaline cartilage.",
+          "B": "Bone requires additional evidence such as mineralized matrix organization and osteocytes; type I collagen alone is insufficient.",
+          "C": "Elastic cartilage requires chondrocytes and an elastic-fiber network. Collagenous repair tissue does not establish those features."
+        },
+        "learningObjective": "Distinguish collagenous repair tissue from restoration of an organized hyaline articular surface.",
+        "source": {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "Chapter 7 Cartilage",
+          "page": "Printed pp. 131, 134, 136; local PDF pp. 142, 145, 147"
+        },
+        "tags": [
+          "exam-term2-limbs",
+          "term-2",
+          "study-practice",
+          "source-based",
+          "limb-science-audit",
+          "book-extension",
+          "knowledge-challenge"
+        ],
+        "examPriority": "high",
+        "qualityFlags": [
+          "author-source-checked",
+          "independent-review-pending",
+          "original-practice-question"
+        ]
+      },
+      "reviewed": {
+        "schemaVersion": "1.0.0",
+        "id": "limb-audit-hist-019",
+        "revision": 1,
+        "status": "draft",
+        "kind": "single_best_answer",
+        "subject": "histology",
+        "topic": "Synovial lining and articular surface",
+        "subtopic": "Cartilage repair quality",
+        "chapter": "Chapter 7 Cartilage",
+        "difficulty": 4,
+        "prompt": "After damage to an articular surface, a repaired region contains predominantly dense type I collagen-rich tissue with few cells. Which conclusion is best supported histologically?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Normal hyaline cartilage has necessarily regenerated because a collagen matrix is present"
+          },
+          {
+            "id": "B",
+            "text": "The region is established mature fibrocartilage solely because type I collagen is abundant"
+          },
+          {
+            "id": "C",
+            "text": "The collagen-rich repair necessarily restores the original compressive behavior of the articular surface"
+          },
+          {
+            "id": "D",
+            "text": "The defect has acquired fibrous repair tissue, without demonstrating restoration of normal hyaline cartilage"
+          }
+        ],
+        "correctOptionId": "D",
+        "explanation": "Repair of cartilage can be slow and incomplete and may yield fibrous tissue. Dense type I collagen-rich tissue does not reproduce the organized type II collagen-proteoglycan matrix with chondrocytes of a normal articular surface.",
+        "distractorExplanations": {
+          "A": "Collagen type, organization and cell phenotype matter; merely detecting collagen cannot establish restoration of hyaline cartilage.",
+          "B": "Fibrocartilage requires a cartilage component with chondrocytes and corresponding matrix; type I collagen abundance alone cannot establish that tissue identity.",
+          "C": "The presence of collagenous repair does not establish restoration of the original hyaline cartilage architecture or its mechanical properties."
+        },
+        "learningObjective": "Distinguish collagenous repair tissue from restoration of an organized hyaline articular surface.",
+        "source": {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "Chapter 7 Cartilage",
+          "page": "Printed pp. 131, 134, 136; local PDF pp. 142, 145, 147"
+        },
+        "tags": [
+          "exam-term2-limbs",
+          "term-2",
+          "study-practice",
+          "source-based",
+          "limb-science-audit",
+          "book-extension",
+          "knowledge-challenge"
+        ],
+        "examPriority": "high",
+        "qualityFlags": [
+          "author-source-checked",
+          "independent-review-pending",
+          "original-practice-question"
+        ]
+      }
+    },
+    {
+      "ids": [
+        "limb-audit-hist-objective-connective-patterns",
+        "limb-audit-hist-objective-fibrocartilage-insertion",
+        "limb-audit-hist-objective-articular-structure-repair"
+      ],
+      "action": "Author corrected primary-only coverage locators to include all pertinent concept sources, notably Ch7PDF142–145 and147."
+    },
+    {
+      "action": "Removed stale pending-review wording from coverage; retained unconfirmed lecture weighting and specialist-scope exclusions. Draft bank status is intentionally left for the gated importer."
+    },
+    {
+      "ids": [
+        "limb-audit-hist-001",
+        "limb-audit-hist-012",
+        "limb-audit-hist-025",
+        "limb-audit-hist-035"
+      ],
+      "action": "Corrected media paths to the bank-relative limb-science-audit/ namespace; API adds /study/ itself. Image pixels, citation and captions unchanged."
+    }
+  ],
+  "duplicateAudit": "All existing10 retained unchanged. New morphology and interpretation samples complement their mechanisms. Physiology reviewer removed unpublished phys035 because hist041 covers the same oxidative-fiber evidence; no duplicated count retained.",
+  "arithmetic": [
+    {
+      "questionId": "limb-audit-hist-032",
+      "calculation": "20 micrometres /10 days =2 micrometres/day; local mineral apposition, not whole-skeleton turnover."
+    }
+  ],
+  "media": [
+    {
+      "file": "limb-audit-hist-tendon-129.png",
+      "verdict": "approved",
+      "notes": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Only source panel letters, if present, remain; no answer-bearing labels. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer."
+    },
+    {
+      "file": "limb-audit-hist-fibrocartilage-145.png",
+      "verdict": "approved",
+      "notes": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Original C labels and arrows retained; no tissue answer is spelled out. Source specimen explicitly identified as disc, not knee. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer."
+    },
+    {
+      "file": "limb-audit-hist-lamellar-157.png",
+      "verdict": "approved",
+      "notes": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Only source panel letters, if present, remain; no answer-bearing labels. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer."
+    },
+    {
+      "file": "limb-audit-hist-laminin-207.png",
+      "verdict": "approved",
+      "notes": "Author visually inspected original page and resulting crop. Figure title and answer-bearing caption excluded. Only source panel letters, if present, remain; no answer-bearing labels. No label masks needed for the written prompt. Independently inspected by /root: usable crop, source identity and prompt match; retained letters/arrows do not spell out the requested answer."
+    }
+  ],
+  "items": [
+    {
+      "id": "limb-audit-hist-001",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 2,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 5 Connective Tissue",
+        "page": "Printed pp. 115, 116, 118; local PDF pp. 126, 127, 129",
+        "figure": "5-20a"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-002",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 5 Connective Tissue",
+        "page": "Printed pp. 115, 116, 117; local PDF pp. 126, 127, 128"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-003",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 5 Connective Tissue",
+        "page": "Printed pp. 97, 99; local PDF pp. 108, 110"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-004",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 5 Connective Tissue",
+        "page": "Printed pp. 115, 116; local PDF pp. 126, 127"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-005",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 131, 134; local PDF pp. 142, 145"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-006",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 139, 143, 158; local PDF pp. 150, 154, 169"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-007",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 2,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 129, 131, 132; local PDF pp. 140, 142, 143",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 3, 4, 6, 7"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-008",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 131, 132; local PDF pp. 142, 143",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 5, 7"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-009",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 2,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 132, 134; local PDF pp. 143, 145",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 9, 15"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-010",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 131, 133; local PDF pp. 142, 144",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 8, 15"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-011",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 134, 135; local PDF pp. 145, 146",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 15, 16"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-012",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 131, 134; local PDF pp. 142, 145",
+        "figure": "7-5",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 6, 12, 13"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-013",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 132; local PDF pp. 143",
+        "figure": "7-3"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-014",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 2,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 131, 133; local PDF pp. 142, 144",
+        "figure": "7-4",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 6, 10, 11"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-015",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 157; local PDF pp. 168",
+        "figure": "8-22",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 54, 55"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-016",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 157; local PDF pp. 168",
+        "figure": "8-22"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-017",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 157, 158; local PDF pp. 168, 169",
+        "figure": "8-23"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-018",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 157, 158; local PDF pp. 168, 169",
+        "figure": "8-22"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-019",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 7 Cartilage",
+        "page": "Printed pp. 131, 134, 136; local PDF pp. 142, 145, 147"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Reviewer strengthened alternatives; key unchanged."
+    },
+    {
+      "id": "limb-audit-hist-020",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 140, 141; local PDF pp. 151, 152",
+        "figure": "8-3",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 20, 24"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-021",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 140, 143, 144; local PDF pp. 151, 154, 155",
+        "figure": "8-6",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 19, 22"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-022",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 145, 146, 147; local PDF pp. 156, 157, 158",
+        "figure": "8-10",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 25, 29"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-023",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 146, 147; local PDF pp. 157, 158",
+        "figure": "8-10"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-024",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 143, 145; local PDF pp. 154, 156",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 26, 28, 33"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-025",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 145, 146; local PDF pp. 156, 157",
+        "figure": "8-8a,b"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-026",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 143, 145; local PDF pp. 154, 156",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 27, 28"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-027",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 151, 152, 153; local PDF pp. 162, 163, 164",
+        "figure": "8-16, 8-17",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 39"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-028",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 151, 152, 153; local PDF pp. 162, 163, 164",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 39"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-029",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 151, 153; local PDF pp. 162, 164",
+        "figure": "8-15, 8-17",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 34, 37, 39"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-030",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 152, 153, 154; local PDF pp. 163, 164, 165",
+        "figure": "8-19",
+        "lecture": "BONE&JOINT TISSUE.pdf; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "PDF pages 44"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-031",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 146, 147; local PDF pp. 157, 158",
+        "figure": "8-11"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-032",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 8 Bone",
+        "page": "Printed pp. 148; local PDF pp. 159",
+        "figure": "8-12"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-033",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 2,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 193, 194, 196; local PDF pp. 204, 205, 207",
+        "figure": "10-4a"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-034",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 194, 195, 196; local PDF pp. 205, 206, 207",
+        "figure": "10-3, 10-4"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-035",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 196; local PDF pp. 207",
+        "figure": "10-4b"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-036",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 195, 197, 199; local PDF pp. 206, 208, 210",
+        "figure": "10-6, 10-8"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-037",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 194, 196; local PDF pp. 205, 207",
+        "figure": "10-4c"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-038",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 204; local PDF pp. 215",
+        "figure": "10-13"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-039",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 206, 213; local PDF pp. 217, 224",
+        "figure": "10-14"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-040",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 213; local PDF pp. 224"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-041",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 10 Muscle Tissue",
+        "page": "Printed pp. 205, 206, 207; local PDF pp. 216, 217, 218",
+        "figure": "Table 10-2"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-042",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 2,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 182, 183, 184; local PDF pp. 193, 194, 195",
+        "figure": "9-21",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "50, 52, 54"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-043",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 183, 184, 185; local PDF pp. 194, 195, 196",
+        "figure": "9-22, 9-25",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "50, 57"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-044",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 182, 183; local PDF pp. 193, 194"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-045",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 184, 186, 187; local PDF pp. 195, 197, 198",
+        "figure": "9-26, 9-27"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-046",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 184, 186, 187; local PDF pp. 195, 197, 198",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "58"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-047",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 184, 186; local PDF pp. 195, 197",
+        "figure": "9-26",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "58"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-048",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 184, 185; local PDF pp. 195, 196",
+        "figure": "9-23, 9-24",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "52, 56"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-049",
+      "verdict": "approved",
+      "key": "A",
+      "difficulty": 4,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 183, 184; local PDF pp. 194, 195",
+        "figure": "9-23"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-050",
+      "verdict": "approved",
+      "key": "C",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 187, 190; local PDF pp. 198, 201",
+        "figure": "9-30",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "69, 71"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    },
+    {
+      "id": "limb-audit-hist-051",
+      "verdict": "approved",
+      "key": "D",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 187, 190; local PDF pp. 198, 201",
+        "figure": "9-30",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "50, 54, 71"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Revised alternatives re-read following independent feedback."
+    },
+    {
+      "id": "limb-audit-hist-052",
+      "verdict": "approved",
+      "key": "B",
+      "difficulty": 3,
+      "source": {
+        "title": "Junqueira's Basic Histology",
+        "edition": "16th edition",
+        "chapter": "Chapter 9 Nerve Tissue and the Nervous System",
+        "page": "Printed pp. 187, 190; local PDF pp. 198, 201",
+        "figure": "9-30",
+        "lecture": "NERVOUS TISSUE MEDICINE (1).pptx; lecture-supported carryover; exam inclusion unconfirmed",
+        "slide": "69"
+      },
+      "checks": [
+        "stem and all options read",
+        "key and mechanism checked",
+        "source locator checked",
+        "scope preserved",
+        "distinct mapped objective sample"
+      ],
+      "note": "Retained after source and semantic review."
+    }
+  ]
+}

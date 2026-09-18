@@ -5,6 +5,8 @@ export const FINAL_EXAM_SESSION_KEYS: {
   readonly july25Telegram: "july25:telegram-past-papers";
   readonly july29Telegram: "july29:telegram-past-papers";
   readonly july29Downloaded: "july29:downloaded-core";
+  readonly nutrition: "term2-nutrition:nutrition-past-papers";
+  readonly religion: "term2-religion:religion-past-papers";
   readonly july29TelegramWithoutCarbLipidMetabolism: "july29:telegram-past-papers:no-carb-lipid-metabolism";
   readonly july29DownloadedWithoutCarbLipidMetabolism: "july29:downloaded-core:no-carb-lipid-metabolism";
 };
@@ -31,6 +33,8 @@ export type StoredFinalExamProgress = {
   version: 2;
   sessions: Record<
     | "july25:telegram-past-papers"
+    | "term2-nutrition:nutrition-past-papers"
+    | "term2-religion:religion-past-papers"
     | "july29:telegram-past-papers"
     | "july29:downloaded-core"
     | "july29:telegram-past-papers:no-carb-lipid-metabolism"
@@ -49,6 +53,8 @@ export function parseFinalExamProgress(
   raw: string | null,
   banks?: Partial<Record<
     | "july25:telegram-past-papers"
+    | "term2-nutrition:nutrition-past-papers"
+    | "term2-religion:religion-past-papers"
     | "july29:telegram-past-papers"
     | "july29:downloaded-core"
     | "july29:telegram-past-papers:no-carb-lipid-metabolism"

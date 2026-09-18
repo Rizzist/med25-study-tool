@@ -14,7 +14,8 @@ export type Tissue =
   | "vein"
   | "gland"
   | "cavity"
-  | "fat";
+  | "fat"
+  | "region";
 
 export type CameraView = {
   azimuth: number;
@@ -42,6 +43,13 @@ export type AnatomyStructure = {
   schematic?: boolean;
   /** A surface-pinned study marker. Retain its supporting bone when isolating it. */
   landmarkOf?: string;
+  /** Source-surface annotations appear on focus, not stacked over each other by default. */
+  focusOnly?: boolean;
+  representation?: string;
+  sourceFidelity?: string;
+  sourceNote?: string;
+  accuracyNote?: string;
+  sourcePages?: number[];
 };
 
 export type AnatomyModuleManifest = {

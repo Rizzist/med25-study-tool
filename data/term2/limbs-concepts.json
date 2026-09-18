@@ -2,8 +2,8 @@
   "schemaVersion": "1.0.0",
   "examId": "term2-limbs",
   "title": "Upper and lower limbs — anatomy and related sciences",
-  "updatedAt": "2026-09-08",
-  "scopeNote": "Both limbs are in scope per the user’s exam confirmation. Existing anatomy follows the local Gray’s Student checklist and available upper-limb transcripts. New regional detail is checked against cited Gray’s 42nd-edition pages, with related limb development, histology and muscle physiology from Langman, Junqueira and Guyton. Missing lower-limb/later-hand teacher material and unconfirmed related-science lecture detail remain book extensions. Source links sample objectives, not every paragraph or official exam weighting; genuine past papers remain separate.",
+  "updatedAt": "2026-09-13",
+  "scopeNote": "Both limbs are confirmed exam regions. Available upper-limb transcripts support regional anatomy; dedicated later-hand and lower-limb lecture detail remains incomplete. Related sciences are now mapped to the local review, Langman 15e, Junqueira 16e and Guyton (2026), with Foundations slides labelled lecture-supported carryover, exam inclusion unconfirmed. Book extensions are not evidence of a separate faculty syllabus. Question links sample the audited objectives, not every paragraph or official exam weighting; genuine past papers remain separate.",
   "modules": [
     {
       "id": "ul-osteology",
@@ -249,6 +249,111 @@
       "title": "Skeletal-muscle length, load, activation and relaxation",
       "description": "Separating active from passive tension, force from shortening, and electrical excitation from calcium handling explains muscle behavior under experimental and limb-loading conditions.",
       "order": 775
+    },
+    {
+      "id": "limb-audit-emb-module-morphogenesis",
+      "subject": "embryology",
+      "title": "Limb morphogenesis and skeletal maturation",
+      "description": "Normal external milestones, cartilage models, ossification centers, and skeletal maturation assessment.",
+      "order": 100
+    },
+    {
+      "id": "limb-audit-emb-module-patterning",
+      "subject": "embryology",
+      "title": "Limb fields and molecular patterning",
+      "description": "Axial field position, ectodermal boundary formation, growth-zone differentiation, and regional skeletal pattern.",
+      "order": 110
+    },
+    {
+      "id": "limb-audit-emb-module-myogenesis",
+      "subject": "embryology",
+      "title": "Limb muscle and tendon development",
+      "description": "Somitic migration domains, inductive environments, fiber assembly, muscle rearrangement, and innervation.",
+      "order": 120
+    },
+    {
+      "id": "limb-audit-emb-module-congenital",
+      "subject": "embryology",
+      "title": "Congenital limb patterns and disruptions",
+      "description": "Distinguish reduction and digital phenotypes, environmental disruptions, syndromic associations, and joint disorders.",
+      "order": 130
+    },
+    {
+      "id": "limb-audit-emb-module-dysplasia",
+      "subject": "embryology",
+      "title": "Skeletal dysplasia affecting the limbs",
+      "description": "Selected appendicular applications from Langman's skeletal chapter, including long-bone and clavicular dysplasias.",
+      "order": 140
+    },
+    {
+      "id": "limb-audit-hist-module-connective-cartilage",
+      "subject": "histology",
+      "title": "Connective tissue and cartilage",
+      "description": "Microscopic recognition of tendon and cartilage, matrix organization, growth and preparation artifacts.",
+      "order": 510
+    },
+    {
+      "id": "limb-audit-hist-module-joints",
+      "subject": "histology",
+      "title": "Synovial joint tissues",
+      "description": "Synoviocytes, vascular synovium, articular collagen architecture and the limits of cartilage repair.",
+      "order": 511
+    },
+    {
+      "id": "limb-audit-hist-module-bone",
+      "subject": "histology",
+      "title": "Bone organization and tissue repair",
+      "description": "Cells, surface coverings, cortical and trabecular organization, growth-plate morphology and fracture repair.",
+      "order": 512
+    },
+    {
+      "id": "limb-audit-hist-module-muscle",
+      "subject": "histology",
+      "title": "Skeletal muscle tissue",
+      "description": "Sections, connective-tissue layers, sarcomeres, attachment and receptor morphology, and repair.",
+      "order": 513
+    },
+    {
+      "id": "limb-audit-hist-module-nerve",
+      "subject": "histology",
+      "title": "Peripheral nerve tissue",
+      "description": "Schwann-cell organization, connective sheaths, barriers, processing artifacts and injury response.",
+      "order": 514
+    },
+    {
+      "id": "limb-audit-phys-conduction-module",
+      "subject": "physiology",
+      "title": "Peripheral axon excitability and conduction",
+      "description": "Carryover lecture support for action potentials and propagation, with explicitly separate quantitative textbook extensions.",
+      "order": 101
+    },
+    {
+      "id": "limb-audit-phys-excitation-module",
+      "subject": "physiology",
+      "title": "Neuromuscular transmission and force activation",
+      "description": "Presynaptic release, end-plate current, excitation-contraction coupling, and ATP-dependent cross-bridge events.",
+      "order": 102
+    },
+    {
+      "id": "limb-audit-phys-force-module",
+      "subject": "physiology",
+      "title": "Motor units and limb mechanics",
+      "description": "Recruitment and twitch behavior, active length-tension, load-dependent shortening, external work, power, and torque.",
+      "order": 103
+    },
+    {
+      "id": "limb-audit-phys-energy-module",
+      "subject": "physiology",
+      "title": "Muscle energy supply and fatigue",
+      "description": "Immediate phosphate buffering, sustained ATP provision, oxidative specialization, and interpretation of force loss.",
+      "order": 104
+    },
+    {
+      "id": "limb-audit-phys-feedback-module",
+      "subject": "physiology",
+      "title": "Muscle sensory feedback and limb reflexes",
+      "description": "Bounded textbook extensions on spindle sensing, gamma control, tendon feedback, and coordinated withdrawal.",
+      "order": 105
     },
     {
       "id": "limbs-visual-atlas",
@@ -6576,6 +6681,2478 @@
           "text": "Distinguish failed calcium resequestration from impaired excitation or calcium release.",
           "questionIds": [
             "comp-limbs-080"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-milestones",
+      "moduleId": "limb-audit-emb-module-morphogenesis",
+      "subject": "embryology",
+      "title": "External limb milestones",
+      "summary": "Limb morphogenesis proceeds through visible outpocketings, buds, hand and foot plates, and separated digits. Upper-limb development begins slightly earlier than lower-limb development, so their appearances should be compared with this normal lag in mind.",
+      "keyPoints": [
+        "Visible limb outpocketings appear near the end of developmental week 4.",
+        "The hindlimb follows the forelimb by approximately one to two days.",
+        "Flattened hand and foot plates are described in 6-week embryos.",
+        "The illustrated human hand has complete digit separation at 56 days, approximately 8 weeks."
+      ],
+      "examTraps": [
+        "Do not equate a hand plate with an already separated set of fingers.",
+        "Developmental weeks in these questions follow Langman's staging and are not a conversion exercise in obstetric pregnancy dating."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What normal timing difference separates initial upper- and lower-limb emergence?",
+          "answer": "The upper limb appears first, and the lower limb follows approximately one to two days later."
+        },
+        {
+          "prompt": "What distinguishes the 6-week plate stage from the 8-week hand appearance?",
+          "answer": "At about 6 weeks the distal limb is a flattened plate; by about 8 weeks finger separation is complete."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 169–170; physical PDF pp. 181–182; Figures 12.1 and 12.3",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-001",
+          "text": "Place initial upper- and lower-limb emergence on the developmental timetable.",
+          "questionIds": [
+            "limb-audit-emb-001"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-002",
+          "text": "Distinguish the plate stage from later separation of digits.",
+          "questionIds": [
+            "limb-audit-emb-002"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-skeletal-maturation",
+      "moduleId": "limb-audit-emb-module-morphogenesis",
+      "subject": "embryology",
+      "title": "Cartilage templates and skeletal maturation",
+      "summary": "Early limb mesenchyme forms cartilage models before long-bone ossification proceeds from primary diaphyseal centers. The pattern of growth plates and ossification centers supplies information about maturation that cannot be replaced by external limb size alone.",
+      "keyPoints": [
+        "The first hyaline cartilage models of limb bones appear by developmental week 6.",
+        "Primary centers are present in all limb long bones by developmental week 12.",
+        "Primary ossification spreads from the diaphysis toward the ends of a cartilaginous model.",
+        "Langman contrasts growth plates at both ends of a major long bone with a plate at one extremity in smaller bones such as phalanges.",
+        "The appearance of hand and wrist ossification centers is useful for evaluating skeletal maturation."
+      ],
+      "examTraps": [
+        "A cartilage template is not a secondary ossification center.",
+        "Do not extend the book's general birth-time account into a claim that every epiphysis ossifies only after birth.",
+        "Bone age assessment does not by itself identify a unique molecular cause."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Where does a limb long bone's primary ossification center lie?",
+          "answer": "It lies in the shaft or diaphysis, with ossification progressing toward the ends of the model."
+        },
+        {
+          "prompt": "Why can similar hand size coexist with different bone ages?",
+          "answer": "External size and the developmental appearance of ossification centers describe different aspects of growth."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 170–172, 176; physical PDF pp. 182–184, 188",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-003",
+          "text": "Distinguish a cartilage template from an ossified long bone during early limb development.",
+          "questionIds": [
+            "limb-audit-emb-003"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-004",
+          "text": "Locate and time the primary ossification centers of limb long bones.",
+          "questionIds": [
+            "limb-audit-emb-004"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-005",
+          "text": "Compare epiphyseal-plate distribution in long limb bones and phalanges.",
+          "questionIds": [
+            "limb-audit-emb-005"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-006",
+          "text": "Interpret the developmental information supplied by hand and wrist ossification centers.",
+          "questionIds": [
+            "limb-audit-emb-006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-field-and-bone-pattern",
+      "moduleId": "limb-audit-emb-module-patterning",
+      "subject": "embryology",
+      "title": "Limb-field position and regional skeletal pattern",
+      "summary": "The mechanisms that position a limb along the body axis, specify its identity, and shape its skeletal elements are related but distinguishable. The ZPA also remains spatially related to the posterior AER as the limb elongates.",
+      "keyPoints": [
+        "Overlapping axial HOX expression helps determine limb-field position along the trunk.",
+        "The cranial boundary of HOXB8 expression is associated with the forelimb field's cranial border.",
+        "Forelimb and hindlimb identity involve TBX5 and TBX4/PITX1, respectively.",
+        "The ZPA moves distally during growth to remain near the posterior border of the AER.",
+        "HOXA and HOXD expression programs help determine the types and shapes of bones in the limb's regional segments."
+      ],
+      "examTraps": [
+        "A shifted axial limb field need not imply a switch from forelimb to hindlimb identity.",
+        "The ZPA is posterior mesenchyme, whereas the AER is distal ectoderm."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "How does the ZPA remain related to the growing distal limb?",
+          "answer": "It moves distalward and remains close to the posterior AER border."
+        },
+        {
+          "prompt": "What distinction separates HOXB8 positioning from TBX5 identity?",
+          "answer": "HOXB8 expression contributes to where the limb field lies, while TBX5 specifies forelimb identity."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 173–175; physical PDF pp. 185–187; Figure 12.8",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-007",
+          "text": "Separate axial limb-field positioning from forelimb-versus-hindlimb specification.",
+          "questionIds": [
+            "limb-audit-emb-007"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-012",
+          "text": "Track the ZPA's location during continued limb outgrowth.",
+          "questionIds": [
+            "limb-audit-emb-012"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-013",
+          "text": "Distinguish limb-axis signaling from the HOX programs that shape regional skeletal elements.",
+          "questionIds": [
+            "limb-audit-emb-013"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-ridge-boundary",
+      "moduleId": "limb-audit-emb-module-patterning",
+      "subject": "embryology",
+      "title": "AER induction, boundary, and differentiation front",
+      "summary": "AER formation requires induction and a spatial ectodermal boundary before its FGF output maintains distal mesenchyme. Langman's illustrated differentiation model then follows a moving proximal-to-distal front through the limb's regional segments.",
+      "keyPoints": [
+        "Ventral ectodermal BMP signaling through MSX2 participates in AER induction after outgrowth begins.",
+        "Dorsal RADICAL FRINGE expression and ventral repression create the boundary used to localize SER2 and the AER in the book's model.",
+        "EN1 helps create that border by repressing RADICAL FRINGE in ventral ectoderm.",
+        "AP2 is the marker given for the undifferentiated zone beneath an active AER.",
+        "Figure 12.9 shows distal advance of the differentiation front and termination of AER FGF secretion as the autopod differentiates."
+      ],
+      "examTraps": [
+        "Induction of an AER and FGF-mediated maintenance by an established AER are different stages.",
+        "Marker expression alone should not be overstated as proof of a fully established causal role; the figure qualifies AP2's possible role.",
+        "Normal final FGF termination is distinct from premature experimental removal of the ridge."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What establishes the ectodermal border for the AER in Langman's boundary model?",
+          "answer": "Dorsal RADICAL FRINGE expression, opposed by ventral EN1 repression, localizes SER2 and the ridge at the interface."
+        },
+        {
+          "prompt": "Which marker distinguishes the active undifferentiated zone from regional segment markers?",
+          "answer": "AP2 marks the undifferentiated zone, whereas MEIS1, HOXA11, and HOXA13 mark regional differentiated segments."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 173–175; physical PDF pp. 185–187; Figures 12.8A and 12.9",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-008",
+          "text": "Identify the ventral ectoderm signal that helps induce the apical ectodermal ridge.",
+          "questionIds": [
+            "limb-audit-emb-008"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-009",
+          "text": "Explain how an ectodermal expression boundary localizes the AER.",
+          "questionIds": [
+            "limb-audit-emb-009"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-010",
+          "text": "Recognize AP2 as a marker of undifferentiated mesenchyme beneath an active AER.",
+          "questionIds": [
+            "limb-audit-emb-010"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-011",
+          "text": "Follow the differentiation front and distinguish normal terminal differentiation from premature AER removal.",
+          "questionIds": [
+            "limb-audit-emb-011"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-014",
+          "text": "Predict the boundary defect caused by loss of ventral repression of RADICAL FRINGE.",
+          "questionIds": [
+            "limb-audit-emb-014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-myogenic-domains",
+      "moduleId": "limb-audit-emb-module-myogenesis",
+      "subject": "embryology",
+      "title": "Myogenic domains and precursor induction",
+      "summary": "Myogenic precursors that cross the lateral somitic frontier enter an environment containing parietal lateral plate mesoderm. This abaxial domain differs from the primaxial domain and cannot be assigned to every upper-limb-associated muscle without attention to its specific origin.",
+      "keyPoints": [
+        "The abaxial domain combines lateral plate mesoderm with somite-derived cells that crossed the lateral somitic frontier.",
+        "The primaxial domain contains somite-derived cells around the neural tube.",
+        "Distal limb muscles are abaxial in Table 11.1, while rhomboids, levator scapulae, and latissimus dorsi are listed as primaxial.",
+        "VLL muscle-cell induction involves signals from lateral plate mesoderm and adjacent ectoderm that activate MyoD.",
+        "The book distinguishes VLL induction from the neural-tube/notochord signals associated with DML precursors."
+      ],
+      "examTraps": [
+        "Abaxial is a domain designation and does not mean that the muscle fiber itself arose from lateral plate mesoderm.",
+        "Primaxial/abaxial is not simply another name for dorsal-ramus/ventral-ramus innervation.",
+        "Table 11.1 qualifies the precise lower-limb origin as incompletely determined; do not erase its footnote."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What changes when a VLL precursor crosses the lateral somitic frontier?",
+          "answer": "It enters the abaxial domain and receives developmental signals in the lateral plate environment while retaining its somitic lineage."
+        },
+        {
+          "prompt": "Which upper-limb-associated muscles are primaxial in Table 11.1?",
+          "answer": "Rhomboids, levator scapulae, and latissimus dorsi are listed as primaxial exceptions to a blanket abaxial label."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "11 - Muscular System",
+          "locator": "Printed pp. 162–165; physical PDF pp. 174–177; Table 11.1 and Figures 11.1, 11.3",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-015",
+          "text": "Define the abaxial domain using cell movement across the lateral somitic frontier.",
+          "questionIds": [
+            "limb-audit-emb-015"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-016",
+          "text": "Recognize the primaxial shoulder-girdle exceptions to a blanket abaxial description of upper-limb-associated muscles.",
+          "questionIds": [
+            "limb-audit-emb-016"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-017",
+          "text": "Distinguish the inductive environment of ventrolateral myogenic precursors from that of dorsomedial precursors.",
+          "questionIds": [
+            "limb-audit-emb-017"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-muscle-assembly",
+      "moduleId": "limb-audit-emb-module-myogenesis",
+      "subject": "embryology",
+      "title": "Muscle assembly, functional differentiation, and segmental continuity",
+      "summary": "Muscle development includes precursor fusion, rearrangement of segmental contributions, tendon differentiation, and acquisition of innervation. These steps explain why an adult limb's mature muscle pattern differs from a simple map of isolated original somites.",
+      "keyPoints": [
+        "SCLERAXIS is identified as a regulator of tendon development.",
+        "Myoblasts fuse to form long multinucleated skeletal muscle fibers before mature striations appear.",
+        "Innervation is a prerequisite for complete functional differentiation of limb muscle cells.",
+        "Further splitting and fusion can bring contributions from several original segments into one mature limb muscle.",
+        "Growth and rotation alter dermatome geometry while leaving a recognizable orderly segmental sensory sequence."
+      ],
+      "examTraps": [
+        "A normal myogenic lineage and connective-tissue template do not remove the need for motor innervation.",
+        "One mature limb muscle need not correspond to exactly one embryonic somite.",
+        "The tendon regulator can be tested without generalizing a regional tendon-origin statement to every tendon of the limb."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Why can one mature limb muscle contain cells from several original segments?",
+          "answer": "Initially segmented muscle masses undergo successive splitting and fusion during limb development."
+        },
+        {
+          "prompt": "What developmental requirement remains if muscle cells migrate and are patterned normally but receive no motor axons?",
+          "answer": "Complete functional differentiation still requires innervation."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "11 - Muscular System",
+          "locator": "Printed p. 165; physical PDF p. 177; skeletal muscle and tendons",
+          "basis": "book"
+        },
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 171–173; physical PDF pp. 183–185; Figures 12.6 and 12.7",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-018",
+          "text": "Identify a transcription factor regulating tendon development independently of myogenic specification.",
+          "questionIds": [
+            "limb-audit-emb-018"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-019",
+          "text": "Explain how multinucleated skeletal muscle fibers arise during differentiation.",
+          "questionIds": [
+            "limb-audit-emb-019"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-020",
+          "text": "Explain why correct myogenic origin and connective-tissue pattern do not alone guarantee full functional differentiation.",
+          "questionIds": [
+            "limb-audit-emb-020"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-021",
+          "text": "Explain how one mature limb muscle can receive contributions from more than one original segment.",
+          "questionIds": [
+            "limb-audit-emb-021"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-022",
+          "text": "Relate altered limb skin geometry to preserved segmental sensory relationships.",
+          "questionIds": [
+            "limb-audit-emb-022"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-defect-morphology",
+      "moduleId": "limb-audit-emb-module-congenital",
+      "subject": "embryology",
+      "title": "Limb reduction and digital defect morphology",
+      "summary": "Descriptions of absent segments, shortened segments, fused digits, extra digits, and central clefts refer to different developmental phenotypes. Careful morphology narrows the category without automatically determining the mechanism or functional completeness.",
+      "keyPoints": [
+        "Amelia denotes complete absence, whereas meromelia denotes partial absence of an extremity.",
+        "Phocomelia is a meromelia pattern with absent intervening long bones and distal structures close to the trunk.",
+        "Micromelia describes present but abnormally short limb segments; brachydactyly describes shortened digits.",
+        "The cleft hand/foot pattern described in the chapter commonly lacks the third ray between the second and fourth metacarpal/metatarsal regions.",
+        "An extra digit can lack proper muscle connections and need not have normal independent movement."
+      ],
+      "examTraps": [
+        "The presence of a rudimentary hand excludes complete absence of that whole extremity.",
+        "Shortening, absence, fusion, and duplication are separate descriptive findings.",
+        "An extra skeletal digit does not prove complete muscle and nerve integration."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What distinguishes phocomelia from micromelia?",
+          "answer": "Phocomelia features loss of intervening long-bone segments with distal parts near the trunk; micromelia retains segments that are abnormally short."
+        },
+        {
+          "prompt": "Which ray is usually deficient in the central cleft pattern?",
+          "answer": "The third metacarpal and its phalanges are almost always absent in the described hand pattern."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 176–177; physical PDF pp. 188–189; Figures 12.11 and 12.12",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-023",
+          "text": "Distinguish complete absence, partial absence, and the phocomelia subtype.",
+          "questionIds": [
+            "limb-audit-emb-023"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-024",
+          "text": "Separate generalized limb shortening from isolated digit shortening.",
+          "questionIds": [
+            "limb-audit-emb-024"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-025",
+          "text": "Recognize the central-ray deficiency in the illustrated cleft-hand or cleft-foot pattern.",
+          "questionIds": [
+            "limb-audit-emb-025"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-026",
+          "text": "Distinguish the presence of an extra digit from normal functional muscle integration.",
+          "questionIds": [
+            "limb-audit-emb-026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-developmental-disruption",
+      "moduleId": "limb-audit-emb-module-congenital",
+      "subject": "embryology",
+      "title": "Teratogen timing and limb disruption",
+      "summary": "Similar distal limb loss can arise through different developmental routes. The exposure interval, constriction morphology, and evidence of AER or vascular disturbance should be considered before assigning a specific causal mechanism.",
+      "keyPoints": [
+        "Langman identifies developmental weeks 4 and 5 as especially sensitive for thalidomide-associated limb defects.",
+        "Amniotic bands can produce constriction rings and amputations of limbs or digits.",
+        "Transverse deficiency describes preserved proximal structures with partial or complete loss distal to a plane.",
+        "The chapter lists AER/signaling disruption and vascular abnormalities among possible causes of transverse deficiencies.",
+        "A descriptive reduction pattern does not by itself establish a unique gene, exposure, or amniotic-band cause."
+      ],
+      "examTraps": [
+        "Do not infer a documented amniotic strand from transverse loss alone.",
+        "An embryonic teratogen window is separate from the later appearance of ossification centers.",
+        "These are developmental learning questions, not medication or pregnancy-management instructions."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which findings particularly support an amniotic-band disruption?",
+          "answer": "A constriction ring with an associated strand and distal tissue loss supports a mechanical disruption mechanism."
+        },
+        {
+          "prompt": "What causal inference is safe from a transverse deficiency alone?",
+          "answer": "Several causes remain possible, including AER/signaling disruption and vascular abnormalities."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 176, 178–179; physical PDF pp. 188, 190–191; Figure 12.16",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-027",
+          "text": "Identify the especially sensitive developmental interval for thalidomide-associated limb defects.",
+          "questionIds": [
+            "limb-audit-emb-027"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-028",
+          "text": "Recognize amniotic-band disruption from constriction and amputation morphology.",
+          "questionIds": [
+            "limb-audit-emb-028"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-029",
+          "text": "Avoid assigning a unique cause to the morphology of transverse limb deficiency.",
+          "questionIds": [
+            "limb-audit-emb-029"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-syndromic-limbs",
+      "moduleId": "limb-audit-emb-module-congenital",
+      "subject": "embryology",
+      "title": "Limb findings that indicate a broader syndrome",
+      "summary": "Limb abnormalities can be part of syndromes affecting the heart, cranial sutures, extracellular matrix, eyes, or aorta. The associated findings are often more discriminating than a general description of an abnormal radius or limb length alone.",
+      "keyPoints": [
+        "TBX5-related Holt–Oram syndrome combines upper-limb abnormalities with septal or conduction defects.",
+        "Baller–Gerold syndrome combines craniosynostosis with radial aplasia.",
+        "Most osteogenesis imperfecta cases in the cited account involve COL1A1 or COL1A2 and type I collagen.",
+        "Osteogenesis imperfecta can produce short bowed hypomineralized long bones, fractures, and blue sclerae.",
+        "FBN1-related Marfan syndrome includes long slender limbs, hyperflexible joints, lens displacement, and ascending-aortic abnormalities."
+      ],
+      "examTraps": [
+        "Radial absence alone does not uniquely diagnose Holt–Oram or Baller–Gerold; accompanying findings matter.",
+        "COL1A1/COL1A2 and FBN1 encode different extracellular-matrix components and produce different characteristic phenotypes."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which association suggests TBX5 when a radial abnormality is present?",
+          "answer": "An atrial or ventricular septal defect or cardiac conduction abnormality supports the Holt–Oram association."
+        },
+        {
+          "prompt": "What distinguishes the classic limb patterns of osteogenesis imperfecta and Marfan syndrome?",
+          "answer": "Fragile bowed hypomineralized short bones with blue sclerae favor osteogenesis imperfecta; long slender limbs with lens and aortic findings favor Marfan syndrome."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed pp. 177–178; physical PDF pp. 189–190; Figure 12.13",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-030",
+          "text": "Connect radial-side upper-limb malformation with the cardiac manifestations of Holt–Oram syndrome.",
+          "questionIds": [
+            "limb-audit-emb-030"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-031",
+          "text": "Recognize the association of radial aplasia with premature cranial-suture fusion.",
+          "questionIds": [
+            "limb-audit-emb-031"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-032",
+          "text": "Relate osteogenesis imperfecta limb findings to type I collagen genes.",
+          "questionIds": [
+            "limb-audit-emb-032"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-033",
+          "text": "Connect long slender limbs and associated findings with fibrillin abnormality.",
+          "questionIds": [
+            "limb-audit-emb-033"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-joint-muscle-conditions",
+      "moduleId": "limb-audit-emb-module-congenital",
+      "subject": "embryology",
+      "title": "Congenital joint and muscle-pattern disorders",
+      "summary": "Hip instability, clubfoot, pectoral deficiency with hand defects, and congenital contractures are distinct patterns. Their developmental explanations require separating prenatal structure, muscle presence, muscle function, and restriction of fetal movement.",
+      "keyPoints": [
+        "Acetabular and femoral-head underdevelopment may be prenatal even when hip dislocation becomes evident after birth.",
+        "PITX1 mutations or microdeletions have been associated with clubfoot, but the chapter describes multiple possible causes.",
+        "Poland sequence includes absent pectoralis minor and partial pectoralis major loss with nipple/areola and often ipsilateral digital abnormalities.",
+        "Langman's abbreviated description uses amyoplasia for generalized muscle absence; distinguish this structural-development example from muscle that is present but has a contractile defect.",
+        "Many distal arthrogryposes involve abnormal muscle function related to genes regulating the contractile apparatus."
+      ],
+      "examTraps": [
+        "The timing of diagnosis does not prove the timing when a developmental abnormality began.",
+        "A genetic cause in one clubfoot family should not be generalized to every case.",
+        "A muscle can be present yet function abnormally enough to contribute to prenatal contractures."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What pectoral and hand combination suggests Poland sequence?",
+          "answer": "Pectoral deficiency with nipple/areola abnormality and ipsilateral short or fused digits fits the described sequence."
+        },
+        {
+          "prompt": "How do amyoplasia and a contractile-apparatus form of distal arthrogryposis differ?",
+          "answer": "In Langman's comparison, amyoplasia is the muscle-absence example, whereas a contractile-apparatus distal arthrogryposis involves abnormal function despite muscle being present."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "11 - Muscular System",
+          "locator": "Printed pp. 166–167; physical PDF pp. 178–179; Figure 11.5",
+          "basis": "book"
+        },
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "12 - Limbs",
+          "locator": "Printed p. 178; physical PDF p. 190",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-034",
+          "text": "Separate prenatal abnormal joint formation from the timing when hip dislocation becomes evident.",
+          "questionIds": [
+            "limb-audit-emb-034"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-035",
+          "text": "Interpret PITX1-related clubfoot as one etiologic association without treating it as a universal mechanism.",
+          "questionIds": [
+            "limb-audit-emb-035"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-036",
+          "text": "Recognize Poland sequence from the combination of pectoral and ipsilateral hand defects.",
+          "questionIds": [
+            "limb-audit-emb-036"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-037",
+          "text": "Differentiate muscle absence from impaired muscle function as routes to congenital contractures.",
+          "questionIds": [
+            "limb-audit-emb-037"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-emb-concept-skeletal-dysplasia",
+      "moduleId": "limb-audit-emb-module-dysplasia",
+      "subject": "embryology",
+      "title": "Appendicular features of selected skeletal dysplasias",
+      "summary": "The skeletal chapter adds selected disorders that directly affect long bones, clavicles, fingers, and toes. Their appendicular manifestations help distinguish defects of endochondral growth, clavicular development, and syndromic digital pattern.",
+      "keyPoints": [
+        "FGFR3-associated achondroplasia and related disorders involve abnormal endochondral bone formation affecting long-bone growth.",
+        "RUNX2 mutations cause cleidocranial dysplasia with hypoplastic or aplastic clavicles.",
+        "Delayed closure of cranial sutures and dental abnormalities accompany the classic cleidocranial pattern.",
+        "Apert syndrome is associated with symmetric syndactyly of hands and feet in Table 10.1.",
+        "Crouzon syndrome has no hand or foot defects in the table, while Jackson–Weiss has foot anomalies with hands usually spared."
+      ],
+      "examTraps": [
+        "These Chapter 10 extensions are included for their appendicular findings, not as an expansion into the complete craniofacial syllabus.",
+        "Do not confuse growth-plate receptor abnormalities with early AER induction merely because both involve FGF terminology.",
+        "The FGFR2-associated syndromes require phenotype distinctions rather than gene-name matching alone."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which developmental process links FGFR3-related dysplasia to short limbs?",
+          "answer": "Abnormal endochondral bone formation adversely affects the growth of long bones."
+        },
+        {
+          "prompt": "How do appendicular findings distinguish Apert and Crouzon syndromes in the table?",
+          "answer": "Apert includes symmetric hand and foot syndactyly, while Crouzon has no hand or foot defects."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Langman's Medical Embryology",
+          "edition": "15th ed.",
+          "chapter": "10 - The Axial Skeleton",
+          "locator": "Printed pp. 154–155; physical PDF pp. 166–167; Table 10.1",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-emb-objective-038",
+          "text": "Connect short-limb skeletal dysplasia with FGFR3-associated disturbance of endochondral development.",
+          "questionIds": [
+            "limb-audit-emb-038"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-039",
+          "text": "Recognize the appendicular clavicular findings of RUNX2-associated cleidocranial dysplasia.",
+          "questionIds": [
+            "limb-audit-emb-039"
+          ]
+        },
+        {
+          "id": "limb-audit-emb-objective-040",
+          "text": "Use hand and foot involvement to distinguish the FGFR2-associated patterns tabulated by Langman.",
+          "questionIds": [
+            "limb-audit-emb-040"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-connective-recognition",
+      "moduleId": "limb-audit-hist-module-connective-cartilage",
+      "subject": "histology",
+      "title": "Connective tissue recognition and repair",
+      "summary": "A tendon is identified by its aligned collagen and sparse fibrocytes, while mixed cartilage and fibrous regions identify fibrocartilage at selected insertion sites. Cell appearance and preparation must be interpreted alongside matrix organization.",
+      "keyPoints": [
+        "Dense regular tissue has parallel type I collagen bundles, elongated fibrocyte nuclei and little ground substance.",
+        "Dense irregular tissue has collagen bundles oriented in several directions, supporting multidirectional tensile loads.",
+        "Active fibroblasts have abundant rough ER and Golgi, with larger euchromatic nuclei than quiescent fibrocytes.",
+        "Tendons and ligaments are relatively poorly vascularized and repair slowly through fibroblast activity.",
+        "Fibrocartilage at some insertions combines type II collagen-rich chondrocyte regions with dense type I collagen-rich fibrous regions.",
+        "A clear rim around a processed chondrocyte can reflect shrinkage; living cells normally fill their lacunae."
+      ],
+      "examTraps": [
+        "Type I collagen alone cannot identify tendon, fibrocartilage or bone without cellular and architectural context.",
+        "The selected insertion question does not establish a universal four-zone enthesis, and no fine zonal enthesis map is claimed."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What distinguishes a tendon fibrocyte from a cartilage cell?",
+          "answer": "A fibrocyte has an elongated nucleus among collagen bundles; a chondrocyte is rounded and occupies a cartilage lacuna."
+        },
+        {
+          "prompt": "Why can a halo around a chondrocyte be misleading?",
+          "answer": "Retraction during processing can create a space that was absent around the living cell."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "5 Connective Tissue",
+          "locator": "Printed pp.97, 115-118; PDF pp.108, 126-129",
+          "basis": "book"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "7 Cartilage",
+          "locator": "Printed pp.131-134; PDF pp.142-145",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-connective-patterns",
+          "text": "Recognize collagen arrangement and distinguish processing artifacts from normal tissue features.",
+          "questionIds": [
+            "limb-audit-hist-001",
+            "limb-audit-hist-002",
+            "limb-audit-hist-013"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-connective-repair",
+          "text": "Explain fibroblast activation and the relative limitations of tendon repair.",
+          "questionIds": [
+            "limb-audit-hist-003",
+            "limb-audit-hist-004"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-fibrocartilage-insertion",
+          "text": "Interpret a fibrocartilaginous insertion from its mixed cellular and matrix components.",
+          "questionIds": [
+            "limb-audit-hist-005"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-cartilage-cells",
+      "moduleId": "limb-audit-hist-module-connective-cartilage",
+      "subject": "histology",
+      "title": "Cartilage cells and matrix",
+      "summary": "Lecture-supported carryover; exam inclusion unconfirmed. Cartilage recognition depends on chondrocytes in lacunae and the surrounding matrix. The original bone-and-joint teaching file supports the distinctions among hyaline, elastic and fibrocartilage and introduces territorial matrix and isogenous groups.",
+      "keyPoints": [
+        "Hyaline cartilage contains rounded lacunar cells and fine type II collagen fibrils within a relatively homogeneous matrix.",
+        "Territorial matrix near lacunae is relatively rich in sulfated GAGs and often stains more basophilically.",
+        "Isogenous groups arise from local division of a cartilage cell, followed by separation as matrix accumulates.",
+        "Fibrocartilage shows chondrocyte rows among dense collagen-rich fibrous regions and lacks a distinct perichondrium.",
+        "Elastic cartilage contains an elastic-fiber network and perichondrium; it is a comparator rather than ordinary limb articular cartilage.",
+        "The supplied fibrocartilage micrograph is a disc specimen illustrating a tissue category also present in knee menisci."
+      ],
+      "examTraps": [
+        "Fibrocartilage contains both type I and type II collagen; it is not defined by type I alone.",
+        "An original disc image must not be presented as an actual knee biopsy."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which finding favors fibrocartilage over ordinary tendon?",
+          "answer": "Rows of chondrocytes in lacunae within cartilage-like matrix between dense fibrous regions."
+        },
+        {
+          "prompt": "Why is territorial matrix relatively basophilic?",
+          "answer": "Its relatively high sulfated GAG content gives it many negatively charged groups."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BONE&JOINT TISSUE.pdf",
+          "locator": "PDF pp.3-7, 9-13",
+          "basis": "slides"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "7 Cartilage",
+          "locator": "Printed pp.129, 131-134; PDF pp.140, 142-145",
+          "basis": "book"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-cartilage-recognition",
+          "text": "Distinguish hyaline, elastic and fibrocartilage from their cells and matrix.",
+          "questionIds": [
+            "limb-audit-hist-007",
+            "limb-audit-hist-012",
+            "limb-audit-hist-014"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-cartilage-microdomains",
+          "text": "Interpret territorial staining and isogenous cell groups.",
+          "questionIds": [
+            "limb-audit-hist-008",
+            "limb-audit-hist-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-cartilage-growth",
+      "moduleId": "limb-audit-hist-module-connective-cartilage",
+      "subject": "histology",
+      "title": "Cartilage growth and covering",
+      "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The perichondrium provides a fibrous outer layer and a chondrogenic cell population. Appositional growth from this covering must be separated from interstitial growth within cartilage, and from later replacement of cartilage by bone.",
+      "keyPoints": [
+        "Perichondrium contains an outer fibrous region with type I collagen and fibroblasts.",
+        "Its inner progenitor population can differentiate into matrix-producing chondroblasts.",
+        "Appositional cartilage growth adds matrix and cells beneath the perichondrium at the surface.",
+        "Interstitial cartilage growth involves division of cells already enclosed within the cartilage and deposition of matrix.",
+        "Articular cartilage and fibrocartilage lack a distinct perichondrium, limiting direct transfer of the covering-based model to them."
+      ],
+      "examTraps": [
+        "The lecture statement that cartilage simply stops growing in the late teens is too broad; growth-plate closure is not cessation of all cartilage matrix maintenance."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "How does appositional cartilage growth differ from interstitial growth?",
+          "answer": "Apposition adds cartilage from perichondrial progenitors at the surface; interstitial growth expands cartilage from cells already in its matrix."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BONE&JOINT TISSUE.pdf",
+          "locator": "PDF pp.8, 15-16",
+          "basis": "slides"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "7 Cartilage",
+          "locator": "Printed pp.131, 133-135; PDF pp.142, 144-146",
+          "basis": "book"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-cartilage-cover-growth",
+          "text": "Identify perichondrial layers and distinguish surface addition from interstitial cartilage expansion.",
+          "questionIds": [
+            "limb-audit-hist-010",
+            "limb-audit-hist-011"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-synoviocytes",
+      "moduleId": "limb-audit-hist-module-joints",
+      "subject": "histology",
+      "title": "Synovial joint lining cells",
+      "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The lecture identifies synoviocyte A as phagocytic and synoviocyte B as a GAG-secreting cell. Junqueira provides the cellular morphology and specifies hyaluronan production and the connective-tissue nature of the lining.",
+      "keyPoints": [
+        "Type A synoviocytes have a macrophage-like phenotype.",
+        "Type A cells engulf and remove wear debris from synovial fluid.",
+        "Type B synoviocytes have a fibroblast-like synthetic phenotype.",
+        "Type B cells produce hyaluronan and other components that replenish synovial fluid.",
+        "These are lining cells in synovial tissue rather than chondrocytes embedded in articular cartilage lacunae."
+      ],
+      "examTraps": [
+        "Type A and type B names must not be reversed; a phagocytic lining cell is not automatically an osteoclast."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which synovial cells remove debris and which produce hyaluronan?",
+          "answer": "Macrophage-like type A cells remove debris; fibroblast-like type B cells produce hyaluronan."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BONE&JOINT TISSUE.pdf",
+          "locator": "PDF pp.54-55",
+          "basis": "slides"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "8 Bone",
+          "locator": "Printed p.157; PDF p.168, Figure 8-22",
+          "basis": "book"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-synoviocyte-functions",
+          "text": "Distinguish the morphology and functions of synoviocyte A and B.",
+          "questionIds": [
+            "limb-audit-hist-015"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-joint-microstructure",
+      "moduleId": "limb-audit-hist-module-joints",
+      "subject": "histology",
+      "title": "Synovial lining and articular surface",
+      "summary": "Joint sections place vascular synovial connective tissue beside avascular articular cartilage. Their different matrix and surface organization explain why an epithelial-looking lining is not a true epithelium and why collagenous repair does not prove normal cartilage restoration.",
+      "keyPoints": [
+        "Synovium is specialized connective tissue, with no continuous epithelial basal lamina or typical epithelial junctional pattern.",
+        "Synovial folds contain numerous capillaries, commonly fenestrated, that support exchange with synovial fluid.",
+        "Articular hyaline cartilage lacks vessels and perichondrium; its cells receive nutrients by diffusion.",
+        "Articular type II collagen arches from a mainly superficial parallel direction toward a deeper perpendicular direction.",
+        "Cartilage repair is often incomplete and can yield collagenous scar that lacks the architecture of the original hyaline surface."
+      ],
+      "examTraps": [
+        "The absence of perichondrium over articular cartilage does not imply that cartilage is acellular.",
+        "Finding type I collagen after repair does not establish lamellar bone or normal hyaline cartilage."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Why is synovium not a true epithelium?",
+          "answer": "Its surface cells lack a continuous epithelial basement membrane and the typical epithelial junctional organization."
+        },
+        {
+          "prompt": "What makes fibrous repair different from restoration of an articular surface?",
+          "answer": "Normal articular cartilage requires an organized type II collagen-proteoglycan matrix with appropriate chondrocytes, not simply any collagen."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "8 Bone",
+          "locator": "Printed pp.157-158; PDF pp.168-169",
+          "basis": "book"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "7 Cartilage",
+          "locator": "Printed pp.131, 134, 136; PDF pp.142, 145, 147",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-synovial-structure",
+          "text": "Recognize the connective-tissue nature and microvascular organization of synovium.",
+          "questionIds": [
+            "limb-audit-hist-016",
+            "limb-audit-hist-018"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-articular-structure-repair",
+          "text": "Interpret depth-dependent articular collagen and distinguish fibrous repair from normal hyaline cartilage.",
+          "questionIds": [
+            "limb-audit-hist-017",
+            "limb-audit-hist-019"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-bone-cells",
+      "moduleId": "limb-audit-hist-module-bone",
+      "subject": "histology",
+      "title": "Bone cells and architecture",
+      "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The bone lecture supports osteoblast, osteocyte and osteoclast recognition, bone coverings and compact versus cancellous organization. The source correction is that mature trabecular bone is lamellar without requiring a complete osteon in each trabecula.",
+      "keyPoints": [
+        "Active osteoblasts line forming surfaces and deposit unmineralized osteoid before mineralization.",
+        "Osteoclasts are large multinucleated cells with a ruffled border at resorbing bone surfaces.",
+        "An osteon has concentric lamellae around a central Haversian canal containing vessels and nerves.",
+        "Perforating Volkmann canals link vascular channels and do not usually have a complete concentric lamellar sleeve.",
+        "Trabecular bone consists of branching endosteum-covered bone plates or struts adjacent to marrow spaces.",
+        "Periosteum covers external nonarticular bone surfaces; endosteum covers internal surfaces."
+      ],
+      "examTraps": [
+        "Compact/trabecular and lamellar/woven describe different dimensions of bone organization.",
+        "The lecture phrase irregular Haversian systems should not be used as the definition of cancellous bone."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What identifies a resorptive osteoclast?",
+          "answer": "A large multinucleated cell in a scalloped surface depression, with a ruffled matrix-facing border."
+        },
+        {
+          "prompt": "Can mature trabecular bone be lamellar without osteons?",
+          "answer": "Yes. Thin trabeculae may have ordered lamellae without complete central-canal systems."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BONE&JOINT TISSUE.pdf",
+          "locator": "PDF pp.19-29, 33",
+          "basis": "slides"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "8 Bone",
+          "locator": "Printed pp.140-147; PDF pp.151-158",
+          "basis": "book"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-bone-cell-recognition",
+          "text": "Identify matrix-forming and matrix-resorbing bone cells from their position and morphology.",
+          "questionIds": [
+            "limb-audit-hist-020",
+            "limb-audit-hist-021"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-bone-canal-architecture",
+          "text": "Distinguish cortical vascular channels, trabecular organization and bone surface coverings.",
+          "questionIds": [
+            "limb-audit-hist-022",
+            "limb-audit-hist-024",
+            "limb-audit-hist-026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-bone-growth-repair",
+      "moduleId": "limb-audit-hist-module-bone",
+      "subject": "histology",
+      "title": "Growth plate and fracture histology",
+      "summary": "Lecture-supported carryover; exam inclusion unconfirmed. Growth plates and fracture callus are identified by their cellular and matrix patterns. This concept stays at the tissue level: it does not assign developmental dates, limb patterning signals or exam-specific ossification timetables.",
+      "keyPoints": [
+        "Proliferating growth-plate chondrocytes divide and form columns along the long axis of a bone.",
+        "Hypertrophic chondrocytes enlarge and leave thinner intervening matrix septa.",
+        "At an ossification front, calcified cartilage remnants form scaffolds on which osteoblasts deposit new bone matrix.",
+        "A typical secondary fracture repair contains an initial soft fibrocartilage-like callus followed by a woven-bone hard callus.",
+        "Later remodeling replaces temporary woven callus with organized lamellar bone.",
+        "Repair appearance depends on mechanical stability and vascularity; a large cartilage callus is not obligatory in every fixation setting."
+      ],
+      "examTraps": [
+        "The reserve-zone wording in the lecture should not displace the proliferative zone as the characteristic site of rapid column-forming mitoses.",
+        "Calcified cartilage is not identical to newly deposited bone; histology shows both matrices at the ossification front."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What distinguishes a hypertrophic from a proliferative growth-plate zone?",
+          "answer": "Hypertrophy gives strikingly enlarged chondrocytes and thinned septa, while proliferation gives dividing cells organized into columns."
+        },
+        {
+          "prompt": "What is the tissue sequence from soft to hard fracture callus?",
+          "answer": "A fibrocartilage-like bridge is followed by a temporary woven-bone bridge, then lamellar remodeling."
+        }
+      ],
+      "sources": [
+        {
+          "title": "BONE&JOINT TISSUE.pdf",
+          "locator": "PDF pp.34, 37, 39, 44",
+          "basis": "slides"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "8 Bone",
+          "locator": "Printed pp.151-154; PDF pp.162-165",
+          "basis": "book"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-growth-plate-zones",
+          "text": "Identify proliferative and hypertrophic cartilage zones and distinguish cartilage scaffold from new bone.",
+          "questionIds": [
+            "limb-audit-hist-027",
+            "limb-audit-hist-028",
+            "limb-audit-hist-029"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-fracture-callus",
+          "text": "Distinguish soft callus, woven hard callus and later lamellar remodeling.",
+          "questionIds": [
+            "limb-audit-hist-030"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-bone-remodeling",
+      "moduleId": "limb-audit-hist-module-bone",
+      "subject": "histology",
+      "title": "Bone architecture and remodeling",
+      "summary": "Bone microscopy reveals the history of matrix deposition and resorption. Anchoring collagen bundles, residual osteons, polarized lamellae and sequential mineral labels distinguish connective attachment, static architecture and ongoing surface apposition.",
+      "keyPoints": [
+        "Sharpey fibers are collagen bundles that penetrate bone and anchor periosteum to the matrix.",
+        "Interstitial lamellae are remnants of partly resorbed older osteons between complete newer systems.",
+        "Changing collagen orientation in successive lamellae produces alternating birefringence under polarized light.",
+        "An osteoclast cutting cone creates a tunnel that osteoblasts refill with concentric bone layers around a vascular canal.",
+        "The distance between sequential fluorescent mineralization labels divided by elapsed time estimates local mineral apposition rate.",
+        "A local linear apposition rate does not itself establish the percentage of the whole cortex or skeleton remodeled."
+      ],
+      "examTraps": [
+        "Perforating fibers are collagen bundles; perforating canals are vascular pathways.",
+        "Bright polarized rings are ordered matrix, not rings of vessels or proof of woven bone."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What remains between newer osteons after older osteons are partly resorbed?",
+          "answer": "Fragments of the older lamellar systems remain as interstitial lamellae."
+        },
+        {
+          "prompt": "What does a 20-micrometer label spacing over ten days estimate?",
+          "answer": "A local mineral apposition rate of approximately two micrometers per day."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "8 Bone",
+          "locator": "Printed pp.139, 143, 145-148, 158; PDF pp.150, 154, 156-159, 169",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-bone-attachment-lamellae",
+          "text": "Interpret anchoring fibers, residual lamellae and birefringence in bone.",
+          "questionIds": [
+            "limb-audit-hist-006",
+            "limb-audit-hist-023",
+            "limb-audit-hist-025"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-bone-remodeling-dynamic",
+          "text": "Explain secondary osteon formation and interpret sequential mineralization labels.",
+          "questionIds": [
+            "limb-audit-hist-031",
+            "limb-audit-hist-032"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-muscle-architecture",
+      "moduleId": "limb-audit-hist-module-muscle",
+      "subject": "histology",
+      "title": "Skeletal muscle microstructure",
+      "summary": "Skeletal muscle recognition changes with the plane of section. Individual fibers, fascicles, external laminae and intracellular sarcomeres are different scales of organization, and the myotendinous junction is a specialized contact with connective tissue.",
+      "keyPoints": [
+        "Mature skeletal muscle fibers are long multinucleated cells with peripheral myonuclei.",
+        "Cross sections show polygonal fiber outlines and peripheral nuclei, while longitudinal sections reveal repeated bands.",
+        "Endomysium surrounds individual fibers, perimysium surrounds fascicles and epimysium surrounds the whole muscle.",
+        "Laminin highlights the external lamina around each fiber; the lamina is not the whole endomysial connective-tissue compartment.",
+        "Z discs bisect I bands and define sarcomere boundaries; the H zone lies centrally within the A band.",
+        "Myotendinous junctions include complex sarcolemmal infoldings associated with tendon collagen."
+      ],
+      "examTraps": [
+        "Failure to see cross-striations in a transverse section is not sufficient to identify smooth muscle.",
+        "A myotendinous attachment, a T-tubule and a motor-end-plate fold are different membrane specializations."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What does a laminin-positive ring around each muscle fiber outline?",
+          "answer": "The external lamina immediately surrounding the individual muscle fiber."
+        },
+        {
+          "prompt": "Which connective sheath surrounds a fascicle?",
+          "answer": "Perimysium surrounds a muscle fascicle; endomysium is around the individual fibers inside it."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "10 Muscle Tissue",
+          "locator": "Printed pp.193-199; PDF pp.204-210",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-muscle-recognition-boundaries",
+          "text": "Recognize skeletal-muscle section planes and distinguish fascicular from cellular boundaries.",
+          "questionIds": [
+            "limb-audit-hist-033",
+            "limb-audit-hist-034",
+            "limb-audit-hist-035"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-muscle-sarcomere-attachment",
+          "text": "Identify static sarcomere regions and the structural myotendinous attachment.",
+          "questionIds": [
+            "limb-audit-hist-036",
+            "limb-audit-hist-037"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-muscle-interfaces",
+      "moduleId": "limb-audit-hist-module-muscle",
+      "subject": "histology",
+      "title": "Muscle interfaces and tissue response",
+      "summary": "Nerve terminals and proprioceptive receptors have distinct tissue architectures. Muscle phenotype and repair must be judged from cells, organelles and extracellular matrix without equating a surviving reserve population with complete restoration.",
+      "keyPoints": [
+        "At a motor end plate, a vesicle-rich axon terminal faces folded postsynaptic muscle sarcolemma across a cleft.",
+        "A muscle spindle encloses intrafusal fibers with nuclear bag or chain arrangements and relatively few myofibrils.",
+        "Golgi tendon organs associate sensory axons with collagen bundles rather than with intrafusal muscle fibers.",
+        "Abundant mitochondria, myoglobin and capillaries support an oxidative muscle-fiber phenotype.",
+        "A single muscle may contain several fiber phenotypes, and oxidative features alone do not uniquely define fast versus slow identity.",
+        "Major injury can leave collagenous scar that impedes regeneration despite survival of some satellite cells."
+      ],
+      "examTraps": [
+        "The presence of satellite cells does not guarantee restoration across a large scar.",
+        "Receptor morphology can be examined without substituting reflex physiology questions for histology."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What makes a muscle spindle a distinctive microscopic receptor?",
+          "answer": "Its capsule encloses thin intrafusal muscle fibers with conspicuous nuclear bag or chain regions and associated sensory axons."
+        },
+        {
+          "prompt": "Which microscopic features favor oxidative metabolism?",
+          "answer": "Numerous mitochondria, abundant myoglobin and a dense nearby capillary network."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "10 Muscle Tissue",
+          "locator": "Printed pp.204-207, 213; PDF pp.215-218, 224",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-muscle-nerve-receptor-interface",
+          "text": "Identify postsynaptic motor-end-plate folds and intrafusal spindle fibers.",
+          "questionIds": [
+            "limb-audit-hist-038",
+            "limb-audit-hist-039"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-muscle-phenotype-repair",
+          "text": "Interpret oxidative fiber morphology and the limitation imposed by extensive muscle scar.",
+          "questionIds": [
+            "limb-audit-hist-040",
+            "limb-audit-hist-041"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-nerve-organization",
+      "moduleId": "limb-audit-hist-module-nerve",
+      "subject": "histology",
+      "title": "Peripheral nerve organization",
+      "summary": "Lecture-supported carryover; exam inclusion unconfirmed. The nervous-tissue lecture supports Schwann-cell covering, myelin, nodal gaps and the connective-tissue organization of peripheral nerves. The fascicle and the individual axon-Schwann-cell unit must be kept distinct.",
+      "keyPoints": [
+        "One myelinating Schwann cell forms one internodal segment along one peripheral axon.",
+        "Small unmyelinated peripheral axons remain enclosed in Schwann-cell folds without compact myelin wraps.",
+        "Endoneurium is a delicate reticular connective-tissue network around individual axon-Schwann-cell units.",
+        "Perineurium encloses a nerve fascicle, while epineurium encloses the whole nerve and extends between fascicles.",
+        "Larger nerve vessels lie in epineurial tissue, while small capillaries supply endoneurial compartments.",
+        "A node of Ranvier is a normal gap between neighboring compact myelin internodes along a continuous axon."
+      ],
+      "examTraps": [
+        "Unmyelinated does not mean unsupported by Schwann cells in the PNS.",
+        "Epineurium, perineurium and endoneurium are connective tissues and must not be equated with compact myelin."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What can a nonmyelinating Schwann cell enclose?",
+          "answer": "Portions of several small peripheral axons, each in a surface fold, without concentric compact myelin wrapping."
+        },
+        {
+          "prompt": "What surrounds the whole nerve and extends between fascicles?",
+          "answer": "The epineurium forms that common connective-tissue coat."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NERVOUS TISSUE MEDICINE (1).pptx",
+          "locator": "Slides 50, 52, 54, 56-58",
+          "basis": "slides"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "9 Nerve Tissue and the Nervous System",
+          "locator": "Printed pp.182-187; PDF pp.193-198",
+          "basis": "book"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-schwann-nodal-organization",
+          "text": "Distinguish myelinating and nonmyelinating Schwann-cell units and recognize a normal nodal gap.",
+          "questionIds": [
+            "limb-audit-hist-042",
+            "limb-audit-hist-043",
+            "limb-audit-hist-048"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-nerve-connective-layers",
+          "text": "Identify the endoneurial and epineurial compartments from their cellular scale and contents.",
+          "questionIds": [
+            "limb-audit-hist-046",
+            "limb-audit-hist-047"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-nerve-ultrastructure",
+      "moduleId": "limb-audit-hist-module-nerve",
+      "subject": "histology",
+      "title": "Peripheral nerve ultrastructure and barriers",
+      "summary": "Preparation, barrier cells and small cytoplasmic channels affect the appearance of a peripheral nerve. These finer distinctions extend the lecture covering beyond names of the principal nerve sheaths.",
+      "keyPoints": [
+        "Routine histological processing can partly extract the lipid-rich myelin sheath and leave pale periaxonal spaces.",
+        "Perineurial cells are joined by tight junctions and restrict diffusion across the fascicle covering.",
+        "Tightly joined endoneurial capillary endothelial cells also contribute to the blood-nerve barrier.",
+        "Compact myelin is formed from repeated Schwann-cell membrane layers rather than collagen or mineral.",
+        "Schmidt-Lanterman clefts retain Schwann-cell cytoplasm within a single myelin internode and support sheath maintenance.",
+        "A nodal gap is located between neighboring internodes, while a myelin cleft lies within one internode."
+      ],
+      "examTraps": [
+        "A pale ring in a paraffin section alone does not establish demyelinating disease.",
+        "The perineurium is a barrier contributor but is not the only component of the blood-nerve barrier."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which normal myelin channels contain Schwann-cell cytoplasm?",
+          "answer": "Schmidt-Lanterman clefts within an internode contain retained Schwann-cell cytoplasm."
+        },
+        {
+          "prompt": "Why can paraffin and TEM specimens show different myelin preservation?",
+          "answer": "Routine processing can extract lipid-rich myelin, whereas appropriate ultrastructural preservation retains its membrane layers."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "9 Nerve Tissue and the Nervous System",
+          "locator": "Printed pp.182-184, 186-187; PDF pp.193-195, 197-198",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-nerve-artifact-barrier-clefts",
+          "text": "Distinguish myelin extraction artifact, the perineurial barrier and normal intramyelin cytoplasmic clefts.",
+          "questionIds": [
+            "limb-audit-hist-044",
+            "limb-audit-hist-045",
+            "limb-audit-hist-049"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-hist-concept-nerve-repair",
+      "moduleId": "limb-audit-hist-module-nerve",
+      "subject": "histology",
+      "title": "Peripheral nerve injury and repair",
+      "summary": "Lecture-supported carryover; exam inclusion unconfirmed. A severed axon produces related but distinct changes in its disconnected distal segment, surviving cell body and supporting Schwann cells. The lecture and book support guided regrowth while preserving its limitations.",
+      "keyPoints": [
+        "The disconnected distal axon and its myelin undergo Wallerian degeneration after a peripheral axonal injury.",
+        "Schwann cells and recruited macrophages participate in the injury response and debris clearance.",
+        "Chromatolysis describes soma swelling, Nissl dispersion or diminution and eccentric nuclear displacement.",
+        "Proliferating Schwann cells align within preserved external-lamina pathways and can guide growing proximal axonal sprouts.",
+        "A surviving neuronal soma is necessary for regrowth of its axon, but scar, misalignment and target access can limit recovery.",
+        "Schwann cells support axonal repair and remyelination rather than becoming new motor-neuron cell bodies."
+      ],
+      "examTraps": [
+        "Chromatolysis is a soma response, not a synonym for the distal axon degeneration.",
+        "A preserved guidance tube favors regrowth but cannot guarantee successful functional reinnervation."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "How do chromatolysis and Wallerian degeneration differ?",
+          "answer": "Chromatolysis changes the neuronal soma; Wallerian degeneration affects the axon and myelin distal to the injury."
+        },
+        {
+          "prompt": "What makes a preserved Schwann-cell tube useful after injury?",
+          "answer": "It provides an aligned external-lamina pathway for Schwann cells and a regrowing proximal axonal sprout."
+        }
+      ],
+      "sources": [
+        {
+          "title": "NERVOUS TISSUE MEDICINE (1).pptx",
+          "locator": "Slides 50, 54, 69, 71",
+          "basis": "slides"
+        },
+        {
+          "title": "Junqueira's Basic Histology",
+          "edition": "16th edition",
+          "chapter": "9 Nerve Tissue and the Nervous System",
+          "locator": "Printed pp.187, 190; PDF pp.198, 201",
+          "basis": "book"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-hist-objective-nerve-injury-compartments",
+          "text": "Distinguish distal axon degeneration from the cell-body chromatolytic response.",
+          "questionIds": [
+            "limb-audit-hist-050",
+            "limb-audit-hist-052"
+          ]
+        },
+        {
+          "id": "limb-audit-hist-objective-nerve-guidance-repair",
+          "text": "Explain how preserved Schwann-cell pathways favor, but do not guarantee, axonal regrowth.",
+          "questionIds": [
+            "limb-audit-hist-051"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-axon-concept",
+      "moduleId": "limb-audit-phys-conduction-module",
+      "subject": "physiology",
+      "title": "Axonal threshold, channel recovery, and ionic maintenance",
+      "summary": "Single-axon recordings separate all-or-none excitation, sodium-channel recovery, and restoration of ionic gradients. This is lecture-supported carryover; inclusion and weighting in the limb examination remain unconfirmed.",
+      "keyPoints": [
+        "A normal single-fiber action potential is regenerative; its amplitude does not scale directly with the strength of a recovered suprathreshold stimulus.",
+        "Fast sodium-channel activation supports the upstroke, whereas sodium inactivation and delayed outward potassium current support repolarization.",
+        "Absolute refractoriness reflects unavailable sodium channels; stronger excitation cannot replace the repolarization required for recovery.",
+        "The sodium-potassium pump preserves gradients over time, but existing gradients can support early action potentials after sudden pump inhibition."
+      ],
+      "examTraps": [
+        "Do not treat the slide's example resting potential and threshold as universal values for every neuron.",
+        "All-or-none electrical excitation does not imply a fixed force for an entire muscle."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Why can blocking the sodium-potassium pump spare initial action potentials?",
+          "answer": "The initial gradients remain. Channel currents can use them temporarily, but ongoing ionic maintenance ultimately requires pump activity."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 8,12; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        },
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 4-6; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        },
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 17; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        },
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 13; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-001-objective",
+          "text": "Distinguish stimulus strength from action-potential amplitude in a single recovered motor axon.",
+          "questionIds": [
+            "limb-audit-phys-001"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-003-objective",
+          "text": "Predict how delayed potassium-channel activation affects repolarization of a fast nerve action potential.",
+          "questionIds": [
+            "limb-audit-phys-003"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-004-objective",
+          "text": "Explain failure of a second stimulus during the absolute refractory period.",
+          "questionIds": [
+            "limb-audit-phys-004"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-008-objective",
+          "text": "Separate rapid spike generation from the longer-term maintenance of ionic gradients.",
+          "questionIds": [
+            "limb-audit-phys-008"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-conduction-concept",
+      "moduleId": "limb-audit-phys-conduction-module",
+      "subject": "physiology",
+      "title": "Saltatory propagation and axonal transit time",
+      "summary": "Myelinated axons combine passive internodal current spread with regenerated nodal spikes. The supporting slides are lecture-supported carryover; limb-exam inclusion and weighting are unconfirmed.",
+      "keyPoints": [
+        "A mid-axon stimulus can propagate in both directions when adjacent membrane on both sides is rested and excitable.",
+        "Myelin insulates internodes while voltage-gated nodal channels regenerate action potentials after local current brings a node to threshold.",
+        "Restricting major ionic exchange to nodes reduces the subsequent energy cost of restoring sodium and potassium gradients.",
+        "For a stated constant conduction velocity, axonal transit time equals path length divided by velocity and excludes synaptic or muscle delays."
+      ],
+      "examTraps": [
+        "Saltatory conduction does not mean a single group of sodium ions travels from one end of the nerve to the other.",
+        "Correct the slide's 'salutatory' spelling to saltatory; quoted speed multipliers are examples, not universal laws."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "How long does conduction over 0.60 m take at 60 m/s?",
+          "answer": "0.60/60 = 0.010 s = 10 ms for the axonal segment alone."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 9-10; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        },
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 18-20; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        },
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 20; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        },
+        {
+          "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+          "chapter": "Action potentials and nerve conduction",
+          "locator": "Slides 21; lecture-supported carryover; limb-exam inclusion unconfirmed",
+          "basis": "slides"
+        }
+      ],
+      "scope": "course",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-002-objective",
+          "text": "Predict bidirectional propagation after stimulation of the middle of a resting isolated axon.",
+          "questionIds": [
+            "limb-audit-phys-002"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-005-objective",
+          "text": "Explain passive internodal spread and active nodal regeneration in saltatory conduction.",
+          "questionIds": [
+            "limb-audit-phys-005"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-006-objective",
+          "text": "Relate saltatory conduction to the metabolic cost of restoring ion gradients.",
+          "questionIds": [
+            "limb-audit-phys-006"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-007-objective",
+          "text": "Calculate axonal transit time while separating it from synaptic and muscular delays.",
+          "questionIds": [
+            "limb-audit-phys-007"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-quantitative-concept",
+      "moduleId": "limb-audit-phys-conduction-module",
+      "subject": "physiology",
+      "title": "Membrane driving forces and firing-rate limits",
+      "summary": "Quantitative nerve and muscle models require stated ion selectivity, sign conventions, and time units. These textbook extensions make calculations interpretable without assuming a universal membrane voltage.",
+      "keyPoints": [
+        "A potassium-selective membrane follows the potassium Nernst potential; changing extracellular potassium changes the equilibrium potential even when intracellular potassium is fixed.",
+        "At 37°C, doubling extracellular potassium while holding intracellular potassium fixed shifts E_K positively by 61 log10(2), about 18 mV.",
+        "For a cation, V_m minus E_ion is negative for an inward driving force and positive for an outward driving force.",
+        "The reciprocal of an absolute refractory period gives a theoretical upper firing-rate bound; metabolic, adaptation, and other recovery limits can lower actual rates."
+      ],
+      "examTraps": [
+        "An equilibrium potential is not itself a driving force unless compared with the actual membrane voltage.",
+        "A 2 ms refractory period means 0.002 s, not 2 s; the upper bound is 500/s."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "If V_m=-80 mV and E_K=-90 mV, which direction does open-channel potassium flux favor?",
+          "answer": "V_m-E_K=+10 mV, so potassium is driven outward in the stated model."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+          "locator": "Printed p. 64; local PDF p. 76",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+          "locator": "Printed p. 65; local PDF p. 77",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+          "locator": "Printed p. 76; local PDF p. 88",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-009-objective",
+          "text": "Calculate the potassium equilibrium-potential shift produced by doubling extracellular potassium in a stated selective-membrane model.",
+          "questionIds": [
+            "limb-audit-phys-009"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-010-objective",
+          "text": "Calculate electrochemical driving forces and predict the directions of sodium and potassium flux.",
+          "questionIds": [
+            "limb-audit-phys-010"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-011-objective",
+          "text": "Convert an absolute refractory period into a theoretical maximum firing frequency without claiming a sustainable physiological rate.",
+          "questionIds": [
+            "limb-audit-phys-011"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-nmj-concept",
+      "moduleId": "limb-audit-phys-excitation-module",
+      "subject": "physiology",
+      "title": "Presynaptic release and end-plate signaling",
+      "summary": "Neuromuscular transmission links a motor-terminal action potential to a graded end-plate current before a muscle spike is triggered. Presynaptic release, receptor current, and transmitter removal are distinct mechanisms.",
+      "keyPoints": [
+        "Motor-terminal depolarization opens voltage-gated calcium channels, and calcium entry triggers acetylcholine vesicle exocytosis.",
+        "Nicotinic end-plate channels conduct cations, including sodium and potassium; they are distinct from voltage-gated muscle sodium channels.",
+        "At the normal negative resting potential, inward sodium current exceeds outward potassium current through open end-plate channels, producing net depolarization.",
+        "Acetylcholinesterase rapidly hydrolyzes released acetylcholine and limits continued receptor stimulation as muscle excitability recovers."
+      ],
+      "examTraps": [
+        "An end-plate potential is a local graded signal, whereas the resulting muscle action potential is regenerative.",
+        "Direct muscle stimulation bypasses a presynaptic release defect; this does not imply failure of the contractile proteins."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Why can a nicotinic channel conduct potassium yet depolarize the end plate?",
+          "answer": "It also conducts sodium, whose larger inward current at rest exceeds outward potassium current."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+          "locator": "Printed p. 93,96; local PDF p. 104,107",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+          "locator": "Printed p. 94-95; local PDF p. 105-106",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+          "locator": "Printed p. 95-96; local PDF p. 106-107",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-012-objective",
+          "text": "Localize a presynaptic calcium-entry defect to impaired acetylcholine exocytosis.",
+          "questionIds": [
+            "limb-audit-phys-012"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-013-objective",
+          "text": "Explain why a nonselective cation channel produces a depolarizing end-plate potential.",
+          "questionIds": [
+            "limb-audit-phys-013"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-014-objective",
+          "text": "Explain how acetylcholinesterase terminates the transmitter signal independently of muscle-channel recovery.",
+          "questionIds": [
+            "limb-audit-phys-014"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-coupling-concept",
+      "moduleId": "limb-audit-phys-excitation-module",
+      "subject": "physiology",
+      "title": "Excitation-contraction coupling and calcium regulation",
+      "summary": "The muscle membrane signal must reach the fiber interior, trigger SR calcium release, and alter thin-filament regulation. A failure at any link can impair force despite intact events earlier in the sequence.",
+      "keyPoints": [
+        "T-tubules are membrane invaginations with extracellular-fluid lumens that bring the electrical signal close to deep myofibrils.",
+        "In skeletal muscle, the dihydropyridine voltage sensor couples T-tubule depolarization to opening of adjacent SR ryanodine receptor channels.",
+        "Released calcium binds troponin C and changes the troponin-tropomyosin complex to permit myosin binding to actin.",
+        "SERCA removes cytosolic calcium by ATP-dependent pumping into the SR; impaired release and impaired reuptake produce different time courses."
+      ],
+      "examTraps": [
+        "The T-tubule lumen and the SR calcium store are different compartments.",
+        "Normal surface action potentials alone do not prove normal deep excitation or SR release."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Which event fails when T-tubule voltage sensing cannot activate the SR release channel?",
+          "answer": "The initial rise of cytosolic calcium is impaired despite preserved membrane action potentials."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+          "locator": "Printed p. 98; local PDF p. 109",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+          "locator": "Printed p. 97-98; local PDF p. 108-109",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 83-84; local PDF p. 94-95",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-015-objective",
+          "text": "Identify the T-tubule voltage-sensor to SR-release-channel link in skeletal-muscle excitation-contraction coupling.",
+          "questionIds": [
+            "limb-audit-phys-015"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-016-objective",
+          "text": "Connect transverse-tubule conduction to the spatial coordination of calcium release in a large skeletal-muscle fiber.",
+          "questionIds": [
+            "limb-audit-phys-016"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-017-objective",
+          "text": "Explain how calcium binding to troponin C permits actin-myosin interaction.",
+          "questionIds": [
+            "limb-audit-phys-017"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-crossbridge-concept",
+      "moduleId": "limb-audit-phys-excitation-module",
+      "subject": "physiology",
+      "title": "ATP-dependent stages of the cross-bridge cycle",
+      "summary": "ATP binding, ATP hydrolysis, and calcium-dependent exposure of actin sites perform different jobs. Separating these events explains both repeated force generation and the failure of normal detachment when ATP is absent.",
+      "keyPoints": [
+        "Calcium controls access to actin binding sites through troponin and tropomyosin, rather than supplying the ATP used by myosin.",
+        "A new ATP molecule binding to an attached myosin head permits detachment from actin.",
+        "Hydrolysis of bound ATP leaves ADP and phosphate associated with a detached primed head, storing energy in its conformation.",
+        "The primed head can interact with accessible actin to generate force; new cycles still require ATP, and ATP is also required for calcium pumping."
+      ],
+      "examTraps": [
+        "ATP depletion does not simply create normal relaxation; attached cross-bridges can remain strongly bound.",
+        "Binding ATP and hydrolyzing ATP are separate steps with different immediate consequences."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What distinguishes the effects of ATP binding and hydrolysis on myosin?",
+          "answer": "Binding promotes detachment; hydrolysis primes the detached head for a subsequent force-generating interaction."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 84; local PDF p. 95",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 84-85; local PDF p. 95-96",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-018-objective",
+          "text": "Distinguish ATP-dependent myosin detachment from calcium-dependent activation of thin filaments.",
+          "questionIds": [
+            "limb-audit-phys-018"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-019-objective",
+          "text": "Identify the primed ADP-phosphate myosin state and distinguish it from ATP-binding detachment.",
+          "questionIds": [
+            "limb-audit-phys-019"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-units-concept",
+      "moduleId": "limb-audit-phys-force-module",
+      "subject": "physiology",
+      "title": "Motor-unit recruitment and twitch patterns",
+      "summary": "Whole-muscle force can increase by adding units, changing their firing pattern, or changing the response of already recruited fibers. Controlled stimulation helps distinguish these mechanisms instead of labeling every force increase recruitment.",
+      "keyPoints": [
+        "Small motor units permit fine increments of force because each recruited motor neuron adds fewer extrafusal fibers.",
+        "During gradually increasing voluntary drive, the size principle generally recruits smaller more excitable motor neurons before larger units.",
+        "Asynchronous firing across different motor units can smooth whole-muscle force even if each unit's twitches are not fused.",
+        "Temporal overlap depends on stimulus interval relative to mechanical twitch duration; equally brief electrical spikes need not imply identical summation.",
+        "Treppe is a progressive rise in discrete twitch peaks after rest; it can be observed while tension returns to baseline between stimuli."
+      ],
+      "examTraps": [
+        "Smooth whole-muscle force does not by itself prove fused tetanus within every motor unit.",
+        "A fixed isolated axon stimulated fully cannot recruit other axons merely because its twitch peaks rise."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "At a 50 ms stimulus interval, which unit is more likely to summate: one with a 20 ms twitch or a 200 ms twitch?",
+          "answer": "The 200 ms twitch overlaps later stimuli; this predicts mechanical overlap but does not guarantee complete fusion."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 88-89; local PDF p. 99-100",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 89; local PDF p. 100",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 87-89; local PDF p. 98-100",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-020-objective",
+          "text": "Relate motor-unit size to the fineness of force control.",
+          "questionIds": [
+            "limb-audit-phys-020"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-021-objective",
+          "text": "Apply the size principle to recruitment during graded voluntary muscle activation.",
+          "questionIds": [
+            "limb-audit-phys-021"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-022-objective",
+          "text": "Distinguish asynchronous motor-unit force smoothing from tetanus within a single motor unit.",
+          "questionIds": [
+            "limb-audit-phys-022"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-023-objective",
+          "text": "Use stimulus interval and twitch duration to compare frequency summation across motor units.",
+          "questionIds": [
+            "limb-audit-phys-023"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-024-objective",
+          "text": "Recognize treppe while distinguishing it from fused tetanus, recruitment, and passive tension.",
+          "questionIds": [
+            "limb-audit-phys-024"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-length-concept",
+      "moduleId": "limb-audit-phys-force-module",
+      "subject": "physiology",
+      "title": "Active force, overlap, and shortening velocity",
+      "summary": "Active force depends on the geometry of available actin-myosin interactions, while shortening velocity depends on opposing load. Maximal activation therefore cannot remove either a mechanical overlap limit or a load-dependent speed change.",
+      "keyPoints": [
+        "Active force requires contact between myosin heads and actin; a sarcomere with no thin-thick overlap cannot generate cross-bridge force.",
+        "The textbook length-tension model shows greatest active tension near optimal overlap and reduced tension at excessively short or long lengths.",
+        "Passive elastic tension can rise during stretch even while the active cross-bridge contribution decreases.",
+        "With activation and starting length matched, increasing a concentric opposing load reduces shortening velocity; at maximum isometric load the shortening velocity is zero."
+      ],
+      "examTraps": [
+        "A rise in total measured tension does not prove a rise in active force.",
+        "Maximal activation does not mean maximal velocity at every load."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Why can an electrically activated overstretched sarcomere generate no active force?",
+          "answer": "Its thick and thin filaments may have lost overlap, so activation cannot create actomyosin cross-bridges."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 85; local PDF p. 96",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 85-86; local PDF p. 96-97",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-025-objective",
+          "text": "Explain the loss of active force when actin-myosin overlap is absent.",
+          "questionIds": [
+            "limb-audit-phys-025"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-026-objective",
+          "text": "Predict shortening velocity across submaximal loads without confusing maximal activation with fixed velocity.",
+          "questionIds": [
+            "limb-audit-phys-026"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-work-concept",
+      "moduleId": "limb-audit-phys-force-module",
+      "subject": "physiology",
+      "title": "Limb work, power, torque, and active lengthening",
+      "summary": "Limb mechanics requires matching force to displacement or to the perpendicular joint moment arm. Balanced opposing forces can hold a joint still, and active muscles can shorten, hold length, or lengthen while producing force.",
+      "keyPoints": [
+        "External work for a constant force parallel to the displacement equals force times displacement; newtons times meters give joules.",
+        "External shortening power equals force times shortening velocity, so the largest force or highest speed alone need not produce the largest power.",
+        "Joint torque equals muscle force times its perpendicular moment arm; a shorter moment arm requires greater muscle force for the same torque.",
+        "At a stationary joint, an increase in antagonist torque must be offset by additional agonist torque if external torque is unchanged.",
+        "Concentric action is active shortening, isometric action holds approximately constant length, and eccentric action develops force during active lengthening."
+      ],
+      "examTraps": [
+        "A distance measured along a bone is not automatically the perpendicular moment arm.",
+        "Zero joint displacement can coexist with active force, coactivation, ATP use, and heat production."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "How much force is required for 6 N m of torque with a 0.02 m moment arm?",
+          "answer": "F=6/0.02=300 N, assuming that muscle is the only source of the required torque."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 86; local PDF p. 97",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 85-87; local PDF p. 96-98",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 90; local PDF p. 101",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 87,90; local PDF p. 98,101",
+          "basis": "book"
+        },
+        {
+          "title": "Upper and Lower Limbs Review (personal review synthesis)",
+          "locator": "PDF p. 86: concentric/eccentric/isometric row",
+          "basis": "notes"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 85: Sports Physiology",
+          "locator": "Printed p. 1102; local PDF p. 1059: holding force and stretch of an already contracted muscle",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 85: Sports Physiology",
+          "locator": "Printed p. 1102; local PDF p. 1059 (power defined as work per time)",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-027-objective",
+          "text": "Calculate external mechanical work for a constant load displaced in the force direction.",
+          "questionIds": [
+            "limb-audit-phys-027"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-028-objective",
+          "text": "Compare external power from force-velocity data and recognize why neither maximal speed nor maximal force alone determines power.",
+          "questionIds": [
+            "limb-audit-phys-028"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-029-objective",
+          "text": "Calculate muscle force from static torque balance using perpendicular moment arms.",
+          "questionIds": [
+            "limb-audit-phys-029"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-030-objective",
+          "text": "Predict the force consequence of a changing muscle moment arm at fixed required joint torque.",
+          "questionIds": [
+            "limb-audit-phys-030"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-031-objective",
+          "text": "Apply torque balance when antagonist coactivation changes at a stationary limb joint.",
+          "questionIds": [
+            "limb-audit-phys-031"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-045-objective",
+          "text": "Distinguish eccentric force production from concentric shortening, isometric action, and passive stretch.",
+          "questionIds": [
+            "limb-audit-phys-045"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-energy-concept",
+      "moduleId": "limb-audit-phys-energy-module",
+      "subject": "physiology",
+      "title": "Energy supply, fiber specialization, and fatigue",
+      "summary": "Muscle ATP demand outlasts the directly stored ATP pool. Immediate phosphate buffering, ongoing metabolism, and oxidative fiber specializations support different demands, while normal electrical excitation does not exclude contractile fatigue.",
+      "keyPoints": [
+        "The small ATP pool needs rapid resynthesis during contraction; phosphocreatine transfers high-energy phosphate to ADP as an immediate buffer.",
+        "Glycolytic and oxidative pathways contribute to ongoing ATP resynthesis, with oxidative metabolism supporting sustained activity when fuel and oxygen are available.",
+        "High mitochondrial abundance, myoglobin, and capillary supply support endurance-oriented oxidative muscle fibers.",
+        "Reduced force with preserved muscle action potentials can reflect limitations downstream of electrical excitation; the observation alone does not identify a unique metabolic cause."
+      ],
+      "examTraps": [
+        "Energy systems overlap in time; they are not switches that activate only when the previous source reaches zero.",
+        "Slow and fast fibers include physiological variation; do not treat every type-II subtype as identical.",
+        "Oxidative fiber morphology is assessed in the parallel histology audit (limb-audit-hist-041); a near-repeat physiology question was removed during independent review."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Does a normal muscle action potential rule out fatigue?",
+          "answer": "No. Calcium handling, cross-bridge performance, or metabolic support can limit force after the electrical event."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 86; local PDF p. 97",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 90; local PDF p. 101",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "locator": "Printed p. 88; local PDF p. 99",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-032-objective",
+          "text": "Identify phosphocreatine as an immediate ATP-regeneration buffer during brief intense contraction.",
+          "questionIds": [
+            "limb-audit-phys-032"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-033-objective",
+          "text": "Distinguish small immediate energy stores from ongoing oxidative ATP supply during sustained muscle activity.",
+          "questionIds": [
+            "limb-audit-phys-033"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-034-objective",
+          "text": "Interpret preserved muscle electrical excitation during fatigue without attributing all force loss to one unmeasured mechanism.",
+          "questionIds": [
+            "limb-audit-phys-034"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-spindle-concept",
+      "moduleId": "limb-audit-phys-feedback-module",
+      "subject": "physiology",
+      "title": "Spindle length sensing and gamma control",
+      "summary": "Muscle spindles encode length and its changes while gamma motor activity adjusts tension in their intrafusal sensory apparatus. These feedback mechanisms are textbook extensions relevant to controlled limb movement.",
+      "keyPoints": [
+        "Primary group Ia endings have strong sensitivity to rapid changes in spindle length and also signal sustained length.",
+        "Secondary group II endings chiefly contribute to the maintained static length response.",
+        "Gamma efferents contract the intrafusal ends, which can stretch the central sensory region even when total muscle length is unchanged.",
+        "Alpha-gamma coactivation helps keep spindle sensory regions appropriately tensioned while extrafusal muscle fibers shorten."
+      ],
+      "examTraps": [
+        "Gamma fibers are motor efferents; group Ia and II fibers are sensory afferents.",
+        "A fixed whole-muscle length does not guarantee a fixed spindle firing rate if gamma drive changes."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "Why would alpha activation without suitable gamma activation risk reducing spindle feedback during shortening?",
+          "answer": "Extrafusal shortening can leave the spindle sensory region slack; intrafusal contraction helps maintain its operating tension."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 699-700; local PDF p. 677-678",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 701; local PDF p. 679",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 699; local PDF p. 677",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-036-objective",
+          "text": "Distinguish dynamic and static components of spindle afferent discharge during ramp-and-hold stretch.",
+          "questionIds": [
+            "limb-audit-phys-036"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-037-objective",
+          "text": "Explain the role of alpha-gamma coactivation in maintaining spindle sensitivity during voluntary muscle shortening.",
+          "questionIds": [
+            "limb-audit-phys-037"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-038-objective",
+          "text": "Predict how gamma activation can change spindle discharge without changing total muscle length.",
+          "questionIds": [
+            "limb-audit-phys-038"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-stretch-concept",
+      "moduleId": "limb-audit-phys-feedback-module",
+      "subject": "physiology",
+      "title": "Stretch-reflex circuitry and selective sensory loss",
+      "summary": "The tendon jerk begins with a sudden stretch of muscle spindles and uses a short spinal excitatory pathway back to the same muscle. Testing the sensory and motor limbs separately distinguishes reflex loss from failure to activate muscle directly.",
+      "keyPoints": [
+        "A primary Ia spindle afferent enters the spinal cord through a dorsal root and can directly excite the homonymous alpha motor neuron.",
+        "Alpha-motor output returns through a ventral root to extrafusal muscle fibers; the excitatory Ia connection is monosynaptic.",
+        "The patellar tendon tap rapidly stretches quadriceps spindles; its location at the tendon does not make it a Golgi tendon-organ reflex.",
+        "Selective interruption of spindle afferents impairs reflex feedback while intact motor axons can still evoke a direct contraction; lost feedback can reduce movement smoothing."
+      ],
+      "examTraps": [
+        "Calling the excitatory stretch-reflex limb monosynaptic does not make every associated inhibitory circuit monosynaptic.",
+        "Preserved direct contraction does not prove that the sensory limb of a reflex is intact."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "What does a tendon tap stimulate in the ordinary knee jerk?",
+          "answer": "A sudden quadriceps stretch excites muscle spindles and the dynamic stretch reflex."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 697-700; local PDF p. 675-678",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 702; local PDF p. 680",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 700-701; local PDF p. 678-679",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-039-objective",
+          "text": "Trace the monosynaptic excitatory limb of the stretch reflex without treating all associated reflex circuits as monosynaptic.",
+          "questionIds": [
+            "limb-audit-phys-039"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-040-objective",
+          "text": "Identify the sensory receptor in a tendon jerk and distinguish a stretch reflex from the Golgi tendon reflex.",
+          "questionIds": [
+            "limb-audit-phys-040"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-042-objective",
+          "text": "Use preserved direct motor activation to distinguish sensory-feedback loss from loss of the muscle efferent pathway.",
+          "questionIds": [
+            "limb-audit-phys-042"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limb-audit-phys-protective-concept",
+      "moduleId": "limb-audit-phys-feedback-module",
+      "subject": "physiology",
+      "title": "Tension feedback and coordinated withdrawal",
+      "summary": "Classic tendon-organ inhibition and polysynaptic withdrawal circuits provide distinct feedback responses. Their receptor inputs, synapses, and patterns of muscle recruitment must be separated to predict limb behavior.",
+      "keyPoints": [
+        "Golgi tendon organs report tendon tension through group Ib afferents, whereas spindles primarily report length and its change.",
+        "In the classic inhibitory spinal Ib pathway, the afferent excites an inhibitory interneuron that reduces motor output to the same muscle.",
+        "Noxious withdrawal uses interneuronal circuits to activate muscles that remove the stimulated part and inhibit opposing muscles.",
+        "The crossed extensor response uses spinal pathways crossing the midline to recruit opposite-side extensors and support the body as a lower limb withdraws."
+      ],
+      "examTraps": [
+        "The specified classic inhibitory Ib circuit is a teaching model; do not infer that every Ib action in every locomotor state is identical.",
+        "A crossed extensor response is polysynaptic and should not be assigned the latency of direct motor stimulation."
+      ],
+      "retrievalPrompts": [
+        {
+          "prompt": "How do the afferent and local synaptic route differ between the classic stretch reflex and inhibitory Golgi tendon reflex?",
+          "answer": "The short excitatory stretch pathway uses Ia input directly to alpha motor neurons; the classic tendon pathway uses Ib input and an inhibitory interneuron."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 702-703; local PDF p. 680-681",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 703-705; local PDF p. 681-683",
+          "basis": "book"
+        },
+        {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+          "locator": "Printed p. 704-705; local PDF p. 682-683",
+          "basis": "book"
+        }
+      ],
+      "scope": "book-extension",
+      "objectives": [
+        {
+          "id": "limb-audit-phys-041-objective",
+          "text": "Trace the classic Ib inhibitory circuit while distinguishing it from the Ia stretch reflex.",
+          "questionIds": [
+            "limb-audit-phys-041"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-043-objective",
+          "text": "Explain coordinated withdrawal through polysynaptic excitation and reciprocal inhibition.",
+          "questionIds": [
+            "limb-audit-phys-043"
+          ]
+        },
+        {
+          "id": "limb-audit-phys-044-objective",
+          "text": "Explain the spinal organization and supporting role of the crossed extensor response.",
+          "questionIds": [
+            "limb-audit-phys-044"
           ]
         }
       ]
@@ -25124,6 +27701,701 @@
       "conceptIds": [],
       "status": "outside-scope",
       "note": "Comprehensive expansion · This is a bounded gap-driven extension, not a claim that every paragraph or clinical variant in Gray42 has a question. Existing osteology, compartment and pathway foundations were retained; vascular variants, surgical treatment protocols and unsampled microscopic details remain outside this draft's completeness claim. Independent review: this is a scope-boundary note, not a linked mapped concept."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 169–170; physical PDF pp. 181–182; Figures 12.1 and 12.3",
+      "topic": "External limb milestones",
+      "conceptIds": [
+        "limb-audit-emb-concept-milestones"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 170–172, 176; physical PDF pp. 182–184, 188",
+      "topic": "Cartilage templates and skeletal maturation",
+      "conceptIds": [
+        "limb-audit-emb-concept-skeletal-maturation"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 173–175; physical PDF pp. 185–187; Figure 12.8",
+      "topic": "Limb-field position and regional skeletal pattern",
+      "conceptIds": [
+        "limb-audit-emb-concept-field-and-bone-pattern"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 173–175; physical PDF pp. 185–187; Figures 12.8A and 12.9",
+      "topic": "AER induction, boundary, and differentiation front",
+      "conceptIds": [
+        "limb-audit-emb-concept-ridge-boundary"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "11 - Muscular System; Printed pp. 162–165; physical PDF pp. 174–177; Table 11.1 and Figures 11.1, 11.3",
+      "topic": "Myogenic domains and precursor induction",
+      "conceptIds": [
+        "limb-audit-emb-concept-myogenic-domains"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "11 - Muscular System; Printed p. 165; physical PDF p. 177; skeletal muscle and tendons",
+      "topic": "Muscle assembly, functional differentiation, and segmental continuity",
+      "conceptIds": [
+        "limb-audit-emb-concept-muscle-assembly"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 171–173; physical PDF pp. 183–185; Figures 12.6 and 12.7",
+      "topic": "Muscle assembly, functional differentiation, and segmental continuity",
+      "conceptIds": [
+        "limb-audit-emb-concept-muscle-assembly"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 176–177; physical PDF pp. 188–189; Figures 12.11 and 12.12",
+      "topic": "Limb reduction and digital defect morphology",
+      "conceptIds": [
+        "limb-audit-emb-concept-defect-morphology"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 176, 178–179; physical PDF pp. 188, 190–191; Figure 12.16",
+      "topic": "Teratogen timing and limb disruption",
+      "conceptIds": [
+        "limb-audit-emb-concept-developmental-disruption"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed pp. 177–178; physical PDF pp. 189–190; Figure 12.13",
+      "topic": "Limb findings that indicate a broader syndrome",
+      "conceptIds": [
+        "limb-audit-emb-concept-syndromic-limbs"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "11 - Muscular System; Printed pp. 166–167; physical PDF pp. 178–179; Figure 11.5",
+      "topic": "Congenital joint and muscle-pattern disorders",
+      "conceptIds": [
+        "limb-audit-emb-concept-joint-muscle-conditions"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "12 - Limbs; Printed p. 178; physical PDF p. 190",
+      "topic": "Congenital joint and muscle-pattern disorders",
+      "conceptIds": [
+        "limb-audit-emb-concept-joint-muscle-conditions"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "Langman's Medical Embryology (15th ed.)",
+      "locator": "10 - The Axial Skeleton; Printed pp. 154–155; physical PDF pp. 166–167; Table 10.1",
+      "topic": "Appendicular features of selected skeletal dysplasias",
+      "conceptIds": [
+        "limb-audit-emb-concept-skeletal-dysplasia"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Direct local textbook passage inspected. This supports a book-extension concept; it does not establish course teaching. New mapped questions have passed independent content/source review and remain drafts for parent integration."
+    },
+    {
+      "source": "02 - Upper and Lower Limbs Review.pdf",
+      "locator": "Physical/printed pp. 79–82; sections limbs-43-development and limbs-44-congenital-growth",
+      "topic": "Secondary review scope and baseline coverage",
+      "conceptIds": [
+        "limb-audit-emb-concept-milestones",
+        "limb-audit-emb-concept-skeletal-maturation",
+        "limb-audit-emb-concept-field-and-bone-pattern",
+        "limb-audit-emb-concept-ridge-boundary",
+        "limb-audit-emb-concept-muscle-assembly",
+        "limb-audit-emb-concept-defect-morphology",
+        "limb-audit-emb-concept-developmental-disruption",
+        "limb-audit-emb-concept-syndromic-limbs",
+        "limb-audit-emb-concept-joint-muscle-conditions"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] The review explicitly labels these sections book extension. Read alongside the source JSON and author script for traceability; not accepted as primary evidence that any teacher taught the topic. Newly added Ch11 and Ch10 details go beyond the review."
+    },
+    {
+      "source": "_build/content/limbs.json and _build/limbs_author.py",
+      "locator": "JSON sections limbs-43-development, limbs-44-congenital-growth; author.py lines 31, 265–278, 300, 353",
+      "topic": "Review provenance and source-range correction",
+      "conceptIds": [
+        "limb-audit-emb-concept-milestones",
+        "limb-audit-emb-concept-skeletal-maturation",
+        "limb-audit-emb-concept-field-and-bone-pattern",
+        "limb-audit-emb-concept-ridge-boundary",
+        "limb-audit-emb-concept-muscle-assembly",
+        "limb-audit-emb-concept-defect-morphology",
+        "limb-audit-emb-concept-developmental-disruption",
+        "limb-audit-emb-concept-syndromic-limbs",
+        "limb-audit-emb-concept-joint-muscle-conditions"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] The review uses a broad Langman PDF180–190 citation. Physical PDF180 is the end of Chapter 11; Chapter 12 begins at PDF181 and continues through PDF192 (printed169–180). All new questions use specific inspected page locators."
+    },
+    {
+      "source": "Upper Limb Carryover/Videos/*.transcript.txt",
+      "locator": "Seven files: Osteology of the upper limb 1; Axilla 1–2; Arm 1–2; Forearm 1–2. Full-file developmental-term search with context inspection.",
+      "topic": "Primary lecture evidence for embryology",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] Available transcripts concern regional anatomy. Search hits for cartilage and rotation concern adult structures/actions. 'Embryo' at Osteology line 99 is an ASR corruption in a scapula discussion, not an embryology lecture statement. No new item is claimed course-grounded from these transcripts."
+    },
+    {
+      "source": "Dedicated limb embryology slides, lecture notes, recordings, or syllabus",
+      "locator": "Local /Users/rizzist/Documents/Med Slides inventory; no matching dedicated primary limb embryology material found",
+      "topic": "Unconfirmed primary course coverage",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "[limb-science-audit] Cannot determine teacher-specific embryology content, exam weighting, or a lecturer's preferred terminology from unavailable files. A comprehensive textbook audit is not a claim of complete course recovery."
+    },
+    {
+      "source": "Langman's Medical Embryology original PDF compared with OCR PDF",
+      "locator": "Selected rendered original pages PDF167, 174, 176–177, 181–182, 184–190; OCR text used for search",
+      "topic": "OCR errors and original-page verification",
+      "conceptIds": [
+        "limb-audit-emb-concept-milestones",
+        "limb-audit-emb-concept-skeletal-maturation",
+        "limb-audit-emb-concept-field-and-bone-pattern",
+        "limb-audit-emb-concept-ridge-boundary",
+        "limb-audit-emb-concept-myogenic-domains",
+        "limb-audit-emb-concept-muscle-assembly",
+        "limb-audit-emb-concept-defect-morphology",
+        "limb-audit-emb-concept-developmental-disruption",
+        "limb-audit-emb-concept-syndromic-limbs",
+        "limb-audit-emb-concept-joint-muscle-conditions",
+        "limb-audit-emb-concept-skeletal-dysplasia"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Original rendered pages are retained for checking. OCR corrupts gene symbols (for example LMX1 as LMX7 and COL1A1/COL1A2 as letter/number substitutions) and table layout. Gene spelling and Table10.1 associations were read from the original page image, not accepted blindly from OCR."
+    },
+    {
+      "source": "Langman's Medical Embryology, Chapter 11",
+      "locator": "Printed pp. 164–165; physical PDF pp. 176–177; Table11.1 and skeletal muscle/tendons paragraph",
+      "topic": "Regional lineage limits",
+      "conceptIds": [
+        "limb-audit-emb-concept-myogenic-domains",
+        "limb-audit-emb-concept-muscle-assembly"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Table11.1 includes a footnote that precise pelvic/lower-limb origins are not fully determined. The broad tendon-sclerotome sentence is not generalized to all limb tendons; the new tendon question asks about SCLERAXIS regulation only."
+    },
+    {
+      "source": "Langman's Medical Embryology, Chapter 12",
+      "locator": "Printed p.172/PDF184 versus printed p.179/PDF191",
+      "topic": "Limb-field position versus innervation ranges",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] The main text gives lower-limb muscle innervation as L4–S3, while the chapter summary gives lower-limb field position as L2–S2. These are different stated contexts and should not be collapsed into one root map; no universal-range MCQ was authored from them."
+    },
+    {
+      "source": "Langman's Medical Embryology, Chapter 12",
+      "locator": "Printed p.171/PDF183; birth-time epiphyseal ossification account",
+      "topic": "General ossification account and exceptions",
+      "conceptIds": [
+        "limb-audit-emb-concept-skeletal-maturation"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] The source gives a general account of cartilaginous epiphyses at birth followed by secondary centers. The draft avoids an absolute claim that every limb epiphysis lacks a prenatal center, and does not invent a universal age table for individual bones."
+    },
+    {
+      "source": "Langman's Medical Embryology, Chapters 10–11",
+      "locator": "Outside selected limb-relevant excerpts: cranial vault, vertebral column, ribs, head, cardiac and smooth muscle",
+      "topic": "Bounded chapter-extension scope",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] Included only appendicular skeletal dysplasia and limb-associated muscle development/defects. Craniofacial material is used only when the hand, foot, radius, or clavicle finding distinguishes the selected syndrome; no general axial or organ-system expansion added."
+    },
+    {
+      "source": "/Users/rizzist/Downloads/Embryology 1-9.pdf",
+      "locator": "12-page condensed study notes; inspected cover and relevant physical pp. 6–7, 9–10, 12",
+      "topic": "General embryology support in additional notes",
+      "conceptIds": [
+        "limb-audit-emb-concept-milestones",
+        "limb-audit-emb-concept-skeletal-maturation",
+        "limb-audit-emb-concept-myogenic-domains",
+        "limb-audit-emb-concept-developmental-disruption"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Cover identifies condensed Langman Chapters1–9 study notes. Pages7 and9 corroborate broad lineage/milestone/ossification topics; p10 lists amniotic-band disruption, uterine-constraint deformation, and thalidomide limb reduction. Authorship and lecturer provenance are not established, so it is secondary notes and does not convert any item to course scope. Exact staging and mechanisms are cited to inspected textbook pages."
+    },
+    {
+      "source": "/Users/rizzist/Downloads/Embryology 1-9.pdf",
+      "locator": "Physical p.10, teratogen table; Varicella row",
+      "topic": "Infectious teratology beyond the bounded limb chapter audit",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] The notes mention varicella-associated limb hypoplasia together with skin and eye/CNS findings. No new infectious-teratology question is added from this abbreviated row without auditing the primary infection passage; it remains a clearly identified residual extension rather than an implied covered objective."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.97, 115-118; PDF pp.108, 126-129",
+      "topic": "Connective tissue recognition and repair",
+      "conceptIds": [
+        "limb-audit-hist-concept-connective-recognition"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.131-134; PDF pp.142-145",
+      "topic": "Connective tissue recognition and repair",
+      "conceptIds": [
+        "limb-audit-hist-concept-connective-recognition"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "BONE&JOINT TISSUE.pdf",
+      "locator": "PDF pp.3-7, 9-13",
+      "topic": "Cartilage cells and matrix",
+      "conceptIds": [
+        "limb-audit-hist-concept-cartilage-cells"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Original teaching material inspected; textbook corrects stated simplifications where relevant."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.129, 131-134; PDF pp.140, 142-145",
+      "topic": "Cartilage cells and matrix",
+      "conceptIds": [
+        "limb-audit-hist-concept-cartilage-cells"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "BONE&JOINT TISSUE.pdf",
+      "locator": "PDF pp.8, 15-16",
+      "topic": "Cartilage growth and covering",
+      "conceptIds": [
+        "limb-audit-hist-concept-cartilage-growth"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Original teaching material inspected; textbook corrects stated simplifications where relevant."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.131, 133-135; PDF pp.142, 144-146",
+      "topic": "Cartilage growth and covering",
+      "conceptIds": [
+        "limb-audit-hist-concept-cartilage-growth"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "BONE&JOINT TISSUE.pdf",
+      "locator": "PDF pp.54-55",
+      "topic": "Synovial joint lining cells",
+      "conceptIds": [
+        "limb-audit-hist-concept-synoviocytes"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Original teaching material inspected; textbook corrects stated simplifications where relevant."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed p.157; PDF p.168, Figure 8-22",
+      "topic": "Synovial joint lining cells",
+      "conceptIds": [
+        "limb-audit-hist-concept-synoviocytes"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.157-158; PDF pp.168-169",
+      "topic": "Synovial lining and articular surface",
+      "conceptIds": [
+        "limb-audit-hist-concept-joint-microstructure"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.131, 134, 136; PDF pp.142, 145, 147",
+      "topic": "Synovial lining and articular surface",
+      "conceptIds": [
+        "limb-audit-hist-concept-joint-microstructure"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "BONE&JOINT TISSUE.pdf",
+      "locator": "PDF pp.19-29, 33",
+      "topic": "Bone cells and architecture",
+      "conceptIds": [
+        "limb-audit-hist-concept-bone-cells"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Original teaching material inspected; textbook corrects stated simplifications where relevant."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.140-147; PDF pp.151-158",
+      "topic": "Bone cells and architecture",
+      "conceptIds": [
+        "limb-audit-hist-concept-bone-cells"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "BONE&JOINT TISSUE.pdf",
+      "locator": "PDF pp.34, 37, 39, 44",
+      "topic": "Growth plate and fracture histology",
+      "conceptIds": [
+        "limb-audit-hist-concept-bone-growth-repair"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Original teaching material inspected; textbook corrects stated simplifications where relevant."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.151-154; PDF pp.162-165",
+      "topic": "Growth plate and fracture histology",
+      "conceptIds": [
+        "limb-audit-hist-concept-bone-growth-repair"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.139, 143, 145-148, 158; PDF pp.150, 154, 156-159, 169",
+      "topic": "Bone architecture and remodeling",
+      "conceptIds": [
+        "limb-audit-hist-concept-bone-remodeling"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.193-199; PDF pp.204-210",
+      "topic": "Skeletal muscle microstructure",
+      "conceptIds": [
+        "limb-audit-hist-concept-muscle-architecture"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.204-207, 213; PDF pp.215-218, 224",
+      "topic": "Muscle interfaces and tissue response",
+      "conceptIds": [
+        "limb-audit-hist-concept-muscle-interfaces"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "NERVOUS TISSUE MEDICINE (1).pptx",
+      "locator": "Slides 50, 52, 54, 56-58",
+      "topic": "Peripheral nerve organization",
+      "conceptIds": [
+        "limb-audit-hist-concept-nerve-organization"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Original teaching material inspected; textbook corrects stated simplifications where relevant."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.182-187; PDF pp.193-198",
+      "topic": "Peripheral nerve organization",
+      "conceptIds": [
+        "limb-audit-hist-concept-nerve-organization"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.182-184, 186-187; PDF pp.193-195, 197-198",
+      "topic": "Peripheral nerve ultrastructure and barriers",
+      "conceptIds": [
+        "limb-audit-hist-concept-nerve-ultrastructure"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Book extension; no dedicated limb histology lecture establishes teaching or exam weighting. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "NERVOUS TISSUE MEDICINE (1).pptx",
+      "locator": "Slides 50, 54, 69, 71",
+      "topic": "Peripheral nerve injury and repair",
+      "conceptIds": [
+        "limb-audit-hist-concept-nerve-repair"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Original teaching material inspected; textbook corrects stated simplifications where relevant."
+    },
+    {
+      "source": "Junqueira's Basic Histology",
+      "locator": "Printed pp.187, 190; PDF pp.198, 201",
+      "topic": "Peripheral nerve injury and repair",
+      "conceptIds": [
+        "limb-audit-hist-concept-nerve-repair"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. Selected local textbook pages checked directly; clinical stems are original educational applications."
+    },
+    {
+      "source": "02 - Upper and Lower Limbs Review.pdf",
+      "locator": "PDF pp.83-85, 88-91; pages 83-84 also visually inspected",
+      "topic": "Personal limb review and source limits",
+      "conceptIds": [
+        "limb-audit-hist-concept-connective-recognition",
+        "limb-audit-hist-concept-cartilage-cells",
+        "limb-audit-hist-concept-cartilage-growth",
+        "limb-audit-hist-concept-synoviocytes",
+        "limb-audit-hist-concept-joint-microstructure",
+        "limb-audit-hist-concept-bone-cells",
+        "limb-audit-hist-concept-bone-growth-repair",
+        "limb-audit-hist-concept-bone-remodeling",
+        "limb-audit-hist-concept-muscle-architecture",
+        "limb-audit-hist-concept-muscle-interfaces",
+        "limb-audit-hist-concept-nerve-organization",
+        "limb-audit-hist-concept-nerve-ultrastructure",
+        "limb-audit-hist-concept-nerve-repair"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Saved personal synthesis used for gap identification. It labels histology as book support and does not establish teaching or exam inclusion."
+    },
+    {
+      "source": "07 - Foundations and Histology Review.pdf",
+      "locator": "PDF pp.3-12, 18-23, 30; page 11 also visually inspected",
+      "topic": "Carryover review and corrections",
+      "conceptIds": [
+        "limb-audit-hist-concept-cartilage-cells",
+        "limb-audit-hist-concept-cartilage-growth",
+        "limb-audit-hist-concept-synoviocytes",
+        "limb-audit-hist-concept-bone-cells",
+        "limb-audit-hist-concept-bone-growth-repair",
+        "limb-audit-hist-concept-nerve-organization",
+        "limb-audit-hist-concept-nerve-repair"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Saved review used as a secondary cross-check; scope comes from actual slides. Its corrections to cartilage growth, trabecular architecture and growth-zone wording were confirmed in Junqueira."
+    },
+    {
+      "source": "INTRODUCTION.pptx",
+      "locator": "24-slide local deck; slides 15-16, 19 inspected for staining context",
+      "topic": "General histology preparation and staining",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] Introductory course evidence exists for general staining and preparation. No new generic histotechnology drill was added; specific cartilage and myelin processing artifacts are book extensions."
+    },
+    {
+      "source": "Osteology of the upper limb 1.transcript.txt; Forearm 1.transcript.txt",
+      "locator": "Osteology transcript lines 1-10; Forearm 1 lines 18-28, 46-48, 77-94",
+      "topic": "Upper-limb applicability anchors",
+      "conceptIds": [
+        "limb-audit-hist-concept-connective-recognition",
+        "limb-audit-hist-concept-nerve-organization"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Raw ASR checked as regional anchors for bones, muscles, tendons and nerves. These anatomy statements do not establish that detailed histology was taught."
+    },
+    {
+      "source": "Dedicated limb histology lecture or practical checklist",
+      "locator": "Not located in inspected Med Slides tree",
+      "topic": "Limb-specific teaching and exam weighting",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. No teacher-specific limb histology weighting, specimen checklist or dedicated lower-limb histology deck was found."
+    },
+    {
+      "source": "Standalone connective-tissue, cartilage or skeletal-muscle teaching decks",
+      "locator": "No matching standalone deck found under /Users/rizzist/Documents/Med Slides",
+      "topic": "Additional primary teaching evidence",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "[limb-science-audit] The local BONE&JOINT TISSUE file covers cartilage. Tendon and skeletal-muscle content is drawn from Junqueira and labeled book-extension."
+    },
+    {
+      "source": "Junqueira's Basic Histology and local lecture files",
+      "locator": "Scope audit of selected limb tissue chapters and carryover slides",
+      "topic": "Residual specialist detail",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] Fine four-zone enthesis architecture, meniscal vascular-zone healing, pathology grading and a large novel image-spotter set remain outside this bounded source-based expansion. No missing material is claimed covered by question count."
+    },
+    {
+      "source": "Cell 4.pptx — Dr. Ranjbaran, Action potentials",
+      "locator": "Slides 2-13 and 17-21 (22 slides inventoried)",
+      "topic": "Carryover action-potential teaching",
+      "conceptIds": [
+        "limb-audit-phys-axon-concept",
+        "limb-audit-phys-conduction-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Primary lecture-supported carryover; limb-exam inclusion and weighting are unconfirmed. Eight new questions use slide-level evidence. Cell-type resting/threshold examples and fixed speed multipliers are not universalized. Slides 14-16 on cardiac plateau/rhythmicity are outside this limb audit."
+    },
+    {
+      "source": "Upper and Lower Limbs Review.pdf (personal review)",
+      "locator": "PDF pp. 84-89, especially 85-87; source/scope map p. 4",
+      "topic": "Muscle-physiology gap specification",
+      "conceptIds": [
+        "limb-audit-phys-nmj-concept",
+        "limb-audit-phys-coupling-concept",
+        "limb-audit-phys-crossbridge-concept",
+        "limb-audit-phys-units-concept",
+        "limb-audit-phys-length-concept",
+        "limb-audit-phys-work-concept",
+        "limb-audit-phys-energy-concept",
+        "limb-audit-phys-spindle-concept",
+        "limb-audit-phys-stretch-concept",
+        "limb-audit-phys-protective-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] The synthesis explicitly labels physiology as book extension and dedicated limb physiology teaching as unconfirmed. Used to identify gaps, with textbook checks for underlying mechanisms. It is not primary evidence for course tagging."
+    },
+    {
+      "source": "Foundations and Histology Review.pdf (personal review)",
+      "locator": "PDF pp. 23-24",
+      "topic": "Carryover reconciliation",
+      "conceptIds": [
+        "limb-audit-phys-axon-concept",
+        "limb-audit-phys-conduction-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Used as a secondary reconciliation aid. Original Cell 4 slide text and Guyton Chapter 5 were checked; the review alone does not establish a new course objective."
+    },
+    {
+      "source": "Guyton and Hall Textbook of Medical Physiology (2026).pdf",
+      "locator": "Chapter 5; printed pp. 64-76, local PDF pp. 76-88",
+      "topic": "Axonal mechanism and quantitative models",
+      "conceptIds": [
+        "limb-audit-phys-axon-concept",
+        "limb-audit-phys-conduction-concept",
+        "limb-audit-phys-quantitative-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Checked source text for channel gating, propagation, pump distinction, ion driving force, Nernst assumptions, and refractory-rate limits. Quantitative extensions remain book-extension scope. Chapter 5 page offsets differ from Chapter 6."
+    },
+    {
+      "source": "Guyton and Hall Textbook of Medical Physiology (2026).pdf",
+      "locator": "Chapter 6; printed pp. 83-90, local PDF pp. 94-101",
+      "topic": "Cross-bridges, recruitment, mechanics, energetics",
+      "conceptIds": [
+        "limb-audit-phys-crossbridge-concept",
+        "limb-audit-phys-units-concept",
+        "limb-audit-phys-length-concept",
+        "limb-audit-phys-work-concept",
+        "limb-audit-phys-energy-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Source pages checked separately. Figure 6.8/6.9 page visually inspected. Existing five physiology items cover only active/passive subtraction, isometric work, fixed-unit tetanus, postsynaptic failure, and SR reuptake; new questions add distinct objectives."
+    },
+    {
+      "source": "Guyton and Hall Textbook of Medical Physiology (2026).pdf",
+      "locator": "Chapter 7; printed pp. 93-98, local PDF pp. 104-109",
+      "topic": "NMJ and excitation-contraction coupling",
+      "conceptIds": [
+        "limb-audit-phys-nmj-concept",
+        "limb-audit-phys-coupling-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Checked presynaptic calcium entry, cation channel currents, acetylcholinesterase, T-tubule propagation, voltage-sensor coupling, and calcium regulation. No dosing or treatment questions were authored."
+    },
+    {
+      "source": "Guyton and Hall Textbook of Medical Physiology (2026).pdf",
+      "locator": "Chapter 55; printed pp. 697-705, local PDF pp. 675-683",
+      "topic": "Bounded limb sensory-feedback and reflex extension",
+      "conceptIds": [
+        "limb-audit-phys-spindle-concept",
+        "limb-audit-phys-stretch-concept",
+        "limb-audit-phys-protective-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Only limb muscle sensory receptors and directly relevant spinal circuits are mapped. Figure 55.5 page visually checked. General brainstem/cortical control, locomotor generators, and broad neurophysiology were excluded. The Ib question explicitly specifies the classic inhibitory circuit."
+    },
+    {
+      "source": "Guyton and Hall Textbook of Medical Physiology (2026).pdf",
+      "locator": "Chapter 85; printed p. 1102, local PDF p. 1059",
+      "topic": "Active lengthening and mechanical power",
+      "conceptIds": [
+        "limb-audit-phys-work-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] Bounded supporting passage describes an external force stretching an already contracted muscle and defines work per time. Eccentric/concentric labels also checked against review p. 86; no fixed 40% strength claim or sports-prescription content is generalized."
+    },
+    {
+      "source": "Arm 1.transcript.txt and companion SRT",
+      "locator": "TXT lines 85-95, sensory feedback discussion; complete transcript inventory searched",
+      "topic": "Limited upper-limb lecture physiology evidence",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] The passage supports a general need for muscle sensory information, but ASR and statements about exclusive brachialis/radial sensory supply are problematic. It does not establish spindle subtypes, Ib circuitry, or gamma control. No new physiology question relies on those questionable statements."
+    },
+    {
+      "source": "Upper Limb Carryover — seven lecture transcripts",
+      "locator": "Osteology 1, Axilla 1-2, Arm 1-2, Forearm 1-2; .transcript.txt inventory and physiological-term search",
+      "topic": "Regional anatomy lecture scope",
+      "conceptIds": [],
+      "status": "outside-scope",
+      "note": "[limb-science-audit] These are principally regional anatomical teaching. They do not confirm a dedicated muscle-physiology syllabus; anatomical nerve-deficit questions remain with the anatomy audit."
+    },
+    {
+      "source": "Dedicated limb physiology lecture, practical protocol, or teacher syllabus",
+      "locator": "No dedicated limb-specific physiology teaching file located in inspected Med Slides inventory",
+      "topic": "Unconfirmed limb physiology course weighting",
+      "conceptIds": [],
+      "status": "source-missing",
+      "note": "[limb-science-audit] Teacher-defined limb physiology objectives, muscle/nerve experimental protocols, and practical apparatus details remain unavailable. Do not present book extensions or calculated model values as recovered lecture or official examination content."
+    },
+    {
+      "source": "Parallel histology audit and physiology independent review",
+      "locator": "limb-audit-hist-041 compared with unpublished limb-audit-phys-035; independent-review.json",
+      "topic": "Cross-subject oxidative fiber phenotype duplication",
+      "conceptIds": [
+        "limb-audit-phys-energy-concept"
+      ],
+      "status": "mapped",
+      "note": "[limb-science-audit] The histology item retains the primary morphological assessment. The near-repeat physiology draft was removed without renumbering the remaining 44 questions. Its full original payload is preserved in independent-review.json; the five published physiology items were not changed."
     },
     {
       "source": "Gray's Anatomy: The Anatomical Basis of Clinical Practice",

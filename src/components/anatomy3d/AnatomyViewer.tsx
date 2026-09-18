@@ -322,7 +322,7 @@ export const AnatomyViewer = forwardRef<AnatomyViewerHandle, AnatomyViewerProps>
         const landmarkParent = activeManifest?.structures.find(structure => structure.id === focusedId)?.landmarkOf;
         const visibleObjects = new Set([...currentHandle.structures].filter(([id]) => !hiddenIds.has(id) && (!isolatedRef.current || !focusedId || id === focusedId || id === landmarkParent)).flatMap(([, objects]) => objects));
         for (const objects of currentHandle.structures.values()) {
-          for (const object of objects) object.visible = visibleObjects.has(object) && (!object.userData.studyGuideEnvelope || showCoversRef.current || surfaceModeRef.current === "xray" || Boolean(currentHandle.structures.get(focusedId ?? "")?.includes(object)));
+          for (const object of objects) object.visible = visibleObjects.has(object) && (!object.userData.focusOnly || Boolean(currentHandle.structures.get(focusedId ?? "")?.includes(object))) && (!object.userData.studyGuideEnvelope || showCoversRef.current || surfaceModeRef.current === "xray" || Boolean(currentHandle.structures.get(focusedId ?? "")?.includes(object)));
         }
       }
 

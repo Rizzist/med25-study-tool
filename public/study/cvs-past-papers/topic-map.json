@@ -1,0 +1,4516 @@
+{
+  "mappingVersion": "cvs-review-sections-v1",
+  "scopeCaution": "Study-navigation metadata only. Topics describe the question stem and options; they do not validate answer keys, repair OCR, infer answers from images, or establish exam-board subject boundaries. Cross-topic items are assigned one principal review section. Unusable placeholders remain unclassified. This sidecar must not be merged into paper/question objects before computing attempt fingerprints.",
+  "subjects": [
+    {
+      "id": "anatomy",
+      "title": "Anatomy"
+    },
+    {
+      "id": "physiology",
+      "title": "Physiology"
+    },
+    {
+      "id": "blood-immune",
+      "title": "Blood & immunity"
+    },
+    {
+      "id": "histology",
+      "title": "Histology"
+    },
+    {
+      "id": "embryology",
+      "title": "Embryology"
+    },
+    {
+      "id": "unclassified",
+      "title": "Unclassified / source review needed"
+    }
+  ],
+  "topics": [
+    {
+      "id": "thoracic-map",
+      "title": "Thoracic boundaries, apertures and surface planes",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "thoracic-map",
+        "sectionTitle": "Thoracic boundaries, apertures and surface planes"
+      }
+    },
+    {
+      "id": "sternum",
+      "title": "Sternum, costal notches and joint types",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "sternum",
+        "sectionTitle": "Sternum, costal notches and joint types"
+      }
+    },
+    {
+      "id": "rib-landmarks",
+      "title": "Typical and atypical ribs: every named landmark",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "rib-landmarks",
+        "sectionTitle": "Typical and atypical ribs: every named landmark"
+      }
+    },
+    {
+      "id": "vertebrae",
+      "title": "Vertebrae, articular facets and intervertebral foramina",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "vertebrae",
+        "sectionTitle": "Vertebrae, articular facets and intervertebral foramina"
+      }
+    },
+    {
+      "id": "spinal-joints",
+      "title": "Spinal joints, ligaments and disc disease",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "spinal-joints",
+        "sectionTitle": "Spinal joints, ligaments and disc disease"
+      }
+    },
+    {
+      "id": "back-muscles",
+      "title": "Back muscles, thoracolumbar fascia and segmental innervation",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "back-muscles",
+        "sectionTitle": "Back muscles, thoracolumbar fascia and segmental innervation"
+      }
+    },
+    {
+      "id": "craniovertebral-suboccipital",
+      "title": "Atlas-axis stability and the suboccipital region",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "craniovertebral-suboccipital",
+        "sectionTitle": "Atlas-axis stability and the suboccipital region"
+      }
+    },
+    {
+      "id": "spinal-cord",
+      "title": "Spinal cord, roots, meninges and lumbar cistern",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "spinal-cord",
+        "sectionTitle": "Spinal cord, roots, meninges and lumbar cistern"
+      }
+    },
+    {
+      "id": "cord-vascular",
+      "title": "Spinal cord blood supply and localization",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "cord-vascular",
+        "sectionTitle": "Spinal cord blood supply and localization"
+      }
+    },
+    {
+      "id": "intercostal",
+      "title": "Intercostal muscles, wall layers and respiratory mechanics",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "intercostal",
+        "sectionTitle": "Intercostal muscles, wall layers and respiratory mechanics"
+      }
+    },
+    {
+      "id": "wall-neurovascular",
+      "title": "Thoracic arteries, veins and nerves",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "wall-neurovascular",
+        "sectionTitle": "Thoracic arteries, veins and nerves"
+      }
+    },
+    {
+      "id": "diaphragm",
+      "title": "Diaphragm openings and neurovascular relations",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "diaphragm",
+        "sectionTitle": "Diaphragm openings and neurovascular relations"
+      }
+    },
+    {
+      "id": "mediastinum",
+      "title": "Mediastinal compartments and three-dimensional relationships",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "mediastinum",
+        "sectionTitle": "Mediastinal compartments and three-dimensional relationships"
+      }
+    },
+    {
+      "id": "esophagus-duct",
+      "title": "Esophagus, thoracic duct and azygos system",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "esophagus-duct",
+        "sectionTitle": "Esophagus, thoracic duct and azygos system"
+      }
+    },
+    {
+      "id": "pericardium",
+      "title": "Pericardial layers, sinuses and tamponade",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "pericardium",
+        "sectionTitle": "Pericardial layers, sinuses and tamponade"
+      }
+    },
+    {
+      "id": "heart-external",
+      "title": "Heart surfaces, borders, grooves and imaging silhouette",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "heart-external",
+        "sectionTitle": "Heart surfaces, borders, grooves and imaging silhouette"
+      }
+    },
+    {
+      "id": "right-heart",
+      "title": "Right atrium and right ventricle: internal examination",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "right-heart",
+        "sectionTitle": "Right atrium and right ventricle: internal examination"
+      }
+    },
+    {
+      "id": "left-heart",
+      "title": "Left atrium, left ventricle and valve apparatus",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "left-heart",
+        "sectionTitle": "Left atrium, left ventricle and valve apparatus"
+      }
+    },
+    {
+      "id": "coronary",
+      "title": "Coronary arterial territories and venous drainage",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "coronary",
+        "sectionTitle": "Coronary arterial territories and venous drainage"
+      }
+    },
+    {
+      "id": "cardiac-nerves",
+      "title": "Autonomic cardiac and mediastinal nerves",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "cardiac-nerves",
+        "sectionTitle": "Autonomic cardiac and mediastinal nerves"
+      }
+    },
+    {
+      "id": "breast",
+      "title": "Breast and thoracic lymphatic pathways",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "breast",
+        "sectionTitle": "Breast and thoracic lymphatic pathways"
+      }
+    },
+    {
+      "id": "pectoral-muscles",
+      "title": "Pectoral muscles, serratus anterior and clavipectoral fascia",
+      "subjectId": "anatomy",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "pectoral-muscles",
+        "sectionTitle": "Pectoral muscles, serratus anterior and clavipectoral fascia"
+      }
+    },
+    {
+      "id": "cardiac-ap",
+      "title": "Cardiac action potentials and excitation-contraction coupling",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "cardiac-ap",
+        "sectionTitle": "Cardiac action potentials and excitation-contraction coupling"
+      }
+    },
+    {
+      "id": "conduction-phys",
+      "title": "Pacemakers, AV delay and conduction failure",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "conduction-phys",
+        "sectionTitle": "Pacemakers, AV delay and conduction failure"
+      }
+    },
+    {
+      "id": "cycle",
+      "title": "Cardiac cycle, pressure crossings and heart sounds",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "cycle",
+        "sectionTitle": "Cardiac cycle, pressure crossings and heart sounds"
+      }
+    },
+    {
+      "id": "pv-loop",
+      "title": "Pressure-volume loops, preload, afterload and contractility",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "pv-loop",
+        "sectionTitle": "Pressure-volume loops, preload, afterload and contractility"
+      }
+    },
+    {
+      "id": "flow-laws",
+      "title": "Pressure, flow, resistance and vascular networks",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "flow-laws",
+        "sectionTitle": "Pressure, flow, resistance and vascular networks"
+      }
+    },
+    {
+      "id": "velocity-turbulence",
+      "title": "Velocity, Bernoulli, Reynolds and flow measurement",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "velocity-turbulence",
+        "sectionTitle": "Velocity, Bernoulli, Reynolds and flow measurement"
+      }
+    },
+    {
+      "id": "measurement-special-circulations",
+      "title": "Measurement principles and regional circulations",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "measurement-special-circulations",
+        "sectionTitle": "Measurement principles and regional circulations"
+      }
+    },
+    {
+      "id": "arterial-pressure",
+      "title": "Compliance, pulse pressure, MAP and measurement",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "arterial-pressure",
+        "sectionTitle": "Compliance, pulse pressure, MAP and measurement"
+      }
+    },
+    {
+      "id": "venous-return",
+      "title": "Venous return, capacitance, posture and cardiac output",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "venous-return",
+        "sectionTitle": "Venous return, capacitance, posture and cardiac output"
+      }
+    },
+    {
+      "id": "advanced-return-pressure",
+      "title": "Venous-return curves, transmural pressure and feedback timing",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "advanced-return-pressure",
+        "sectionTitle": "Venous-return curves, transmural pressure and feedback timing"
+      }
+    },
+    {
+      "id": "microexchange",
+      "title": "Microcirculation, Starling forces, lymph and edema",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "microexchange",
+        "sectionTitle": "Microcirculation, Starling forces, lymph and edema"
+      }
+    },
+    {
+      "id": "local-regulation",
+      "title": "Local blood-flow control, autoregulation and special circuits",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "local-regulation",
+        "sectionTitle": "Local blood-flow control, autoregulation and special circuits"
+      }
+    },
+    {
+      "id": "neural-pressure",
+      "title": "Baroreceptors, chemoreceptors and central pressure regulation",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "neural-pressure",
+        "sectionTitle": "Baroreceptors, chemoreceptors and central pressure regulation"
+      }
+    },
+    {
+      "id": "longterm-pressure",
+      "title": "Renal-body fluid feedback and hormonal pressure control",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "longterm-pressure",
+        "sectionTitle": "Renal-body fluid feedback and hormonal pressure control"
+      }
+    },
+    {
+      "id": "coronary-exercise",
+      "title": "Coronary perfusion, exercise and oxygen demand",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "coronary-exercise",
+        "sectionTitle": "Coronary perfusion, exercise and oxygen demand"
+      }
+    },
+    {
+      "id": "shock-failure",
+      "title": "Shock, heart failure and valve lesions: integrated physiology",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "shock-failure",
+        "sectionTitle": "Shock, heart failure and valve lesions: integrated physiology"
+      }
+    },
+    {
+      "id": "advanced-failure-shock",
+      "title": "Preserved ejection fraction, valve geometry and shock mechanisms",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "advanced-failure-shock",
+        "sectionTitle": "Preserved ejection fraction, valve geometry and shock mechanisms"
+      }
+    },
+    {
+      "id": "ecg-foundations",
+      "title": "ECG calibration, lead geometry and a systematic interpretation",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "ecg-foundations",
+        "sectionTitle": "ECG calibration, lead geometry and a systematic interpretation"
+      }
+    },
+    {
+      "id": "ecg-axis",
+      "title": "Cardiac axis and vector interpretation",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "ecg-axis",
+        "sectionTitle": "Cardiac axis and vector interpretation"
+      }
+    },
+    {
+      "id": "ecg-patterns",
+      "title": "ECG rhythm, intervals and difficult distinctions",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "ecg-patterns",
+        "sectionTitle": "ECG rhythm, intervals and difficult distinctions"
+      }
+    },
+    {
+      "id": "advanced-excitation",
+      "title": "Pacemaker competition, reentry and vector calculations",
+      "subjectId": "physiology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "advanced-excitation",
+        "sectionTitle": "Pacemaker competition, reentry and vector calculations"
+      }
+    },
+    {
+      "id": "rbc",
+      "title": "Erythrocytes, hematocrit and oxygen delivery",
+      "subjectId": "blood-immune",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "rbc",
+        "sectionTitle": "Erythrocytes, hematocrit and oxygen delivery"
+      }
+    },
+    {
+      "id": "erythropoiesis",
+      "title": "Erythropoiesis, iron and anemia mechanisms",
+      "subjectId": "blood-immune",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "erythropoiesis",
+        "sectionTitle": "Erythropoiesis, iron and anemia mechanisms"
+      }
+    },
+    {
+      "id": "wbc",
+      "title": "Leukocytes, inflammation and absolute counts",
+      "subjectId": "blood-immune",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "wbc",
+        "sectionTitle": "Leukocytes, inflammation and absolute counts"
+      }
+    },
+    {
+      "id": "platelets",
+      "title": "Primary hemostasis and platelet biology",
+      "subjectId": "blood-immune",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "platelets",
+        "sectionTitle": "Primary hemostasis and platelet biology"
+      }
+    },
+    {
+      "id": "coagulation",
+      "title": "Coagulation cascade, anticoagulants and fibrinolysis",
+      "subjectId": "blood-immune",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "coagulation",
+        "sectionTitle": "Coagulation cascade, anticoagulants and fibrinolysis"
+      }
+    },
+    {
+      "id": "blood-groups",
+      "title": "ABO, Rh and transfusion concepts",
+      "subjectId": "blood-immune",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "blood-groups",
+        "sectionTitle": "ABO, Rh and transfusion concepts"
+      }
+    },
+    {
+      "id": "heart-histo",
+      "title": "Histology of myocardium, endocardium and conduction tissue",
+      "subjectId": "histology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "heart-histo",
+        "sectionTitle": "Histology of myocardium, endocardium and conduction tissue"
+      }
+    },
+    {
+      "id": "vessel-histo",
+      "title": "Vascular tunics, endothelium and artery-vein discrimination",
+      "subjectId": "histology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "vessel-histo",
+        "sectionTitle": "Vascular tunics, endothelium and artery-vein discrimination"
+      }
+    },
+    {
+      "id": "capillary-histo",
+      "title": "Capillary types, pericytes and lymphatic microanatomy",
+      "subjectId": "histology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "capillary-histo",
+        "sectionTitle": "Capillary types, pericytes and lymphatic microanatomy"
+      }
+    },
+    {
+      "id": "immune-foundations",
+      "title": "Lymphocytes, antigen presentation and antibody responses",
+      "subjectId": "blood-immune",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "immune-foundations",
+        "sectionTitle": "Lymphocytes, antigen presentation and antibody responses"
+      }
+    },
+    {
+      "id": "thymus",
+      "title": "Thymus: epithelial reticulum, selection and blood-thymus barrier",
+      "subjectId": "histology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "thymus",
+        "sectionTitle": "Thymus: epithelial reticulum, selection and blood-thymus barrier"
+      }
+    },
+    {
+      "id": "lymph-node",
+      "title": "Lymph node compartments and trafficking",
+      "subjectId": "histology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "lymph-node",
+        "sectionTitle": "Lymph node compartments and trafficking"
+      }
+    },
+    {
+      "id": "spleen-malt",
+      "title": "Spleen, tonsils, Peyer patches and organ comparison",
+      "subjectId": "histology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "spleen-malt",
+        "sectionTitle": "Spleen, tonsils, Peyer patches and organ comparison"
+      }
+    },
+    {
+      "id": "heart-fields",
+      "title": "Cardiogenic fields, folding and heart-tube derivatives",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "heart-fields",
+        "sectionTitle": "Cardiogenic fields, folding and heart-tube derivatives"
+      }
+    },
+    {
+      "id": "atrial-septation",
+      "title": "Atrial septation, sinus venosus and pulmonary veins",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "atrial-septation",
+        "sectionTitle": "Atrial septation, sinus venosus and pulmonary veins"
+      }
+    },
+    {
+      "id": "ventricular-outflow",
+      "title": "AV cushions, ventricular septation and outflow division",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "ventricular-outflow",
+        "sectionTitle": "AV cushions, ventricular septation and outflow division"
+      }
+    },
+    {
+      "id": "advanced-heart-development",
+      "title": "Molecular induction, valve formation and developmental traps",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "advanced-heart-development",
+        "sectionTitle": "Molecular induction, valve formation and developmental traps"
+      }
+    },
+    {
+      "id": "arch-arteries",
+      "title": "Aortic arch derivatives and recurrent-nerve consequences",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "arch-arteries",
+        "sectionTitle": "Aortic arch derivatives and recurrent-nerve consequences"
+      }
+    },
+    {
+      "id": "venous-development",
+      "title": "Vitelline, umbilical and cardinal venous development",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "venous-development",
+        "sectionTitle": "Vitelline, umbilical and cardinal venous development"
+      }
+    },
+    {
+      "id": "fetal-circulation",
+      "title": "Fetal circulation, birth transition and remnants",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "fetal-circulation",
+        "sectionTitle": "Fetal circulation, birth transition and remnants"
+      }
+    },
+    {
+      "id": "lymph-embryo",
+      "title": "Lymphatic development and integrated embryologic reasoning",
+      "subjectId": "embryology",
+      "reviewLocator": {
+        "documentTitle": "01 - Cardiovascular Review.pdf",
+        "sectionId": "lymph-embryo",
+        "sectionTitle": "Lymphatic development and integrated embryologic reasoning"
+      }
+    },
+    {
+      "id": "unclassified",
+      "title": "Source review needed — no reliable topic",
+      "subjectId": "unclassified"
+    }
+  ],
+  "questions": {
+    "cvs-2021-april-q1": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-april-q2": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-april-q3": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-april-q4": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-april-q5": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-april-q6": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-april-q7": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2021-april-q8": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-april-q9": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-april-q10": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-april-q11": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-april-q12": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2021-april-q13": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-april-q14": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-april-q15": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-april-q16": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-april-q17": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-april-q18": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2021-april-q19": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-2021-april-q20": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2021-april-q21": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-april-q22": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-april-q23": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-april-q24": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-april-q25": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-april-q26": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-2021-april-q27": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-april-q28": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-april-q29": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-april-q30": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-april-q31": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-april-q32": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-april-q33": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-april-q34": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-april-q35": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2021-april-q36": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-april-q37": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2021-april-q38": {
+      "subjectId": "physiology",
+      "topicId": "measurement-special-circulations"
+    },
+    "cvs-2021-april-q39": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2021-april-q40": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-april-q41": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q42": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-april-q43": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q44": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2021-april-q45": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q46": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2021-april-q47": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q48": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2021-april-q49": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q50": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q51": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-april-q52": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2021-april-q53": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2021-april-q54": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2021-april-q55": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2021-april-q56": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-april-q57": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q58": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-april-q59": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2021-april-q60": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-april-q61": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-april-q62": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-april-q63": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-2021-april-q64": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2021-april-q65": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-2021-april-q66": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-april-q67": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-2021-april-q68": {
+      "subjectId": "anatomy",
+      "topicId": "thoracic-map"
+    },
+    "cvs-2021-april-q69": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2021-april-q70": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2021-april-q71": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2021-april-q72": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2021-april-q73": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2021-april-q74": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2021-april-q75": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2021-april-q76": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-april-q77": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2021-april-q78": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-april-q79": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2021-april-q80": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-april-q81": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2021-april-q82": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-2021-april-q83": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2021-april-q84": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2021-april-q85": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2021-april-q86": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2021-april-q87": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-april-q88": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2021-april-q89": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2021-april-q90": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-april-q91": {
+      "subjectId": "histology",
+      "topicId": "heart-histo"
+    },
+    "cvs-2021-april-q92": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-april-q93": {
+      "subjectId": "histology",
+      "topicId": "lymph-node"
+    },
+    "cvs-2021-april-q94": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2021-april-q95": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-2021-april-q96": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2021-april-q97": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2021-april-q98": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2021-april-q99": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2021-april-q100": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2021-october-q1": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-october-q2": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-october-q3": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-october-q4": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-october-q5": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-october-q6": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-october-q7": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2021-october-q8": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-october-q9": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-october-q10": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-october-q11": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-october-q12": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-2021-october-q13": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-october-q14": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-october-q15": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-october-q16": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-october-q17": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-october-q18": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-october-q19": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-october-q20": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2021-october-q21": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-october-q22": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-october-q23": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-october-q24": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-october-q25": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-october-q26": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2021-october-q27": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-october-q28": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-october-q29": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-october-q30": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2021-october-q31": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2021-october-q32": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2021-october-q33": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-october-q34": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2021-october-q35": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2021-october-q36": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-october-q37": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-october-q38": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-october-q39": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2021-october-q40": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2021-october-q41": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2021-october-q42": {
+      "subjectId": "physiology",
+      "topicId": "longterm-pressure"
+    },
+    "cvs-2021-october-q43": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-october-q44": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2021-october-q45": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-october-q46": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-october-q47": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2021-october-q48": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-october-q49": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-october-q50": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-october-q51": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-october-q52": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-october-q53": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-october-q54": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-october-q55": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-2021-october-q56": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-october-q57": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-2021-october-q58": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-october-q59": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-october-q60": {
+      "subjectId": "anatomy",
+      "topicId": "vertebrae"
+    },
+    "cvs-2021-october-q61": {
+      "subjectId": "unclassified",
+      "topicId": "unclassified"
+    },
+    "cvs-2021-october-q62": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2021-october-q63": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-2021-october-q64": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-october-q65": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2021-october-q66": {
+      "subjectId": "anatomy",
+      "topicId": "vertebrae"
+    },
+    "cvs-2021-october-q67": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2021-october-q68": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2021-october-q69": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2021-october-q70": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-2021-october-q71": {
+      "subjectId": "anatomy",
+      "topicId": "spinal-joints"
+    },
+    "cvs-2021-october-q72": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2021-october-q73": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-october-q74": {
+      "subjectId": "anatomy",
+      "topicId": "pectoral-muscles"
+    },
+    "cvs-2021-october-q75": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2021-october-q76": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2021-october-q77": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-october-q78": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-2021-october-q79": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-october-q80": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-october-q81": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-october-q82": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2021-october-q83": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-october-q84": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2021-october-q85": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2021-october-q86": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2021-october-q87": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-october-q88": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2021-october-q89": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2021-october-q90": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-october-q91": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2021-october-q92": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-october-q93": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2021-october-q94": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2021-october-q95": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2021-october-q96": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-2021-october-q97": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2021-october-q98": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2021-october-q99": {
+      "subjectId": "embryology",
+      "topicId": "fetal-circulation"
+    },
+    "cvs-2021-october-q100": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2021-practical-q1": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-practical-q2": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2021-practical-q3": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-practical-q4": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-practical-q5": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-2021-practical-q6": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2021-practical-q7": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2021-practical-q8": {
+      "subjectId": "anatomy",
+      "topicId": "vertebrae"
+    },
+    "cvs-2021-practical-q9": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2021-practical-q10": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2021-practical-q11": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-practical-q12": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2021-practical-q13": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-practical-q14": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2021-september-q1": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-september-q2": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-september-q3": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2021-september-q4": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2021-september-q5": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-september-q6": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-september-q7": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-september-q8": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2021-september-q9": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-september-q10": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2021-september-q11": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-september-q12": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-september-q13": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-september-q14": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2021-september-q15": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2021-september-q16": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2021-september-q17": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-september-q18": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-2021-september-q19": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-september-q20": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-september-q21": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2021-september-q22": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2021-september-q23": {
+      "subjectId": "physiology",
+      "topicId": "longterm-pressure"
+    },
+    "cvs-2021-september-q24": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2021-september-q25": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2021-september-q26": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-september-q27": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-september-q28": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-september-q29": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-september-q30": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-september-q31": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-september-q32": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2021-september-q33": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-september-q34": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-september-q35": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2021-september-q36": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-2021-september-q37": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2021-september-q38": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-september-q39": {
+      "subjectId": "physiology",
+      "topicId": "ecg-patterns"
+    },
+    "cvs-2021-september-q40": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-september-q41": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-september-q42": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-september-q43": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-september-q44": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-september-q45": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-september-q46": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-september-q47": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-september-q48": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-september-q49": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-september-q50": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2021-september-q51": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-2021-september-q52": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2021-september-q53": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2021-september-q54": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-september-q55": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-september-q56": {
+      "subjectId": "physiology",
+      "topicId": "ecg-patterns"
+    },
+    "cvs-2021-september-q57": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2021-september-q58": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2021-september-q59": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-september-q60": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-september-q61": {
+      "subjectId": "anatomy",
+      "topicId": "spinal-cord"
+    },
+    "cvs-2021-september-q62": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-september-q63": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-september-q64": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-september-q65": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2021-september-q66": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2021-september-q67": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-2021-september-q68": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-september-q69": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2021-september-q70": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2021-september-q71": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-september-q72": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2021-september-q73": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2021-september-q74": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2021-september-q75": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-2021-september-q76": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2021-september-q77": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2021-september-q78": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2021-september-q79": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2021-september-q80": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-september-q81": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2021-september-q82": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2021-september-q83": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2021-september-q84": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2021-september-q85": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2021-september-q86": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2021-september-q87": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-september-q88": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2021-september-q89": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2021-september-q90": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-september-q91": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2021-september-q92": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2021-september-q93": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2021-september-q94": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2021-september-q95": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-2021-september-q96": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2021-september-q97": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-2021-september-q98": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2021-september-q99": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2021-september-q100": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2022-may-q1": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2022-may-q2": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2022-may-q3": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2022-may-q4": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2022-may-q5": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2022-may-q6": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2022-may-q7": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2022-may-q8": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2022-may-q9": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2022-may-q10": {
+      "subjectId": "physiology",
+      "topicId": "longterm-pressure"
+    },
+    "cvs-2022-may-q11": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2022-may-q12": {
+      "subjectId": "physiology",
+      "topicId": "longterm-pressure"
+    },
+    "cvs-2022-may-q13": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2022-may-q14": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2022-may-q15": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2022-may-q16": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2022-may-q17": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2022-may-q18": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2022-may-q19": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2022-may-q20": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2022-may-q21": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2022-may-q22": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2022-may-q23": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2022-may-q24": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2022-may-q25": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2022-may-q26": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2022-may-q27": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2022-may-q28": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2022-may-q29": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2022-may-q30": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2022-may-q31": {
+      "subjectId": "physiology",
+      "topicId": "ecg-patterns"
+    },
+    "cvs-2022-may-q32": {
+      "subjectId": "physiology",
+      "topicId": "ecg-patterns"
+    },
+    "cvs-2022-may-q33": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2022-may-q34": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2022-may-q35": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2022-may-q36": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2022-may-q37": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2022-may-q38": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2022-may-q39": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2022-may-q40": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2022-may-q41": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2022-may-q42": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2022-may-q43": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2022-may-q44": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-2022-may-q45": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-2022-may-q46": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2022-may-q47": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2022-may-q48": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2022-may-q49": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2022-may-q50": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2022-may-q51": {
+      "subjectId": "anatomy",
+      "topicId": "spinal-joints"
+    },
+    "cvs-2022-may-q52": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-2022-may-q53": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2022-may-q54": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2022-may-q55": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2022-may-q56": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2022-may-q57": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2022-may-q58": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2022-may-q59": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2022-may-q60": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2022-may-q61": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-2022-may-q62": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-2022-may-q63": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2022-may-q64": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2022-may-q65": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2022-may-q66": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2022-may-q67": {
+      "subjectId": "anatomy",
+      "topicId": "pectoral-muscles"
+    },
+    "cvs-2022-may-q68": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2022-may-q69": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2022-may-q70": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2022-may-q71": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2022-may-q72": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2022-may-q73": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2022-may-q74": {
+      "subjectId": "histology",
+      "topicId": "lymph-node"
+    },
+    "cvs-2022-may-q75": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2022-may-q76": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2022-may-q77": {
+      "subjectId": "histology",
+      "topicId": "heart-histo"
+    },
+    "cvs-2022-may-q78": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2022-may-q79": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2022-may-q80": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2022-may-q81": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2022-may-q82": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2022-may-q83": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2022-may-q84": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-2022-may-q85": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-2022-may-q86": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2022-may-q87": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2022-may-q88": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-2022-may-q89": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2023-january-q1": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2023-january-q2": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2023-january-q3": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-2023-january-q4": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2023-january-q5": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2023-january-q6": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2023-january-q7": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-2023-january-q8": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2023-january-q9": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2023-january-q10": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2023-january-q11": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2023-january-q12": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2023-january-q13": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2023-january-q14": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2023-january-q15": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2023-january-q16": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2023-january-q17": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2023-january-q18": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2023-january-q19": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2023-january-q20": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2023-january-q21": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2023-january-q22": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2023-january-q23": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2023-january-q24": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-2023-january-q25": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2023-january-q26": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2023-january-q27": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2023-january-q28": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2023-january-q29": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2023-january-q30": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2023-january-q31": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2023-january-q32": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2023-january-q33": {
+      "subjectId": "physiology",
+      "topicId": "ecg-patterns"
+    },
+    "cvs-2023-january-q34": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q35": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q36": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q37": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q38": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2023-january-q39": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2023-january-q40": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2023-january-q41": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2023-january-q42": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2023-january-q43": {
+      "subjectId": "physiology",
+      "topicId": "measurement-special-circulations"
+    },
+    "cvs-2023-january-q44": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q45": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2023-january-q46": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2023-january-q47": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2023-january-q48": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2023-january-q49": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q50": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2023-january-q51": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q52": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2023-january-q53": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2023-january-q54": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2023-january-q55": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2023-january-q56": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2023-january-q57": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-2023-january-q58": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-2023-january-q59": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2023-january-q60": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2023-january-q61": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2023-january-q62": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2023-january-q63": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2023-january-q64": {
+      "subjectId": "anatomy",
+      "topicId": "spinal-joints"
+    },
+    "cvs-2023-january-q65": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-2023-january-q66": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2023-january-q67": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2023-january-q68": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2023-january-q69": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2023-january-q70": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2023-january-q71": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2023-january-q72": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2023-january-q73": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2023-january-q74": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-2023-january-q75": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-2023-january-q76": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2023-january-q77": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2023-january-q78": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2023-january-q79": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2023-january-q80": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2023-january-q81": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2023-january-q82": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2023-january-q83": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2023-january-q84": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2023-january-q85": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2023-january-q86": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2023-january-q87": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2023-january-q88": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2023-january-q89": {
+      "subjectId": "histology",
+      "topicId": "lymph-node"
+    },
+    "cvs-2023-january-q90": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2023-january-q91": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2023-january-q92": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2023-january-q93": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2023-january-q94": {
+      "subjectId": "embryology",
+      "topicId": "fetal-circulation"
+    },
+    "cvs-2023-january-q95": {
+      "subjectId": "embryology",
+      "topicId": "fetal-circulation"
+    },
+    "cvs-2023-january-q96": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2023-january-q97": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-2023-january-q98": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-2023-january-q99": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-2023-january-q100": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2025-february-q1": {
+      "subjectId": "anatomy",
+      "topicId": "vertebrae"
+    },
+    "cvs-2025-february-q2": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-2025-february-q3": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2025-february-q4": {
+      "subjectId": "anatomy",
+      "topicId": "intercostal"
+    },
+    "cvs-2025-february-q5": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2025-february-q6": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-2025-february-q7": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-2025-february-q8": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-2025-february-q9": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-2025-february-q10": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2025-february-q11": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-2025-february-q12": {
+      "subjectId": "anatomy",
+      "topicId": "pericardium"
+    },
+    "cvs-2025-february-q13": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2025-february-q14": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2025-february-q15": {
+      "subjectId": "anatomy",
+      "topicId": "intercostal"
+    },
+    "cvs-2025-february-q16": {
+      "subjectId": "anatomy",
+      "topicId": "thoracic-map"
+    },
+    "cvs-2025-february-q17": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2025-february-q18": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-2025-february-q19": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-2025-february-q20": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-2025-february-q21": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-2025-february-q22": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-2025-february-q23": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-2025-february-q24": {
+      "subjectId": "anatomy",
+      "topicId": "pectoral-muscles"
+    },
+    "cvs-2025-february-q25": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2025-february-q26": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2025-february-q27": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-2025-february-q28": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2025-february-q29": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2025-february-q30": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-2025-february-q31": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-2025-february-q32": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2025-february-q33": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2025-february-q34": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-2025-february-q35": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2025-february-q36": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-2025-february-q37": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2025-february-q38": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-2025-february-q39": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-2025-february-q40": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-2025-february-q41": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-2025-february-q42": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2025-february-q43": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2025-february-q44": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2025-february-q45": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2025-february-q46": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2025-february-q47": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2025-february-q48": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2025-february-q49": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2025-february-q50": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-2025-february-q51": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2025-february-q52": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2025-february-q53": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2025-february-q54": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-2025-february-q55": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-2025-february-q56": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2025-february-q57": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-2025-february-q58": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2025-february-q59": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2025-february-q60": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-2025-february-q61": {
+      "subjectId": "physiology",
+      "topicId": "ecg-patterns"
+    },
+    "cvs-2025-february-q62": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2025-february-q63": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2025-february-q64": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2025-february-q65": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-2025-february-q66": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-2025-february-q67": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2025-february-q68": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2025-february-q69": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-2025-february-q70": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2025-february-q71": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2025-february-q72": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2025-february-q73": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2025-february-q74": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-2025-february-q75": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2025-february-q76": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2025-february-q77": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2025-february-q78": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-2025-february-q79": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2025-february-q80": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2025-february-q81": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2025-february-q82": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2025-february-q83": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-2025-february-q84": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2025-february-q85": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2025-february-q86": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2025-february-q87": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2025-february-q88": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2025-february-q89": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2025-february-q90": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-2025-february-q91": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-2025-february-q92": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2025-february-q93": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2025-february-q94": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-2025-february-q95": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2025-february-q96": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2025-february-q97": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-2025-february-q98": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-2025-february-q99": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-answered-fragment-q1": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-undated-answered-fragment-q2": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-undated-answered-fragment-q3": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-undated-answered-fragment-q4": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-undated-answered-fragment-q5": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-answered-fragment-q6": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-undated-answered-fragment-q7": {
+      "subjectId": "anatomy",
+      "topicId": "vertebrae"
+    },
+    "cvs-undated-answered-fragment-q8": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-undated-answered-fragment-q9": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-answered-fragment-q10": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-undated-answered-fragment-q11": {
+      "subjectId": "anatomy",
+      "topicId": "pectoral-muscles"
+    },
+    "cvs-undated-answered-fragment-q12": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-undated-answered-fragment-q13": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-answered-fragment-q14": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-answered-fragment-q15": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-answered-fragment-q16": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-undated-answered-fragment-q17": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-answered-fragment-q18": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-answered-fragment-q19": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-answered-fragment-q20": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-undated-answered-fragment-q21": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-answered-fragment-q22": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-undated-answered-fragment-q23": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-answered-fragment-q24": {
+      "subjectId": "physiology",
+      "topicId": "coronary-exercise"
+    },
+    "cvs-undated-answered-fragment-q25": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-answered-fragment-q26": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-answered-fragment-q27": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-undated-answered-fragment-q28": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-answered-fragment-q29": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-undated-answered-fragment-q30": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-answered-fragment-q31": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-answered-fragment-q32": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-answered-fragment-q33": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-undated-answered-fragment-q34": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-undated-answered-fragment-q35": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-answered-fragment-q36": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-undated-answered-fragment-q37": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-undated-answered-fragment-q38": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-answered-fragment-q39": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-answered-fragment-q40": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-answered-fragment-q41": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-undated-answered-fragment-q42": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-undated-answered-fragment-q43": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-undated-answered-fragment-q44": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-undated-answered-fragment-q45": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-undated-answered-fragment-q46": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-answered-fragment-q47": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-answered-fragment-q48": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-answered-fragment-q49": {
+      "subjectId": "histology",
+      "topicId": "lymph-node"
+    },
+    "cvs-undated-answered-fragment-q50": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-undated-histology-first-q1": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-histology-first-q2": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-undated-histology-first-q3": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-histology-first-q4": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-histology-first-q5": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-undated-histology-first-q6": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-histology-first-q7": {
+      "subjectId": "histology",
+      "topicId": "lymph-node"
+    },
+    "cvs-undated-histology-first-q8": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-undated-histology-first-q9": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-histology-first-q10": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-histology-first-q11": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-histology-first-q12": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-histology-first-q13": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-histology-first-q14": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-undated-histology-first-q15": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-histology-first-q16": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-histology-first-q17": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-histology-first-q18": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-histology-first-q19": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-histology-first-q20": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-histology-first-q21": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-histology-first-q22": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-histology-first-q23": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-undated-histology-first-q24": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-histology-first-q25": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-histology-first-q26": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-histology-first-q27": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-histology-first-q28": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-histology-first-q29": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-histology-first-q30": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-undated-histology-first-q31": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-histology-first-q32": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-histology-first-q33": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-histology-first-q34": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-histology-first-q35": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-histology-first-q36": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-undated-histology-first-q37": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-histology-first-q38": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-histology-first-q39": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-undated-histology-first-q40": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-histology-first-q41": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-histology-first-q42": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-histology-first-q43": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-histology-first-q44": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-histology-first-q45": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-histology-first-q46": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-histology-first-q47": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-undated-histology-first-q48": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-undated-histology-first-q49": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-histology-first-q50": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-histology-first-q51": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-histology-first-q52": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-undated-histology-first-q53": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-histology-first-q54": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-histology-first-q55": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-histology-first-q56": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-histology-first-q57": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-undated-histology-first-q58": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-histology-first-q59": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-histology-first-q60": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-histology-first-q61": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-undated-histology-first-q62": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-histology-first-q63": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-histology-first-q64": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-histology-first-q65": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-histology-first-q66": {
+      "subjectId": "physiology",
+      "topicId": "measurement-special-circulations"
+    },
+    "cvs-undated-histology-first-q67": {
+      "subjectId": "physiology",
+      "topicId": "local-regulation"
+    },
+    "cvs-undated-histology-first-q68": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-undated-histology-first-q69": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-undated-histology-first-q70": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-undated-histology-first-q71": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-undated-histology-first-q72": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-undated-histology-first-q73": {
+      "subjectId": "anatomy",
+      "topicId": "pectoral-muscles"
+    },
+    "cvs-undated-histology-first-q74": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-undated-histology-first-q75": {
+      "subjectId": "anatomy",
+      "topicId": "intercostal"
+    },
+    "cvs-undated-histology-first-q76": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-undated-histology-first-q77": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-undated-histology-first-q78": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-undated-histology-first-q79": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-undated-histology-first-q80": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-undated-histology-first-q81": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-undated-histology-first-q82": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-undated-histology-first-q83": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-undated-histology-first-q84": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-undated-histology-first-q85": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-undated-histology-first-q86": {
+      "subjectId": "anatomy",
+      "topicId": "pericardium"
+    },
+    "cvs-undated-histology-first-q87": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-histology-first-q88": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-undated-histology-first-q89": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-undated-histology-first-q90": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-undated-histology-first-q91": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-undated-histology-first-q92": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-undated-histology-first-q93": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-undated-histology-first-q94": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-undated-histology-first-q95": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-undated-histology-first-q96": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-undated-histology-first-q97": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-undated-histology-first-q98": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-undated-histology-first-q99": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-undated-histology-first-q100": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-undated-photo-paper-q1": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-photo-paper-q2": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q3": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q4": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q5": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q6": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q7": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-photo-paper-q8": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q9": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q10": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-photo-paper-q11": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-photo-paper-q12": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-photo-paper-q13": {
+      "subjectId": "physiology",
+      "topicId": "longterm-pressure"
+    },
+    "cvs-undated-photo-paper-q14": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-undated-photo-paper-q15": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q16": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-undated-photo-paper-q17": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q18": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-undated-photo-paper-q19": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q20": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-photo-paper-q21": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-photo-paper-q22": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-photo-paper-q23": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-undated-photo-paper-q24": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-undated-photo-paper-q25": {
+      "subjectId": "physiology",
+      "topicId": "microexchange"
+    },
+    "cvs-undated-photo-paper-q26": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-undated-photo-paper-q27": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-photo-paper-q28": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-photo-paper-q29": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-photo-paper-q30": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-photo-paper-q31": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-photo-paper-q32": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-photo-paper-q33": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-photo-paper-q34": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-photo-paper-q35": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-photo-paper-q36": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-photo-paper-q37": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-photo-paper-q38": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-photo-paper-q39": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-photo-paper-q40": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-photo-paper-q41": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-photo-paper-q42": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-photo-paper-q43": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-photo-paper-q44": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-photo-paper-q45": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-photo-paper-q46": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-photo-paper-q47": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-photo-paper-q48": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-photo-paper-q49": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-photo-paper-q50": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-photo-paper-q51": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-undated-photo-paper-q52": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-photo-paper-q53": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-photo-paper-q54": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-photo-paper-q55": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-photo-paper-q56": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-photo-paper-q57": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-photo-paper-q58": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-photo-paper-q59": {
+      "subjectId": "anatomy",
+      "topicId": "thoracic-map"
+    },
+    "cvs-undated-photo-paper-q60": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-undated-photo-paper-q61": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-undated-photo-paper-q62": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-undated-photo-paper-q63": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-undated-photo-paper-q64": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-photo-paper-q65": {
+      "subjectId": "anatomy",
+      "topicId": "pectoral-muscles"
+    },
+    "cvs-undated-photo-paper-q66": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-undated-photo-paper-q67": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-undated-photo-paper-q68": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-undated-photo-paper-q69": {
+      "subjectId": "anatomy",
+      "topicId": "thoracic-map"
+    },
+    "cvs-undated-photo-paper-q70": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-undated-photo-paper-q71": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-photo-paper-q72": {
+      "subjectId": "anatomy",
+      "topicId": "diaphragm"
+    },
+    "cvs-undated-photo-paper-q73": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-undated-photo-paper-q74": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-undated-photo-paper-q75": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-photo-paper-q76": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-undated-photo-paper-q77": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-undated-photo-paper-q78": {
+      "subjectId": "histology",
+      "topicId": "lymph-node"
+    },
+    "cvs-undated-photo-paper-q79": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-photo-paper-q80": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-photo-paper-q81": {
+      "subjectId": "histology",
+      "topicId": "heart-histo"
+    },
+    "cvs-undated-photo-paper-q82": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-photo-paper-q83": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-undated-photo-paper-q84": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-undated-photo-paper-q85": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-undated-photo-paper-q86": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-undated-photo-paper-q87": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-undated-photo-paper-q88": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-undated-photo-paper-q89": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-undated-photo-paper-q90": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    },
+    "cvs-undated-photo-paper-q91": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-undated-student-2023-q1": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-student-2023-q2": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-student-2023-q3": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-student-2023-q4": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-student-2023-q5": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-student-2023-q6": {
+      "subjectId": "physiology",
+      "topicId": "velocity-turbulence"
+    },
+    "cvs-undated-student-2023-q7": {
+      "subjectId": "physiology",
+      "topicId": "flow-laws"
+    },
+    "cvs-undated-student-2023-q8": {
+      "subjectId": "physiology",
+      "topicId": "arterial-pressure"
+    },
+    "cvs-undated-student-2023-q9": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-student-2023-q10": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-student-2023-q11": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-student-2023-q12": {
+      "subjectId": "physiology",
+      "topicId": "venous-return"
+    },
+    "cvs-undated-student-2023-q13": {
+      "subjectId": "physiology",
+      "topicId": "longterm-pressure"
+    },
+    "cvs-undated-student-2023-q14": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-undated-student-2023-q15": {
+      "subjectId": "physiology",
+      "topicId": "neural-pressure"
+    },
+    "cvs-undated-student-2023-q16": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-undated-student-2023-q17": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-student-2023-q18": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-student-2023-q19": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-student-2023-q20": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-student-2023-q21": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-student-2023-q22": {
+      "subjectId": "blood-immune",
+      "topicId": "coagulation"
+    },
+    "cvs-undated-student-2023-q23": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-student-2023-q24": {
+      "subjectId": "blood-immune",
+      "topicId": "erythropoiesis"
+    },
+    "cvs-undated-student-2023-q25": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-undated-student-2023-q26": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-student-2023-q27": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-student-2023-q28": {
+      "subjectId": "blood-immune",
+      "topicId": "rbc"
+    },
+    "cvs-undated-student-2023-q29": {
+      "subjectId": "blood-immune",
+      "topicId": "wbc"
+    },
+    "cvs-undated-student-2023-q30": {
+      "subjectId": "blood-immune",
+      "topicId": "platelets"
+    },
+    "cvs-undated-student-2023-q31": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q32": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q33": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q34": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q35": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-undated-student-2023-q36": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q37": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q38": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q39": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-student-2023-q40": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-student-2023-q41": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-student-2023-q42": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-student-2023-q43": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-student-2023-q44": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-student-2023-q45": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-student-2023-q46": {
+      "subjectId": "physiology",
+      "topicId": "cycle"
+    },
+    "cvs-undated-student-2023-q47": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-student-2023-q48": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-student-2023-q49": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-student-2023-q50": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-student-2023-q51": {
+      "subjectId": "physiology",
+      "topicId": "pv-loop"
+    },
+    "cvs-undated-student-2023-q52": {
+      "subjectId": "physiology",
+      "topicId": "cardiac-ap"
+    },
+    "cvs-undated-student-2023-q53": {
+      "subjectId": "physiology",
+      "topicId": "conduction-phys"
+    },
+    "cvs-undated-student-2023-q54": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-student-2023-q55": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-student-2023-q56": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-undated-student-2023-q57": {
+      "subjectId": "physiology",
+      "topicId": "ecg-axis"
+    },
+    "cvs-undated-student-2023-q58": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-student-2023-q59": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-student-2023-q60": {
+      "subjectId": "physiology",
+      "topicId": "ecg-foundations"
+    },
+    "cvs-undated-student-2023-q61": {
+      "subjectId": "anatomy",
+      "topicId": "rib-landmarks"
+    },
+    "cvs-undated-student-2023-q62": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-undated-student-2023-q63": {
+      "subjectId": "anatomy",
+      "topicId": "sternum"
+    },
+    "cvs-undated-student-2023-q64": {
+      "subjectId": "anatomy",
+      "topicId": "esophagus-duct"
+    },
+    "cvs-undated-student-2023-q65": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-undated-student-2023-q66": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-student-2023-q67": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-student-2023-q68": {
+      "subjectId": "anatomy",
+      "topicId": "cardiac-nerves"
+    },
+    "cvs-undated-student-2023-q69": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-undated-student-2023-q70": {
+      "subjectId": "anatomy",
+      "topicId": "pericardium"
+    },
+    "cvs-undated-student-2023-q71": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-student-2023-q72": {
+      "subjectId": "anatomy",
+      "topicId": "left-heart"
+    },
+    "cvs-undated-student-2023-q73": {
+      "subjectId": "anatomy",
+      "topicId": "intercostal"
+    },
+    "cvs-undated-student-2023-q74": {
+      "subjectId": "anatomy",
+      "topicId": "right-heart"
+    },
+    "cvs-undated-student-2023-q75": {
+      "subjectId": "anatomy",
+      "topicId": "pericardium"
+    },
+    "cvs-undated-student-2023-q76": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-undated-student-2023-q77": {
+      "subjectId": "anatomy",
+      "topicId": "thoracic-map"
+    },
+    "cvs-undated-student-2023-q78": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-undated-student-2023-q79": {
+      "subjectId": "anatomy",
+      "topicId": "wall-neurovascular"
+    },
+    "cvs-undated-student-2023-q80": {
+      "subjectId": "anatomy",
+      "topicId": "coronary"
+    },
+    "cvs-undated-student-2023-q81": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-student-2023-q82": {
+      "subjectId": "anatomy",
+      "topicId": "mediastinum"
+    },
+    "cvs-undated-student-2023-q83": {
+      "subjectId": "anatomy",
+      "topicId": "heart-external"
+    },
+    "cvs-undated-student-2023-q84": {
+      "subjectId": "unclassified",
+      "topicId": "unclassified"
+    },
+    "cvs-undated-student-2023-q85": {
+      "subjectId": "anatomy",
+      "topicId": "back-muscles"
+    },
+    "cvs-undated-student-2023-q86": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-undated-student-2023-q87": {
+      "subjectId": "histology",
+      "topicId": "vessel-histo"
+    },
+    "cvs-undated-student-2023-q88": {
+      "subjectId": "histology",
+      "topicId": "thymus"
+    },
+    "cvs-undated-student-2023-q89": {
+      "subjectId": "histology",
+      "topicId": "capillary-histo"
+    },
+    "cvs-undated-student-2023-q90": {
+      "subjectId": "blood-immune",
+      "topicId": "immune-foundations"
+    },
+    "cvs-undated-student-2023-q91": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-student-2023-q92": {
+      "subjectId": "histology",
+      "topicId": "spleen-malt"
+    },
+    "cvs-undated-student-2023-q93": {
+      "subjectId": "embryology",
+      "topicId": "heart-fields"
+    },
+    "cvs-undated-student-2023-q94": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-undated-student-2023-q95": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-undated-student-2023-q96": {
+      "subjectId": "embryology",
+      "topicId": "ventricular-outflow"
+    },
+    "cvs-undated-student-2023-q97": {
+      "subjectId": "embryology",
+      "topicId": "atrial-septation"
+    },
+    "cvs-undated-student-2023-q98": {
+      "subjectId": "embryology",
+      "topicId": "arch-arteries"
+    },
+    "cvs-undated-student-2023-q99": {
+      "subjectId": "embryology",
+      "topicId": "venous-development"
+    }
+  },
+  "sourceFingerprints": [
+    {
+      "paperId": "cvs-2021-april",
+      "questionCount": 100,
+      "sha256": "f5c64c71ce5c6797fa3a20ba18edf40d3dccc5b3c10d39a5265813e78a068e4c"
+    },
+    {
+      "paperId": "cvs-2021-october",
+      "questionCount": 100,
+      "sha256": "48f829cfc84f1b70b45ce31030c92439a2b10ce4934a6d51abb54086eb21d29c"
+    },
+    {
+      "paperId": "cvs-2021-practical",
+      "questionCount": 14,
+      "sha256": "b58076f89579b9e89eee6a0375663d707457aa13bfc0150b45505a71deba7579"
+    },
+    {
+      "paperId": "cvs-2021-september",
+      "questionCount": 100,
+      "sha256": "33a475b41a87f91f8ef926505396fa03f448e0f3b7c39bbd1c66e813ada8bf0a"
+    },
+    {
+      "paperId": "cvs-2022-may",
+      "questionCount": 89,
+      "sha256": "821b764f587f91d8507dbcd9612f80c6be6b020b6c7910c23bbffd226f52b5da"
+    },
+    {
+      "paperId": "cvs-2023-january",
+      "questionCount": 100,
+      "sha256": "8a35bd70f7fee5c265ec61bf914d4fa3afc7b06b466412538374f83feb0dc172"
+    },
+    {
+      "paperId": "cvs-2025-february",
+      "questionCount": 99,
+      "sha256": "06c7f5c6fac0f100359d33725a81cbf7f01d611cb78020bd06e38f6594c5f016"
+    },
+    {
+      "paperId": "cvs-undated-answered-fragment",
+      "questionCount": 50,
+      "sha256": "6b80f2b7b5eb3ee4681891b4c08dfa003f1b387596b30db27457462b37d13de3"
+    },
+    {
+      "paperId": "cvs-undated-histology-first",
+      "questionCount": 100,
+      "sha256": "72006b01f6a36a1ef654867944efa59507e3114c6819682c8b45811cbf0412c2"
+    },
+    {
+      "paperId": "cvs-undated-photo-paper",
+      "questionCount": 91,
+      "sha256": "3740e3417cbcbd5e45125d8c581757d75a4f91423fd42253fbee359a4409b9a2"
+    },
+    {
+      "paperId": "cvs-undated-student-2023",
+      "questionCount": 99,
+      "sha256": "95acde43644a4b085939edf774604ab14cd73a2063e0c12707b19fbe169a5adb"
+    }
+  ],
+  "sourceReview": {
+    "metadataFile": "/Users/rizzist/Documents/MED SLIDES/TERM 2/10 Review Summaries/_build/content/cvs.json",
+    "documentTitle": "01 - Cardiovascular Review.pdf"
+  },
+  "counts": {
+    "physiology": 417,
+    "blood-immune": 132,
+    "anatomy": 235,
+    "histology": 87,
+    "embryology": 69,
+    "unclassified": 2
+  }
+}

@@ -1,0 +1,968 @@
+[
+  {
+    "id": "limb-audit-phys-axon-concept",
+    "moduleId": "limb-audit-phys-conduction-module",
+    "subject": "physiology",
+    "title": "Axonal threshold, channel recovery, and ionic maintenance",
+    "summary": "Single-axon recordings separate all-or-none excitation, sodium-channel recovery, and restoration of ionic gradients. This is lecture-supported carryover; inclusion and weighting in the limb examination remain unconfirmed.",
+    "keyPoints": [
+      "A normal single-fiber action potential is regenerative; its amplitude does not scale directly with the strength of a recovered suprathreshold stimulus.",
+      "Fast sodium-channel activation supports the upstroke, whereas sodium inactivation and delayed outward potassium current support repolarization.",
+      "Absolute refractoriness reflects unavailable sodium channels; stronger excitation cannot replace the repolarization required for recovery.",
+      "The sodium-potassium pump preserves gradients over time, but existing gradients can support early action potentials after sudden pump inhibition."
+    ],
+    "examTraps": [
+      "Do not treat the slide's example resting potential and threshold as universal values for every neuron.",
+      "All-or-none electrical excitation does not imply a fixed force for an entire muscle."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Why can blocking the sodium-potassium pump spare initial action potentials?",
+        "answer": "The initial gradients remain. Channel currents can use them temporarily, but ongoing ionic maintenance ultimately requires pump activity."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 8,12; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      },
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 4-6; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      },
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 17; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      },
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 13; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-001-objective",
+        "text": "Distinguish stimulus strength from action-potential amplitude in a single recovered motor axon.",
+        "questionIds": [
+          "limb-audit-phys-001"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-003-objective",
+        "text": "Predict how delayed potassium-channel activation affects repolarization of a fast nerve action potential.",
+        "questionIds": [
+          "limb-audit-phys-003"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-004-objective",
+        "text": "Explain failure of a second stimulus during the absolute refractory period.",
+        "questionIds": [
+          "limb-audit-phys-004"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-008-objective",
+        "text": "Separate rapid spike generation from the longer-term maintenance of ionic gradients.",
+        "questionIds": [
+          "limb-audit-phys-008"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-conduction-concept",
+    "moduleId": "limb-audit-phys-conduction-module",
+    "subject": "physiology",
+    "title": "Saltatory propagation and axonal transit time",
+    "summary": "Myelinated axons combine passive internodal current spread with regenerated nodal spikes. The supporting slides are lecture-supported carryover; limb-exam inclusion and weighting are unconfirmed.",
+    "keyPoints": [
+      "A mid-axon stimulus can propagate in both directions when adjacent membrane on both sides is rested and excitable.",
+      "Myelin insulates internodes while voltage-gated nodal channels regenerate action potentials after local current brings a node to threshold.",
+      "Restricting major ionic exchange to nodes reduces the subsequent energy cost of restoring sodium and potassium gradients.",
+      "For a stated constant conduction velocity, axonal transit time equals path length divided by velocity and excludes synaptic or muscle delays."
+    ],
+    "examTraps": [
+      "Saltatory conduction does not mean a single group of sodium ions travels from one end of the nerve to the other.",
+      "Correct the slide's 'salutatory' spelling to saltatory; quoted speed multipliers are examples, not universal laws."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "How long does conduction over 0.60 m take at 60 m/s?",
+        "answer": "0.60/60 = 0.010 s = 10 ms for the axonal segment alone."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 9-10; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      },
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 18-20; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      },
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 20; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      },
+      {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "locator": "Slides 21; lecture-supported carryover; limb-exam inclusion unconfirmed",
+        "basis": "slides"
+      }
+    ],
+    "scope": "course",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-002-objective",
+        "text": "Predict bidirectional propagation after stimulation of the middle of a resting isolated axon.",
+        "questionIds": [
+          "limb-audit-phys-002"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-005-objective",
+        "text": "Explain passive internodal spread and active nodal regeneration in saltatory conduction.",
+        "questionIds": [
+          "limb-audit-phys-005"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-006-objective",
+        "text": "Relate saltatory conduction to the metabolic cost of restoring ion gradients.",
+        "questionIds": [
+          "limb-audit-phys-006"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-007-objective",
+        "text": "Calculate axonal transit time while separating it from synaptic and muscular delays.",
+        "questionIds": [
+          "limb-audit-phys-007"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-quantitative-concept",
+    "moduleId": "limb-audit-phys-conduction-module",
+    "subject": "physiology",
+    "title": "Membrane driving forces and firing-rate limits",
+    "summary": "Quantitative nerve and muscle models require stated ion selectivity, sign conventions, and time units. These textbook extensions make calculations interpretable without assuming a universal membrane voltage.",
+    "keyPoints": [
+      "A potassium-selective membrane follows the potassium Nernst potential; changing extracellular potassium changes the equilibrium potential even when intracellular potassium is fixed.",
+      "At 37°C, doubling extracellular potassium while holding intracellular potassium fixed shifts E_K positively by 61 log10(2), about 18 mV.",
+      "For a cation, V_m minus E_ion is negative for an inward driving force and positive for an outward driving force.",
+      "The reciprocal of an absolute refractory period gives a theoretical upper firing-rate bound; metabolic, adaptation, and other recovery limits can lower actual rates."
+    ],
+    "examTraps": [
+      "An equilibrium potential is not itself a driving force unless compared with the actual membrane voltage.",
+      "A 2 ms refractory period means 0.002 s, not 2 s; the upper bound is 500/s."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "If V_m=-80 mV and E_K=-90 mV, which direction does open-channel potassium flux favor?",
+        "answer": "V_m-E_K=+10 mV, so potassium is driven outward in the stated model."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+        "locator": "Printed p. 64; local PDF p. 76",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+        "locator": "Printed p. 65; local PDF p. 77",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+        "locator": "Printed p. 76; local PDF p. 88",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-009-objective",
+        "text": "Calculate the potassium equilibrium-potential shift produced by doubling extracellular potassium in a stated selective-membrane model.",
+        "questionIds": [
+          "limb-audit-phys-009"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-010-objective",
+        "text": "Calculate electrochemical driving forces and predict the directions of sodium and potassium flux.",
+        "questionIds": [
+          "limb-audit-phys-010"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-011-objective",
+        "text": "Convert an absolute refractory period into a theoretical maximum firing frequency without claiming a sustainable physiological rate.",
+        "questionIds": [
+          "limb-audit-phys-011"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-nmj-concept",
+    "moduleId": "limb-audit-phys-excitation-module",
+    "subject": "physiology",
+    "title": "Presynaptic release and end-plate signaling",
+    "summary": "Neuromuscular transmission links a motor-terminal action potential to a graded end-plate current before a muscle spike is triggered. Presynaptic release, receptor current, and transmitter removal are distinct mechanisms.",
+    "keyPoints": [
+      "Motor-terminal depolarization opens voltage-gated calcium channels, and calcium entry triggers acetylcholine vesicle exocytosis.",
+      "Nicotinic end-plate channels conduct cations, including sodium and potassium; they are distinct from voltage-gated muscle sodium channels.",
+      "At the normal negative resting potential, inward sodium current exceeds outward potassium current through open end-plate channels, producing net depolarization.",
+      "Acetylcholinesterase rapidly hydrolyzes released acetylcholine and limits continued receptor stimulation as muscle excitability recovers."
+    ],
+    "examTraps": [
+      "An end-plate potential is a local graded signal, whereas the resulting muscle action potential is regenerative.",
+      "Direct muscle stimulation bypasses a presynaptic release defect; this does not imply failure of the contractile proteins."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Why can a nicotinic channel conduct potassium yet depolarize the end plate?",
+        "answer": "It also conducts sodium, whose larger inward current at rest exceeds outward potassium current."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "locator": "Printed p. 93,96; local PDF p. 104,107",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "locator": "Printed p. 94-95; local PDF p. 105-106",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "locator": "Printed p. 95-96; local PDF p. 106-107",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-012-objective",
+        "text": "Localize a presynaptic calcium-entry defect to impaired acetylcholine exocytosis.",
+        "questionIds": [
+          "limb-audit-phys-012"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-013-objective",
+        "text": "Explain why a nonselective cation channel produces a depolarizing end-plate potential.",
+        "questionIds": [
+          "limb-audit-phys-013"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-014-objective",
+        "text": "Explain how acetylcholinesterase terminates the transmitter signal independently of muscle-channel recovery.",
+        "questionIds": [
+          "limb-audit-phys-014"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-coupling-concept",
+    "moduleId": "limb-audit-phys-excitation-module",
+    "subject": "physiology",
+    "title": "Excitation-contraction coupling and calcium regulation",
+    "summary": "The muscle membrane signal must reach the fiber interior, trigger SR calcium release, and alter thin-filament regulation. A failure at any link can impair force despite intact events earlier in the sequence.",
+    "keyPoints": [
+      "T-tubules are membrane invaginations with extracellular-fluid lumens that bring the electrical signal close to deep myofibrils.",
+      "In skeletal muscle, the dihydropyridine voltage sensor couples T-tubule depolarization to opening of adjacent SR ryanodine receptor channels.",
+      "Released calcium binds troponin C and changes the troponin-tropomyosin complex to permit myosin binding to actin.",
+      "SERCA removes cytosolic calcium by ATP-dependent pumping into the SR; impaired release and impaired reuptake produce different time courses."
+    ],
+    "examTraps": [
+      "The T-tubule lumen and the SR calcium store are different compartments.",
+      "Normal surface action potentials alone do not prove normal deep excitation or SR release."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Which event fails when T-tubule voltage sensing cannot activate the SR release channel?",
+        "answer": "The initial rise of cytosolic calcium is impaired despite preserved membrane action potentials."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "locator": "Printed p. 98; local PDF p. 109",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "locator": "Printed p. 97-98; local PDF p. 108-109",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 83-84; local PDF p. 94-95",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-015-objective",
+        "text": "Identify the T-tubule voltage-sensor to SR-release-channel link in skeletal-muscle excitation-contraction coupling.",
+        "questionIds": [
+          "limb-audit-phys-015"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-016-objective",
+        "text": "Connect transverse-tubule conduction to the spatial coordination of calcium release in a large skeletal-muscle fiber.",
+        "questionIds": [
+          "limb-audit-phys-016"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-017-objective",
+        "text": "Explain how calcium binding to troponin C permits actin-myosin interaction.",
+        "questionIds": [
+          "limb-audit-phys-017"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-crossbridge-concept",
+    "moduleId": "limb-audit-phys-excitation-module",
+    "subject": "physiology",
+    "title": "ATP-dependent stages of the cross-bridge cycle",
+    "summary": "ATP binding, ATP hydrolysis, and calcium-dependent exposure of actin sites perform different jobs. Separating these events explains both repeated force generation and the failure of normal detachment when ATP is absent.",
+    "keyPoints": [
+      "Calcium controls access to actin binding sites through troponin and tropomyosin, rather than supplying the ATP used by myosin.",
+      "A new ATP molecule binding to an attached myosin head permits detachment from actin.",
+      "Hydrolysis of bound ATP leaves ADP and phosphate associated with a detached primed head, storing energy in its conformation.",
+      "The primed head can interact with accessible actin to generate force; new cycles still require ATP, and ATP is also required for calcium pumping."
+    ],
+    "examTraps": [
+      "ATP depletion does not simply create normal relaxation; attached cross-bridges can remain strongly bound.",
+      "Binding ATP and hydrolyzing ATP are separate steps with different immediate consequences."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What distinguishes the effects of ATP binding and hydrolysis on myosin?",
+        "answer": "Binding promotes detachment; hydrolysis primes the detached head for a subsequent force-generating interaction."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 84; local PDF p. 95",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 84-85; local PDF p. 95-96",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-018-objective",
+        "text": "Distinguish ATP-dependent myosin detachment from calcium-dependent activation of thin filaments.",
+        "questionIds": [
+          "limb-audit-phys-018"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-019-objective",
+        "text": "Identify the primed ADP-phosphate myosin state and distinguish it from ATP-binding detachment.",
+        "questionIds": [
+          "limb-audit-phys-019"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-units-concept",
+    "moduleId": "limb-audit-phys-force-module",
+    "subject": "physiology",
+    "title": "Motor-unit recruitment and twitch patterns",
+    "summary": "Whole-muscle force can increase by adding units, changing their firing pattern, or changing the response of already recruited fibers. Controlled stimulation helps distinguish these mechanisms instead of labeling every force increase recruitment.",
+    "keyPoints": [
+      "Small motor units permit fine increments of force because each recruited motor neuron adds fewer extrafusal fibers.",
+      "During gradually increasing voluntary drive, the size principle generally recruits smaller more excitable motor neurons before larger units.",
+      "Asynchronous firing across different motor units can smooth whole-muscle force even if each unit's twitches are not fused.",
+      "Temporal overlap depends on stimulus interval relative to mechanical twitch duration; equally brief electrical spikes need not imply identical summation.",
+      "Treppe is a progressive rise in discrete twitch peaks after rest; it can be observed while tension returns to baseline between stimuli."
+    ],
+    "examTraps": [
+      "Smooth whole-muscle force does not by itself prove fused tetanus within every motor unit.",
+      "A fixed isolated axon stimulated fully cannot recruit other axons merely because its twitch peaks rise."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "At a 50 ms stimulus interval, which unit is more likely to summate: one with a 20 ms twitch or a 200 ms twitch?",
+        "answer": "The 200 ms twitch overlaps later stimuli; this predicts mechanical overlap but does not guarantee complete fusion."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 88-89; local PDF p. 99-100",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 89; local PDF p. 100",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 87-89; local PDF p. 98-100",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-020-objective",
+        "text": "Relate motor-unit size to the fineness of force control.",
+        "questionIds": [
+          "limb-audit-phys-020"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-021-objective",
+        "text": "Apply the size principle to recruitment during graded voluntary muscle activation.",
+        "questionIds": [
+          "limb-audit-phys-021"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-022-objective",
+        "text": "Distinguish asynchronous motor-unit force smoothing from tetanus within a single motor unit.",
+        "questionIds": [
+          "limb-audit-phys-022"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-023-objective",
+        "text": "Use stimulus interval and twitch duration to compare frequency summation across motor units.",
+        "questionIds": [
+          "limb-audit-phys-023"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-024-objective",
+        "text": "Recognize treppe while distinguishing it from fused tetanus, recruitment, and passive tension.",
+        "questionIds": [
+          "limb-audit-phys-024"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-length-concept",
+    "moduleId": "limb-audit-phys-force-module",
+    "subject": "physiology",
+    "title": "Active force, overlap, and shortening velocity",
+    "summary": "Active force depends on the geometry of available actin-myosin interactions, while shortening velocity depends on opposing load. Maximal activation therefore cannot remove either a mechanical overlap limit or a load-dependent speed change.",
+    "keyPoints": [
+      "Active force requires contact between myosin heads and actin; a sarcomere with no thin-thick overlap cannot generate cross-bridge force.",
+      "The textbook length-tension model shows greatest active tension near optimal overlap and reduced tension at excessively short or long lengths.",
+      "Passive elastic tension can rise during stretch even while the active cross-bridge contribution decreases.",
+      "With activation and starting length matched, increasing a concentric opposing load reduces shortening velocity; at maximum isometric load the shortening velocity is zero."
+    ],
+    "examTraps": [
+      "A rise in total measured tension does not prove a rise in active force.",
+      "Maximal activation does not mean maximal velocity at every load."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Why can an electrically activated overstretched sarcomere generate no active force?",
+        "answer": "Its thick and thin filaments may have lost overlap, so activation cannot create actomyosin cross-bridges."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 85; local PDF p. 96",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 85-86; local PDF p. 96-97",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-025-objective",
+        "text": "Explain the loss of active force when actin-myosin overlap is absent.",
+        "questionIds": [
+          "limb-audit-phys-025"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-026-objective",
+        "text": "Predict shortening velocity across submaximal loads without confusing maximal activation with fixed velocity.",
+        "questionIds": [
+          "limb-audit-phys-026"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-work-concept",
+    "moduleId": "limb-audit-phys-force-module",
+    "subject": "physiology",
+    "title": "Limb work, power, torque, and active lengthening",
+    "summary": "Limb mechanics requires matching force to displacement or to the perpendicular joint moment arm. Balanced opposing forces can hold a joint still, and active muscles can shorten, hold length, or lengthen while producing force.",
+    "keyPoints": [
+      "External work for a constant force parallel to the displacement equals force times displacement; newtons times meters give joules.",
+      "External shortening power equals force times shortening velocity, so the largest force or highest speed alone need not produce the largest power.",
+      "Joint torque equals muscle force times its perpendicular moment arm; a shorter moment arm requires greater muscle force for the same torque.",
+      "At a stationary joint, an increase in antagonist torque must be offset by additional agonist torque if external torque is unchanged.",
+      "Concentric action is active shortening, isometric action holds approximately constant length, and eccentric action develops force during active lengthening."
+    ],
+    "examTraps": [
+      "A distance measured along a bone is not automatically the perpendicular moment arm.",
+      "Zero joint displacement can coexist with active force, coactivation, ATP use, and heat production."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "How much force is required for 6 N m of torque with a 0.02 m moment arm?",
+        "answer": "F=6/0.02=300 N, assuming that muscle is the only source of the required torque."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 86; local PDF p. 97",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 85-87; local PDF p. 96-98",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 90; local PDF p. 101",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 87,90; local PDF p. 98,101",
+        "basis": "book"
+      },
+      {
+        "title": "Upper and Lower Limbs Review (personal review synthesis)",
+        "locator": "PDF p. 86: concentric/eccentric/isometric row",
+        "basis": "notes"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 85: Sports Physiology",
+        "locator": "Printed p. 1102; local PDF p. 1059: holding force and stretch of an already contracted muscle",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 85: Sports Physiology",
+        "locator": "Printed p. 1102; local PDF p. 1059 (power defined as work per time)",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-027-objective",
+        "text": "Calculate external mechanical work for a constant load displaced in the force direction.",
+        "questionIds": [
+          "limb-audit-phys-027"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-028-objective",
+        "text": "Compare external power from force-velocity data and recognize why neither maximal speed nor maximal force alone determines power.",
+        "questionIds": [
+          "limb-audit-phys-028"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-029-objective",
+        "text": "Calculate muscle force from static torque balance using perpendicular moment arms.",
+        "questionIds": [
+          "limb-audit-phys-029"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-030-objective",
+        "text": "Predict the force consequence of a changing muscle moment arm at fixed required joint torque.",
+        "questionIds": [
+          "limb-audit-phys-030"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-031-objective",
+        "text": "Apply torque balance when antagonist coactivation changes at a stationary limb joint.",
+        "questionIds": [
+          "limb-audit-phys-031"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-045-objective",
+        "text": "Distinguish eccentric force production from concentric shortening, isometric action, and passive stretch.",
+        "questionIds": [
+          "limb-audit-phys-045"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-energy-concept",
+    "moduleId": "limb-audit-phys-energy-module",
+    "subject": "physiology",
+    "title": "Energy supply, fiber specialization, and fatigue",
+    "summary": "Muscle ATP demand outlasts the directly stored ATP pool. Immediate phosphate buffering, ongoing metabolism, and oxidative fiber specializations support different demands, while normal electrical excitation does not exclude contractile fatigue.",
+    "keyPoints": [
+      "The small ATP pool needs rapid resynthesis during contraction; phosphocreatine transfers high-energy phosphate to ADP as an immediate buffer.",
+      "Glycolytic and oxidative pathways contribute to ongoing ATP resynthesis, with oxidative metabolism supporting sustained activity when fuel and oxygen are available.",
+      "High mitochondrial abundance, myoglobin, and capillary supply support endurance-oriented oxidative muscle fibers.",
+      "Reduced force with preserved muscle action potentials can reflect limitations downstream of electrical excitation; the observation alone does not identify a unique metabolic cause."
+    ],
+    "examTraps": [
+      "Energy systems overlap in time; they are not switches that activate only when the previous source reaches zero.",
+      "Slow and fast fibers include physiological variation; do not treat every type-II subtype as identical.",
+      "Oxidative fiber morphology is assessed in the parallel histology audit (limb-audit-hist-041); a near-repeat physiology question was removed during independent review."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Does a normal muscle action potential rule out fatigue?",
+        "answer": "No. Calcium handling, cross-bridge performance, or metabolic support can limit force after the electrical event."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 86; local PDF p. 97",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 90; local PDF p. 101",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "locator": "Printed p. 88; local PDF p. 99",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-032-objective",
+        "text": "Identify phosphocreatine as an immediate ATP-regeneration buffer during brief intense contraction.",
+        "questionIds": [
+          "limb-audit-phys-032"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-033-objective",
+        "text": "Distinguish small immediate energy stores from ongoing oxidative ATP supply during sustained muscle activity.",
+        "questionIds": [
+          "limb-audit-phys-033"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-034-objective",
+        "text": "Interpret preserved muscle electrical excitation during fatigue without attributing all force loss to one unmeasured mechanism.",
+        "questionIds": [
+          "limb-audit-phys-034"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-spindle-concept",
+    "moduleId": "limb-audit-phys-feedback-module",
+    "subject": "physiology",
+    "title": "Spindle length sensing and gamma control",
+    "summary": "Muscle spindles encode length and its changes while gamma motor activity adjusts tension in their intrafusal sensory apparatus. These feedback mechanisms are textbook extensions relevant to controlled limb movement.",
+    "keyPoints": [
+      "Primary group Ia endings have strong sensitivity to rapid changes in spindle length and also signal sustained length.",
+      "Secondary group II endings chiefly contribute to the maintained static length response.",
+      "Gamma efferents contract the intrafusal ends, which can stretch the central sensory region even when total muscle length is unchanged.",
+      "Alpha-gamma coactivation helps keep spindle sensory regions appropriately tensioned while extrafusal muscle fibers shorten."
+    ],
+    "examTraps": [
+      "Gamma fibers are motor efferents; group Ia and II fibers are sensory afferents.",
+      "A fixed whole-muscle length does not guarantee a fixed spindle firing rate if gamma drive changes."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Why would alpha activation without suitable gamma activation risk reducing spindle feedback during shortening?",
+        "answer": "Extrafusal shortening can leave the spindle sensory region slack; intrafusal contraction helps maintain its operating tension."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 699-700; local PDF p. 677-678",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 701; local PDF p. 679",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 699; local PDF p. 677",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-036-objective",
+        "text": "Distinguish dynamic and static components of spindle afferent discharge during ramp-and-hold stretch.",
+        "questionIds": [
+          "limb-audit-phys-036"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-037-objective",
+        "text": "Explain the role of alpha-gamma coactivation in maintaining spindle sensitivity during voluntary muscle shortening.",
+        "questionIds": [
+          "limb-audit-phys-037"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-038-objective",
+        "text": "Predict how gamma activation can change spindle discharge without changing total muscle length.",
+        "questionIds": [
+          "limb-audit-phys-038"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-stretch-concept",
+    "moduleId": "limb-audit-phys-feedback-module",
+    "subject": "physiology",
+    "title": "Stretch-reflex circuitry and selective sensory loss",
+    "summary": "The tendon jerk begins with a sudden stretch of muscle spindles and uses a short spinal excitatory pathway back to the same muscle. Testing the sensory and motor limbs separately distinguishes reflex loss from failure to activate muscle directly.",
+    "keyPoints": [
+      "A primary Ia spindle afferent enters the spinal cord through a dorsal root and can directly excite the homonymous alpha motor neuron.",
+      "Alpha-motor output returns through a ventral root to extrafusal muscle fibers; the excitatory Ia connection is monosynaptic.",
+      "The patellar tendon tap rapidly stretches quadriceps spindles; its location at the tendon does not make it a Golgi tendon-organ reflex.",
+      "Selective interruption of spindle afferents impairs reflex feedback while intact motor axons can still evoke a direct contraction; lost feedback can reduce movement smoothing."
+    ],
+    "examTraps": [
+      "Calling the excitatory stretch-reflex limb monosynaptic does not make every associated inhibitory circuit monosynaptic.",
+      "Preserved direct contraction does not prove that the sensory limb of a reflex is intact."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What does a tendon tap stimulate in the ordinary knee jerk?",
+        "answer": "A sudden quadriceps stretch excites muscle spindles and the dynamic stretch reflex."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 697-700; local PDF p. 675-678",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 702; local PDF p. 680",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 700-701; local PDF p. 678-679",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-039-objective",
+        "text": "Trace the monosynaptic excitatory limb of the stretch reflex without treating all associated reflex circuits as monosynaptic.",
+        "questionIds": [
+          "limb-audit-phys-039"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-040-objective",
+        "text": "Identify the sensory receptor in a tendon jerk and distinguish a stretch reflex from the Golgi tendon reflex.",
+        "questionIds": [
+          "limb-audit-phys-040"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-042-objective",
+        "text": "Use preserved direct motor activation to distinguish sensory-feedback loss from loss of the muscle efferent pathway.",
+        "questionIds": [
+          "limb-audit-phys-042"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-phys-protective-concept",
+    "moduleId": "limb-audit-phys-feedback-module",
+    "subject": "physiology",
+    "title": "Tension feedback and coordinated withdrawal",
+    "summary": "Classic tendon-organ inhibition and polysynaptic withdrawal circuits provide distinct feedback responses. Their receptor inputs, synapses, and patterns of muscle recruitment must be separated to predict limb behavior.",
+    "keyPoints": [
+      "Golgi tendon organs report tendon tension through group Ib afferents, whereas spindles primarily report length and its change.",
+      "In the classic inhibitory spinal Ib pathway, the afferent excites an inhibitory interneuron that reduces motor output to the same muscle.",
+      "Noxious withdrawal uses interneuronal circuits to activate muscles that remove the stimulated part and inhibit opposing muscles.",
+      "The crossed extensor response uses spinal pathways crossing the midline to recruit opposite-side extensors and support the body as a lower limb withdraws."
+    ],
+    "examTraps": [
+      "The specified classic inhibitory Ib circuit is a teaching model; do not infer that every Ib action in every locomotor state is identical.",
+      "A crossed extensor response is polysynaptic and should not be assigned the latency of direct motor stimulation."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "How do the afferent and local synaptic route differ between the classic stretch reflex and inhibitory Golgi tendon reflex?",
+        "answer": "The short excitatory stretch pathway uses Ia input directly to alpha motor neurons; the classic tendon pathway uses Ib input and an inhibitory interneuron."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 702-703; local PDF p. 680-681",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 703-705; local PDF p. 681-683",
+        "basis": "book"
+      },
+      {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "locator": "Printed p. 704-705; local PDF p. 682-683",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-phys-041-objective",
+        "text": "Trace the classic Ib inhibitory circuit while distinguishing it from the Ia stretch reflex.",
+        "questionIds": [
+          "limb-audit-phys-041"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-043-objective",
+        "text": "Explain coordinated withdrawal through polysynaptic excitation and reciprocal inhibition.",
+        "questionIds": [
+          "limb-audit-phys-043"
+        ]
+      },
+      {
+        "id": "limb-audit-phys-044-objective",
+        "text": "Explain the spinal organization and supporting role of the crossed extensor response.",
+        "questionIds": [
+          "limb-audit-phys-044"
+        ]
+      }
+    ]
+  }
+]

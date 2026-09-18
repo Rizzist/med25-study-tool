@@ -19,7 +19,8 @@ export type AnatomySystem =
   | "connective"
   | "ligaments"
   | "tendons"
-  | "organs";
+  | "organs"
+  | "regions";
 
 // Every Tissue maps to exactly one system. Typed as `Record<Tissue, …>` so `tsc` refuses to compile
 // if a future tissue is added to the union without being classified here (belt to the runtime test's
@@ -44,6 +45,7 @@ export const tissueToSystem: Record<Tissue, AnatomySystem> = {
   lung: "organs",
   gland: "organs",
   mucosa: "organs",
+  region: "regions",
 };
 
 export type AnatomySystemMeta = {
@@ -67,6 +69,7 @@ export const SYSTEMS: AnatomySystemMeta[] = [
   { id: "ligaments", label: "Ligaments", order: 9.1 },
   { id: "tendons", label: "Tendons", order: 9.2 },
   { id: "organs", label: "Organs", order: 10 },
+  { id: "regions", label: "Regions & spaces", order: 11 },
 ];
 
 export function systemForStructure(structure: AnatomyStructure): AnatomySystem {

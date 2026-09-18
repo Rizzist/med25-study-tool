@@ -1,0 +1,743 @@
+[
+  {
+    "id": "limb-audit-emb-concept-milestones",
+    "moduleId": "limb-audit-emb-module-morphogenesis",
+    "subject": "embryology",
+    "title": "External limb milestones",
+    "summary": "Limb morphogenesis proceeds through visible outpocketings, buds, hand and foot plates, and separated digits. Upper-limb development begins slightly earlier than lower-limb development, so their appearances should be compared with this normal lag in mind.",
+    "keyPoints": [
+      "Visible limb outpocketings appear near the end of developmental week 4.",
+      "The hindlimb follows the forelimb by approximately one to two days.",
+      "Flattened hand and foot plates are described in 6-week embryos.",
+      "The illustrated human hand has complete digit separation at 56 days, approximately 8 weeks."
+    ],
+    "examTraps": [
+      "Do not equate a hand plate with an already separated set of fingers.",
+      "Developmental weeks in these questions follow Langman's staging and are not a conversion exercise in obstetric pregnancy dating."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What normal timing difference separates initial upper- and lower-limb emergence?",
+        "answer": "The upper limb appears first, and the lower limb follows approximately one to two days later."
+      },
+      {
+        "prompt": "What distinguishes the 6-week plate stage from the 8-week hand appearance?",
+        "answer": "At about 6 weeks the distal limb is a flattened plate; by about 8 weeks finger separation is complete."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 169–170; physical PDF pp. 181–182; Figures 12.1 and 12.3",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-001",
+        "text": "Place initial upper- and lower-limb emergence on the developmental timetable.",
+        "questionIds": [
+          "limb-audit-emb-001"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-002",
+        "text": "Distinguish the plate stage from later separation of digits.",
+        "questionIds": [
+          "limb-audit-emb-002"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-skeletal-maturation",
+    "moduleId": "limb-audit-emb-module-morphogenesis",
+    "subject": "embryology",
+    "title": "Cartilage templates and skeletal maturation",
+    "summary": "Early limb mesenchyme forms cartilage models before long-bone ossification proceeds from primary diaphyseal centers. The pattern of growth plates and ossification centers supplies information about maturation that cannot be replaced by external limb size alone.",
+    "keyPoints": [
+      "The first hyaline cartilage models of limb bones appear by developmental week 6.",
+      "Primary centers are present in all limb long bones by developmental week 12.",
+      "Primary ossification spreads from the diaphysis toward the ends of a cartilaginous model.",
+      "Langman contrasts growth plates at both ends of a major long bone with a plate at one extremity in smaller bones such as phalanges.",
+      "The appearance of hand and wrist ossification centers is useful for evaluating skeletal maturation."
+    ],
+    "examTraps": [
+      "A cartilage template is not a secondary ossification center.",
+      "Do not extend the book's general birth-time account into a claim that every epiphysis ossifies only after birth.",
+      "Bone age assessment does not by itself identify a unique molecular cause."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Where does a limb long bone's primary ossification center lie?",
+        "answer": "It lies in the shaft or diaphysis, with ossification progressing toward the ends of the model."
+      },
+      {
+        "prompt": "Why can similar hand size coexist with different bone ages?",
+        "answer": "External size and the developmental appearance of ossification centers describe different aspects of growth."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 170–172, 176; physical PDF pp. 182–184, 188",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-003",
+        "text": "Distinguish a cartilage template from an ossified long bone during early limb development.",
+        "questionIds": [
+          "limb-audit-emb-003"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-004",
+        "text": "Locate and time the primary ossification centers of limb long bones.",
+        "questionIds": [
+          "limb-audit-emb-004"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-005",
+        "text": "Compare epiphyseal-plate distribution in long limb bones and phalanges.",
+        "questionIds": [
+          "limb-audit-emb-005"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-006",
+        "text": "Interpret the developmental information supplied by hand and wrist ossification centers.",
+        "questionIds": [
+          "limb-audit-emb-006"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-field-and-bone-pattern",
+    "moduleId": "limb-audit-emb-module-patterning",
+    "subject": "embryology",
+    "title": "Limb-field position and regional skeletal pattern",
+    "summary": "The mechanisms that position a limb along the body axis, specify its identity, and shape its skeletal elements are related but distinguishable. The ZPA also remains spatially related to the posterior AER as the limb elongates.",
+    "keyPoints": [
+      "Overlapping axial HOX expression helps determine limb-field position along the trunk.",
+      "The cranial boundary of HOXB8 expression is associated with the forelimb field's cranial border.",
+      "Forelimb and hindlimb identity involve TBX5 and TBX4/PITX1, respectively.",
+      "The ZPA moves distally during growth to remain near the posterior border of the AER.",
+      "HOXA and HOXD expression programs help determine the types and shapes of bones in the limb's regional segments."
+    ],
+    "examTraps": [
+      "A shifted axial limb field need not imply a switch from forelimb to hindlimb identity.",
+      "The ZPA is posterior mesenchyme, whereas the AER is distal ectoderm."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "How does the ZPA remain related to the growing distal limb?",
+        "answer": "It moves distalward and remains close to the posterior AER border."
+      },
+      {
+        "prompt": "What distinction separates HOXB8 positioning from TBX5 identity?",
+        "answer": "HOXB8 expression contributes to where the limb field lies, while TBX5 specifies forelimb identity."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 173–175; physical PDF pp. 185–187; Figure 12.8",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-007",
+        "text": "Separate axial limb-field positioning from forelimb-versus-hindlimb specification.",
+        "questionIds": [
+          "limb-audit-emb-007"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-012",
+        "text": "Track the ZPA's location during continued limb outgrowth.",
+        "questionIds": [
+          "limb-audit-emb-012"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-013",
+        "text": "Distinguish limb-axis signaling from the HOX programs that shape regional skeletal elements.",
+        "questionIds": [
+          "limb-audit-emb-013"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-ridge-boundary",
+    "moduleId": "limb-audit-emb-module-patterning",
+    "subject": "embryology",
+    "title": "AER induction, boundary, and differentiation front",
+    "summary": "AER formation requires induction and a spatial ectodermal boundary before its FGF output maintains distal mesenchyme. Langman's illustrated differentiation model then follows a moving proximal-to-distal front through the limb's regional segments.",
+    "keyPoints": [
+      "Ventral ectodermal BMP signaling through MSX2 participates in AER induction after outgrowth begins.",
+      "Dorsal RADICAL FRINGE expression and ventral repression create the boundary used to localize SER2 and the AER in the book's model.",
+      "EN1 helps create that border by repressing RADICAL FRINGE in ventral ectoderm.",
+      "AP2 is the marker given for the undifferentiated zone beneath an active AER.",
+      "Figure 12.9 shows distal advance of the differentiation front and termination of AER FGF secretion as the autopod differentiates."
+    ],
+    "examTraps": [
+      "Induction of an AER and FGF-mediated maintenance by an established AER are different stages.",
+      "Marker expression alone should not be overstated as proof of a fully established causal role; the figure qualifies AP2's possible role.",
+      "Normal final FGF termination is distinct from premature experimental removal of the ridge."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What establishes the ectodermal border for the AER in Langman's boundary model?",
+        "answer": "Dorsal RADICAL FRINGE expression, opposed by ventral EN1 repression, localizes SER2 and the ridge at the interface."
+      },
+      {
+        "prompt": "Which marker distinguishes the active undifferentiated zone from regional segment markers?",
+        "answer": "AP2 marks the undifferentiated zone, whereas MEIS1, HOXA11, and HOXA13 mark regional differentiated segments."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 173–175; physical PDF pp. 185–187; Figures 12.8A and 12.9",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-008",
+        "text": "Identify the ventral ectoderm signal that helps induce the apical ectodermal ridge.",
+        "questionIds": [
+          "limb-audit-emb-008"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-009",
+        "text": "Explain how an ectodermal expression boundary localizes the AER.",
+        "questionIds": [
+          "limb-audit-emb-009"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-010",
+        "text": "Recognize AP2 as a marker of undifferentiated mesenchyme beneath an active AER.",
+        "questionIds": [
+          "limb-audit-emb-010"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-011",
+        "text": "Follow the differentiation front and distinguish normal terminal differentiation from premature AER removal.",
+        "questionIds": [
+          "limb-audit-emb-011"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-014",
+        "text": "Predict the boundary defect caused by loss of ventral repression of RADICAL FRINGE.",
+        "questionIds": [
+          "limb-audit-emb-014"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-myogenic-domains",
+    "moduleId": "limb-audit-emb-module-myogenesis",
+    "subject": "embryology",
+    "title": "Myogenic domains and precursor induction",
+    "summary": "Myogenic precursors that cross the lateral somitic frontier enter an environment containing parietal lateral plate mesoderm. This abaxial domain differs from the primaxial domain and cannot be assigned to every upper-limb-associated muscle without attention to its specific origin.",
+    "keyPoints": [
+      "The abaxial domain combines lateral plate mesoderm with somite-derived cells that crossed the lateral somitic frontier.",
+      "The primaxial domain contains somite-derived cells around the neural tube.",
+      "Distal limb muscles are abaxial in Table 11.1, while rhomboids, levator scapulae, and latissimus dorsi are listed as primaxial.",
+      "VLL muscle-cell induction involves signals from lateral plate mesoderm and adjacent ectoderm that activate MyoD.",
+      "The book distinguishes VLL induction from the neural-tube/notochord signals associated with DML precursors."
+    ],
+    "examTraps": [
+      "Abaxial is a domain designation and does not mean that the muscle fiber itself arose from lateral plate mesoderm.",
+      "Primaxial/abaxial is not simply another name for dorsal-ramus/ventral-ramus innervation.",
+      "Table 11.1 qualifies the precise lower-limb origin as incompletely determined; do not erase its footnote."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What changes when a VLL precursor crosses the lateral somitic frontier?",
+        "answer": "It enters the abaxial domain and receives developmental signals in the lateral plate environment while retaining its somitic lineage."
+      },
+      {
+        "prompt": "Which upper-limb-associated muscles are primaxial in Table 11.1?",
+        "answer": "Rhomboids, levator scapulae, and latissimus dorsi are listed as primaxial exceptions to a blanket abaxial label."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "11 - Muscular System",
+        "locator": "Printed pp. 162–165; physical PDF pp. 174–177; Table 11.1 and Figures 11.1, 11.3",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-015",
+        "text": "Define the abaxial domain using cell movement across the lateral somitic frontier.",
+        "questionIds": [
+          "limb-audit-emb-015"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-016",
+        "text": "Recognize the primaxial shoulder-girdle exceptions to a blanket abaxial description of upper-limb-associated muscles.",
+        "questionIds": [
+          "limb-audit-emb-016"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-017",
+        "text": "Distinguish the inductive environment of ventrolateral myogenic precursors from that of dorsomedial precursors.",
+        "questionIds": [
+          "limb-audit-emb-017"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-muscle-assembly",
+    "moduleId": "limb-audit-emb-module-myogenesis",
+    "subject": "embryology",
+    "title": "Muscle assembly, functional differentiation, and segmental continuity",
+    "summary": "Muscle development includes precursor fusion, rearrangement of segmental contributions, tendon differentiation, and acquisition of innervation. These steps explain why an adult limb's mature muscle pattern differs from a simple map of isolated original somites.",
+    "keyPoints": [
+      "SCLERAXIS is identified as a regulator of tendon development.",
+      "Myoblasts fuse to form long multinucleated skeletal muscle fibers before mature striations appear.",
+      "Innervation is a prerequisite for complete functional differentiation of limb muscle cells.",
+      "Further splitting and fusion can bring contributions from several original segments into one mature limb muscle.",
+      "Growth and rotation alter dermatome geometry while leaving a recognizable orderly segmental sensory sequence."
+    ],
+    "examTraps": [
+      "A normal myogenic lineage and connective-tissue template do not remove the need for motor innervation.",
+      "One mature limb muscle need not correspond to exactly one embryonic somite.",
+      "The tendon regulator can be tested without generalizing a regional tendon-origin statement to every tendon of the limb."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Why can one mature limb muscle contain cells from several original segments?",
+        "answer": "Initially segmented muscle masses undergo successive splitting and fusion during limb development."
+      },
+      {
+        "prompt": "What developmental requirement remains if muscle cells migrate and are patterned normally but receive no motor axons?",
+        "answer": "Complete functional differentiation still requires innervation."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "11 - Muscular System",
+        "locator": "Printed p. 165; physical PDF p. 177; skeletal muscle and tendons",
+        "basis": "book"
+      },
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 171–173; physical PDF pp. 183–185; Figures 12.6 and 12.7",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-018",
+        "text": "Identify a transcription factor regulating tendon development independently of myogenic specification.",
+        "questionIds": [
+          "limb-audit-emb-018"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-019",
+        "text": "Explain how multinucleated skeletal muscle fibers arise during differentiation.",
+        "questionIds": [
+          "limb-audit-emb-019"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-020",
+        "text": "Explain why correct myogenic origin and connective-tissue pattern do not alone guarantee full functional differentiation.",
+        "questionIds": [
+          "limb-audit-emb-020"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-021",
+        "text": "Explain how one mature limb muscle can receive contributions from more than one original segment.",
+        "questionIds": [
+          "limb-audit-emb-021"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-022",
+        "text": "Relate altered limb skin geometry to preserved segmental sensory relationships.",
+        "questionIds": [
+          "limb-audit-emb-022"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-defect-morphology",
+    "moduleId": "limb-audit-emb-module-congenital",
+    "subject": "embryology",
+    "title": "Limb reduction and digital defect morphology",
+    "summary": "Descriptions of absent segments, shortened segments, fused digits, extra digits, and central clefts refer to different developmental phenotypes. Careful morphology narrows the category without automatically determining the mechanism or functional completeness.",
+    "keyPoints": [
+      "Amelia denotes complete absence, whereas meromelia denotes partial absence of an extremity.",
+      "Phocomelia is a meromelia pattern with absent intervening long bones and distal structures close to the trunk.",
+      "Micromelia describes present but abnormally short limb segments; brachydactyly describes shortened digits.",
+      "The cleft hand/foot pattern described in the chapter commonly lacks the third ray between the second and fourth metacarpal/metatarsal regions.",
+      "An extra digit can lack proper muscle connections and need not have normal independent movement."
+    ],
+    "examTraps": [
+      "The presence of a rudimentary hand excludes complete absence of that whole extremity.",
+      "Shortening, absence, fusion, and duplication are separate descriptive findings.",
+      "An extra skeletal digit does not prove complete muscle and nerve integration."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What distinguishes phocomelia from micromelia?",
+        "answer": "Phocomelia features loss of intervening long-bone segments with distal parts near the trunk; micromelia retains segments that are abnormally short."
+      },
+      {
+        "prompt": "Which ray is usually deficient in the central cleft pattern?",
+        "answer": "The third metacarpal and its phalanges are almost always absent in the described hand pattern."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 176–177; physical PDF pp. 188–189; Figures 12.11 and 12.12",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-023",
+        "text": "Distinguish complete absence, partial absence, and the phocomelia subtype.",
+        "questionIds": [
+          "limb-audit-emb-023"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-024",
+        "text": "Separate generalized limb shortening from isolated digit shortening.",
+        "questionIds": [
+          "limb-audit-emb-024"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-025",
+        "text": "Recognize the central-ray deficiency in the illustrated cleft-hand or cleft-foot pattern.",
+        "questionIds": [
+          "limb-audit-emb-025"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-026",
+        "text": "Distinguish the presence of an extra digit from normal functional muscle integration.",
+        "questionIds": [
+          "limb-audit-emb-026"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-developmental-disruption",
+    "moduleId": "limb-audit-emb-module-congenital",
+    "subject": "embryology",
+    "title": "Teratogen timing and limb disruption",
+    "summary": "Similar distal limb loss can arise through different developmental routes. The exposure interval, constriction morphology, and evidence of AER or vascular disturbance should be considered before assigning a specific causal mechanism.",
+    "keyPoints": [
+      "Langman identifies developmental weeks 4 and 5 as especially sensitive for thalidomide-associated limb defects.",
+      "Amniotic bands can produce constriction rings and amputations of limbs or digits.",
+      "Transverse deficiency describes preserved proximal structures with partial or complete loss distal to a plane.",
+      "The chapter lists AER/signaling disruption and vascular abnormalities among possible causes of transverse deficiencies.",
+      "A descriptive reduction pattern does not by itself establish a unique gene, exposure, or amniotic-band cause."
+    ],
+    "examTraps": [
+      "Do not infer a documented amniotic strand from transverse loss alone.",
+      "An embryonic teratogen window is separate from the later appearance of ossification centers.",
+      "These are developmental learning questions, not medication or pregnancy-management instructions."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Which findings particularly support an amniotic-band disruption?",
+        "answer": "A constriction ring with an associated strand and distal tissue loss supports a mechanical disruption mechanism."
+      },
+      {
+        "prompt": "What causal inference is safe from a transverse deficiency alone?",
+        "answer": "Several causes remain possible, including AER/signaling disruption and vascular abnormalities."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 176, 178–179; physical PDF pp. 188, 190–191; Figure 12.16",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-027",
+        "text": "Identify the especially sensitive developmental interval for thalidomide-associated limb defects.",
+        "questionIds": [
+          "limb-audit-emb-027"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-028",
+        "text": "Recognize amniotic-band disruption from constriction and amputation morphology.",
+        "questionIds": [
+          "limb-audit-emb-028"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-029",
+        "text": "Avoid assigning a unique cause to the morphology of transverse limb deficiency.",
+        "questionIds": [
+          "limb-audit-emb-029"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-syndromic-limbs",
+    "moduleId": "limb-audit-emb-module-congenital",
+    "subject": "embryology",
+    "title": "Limb findings that indicate a broader syndrome",
+    "summary": "Limb abnormalities can be part of syndromes affecting the heart, cranial sutures, extracellular matrix, eyes, or aorta. The associated findings are often more discriminating than a general description of an abnormal radius or limb length alone.",
+    "keyPoints": [
+      "TBX5-related Holt–Oram syndrome combines upper-limb abnormalities with septal or conduction defects.",
+      "Baller–Gerold syndrome combines craniosynostosis with radial aplasia.",
+      "Most osteogenesis imperfecta cases in the cited account involve COL1A1 or COL1A2 and type I collagen.",
+      "Osteogenesis imperfecta can produce short bowed hypomineralized long bones, fractures, and blue sclerae.",
+      "FBN1-related Marfan syndrome includes long slender limbs, hyperflexible joints, lens displacement, and ascending-aortic abnormalities."
+    ],
+    "examTraps": [
+      "Radial absence alone does not uniquely diagnose Holt–Oram or Baller–Gerold; accompanying findings matter.",
+      "COL1A1/COL1A2 and FBN1 encode different extracellular-matrix components and produce different characteristic phenotypes."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Which association suggests TBX5 when a radial abnormality is present?",
+        "answer": "An atrial or ventricular septal defect or cardiac conduction abnormality supports the Holt–Oram association."
+      },
+      {
+        "prompt": "What distinguishes the classic limb patterns of osteogenesis imperfecta and Marfan syndrome?",
+        "answer": "Fragile bowed hypomineralized short bones with blue sclerae favor osteogenesis imperfecta; long slender limbs with lens and aortic findings favor Marfan syndrome."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed pp. 177–178; physical PDF pp. 189–190; Figure 12.13",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-030",
+        "text": "Connect radial-side upper-limb malformation with the cardiac manifestations of Holt–Oram syndrome.",
+        "questionIds": [
+          "limb-audit-emb-030"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-031",
+        "text": "Recognize the association of radial aplasia with premature cranial-suture fusion.",
+        "questionIds": [
+          "limb-audit-emb-031"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-032",
+        "text": "Relate osteogenesis imperfecta limb findings to type I collagen genes.",
+        "questionIds": [
+          "limb-audit-emb-032"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-033",
+        "text": "Connect long slender limbs and associated findings with fibrillin abnormality.",
+        "questionIds": [
+          "limb-audit-emb-033"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-joint-muscle-conditions",
+    "moduleId": "limb-audit-emb-module-congenital",
+    "subject": "embryology",
+    "title": "Congenital joint and muscle-pattern disorders",
+    "summary": "Hip instability, clubfoot, pectoral deficiency with hand defects, and congenital contractures are distinct patterns. Their developmental explanations require separating prenatal structure, muscle presence, muscle function, and restriction of fetal movement.",
+    "keyPoints": [
+      "Acetabular and femoral-head underdevelopment may be prenatal even when hip dislocation becomes evident after birth.",
+      "PITX1 mutations or microdeletions have been associated with clubfoot, but the chapter describes multiple possible causes.",
+      "Poland sequence includes absent pectoralis minor and partial pectoralis major loss with nipple/areola and often ipsilateral digital abnormalities.",
+      "Langman's abbreviated description uses amyoplasia for generalized muscle absence; distinguish this structural-development example from muscle that is present but has a contractile defect.",
+      "Many distal arthrogryposes involve abnormal muscle function related to genes regulating the contractile apparatus."
+    ],
+    "examTraps": [
+      "The timing of diagnosis does not prove the timing when a developmental abnormality began.",
+      "A genetic cause in one clubfoot family should not be generalized to every case.",
+      "A muscle can be present yet function abnormally enough to contribute to prenatal contractures."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "What pectoral and hand combination suggests Poland sequence?",
+        "answer": "Pectoral deficiency with nipple/areola abnormality and ipsilateral short or fused digits fits the described sequence."
+      },
+      {
+        "prompt": "How do amyoplasia and a contractile-apparatus form of distal arthrogryposis differ?",
+        "answer": "In Langman's comparison, amyoplasia is the muscle-absence example, whereas a contractile-apparatus distal arthrogryposis involves abnormal function despite muscle being present."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "11 - Muscular System",
+        "locator": "Printed pp. 166–167; physical PDF pp. 178–179; Figure 11.5",
+        "basis": "book"
+      },
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "12 - Limbs",
+        "locator": "Printed p. 178; physical PDF p. 190",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-034",
+        "text": "Separate prenatal abnormal joint formation from the timing when hip dislocation becomes evident.",
+        "questionIds": [
+          "limb-audit-emb-034"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-035",
+        "text": "Interpret PITX1-related clubfoot as one etiologic association without treating it as a universal mechanism.",
+        "questionIds": [
+          "limb-audit-emb-035"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-036",
+        "text": "Recognize Poland sequence from the combination of pectoral and ipsilateral hand defects.",
+        "questionIds": [
+          "limb-audit-emb-036"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-037",
+        "text": "Differentiate muscle absence from impaired muscle function as routes to congenital contractures.",
+        "questionIds": [
+          "limb-audit-emb-037"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limb-audit-emb-concept-skeletal-dysplasia",
+    "moduleId": "limb-audit-emb-module-dysplasia",
+    "subject": "embryology",
+    "title": "Appendicular features of selected skeletal dysplasias",
+    "summary": "The skeletal chapter adds selected disorders that directly affect long bones, clavicles, fingers, and toes. Their appendicular manifestations help distinguish defects of endochondral growth, clavicular development, and syndromic digital pattern.",
+    "keyPoints": [
+      "FGFR3-associated achondroplasia and related disorders involve abnormal endochondral bone formation affecting long-bone growth.",
+      "RUNX2 mutations cause cleidocranial dysplasia with hypoplastic or aplastic clavicles.",
+      "Delayed closure of cranial sutures and dental abnormalities accompany the classic cleidocranial pattern.",
+      "Apert syndrome is associated with symmetric syndactyly of hands and feet in Table 10.1.",
+      "Crouzon syndrome has no hand or foot defects in the table, while Jackson–Weiss has foot anomalies with hands usually spared."
+    ],
+    "examTraps": [
+      "These Chapter 10 extensions are included for their appendicular findings, not as an expansion into the complete craniofacial syllabus.",
+      "Do not confuse growth-plate receptor abnormalities with early AER induction merely because both involve FGF terminology.",
+      "The FGFR2-associated syndromes require phenotype distinctions rather than gene-name matching alone."
+    ],
+    "retrievalPrompts": [
+      {
+        "prompt": "Which developmental process links FGFR3-related dysplasia to short limbs?",
+        "answer": "Abnormal endochondral bone formation adversely affects the growth of long bones."
+      },
+      {
+        "prompt": "How do appendicular findings distinguish Apert and Crouzon syndromes in the table?",
+        "answer": "Apert includes symmetric hand and foot syndactyly, while Crouzon has no hand or foot defects."
+      }
+    ],
+    "sources": [
+      {
+        "title": "Langman's Medical Embryology",
+        "edition": "15th ed.",
+        "chapter": "10 - The Axial Skeleton",
+        "locator": "Printed pp. 154–155; physical PDF pp. 166–167; Table 10.1",
+        "basis": "book"
+      }
+    ],
+    "scope": "book-extension",
+    "objectives": [
+      {
+        "id": "limb-audit-emb-objective-038",
+        "text": "Connect short-limb skeletal dysplasia with FGFR3-associated disturbance of endochondral development.",
+        "questionIds": [
+          "limb-audit-emb-038"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-039",
+        "text": "Recognize the appendicular clavicular findings of RUNX2-associated cleidocranial dysplasia.",
+        "questionIds": [
+          "limb-audit-emb-039"
+        ]
+      },
+      {
+        "id": "limb-audit-emb-objective-040",
+        "text": "Use hand and foot involvement to distinguish the FGFR2-associated patterns tabulated by Langman.",
+        "questionIds": [
+          "limb-audit-emb-040"
+        ]
+      }
+    ]
+  }
+]

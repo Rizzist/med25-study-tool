@@ -10,6 +10,7 @@ const subjectTitle = {
   embryology: "Embryology",
   physiology: "Physiology",
   biochemistry: "Biochemistry",
+  religion: "Religion",
 } as const;
 
 export function LessonGuide({ exam, lessons, onStartLesson }: { exam: LessonExamId; lessons: CoreLesson[]; onStartLesson?: (lesson: CoreLesson) => void }) {

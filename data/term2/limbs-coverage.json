@@ -1,18 +1,18 @@
 {
   "schemaVersion": "1.0.0",
   "examId": "term2-limbs",
-  "updatedAt": "2026-09-08",
-  "moduleCount": 36,
-  "conceptCount": 165,
-  "objectiveCount": 1309,
-  "mcqLinkedObjectives": 1309,
+  "updatedAt": "2026-09-13",
+  "moduleCount": 51,
+  "conceptCount": 202,
+  "objectiveCount": 1417,
+  "mcqLinkedObjectives": 1417,
   "objectivesSampledBeforeExpansion": 1203,
-  "objectivesFirstSampledByExpansion": 106,
-  "questionCount": 3427,
-  "addedQuestionCount": 130,
-  "imageQuestionCount": 3141,
+  "objectivesFirstSampledByExpansion": 214,
+  "questionCount": 3563,
+  "addedQuestionCount": 266,
+  "imageQuestionCount": 3145,
   "interactive3dCount": 32,
-  "distinctPracticeItems": 2380,
+  "distinctPracticeItems": 2516,
   "unmappedQuestionIds": [],
   "unsampledObjectiveIds": [],
   "byModule": [
@@ -402,6 +402,171 @@
       "newlySampledObjectives": 5
     },
     {
+      "id": "limb-audit-emb-module-morphogenesis",
+      "title": "Limb morphogenesis and skeletal maturation",
+      "subject": "embryology",
+      "conceptCount": 2,
+      "objectiveCount": 6,
+      "linkedObjectiveCount": 6,
+      "questions": 6,
+      "distinctItems": 6,
+      "newlySampledObjectives": 6
+    },
+    {
+      "id": "limb-audit-emb-module-patterning",
+      "title": "Limb fields and molecular patterning",
+      "subject": "embryology",
+      "conceptCount": 2,
+      "objectiveCount": 8,
+      "linkedObjectiveCount": 8,
+      "questions": 8,
+      "distinctItems": 8,
+      "newlySampledObjectives": 8
+    },
+    {
+      "id": "limb-audit-emb-module-myogenesis",
+      "title": "Limb muscle and tendon development",
+      "subject": "embryology",
+      "conceptCount": 2,
+      "objectiveCount": 8,
+      "linkedObjectiveCount": 8,
+      "questions": 8,
+      "distinctItems": 8,
+      "newlySampledObjectives": 8
+    },
+    {
+      "id": "limb-audit-emb-module-congenital",
+      "title": "Congenital limb patterns and disruptions",
+      "subject": "embryology",
+      "conceptCount": 4,
+      "objectiveCount": 15,
+      "linkedObjectiveCount": 15,
+      "questions": 15,
+      "distinctItems": 15,
+      "newlySampledObjectives": 15
+    },
+    {
+      "id": "limb-audit-emb-module-dysplasia",
+      "title": "Skeletal dysplasia affecting the limbs",
+      "subject": "embryology",
+      "conceptCount": 1,
+      "objectiveCount": 3,
+      "linkedObjectiveCount": 3,
+      "questions": 3,
+      "distinctItems": 3,
+      "newlySampledObjectives": 3
+    },
+    {
+      "id": "limb-audit-hist-module-connective-cartilage",
+      "title": "Connective tissue and cartilage",
+      "subject": "histology",
+      "conceptCount": 3,
+      "objectiveCount": 6,
+      "linkedObjectiveCount": 6,
+      "questions": 13,
+      "distinctItems": 13,
+      "newlySampledObjectives": 6
+    },
+    {
+      "id": "limb-audit-hist-module-joints",
+      "title": "Synovial joint tissues",
+      "subject": "histology",
+      "conceptCount": 2,
+      "objectiveCount": 3,
+      "linkedObjectiveCount": 3,
+      "questions": 5,
+      "distinctItems": 5,
+      "newlySampledObjectives": 3
+    },
+    {
+      "id": "limb-audit-hist-module-bone",
+      "title": "Bone organization and tissue repair",
+      "subject": "histology",
+      "conceptCount": 3,
+      "objectiveCount": 6,
+      "linkedObjectiveCount": 6,
+      "questions": 14,
+      "distinctItems": 14,
+      "newlySampledObjectives": 6
+    },
+    {
+      "id": "limb-audit-hist-module-muscle",
+      "title": "Skeletal muscle tissue",
+      "subject": "histology",
+      "conceptCount": 2,
+      "objectiveCount": 4,
+      "linkedObjectiveCount": 4,
+      "questions": 9,
+      "distinctItems": 9,
+      "newlySampledObjectives": 4
+    },
+    {
+      "id": "limb-audit-hist-module-nerve",
+      "title": "Peripheral nerve tissue",
+      "subject": "histology",
+      "conceptCount": 3,
+      "objectiveCount": 5,
+      "linkedObjectiveCount": 5,
+      "questions": 11,
+      "distinctItems": 11,
+      "newlySampledObjectives": 5
+    },
+    {
+      "id": "limb-audit-phys-conduction-module",
+      "title": "Peripheral axon excitability and conduction",
+      "subject": "physiology",
+      "conceptCount": 3,
+      "objectiveCount": 11,
+      "linkedObjectiveCount": 11,
+      "questions": 11,
+      "distinctItems": 11,
+      "newlySampledObjectives": 11
+    },
+    {
+      "id": "limb-audit-phys-excitation-module",
+      "title": "Neuromuscular transmission and force activation",
+      "subject": "physiology",
+      "conceptCount": 3,
+      "objectiveCount": 8,
+      "linkedObjectiveCount": 8,
+      "questions": 8,
+      "distinctItems": 8,
+      "newlySampledObjectives": 8
+    },
+    {
+      "id": "limb-audit-phys-force-module",
+      "title": "Motor units and limb mechanics",
+      "subject": "physiology",
+      "conceptCount": 3,
+      "objectiveCount": 13,
+      "linkedObjectiveCount": 13,
+      "questions": 13,
+      "distinctItems": 13,
+      "newlySampledObjectives": 13
+    },
+    {
+      "id": "limb-audit-phys-energy-module",
+      "title": "Muscle energy supply and fatigue",
+      "subject": "physiology",
+      "conceptCount": 1,
+      "objectiveCount": 3,
+      "linkedObjectiveCount": 3,
+      "questions": 3,
+      "distinctItems": 3,
+      "newlySampledObjectives": 3
+    },
+    {
+      "id": "limb-audit-phys-feedback-module",
+      "title": "Muscle sensory feedback and limb reflexes",
+      "subject": "physiology",
+      "conceptCount": 3,
+      "objectiveCount": 9,
+      "linkedObjectiveCount": 9,
+      "questions": 9,
+      "distinctItems": 9,
+      "newlySampledObjectives": 9
+    },
+    {
       "id": "limbs-visual-atlas",
       "title": "Anatomy image identification & location",
       "subject": "anatomy",
@@ -414,7 +579,7 @@
     }
   ],
   "sourceInventory": {
-    "mapped": 227,
+    "mapped": 280,
     "limits": [
       {
         "source": "Local Term 2 teacher materials",
@@ -597,6 +762,102 @@
         "conceptIds": [],
         "status": "outside-scope",
         "note": "Comprehensive expansion · This is a bounded gap-driven extension, not a claim that every paragraph or clinical variant in Gray42 has a question. Existing osteology, compartment and pathway foundations were retained; vascular variants, surgical treatment protocols and unsampled microscopic details remain outside this draft's completeness claim. Independent review: this is a scope-boundary note, not a linked mapped concept."
+      },
+      {
+        "source": "Upper Limb Carryover/Videos/*.transcript.txt",
+        "locator": "Seven files: Osteology of the upper limb 1; Axilla 1–2; Arm 1–2; Forearm 1–2. Full-file developmental-term search with context inspection.",
+        "topic": "Primary lecture evidence for embryology",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] Available transcripts concern regional anatomy. Search hits for cartilage and rotation concern adult structures/actions. 'Embryo' at Osteology line 99 is an ASR corruption in a scapula discussion, not an embryology lecture statement. No new item is claimed course-grounded from these transcripts."
+      },
+      {
+        "source": "Dedicated limb embryology slides, lecture notes, recordings, or syllabus",
+        "locator": "Local /Users/rizzist/Documents/Med Slides inventory; no matching dedicated primary limb embryology material found",
+        "topic": "Unconfirmed primary course coverage",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "[limb-science-audit] Cannot determine teacher-specific embryology content, exam weighting, or a lecturer's preferred terminology from unavailable files. A comprehensive textbook audit is not a claim of complete course recovery."
+      },
+      {
+        "source": "Langman's Medical Embryology, Chapter 12",
+        "locator": "Printed p.172/PDF184 versus printed p.179/PDF191",
+        "topic": "Limb-field position versus innervation ranges",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] The main text gives lower-limb muscle innervation as L4–S3, while the chapter summary gives lower-limb field position as L2–S2. These are different stated contexts and should not be collapsed into one root map; no universal-range MCQ was authored from them."
+      },
+      {
+        "source": "Langman's Medical Embryology, Chapters 10–11",
+        "locator": "Outside selected limb-relevant excerpts: cranial vault, vertebral column, ribs, head, cardiac and smooth muscle",
+        "topic": "Bounded chapter-extension scope",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] Included only appendicular skeletal dysplasia and limb-associated muscle development/defects. Craniofacial material is used only when the hand, foot, radius, or clavicle finding distinguishes the selected syndrome; no general axial or organ-system expansion added."
+      },
+      {
+        "source": "/Users/rizzist/Downloads/Embryology 1-9.pdf",
+        "locator": "Physical p.10, teratogen table; Varicella row",
+        "topic": "Infectious teratology beyond the bounded limb chapter audit",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] The notes mention varicella-associated limb hypoplasia together with skin and eye/CNS findings. No new infectious-teratology question is added from this abbreviated row without auditing the primary infection passage; it remains a clearly identified residual extension rather than an implied covered objective."
+      },
+      {
+        "source": "INTRODUCTION.pptx",
+        "locator": "24-slide local deck; slides 15-16, 19 inspected for staining context",
+        "topic": "General histology preparation and staining",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] Introductory course evidence exists for general staining and preparation. No new generic histotechnology drill was added; specific cartilage and myelin processing artifacts are book extensions."
+      },
+      {
+        "source": "Dedicated limb histology lecture or practical checklist",
+        "locator": "Not located in inspected Med Slides tree",
+        "topic": "Limb-specific teaching and exam weighting",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "[limb-science-audit] Lecture-supported carryover; exam inclusion unconfirmed. No teacher-specific limb histology weighting, specimen checklist or dedicated lower-limb histology deck was found."
+      },
+      {
+        "source": "Standalone connective-tissue, cartilage or skeletal-muscle teaching decks",
+        "locator": "No matching standalone deck found under /Users/rizzist/Documents/Med Slides",
+        "topic": "Additional primary teaching evidence",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "[limb-science-audit] The local BONE&JOINT TISSUE file covers cartilage. Tendon and skeletal-muscle content is drawn from Junqueira and labeled book-extension."
+      },
+      {
+        "source": "Junqueira's Basic Histology and local lecture files",
+        "locator": "Scope audit of selected limb tissue chapters and carryover slides",
+        "topic": "Residual specialist detail",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] Fine four-zone enthesis architecture, meniscal vascular-zone healing, pathology grading and a large novel image-spotter set remain outside this bounded source-based expansion. No missing material is claimed covered by question count."
+      },
+      {
+        "source": "Arm 1.transcript.txt and companion SRT",
+        "locator": "TXT lines 85-95, sensory feedback discussion; complete transcript inventory searched",
+        "topic": "Limited upper-limb lecture physiology evidence",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] The passage supports a general need for muscle sensory information, but ASR and statements about exclusive brachialis/radial sensory supply are problematic. It does not establish spindle subtypes, Ib circuitry, or gamma control. No new physiology question relies on those questionable statements."
+      },
+      {
+        "source": "Upper Limb Carryover — seven lecture transcripts",
+        "locator": "Osteology 1, Axilla 1-2, Arm 1-2, Forearm 1-2; .transcript.txt inventory and physiological-term search",
+        "topic": "Regional anatomy lecture scope",
+        "conceptIds": [],
+        "status": "outside-scope",
+        "note": "[limb-science-audit] These are principally regional anatomical teaching. They do not confirm a dedicated muscle-physiology syllabus; anatomical nerve-deficit questions remain with the anatomy audit."
+      },
+      {
+        "source": "Dedicated limb physiology lecture, practical protocol, or teacher syllabus",
+        "locator": "No dedicated limb-specific physiology teaching file located in inspected Med Slides inventory",
+        "topic": "Unconfirmed limb physiology course weighting",
+        "conceptIds": [],
+        "status": "source-missing",
+        "note": "[limb-science-audit] Teacher-defined limb physiology objectives, muscle/nerve experimental protocols, and practical apparatus details remain unavailable. Do not present book extensions or calculated model values as recovered lecture or official examination content."
       }
     ]
   },

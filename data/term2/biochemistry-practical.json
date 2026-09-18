@@ -1,0 +1,360 @@
+{
+  "schemaVersion": "1.0.0",
+  "examId": "term2-biochemistry",
+  "updatedAt": "2026-09-13",
+  "title": "Biochemistry practicals",
+  "scopeNote": "Authored practice from your six local practical stations and saved review. These are not past-paper questions. Lecturer-specific protocols remain named; numerical cases state their own data and are not claimed as your laboratory observations.",
+  "totals": {
+    "questions": 86,
+    "stations": 6,
+    "challenge": 42,
+    "images": 7
+  },
+  "stations": [
+    {
+      "id": "lab",
+      "moduleId": "biochem2-practical-lab",
+      "title": "Safety & laboratory equipment",
+      "summary": "Choose equipment by what it measures or controls, then identify technique errors before they become analytical errors. The review clarifies precision, centrifuge balancing and safe chemical handling.",
+      "checkpoints": [
+        "A volumetric flask contains one calibrated final volume; a volumetric pipette delivers a fixed calibrated aliquot. A beaker is not precision volumetric glassware.",
+        "Read the bottom of a clear aqueous meniscus at eye level; dispense with a pipette aid and obey the delivery markings.",
+        "Balance centrifuge tubes by mass in opposite positions; a water bath controls temperature and a fume hood removes hazardous vapours.",
+        "Use the local chemical SOP: no mouth pipetting, no ignition source near acetone, and use the eyewash immediately for an eye splash."
+      ],
+      "traps": [
+        "A flask marked to contain and a pipette marked to deliver are not interchangeable.",
+        "Equipment names alone do not establish safe handling or measurement precision."
+      ],
+      "sources": [
+        {
+          "title": "01 - Laboratory safety and equipment.pdf",
+          "locator": "PDF pp. 3–44",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Safety & laboratory equipment",
+          "basis": "notes"
+        }
+      ],
+      "questionIds": [
+        "biochem2-practical-lab-stock-flask-v1",
+        "biochem2-practical-lab-final-volume-v1",
+        "biochem2-practical-lab-meniscus-v1",
+        "biochem2-practical-lab-mohr-delivery-v1",
+        "biochem2-practical-lab-centrifuge-balance-v1",
+        "biochem2-practical-lab-fumehood-v1",
+        "biochem2-practical-lab-pipette-aid-v1",
+        "biochem2-practical-lab-eye-splash-v1",
+        "biochem2-practical-lab-filter-versus-salt-v1",
+        "biochem2-practical-lab-balance-tare-v1",
+        "biochem2-practical-lab-acid-dilution-v1",
+        "biochem2-practical-lab-acetone-bath-v1"
+      ],
+      "challengeIds": [],
+      "imageIds": [
+        "biochem2-practical-lab-mohr-delivery-v1"
+      ]
+    },
+    {
+      "id": "titration",
+      "moduleId": "biochem2-practical-titration",
+      "title": "Titration & equivalent calculations",
+      "summary": "Calculate the delivered titre before applying equivalent balance. Distinguish the indicator endpoint from the chemical equivalence point, and predict the direction of common burette and dilution errors.",
+      "checkpoints": [
+        "Delivered titre = final burette reading minus initial reading; a nonzero initial reading is not an error if subtracted correctly.",
+        "At equivalence, acid normality × acid volume = base normality × base volume. Normality counts reactive equivalents per litre.",
+        "The local titrant is 0.1 N NaOH; the endpoint is a faint pink persisting at least 30 seconds after mixing with phenolphthalein.",
+        "Add titrant slowly near the endpoint and swirl. Diluting a measured acid aliquot with water does not change its amount of acid."
+      ],
+      "traps": [
+        "Endpoint overshoot, an initially air-filled burette tip, and using the final reading alone can overestimate acid normality.",
+        "Equivalence does not always mean pH 7, and normality does not always equal molarity."
+      ],
+      "sources": [
+        {
+          "title": "02 - Titration practical and calculations.pdf",
+          "locator": "PDF pp. 3–9",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Titration & equivalent calculations",
+          "basis": "notes"
+        }
+      ],
+      "questionIds": [
+        "biochem2-practical-titration-nonzero-burette-v1",
+        "biochem2-practical-titration-diprotic-normality-v1",
+        "biochem2-practical-titration-endpoint-observation-v1",
+        "biochem2-practical-titration-overshoot-direction-v1",
+        "biochem2-practical-titration-flask-dilution-v1",
+        "biochem2-practical-titration-wet-burette-v1",
+        "biochem2-practical-titration-tip-air-v1",
+        "biochem2-practical-titration-equivalence-ph-v1",
+        "biochem2-practical-titration-unknown-aliquot-v1",
+        "biochem2-practical-titration-titre-difference-v1",
+        "biochem2-practical-titration-duplicate-titres-v1",
+        "biochem2-practical-titration-base-molarity-v1"
+      ],
+      "challengeIds": [
+        "biochem2-practical-titration-diprotic-normality-v1",
+        "biochem2-practical-titration-overshoot-direction-v1",
+        "biochem2-practical-titration-flask-dilution-v1",
+        "biochem2-practical-titration-wet-burette-v1",
+        "biochem2-practical-titration-tip-air-v1",
+        "biochem2-practical-titration-equivalence-ph-v1",
+        "biochem2-practical-titration-duplicate-titres-v1"
+      ],
+      "imageIds": []
+    },
+    {
+      "id": "photometry",
+      "moduleId": "biochem2-practical-photometry",
+      "title": "Spectrophotometry & serum protein",
+      "summary": "Move from light transmission to a defensible concentration result: choose the wavelength, blank correctly, construct standards, check linearity and apply the appropriate calibration or Biuret ratio.",
+      "checkpoints": [
+        "T = I/I₀, A = −log₁₀(T), and %T = 100 × 10^(−A). Absorbance is dimensionless, not the absorbed light intensity I₀ − I.",
+        "At fixed wavelength, path length and chemistry, A = εbc. Absorbance is linear with concentration in the valid range; transmittance is not.",
+        "The dye experiment uses bromophenol-blue standards prepared from 10 mg/L stock to a final 10 mL, a distilled-water blank, and a 480–620 nm wavelength scan.",
+        "The protein protocol uses 0.5 mL sample or 7 g/dL standard plus 2 mL Biuret reagent, a saline blank, 15 minutes at room temperature and measurement at 540 nm.",
+        "Protein = Atest/Astandard × 7 g/dL when sample and standard follow the same assay. Apply a separate pre-dilution factor only if the original sample was pre-diluted."
+      ],
+      "traps": [
+        "The dye wavelength scan, dye calibration and protein assay are separate experiments; their OD readings are not interchangeable.",
+        "A concentration result fixes an OD ratio, not a unique pair of raw readings. Numerical teaching cases are not claimed as student measurements."
+      ],
+      "sources": [
+        {
+          "title": "03 - Spectrophotometry and Beer-Lambert law.pptx",
+          "locator": "Slides 3–31",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Spectrophotometry & serum protein",
+          "basis": "notes"
+        }
+      ],
+      "questionIds": [
+        "biochem2-practical-photometry-transmittance-ratio-v1",
+        "biochem2-practical-photometry-protein-transmittance-v1",
+        "biochem2-practical-photometry-doubling-concentration-v1",
+        "biochem2-practical-photometry-pathlength-v1",
+        "biochem2-practical-photometry-lambda-max-v1",
+        "biochem2-practical-photometry-dye-standard-v1",
+        "biochem2-practical-photometry-blank-selection-v1",
+        "biochem2-practical-photometry-biuret-calculation-v1",
+        "biochem2-practical-photometry-ratio-not-raw-v1",
+        "biochem2-practical-photometry-shared-dilution-v1",
+        "biochem2-practical-photometry-predilution-v1",
+        "biochem2-practical-photometry-intercept-v1",
+        "biochem2-practical-photometry-above-linearity-v1",
+        "biochem2-practical-photometry-cuvette-mismatch-v1",
+        "biochem2-practical-photometry-turbid-sample-v1",
+        "biochem2-practical-photometry-blank-standard-control-v1",
+        "biochem2-practical-photometry-timing-wavelength-v1",
+        "biochem2-practical-photometry-reference-meaning-v1"
+      ],
+      "challengeIds": [
+        "biochem2-practical-photometry-doubling-concentration-v1",
+        "biochem2-practical-photometry-ratio-not-raw-v1",
+        "biochem2-practical-photometry-shared-dilution-v1",
+        "biochem2-practical-photometry-predilution-v1",
+        "biochem2-practical-photometry-intercept-v1",
+        "biochem2-practical-photometry-above-linearity-v1",
+        "biochem2-practical-photometry-cuvette-mismatch-v1",
+        "biochem2-practical-photometry-turbid-sample-v1",
+        "biochem2-practical-photometry-blank-standard-control-v1"
+      ],
+      "imageIds": [
+        "biochem2-practical-photometry-doubling-concentration-v1"
+      ]
+    },
+    {
+      "id": "proteins",
+      "moduleId": "biochem2-practical-proteins",
+      "title": "Amino-acid & protein identification tests",
+      "summary": "Interpret a pattern of reactions rather than treating any single colour as a complete protein identification. Keep chemical targets, positive appearances, controls and the two lecturer protocols distinct.",
+      "checkpoints": [
+        "Ninhydrin tests free amino groups: most α-amino acids give purple, while proline/hydroxyproline give yellow. Ebrahimi heats 5 minutes; Emamgholipour specifies 10 minutes.",
+        "Xanthoproteic nitration gives yellow, enhanced to orange on alkalinisation. Tyr and Trp respond strongly; phenylalanine can respond weakly or negatively under usual conditions.",
+        "Pauly detects tyrosine or histidine by red azo coupling; Hopkins–Cole detects the tryptophan indole group as a violet interface.",
+        "Qualitative Biuret requires at least two peptide bonds and alkaline Cu²⁺. Denaturation alone need not destroy its peptide-bond response.",
+        "TCA precipitates protein: 1+1 mL of protein and 15% TCA in Ebrahimi, versus 2+2 mL in Emamgholipour; both retain a 1:1 volume ratio."
+      ],
+      "traps": [
+        "A negative residue-specific test does not prove absence of protein.",
+        "Do not merge the ninhydrin heating times or TCA volumes into a nonexistent universal protocol."
+      ],
+      "sources": [
+        {
+          "title": "04A - Amino acid and protein qualitative tests - Ebrahimi.pptx",
+          "locator": "Ebrahimi slides 15–29; Emamgholipour PDF pp. 13–27",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Amino-acid & protein identification tests",
+          "basis": "notes"
+        },
+        {
+          "title": "04B - Amino acid and protein qualitative tests - Emamgholipour.pdf",
+          "locator": "PDF pp. 13–27",
+          "basis": "slides"
+        }
+      ],
+      "questionIds": [
+        "biochem2-practical-proteins-ninhydrin-yellow-v1",
+        "biochem2-practical-proteins-ninhydrin-not-protein-v1",
+        "biochem2-practical-proteins-ninhydrin-times-v1",
+        "biochem2-practical-proteins-decarboxylation-v1",
+        "biochem2-practical-proteins-xantho-orange-v1",
+        "biochem2-practical-proteins-phenylalanine-v1",
+        "biochem2-practical-proteins-pauly-pair-v1",
+        "biochem2-practical-proteins-pauly-reagent-order-v1",
+        "biochem2-practical-proteins-hopkins-interface-v1",
+        "biochem2-practical-proteins-negative-hopkins-v1",
+        "biochem2-practical-proteins-tripeptide-v1",
+        "biochem2-practical-proteins-hydrolysis-figure-v1",
+        "biochem2-practical-proteins-blue-versus-violet-v1",
+        "biochem2-practical-proteins-tca-protocols-v1",
+        "biochem2-practical-proteins-tca-meaning-v1",
+        "biochem2-practical-proteins-tyrosine-pattern-v1",
+        "biochem2-practical-proteins-control-failure-v1",
+        "biochem2-practical-proteins-denaturation-v1"
+      ],
+      "challengeIds": [
+        "biochem2-practical-proteins-ninhydrin-not-protein-v1",
+        "biochem2-practical-proteins-decarboxylation-v1",
+        "biochem2-practical-proteins-phenylalanine-v1",
+        "biochem2-practical-proteins-pauly-reagent-order-v1",
+        "biochem2-practical-proteins-negative-hopkins-v1",
+        "biochem2-practical-proteins-hydrolysis-figure-v1",
+        "biochem2-practical-proteins-tca-protocols-v1",
+        "biochem2-practical-proteins-tyrosine-pattern-v1",
+        "biochem2-practical-proteins-control-failure-v1",
+        "biochem2-practical-proteins-denaturation-v1"
+      ],
+      "imageIds": [
+        "biochem2-practical-proteins-hydrolysis-figure-v1"
+      ]
+    },
+    {
+      "id": "enzymes",
+      "moduleId": "biochem2-practical-enzymes",
+      "title": "Enzyme experiments & controls",
+      "summary": "Read the actual rennin and urease tube plans, identify the variable being changed, and separate expected direction of reaction from measured results. Do not infer a detailed inhibition mechanism from one colour observation.",
+      "checkpoints": [
+        "Rennin/chymosin clots milk; renal renin is a different enzyme. Pre-equilibrate milk and enzyme separately before mixing and starting the timer.",
+        "Enzyme-concentration experiment: 2 mL milk with 1, 0.5 or 0.25 mL rennin and enough water to make 3 mL total. More active enzyme generally shortens clotting time.",
+        "Substrate experiment: 2, 1 or 0.5 mL milk with compensating water, plus 1 mL rennin in every tube. Dilution changes milk substrate and physical clot formation.",
+        "Urease converts urea to ammonia and CO₂; ammonia increases pH, changing phenol red. Compare urea alone, urea plus zinc sulfate, and thiourea under matched conditions.",
+        "Temperature and pH affect activity; high temperature can denature enzyme. A fixed-time colour or clot endpoint is not automatically an initial-rate measurement."
+      ],
+      "traps": [
+        "The slide’s “renin” spelling does not make the milk-clotting enzyme the renal angiotensinogen-cleaving enzyme.",
+        "Reduced colour in zinc sulfate does not prove competitive inhibition, and three milk-clot times do not establish a valid Km."
+      ],
+      "sources": [
+        {
+          "title": "05 - Enzyme practical.pptx",
+          "locator": "Slides 3–21",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Enzyme experiments & controls",
+          "basis": "notes"
+        }
+      ],
+      "questionIds": [
+        "biochem2-practical-enzymes-rennin-identity-v1",
+        "biochem2-practical-enzymes-enzyme-table-control-v1",
+        "biochem2-practical-enzymes-enzyme-relative-v1",
+        "biochem2-practical-enzymes-enzyme-time-v1",
+        "biochem2-practical-enzymes-substrate-table-v1",
+        "biochem2-practical-enzymes-pre-equilibration-v1",
+        "biochem2-practical-enzymes-temperature-denaturation-v1",
+        "biochem2-practical-enzymes-ph-specificity-v1",
+        "biochem2-practical-enzymes-urease-comparison-v1",
+        "biochem2-practical-enzymes-urease-specificity-v1",
+        "biochem2-practical-enzymes-ammonia-indicator-v1",
+        "biochem2-practical-enzymes-zinc-mechanism-limit-v1",
+        "biochem2-practical-enzymes-enzyme-saturation-v1",
+        "biochem2-practical-enzymes-activation-equilibrium-v1",
+        "biochem2-practical-enzymes-clot-not-km-v1",
+        "biochem2-practical-enzymes-indicator-control-v1"
+      ],
+      "challengeIds": [
+        "biochem2-practical-enzymes-enzyme-table-control-v1",
+        "biochem2-practical-enzymes-enzyme-relative-v1",
+        "biochem2-practical-enzymes-substrate-table-v1",
+        "biochem2-practical-enzymes-temperature-denaturation-v1",
+        "biochem2-practical-enzymes-urease-comparison-v1",
+        "biochem2-practical-enzymes-zinc-mechanism-limit-v1",
+        "biochem2-practical-enzymes-enzyme-saturation-v1",
+        "biochem2-practical-enzymes-activation-equilibrium-v1",
+        "biochem2-practical-enzymes-clot-not-km-v1",
+        "biochem2-practical-enzymes-indicator-control-v1"
+      ],
+      "imageIds": [
+        "biochem2-practical-enzymes-enzyme-table-control-v1",
+        "biochem2-practical-enzymes-enzyme-relative-v1",
+        "biochem2-practical-enzymes-substrate-table-v1",
+        "biochem2-practical-enzymes-urease-comparison-v1"
+      ]
+    },
+    {
+      "id": "flame",
+      "moduleId": "biochem2-practical-flame",
+      "title": "Flame photometry & electrolytes",
+      "summary": "Understand flame emission and calibration without mistaking visible flame colour for a complete quantitative analysis. The local deck does not supply a full numerical standard-preparation SOP, so the calculation cases state their own teaching data.",
+      "checkpoints": [
+        "Flame photometry detects characteristic light emitted as excited species relax; it is not a measurement of transmitted light through a coloured solution.",
+        "Within a validated calibration range, emission intensity can quantify selected elements. Blank, calibrators, quality controls and sample matrix matter.",
+        "The local wavelength table lists Na near 589 nm and K near 766 nm. A visually lilac potassium flame is not the same thing as a single violet 766 nm emission line.",
+        "mEq/L = mmol/L × absolute ionic charge: monovalent Na⁺/K⁺ retain the number, while Ca²⁺ doubles it.",
+        "Electrode methods measure ion activity and can be automated without a flame. Performance depends on method and sample conditions; no universal “ISE is less precise” rule is justified."
+      ],
+      "traps": [
+        "A visual flame colour alone is not a concentration measurement or a reliable identification of every component in a mixture.",
+        "Do not invent laboratory calibration readings or apply a calibration outside its validated range."
+      ],
+      "sources": [
+        {
+          "title": "06 - Flame photometry and body electrolytes.pptx",
+          "locator": "Slides 2–11; review: flame photometry",
+          "basis": "slides"
+        },
+        {
+          "title": "06 - Biochemistry Practical Review.pdf",
+          "locator": "Section: Flame photometry & electrolytes",
+          "basis": "notes"
+        }
+      ],
+      "questionIds": [
+        "biochem2-practical-flame-emission-versus-absorption-v1",
+        "biochem2-practical-flame-potassium-wavelength-v1",
+        "biochem2-practical-flame-sodium-calibration-v1",
+        "biochem2-practical-flame-flame-intercept-v1",
+        "biochem2-practical-flame-matrix-effect-v1",
+        "biochem2-practical-flame-selected-elements-v1",
+        "biochem2-practical-flame-electrolyte-charge-v1",
+        "biochem2-practical-flame-saline-molarity-v1",
+        "biochem2-practical-flame-ise-alternative-v1",
+        "biochem2-practical-flame-colour-mixture-v1"
+      ],
+      "challengeIds": [
+        "biochem2-practical-flame-potassium-wavelength-v1",
+        "biochem2-practical-flame-sodium-calibration-v1",
+        "biochem2-practical-flame-flame-intercept-v1",
+        "biochem2-practical-flame-matrix-effect-v1",
+        "biochem2-practical-flame-saline-molarity-v1",
+        "biochem2-practical-flame-colour-mixture-v1"
+      ],
+      "imageIds": []
+    }
+  ]
+}

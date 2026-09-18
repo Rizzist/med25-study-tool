@@ -7,8 +7,8 @@ import { buildLocationQuestions } from "../../lib/mcq/anatomy-location.mjs";
 import { AnatomyImage } from "../AnatomyImage";
 import AnatomyCoverageChecklist from './AnatomyCoverageChecklist';
 
-export default function AnatomyStudyGallery({ examId, onExit, onExplore, initialImageId, onImageChange }: { examId: string; onExit: () => void; onExplore: (modelKey?:string) => void; initialImageId?:string; onImageChange?:(id:string)=>void }) {
-  const [region, setRegion] = useState(anatomyStudyImages.find(image=>image.id===initialImageId)?.examId??examId);
+export default function AnatomyStudyGallery({ examId, onExit, onExplore, initialImageId, initialModuleKey, onImageChange, embedded=false }: { examId: string; onExit: () => void; onExplore: (modelKey?:string) => void; initialImageId?:string; initialModuleKey?:string; onImageChange?:(id:string)=>void; embedded?:boolean }) {
+  const [region, setRegion] = useState(initialModuleKey??anatomyStudyImages.find(image=>image.id===initialImageId)?.examId??examId);
   const [query, setQuery] = useState("");
   const [imageId, setImageId] = useState(initialImageId??"");
   const [practice, setPractice] = useState(false);
@@ -16,11 +16,12 @@ export default function AnatomyStudyGallery({ examId, onExit, onExplore, initial
   const image = images.find(item => item.id === imageId) ?? images[0];
   const index = images.indexOf(image);
   useEffect(()=>{if(image)onImageChange?.(image.id);},[image,onImageChange]);
+  useEffect(()=>{if(initialModuleKey)setRegion(initialModuleKey);},[initialModuleKey]);
   function go(delta: number) { if (images.length) setImageId(images[(index + delta + images.length) % images.length].id); }
   return <section className="anatomy-study-gallery" aria-label="Labeled anatomy study atlas">
-    <header className="anatomy-study-header"><div><h1>Anatomy · Source figures</h1><p>Study the original labels, then practise finding them.</p></div><button type="button" onClick={onExit}>Back to questions</button></header>
+    {!embedded && <header className="anatomy-study-header"><div><h1>Anatomy · Source figures</h1><p>Study the original labels, then practise finding them.</p></div><button type="button" onClick={onExit}>Back to questions</button></header>}
     <div className="anatomy-study-controls">
-      <label>Region<select value={region} onChange={event => {setRegion(event.target.value); setImageId("");}}><option value="all">All anatomy</option><option value="term2-cvs">CVS & thorax</option><option value="term2-respiratory">Respiratory</option><option value="term2-limbs">Both limbs</option><option value="upper-limb">Upper limb</option><option value="lower-limb">Lower limb</option></select></label>
+      <label>Region<select value={region} onChange={event => {setRegion(event.target.value); setImageId("");}}><option value="all">All anatomy</option><option value="term2-cvs">CVS & thorax</option><option value="term2-respiratory">Respiratory</option><option value="term2-limbs">Both limbs</option><option value="upper-limb">Upper limb</option><option value="lower-limb">Lower limb</option>{[...new Set(anatomyStudyImages.map(item=>item.moduleKey).filter(Boolean))].filter(key=>key!=="upper-limb"&&key!=="lower-limb").map(key=><option key={key} value={key}>{key!.replaceAll('-',' ')}</option>)}</select></label>
       <label>Find a figure or structure<input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="e.g. humerus, carpals, knee" /></label>
       <label>Figure<select value={image?.id ?? ""} onChange={event => setImageId(event.target.value)}>{images.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</select></label>
     </div>

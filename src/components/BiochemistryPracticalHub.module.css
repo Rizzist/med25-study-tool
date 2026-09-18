@@ -1,0 +1,19 @@
+.hub { max-width: 1160px; margin: 0 auto; padding-bottom: 3rem; }
+.hub h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin: .35rem 0 1rem; }
+.hub h2 { font-size: 1.3rem; margin: .5rem 0; }
+.hub h3 { font-size: 1rem; margin-top: 1.2rem; }
+.hub p, .hub li { line-height: 1.6; }
+.note { color: #5b6c64; font-size: .9rem; }
+.controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; background: #edf2ee; border: 1px solid #cbd7cf; border-radius: 16px; padding: 1.25rem; margin: 1.5rem 0; }
+.controls label { display: flex; flex-direction: column; gap: .45rem; font-size: .85rem; font-weight: 650; min-width: 0; }
+.controls select { background: #fff; color: #173b2c; width: 100%; min-width: 0; min-height: 44px; border: 1px solid #b9c7be; border-radius: 8px; padding: .5rem; font: inherit; }
+.controls small { align-self: center; line-height: 1.5; color: #456052; }
+.stations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.stations article { min-width: 0; background: #fff; border: 1px solid #cbd7cf; border-radius: 16px; padding: 1.25rem; align-self: start; }
+.stations details { border-top: 1px solid #e0e7e2; margin-top: 1rem; padding-top: 1rem; }
+.stations summary { cursor: pointer; font-weight: 650; padding: .3rem 0; }
+.stations ul { padding-left: 1.2rem; }
+.stations li { margin-bottom: .7rem; }
+.sources { font-size: .85rem; overflow-wrap: anywhere; }
+.hub button:focus-visible, .hub select:focus-visible, .hub summary:focus-visible { outline: 3px solid #247256; outline-offset: 3px; }
+@media (max-width: 800px) { .stations, .controls { grid-template-columns: minmax(0, 1fr); } }

@@ -1,0 +1,2015 @@
+{
+  "schema": "independent-connective-anatomical-review-v1",
+  "reviewer": "lower_limb_audit",
+  "sourceDescriptorSha256": "f48612aa9719783c7dc8bdbe6cbf935a0bb7452c7fc01e76238cb2219eb4d3c4",
+  "sourceAssetSha256": "129f946136a38a36c2bebf2d2bfadafc491af72615e70648da419d80e9e83c66",
+  "status": "conditional: listed held IDs require correction and re-review",
+  "acceptedIds": [
+    "gap-tibialis-anterior-tendon",
+    "gap-tibialis-posterior-tendon",
+    "gap-extensor-hallucis-longus-tendon",
+    "gap-extensor-digitorum-longus-tendon",
+    "gap-flexor-hallucis-longus-tendon",
+    "gap-flexor-digitorum-longus-tendon",
+    "gap-fibularis-longus-tendon",
+    "gap-fibularis-brevis-tendon",
+    "gap-fibularis-tertius-tendon",
+    "gap-plantaris-tendon",
+    "gap-popliteus-tendon",
+    "gap-sartorius-tendon",
+    "gap-gracilis-tendon",
+    "gap-semitendinosus-tendon",
+    "gap-semimembranosus-tendon",
+    "gap-biceps-femoris-tendon",
+    "gap-iliopsoas-tendon",
+    "gap-pubofemoral-ligament",
+    "gap-ischiofemoral-ligament",
+    "gap-transverse-acetabular-ligament",
+    "gap-sacrospinous-ligament",
+    "gap-sacrotuberous-ligament",
+    "gap-obturator-membrane",
+    "gap-oblique-popliteal-ligament",
+    "gap-medial-patellar-retinaculum",
+    "gap-lateral-patellar-retinaculum",
+    "gap-medial-patellofemoral-ligament",
+    "gap-anterior-inferior-tibiofibular-ligament",
+    "gap-posterior-inferior-tibiofibular-ligament",
+    "gap-inferior-transverse-tibiofibular-ligament",
+    "gap-interosseous-tibiofibular-ligament",
+    "gap-tibionavicular-part-of-deltoid-ligament",
+    "gap-tibiocalcaneal-part-of-deltoid-ligament",
+    "gap-anterior-tibiotalar-part-of-deltoid-ligament",
+    "gap-posterior-tibiotalar-part-of-deltoid-ligament",
+    "gap-short-plantar-ligament",
+    "gap-calcaneonavicular-part-of-bifurcate-ligament",
+    "gap-calcaneocuboid-part-of-bifurcate-ligament",
+    "gap-interosseous-talocalcaneal-ligament",
+    "gap-cervical-ligament",
+    "gap-dorsal-talonavicular-ligament",
+    "gap-lisfranc-ligament",
+    "gap-bifurcate-ligament",
+    "gap-metatarsophalangeal-collateral-ligaments",
+    "gap-interphalangeal-collateral-ligaments",
+    "gap-plantar-aponeurosis",
+    "gap-fascia-lata",
+    "gap-crural-fascia",
+    "gap-femoral-sheath"
+  ],
+  "heldIds": [
+    "gap-acetabular-labrum",
+    "gap-ligament-of-head-of-femur",
+    "gap-medial-meniscus-anterior-horn",
+    "gap-medial-meniscus-posterior-horn",
+    "gap-lateral-meniscus-anterior-horn",
+    "gap-lateral-meniscus-posterior-horn",
+    "gap-transverse-ligament-of-knee",
+    "gap-anterior-meniscofemoral-ligament",
+    "gap-posterior-meniscofemoral-ligament",
+    "gap-meniscotibial-ligaments",
+    "gap-arcuate-popliteal-ligament",
+    "gap-plantar-plates",
+    "gap-fibrous-flexor-sheaths-of-toes",
+    "gap-extensor-expansions-of-toes",
+    "gap-deep-transverse-metatarsal-ligament",
+    "gap-saphenous-opening"
+  ],
+  "accepted": [
+    {
+      "id": "gap-tibialis-anterior-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-tibialis-posterior-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-extensor-hallucis-longus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-extensor-digitorum-longus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-flexor-hallucis-longus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-flexor-digitorum-longus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-fibularis-longus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-fibularis-brevis-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-fibularis-tertius-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-plantaris-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-popliteus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-sartorius-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-gracilis-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-semitendinosus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-semimembranosus-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-biceps-femoris-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-iliopsoas-tendon",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Terminal insertion-complex approximation only; do not imply that all distal iliacus contribution is independently segmented tendon."
+    },
+    {
+      "id": "gap-pubofemoral-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-ischiofemoral-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-transverse-acetabular-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-sacrospinous-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-sacrotuberous-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-obturator-membrane",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-oblique-popliteal-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-medial-patellar-retinaculum",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-lateral-patellar-retinaculum",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-medial-patellofemoral-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-anterior-inferior-tibiofibular-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-posterior-inferior-tibiofibular-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-inferior-transverse-tibiofibular-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-interosseous-tibiofibular-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-tibionavicular-part-of-deltoid-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-tibiocalcaneal-part-of-deltoid-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-anterior-tibiotalar-part-of-deltoid-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-posterior-tibiotalar-part-of-deltoid-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-short-plantar-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-calcaneonavicular-part-of-bifurcate-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-calcaneocuboid-part-of-bifurcate-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-interosseous-talocalcaneal-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-cervical-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-dorsal-talonavicular-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-lisfranc-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-bifurcate-ligament",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-metatarsophalangeal-collateral-ligaments",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-interphalangeal-collateral-ligaments",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-plantar-aponeurosis",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-fascia-lata",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "General muscle-envelope fascia approximation accepted. Matching precise saphenous rim remains held pending correction."
+    },
+    {
+      "id": "gap-crural-fascia",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Preserve reconstructed/schematic fidelity, source limits and approximate attachment footprint statements."
+    },
+    {
+      "id": "gap-femoral-sheath",
+      "status": "accepted-as-approximate-reconstruction",
+      "qualifications": "Outer vessel-envelope only; no independently modeled femoral canal/septa. Keep limitations visible."
+    }
+  ],
+  "held": [
+    {
+      "id": "gap-acetabular-labrum",
+      "reason": "Closed full ring bridges the inferior notch interval despite separate transverse ligament. Interrupt that interval; maintain actual rim anchors."
+    },
+    {
+      "id": "gap-ligament-of-head-of-femur",
+      "reason": "Foveal target is anterosuperior; foveal depression is unresolved in reduced source. Hold or explicitly supply reviewed posteroinferior region with honest uncertainty."
+    },
+    {
+      "id": "gap-medial-meniscus-anterior-horn",
+      "reason": "48/48 vertices penetrate tibia by >.001; worst -.01359. Conform to actual plateau, constrain below femur."
+    },
+    {
+      "id": "gap-medial-meniscus-posterior-horn",
+      "reason": "Individual region has no >.001 penetration, but requires coherent corrected whole medial meniscus assembly before replacing legacy group."
+    },
+    {
+      "id": "gap-lateral-meniscus-anterior-horn",
+      "reason": "Individual region has no >.001 penetration, but lateral body penetrates tibia and assembly must be corrected together."
+    },
+    {
+      "id": "gap-lateral-meniscus-posterior-horn",
+      "reason": "Individual region has no >.001 penetration; release with coherent corrected lateral assembly and corrected ligament attachments."
+    },
+    {
+      "id": "gap-transverse-ligament-of-knee",
+      "reason": "Must reattach to corrected horn surface stations after meniscus conformation."
+    },
+    {
+      "id": "gap-anterior-meniscofemoral-ligament",
+      "reason": "Current Humphrey midpoint overlaps legacy PCL centerline near y-.212/z-.038, not clearly anterior. Verify tube clearance and corrected horn attachment."
+    },
+    {
+      "id": "gap-posterior-meniscofemoral-ligament",
+      "reason": "Posterior course is anatomically correct; reattach to corrected lateral horn and verify after meniscal conformation."
+    },
+    {
+      "id": "gap-meniscotibial-ligaments",
+      "reason": "Must reattach to corrected meniscal lower/peripheral surfaces. Preserve posterolateral popliteus hiatus."
+    },
+    {
+      "id": "gap-arcuate-popliteal-ligament",
+      "reason": "Fibular anchor labeled posterior lies anterolaterally at Z-.057; move to posterior head/styloid, e.g. actual fibular vertex49 [.04223926365,-.26053529978,-.08900467306]."
+    },
+    {
+      "id": "gap-plantar-plates",
+      "reason": "9/250 vertices penetrate foot bone >.001, maximum .00381. Conform to plantar joint surface while preserving phalangeal-base attachment and first-MTP sesamoid distinction."
+    },
+    {
+      "id": "gap-fibrous-flexor-sheaths-of-toes",
+      "reason": "122/760 vertices penetrate bone >.001, maximum .00716. Fixed Y offset is not sufficient; fit plantar roof outside actual phalangeal surfaces."
+    },
+    {
+      "id": "gap-extensor-expansions-of-toes",
+      "reason": "200/696 vertices penetrate bone >.001, maximum .00892. Fit dorsal hood and bands outside actual phalangeal upper envelope."
+    },
+    {
+      "id": "gap-deep-transverse-metatarsal-ligament",
+      "reason": "No bone penetration and correct four adjacent-plate connections, including first interval; dependent on final corrected plate placement."
+    },
+    {
+      "id": "gap-saphenous-opening",
+      "reason": "Authored rim disconnected from fascia-lata aperture: mean nearest boundary-edge gap .0161, max .03094 baked units. Derive rim from same aperture geometry."
+    }
+  ],
+  "supportMeshHolds": [
+    "reconstructed-medial-meniscus-body",
+    "reconstructed-lateral-meniscus-body"
+  ],
+  "methods": [
+    "Read generator rules and all65 exact-ID metadata.",
+    "Independently rendered19 source-muscle split surfaces in two projections for17 tendon targets.",
+    "Computed vertical barycentric intersections with actual source tibial/femoral/foot triangles, not bounding-box-only clearance.",
+    "Reviewed hip/ankle attachment pairs against local Gray42 figures/text and known baked lower-limb axes.",
+    "Checked runtime PCL controls against anterior/posterior meniscofemoral route ordering.",
+    "Measured saphenous rim versus actual fascia boundary edges."
+  ],
+  "sourceEvidence": [
+    {
+      "chapter": 77,
+      "pdfPages": [
+        2137,
+        2138,
+        2140,
+        2141,
+        2146,
+        2153,
+        2155
+      ]
+    },
+    {
+      "chapter": 78,
+      "pdfPages": [
+        2203,
+        2204,
+        2205,
+        2206,
+        2207,
+        2218,
+        2219,
+        2220,
+        2223
+      ]
+    },
+    {
+      "chapter": 79,
+      "pdfPages": [
+        2231,
+        2232,
+        2251,
+        2253,
+        2255,
+        2256,
+        2258,
+        2261,
+        2262,
+        2264,
+        2266,
+        2268,
+        2269
+      ]
+    }
+  ],
+  "anchorValidation": {
+    "allPass": true,
+    "count": 195,
+    "rows": [
+      {
+        "id": "a0",
+        "source": "hip-bone",
+        "vertexIndex": 24,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a1",
+        "source": "femur",
+        "vertexIndex": 547,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a2",
+        "source": "hip-bone",
+        "vertexIndex": 557,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a3",
+        "source": "femur",
+        "vertexIndex": 83,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a4",
+        "source": "hip-bone",
+        "vertexIndex": 419,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a5",
+        "source": "hip-bone",
+        "vertexIndex": 373,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a6",
+        "source": "hip-bone",
+        "vertexIndex": 423,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a7",
+        "source": "hip-bone",
+        "vertexIndex": 564,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a8",
+        "source": "hip-bone",
+        "vertexIndex": 597,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a9",
+        "source": "hip-bone",
+        "vertexIndex": 604,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a10",
+        "source": "hip-bone",
+        "vertexIndex": 579,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a11",
+        "source": "hip-bone",
+        "vertexIndex": 367,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a12",
+        "source": "hip-bone",
+        "vertexIndex": 326,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a13",
+        "source": "hip-bone",
+        "vertexIndex": 567,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a14",
+        "source": "hip-bone",
+        "vertexIndex": 597,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a15",
+        "source": "femur",
+        "vertexIndex": 153,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a16",
+        "source": "hip-bone",
+        "vertexIndex": 547,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a17",
+        "source": "hip-bone",
+        "vertexIndex": 691,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a18",
+        "source": "reference-sacrum",
+        "vertexIndex": 4050,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a19",
+        "source": "reference-sacrum",
+        "vertexIndex": 4365,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a20",
+        "source": "hip-bone",
+        "vertexIndex": 144,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a21",
+        "source": "hip-bone",
+        "vertexIndex": 453,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a22",
+        "source": "hip-bone",
+        "vertexIndex": 7,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a23",
+        "source": "hip-bone",
+        "vertexIndex": 29,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a24",
+        "source": "hip-bone",
+        "vertexIndex": 671,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a25",
+        "source": "hip-bone",
+        "vertexIndex": 619,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a26",
+        "source": "hip-bone",
+        "vertexIndex": 519,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a27",
+        "source": "hip-bone",
+        "vertexIndex": 492,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a28",
+        "source": "tibia",
+        "vertexIndex": 195,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a29",
+        "source": "tibia",
+        "vertexIndex": 371,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a30",
+        "source": "femur",
+        "vertexIndex": 681,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a31",
+        "source": "femur",
+        "vertexIndex": 727,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a32",
+        "source": "tibia",
+        "vertexIndex": 176,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a33",
+        "source": "femur",
+        "vertexIndex": 29,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a34",
+        "source": "fibula",
+        "vertexIndex": 34,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a35",
+        "source": "tibia",
+        "vertexIndex": 246,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a36",
+        "source": "femur",
+        "vertexIndex": 30,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a37",
+        "source": "patella",
+        "vertexIndex": 125,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a38",
+        "source": "patella",
+        "vertexIndex": 134,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a39",
+        "source": "tibia",
+        "vertexIndex": 329,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a40",
+        "source": "femur",
+        "vertexIndex": 932,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a41",
+        "source": "patella",
+        "vertexIndex": 21,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a42",
+        "source": "patella",
+        "vertexIndex": 35,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a43",
+        "source": "tibia",
+        "vertexIndex": 502,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a44",
+        "source": "femur",
+        "vertexIndex": 590,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a45",
+        "source": "femur",
+        "vertexIndex": 950,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a46",
+        "source": "patella",
+        "vertexIndex": 127,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a47",
+        "source": "tibia",
+        "vertexIndex": 281,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a48",
+        "source": "fibula",
+        "vertexIndex": 201,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a49",
+        "source": "tibia",
+        "vertexIndex": 135,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a50",
+        "source": "fibula",
+        "vertexIndex": 312,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a51",
+        "source": "fibula",
+        "vertexIndex": 294,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a52",
+        "source": "tibia",
+        "vertexIndex": 16,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a53",
+        "source": "tibia",
+        "vertexIndex": 132,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a54",
+        "source": "fibula",
+        "vertexIndex": 199,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a55",
+        "source": "tibia",
+        "vertexIndex": 12,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a56",
+        "source": "visual-navicular",
+        "vertexIndex": 2,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a57",
+        "source": "tibia",
+        "vertexIndex": 1,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a58",
+        "source": "visual-calcaneus",
+        "vertexIndex": 316,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a59",
+        "source": "tibia",
+        "vertexIndex": 12,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a60",
+        "source": "visual-talus",
+        "vertexIndex": 346,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a61",
+        "source": "tibia",
+        "vertexIndex": 14,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a62",
+        "source": "visual-talus",
+        "vertexIndex": 40,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a63",
+        "source": "visual-calcaneus",
+        "vertexIndex": 440,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a64",
+        "source": "visual-cuboid",
+        "vertexIndex": 130,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a65",
+        "source": "visual-calcaneus",
+        "vertexIndex": 640,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a66",
+        "source": "visual-navicular",
+        "vertexIndex": 444,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a67",
+        "source": "visual-calcaneus",
+        "vertexIndex": 640,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a68",
+        "source": "visual-cuboid",
+        "vertexIndex": 236,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a69",
+        "source": "visual-talus",
+        "vertexIndex": 369,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a70",
+        "source": "visual-calcaneus",
+        "vertexIndex": 443,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a71",
+        "source": "visual-calcaneus",
+        "vertexIndex": 644,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a72",
+        "source": "visual-talus",
+        "vertexIndex": 737,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a73",
+        "source": "visual-talus",
+        "vertexIndex": 614,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a74",
+        "source": "visual-navicular",
+        "vertexIndex": 370,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a75",
+        "source": "visual-medial-cuneiform",
+        "vertexIndex": 418,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a76",
+        "source": "practical-metatarsal-2",
+        "vertexIndex": 67,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a77",
+        "source": "practical-metatarsal-1",
+        "vertexIndex": 471,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a78",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 46,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a79",
+        "source": "practical-metatarsal-1",
+        "vertexIndex": 509,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a80",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 69,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a81",
+        "source": "practical-metatarsal-1",
+        "vertexIndex": 431,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a82",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 64,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a83",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 210,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a84",
+        "source": "practical-toe-1-distal-phalanx",
+        "vertexIndex": 72,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a85",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 236,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a86",
+        "source": "practical-toe-1-distal-phalanx",
+        "vertexIndex": 108,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a87",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 213,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a88",
+        "source": "practical-toe-1-distal-phalanx",
+        "vertexIndex": 41,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a89",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 46,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a90",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 210,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a91",
+        "source": "practical-toe-1-distal-phalanx",
+        "vertexIndex": 174,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a92",
+        "source": "practical-toe-1-proximal-phalanx",
+        "vertexIndex": 210,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a93",
+        "source": "practical-toe-1-distal-phalanx",
+        "vertexIndex": 72,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a94",
+        "source": "practical-metatarsal-2",
+        "vertexIndex": 404,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a95",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 68,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a96",
+        "source": "practical-metatarsal-2",
+        "vertexIndex": 380,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a97",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 25,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a98",
+        "source": "practical-metatarsal-2",
+        "vertexIndex": 459,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a99",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 73,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a100",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 171,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a101",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 73,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a102",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 198,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a103",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 122,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a104",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 160,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a105",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 26,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a106",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 135,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a107",
+        "source": "practical-toe-2-distal-phalanx",
+        "vertexIndex": 18,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a108",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 161,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a109",
+        "source": "practical-toe-2-distal-phalanx",
+        "vertexIndex": 82,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a110",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 109,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a111",
+        "source": "practical-toe-2-distal-phalanx",
+        "vertexIndex": 18,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a112",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 68,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a113",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 171,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a114",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 135,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a115",
+        "source": "practical-toe-2-distal-phalanx",
+        "vertexIndex": 139,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a116",
+        "source": "practical-toe-2-proximal-phalanx",
+        "vertexIndex": 171,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a117",
+        "source": "practical-toe-2-distal-phalanx",
+        "vertexIndex": 18,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a118",
+        "source": "practical-toe-2-middle-phalanx",
+        "vertexIndex": 73,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a119",
+        "source": "practical-metatarsal-3",
+        "vertexIndex": 359,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a120",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 30,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a121",
+        "source": "practical-metatarsal-3",
+        "vertexIndex": 333,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a122",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 7,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a123",
+        "source": "practical-metatarsal-3",
+        "vertexIndex": 382,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a124",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 99,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a125",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 200,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a126",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 51,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a127",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 194,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a128",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 102,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a129",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 206,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a130",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 61,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a131",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 142,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a132",
+        "source": "practical-toe-3-distal-phalanx",
+        "vertexIndex": 53,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a133",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 146,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a134",
+        "source": "practical-toe-3-distal-phalanx",
+        "vertexIndex": 83,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a135",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 112,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a136",
+        "source": "practical-toe-3-distal-phalanx",
+        "vertexIndex": 10,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a137",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 30,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a138",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 200,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a139",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 142,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a140",
+        "source": "practical-toe-3-distal-phalanx",
+        "vertexIndex": 161,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a141",
+        "source": "practical-toe-3-proximal-phalanx",
+        "vertexIndex": 200,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a142",
+        "source": "practical-toe-3-distal-phalanx",
+        "vertexIndex": 53,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a143",
+        "source": "practical-toe-3-middle-phalanx",
+        "vertexIndex": 51,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a144",
+        "source": "practical-metatarsal-4",
+        "vertexIndex": 374,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a145",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 76,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a146",
+        "source": "practical-metatarsal-4",
+        "vertexIndex": 365,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a147",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 42,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a148",
+        "source": "practical-metatarsal-4",
+        "vertexIndex": 403,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a149",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 105,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a150",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 206,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a151",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 45,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a152",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 228,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a153",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 78,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a154",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 189,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a155",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 45,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a156",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 147,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a157",
+        "source": "practical-toe-4-distal-phalanx",
+        "vertexIndex": 36,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a158",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 152,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a159",
+        "source": "practical-toe-4-distal-phalanx",
+        "vertexIndex": 115,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a160",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 87,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a161",
+        "source": "practical-toe-4-distal-phalanx",
+        "vertexIndex": 50,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a162",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 76,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a163",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 206,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a164",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 147,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a165",
+        "source": "practical-toe-4-distal-phalanx",
+        "vertexIndex": 132,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a166",
+        "source": "practical-toe-4-proximal-phalanx",
+        "vertexIndex": 206,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a167",
+        "source": "practical-toe-4-distal-phalanx",
+        "vertexIndex": 36,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a168",
+        "source": "practical-toe-4-middle-phalanx",
+        "vertexIndex": 45,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a169",
+        "source": "practical-metatarsal-5",
+        "vertexIndex": 386,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a170",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 61,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a171",
+        "source": "practical-metatarsal-5",
+        "vertexIndex": 407,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a172",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 96,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a173",
+        "source": "practical-metatarsal-5",
+        "vertexIndex": 388,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a174",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 63,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a175",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 193,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a176",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 78,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a177",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 175,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a178",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 76,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a179",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 189,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a180",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 78,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a181",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 96,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a182",
+        "source": "practical-toe-5-distal-phalanx",
+        "vertexIndex": 27,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a183",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 96,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a184",
+        "source": "practical-toe-5-distal-phalanx",
+        "vertexIndex": 78,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a185",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 23,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a186",
+        "source": "practical-toe-5-distal-phalanx",
+        "vertexIndex": 35,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a187",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 61,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a188",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 193,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a189",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 96,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a190",
+        "source": "practical-toe-5-distal-phalanx",
+        "vertexIndex": 114,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a191",
+        "source": "practical-toe-5-proximal-phalanx",
+        "vertexIndex": 193,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a192",
+        "source": "practical-toe-5-distal-phalanx",
+        "vertexIndex": 27,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a193",
+        "source": "practical-toe-5-middle-phalanx",
+        "vertexIndex": 78,
+        "delta": 0,
+        "pass": true
+      },
+      {
+        "id": "a194",
+        "source": "visual-calcaneus",
+        "vertexIndex": 24,
+        "delta": 0,
+        "pass": true
+      }
+    ]
+  },
+  "splitValidation": {
+    "allPass": true,
+    "count": 19,
+    "rows": [
+      {
+        "id": "gap-tibialis-anterior-tendon",
+        "source": "tibialis-anterior",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 1504,
+        "retainedFaces": 985,
+        "tendonFaces": 519,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-tibialis-posterior-tendon",
+        "source": "tibialis-posterior",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 3074,
+        "retainedFaces": 1216,
+        "tendonFaces": 1858,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-extensor-hallucis-longus-tendon",
+        "source": "extensor-hallucis-longus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 1668,
+        "retainedFaces": 1109,
+        "tendonFaces": 559,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-extensor-digitorum-longus-tendon",
+        "source": "extensor-digitorum-longus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 2724,
+        "retainedFaces": 1281,
+        "tendonFaces": 1443,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-flexor-hallucis-longus-tendon",
+        "source": "flexor-hallucis-longus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 2758,
+        "retainedFaces": 1670,
+        "tendonFaces": 1088,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-flexor-digitorum-longus-tendon",
+        "source": "flexor-digitorum-longus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 4004,
+        "retainedFaces": 1442,
+        "tendonFaces": 2562,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-fibularis-longus-tendon",
+        "source": "visual-fibularis-longus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 3860,
+        "retainedFaces": 2663,
+        "tendonFaces": 1197,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-fibularis-brevis-tendon",
+        "source": "visual-fibularis-brevis",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 1766,
+        "retainedFaces": 1090,
+        "tendonFaces": 676,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-fibularis-tertius-tendon",
+        "source": "fibularis-tertius",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 1416,
+        "retainedFaces": 461,
+        "tendonFaces": 955,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-plantaris-tendon",
+        "source": "plantaris",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 2512,
+        "retainedFaces": 1372,
+        "tendonFaces": 1140,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-popliteus-tendon",
+        "source": "popliteus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 858,
+        "retainedFaces": 660,
+        "tendonFaces": 198,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-sartorius-tendon",
+        "source": "sartorius",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 3444,
+        "retainedFaces": 2963,
+        "tendonFaces": 481,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-gracilis-tendon",
+        "source": "gracilis",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 1900,
+        "retainedFaces": 1649,
+        "tendonFaces": 251,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-semitendinosus-tendon",
+        "source": "semitendinosus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 1626,
+        "retainedFaces": 1159,
+        "tendonFaces": 467,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-semimembranosus-tendon",
+        "source": "semimembranosus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 2766,
+        "retainedFaces": 2517,
+        "tendonFaces": 249,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-biceps-femoris-tendon",
+        "source": "practical-biceps-femoris-long-head",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 5110,
+        "retainedFaces": 4518,
+        "tendonFaces": 592,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-biceps-femoris-tendon",
+        "source": "practical-biceps-femoris-short-head",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 1728,
+        "retainedFaces": 1423,
+        "tendonFaces": 305,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-iliopsoas-tendon",
+        "source": "visual-psoas-major",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 4900,
+        "retainedFaces": 4371,
+        "tendonFaces": 529,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      },
+      {
+        "id": "gap-iliopsoas-tendon",
+        "source": "visual-iliacus",
+        "disjoint": true,
+        "complete": true,
+        "sourceFaces": 2862,
+        "retainedFaces": 2404,
+        "tendonFaces": 458,
+        "morphologyReview": "Independently plotted full source muscle with colored selected region in orthogonal projections. Retained selection follows the narrowed terminal/proximal tendon region; not an independently segmented myotendinous boundary."
+      }
+    ]
+  },
+  "limitations": "Acceptance is educational schematic anatomy only, not clinical geometry, donor-specific tissue segmentation or certified examination coverage. Corrected revisions must be separately rechecked; this report fingerprints the reviewed candidate."
+}

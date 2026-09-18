@@ -1,0 +1,1988 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "date": "2026-09-13",
+  "author": "/root/limb_physiology_audit",
+  "independentReviewer": "/root/limb_embryology_audit",
+  "scope": "Independent content review of the author's frozen physiology research bundle only. Repository, books, slide decks, and other subject bundles were read-only. Parent performs import/publication separately.",
+  "outcome": {
+    "submittedQuestions": 45,
+    "approvedQuestions": 44,
+    "removedUnpublishedQuestions": 1,
+    "courseCarryover": 8,
+    "bookExtension": 36,
+    "knowledgeCore": 32,
+    "knowledgeChallenge": 12,
+    "concepts": 13,
+    "modules": 5,
+    "coverageRows": 50,
+    "sourceAuditRows": 12,
+    "questionStatus": "draft until parent import/publication",
+    "existingPublishedQuestionsPreserved": [
+      "comp-limbs-076",
+      "comp-limbs-077",
+      "comp-limbs-078",
+      "comp-limbs-079",
+      "comp-limbs-080"
+    ]
+  },
+  "sourceChecks": [
+    {
+      "source": "/Users/rizzist/Documents/Med Slides/TERM 2/05 Foundations Carryover/Physiology/Cell 4.pptx",
+      "primary": true,
+      "method": "Independently read original PPTX slide XML, including title/teacher identification and relevant action-potential/conduction slides.",
+      "locators": "Slides 1–13 and 17–22; directly relevant slides 4–6, 8–10, 12–13, 17–21.",
+      "findings": "Sodium/potassium gating, mid-axon propagation, all-or-none behavior, small ionic changes and pump restoration, inactivation, Schwann myelin, nodal conduction, energy saving, and conduction velocity are supported. Slide 19's 'Salutatory' typo is not propagated. Slide 7's particular threshold numbers and slide 20's broad speed multiplier are not universalized. Eight course items are explicitly Foundations carryover with limb-exam inclusion unconfirmed."
+    },
+    {
+      "source": "/Users/rizzist/Documents/MED SCHOOL BOOKS/Guyton and Hall Textbook of Medical Physiology (2026).pdf",
+      "primary": true,
+      "method": "Independent text extraction and direct reading from the original PDF, checking physical and printed page numbers rather than assuming a single offset.",
+      "locators": "PDF 76–77 (printed 64–65), 88 (76); 94–101 (83–90); 104–109 (93–98); 675–683 (697–705); 1059 (1102).",
+      "findings": "Checked Nernst and driving-force conventions, refractory ceiling, cross-bridge events, overlap and force-velocity, work/power, ATP sources, motor-unit recruitment and treppe, fatigue and leverage, NMJ and calcium release/removal, spindle and gamma behavior, reflex circuits, and active resistance to external stretching."
+    },
+    {
+      "source": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-science-gap-audit/physiology/source-checks/guyton-pdf096.png",
+      "primary": true,
+      "method": "Reviewer visually inspected the rendered original book page, not only OCR.",
+      "locators": "Original Guyton physical PDF 96; printed 85; Figures 6.8 and 6.9 and force-velocity paragraph.",
+      "findings": "Verified zero active force with no overlap; distinction between active increase and passive tension; load-dependent shortening velocity. Diagram labels and printed page number agree with locators."
+    },
+    {
+      "source": "/Users/rizzist/Documents/Codex/2026-08-26/look/work/limb-science-gap-audit/physiology/source-checks/guyton-pdf678.png",
+      "primary": true,
+      "method": "Reviewer visually inspected the rendered original book page and Figure 55.5.",
+      "locators": "Original Guyton physical PDF 678; printed 700.",
+      "findings": "Verified dynamic versus static spindle response, gamma effects described on page, and monosynaptic Ia-to-anterior-horn stretch reflex circuit."
+    },
+    {
+      "source": "/Users/rizzist/Documents/Med Slides/TERM 2/10 Review Summaries/02 - Upper and Lower Limbs Review.pdf",
+      "primary": false,
+      "method": "Independently read scope and relevant rendered-document text.",
+      "locators": "PDF pages 4 and 85–87.",
+      "findings": "Review labels physiology as book extension rather than dedicated limb teaching; checked ATP cycle, length-tension/velocity, work, torque and moment arms, fiber phenotypes, eccentric/concentric/isometric terminology, and existing five question precursors. It does not independently establish course coverage."
+    }
+  ],
+  "sourceInventoryLimitations": [
+    "The author's broader inventories of seven regional-anatomy transcripts, secondary Foundations review pages, and build JSON are not represented here as newly independently re-audited primary sources. No approved physiology question relies on those inventories for its key.",
+    "No dedicated limb physiology syllabus, practical protocol, apparatus specification, or exam weighting has been recovered. Course-tagged Cell 4 carryover remains explicitly exam-inclusion-unconfirmed.",
+    "Question 007 applies a lecture-supported variable to supplied author-created numbers; this does not prove that the lecture taught that exact calculation.",
+    "Question 045's eccentric terminology is from the saved review; the original Guyton page corroborates the underlying active-lengthening behavior. This limitation remains in the question source.",
+    "Approval is scientific/content and structural review, not external psychometric validation or official-exam authentication."
+  ],
+  "corrections": [
+    {
+      "questionId": "limb-audit-phys-020",
+      "field": "prompt",
+      "before": "Two muscles have the same total number of extrafusal fibers. Muscle X has many small motor units; muscle Y has fewer large motor units. Which property should X generally have when force is increased by recruitment?",
+      "after": "Two muscles have the same total number of extrafusal fibers with comparable individual force capacities. Muscle X has many small motor units; muscle Y has fewer large motor units. Which property should X generally have when force is increased by recruitment?",
+      "reason": "Controls the individual-fiber force assumption needed for the motor-unit comparison."
+    },
+    {
+      "questionId": "limb-audit-phys-024",
+      "field": "prompt",
+      "before": "After a long rest, a skeletal-muscle preparation receives repeated identical stimuli far enough apart for tension to return to baseline each time. The first several twitch peaks progressively increase. Which description best fits?",
+      "after": "After a long rest, a single isolated motor axon is stimulated supramaximally at fixed intervals, activating the same motor unit each time. The muscle is held at a fixed length. The intervals allow tension to return to baseline between stimuli, but the first several twitch peaks progressively increase. Which description best fits?",
+      "reason": "Makes fixed motor-unit recruitment and length explicit; the original distractor explanations assumed these conditions."
+    },
+    {
+      "questionId": "limb-audit-phys-034",
+      "field": "prompt",
+      "before": "After prolonged intense stimulation, muscle force declines, but recorded muscle action potentials remain normal. Which conclusion is justified by those observations alone?",
+      "after": "An isolated motor unit is stimulated repeatedly through its motor axon. After prolonged intense stimulation, its force declines, but every nerve stimulus still evokes normal muscle action potentials in the tested fibers. Which conclusion is justified by those observations alone?",
+      "reason": "Specifies nerve-evoked excitation and the tested motor unit so conclusions cannot be confounded by an unmeasured loss of other recruited units."
+    },
+    {
+      "questionId": "limb-audit-phys-028",
+      "field": "source.chapter",
+      "before": "Chapter 6: Contraction of Skeletal Muscle",
+      "after": "Chapters 6 and 85: Skeletal Muscle Contraction and Sports Physiology",
+      "reason": "Adds the primary page that explicitly defines muscle power as work per time."
+    },
+    {
+      "questionId": "limb-audit-phys-028",
+      "field": "source.page",
+      "before": "Printed p. 85-87; local PDF p. 96-98",
+      "after": "Chapter 6 printed pp. 85–87, local PDF pp. 96–98; Chapter 85 printed p. 1102, local PDF p. 1059",
+      "reason": "Chapter 85 supplies the explicit power definition; Chapter 6 supplies shortening work and force-velocity."
+    },
+    {
+      "questionId": "limb-audit-phys-007",
+      "field": "source.excerpt",
+      "before": null,
+      "after": "Slide 21 establishes conduction velocity. The stated distance and speed are author-supplied values for applying distance/speed, not recovered lecture measurements or a confirmed exam calculation.",
+      "reason": "Separates a lecture-supported quantity from the newly authored calculation."
+    }
+  ],
+  "metadataChanges": [
+    "Resolved independent-review-pending quality flags to independent-content-reviewed while keeping draft question status.",
+    "Resolved filled-draft-pending-independent-review coverage labels to filled-independent-review-approved while retaining all source/weighting caveats.",
+    "Removed draft 035 from questions and concept objective mapping; kept its coverage row as covered-in-parallel-histology-audit, pointing to hist041 in a residual note instead of falsely listing it as existing published coverage.",
+    "Added cross-subject duplicate disposition to energy concept/source audit; added explicit primary power-definition source to the mechanics concept.",
+    "Updated audit counts to 44 and preserved author's original validation.json as a historical 45-item self-audit. Final validation is independent-validation.json."
+  ],
+  "duplicationReview": {
+    "existingQuestionIds": [
+      "comp-limbs-076",
+      "comp-limbs-077",
+      "comp-limbs-078",
+      "comp-limbs-079",
+      "comp-limbs-080"
+    ],
+    "procedure": "Read all five existing physiology stems, options, correct explanations, and distractor explanations; compared all 45 submitted objectives, stems, and discriminations. Inspected relevant parallel histology muscle/nerve items and embryology developmental content. No exact duplicate new stem or ID exists in the current bank.",
+    "removed": {
+      "questionId": "limb-audit-phys-035",
+      "parallelQuestionId": "limb-audit-hist-041",
+      "reason": "Both assess abundant mitochondria, myoglobin, and capillary supply as an oxidative/endurance phenotype. Retain the tissue-focused histology item and avoid cross-subject padding.",
+      "existingPublishedItemRemoved": false
+    },
+    "retainedRelatedPairs": [
+      {
+        "ids": [
+          "limb-audit-phys-012",
+          "comp-limbs-079"
+        ],
+        "reason": "Presynaptic calcium-triggered exocytosis versus postsynaptic receptor blockade."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-015",
+          "comp-limbs-080"
+        ],
+        "reason": "Initial SR calcium-release coupling versus reuptake/relaxation."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-022",
+          "limb-audit-phys-023",
+          "comp-limbs-078"
+        ],
+        "reason": "Across-unit asynchronous smoothing and quantitative twitch-duration overlap differ from the existing within-unit calcium mechanism."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-025",
+          "comp-limbs-076"
+        ],
+        "reason": "No-overlap mechanism differs from active-minus-passive arithmetic."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-027",
+          "limb-audit-phys-028",
+          "comp-limbs-077"
+        ],
+        "reason": "Positive work and force-speed power comparison differ from zero shortening work during isometric force."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-029",
+          "limb-audit-phys-030",
+          "limb-audit-phys-031"
+        ],
+        "reason": "Absolute static leverage, position-dependent moment-arm change, and antagonist coactivation test separate applications."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-018",
+          "limb-audit-phys-019"
+        ],
+        "reason": "ATP-binding detachment and hydrolysis-dependent head priming are different ordered events."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-037",
+          "limb-audit-phys-038"
+        ],
+        "reason": "Purpose of coactivation during shortening versus direct effect of selective gamma activation at fixed outer length."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-039",
+          "limb-audit-phys-040",
+          "limb-audit-phys-042"
+        ],
+        "reason": "Reflex arc organization, tendon-tap receptor identification, and selective sensory-pathway interruption are separate discriminations."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-043",
+          "limb-audit-phys-044"
+        ],
+        "reason": "Ipsilateral withdrawal coordination versus contralateral crossed extensor output."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-005",
+          "limb-audit-hist-042"
+        ],
+        "reason": "Nodal electrical regeneration versus Schwann-cell myelin segment anatomy."
+      },
+      {
+        "ids": [
+          "limb-audit-phys-036",
+          "limb-audit-hist-039"
+        ],
+        "reason": "Dynamic/static afferent response versus microscopic identification of an intrafusal spindle."
+      }
+    ]
+  },
+  "questions": [
+    {
+      "questionId": "limb-audit-phys-001",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "8,12"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Fixed single axon and full recovery make two suprathreshold spikes comparable; stimulus strength does not proportionally grade regenerative spike amplitude. Refractoriness, recruitment, and signal attenuation alternatives do not fit the stated setup.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-002",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "9-10"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "A resting axon stimulated in its middle propagates away in both directions. Ordinary orthodromic physiological flow is not imposed on this isolated mid-axon experiment.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-003",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "4-6"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Delayed voltage-gated potassium activation delays the repolarizing phase; preserved early sodium current rules out failure of the initiating upstroke as the primary prediction.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-004",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "17"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Depolarized sodium-channel inactivation explains absolute refractoriness despite stronger stimulation; repolarization restores availability. Pump operation and all-or-none amplitude are not substitutes for channel recovery.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-005",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "18-20"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Internodal local current is passive and next-node spike generation is active. Distinguishes physiological regeneration from anatomical identity of a Schwann internode in the histology set.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-006",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "20"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Restricting spike-associated transmembrane ion movement largely to nodes reduces restorative pumping demand; does not imply that pumping or ion gradients become unnecessary.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-007",
+      "verdict": "approved-after-correction",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "21",
+        "excerpt": "Slide 21 establishes conduction velocity. The stated distance and speed are author-supplied values for applying distance/speed, not recovered lecture measurements or a confirmed exam calculation."
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Independent division and unit conversion give 10 ms. Clarified that supplied distance and velocity are authored values, not a recovered teaching experiment; Cell 4 directly supports conduction velocity.",
+      "correctedFields": [
+        "source.excerpt"
+      ],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-008",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Cell 4: Action potentials (Dr. Ranjbaran)",
+        "chapter": "Action potentials and nerve conduction",
+        "lecture": "Foundations Carryover; lecture-supported carryover, limb-exam inclusion unconfirmed",
+        "slide": "13"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "The pre-existing electrochemical gradients can sustain initial channel currents after acute pump blockade. Eventual gradient loss is not confused with direct pump generation of each spike.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-009",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+        "page": "Printed p. 64; local PDF p. 76"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "K-selective model and supplied temperature/formula avoid treating every actual resting membrane as a potassium-only membrane. Recalculation gives a +18.36 mV depolarizing shift.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-010",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+        "page": "Printed p. 65; local PDF p. 77"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Using Vm minus equilibrium potential gives Na -140 mV and K +10 mV; for these positive ions this means inward sodium and outward potassium movement.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-011",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 5: Membrane Potentials and Action Potentials",
+        "page": "Printed p. 76; local PDF p. 88"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Two milliseconds imposes a theoretical 500 Hz ceiling. The explicit exclusion of other limits prevents claiming a guaranteed physiological firing rate.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-012",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "page": "Printed p. 93,96; local PDF p. 104,107"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Terminal calcium entry drives vesicle exocytosis despite preserved arriving terminal spike. Distinct from existing comp-limbs-079, which localizes postsynaptic receptor blockade.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-013",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "page": "Printed p. 94-95; local PDF p. 105-106"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Nicotinic channels pass cations, and sodium inward current exceeds potassium outward current at the normal resting potential. Options confusing potassium direction, chloride, or direct SR release are rejected.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-014",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "page": "Printed p. 95-96; local PDF p. 106-107"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Acetylcholinesterase shortens acetylcholine action in the cleft. Presynaptic recycling, postsynaptic recovery, and SR handling do not directly hydrolyze the transmitter.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-015",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "page": "Printed p. 98; local PDF p. 109"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Uncoupled DHPR-to-RyR activation impairs initial SR calcium release even with normal T-tubule excitation. Distinct from existing comp-limbs-080, which tests calcium removal during relaxation.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-016",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 7: Excitation of Skeletal Muscle: Neuromuscular Transmission and Excitation-Contraction Coupling",
+        "page": "Printed p. 97-98; local PDF p. 108-109"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "T-tubules deliver excitation to the fiber interior; they are not the SR calcium reservoir, an acetylcholine-delivery route, or an ATP-production compartment.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-017",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 83-84; local PDF p. 94-95"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Troponin C calcium binding shifts the regulatory complex and permits actin-myosin interaction. Normal release isolates thin-filament regulation from upstream excitation or SR failure.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-018",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 84; local PDF p. 95"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "ATP binding directly dissociates rigor actomyosin in a permeabilized preparation; hydrolysis, phosphate release, and calcium removal represent different events.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-019",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 84-85; local PDF p. 95-96"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Hydrolysis with retained ADP and phosphate primes detached myosin; this is not ATP-binding detachment or the completion of a power stroke. Retained alongside 018 because it tests a different ordered molecular transition.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-020",
+      "verdict": "approved-after-correction",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 88-89; local PDF p. 99-100"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Added comparable fiber force capacities to make the motor-unit size comparison determinate. Smaller units produce smaller recruitment increments; a fiber is not independently selected within its motor unit.",
+      "correctedFields": [
+        "prompt"
+      ],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-021",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 89; local PDF p. 100"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Small, more excitable motor neurons are recruited before larger units under progressively increasing shared drive. Distinguishes recruitment order from the size-versus-resolution comparison in 020.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-022",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 89; local PDF p. 100"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Asynchronous units can smooth combined tension even when each unit is not fused. Distinct from existing comp-limbs-078's within-unit frequency summation and persistent calcium.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-023",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 87-89; local PDF p. 98-100"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "At 20 Hz the interval is 50 ms: a 200 ms twitch overlaps, while a 20 ms twitch need not. Item predicts overlap, not guaranteed fully fused tetanus; duration comparison differs from existing fixed-unit calcium-mechanism item.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-024",
+      "verdict": "approved-after-correction",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 89; local PDF p. 100"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Original stem omitted assumptions used by its own rationales. Fixed length, isolated motor axon, supramaximal stimulation, and complete mechanical relaxation are now explicit; treppe is distinguished from recruitment, fused tetanus, and passive stretch.",
+      "correctedFields": [
+        "prompt"
+      ],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-025",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 85; local PDF p. 96"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "No filament overlap prevents active cross-bridges despite activation; passive elastic force need not vanish. Distinct from existing comp-limbs-076's arithmetic subtraction of passive from total force.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-026",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 85-86; local PDF p. 96-97"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Matched initial length and maximal activation with two sub-isometric loads isolate the decreasing concentric force-velocity relation; not an isometric zero-work paraphrase.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-027",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 86; local PDF p. 97"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Vertical load and displacement are parallel, with acceleration excluded: external positive work is 40 x 0.25 = 10 J. Distinct from the existing zero-displacement isometric concept.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-028",
+      "verdict": "approved-after-correction",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapters 6 and 85: Skeletal Muscle Contraction and Sports Physiology",
+        "page": "Chapter 6 printed pp. 85–87, local PDF pp. 96–98; Chapter 85 printed p. 1102, local PDF p. 1059"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Calculated power in A/B/C/D is 2.0/3.0/2.4/0 W, selecting B. Added the explicit primary definition at Guyton printed 1102/PDF 1059; neither maximum force nor maximum velocity alone establishes maximum power.",
+      "correctedFields": [
+        "source.chapter",
+        "source.page"
+      ],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-029",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 90; local PDF p. 101"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Static torque balance using explicitly perpendicular moment arms requires 300 N; does not equate flexor force with hand load.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-030",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 90; local PDF p. 101"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Same required torque with halved moment arm requires force to double from 150 to 300 N. Retained alongside 029 because it tests changing geometry across joint positions, which Guyton explicitly discusses, not merely a renamed load.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-031",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 87,90; local PDF p. 98,101"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "At unchanged net external conditions, 2 Nm extra opposing torque requires 2 Nm extra agonist torque. Tests coactivation rather than the moment-arm formula alone.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-032",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 86; local PDF p. 97"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Phosphocreatine transfers phosphate to ADP as immediate buffering. Alternatives compare plausible slower or sustained ATP-resynthesis processes; energy systems are not presented as nonoverlapping switches.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-033",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 86; local PDF p. 97"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Oxidative metabolism can provide sustained ATP resynthesis when oxygen and fuels are supplied. This assesses continuing energy supply rather than morphology or the immediate buffer of 032.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-034",
+      "verdict": "approved-after-correction",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 90; local PDF p. 101"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Clarified that each nerve stimulus evokes normal muscle spikes in the tested isolated motor unit. Preserved excitation permits downstream contractile/metabolic limitation without proving a unique biochemical cause or complete transmitter failure.",
+      "correctedFields": [
+        "prompt"
+      ],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-035",
+      "verdict": "removed-semantic-near-duplicate",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "page": "Printed p. 88; local PDF p. 99"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Scientifically supported, but its oxidative phenotype and endurance inference closely repeat parallel histology limb-audit-hist-041. Removed as unpublished draft with parent agreement; retain original here for recovery, and do not renumber later IDs.",
+      "correctedFields": [],
+      "includedInGate": false
+    },
+    {
+      "questionId": "limb-audit-phys-036",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 699-700; local PDF p. 677-678"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Large dynamic burst followed by static discharge fits primary Ia ending. Source explicitly distinguishes dynamic sensitivity from continuing length-related discharge; secondary II is not the strong dynamic-burst answer.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-037",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 701; local PDF p. 679"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Alpha-gamma coactivation helps maintain tension in the spindle sensory region during extrafusal shortening, preserving feedback rather than permanently silencing it.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-038",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 699; local PDF p. 677"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "At fixed whole-muscle length, shortening contractile intrafusal ends can stretch the sensory center and increase discharge. Distinct from the whole-muscle shortening/coactivation context of 037.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-039",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 697-700; local PDF p. 675-678"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "The shortest excitatory homonymous stretch pathway is Ia dorsal-root input directly to alpha motor neuron with ventral-root output. Diagram and prose independently checked on printed 700/PDF 678.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-040",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 702; local PDF p. 680"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "A patellar tendon tap stretches quadriceps muscle spindles; tendon location of the tap does not make the Golgi tendon organ the normal initiating knee-jerk receptor.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-041",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 702-703; local PDF p. 680-681"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "The explicitly classic Ib inhibitory circuit excites an inhibitory interneuron reducing homonymous alpha output. This wording avoids universalizing simplified Ib behavior to all locomotor states.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-042",
+      "verdict": "approved",
+      "correctOptionId": "D",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 700-701; local PDF p. 678-679"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        }
+      ],
+      "reviewFinding": "Selective afferent interruption compromises spindle-mediated reflex input but leaves direct motor-axon evoked contraction possible. Distinct from a neuromuscular junction lesion or a motor-output interruption.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-043",
+      "verdict": "approved",
+      "correctOptionId": "C",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 703-705; local PDF p. 681-683"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Ipsilateral withdrawal requires interneuronal distribution to appropriate flexors plus inhibition of antagonists. Competing-circuit options are anatomically discriminating, and no monosynaptic homonymous stretch arc substitutes for this pattern.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-044",
+      "verdict": "approved",
+      "correctOptionId": "B",
+      "sourceLocator": {
+        "title": "Guyton and Hall Textbook of Medical Physiology",
+        "edition": "2026 local edition",
+        "chapter": "Chapter 55: Spinal Cord Motor Functions; The Cord Reflexes",
+        "page": "Printed p. 704-705; local PDF p. 682-683"
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "B",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Crossed extension uses interneuronal pathways crossing the cord to contralateral extensor output. Distinct from 043's ipsilateral reciprocal coordination; alternatives misplace side or circuit organization.",
+      "correctedFields": [],
+      "includedInGate": true
+    },
+    {
+      "questionId": "limb-audit-phys-045",
+      "verdict": "approved",
+      "correctOptionId": "A",
+      "sourceLocator": {
+        "title": "Upper and Lower Limbs Review (personal review synthesis), corroborated by Guyton and Hall Textbook of Medical Physiology",
+        "chapter": "Physiology support: from nerve impulse to joint torque; Guyton Chapter 85",
+        "page": "Review PDF p. 86; Guyton printed p. 1102, local PDF p. 1059",
+        "excerpt": "Terminology comes from the review synthesis; Guyton corroborates active muscle resisting an external stretching force. This is book-extension support, not confirmed limb teaching."
+      },
+      "allFourOptionsAndRationalesRead": true,
+      "optionChecks": [
+        {
+          "optionId": "A",
+          "role": "correct",
+          "verdict": "Correct key and its supporting explanation checked"
+        },
+        {
+          "optionId": "B",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "C",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        },
+        {
+          "optionId": "D",
+          "role": "distractor",
+          "verdict": "Incorrect alternative and its specific exclusion rationale checked"
+        }
+      ],
+      "reviewFinding": "Active flexor lengthening during load lowering is eccentric. Review page 86 supplies the term; primary Guyton printed 1102/PDF 1059 corroborates active muscle resisting stretch but is not represented as using the exact term. No percentage-strength claim or treatment advice is assessed.",
+      "correctedFields": [],
+      "includedInGate": true
+    }
+  ],
+  "removedDraftArchive": [
+    {
+      "reason": "Unpublished near-repeat removed by independent reviewer with parent agreement; kept here for recoverability.",
+      "question": {
+        "schemaVersion": "1.0.0",
+        "id": "limb-audit-phys-035",
+        "revision": 1,
+        "status": "draft",
+        "kind": "single_best_answer",
+        "subject": "physiology",
+        "topic": "Limb nerve and muscle physiology",
+        "subtopic": "Link oxidative muscle-fiber specializations to endurance without treating every type-II subtype as identical.",
+        "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+        "difficulty": 3,
+        "prompt": "A sample from an endurance-oriented motor unit contains fibers with abundant mitochondria, myoglobin, and capillary supply. Which performance profile is most consistent with these features?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Brief high power supported by large glycolytic-enzyme stores and low capillary density"
+          },
+          {
+            "id": "B",
+            "text": "Rapid powerful contractions associated with sparse mitochondria and fast glycolytic specialization"
+          },
+          {
+            "id": "C",
+            "text": "Relatively sustained force production supported by oxidative metabolism"
+          },
+          {
+            "id": "D",
+            "text": "High shortening speed determined solely by the concentration of oxygen-binding myoglobin"
+          }
+        ],
+        "correctOptionId": "C",
+        "explanation": "These features support oxygen use and sustained oxidative ATP production, typical of slow endurance-oriented fibers.",
+        "distractorExplanations": {
+          "A": "This is a more glycolytic profile, unlike the stated highly oxidative sample.",
+          "B": "This combination of low mitochondrial abundance and glycolytic specialization differs from the stated endurance-oriented sample.",
+          "D": "Myoglobin supports oxygen handling; it does not by itself determine maximal shortening speed."
+        },
+        "learningObjective": "Link oxidative muscle-fiber specializations to endurance without treating every type-II subtype as identical.",
+        "source": {
+          "title": "Guyton and Hall Textbook of Medical Physiology",
+          "edition": "2026 local edition",
+          "chapter": "Chapter 6: Contraction of Skeletal Muscle",
+          "page": "Printed p. 88; local PDF p. 99"
+        },
+        "tags": [
+          "exam-term2-limbs",
+          "term-2",
+          "study-practice",
+          "source-based",
+          "limb-science-audit",
+          "book-extension",
+          "knowledge-core"
+        ],
+        "examPriority": "standard",
+        "qualityFlags": [
+          "original-not-past-question",
+          "source-locator-checked",
+          "complete-option-reasoning",
+          "independent-review-pending"
+        ]
+      }
+    }
+  ],
+  "validation": {
+    "result": "passed",
+    "report": "independent-validation.json",
+    "reproducibleCheck": "node independent_validate.cjs",
+    "sha256": {
+      "questions.jsonl": "b8881c268584f9e82d4f42a6020ed14d058b98410c091b00101136a7d461daf4",
+      "concepts.json": "8aeb6c64a71506238dde092c6cfefcd3634972e757d60d9d55989c2d9edce29c",
+      "modules.json": "087a065482d37facdd04cb993531a3ad7adeac9cf5f1eac02a20b384dfa89f6c",
+      "coverage.json": "c496de7e833187b09fe51b6bba9bdfecb6a06df1de20964edc580c63f5417356",
+      "source-audit.json": "20cc279f76cf095ab10c598a2a3289768d58b98e43113b54a3861d2ebfa0c89b"
+    }
+  },
+  "gatePolicy": "Only approvedQuestionIds and exact five-file SHA-256 payload values in review-gate.json are approved. Any payload edit requires renewed verification and gate regeneration."
+}

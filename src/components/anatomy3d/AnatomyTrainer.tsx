@@ -102,11 +102,18 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
     if (window.matchMedia("(max-width: 700px)").matches) questionRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
   }
   const exploreRegion=listAnatomyModules().find(item=>item.manifest.modelKey===exploreModelKey)?.manifest.region;
-  const explorer=<div className="anatomy-explorer-shell"><div className="anatomy-study-modes"><button type="button" className="anatomy-explorer-back" onClick={() => {setExploring(false);setStudying(false);}}>← Back to anatomy test</button><button type="button" onClick={() => {setExploring(false);setStudying(true);}}>Study 2D · labeled figures</button></div><AnatomyExplorer regions={exploreRegion&&!regions.includes(exploreRegion)?[exploreRegion]:regions} initialModelKey={exploreModelKey} /></div>;
+  const explorer=<AnatomyExplorer regions={exploreRegion&&!regions.includes(exploreRegion)?[exploreRegion]:regions} initialModelKey={exploreModelKey} onModuleChange={setExploreModelKey} embedded />;
   // Keep the gallery mounted while exploring: filters, masked labels and the
   // current practice target/answer survive a 2D → 3D → 2D round trip.
-  if (studying) return <><div hidden={exploring}><AnatomyStudyGallery examId={examId} initialImageId={galleryImageId} onImageChange={setGalleryImageId} onExit={() => setStudying(false)} onExplore={key => {setExploreModelKey(key);setExploring(true);}} /></div>{exploring&&explorer}</>;
-  if (exploring) return explorer;
+  if (studying || exploring) return <section className="anatomy-explorer-shell anatomy-unified-atlas" aria-label="Anatomy 2D and 3D study atlas">
+    <header className="anatomy-atlas-header"><div><p className="eyebrow">Interactive atlas</p><h1>Anatomy · 2D & 3D</h1><p>Flip through labeled source figures or explore the regional model.</p></div><button type="button" className="anatomy-explorer-back" onClick={() => {setExploring(false);setStudying(false);}}>← Back to anatomy test</button></header>
+    <div className="anatomy-atlas-view-switch" role="group" aria-label="Atlas view">
+      <button type="button" aria-pressed={!exploring} onClick={() => {setExploring(false);setStudying(true);}}>2D labeled images</button>
+      <button type="button" aria-pressed={exploring} onClick={() => {setStudying(true);setExploring(true);}}>3D regional model</button>
+    </div>
+    <div hidden={exploring}><AnatomyStudyGallery examId={examId} embedded initialModuleKey={exploreModelKey} initialImageId={galleryImageId} onImageChange={setGalleryImageId} onExit={() => setStudying(false)} onExplore={key => {setExploreModelKey(key);setStudying(true);setExploring(true);}} /></div>
+    {exploring&&explorer}
+  </section>;
   if (labelGame) return <AnatomyLabelGame examId={examId} modules={modules.map(item=>item.manifest)} onExit={() => setLabelGame(false)} />;
   const item = items[index];
   const question = item?.question;
@@ -137,7 +144,7 @@ export function AnatomyTrainer({ regions, onExit }: { regions: string[]; onExit?
       <p>{figureCount} source figures · {imageTargets.length} labeled targets. {pairedTargets} have a separate 3D target; {imageTargets.length - pairedTargets} use regional 3D context only. Schematic structures are marked. Switching views keeps the same question.</p>
       <p>Learn uses one target per figure so revealed labels cannot answer a later question. Test mode can include more targets from each figure. Start a new test to apply these settings to a saved session.</p>
       <p>Advanced regional spotters: elementary whole-organ/bone recognition and “which system?” questions are excluded. The full anatomy remains available for context and exploration.</p>
-      <div className="anatomy-settings-actions"><button type="button" onClick={startSession}>Start new test</button><button type="button" onClick={() => { setExploring(true); setSettings(false); }}>Explore the full 3D atlas</button>{onExit && <button type="button" onClick={onExit}>Back to study</button>}</div>
+      <div className="anatomy-settings-actions"><button type="button" onClick={startSession}>Start new test</button><button type="button" onClick={() => { setStudying(true); setExploring(false); setSettings(false); }}>Open study atlas · 2D & 3D</button>{onExit && <button type="button" onClick={onExit}>Back to study</button>}</div>
       <div ref={setSettingsContainer} className="anatomy-settings-visual" />
     </section>}
     {!question ? <div className="anatomy-exam-empty"><p>No questions match these settings.</p><button type="button" onClick={() => setSettings(true)}>Change settings</button></div> : <>
