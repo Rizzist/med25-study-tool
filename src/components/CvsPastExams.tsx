@@ -188,7 +188,7 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
             <button aria-pressed={mode === 'instant'} onClick={() => setMode('instant')}>Learn · instant feedback</button>
             <button aria-pressed={mode === 'deferred'} onClick={() => setMode('deferred')}>Exam · mark at the end</button>
         </div>
-        <p className={styles.note}>Supplied keys use pale green/red. Independently AI-reviewed proposals use deep green/red and an “AI-proposed” label—not an official key. Unresolved questions stay ungraded. Feedback mode applies to new attempts.</p>
+        <details className={styles.note}><summary>About the answers</summary><p>Slightly stronger colors distinguish reference-reviewed answers from supplied keys. Review provenance and references are available with each answer. These are study answers, not certified university keys. Feedback mode applies to new attempts.</p></details>
         {storageWarning && <p role="alert">{storageWarning}</p>}{error && <p role="alert">{error}</p>}
         {loading && <p role="status">Opening your past paper…</p>}
         <section className={styles.aggregator} aria-label="Combine past papers">
@@ -196,7 +196,7 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
             <div className={styles.actions}><button disabled={loading} onClick={() => setSelectedPapers(catalog.papers.map(p => p.id))}>Select all</button><button disabled={loading || !selectedPapers.length} onClick={() => setSelectedPapers([])}>Clear selection</button></div>
             <div className={styles.paperSelection}>{catalog.papers.map(entry => <label key={entry.id}>
                 <input type="checkbox" disabled={loading} checked={selectedPapers.includes(entry.id)} onChange={e => setSelectedPapers(ids => e.target.checked ? [...ids, entry.id] : ids.filter(id => id !== entry.id))} />
-                <span>{entry.title}<small>{entry.count} questions · {entry.keyed} source / {answerCounts[entry.id]?.proposed ?? 0} AI-proposed</small></span>
+                <span>{entry.title}<small>{entry.count} questions · {entry.keyed + (answerCounts[entry.id]?.proposed ?? 0)} with answers</small></span>
             </label>)}</div>
             <p>{selectedPapers.length} papers selected · {catalog.papers.filter(p => selectedPapers.includes(p.id)).reduce((n, p) => n + p.count, 0)} questions</p>
             <div className={styles.actions}><button className="primary" disabled={loading || !selectedPapers.length} onClick={() => void openCombined()}>
@@ -214,7 +214,7 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
             const result = progress.latest[entry.id], saved = progress.attempts[entry.id];
             const same = saved?.fingerprint === entry.fingerprint;
             return <article key={entry.id}><span className={styles.meta}>{entry.category}</span><h2>{entry.title}</h2><p>{entry.note}</p>
-                <p><b>{entry.count}</b> questions · <b>{entry.keyed}</b> source-keyed · <b>{answerCounts[entry.id]?.proposed ?? 0}</b> AI-proposed{answerCounts[entry.id]?.unresolved ? ` · ${answerCounts[entry.id].unresolved} unresolved` : ''}</p>
+                <p><b>{entry.count}</b> questions · <b>{entry.keyed + (answerCounts[entry.id]?.proposed ?? 0)}</b> with answers{answerCounts[entry.id]?.unresolved ? ` · ${answerCounts[entry.id].unresolved} unresolved` : ''}</p>
                 {result ? <Result result={result} stale={result.fingerprint !== entry.fingerprint} /> : <p className={styles.meta}>No completed result yet</p>}
                 <div className={styles.actions}><button className="primary" disabled={loading} onClick={() => void open(entry)}>{same ? saved.completedAt ? 'Results & review' : 'Resume paper' : 'Take paper'}</button>
                     {same && <button disabled={loading} onClick={() => void open(entry, true)}>New attempt</button>}</div>
@@ -270,11 +270,10 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
                 {q.media && <img className={styles.figure} src={q.media} alt={'Original figure for question ' + q.number} />}
                 <PaperAnswer key={q.id} options={q.options} value={value} locked={locked} correctKey={reveal ? reliableKey : null} aiGraded={aiGraded} onSubmit={submit} />
                 {reveal && <section className={styles.feedback + ' ' + (feedback === 'correct' ? aiGraded ? styles.aiCorrect : styles.correct : feedback === 'incorrect' ? aiGraded ? styles.aiIncorrect : styles.incorrect : styles.neutral)} aria-live="polite">
-                    <h3>{feedback === 'correct' ? aiGraded ? '✓ Correct against AI-proposed answer' : '✓ Correct — matches supplied key' : feedback === 'incorrect' ? aiGraded ? '✕ Incorrect against AI-proposed answer' : '✕ Incorrect — does not match supplied key' : feedback === 'unanswered' ? 'Not answered' : 'Answer saved · unresolved question'}</h3>
-                    {reliableKey ? <p><b>{aiGraded ? 'AI-proposed answer' : 'Supplied answer'}: {reliableKey}.</b> {q.options['ABCDEF'.indexOf(reliableKey)]}</p> : <p>No defensible reviewed answer is available for automatic marking. This is not counted as a wrong answer.</p>}
+                    <h3>{feedback === 'correct' ? '✓ Correct' : feedback === 'incorrect' ? '✕ Incorrect' : feedback === 'unanswered' ? 'Not answered' : 'Answer saved · unresolved question'}</h3>
+                    {reliableKey ? <p><b>Correct answer: {reliableKey}.</b> {q.options['ABCDEF'.indexOf(reliableKey)]}</p> : <p>No defensible reviewed answer is available for automatic marking. This is not counted as a wrong answer.</p>}
                     {q.aiAnswer && <div className={styles.aiExplanation}><p>{q.aiAnswer.explanation}</p>{q.aiAnswer.caveat && <p><b>Qualification:</b> {q.aiAnswer.caveat}</p>}
-                        <p className={styles.meta}>AI-proposed · second AI review completed · {q.aiAnswer.confidence} confidence · not a university answer key</p>
-                        <details><summary>References used for the AI review</summary><ul>{q.aiAnswer.references.map((ref, i) => <li key={i}><a href={ref.url} target="_blank" rel="noreferrer">{ref.title}</a></li>)}</ul></details></div>}
+                        <details><summary>References &amp; provenance</summary><p className={styles.meta}>Reference-based answer · {q.aiAnswer.confidence} confidence · machine-assisted review, not a university answer key</p><ul>{q.aiAnswer.references.map((ref, i) => <li key={i}><a href={ref.url} target="_blank" rel="noreferrer">{ref.title}</a></li>)}</ul></details></div>}
                     {q.keyNote && <details><summary>Answer-key provenance</summary><p>{q.keyNote}</p>{!reliableKey && q.providedKey && <p>Unverified source mark: {q.providedKey}</p>}</details>}
                     {!reliableKey && value.trim() && <fieldset className={styles.selfMark}><legend>Optional self-mark · reported separately</legend>
                         {[['correct', 'I was correct'], ['incorrect', 'I was incorrect'], ['ungraded', 'Leave ungraded']].map(([status, label]) =>
@@ -314,7 +313,7 @@ function PaperAnswer({ options, value, locked, correctKey, aiGraded, onSubmit }:
                 className={[styles.option, selected ? styles.chosen : '', right ? aiGraded ? styles.aiCorrect : styles.optionCorrect : '', wrong ? aiGraded ? styles.aiIncorrect : styles.optionWrong : ''].join(' ')}
                 onClick={() => { if (!locked) onSubmit(letter); }}>
                 <b className={styles.letter}>{letter}</b><span dir="auto">{option}</span>
-                {(right || selected) && <span className={styles.optionStatus}>{right ? aiGraded ? '✓ AI-proposed' : '✓ Source key' : wrong ? aiGraded ? '✕ AI-graded' : '✕ Your answer' : 'Selected'}</span>}
+                {(right || selected) && <span className={styles.optionStatus}>{right ? '✓ Correct' : wrong ? '✕ Your answer' : 'Selected'}</span>}
             </button>;
         }) : <>
             {options.length > 0 && <details><summary>Partially recovered choices · check source</summary>
@@ -330,9 +329,9 @@ function Result({ result, stale = false }: { result: PaperResult; stale?: boolea
     return <section className={styles.result} aria-label="Latest final result">
         <b>Latest result: {result.sectionStats?.overall.percentage != null ? result.sectionStats.overall.percentage + '% accuracy on graded answers' : 'No graded answers yet'}</b>
         {result.keyed > 0 && <span>{result.matched}/{result.keyed} source-key matches ({result.percentage}%)</span>}
-        {!!result.aiKeyed && <span>{result.aiMatched}/{result.aiKeyed} AI-proposed matches · provisional, not an official mark</span>}
+        {!!result.aiKeyed && <span>{result.aiMatched}/{result.aiKeyed} reference-reviewed matches</span>}
         <span>{result.manualGraded ? result.manualCorrect + '/' + result.manualGraded + ' self-marked correct · ' : ''}{result.sectionStats ? result.sectionStats.overall.ungraded + ' answered, ungraded' : result.ungraded + ' unkeyed/ungraded items (may be unanswered)'} · {result.unanswered} unanswered</span>
-        <small>Source-key and AI-proposed match counts include unanswered items in their denominators. Section accuracy uses graded answers only. Older saved results retain the grading available at completion; open Results &amp; review to recalculate.</small>
+        <small>Match counts include unanswered items in their denominators. Section accuracy uses graded answers only. Older saved results retain the grading available at completion; open Results &amp; review to recalculate.</small>
         <time dateTime={result.completedAt}>{new Date(result.completedAt).toLocaleString()}</time>
         {stale && <small>From an earlier paper revision; preserved for reference.</small>}
     </section>;

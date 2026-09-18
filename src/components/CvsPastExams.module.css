@@ -52,10 +52,11 @@
 .paperSelection small{display:block;color:var(--muted);margin-top:6px}
 .savedCombined{display:grid;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
 .aggregator summary{cursor:pointer;padding:12px 0;font-weight:650}
-.options .aiCorrect,.aiCorrect{background:#064e3b;color:#fff;border-color:#064e3b}
-.options .aiIncorrect,.aiIncorrect{background:#881e29;color:#fff;border-color:#881e29}
-.aiCorrect .letter,.aiIncorrect .letter{border-color:#ffffff80}
-.aiCorrect a,.aiIncorrect a,.aiCorrect .meta,.aiIncorrect .meta{color:#fff}
+.options .aiCorrect,.aiCorrect{background:#d0ead8;color:#155532;border-color:#78ac8b}
+.options .aiIncorrect,.aiIncorrect{background:#f2d2ce;color:#8b2a23;border-color:#b87970}
+.aiCorrect .letter,.aiIncorrect .letter{border-color:currentColor}
+.aiCorrect a,.aiCorrect .meta{color:#155532}
+.aiIncorrect a,.aiIncorrect .meta{color:#8b2a23}
 .aiExplanation ul{padding-left:22px;line-height:1.7}
 .aiExplanation .meta{font-size:.85rem}
 .report{display:grid;gap:18px;min-width:0}
