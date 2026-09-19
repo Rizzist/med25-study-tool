@@ -13,9 +13,16 @@ import styles from './CvsPastExams.module.css';
 import reviewedCounts from '../../public/study/cvs-past-papers/ai-summary.json';
 import coreData from '../../public/study/cvs-past-papers/core-exam.json';
 import {coreExamId, createCoreExam, type CoreExamManifest} from '@/src/lib/mcq/cvs-core-exam.mjs';
+import nonCoreData from '../../public/study/cvs-past-papers/noncore-anatomy.json';
+import {NON_CORE_ANATOMY_ID, createNonCoreAnatomyExam, type NonCoreAnatomyManifest} from '@/src/lib/mcq/cvs-noncore-anatomy.mjs';
 
 const answerCounts: Record<string, {proposed:number;unresolved:number;corrections:number}> = reviewedCounts;
 const coreManifest: CoreExamManifest = coreData;
+const nonCoreManifest: NonCoreAnatomyManifest = nonCoreData;
+const nonCoreTopicCounts = [...new Set(nonCoreManifest.questions.map(row => row.topicId))].map(id => ({
+    id, title: nonCoreManifest.questions.find(row => row.topicId === id)!.topicTitle,
+    count: nonCoreManifest.questions.filter(row => row.topicId === id).length,
+}));
 const coreAnatomyCount = coreManifest.questions.filter(row => row.subjectId === 'anatomy').length;
 const coreTopics = [...new Map(coreManifest.questions.map(row => [row.topicId, row])).values()]
     .sort((a,b) => b.topicPaperCount-a.topicPaperCount);
@@ -113,8 +120,8 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
         if (!p.questions.length) throw new Error('This source has no exam-ready items. Read its transcript in the archive.');
         const previous = progressRef.current.attempts[p.id];
         let saved = restart ? null : restorePaperAttempt(previous, p);
-        // Expanding the curated core must not discard answers already entered.
-        if (!restart && !saved && previous && p.id.startsWith('cvs-core-exam:')) {
+        // Updating a curated set must not discard answers to retained questions.
+        if (!restart && !saved && previous && (p.id.startsWith('cvs-core-exam:') || p.id === NON_CORE_ANATOMY_ID)) {
             saved = restorePaperAttempt({...previous,fingerprint:p.fingerprint,completedAt:null,index:0},p);
             if (saved) saved.index = Math.max(0,p.questions.findIndex(q => !saved!.answers[q.id]?.trim()));
         }
@@ -161,6 +168,19 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
             if (id !== request.current) return;
             enter(createCoreExam(coreManifest, sources, scope), restart);
         } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not open Core Exam.'); }
+        finally { if (id === request.current) setLoading(false); }
+    }
+    async function openNonCoreAnatomy(restart = false) {
+        if (!catalog) return;
+        if (restart && !window.confirm('Start a new Non-core Anatomy attempt? Your latest completed result stays saved.')) return;
+        const id = ++request.current;
+        setLoading(true); setError('');
+        try {
+            const ids = new Set(nonCoreManifest.questions.map(row => row.paperId));
+            const sources = await Promise.all(catalog.papers.filter(entry => ids.has(entry.id)).map(loadPaper));
+            if (id !== request.current) return;
+            enter(createNonCoreAnatomyExam(nonCoreManifest, sources, coreManifest), restart);
+        } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not open Non-core Anatomy.'); }
         finally { if (id === request.current) setLoading(false); }
     }
     function submit(value: string) {
@@ -243,6 +263,31 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
                 <p>Repeated questions appear first. After answering, open “Repeated-question sources” to see their matches. The table below separately shows <b>topic coverage</b>, not identical-question repeats or predicted probabilities.</p>
                 <div className={styles.coreTopicList}>{coreTopics.map(row => <div key={row.topicId}><span>{row.topicTitle}</span><b>{row.topicPaperCount}/{coreManifest.evidencePaperIds.length} papers</b></div>)}</div>
                 <p>{coreManifest.limitation}</p>
+            </details>
+        </article>
+        <article className={styles.nonCoreCard} aria-labelledby="cvs-noncore-title">
+            <div className={styles.coreHeading}><span className={styles.nonCoreBadge}>02 · Beyond Core</span><span>Anatomy only · original PYQs</span></div>
+            <h2 id="cvs-noncore-title">Non-core Anatomy</h2>
+            <p className={styles.nonCoreLead}>The unusual details, exceptions, and one-offs.</p>
+            <p>{nonCoreManifest.questions.length} distinct questions beyond Core, including {nonCoreManifest.questions.filter(row => row.hasImage).length} original image spotters. Core questions and known repeat variants are excluded; duplicate copies are collapsed. Different details within the same topic stay in.</p>
+            <div className={styles.actions}>
+                <button className="primary" disabled={loading} onClick={() => void openNonCoreAnatomy()}>
+                    {progress.attempts[NON_CORE_ANATOMY_ID] ? progress.attempts[NON_CORE_ANATOMY_ID].completedAt ? 'Results & review' : 'Resume' : 'Start'} · Non-core Anatomy · {nonCoreManifest.questions.length}
+                </button>
+                {progress.attempts[NON_CORE_ANATOMY_ID] && <button disabled={loading} onClick={() => void openNonCoreAnatomy(true)}>New attempt</button>}
+            </div>
+            <p className={styles.meta}>Separate saved progress and latest result · weak-point report by anatomy review section.</p>
+            {progress.latest[NON_CORE_ANATOMY_ID] && <Result result={progress.latest[NON_CORE_ANATOMY_ID]} stale={progress.latest[NON_CORE_ANATOMY_ID].total !== nonCoreManifest.questions.length} />}
+            <details><summary>Coverage &amp; excluded items</summary>
+                <p>{nonCoreManifest.candidateCount} anatomy source questions accounted for: {nonCoreManifest.excludedCore.length} Core overlaps, {nonCoreManifest.duplicates.length} additional duplicate copies, {nonCoreManifest.questions.length} in this test, and {nonCoreManifest.withheld.length} held for clarification.</p>
+                <div className={styles.coreTopicList}>{nonCoreTopicCounts.map(topic => <div key={topic.id}><span>{topic.title}</span><b>{topic.count} questions</b></div>)}</div>
+                <p>{nonCoreManifest.methodology}</p><p>{nonCoreManifest.limitation}</p>
+                <details><summary>{nonCoreManifest.withheld.length} unresolved items · original sources, not scored</summary>
+                    <ul className={styles.heldItems}>{nonCoreManifest.withheld.map(item => <li key={item.questionId}>
+                        <a href={item.sourcePage} target="_blank" rel="noreferrer">{catalog.papers.find(entry => entry.id === item.paperId)?.title ?? item.paperId} · Q{item.questionId.split('-q').pop()}</a>
+                        <p>{item.prompt}</p><small>{item.reason}</small>
+                    </li>)}</ul>
+                </details>
             </details>
         </article>
         <section className={styles.aggregator} aria-label="Combine past papers">

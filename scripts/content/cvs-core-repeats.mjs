@@ -28,6 +28,10 @@ function signature(q) {
   const key=answerResolution(q).key;
   return {q,answer:normalizeQuestionText(q.options['ABCDEF'.indexOf(key)]||''),stem:tokens(q.prompt),choices:tokens(q.options.join(' ')),full:normalizeQuestionText(q.prompt)+'|'+choiceSignature(q)};
 }
+// Public question-level adapter, shared by complementary revision sets.
+export function questionsSharePattern(a,b) {
+  return sameQuestionPattern(signature(a),signature(b));
+}
 export function sameQuestionPattern(a,b) {
   // Different developmental subdivisions must not be merged by similar distractors.
   const pair=[a.q.id,b.q.id].sort().join('|');

@@ -1,0 +1,37 @@
+{
+  "revision": "2026-09-19-noncore-anatomy-v1",
+  "note": "Question-pattern review, not a new clinical answer-key audit. Equivalent tested facts are collapsed; distinct facts within a topic and image spotters remain separate.",
+  "coreEquivalents": {
+    "cvs-2021-april-q65": "cvs-2025-february-q23",
+    "cvs-2021-april-q73": "cvs-2021-september-q82",
+    "cvs-2021-april-q77": "cvs-2023-january-q80",
+    "cvs-2021-april-q83": "cvs-undated-histology-first-q81",
+    "cvs-2021-september-q79": "cvs-undated-histology-first-q69",
+    "cvs-2021-october-q68": "cvs-2022-may-q66",
+    "cvs-2021-october-q69": "cvs-2025-february-q19",
+    "cvs-2021-october-q77": "cvs-undated-answered-fragment-q2",
+    "cvs-2021-october-q81": "cvs-undated-histology-first-q88",
+    "cvs-2022-may-q56": "cvs-2025-february-q22",
+    "cvs-2022-may-q67": "cvs-2025-february-q24",
+    "cvs-2023-january-q66": "cvs-undated-histology-first-q88",
+    "cvs-2025-february-q18": "cvs-2022-may-q59",
+    "cvs-undated-histology-first-q86": "cvs-2025-february-q12",
+    "cvs-undated-student-2023-q61": "cvs-2023-january-q80",
+    "cvs-undated-student-2023-q72": "cvs-2025-february-q6",
+    "cvs-undated-student-2023-q73": "cvs-undated-histology-first-q75",
+    "cvs-undated-photo-paper-q65": "cvs-2025-february-q24",
+    "cvs-undated-answered-fragment-q8": "cvs-undated-histology-first-q90"
+  },
+  "duplicateGroups": [
+    ["cvs-2021-april-q61", "cvs-2021-september-q76"],
+    ["cvs-2021-april-q76", "cvs-2021-september-q68"],
+    ["cvs-2021-september-q73", "cvs-undated-student-2023-q64"],
+    ["cvs-2021-october-q79", "cvs-2022-may-q70", "cvs-undated-student-2023-q74"],
+    ["cvs-2025-february-q16", "cvs-undated-student-2023-q77"]
+  ],
+  "holds": {
+    "cvs-2021-april-q64": "The source mark conflicts with the keyed equivalent in September 2021 Q74. Use that representative; this copy requires key reconciliation.",
+    "cvs-2021-september-q70": "The same stem in May 2022 Q46 is unresolved: it conflates erector spinae with deep transversospinal muscles. A source mark alone does not resolve the wording.",
+    "cvs-2021-october-q80": "The spatial relation is unspecified, so more than one neighboring structure may fit. The source mark needs clarification before scoring."
+  }
+}

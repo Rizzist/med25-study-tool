@@ -67,6 +67,15 @@
 @media(prefers-reduced-motion:reduce){.coreCard::before{animation:none;display:none}}
 @media(max-width:650px){.coreCard{padding:20px 16px}.coreCard .actions{display:grid;grid-template-columns:1fr;width:100%}.coreTopicList>div{gap:8px}}
 .aggregator{display:grid;gap:16px;padding:clamp(16px,3vw,26px);border:1px solid var(--line);border-radius:16px;background:var(--paper,#fff)}
+.nonCoreCard{display:grid;gap:14px;padding:clamp(20px,3vw,30px);border:1px solid #a4babc;border-radius:18px;background:linear-gradient(120deg,#f3f8f8,#e5efef);color:#1b373b;min-width:0;overflow-wrap:anywhere}
+.nonCoreCard h2{font-size:clamp(1.55rem,2.6vw,2rem);margin:0;line-height:1.25;letter-spacing:-.025em}
+.nonCoreCard p{margin:0;max-width:85ch}.nonCoreLead{font-weight:600;font-size:1.05rem}
+.nonCoreBadge{display:inline-block;border:1px solid #b1c6c7;border-radius:30px;background:#faffff;padding:6px 12px}
+.nonCoreCard summary{cursor:pointer;font-size:.9rem;font-weight:650;padding:8px 0}
+.nonCoreCard details p{margin:10px 0;font-size:.9rem}
+.nonCoreCard .coreTopicList>div{border-color:#a4babc66}
+.heldItems{padding-left:22px;line-height:1.6}.heldItems li{margin:16px 0}.heldItems a{color:#125964}.heldItems small{font-size:.85rem}
+@media(max-width:650px){.nonCoreCard{padding:20px 16px}.nonCoreCard .actions{display:grid;grid-template-columns:1fr}.nonCoreCard .actions button{width:100%}}
 .aggregator h2{font-size:1.4rem;margin:0 0 10px}
 .paperSelection{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:8px}
 .paperSelection label{display:flex;align-items:flex-start;gap:12px;padding:12px;border:1px solid var(--line);border-radius:9px;cursor:pointer;line-height:1.45;font-size:.95rem}
