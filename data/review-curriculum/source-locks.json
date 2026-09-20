@@ -1,0 +1,3229 @@
+{
+  "schemaVersion": 1,
+  "courses": [
+    "term2-cvs",
+    "term2-respiratory",
+    "term2-limbs",
+    "term2-biochemistry",
+    "term2-physiology-practical",
+    "term2-nutrition",
+    "term2-religion",
+    "term2-divine-ethics"
+  ],
+  "policy": "PDF hashes lock previously verified bookmarks/page counts. A changed PDF fails closed and requires explicit outline revalidation before updating this manifest. Authoring JSON hashes can be checked with --archive without requiring an archive path during normal builds.",
+  "volumes": [
+    {
+      "id": "cvs",
+      "examId": "term2-cvs",
+      "pdfPath": "public/study/reviews/cvs.pdf",
+      "sha256": "5eff448128a044a9ab26baf490eb9db798d9f96871c595d72e79ae92e72a5237",
+      "pageCount": 110,
+      "originalPdfFilename": "01 - Cardiovascular Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/cvs.json",
+        "sha256": "84bcd77b386d42f1a3e14ca094ca42df14050cc07d9eb41f04ea534a4abf671d"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "cvs/orientation",
+          "sourceSectionId": "orientation",
+          "title": "Scope, source hierarchy and how to use this volume",
+          "pdfPage": 4
+        },
+        {
+          "id": "cvs/thoracic-map",
+          "sourceSectionId": "thoracic-map",
+          "title": "Thoracic boundaries, apertures and surface planes",
+          "pdfPage": 5
+        },
+        {
+          "id": "cvs/sternum",
+          "sourceSectionId": "sternum",
+          "title": "Sternum, costal notches and joint types",
+          "pdfPage": 7
+        },
+        {
+          "id": "cvs/rib-landmarks",
+          "sourceSectionId": "rib-landmarks",
+          "title": "Typical and atypical ribs: every named landmark",
+          "pdfPage": 9
+        },
+        {
+          "id": "cvs/vertebrae",
+          "sourceSectionId": "vertebrae",
+          "title": "Vertebrae, articular facets and intervertebral foramina",
+          "pdfPage": 11
+        },
+        {
+          "id": "cvs/spinal-joints",
+          "sourceSectionId": "spinal-joints",
+          "title": "Spinal joints, ligaments and disc disease",
+          "pdfPage": 13
+        },
+        {
+          "id": "cvs/back-muscles",
+          "sourceSectionId": "back-muscles",
+          "title": "Back muscles, thoracolumbar fascia and segmental innervation",
+          "pdfPage": 16
+        },
+        {
+          "id": "cvs/craniovertebral-suboccipital",
+          "sourceSectionId": "craniovertebral-suboccipital",
+          "title": "Atlas-axis stability and the suboccipital region",
+          "pdfPage": 18
+        },
+        {
+          "id": "cvs/spinal-cord",
+          "sourceSectionId": "spinal-cord",
+          "title": "Spinal cord, roots, meninges and lumbar cistern",
+          "pdfPage": 19
+        },
+        {
+          "id": "cvs/cord-vascular",
+          "sourceSectionId": "cord-vascular",
+          "title": "Spinal cord blood supply and localization",
+          "pdfPage": 20
+        },
+        {
+          "id": "cvs/intercostal",
+          "sourceSectionId": "intercostal",
+          "title": "Intercostal muscles, wall layers and respiratory mechanics",
+          "pdfPage": 22
+        },
+        {
+          "id": "cvs/wall-neurovascular",
+          "sourceSectionId": "wall-neurovascular",
+          "title": "Thoracic arteries, veins and nerves",
+          "pdfPage": 25
+        },
+        {
+          "id": "cvs/diaphragm",
+          "sourceSectionId": "diaphragm",
+          "title": "Diaphragm openings and neurovascular relations",
+          "pdfPage": 27
+        },
+        {
+          "id": "cvs/mediastinum",
+          "sourceSectionId": "mediastinum",
+          "title": "Mediastinal compartments and three-dimensional relationships",
+          "pdfPage": 27
+        },
+        {
+          "id": "cvs/esophagus-duct",
+          "sourceSectionId": "esophagus-duct",
+          "title": "Esophagus, thoracic duct and azygos system",
+          "pdfPage": 30
+        },
+        {
+          "id": "cvs/pericardium",
+          "sourceSectionId": "pericardium",
+          "title": "Pericardial layers, sinuses and tamponade",
+          "pdfPage": 31
+        },
+        {
+          "id": "cvs/heart-external",
+          "sourceSectionId": "heart-external",
+          "title": "Heart surfaces, borders, grooves and imaging silhouette",
+          "pdfPage": 34
+        },
+        {
+          "id": "cvs/right-heart",
+          "sourceSectionId": "right-heart",
+          "title": "Right atrium and right ventricle: internal examination",
+          "pdfPage": 37
+        },
+        {
+          "id": "cvs/left-heart",
+          "sourceSectionId": "left-heart",
+          "title": "Left atrium, left ventricle and valve apparatus",
+          "pdfPage": 39
+        },
+        {
+          "id": "cvs/coronary",
+          "sourceSectionId": "coronary",
+          "title": "Coronary arterial territories and venous drainage",
+          "pdfPage": 42
+        },
+        {
+          "id": "cvs/cardiac-nerves",
+          "sourceSectionId": "cardiac-nerves",
+          "title": "Autonomic cardiac and mediastinal nerves",
+          "pdfPage": 43
+        },
+        {
+          "id": "cvs/breast",
+          "sourceSectionId": "breast",
+          "title": "Breast and thoracic lymphatic pathways",
+          "pdfPage": 46
+        },
+        {
+          "id": "cvs/pectoral-muscles",
+          "sourceSectionId": "pectoral-muscles",
+          "title": "Pectoral muscles, serratus anterior and clavipectoral fascia",
+          "pdfPage": 48
+        },
+        {
+          "id": "cvs/cardiac-ap",
+          "sourceSectionId": "cardiac-ap",
+          "title": "Cardiac action potentials and excitation-contraction coupling",
+          "pdfPage": 49
+        },
+        {
+          "id": "cvs/conduction-phys",
+          "sourceSectionId": "conduction-phys",
+          "title": "Pacemakers, AV delay and conduction failure",
+          "pdfPage": 51
+        },
+        {
+          "id": "cvs/cycle",
+          "sourceSectionId": "cycle",
+          "title": "Cardiac cycle, pressure crossings and heart sounds",
+          "pdfPage": 51
+        },
+        {
+          "id": "cvs/pv-loop",
+          "sourceSectionId": "pv-loop",
+          "title": "Pressure-volume loops, preload, afterload and contractility",
+          "pdfPage": 53
+        },
+        {
+          "id": "cvs/flow-laws",
+          "sourceSectionId": "flow-laws",
+          "title": "Pressure, flow, resistance and vascular networks",
+          "pdfPage": 55
+        },
+        {
+          "id": "cvs/velocity-turbulence",
+          "sourceSectionId": "velocity-turbulence",
+          "title": "Velocity, Bernoulli, Reynolds and flow measurement",
+          "pdfPage": 56
+        },
+        {
+          "id": "cvs/measurement-special-circulations",
+          "sourceSectionId": "measurement-special-circulations",
+          "title": "Measurement principles and regional circulations",
+          "pdfPage": 56
+        },
+        {
+          "id": "cvs/arterial-pressure",
+          "sourceSectionId": "arterial-pressure",
+          "title": "Compliance, pulse pressure, MAP and measurement",
+          "pdfPage": 58
+        },
+        {
+          "id": "cvs/venous-return",
+          "sourceSectionId": "venous-return",
+          "title": "Venous return, capacitance, posture and cardiac output",
+          "pdfPage": 58
+        },
+        {
+          "id": "cvs/advanced-return-pressure",
+          "sourceSectionId": "advanced-return-pressure",
+          "title": "Venous-return curves, transmural pressure and feedback timing",
+          "pdfPage": 59
+        },
+        {
+          "id": "cvs/microexchange",
+          "sourceSectionId": "microexchange",
+          "title": "Microcirculation, Starling forces, lymph and edema",
+          "pdfPage": 60
+        },
+        {
+          "id": "cvs/local-regulation",
+          "sourceSectionId": "local-regulation",
+          "title": "Local blood-flow control, autoregulation and special circuits",
+          "pdfPage": 61
+        },
+        {
+          "id": "cvs/neural-pressure",
+          "sourceSectionId": "neural-pressure",
+          "title": "Baroreceptors, chemoreceptors and central pressure regulation",
+          "pdfPage": 62
+        },
+        {
+          "id": "cvs/longterm-pressure",
+          "sourceSectionId": "longterm-pressure",
+          "title": "Renal-body fluid feedback and hormonal pressure control",
+          "pdfPage": 62
+        },
+        {
+          "id": "cvs/coronary-exercise",
+          "sourceSectionId": "coronary-exercise",
+          "title": "Coronary perfusion, exercise and oxygen demand",
+          "pdfPage": 63
+        },
+        {
+          "id": "cvs/shock-failure",
+          "sourceSectionId": "shock-failure",
+          "title": "Shock, heart failure and valve lesions: integrated physiology",
+          "pdfPage": 64
+        },
+        {
+          "id": "cvs/advanced-failure-shock",
+          "sourceSectionId": "advanced-failure-shock",
+          "title": "Preserved ejection fraction, valve geometry and shock mechanisms",
+          "pdfPage": 65
+        },
+        {
+          "id": "cvs/ecg-foundations",
+          "sourceSectionId": "ecg-foundations",
+          "title": "ECG calibration, lead geometry and a systematic interpretation",
+          "pdfPage": 66
+        },
+        {
+          "id": "cvs/ecg-axis",
+          "sourceSectionId": "ecg-axis",
+          "title": "Cardiac axis and vector interpretation",
+          "pdfPage": 67
+        },
+        {
+          "id": "cvs/ecg-patterns",
+          "sourceSectionId": "ecg-patterns",
+          "title": "ECG rhythm, intervals and difficult distinctions",
+          "pdfPage": 69
+        },
+        {
+          "id": "cvs/advanced-excitation",
+          "sourceSectionId": "advanced-excitation",
+          "title": "Pacemaker competition, reentry and vector calculations",
+          "pdfPage": 70
+        },
+        {
+          "id": "cvs/rbc",
+          "sourceSectionId": "rbc",
+          "title": "Erythrocytes, hematocrit and oxygen delivery",
+          "pdfPage": 70
+        },
+        {
+          "id": "cvs/erythropoiesis",
+          "sourceSectionId": "erythropoiesis",
+          "title": "Erythropoiesis, iron and anemia mechanisms",
+          "pdfPage": 71
+        },
+        {
+          "id": "cvs/wbc",
+          "sourceSectionId": "wbc",
+          "title": "Leukocytes, inflammation and absolute counts",
+          "pdfPage": 74
+        },
+        {
+          "id": "cvs/platelets",
+          "sourceSectionId": "platelets",
+          "title": "Primary hemostasis and platelet biology",
+          "pdfPage": 75
+        },
+        {
+          "id": "cvs/coagulation",
+          "sourceSectionId": "coagulation",
+          "title": "Coagulation cascade, anticoagulants and fibrinolysis",
+          "pdfPage": 75
+        },
+        {
+          "id": "cvs/blood-groups",
+          "sourceSectionId": "blood-groups",
+          "title": "ABO, Rh and transfusion concepts",
+          "pdfPage": 76
+        },
+        {
+          "id": "cvs/heart-histo",
+          "sourceSectionId": "heart-histo",
+          "title": "Histology of myocardium, endocardium and conduction tissue",
+          "pdfPage": 77
+        },
+        {
+          "id": "cvs/vessel-histo",
+          "sourceSectionId": "vessel-histo",
+          "title": "Vascular tunics, endothelium and artery-vein discrimination",
+          "pdfPage": 78
+        },
+        {
+          "id": "cvs/capillary-histo",
+          "sourceSectionId": "capillary-histo",
+          "title": "Capillary types, pericytes and lymphatic microanatomy",
+          "pdfPage": 82
+        },
+        {
+          "id": "cvs/immune-foundations",
+          "sourceSectionId": "immune-foundations",
+          "title": "Lymphocytes, antigen presentation and antibody responses",
+          "pdfPage": 83
+        },
+        {
+          "id": "cvs/thymus",
+          "sourceSectionId": "thymus",
+          "title": "Thymus: epithelial reticulum, selection and blood-thymus barrier",
+          "pdfPage": 84
+        },
+        {
+          "id": "cvs/lymph-node",
+          "sourceSectionId": "lymph-node",
+          "title": "Lymph node compartments and trafficking",
+          "pdfPage": 86
+        },
+        {
+          "id": "cvs/spleen-malt",
+          "sourceSectionId": "spleen-malt",
+          "title": "Spleen, tonsils, Peyer patches and organ comparison",
+          "pdfPage": 88
+        },
+        {
+          "id": "cvs/heart-fields",
+          "sourceSectionId": "heart-fields",
+          "title": "Cardiogenic fields, folding and heart-tube derivatives",
+          "pdfPage": 91
+        },
+        {
+          "id": "cvs/atrial-septation",
+          "sourceSectionId": "atrial-septation",
+          "title": "Atrial septation, sinus venosus and pulmonary veins",
+          "pdfPage": 93
+        },
+        {
+          "id": "cvs/ventricular-outflow",
+          "sourceSectionId": "ventricular-outflow",
+          "title": "AV cushions, ventricular septation and outflow division",
+          "pdfPage": 95
+        },
+        {
+          "id": "cvs/advanced-heart-development",
+          "sourceSectionId": "advanced-heart-development",
+          "title": "Molecular induction, valve formation and developmental traps",
+          "pdfPage": 96
+        },
+        {
+          "id": "cvs/arch-arteries",
+          "sourceSectionId": "arch-arteries",
+          "title": "Aortic arch derivatives and recurrent-nerve consequences",
+          "pdfPage": 98
+        },
+        {
+          "id": "cvs/venous-development",
+          "sourceSectionId": "venous-development",
+          "title": "Vitelline, umbilical and cardinal venous development",
+          "pdfPage": 99
+        },
+        {
+          "id": "cvs/fetal-circulation",
+          "sourceSectionId": "fetal-circulation",
+          "title": "Fetal circulation, birth transition and remnants",
+          "pdfPage": 101
+        },
+        {
+          "id": "cvs/lymph-embryo",
+          "sourceSectionId": "lymph-embryo",
+          "title": "Lymphatic development and integrated embryologic reasoning",
+          "pdfPage": 103
+        },
+        {
+          "id": "cvs/correction-ledger",
+          "sourceSectionId": "correction-ledger",
+          "title": "Corrections, disputed wording and final retrieval checklist",
+          "pdfPage": 104
+        }
+      ]
+    },
+    {
+      "id": "respiratory",
+      "examId": "term2-respiratory",
+      "pdfPath": "public/study/reviews/respiratory.pdf",
+      "sha256": "cc22f5c797d58ab7c2e2ae3f5fb7a7eb3af5762a00b6177b61f8f6dbd8000a4d",
+      "pageCount": 192,
+      "originalPdfFilename": "03 - Respiratory Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/respiratory.json",
+        "sha256": "36691bd76d540e987a97fe68d1cc915c2a31924107c334887c649b0771ae878d"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "respiratory/resp-anat-nasal-framework",
+          "sourceSectionId": "resp-anat-nasal-framework",
+          "title": "Anatomy: Nasal walls, septum and apertures",
+          "pdfPage": 6
+        },
+        {
+          "id": "respiratory/resp-anat-nasal-regions",
+          "sourceSectionId": "resp-anat-nasal-regions",
+          "title": "Anatomy: Vestibular, respiratory and olfactory regions",
+          "pdfPage": 7
+        },
+        {
+          "id": "respiratory/resp-anat-nasal-drainage",
+          "sourceSectionId": "resp-anat-nasal-drainage",
+          "title": "Anatomy: Conchae, meatuses and sinus drainage",
+          "pdfPage": 8
+        },
+        {
+          "id": "respiratory/resp-anat-frontal-ethmoidal",
+          "sourceSectionId": "resp-anat-frontal-ethmoidal",
+          "title": "Anatomy: Frontal and ethmoidal sinuses: orbital and drainage relations",
+          "pdfPage": 10
+        },
+        {
+          "id": "respiratory/resp-anat-maxillary-sphenoidal",
+          "sourceSectionId": "resp-anat-maxillary-sphenoidal",
+          "title": "Anatomy: Maxillary and sphenoidal sinuses: clinically useful neighbors",
+          "pdfPage": 12
+        },
+        {
+          "id": "respiratory/resp-anat-nasal-gateways",
+          "sourceSectionId": "resp-anat-nasal-gateways",
+          "title": "Anatomy: Nasal gateways and what passes through them",
+          "pdfPage": 13
+        },
+        {
+          "id": "respiratory/resp-anat-nasal-vessels",
+          "sourceSectionId": "resp-anat-nasal-vessels",
+          "title": "Anatomy: Nasal blood supply, epistaxis and venous connections",
+          "pdfPage": 14
+        },
+        {
+          "id": "respiratory/resp-anat-nasal-nerves-lymph",
+          "sourceSectionId": "resp-anat-nasal-nerves-lymph",
+          "title": "Anatomy: Nasal sensation, autonomic pathways and lymphatics",
+          "pdfPage": 16
+        },
+        {
+          "id": "respiratory/resp-anat-pharyngeal-regions",
+          "sourceSectionId": "resp-anat-pharyngeal-regions",
+          "title": "Anatomy: Pharyngeal regions, isthmuses and mucosal landmarks",
+          "pdfPage": 18
+        },
+        {
+          "id": "respiratory/resp-anat-pharyngeal-wall",
+          "sourceSectionId": "resp-anat-pharyngeal-wall",
+          "title": "Anatomy: Pharyngeal muscles, attachments and fascia",
+          "pdfPage": 19
+        },
+        {
+          "id": "respiratory/resp-anat-pharyngeal-gaps",
+          "sourceSectionId": "resp-anat-pharyngeal-gaps",
+          "title": "Anatomy: Passages through the pharyngeal wall",
+          "pdfPage": 20
+        },
+        {
+          "id": "respiratory/resp-anat-tonsils-pharyngeal-vessels",
+          "sourceSectionId": "resp-anat-tonsils-pharyngeal-vessels",
+          "title": "Anatomy: Tonsils and pharyngeal vascular–lymphatic routes",
+          "pdfPage": 21
+        },
+        {
+          "id": "respiratory/resp-anat-pharyngeal-nerves",
+          "sourceSectionId": "resp-anat-pharyngeal-nerves",
+          "title": "Anatomy: Pharyngeal sensory territories and reflex pathways",
+          "pdfPage": 22
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-skeleton",
+          "sourceSectionId": "resp-anat-laryngeal-skeleton",
+          "title": "Anatomy: Laryngeal cartilages and attachment landmarks",
+          "pdfPage": 23
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-membranes",
+          "sourceSectionId": "resp-anat-laryngeal-membranes",
+          "title": "Anatomy: Intrinsic membranes and extrinsic ligaments",
+          "pdfPage": 25
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-cavity",
+          "sourceSectionId": "resp-anat-laryngeal-cavity",
+          "title": "Anatomy: Laryngeal inlet, chambers, ventricles and saccules",
+          "pdfPage": 27
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-abduction-adduction",
+          "sourceSectionId": "resp-anat-laryngeal-abduction-adduction",
+          "title": "Anatomy: Intrinsic muscles opening and closing the airway",
+          "pdfPage": 29
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-tension-joints",
+          "sourceSectionId": "resp-anat-laryngeal-tension-joints",
+          "title": "Anatomy: Laryngeal joints and control of vocal-fold tension",
+          "pdfPage": 31
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-functions",
+          "sourceSectionId": "resp-anat-laryngeal-functions",
+          "title": "Anatomy: Respiration, phonation, effort closure and swallowing",
+          "pdfPage": 32
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-nerves",
+          "sourceSectionId": "resp-anat-laryngeal-nerves",
+          "title": "Anatomy: Laryngeal sensory boundaries, motor exceptions and recurrent courses",
+          "pdfPage": 33
+        },
+        {
+          "id": "respiratory/resp-anat-laryngeal-vessels-lymph",
+          "sourceSectionId": "resp-anat-laryngeal-vessels-lymph",
+          "title": "Anatomy: Laryngeal arteries, veins and regional lymphatic drainage",
+          "pdfPage": 35
+        },
+        {
+          "id": "respiratory/resp-anat-tracheal-relations",
+          "sourceSectionId": "resp-anat-tracheal-relations",
+          "title": "Anatomy: Trachea, carina and main bronchi",
+          "pdfPage": 36
+        },
+        {
+          "id": "respiratory/resp-anat-bronchopulmonary-segments",
+          "sourceSectionId": "resp-anat-bronchopulmonary-segments",
+          "title": "Anatomy: Bronchial hierarchy and bronchopulmonary segments",
+          "pdfPage": 37
+        },
+        {
+          "id": "respiratory/resp-anat-lung-lobes-surface",
+          "sourceSectionId": "resp-anat-lung-lobes-surface",
+          "title": "Anatomy: Lung surfaces, fissures and chest-wall projection",
+          "pdfPage": 39
+        },
+        {
+          "id": "respiratory/resp-anat-lung-roots",
+          "sourceSectionId": "resp-anat-lung-roots",
+          "title": "Anatomy: Roots, hila and pulmonary ligaments",
+          "pdfPage": 41
+        },
+        {
+          "id": "respiratory/resp-anat-pulmonary-bronchial-vessels",
+          "sourceSectionId": "resp-anat-pulmonary-bronchial-vessels",
+          "title": "Anatomy: Pulmonary and bronchial circulations",
+          "pdfPage": 44
+        },
+        {
+          "id": "respiratory/resp-anat-pulmonary-autonomics",
+          "sourceSectionId": "resp-anat-pulmonary-autonomics",
+          "title": "Anatomy: Pulmonary plexuses and visceral innervation",
+          "pdfPage": 45
+        },
+        {
+          "id": "respiratory/resp-anat-pulmonary-lymph",
+          "sourceSectionId": "resp-anat-pulmonary-lymph",
+          "title": "Anatomy: Pulmonary lymphatic routes and anatomical spread",
+          "pdfPage": 46
+        },
+        {
+          "id": "respiratory/resp-anat-pleural-layers",
+          "sourceSectionId": "resp-anat-pleural-layers",
+          "title": "Anatomy: Pleural layers, cervical cupola and continuity at the hilum",
+          "pdfPage": 47
+        },
+        {
+          "id": "respiratory/resp-anat-pleural-recesses",
+          "sourceSectionId": "resp-anat-pleural-recesses",
+          "title": "Anatomy: Pleural recesses and inferior surface landmarks",
+          "pdfPage": 49
+        },
+        {
+          "id": "respiratory/resp-anat-pleural-pain-clinical",
+          "sourceSectionId": "resp-anat-pleural-pain-clinical",
+          "title": "Anatomy: Pleural pain, effusion and pneumothorax",
+          "pdfPage": 50
+        },
+        {
+          "id": "respiratory/resp-anat-thoracic-wall-mechanics",
+          "sourceSectionId": "resp-anat-thoracic-wall-mechanics",
+          "title": "Anatomy: Intercostal framework and rib movements",
+          "pdfPage": 51
+        },
+        {
+          "id": "respiratory/resp-anat-diaphragm-anatomy",
+          "sourceSectionId": "resp-anat-diaphragm-anatomy",
+          "title": "Anatomy: Diaphragm: attachments, openings and breathing movement",
+          "pdfPage": 52
+        },
+        {
+          "id": "respiratory/resp-hist-functional-map",
+          "sourceSectionId": "resp-hist-functional-map",
+          "title": "Histology: Conducting versus respiratory regions",
+          "pdfPage": 53
+        },
+        {
+          "id": "respiratory/resp-hist-nasal-conditioning",
+          "sourceSectionId": "resp-hist-nasal-conditioning",
+          "title": "Histology: Vestibule, conchae and air conditioning",
+          "pdfPage": 54
+        },
+        {
+          "id": "respiratory/resp-hist-respiratory-cell-types",
+          "sourceSectionId": "resp-hist-respiratory-cell-types",
+          "title": "Histology: Five cell populations in respiratory epithelium",
+          "pdfPage": 55
+        },
+        {
+          "id": "respiratory/resp-hist-olfactory-mucosa",
+          "sourceSectionId": "resp-hist-olfactory-mucosa",
+          "title": "Histology: Olfactory mucosa: receptor neurons, support and renewal",
+          "pdfPage": 56
+        },
+        {
+          "id": "respiratory/resp-hist-sinuses-pharynx",
+          "sourceSectionId": "resp-hist-sinuses-pharynx",
+          "title": "Histology: Sinus drainage and pharyngeal epithelial transitions",
+          "pdfPage": 57
+        },
+        {
+          "id": "respiratory/resp-hist-laryngeal-support",
+          "sourceSectionId": "resp-hist-laryngeal-support",
+          "title": "Histology: Laryngeal cartilage and the epiglottic transition",
+          "pdfPage": 58
+        },
+        {
+          "id": "respiratory/resp-hist-vocal-folds",
+          "sourceSectionId": "resp-hist-vocal-folds",
+          "title": "Histology: True and vestibular folds: tissue organization and phonation",
+          "pdfPage": 59
+        },
+        {
+          "id": "respiratory/resp-hist-tracheal-wall",
+          "sourceSectionId": "resp-hist-tracheal-wall",
+          "title": "Histology: Tracheal wall: support, secretion and a flexible posterior bridge",
+          "pdfPage": 60
+        },
+        {
+          "id": "respiratory/resp-hist-branching-units",
+          "sourceSectionId": "resp-hist-branching-units",
+          "title": "Histology: Lung, lobe, segment and lobule are different organizational units",
+          "pdfPage": 60
+        },
+        {
+          "id": "respiratory/resp-hist-bronchus-bronchiole",
+          "sourceSectionId": "resp-hist-bronchus-bronchiole",
+          "title": "Histology: Bronchus versus bronchiole: use the wall, not one epithelial rule",
+          "pdfPage": 61
+        },
+        {
+          "id": "respiratory/resp-hist-club-cell-defense",
+          "sourceSectionId": "resp-hist-club-cell-defense",
+          "title": "Histology: Club cells: bronchiolar secretion, detoxification and immune support",
+          "pdfPage": 62
+        },
+        {
+          "id": "respiratory/resp-hist-airway-obstruction-injury",
+          "sourceSectionId": "resp-hist-airway-obstruction-injury",
+          "title": "Histology: Bronchospasm, bronchiolar fibrosis and absorption atelectasis",
+          "pdfPage": 63
+        },
+        {
+          "id": "respiratory/resp-hist-distal-transitions",
+          "sourceSectionId": "resp-hist-distal-transitions",
+          "title": "Histology: Terminal bronchiole, respiratory bronchiole, duct and sac",
+          "pdfPage": 64
+        },
+        {
+          "id": "respiratory/resp-hist-alveolar-septa",
+          "sourceSectionId": "resp-hist-alveolar-septa",
+          "title": "Histology: Interalveolar septa and collateral ventilation",
+          "pdfPage": 65
+        },
+        {
+          "id": "respiratory/resp-hist-blood-air-barrier",
+          "sourceSectionId": "resp-hist-blood-air-barrier",
+          "title": "Histology: Blood-air barrier: thin does not mean perforated",
+          "pdfPage": 66
+        },
+        {
+          "id": "respiratory/resp-hist-type-one-cells",
+          "sourceSectionId": "resp-hist-type-one-cells",
+          "title": "Histology: Type I pneumocytes: surface coverage and a sealed thin lining",
+          "pdfPage": 67
+        },
+        {
+          "id": "respiratory/resp-hist-type-two-cells",
+          "sourceSectionId": "resp-hist-type-two-cells",
+          "title": "Histology: Type II pneumocytes: secretion, morphology and regenerative reserve",
+          "pdfPage": 68
+        },
+        {
+          "id": "respiratory/resp-hist-surfactant-film",
+          "sourceSectionId": "resp-hist-surfactant-film",
+          "title": "Histology: Surfactant: lipid-film mechanics, immune proteins and turnover",
+          "pdfPage": 69
+        },
+        {
+          "id": "respiratory/resp-hist-alveolar-macrophages",
+          "sourceSectionId": "resp-hist-alveolar-macrophages",
+          "title": "Histology: Dust cells, heart-failure cells and airway clearance",
+          "pdfPage": 69
+        },
+        {
+          "id": "respiratory/resp-hist-alveolar-injury-repair",
+          "sourceSectionId": "resp-hist-alveolar-injury-repair",
+          "title": "Histology: Diffuse alveolar injury, epithelial repair and emphysema",
+          "pdfPage": 70
+        },
+        {
+          "id": "respiratory/resp-hist-cancer-lineages",
+          "sourceSectionId": "resp-hist-cancer-lineages",
+          "title": "Histology: Histological context of bronchial and peripheral lung cancers",
+          "pdfPage": 71
+        },
+        {
+          "id": "respiratory/resp-hist-lung-blood-vessels",
+          "sourceSectionId": "resp-hist-lung-blood-vessels",
+          "title": "Histology: Pulmonary versus bronchial circulation and airway relationships",
+          "pdfPage": 72
+        },
+        {
+          "id": "respiratory/resp-hist-lymphatics-nerves",
+          "sourceSectionId": "resp-hist-lymphatics-nerves",
+          "title": "Histology: Lymphatic drainage and autonomic control",
+          "pdfPage": 73
+        },
+        {
+          "id": "respiratory/resp-hist-pleural-membranes",
+          "sourceSectionId": "resp-hist-pleural-membranes",
+          "title": "Histology: Pleura: two mesothelial surfaces and one lubricated potential space",
+          "pdfPage": 74
+        },
+        {
+          "id": "respiratory/resp-hist-respiratory-movement",
+          "sourceSectionId": "resp-hist-respiratory-movement",
+          "title": "Histology: Microscopic changes during inspiration and expiration",
+          "pdfPage": 75
+        },
+        {
+          "id": "respiratory/resp-emb-bud-induction",
+          "sourceSectionId": "resp-emb-bud-induction",
+          "title": "Embryology: Lung-bud appearance and local tissue signaling",
+          "pdfPage": 75
+        },
+        {
+          "id": "respiratory/resp-emb-tissue-lineages",
+          "sourceSectionId": "resp-emb-tissue-lineages",
+          "title": "Embryology: Respiratory epithelium versus supporting-tissue lineages",
+          "pdfPage": 77
+        },
+        {
+          "id": "respiratory/resp-emb-foregut-septation",
+          "sourceSectionId": "resp-emb-foregut-septation",
+          "title": "Embryology: Tracheoesophageal septation and retained pharyngeal communication",
+          "pdfPage": 78
+        },
+        {
+          "id": "respiratory/resp-emb-tef-patterns",
+          "sourceSectionId": "resp-emb-tef-patterns",
+          "title": "Embryology: Atresia and fistula are independent structural questions",
+          "pdfPage": 79
+        },
+        {
+          "id": "respiratory/resp-emb-tef-consequences",
+          "sourceSectionId": "resp-emb-tef-consequences",
+          "title": "Embryology: TEF consequences, feeding presentation and VACTERL",
+          "pdfPage": 80
+        },
+        {
+          "id": "respiratory/resp-emb-laryngeal-arches",
+          "sourceSectionId": "resp-emb-laryngeal-arches",
+          "title": "Embryology: Fourth and sixth arches explain laryngeal innervation",
+          "pdfPage": 81
+        },
+        {
+          "id": "respiratory/resp-emb-laryngeal-remodeling",
+          "sourceSectionId": "resp-emb-laryngeal-remodeling",
+          "title": "Embryology: Laryngeal shape, temporary occlusion and recanalization",
+          "pdfPage": 82
+        },
+        {
+          "id": "respiratory/resp-emb-branching-pattern",
+          "sourceSectionId": "resp-emb-branching-pattern",
+          "title": "Embryology: Branching hierarchy, signaling and continuing growth",
+          "pdfPage": 83
+        },
+        {
+          "id": "respiratory/resp-emb-pleural-cavities",
+          "sourceSectionId": "resp-emb-pleural-cavities",
+          "title": "Embryology: Pericardioperitoneal canals and formation of separate pleural spaces",
+          "pdfPage": 84
+        },
+        {
+          "id": "respiratory/resp-emb-maturation-periods",
+          "sourceSectionId": "resp-emb-maturation-periods",
+          "title": "Embryology: Developmental periods: structural milestones and source-specific dates",
+          "pdfPage": 85
+        },
+        {
+          "id": "respiratory/resp-emb-saccular-barrier",
+          "sourceSectionId": "resp-emb-saccular-barrier",
+          "title": "Embryology: Terminal sacs, capillary apposition and gas-exchange readiness",
+          "pdfPage": 86
+        },
+        {
+          "id": "respiratory/resp-emb-surfactant-development",
+          "sourceSectionId": "resp-emb-surfactant-development",
+          "title": "Embryology: Type II differentiation and increasing fetal surfactant",
+          "pdfPage": 87
+        },
+        {
+          "id": "respiratory/resp-emb-fetal-fluid-birth",
+          "sourceSectionId": "resp-emb-fetal-fluid-birth",
+          "title": "Embryology: Fluid-filled fetal lungs and the first-breath transition",
+          "pdfPage": 87
+        },
+        {
+          "id": "respiratory/resp-emb-neonatal-rds",
+          "sourceSectionId": "resp-emb-neonatal-rds",
+          "title": "Embryology: Surfactant deficiency and neonatal respiratory distress",
+          "pdfPage": 88
+        },
+        {
+          "id": "respiratory/resp-emb-postnatal-growth",
+          "sourceSectionId": "resp-emb-postnatal-growth",
+          "title": "Embryology: Postnatal growth adds respiratory units",
+          "pdfPage": 89
+        },
+        {
+          "id": "respiratory/resp-emb-congenital-variants",
+          "sourceSectionId": "resp-emb-congenital-variants",
+          "title": "Embryology: Additional branches, ectopic lobes and congenital cysts",
+          "pdfPage": 90
+        },
+        {
+          "id": "respiratory/resp-emb-labor-signal-hypothesis",
+          "sourceSectionId": "resp-emb-labor-signal-hypothesis",
+          "title": "Embryology: A proposed fetal lung–immune contribution to labor",
+          "pdfPage": 91
+        },
+        {
+          "id": "respiratory/resp-phys-mechanics",
+          "sourceSectionId": "resp-phys-mechanics",
+          "title": "Physiology: Breathing muscles, airflow, and distending pressure",
+          "pdfPage": 93
+        },
+        {
+          "id": "respiratory/resp-phys-compliance-work",
+          "sourceSectionId": "resp-phys-compliance-work",
+          "title": "Physiology: Compliance, lung-chest interaction, and work of breathing",
+          "pdfPage": 95
+        },
+        {
+          "id": "respiratory/resp-phys-surfactant",
+          "sourceSectionId": "resp-phys-surfactant",
+          "title": "Physiology: Surfactant, surface tension, and alveolar stability",
+          "pdfPage": 96
+        },
+        {
+          "id": "respiratory/resp-phys-lung-volumes",
+          "sourceSectionId": "resp-phys-lung-volumes",
+          "title": "Physiology: Lung volumes, capacities, and spirometric limits",
+          "pdfPage": 98
+        },
+        {
+          "id": "respiratory/resp-phys-gas-dilution",
+          "sourceSectionId": "resp-phys-gas-dilution",
+          "title": "Physiology: Helium dilution and single-breath nitrogen washout",
+          "pdfPage": 99
+        },
+        {
+          "id": "respiratory/resp-phys-alveolar-ventilation",
+          "sourceSectionId": "resp-phys-alveolar-ventilation",
+          "title": "Physiology: Minute ventilation, alveolar ventilation, and wasted ventilation",
+          "pdfPage": 100
+        },
+        {
+          "id": "respiratory/resp-phys-airway-patency",
+          "sourceSectionId": "resp-phys-airway-patency",
+          "title": "Physiology: Airway support and the distribution of resistance",
+          "pdfPage": 101
+        },
+        {
+          "id": "respiratory/resp-phys-airway-tone",
+          "sourceSectionId": "resp-phys-airway-tone",
+          "title": "Physiology: Autonomic and local regulation of bronchiolar tone",
+          "pdfPage": 102
+        },
+        {
+          "id": "respiratory/resp-phys-airway-defenses",
+          "sourceSectionId": "resp-phys-airway-defenses",
+          "title": "Physiology: Air conditioning, particle removal, cough, and sneeze",
+          "pdfPage": 103
+        },
+        {
+          "id": "respiratory/resp-phys-vocalization",
+          "sourceSectionId": "resp-phys-vocalization",
+          "title": "Physiology: Phonation, pitch, articulation, and resonance",
+          "pdfPage": 104
+        },
+        {
+          "id": "respiratory/resp-phys-two-circulations",
+          "sourceSectionId": "resp-phys-two-circulations",
+          "title": "Physiology: Pulmonary versus bronchial circulation and the lung reservoir",
+          "pdfPage": 105
+        },
+        {
+          "id": "respiratory/resp-phys-pulmonary-pressures",
+          "sourceSectionId": "resp-phys-pulmonary-pressures",
+          "title": "Physiology: Pressure profiles, pulmonary wedge pressure, and left-heart back pressure",
+          "pdfPage": 106
+        },
+        {
+          "id": "respiratory/resp-phys-flow-distribution",
+          "sourceSectionId": "resp-phys-flow-distribution",
+          "title": "Physiology: Local hypoxic vasoconstriction, gravity, flow zones, and exercise",
+          "pdfPage": 107
+        },
+        {
+          "id": "respiratory/resp-phys-starling-edema",
+          "sourceSectionId": "resp-phys-starling-edema",
+          "title": "Physiology: Pulmonary fluid forces and mechanisms of edema",
+          "pdfPage": 108
+        },
+        {
+          "id": "respiratory/resp-phys-lymphatic-protection",
+          "sourceSectionId": "resp-phys-lymphatic-protection",
+          "title": "Physiology: Lymphatic drainage, dry alveoli, and edema safety margins",
+          "pdfPage": 109
+        },
+        {
+          "id": "respiratory/resp-phys-pleural-fluid",
+          "sourceSectionId": "resp-phys-pleural-fluid",
+          "title": "Physiology: Pleural lubrication, negative pressure, and effusion",
+          "pdfPage": 110
+        },
+        {
+          "id": "respiratory/resp-phys-gas-physics",
+          "sourceSectionId": "resp-phys-gas-physics",
+          "title": "Physiology: Partial pressure, solubility, humidification, and gas diffusion",
+          "pdfPage": 111
+        },
+        {
+          "id": "respiratory/resp-phys-alveolar-gas-balance",
+          "sourceSectionId": "resp-phys-alveolar-gas-balance",
+          "title": "Physiology: Alveolar gas reservoir, oxygen balance, and carbon dioxide balance",
+          "pdfPage": 112
+        },
+        {
+          "id": "respiratory/resp-phys-respiratory-membrane",
+          "sourceSectionId": "resp-phys-respiratory-membrane",
+          "title": "Physiology: The blood-gas barrier and lung diffusing capacity",
+          "pdfPage": 113
+        },
+        {
+          "id": "respiratory/resp-phys-vq-extremes",
+          "sourceSectionId": "resp-phys-vq-extremes",
+          "title": "Physiology: Ventilation-perfusion extremes and alveolar gas composition",
+          "pdfPage": 114
+        },
+        {
+          "id": "respiratory/resp-phys-regional-vq",
+          "sourceSectionId": "resp-phys-regional-vq",
+          "title": "Physiology: Regional matching and mixed abnormalities in obstructive disease",
+          "pdfPage": 115
+        },
+        {
+          "id": "respiratory/resp-phys-physiological-shunt",
+          "sourceSectionId": "resp-phys-physiological-shunt",
+          "title": "Physiology: Physiological shunt and oxygen-content mixing",
+          "pdfPage": 116
+        },
+        {
+          "id": "respiratory/resp-phys-co2-dead-space",
+          "sourceSectionId": "resp-phys-co2-dead-space",
+          "title": "Physiology: Physiological dead space from mixed-expired carbon dioxide",
+          "pdfPage": 117
+        },
+        {
+          "id": "respiratory/resp-phys-gas-cascade",
+          "sourceSectionId": "resp-phys-gas-cascade",
+          "title": "Physiology: Lung-to-tissue gas gradients, transit time, and venous admixture",
+          "pdfPage": 118
+        },
+        {
+          "id": "respiratory/resp-phys-tissue-gas-balance",
+          "sourceSectionId": "resp-phys-tissue-gas-balance",
+          "title": "Physiology: Tissue oxygen and carbon dioxide: delivery, flow, and metabolism",
+          "pdfPage": 119
+        },
+        {
+          "id": "respiratory/resp-phys-oxygen-content",
+          "sourceSectionId": "resp-phys-oxygen-content",
+          "title": "Physiology: Hemoglobin oxygen content, extraction, and delivery",
+          "pdfPage": 120
+        },
+        {
+          "id": "respiratory/resp-phys-hemoglobin-buffer",
+          "sourceSectionId": "resp-phys-hemoglobin-buffer",
+          "title": "Physiology: The hemoglobin dissociation curve as an oxygen buffer",
+          "pdfPage": 121
+        },
+        {
+          "id": "respiratory/resp-phys-affinity-shifts",
+          "sourceSectionId": "resp-phys-affinity-shifts",
+          "title": "Physiology: Bohr effect, temperature, BPG, and exercise unloading",
+          "pdfPage": 122
+        },
+        {
+          "id": "respiratory/resp-phys-cellular-oxygen-use",
+          "sourceSectionId": "resp-phys-cellular-oxygen-use",
+          "title": "Physiology: ADP demand, diffusion distance, and flow-limited cellular oxygen use",
+          "pdfPage": 123
+        },
+        {
+          "id": "respiratory/resp-phys-dissolved-oxygen-co",
+          "sourceSectionId": "resp-phys-dissolved-oxygen-co",
+          "title": "Physiology: Dissolved oxygen and carbon monoxide: pressure is not content",
+          "pdfPage": 124
+        },
+        {
+          "id": "respiratory/resp-phys-carbon-dioxide-transport",
+          "sourceSectionId": "resp-phys-carbon-dioxide-transport",
+          "title": "Physiology: Carbon dioxide carriage, chloride shift, buffering, and the Haldane effect",
+          "pdfPage": 125
+        },
+        {
+          "id": "respiratory/resp-phys-exchange-ratio",
+          "sourceSectionId": "resp-phys-exchange-ratio",
+          "title": "Physiology: Respiratory exchange ratio and substrate use",
+          "pdfPage": 127
+        },
+        {
+          "id": "respiratory/resp-phys-brainstem-pattern",
+          "sourceSectionId": "resp-phys-brainstem-pattern",
+          "title": "Physiology: Brainstem networks, inspiratory ramp, and active expiration",
+          "pdfPage": 127
+        },
+        {
+          "id": "respiratory/resp-phys-central-chemoreception",
+          "sourceSectionId": "resp-phys-central-chemoreception",
+          "title": "Physiology: Central CO2/H+ sensing and adaptation to hypercapnia",
+          "pdfPage": 129
+        },
+        {
+          "id": "respiratory/resp-phys-peripheral-chemoreceptors",
+          "sourceSectionId": "resp-phys-peripheral-chemoreceptors",
+          "title": "Physiology: Carotid and aortic chemoreceptors: gases, afferents, and glomus cells",
+          "pdfPage": 130
+        },
+        {
+          "id": "respiratory/resp-phys-integrated-chemical-control",
+          "sourceSectionId": "resp-phys-integrated-chemical-control",
+          "title": "Physiology: Combined chemical drives and ventilatory acclimatization",
+          "pdfPage": 131
+        },
+        {
+          "id": "respiratory/resp-phys-pulmonary-reflexes",
+          "sourceSectionId": "resp-phys-pulmonary-reflexes",
+          "title": "Physiology: Stretch, irritant, and juxtacapillary respiratory signals",
+          "pdfPage": 132
+        },
+        {
+          "id": "respiratory/resp-phys-exercise-control",
+          "sourceSectionId": "resp-phys-exercise-control",
+          "title": "Physiology: Anticipatory exercise ventilation and chemical fine-tuning",
+          "pdfPage": 133
+        },
+        {
+          "id": "respiratory/resp-phys-periodic-breathing",
+          "sourceSectionId": "resp-phys-periodic-breathing",
+          "title": "Physiology: Cheyne-Stokes breathing: delay and excessive feedback gain",
+          "pdfPage": 134
+        },
+        {
+          "id": "respiratory/resp-phys-sleep-apnea",
+          "sourceSectionId": "resp-phys-sleep-apnea",
+          "title": "Physiology: Obstructive, central, and mixed sleep apnea mechanisms",
+          "pdfPage": 134
+        },
+        {
+          "id": "respiratory/resp-phys-voluntary-depressed-drive",
+          "sourceSectionId": "resp-phys-voluntary-depressed-drive",
+          "title": "Physiology: Voluntary breathing and pathological depression of drive",
+          "pdfPage": 135
+        },
+        {
+          "id": "respiratory/depth-resp-upper-airway",
+          "sourceSectionId": "depth-resp-upper-airway",
+          "title": "Histology: Respiratory and olfactory mucosal specialization",
+          "pdfPage": 136
+        },
+        {
+          "id": "respiratory/depth-resp-bronchial-tree",
+          "sourceSectionId": "depth-resp-bronchial-tree",
+          "title": "Histology: Bronchial-tree wall transitions and club-cell defense",
+          "pdfPage": 137
+        },
+        {
+          "id": "respiratory/depth-resp-alveolar-unit",
+          "sourceSectionId": "depth-resp-alveolar-unit",
+          "title": "Histology: Alveolar ducts, septa, blood-air barrier, and surfactant",
+          "pdfPage": 138
+        },
+        {
+          "id": "respiratory/depth-resp-lung-support",
+          "sourceSectionId": "depth-resp-lung-support",
+          "title": "Histology: Pulmonary vessels, lymphatics, and pleural support",
+          "pdfPage": 139
+        },
+        {
+          "id": "respiratory/depth-resp-emb-induction-branching",
+          "sourceSectionId": "depth-resp-emb-induction-branching",
+          "title": "Embryology: Respiratory induction, partitioning, and branching",
+          "pdfPage": 139
+        },
+        {
+          "id": "respiratory/depth-resp-emb-maturation-anomalies",
+          "sourceSectionId": "depth-resp-emb-maturation-anomalies",
+          "title": "Embryology: Pulmonary maturation and congenital anomaly mechanisms",
+          "pdfPage": 141
+        },
+        {
+          "id": "respiratory/depth-resp-larynx",
+          "sourceSectionId": "depth-resp-larynx",
+          "title": "Anatomy: Laryngeal lesions, spaces and airway access",
+          "pdfPage": 141
+        },
+        {
+          "id": "respiratory/depth-resp-pleura",
+          "sourceSectionId": "depth-resp-pleura",
+          "title": "Anatomy: Bronchial return and pleural procedures",
+          "pdfPage": 142
+        },
+        {
+          "id": "respiratory/depth-resp-integration",
+          "sourceSectionId": "depth-resp-integration",
+          "title": "Physiology: Ventilation, oxygen content, and control: integrated challenges",
+          "pdfPage": 143
+        },
+        {
+          "id": "respiratory/comp-resp-flow",
+          "sourceSectionId": "comp-resp-flow",
+          "title": "Physiology: Forced expiration and flow-volume interpretation",
+          "pdfPage": 145
+        },
+        {
+          "id": "respiratory/comp-resp-failure",
+          "sourceSectionId": "comp-resp-failure",
+          "title": "Physiology: Oxygenation, ventilation and cellular oxygen use",
+          "pdfPage": 146
+        },
+        {
+          "id": "respiratory/comp-resp-pathophysiology",
+          "sourceSectionId": "comp-resp-pathophysiology",
+          "title": "Physiology: Alveolar collapse, fibrosis and pulmonary vascular loss",
+          "pdfPage": 147
+        },
+        {
+          "id": "respiratory/comp-resp-ventilator",
+          "sourceSectionId": "comp-resp-ventilator",
+          "title": "Physiology: Assisted ventilation and competing respiratory pressures",
+          "pdfPage": 148
+        },
+        {
+          "id": "respiratory/comp-resp-mechanics",
+          "sourceSectionId": "comp-resp-mechanics",
+          "title": "Physiology: Compliance, surface tension and pressure-volume history",
+          "pdfPage": 149
+        },
+        {
+          "id": "respiratory/comp-resp-ventilation",
+          "sourceSectionId": "comp-resp-ventilation",
+          "title": "Physiology: Effective ventilation under changing dead space",
+          "pdfPage": 150
+        },
+        {
+          "id": "respiratory/comp-resp-vascular",
+          "sourceSectionId": "comp-resp-vascular",
+          "title": "Physiology: Regional blood flow and edema forces",
+          "pdfPage": 152
+        },
+        {
+          "id": "respiratory/comp-resp-vq",
+          "sourceSectionId": "comp-resp-vq",
+          "title": "Physiology: Regional matching and venous admixture",
+          "pdfPage": 153
+        },
+        {
+          "id": "respiratory/comp-resp-oxygen",
+          "sourceSectionId": "comp-resp-oxygen",
+          "title": "Physiology: Oxygen carriage, delivery and unloading",
+          "pdfPage": 154
+        },
+        {
+          "id": "respiratory/comp-resp-control",
+          "sourceSectionId": "comp-resp-control",
+          "title": "Physiology: Chemical respiratory control across time and sites",
+          "pdfPage": 156
+        },
+        {
+          "id": "respiratory/comp-resp-nasal",
+          "sourceSectionId": "comp-resp-nasal",
+          "title": "Anatomy: Nasal neurovascular pathways and injury localization",
+          "pdfPage": 157
+        },
+        {
+          "id": "respiratory/comp-resp-laryngeal-spread",
+          "sourceSectionId": "comp-resp-laryngeal-spread",
+          "title": "Anatomy: Laryngeal tissue mechanics and routes of spread",
+          "pdfPage": 158
+        },
+        {
+          "id": "respiratory/comp-resp-pleural-planes",
+          "sourceSectionId": "comp-resp-pleural-planes",
+          "title": "Anatomy: Pleural compartments and procedural boundaries",
+          "pdfPage": 159
+        },
+        {
+          "id": "respiratory/comp-resp-hilar",
+          "sourceSectionId": "comp-resp-hilar",
+          "title": "Anatomy: Shared pulmonary drainage and hilar relationships",
+          "pdfPage": 160
+        },
+        {
+          "id": "respiratory/comp-resp-epithelial-defense",
+          "sourceSectionId": "comp-resp-epithelial-defense",
+          "title": "Histology: Epithelial defense, sensory pathways and small-airway injury",
+          "pdfPage": 161
+        },
+        {
+          "id": "respiratory/comp-resp-exchange-interface",
+          "sourceSectionId": "comp-resp-exchange-interface",
+          "title": "Histology: Alveolar barrier, surfactant and repair",
+          "pdfPage": 162
+        },
+        {
+          "id": "respiratory/comp-resp-developmental-localization",
+          "sourceSectionId": "comp-resp-developmental-localization",
+          "title": "Embryology: Localizing airway-development and maturation defects",
+          "pdfPage": 164
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-nasal-skeleton",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-nasal-skeleton",
+          "title": "Anatomy: Bony and cartilaginous nasal skeleton",
+          "pdfPage": 165
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-nasal-drainage-openings",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-nasal-drainage-openings",
+          "title": "Anatomy: Nasal cavity and sinus openings",
+          "pdfPage": 167
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-nasal-arteries",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-nasal-arteries",
+          "title": "Anatomy: Arteries of the nasal cavity",
+          "pdfPage": 168
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-nasal-nerves",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-nasal-nerves",
+          "title": "Anatomy: Nerves of the nasal cavity",
+          "pdfPage": 170
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-nasal-coronal-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-nasal-coronal-gray",
+          "title": "Anatomy: Paranasal sinuses in coronal section",
+          "pdfPage": 171
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-larynx-posterior-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-larynx-posterior-gray",
+          "title": "Anatomy: Posterior laryngeal skeleton",
+          "pdfPage": 172
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-larynx-membranes-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-larynx-membranes-gray",
+          "title": "Anatomy: Laryngeal membranes",
+          "pdfPage": 174
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-larynx-coronal-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-larynx-coronal-gray",
+          "title": "Anatomy: Laryngeal cavity in coronal section",
+          "pdfPage": 175
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-larynx-intrinsic-muscles-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-larynx-intrinsic-muscles-gray",
+          "title": "Anatomy: Intrinsic muscles of the larynx",
+          "pdfPage": 177
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-pleural-reflections-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-pleural-reflections-gray",
+          "title": "Anatomy: Pleural reflections and recesses",
+          "pdfPage": 178
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-right-lung-surfaces-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-right-lung-surfaces-gray",
+          "title": "Anatomy: Right lung surfaces and hilum",
+          "pdfPage": 180
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-left-lung-surfaces-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-left-lung-surfaces-gray",
+          "title": "Anatomy: Left lung surfaces and hilum",
+          "pdfPage": 181
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-segmental-bronchi-gray",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-segmental-bronchi-gray",
+          "title": "Anatomy: Tracheobronchial and segmental anatomy",
+          "pdfPage": 183
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-larynx-anterior-lecture",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-larynx-anterior-lecture",
+          "title": "Anatomy: Anterior laryngeal skeleton",
+          "pdfPage": 185
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-laryngeal-nerves-lecture",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-laryngeal-nerves-lecture",
+          "title": "Anatomy: Laryngeal nerves and intrinsic muscles",
+          "pdfPage": 186
+        },
+        {
+          "id": "respiratory/resp-visual-atlas-resp-2d-lungs-anterior-lecture",
+          "sourceSectionId": "resp-visual-atlas-resp-2d-lungs-anterior-lecture",
+          "title": "Anatomy: Anterior lung lobes and fissures",
+          "pdfPage": 188
+        }
+      ]
+    },
+    {
+      "id": "limbs",
+      "examId": "term2-limbs",
+      "pdfPath": "public/study/reviews/limbs.pdf",
+      "sha256": "85d3d6a98c742f43330fa4092a3f5a41d348874fa03c90f641bc50133474a351",
+      "pageCount": 91,
+      "originalPdfFilename": "02 - Upper and Lower Limbs Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/limbs.json",
+        "sha256": "8e9f765c134e4eb3fd6bb509e852a4452062f81eec79106bac8baaeb751ab366"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "limbs/limbs-01-scope",
+          "sourceSectionId": "limbs-01-scope",
+          "title": "Scope, source map and how to learn a region",
+          "pdfPage": 4
+        },
+        {
+          "id": "limbs/limbs-02-asr",
+          "sourceSectionId": "limbs-02-asr",
+          "title": "Lecture-transcript corrections and exam traps",
+          "pdfPage": 5
+        },
+        {
+          "id": "limbs/limbs-03-orientation",
+          "sourceSectionId": "limbs-03-orientation",
+          "title": "Upper-limb orientation, fascia and functional compartments",
+          "pdfPage": 6
+        },
+        {
+          "id": "limbs/limbs-04-clavicle-scapula",
+          "sourceSectionId": "limbs-04-clavicle-scapula",
+          "title": "Clavicle and scapula: every high-yield prominence",
+          "pdfPage": 8
+        },
+        {
+          "id": "limbs/limbs-05-humerus",
+          "sourceSectionId": "limbs-05-humerus",
+          "title": "Humerus: proximal and shaft attachment map",
+          "pdfPage": 9
+        },
+        {
+          "id": "limbs/limbs-06-distal-humerus",
+          "sourceSectionId": "limbs-06-distal-humerus",
+          "title": "Distal humerus: fossae, ridges, condyles and epicondyles",
+          "pdfPage": 12
+        },
+        {
+          "id": "limbs/limbs-07-radius-ulna",
+          "sourceSectionId": "limbs-07-radius-ulna",
+          "title": "Radius, ulna and elbow mechanics",
+          "pdfPage": 13
+        },
+        {
+          "id": "limbs/limbs-08-plexus",
+          "sourceSectionId": "limbs-08-plexus",
+          "title": "Brachial plexus: roots to terminal branches",
+          "pdfPage": 15
+        },
+        {
+          "id": "limbs/limbs-09-axilla",
+          "sourceSectionId": "limbs-09-axilla",
+          "title": "Axilla: boundaries, vessels, lymph and posterior spaces",
+          "pdfPage": 16
+        },
+        {
+          "id": "limbs/limbs-10-shoulder",
+          "sourceSectionId": "limbs-10-shoulder",
+          "title": "Shoulder joints, scapular movement and stability",
+          "pdfPage": 18
+        },
+        {
+          "id": "limbs/limbs-11-shoulder-muscle-table",
+          "sourceSectionId": "limbs-11-shoulder-muscle-table",
+          "title": "Pectoral girdle and scapulohumeral muscles",
+          "pdfPage": 20
+        },
+        {
+          "id": "limbs/limbs-12-arm",
+          "sourceSectionId": "limbs-12-arm",
+          "title": "Arm muscles and routes through the humeral compartments",
+          "pdfPage": 21
+        },
+        {
+          "id": "limbs/limbs-13-cubital-arteries",
+          "sourceSectionId": "limbs-13-cubital-arteries",
+          "title": "Cubital fossa and arterial continuity",
+          "pdfPage": 24
+        },
+        {
+          "id": "limbs/limbs-14-flexors",
+          "sourceSectionId": "limbs-14-flexors",
+          "title": "Forearm flexor-pronator table: superficial to deep",
+          "pdfPage": 25
+        },
+        {
+          "id": "limbs/limbs-15-extensors",
+          "sourceSectionId": "limbs-15-extensors",
+          "title": "Forearm extensor-supinator table",
+          "pdfPage": 28
+        },
+        {
+          "id": "limbs/limbs-16-carpals",
+          "sourceSectionId": "limbs-16-carpals",
+          "title": "All eight carpal bones: rows, facets and attachments",
+          "pdfPage": 31
+        },
+        {
+          "id": "limbs/limbs-17-wrist-tunnels",
+          "sourceSectionId": "limbs-17-wrist-tunnels",
+          "title": "Wrist, retinacula, snuffbox and tendon compartments",
+          "pdfPage": 33
+        },
+        {
+          "id": "limbs/limbs-18-intrinsic-hand",
+          "sourceSectionId": "limbs-18-intrinsic-hand",
+          "title": "Intrinsic hand muscles and extensor apparatus",
+          "pdfPage": 35
+        },
+        {
+          "id": "limbs/limbs-19-hand-blood",
+          "sourceSectionId": "limbs-19-hand-blood",
+          "title": "Hand blood supply, pulp spaces and tendon sheaths",
+          "pdfPage": 37
+        },
+        {
+          "id": "limbs/limbs-20-upper-localization",
+          "sourceSectionId": "limbs-20-upper-localization",
+          "title": "Upper-limb lesions: localize before naming the syndrome",
+          "pdfPage": 39
+        },
+        {
+          "id": "limbs/limbs-21-lower-overview",
+          "sourceSectionId": "limbs-21-lower-overview",
+          "title": "Lower limb: load-bearing organization",
+          "pdfPage": 41
+        },
+        {
+          "id": "limbs/limbs-22-hip-bone",
+          "sourceSectionId": "limbs-22-hip-bone",
+          "title": "Hip bone and pelvic exits: exact landmarks",
+          "pdfPage": 43
+        },
+        {
+          "id": "limbs/limbs-23-femur",
+          "sourceSectionId": "limbs-23-femur",
+          "title": "Femur: proximal, shaft and distal features",
+          "pdfPage": 45
+        },
+        {
+          "id": "limbs/limbs-24-hip-joint",
+          "sourceSectionId": "limbs-24-hip-joint",
+          "title": "Hip joint, capsule and stabilizing ligaments",
+          "pdfPage": 47
+        },
+        {
+          "id": "limbs/limbs-25-gluteal",
+          "sourceSectionId": "limbs-25-gluteal",
+          "title": "Gluteal muscles, rotators and neurovascular relations",
+          "pdfPage": 48
+        },
+        {
+          "id": "limbs/limbs-26-anterior-thigh",
+          "sourceSectionId": "limbs-26-anterior-thigh",
+          "title": "Anterior thigh and iliopsoas",
+          "pdfPage": 50
+        },
+        {
+          "id": "limbs/limbs-27-medial-posterior-thigh",
+          "sourceSectionId": "limbs-27-medial-posterior-thigh",
+          "title": "Medial and posterior thigh muscle tables",
+          "pdfPage": 52
+        },
+        {
+          "id": "limbs/limbs-28-triangle-canal",
+          "sourceSectionId": "limbs-28-triangle-canal",
+          "title": "Femoral triangle, sheath, canal and adductor canal",
+          "pdfPage": 53
+        },
+        {
+          "id": "limbs/limbs-29-lower-nerves",
+          "sourceSectionId": "limbs-29-lower-nerves",
+          "title": "Lumbar and sacral plexuses: complete named route map",
+          "pdfPage": 55
+        },
+        {
+          "id": "limbs/limbs-30-lower-vessels",
+          "sourceSectionId": "limbs-30-lower-vessels",
+          "title": "Lower-limb arteries, veins and lymphatics",
+          "pdfPage": 56
+        },
+        {
+          "id": "limbs/limbs-31-knee-bones",
+          "sourceSectionId": "limbs-31-knee-bones",
+          "title": "Patella, tibia and fibula: landmark map",
+          "pdfPage": 58
+        },
+        {
+          "id": "limbs/limbs-32-knee",
+          "sourceSectionId": "limbs-32-knee",
+          "title": "Knee ligaments, menisci and locking",
+          "pdfPage": 59
+        },
+        {
+          "id": "limbs/limbs-33-popliteal",
+          "sourceSectionId": "limbs-33-popliteal",
+          "title": "Popliteal fossa and proximal calf",
+          "pdfPage": 61
+        },
+        {
+          "id": "limbs/limbs-34-leg-cross",
+          "sourceSectionId": "limbs-34-leg-cross",
+          "title": "Leg cross-sections and compartment relationships",
+          "pdfPage": 63
+        },
+        {
+          "id": "limbs/limbs-35-anterolateral-leg",
+          "sourceSectionId": "limbs-35-anterolateral-leg",
+          "title": "Anterior and lateral leg muscles",
+          "pdfPage": 65
+        },
+        {
+          "id": "limbs/limbs-36-posterior-leg",
+          "sourceSectionId": "limbs-36-posterior-leg",
+          "title": "Posterior leg: plantarflexors, deep flexors and tendon crossings",
+          "pdfPage": 67
+        },
+        {
+          "id": "limbs/limbs-37-tarsals",
+          "sourceSectionId": "limbs-37-tarsals",
+          "title": "All seven tarsals and foot osteology",
+          "pdfPage": 69
+        },
+        {
+          "id": "limbs/limbs-38-ankle",
+          "sourceSectionId": "limbs-38-ankle",
+          "title": "Ankle, hindfoot and midfoot ligament map",
+          "pdfPage": 71
+        },
+        {
+          "id": "limbs/limbs-39-tarsal-tunnel",
+          "sourceSectionId": "limbs-39-tarsal-tunnel",
+          "title": "Retinacula, tarsal tunnel and plantar neurovascular routes",
+          "pdfPage": 73
+        },
+        {
+          "id": "limbs/limbs-40-intrinsic-foot",
+          "sourceSectionId": "limbs-40-intrinsic-foot",
+          "title": "Four plantar layers and dorsal foot muscles",
+          "pdfPage": 75
+        },
+        {
+          "id": "limbs/limbs-41-arches-gait",
+          "sourceSectionId": "limbs-41-arches-gait",
+          "title": "Foot arches, windlass and gait mechanics",
+          "pdfPage": 76
+        },
+        {
+          "id": "limbs/limbs-42-lower-clinical",
+          "sourceSectionId": "limbs-42-lower-clinical",
+          "title": "Advanced lower-limb localization and applied anatomy",
+          "pdfPage": 77
+        },
+        {
+          "id": "limbs/limbs-43-development",
+          "sourceSectionId": "limbs-43-development",
+          "title": "Limb embryology: origin, axes and rotation",
+          "pdfPage": 79
+        },
+        {
+          "id": "limbs/limbs-44-congenital-growth",
+          "sourceSectionId": "limbs-44-congenital-growth",
+          "title": "Developmental anomalies and growth mechanisms",
+          "pdfPage": 81
+        },
+        {
+          "id": "limbs/limbs-45-cartilage-bone",
+          "sourceSectionId": "limbs-45-cartilage-bone",
+          "title": "Histology support: cartilage, bone and load adaptation",
+          "pdfPage": 83
+        },
+        {
+          "id": "limbs/limbs-46-muscle-histology",
+          "sourceSectionId": "limbs-46-muscle-histology",
+          "title": "Histology support: skeletal muscle architecture",
+          "pdfPage": 84
+        },
+        {
+          "id": "limbs/limbs-47-muscle-physiology",
+          "sourceSectionId": "limbs-47-muscle-physiology",
+          "title": "Physiology support: from nerve impulse to joint torque",
+          "pdfPage": 86
+        },
+        {
+          "id": "limbs/limbs-48-mastery",
+          "sourceSectionId": "limbs-48-mastery",
+          "title": "Advanced recall checklist and unresolved source gaps",
+          "pdfPage": 87
+        }
+      ]
+    },
+    {
+      "id": "biochemistry",
+      "examId": "term2-biochemistry",
+      "pdfPath": "public/study/reviews/biochemistry.pdf",
+      "sha256": "d7e5d3c485f21500bd9842fa2552ecada42bbac6899b59d799711ab245efd637",
+      "pageCount": 47,
+      "originalPdfFilename": "04 - Biochemistry II Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/biochemistry.json",
+        "sha256": "d7e579e19ee31acc1f24d8304c4c4c879a3c40b2d50a4fd31ebe8cfd267737ab"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "biochemistry/biochem-source-map",
+          "sourceSectionId": "biochem-source-map",
+          "title": "Reading map and source confidence",
+          "pdfPage": 3
+        },
+        {
+          "id": "biochemistry/biochem-metabolic-logic",
+          "sourceSectionId": "biochem-metabolic-logic",
+          "title": "Compartmentation, energy and pathway regulation",
+          "pdfPage": 4
+        },
+        {
+          "id": "biochemistry/biochem-glucose-entry",
+          "sourceSectionId": "biochem-glucose-entry",
+          "title": "Glucose transport, trapping and tissue priorities",
+          "pdfPage": 5
+        },
+        {
+          "id": "biochemistry/biochem-glycolysis",
+          "sourceSectionId": "biochem-glycolysis",
+          "title": "Glycolysis: every step, carbon count and energy event",
+          "pdfPage": 6
+        },
+        {
+          "id": "biochemistry/biochem-glycolysis-regulation",
+          "sourceSectionId": "biochem-glycolysis-regulation",
+          "title": "PFK-1, pyruvate kinase and the lactate shunt",
+          "pdfPage": 8
+        },
+        {
+          "id": "biochemistry/biochem-pdh-tca",
+          "sourceSectionId": "biochem-pdh-tca",
+          "title": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+          "pdfPage": 9
+        },
+        {
+          "id": "biochemistry/biochem-oxphos",
+          "sourceSectionId": "biochem-oxphos",
+          "title": "Respiratory chain and transparent ATP accounting",
+          "pdfPage": 10
+        },
+        {
+          "id": "biochemistry/biochem-other-sugars",
+          "sourceSectionId": "biochem-other-sugars",
+          "title": "Fructose, galactose, mannose and the polyol pathway",
+          "pdfPage": 13
+        },
+        {
+          "id": "biochemistry/biochem-glycogen",
+          "sourceSectionId": "biochem-glycogen",
+          "title": "Glycogen structure, synthesis, degradation and control",
+          "pdfPage": 14
+        },
+        {
+          "id": "biochemistry/biochem-gluconeogenesis",
+          "sourceSectionId": "biochem-gluconeogenesis",
+          "title": "Gluconeogenesis, redox transfer and substrate limits",
+          "pdfPage": 15
+        },
+        {
+          "id": "biochemistry/biochem-ppp",
+          "sourceSectionId": "biochem-ppp",
+          "title": "Pentose phosphate pathway and antioxidant defense",
+          "pdfPage": 17
+        },
+        {
+          "id": "biochemistry/biochem-lipid-digestion",
+          "sourceSectionId": "biochem-lipid-digestion",
+          "title": "Dietary lipid digestion: from meal to absorbable products",
+          "pdfPage": 17
+        },
+        {
+          "id": "biochemistry/biochem-micelles-chylomicrons",
+          "sourceSectionId": "biochem-micelles-chylomicrons",
+          "title": "Micelles, enterocytes, chylomicrons and remnant uptake",
+          "pdfPage": 19
+        },
+        {
+          "id": "biochemistry/biochem-fatty-acid-synthesis",
+          "sourceSectionId": "biochem-fatty-acid-synthesis",
+          "title": "Fatty-acid synthesis and TAG storage",
+          "pdfPage": 21
+        },
+        {
+          "id": "biochemistry/biochem-beta-oxidation",
+          "sourceSectionId": "biochem-beta-oxidation",
+          "title": "Lipolysis, carnitine transport and beta-oxidation",
+          "pdfPage": 21
+        },
+        {
+          "id": "biochemistry/biochem-ketones",
+          "sourceSectionId": "biochem-ketones",
+          "title": "Ketogenesis and ketone utilization",
+          "pdfPage": 23
+        },
+        {
+          "id": "biochemistry/biochem-complex-lipids",
+          "sourceSectionId": "biochem-complex-lipids",
+          "title": "Membrane lipids, sphingolipidoses and eicosanoids",
+          "pdfPage": 24
+        },
+        {
+          "id": "biochemistry/biochem-cholesterol",
+          "sourceSectionId": "biochem-cholesterol",
+          "title": "Cholesterol, bile acids and steroid synthesis",
+          "pdfPage": 25
+        },
+        {
+          "id": "biochemistry/biochem-lipoprotein-map",
+          "sourceSectionId": "biochem-lipoprotein-map",
+          "title": "Lipoproteins and apoproteins: an integrated transport map",
+          "pdfPage": 26
+        },
+        {
+          "id": "biochemistry/biochem-protein-nitrogen",
+          "sourceSectionId": "biochem-protein-nitrogen",
+          "title": "Protein digestion, amino-acid transport and nitrogen collection",
+          "pdfPage": 27
+        },
+        {
+          "id": "biochemistry/biochem-urea",
+          "sourceSectionId": "biochem-urea",
+          "title": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+          "pdfPage": 28
+        },
+        {
+          "id": "biochemistry/biochem-aa-carbon",
+          "sourceSectionId": "biochem-aa-carbon",
+          "title": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+          "pdfPage": 30
+        },
+        {
+          "id": "biochemistry/biochem-aa-disorders",
+          "sourceSectionId": "biochem-aa-disorders",
+          "title": "Amino-acid disorders: reason from the blocked reaction",
+          "pdfPage": 33
+        },
+        {
+          "id": "biochemistry/biochem-heme",
+          "sourceSectionId": "biochem-heme",
+          "title": "Heme synthesis, porphyrias and bilirubin handling",
+          "pdfPage": 34
+        },
+        {
+          "id": "biochemistry/biochem-special-products",
+          "sourceSectionId": "biochem-special-products",
+          "title": "Amino acids as precursors of signaling and storage molecules",
+          "pdfPage": 37
+        },
+        {
+          "id": "biochemistry/biochem-nucleotides",
+          "sourceSectionId": "biochem-nucleotides",
+          "title": "Purines, pyrimidines, salvage and DNA precursor supply",
+          "pdfPage": 37
+        },
+        {
+          "id": "biochemistry/biochem-insulin-glucagon",
+          "sourceSectionId": "biochem-insulin-glucagon",
+          "title": "Insulin, glucagon and the fed-fast cycle",
+          "pdfPage": 38
+        },
+        {
+          "id": "biochemistry/biochem-diabetes-integration",
+          "sourceSectionId": "biochem-diabetes-integration",
+          "title": "Diabetes and metabolic perturbations: causal review",
+          "pdfPage": 40
+        },
+        {
+          "id": "biochemistry/biochem-vitamins",
+          "sourceSectionId": "biochem-vitamins",
+          "title": "Vitamin and cofactor integration for metabolism",
+          "pdfPage": 41
+        },
+        {
+          "id": "biochemistry/biochem-nutrition-review",
+          "sourceSectionId": "biochem-nutrition-review",
+          "title": "Nutrition, nitrogen balance and final integration checkpoints",
+          "pdfPage": 44
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-practical",
+      "examId": "term2-biochemistry",
+      "pdfPath": "public/study/reviews/biochemistry-practical.pdf",
+      "sha256": "a472fb32f62b54f3877f2a41457a911fc2bb1ef9a509dac96bfc9c47800b0471",
+      "pageCount": 32,
+      "originalPdfFilename": "06 - Biochemistry Practical Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/biochemistry-practical.json",
+        "sha256": "34920aa9da2162cc9cd5e9044ec8eacf4597ac09438710df21aebad030af0862"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "biochemistry-practical/bp-route",
+          "sourceSectionId": "bp-route",
+          "title": "Practical map: what you must be able to do",
+          "pdfPage": 3
+        },
+        {
+          "id": "biochemistry-practical/bp-safety",
+          "sourceSectionId": "bp-safety",
+          "title": "Safety, waste and apparatus handling",
+          "pdfPage": 4
+        },
+        {
+          "id": "biochemistry-practical/bp-glassware",
+          "sourceSectionId": "bp-glassware",
+          "title": "Choose the correct measuring device",
+          "pdfPage": 5
+        },
+        {
+          "id": "biochemistry-practical/bp-titration-principle",
+          "sourceSectionId": "bp-titration-principle",
+          "title": "Titration: neutralization, equivalence and endpoint",
+          "pdfPage": 6
+        },
+        {
+          "id": "biochemistry-practical/bp-titration-calculation",
+          "sourceSectionId": "bp-titration-calculation",
+          "title": "Titration calculations and directional errors",
+          "pdfPage": 7
+        },
+        {
+          "id": "biochemistry-practical/bp-photometry-instrument",
+          "sourceSectionId": "bp-photometry-instrument",
+          "title": "Spectrophotometry: light path, wavelength and cuvette",
+          "pdfPage": 8
+        },
+        {
+          "id": "biochemistry-practical/bp-beer-lambert",
+          "sourceSectionId": "bp-beer-lambert",
+          "title": "Beer-Lambert law, absorbance and transmittance",
+          "pdfPage": 10
+        },
+        {
+          "id": "biochemistry-practical/bp-blanks-calibration",
+          "sourceSectionId": "bp-blanks-calibration",
+          "title": "Blanks, calibration, dilution and optical errors",
+          "pdfPage": 11
+        },
+        {
+          "id": "biochemistry-practical/bp-wavelength-standards",
+          "sourceSectionId": "bp-wavelength-standards",
+          "title": "Course experiment: bromophenol-blue wavelength and standard curve",
+          "pdfPage": 11
+        },
+        {
+          "id": "biochemistry-practical/bp-protein-assay",
+          "sourceSectionId": "bp-protein-assay",
+          "title": "Course total-protein assay: the quantitative Biuret method",
+          "pdfPage": 13
+        },
+        {
+          "id": "biochemistry-practical/bp-amino-acid-properties",
+          "sourceSectionId": "bp-amino-acid-properties",
+          "title": "Amino-acid and protein chemistry behind the qualitative tests",
+          "pdfPage": 14
+        },
+        {
+          "id": "biochemistry-practical/bp-tests-overview",
+          "sourceSectionId": "bp-tests-overview",
+          "title": "Qualitative tests: discriminate the molecular target",
+          "pdfPage": 15
+        },
+        {
+          "id": "biochemistry-practical/bp-ninhydrin",
+          "sourceSectionId": "bp-ninhydrin",
+          "title": "Ninhydrin: principle, exact protocol and interpretation",
+          "pdfPage": 16
+        },
+        {
+          "id": "biochemistry-practical/bp-xanthoproteic",
+          "sourceSectionId": "bp-xanthoproteic",
+          "title": "Xanthoproteic: aromatic nitration and the phenylalanine trap",
+          "pdfPage": 17
+        },
+        {
+          "id": "biochemistry-practical/bp-pauly",
+          "sourceSectionId": "bp-pauly",
+          "title": "Pauly test: tyrosine or histidine",
+          "pdfPage": 18
+        },
+        {
+          "id": "biochemistry-practical/bp-hopkins",
+          "sourceSectionId": "bp-hopkins",
+          "title": "Hopkins-Cole: the tryptophan interface ring",
+          "pdfPage": 18
+        },
+        {
+          "id": "biochemistry-practical/bp-biuret-tca",
+          "sourceSectionId": "bp-biuret-tca",
+          "title": "Qualitative Biuret and TCA precipitation",
+          "pdfPage": 20
+        },
+        {
+          "id": "biochemistry-practical/bp-enzyme-foundations",
+          "sourceSectionId": "bp-enzyme-foundations",
+          "title": "Enzyme activity: specificity, temperature, pH and amount",
+          "pdfPage": 21
+        },
+        {
+          "id": "biochemistry-practical/bp-kinetics",
+          "sourceSectionId": "bp-kinetics",
+          "title": "Kinetics and inhibition: a rigorous extension for hard questions",
+          "pdfPage": 22
+        },
+        {
+          "id": "biochemistry-practical/bp-rennin-temperature",
+          "sourceSectionId": "bp-rennin-temperature",
+          "title": "Milk-clotting experiment: temperature",
+          "pdfPage": 23
+        },
+        {
+          "id": "biochemistry-practical/bp-rennin-concentrations",
+          "sourceSectionId": "bp-rennin-concentrations",
+          "title": "Milk-clotting experiments: enzyme versus substrate concentration",
+          "pdfPage": 24
+        },
+        {
+          "id": "biochemistry-practical/bp-urease",
+          "sourceSectionId": "bp-urease",
+          "title": "Urease: substrate specificity, inhibition and an indicator endpoint",
+          "pdfPage": 25
+        },
+        {
+          "id": "biochemistry-practical/bp-flame-principle",
+          "sourceSectionId": "bp-flame-principle",
+          "title": "Flame photometry: emission, instrument and wavelength",
+          "pdfPage": 26
+        },
+        {
+          "id": "biochemistry-practical/bp-electrolytes",
+          "sourceSectionId": "bp-electrolytes",
+          "title": "Electrolytes: biological roles and analytical pitfalls",
+          "pdfPage": 27
+        },
+        {
+          "id": "biochemistry-practical/bp-final-review",
+          "sourceSectionId": "bp-final-review",
+          "title": "Integrated difficult practical checks",
+          "pdfPage": 29
+        }
+      ]
+    },
+    {
+      "id": "physiology-practical",
+      "examId": "term2-physiology-practical",
+      "pdfPath": "public/study/reviews/physiology-practical.pdf",
+      "sha256": "6e2a59868c263f163d417c1ab0631cf5972510bd86bccf44d1fae0273cde0c04",
+      "pageCount": 113,
+      "originalPdfFilename": "05 - Physiology Practical Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/physiology-practical.json",
+        "sha256": "0c88b78ff275cbf471c40d482d7405f68a04a589d3c9fa75952280ec0c5f574b"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "physiology-practical/bp",
+          "sourceSectionId": "bp",
+          "title": "Measure blood pressure",
+          "pdfPage": 5
+        },
+        {
+          "id": "physiology-practical/bp-pressure-principles",
+          "sourceSectionId": "bp-pressure-principles",
+          "title": "Pressure, arterial occlusion and direct versus indirect measurement",
+          "pdfPage": 7
+        },
+        {
+          "id": "physiology-practical/bp-arterial-sites",
+          "sourceSectionId": "bp-arterial-sites",
+          "title": "Arterial landmarks and alternative cuff sites",
+          "pdfPage": 8
+        },
+        {
+          "id": "physiology-practical/bp-position-errors",
+          "sourceSectionId": "bp-position-errors",
+          "title": "Cuff fit, hydrostatic error and comparison between arms",
+          "pdfPage": 9
+        },
+        {
+          "id": "physiology-practical/bp-korotkoff-phases",
+          "sourceSectionId": "bp-korotkoff-phases",
+          "title": "Korotkoff phases and the meaning of silence",
+          "pdfPage": 9
+        },
+        {
+          "id": "physiology-practical/bp-endpoint-troubleshooting",
+          "sourceSectionId": "bp-endpoint-troubleshooting",
+          "title": "Palpatory limits, gaps and endpoint errors",
+          "pdfPage": 10
+        },
+        {
+          "id": "physiology-practical/bp-pressure-calculations",
+          "sourceSectionId": "bp-pressure-calculations",
+          "title": "Pulse pressure, MAP weighting and worked comparisons",
+          "pdfPage": 11
+        },
+        {
+          "id": "physiology-practical/bp-bp-table",
+          "sourceSectionId": "bp-bp-table",
+          "title": "Read the course BP classification table without diagnosing from one reading",
+          "pdfPage": 11
+        },
+        {
+          "id": "physiology-practical/bp-bp-procedure-reasons",
+          "sourceSectionId": "bp-bp-procedure-reasons",
+          "title": "Explain the measurement sequence and instrument function",
+          "pdfPage": 12
+        },
+        {
+          "id": "physiology-practical/heart-sounds",
+          "sourceSectionId": "heart-sounds",
+          "title": "Find and explain heart sounds",
+          "pdfPage": 13
+        },
+        {
+          "id": "physiology-practical/heart-sounds-cardiac-sound-timing",
+          "sourceSectionId": "heart-sounds-cardiac-sound-timing",
+          "title": "S1/S2, systole and isovolumetric phases",
+          "pdfPage": 14
+        },
+        {
+          "id": "physiology-practical/heart-sounds-extra-sounds",
+          "sourceSectionId": "heart-sounds-extra-sounds",
+          "title": "S3/S4: filling mechanism and cautious interpretation",
+          "pdfPage": 15
+        },
+        {
+          "id": "physiology-practical/heart-sounds-listening-landmarks",
+          "sourceSectionId": "heart-sounds-listening-landmarks",
+          "title": "Sternal angle and all four valve listening areas",
+          "pdfPage": 16
+        },
+        {
+          "id": "physiology-practical/heart-sounds-stethoscope-theory",
+          "sourceSectionId": "heart-sounds-stethoscope-theory",
+          "title": "Stethoscope acoustics and troubleshooting",
+          "pdfPage": 16
+        },
+        {
+          "id": "physiology-practical/heart-sounds-sound-integration",
+          "sourceSectionId": "heart-sounds-sound-integration",
+          "title": "Integrate timing, anatomy and a defensible practical report",
+          "pdfPage": 17
+        },
+        {
+          "id": "physiology-practical/ecg",
+          "sourceSectionId": "ecg",
+          "title": "Record and interpret an ECG",
+          "pdfPage": 17
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-leads",
+          "sourceSectionId": "ecg-ecg-leads",
+          "title": "Leads versus electrodes and the three bipolar limb views",
+          "pdfPage": 27
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-axes-views",
+          "sourceSectionId": "ecg-ecg-axes-views",
+          "title": "Hexaxial directions and frontal versus horizontal views",
+          "pdfPage": 28
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-acquisition",
+          "sourceSectionId": "ecg-ecg-acquisition",
+          "title": "Electrode landmarks, skin contact and recording quality",
+          "pdfPage": 29
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-calibration",
+          "sourceSectionId": "ecg-ecg-calibration",
+          "title": "Paper speed, gain and millimetre-to-unit conversions",
+          "pdfPage": 29
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-wave-intervals",
+          "sourceSectionId": "ecg-ecg-wave-intervals",
+          "title": "P/QRS/T, PR segment versus interval, QT and ST",
+          "pdfPage": 30
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-rate-maths",
+          "sourceSectionId": "ecg-ecg-rate-maths",
+          "title": "Regular and irregular rate calculations with explicit calibration",
+          "pdfPage": 31
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-sinus-check",
+          "sourceSectionId": "ecg-ecg-sinus-check",
+          "title": "Apply all five sinus-rhythm criteria, not rate alone",
+          "pdfPage": 31
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-visual-transfer",
+          "sourceSectionId": "ecg-ecg-visual-transfer",
+          "title": "Describe unfamiliar rhythm strips before naming a diagnosis",
+          "pdfPage": 32
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-axis-quadrants",
+          "sourceSectionId": "ecg-ecg-axis-quadrants",
+          "title": "Axis quadrants, net QRS polarity and lead-II refinement",
+          "pdfPage": 33
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-equiphasic",
+          "sourceSectionId": "ecg-ecg-equiphasic",
+          "title": "Equiphasic-axis construction and the local assignment",
+          "pdfPage": 33
+        },
+        {
+          "id": "physiology-practical/ecg-ecg-territories",
+          "sourceSectionId": "ecg-ecg-territories",
+          "title": "Lead territories and avoiding overdiagnosis",
+          "pdfPage": 34
+        },
+        {
+          "id": "physiology-practical/spirometry",
+          "sourceSectionId": "spirometry",
+          "title": "Read a spirometry trace",
+          "pdfPage": 35
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-apparatus",
+          "sourceSectionId": "spirometry-spiro-apparatus",
+          "title": "What a spirometer records and why the manoeuvre matters",
+          "pdfPage": 39
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-volumes",
+          "sourceSectionId": "spirometry-spiro-volumes",
+          "title": "Tidal and reserve volumes on a tracing",
+          "pdfPage": 40
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-capacities",
+          "sourceSectionId": "spirometry-spiro-capacities",
+          "title": "VC, IC, FRC and TLC: definitions and sums",
+          "pdfPage": 41
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-trace-scale",
+          "sourceSectionId": "spirometry-spiro-trace-scale",
+          "title": "Use the paper's time and volume scale, not screen dimensions",
+          "pdfPage": 41
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-correction",
+          "sourceSectionId": "spirometry-spiro-correction",
+          "title": "Temperature correction and percentage predicted",
+          "pdfPage": 42
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-ratio",
+          "sourceSectionId": "spirometry-spiro-ratio",
+          "title": "FEV1, VC/FVC denominators and ratio arithmetic",
+          "pdfPage": 43
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-patterns",
+          "sourceSectionId": "spirometry-spiro-patterns",
+          "title": "Obstruction versus restriction and the incorrect TLC slide",
+          "pdfPage": 43
+        },
+        {
+          "id": "physiology-practical/spirometry-spiro-integrated",
+          "sourceSectionId": "spirometry-spiro-integrated",
+          "title": "Work the final exercise: order, units and quality checks",
+          "pdfPage": 44
+        },
+        {
+          "id": "physiology-practical/rbc",
+          "sourceSectionId": "rbc",
+          "title": "Count red blood cells",
+          "pdfPage": 45
+        },
+        {
+          "id": "physiology-practical/rbc-microscope-optics",
+          "sourceSectionId": "rbc-microscope-optics",
+          "title": "Microscope parts, magnification and illumination",
+          "pdfPage": 48
+        },
+        {
+          "id": "physiology-practical/rbc-microscope-handling",
+          "sourceSectionId": "rbc-microscope-handling",
+          "title": "Find the chamber grid safely and focus at the right power",
+          "pdfPage": 48
+        },
+        {
+          "id": "physiology-practical/rbc-rbc-geometry",
+          "sourceSectionId": "rbc-rbc-geometry",
+          "title": "Derive the central-grid dimensions rather than memorising a multiplier",
+          "pdfPage": 49
+        },
+        {
+          "id": "physiology-practical/rbc-rbc-pipette",
+          "sourceSectionId": "rbc-rbc-pipette",
+          "title": "RBC pipette identification and dilution logic",
+          "pdfPage": 50
+        },
+        {
+          "id": "physiology-practical/rbc-rbc-count-calculations",
+          "sourceSectionId": "rbc-rbc-count-calculations",
+          "title": "RBC concentration calculations and altered dilution",
+          "pdfPage": 50
+        },
+        {
+          "id": "physiology-practical/rbc-rbc-count-errors",
+          "sourceSectionId": "rbc-rbc-count-errors",
+          "title": "Boundary rules, chamber loading and systematic count errors",
+          "pdfPage": 51
+        },
+        {
+          "id": "physiology-practical/rbc-rbc-reference",
+          "sourceSectionId": "rbc-rbc-reference",
+          "title": "Course RBC ranges, units and limits of interpretation",
+          "pdfPage": 52
+        },
+        {
+          "id": "physiology-practical/wbc",
+          "sourceSectionId": "wbc",
+          "title": "Count white blood cells",
+          "pdfPage": 52
+        },
+        {
+          "id": "physiology-practical/wbc-wbc-dilution-reagent",
+          "sourceSectionId": "wbc-wbc-dilution-reagent",
+          "title": "WBC pipette, Türk's solution and dilution",
+          "pdfPage": 54
+        },
+        {
+          "id": "physiology-practical/wbc-wbc-geometry",
+          "sourceSectionId": "wbc-wbc-geometry",
+          "title": "Four corner squares, depth and count units",
+          "pdfPage": 55
+        },
+        {
+          "id": "physiology-practical/wbc-wbc-calculations",
+          "sourceSectionId": "wbc-wbc-calculations",
+          "title": "Total-count calculations, averaging and changed dilution",
+          "pdfPage": 55
+        },
+        {
+          "id": "physiology-practical/wbc-wbc-quality",
+          "sourceSectionId": "wbc-wbc-quality",
+          "title": "Mixing, loading, border counting and safe technique",
+          "pdfPage": 56
+        },
+        {
+          "id": "physiology-practical/wbc-wbc-total-versus-differential",
+          "sourceSectionId": "wbc-wbc-total-versus-differential",
+          "title": "What the total count can and cannot tell you",
+          "pdfPage": 57
+        },
+        {
+          "id": "physiology-practical/differential",
+          "sourceSectionId": "differential",
+          "title": "Identify the five WBC types",
+          "pdfPage": 57
+        },
+        {
+          "id": "physiology-practical/differential-dlc-morphology",
+          "sourceSectionId": "differential-dlc-morphology",
+          "title": "Recognise cells in additional course micrographs",
+          "pdfPage": 63
+        },
+        {
+          "id": "physiology-practical/differential-dlc-functions",
+          "sourceSectionId": "differential-dlc-functions",
+          "title": "Granulocytes, agranulocytes and principal functions",
+          "pdfPage": 64
+        },
+        {
+          "id": "physiology-practical/differential-dlc-lineage",
+          "sourceSectionId": "differential-dlc-lineage",
+          "title": "Hematopoietic lineages and formed elements",
+          "pdfPage": 65
+        },
+        {
+          "id": "physiology-practical/differential-dlc-ranges-size",
+          "sourceSectionId": "differential-dlc-ranges-size",
+          "title": "Course percentages and why size alone is insufficient",
+          "pdfPage": 65
+        },
+        {
+          "id": "physiology-practical/differential-dlc-calculations",
+          "sourceSectionId": "differential-dlc-calculations",
+          "title": "100/200-cell differentials and absolute counts",
+          "pdfPage": 66
+        },
+        {
+          "id": "physiology-practical/differential-dlc-integration",
+          "sourceSectionId": "differential-dlc-integration",
+          "title": "Integrate morphology, relative counts and interpretation limits",
+          "pdfPage": 67
+        },
+        {
+          "id": "physiology-practical/hematocrit",
+          "sourceSectionId": "hematocrit",
+          "title": "Read hematocrit / PCV",
+          "pdfPage": 67
+        },
+        {
+          "id": "physiology-practical/hematocrit-hct-principle",
+          "sourceSectionId": "hematocrit-hct-principle",
+          "title": "Packed-cell volume, plasma and the buffy coat",
+          "pdfPage": 70
+        },
+        {
+          "id": "physiology-practical/hematocrit-hct-preparation",
+          "sourceSectionId": "hematocrit-hct-preparation",
+          "title": "Anticoagulation, sealing, balance and centrifuge settings",
+          "pdfPage": 71
+        },
+        {
+          "id": "physiology-practical/hematocrit-hct-reading",
+          "sourceSectionId": "hematocrit-hct-reading",
+          "title": "Reader alignment, numerator and worked PCV ratios",
+          "pdfPage": 72
+        },
+        {
+          "id": "physiology-practical/hematocrit-hct-low-high",
+          "sourceSectionId": "hematocrit-hct-low-high",
+          "title": "Relative versus absolute changes and causes listed in the slides",
+          "pdfPage": 72
+        },
+        {
+          "id": "physiology-practical/hematocrit-hct-ranges-quality",
+          "sourceSectionId": "hematocrit-hct-ranges-quality",
+          "title": "Course ranges and specimen validity",
+          "pdfPage": 73
+        },
+        {
+          "id": "physiology-practical/hemostasis",
+          "sourceSectionId": "hemostasis",
+          "title": "Distinguish bleeding and clotting time",
+          "pdfPage": 74
+        },
+        {
+          "id": "physiology-practical/hemostasis-hemostasis-sequence",
+          "sourceSectionId": "hemostasis-hemostasis-sequence",
+          "title": "Vessel injury, platelet adhesion, activation and aggregation",
+          "pdfPage": 76
+        },
+        {
+          "id": "physiology-practical/hemostasis-bt-ct-principles",
+          "sourceSectionId": "hemostasis-bt-ct-principles",
+          "title": "Primary versus secondary haemostasis and assay limitations",
+          "pdfPage": 77
+        },
+        {
+          "id": "physiology-practical/hemostasis-bleeding-time-details",
+          "sourceSectionId": "hemostasis-bleeding-time-details",
+          "title": "Bleeding-time endpoint, sampling intervals and interpretation",
+          "pdfPage": 78
+        },
+        {
+          "id": "physiology-practical/hemostasis-capillary-ct",
+          "sourceSectionId": "hemostasis-capillary-ct",
+          "title": "Capillary clotting time: tube, endpoint and conflicting timer instructions",
+          "pdfPage": 78
+        },
+        {
+          "id": "physiology-practical/hemostasis-slide-ct",
+          "sourceSectionId": "hemostasis-slide-ct",
+          "title": "Slide clotting time and the two endpoint descriptions",
+          "pdfPage": 79
+        },
+        {
+          "id": "physiology-practical/hemostasis-hemostasis-cases",
+          "sourceSectionId": "hemostasis-hemostasis-cases",
+          "title": "Platelet number versus function and selective test abnormalities",
+          "pdfPage": 80
+        },
+        {
+          "id": "physiology-practical/hemostasis-hemostasis-quality-safety",
+          "sourceSectionId": "hemostasis-hemostasis-quality-safety",
+          "title": "Timing resolution, specimen validity and practical safety",
+          "pdfPage": 81
+        },
+        {
+          "id": "physiology-practical/visual-ecg-01",
+          "sourceSectionId": "visual-ecg-01",
+          "title": "Visual interpretation: ECG 01 · Rhythm checklist",
+          "pdfPage": 82
+        },
+        {
+          "id": "physiology-practical/visual-ecg-02",
+          "sourceSectionId": "visual-ecg-02",
+          "title": "Visual interpretation: ECG 02 · Closely spaced complexes",
+          "pdfPage": 83
+        },
+        {
+          "id": "physiology-practical/visual-ecg-03",
+          "sourceSectionId": "visual-ecg-03",
+          "title": "Visual interpretation: ECG 03 · Slow organised rhythm",
+          "pdfPage": 84
+        },
+        {
+          "id": "physiology-practical/visual-ecg-04",
+          "sourceSectionId": "visual-ecg-04",
+          "title": "Visual interpretation: ECG 04 · Irregular rhythm, first example",
+          "pdfPage": 85
+        },
+        {
+          "id": "physiology-practical/visual-ecg-05",
+          "sourceSectionId": "visual-ecg-05",
+          "title": "Visual interpretation: ECG 05 · Irregular rhythm, faster example",
+          "pdfPage": 86
+        },
+        {
+          "id": "physiology-practical/visual-ecg-06",
+          "sourceSectionId": "visual-ecg-06",
+          "title": "Visual interpretation: ECG 06 · Repeating atrial activity",
+          "pdfPage": 87
+        },
+        {
+          "id": "physiology-practical/visual-ecg-07",
+          "sourceSectionId": "visual-ecg-07",
+          "title": "Visual interpretation: ECG 07 · Two rhythms to count",
+          "pdfPage": 88
+        },
+        {
+          "id": "physiology-practical/visual-ecg-08",
+          "sourceSectionId": "visual-ecg-08",
+          "title": "Visual interpretation: ECG 08 · A long conduction interval",
+          "pdfPage": 89
+        },
+        {
+          "id": "physiology-practical/visual-ecg-09",
+          "sourceSectionId": "visual-ecg-09",
+          "title": "Visual interpretation: ECG 09 · Grouped beating",
+          "pdfPage": 89
+        },
+        {
+          "id": "physiology-practical/visual-ecg-10",
+          "sourceSectionId": "visual-ecg-10",
+          "title": "Visual interpretation: ECG 10 · A missing ventricular response",
+          "pdfPage": 90
+        },
+        {
+          "id": "physiology-practical/visual-ecg-11",
+          "sourceSectionId": "visual-ecg-11",
+          "title": "Visual interpretation: ECG 11 · Atrial and ventricular independence",
+          "pdfPage": 90
+        },
+        {
+          "id": "physiology-practical/visual-ecg-12",
+          "sourceSectionId": "visual-ecg-12",
+          "title": "Visual interpretation: ECG 12 · An early complex",
+          "pdfPage": 91
+        },
+        {
+          "id": "physiology-practical/visual-ecg-13",
+          "sourceSectionId": "visual-ecg-13",
+          "title": "Visual interpretation: ECG 13 · A different early complex",
+          "pdfPage": 92
+        },
+        {
+          "id": "physiology-practical/visual-ecg-14",
+          "sourceSectionId": "visual-ecg-14",
+          "title": "Visual interpretation: ECG 14 · Frontal-plane direction",
+          "pdfPage": 93
+        },
+        {
+          "id": "physiology-practical/visual-ecg-15",
+          "sourceSectionId": "visual-ecg-15",
+          "title": "Visual interpretation: ECG 15 · Opposite frontal quadrant",
+          "pdfPage": 94
+        },
+        {
+          "id": "physiology-practical/visual-ecg-16",
+          "sourceSectionId": "visual-ecg-16",
+          "title": "Visual interpretation: ECG 16 · Broad ventricular activation",
+          "pdfPage": 95
+        },
+        {
+          "id": "physiology-practical/visual-ecg-17",
+          "sourceSectionId": "visual-ecg-17",
+          "title": "Visual interpretation: ECG 17 · Terminal forces and axis",
+          "pdfPage": 96
+        },
+        {
+          "id": "physiology-practical/visual-ecg-18",
+          "sourceSectionId": "visual-ecg-18",
+          "title": "Visual interpretation: ECG 18 · Check the connections",
+          "pdfPage": 97
+        },
+        {
+          "id": "physiology-practical/visual-ecg-19",
+          "sourceSectionId": "visual-ecg-19",
+          "title": "Visual interpretation: ECG 19 · Unexpected chest-lead progression",
+          "pdfPage": 98
+        },
+        {
+          "id": "physiology-practical/visual-ecg-20",
+          "sourceSectionId": "visual-ecg-20",
+          "title": "Visual interpretation: ECG 20 · A misleading monitor alert",
+          "pdfPage": 99
+        },
+        {
+          "id": "physiology-practical/visual-ecg-21",
+          "sourceSectionId": "visual-ecg-21",
+          "title": "Visual interpretation: ECG 21 · Your rapid-trace assignment",
+          "pdfPage": 100
+        },
+        {
+          "id": "physiology-practical/visual-ecg-22",
+          "sourceSectionId": "visual-ecg-22",
+          "title": "Visual interpretation: ECG 22 · Your equiphasic-axis assignment",
+          "pdfPage": 101
+        },
+        {
+          "id": "physiology-practical/visual-bp-gap",
+          "sourceSectionId": "visual-bp-gap",
+          "title": "Visual interpretation: BP image · Follow the full sound sequence",
+          "pdfPage": 102
+        },
+        {
+          "id": "physiology-practical/visual-sounds-cycle",
+          "sourceSectionId": "visual-sounds-cycle",
+          "title": "Visual interpretation: Heart sounds · Relate sound to pressure",
+          "pdfPage": 103
+        },
+        {
+          "id": "physiology-practical/visual-spiro-scale",
+          "sourceSectionId": "visual-spiro-scale",
+          "title": "Visual interpretation: Spirometry image · Calibrate before calculating",
+          "pdfPage": 104
+        },
+        {
+          "id": "physiology-practical/visual-rbc-regions",
+          "sourceSectionId": "visual-rbc-regions",
+          "title": "Visual interpretation: RBC image · Area becomes concentration",
+          "pdfPage": 105
+        },
+        {
+          "id": "physiology-practical/visual-wbc-depth",
+          "sourceSectionId": "visual-wbc-depth",
+          "title": "Visual interpretation: WBC image · Depth, area and dilution",
+          "pdfPage": 106
+        },
+        {
+          "id": "physiology-practical/visual-dlc-field",
+          "sourceSectionId": "visual-dlc-field",
+          "title": "Visual interpretation: Blood film 01 · Identify, then explain",
+          "pdfPage": 107
+        },
+        {
+          "id": "physiology-practical/visual-dlc-transfer",
+          "sourceSectionId": "visual-dlc-transfer",
+          "title": "Visual interpretation: Blood film 02 · Transfer to different fields",
+          "pdfPage": 108
+        },
+        {
+          "id": "physiology-practical/visual-hct-reader",
+          "sourceSectionId": "visual-hct-reader",
+          "title": "Visual interpretation: Hematocrit image · Choose the endpoints",
+          "pdfPage": 109
+        },
+        {
+          "id": "physiology-practical/visual-hemostasis-plug",
+          "sourceSectionId": "visual-hemostasis-plug",
+          "title": "Visual interpretation: Haemostasis image · From adhesion to reinforcement",
+          "pdfPage": 110
+        },
+        {
+          "id": "physiology-practical/counting-exam-clarification",
+          "sourceSectionId": "counting-exam-clarification",
+          "title": "The 400-cell exam example: always reconstruct the counted volume",
+          "pdfPage": 111
+        }
+      ]
+    },
+    {
+      "id": "nutrition",
+      "examId": "term2-nutrition",
+      "pdfPath": "public/study/reviews/nutrition.pdf",
+      "sha256": "15c59409dfd4468c4e87294e2ee3e0aca2f152ebc81acbb4c1a1934b2b430ed2",
+      "pageCount": 56,
+      "originalPdfFilename": "11 - Nutrition Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/nutrition.json",
+        "sha256": "2d7d08d6e171b26df598f6f6475d920a18ab673cfa0a132faca2bfa99a0c4c40"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "nutrition/roadmap",
+          "sourceSectionId": "roadmap",
+          "title": "01 / Exam-led reading map and evidence",
+          "pdfPage": 3
+        },
+        {
+          "id": "nutrition/foundations",
+          "sourceSectionId": "foundations",
+          "title": "02 / Nutrients, DRIs and food choices",
+          "pdfPage": 4
+        },
+        {
+          "id": "nutrition/carbohydrate",
+          "sourceSectionId": "carbohydrate",
+          "title": "03 / Carbohydrate, fiber and glycemic control",
+          "pdfPage": 6
+        },
+        {
+          "id": "nutrition/lipids",
+          "sourceSectionId": "lipids",
+          "title": "04 / Lipids, essential fatty acids and eicosanoids",
+          "pdfPage": 8
+        },
+        {
+          "id": "nutrition/protein",
+          "sourceSectionId": "protein",
+          "title": "05 / Protein, amino acids and nitrogen balance",
+          "pdfPage": 9
+        },
+        {
+          "id": "nutrition/digestion",
+          "sourceSectionId": "digestion",
+          "title": "06 / Digestion and absorption: predict the deficiency",
+          "pdfPage": 11
+        },
+        {
+          "id": "nutrition/energy",
+          "sourceSectionId": "energy",
+          "title": "07 / Energy calculations, BMR and fasting",
+          "pdfPage": 12
+        },
+        {
+          "id": "nutrition/assessment",
+          "sourceSectionId": "assessment",
+          "title": "08 / Assessment, BMI and body composition",
+          "pdfPage": 14
+        },
+        {
+          "id": "nutrition/malnutrition",
+          "sourceSectionId": "malnutrition",
+          "title": "09 / Protein-energy malnutrition and refeeding",
+          "pdfPage": 16
+        },
+        {
+          "id": "nutrition/vitamin-a",
+          "sourceSectionId": "vitamin-a",
+          "title": "10 / Vitamin A: vision, epithelium and toxicity",
+          "pdfPage": 17
+        },
+        {
+          "id": "nutrition/vitamin-d",
+          "sourceSectionId": "vitamin-d",
+          "title": "11 / Vitamin D, calcium and mineralization",
+          "pdfPage": 18
+        },
+        {
+          "id": "nutrition/vitamin-ek",
+          "sourceSectionId": "vitamin-ek",
+          "title": "12 / Vitamins E and K: antioxidant versus clotting roles",
+          "pdfPage": 19
+        },
+        {
+          "id": "nutrition/b-vitamins",
+          "sourceSectionId": "b-vitamins",
+          "title": "13 / B vitamins: enzymes and deficiency patterns",
+          "pdfPage": 20
+        },
+        {
+          "id": "nutrition/folate-b12",
+          "sourceSectionId": "folate-b12",
+          "title": "14 / B6, folate and B12: connect the pathways",
+          "pdfPage": 22
+        },
+        {
+          "id": "nutrition/vitamin-c",
+          "sourceSectionId": "vitamin-c",
+          "title": "15 / Vitamin C, connective tissue and antioxidant logic",
+          "pdfPage": 23
+        },
+        {
+          "id": "nutrition/iron",
+          "sourceSectionId": "iron",
+          "title": "16 / Iron: intake, transport, stores and anemia",
+          "pdfPage": 24
+        },
+        {
+          "id": "nutrition/minerals",
+          "sourceSectionId": "minerals",
+          "title": "17 / Water, major minerals and trace elements",
+          "pdfPage": 26
+        },
+        {
+          "id": "nutrition/pregnancy",
+          "sourceSectionId": "pregnancy",
+          "title": "18 / Pregnancy and lactation",
+          "pdfPage": 28
+        },
+        {
+          "id": "nutrition/infancy",
+          "sourceSectionId": "infancy",
+          "title": "19 / Infant and child nutrition",
+          "pdfPage": 30
+        },
+        {
+          "id": "nutrition/ageing",
+          "sourceSectionId": "ageing",
+          "title": "20 / Ageing: muscle, hydration, B12 and D",
+          "pdfPage": 31
+        },
+        {
+          "id": "nutrition/clinical-diets",
+          "sourceSectionId": "clinical-diets",
+          "title": "21 / CVD, diabetes and renal diet principles",
+          "pdfPage": 32
+        },
+        {
+          "id": "nutrition/oral",
+          "sourceSectionId": "oral",
+          "title": "22 / Supplement: nutrition and oral health",
+          "pdfPage": 34
+        },
+        {
+          "id": "nutrition/numbers",
+          "sourceSectionId": "numbers",
+          "title": "23 / Numerical checkpoint sheet",
+          "pdfPage": 38
+        },
+        {
+          "id": "nutrition/integrated-recall",
+          "sourceSectionId": "integrated-recall",
+          "title": "24 / Integrated active recall: mechanism, not recognition",
+          "pdfPage": 39
+        },
+        {
+          "id": "nutrition/map-f",
+          "sourceSectionId": "map-f",
+          "title": "25 / English final-exam screenshot map",
+          "pdfPage": 41
+        },
+        {
+          "id": "nutrition/map-n",
+          "sourceSectionId": "map-n",
+          "title": "26 / Mixed-language scan map",
+          "pdfPage": 44
+        },
+        {
+          "id": "nutrition/map-d",
+          "sourceSectionId": "map-d",
+          "title": "27 / Numbered bilingual compilation map",
+          "pdfPage": 46
+        },
+        {
+          "id": "nutrition/map-o",
+          "sourceSectionId": "map-o",
+          "title": "28 / Supplementary oral-health paper map",
+          "pdfPage": 50
+        },
+        {
+          "id": "nutrition/last-pass",
+          "sourceSectionId": "last-pass",
+          "title": "29 / Final pass: secure marks and unresolved source requests",
+          "pdfPage": 54
+        },
+        {
+          "id": "nutrition/exam-gap-review",
+          "sourceSectionId": "exam-gap-review",
+          "title": "30 / Past-paper gap review and completion checklist",
+          "pdfPage": 55
+        }
+      ]
+    },
+    {
+      "id": "religion",
+      "examId": "term2-religion",
+      "pdfPath": "public/study/reviews/religion.pdf",
+      "sha256": "5b4873a8447941923724f2a45fcdf2b2f929d07406ffb4a61fe6d48397248cfb",
+      "pageCount": 41,
+      "originalPdfFilename": "09 - Religion Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/religion.json",
+        "sha256": "f9ee261c83f66ab40eeead196e57f42ef8515b46f2a2b66dc88b364096eb82bc"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "religion/more-reading-map",
+          "sourceSectionId": "more-reading-map",
+          "title": "Expanded reading map: four papers, one coherent review",
+          "pdfPage": 3
+        },
+        {
+          "id": "religion/paper-reading-map",
+          "sourceSectionId": "paper-reading-map",
+          "title": "Original 40-item paper: its established book match",
+          "pdfPage": 5
+        },
+        {
+          "id": "religion/definitions",
+          "sourceSectionId": "definitions",
+          "title": "Lexical and terminological definitions",
+          "pdfPage": 6
+        },
+        {
+          "id": "religion/interpretations",
+          "sourceSectionId": "interpretations",
+          "title": "The four introductory interpretations",
+          "pdfPage": 7
+        },
+        {
+          "id": "religion/course-definition",
+          "sourceSectionId": "course-definition",
+          "title": "The course definition of din",
+          "pdfPage": 7
+        },
+        {
+          "id": "religion/belief-structure",
+          "sourceSectionId": "belief-structure",
+          "title": "Beliefs, practice and the structure of religion",
+          "pdfPage": 8
+        },
+        {
+          "id": "religion/religious-inquiry",
+          "sourceSectionId": "religious-inquiry",
+          "title": "Why investigate? Curiosity, desire and avoidance",
+          "pdfPage": 9
+        },
+        {
+          "id": "religion/benefits-responsibility",
+          "sourceSectionId": "benefits-responsibility",
+          "title": "Benefits of religion: purpose, support and responsibility",
+          "pdfPage": 11
+        },
+        {
+          "id": "religion/decree-knowledge",
+          "sourceSectionId": "decree-knowledge",
+          "title": "Taqdir, qada and conditional knowledge records",
+          "pdfPage": 12
+        },
+        {
+          "id": "religion/decree-agency",
+          "sourceSectionId": "decree-agency",
+          "title": "One act, human choice and divine dependence",
+          "pdfPage": 13
+        },
+        {
+          "id": "religion/infallibility-scope",
+          "sourceSectionId": "infallibility-scope",
+          "title": "Prophetic infallibility: scope and agency",
+          "pdfPage": 14
+        },
+        {
+          "id": "religion/infallibility-proofs",
+          "sourceSectionId": "infallibility-proofs",
+          "title": "Arguments for infallibility: trust, example and texts",
+          "pdfPage": 15
+        },
+        {
+          "id": "religion/infallibility-objections",
+          "sourceSectionId": "infallibility-objections",
+          "title": "Difficult wording: tawriyah, reproach and Moses",
+          "pdfPage": 16
+        },
+        {
+          "id": "religion/prophetic-opposition",
+          "sourceSectionId": "prophetic-opposition",
+          "title": "Opposition to prophets: who, why and how",
+          "pdfPage": 18
+        },
+        {
+          "id": "religion/noah-sources",
+          "sourceSectionId": "noah-sources",
+          "title": "Noah: separate the verse from the report",
+          "pdfPage": 18
+        },
+        {
+          "id": "religion/more-terminology",
+          "sourceSectionId": "more-terminology",
+          "title": "Religion, sharia, functions and guidance: keep the categories separate",
+          "pdfPage": 19
+        },
+        {
+          "id": "religion/more-attributes-justice",
+          "sourceSectionId": "more-attributes-justice",
+          "title": "Divine attributes and justice",
+          "pdfPage": 21
+        },
+        {
+          "id": "religion/more-unity-finality",
+          "sourceSectionId": "more-unity-finality",
+          "title": "One revealed core, successive laws, final prophethood",
+          "pdfPage": 22
+        },
+        {
+          "id": "religion/more-salvation",
+          "sourceSectionId": "more-salvation",
+          "title": "Pluralism, tolerance and salvation: three different claims",
+          "pdfPage": 23
+        },
+        {
+          "id": "religion/more-faith",
+          "sourceSectionId": "more-faith",
+          "title": "Faith, practice, intention and degrees",
+          "pdfPage": 24
+        },
+        {
+          "id": "religion/more-hereafter",
+          "sourceSectionId": "more-hereafter",
+          "title": "This world and the Hereafter: aim, action and consequence",
+          "pdfPage": 25
+        },
+        {
+          "id": "religion/more-biography-early",
+          "sourceSectionId": "more-biography-early",
+          "title": "Prophetic biography: childhood and family",
+          "pdfPage": 26
+        },
+        {
+          "id": "religion/more-biography-mission",
+          "sourceSectionId": "more-biography-mission",
+          "title": "Revelation, public invitation and migration",
+          "pdfPage": 27
+        },
+        {
+          "id": "religion/more-scripture-foundations",
+          "sourceSectionId": "more-scripture-foundations",
+          "title": "Scripture literacy: books, commandments and common figures",
+          "pdfPage": 28
+        },
+        {
+          "id": "religion/more-scripture-comparison",
+          "sourceSectionId": "more-scripture-comparison",
+          "title": "Jesus, Mary and prediction claims: compare without conflating",
+          "pdfPage": 29
+        },
+        {
+          "id": "religion/more-thaqalayn",
+          "sourceSectionId": "more-thaqalayn",
+          "title": "Guidance after the Prophet: Thaqalayn and authority",
+          "pdfPage": 30
+        },
+        {
+          "id": "religion/more-ethics",
+          "sourceSectionId": "more-ethics",
+          "title": "Religious ethics and the medical items: learn the conditions",
+          "pdfPage": 31
+        },
+        {
+          "id": "religion/more-source-coverage",
+          "sourceSectionId": "more-source-coverage",
+          "title": "New-paper coverage: where every item was reconciled",
+          "pdfPage": 32
+        },
+        {
+          "id": "religion/more-revision-checklist",
+          "sourceSectionId": "more-revision-checklist",
+          "title": "Expanded core: final study checklist",
+          "pdfPage": 34
+        },
+        {
+          "id": "religion/paper-map-1",
+          "sourceSectionId": "paper-map-1",
+          "title": "Paper map: questions 1-10",
+          "pdfPage": 35
+        },
+        {
+          "id": "religion/paper-map-11",
+          "sourceSectionId": "paper-map-11",
+          "title": "Paper map: questions 11-20",
+          "pdfPage": 36
+        },
+        {
+          "id": "religion/paper-map-21",
+          "sourceSectionId": "paper-map-21",
+          "title": "Paper map: questions 21-30",
+          "pdfPage": 37
+        },
+        {
+          "id": "religion/paper-map-31",
+          "sourceSectionId": "paper-map-31",
+          "title": "Paper map: questions 31-40",
+          "pdfPage": 38
+        },
+        {
+          "id": "religion/revision-checklist",
+          "sourceSectionId": "revision-checklist",
+          "title": "Final retrieval pass and coverage checklist",
+          "pdfPage": 39
+        },
+        {
+          "id": "religion/assessment",
+          "sourceSectionId": "assessment",
+          "title": "Original lecture assessment and remaining course topics",
+          "pdfPage": 40
+        }
+      ]
+    },
+    {
+      "id": "divine-ethics",
+      "examId": "term2-divine-ethics",
+      "pdfPath": "public/study/reviews/divine-ethics.pdf",
+      "sha256": "f2aa68c9d5ba00dad871cbaa3131207031dd63dd15d78b3e661abcf9bcab427f",
+      "pageCount": 22,
+      "originalPdfFilename": "10 - Divine Ethics Review.pdf",
+      "authoringJson": {
+        "relativePath": "_build/content/divine-ethics.json",
+        "sha256": "47b58afca0be41128e4c039e6b6b9479468f03b0d518cd96d1828d5ac4b8d43c"
+      },
+      "pageEvidence": "Actual original PDF outline; unique exact heading match after renderer punctuation normalization; one-based PDF page number.",
+      "sections": [
+        {
+          "id": "divine-ethics/sep17-source-map",
+          "sourceSectionId": "sep17-source-map",
+          "title": "Start here: the new extract and your study order",
+          "pdfPage": 3
+        },
+        {
+          "id": "divine-ethics/sep17-planning",
+          "sourceSectionId": "sep17-planning",
+          "title": "Planning, organization and the value of time",
+          "pdfPage": 4
+        },
+        {
+          "id": "divine-ethics/sep17-ostentation",
+          "sourceSectionId": "sep17-ostentation",
+          "title": "Sincerity, ostentation and dependent means",
+          "pdfPage": 5
+        },
+        {
+          "id": "divine-ethics/sep17-sincerity-practice",
+          "sourceSectionId": "sep17-sincerity-practice",
+          "title": "Seven practices for cultivating sincerity",
+          "pdfPage": 6
+        },
+        {
+          "id": "divine-ethics/sep17-trust",
+          "sourceSectionId": "sep17-trust",
+          "title": "Trust in God, effort and five signs",
+          "pdfPage": 8
+        },
+        {
+          "id": "divine-ethics/sep17-remembrance",
+          "sourceSectionId": "sep17-remembrance",
+          "title": "Remembrance of the heart and the apple case",
+          "pdfPage": 9
+        },
+        {
+          "id": "divine-ethics/sep17-gratitude-levels",
+          "sourceSectionId": "sep17-gratitude-levels",
+          "title": "Gratitude in recognition, speech and action",
+          "pdfPage": 10
+        },
+        {
+          "id": "divine-ethics/sep17-gratitude-obstacles",
+          "sourceSectionId": "sep17-gratitude-obstacles",
+          "title": "Gratitude’s effects and five obstacles",
+          "pdfPage": 11
+        },
+        {
+          "id": "divine-ethics/sep17-prayer",
+          "sourceSectionId": "sep17-prayer",
+          "title": "Prayer, effort and a wise response",
+          "pdfPage": 12
+        },
+        {
+          "id": "divine-ethics/sep17-repentance",
+          "sourceSectionId": "sep17-repentance",
+          "title": "Immediate repentance, habits and moral development",
+          "pdfPage": 13
+        },
+        {
+          "id": "divine-ethics/sep17-integration",
+          "sourceSectionId": "sep17-integration",
+          "title": "Cross-topic reasoning and the missing-page boundary",
+          "pdfPage": 15
+        },
+        {
+          "id": "divine-ethics/self-knowledge",
+          "sourceSectionId": "self-knowledge",
+          "title": "Earlier packet: Self-knowledge and the purpose of self-building",
+          "pdfPage": 16
+        },
+        {
+          "id": "divine-ethics/self-building-practice",
+          "sourceSectionId": "self-building-practice",
+          "title": "Earlier packet: Daily practice, obstacles and the intended outcome",
+          "pdfPage": 17
+        },
+        {
+          "id": "divine-ethics/dhikr",
+          "sourceSectionId": "dhikr",
+          "title": "Earlier packet: Remembrance of God: heart, action and speech",
+          "pdfPage": 17
+        },
+        {
+          "id": "divine-ethics/tawakkul",
+          "sourceSectionId": "tawakkul",
+          "title": "Earlier packet: Trust in God and the use of means",
+          "pdfPage": 18
+        },
+        {
+          "id": "divine-ethics/prayer",
+          "sourceSectionId": "prayer",
+          "title": "Earlier packet: Prayer, dependence and the meaning of an answer",
+          "pdfPage": 19
+        },
+        {
+          "id": "divine-ethics/gratitude",
+          "sourceSectionId": "gratitude",
+          "title": "Earlier packet: Blessings and the levels of gratitude",
+          "pdfPage": 19
+        },
+        {
+          "id": "divine-ethics/integrated-recall",
+          "sourceSectionId": "integrated-recall",
+          "title": "Earlier packet: Integrated ethical comparisons",
+          "pdfPage": 21
+        }
+      ]
+    }
+  ]
+}

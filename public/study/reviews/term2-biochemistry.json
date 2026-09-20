@@ -1,0 +1,2556 @@
+{
+  "examId": "term2-biochemistry",
+  "title": "Biochemistry II",
+  "volumes": [
+    {
+      "id": "biochemistry",
+      "title": "Biochemistry II",
+      "url": "/study/reviews/biochemistry.pdf?v=d7e5d3c485f21500bd9842fa2552ecada42bbac6899b59d799711ab245efd637",
+      "sha256": "d7e5d3c485f21500bd9842fa2552ecada42bbac6899b59d799711ab245efd637",
+      "pageCount": 47
+    },
+    {
+      "id": "biochemistry-practical",
+      "title": "Biochemistry Practical",
+      "url": "/study/reviews/biochemistry-practical.pdf?v=a472fb32f62b54f3877f2a41457a911fc2bb1ef9a509dac96bfc9c47800b0471",
+      "sha256": "a472fb32f62b54f3877f2a41457a911fc2bb1ef9a509dac96bfc9c47800b0471",
+      "pageCount": 32
+    }
+  ],
+  "sections": [
+    {
+      "id": "biochemistry/biochem-source-map",
+      "title": "Reading map and source confidence",
+      "volumeId": "biochemistry",
+      "order": 1,
+      "role": "orientation-or-checklist",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 3
+    },
+    {
+      "id": "biochemistry/biochem-metabolic-logic",
+      "title": "Compartmentation, energy and pathway regulation",
+      "volumeId": "biochemistry",
+      "order": 2,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 4
+    },
+    {
+      "id": "biochemistry/biochem-glucose-entry",
+      "title": "Glucose transport, trapping and tissue priorities",
+      "volumeId": "biochemistry",
+      "order": 3,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 5
+    },
+    {
+      "id": "biochemistry/biochem-glycolysis",
+      "title": "Glycolysis: every step, carbon count and energy event",
+      "volumeId": "biochemistry",
+      "order": 4,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 6
+    },
+    {
+      "id": "biochemistry/biochem-glycolysis-regulation",
+      "title": "PFK-1, pyruvate kinase and the lactate shunt",
+      "volumeId": "biochemistry",
+      "order": 5,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 8
+    },
+    {
+      "id": "biochemistry/biochem-pdh-tca",
+      "title": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "volumeId": "biochemistry",
+      "order": 6,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 9
+    },
+    {
+      "id": "biochemistry/biochem-oxphos",
+      "title": "Respiratory chain and transparent ATP accounting",
+      "volumeId": "biochemistry",
+      "order": 7,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 10
+    },
+    {
+      "id": "biochemistry/biochem-other-sugars",
+      "title": "Fructose, galactose, mannose and the polyol pathway",
+      "volumeId": "biochemistry",
+      "order": 8,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 13
+    },
+    {
+      "id": "biochemistry/biochem-glycogen",
+      "title": "Glycogen structure, synthesis, degradation and control",
+      "volumeId": "biochemistry",
+      "order": 9,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 14
+    },
+    {
+      "id": "biochemistry/biochem-gluconeogenesis",
+      "title": "Gluconeogenesis, redox transfer and substrate limits",
+      "volumeId": "biochemistry",
+      "order": 10,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 15
+    },
+    {
+      "id": "biochemistry/biochem-ppp",
+      "title": "Pentose phosphate pathway and antioxidant defense",
+      "volumeId": "biochemistry",
+      "order": 11,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 17
+    },
+    {
+      "id": "biochemistry/biochem-lipid-digestion",
+      "title": "Dietary lipid digestion: from meal to absorbable products",
+      "volumeId": "biochemistry",
+      "order": 12,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 17
+    },
+    {
+      "id": "biochemistry/biochem-micelles-chylomicrons",
+      "title": "Micelles, enterocytes, chylomicrons and remnant uptake",
+      "volumeId": "biochemistry",
+      "order": 13,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 19
+    },
+    {
+      "id": "biochemistry/biochem-fatty-acid-synthesis",
+      "title": "Fatty-acid synthesis and TAG storage",
+      "volumeId": "biochemistry",
+      "order": 14,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 21
+    },
+    {
+      "id": "biochemistry/biochem-beta-oxidation",
+      "title": "Lipolysis, carnitine transport and beta-oxidation",
+      "volumeId": "biochemistry",
+      "order": 15,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 21
+    },
+    {
+      "id": "biochemistry/biochem-ketones",
+      "title": "Ketogenesis and ketone utilization",
+      "volumeId": "biochemistry",
+      "order": 16,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 23
+    },
+    {
+      "id": "biochemistry/biochem-complex-lipids",
+      "title": "Membrane lipids, sphingolipidoses and eicosanoids",
+      "volumeId": "biochemistry",
+      "order": 17,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 24
+    },
+    {
+      "id": "biochemistry/biochem-cholesterol",
+      "title": "Cholesterol, bile acids and steroid synthesis",
+      "volumeId": "biochemistry",
+      "order": 18,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 25
+    },
+    {
+      "id": "biochemistry/biochem-lipoprotein-map",
+      "title": "Lipoproteins and apoproteins: an integrated transport map",
+      "volumeId": "biochemistry",
+      "order": 19,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 26
+    },
+    {
+      "id": "biochemistry/biochem-protein-nitrogen",
+      "title": "Protein digestion, amino-acid transport and nitrogen collection",
+      "volumeId": "biochemistry",
+      "order": 20,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 27
+    },
+    {
+      "id": "biochemistry/biochem-urea",
+      "title": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "volumeId": "biochemistry",
+      "order": 21,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 28
+    },
+    {
+      "id": "biochemistry/biochem-aa-carbon",
+      "title": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "volumeId": "biochemistry",
+      "order": 22,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 30
+    },
+    {
+      "id": "biochemistry/biochem-aa-disorders",
+      "title": "Amino-acid disorders: reason from the blocked reaction",
+      "volumeId": "biochemistry",
+      "order": 23,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 33
+    },
+    {
+      "id": "biochemistry/biochem-heme",
+      "title": "Heme synthesis, porphyrias and bilirubin handling",
+      "volumeId": "biochemistry",
+      "order": 24,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 34
+    },
+    {
+      "id": "biochemistry/biochem-special-products",
+      "title": "Amino acids as precursors of signaling and storage molecules",
+      "volumeId": "biochemistry",
+      "order": 25,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 37
+    },
+    {
+      "id": "biochemistry/biochem-nucleotides",
+      "title": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "volumeId": "biochemistry",
+      "order": 26,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 37
+    },
+    {
+      "id": "biochemistry/biochem-insulin-glucagon",
+      "title": "Insulin, glucagon and the fed-fast cycle",
+      "volumeId": "biochemistry",
+      "order": 27,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 38
+    },
+    {
+      "id": "biochemistry/biochem-diabetes-integration",
+      "title": "Diabetes and metabolic perturbations: causal review",
+      "volumeId": "biochemistry",
+      "order": 28,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 40
+    },
+    {
+      "id": "biochemistry/biochem-vitamins",
+      "title": "Vitamin and cofactor integration for metabolism",
+      "volumeId": "biochemistry",
+      "order": 29,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 41
+    },
+    {
+      "id": "biochemistry/biochem-nutrition-review",
+      "title": "Nutrition, nitrogen balance and final integration checkpoints",
+      "volumeId": "biochemistry",
+      "order": 30,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 44
+    },
+    {
+      "id": "biochemistry-practical/bp-route",
+      "title": "Practical map: what you must be able to do",
+      "volumeId": "biochemistry-practical",
+      "order": 1,
+      "role": "orientation-or-checklist",
+      "sourceBasis": "lecture",
+      "pdfPage": 3
+    },
+    {
+      "id": "biochemistry-practical/bp-safety",
+      "title": "Safety, waste and apparatus handling",
+      "volumeId": "biochemistry-practical",
+      "order": 2,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 4
+    },
+    {
+      "id": "biochemistry-practical/bp-glassware",
+      "title": "Choose the correct measuring device",
+      "volumeId": "biochemistry-practical",
+      "order": 3,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 5
+    },
+    {
+      "id": "biochemistry-practical/bp-titration-principle",
+      "title": "Titration: neutralization, equivalence and endpoint",
+      "volumeId": "biochemistry-practical",
+      "order": 4,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 6
+    },
+    {
+      "id": "biochemistry-practical/bp-titration-calculation",
+      "title": "Titration calculations and directional errors",
+      "volumeId": "biochemistry-practical",
+      "order": 5,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 7
+    },
+    {
+      "id": "biochemistry-practical/bp-photometry-instrument",
+      "title": "Spectrophotometry: light path, wavelength and cuvette",
+      "volumeId": "biochemistry-practical",
+      "order": 6,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 8
+    },
+    {
+      "id": "biochemistry-practical/bp-beer-lambert",
+      "title": "Beer-Lambert law, absorbance and transmittance",
+      "volumeId": "biochemistry-practical",
+      "order": 7,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 10
+    },
+    {
+      "id": "biochemistry-practical/bp-blanks-calibration",
+      "title": "Blanks, calibration, dilution and optical errors",
+      "volumeId": "biochemistry-practical",
+      "order": 8,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 11
+    },
+    {
+      "id": "biochemistry-practical/bp-wavelength-standards",
+      "title": "Course experiment: bromophenol-blue wavelength and standard curve",
+      "volumeId": "biochemistry-practical",
+      "order": 9,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 11
+    },
+    {
+      "id": "biochemistry-practical/bp-protein-assay",
+      "title": "Course total-protein assay: the quantitative Biuret method",
+      "volumeId": "biochemistry-practical",
+      "order": 10,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 13
+    },
+    {
+      "id": "biochemistry-practical/bp-amino-acid-properties",
+      "title": "Amino-acid and protein chemistry behind the qualitative tests",
+      "volumeId": "biochemistry-practical",
+      "order": 11,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 14
+    },
+    {
+      "id": "biochemistry-practical/bp-tests-overview",
+      "title": "Qualitative tests: discriminate the molecular target",
+      "volumeId": "biochemistry-practical",
+      "order": 12,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 15
+    },
+    {
+      "id": "biochemistry-practical/bp-ninhydrin",
+      "title": "Ninhydrin: principle, exact protocol and interpretation",
+      "volumeId": "biochemistry-practical",
+      "order": 13,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 16
+    },
+    {
+      "id": "biochemistry-practical/bp-xanthoproteic",
+      "title": "Xanthoproteic: aromatic nitration and the phenylalanine trap",
+      "volumeId": "biochemistry-practical",
+      "order": 14,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 17
+    },
+    {
+      "id": "biochemistry-practical/bp-pauly",
+      "title": "Pauly test: tyrosine or histidine",
+      "volumeId": "biochemistry-practical",
+      "order": 15,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 18
+    },
+    {
+      "id": "biochemistry-practical/bp-hopkins",
+      "title": "Hopkins-Cole: the tryptophan interface ring",
+      "volumeId": "biochemistry-practical",
+      "order": 16,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 18
+    },
+    {
+      "id": "biochemistry-practical/bp-biuret-tca",
+      "title": "Qualitative Biuret and TCA precipitation",
+      "volumeId": "biochemistry-practical",
+      "order": 17,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 20
+    },
+    {
+      "id": "biochemistry-practical/bp-enzyme-foundations",
+      "title": "Enzyme activity: specificity, temperature, pH and amount",
+      "volumeId": "biochemistry-practical",
+      "order": 18,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 21
+    },
+    {
+      "id": "biochemistry-practical/bp-kinetics",
+      "title": "Kinetics and inhibition: a rigorous extension for hard questions",
+      "volumeId": "biochemistry-practical",
+      "order": 19,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 22
+    },
+    {
+      "id": "biochemistry-practical/bp-rennin-temperature",
+      "title": "Milk-clotting experiment: temperature",
+      "volumeId": "biochemistry-practical",
+      "order": 20,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 23
+    },
+    {
+      "id": "biochemistry-practical/bp-rennin-concentrations",
+      "title": "Milk-clotting experiments: enzyme versus substrate concentration",
+      "volumeId": "biochemistry-practical",
+      "order": 21,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 24
+    },
+    {
+      "id": "biochemistry-practical/bp-urease",
+      "title": "Urease: substrate specificity, inhibition and an indicator endpoint",
+      "volumeId": "biochemistry-practical",
+      "order": 22,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 25
+    },
+    {
+      "id": "biochemistry-practical/bp-flame-principle",
+      "title": "Flame photometry: emission, instrument and wavelength",
+      "volumeId": "biochemistry-practical",
+      "order": 23,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 26
+    },
+    {
+      "id": "biochemistry-practical/bp-electrolytes",
+      "title": "Electrolytes: biological roles and analytical pitfalls",
+      "volumeId": "biochemistry-practical",
+      "order": 24,
+      "role": "review-section",
+      "sourceBasis": "lecture",
+      "pdfPage": 27
+    },
+    {
+      "id": "biochemistry-practical/bp-final-review",
+      "title": "Integrated difficult practical checks",
+      "volumeId": "biochemistry-practical",
+      "order": 25,
+      "role": "orientation-or-checklist",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 29
+    }
+  ],
+  "questions": {
+    "biochem2-practical-enzymes-activation-equilibrium-v1": {
+      "sectionId": "biochemistry-practical/bp-enzyme-foundations",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-ammonia-indicator-v1": {
+      "sectionId": "biochemistry-practical/bp-urease",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-clot-not-km-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-concentrations",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-enzyme-relative-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-concentrations",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-enzyme-saturation-v1": {
+      "sectionId": "biochemistry-practical/bp-kinetics",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-enzyme-table-control-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-concentrations",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-enzyme-time-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-concentrations",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-indicator-control-v1": {
+      "sectionId": "biochemistry-practical/bp-urease",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-ph-specificity-v1": {
+      "sectionId": "biochemistry-practical/bp-enzyme-foundations",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-pre-equilibration-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-temperature",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-rennin-identity-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-temperature",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-substrate-table-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-concentrations",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-temperature-denaturation-v1": {
+      "sectionId": "biochemistry-practical/bp-rennin-temperature",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-urease-comparison-v1": {
+      "sectionId": "biochemistry-practical/bp-urease",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-urease-specificity-v1": {
+      "sectionId": "biochemistry-practical/bp-urease",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-enzymes-zinc-mechanism-limit-v1": {
+      "sectionId": "biochemistry-practical/bp-urease",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-colour-mixture-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-electrolyte-charge-v1": {
+      "sectionId": "biochemistry-practical/bp-electrolytes",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-emission-versus-absorption-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-flame-intercept-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-ise-alternative-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-matrix-effect-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-potassium-wavelength-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-saline-molarity-v1": {
+      "sectionId": "biochemistry-practical/bp-electrolytes",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-selected-elements-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-flame-sodium-calibration-v1": {
+      "sectionId": "biochemistry-practical/bp-flame-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-acetone-bath-v1": {
+      "sectionId": "biochemistry-practical/bp-safety",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-acid-dilution-v1": {
+      "sectionId": "biochemistry-practical/bp-safety",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-balance-tare-v1": {
+      "sectionId": "biochemistry-practical/bp-glassware",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-centrifuge-balance-v1": {
+      "sectionId": "biochemistry-practical/bp-safety",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-eye-splash-v1": {
+      "sectionId": "biochemistry-practical/bp-safety",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-filter-versus-salt-v1": {
+      "sectionId": "biochemistry-practical/bp-glassware",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-final-volume-v1": {
+      "sectionId": "biochemistry-practical/bp-glassware",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-fumehood-v1": {
+      "sectionId": "biochemistry-practical/bp-glassware",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-meniscus-v1": {
+      "sectionId": "biochemistry-practical/bp-glassware",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-mohr-delivery-v1": {
+      "sectionId": "biochemistry-practical/bp-glassware",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-pipette-aid-v1": {
+      "sectionId": "biochemistry-practical/bp-safety",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-lab-stock-flask-v1": {
+      "sectionId": "biochemistry-practical/bp-glassware",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-above-linearity-v1": {
+      "sectionId": "biochemistry-practical/bp-blanks-calibration",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-biuret-calculation-v1": {
+      "sectionId": "biochemistry-practical/bp-protein-assay",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-blank-selection-v1": {
+      "sectionId": "biochemistry-practical/bp-blanks-calibration",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-blank-standard-control-v1": {
+      "sectionId": "biochemistry-practical/bp-blanks-calibration",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-cuvette-mismatch-v1": {
+      "sectionId": "biochemistry-practical/bp-beer-lambert",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-doubling-concentration-v1": {
+      "sectionId": "biochemistry-practical/bp-beer-lambert",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-dye-standard-v1": {
+      "sectionId": "biochemistry-practical/bp-wavelength-standards",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-intercept-v1": {
+      "sectionId": "biochemistry-practical/bp-blanks-calibration",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-lambda-max-v1": {
+      "sectionId": "biochemistry-practical/bp-wavelength-standards",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-pathlength-v1": {
+      "sectionId": "biochemistry-practical/bp-beer-lambert",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-predilution-v1": {
+      "sectionId": "biochemistry-practical/bp-protein-assay",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-protein-transmittance-v1": {
+      "sectionId": "biochemistry-practical/bp-beer-lambert",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-ratio-not-raw-v1": {
+      "sectionId": "biochemistry-practical/bp-protein-assay",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-reference-meaning-v1": {
+      "sectionId": "biochemistry-practical/bp-protein-assay",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-shared-dilution-v1": {
+      "sectionId": "biochemistry-practical/bp-protein-assay",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-timing-wavelength-v1": {
+      "sectionId": "biochemistry-practical/bp-protein-assay",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-transmittance-ratio-v1": {
+      "sectionId": "biochemistry-practical/bp-beer-lambert",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-photometry-turbid-sample-v1": {
+      "sectionId": "biochemistry-practical/bp-blanks-calibration",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-blue-versus-violet-v1": {
+      "sectionId": "biochemistry-practical/bp-biuret-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-control-failure-v1": {
+      "sectionId": "biochemistry-practical/bp-biuret-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-decarboxylation-v1": {
+      "sectionId": "biochemistry-practical/bp-ninhydrin",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-denaturation-v1": {
+      "sectionId": "biochemistry-practical/bp-amino-acid-properties",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-hopkins-interface-v1": {
+      "sectionId": "biochemistry-practical/bp-hopkins",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-hydrolysis-figure-v1": {
+      "sectionId": "biochemistry-practical/bp-biuret-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-negative-hopkins-v1": {
+      "sectionId": "biochemistry-practical/bp-hopkins",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-ninhydrin-not-protein-v1": {
+      "sectionId": "biochemistry-practical/bp-ninhydrin",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-ninhydrin-times-v1": {
+      "sectionId": "biochemistry-practical/bp-ninhydrin",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-ninhydrin-yellow-v1": {
+      "sectionId": "biochemistry-practical/bp-ninhydrin",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-pauly-pair-v1": {
+      "sectionId": "biochemistry-practical/bp-pauly",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-pauly-reagent-order-v1": {
+      "sectionId": "biochemistry-practical/bp-pauly",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-phenylalanine-v1": {
+      "sectionId": "biochemistry-practical/bp-xanthoproteic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-tca-meaning-v1": {
+      "sectionId": "biochemistry-practical/bp-biuret-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-tca-protocols-v1": {
+      "sectionId": "biochemistry-practical/bp-biuret-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-tripeptide-v1": {
+      "sectionId": "biochemistry-practical/bp-biuret-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-tyrosine-pattern-v1": {
+      "sectionId": "biochemistry-practical/bp-tests-overview",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-proteins-xantho-orange-v1": {
+      "sectionId": "biochemistry-practical/bp-xanthoproteic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-base-molarity-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-diprotic-normality-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-duplicate-titres-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-endpoint-observation-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-equivalence-ph-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-principle",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-flask-dilution-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-nonzero-burette-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-overshoot-direction-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-tip-air-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-titre-difference-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-unknown-aliquot-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "biochem2-practical-titration-wet-burette-v1": {
+      "sectionId": "biochemistry-practical/bp-titration-calculation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-001": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-002": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-003": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-004": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-005": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-006": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-007": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-008": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "depth-bio-biochem-009": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-001-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-002-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-003-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-004-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-005-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-006-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-007-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-008-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-009-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-010-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-011-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-012-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-013-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-014-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-015-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-016-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-017-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-018-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-019-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-020-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-021-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-022-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-023-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-024-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-025-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-026-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-027-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-028-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-029-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-030-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-031-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-032-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-033-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-034-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-035-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-036-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-037-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-038-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-039-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch08-040-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-001-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-002-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-003-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-004-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-005-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-006-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-007-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-008-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-009-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-010-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-011-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-012-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-013-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-014-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-015-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-016-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-017-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-018-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-019-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch09-020-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-001-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-002-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-003-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-004-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-005-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-006-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-007-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-008-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-009-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-010-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-011-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-012-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-013-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-014-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-015-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-016-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-017-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-019-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch10-020-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-001-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-002-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-003-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-004-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-005-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-006-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-007-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-008-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-009-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-010-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-011-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-012-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-013-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-014-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-015-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-016-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-017-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-018-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-019-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch11-020-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-001-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-002-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-003-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-004-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-005-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-006-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-007-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-008-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-010-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-011-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-012-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-014-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-015-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-016-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch12-017-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-001-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-002-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-003-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-004-v1": {
+      "sectionId": "biochemistry/biochem-nutrition-review",
+      "uncertain": true,
+      "status": "needs-review",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-005-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-006-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-007-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-008-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-009-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-010-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-011-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-012-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-013-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-014-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-015-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-016-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-017-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-018-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-019-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-020-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-021-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-022-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-023-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-024-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-025-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-026-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-027-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-028-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-029-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-030-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-031-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-032-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-033-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-034-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-035-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-036-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-037-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-038-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-039-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-040-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-041-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-042-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-043-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-ch15-044-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-001-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-002-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-003-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-004-v1": {
+      "sectionId": "biochemistry/biochem-metabolic-logic",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-005-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-006-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-007-v1": {
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-008-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-009-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-010-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-011-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-012-v1": {
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-013-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-014-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-015-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-016-v1": {
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-017-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-018-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-019-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-020-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-021-v1": {
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-022-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-023-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-024-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-025-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-026-v1": {
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-027-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-028-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-029-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-030-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-031-v1": {
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-032-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-033-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-034-v1": {
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-035-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-036-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-037-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    },
+    "term2-biochem-gap-038-v1": {
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "uncertain": false,
+      "status": "mapped",
+      "livePractice": true,
+      "bankId": "practice"
+    }
+  }
+}

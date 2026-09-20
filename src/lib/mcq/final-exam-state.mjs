@@ -95,6 +95,10 @@ export function parseFinalExamProgress(raw, banks = {}) {
         [FINAL_EXAM_SESSION_KEYS.july29DownloadedWithoutCarbLipidMetabolism]: null,
       };
     const sessions = { ...empty.sessions };
+    // Collection-specific sessions share the legacy container without erasing old attempts.
+    for(const key of Object.keys(sourceSessions)) {
+      if(/^(july25|july29|term2-nutrition|term2-religion):(telegram-past-papers|nutrition-past-papers|religion-past-papers):collection:[a-z0-9-]+(?::no-carb-lipid-metabolism)?$/.test(key)&&key.length<200)sessions[key]=null;
+    }
     for (const key of Object.keys(sessions)) {
       sessions[key] = banks[key]
         ? reconcileFinalExamSession(sourceSessions[key], banks[key].questions, banks[key].fingerprint)

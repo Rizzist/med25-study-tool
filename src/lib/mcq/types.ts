@@ -12,8 +12,13 @@ export type MCQOption = {
 
 export type MCQMedia = {
   id: string;
-  type: "image";
+  type: "image" | "audio" | "video";
   path: string;
+  url?: string;
+  version?: string;
+  mimeType?: string;
+  transcript?: string;
+  practicalCase?: import('@/src/lib/physiology-practical').PracticalVisualCase;
   alt: string;
   caption?: string;
   attribution?: string;

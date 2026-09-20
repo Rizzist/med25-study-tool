@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 export function POST() {
   return json(
     {
-      error: "Codex reasoning audits are available only in the local app.",
-      code: "CODEX_LOCAL_ONLY",
+      error: "Tutor integration has been retired. Use question explanations and review sections.",
+      code: "FEATURE_RETIRED",
     },
-    { status: 501 },
+    { status: 410 },
   );
 }

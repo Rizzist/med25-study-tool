@@ -1,0 +1,3 @@
+export type ReviewOutcome={questionId:string;answered:boolean;correct:boolean;topic?:string;gradable?:boolean};
+export type ReviewCourse={examId:string;title:string;volumes:Array<{id:string;title:string;url:string;pageCount:number}>;sections:Array<{id:string;title:string;volumeId:string;order:number;role:string;sourceBasis:string;pdfPage:number}>;questions:Record<string,{sectionId:string|null;uncertain:boolean;status:string;livePractice:boolean;bankId:string}>};
+export function reviewBreakdown(outcomes:ReviewOutcome[],course?:ReviewCourse|null):Array<{id:string;sectionId?:string;title:string;uncertain:boolean;correct:number;answered:number;skipped:number;ungraded:number;total:number;missedIds:string[];percent:number|null}>;

@@ -1,0 +1,299 @@
+/* MED//25 study shell: slim dark rail (desktop) or bottom tab bar (phone), one compact
+   course strip, pill controls, and dense cards. The question/exam engines keep their
+   own styles; low-specificity base rules here never override them. */
+:root{--mcq-paper:#f4f5f0;--mcq-card:#fff;--mcq-ink:#172a22;--mcq-muted:#5f6f66;--mcq-line:#dde3da;--mcq-green:#126747;--mcq-deep:#14251f;--mcq-lime:#d9f06b;--mcq-soft:#eef3ea;--mcq-radius:12px}
+
+/* Navigation stays beside the page; long content uses the native document scroll. */
+html:has(.mcq-app),html:has(.review-shell){height:auto;min-height:100%;overflow-y:auto;overflow-x:clip}
+body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:visible}
+
+.mcq-app{min-height:100dvh;background:var(--mcq-paper);color:var(--mcq-ink);display:grid;grid-template-columns:196px minmax(0,1fr);align-items:start;font-size:13px}
+.mcq-app h1,.mcq-app h2,.mcq-app h3,.mcq-app h4{margin:0;letter-spacing:-.02em}
+.study-icon{flex-shrink:0;vertical-align:middle}
+.study-icon.flip{transform:scaleX(-1)}
+
+/* Controls: zero-specificity base so engine modules keep their own look. */
+:where(.mcq-app) :where(button,select,input:not([type=checkbox]):not([type=radio]),textarea){font:inherit;color:inherit}
+:where(.mcq-app) :where(button,select,input:not([type=checkbox]):not([type=radio])){min-height:36px;border:1px solid var(--mcq-line);border-radius:10px;padding:7px 12px;background:var(--mcq-card)}
+:where(.mcq-app) :where(button){cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:7px;font-weight:600;line-height:1.3}
+.mcq-app .primary{background:var(--mcq-green);color:#fff;border:1px solid var(--mcq-green);border-radius:999px;padding:8px 16px;font-weight:700}
+.mcq-app .primary:hover:not(:disabled){background:#0e553a;border-color:#0e553a;transform:none}
+.mcq-app .pill,.mcq-app .dl-pill,.paper-downloads a,.review-downloads a,.review-card-actions a{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:6px 13px;border:1px solid var(--mcq-line);border-radius:999px;background:var(--mcq-card);color:var(--mcq-ink);font-size:12.5px;font-weight:600;line-height:1.3;text-decoration:none;white-space:nowrap}
+.mcq-app .pill:hover:not(:disabled),.mcq-app .dl-pill:hover,.paper-downloads a:hover,.review-downloads a:hover,.review-card-actions a:hover{border-color:#9db5a3;background:#f7faf5}
+.mcq-app .pill b{font-weight:700;color:var(--mcq-green)}
+.mcq-app .pill.small,.mcq-app .primary.small{min-height:30px;padding:4px 11px;font-size:12px}
+.mcq-app .pill.accent{background:var(--mcq-soft);border-color:#c7dcc4;color:var(--mcq-green)}
+.mcq-app .dl-pill,.paper-downloads a,.review-downloads a{color:var(--mcq-green);background:#f7faf5;border-color:#cfdccd}
+.mcq-app .dl-pill svg,.paper-downloads a svg,.review-downloads a svg{width:15px;height:15px}
+.mcq-app .dl-pill[aria-busy=true]{opacity:.6;cursor:progress}
+.cached-pdf-download{display:inline-flex;flex-direction:column;gap:3px;max-width:100%}
+.cached-pdf-download>small{padding-left:6px;font-size:10.5px;line-height:1.4;color:var(--mcq-muted)}
+.review-downloads a small{font-weight:500;color:#6d8073}
+.pill-note{font-size:11.5px;color:var(--mcq-muted)}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seg{display:inline-flex;gap:2px;padding:3px;border-radius:999px;background:#e8ece5}
+.mcq-app .seg button{min-height:28px;padding:4px 11px;border:0;border-radius:999px;background:transparent;color:#5b6862;font-size:12px;font-weight:600}
+.mcq-app .seg button[aria-pressed=true]{background:var(--mcq-card);color:var(--mcq-green);box-shadow:0 1px 3px #17211d18}
+.chip-set{display:flex;flex-wrap:wrap;gap:6px}
+.mcq-app .chip-set button{min-height:32px;padding:5px 11px;border-radius:999px;font-size:12.5px;font-weight:600;gap:6px}
+.mcq-app .chip-set button b{font-weight:600;color:var(--mcq-muted)}
+.mcq-app .chip-set button:hover:not(:disabled){border-color:#9db5a3}
+.mcq-app .chip-set button[aria-pressed=true]{background:var(--mcq-deep);border-color:var(--mcq-deep);color:#fff}
+.mcq-app .chip-set button[aria-pressed=true] b{color:var(--mcq-lime)}
+.mcq-app a:focus-visible,.mcq-app button:focus-visible,.mcq-app select:focus-visible,.mcq-app input:focus-visible,.mcq-app summary:focus-visible{outline:3px solid #88ad40;outline-offset:2px}
+.mcq-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.mcq-skip-link{position:fixed;top:8px;left:8px;z-index:150;transform:translateY(-200%);padding:12px;background:#fff;border:2px solid var(--mcq-green);border-radius:8px;color:var(--mcq-green)}
+.mcq-skip-link:focus{transform:translateY(0)}
+
+/* Sidebar rail */
+.mcq-sidebar{position:fixed;inset:0 auto 0 0;width:196px;z-index:40;display:flex;flex-direction:column;gap:22px;padding:20px 12px;background:var(--mcq-deep);color:#c3cfc8;overflow-y:auto;scrollbar-width:thin}
+.mcq-brand{font-weight:900;font-size:22px;letter-spacing:2px;line-height:1;color:var(--mcq-lime);text-decoration:none;white-space:nowrap}
+.mcq-sidebar-brand{display:grid;gap:4px;padding:2px 8px 0}
+.mcq-sidebar-brand>span{margin-top:8px;font-size:12px;color:#d6e0da}
+.mcq-sidebar-brand>small{font-size:11px;color:#8aa094}
+.mcq-side-nav{display:grid;gap:3px}
+.mcq-app .mcq-side-nav button{justify-content:flex-start;gap:10px;min-height:40px;padding:8px 10px;border:0;border-radius:9px;background:transparent;color:#c3cfc8;font-size:13px;font-weight:600;text-align:left}
+.mcq-side-nav svg{width:17px;height:17px}
+.mcq-app .mcq-side-nav button:hover:not(:disabled){background:#203429;color:#fff}
+.mcq-app .mcq-side-nav button.active{background:var(--mcq-lime);color:var(--mcq-deep)}
+.mcq-sidebar-foot{display:flex;gap:8px;align-items:flex-start;margin:auto 0 0;padding:10px 8px;font-size:11px;line-height:1.45;color:#8aa094}
+.mcq-sidebar-foot svg{width:14px;height:14px;margin-top:2px;color:var(--mcq-lime)}
+
+/* Workspace and the one-row course strip */
+.mcq-workspace{grid-column:2;min-width:0;width:100%;min-height:100dvh}
+.mcq-topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:12px;padding:9px 24px;background:#f4f5f0f2;backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--mcq-line)}
+.mcq-topbar-brand{display:none}
+.mcq-term-picker{display:inline-flex;flex:none;gap:2px;padding:3px;border-radius:999px;background:#e8ece5}
+.mcq-app .mcq-term-picker button{min-height:28px;padding:4px 13px;border:0;border-radius:999px;background:transparent;color:#5b6862;font-size:12px;font-weight:700}
+.mcq-app .mcq-term-picker button[aria-pressed=true]{background:var(--mcq-deep);color:var(--mcq-lime)}
+.mcq-course-picker{display:flex;flex:1;min-width:0;flex-wrap:wrap;gap:6px}
+.mcq-app .mcq-course-picker button{flex:none;display:grid;justify-items:start;gap:1px;min-height:40px;padding:5px 11px;border-radius:10px;background:#fbfcfa;text-align:left;font-weight:500}
+.mcq-course-picker b{font-size:12.5px;font-weight:700;line-height:1.25}
+.mcq-course-picker small{font-size:10.5px;line-height:1.2;color:var(--mcq-muted)}
+.mcq-course-picker small i{margin:0 4px;font-style:normal;opacity:.6}
+.mcq-app .mcq-course-picker button:hover:not(:disabled){border-color:#9db5a3;background:#f7faf5}
+.mcq-app .mcq-course-picker button.active{border-color:var(--mcq-green);background:#eaf4ec;box-shadow:inset 0 0 0 1px var(--mcq-green)}
+.mcq-course-picker button.active b{color:var(--mcq-green)}
+.mcq-content{width:100%;max-width:1180px;min-width:0;margin:auto;padding:20px 28px 56px}
+.mcq-content:focus{outline:none}
+
+/* Immersive: answering hides all chrome. */
+.mcq-app.mcq-immersive,.mcq-app:has(.final-exam-shell),.mcq-app:has([data-cvs-paper-session="active"]){display:block}
+.mcq-immersive>.mcq-sidebar,.mcq-immersive>.mcq-workspace>.mcq-topbar,
+.mcq-app:has(.final-exam-shell)>.mcq-sidebar,.mcq-app:has(.final-exam-shell)>.mcq-workspace>.mcq-topbar,
+.mcq-app:has([data-cvs-paper-session="active"])>.mcq-sidebar,.mcq-app:has([data-cvs-paper-session="active"])>.mcq-workspace>.mcq-topbar{display:none}
+.mcq-immersive>.mcq-workspace>.mcq-content,.mcq-app:has(.final-exam-shell)>.mcq-workspace>.mcq-content,.mcq-app:has([data-cvs-paper-session="active"])>.mcq-workspace>.mcq-content{max-width:none;padding:0}
+
+/* Course header (shared by every tab) */
+.course-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--mcq-line)}
+.course-head-copy{min-width:0;max-width:720px}
+.course-head .eyebrow{padding:5px 9px;background:#e4e9e2;font-size:9.5px}
+.course-head h1{margin:10px 0 6px;font-size:26px;line-height:1.15;letter-spacing:-.03em}
+.course-head p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0;font-size:13px;line-height:1.5;color:var(--mcq-muted)}
+.course-head-side{flex:none;display:grid;justify-items:end;gap:10px;max-width:46%}
+.course-head-side .pill-row{justify-content:flex-end}
+.course-stat{display:flex;align-items:baseline;gap:6px}
+.course-stat strong{font-size:30px;line-height:1;letter-spacing:-.04em}
+.course-stat span{font-size:12px;color:var(--mcq-muted)}
+.loading-stat{color:var(--mcq-muted)}
+
+/* Alerts, loading, empty states */
+.mcq-alert{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 14px;padding:10px 14px;border-radius:10px;background:#fff6dd;color:#5d4a17;font-size:13px}
+.mcq-alert.error,.mcq-app .session-error{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:#fff0ed;color:#8b2a23;font-size:13px}
+.mcq-loading{margin:0 0 14px;padding:10px 14px;border-radius:10px;background:var(--mcq-soft);font-size:13px;animation:mcq-pulse 1.5s ease infinite}
+@keyframes mcq-pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.mcq-empty{display:grid;justify-items:center;gap:6px;padding:28px 20px;border:1px dashed #c5cec6;border-radius:var(--mcq-radius);text-align:center;color:var(--mcq-muted)}
+.mcq-empty b{color:var(--mcq-ink)}.mcq-empty p{max-width:420px;margin:0;line-height:1.5}.mcq-empty svg{width:22px;height:22px}
+.mcq-note{margin:0 0 12px;padding:10px 14px;border-left:3px solid var(--mcq-green);border-radius:6px;background:var(--mcq-soft);font-size:12.5px;line-height:1.55;color:#3f5248}
+
+/* Section heads */
+.section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 16px;margin:0 0 12px}
+.section-head h2,.section-head h3{display:flex;align-items:center;gap:8px;font-size:18px}
+.section-head h2 span,.section-head h3 span{font-size:12px;font-weight:600;color:var(--mcq-muted)}
+.section-head p{flex-basis:100%;max-width:760px;margin:0;font-size:12.5px;line-height:1.5;color:var(--mcq-muted)}
+.section-head.compact{margin-bottom:10px}.section-head.compact p{flex:1;flex-basis:auto;min-width:200px}
+
+/* Practice: resume strip and launch panel */
+.resume-strip{display:flex;align-items:center;gap:12px;margin:0 0 12px;padding:10px 14px;border:1px solid #bfd3c3;border-radius:var(--mcq-radius);background:#e9f2e8}
+.resume-strip>svg{color:var(--mcq-green)}
+.resume-strip>div{flex:1;min-width:0;display:grid;gap:1px}.resume-strip b{font-size:13px}.resume-strip span{font-size:12px;color:#4f6357}
+.launch{display:grid;gap:14px;padding:16px 18px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
+.launch-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.launch-label{flex:none;min-width:74px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mcq-muted)}
+.launch-group{display:flex;align-items:center;gap:10px}.launch-group .launch-label{min-width:0}
+.launch-start{margin-left:auto}
+.launch-hint{margin:-4px 0 0;font-size:12px;color:var(--mcq-muted)}
+.quick-row{margin:14px 0 0}
+
+/* Term 1 topics */
+.mcq-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 14px}
+.mcq-app .mcq-topic-grid button{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto;column-gap:10px;justify-items:start;padding:12px 14px;border-radius:var(--mcq-radius);text-align:left;font-weight:500}
+.mcq-topic-grid svg{grid-row:1/span 2;color:var(--mcq-green)}.mcq-topic-grid b{font-size:13px;font-weight:700;line-height:1.35}.mcq-topic-grid span{font-size:11.5px;color:var(--mcq-muted)}
+
+/* Past papers */
+.paper-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 16px}
+.mcq-app .mcq-content article.past-paper-card{display:flex;flex-direction:column;gap:9px;min-width:0;padding:14px 16px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
+.past-paper-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.past-paper-label{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--mcq-muted)}.past-paper-label svg{width:14px;height:14px}
+.past-paper-note{position:relative;font-size:11.5px;color:var(--mcq-muted)}
+.past-paper-note summary{padding:3px 0;list-style:none;cursor:pointer;font-weight:600;color:var(--mcq-green)}.past-paper-note summary::-webkit-details-marker{display:none}
+.past-paper-note p{position:absolute;right:0;z-index:5;width:min(320px,70vw);margin:4px 0 0;padding:10px 12px;border:1px solid var(--mcq-line);border-radius:10px;background:var(--mcq-card);box-shadow:0 10px 28px #14251f1f;line-height:1.5;color:var(--mcq-ink)}
+.mcq-app .mcq-content article.past-paper-card h2{font-size:15px;line-height:1.35;font-weight:700}
+.mcq-app .mcq-content article.past-paper-card p{margin:0;font-size:12.5px;line-height:1.5;color:var(--mcq-muted)}
+.paper-counts b{color:var(--mcq-ink)}.paper-counts i{margin:0 5px;font-style:normal;opacity:.5}
+.paper-saved-result{display:flex;align-items:baseline;gap:8px}.paper-saved-result strong{font-size:18px;color:var(--mcq-green)}
+.paper-card-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:4px}
+.paper-downloads,.review-downloads{display:flex;flex-wrap:wrap;gap:6px}
+.paper-downloads a,.review-downloads a{min-height:30px;padding:4px 11px;font-size:12px}
+.paper-download-library{margin:16px 0;padding:6px 14px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
+.paper-download-library>summary{display:flex;align-items:center;gap:8px;min-height:36px;cursor:pointer;font-size:13px;font-weight:600;color:var(--mcq-green)}
+.paper-download-library article{display:grid;gap:6px;padding:12px 0;border-top:1px solid var(--mcq-line)}.paper-download-library article b{font-size:13px}.paper-download-library article p{margin:0;font-size:12px;line-height:1.5;color:var(--mcq-muted)}
+.paper-title{margin:12px 0 6px;font-size:20px}.paper-note{margin:0 0 10px;font-size:12.5px;line-height:1.5;color:var(--mcq-muted)}
+.paper-combiner{display:grid;gap:10px;margin:0 0 16px;padding:14px 16px;border:1px solid #d3dece;border-radius:var(--mcq-radius);background:#f3f7f0}
+.paper-combiner .section-head{margin:0}.paper-combiner .section-head h3{font-size:15px}.paper-combiner .section-head .pill-row{margin-left:auto}
+.paper-selection{display:flex;flex-wrap:wrap;gap:6px}
+.paper-selection label{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:5px 12px 5px 8px;border:1px solid var(--mcq-line);border-radius:999px;background:var(--mcq-card);font-size:12.5px;font-weight:600;line-height:1.3;cursor:pointer}
+.paper-selection label:has(input:checked){border-color:var(--mcq-green);background:#e6f0e2}
+.paper-selection label:has(input:disabled){opacity:.5;cursor:not-allowed}
+.paper-selection input{width:16px;height:16px;min-height:0;margin:0;accent-color:var(--mcq-green)}
+.paper-selection small{font-weight:500;color:var(--mcq-muted)}
+.paper-combiner-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--mcq-muted)}
+.paper-saved-combinations{padding-top:6px;border-top:1px solid #d3dece;font-size:12.5px}.paper-saved-combinations>summary{display:flex;align-items:center;min-height:32px;cursor:pointer;font-weight:600;color:var(--mcq-green)}
+.paper-saved-combinations article{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:10px 0;border-top:1px solid #e1e8dc}.paper-saved-combinations article b{flex-basis:100%;font-size:13px}.paper-saved-combinations article p{flex:1;margin:0;color:var(--mcq-muted)}
+
+/* Review sections */
+.review-finder{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px}
+.review-finder .mcq-search{flex:1;min-width:min(100%,240px);margin:0}
+.review-search-field{display:flex;align-items:center;gap:8px;min-height:36px;padding-left:12px;border:1px solid var(--mcq-line);border-radius:999px;background:var(--mcq-card);color:#708775}
+.mcq-app .review-search-field input{flex:1;min-width:0;min-height:34px;border:0;background:transparent;padding-left:0;font-size:13px}
+.review-search-field input:focus-visible{outline:none}.review-search-field:focus-within{border-color:var(--mcq-green);box-shadow:0 0 0 3px #12674718}
+.mcq-app .review-volume-filter select{min-height:36px;padding:6px 12px;border-radius:999px;font-size:12.5px}
+.review-practice-filter{gap:8px;cursor:pointer}.review-practice-filter input{width:16px;height:16px;min-height:0;margin:0;accent-color:var(--mcq-green)}
+.review-volume{margin:0 0 18px}
+.review-volume>h3{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:14px}.review-volume>h3 svg{width:16px;height:16px;color:var(--mcq-green)}.review-volume>h3 span{margin-left:auto;font-size:11.5px;font-weight:500;color:var(--mcq-muted)}
+.review-section-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:0;padding:0;list-style:none}
+.review-section-list li{display:grid;grid-template-columns:26px minmax(0,1fr);align-items:start;gap:4px 8px;min-width:0;padding:10px 12px;border:1px solid var(--mcq-line);border-radius:10px;background:var(--mcq-card);transition:border-color .15s}
+.review-section-list li:hover{border-color:#9db5a3}
+.review-card-index{padding:3px 0;border:1px solid var(--mcq-line);border-radius:6px;background:#f7f9f3;font-size:10px;font-weight:700;text-align:center;color:var(--mcq-muted);font-variant-numeric:tabular-nums}
+.review-card-copy{min-width:0}.review-section-list h4{font-size:12.5px;font-weight:650;line-height:1.4}.review-section-list p{margin:3px 0 0;font-size:11.5px;line-height:1.4;color:var(--mcq-muted)}.review-section-list small{display:block;margin-top:2px;font-size:10.5px;color:#7d8a80}
+.review-card-actions{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.review-card-actions a,.mcq-app .review-card-actions button{min-height:28px;padding:3px 10px;font-size:11.5px}
+.review-card-actions svg{width:13px;height:13px}
+.review-section-list .review-reference-only{background:#fafbf8}.review-section-list .review-reference-only .review-card-actions button{display:none}
+
+/* Results */
+.result-rows{display:grid;gap:6px}
+.result-row{display:grid;grid-template-columns:110px minmax(0,1fr) auto auto;align-items:center;gap:14px;min-width:0;padding:10px 14px;border:1px solid var(--mcq-line);border-radius:10px;background:var(--mcq-card)}
+.result-date{font-size:11.5px;color:var(--mcq-muted)}.result-copy{min-width:0;display:grid;gap:2px}.result-copy b{font-size:13px}.result-copy small{font-size:11.5px;color:var(--mcq-muted)}
+.score-pill{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border-radius:999px;background:#eef3ea;color:var(--mcq-green);font-size:13px;font-weight:800}
+.score-pill.mid{background:#fff3d9;color:#8a5a12}.score-pill.low{background:#fdeceb;color:#9a3a30}
+
+/* Shared engines rendered inside the shell: review report, final-exam home */
+.course-review-report{margin:20px 0;padding:16px 18px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
+.course-review-report h2{margin:0 0 6px;font-size:17px}.course-review-report>p{max-width:820px;margin:0 0 12px;font-size:12.5px;line-height:1.5;color:var(--mcq-muted)}
+.review-bars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.review-bars article{display:grid;gap:8px;padding:12px 14px;border:1px solid var(--mcq-line);border-radius:10px}
+.review-bar-heading{display:flex;justify-content:space-between;gap:12px;font-size:13px;line-height:1.4}.review-bar-heading strong{white-space:nowrap;color:var(--mcq-green)}
+.review-bar{height:6px;border-radius:6px;background:#e7ebe2;overflow:hidden}.review-bar>span{display:block;height:100%;border-radius:6px;background:#43845c}
+.review-bars small{font-size:11.5px;line-height:1.5;color:var(--mcq-muted)}
+.review-bar-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px}
+.review-bar-actions a{color:var(--mcq-green);font-weight:600}
+.review-bar-actions button{min-height:30px;padding:4px 11px;border:1px solid #c9dbc4;border-radius:999px;background:var(--mcq-soft);color:var(--mcq-green);font-size:12px;font-weight:600}
+.course-review-report details{margin-top:12px;font-size:12.5px}.course-review-report summary{cursor:pointer;font-weight:600;color:var(--mcq-green)}
+.final-exam-home{gap:12px}.final-exam-home .final-exam-copy{margin:0}.final-exam-home .final-exam-copy h1{margin:10px 0 6px;font-size:22px}.final-exam-home .final-exam-copy p{font-size:13px}
+.final-exam-stats{gap:8px}.final-exam-stats article{min-height:0;gap:4px;padding:12px 14px;border-radius:10px}.final-exam-stats strong{font-size:22px}.final-exam-stats span{font-size:9.5px}.final-exam-stats small{font-size:11px}
+.final-exam-resume{padding:14px 16px;border-radius:var(--mcq-radius)}.final-exam-resume h2{margin:5px 0 4px;font-size:18px}.final-exam-resume p{font-size:12.5px}
+.final-exam-empty{min-height:120px;padding:18px;border-radius:var(--mcq-radius)}
+.final-metabolism-filter{border-radius:var(--mcq-radius)}
+
+/* Question media (shared with the session engines) */
+.mcq-image-marker{position:absolute;border:3px solid #efca39;box-shadow:0 0 0 1px #18251a;pointer-events:none}.mcq-image-marker b{position:absolute;top:0;left:0;max-width:240px;padding:2px 5px;background:#ffdf60;color:#172215;font-size:13px;line-height:1.4}
+.mcq-media{max-width:100%;margin:16px 0}.mcq-media video{width:100%;max-height:48dvh;border-radius:12px;background:#111}.mcq-media audio{width:100%}.mcq-image-stage{position:relative;width:fit-content;max-width:100%;margin:auto;line-height:0}.mcq-image-stage img{display:block;max-width:100%;max-height:50dvh;object-fit:contain}.mcq-media figcaption{margin-top:12px;font-size:12px;line-height:1.6;color:#667265}
+
+/* Session and review screens: the same button language, slimmer bars. */
+.session-shell{grid-template-rows:56px minmax(0,1fr)}.final-exam-shell{grid-template-rows:56px minmax(0,1fr)}
+.session-header,.review-header,.final-exam-header{height:56px}
+.end-button,.review-header>button,.final-exam-header>button{padding:7px 14px;border-radius:999px;font-size:12px;font-weight:600}
+.session-nav,.final-exam-nav{grid-template-columns:auto minmax(0,1fr) auto}
+.session-nav>.primary,.final-exam-nav>.primary,.review-actions .primary,.end-modal .primary{padding:10px 18px;border-radius:999px;white-space:nowrap}
+.final-exam-nav>.next-unanswered{white-space:nowrap}
+.final-exam-nav>.next-unanswered,.retry-button,.review-filters,.review-filters button{border-radius:999px}
+.review-page{width:min(1020px,calc(100% - 40px));margin:24px auto 60px}
+.score-hero{padding:20px 24px;border-radius:var(--mcq-radius)}.score-hero h1{margin:6px 0 0;font-size:52px}.score-hero p{font-size:13px;line-height:1.5}
+.result-stats{margin:10px 0 18px}.result-stats>div{padding:10px 14px;border-radius:10px}.result-stats strong{font-size:20px}
+.review-item{padding:18px;border-radius:var(--mcq-radius)}.review-item h2{margin:10px 0 12px;font-size:17px}
+
+/* Responsive */
+@media(min-width:1500px){.review-section-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1400px){.mcq-app .mcq-course-picker button{min-height:38px;padding:4px 9px}.mcq-course-picker b{font-size:12px}.mcq-course-picker small{font-size:10px}}
+@media(max-width:1100px){.mcq-app{grid-template-columns:184px minmax(0,1fr)}.mcq-sidebar{width:184px}.mcq-content{padding-inline:20px}.paper-grid,.mcq-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.course-head-side{max-width:40%}}
+@media(max-width:800px){
+  .mcq-app{display:block}
+  /* The rail becomes the bottom tab bar. */
+  .mcq-sidebar{position:fixed;inset:auto 0 0 0;width:100%;height:auto;flex-direction:row;gap:0;padding:0 0 env(safe-area-inset-bottom,0px);overflow:visible;box-shadow:0 -1px 0 #2a3f34}
+  .mcq-sidebar-brand,.mcq-sidebar-foot{display:none}
+  .mcq-side-nav{flex:1;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:4px 6px}
+  .mcq-app .mcq-side-nav button{flex-direction:column;justify-content:center;gap:4px;min-height:52px;padding:6px 2px;border-radius:9px;font-size:10.5px;text-align:center}
+  .mcq-side-nav svg{width:19px;height:19px}
+  .mcq-workspace{min-height:0}
+  .mcq-topbar{flex-wrap:wrap;gap:8px 10px;padding:8px 12px}
+  .mcq-topbar-brand{display:block;margin-right:2px;font-size:17px;letter-spacing:1.5px}
+  .mcq-term-picker{margin-left:auto}
+  .mcq-course-picker{flex-basis:100%;flex-wrap:nowrap;overflow-x:auto;padding-bottom:1px;scrollbar-width:none;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .mcq-course-picker::-webkit-scrollbar{display:none}
+  .mcq-app .mcq-course-picker button{min-height:38px;padding:4px 10px;scroll-snap-align:start}
+  .mcq-content{padding:14px 14px calc(76px + env(safe-area-inset-bottom,0px))}
+  .course-head{flex-direction:column;gap:10px;margin-bottom:12px;padding-bottom:12px}.course-head h1{margin:8px 0 4px;font-size:22px}.course-head p{-webkit-line-clamp:3}
+  .course-head-side{grid-template-columns:auto minmax(0,1fr);align-items:center;justify-items:start;gap:8px 12px;width:100%;max-width:none}.course-head-side .pill-row{justify-content:flex-start}.course-stat strong{font-size:22px}
+  .launch{gap:12px;padding:12px 14px}.launch-label{flex-basis:100%;min-width:0}.launch-group{flex-wrap:wrap}.launch-start{width:100%;margin-left:0}.seg{max-width:100%;overflow-x:auto;scrollbar-width:none}
+  .paper-grid,.mcq-topic-grid,.review-section-list,.review-bars{grid-template-columns:1fr}
+  .paper-combiner{padding:12px}.paper-combiner-footer>button{width:100%}
+  .result-row{grid-template-columns:minmax(0,1fr) auto;gap:6px 10px}.result-date{grid-column:1/-1}.result-row>button{grid-column:1/-1}
+  .review-finder{gap:6px}.review-volume-filter{flex:1}.mcq-app .review-volume-filter select{width:100%}
+  .past-paper-note p{right:auto;left:0}
+  .review-page{width:calc(100% - 24px);margin-top:16px}
+}
+@media(prefers-reduced-motion:reduce){.mcq-loading{animation:none}.review-section-list li{transition:none}}
+
+/* Past-paper hub: toolbar, downloads panel, curated-set cards, selected-paper head. */
+.hub-tools{margin:0 0 12px}
+.hub-tools .seg{margin-right:2px}
+.hub-note{font-size:12px;color:var(--mcq-muted)}.hub-note>summary{display:inline-flex;align-items:center;min-height:34px;cursor:pointer;font-weight:600;color:var(--mcq-green)}.hub-note p{max-width:720px;margin:4px 0 8px;line-height:1.5}
+.mcq-app .dl-pill small,.paper-downloads a small,.review-downloads a small{font-size:10px;font-weight:600;color:#6d8073}
+.paper-download-library{display:grid;margin:0 0 14px;padding:2px 14px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
+.library-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;padding:9px 0;border-top:1px solid var(--mcq-line)}
+.library-row:first-child{border-top:0}.library-row b{flex:1;min-width:200px;font-size:12.5px}.library-row .paper-downloads{margin:0}
+.paper-view{margin:0 0 16px}
+.paper-view-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0 0 10px}.paper-view-head h2{font-size:18px}
+.paper-view .paper-note{margin:0 0 10px}
+.mcq-app .mcq-content article.past-paper-card.featured{border-color:#dcc783;background:linear-gradient(160deg,#fffbef,#fff)}
+.past-paper-badge{display:inline-block;margin:0 8px 0 0;padding:2px 8px;border-radius:999px;background:#f2e2a8;color:#5c4614;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;vertical-align:2px}
+.mcq-app .mcq-content article.past-paper-card p.paper-lead{color:var(--mcq-ink)}
+.paper-evidence{font-size:12px;color:var(--mcq-muted)}.paper-evidence>summary{display:flex;align-items:center;min-height:30px;cursor:pointer;font-weight:600;color:var(--mcq-green)}.paper-evidence p{margin:6px 0;line-height:1.5}
+.topic-list{display:grid;margin:6px 0}.topic-list>div{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-top:1px solid var(--mcq-line);font-size:12px}.topic-list b{white-space:nowrap;color:var(--mcq-ink)}
+.paper-combiner-footer .pill-row{margin-left:auto}
+.final-exam-home .final-exam-copy p{margin:0;color:var(--mcq-muted)}
+/* Review sections: dense single-line rows, grouped by subject. */
+.review-subjects{margin:0 0 10px}
+.review-section-list{grid-template-columns:1fr;gap:4px}
+.review-section-list li{grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:6px 8px;min-height:38px;padding:4px 10px}
+.review-card-index{padding:2px 0}
+.review-card-copy{display:flex;align-items:baseline;gap:8px}
+.review-section-list h4{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:12.5px}
+.review-section-list p{margin:0;flex:none;white-space:nowrap;font-size:11px}.review-section-list small{display:inline;margin:0 0 0 4px}
+.review-card-actions{grid-column:auto;margin:0;flex-wrap:nowrap}
+.review-volume>h3{margin:0 0 6px}
+@media(min-width:1100px){.review-section-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1500px){.review-section-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.review-section-list li{grid-template-columns:24px minmax(0,1fr)}.review-card-actions{grid-column:2}.review-section-list h4{white-space:normal}.library-row b{min-width:0;flex-basis:100%}}
+
+/* Download pills report progress inside the pill; the detail lives in the tooltip. */
+.mcq-app .dl-pill.is-busy{cursor:progress;opacity:.75}
+.mcq-app .dl-pill.is-done{border-color:#9ec7a8;background:#eef6ea}
+.mcq-app .dl-pill.is-error{border-color:#d9a19a;background:#fff1ee;color:#8b2a23}
+.pill-status{flex:none;margin-left:-1px}
+.pill-status.busy{width:12px;height:12px;border:2px solid #bfd3c3;border-top-color:var(--mcq-green);border-radius:50%;animation:mcq-spin .8s linear infinite}
+.pill-status.done{width:14px;height:14px;color:var(--mcq-green)}
+.pill-status.error{display:inline-grid;place-items:center;width:14px;height:14px;border-radius:50%;background:#8b2a23;color:#fff;font-size:10px;font-weight:800;line-height:1}
+@keyframes mcq-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.pill-status.busy{animation:none;border-top-color:#bfd3c3}}

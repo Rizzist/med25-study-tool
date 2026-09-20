@@ -45,6 +45,7 @@ test("server-renders the MED//25 exam dashboard shell", async () => {
   assert.doesNotMatch(html, /Your site is taking shape|starter loading skeleton/i);
 });
 
+// Page assertions target the MCQ-only shell (docs/mcq-only-refactor.md); tutor, visual-lesson, practical-atlas and sprint-copy checks were retired with those tabs.
 test("source provides immediate answer feedback and supports the confirmed exam split", async () => {
   const [page, bridge, finalExam, finalExamState, lessonGuide, manifestText, questionFiles, finalExamFiles, practicalQuestionText, fullPracticalQuestionText, identificationQuestionText, transferQuestionText, transferCatalogText, practicalLessonText, fullPracticalLessonText] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
@@ -76,6 +77,7 @@ test("source provides immediate answer feedback and supports the confirmed exam 
     "embryology",
     "physiology",
     "biochemistry",
+    "religion",
     "anatomy",
   ]);
   assert.ok(questionFiles.filter((name) => name.endsWith(".jsonl")).length >= 10);
@@ -92,38 +94,24 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(page, /Check tissue/);
   assert.match(page, /interpretWrittenAnswer/);
   assert.match(page, /What confirms it across both magnifications/);
-  assert.match(page, /Ask Codex: why my tissue differs/);
-  assert.match(page, /study-image-pair/);
+  assert.match(page, /<QuestionMedia/); // media (image pairs, markers, practical figures) render through the shared QuestionMedia component
   assert.match(page, /option\.id === question\.correctOptionId \? "correct"/);
   assert.match(page, /End session/);
   assert.match(page, /Finish & grade/);
   assert.match(page, /if \(phase === "review"\)/);
-  assert.match(page, /Ask Codex to audit my reasoning/);
-  assert.match(page, /Open 90-second visual lesson/);
-  assert.match(page, /tab === "Visual Guide" && !isTerm2Exam\(exam\) && <LessonGuide/);
-  assert.match(page, /lessonForQuestion/);
-  assert.match(page, /Tabs disappear during MCQs/);
+  assert.match(page, /immersive/); // chrome is hidden while answering
   assert.match(page, /Guyton Chapters 1–8/);
-  assert.match(page, /GUYTON 1–8/);
-  assert.match(page, /Membrane physiology/);
   assert.match(page, /Biochemistry/);
   assert.match(page, /Practical \+ spotters/);
-  assert.match(page, /55-specimen practical bank/);
   assert.match(page, /100\+ unfamiliar-field transfer bank/);
   assert.match(page, /histo-identification/);
   assert.match(page, /histo-transfer/);
-  assert.match(page, /110\+ field unfamiliar-slide transfer lab/);
-  assert.match(page, /Structure identification · name marker A/);
-  assert.match(page, /study-image-marker/);
-  assert.match(page, /Test all \{examCount\("histo-practical"\)\}/);
-  assert.match(page, /tab === "Practical Atlas"/);
-  assert.match(page, /startSession\("histo-practical"/);
   assert.match(page, /if \(exactIds \|\| isSavedCollection\(nextCollection\)\)/);
-  assert.match(page, /reproductive histology/i);
   assert.match(page, /med25-study-progress-v1/);
   assert.match(page, /med25-session-archive-v1/);
-  assert.match(page, /Final exam/);
-  assert.match(page, /<FinalExam/);
+  assert.match(page, /Past exams/);
+  assert.match(page, /<PastExamHub key=\{exam\} exam=\{exam\}/);
+  assert.match(await readFile(new URL("../src/components/PastExamHub.tsx", import.meta.url), "utf8"), /<FinalExam/);
   assert.match(finalExam, /FINAL_EXAM_STORAGE_KEY/);
   assert.match(finalExamState, /med25-final-exam-v1/);
   assert.match(finalExam, /Continue final exam/);
@@ -133,21 +121,21 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(finalExam, /Delete progress & restart/);
   assert.match(bridge, /\/api\/final-exam/);
   assert.match(bridge, /loadFinalExamQuestions/);
-  assert.match(page, /Past sprint results/);
+  assert.match(page, /<SessionArchive/);
   assert.match(page, /history: \[completedSession, \.\.\.current\.history\]/);
-  assert.match(page, /Continue sprint/);
-  assert.match(page, /Delete unfinished sprint/);
+  assert.match(page, />Resume</);
+  assert.match(page, />Discard</);
   assert.doesNotMatch(page, /maxSavedSessions/);
   assert.match(page, /active: null/);
   assert.match(page, /Wrong answers/);
   assert.match(page, /Retry these/);
-  assert.match(page, /Clear .* saved progress/);
+  assert.match(page, /Review mistakes/);
+  assert.match(page, /Flagged/);
   assert.match(page, /window\.localStorage\.setItem/);
   assert.match(page, /wrongIds: \[\.\.\.new Set/);
   assert.match(page, /flaggedIds: flagged \? \[\.\.\.existing, questionId\] : existing/);
   assert.doesNotMatch(page, /cellbiology|Cell biology/);
   assert.match(page, /\/api\/questions\/sprint/);
-  assert.match(page, /repair → unseen → mastered/);
   assert.match(page, /visitedQuestionIds/);
   assert.match(page, /untouched .* remain.* unseen and will return with priority/);
   assert.match(page, /historicalSeenIds/);
@@ -157,7 +145,6 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(bridge, /"histo-identification"/);
   assert.match(bridge, /"histo-transfer"/);
   assert.match(bridge, /histo-identification-15/);
-  assert.match(page, /builder-coverage/);
   assert.match(page, /seenCollectionCount/);
   assert.match(page, /unseenCollectionCount/);
   assert.match(bridge, /selectCoverageSprint/);
@@ -289,8 +276,9 @@ test("biochemistry chapter mode is source-traceable, scoped and fully explanator
   assert.deepEqual(new Set(carbohydrateQuestions.map((question) => biochemistryChapterIdForQuestion(question))), new Set(["ch-9", "ch-10", "ch-11", "ch-12", "ch-13"]));
   assert.match(page, /studyMode === "learn" && hasAnswer/);
   assert.match(page, /hasImmediateFeedback && <small className/);
-  assert.match(page, /BiochemistryChapterHub/);
-  assert.match(page, /BiochemistryMasteryGrid/);
+  // MCQ-only shell: the chapter hub and mastery grid are retired; chapter scoping lives in the practice session state.
+  assert.match(page, /activeBiochemistryChapterId/);
+  assert.match(page, /BiochemistryStudyMode/);
   assert.match(chapterHub, /Learn/);
   assert.match(chapterHub, /Chapter exam/);
   assert.match(chapterHub, /Teacher-confirmed/);
@@ -386,9 +374,8 @@ test("the active biochemistry bank is concept-curated without deleting the gener
   assert.match(chapterHub, /Study \{chapterConcepts\.length\} ideas/);
   assert.match(chapterHub, /Know this cold/);
   assert.match(chapterHub, /Clinical connection/);
-  assert.match(page, /BiochemistryConceptFeedback/);
-  assert.match(page, /Connect this answer back to/);
-  assert.match(page, /Why a doctor cares/);
+  // Post-answer concept feedback is retired; section feedback comes from the shared review report.
+  assert.match(page, /<CourseReviewReport/);
   assert.match(bridge, /biochemistryCoreQuestionIds\.has\(question\.id\)/);
   assert.match(bridge, /chapterConcept/);
   assert.match(bridge, /question\.source/);
@@ -476,7 +463,7 @@ test("August 25 exposes two independent final banks and keeps the original archi
     && Object.keys(question.distractorExplanations).length === 3));
   assert.deepEqual(august25.finalExamBanks.map((bank) => bank.id), ["telegram-past-papers", "downloaded-core"]);
   assert.equal(invalidResponse.status, 400);
-  assert.match(component, /New Downloads · Core Distilled/);
+  assert.match(await readFile(new URL("../src/components/PastExamHub.tsx", import.meta.url), "utf8"), /“Core Distilled” questions are now in Practice MCQs/);
   assert.match(component, /sessionKey/);
   assert.match(component, /bank=\$\{bank\}/);
 });

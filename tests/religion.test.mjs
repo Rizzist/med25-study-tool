@@ -46,6 +46,6 @@ test('religion: progress round-trips without replacing nutrition or old finals',
 });
 test('religion: embedded banks and UI entrypoints preserve practice/final separation',()=>{
  const embedded=json('data/bank/embedded-bank.json');assert.deepEqual(embedded.questions.filter(q=>q.tags.includes('exam-term2-religion')),practice);assert.deepEqual(embedded.finalExams['term2-religion:religion-past-papers'],final);
- const page=read('app/page.tsx');assert.match(page,/<ReligionFinalExam/);assert.match(page,/<ReligionPracticeTopics/);assert.match(page,/exam !== "term2-religion" && <section className="term2-mock"/);
+ const page=read('app/page.tsx');assert.match(page,/<PastExamHub key=\{exam\} exam=\{exam\}/);const hub=read('src/components/PastExamHub.tsx');assert.match(hub,/exam==='term2-religion'/);assert.match(hub,/<ReligionArchive/);
  const ui=read('src/components/ReligionExam.tsx');assert.match(ui,/med25-religion-source-review-v1/);assert.match(ui,/Reveal answer \/ correction notes/);assert.match(ui,/Object.entries\(selected.options\)/);assert.match(ui,/aria-pressed/);assert.match(read('src/components/ReligionExam.module.css'),/@media\(max-width:760px\)/);
 });

@@ -48,3 +48,6 @@ next-env.d.ts
 /tmp/
 /data/teacher-materials/telegram/*
 !/data/teacher-materials/telegram/.gitkeep
+
+# generated at every dev/build by scripts/build-mcq-runtime.mjs (108 MB of runtime JSON)
+/data/mcq-runtime/

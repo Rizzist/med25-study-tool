@@ -2,9 +2,6 @@
 /* eslint-disable @next/next/no-img-element -- final-exam images are streamed from the local study bridge */
 
 import { useEffect, useMemo, useState } from "react";
-import { LessonSlide } from "@/src/components/LessonSlide";
-import { allLessons } from "@/src/lib/lessons";
-import { lessonForQuestion } from "@/src/lib/lessons/types";
 import { filterFinalExamQuestions } from "@/src/lib/mcq/final-exam-scope.mjs";
 import {
   FINAL_EXAM_STORAGE_KEY,
@@ -12,14 +9,15 @@ import {
   parseFinalExamProgress,
   reconcileFinalExamSession,
 } from "@/src/lib/mcq/final-exam-state.mjs";
+import {cachedJson} from '@/src/lib/mcq/client-cache';
+import {QuestionMedia} from './QuestionMedia';
+import {CourseReviewReport} from './CourseReview';
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
 type ExamId = "july25" | "july29" | "term2-nutrition" | "term2-religion";
 type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers";
 type FinalBaseSessionKey = `${ExamId}:${FinalExamBankId}`;
-type FinalSessionKey = FinalBaseSessionKey
-  | "july29:telegram-past-papers:no-carb-lipid-metabolism"
-  | "july29:downloaded-core:no-carb-lipid-metabolism";
+type FinalSessionKey = string;
 type FinalAnswer = {
   selectedOptionId: string;
   correct: boolean;
@@ -50,25 +48,25 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
   return `${bridgeUrl}/api/media?${query}`;
 }
 
-export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string }) {
+export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: {id:string;title:string;gradedQuestionIds:string[]}; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';onProgressSaved?:()=>void;onExit?:()=>void }) {
   const [bank, setBank] = useState<FinalExamBankId>(exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
   const [bankLabel, setBankLabel] = useState(exam === "term2-religion" ? "Religion · Downloaded Past Papers" : exam === "term2-nutrition" ? "Nutrition · Downloaded Past Papers" : "Telegram Past Papers");
   const [bankDescription, setBankDescription] = useState("The original source-traceable past-paper bank.");
-  const [excludeCarbohydrateLipidMetabolism, setExcludeCarbohydrateLipidMetabolism] = useState(true);
+  const [excludeCarbohydrateLipidMetabolism, setExcludeCarbohydrateLipidMetabolism] = useState(!collection);
   const [filteredOutCount, setFilteredOutCount] = useState(0);
   const [progress, setProgress] = useState<FinalProgress>(() => emptyFinalExamProgress() as FinalProgress);
   const [ready, setReady] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [active, setActive] = useState(false);
-  const [lessonOpen, setLessonOpen] = useState(false);
+  useEffect(()=>{onSessionActiveChange?.(active);return()=>onSessionActiveChange?.(false);},[active,onSessionActiveChange]);
 
   const byId = useMemo(() => new Map(questions.map((question) => [question.id, question])), [questions]);
   const baseSessionKey = `${exam}:${bank}` as FinalBaseSessionKey;
   const metabolismFilterActive = exam === "july29" && excludeCarbohydrateLipidMetabolism;
-  const sessionKey = `${baseSessionKey}${metabolismFilterActive ? ":no-carb-lipid-metabolism" : ""}` as FinalSessionKey;
+  const sessionKey = `${baseSessionKey}${collection ? ":collection:"+collection.id : ""}${metabolismFilterActive ? ":no-carb-lipid-metabolism" : ""}` as FinalSessionKey;
   const session = progress.sessions[sessionKey];
   const orderedQuestions = useMemo(
     () => session?.questionIds.flatMap((id) => byId.get(id) ?? []) ?? questions,
@@ -80,33 +78,32 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
   const correctCount = session ? Object.values(session.answers).filter((item) => item.correct).length : 0;
   const wrongCount = answeredCount - correctCount;
   const completed = Boolean(session?.completedAt);
-  const linkedLesson = question && (exam === "july25" || exam === "july29") && bank !== "downloaded-core" ? lessonForQuestion(question, exam, allLessons) : undefined;
 
   useEffect(() => {
     let cancelled = false;
-    void fetch(`${bridgeUrl}/api/final-exam?exam=${exam}&bank=${bank}`, { cache: "no-store" })
-      .then(async (response) => {
-        const payload = await response.json() as { questions?: MCQQuestion[]; fingerprint?: string; label?: string; description?: string; error?: string };
-        if (!response.ok) throw new Error(payload.error ?? "Could not load the final-exam bank.");
+    setLoading(true);setError('');
+    void cachedJson<{questions:MCQQuestion[];fingerprint:string;label:string;description:string}>(`${bridgeUrl}/api/final-exam?exam=${exam}&bank=${bank}`,true)
+      .then((payload) => {
         if (cancelled) return;
-        const allLoaded = payload.questions ?? [];
+        const allLoaded = (payload.questions ?? []).filter(q=>!collection||collection.gradedQuestionIds.includes(q.id));
         const loaded = filterFinalExamQuestions(allLoaded, metabolismFilterActive);
         const rawFingerprint = payload.fingerprint ?? `${exam}-${allLoaded.length}`;
-        const nextFingerprint = `${rawFingerprint}:${metabolismFilterActive ? "without-carb-lipid-metabolism" : "all-topics"}`;
+        const nextFingerprint = `${rawFingerprint}:${collection?.id??"all"}:${metabolismFilterActive ? "without-carb-lipid-metabolism" : "all-topics"}`;
         let stored = emptyFinalExamProgress() as FinalProgress;
         try {
           stored = parseFinalExamProgress(window.localStorage.getItem(FINAL_EXAM_STORAGE_KEY)) as FinalProgress;
         } catch { /* Continue with an empty final-exam record. */ }
         const saved = stored.sessions[sessionKey];
-        const migrationSeed = saved ?? (metabolismFilterActive ? stored.sessions[baseSessionKey] : null);
-        const nextSession = migrationSeed ? reconcileFinalExamSession(migrationSeed, loaded, nextFingerprint) as FinalSession : null;
+        const migrationSeed = initialIntent==='new'?null:saved ?? ((collection||metabolismFilterActive) ? stored.sessions[baseSessionKey] ?? stored.sessions[baseSessionKey+':no-carb-lipid-metabolism'] : null);
+        const nextSession = migrationSeed||initialIntent!=='review' ? reconcileFinalExamSession(migrationSeed, loaded, nextFingerprint) as FinalSession : null;
         setQuestions(loaded);
         setFilteredOutCount(allLoaded.length - loaded.length);
         setFingerprint(nextFingerprint);
-        setBankLabel(payload.label ?? (bank === "downloaded-core" ? "New Downloads · Core Distilled" : "Telegram Past Papers"));
+        setBankLabel(collection?.title ?? payload.label ?? "Sourced past papers");
         setBankDescription(payload.description ?? "A source-traceable final-exam bank.");
         setProgress({ ...stored, sessions: { ...stored.sessions, [sessionKey]: nextSession } });
         setReady(true);
+        if(initialIntent!=='review'&&loaded.length)setActive(true);
       })
       .catch((cause) => {
         if (!cancelled) setError(cause instanceof Error ? cause.message : "Could not load the final-exam bank.");
@@ -115,26 +112,13 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
         if (!cancelled) setLoading(false);
       });
     return () => { cancelled = true; };
-  }, [bank, baseSessionKey, bridgeUrl, exam, metabolismFilterActive, sessionKey]);
+  }, [bank, baseSessionKey, bridgeUrl, exam, metabolismFilterActive, sessionKey, collection,initialIntent]);
 
   useEffect(() => {
     if (!ready) return;
-    try { window.localStorage.setItem(FINAL_EXAM_STORAGE_KEY, JSON.stringify(progress)); }
+    try { window.localStorage.setItem(FINAL_EXAM_STORAGE_KEY, JSON.stringify(progress));onProgressSaved?.(); }
     catch { /* The exam remains usable if browser storage is unavailable. */ }
-  }, [progress, ready]);
-
-  function chooseBank(nextBank: FinalExamBankId) {
-    if (nextBank === bank) return;
-    setLoading(true);
-    setReady(false);
-    setError("");
-    setActive(false);
-    setLessonOpen(false);
-    setQuestions([]);
-    setFilteredOutCount(0);
-    setBankLabel(nextBank === "downloaded-core" ? "New Downloads · Core Distilled" : "Telegram Past Papers");
-    setBank(nextBank);
-  }
+  }, [progress, ready,onProgressSaved]);
 
   function chooseMetabolismScope(exclude: boolean) {
     if (exclude === excludeCarbohydrateLipidMetabolism) return;
@@ -142,7 +126,6 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
     setReady(false);
     setError("");
     setActive(false);
-    setLessonOpen(false);
     setQuestions([]);
     setFilteredOutCount(0);
     setExcludeCarbohydrateLipidMetabolism(exclude);
@@ -154,7 +137,6 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
       const next = reconcileFinalExamSession(null, questions, fingerprint) as FinalSession;
       setProgress((current) => ({ ...current, sessions: { ...current.sessions, [sessionKey]: next } }));
     }
-    setLessonOpen(false);
     setActive(true);
   }
 
@@ -162,12 +144,10 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
     if (!window.confirm(`Delete all saved ${bankLabel} answers for ${examLabels[exam].date} and restart from question 1?`)) return;
     const next = reconcileFinalExamSession(null, questions, fingerprint) as FinalSession;
     setProgress((current) => ({ ...current, sessions: { ...current.sessions, [sessionKey]: next } }));
-    setLessonOpen(false);
     setActive(true);
   }
 
   function moveTo(index: number) {
-    setLessonOpen(false);
     setProgress((current) => {
       const existing = current.sessions[sessionKey];
       if (!existing) return current;
@@ -232,16 +212,16 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
           <div><i style={{ width: `${(answeredCount / session.questionIds.length) * 100}%` }} /></div>
           <small>{answeredCount} answered · {correctCount} correct</small>
         </div>
-        <button onClick={() => setActive(false)}>Save & exit</button>
+        <button onClick={() => {setActive(false);onExit?.();}}>Save & exit</button>
       </header>
       <section className="final-exam-body">
         <div className="final-question-scroll">
           <article className="final-question-card">
-            <div className="question-meta"><span>{bank === "downloaded-core" ? "Distilled core" : "Past paper"}</span><span>{question.subject}</span><span>{question.topic}</span></div>
+            <div className="question-meta"><span>Past paper</span><span>{question.subject}</span><span>{question.topic}</span></div>
             <h1>{question.prompt}</h1>
             {exam === "term2-religion" && <p className="term2-scope-note">Original wording · source-reviewed editorial key, not an official answer. Interpret within the source framework; qualifications and corrections appear with feedback.</p>}
             {exam === "term2-nutrition" && question.qualityFlags.includes("qualified-source-wording") && <p className="term2-scope-note">Historical / qualified wording: scoring uses the source's intended convention. Read the explanation for its limits; a marked answer is not an official key.</p>}
-            {question.media?.map((media) => <figure className="study-image" key={media.id}><img src={mediaUrl(bridgeUrl, question, media.id)} alt={media.alt} /><figcaption>{media.caption ?? "Past-paper image"}</figcaption></figure>)}
+            <QuestionMedia question={question} review={Boolean(answer)}/>
             <div className={`final-options ${answer ? "locked" : ""}`}>
               {question.options.map((option) => {
                 const state = answer
@@ -254,7 +234,6 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
               <div className="instant-feedback-title"><b>{answer.correct ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · page ${question.source.page}` : ""}</span></div>
               <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer.selectedOptionId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
               <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{!answer.correct && question.distractorExplanations[answer.selectedOptionId] && <p className="distractor-note"><b>Why {answer.selectedOptionId} loses:</b> {question.distractorExplanations[answer.selectedOptionId]}</p>}</div>
-              {linkedLesson && <div className="linked-lesson"><button onClick={() => setLessonOpen((value) => !value)}><b>{lessonOpen ? "Close visual lesson" : "Open matching visual lesson"}</b><span>{linkedLesson.title} {lessonOpen ? "↑" : "↓"}</span></button>{lessonOpen && <LessonSlide lesson={linkedLesson} compact />}</div>}
             </section>}
           </article>
         </div>
@@ -275,14 +254,9 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
 
   return <section className="final-exam-home">
     <div className="final-exam-copy">
-      <span className="eyebrow">{bankLabel} · {examLabels[exam].date}</span>
-      <h1>Final exam mode.</h1>
-      <p>{bankDescription} Each answer locks immediately, shows the repair lesson, and stays saved on this device so you can leave and resume at the same question.</p>
+      {!collection && <><span className="eyebrow">{bankLabel} · {examLabels[exam].date}</span><h1>Final exam mode.</h1></>}
+      <p>{collection ? "" : bankDescription + " "}Each answer locks immediately, shows the explanation, and stays saved on this device so you can leave and resume at the same question.</p>
     </div>
-    {exam === "july29" && <div className="final-bank-chooser" aria-label="Choose August 25 final-exam bank">
-      <button className={bank === "telegram-past-papers" ? "active" : ""} aria-pressed={bank === "telegram-past-papers"} onClick={() => chooseBank("telegram-past-papers")}><b>Telegram Past Papers</b><span>Original 199-question archive</span></button>
-      <button className={bank === "downloaded-core" ? "active" : ""} aria-pressed={bank === "downloaded-core"} onClick={() => chooseBank("downloaded-core")}><b>New Downloads · Core Distilled</b><span>Deduplicated and scientifically re-keyed</span></button>
-    </div>}
     {exam === "july29" && <button
       type="button"
       role="switch"
@@ -295,7 +269,7 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
     </button>}
     {loading && <div className="final-exam-empty"><b>Loading checked past-paper questions…</b><span>Keeping source-based practice separate.</span></div>}
     {!loading && error && <div className="final-exam-empty error"><b>Final exam bank is unavailable.</b><span>{error}</span></div>}
-    {!loading && !error && !questions.length && <div className="final-exam-empty"><b>No verified past-paper questions have been imported yet.</b><span>The ordinary study bank is still available in Overview and Topics.</span></div>}
+    {!loading && !error && !questions.length && <div className="final-exam-empty"><b>No verified past-paper questions have been imported yet.</b><span>Book- and lecture-based questions remain in Practice MCQs.</span></div>}
     {!loading && !error && questions.length > 0 && <div className="final-exam-launch">
       <div className="final-exam-stats">
         <article><span>VERIFIED QUESTIONS</span><strong>{questions.length}</strong><small>Relevant to {examLabels[exam].date}</small></article>
@@ -308,5 +282,6 @@ export function FinalExam({ exam, bridgeUrl }: { exam: ExamId; bridgeUrl: string
         <div><button className="primary" onClick={startOrResume}>{session ? "Continue final exam →" : "Start final exam →"}</button>{session && <button className="delete-sprint" onClick={resetProgress}>Delete progress & restart</button>}</div>
       </div>
     </div>}
+    {session&&answeredCount>0&&<CourseReviewReport exam={exam} outcomes={orderedQuestions.filter(q=>session.answers[q.id]||completed).map(q=>({questionId:q.id,answered:Boolean(session.answers[q.id]),correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>}
   </section>;
 }

@@ -95,6 +95,7 @@ test("nutrition: embedded practice/final separation and UI entrypoints",()=>{
   assert.deepEqual(embedded.finalExams["term2-nutrition:nutrition-past-papers"],final);
   assert.deepEqual(embedded.questions.filter(q=>q.tags.includes("exam-term2-nutrition")),practice);
   const page=readFileSync(new URL("../app/page.tsx",import.meta.url),"utf8");
-  assert.match(page,/<NutritionFinalExam/);assert.match(page,/<NutritionPracticeTopics/);
-  assert.match(page,/isTerm2Exam\(exam\) && exam !== "term2-cvs" && exam !== "term2-nutrition" && exam !== "term2-religion" && <section className="term2-mock"/);
+  // MCQ-only shell: the shared past-exam hub serves the Nutrition source papers and archive.
+  assert.match(page,/<PastExamHub key=\{exam\} exam=\{exam\}/);
+  const hub=readFileSync(new URL("../src/components/PastExamHub.tsx",import.meta.url),"utf8");assert.match(hub,/exam==='term2-nutrition'/);assert.match(hub,/<NutritionArchive/);
 });

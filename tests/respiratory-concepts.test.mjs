@@ -142,7 +142,7 @@ test("concept interface renders substantive notes, retrieval and objective pract
   assert.match(feedback, /Connect the answer to the theory/);
   assert.equal(compiledModule.exports.renderFeedback("not-a-respiratory-id"), "");
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.match(page, /hasImmediateFeedback && exam === "term2-respiratory" && <RespiratoryConceptFeedback/);
-  assert.match(page, /startSession\(collection, activeRespiratoryPracticeIds/);
-  assert.match(page, /studyMode: nextStudyMode/);
+  // MCQ-only shell: the respiratory concept hub and feedback are retired; the shared review report gives post-answer section feedback.
+  assert.match(page, /<CourseReviewReport/);
+  assert.match(page, /activeRespiratoryPracticeIds/);
 });

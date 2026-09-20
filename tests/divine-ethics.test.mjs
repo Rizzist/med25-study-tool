@@ -42,7 +42,8 @@ test('Divine Ethics: embedded practice and saved progress separate from Religion
 });
 test('Divine Ethics: study source and review are real PDFs with mobile-friendly entrypoints',()=>{
  for(const path of [catalog.source.file,catalog.source.reviewFile])assert.equal(readFileSync(new URL(`../public${path}`,import.meta.url)).subarray(0,4).toString(),'%PDF');
- assert.match(read('app/page.tsx'),/<DivineEthicsStudy/);
- assert.match(read('src/components/DivineEthicsStudy.module.css'),/@media\(max-width:760px\)/);
- assert.match(read('src/components/DivineEthicsStudy.tsx'),/Test · grade at the end/);
+ // MCQ-only shell: Divine Ethics uses the shared destinations (practice, past-exam hub, review topics from the review PDF).
+ const page=read('app/page.tsx');assert.match(page,/"term2-divine-ethics": \{ date:/);assert.match(page,/<PastExamHub key=\{exam\} exam=\{exam\}/);assert.match(page,/<ReviewTopics/);
+ assert.ok(JSON.parse(readFileSync(new URL('../public/study/reviews/index.json',import.meta.url),'utf8')).courses['term2-divine-ethics']);
+ assert.match(read('src/components/CourseReview.tsx'),/\/study\/reviews\/index\.json/);
 });

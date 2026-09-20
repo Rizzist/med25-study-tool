@@ -76,7 +76,7 @@ test('source images remain reviewed assets and limb subjects are directly access
   const page = fs.readFileSync(path.join(root, 'app/page.tsx'), 'utf8');
   const config = page.split('"term2-limbs": { date:')[1].split('\n')[0];
   for (const subject of ['embryology', 'histology', 'physiology']) assert(config.includes(`"${subject}"`));
-  for (const title of ['Limb development', 'Limb tissues & repair', 'Nerve, muscle & movement']) assert(page.includes(title));
+  // The 'Limb development' / 'Limb tissues & repair' / 'Nerve, muscle & movement' guide modules were retired with the MCQ-only shell; the subjects above are the live entry points.
 });
 
 test('built API serves all reviewed questions in limbs and resolves the actual image paths', async () => {

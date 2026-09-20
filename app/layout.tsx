@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./physiology-practical.css";
+import "./mcq.css";
 
 const geistSans = localFont({
   src: "../node_modules/next/dist/next-devtools/server/font/geist-latin.woff2",
@@ -14,7 +15,7 @@ const geistMono = localFont({
 
 export async function generateMetadata(): Promise<Metadata> {
   const image = "https://med25-exam-sprint.wise-sun-8653.chatgpt.site/og.png";
-  const description = "Term 1 and Term 2 medical exam preparation with source-based MCQs, interactive respiratory anatomy, histology images, saved progress and answer explanations.";
+  const description = "Medical MCQ practice, sourced past exams, review PDF downloads and section-by-section feedback with saved progress.";
   return {
     title: "MED//25 Exam Sprint",
     description,

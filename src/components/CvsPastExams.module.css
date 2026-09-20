@@ -124,3 +124,33 @@
  .feedback{padding:12px}
  .actions button{min-height:46px}
 }
+
+/* Shell revamp: the CVS hub shares the app's pill controls and denser cards. */
+.root{gap:14px}
+.root h1{font-size:clamp(1.35rem,2.3vw,1.8rem);margin:4px 0 8px}
+.root h2{font-size:1.05rem}
+.root p{font-size:.875rem}
+.root button{min-height:34px;padding:6px 14px;border-radius:999px;font-size:.8125rem;font-weight:600}
+.root button:global(.primary){font-weight:700}
+.meta{font-size:.8125rem}
+.note{padding:10px 14px;border-radius:6px;font-size:.8125rem}
+.papers{gap:10px}
+.papers article{padding:14px 16px;border-radius:12px;gap:8px}
+.papers article .actions{padding-top:8px}
+.result{padding:10px 12px;font-size:.8125rem}
+.coreCard{gap:10px;padding:clamp(16px,2.4vw,24px);border-radius:14px}
+.coreCard h2{font-size:clamp(1.35rem,2.4vw,1.85rem)}
+.coreCard .coreLead{font-size:.95rem}
+.coreCounts span{padding:5px 10px;font-size:.8125rem}
+.root .coreStart,.root .coreSecondary{padding:8px 16px}
+.nonCoreCard{gap:10px;padding:clamp(16px,2.4vw,22px);border-radius:14px}
+.nonCoreCard h2{font-size:clamp(1.25rem,2.2vw,1.6rem)}
+.nonCoreLead{font-size:.95rem}
+.aggregator{gap:10px;padding:14px 16px;border-radius:12px}
+.aggregator h2{font-size:1.05rem;margin:0 0 4px}
+.paperSelection{display:flex;flex-wrap:wrap;gap:6px}
+.paperSelection label{align-items:center;min-height:34px;padding:5px 12px 5px 8px;border-radius:999px;font-size:.8125rem;font-weight:600}
+.paperSelection input{width:16px;height:16px}
+.paperSelection small{display:inline;margin:0 0 0 6px;font-weight:500}
+.modePicker{gap:6px}
+.savedCombined{padding:10px 0}

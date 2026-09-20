@@ -31,7 +31,7 @@ export function NutritionFinalExam({ bridgeUrl }: { bridgeUrl: string }) {
   </section>;
 }
 
-function NutritionPaperArchive() {
+export function NutritionPaperArchive() {
   const [paperId, setPaperId] = useState("all");
   const [search, setSearch] = useState("");
   const [selectedId, setSelectedId] = useState("F1");

@@ -39,7 +39,7 @@ export function ReligionFinalExam({bridgeUrl}:{bridgeUrl:string}) {
   </section>;
 }
 
-function ReligionPaperArchive() {
+export function ReligionPaperArchive() {
   const [paper,setPaper]=useState('all'),[search,setSearch]=useState(''),[selectedId,setSelectedId]=useState('O1');
   const [revealed,setRevealed]=useState(false),[documentOpen,setDocumentOpen]=useState(false);
   const rawReview=useSyncExternalStore(subscribeReview,reviewSnapshot,serverReviewSnapshot);

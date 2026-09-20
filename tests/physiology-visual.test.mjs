@@ -64,8 +64,8 @@ test('source explanations, annotations and diagnosis links are gated in rendered
   if(c.masks.length){assert.match(before,/pp-case-mask/);assert.doesNotMatch(after,/class="pp-case-mask"/);}
   assert.match(before,/Zoom image in/);assert.match(before,/Scrollable source image/);
  }
- const page=readFileSync(new URL('app/page.tsx',root),'utf8');
- assert.match(page,/PracticalCaseFigure[^\n]+revealed=\{review\}/);
+ const page=readFileSync(new URL('app/page.tsx',root),'utf8'),media=readFileSync(new URL('src/components/QuestionMedia.tsx',root),'utf8');
+ assert.match(media,/PracticalCaseFigure[^\n]+revealed=\{review\}/);assert.match(page,/<QuestionMedia/);
  assert.match(page,/studyMode === "learn" && hasAnswer/);
 });
 test('new worked calculations and user-supplied theory traps have independently checked answers',()=>{

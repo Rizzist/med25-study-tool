@@ -12,9 +12,6 @@ export function GET(request: Request) {
   );
   if (!media) return json({ error: "Media not found" }, { status: 404 });
 
-  const publicPath = media.path
-    .split("/")
-    .map((segment) => encodeURIComponent(segment))
-    .join("/");
-  return Response.redirect(new URL(`/study/${publicPath}`, url.origin), 307);
+  if(!media.url.startsWith('/study/'))return json({error:'Invalid media path'},{status:404});
+  return Response.redirect(new URL(media.url,url.origin),307);
 }

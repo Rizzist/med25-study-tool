@@ -8,6 +8,11 @@ import {
     type PaperTopicMap, type PaperFeedbackMode,
 } from '@/src/lib/mcq/cvs-paper-state.mjs';
 import { CvsWeaknessReport } from './CvsWeaknessReport';
+import {CourseReviewReport} from './CourseReview';
+import {PastPaperCard} from './PastPaperCard';
+import {PaperDownloads,type DownloadCollection} from './PaperDownloads';
+import {StudyIcon} from './StudyIcon';
+import {cachedJson} from '@/src/lib/mcq/client-cache';
 import { answerResolution, applyAnswerOverlay, combinedPaperId, createCombinedPaper, type AnswerOverlay } from '@/src/lib/mcq/cvs-paper-enhancements.mjs';
 import styles from './CvsPastExams.module.css';
 import reviewedCounts from '../../public/study/cvs-past-papers/ai-summary.json';
@@ -30,7 +35,7 @@ const coreTopics = [...new Map(coreManifest.questions.map(row => [row.topicId, r
 type Entry = { id: string; title: string; note: string; count: number; keyed: number; file: string; fingerprint: string; category: string };
 type Index = { papers: Entry[]; referenceNote: string };
 
-export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?: (active: boolean) => void }) {
+export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionActiveChange?: (active: boolean) => void; downloads?: Record<string, DownloadCollection> }) {
     const [catalog, setCatalog] = useState<Index | null>(null);
     const [paper, setPaper] = useState<Paper | null>(null);
     const [topics, setTopics] = useState<PaperTopicMap | null>(null);
@@ -69,15 +74,9 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
             setProgress(saved);
         } catch { setStorageWarning('Storage is unavailable. Answers remain in this tab only.'); }
         setReady(true);
-        fetch('/study/cvs-past-papers/index.json').then(r => {
-            if (!r.ok) throw new Error('Could not load the paper list.');
-            return r.json();
-        }).then(data => { if (!cancelled) setCatalog(data); })
+        cachedJson<Index>('/study/cvs-past-papers/index.json').then(data => { if (!cancelled) setCatalog(data); })
           .catch(e => { if (!cancelled) setError(e.message); });
-        fetch('/study/cvs-past-papers/topic-map.json').then(r => {
-            if (!r.ok) throw new Error('Topic mapping could not load.');
-            return r.json();
-        }).then(data => { if (!cancelled) setTopics(data); })
+        cachedJson<PaperTopicMap>('/study/cvs-past-papers/topic-map.json').then(data => { if (!cancelled) setTopics(data); })
           .catch(() => { if (!cancelled) setMappingWarning('Topic mapping unavailable. Your answers are still saved; reopen the paper later for section results.'); });
         return () => { cancelled = true; request.current++; };
     }, []);
@@ -100,14 +99,8 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
     const breakdown = useMemo(() => paper && attempt ? gradePaperBreakdown(paper, attempt, topics) : null, [paper, attempt, topics]);
 
     async function loadPaper(entry: Entry): Promise<Paper> {
-        const response = await fetch(entry.file);
-        if (!response.ok) throw new Error('Could not load ' + entry.title + '. Please retry.');
-        const original: Paper = await response.json();
-        if (!overlayRequest.current) overlayRequest.current = fetch('/study/cvs-past-papers/ai-answers.json').then(r => {
-            if (!r.ok) throw new Error('Answer review unavailable');
-            setAnswerWarning('');
-            return r.json();
-        }).catch(() => { setAnswerWarning('AI answer review could not load. Supplied keys still work; missing keys remain ungraded. Exit and reopen to retry.'); overlayRequest.current = null; return null; });
+        const original = await cachedJson<Paper>(entry.file+'?v='+encodeURIComponent(entry.fingerprint));
+        if (!overlayRequest.current) overlayRequest.current = cachedJson<AnswerOverlay>('/study/cvs-past-papers/ai-answers.json',true).then(data=>{setAnswerWarning('');return data;}).catch(() => { setAnswerWarning('AI answer review could not load. Supplied keys still work; missing keys remain ungraded. Exit and reopen to retry.'); overlayRequest.current = null; return null; });
         const overlay = await overlayRequest.current;
         // Never overwrite an attempt based on corrected choices with an unavailable overlay.
         if (!overlay && Object.values(progressRef.current.attempts).some(attempt => original.questions.some(q => attempt.correctionRevisions?.[q.id]))) {
@@ -227,99 +220,80 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
 
     if (error && !catalog) return <section className={styles.root}><p role="alert">{error}</p><button onClick={() => window.location.reload()}>Retry</button></section>;
     if (!catalog || !ready) return <p role="status">Loading your CVS papers…</p>;
-    if (!paper || !attempt || !q) return <section className={styles.root} aria-label="CVS past exams">
-        <header><p className="eyebrow">CVS · Final Exam · past papers only</p><h1>Choose your paper</h1>
-            <p>Tap an answer for instant feedback. Finish to see your weak subjects and exact review sections. Progress and the latest result for each paper stay saved in this browser.</p></header>
-        <div className={styles.modePicker} aria-label="Feedback mode">
-            <button aria-pressed={mode === 'instant'} onClick={() => setMode('instant')}>Learn · instant feedback</button>
-            <button aria-pressed={mode === 'deferred'} onClick={() => setMode('deferred')}>Exam · mark at the end</button>
+    if (!paper || !attempt || !q) return <div className="cvs-hub" aria-label="CVS past exams">
+        {storageWarning && <p role="alert" className="mcq-alert">{storageWarning}</p>}{error && <p role="alert" className="mcq-alert error">{error}</p>}
+        {loading && <p role="status" className="mcq-loading">Opening your past paper…</p>}
+        <div className="pill-row hub-tools">
+            <div className="seg" role="group" aria-label="Feedback mode"><button type="button" aria-pressed={mode === 'instant'} onClick={() => setMode('instant')}>Learn · instant feedback</button><button type="button" aria-pressed={mode === 'deferred'} onClick={() => setMode('deferred')}>Exam · mark at the end</button></div>
+            <details className="hub-note"><summary>About the answers</summary><p>Slightly stronger colors distinguish reference-reviewed answers from supplied keys. Review provenance and references are available with each answer. These are study answers, not certified university keys. Feedback mode applies to new attempts.</p></details>
         </div>
-        <details className={styles.note}><summary>About the answers</summary><p>Slightly stronger colors distinguish reference-reviewed answers from supplied keys. Review provenance and references are available with each answer. These are study answers, not certified university keys. Feedback mode applies to new attempts.</p></details>
-        {storageWarning && <p role="alert">{storageWarning}</p>}{error && <p role="alert">{error}</p>}
-        {loading && <p role="status">Opening your past paper…</p>}
-        <article className={styles.coreCard} aria-labelledby="cvs-core-title">
-            <div className={styles.coreHeading}><span className={styles.coreBadge}>★ Start here</span><span>Original PYQs · strongest repeats first</span></div>
-            <h2 id="cvs-core-title">Core Exam</h2>
-            <p className={styles.coreLead}>Repeated concepts. The core to know before you go in.</p>
-            <div className={styles.coreCounts}>{coreManifest.subjects.map(subject => <span key={subject.id}><b>{subject.count}</b> {subject.title}</span>)}</div>
-            <p>{coreManifest.questions.length} selected past-paper questions · {coreManifest.repeatedPatternCount} repeated question patterns, plus core coverage. No 100-question cap. One representative per repeat pattern is added instead of replaying every duplicate copy.</p>
-            <div className={styles.actions}>{(['all','anatomy'] as const).map(scope => {
-                const saved = progress.attempts[coreExamId(scope)];
-                return <button key={scope} className={scope === 'all' ? styles.coreStart : styles.coreSecondary} disabled={loading} onClick={() => void openCore(scope)}>
-                    {saved ? saved.completedAt ? 'Results / resume' : 'Resume' : 'Start'} · {scope === 'all' ? `Full Core · ${coreManifest.questions.length}` : `Anatomy · ${coreAnatomyCount}`}
-                </button>;
-            })}</div>
-            {(['all','anatomy'] as const).some(scope => progress.attempts[coreExamId(scope)]) && <details>
-                <summary>Saved Core Exam attempts</summary>
-                {(['all','anatomy'] as const).filter(scope => progress.attempts[coreExamId(scope)]).map(scope => <div className={styles.coreSaved} key={scope}>
-                    <b>{scope === 'all' ? `Full Core · ${coreManifest.questions.length}` : `Anatomy · ${coreAnatomyCount}`}</b>
-                    {progress.latest[coreExamId(scope)] && <Result result={progress.latest[coreExamId(scope)]} stale={progress.latest[coreExamId(scope)].total !== (scope === 'all' ? coreManifest.questions.length : coreAnatomyCount)} />}
-                    <button disabled={loading} onClick={() => void openCore(scope,true)}>New attempt</button>
-                </div>)}
-            </details>}
-            <p className={styles.coreCaution}>Priority, not a prediction: repeated topics may return with different wording. We cannot promise 20–30 identical questions or assign a reliable probability to your upcoming exam.</p>
-            <details className={styles.coreEvidence}><summary>Why these questions? See past-paper recurrence</summary>
-                <p>{coreManifest.methodology}</p>
-                <p>Repeated questions appear first. After answering, open “Repeated-question sources” to see their matches. The table below separately shows <b>topic coverage</b>, not identical-question repeats or predicted probabilities.</p>
-                <div className={styles.coreTopicList}>{coreTopics.map(row => <div key={row.topicId}><span>{row.topicTitle}</span><b>{row.topicPaperCount}/{coreManifest.evidencePaperIds.length} papers</b></div>)}</div>
-                <p>{coreManifest.limitation}</p>
-            </details>
-        </article>
-        <article className={styles.nonCoreCard} aria-labelledby="cvs-noncore-title">
-            <div className={styles.coreHeading}><span className={styles.nonCoreBadge}>02 · Beyond Core</span><span>Anatomy only · original PYQs</span></div>
-            <h2 id="cvs-noncore-title">Non-core Anatomy</h2>
-            <p className={styles.nonCoreLead}>The unusual details, exceptions, and one-offs.</p>
-            <p>{nonCoreManifest.questions.length} distinct questions beyond Core, including {nonCoreManifest.questions.filter(row => row.hasImage).length} original image spotters. Core questions and known repeat variants are excluded; duplicate copies are collapsed. Different details within the same topic stay in.</p>
-            <div className={styles.actions}>
-                <button className="primary" disabled={loading} onClick={() => void openNonCoreAnatomy()}>
-                    {progress.attempts[NON_CORE_ANATOMY_ID] ? progress.attempts[NON_CORE_ANATOMY_ID].completedAt ? 'Results & review' : 'Resume' : 'Start'} · Non-core Anatomy · {nonCoreManifest.questions.length}
-                </button>
-                {progress.attempts[NON_CORE_ANATOMY_ID] && <button disabled={loading} onClick={() => void openNonCoreAnatomy(true)}>New attempt</button>}
-            </div>
-            <p className={styles.meta}>Separate saved progress and latest result · weak-point report by anatomy review section.</p>
-            {progress.latest[NON_CORE_ANATOMY_ID] && <Result result={progress.latest[NON_CORE_ANATOMY_ID]} stale={progress.latest[NON_CORE_ANATOMY_ID].total !== nonCoreManifest.questions.length} />}
-            <details><summary>Coverage &amp; excluded items</summary>
-                <p>{nonCoreManifest.candidateCount} anatomy source questions accounted for: {nonCoreManifest.excludedCore.length} Core overlaps, {nonCoreManifest.duplicates.length} additional duplicate copies, {nonCoreManifest.questions.length} in this test, and {nonCoreManifest.withheld.length} held for clarification.</p>
-                <div className={styles.coreTopicList}>{nonCoreTopicCounts.map(topic => <div key={topic.id}><span>{topic.title}</span><b>{topic.count} questions</b></div>)}</div>
-                <p>{nonCoreManifest.methodology}</p><p>{nonCoreManifest.limitation}</p>
-                <details><summary>{nonCoreManifest.withheld.length} unresolved items · original sources, not scored</summary>
-                    <ul className={styles.heldItems}>{nonCoreManifest.withheld.map(item => <li key={item.questionId}>
-                        <a href={item.sourcePage} target="_blank" rel="noreferrer">{catalog.papers.find(entry => entry.id === item.paperId)?.title ?? item.paperId} · Q{item.questionId.split('-q').pop()}</a>
-                        <p>{item.prompt}</p><small>{item.reason}</small>
-                    </li>)}</ul>
-                </details>
-            </details>
-        </article>
-        <section className={styles.aggregator} aria-label="Combine past papers">
-            <header><h2>Combine past papers</h2><p>One continuous session, with a combined subject and review-section report. Your individual-paper attempts stay separate. Repeated questions from different papers are retained.</p></header>
-            <div className={styles.actions}><button disabled={loading} onClick={() => setSelectedPapers(catalog.papers.map(p => p.id))}>Select all</button><button disabled={loading || !selectedPapers.length} onClick={() => setSelectedPapers([])}>Clear selection</button></div>
-            <div className={styles.paperSelection}>{catalog.papers.map(entry => <label key={entry.id}>
+        <section className="paper-combiner" aria-label="Combine past papers">
+            <div className="section-head compact"><h3><StudyIcon name="layers"/>Combine papers</h3><p>One continuous session with a combined subject and review-section report. Individual-paper attempts stay separate; repeated questions from different papers are retained.</p><div className="pill-row"><button type="button" className="pill small" disabled={loading} onClick={() => setSelectedPapers(catalog.papers.map(p => p.id))}>Select all</button><button type="button" className="pill small" disabled={loading || !selectedPapers.length} onClick={() => setSelectedPapers([])}>Clear</button></div></div>
+            <div className="paper-selection">{catalog.papers.map(entry => <label key={entry.id}>
                 <input type="checkbox" disabled={loading} checked={selectedPapers.includes(entry.id)} onChange={e => setSelectedPapers(ids => e.target.checked ? [...ids, entry.id] : ids.filter(id => id !== entry.id))} />
-                <span>{entry.title}<small>{entry.count} questions · {entry.keyed + (answerCounts[entry.id]?.proposed ?? 0)} with answers</small></span>
+                {entry.title}<small>{entry.count}</small>
             </label>)}</div>
-            <p>{selectedPapers.length} papers selected · {catalog.papers.filter(p => selectedPapers.includes(p.id)).reduce((n, p) => n + p.count, 0)} questions</p>
-            <div className={styles.actions}><button className="primary" disabled={loading || !selectedPapers.length} onClick={() => void openCombined()}>
-                {progress.attempts[combinedPaperId(selectedPapers)] ? 'Resume combined / view results' : 'Start combined session'}</button>
-                {progress.attempts[combinedPaperId(selectedPapers)] && <button disabled={loading} onClick={() => void openCombined(true)}>New combined attempt</button>}</div>
-            {Object.values(progress.attempts).some(a => a.sourcePaperIds?.length) && <details><summary>Saved combined sessions</summary>
-                {Object.values(progress.attempts).filter(a => a.sourcePaperIds?.length).map(saved => <article className={styles.savedCombined} key={saved.paperId}>
+            <div className="paper-combiner-footer"><span>{selectedPapers.length} papers · {catalog.papers.filter(p => selectedPapers.includes(p.id)).reduce((n, p) => n + p.count, 0)} questions</span><div className="pill-row"><button type="button" className="primary" disabled={loading || !selectedPapers.length} onClick={() => void openCombined()}>{progress.attempts[combinedPaperId(selectedPapers)] ? 'Resume combined · results' : 'Start combined session'}<StudyIcon name="arrow"/></button>{progress.attempts[combinedPaperId(selectedPapers)] && <button type="button" className="pill" disabled={loading} onClick={() => void openCombined(true)}>New combined attempt</button>}</div></div>
+            {Object.values(progress.attempts).some(a => a.sourcePaperIds?.length) && <details className="paper-saved-combinations"><summary>Saved combined sessions</summary>
+                {Object.values(progress.attempts).filter(a => a.sourcePaperIds?.length).map(saved => <article key={saved.paperId}>
                     <b>{saved.sourcePaperIds!.map(id => catalog.papers.find(p => p.id === id)?.title ?? id).join(' + ')}</b>
-                    {progress.latest[saved.paperId] && <Result result={progress.latest[saved.paperId]} />}
-                    <button disabled={loading} onClick={() => { setSelectedPapers(saved.sourcePaperIds!); void openCombined(false, saved.sourcePaperIds); }}>{saved.completedAt ? 'Results & review' : 'Resume combined session'}</button>
+                    {progress.latest[saved.paperId] ? <Result result={progress.latest[saved.paperId]} /> : <p>Ready to resume</p>}
+                    <button type="button" className="pill small" disabled={loading} onClick={() => { setSelectedPapers(saved.sourcePaperIds!); void openCombined(false, saved.sourcePaperIds); }}>{saved.completedAt ? 'Results & review' : 'Resume'}</button>
                 </article>)}
             </details>}
         </section>
-        <div className={styles.papers}>{catalog.papers.map(entry => {
-            const result = progress.latest[entry.id], saved = progress.attempts[entry.id];
-            const same = saved?.fingerprint === entry.fingerprint;
-            return <article key={entry.id}><span className={styles.meta}>{entry.category}</span><h2>{entry.title}</h2><p>{entry.note}</p>
-                <p><b>{entry.count}</b> questions · <b>{entry.keyed + (answerCounts[entry.id]?.proposed ?? 0)}</b> with answers{answerCounts[entry.id]?.unresolved ? ` · ${answerCounts[entry.id].unresolved} unresolved` : ''}</p>
-                {result ? <Result result={result} stale={result.fingerprint !== entry.fingerprint} /> : <p className={styles.meta}>No completed result yet</p>}
-                <div className={styles.actions}><button className="primary" disabled={loading} onClick={() => void open(entry)}>{same ? saved.completedAt ? 'Results & review' : 'Resume paper' : 'Take paper'}</button>
-                    {same && <button disabled={loading} onClick={() => void open(entry, true)}>New attempt</button>}</div>
-            </article>;
-        })}</div><p className={styles.note}>{catalog.referenceNote}</p>
-    </section>;
+        <div className="paper-grid">
+            <PastPaperCard featured badge="★ Start here" label="Core exam · repeated PYQs first" title="Core Exam" note={`${coreManifest.methodology} ${coreManifest.limitation}`}>
+                <p className="paper-counts">{coreManifest.subjects.map((subject, i) => <span key={subject.id}>{i > 0 && <i>·</i>}<b>{subject.count}</b> {subject.title}</span>)}</p>
+                <p className="paper-lead">Repeated concepts first: {coreManifest.questions.length} selected questions, {coreManifest.repeatedPatternCount} repeated patterns, one representative per pattern. Priority, not a prediction.</p>
+                {(['all','anatomy'] as const).filter(scope => progress.latest[coreExamId(scope)]).map(scope => <Result key={scope} result={progress.latest[coreExamId(scope)]} stale={progress.latest[coreExamId(scope)].total !== (scope === 'all' ? coreManifest.questions.length : coreAnatomyCount)} />)}
+                <div className="paper-card-actions">{(['all','anatomy'] as const).map(scope => {
+                    const saved = progress.attempts[coreExamId(scope)];
+                    return <button key={scope} type="button" className={scope === 'all' ? 'primary' : 'pill'} disabled={loading} onClick={() => void openCore(scope)}>
+                        {saved ? saved.completedAt ? 'Results' : 'Resume' : 'Start'} · {scope === 'all' ? `Full core · ${coreManifest.questions.length}` : `Anatomy · ${coreAnatomyCount}`}
+                    </button>;
+                })}{(['all','anatomy'] as const).filter(scope => progress.attempts[coreExamId(scope)]).map(scope => <button key={scope + '-new'} type="button" className="pill" disabled={loading} onClick={() => void openCore(scope, true)}>New {scope === 'all' ? 'full' : 'anatomy'} attempt</button>)}</div>
+                <details className="paper-evidence"><summary>Why these questions?</summary>
+                    <p>{coreManifest.methodology}</p>
+                    <p>Repeated questions appear first. After answering, open “Repeated-question sources” to see their matches. The list shows <b>topic coverage</b>, not identical-question repeats or predicted probabilities.</p>
+                    <div className="topic-list">{coreTopics.map(row => <div key={row.topicId}><span>{row.topicTitle}</span><b>{row.topicPaperCount}/{coreManifest.evidencePaperIds.length} papers</b></div>)}</div>
+                    <p>{coreManifest.limitation}</p>
+                </details>
+            </PastPaperCard>
+            <PastPaperCard featured badge="02 · Beyond core" label="Non-core anatomy · original PYQs" title="Non-core Anatomy" note={`${nonCoreManifest.methodology} ${nonCoreManifest.limitation}`}>
+                <p className="paper-counts"><b>{nonCoreManifest.questions.length}</b> distinct questions<i>·</i>{nonCoreManifest.questions.filter(row => row.hasImage).length} image spotters</p>
+                <p className="paper-lead">The unusual details, exceptions and one-offs. Core questions and known repeat variants are excluded; duplicate copies are collapsed.</p>
+                {progress.latest[NON_CORE_ANATOMY_ID] ? <Result result={progress.latest[NON_CORE_ANATOMY_ID]} stale={progress.latest[NON_CORE_ANATOMY_ID].total !== nonCoreManifest.questions.length} /> : <p className="paper-saved-result">Not attempted yet</p>}
+                <div className="paper-card-actions">
+                    <button type="button" className="primary" disabled={loading} onClick={() => void openNonCoreAnatomy()}>{progress.attempts[NON_CORE_ANATOMY_ID] ? progress.attempts[NON_CORE_ANATOMY_ID].completedAt ? 'Results & review' : 'Resume' : 'Start'} · {nonCoreManifest.questions.length}</button>
+                    {progress.attempts[NON_CORE_ANATOMY_ID] && <button type="button" className="pill" disabled={loading} onClick={() => void openNonCoreAnatomy(true)}>New attempt</button>}
+                </div>
+                <details className="paper-evidence"><summary>Coverage &amp; excluded items</summary>
+                    <p>{nonCoreManifest.candidateCount} anatomy source questions accounted for: {nonCoreManifest.excludedCore.length} Core overlaps, {nonCoreManifest.duplicates.length} additional duplicate copies, {nonCoreManifest.questions.length} in this test, and {nonCoreManifest.withheld.length} held for clarification.</p>
+                    <div className="topic-list">{nonCoreTopicCounts.map(topic => <div key={topic.id}><span>{topic.title}</span><b>{topic.count} questions</b></div>)}</div>
+                    <p>{nonCoreManifest.methodology}</p><p>{nonCoreManifest.limitation}</p>
+                    <details><summary>{nonCoreManifest.withheld.length} unresolved items · original sources, not scored</summary>
+                        <ul className={styles.heldItems}>{nonCoreManifest.withheld.map(item => <li key={item.questionId}>
+                            <a href={item.sourcePage} target="_blank" rel="noreferrer">{catalog.papers.find(entry => entry.id === item.paperId)?.title ?? item.paperId} · Q{item.questionId.split('-q').pop()}</a>
+                            <p>{item.prompt}</p><small>{item.reason}</small>
+                        </li>)}</ul>
+                    </details>
+                </details>
+            </PastPaperCard>
+            {catalog.papers.map(entry => {
+                const result = progress.latest[entry.id], saved = progress.attempts[entry.id];
+                const same = saved?.fingerprint === entry.fingerprint;
+                return <PastPaperCard key={entry.id} title={entry.title} label={entry.category} note={entry.note}>
+                    <p className="paper-counts"><b>{entry.count}</b> questions<i>·</i><b>{entry.keyed + (answerCounts[entry.id]?.proposed ?? 0)}</b> with answers{answerCounts[entry.id]?.unresolved ? <><i>·</i>{answerCounts[entry.id].unresolved} unresolved</> : null}</p>
+                    {result ? <Result result={result} stale={result.fingerprint !== entry.fingerprint} /> : <p className="paper-saved-result">{same ? `${Object.values(saved.answers).filter(v => v?.trim()).length}/${entry.count} answered · saved on this device` : 'Not attempted yet'}</p>}
+                    <div className="paper-card-actions"><button type="button" className="primary" disabled={loading} onClick={() => void open(entry)}>{same ? saved.completedAt ? 'Results & review' : 'Resume paper' : 'Take paper'}</button>
+                        {same && <button type="button" className="pill" disabled={loading} onClick={() => void open(entry, true)}>New attempt</button>}</div>
+                    {downloads?.[entry.id] && <PaperDownloads item={downloads[entry.id]} courseTitle="CVS" />}
+                </PastPaperCard>;
+            })}
+        </div>
+        <p className="mcq-note">{catalog.referenceNote}</p>
+    </div>;
 
     const answered = paper.questions.filter(item => attempt.answers[item.id]?.trim()).length;
     const value = attempt.answers[q.id] ?? '';
@@ -345,7 +319,8 @@ export function CvsPastExams({ onSessionActiveChange }: { onSessionActiveChange?
         {storageWarning && <p role="alert">{storageWarning}</p>}{mappingWarning && <p className={styles.warning}>{mappingWarning}</p>}{answerWarning && <p role="alert" className={styles.warning}>{answerWarning}</p>}
         {reportOpen && finished && breakdown ? <>
             {result && <Result result={result} />}
-            <CvsWeaknessReport breakdown={breakdown} topics={topics} onReview={review} />
+            <CourseReviewReport reviewOnly exam="term2-cvs" outcomes={paper.questions.map(item=>({questionId:item.id,answered:Boolean(attempt.answers[item.id]?.trim()),correct:questionFeedback(item,attempt.answers[item.id])==='correct'||(!answerResolution(item).key&&attempt.manual[item.id]==='correct'),gradable:Boolean(answerResolution(item).key)||['correct','incorrect'].includes(attempt.manual[item.id]),topic:topics?.questions[item.id]?.topicId}))} onPractice={ids=>review(ids,'Questions to review')}/>
+            <details><summary>Subject breakdown &amp; paper review controls</summary><CvsWeaknessReport breakdown={breakdown} topics={topics} onReview={review}/></details>
             <button onClick={() => { setFilter(null); setReportOpen(false); }}>Review all questions</button>
         </> : <>
             <div className={styles.sessionTools}>

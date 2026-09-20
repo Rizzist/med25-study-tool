@@ -51,7 +51,8 @@
     "media": {
       "type": "object", "additionalProperties": false, "required": ["id", "type", "path", "alt"],
       "properties": {
-        "id": { "type": "string", "minLength": 1 }, "type": { "const": "image" },
+        "id": { "type": "string", "minLength": 1 }, "type": { "enum": ["image", "audio", "video"] },
+        "mimeType": { "type": "string" }, "transcript": { "type": "string" },
         "path": { "type": "string", "minLength": 1 }, "alt": { "type": "string", "minLength": 1 },
         "caption": { "type": "string" }, "attribution": { "type": "string" },
         "labelMasks": { "type": "array", "items": { "$ref": "#/$defs/box" } },

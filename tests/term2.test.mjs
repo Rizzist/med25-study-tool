@@ -33,9 +33,10 @@ test("Term 2 catalog has eight exams with explicit membership and only the user-
 
 test("Term 2 Past Exams UI is an explicit empty provenance boundary until genuine papers exist", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
-  assert.match(page, /Term 2 · Past exams only/);
-  assert.match(page, /This section is deliberately empty/);
-  assert.match(page, /never presented as past-exam questions/);
+  const hub = await readFile(new URL("../src/components/PastExamHub.tsx", import.meta.url), "utf8");
+  assert.match(page, /<PastExamHub key=\{exam\} exam=\{exam\}/);
+  assert.match(hub, /No past papers imported yet/);
+  assert.match(hub, /Practice MCQs are available, but they are not past-exam questions\./);
   assert.doesNotMatch(page, /Start \{selectedConfig\.title\} mock/);
 });
 

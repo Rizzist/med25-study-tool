@@ -1,7 +1,6 @@
 import { spawn } from "node:child_process";
 
 const children = [
-  spawn(process.execPath, ["scripts/codex-bridge.mjs"], { stdio: "inherit" }),
   spawn("npm", ["run", "dev"], { stdio: "inherit" }),
 ];
 

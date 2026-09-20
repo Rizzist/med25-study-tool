@@ -17,7 +17,11 @@ export function GET(request: Request) {
     const requestedBank = searchParams.get("bank");
     const bank = requestedBank === null ? defaultFinalExamBank(exam) : requestedBank;
     if (!isFinalExamBankId(bank)) throw new Error("A valid final-exam bank is required");
-    return json(finalExamSet(exam, bank));
+    const payload=finalExamSet(exam,bank);
+    const etag='"'+payload.fingerprint+'"';
+    const headers={'etag':etag,'cache-control':'private, no-cache'};
+    if(request.headers.get('if-none-match')===etag)return new Response(null,{status:304,headers});
+    return json(payload,{headers});
   } catch (error) {
     return badRequest(error);
   }

@@ -113,9 +113,10 @@ test("the Term 2 theory UI exposes source scope, objective practice and post-ans
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("src/components/Term2ConceptHub.tsx", root), "utf8"),
   ]);
-  assert.match(page, /<Term2ConceptHub/);
-  assert.match(page, /<Term2ConceptFeedback/);
-  assert.match(page, /hasImmediateFeedback && selectedConceptDataset/);
+  // MCQ-only shell: concept hubs are retired; source scope and post-answer repair come from review topics and the review report.
+  assert.match(page, /<ReviewTopics/);
+  assert.match(page, /<CourseReviewReport/);
+  assert.match(page, /hasImmediateFeedback/);
   assert.match(hub, /Course-supported/);
   assert.match(hub, /Book extension/);
   assert.match(hub, /Practice objective/);

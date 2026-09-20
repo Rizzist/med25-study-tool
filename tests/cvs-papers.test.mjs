@@ -102,7 +102,9 @@ test('CVS: textbook/reference banks never masquerade as past papers or enter pra
   const ids=new Set(papers.flatMap(p=>p.questions.map(q=>q.id)));
   assert(embedded.questions.every(q=>!ids.has(q.id)));
   const page=readFileSync(new URL('app/page.tsx',root),'utf8');
-  assert.match(page,/exam === "term2-cvs" && <CvsPastExams/);
+  assert.match(page,/<PastExamHub key=\{exam\} exam=\{exam\}/);
+  const hub=readFileSync(new URL('src/components/PastExamHub.tsx',root),'utf8');
+  assert.match(hub,/exam==='term2-cvs'\)return <section className="past-exam-hub">[\s\S]*?<CvsPastExams/);
   const component=readFileSync(new URL('src/components/CvsPastExams.tsx',root),'utf8');
   assert.match(component,/aria-disabled=\{locked\}/);
   assert.match(component,/if \(!locked\) onSubmit\(letter\)/);
