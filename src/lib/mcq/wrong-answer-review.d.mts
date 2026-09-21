@@ -1,0 +1,17 @@
+import type {MCQQuestion} from './types';
+import type {PaperQuestion} from './cvs-paper-state.mjs';
+import type {ReviewOutcome} from './review-results.mjs';
+export type RetryQuestion={id:string;prompt:string;options:{id:string;text:string}[];correctIds:string[];revision:string|number;explanation:string;inferred:boolean;mediaQuestion?:MCQQuestion;imageUrl?:string};
+export type ReviewAnswer={optionId:string;correct:boolean;signature:string;answeredAt:string};
+export type WrongReviewState={version:1;answers:Record<string,ReviewAnswer>;run:null|{ids:string[];title:string;index:number;answers:Record<string,ReviewAnswer>}};
+export function wrongReviewStorageKey(attemptId:string):string;
+export function emptyWrongReview():WrongReviewState;
+export function reviewQuestionSignature(question:RetryQuestion):string;
+export function wrongQuestionIds(outcomes:ReviewOutcome[]):string[];
+export function canRetryQuestion(question:RetryQuestion):boolean;
+export function mcqReviewQuestions(questions:MCQQuestion[]):RetryQuestion[];
+export function paperReviewQuestions(questions:PaperQuestion[]):RetryQuestion[];
+export function readWrongReview(raw:string|null,questions:RetryQuestion[],outcomes:ReviewOutcome[]):WrongReviewState;
+export function startWrongReview(state:WrongReviewState,ids:string[],title:string,questions:RetryQuestion[],outcomes:ReviewOutcome[]):WrongReviewState;
+export function answerWrongReview(state:WrongReviewState,question:RetryQuestion,optionId:string,now?:string):WrongReviewState;
+export function wrongReviewStats(ids:string[],answers:Record<string,ReviewAnswer>):{total:number;reviewed:number;correct:number;percent:number};

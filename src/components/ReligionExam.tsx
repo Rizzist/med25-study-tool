@@ -34,7 +34,7 @@ export function ReligionFinalExam({bridgeUrl}:{bridgeUrl:string}) {
   const [view,setView]=useState<'scored'|'archive'>('scored');
   return <section className={styles.root}>
     <nav className={styles.tabs} aria-label="Religion final exam views"><button aria-pressed={view==='scored'} onClick={()=>setView('scored')}><b>Scored past-paper MCQs</b><span>{catalog.counts.scoredPastPaper} source-reviewed keys · saved progress</span></button><button aria-pressed={view==='archive'} onClick={()=>setView('archive')}><b>All papers + answer notes</b><span>All {catalog.counts.allSourceItems} original occurrences · four papers</span></button></nav>
-    <p className={styles.note}>Past papers only. Keys are editorial reviews, not official university answers. All {catalog.counts.ungraded} ungraded originals and {catalog.counts.duplicateSource} repeated copies remain available with notes. A repeated copy is not given extra scored weight. Original spelling and choice order are retained.</p>
+    <p className={styles.note}>Past papers only. Keys are editorial reviews, not official university answers. Each paper can be taken in full, including its repeated questions ({catalog.counts.duplicateSource} overlapping copies across papers). Original spelling and choice order are retained. Read the correction and uncertainty notes for disputed items.</p>
     {view==='scored'?<FinalExam key="religion" exam="term2-religion" bridgeUrl={bridgeUrl}/>:<ReligionPaperArchive/>}
   </section>;
 }

@@ -2,6 +2,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import {cachedJson} from '@/src/lib/mcq/client-cache';
 import {reviewBreakdown,type ReviewCourse,type ReviewOutcome} from '@/src/lib/mcq/review-results.mjs';
+import {wrongReviewStats,type ReviewAnswer} from '@/src/lib/mcq/wrong-answer-review.mjs';
 import {isTerm2Exam} from '@/src/lib/mcq/exams.mjs';
 import {CachedPdfDownload} from './CachedPdfDownload';
 import {StudyIcon} from './StudyIcon';
@@ -95,12 +96,21 @@ export function ReviewTopics({exam,onPractice,disabled=false,subjectOf}:{exam:st
     })}
   </section>;
 }
-export function CourseReviewReport({exam,outcomes,onPractice,reviewOnly=false}:{exam:string;outcomes:ReviewOutcome[];onPractice?:(ids:string[])=>void;reviewOnly?:boolean}) {
+export function CourseReviewReport({exam,outcomes,onPractice,reviewOnly=false,onRetryWrong,reviewAnswers,retryableIds=[]}:{exam:string;outcomes:ReviewOutcome[];onPractice?:(ids:string[])=>void;reviewOnly?:boolean;onRetryWrong?:(ids:string[],title:string)=>void;reviewAnswers?:Record<string,ReviewAnswer>;retryableIds?:string[]}) {
   const {course,error}=useReview(exam),term2=isTerm2Exam(exam);
   if(term2&&!course&&!error)return <p role="status" className="mcq-loading">Matching your answers to review sections…</p>;
   const rows=reviewBreakdown(outcomes,course);
   return <section className="course-review-report" aria-label="Review section results"><h2>Your next review steps</h2><p>Green shows correct answers among those you attempted. Skipped and ungraded items are listed separately. This is a snapshot of tested material, not a mastery score for the entire course.</p>{error&&<p role="alert" className="mcq-alert">Review mapping unavailable. Showing question topics instead; your answers are safe.</p>}
-    <div className="review-bars">{rows.map(row=><article key={row.id}><div className="review-bar-heading"><b>{row.title}</b><strong>{row.percent===null?'Not assessed':row.percent+'%'}</strong></div><div className="review-bar" role="img" aria-label={`${row.correct} correct of ${row.answered} answered`}><span style={{width:(row.percent??0)+'%'}}/></div><small>{row.correct}/{row.answered} answered correctly · {row.skipped} skipped{row.ungraded?' · '+row.ungraded+' ungraded':''}{row.uncertain?' · Suggested review match; confirm relevance':''}</small><div className="review-bar-actions">{course&&row.sectionId&&<a href={sectionUrl(course,row.sectionId)} target="_blank" rel="noreferrer">{row.missedIds.length?'Review this section':'Revisit section'} ↗</a>}{onPractice&&row.missedIds.length>0&&<button type="button" onClick={()=>onPractice(row.missedIds)}>{reviewOnly?'Review':'Retry'} {row.missedIds.length} to strengthen this</button>}</div></article>)}</div>
+    <div className="review-bars">{rows.map(row=>{
+      const retryIds=row.wrongIds.filter(id=>retryableIds.includes(id)),review=wrongReviewStats(retryIds,reviewAnswers??{});
+      return <article key={row.id}><div className="review-bar-heading"><b>{row.title}</b><strong>{row.percent===null?'Not assessed':row.percent+'%'}</strong></div>
+        <div className={'review-comparison'+(reviewAnswers?' has-review':'')}>
+          <div>{reviewAnswers&&<small>Original attempt</small>}<div className="review-bar" role="img" aria-label={`Original attempt: ${row.correct} correct of ${row.answered} answered`}><span style={{width:(row.percent??0)+'%'}}/></div><small>{row.correct}/{row.answered} answered correctly · {row.skipped} skipped{row.ungraded?' · '+row.ungraded+' ungraded':''}</small></div>
+          {reviewAnswers&&<div className="review-comparison-retry"><small>Review · {review.total?review.percent+'% corrected':'No wrong answers to retry'}</small>{review.total>0&&<><div className="review-bar review-bar-yellow" role="img" aria-label={`Review: ${review.correct} of ${review.total} originally wrong questions corrected; ${review.reviewed} reviewed`}><span style={{width:review.percent+'%'}}/></div><small>{review.correct}/{review.total} corrected · {review.reviewed} reviewed</small></>}</div>}
+        </div>
+        {row.uncertain&&<small>Suggested review match; confirm relevance</small>}
+        <div className="review-bar-actions">{course&&row.sectionId&&<a href={sectionUrl(course,row.sectionId)} target="_blank" rel="noreferrer">{row.missedIds.length?'Review this section':'Revisit section'} ↗</a>}{onRetryWrong&&retryIds.length>0&&<button type="button" onClick={()=>onRetryWrong(retryIds,row.title)}>Redo wrong ({retryIds.length})</button>}{onPractice&&row.missedIds.length>0&&<button type="button" onClick={()=>onPractice(row.missedIds)}>{reviewOnly?'Review':'Retry'} {row.missedIds.length} to strengthen this</button>}</div></article>;
+    })}</div>
     {!rows.length&&<p>Complete some questions to see your review priorities.</p>}
     {term2&&course&&<details><summary>What this session did not assess</summary><p>{course.sections.filter(s=>!rows.some(r=>r.sectionId===s.id&&r.answered>0&&!r.uncertain)).length} review sections were not tested. They are not counted as incorrect or mastered. Use the Review topics tab for the full table of contents.</p></details>}
   </section>;

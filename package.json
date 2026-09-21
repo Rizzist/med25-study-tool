@@ -32,7 +32,7 @@
     "reviews:generate": "node scripts/build-review-runtime.mjs && node scripts/build-pdf-manifest.mjs",
     "reviews:check": "node scripts/build-review-runtime.mjs --check",
     "pdfs:check": "node scripts/build-pdf-manifest.mjs --check && node --test tests/pdf-cache.test.mjs",
-    "mcq:check": "node --test tests/react-hooks.test.mjs tests/mcq-refactor.test.mjs tests/cvs-papers.test.mjs tests/cvs-state-upgrade.test.mjs tests/cvs-core-exam.test.mjs tests/cvs-noncore-anatomy.test.mjs tests/cvs-ai-combined.test.mjs",
+    "mcq:check": "node --test tests/react-hooks.test.mjs tests/mcq-refactor.test.mjs tests/final-exam-completion.test.mjs tests/wrong-answer-review.test.mjs tests/cvs-papers.test.mjs tests/cvs-state-upgrade.test.mjs tests/cvs-core-exam.test.mjs tests/cvs-noncore-anatomy.test.mjs tests/cvs-ai-combined.test.mjs",
     "hooks:check": "node --test tests/react-hooks.test.mjs",
     "test": "npm run pdfs:check && npm run mcq:check && npm run reviews:check && node --test tests/anatomy-location.test.mjs && npm run build",
     "test:legacy": "node --test tests/*.test.mjs",

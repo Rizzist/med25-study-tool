@@ -270,6 +270,10 @@ textarea:focus { border-color:var(--green); box-shadow:0 0 0 3px #126b4b16; }
 .final-options button.correct>span { background:var(--green); color:#fff; }
 .final-options button.wrong { border-color:#cd7f70; background:#fff0ed; opacity:1; }
 .final-options button.wrong>span { background:var(--red); color:#fff; }
+.final-options.inferred-answer button.correct, .instant-feedback.inferred-answer.correct { background:#d0ead8; border-color:#78ac8b; color:#155532; }
+.final-options.inferred-answer button.wrong, .instant-feedback.inferred-answer.wrong { background:#f2d2ce; border-color:#b87970; color:#8b2a23; }
+.answer-review-evidence { margin-top:1rem; font-size:.85rem; overflow-wrap:anywhere; }
+.answer-review-evidence summary { cursor:pointer; font-weight:600; }
 .instant-feedback { margin-top:13px; padding:15px; border:1px solid #a8c7b8; border-left:4px solid var(--green); border-radius:14px; background:#fff; }
 .instant-feedback.wrong { border-color:#dbb1a9; border-left-color:var(--red); }
 .instant-feedback-title { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:11px; }

@@ -1,5 +1,12 @@
 export const FINAL_EXAM_STORAGE_KEY = "med25-final-exam-v1";
 
+// Keep live grading and restored attempts consistent for flawed source items
+// with genuinely equivalent alternatives. Preferred answer remains explicit.
+export function isFinalAnswerCorrect(question, optionId) {
+  return question.options.some(option=>option.id===optionId)
+    && (question.correctOptionId===optionId || question.acceptedOptionIds?.includes(optionId)===true);
+}
+
 export const FINAL_EXAM_SESSION_KEYS = {
   july25Telegram: "july25:telegram-past-papers",
   july29Telegram: "july29:telegram-past-papers",
@@ -60,7 +67,7 @@ export function reconcileFinalExamSession(value, questions, fingerprint) {
     const question = validQuestions.get(id);
     const answer = cleanAnswer(sourceAnswers[id], question);
     if (answer) {
-      answer.correct = answer.selectedOptionId === question.correctOptionId;
+      answer.correct = isFinalAnswerCorrect(question, answer.selectedOptionId);
       answers[id] = answer;
     }
   }

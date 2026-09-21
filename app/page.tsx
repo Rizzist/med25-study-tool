@@ -13,10 +13,11 @@ import type { MCQMedia, MCQQuestion, StudentAnswer } from '@/src/lib/mcq/types';
 import { isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
 import { createEmptyProgress, parseProgress, type StudyProgress } from '@/src/lib/mcq/study-progress.mjs';
 import { cachedJson, rememberQuestions, recallQuestions, setQuestionCacheVersion } from '@/src/lib/mcq/client-cache';
+import {mcqReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
 const PastExamHub = dynamic(() => import('@/src/components/PastExamHub').then(m=>m.PastExamHub), {loading:()=> <p role="status">Loading past papers…</p>});
 const ReviewTopics = dynamic(() => import('@/src/components/CourseReview').then(m=>m.ReviewTopics), {loading:()=> <p role="status">Loading review sections…</p>});
 const ReviewDownloads = dynamic(() => import('@/src/components/CourseReview').then(m=>m.ReviewDownloads), {loading:()=> <p role="status">Loading review PDFs…</p>});
-const CourseReviewReport = dynamic(() => import('@/src/components/CourseReview').then(m=>m.CourseReviewReport));
+const WrongAnswerReview = dynamic(() => import('@/src/components/WrongAnswerReview').then(m=>m.WrongAnswerReview));
 type BiochemistryStudyMode = 'learn' | 'exam';
 type BiochemistryChapterProgress = (typeof biochemistryChapters)[number] & {questionCount:number;questionIds:string[];seenCount:number;unseenCount:number;wrongCount:number;repairCount:number;masteredCount:number;mastery:number};
 
@@ -991,7 +992,6 @@ export default function Home() {
     const correctCount = questions.filter((question) => isCorrect(question, answers[question.id])).length;
     const answeredCount = questions.filter((question) => isAnswered(answers[question.id])).length;
     const flaggedCount = questions.filter((question) => answers[question.id]?.flagged).length;
-    const missedIds = questions.filter((question) => !isCorrect(question, answers[question.id])).map((question) => question.id);
     const visible = questions.filter((question) => reviewFilter === "all" || (reviewFilter === "wrong" ? !isCorrect(question, answers[question.id]) : answers[question.id]?.flagged));
     const score = Math.round((correctCount / questions.length) * 100);
     return <main className="review-shell">
@@ -999,8 +999,8 @@ export default function Home() {
       <section className="review-page">
         <div className="score-hero"><div><span className="eyebrow">{studyMode === "exam" ? isTerm2Exam(exam) ? "Source-based test complete" : "Chapter exam complete" : "Learning sprint complete"}{activeBiochemistryChapterId ? ` · ${biochemistryChapterById(activeBiochemistryChapterId)?.shortTitle}` : ""}</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Every option now explains the concept it represents, so repair the misses while your reasoning is fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
         <div className="result-stats"><div><strong>{correctCount}</strong><span>Correct</span></div><div><strong>{questions.length - correctCount}</strong><span>To repair</span></div><div><strong>{questions.length - answeredCount}</strong><span>Unanswered</span></div><div><strong>{flaggedCount}</strong><span>Flagged</span></div></div>
-        <CourseReviewReport exam={exam} outcomes={questions.map(q=>({questionId:q.id,answered:isAnswered(answers[q.id]),correct:isCorrect(q,answers[q.id]),topic:q.topic}))} onPractice={ids=>void startSession('all',ids,{limit:Math.min(ids.length,sessionSize)})}/>
-        <div className="review-toolbar"><div className="review-filters">{(["wrong", "flagged", "all"] as const).map((value) => <button key={value} className={reviewFilter === value ? "active" : ""} onClick={() => setReviewFilter(value)}>{value === "wrong" ? `Wrong (${questions.length - correctCount})` : value === "flagged" ? `Flagged (${flaggedCount})` : `All (${questions.length})`}</button>)}</div><div className="review-actions">{missedIds.length > 0 && <button className="retry-button" onClick={() => void startSession("wrong", missedIds, { biochemistryChapterId: activeBiochemistryChapterId, respiratoryScopeId: activeRespiratoryScopeId, mode: "learn", limit: missedIds.length })}>Retry these {missedIds.length}</button>}<button className="primary" onClick={() => void startSession(collection, activeRespiratoryPracticeIds ?? activePracticalPracticeIds ?? activeCoursePracticeIds, { biochemistryChapterId: activeBiochemistryChapterId, respiratoryScopeId: activeRespiratoryScopeId, mode: studyMode, limit: sessionSize })}>New sprint</button></div></div>
+        <WrongAnswerReview exam={exam} attemptId={`practice:${exam}:${sessionStartedAt}`} questions={mcqReviewQuestions(questions)} outcomes={questions.map(q=>({questionId:q.id,answered:isAnswered(answers[q.id]),correct:isCorrect(q,answers[q.id]),topic:q.topic}))}/>
+        <div className="review-toolbar"><div className="review-filters">{(["wrong", "flagged", "all"] as const).map((value) => <button key={value} className={reviewFilter === value ? "active" : ""} onClick={() => setReviewFilter(value)}>{value === "wrong" ? `Wrong (${questions.length - correctCount})` : value === "flagged" ? `Flagged (${flaggedCount})` : `All (${questions.length})`}</button>)}</div><div className="review-actions"><button className="primary" onClick={() => void startSession(collection, activeRespiratoryPracticeIds ?? activePracticalPracticeIds ?? activeCoursePracticeIds, { biochemistryChapterId: activeBiochemistryChapterId, respiratoryScopeId: activeRespiratoryScopeId, mode: studyMode, limit: sessionSize })}>New sprint</button></div></div>
         <div className="review-list">
           {!visible.length && <div className="empty-review"><b>Nothing in this view.</b><span>Switch the filter to inspect all answers.</span></div>}
           {visible.map((question) => {

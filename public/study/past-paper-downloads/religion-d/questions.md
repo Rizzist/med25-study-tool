@@ -1,15 +1,13 @@
 # 100-item compilation
 
-Supplied source paper/collection. Preserve all occurrences, including duplicates and ungraded questions. Editorial teaching keys are not official university keys.
+Original questions and choice order. Editorial study answers, not an official university key. Inferred and corrected answers retain confidence, evidence and wording limitations. Repeated items remain in each complete source paper.
 
 Collection ID: religion-d
-Course: term2-religion
-
-100 retained source records; 100 transcribed prompts; 44 currently graded questions. This is a source collection export, not a claim that the selected items constitute a complete historical examination. Dates are reproduced only as qualified source metadata.
+Course: Religion
 
 ## Original sources
 
-- RELIGION_FINAL[1].docx: /study/religion/past-papers/compilation-100.pdf — Original source document may contain visible marks.
+- RELIGION_FINAL[1].docx: /study/religion/past-papers/compilation-100.pdf — Original document; visible marks are not authoritative.
 
 ## Questions
 
@@ -22,7 +20,7 @@ B. Secondary principles
 C. Rituals and festivals
 D. Rights and duties
 
-Source: Item 1 · PDF page 1 — /study/religion/past-papers/compilation-100.pdf#page=1
+Source: Item 1 · PDF page 1
 
 ### 2 · D2
 
@@ -33,7 +31,7 @@ B. They will be saved
 C. They will not face the day of judgement
 D. Some will be saved
 
-Source: Item 2 · PDF page 1 — /study/religion/past-papers/compilation-100.pdf#page=1
+Source: Item 2 · PDF page 1
 
 ### 3 · D3
 
@@ -44,7 +42,7 @@ B. They will be saved
 C. They will be tested and if they accept Islam,they will be saved
 D. They will be forced to accept Islam
 
-Source: Item 3 · PDF page 1 — /study/religion/past-papers/compilation-100.pdf#page=1
+Source: Item 3 · PDF page 1
 
 ### 4 · D4
 
@@ -55,7 +53,7 @@ B. Qur’an, Mohammed(PBUH),Muslim
 C. Islam, Qur'an, Mohammad(PBUH)
 D. Qur’an, Islam, Mohammad(PBUH)
 
-Source: Item 4 · PDF page 1 — /study/religion/past-papers/compilation-100.pdf#page=1
+Source: Item 4 · PDF page 1
 
 ### 5 · D5
 
@@ -66,7 +64,7 @@ B. Jesus
 C. Mosses
 D. Both A and B
 
-Source: Item 5 · PDF page 1 — /study/religion/past-papers/compilation-100.pdf#page=1
+Source: Item 5 · PDF page 1
 
 ### 6 · D6
 
@@ -77,7 +75,7 @@ B. Monotheism
 C. Pluralism
 D. none
 
-Source: Item 6 · PDF page 2 — /study/religion/past-papers/compilation-100.pdf#page=2
+Source: Item 6 · PDF page 2
 
 ### 7 · D7
 
@@ -88,7 +86,7 @@ B. Christianity
 C. Judaism
 D. Hinduism
 
-Source: Item 7 · PDF page 2 — /study/religion/past-papers/compilation-100.pdf#page=2
+Source: Item 7 · PDF page 2
 
 ### 8 · D8
 
@@ -99,7 +97,7 @@ B. Appointment of prophet Isa (PBUH) as the messenger of Allah
 C. Appointment of prophet Musa (PBUH) as the messenger of Allah
 D. None of the above
 
-Source: Item 8 · PDF page 2 — /study/religion/past-papers/compilation-100.pdf#page=2
+Source: Item 8 · PDF page 2
 
 ### 9 · D9
 
@@ -110,7 +108,7 @@ B. Prophet Muhammad ﷺ (PBUH)
 C. Prophet Musa (PBUH)
 D. Prophet Ismail (PBUH)
 
-Source: Item 9 · PDF page 2 — /study/religion/past-papers/compilation-100.pdf#page=2
+Source: Item 9 · PDF page 2
 
 ### 10 · D10
 
@@ -121,7 +119,7 @@ B. People who are ignorant about the message of Islam
 C. Both A and B
 D. None of the above
 
-Source: Item 10 · PDF page 2 — /study/religion/past-papers/compilation-100.pdf#page=2
+Source: Item 10 · PDF page 2
 
 ### 11 · D11
 
@@ -132,7 +130,7 @@ B. Polytheism
 C. Both A and B
 D. None of the above
 
-Source: Item 11 · PDF page 3 — /study/religion/past-papers/compilation-100.pdf#page=3
+Source: Item 11 · PDF page 3
 
 ### 12 · D12
 
@@ -143,7 +141,7 @@ B. They will be tested by Allah after death
 C. They will be sent to Jahannam
 D. They will be sent to Heaven
 
-Source: Item 12 · PDF page 3 — /study/religion/past-papers/compilation-100.pdf#page=3
+Source: Item 12 · PDF page 3
 
 ### 13 · D13
 
@@ -154,7 +152,7 @@ B. They will be sent to hell
 C. They will be tested
 D. None of them
 
-Source: Item 13 · PDF page 3 — /study/religion/past-papers/compilation-100.pdf#page=3
+Source: Item 13 · PDF page 3
 
 ### 14 · D14
 
@@ -165,7 +163,7 @@ B. The faith of Jews and Christians are accepted after appearing of Islam
 C. None of them
 D. Both of them
 
-Source: Item 14 · PDF page 3 — /study/religion/past-papers/compilation-100.pdf#page=3
+Source: Item 14 · PDF page 3
 
 ### 15 · D15
 
@@ -176,7 +174,7 @@ B. Christianity
 C. Judaism
 D. Buddhism
 
-Source: Item 15 · PDF page 3 — /study/religion/past-papers/compilation-100.pdf#page=3
+Source: Item 15 · PDF page 3
 
 ### 16 · D16
 
@@ -187,7 +185,7 @@ B. it follows the teachings of the Holy Books
 C. it doesn't present any belief
 D. none of the above
 
-Source: Item 16 · PDF page 4 — /study/religion/past-papers/compilation-100.pdf#page=4
+Source: Item 16 · PDF page 4
 
 ### 17 · D17
 
@@ -198,7 +196,7 @@ B. is to provide guidance to the people
 C. is to pull a believer away from the stray path
 D. is to provide knowledge about religion
 
-Source: Item 17 · PDF page 4 — /study/religion/past-papers/compilation-100.pdf#page=4
+Source: Item 17 · PDF page 4
 
 ### 18 · D18
 
@@ -209,7 +207,7 @@ B. short, river
 C. temporary, bridge
 D. short , ocean
 
-Source: Item 18 · PDF page 4 — /study/religion/past-papers/compilation-100.pdf#page=4
+Source: Item 18 · PDF page 4
 
 ### 19 · D19
 
@@ -220,7 +218,7 @@ B. 1
 C. 6
 D. 5
 
-Source: Item 19 · PDF page 4 — /study/religion/past-papers/compilation-100.pdf#page=4
+Source: Item 19 · PDF page 4
 
 ### 20 · D20
 
@@ -231,7 +229,7 @@ B. practice
 C. meditation
 D. action
 
-Source: Item 20 · PDF page 4 — /study/religion/past-papers/compilation-100.pdf#page=4
+Source: Item 20 · PDF page 4
 
 ### 21 · D21
 
@@ -242,7 +240,7 @@ B. intellect
 C. belief
 D. faith
 
-Source: Item 21 · PDF page 5 — /study/religion/past-papers/compilation-100.pdf#page=5
+Source: Item 21 · PDF page 5
 
 ### 22 · D22
 
@@ -253,7 +251,7 @@ B. Holy Prophets, Commandments
 C. Morals, Heaven
 D. Prosperity, Rewards
 
-Source: Item 22 · PDF page 5 — /study/religion/past-papers/compilation-100.pdf#page=5
+Source: Item 22 · PDF page 5
 
 ### 23 · D23
 
@@ -264,7 +262,7 @@ B. he follows the guidance of Allah
 C. he follows the set of rules given by Allah
 D. he does charity work
 
-Source: Item 23 · PDF page 5 — /study/religion/past-papers/compilation-100.pdf#page=5
+Source: Item 23 · PDF page 5
 
 ### 24 · D24
 
@@ -275,7 +273,7 @@ B. commandments, values, beliefs
 C. beliefs, orders, values
 D. Quran, God, commandments
 
-Source: Item 24 · PDF page 5 — /study/religion/past-papers/compilation-100.pdf#page=5
+Source: Item 24 · PDF page 5
 
 ### 25 · D25
 
@@ -286,7 +284,7 @@ B. makes life easy to live
 C. provides peace of mind
 D. Provides happiness
 
-Source: Item 25 · PDF page 5 — /study/religion/past-papers/compilation-100.pdf#page=5
+Source: Item 25 · PDF page 5
 
 ### 26 · D26
 
@@ -297,7 +295,7 @@ B. greed
 C. nihilism
 D. capitalism
 
-Source: Item 26 · PDF page 6 — /study/religion/past-papers/compilation-100.pdf#page=6
+Source: Item 26 · PDF page 6
 
 ### 27 · D27
 
@@ -308,7 +306,7 @@ B. false
 C. both of the above
 D. none of the above
 
-Source: Item 27 · PDF page 6 — /study/religion/past-papers/compilation-100.pdf#page=6
+Source: Item 27 · PDF page 6
 
 ### 28 · D28
 
@@ -319,7 +317,7 @@ B. Quran, peacefulness
 C. God, guidance
 D. Quran, betterment
 
-Source: Item 28 · PDF page 6 — /study/religion/past-papers/compilation-100.pdf#page=6
+Source: Item 28 · PDF page 6
 
 ### 29 · D29
 
@@ -330,7 +328,7 @@ B. the unknown, life known
 C. aim of life, life a success
 D. aim of life, life meaningful
 
-Source: Item 29 · PDF page 6 — /study/religion/past-papers/compilation-100.pdf#page=6
+Source: Item 29 · PDF page 6
 
 ### 30 · D30
 
@@ -341,7 +339,7 @@ B. a bridge to pass
 C. a mountain to overcome
 D. short
 
-Source: Item 30 · PDF page 6 — /study/religion/past-papers/compilation-100.pdf#page=6
+Source: Item 30 · PDF page 6
 
 ### 31 · D31
 
@@ -352,7 +350,7 @@ B. Both of them
 C. None of them
 D. Technical
 
-Source: Item 31 · PDF page 7 — /study/religion/past-papers/compilation-100.pdf#page=7
+Source: Item 31 · PDF page 7
 
 ### 32 · D32
 
@@ -363,7 +361,7 @@ B. Day of judgement
 C. Religion
 D. All of the above
 
-Source: Item 32 · PDF page 7 — /study/religion/past-papers/compilation-100.pdf#page=7
+Source: Item 32 · PDF page 7
 
 ### 33 · D33
 
@@ -374,7 +372,7 @@ B. Day of judgement
 C. Method or way
 D. All of them
 
-Source: Item 33 · PDF page 7 — /study/religion/past-papers/compilation-100.pdf#page=7
+Source: Item 33 · PDF page 7
 
 ### 34 · D34
 
@@ -385,7 +383,7 @@ B. Mecca in 330AD
 C. Mecca in 570AD
 D. None of the above
 
-Source: Item 34 · PDF page 7 — /study/religion/past-papers/compilation-100.pdf#page=7
+Source: Item 34 · PDF page 7
 
 ### 35 · D35
 
@@ -396,7 +394,7 @@ B. He lost his father before he was born
 C. After he lost his mother
 D. None of the above
 
-Source: Item 35 · PDF page 7 — /study/religion/past-papers/compilation-100.pdf#page=7
+Source: Item 35 · PDF page 7
 
 ### 36 · D36
 
@@ -407,7 +405,7 @@ B. When he was 4 years old
 C. When was 6 years old
 D. None of the above.
 
-Source: Item 36 · PDF page 7 — /study/religion/past-papers/compilation-100.pdf#page=7
+Source: Item 36 · PDF page 7
 
 ### 37 · D37
 
@@ -418,7 +416,7 @@ B. After he lost his father
 C. After 5 years
 D. None of the above
 
-Source: Item 37 · PDF page 8 — /study/religion/past-papers/compilation-100.pdf#page=8
+Source: Item 37 · PDF page 8
 
 ### 38 · D38
 
@@ -429,7 +427,7 @@ B. 30 years old
 C. 45 years old
 D. 40 years old
 
-Source: Item 38 · PDF page 8 — /study/religion/past-papers/compilation-100.pdf#page=8
+Source: Item 38 · PDF page 8
 
 ### 39 · D39
 
@@ -440,7 +438,7 @@ B. Through the dream
 C. Directly from angel Gabriel
 D. All of the above
 
-Source: Item 39 · PDF page 8 — /study/religion/past-papers/compilation-100.pdf#page=8
+Source: Item 39 · PDF page 8
 
 ### 40 · D40
 
@@ -451,7 +449,7 @@ B. 18th of Rajab
 C. 10th of Rajab
 D. 27th of Rajab
 
-Source: Item 40 · PDF page 8 — /study/religion/past-papers/compilation-100.pdf#page=8
+Source: Item 40 · PDF page 8
 
 ### 41 · D41
 
@@ -462,7 +460,7 @@ B. After he turn 20 years old
 C. After 3 years of his Prophethood
 D. None of the above
 
-Source: Item 41 · PDF page 8 — /study/religion/past-papers/compilation-100.pdf#page=8
+Source: Item 41 · PDF page 8
 
 ### 42 · D42
 
@@ -473,7 +471,7 @@ B. His aunt
 C. His uncle
 D. None of the above
 
-Source: Item 42 · PDF page 9 — /study/religion/past-papers/compilation-100.pdf#page=9
+Source: Item 42 · PDF page 9
 
 ### 43 · D43
 
@@ -484,7 +482,7 @@ B. Keep him out of the hands of Jews
 C. Keep him out of the hands of Christian
 D. All of the above
 
-Source: Item 43 · PDF page 9 — /study/religion/past-papers/compilation-100.pdf#page=9
+Source: Item 43 · PDF page 9
 
 ### 44 · D44
 
@@ -495,7 +493,7 @@ B. Hell
 C. Peace
 D. None of the above
 
-Source: Item 44 · PDF page 9 — /study/religion/past-papers/compilation-100.pdf#page=9
+Source: Item 44 · PDF page 9
 
 ### 45 · D45
 
@@ -506,7 +504,7 @@ B. Fatima
 C. Khadija
 D. Aminah
 
-Source: Item 45 · PDF page 9 — /study/religion/past-papers/compilation-100.pdf#page=9
+Source: Item 45 · PDF page 9
 
 ### 46 · D46
 
@@ -517,7 +515,7 @@ B. about 60 people
 C. about 1200 people
 D. about 40 people
 
-Source: Item 46 · PDF page 9 — /study/religion/past-papers/compilation-100.pdf#page=9
+Source: Item 46 · PDF page 9
 
 ### 47 · D47
 
@@ -528,7 +526,7 @@ B. Ayesha
 C. Salima
 D. None of the above
 
-Source: Item 47 · PDF page 10 — /study/religion/past-papers/compilation-100.pdf#page=10
+Source: Item 47 · PDF page 10
 
 ### 48 · D48
 
@@ -539,7 +537,7 @@ B. The Holy Quran has not mentioned this story at all.
 C. The Holy Quran says the body of Pharaoh shall be saved while the Bible is silent about it.
 D. The Bible has narrated it more accurate and more complete
 
-Source: Item 48 · PDF page 10 — /study/religion/past-papers/compilation-100.pdf#page=10
+Source: Item 48 · PDF page 10
 
 ### 49 · D49
 
@@ -550,7 +548,7 @@ B. The followers of all religions are saved.
 C. Both A and B
 D. None of the above
 
-Source: Item 49 · PDF page 10 — /study/religion/past-papers/compilation-100.pdf#page=10
+Source: Item 49 · PDF page 10
 
 ### 50 · D50
 
@@ -561,7 +559,7 @@ B. The father of many nations
 C. The father of the Hebrew nation
 D. None
 
-Source: Item 50 · PDF page 10 — /study/religion/past-papers/compilation-100.pdf#page=10
+Source: Item 50 · PDF page 10
 
 ### 51 · D51
 
@@ -572,7 +570,7 @@ B. Reward, Religion and way/method
 C. Way/method, religion and judgment
 D. All of the above
 
-Source: Item 51 · PDF page 10 — /study/religion/past-papers/compilation-100.pdf#page=10
+Source: Item 51 · PDF page 10
 
 ### 52 · D52
 
@@ -583,7 +581,7 @@ B. This world is a temporary and passing one but the Hereafter is the permanent 
 C. This world is a simple introduction and the hereafter we will have introduction also in a more complicated form.
 D. Both A&B
 
-Source: Item 52 · PDF page 11 — /study/religion/past-papers/compilation-100.pdf#page=11
+Source: Item 52 · PDF page 11
 
 ### 53 · D53
 
@@ -594,7 +592,7 @@ B. Intention
 C. Purity
 D. None of the above
 
-Source: Item 53 · PDF page 11 — /study/religion/past-papers/compilation-100.pdf#page=11
+Source: Item 53 · PDF page 11
 
 ### 54 · D54
 
@@ -605,7 +603,7 @@ B. It is born out of the civilizations of Post-Renaissance West.
 C. Desiderius Erasmus believed that the ideals of Humanism may not fit within the Christian Faith.
 D. Socrates was a medieval theologian who abused people's freedom of expression and research.
 
-Source: Item 54 · PDF page 11 — /study/religion/past-papers/compilation-100.pdf#page=11
+Source: Item 54 · PDF page 11
 
 ### 55 · D55
 
@@ -616,7 +614,7 @@ B. Invitation to Prophet hood.
 C. Completing Virtues of Ethics.
 D. Invitation to Truthfulness.
 
-Source: Item 55 · PDF page 11 — /study/religion/past-papers/compilation-100.pdf#page=11
+Source: Item 55 · PDF page 11
 
 ### 56 · D56
 
@@ -627,7 +625,7 @@ B. This verse was revealed when Prophet wanted to go for Badr War
 C. It was revealed to order Prophet to begin the secret invitation.
 D. It was revealed to order Prophet to begin the public invitation.
 
-Source: Item 56 · PDF page 12 — /study/religion/past-papers/compilation-100.pdf#page=12
+Source: Item 56 · PDF page 12
 
 ### 57 · D57
 
@@ -638,7 +636,7 @@ B. After the demise of the Holy Quran, people must cling firmly to both the Holy
 C. As a Muslim you must have both good action and good faith.
 D. After the demise of the Holy Quran, people must cling firmly to both the Holy Quran and also Sunnah.
 
-Source: Item 57 · PDF page 12 — /study/religion/past-papers/compilation-100.pdf#page=12
+Source: Item 57 · PDF page 12
 
 ### 58 · D58
 
@@ -649,7 +647,7 @@ B. Prophet Moses.
 C. Prophet Jesus Christ.
 D. Prophet Muhammad
 
-Source: Item 58 · PDF page 12 — /study/religion/past-papers/compilation-100.pdf#page=12
+Source: Item 58 · PDF page 12
 
 ### 59 · D59
 
@@ -660,7 +658,7 @@ B. All the prophets.
 C. The Five prophets of Islam who were blessed with the Divine books
 D. None of the above
 
-Source: Item 59 · PDF page 12 — /study/religion/past-papers/compilation-100.pdf#page=12
+Source: Item 59 · PDF page 12
 
 ### 60 · D60
 
@@ -671,7 +669,7 @@ B. The praised
 C. Both of them
 D. None of them
 
-Source: Item 60 · PDF page 12 — /study/religion/past-papers/compilation-100.pdf#page=12
+Source: Item 60 · PDF page 12
 
 ### 61 · D61
 
@@ -682,7 +680,7 @@ B. They wanted to crucify him but God saved him and he was ascended to the Heave
 C. Both the Bible and Quran say the same thing
 D. None of the above.
 
-Source: Item 61 · PDF page 13 — /study/religion/past-papers/compilation-100.pdf#page=13
+Source: Item 61 · PDF page 13
 
 ### 62 · D62
 
@@ -693,7 +691,7 @@ B. Because after he left them they started worshiping a Golden calf
 C. Because they disobeyed him
 D. Because they were bad
 
-Source: Item 62 · PDF page 13 — /study/religion/past-papers/compilation-100.pdf#page=13
+Source: Item 62 · PDF page 13
 
 ### 63 · D63
 
@@ -704,7 +702,7 @@ B. You must not commit murder
 C. You should pray
 D. You shouldn’t steal
 
-Source: Item 63 · PDF page 13 — /study/religion/past-papers/compilation-100.pdf#page=13
+Source: Item 63 · PDF page 13
 
 ### 64 · D64
 
@@ -715,7 +713,7 @@ B. There are 2 Bibles and christians only believe in one
 C. There are 2 Bibles and christians believe in both of them
 D. There are 3 Bibles
 
-Source: Item 64 · PDF page 13 — /study/religion/past-papers/compilation-100.pdf#page=13
+Source: Item 64 · PDF page 13
 
 ### 65 · D65
 
@@ -726,7 +724,7 @@ B. Deuteronomy- Exodus- numbers- genesis- Leviticus
 C. Genesis -Deuteronomy- Exodus- numbers- Leviticus
 D. Genesis – Exodus – Leviticus – Numbers- Deuteronomy
 
-Source: Item 65 · PDF page 14 — /study/religion/past-papers/compilation-100.pdf#page=14
+Source: Item 65 · PDF page 14
 
 ### 66 · D66
 
@@ -737,7 +735,7 @@ B. A very normal and insulting one
 C. It is just like Qur’an
 D. It didn’t mention her
 
-Source: Item 66 · PDF page 14 — /study/religion/past-papers/compilation-100.pdf#page=14
+Source: Item 66 · PDF page 14
 
 ### 67 · D67
 
@@ -748,7 +746,7 @@ B. She was a normal woman
 C. She was a bad woman
 D. Just like the bible
 
-Source: Item 67 · PDF page 14 — /study/religion/past-papers/compilation-100.pdf#page=14
+Source: Item 67 · PDF page 14
 
 ### 68 · D68
 
@@ -759,7 +757,7 @@ B. he died normally
 C. he got ascended to heaven
 D. he was crucified then after three days he was resurrected
 
-Source: Item 68 · PDF page 14 — /study/religion/past-papers/compilation-100.pdf#page=14
+Source: Item 68 · PDF page 14
 
 ### 69 · D69
 
@@ -770,7 +768,7 @@ B. He died normally
 C. They crucified someone who looks like him while the real one ascended to heaven
 D. None of the above
 
-Source: Item 69 · PDF page 14 — /study/religion/past-papers/compilation-100.pdf#page=14
+Source: Item 69 · PDF page 14
 
 ### 70 · D70
 
@@ -781,7 +779,7 @@ B. Moses
 C. The prophet Muhammad (saw)
 D. Ibrahim
 
-Source: Item 70 · PDF page 14 — /study/religion/past-papers/compilation-100.pdf#page=14
+Source: Item 70 · PDF page 14
 
 ### 71 · D71
 
@@ -792,7 +790,7 @@ B. Beauty
 C. Both A and B.
 D. None of the above
 
-Source: Item 71 · PDF page 15 — /study/religion/past-papers/compilation-100.pdf#page=15
+Source: Item 71 · PDF page 15
 
 ### 72 · D72
 
@@ -803,7 +801,7 @@ B. If it is necessary for preventing of a life-threatening epidemic disease
 C. If it is necessary for new scientific discoveries and researches.
 D. If the life of another person is depended on this dissection.
 
-Source: Item 72 · PDF page 15 — /study/religion/past-papers/compilation-100.pdf#page=15
+Source: Item 72 · PDF page 15
 
 ### 73 · D73
 
@@ -814,7 +812,7 @@ B. He asks her to reveal more than the affected area
 C. He directly touches the affected area only
 D. All of the above is permitted
 
-Source: Item 73 · PDF page 15 — /study/religion/past-papers/compilation-100.pdf#page=15
+Source: Item 73 · PDF page 15
 
 ### 74 · D74
 
@@ -825,7 +823,7 @@ B. Money
 C. An exit from a harsh situation
 D. All of the above
 
-Source: Item 74 · PDF page 15 — /study/religion/past-papers/compilation-100.pdf#page=15
+Source: Item 74 · PDF page 15
 
 ### 75 · D75
 
@@ -836,7 +834,7 @@ B. Care about people’s problems
 C. Care about people’s affairs
 D. Both 2 and 3
 
-Source: Item 75 · PDF page 15 — /study/religion/past-papers/compilation-100.pdf#page=15
+Source: Item 75 · PDF page 15
 
 ### 76 · D76
 
@@ -847,7 +845,7 @@ B. Is not responsible
 C. Must be fired
 D. None of the above
 
-Source: Item 76 · PDF page 16 — /study/religion/past-papers/compilation-100.pdf#page=16
+Source: Item 76 · PDF page 16
 
 ### 77 · D77
 
@@ -858,7 +856,7 @@ B. Both of them had a vizier who was their brothers.
 C. Both of them because of enemies escaped and migrated.
 D. Both of them died normally
 
-Source: Item 77 · PDF page 16 — /study/religion/past-papers/compilation-100.pdf#page=16
+Source: Item 77 · PDF page 16
 
 ### 78 · D78
 
@@ -869,7 +867,7 @@ B. He died normally
 C. he was raised to Heaven without being put on the cross
 D. none of the above
 
-Source: Item 78 · PDF page 16 — /study/religion/past-papers/compilation-100.pdf#page=16
+Source: Item 78 · PDF page 16
 
 ### 79 · D79
 
@@ -880,7 +878,7 @@ B. The Head of the Quraysh
 C. Shaytan
 D. Daru al Nadwah
 
-Source: Item 79 · PDF page 16 — /study/religion/past-papers/compilation-100.pdf#page=16
+Source: Item 79 · PDF page 16
 
 ### 80 · D80
 
@@ -891,7 +889,7 @@ B. Cave of Nadwah
 C. Cave of Najaf
 D. Cave of Thawr
 
-Source: Item 80 · PDF page 17 — /study/religion/past-papers/compilation-100.pdf#page=17
+Source: Item 80 · PDF page 17
 
 ### 81 · D81
 
@@ -902,7 +900,7 @@ B. The Holy Prophet and his Companions
 C. The Holy Prophet and the Holy Quran
 D. The Holy Cow and the Holy Quran
 
-Source: Item 81 · PDF page 17 — /study/religion/past-papers/compilation-100.pdf#page=17
+Source: Item 81 · PDF page 17
 
 ### 82 · D82
 
@@ -913,7 +911,7 @@ B. The differences begin
 C. None
 D. both
 
-Source: Item 82 · PDF page 17 — /study/religion/past-papers/compilation-100.pdf#page=17
+Source: Item 82 · PDF page 17
 
 ### 83 · D83
 
@@ -924,7 +922,7 @@ B. Islam
 C. Beliefs
 D. Moral values
 
-Source: Item 83 · PDF page 17 — /study/religion/past-papers/compilation-100.pdf#page=17
+Source: Item 83 · PDF page 17
 
 ### 84 · D84
 
@@ -935,7 +933,7 @@ B. Daru al Nadwah
 C. Cave of Thawr
 D. None of these
 
-Source: Item 84 · PDF page 17 — /study/religion/past-papers/compilation-100.pdf#page=17
+Source: Item 84 · PDF page 17
 
 ### 85 · D85
 
@@ -946,7 +944,7 @@ B. Satan
 C. Both
 D. None
 
-Source: Item 85 · PDF page 17 — /study/religion/past-papers/compilation-100.pdf#page=17
+Source: Item 85 · PDF page 17
 
 ### 86 · D86
 
@@ -957,7 +955,7 @@ B. Hadith yauwmul adha
 C. none of the above
 D. both A and C
 
-Source: Item 86 · PDF page 18 — /study/religion/past-papers/compilation-100.pdf#page=18
+Source: Item 86 · PDF page 18
 
 ### 87 · D87
 
@@ -968,7 +966,7 @@ B. the Holy Prophet
 C. Muhammad ibn Jarir Tabari
 D. all of the above
 
-Source: Item 87 · PDF page 18 — /study/religion/past-papers/compilation-100.pdf#page=18
+Source: Item 87 · PDF page 18
 
 ### 88 · D88
 
@@ -979,7 +977,7 @@ B. All religions are true and have equal value
 C. One religion is superior to all others
 D. It is not possible to determine the truth of any religion
 
-Source: Item 88 · PDF page 18 — /study/religion/past-papers/compilation-100.pdf#page=18
+Source: Item 88 · PDF page 18
 
 ### 89 · D89
 
@@ -990,7 +988,7 @@ B. Individuals must choose the religion that is superior
 C. Individuals are free to choose any religion they believe is right for them
 D. Individuals must choose the religion that is determined by their culture or society
 
-Source: Item 89 · PDF page 18 — /study/religion/past-papers/compilation-100.pdf#page=18
+Source: Item 89 · PDF page 18
 
 ### 90 · D90
 
@@ -1001,7 +999,7 @@ B. Salvation is granted to followers of all religions
 C. Salvation is only granted to those who follow the most superior religion
 D. Salvation is not granted to any followers of religion.
 
-Source: Item 90 · PDF page 18 — /study/religion/past-papers/compilation-100.pdf#page=18
+Source: Item 90 · PDF page 18
 
 ### 91 · D91
 
@@ -1012,7 +1010,7 @@ B. People are all the same
 C. Muslims are all the same
 D. None of them
 
-Source: Item 91 · PDF page 18 — /study/religion/past-papers/compilation-100.pdf#page=18
+Source: Item 91 · PDF page 18
 
 ### 92 · D92
 
@@ -1023,7 +1021,7 @@ B. 7 - ladder
 C. 10 - building
 D. 10 - ladder
 
-Source: Item 92 · PDF page 19 — /study/religion/past-papers/compilation-100.pdf#page=19
+Source: Item 92 · PDF page 19
 
 ### 93 · D93
 
@@ -1034,7 +1032,7 @@ B. The holy prophet of Islam and his household
 C. Only the holy prophet of Islam
 D. The holy prophet of Islam and his companions.
 
-Source: Item 93 · PDF page 19 — /study/religion/past-papers/compilation-100.pdf#page=19
+Source: Item 93 · PDF page 19
 
 ### 94 · D94
 
@@ -1045,7 +1043,7 @@ B. the Qur'an believes that the nations one the religion is one which is Islam.
 C. All are correct
 D. All is wrong
 
-Source: Item 94 · PDF page 19 — /study/religion/past-papers/compilation-100.pdf#page=19
+Source: Item 94 · PDF page 19
 
 ### 95 · D95
 
@@ -1056,7 +1054,7 @@ B. All the religion of the prophets before Islam are true to this day.
 C. A and B
 D. All are wrong.
 
-Source: Item 95 · PDF page 19 — /study/religion/past-papers/compilation-100.pdf#page=19
+Source: Item 95 · PDF page 19
 
 ### 96 · D96
 
@@ -1067,7 +1065,7 @@ B. God will decide who will be saved on the day of Judgement
 C. It will result in contradictions
 D. All of the above
 
-Source: Item 96 · PDF page 19 — /study/religion/past-papers/compilation-100.pdf#page=19
+Source: Item 96 · PDF page 19
 
 ### 97 · D97
 
@@ -1078,7 +1076,7 @@ B. There are 12 Imams
 C. We have to believe in one God and follow everything the Imams have said
 D. We believe in one God and have to pray 5 times a day.
 
-Source: Item 97 · PDF page 19 — /study/religion/past-papers/compilation-100.pdf#page=19
+Source: Item 97 · PDF page 19
 
 ### 98 · D98
 
@@ -1089,7 +1087,7 @@ B. Yes, because everyone will be saved in the end.
 C. No, because their main pillars are all flawed as it can be contradicted and invalidated.
 D. No, because the pillars can be contradicted, self-refuted, and invalid.
 
-Source: Item 98 · PDF page 20 — /study/religion/past-papers/compilation-100.pdf#page=20
+Source: Item 98 · PDF page 20
 
 ### 99 · D99
 
@@ -1100,7 +1098,7 @@ B. Islam is an easy religion where you can choose the way you practice . Because
 C. Islam sends prophet to people for them to testify and judge the religion.
 D. Islam has revealed the way of truth and the way of falsehood are clear. So there is no compulsion in accepting Religion.
 
-Source: Item 99 · PDF page 20 — /study/religion/past-papers/compilation-100.pdf#page=20
+Source: Item 99 · PDF page 20
 
 ### 100 · D100
 
@@ -1111,6 +1109,6 @@ B. The religion of Islam is correct but you can choose from ur desired religion.
 C. Allah (S.W.T) is forcing his servant, that is (humans ) to accept Islam as their religion because other religions will be rejected.
 D. The religion of Islam is the correct way and other religions will not be accepted.
 
-Source: Item 100 · PDF page 20 — /study/religion/past-papers/compilation-100.pdf#page=20
+Source: Item 100 · PDF page 20
 
-Figure: religion/quran-3-85.png
+Original figure: /study/religion/quran-3-85.png

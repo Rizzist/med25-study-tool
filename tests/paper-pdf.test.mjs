@@ -44,7 +44,9 @@ test('document builder mirrors the export: cover, cards with inline keys, key ta
   const part={doc:parseExport(read(item.downloads.questionsAndKey)),courseTitle:'Religion',collection:item};
   const both=buildPaperDocument([part],'both','MED//25 · Religion · test');
   const json=JSON.stringify(both.content);
-  assert.equal(both.pageSize,'A4');assert.match(json,/Original 40-item paper/);assert.match(json,/"Answer C"/);assert.match(json,/Not graded/);
+  assert.equal(both.pageSize,'A4');assert.match(json,/Original 40-item paper/);assert.match(json,/"Answer C"/);assert.ok(!json.includes('Not graded'));
+  const ungraded=structuredClone(part);ungraded.doc.keys[0].fields.Key='Not graded';
+  assert.match(JSON.stringify(buildPaperDocument([ungraded],'both','fixture').content),/Not graded/);
   assert.ok(!json.includes('"pageBreak"'));
   const key=JSON.stringify(buildPaperDocument([part],'key','x').content);
   assert.match(key,/NOTES AND PROVENANCE/);assert.ok(!key.includes('"Answer C"'));

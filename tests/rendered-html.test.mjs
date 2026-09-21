@@ -114,11 +114,13 @@ test("source provides immediate answer feedback and supports the confirmed exam 
   assert.match(await readFile(new URL("../src/components/PastExamHub.tsx", import.meta.url), "utf8"), /<FinalExam/);
   assert.match(finalExam, /FINAL_EXAM_STORAGE_KEY/);
   assert.match(finalExamState, /med25-final-exam-v1/);
-  assert.match(finalExam, /Continue final exam/);
+  const finalStatusBanner = await readFile(new URL("../src/components/FinalExamStatusBanner.tsx", import.meta.url), "utf8");
+  assert.match(finalStatusBanner, /Continue final exam/);
+  assert.match(finalStatusBanner, /Review answers/);
   assert.match(finalExam, /instant-feedback/);
   assert.match(finalExam, /Previous/);
   assert.match(finalExam, /Next question/);
-  assert.match(finalExam, /Delete progress & restart/);
+  assert.match(finalStatusBanner, /Delete progress &amp; restart/);
   assert.match(bridge, /\/api\/final-exam/);
   assert.match(bridge, /loadFinalExamQuestions/);
   assert.match(page, /<SessionArchive/);

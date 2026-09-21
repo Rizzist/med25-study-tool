@@ -8,7 +8,8 @@ import {
     type PaperTopicMap, type PaperFeedbackMode,
 } from '@/src/lib/mcq/cvs-paper-state.mjs';
 import { CvsWeaknessReport } from './CvsWeaknessReport';
-import {CourseReviewReport} from './CourseReview';
+import {WrongAnswerReview} from './WrongAnswerReview';
+import {paperReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
 import {PastPaperCard} from './PastPaperCard';
 import {PaperDownloads,type DownloadCollection} from './PaperDownloads';
 import {StudyIcon} from './StudyIcon';
@@ -319,7 +320,7 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
         {storageWarning && <p role="alert">{storageWarning}</p>}{mappingWarning && <p className={styles.warning}>{mappingWarning}</p>}{answerWarning && <p role="alert" className={styles.warning}>{answerWarning}</p>}
         {reportOpen && finished && breakdown ? <>
             {result && <Result result={result} />}
-            <CourseReviewReport reviewOnly exam="term2-cvs" outcomes={paper.questions.map(item=>({questionId:item.id,answered:Boolean(attempt.answers[item.id]?.trim()),correct:questionFeedback(item,attempt.answers[item.id])==='correct'||(!answerResolution(item).key&&attempt.manual[item.id]==='correct'),gradable:Boolean(answerResolution(item).key)||['correct','incorrect'].includes(attempt.manual[item.id]),topic:topics?.questions[item.id]?.topicId}))} onPractice={ids=>review(ids,'Questions to review')}/>
+            <WrongAnswerReview exam="term2-cvs" attemptId={`cvs:${paper.id}:${attempt.startedAt}`} questions={paperReviewQuestions(paper.questions)} outcomes={paper.questions.map(item=>({questionId:item.id,answered:Boolean(attempt.answers[item.id]?.trim()),correct:questionFeedback(item,attempt.answers[item.id])==='correct'||(!answerResolution(item).key&&attempt.manual[item.id]==='correct'),gradable:Boolean(answerResolution(item).key)||['correct','incorrect'].includes(attempt.manual[item.id]),topic:topics?.questions[item.id]?.topicId}))}/>
             <details><summary>Subject breakdown &amp; paper review controls</summary><CvsWeaknessReport breakdown={breakdown} topics={topics} onReview={review}/></details>
             <button onClick={() => { setFilter(null); setReportOpen(false); }}>Review all questions</button>
         </> : <>

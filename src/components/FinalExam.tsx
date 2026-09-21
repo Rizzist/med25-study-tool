@@ -8,10 +8,14 @@ import {
   emptyFinalExamProgress,
   parseFinalExamProgress,
   reconcileFinalExamSession,
+  isFinalAnswerCorrect,
 } from "@/src/lib/mcq/final-exam-state.mjs";
 import {cachedJson} from '@/src/lib/mcq/client-cache';
 import {QuestionMedia} from './QuestionMedia';
 import {CourseReviewReport} from './CourseReview';
+import {FinalExamStatusBanner} from './FinalExamStatusBanner';
+import {WrongAnswerReview} from './WrongAnswerReview';
+import {mcqReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
 type ExamId = "july25" | "july29" | "term2-nutrition" | "term2-religion";
@@ -136,6 +140,10 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
     if (!session) {
       const next = reconcileFinalExamSession(null, questions, fingerprint) as FinalSession;
       setProgress((current) => ({ ...current, sessions: { ...current.sessions, [sessionKey]: next } }));
+    } else if (completed) {
+      // Completed attempts open as a locked answer review, not at the last
+      // question as if there were still work to resume. Keep every answer.
+      moveTo(0);
     }
     setActive(true);
   }
@@ -169,7 +177,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
     if (!session || !question || session.answers[question.id]) return;
     const nextAnswer: FinalAnswer = {
       selectedOptionId: optionId,
-      correct: optionId === question.correctOptionId,
+      correct: isFinalAnswerCorrect(question, optionId),
       answeredAt: new Date().toISOString(),
       questionRevision: question.revision,
       correctOptionId: question.correctOptionId,
@@ -204,9 +212,11 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
   if (active && session && question) {
     const chosen = question.options.find((option) => option.id === answer?.selectedOptionId);
     const correct = question.options.find((option) => option.id === question.correctOptionId);
+    const inferred = question.answerReview?.basis === 'ai-inferred';
+    const provisional = question.qualityFlags.includes('provisional-answer');
     return <main className="final-exam-shell">
       <header className="final-exam-header">
-        <div className="session-mark"><b>MED//25</b><span>{examLabels[exam].date} · Final exam</span></div>
+        <div className="session-mark"><b>MED//25</b><span>{examLabels[exam].date} · {completed ? 'Answer review' : 'Final exam'}</span></div>
         <div className="final-live-progress">
           <span>{session.currentIndex + 1} / {session.questionIds.length}</span>
           <div><i style={{ width: `${(answeredCount / session.questionIds.length) * 100}%` }} /></div>
@@ -222,18 +232,19 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
             {exam === "term2-religion" && <p className="term2-scope-note">Original wording · source-reviewed editorial key, not an official answer. Interpret within the source framework; qualifications and corrections appear with feedback.</p>}
             {exam === "term2-nutrition" && question.qualityFlags.includes("qualified-source-wording") && <p className="term2-scope-note">Historical / qualified wording: scoring uses the source's intended convention. Read the explanation for its limits; a marked answer is not an official key.</p>}
             <QuestionMedia question={question} review={Boolean(answer)}/>
-            <div className={`final-options ${answer ? "locked" : ""}`}>
+            <div className={`final-options ${answer ? "locked" : ""} ${answer && inferred ? "inferred-answer" : ""}`}>
               {question.options.map((option) => {
                 const state = answer
-                  ? option.id === question.correctOptionId ? "correct" : option.id === answer.selectedOptionId ? "wrong" : ""
+                  ? isFinalAnswerCorrect(question, option.id) ? "correct" : option.id === answer.selectedOptionId ? "wrong" : ""
                   : "";
                 return <button key={option.id} className={state} disabled={Boolean(answer)} onClick={() => answerQuestion(option.id)}><span>{option.id}</span><b>{option.text}</b></button>;
               })}
             </div>
-            {answer && <section className={`instant-feedback ${answer.correct ? "correct" : "wrong"}`}>
-              <div className="instant-feedback-title"><b>{answer.correct ? "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · page ${question.source.page}` : ""}</span></div>
-              <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer.selectedOptionId}</b></div><div><span>Correct answer</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b></div></div>
+            {answer && <section className={`instant-feedback ${answer.correct ? "correct" : "wrong"} ${inferred ? "inferred-answer" : ""}`}>
+              <div className="instant-feedback-title"><b>{answer.correct ? provisional ? "✓ Best available choice" : "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · page ${question.source.page}` : ""}</span></div>
+              <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer.selectedOptionId}</b></div><div><span>{provisional ? 'Best available choice · wording uncertain' : question.acceptedOptionIds?.length ? 'Preferred answer' : 'Correct answer'}</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b>{question.acceptedOptionIds && <small>Accepted choices: {question.acceptedOptionIds.join(', ')}</small>}</div></div>
               <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{!answer.correct && question.distractorExplanations[answer.selectedOptionId] && <p className="distractor-note"><b>Why {answer.selectedOptionId} loses:</b> {question.distractorExplanations[answer.selectedOptionId]}</p>}</div>
+              {question.answerReview && <details className="answer-review-evidence"><summary>Sources & answer notes</summary><p>Editorial review · {question.answerReview.confidence} confidence · {question.answerReview.auditedAt}. Not an official university key.</p>{question.answerReview.evidence.map(ref=><p key={ref}>{ref}</p>)}<p>{question.source.excerpt}</p></details>}
             </section>}
           </article>
         </div>
@@ -243,7 +254,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
           {session.currentIndex < session.questionIds.length - 1
             ? <button className="primary" onClick={() => moveTo(session.currentIndex + 1)}>Next question →</button>
             : completed
-              ? <button className="primary" onClick={() => setActive(false)}>Exam complete →</button>
+              ? <button className="primary" onClick={() => setActive(false)}>Results &amp; review →</button>
               : answer
                 ? <button className="primary" onClick={nextUnanswered}>Next unanswered →</button>
                 : <button className="next-unanswered" onClick={nextUnanswered}>Next unanswered</button>}
@@ -255,7 +266,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
   return <section className="final-exam-home">
     <div className="final-exam-copy">
       {!collection && <><span className="eyebrow">{bankLabel} · {examLabels[exam].date}</span><h1>Final exam mode.</h1></>}
-      <p>{collection ? "" : bankDescription + " "}Each answer locks immediately, shows the explanation, and stays saved on this device so you can leave and resume at the same question.</p>
+      <p>{completed ? 'This paper is complete. Your saved score and review topics are below; you can revisit the locked answers without changing your result.' : <>{collection ? "" : bankDescription + " "}Each answer locks immediately, shows the explanation, and stays saved on this device so you can leave and resume at the same question.</>}</p>
     </div>
     {exam === "july29" && <button
       type="button"
@@ -272,16 +283,13 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
     {!loading && !error && !questions.length && <div className="final-exam-empty"><b>No verified past-paper questions have been imported yet.</b><span>Book- and lecture-based questions remain in Practice MCQs.</span></div>}
     {!loading && !error && questions.length > 0 && <div className="final-exam-launch">
       <div className="final-exam-stats">
-        <article><span>VERIFIED QUESTIONS</span><strong>{questions.length}</strong><small>Relevant to {examLabels[exam].date}</small></article>
+        <article><span>PAST-PAPER QUESTIONS</span><strong>{questions.length}</strong><small>Relevant to {examLabels[exam].date}</small></article>
         <article><span>ANSWERED</span><strong>{answeredCount}</strong><small>{questions.length - answeredCount} remaining</small></article>
         <article><span>CORRECT</span><strong>{correctCount}</strong><small>{wrongCount} need repair</small></article>
-        <article><span>STATUS</span><strong>{completed ? "Done" : session ? "Saved" : "New"}</strong><small>{session ? `Question ${session.currentIndex + 1}` : "Ready to begin"}</small></article>
+        <article><span>STATUS</span><strong>{completed ? "Done" : session ? "Saved" : "New"}</strong><small>{completed ? 'All questions answered' : session ? `Question ${session.currentIndex + 1}` : "Ready to begin"}</small></article>
       </div>
-      <div className="final-exam-resume">
-        <div><span>{completed ? "FINAL EXAM COMPLETE" : session ? "PROGRESS SAVED AUTOMATICALLY" : "SOURCE-TRACEABLE BANK"}</span><h2>{examLabels[exam].title}</h2><p>{session ? `${answeredCount} of ${questions.length} answered. Resume at question ${session.currentIndex + 1}.` : "Start the complete past-paper bank. Feedback appears immediately after every choice."}</p></div>
-        <div><button className="primary" onClick={startOrResume}>{session ? "Continue final exam →" : "Start final exam →"}</button>{session && <button className="delete-sprint" onClick={resetProgress}>Delete progress & restart</button>}</div>
-      </div>
+      <FinalExamStatusBanner title={bankLabel} completed={completed} hasSession={Boolean(session)} answeredCount={answeredCount} correctCount={correctCount} total={questions.length} currentIndex={session?.currentIndex ?? 0} onOpen={startOrResume} onRestart={resetProgress}/>
     </div>}
-    {session&&answeredCount>0&&<CourseReviewReport exam={exam} outcomes={orderedQuestions.filter(q=>session.answers[q.id]||completed).map(q=>({questionId:q.id,answered:Boolean(session.answers[q.id]),correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>}
+    {session&&answeredCount>0&&(completed?<WrongAnswerReview exam={exam} attemptId={`${sessionKey}:${session.startedAt}`} questions={mcqReviewQuestions(orderedQuestions)} outcomes={orderedQuestions.map(q=>({questionId:q.id,answered:Boolean(session.answers[q.id]),correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>:<CourseReviewReport exam={exam} outcomes={orderedQuestions.filter(q=>session.answers[q.id]).map(q=>({questionId:q.id,answered:true,correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>)}
   </section>;
 }

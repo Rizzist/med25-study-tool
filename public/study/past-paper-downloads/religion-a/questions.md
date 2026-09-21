@@ -1,15 +1,13 @@
 # Introduction to Religion · 2021/6/21
 
-Supplied source paper/collection. Preserve all occurrences, including duplicates and ungraded questions. Editorial teaching keys are not official university keys.
+Original questions and choice order. Editorial study answers, not an official university key. Inferred and corrected answers retain confidence, evidence and wording limitations. Repeated items remain in each complete source paper.
 
 Collection ID: religion-a
-Course: term2-religion
-
-20 retained source records; 20 transcribed prompts; 10 currently graded questions. This is a source collection export, not a claim that the selected items constitute a complete historical examination. Dates are reproduced only as qualified source metadata.
+Course: Religion
 
 ## Original sources
 
-- exam (inro to religion 1 ).pdf: /study/religion/past-papers/intro-2021.pdf — Original source document may contain visible marks.
+- exam (inro to religion 1 ).pdf: /study/religion/past-papers/intro-2021.pdf — Original document; visible marks are not authoritative.
 
 ## Questions
 
@@ -22,7 +20,7 @@ B. This verse was revealed when Prophet wanted to go for Badr War.
 C. . It was revealed to order Prophet to begin the secret invitation.
 D. It was revealed to order Prophet to begin the public invitation.
 
-Source: Item 1 · PDF page 1 — /study/religion/past-papers/intro-2021.pdf#page=1
+Source: Item 1 · PDF page 1
 
 ### 2 · A2
 
@@ -33,7 +31,7 @@ B. The Holy Quran has not mentioned this story at all.
 C. The Holy Quran says the body of Pharaoh shall be saved while the Bible is silent about it.
 D. The Bible has narrated it more accurate and more complete.
 
-Source: Item 2 · PDF page 1 — /study/religion/past-papers/intro-2021.pdf#page=1
+Source: Item 2 · PDF page 1
 
 ### 3 · A3
 
@@ -44,7 +42,7 @@ B. There is no difference between the positive and negative attributes both of t
 C. The positive attributes are those attributes which represent one perfection of the perfects of Allah the Almighty.
 D. None of the above
 
-Source: Item 3 · PDF page 1 — /study/religion/past-papers/intro-2021.pdf#page=1
+Source: Item 3 · PDF page 1
 
 ### 4 · A4
 
@@ -55,7 +53,7 @@ B. Will be punished and sent to Hell.
 C. Shall be saved and sent to Paradise.
 D. Islam has not spoken about it
 
-Source: Item 4 · PDF page 1 — /study/religion/past-papers/intro-2021.pdf#page=1
+Source: Item 4 · PDF page 1
 
 ### 5 · A5
 
@@ -66,7 +64,7 @@ B. There is only one religion which is called Islam and the differences between 
 C. The name of religion is not important. We must only try to be a good doer in our life.
 D. Any nation can have its own religion.
 
-Source: Item 5 · PDF page 1 — /study/religion/past-papers/intro-2021.pdf#page=1
+Source: Item 5 · PDF page 1
 
 ### 6 · A6
 
@@ -77,7 +75,7 @@ B. This word refer to one of the books of Jews.
 C. It is another name for Jesus Christ.
 D. It refers to the Book which believed by Jews
 
-Source: Item 6 · PDF page 2 — /study/religion/past-papers/intro-2021.pdf#page=2
+Source: Item 6 · PDF page 2
 
 ### 7 · A7
 
@@ -88,7 +86,7 @@ B. These two terms are wrong and should not be uttered about Him.
 C. These two terms in fact refer to His Knowledge. They mean He is All-Knowing.
 D. These two terms refer to His Power. They mean He is All- powerful
 
-Source: Item 7 · PDF page 2 — /study/religion/past-papers/intro-2021.pdf#page=2
+Source: Item 7 · PDF page 2
 
 ### 8 · A8
 
@@ -99,7 +97,7 @@ B. Number of its followers.
 C. It must not be altered.
 D. If it is predicted by previous one
 
-Source: Item 8 · PDF page 2 — /study/religion/past-papers/intro-2021.pdf#page=2
+Source: Item 8 · PDF page 2
 
 ### 9 · A9
 
@@ -110,7 +108,7 @@ B. . Ummar
 C. . Uthman
 D. . Imam Ali
 
-Source: Item 9 · PDF page 2 — /study/religion/past-papers/intro-2021.pdf#page=2
+Source: Item 9 · PDF page 2
 
 ### 10 · A10
 
@@ -121,7 +119,7 @@ B. . After the demise of the Holy Quran, people must cling firmly to both the Ho
 C. . As a Muslim you must have both good action and good faith.
 D. . After the demise of the Holy Quran, people must cling firmly to both the Holy Quran and also Sunnah.
 
-Source: Item 10 · PDF page 2 — /study/religion/past-papers/intro-2021.pdf#page=2
+Source: Item 10 · PDF page 2
 
 ### 11 · A11
 
@@ -132,7 +130,7 @@ B. Justice means to put everything in its own place.
 C. Justice means not to oppress others.
 D. Justice means to distribute all sources among the people according to their capacity
 
-Source: Item 11 · PDF page 2 — /study/religion/past-papers/intro-2021.pdf#page=2
+Source: Item 11 · PDF page 2
 
 ### 12 · A12
 
@@ -143,7 +141,7 @@ B. Because Prophet Ibrahim is the father of all Prophets.
 C. Because all of us are human being and must follow Prophet Adam (pbuh)
 D. None of the above
 
-Source: Item 12 · PDF page 3 — /study/religion/past-papers/intro-2021.pdf#page=3
+Source: Item 12 · PDF page 3
 
 ### 13 · A13
 
@@ -154,7 +152,7 @@ B. Prophet Moses.
 C. Prophet Jesus Christ.
 D. Prophet Muhammad.
 
-Source: Item 13 · PDF page 3 — /study/religion/past-papers/intro-2021.pdf#page=3
+Source: Item 13 · PDF page 3
 
 ### 14 · A14
 
@@ -165,7 +163,7 @@ B. One of the companions of Jesus Christ.
 C. One of the commentator of the Bible
 D. None of the above.
 
-Source: Item 14 · PDF page 3 — /study/religion/past-papers/intro-2021.pdf#page=3
+Source: Item 14 · PDF page 3
 
 ### 15 · A15
 
@@ -176,7 +174,7 @@ B. It is the message given to Prophet Muhammad in the Holy Quran.
 C. Both of them.
 D. None of the above
 
-Source: Item 15 · PDF page 3 — /study/religion/past-papers/intro-2021.pdf#page=3
+Source: Item 15 · PDF page 3
 
 ### 16 · A16
 
@@ -187,7 +185,7 @@ B. The followers of all religions are saved.
 C. Both A and B.
 D. None of the above
 
-Source: Item 16 · PDF page 3 — /study/religion/past-papers/intro-2021.pdf#page=3
+Source: Item 16 · PDF page 3
 
 ### 17 · A17
 
@@ -198,7 +196,7 @@ B. In this world, it is possible to change the destiny but in the Hereafter, it 
 C. Both A and B
 D. None of the above
 
-Source: Item 17 · PDF page 3 — /study/religion/past-papers/intro-2021.pdf#page=3
+Source: Item 17 · PDF page 3
 
 ### 18 · A18
 
@@ -209,7 +207,7 @@ B. They wanted to crucify him but God saved him and he was ascended to the Heave
 C. Both the Bible and Quran say the same thing
 D. None of the above.
 
-Source: Item 18 · PDF page 4 — /study/religion/past-papers/intro-2021.pdf#page=4
+Source: Item 18 · PDF page 4
 
 ### 19 · A19
 
@@ -220,7 +218,7 @@ B. Practical orders, Beliefs, Moral values.
 C. Beliefs, Moral instructions, Honesty.
 D. Main principle, second principle, third principle
 
-Source: Item 19 · PDF page 4 — /study/religion/past-papers/intro-2021.pdf#page=4
+Source: Item 19 · PDF page 4
 
 ### 20 · A20
 
@@ -231,4 +229,4 @@ B. "Psychological" function of a religion.
 C. "Social" function of a religion.
 D. "Political" function of a religion.
 
-Source: Item 20 · PDF page 4 — /study/religion/past-papers/intro-2021.pdf#page=4
+Source: Item 20 · PDF page 4

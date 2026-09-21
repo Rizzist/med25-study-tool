@@ -1,5 +1,6 @@
 // Source IDs only. Keys below are editorial source reviews, NEVER official exam keys.
 // Wrong-option notes follow source order with the reviewed answer omitted.
+import {completeReligionReviews} from './religion-answer-audit.mjs';
 export const religionPastReview = {};
 const scored = (id,key,why,...wrong) => { religionPastReview[id]={key,why,wrong}; };
 const hold = (id,why) => { religionPastReview[id]={key:null,why,wrong:[]}; };
@@ -198,3 +199,4 @@ const originalOptionNotes = {
 };
 for (const [id,wrong] of Object.entries(originalOptionNotes)) religionPastReview[id].wrong=wrong;
 religionPastReview.O25.why='The passage reports differing traditions about ordinary everyday lapses and calls for further study; it does not make every such detail a core belief. Distinguish that unresolved everyday scope from sins, essential duties and revelation reliability.';
+completeReligionReviews(religionPastReview);

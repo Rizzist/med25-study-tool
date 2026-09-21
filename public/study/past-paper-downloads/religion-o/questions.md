@@ -1,15 +1,13 @@
 # Original 40-item paper
 
-Supplied 40-item question document; provenance is explicitly unconfirmed in existing references. Do not advertise as an authenticated dated university final. Existing source text and qualified teaching keys are preserved.
+Original questions and choice order. Editorial study answers, not an official university key. Inferred and corrected answers retain confidence, evidence and wording limitations. Repeated items remain in each complete source paper.
 
 Collection ID: religion-o
-Course: term2-religion
-
-40 retained source records; 40 transcribed prompts; 35 currently graded questions. This is a source collection export, not a claim that the selected items constitute a complete historical examination. Dates are reproduced only as qualified source metadata.
+Course: Religion
 
 ## Original sources
 
-- 1_28599620737.docx: /study/religion/past-papers/original-40.pdf — Original source document may contain visible marks.
+- 1_28599620737.docx: /study/religion/past-papers/original-40.pdf — Original document; visible marks are not authoritative.
 
 ## Questions
 
@@ -22,7 +20,7 @@ B. Describing the personal, emotional state of reverence (like khashiat) it insp
 C. Specifying its precise and standardized meaning within the framework of religious doctrine.
 D. Listing all the various meanings it has in general-use dictionaries.
 
-Source: Item 1 · PDF page 1 — /study/religion/past-papers/original-40.pdf#page=1
+Source: Item 1 · PDF page 1
 
 ### 2 · O2
 
@@ -33,7 +31,7 @@ B. It is fundamentally about believing in an ever-living God who rules the world
 C. Only the Creator of a perfect universe could author a perfect, error-free system of law for humanity.
 D. It represents humanity's own attempt to discover the complete truth of what is good.
 
-Source: Item 2 · PDF page 1 — /study/religion/past-papers/original-40.pdf#page=1
+Source: Item 2 · PDF page 1
 
 ### 3 · O3
 
@@ -44,7 +42,7 @@ B. Having a belief in a Creator of humanity and the universe.
 C. Following one of the specific "Revealed Religions" like Islam or Christianity.
 D. Possessing a complete "divine worldview" and a corresponding ideology.
 
-Source: Item 3 · PDF page 1 — /study/religion/past-papers/original-40.pdf#page=1
+Source: Item 3 · PDF page 1
 
 ### 4 · O4
 
@@ -55,7 +53,7 @@ B. Worldview corresponds to the Principles of Religion (beliefs), while Ideology
 C. Ideology is a broader term that fully encompasses and replaces the need for a specific worldview.
 D. Worldview includes the practical rules of behavior, while ideology explains the fundamental beliefs about creation.
 
-Source: Item 4 · PDF page 1 — /study/religion/past-papers/original-40.pdf#page=1
+Source: Item 4 · PDF page 1
 
 ### 5 · O5
 
@@ -66,7 +64,7 @@ B. Belief in the Hereafter and Divine Recompense ( Maʿād )
 C. Belief in the socio-political leadership of Imams ( Imāmah )
 D. Belief in the Prophets sent for guidance ( Nubuwwah )
 
-Source: Item 5 · PDF page 2 — /study/religion/past-papers/original-40.pdf#page=2
+Source: Item 5 · PDF page 2
 
 ### 6 · O6
 
@@ -77,7 +75,7 @@ B. The inherent complexity of metaphysical reality.
 C. Human beings following their own desires instead of true divine guidance.
 D. The influence of materialistic philosophies like dialectical materialism.
 
-Source: Item 6 · PDF page 2 — /study/religion/past-papers/original-40.pdf#page=2
+Source: Item 6 · PDF page 2
 
 ### 7 · O7
 
@@ -88,7 +86,7 @@ B. A "sense of curiosity" that compels humans to ponder religious questions.
 C. An innate knowledge of specific religious doctrines and prophets.
 D. A fear of punishment in the afterlife for moral failures.
 
-Source: Item 7 · PDF page 3 — /study/religion/past-papers/original-40.pdf#page=3
+Source: Item 7 · PDF page 3
 
 ### 8 · O8
 
@@ -99,7 +97,7 @@ B. They are obstacles that must be completely eliminated before true religious u
 C. They can be worldly motivations that, if religion is seen as a means to fulfill them without loss, can inspire further religious investigation.
 D. They are irrelevant to the search for religious truth, which is solely a matter of intellectual reasoning.
 
-Source: Item 8 · PDF page 3 — /study/religion/past-papers/original-40.pdf#page=3
+Source: Item 8 · PDF page 3
 
 ### 9 · O9
 
@@ -110,7 +108,7 @@ B. They are seen as the primary and only legitimate reason for seeking faith.
 C. If religion is perceived as a way to achieve worldly goals safely, it can motivate further inquiry.
 D. They must be completely fulfilled before one can begin to consider spiritual matters.
 
-Source: Item 9 · PDF page 3 — /study/religion/past-papers/original-40.pdf#page=3
+Source: Item 9 · PDF page 3
 
 ### 10 · O10
 
@@ -121,7 +119,7 @@ B. Fear that religion will impose unwanted restrictions.
 C. A belief that the investigation will not yield useful or sufficient results.
 D. A conscious and rational rejection of the concept of God.
 
-Source: Item 10 · PDF page 4 — /study/religion/past-papers/original-40.pdf#page=4
+Source: Item 10 · PDF page 4
 
 ### 11 · O11
 
@@ -132,7 +130,7 @@ B. A mature adult who has logically rejected superstition.
 C. A sick child who avoids the doctor for fear of bitter medicine.
 D. A scientist engaged in a lengthy but worthwhile research project.
 
-Source: Item 11 · PDF page 4 — /study/religion/past-papers/original-40.pdf#page=4
+Source: Item 11 · PDF page 4
 
 ### 12 · O12
 
@@ -143,7 +141,7 @@ B. It argues that even a weak chance of an infinite benefit (eternal happiness) 
 C. It shows that material profits from religion are guaranteed to be higher than from any other venture.
 D. It demonstrates that resolving religious issues is always quicker than resolving scientific ones.
 
-Source: Item 12 · PDF page 4 — /study/religion/past-papers/original-40.pdf#page=4
+Source: Item 12 · PDF page 4
 
 ### 13 · O13
 
@@ -154,7 +152,7 @@ B. Because the benefits of religion in this world are more immediate and tangibl
 C. Because the Quran explicitly states that only religious rituals guarantee success in the Hereafter.
 D. Because belief in the Hereafter is optional, while belief in God is the only absolute requirement.
 
-Source: Item 13 · PDF page 5 — /study/religion/past-papers/original-40.pdf#page=5
+Source: Item 13 · PDF page 5
 
 ### 14 · O14
 
@@ -165,7 +163,7 @@ B. The verse stating that all glory belongs to God, His Messenger, and the belie
 C. The verse questioning who rescues people from darkness when they call secretly, with the answer being God.
 D. The verse explaining that people associate others with God even after being rescued.
 
-Source: Item 14 · PDF page 5 — /study/religion/past-papers/original-40.pdf#page=5
+Source: Item 14 · PDF page 5
 
 ### 15 · O15
 
@@ -176,7 +174,7 @@ B. The creation of an "inner guardian" born from a sense of divine responsibilit
 C. The promise of immediate worldly rewards for good behavior and social praise.
 D. The focus on individual worship that is separate from social interactions and laws.
 
-Source: Item 15 · PDF page 5 — /study/religion/past-papers/original-40.pdf#page=5
+Source: Item 15 · PDF page 5
 
 ### 16 · O16
 
@@ -187,7 +185,7 @@ B. A driver who stops at a red light only when a police officer is visible.
 C. A person who feels alone and seeks constant support from other people.
 D. An individual who maintains self-esteem by never asking anyone for help.
 
-Source: Item 16 · PDF page 6 — /study/religion/past-papers/original-40.pdf#page=6
+Source: Item 16 · PDF page 6
 
 ### 17 · O17
 
@@ -198,7 +196,7 @@ B. Taqdir is the changeable, gradual planning stage, while qada is the inevitabl
 C. Taqdir and qada are completely synonymous and refer only to fixed fate.
 D. Taqdir applies only to human actions, while qada applies only to natural phenomena.
 
-Source: Item 17 · PDF page 6 — /study/religion/past-papers/original-40.pdf#page=6
+Source: Item 17 · PDF page 6
 
 ### 18 · O18
 
@@ -209,7 +207,7 @@ B. It is conditional, incomplete, and subject to change (bada').
 C. It only contains information about past events, not the future.
 D. It is accessible to everyone without divine permission.
 
-Source: Item 18 · PDF page 7 — /study/religion/past-papers/original-40.pdf#page=7
+Source: Item 18 · PDF page 7
 
 ### 19 · O19
 
@@ -220,7 +218,7 @@ B. How a single action can depend on both human will and divine will without con
 C. Why God allows evil actions if He has decreed everything.
 D. Whether divine decree applies to non-believers or only to believers.
 
-Source: Item 19 · PDF page 7 — /study/religion/past-papers/original-40.pdf#page=7
+Source: Item 19 · PDF page 7
 
 ### 20 · O20
 
@@ -231,7 +229,7 @@ B. Human will operates completely outside the scope of divine will.
 C. Human will and its existence are themselves dependent on divine will.
 D. Divine will only takes effect if human will is absent or suspended.
 
-Source: Item 20 · PDF page 7 — /study/religion/past-papers/original-40.pdf#page=7
+Source: Item 20 · PDF page 7
 
 ### 21 · O21
 
@@ -242,7 +240,7 @@ B. Because any possibility of error in receiving or transmitting revelation woul
 C. Because prophets need to be physically strong to lead communities.
 D. Because prophets must be able to perform miracles that ordinary humans cannot.
 
-Source: Item 21 · PDF page 8 — /study/religion/past-papers/original-40.pdf#page=8
+Source: Item 21 · PDF page 8
 
 ### 22 · O22
 
@@ -253,7 +251,7 @@ B. Mukhlis — those who are sincere in worship.
 C. Muttaqin — those who are God-conscious.
 D. Muhsinin — those who do good deeds.
 
-Source: Item 22 · PDF page 8 — /study/religion/past-papers/original-40.pdf#page=8
+Source: Item 22 · PDF page 8
 
 ### 23 · O23
 
@@ -264,7 +262,7 @@ B. Required to know all worldly sciences perfectly.
 C. Chosen only from among the wealthiest and most influential people.
 D. Perfect educators who serve as examples for cultivating spiritual and moral excellence in others.
 
-Source: Item 23 · PDF page 8 — /study/religion/past-papers/original-40.pdf#page=8
+Source: Item 23 · PDF page 8
 
 ### 24 · O24
 
@@ -275,7 +273,7 @@ B. Prophets were sent so that people could obey them by God’s leave.
 C. Obedience is only required when the prophet’s command aligns with popular opinion.
 D. Prophets must obey the people in matters of social governance.
 
-Source: Item 24 · PDF page 9 — /study/religion/past-papers/original-40.pdf#page=9
+Source: Item 24 · PDF page 9
 
 ### 25 · O25
 
@@ -286,7 +284,7 @@ B. Traditions on this issue are inconsistent and require further study, though i
 C. Only major sins are impossible for prophets; minor errors are permitted to show their humanity.
 D. Prophets are only infallible when delivering revelation; at other times they are like ordinary people.
 
-Source: Item 25 · PDF page 9 — /study/religion/past-papers/original-40.pdf#page=9
+Source: Item 25 · PDF page 9
 
 ### 26 · O26
 
@@ -297,7 +295,7 @@ B. It forces them to obey against their desire.
 C. It does not remove their voluntary choice.
 D. It applies only after their prophethood begins.
 
-Source: Item 26 · PDF page 9 — /study/religion/past-papers/original-40.pdf#page=9
+Source: Item 26 · PDF page 9
 
 ### 27 · O27
 
@@ -308,7 +306,7 @@ B. Metaphor (isti'ārah)
 C. Dissimulation (tawriyah)
 D. Abrogation (naskh)
 
-Source: Item 27 · PDF page 10 — /study/religion/past-papers/original-40.pdf#page=10
+Source: Item 27 · PDF page 10
 
 ### 28 · O28
 
@@ -319,7 +317,7 @@ B. It makes their responsibilities heavier.
 C. It exempts them from divine law.
 D. It has no effect on their duties.
 
-Source: Item 28 · PDF page 10 — /study/religion/past-papers/original-40.pdf#page=10
+Source: Item 28 · PDF page 10
 
 ### 29 · O29
 
@@ -330,7 +328,7 @@ B. A divinely commanded execution.
 C. An intentional but justified homicide.
 D. An unintentional striking.
 
-Source: Item 29 · PDF page 10 — /study/religion/past-papers/original-40.pdf#page=10
+Source: Item 29 · PDF page 10
 
 ### 30 · O30
 
@@ -341,7 +339,7 @@ B. All sins and neglect of essential duties.
 C. Only sins committed after their mission begins.
 D. Only errors in delivering religious messages.
 
-Source: Item 30 · PDF page 10 — /study/religion/past-papers/original-40.pdf#page=10
+Source: Item 30 · PDF page 10
 
 ### 31 · O31
 
@@ -352,7 +350,7 @@ B. Rulers and the wealthy
 C. Prophets' own families
 D. Ordinary farmers
 
-Source: Item 31 · PDF page 11 — /study/religion/past-papers/original-40.pdf#page=11
+Source: Item 31 · PDF page 11
 
 ### 32 · O32
 
@@ -363,7 +361,7 @@ B. Water from an oven
 C. An earthquake
 D. A solar eclipse
 
-Source: Item 32 · PDF page 11 — /study/religion/past-papers/original-40.pdf#page=11
+Source: Item 32 · PDF page 11
 
 ### 33 · O33
 
@@ -374,7 +372,7 @@ B. Protection of economic benefits
 C. Blind following of ancestors
 D. Physical weakness
 
-Source: Item 33 · PDF page 11 — /study/religion/past-papers/original-40.pdf#page=11
+Source: Item 33 · PDF page 11
 
 ### 34 · O34
 
@@ -385,7 +383,7 @@ B. Clay and mud
 C. His ring as a seal
 D. A wooden plank
 
-Source: Item 34 · PDF page 12 — /study/religion/past-papers/original-40.pdf#page=12
+Source: Item 34 · PDF page 12
 
 ### 35 · O35
 
@@ -396,7 +394,7 @@ B. Only animals
 C. All townspeople
 D. Other prophets
 
-Source: Item 35 · PDF page 12 — /study/religion/past-papers/original-40.pdf#page=12
+Source: Item 35 · PDF page 12
 
 ### 36 · O36
 
@@ -407,7 +405,7 @@ B. Social peace
 C. Hereafter benefit
 D. Psychological comfort
 
-Source: Item 36 · PDF page 12 — /study/religion/past-papers/original-40.pdf#page=12
+Source: Item 36 · PDF page 12
 
 ### 37 · O37
 
@@ -418,7 +416,7 @@ B. Fear of police
 C. Social pressure
 D. Family honor
 
-Source: Item 37 · PDF page 12 — /study/religion/past-papers/original-40.pdf#page=12
+Source: Item 37 · PDF page 12
 
 ### 38 · O38
 
@@ -429,7 +427,7 @@ B. Friends
 C. God
 D. Community
 
-Source: Item 38 · PDF page 13 — /study/religion/past-papers/original-40.pdf#page=13
+Source: Item 38 · PDF page 13
 
 ### 39 · O39
 
@@ -440,7 +438,7 @@ B. Embarrassment
 C. Superiority
 D. Indifference
 
-Source: Item 39 · PDF page 13 — /study/religion/past-papers/original-40.pdf#page=13
+Source: Item 39 · PDF page 13
 
 ### 40 · O40
 
@@ -451,4 +449,4 @@ B. Fear of God
 C. Fear of punishment
 D. Moral conscience
 
-Source: Item 40 · PDF page 13 — /study/religion/past-papers/original-40.pdf#page=13
+Source: Item 40 · PDF page 13
