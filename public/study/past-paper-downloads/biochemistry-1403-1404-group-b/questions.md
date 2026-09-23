@@ -1,0 +1,445 @@
+# Biochemistry metabolism · 1403–1404 · Group B
+
+Supplied English translation paired with the Persian scan. Academic-year label comes from the English filename; Persian filename contains a conflicting year string. No exact sitting date assigned.
+
+Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+
+Collection ID: biochemistry-1403-1404-group-b
+Course: Biochemistry II - Metabolism
+
+## Original sources
+
+- 1403-1404 biochemistry metabolsim (2).pdf: /study/biochemistry/past-papers/1403-1404-group-b/original.pdf — Supplied English translation paired with the Persian scan. Academic-year label comes from the English filename; Persian filename contains a conflicting year string. No exact sitting date assigned.
+
+## Questions
+
+### 1 · biochemistry-1403-1404-group-b-q001
+
+Which of the following indicates the greatest hepatic cellular damage?
+
+A. Increased alkaline phosphatase (ALP) and bilirubin, with normal ALT and AST
+B. Significant increase in ALT and AST
+C. Increased amylase and lipase, with normal ALP and bilirubin
+D. Increased creatine kinase (CK), with slightly elevated AST
+
+Source: Original Q1; page 2.
+
+### 2 · biochemistry-1403-1404-group-b-q002
+
+All of the following conditions can lead to hyperuricemia (increased blood uric acid) and gout, EXCEPT:
+
+A. Defect in the activity of the enzyme hypoxanthine–guanine phosphoribosyltransferase (HGPRT)
+B. Lactic acidosis
+C. Chronic alcohol consumption
+D. Non-thiazide antihypertensive drugs
+
+Source: Original Q2; page 2.
+
+### 3 · biochemistry-1403-1404-group-b-q003
+
+In a blood test of a person with anemia symptoms, the hemoglobin level is decreased. The physician suspects anemia caused by lead poisoning. Which of the following do you recommend to confirm the diagnosis?
+
+A. Red blood cell count
+B. Blood bilirubin measurement
+C. Measurement of urinary delta-aminolevulinic acid (delta-ALA)
+D. Measurement of heme oxygenase activity
+
+Source: Original Q3; page 2.
+
+### 4 · biochemistry-1403-1404-group-b-q004
+
+All of the following statements regarding a patient with Severe Combined Immunodeficiency (SCID) are correct, EXCEPT:
+
+A. The person has lymphocytosis (increased blood lymphocytes).
+B. It is a very rare genetic disease.
+C. There is a defect in the enzyme adenosine deaminase (ADA).
+D. Without treatment, they die before the age of two.
+
+Source: Original Q4; page 2.
+
+### 5 · biochemistry-1403-1404-group-b-q005
+
+Which of the following statements about purine and pyrimidine metabolism is correct?
+
+A. Dietary purines are used in DNA synthesis.
+B. Dietary pyrimidines do not participate in RNA and DNA synthesis.
+C. During purine catabolism, the carbons of the purine ring are used to produce energy.
+D. Lesch–Nyhan disease is caused by a disorder in the enzyme involved in the purine salvage pathway.
+
+Source: Original Q5; page 2.
+
+### 6 · biochemistry-1403-1404-group-b-q006
+
+Which of the following antibiotics is used to treat bacterial infection by inhibiting pyrimidine synthesis?
+
+A. Sulfamethoxazole
+B. Methotrexate
+C. Hydroxyurea
+D. Allopurinol
+
+Source: Original Q6; page 3.
+
+### 7 · biochemistry-1403-1404-group-b-q007
+
+Which of the following statements about a person with Gilbert's disease is correct?
+
+A. The increased bilirubin has toxic effects on the patient.
+B. More than 80% of UDP-glucuronosyltransferase enzyme activity is lost.
+C. The disease has a high prevalence in Black African populations.
+D. Patients require blood transfusion to reduce bilirubin levels.
+
+Source: Original Q7; page 3.
+
+Status: Ungraded - No unambiguously correct option: Gilbert syndrome usually retains roughly 30% UGT1A1 activity and does not require transfusion. The ancestry statement needs a defined population reference.
+
+### 8 · biochemistry-1403-1404-group-b-q008
+
+All of the following statements about neonatal jaundice are correct, EXCEPT:
+
+A. In most full-term newborns, there is a temporary increase.
+B. In premature newborns, there is a possibility of the increase reaching toxic levels.
+C. A UV lamp is used in treating newborns.
+D. In these newborns, the level of conjugated bilirubin (direct bilirubin) increases.
+
+Source: Original Q8; page 3.
+
+### 9 · biochemistry-1403-1404-group-b-q009
+
+All of the following statements about a patient with Acute Hepatic Porphyria are correct, EXCEPT:
+
+A. Disease symptoms may be triggered by ethanol consumption.
+B. Disease symptoms may be triggered by barbiturate use.
+C. Patients likely show sensitivity to light exposure.
+D. It is caused by a congenital defect in the enzyme ferrochelatase.
+
+Source: Original Q9; page 3.
+
+### 10 · biochemistry-1403-1404-group-b-q010
+
+In Crigler–Najjar syndrome Type I, serum unconjugated bilirubin level ......... and urinary urobilinogen .......... .
+
+A. Increase – Decrease
+B. Decrease – Increase
+C. Decrease – Decrease
+D. Increase – Increase
+
+Source: Original Q10; page 3.
+
+### 11 · biochemistry-1403-1404-group-b-q011
+
+A 45-year-old man presents to the emergency department with upper abdominal pain, jaundice, nausea, and vomiting. He also reports that over the past week he has had dark urine and pale stools. The patient has a history of heavy alcohol consumption. Laboratory results show elevated serum levels of the following enzymes: ALT: 210 U/L (normal: 7–56 U/L) AST: 290 U/L (normal: 10–40 U/L) ALP: 180 U/L (normal: 44–147 U/L) GGT: 350 U/L (normal: 8–61 U/L) Amylase: 280 U/L (normal: 23–85 U/L) LDH: 600 U/L (normal: 140–280 U/L) What is the most likely preliminary diagnosis based on the enzyme pattern and clinical signs?
+
+A. Acute pancreatitis caused by gallstones
+B. Viral hepatitis
+C. Heart attack (myocardial infarction)
+D. Hemolytic anemia
+
+Source: Original Q11; page 4.
+
+### 12 · biochemistry-1403-1404-group-b-q012
+
+Which of the following options can distinguish the cause of LDH elevation due to cardiac problems from that due to hemolysis?
+
+A. Measuring bilirubin and reticulocyte count
+B. Comparing GGT and AST levels
+C. Comparing ALP and ALT
+D. Direct bilirubin and CK level
+
+Source: Original Q12; page 4.
+
+### 13 · biochemistry-1403-1404-group-b-q013
+
+Which of the following has the most negative ΔG°′ (the greatest energy released upon hydrolysis)?
+
+A. Creatine phosphate
+B. ATP → ADP + P
+C. Phosphoenolpyruvate
+D. Glucose-1-phosphate
+
+Source: Original Q13; page 4.
+
+### 14 · biochemistry-1403-1404-group-b-q014
+
+Which compound inhibits F₀, ATP synthase by targeting its subunit?
+
+A. Atractyloside
+B. Oligomycin
+C. Valinomycin
+D. Gramicidin
+
+Source: Original Q14; page 4.
+
+### 15 · biochemistry-1403-1404-group-b-q015
+
+Which of the following cofactors play a role in electron transport in Complex I?
+
+A. FAD and heme
+B. FMN and Fe-S
+C. Cytochrome c and ubiquinol
+D. ATP and NADPH
+
+Source: Original Q15; page 5.
+
+### 16 · biochemistry-1403-1404-group-b-q016
+
+All of the following factors play a role in the process of lipid digestion and absorption, EXCEPT:
+
+A. Secretin
+B. Glucagon
+C. Cholecystokinin (CCK)
+D. Bile acids
+
+Source: Original Q16; page 5.
+
+### 17 · biochemistry-1403-1404-group-b-q017
+
+A 46-year-old man with a history of a soft mass under the skin of the knee region presents to a physician with an LDL level of 202 mg/dL and triglycerides of 480 mg/dL. For a definitive diagnosis of the disease by identifying possible mutations, which gene's sequencing would you recommend?
+
+A. Apo E
+B. LPL
+C. Apo B100
+D. LDL Receptor
+
+Source: Original Q17; page 5.
+
+### 18 · biochemistry-1403-1404-group-b-q018
+
+LDL particles consist of which of the following groups of components?
+
+A. Cholesterol and Apo B100
+B. Triglyceride and Apo A1
+C. Phospholipid and Apo CII
+D. Fatty acid and Apo E
+
+Source: Original Q18; page 5.
+
+### 19 · biochemistry-1403-1404-group-b-q019
+
+A decrease in HDL-C is seen in all of the following, EXCEPT:
+
+A. Type 2 diabetes
+B. Obesity
+C. Cigarette smoking
+D. Hypothyroidism
+
+Source: Original Q19; page 5.
+
+### 20 · biochemistry-1403-1404-group-b-q020
+
+Which one is an inhibitor of acetyl-CoA carboxylase enzyme activity?
+
+A. Antacid
+B. Lovastatin
+C. Metformin
+D. Antihistamine
+
+Source: Original Q20; page 6.
+
+### 21 · biochemistry-1403-1404-group-b-q021
+
+In the liver tissue of a person after a 12-hour fast, which of the following enzymes has increased activity?
+
+A. Carnitine Palmitoyltransferase I
+B. HMG-CoA reductase
+C. Fatty Acid Synthase
+D. Acetyl CoA carboxylase
+
+Source: Original Q21; page 6.
+
+### 22 · biochemistry-1403-1404-group-b-q022
+
+Three hours after eating a lunch meal, all of the following changes are expected in liver tissue, EXCEPT:
+
+A. Increase in the level of malonyl-CoA
+B. Increase in carnitine shuttle activity
+C. Increase in acetyl-CoA carboxylase enzyme activity
+D. Increase in fatty acid synthase enzyme activity
+
+Source: Original Q22; page 6.
+
+### 23 · biochemistry-1403-1404-group-b-q023
+
+Which one of the following is correct?
+
+A. Insulin inhibits lipogenesis.
+B. NADPH is produced during lipogenesis.
+C. In a state of insulin resistance, lipolysis increases.
+D. Beta-oxidation takes place in the cytosol.
+
+Source: Original Q23; page 6.
+
+### 24 · biochemistry-1403-1404-group-b-q024
+
+All of the following factors are produced in the beta-oxidation pathway, EXCEPT:
+
+A. Malonyl-CoA
+B. Acetyl-CoA
+C. FADH₂
+D. NADH+H⁺
+
+Source: Original Q24; page 6.
+
+### 25 · biochemistry-1403-1404-group-b-q025
+
+Which of the following are the regulatable (rate-limiting) enzymes of the Krebs cycle?
+
+A. Isocitrate dehydrogenase, alpha-ketoglutarate dehydrogenase, citrate synthase
+B. Malate dehydrogenase, alpha-ketoglutarate dehydrogenase, succinate dehydrogenase
+C. Isocitrate dehydrogenase, malate dehydrogenase, succinyl-CoA synthetase
+D. Succinyl-CoA synthetase, succinate dehydrogenase, citrate synthase
+
+Source: Original Q25; page 7.
+
+### 26 · biochemistry-1403-1404-group-b-q026
+
+During the activity of which pair of Krebs cycle enzymes is CO₂ released?
+
+A. Malate dehydrogenase and alpha-ketoglutarate dehydrogenase
+B. Isocitrate dehydrogenase and succinate dehydrogenase
+C. Alpha-ketoglutarate dehydrogenase and isocitrate dehydrogenase
+D. Malate dehydrogenase and succinate dehydrogenase
+
+Source: Original Q26; page 7.
+
+### 27 · biochemistry-1403-1404-group-b-q027
+
+Regarding the pyruvate dehydrogenase complex (PDH), which of the following statements is correct?
+
+A. In the third enzymatic component of the complex (E3), the flavin coenzyme is reduced first.
+B. A high NADH/NAD ratio leads to decreased phosphorylation of PDH.
+C. An increase in pyruvate leads to activation of the enzyme PDH kinase.
+D. Oxidation of pyruvate is carried out by the first enzyme of the complex (E1).
+
+Source: Original Q27; page 7.
+
+### 28 · biochemistry-1403-1404-group-b-q028
+
+Which pair of enzymes below is specific to the Rapoport pathway (2,3-BPG pathway) in red blood cells?
+
+A. Bisphosphoglycerate phosphatase and phosphoglycerate kinase
+B. Phosphoglycerate kinase and glyceraldehyde-3-phosphate dehydrogenase
+C. Glyceraldehyde-3-phosphate dehydrogenase and bisphosphoglycerate mutase
+D. Bisphosphoglycerate mutase and bisphosphoglycerate phosphatase
+
+Source: Original Q28; page 7.
+
+### 29 · biochemistry-1403-1404-group-b-q029
+
+Which of the following, respectively (from right to left), can lead to hemolytic anemia and (pyruvic and lactic) acidosis?
+
+A. Aldolase A deficiency, thiamine deficiency
+B. Thiamine deficiency, mercury poisoning
+C. Mercury poisoning, pyruvate kinase deficiency
+D. Pyruvate kinase deficiency, aldolase A deficiency
+
+Source: Original Q29; page 7.
+
+### 30 · biochemistry-1403-1404-group-b-q030
+
+In carbohydrate metabolism, which of the following enzymes is capable of both producing and consuming ATP?
+
+A. Phosphoenolpyruvate carboxykinase (PEPCK)
+B. Phosphoglycerate kinase
+C. Pyruvate kinase
+D. Phosphofructokinase
+
+Source: Original Q30; page 8.
+
+### 31 · biochemistry-1403-1404-group-b-q031
+
+Regarding fructose and sorbitol metabolism, all of the following statements are correct, EXCEPT:
+
+A. Aldose reductase, using the coenzyme NADPH, reduces glucose to sorbitol.
+B. The enzyme aldolase B converts fructose-1-phosphate to dihydroxyacetone phosphate and glyceraldehyde.
+C. Fructokinase deficiency has fewer complications than aldolase B deficiency.
+D. In the lens of the eye, sorbitol is converted to fructose by sorbitol dehydrogenase.
+
+Source: Original Q31; page 8.
+
+### 32 · biochemistry-1403-1404-group-b-q032
+
+Regarding glycogen metabolism, which of the following statements is correct?
+
+A. Glycogen synthase first adds glucose to the tyrosine residue of glycogenin.
+B. UDP-glucose, the substrate of glycogen synthase, is [produced by] UDP-glucose pyrophosphorylase.
+C. The debranching enzyme performs two actions: transferase and glucosidase.
+D. Glycogen phosphorylase releases glucose at the α(1→6) linkage sites of glycogen.
+
+Source: Original Q32; page 8.
+
+### 33 · biochemistry-1403-1404-group-b-q033
+
+Regarding the pentose phosphate pathway, all of the following statements are correct, EXCEPT:
+
+A. In all three steps of the oxidative phase, the reduced coenzyme NADPH is produced.
+B. Glucose-6-phosphate dehydrogenase deficiency leads to favism.
+C. In the second step of the oxidative phase, CO₂ is released.
+D. Transketolase transfers two-carbon units.
+
+Source: Original Q33; page 8.
+
+### 34 · biochemistry-1403-1404-group-b-q034
+
+Regarding congenital hyperammonemia, all of the following are correct, EXCEPT:
+
+A. Argininosuccinate synthetase deficiency leads to citrullinemia.
+B. Arginase deficiency has fewer complications.
+C. The most common form is hyperammonemia type I.
+D. Blood glutamine levels increase.
+
+Source: Original Q34; page 8.
+
+### 35 · biochemistry-1403-1404-group-b-q035
+
+Regarding the absorption and transport of amino acids from the intestine, which of the following options is correct?
+
+A. In Hartnup disease, the transport of dibasic amino acids is defective.
+B. Transport of amino acids into the portal system occurs by facilitated diffusion.
+C. Free amino acids have active transport dependent on the hydrogen ion.
+D. Di- and tripeptides have active transport dependent on sodium.
+
+Source: Original Q35; page 9.
+
+### 36 · biochemistry-1403-1404-group-b-q036
+
+In which of the following are the carbon skeletons of the amino acids converted, respectively, to succinyl-CoA and alpha-ketoglutarate?
+
+A. Threonine and arginine
+B. Tyrosine and glutamine
+C. Valine and methionine
+D. Proline and histidine
+
+Source: Original Q36; page 9.
+
+### 37 · biochemistry-1403-1404-group-b-q037
+
+The amino acids cysteine, phenylalanine, and isoleucine are, respectively, glucogenic through conversion to which compounds?
+
+A. Succinyl-CoA, pyruvate, fumarate
+B. Pyruvate, succinyl-CoA, fumarate
+C. Pyruvate, fumarate, succinyl-CoA
+D. Fumarate, succinyl-CoA, pyruvate
+
+Source: Original Q37; page 9.
+
+### 38 · biochemistry-1403-1404-group-b-q038
+
+Regarding homocystinuria, which of the following options is correct?
+
+A. The amount of methionine in the urine increases.
+B. Vitamin B1 supplementation has a role as adjunct therapy.
+C. One of its complications is the formation of cystine stones in the urinary tract.
+D. The most common cause is increased activity of cystathionine beta-synthase.
+
+Source: Original Q38; page 9.
+
+### 39 · biochemistry-1403-1404-group-b-q039
+
+All of the following statements about nitric oxide (NO) are correct, EXCEPT:
+
+A. Its synthesis requires tetrahydrobiopterin (BH4).
+B. Its precursor is the amino acid arginine.
+C. It causes contraction of smooth muscle.
+D. It has a role as a neurotransmitter in the brain.
+
+Source: Original Q39; page 9.

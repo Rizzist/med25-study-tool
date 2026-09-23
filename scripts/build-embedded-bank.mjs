@@ -10,6 +10,7 @@ import "./build-physiology-practical.mjs";
 import "./build-nutrition.mjs";
 import "./build-religion.mjs";
 import "./build-divine-ethics.mjs";
+import "./build-biochemistry-papers.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const questionDirectory = resolve(root, "data/bank/questions");
@@ -37,6 +38,7 @@ const embeddedBank = {
     "july29:telegram-past-papers": readJsonLines(resolve(finalExamDirectory, "july29.jsonl")),
     "july29:downloaded-core": readJsonLines(resolve(downloadedFinalExamDirectory, "aug25-downloaded-core.jsonl")),
     "term2-nutrition:nutrition-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "nutrition-past-papers.jsonl")),
+    "term2-biochemistry:biochemistry-metabolism-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "biochemistry-metabolism-past-papers.jsonl")),
     "term2-religion:religion-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "religion-past-papers.jsonl")),
   },
 };

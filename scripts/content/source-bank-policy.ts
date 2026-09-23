@@ -18,7 +18,7 @@ import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuesti
 
 export { isExamId };
 export type { ExamId };
-export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers";
+export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers";
 type FinalExamBankKey = `${ExamId}:${FinalExamBankId}`;
 export type CollectionId =
   | "all"
@@ -230,6 +230,13 @@ const FINAL_EXAM_BANKS = [
   nutritionFinalBank,
   religionFinalBank,
   {
+    id: "biochemistry-metabolism-past-papers" as const,
+    exam: "term2-biochemistry" as const,
+    label: "Biochemistry II · Metabolism Past Papers",
+    description: "Source-preserved metabolism theory finals; practical and foundations papers excluded.",
+    requiredTag: "final-bank-biochemistry-metabolism-past-papers",
+  },
+  {
     id: "telegram-past-papers" as const,
     exam: "july25" as const,
     label: "Telegram Past Papers",
@@ -253,11 +260,11 @@ const FINAL_EXAM_BANKS = [
 ] as const;
 
 export function isFinalExamBankId(value: unknown): value is FinalExamBankId {
-  return value === "telegram-past-papers" || value === "downloaded-core" || value === "nutrition-past-papers" || value === "religion-past-papers";
+  return value === "biochemistry-metabolism-past-papers" || value === "telegram-past-papers" || value === "downloaded-core" || value === "nutrition-past-papers" || value === "religion-past-papers";
 }
 
 export function defaultFinalExamBank(exam?: ExamId): FinalExamBankId {
-  return exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers";
+  return exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers";
 }
 
 function finalExamBankDefinition(exam: ExamId, bank: FinalExamBankId) {
@@ -565,4 +572,3 @@ export function resolveMedia(questionId: string | null, mediaId: string | null) 
   if (!cleanPath || cleanPath.split("/").some((segment) => segment === "..")) return null;
   return { path: cleanPath, alt: media.alt };
 }
-

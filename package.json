@@ -6,6 +6,8 @@
     "node": "22.x"
   },
   "scripts": {
+    "biochemistry:papers:generate": "node scripts/build-biochemistry-papers.mjs",
+    "biochemistry:papers:check": "node scripts/build-biochemistry-papers.mjs --check && node --test tests/biochemistry-papers.test.mjs",
     "religion:generate": "node scripts/build-religion.mjs",
     "religion:validate": "node scripts/build-religion.mjs --check && node --test tests/religion.test.mjs",
     "dev": "node scripts/build-mcq-runtime.mjs && node scripts/build-pdf-manifest.mjs && next dev --port 3000",

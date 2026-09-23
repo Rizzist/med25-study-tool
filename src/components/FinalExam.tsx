@@ -18,8 +18,8 @@ import {WrongAnswerReview} from './WrongAnswerReview';
 import {mcqReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
 import type { MCQQuestion } from "@/src/lib/mcq/types";
 
-type ExamId = "july25" | "july29" | "term2-nutrition" | "term2-religion";
-type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers";
+type ExamId = "july25" | "july29" | "term2-nutrition" | "term2-religion" | "term2-biochemistry";
+type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers";
 type FinalBaseSessionKey = `${ExamId}:${FinalExamBankId}`;
 type FinalSessionKey = string;
 type FinalAnswer = {
@@ -44,6 +44,7 @@ const examLabels: Record<ExamId, { date: string; title: string }> = {
   july25: { date: "July 25", title: "Tissue Development & Function" },
   july29: { date: "Aug 25", title: "Cell & Molecules" },
   "term2-nutrition": { date: "Nutrition · date TBA", title: "Nutrition · downloaded past papers" },
+  "term2-biochemistry": { date: "Biochemistry II · past finals", title: "Biochemistry II · Metabolism past papers" },
   "term2-religion": { date: "Religion · date TBA", title: "Religion · downloaded past papers" },
 };
 
@@ -53,10 +54,10 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
 }
 
 export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: {id:string;title:string;gradedQuestionIds:string[]}; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';onProgressSaved?:()=>void;onExit?:()=>void }) {
-  const [bank, setBank] = useState<FinalExamBankId>(exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
+  const [bank, setBank] = useState<FinalExamBankId>(exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
-  const [bankLabel, setBankLabel] = useState(exam === "term2-religion" ? "Religion · Downloaded Past Papers" : exam === "term2-nutrition" ? "Nutrition · Downloaded Past Papers" : "Telegram Past Papers");
+  const [bankLabel, setBankLabel] = useState(exam === "term2-biochemistry" ? "Biochemistry II · Metabolism Past Papers" : exam === "term2-religion" ? "Religion · Downloaded Past Papers" : exam === "term2-nutrition" ? "Nutrition · Downloaded Past Papers" : "Telegram Past Papers");
   const [bankDescription, setBankDescription] = useState("The original source-traceable past-paper bank.");
   const [excludeCarbohydrateLipidMetabolism, setExcludeCarbohydrateLipidMetabolism] = useState(!collection);
   const [filteredOutCount, setFilteredOutCount] = useState(0);

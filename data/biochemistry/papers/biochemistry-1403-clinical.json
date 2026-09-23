@@ -1,0 +1,1130 @@
+{
+  "id": "biochemistry-1403-clinical",
+  "sourceId": "39",
+  "title": "Clinical biochemistry · 1403 · numbered fragment",
+  "note": "37 readable items numbered 1–39: source items 26 and 29 are absent. Supplied English translation; no missing question is invented.",
+  "defaultEligible": true,
+  "date": null,
+  "sources": [
+    {
+      "originalFilename": "امتحان بیوشیمی بالینی 1403 eng.pdf",
+      "archiveFile": "originals/source-01.pdf",
+      "sha256": "c06978f58318d803f7e2ba9eab038ecabdda7fbc9d24cf7de4c3f72da91e27af",
+      "pages": 8
+    }
+  ],
+  "original": {
+    "title": "امتحان بیوشیمی بالینی 1403 eng.pdf",
+    "url": "/study/biochemistry/past-papers/1403-clinical/original.pdf",
+    "sha256": "c06978f58318d803f7e2ba9eab038ecabdda7fbc9d24cf7de4c3f72da91e27af"
+  },
+  "missingSourceNumbers": [
+    26,
+    29
+  ],
+  "questions": [
+    {
+      "number": 1,
+      "page": 2,
+      "prompt": "In which of the following conditions is C-peptide lowest (lower than the rest)?",
+      "options": [
+        "Insulinoma",
+        "Type I diabetes",
+        "Hyperinsulinemia",
+        "Gestational diabetes"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q001",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q001",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 1, source page 2."
+        ]
+      },
+      "explanation": "Type I diabetes is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
+    },
+    {
+      "number": 2,
+      "page": 2,
+      "prompt": "Diabetes caused by the use of Diazoxide belongs to which category of diabetes?",
+      "options": [
+        "Type 1",
+        "Type 2",
+        "Gestational diabetes",
+        "Other specific types of diabetes"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q002",
+      "sectionId": "biochemistry/biochem-diabetes-integration",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q002",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 2, source page 2."
+        ]
+      },
+      "explanation": "Other specific types of diabetes is the retained source answer for the printed question. Review: Diabetes and metabolic perturbations: causal review."
+    },
+    {
+      "number": 3,
+      "page": 2,
+      "prompt": "How many disulfide bonds are in the structure of insulin?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "0"
+      ],
+      "providedKey": "B",
+      "key": null,
+      "note": "Mature insulin has THREE disulfide bonds (two interchain and one intrachain). Three is absent from the options; the marked two counts only interchain bonds.",
+      "acceptedOptionIds": [],
+      "id": "biochemistry-1403-clinical-q003",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q003",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 3, source page 2.",
+          "https://pubmed.ncbi.nlm.nih.gov/14744022/"
+        ]
+      },
+      "explanation": "Mature insulin has THREE disulfide bonds (two interchain and one intrachain). Three is absent from the options; the marked two counts only interchain bonds."
+    },
+    {
+      "number": 4,
+      "page": 2,
+      "prompt": "A person with features of Reaven syndrome (metabolic syndrome) is at high risk for which category of disease?",
+      "options": [
+        "Cancer",
+        "Osteoporosis",
+        "Cardiac (cardiovascular)",
+        "Endocrinopathy"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "note": "",
+      "acceptedOptionIds": [
+        "C"
+      ],
+      "id": "biochemistry-1403-clinical-q004",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q004",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 4, source page 2."
+        ]
+      },
+      "explanation": "Cardiac (cardiovascular) is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 5,
+      "page": 2,
+      "prompt": "In Von Gierke disease, all of the following laboratory findings are seen, EXCEPT:",
+      "options": [
+        "Lactic acidemia",
+        "Hypoglycemia",
+        "Hypouricemia",
+        "Hepatomegaly"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "note": "",
+      "acceptedOptionIds": [
+        "C"
+      ],
+      "id": "biochemistry-1403-clinical-q005",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q005",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 5, source page 2."
+        ]
+      },
+      "explanation": "Hypouricemia is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 6,
+      "page": 2,
+      "prompt": "Hereditary fructose intolerance and dietary fructose intolerance are respectively due to a defect in which of the following?",
+      "options": [
+        "Fructokinase – GLUT1",
+        "Phosphofructokinase – Fructokinase",
+        "Aldolase B – GLUT5",
+        "Aldolase A – GLUT3"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "note": "",
+      "acceptedOptionIds": [
+        "C"
+      ],
+      "id": "biochemistry-1403-clinical-q006",
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q006",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 6, source page 2."
+        ]
+      },
+      "explanation": "Aldolase B – GLUT5 is the retained source answer for the printed question. Review: Fructose, galactose, mannose and the polyol pathway."
+    },
+    {
+      "number": 7,
+      "page": 3,
+      "prompt": "Cataract and formation of AGE compounds arise from which carbohydrate?",
+      "options": [
+        "Mannose",
+        "Galactose",
+        "Sucrose",
+        "Fructose"
+      ],
+      "providedKey": "B",
+      "key": null,
+      "note": "The item combines cataract and advanced glycation without a clear mechanism; the supplied key is insufficient to settle the broad wording.",
+      "acceptedOptionIds": [],
+      "id": "biochemistry-1403-clinical-q007",
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "uncertain": true,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q007",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 7, source page 3."
+        ]
+      },
+      "explanation": "The item combines cataract and advanced glycation without a clear mechanism; the supplied key is insufficient to settle the broad wording."
+    },
+    {
+      "number": 8,
+      "page": 3,
+      "prompt": "All of the following are seen in McArdle disease, EXCEPT:",
+      "options": [
+        "Hepatomegaly",
+        "Muscle cramps",
+        "Myoglobinuria",
+        "Iron deposition in the kidney and renal failure"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "note": "",
+      "acceptedOptionIds": [
+        "A"
+      ],
+      "id": "biochemistry-1403-clinical-q008",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q008",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 8, source page 3."
+        ]
+      },
+      "explanation": "Hepatomegaly is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 9,
+      "page": 3,
+      "prompt": "Which of the following functions is related to farnesyl pyrophosphate?",
+      "options": [
+        "Formation of HMG-CoA",
+        "Formation of vitamin K",
+        "Formation of vitamin A",
+        "Formation of dolichol phosphate"
+      ],
+      "providedKey": "A",
+      "key": "D",
+      "note": "Farnesyl pyrophosphate supplies isoprenoid pathways including dolichol formation; it is downstream, not a precursor of HMG-CoA.",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q009",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q009",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 9, source page 3."
+        ]
+      },
+      "explanation": "Farnesyl pyrophosphate supplies isoprenoid pathways including dolichol formation; it is downstream, not a precursor of HMG-CoA."
+    },
+    {
+      "number": 10,
+      "page": 3,
+      "prompt": "How many units of isopentenyl pyrophosphate are needed to form geraniol pyrophosphate (geranyl-PP)?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "Two five-carbon isoprene equivalents yield geranyl-PP; more exactly these are one DMAPP plus one IPP.",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q010",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q010",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 10, source page 3."
+        ]
+      },
+      "explanation": "Two five-carbon isoprene equivalents yield geranyl-PP; more exactly these are one DMAPP plus one IPP."
+    },
+    {
+      "number": 11,
+      "page": 3,
+      "prompt": "Which of the following is a laboratory finding of SLOS (Smith–Lemli–Opitz Syndrome)?",
+      "options": [
+        "Lymphopenia",
+        "Increased lanosterol",
+        "Thrombocytosis",
+        "Normocytic normochromic anemia"
+      ],
+      "providedKey": "D",
+      "key": null,
+      "note": "The claimed SLOS hematologic discriminator is not established by the supplied material.",
+      "acceptedOptionIds": [],
+      "id": "biochemistry-1403-clinical-q011",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q011",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 11, source page 3.",
+          "https://www.ncbi.nlm.nih.gov/books/NBK1143/"
+        ]
+      },
+      "explanation": "The claimed SLOS hematologic discriminator is not established by the supplied material."
+    },
+    {
+      "number": 12,
+      "page": 3,
+      "prompt": "Which apolipoprotein plays an essential role in the formation of HDL?",
+      "options": [
+        "Apo C-II",
+        "Apo B100",
+        "Apo B48",
+        "Apo A-I"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q012",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q012",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 12, source page 3."
+        ]
+      },
+      "explanation": "Apo A-I is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
+    },
+    {
+      "number": 13,
+      "page": 4,
+      "prompt": "In which of the Fredrickson classifications is there NO decrease in HDL?",
+      "options": [
+        "Type I",
+        "Type II-a",
+        "Type IV",
+        "Type V"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q013",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q013",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 13, source page 4."
+        ]
+      },
+      "explanation": "Type II-a is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
+    },
+    {
+      "number": 14,
+      "page": 4,
+      "prompt": "Which antihypertensive drug leads to hyperkalemia?",
+      "options": [
+        "Acetazolamide",
+        "Triamterene",
+        "Furosemide",
+        "Thiazide"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q014",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q014",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 14, source page 4."
+        ]
+      },
+      "explanation": "Triamterene is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 15,
+      "page": 4,
+      "prompt": "In which of the following conditions does blood creatinine show a falsely low value?",
+      "options": [
+        "High urea",
+        "High hemoglobin",
+        "High blood glucose",
+        "Use of cephalosporins"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q015",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q015",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 15, source page 4."
+        ]
+      },
+      "explanation": "High hemoglobin is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 16,
+      "page": 4,
+      "prompt": "What is the GFR value in ESRD patients?",
+      "options": [
+        "Less than 15",
+        "15–30",
+        "30–60",
+        "Less than 30"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "note": "",
+      "acceptedOptionIds": [
+        "A"
+      ],
+      "id": "biochemistry-1403-clinical-q016",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q016",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 16, source page 4."
+        ]
+      },
+      "explanation": "Less than 15 is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 17,
+      "page": 4,
+      "prompt": "For early detection of kidney diseases, measuring which is more appropriate?",
+      "options": [
+        "Serum creatinine",
+        "Cystatin C clearance",
+        "Microalbuminuria",
+        "Urine osmolarity"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "note": "",
+      "acceptedOptionIds": [
+        "C"
+      ],
+      "id": "biochemistry-1403-clinical-q017",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q017",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 17, source page 4."
+        ]
+      },
+      "explanation": "Microalbuminuria is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 18,
+      "page": 4,
+      "prompt": "In which liver disease can the ALT rise exceed 1000 IU/L?",
+      "options": [
+        "Fatty liver",
+        "Liver cirrhosis",
+        "Hepatitis C",
+        "Hepatitis A"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q018",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q018",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 18, source page 4."
+        ]
+      },
+      "explanation": "Hepatitis A is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 19,
+      "page": 5,
+      "prompt": "Deficiency of which of the following vitamins leads to a falsely low measurement of the enzyme ALT?",
+      "options": [
+        "B6",
+        "B3",
+        "B1",
+        "B9"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "note": "",
+      "acceptedOptionIds": [
+        "A"
+      ],
+      "id": "biochemistry-1403-clinical-q019",
+      "sectionId": "biochemistry/biochem-vitamins",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q019",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 19, source page 5."
+        ]
+      },
+      "explanation": "B6 is the retained source answer for the printed question. Review: Vitamin and cofactor integration for metabolism."
+    },
+    {
+      "number": 20,
+      "page": 5,
+      "prompt": "Which of the following disorders leads to an increase in direct (conjugated) bilirubin?",
+      "options": [
+        "Use of contrast media in CT",
+        "Dubin–Johnson syndrome",
+        "Gilbert syndrome",
+        "Hemolytic anemia"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q020",
+      "sectionId": "biochemistry/biochem-heme",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q020",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 20, source page 5."
+        ]
+      },
+      "explanation": "Dubin–Johnson syndrome is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
+    },
+    {
+      "number": 21,
+      "page": 5,
+      "prompt": "A person with a marked increase in alkaline phosphatase and gamma-GT probably has which liver disorder?",
+      "options": [
+        "Gilbert syndrome",
+        "Rotor syndrome",
+        "Biliary duct obstruction",
+        "Fatty liver"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "note": "",
+      "acceptedOptionIds": [
+        "C"
+      ],
+      "id": "biochemistry-1403-clinical-q021",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q021",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 21, source page 5."
+        ]
+      },
+      "explanation": "Biliary duct obstruction is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 22,
+      "page": 5,
+      "prompt": "In which of the following porphyrias do clinical symptoms appear in childhood and with greater severity?",
+      "options": [
+        "AIP",
+        "HCP (Hereditary Coproporphyria)",
+        "VP",
+        "CEP"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q022",
+      "sectionId": "biochemistry/biochem-heme",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q022",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 22, source page 5."
+        ]
+      },
+      "explanation": "CEP is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
+    },
+    {
+      "number": 23,
+      "page": 5,
+      "prompt": "What is the most common acquired porphyria?",
+      "options": [
+        "CEP (Günther disease)",
+        "Acute Intermittent Porphyria",
+        "PCT (Porphyria Cutanea Tarda)",
+        "EPP (Erythropoietic Protoporphyria)"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "note": "",
+      "acceptedOptionIds": [
+        "C"
+      ],
+      "id": "biochemistry-1403-clinical-q023",
+      "sectionId": "biochemistry/biochem-heme",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q023",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 23, source page 5."
+        ]
+      },
+      "explanation": "PCT (Porphyria Cutanea Tarda) is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
+    },
+    {
+      "number": 24,
+      "page": 5,
+      "prompt": "In PCT porphyria, which compound increases in urine or feces?",
+      "options": [
+        "PBG in urine",
+        "Uroporphyrin in urine or feces",
+        "ALA in urine",
+        "PBG in feces"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q024",
+      "sectionId": "biochemistry/biochem-heme",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q024",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 24, source page 5."
+        ]
+      },
+      "explanation": "Uroporphyrin in urine or feces is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
+    },
+    {
+      "number": 25,
+      "page": 6,
+      "prompt": "Which of the heme biosynthesis enzymes is present (also) in the mitochondria?",
+      "options": [
+        "ALA synthase",
+        "ALA dehydratase",
+        "PBG deaminase",
+        "Uroporphyrinogen cosynthase"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "note": "",
+      "acceptedOptionIds": [
+        "A"
+      ],
+      "id": "biochemistry-1403-clinical-q025",
+      "sectionId": "biochemistry/biochem-heme",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q025",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 25, source page 6."
+        ]
+      },
+      "explanation": "ALA synthase is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
+    },
+    {
+      "number": 27,
+      "page": 6,
+      "prompt": "Which of the following symptoms is NOT present in phenylketonuria (PKU)?",
+      "options": [
+        "Liver cirrhosis",
+        "Self-harm (self-injurious behavior)",
+        "Paralysis",
+        "Mousy odor of urine and sweat"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "note": "",
+      "acceptedOptionIds": [
+        "A"
+      ],
+      "id": "biochemistry-1403-clinical-q027",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q027",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 27, source page 6."
+        ]
+      },
+      "explanation": "Liver cirrhosis is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
+    },
+    {
+      "number": 28,
+      "page": 6,
+      "prompt": "What is the most important clinical sign in alkaptonuria patients?",
+      "options": [
+        "Ataxia",
+        "Anemia",
+        "Facial acne",
+        "Ochronosis"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q028",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q028",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 28, source page 6."
+        ]
+      },
+      "explanation": "Ochronosis is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
+    },
+    {
+      "number": 30,
+      "page": 6,
+      "prompt": "Deficiency of which vitamin is present in Hartnup disease?",
+      "options": [
+        "B1",
+        "B2",
+        "B12",
+        "B3"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q030",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q030",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 30, source page 6."
+        ]
+      },
+      "explanation": "B3 is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
+    },
+    {
+      "number": 31,
+      "page": 6,
+      "prompt": "Which of the following amino acids is conditional (conditionally essential)?",
+      "options": [
+        "Asp",
+        "Ala",
+        "Ser",
+        "Arg"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q031",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q031",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 31, source page 6."
+        ]
+      },
+      "explanation": "Arg is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+    },
+    {
+      "number": 32,
+      "page": 6,
+      "prompt": "In which of the following conditions does the urine NOT develop a caramel/burnt-sugar (maple syrup) smell due to the presence of sotolon?",
+      "options": [
+        "Tyrosinemia type III",
+        "Pregnancy",
+        "Prolonged starvation",
+        "MSUD disease"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "note": "The broad sotolon/odor claim needs a defined source before scoring.",
+      "acceptedOptionIds": [],
+      "id": "biochemistry-1403-clinical-q032",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q032",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 32, source page 6."
+        ]
+      },
+      "explanation": "The broad sotolon/odor claim needs a defined source before scoring."
+    },
+    {
+      "number": 33,
+      "page": 7,
+      "prompt": "Which of the following compounds does NOT play a role in the conversion of phenylalanine to tyrosine?",
+      "options": [
+        "NADPH,H⁺",
+        "O₂",
+        "BH₄",
+        "Cu"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q033",
+      "sectionId": "biochemistry/biochem-ppp",
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q033",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 33, source page 7."
+        ]
+      },
+      "explanation": "Cu is the retained source answer for the printed question. Review: Pentose phosphate pathway and antioxidant defense."
+    },
+    {
+      "number": 34,
+      "page": 7,
+      "prompt": "Formation of cystathionine from homocysteine (homoCys) requires which amino acid?",
+      "options": [
+        "Alanine",
+        "Serine",
+        "Leucine",
+        "Glycine"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q034",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q034",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 34, source page 7."
+        ]
+      },
+      "explanation": "Serine is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+    },
+    {
+      "number": 35,
+      "page": 7,
+      "prompt": "Which of the following vitamins does NOT play a role in homocysteine (homoCys) metabolism?",
+      "options": [
+        "B12",
+        "B6",
+        "B9",
+        "B5"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "note": "",
+      "acceptedOptionIds": [
+        "D"
+      ],
+      "id": "biochemistry-1403-clinical-q035",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "biochemistry-1403-clinical-q035",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 35, source page 7."
+        ]
+      },
+      "explanation": "B5 is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+    },
+    {
+      "number": 36,
+      "page": 7,
+      "prompt": "Troponin measurement is helpful for diagnosing which patients?",
+      "options": [
+        "STEMI",
+        "Non-STEMI",
+        "Pulmonary embolism",
+        "Dyspnea (shortness of breath)"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "Troponin is valuable in both STEMI and NSTEMI; the diagnostic contrast is particularly important in NSTEMI.",
+      "acceptedOptionIds": [
+        "A",
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q036",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q036",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 36, source page 7."
+        ]
+      },
+      "explanation": "Troponin is valuable in both STEMI and NSTEMI; the diagnostic contrast is particularly important in NSTEMI."
+    },
+    {
+      "number": 37,
+      "page": 7,
+      "prompt": "The \"Flipped Ratio\" is used for which of the following factors?",
+      "options": [
+        "ALT",
+        "AST",
+        "LDH",
+        "cTnI"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "note": "",
+      "acceptedOptionIds": [
+        "C"
+      ],
+      "id": "biochemistry-1403-clinical-q037",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q037",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 37, source page 7."
+        ]
+      },
+      "explanation": "LDH is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+    },
+    {
+      "number": 38,
+      "page": 7,
+      "prompt": "Which of the following is more sensitive than the rest for diagnosing myocardial infarction in the early hours?",
+      "options": [
+        "CK-MB",
+        "Myoglobin",
+        "LDH",
+        "Troponin"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "note": "Historical early-marker question: myoglobin rises rapidly but is nonspecific. Current assessment relies on high-sensitivity cardiac troponin; do not apply this old ranking as modern practice.",
+      "acceptedOptionIds": [
+        "B"
+      ],
+      "id": "biochemistry-1403-clinical-q038",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q038",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 38, source page 7."
+        ]
+      },
+      "explanation": "Historical early-marker question: myoglobin rises rapidly but is nonspecific. Current assessment relies on high-sensitivity cardiac troponin; do not apply this old ranking as modern practice."
+    },
+    {
+      "number": 39,
+      "page": 8,
+      "prompt": "To differentiate Dyspnea caused by cardiac disease from (that caused by) intravascular coagulation, measuring which is appropriate?",
+      "options": [
+        "D-dimer",
+        "AST",
+        "BNP",
+        "hsCRP"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "note": "BNP supports heart-failure evaluation while D-dimer supports selected thromboembolism workups. This wording does not specify which diagnostic role it asks for.",
+      "acceptedOptionIds": [],
+      "id": "biochemistry-1403-clinical-q039",
+      "sectionId": null,
+      "uncertain": true,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "biochemistry-1403-clinical-q039",
+        "auditedAt": "2026-09-23",
+        "evidence": [
+          "Clinical biochemistry · 1403 · numbered fragment, original question 39, source page 8."
+        ]
+      },
+      "explanation": "BNP supports heart-failure evaluation while D-dimer supports selected thromboembolism workups. This wording does not specify which diagnostic role it asks for."
+    }
+  ]
+}

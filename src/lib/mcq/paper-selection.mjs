@@ -1,12 +1,12 @@
 export function finalPaperKey(exam, collectionId) {
-  const bank=exam==='term2-nutrition'?'nutrition-past-papers':exam==='term2-religion'?'religion-past-papers':'telegram-past-papers';
+  const bank=exam==='term2-biochemistry'?'biochemistry-metabolism-past-papers':exam==='term2-nutrition'?'nutrition-past-papers':exam==='term2-religion'?'religion-past-papers':'telegram-past-papers';
   return `${exam}:${bank}${collectionId?':collection:'+collectionId:''}`;
 }
 export const COMBINED_PAPER_SELECTIONS_KEY='med25-combined-paper-selections-v1';
 export function readCombinedSelections(raw) {
   try {
     const rows=JSON.parse(raw??'[]');if(!Array.isArray(rows))return [];
-    return rows.filter(r=>r&&['july25','july29','term2-nutrition','term2-religion'].includes(r.exam)&&/^combined-[a-f0-9]{64}$/.test(r.id)&&Array.isArray(r.sourcePaperIds)&&r.sourcePaperIds.length>0&&r.sourcePaperIds.length<=100&&r.sourcePaperIds.every(id=>typeof id==='string'&&/^[a-z0-9-]{1,180}$/.test(id))).slice(-100).map(r=>({id:r.id,exam:r.exam,sourcePaperIds:[...new Set(r.sourcePaperIds)]}));
+    return rows.filter(r=>r&&['july25','july29','term2-nutrition','term2-religion','term2-biochemistry'].includes(r.exam)&&/^combined-[a-f0-9]{64}$/.test(r.id)&&Array.isArray(r.sourcePaperIds)&&r.sourcePaperIds.length>0&&r.sourcePaperIds.length<=100&&r.sourcePaperIds.every(id=>typeof id==='string'&&/^[a-z0-9-]{1,180}$/.test(id))).slice(-100).map(r=>({id:r.id,exam:r.exam,sourcePaperIds:[...new Set(r.sourcePaperIds)]}));
   }catch{return [];}
 }
 export function paperAttemptSummary(progress,exam,collection) {

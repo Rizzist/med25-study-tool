@@ -113,7 +113,7 @@ test('collection sessions and retired legacy sessions survive parse',()=>{
 });
 test('all source download URLs resolve, and none exposes local paths',()=>{
   const c=read('public/study/past-paper-downloads/catalog.json');assert(!/\/Users\/|\/tmp\//.test(JSON.stringify(c)));
-  assert.equal(c.courses.flatMap(c=>c.collections).length,30);
+  assert.equal(c.courses.flatMap(c=>c.collections).length,45); // 30 existing + 15 metabolism collections
   for(const item of c.courses.flatMap(c=>c.collections))for(const url of [...Object.values(item.downloads),...item.originals.map(o=>o.url)])assert(fs.statSync(path.join(root,'public',url.split(/[?#]/)[0])).size>0,url);
 });
 test('image markers remain visible before feedback without revealing anatomy names',()=>{

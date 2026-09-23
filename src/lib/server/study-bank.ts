@@ -10,7 +10,7 @@ import {selectPracticalSprint} from '@/src/lib/mcq/practical-selection.mjs';
 import {selectTerm2Sprint} from '@/src/lib/mcq/term2-selection.mjs';
 import {isExamId,isTerm2Exam,isImageQuestion,type ExamId} from '@/src/lib/mcq/exams.mjs';
 export {isExamId};export type {ExamId};
-export type FinalExamBankId='telegram-past-papers'|'nutrition-past-papers'|'religion-past-papers';
+export type FinalExamBankId='telegram-past-papers'|'nutrition-past-papers'|'religion-past-papers'|'biochemistry-metabolism-past-papers';
 export type CollectionId='all'|'anatomy'|'dynamic-anatomy'|'histology'|'embryology'|'physiology'|'biochemistry'|'images'|'stains'|'histo-practical'|'histo-identification'|'histo-transfer'|'practical';
 const COLLECTIONS:CollectionId[]=['all','anatomy','dynamic-anatomy','histology','embryology','physiology','biochemistry','images','stains','histo-practical','histo-identification','histo-transfer','practical'];
 type Runtime={version:string;courses:Record<ExamId,{file:string;historyFile:string;version:string;count:number}>;finals:Record<string,{file:string;version:string;count:number}>};
@@ -24,8 +24,8 @@ function readQuestions(file:string):MCQQuestion[] {
 }
 export function loadVerifiedQuestions(exam:ExamId):MCQQuestion[]{return readQuestions(runtime.courses[exam].file);}
 export function isCollectionId(value:unknown):value is CollectionId{return typeof value==='string'&&COLLECTIONS.includes(value as CollectionId);}
-export function isFinalExamBankId(value:unknown):value is FinalExamBankId{return value==='telegram-past-papers'||value==='nutrition-past-papers'||value==='religion-past-papers';}
-export function defaultFinalExamBank(exam?:ExamId):FinalExamBankId{return exam==='term2-religion'?'religion-past-papers':exam==='term2-nutrition'?'nutrition-past-papers':'telegram-past-papers';}
+export function isFinalExamBankId(value:unknown):value is FinalExamBankId{return value==='biochemistry-metabolism-past-papers'||value==='telegram-past-papers'||value==='nutrition-past-papers'||value==='religion-past-papers';}
+export function defaultFinalExamBank(exam?:ExamId):FinalExamBankId{return exam==='term2-biochemistry'?'biochemistry-metabolism-past-papers':exam==='term2-religion'?'religion-past-papers':exam==='term2-nutrition'?'nutrition-past-papers':'telegram-past-papers';}
 export function loadFinalExamQuestions(exam:ExamId,bank:FinalExamBankId=defaultFinalExamBank(exam)){
   const record=runtime.finals[exam+':'+bank];if(!record)throw Error('No sourced past-paper bank exists for this course.');
   return readQuestions(record.file);
