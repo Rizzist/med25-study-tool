@@ -2,7 +2,7 @@
 
 37 readable items numbered 1–39: source items 26 and 29 are absent. Supplied English translation; no missing question is invented.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-1403-clinical
 Course: Biochemistry II - Metabolism
@@ -37,7 +37,9 @@ Source: Original Q2; page 2.
 
 ### 3 · biochemistry-1403-clinical-q003
 
-How many disulfide bonds are in the structure of insulin?
+Edited study version; original wording follows below.
+
+How many disulfide bonds connect the A and B chains of mature insulin?
 
 A. 1
 B. 2
@@ -46,7 +48,7 @@ D. 0
 
 Source: Original Q3; page 2.
 
-Status: Ungraded - Mature insulin has THREE disulfide bonds (two interchain and one intrachain). Three is absent from the options; the marked two counts only interchain bonds.
+Note: Original stem: How many disulfide bonds are in the structure of insulin? Original choices: A) 1 | B) 2 | C) 4 | D) 0
 
 ### 4 · biochemistry-1403-clinical-q004
 
@@ -83,7 +85,9 @@ Source: Original Q6; page 2.
 
 ### 7 · biochemistry-1403-clinical-q007
 
-Cataract and formation of AGE compounds arise from which carbohydrate?
+Edited study version; original wording follows below.
+
+Which listed carbohydrate can be reduced to galactitol and cause cataracts when its metabolism is defective?
 
 A. Mannose
 B. Galactose
@@ -92,7 +96,7 @@ D. Fructose
 
 Source: Original Q7; page 3.
 
-Status: Ungraded - The item combines cataract and advanced glycation without a clear mechanism; the supplied key is insufficient to settle the broad wording.
+Note: Original stem: Cataract and formation of AGE compounds arise from which carbohydrate? Original choices: A) Mannose | B) Galactose | C) Sucrose | D) Fructose
 
 ### 8 · biochemistry-1403-clinical-q008
 
@@ -129,16 +133,19 @@ Source: Original Q10; page 3.
 
 ### 11 · biochemistry-1403-clinical-q011
 
+Edited study version; original wording follows below.
+
 Which of the following is a laboratory finding of SLOS (Smith–Lemli–Opitz Syndrome)?
 
 A. Lymphopenia
 B. Increased lanosterol
 C. Thrombocytosis
 D. Normocytic normochromic anemia
+E. Increased 7-dehydrocholesterol
 
 Source: Original Q11; page 3.
 
-Status: Ungraded - The claimed SLOS hematologic discriminator is not established by the supplied material.
+Note: Original stem: Which of the following is a laboratory finding of SLOS (Smith–Lemli–Opitz Syndrome)? Original choices: A) Lymphopenia | B) Increased lanosterol | C) Thrombocytosis | D) Normocytic normochromic anemia
 
 ### 12 · biochemistry-1403-clinical-q012
 
@@ -340,7 +347,9 @@ Source: Original Q31; page 6.
 
 ### 32 · biochemistry-1403-clinical-q032
 
-In which of the following conditions does the urine NOT develop a caramel/burnt-sugar (maple syrup) smell due to the presence of sotolon?
+Edited study version; original wording follows below.
+
+Which listed inherited metabolic disease is classically associated with a maple-syrup or burnt-sugar odor caused by sotolon?
 
 A. Tyrosinemia type III
 B. Pregnancy
@@ -349,7 +358,7 @@ D. MSUD disease
 
 Source: Original Q32; page 6.
 
-Status: Ungraded - The broad sotolon/odor claim needs a defined source before scoring.
+Note: Original stem: In which of the following conditions does the urine NOT develop a caramel/burnt-sugar (maple syrup) smell due to the presence of sotolon? Original choices: A) Tyrosinemia type III | B) Pregnancy | C) Prolonged starvation | D) MSUD disease
 
 ### 33 · biochemistry-1403-clinical-q033
 
@@ -419,7 +428,9 @@ Source: Original Q38; page 7.
 
 ### 39 · biochemistry-1403-clinical-q039
 
-To differentiate Dyspnea caused by cardiac disease from (that caused by) intravascular coagulation, measuring which is appropriate?
+Edited study version; original wording follows below.
+
+In a patient with dyspnea and a low clinical probability of pulmonary embolism, which fibrin-breakdown marker can help exclude venous thromboembolism when negative in an appropriate diagnostic pathway?
 
 A. D-dimer
 B. AST
@@ -428,4 +439,4 @@ D. hsCRP
 
 Source: Original Q39; page 8.
 
-Status: Ungraded - BNP supports heart-failure evaluation while D-dimer supports selected thromboembolism workups. This wording does not specify which diagnostic role it asks for.
+Note: Original stem: To differentiate Dyspnea caused by cardiac disease from (that caused by) intravascular coagulation, measuring which is appropriate? Original choices: A) D-dimer | B) AST | C) BNP | D) hsCRP

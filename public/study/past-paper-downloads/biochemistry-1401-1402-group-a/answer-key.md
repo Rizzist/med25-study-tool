@@ -2,7 +2,7 @@
 
 Supplied English translation. Academic-year label retained; exact sitting date unconfirmed.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-1401-1402-group-a
 Course: Biochemistry II - Metabolism
@@ -26,7 +26,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q1; page 2.
 
 Biochemistry theory · 1401–1402 · Group A, original question 1, source page 2.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 2 · biochemistry-1401-1402-group-a-q002
 
@@ -71,7 +71,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 2.
 
 Biochemistry theory · 1401–1402 · Group A, original question 4, source page 2.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 5 · biochemistry-1401-1402-group-a-q005
 
@@ -86,7 +86,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Biochemistry theory · 1401–1402 · Group A, original question 5, source page 2.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 https://www.bu.edu/aldolase/biochemistry2/17_LipidCatabolism_V2026.pdf
 
 ### 6 · biochemistry-1401-1402-group-a-q006
@@ -117,7 +117,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q7; page 3.
 
 Biochemistry theory · 1401–1402 · Group A, original question 7, source page 3.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 8 · biochemistry-1401-1402-group-a-q008
 
@@ -132,7 +132,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q8; page 3.
 
 Biochemistry theory · 1401–1402 · Group A, original question 8, source page 3.
-Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway.
+Biochemistry II review, PDF p. 14: Fructose, galactose, mannose and the polyol pathway.
 
 ### 9 · biochemistry-1401-1402-group-a-q009
 
@@ -162,7 +162,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 3.
 
 Biochemistry theory · 1401–1402 · Group A, original question 10, source page 3.
-Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
+Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 11 · biochemistry-1401-1402-group-a-q011
 
@@ -177,7 +177,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q11; page 3.
 
 Biochemistry theory · 1401–1402 · Group A, original question 11, source page 3.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 12 · biochemistry-1401-1402-group-a-q012
 
@@ -192,7 +192,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 3.
 
 Biochemistry theory · 1401–1402 · Group A, original question 12, source page 3.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 13 · biochemistry-1401-1402-group-a-q013
 
@@ -207,7 +207,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 13, source page 4.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 14 · biochemistry-1401-1402-group-a-q014
 
@@ -224,7 +224,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q14; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 14, source page 4.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 15 · biochemistry-1401-1402-group-a-q015
 
@@ -239,7 +239,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 15, source page 4.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 16 · biochemistry-1401-1402-group-a-q016
 
@@ -254,7 +254,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 16, source page 4.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 17 · biochemistry-1401-1402-group-a-q017
 
@@ -269,7 +269,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 17, source page 4.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 18 · biochemistry-1401-1402-group-a-q018
 
@@ -284,7 +284,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q18; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 18, source page 4.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 19 · biochemistry-1401-1402-group-a-q019
 
@@ -299,7 +299,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 5.
 
 Biochemistry theory · 1401–1402 · Group A, original question 19, source page 5.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 20 · biochemistry-1401-1402-group-a-q020
 
@@ -314,7 +314,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 5.
 
 Biochemistry theory · 1401–1402 · Group A, original question 20, source page 5.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 21 · biochemistry-1401-1402-group-a-q021
 
@@ -329,7 +329,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Biochemistry theory · 1401–1402 · Group A, original question 21, source page 5.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 22 · biochemistry-1401-1402-group-a-q022
 
@@ -346,7 +346,7 @@ Note: Accepted source alternatives: A, D.
 Source: Original Q22; page 5.
 
 Biochemistry theory · 1401–1402 · Group A, original question 22, source page 5.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 23 · biochemistry-1401-1402-group-a-q023
 
@@ -361,7 +361,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Biochemistry theory · 1401–1402 · Group A, original question 23, source page 5.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 24 · biochemistry-1401-1402-group-a-q024
 
@@ -376,7 +376,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 5.
 
 Biochemistry theory · 1401–1402 · Group A, original question 24, source page 5.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 25 · biochemistry-1401-1402-group-a-q025
 
@@ -391,7 +391,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q25; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 25, source page 6.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 26 · biochemistry-1401-1402-group-a-q026
 
@@ -406,7 +406,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 26, source page 6.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 27 · biochemistry-1401-1402-group-a-q027
 
@@ -421,7 +421,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 27, source page 6.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 28 · biochemistry-1401-1402-group-a-q028
 
@@ -438,7 +438,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q28; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 28, source page 6.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 29 · biochemistry-1401-1402-group-a-q029
 
@@ -453,7 +453,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q29; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 29, source page 6.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 30 · biochemistry-1401-1402-group-a-q030
 
@@ -468,7 +468,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q30; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 30, source page 6.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-1401-1402-group-a-q031
 
@@ -483,7 +483,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 31, source page 6.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 32 · biochemistry-1401-1402-group-a-q032
 
@@ -498,7 +498,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q32; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 32, source page 7.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 33 · biochemistry-1401-1402-group-a-q033
 
@@ -513,7 +513,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q33; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 33, source page 7.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 34 · biochemistry-1401-1402-group-a-q034
 
@@ -528,7 +528,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q34; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 34, source page 7.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 35 · biochemistry-1401-1402-group-a-q035
 
@@ -543,7 +543,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q35; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 35, source page 7.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 36 · biochemistry-1401-1402-group-a-q036
 
@@ -558,7 +558,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q36; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 36, source page 7.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 37 · biochemistry-1401-1402-group-a-q037
 
@@ -573,7 +573,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 37, source page 7.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 38 · biochemistry-1401-1402-group-a-q038
 
@@ -588,7 +588,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q38; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 38, source page 7.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 39 · biochemistry-1401-1402-group-a-q039
 
@@ -603,4 +603,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q39; page 8.
 
 Biochemistry theory · 1401–1402 · Group A, original question 39, source page 8.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.

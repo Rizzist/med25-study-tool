@@ -2,7 +2,7 @@
 
 Cover: February 2023 semester, examination 23 July 2023. Handwritten answers are not an official key.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2023-july-23
 Course: Biochemistry II - Metabolism
@@ -26,7 +26,9 @@ Source: Original Q1; page 2.
 
 ### 2 · biochemistry-2023-july-23-q002
 
-All of the following are true about citrate, except:
+Edited study version; original wording follows below.
+
+Which effect of citrate is INDIRECT, through increased malonyl-CoA and inhibition of CPT-I, rather than direct enzyme regulation or export of acetyl units?
 
 A. It inhibits phosphofructokinase.
 B. Transport two-carbon units from mitochondria.
@@ -35,7 +37,7 @@ D. It inhibits beta oxidation.
 
 Source: Original Q2; page 2.
 
-Status: Ungraded - All four statements are defensible: citrate inhibits PFK-1, exports acetyl units and activates ACC; malonyl-CoA then inhibits CPT-I and beta-oxidation.
+Note: Original stem: All of the following are true about citrate, except: Original choices: A) It inhibits phosphofructokinase. | B) Transport two-carbon units from mitochondria. | C) Activates Acetyl CoA carboxylase. | D) It inhibits beta oxidation.
 
 ### 3 · biochemistry-2023-july-23-q003
 

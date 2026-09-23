@@ -36,7 +36,7 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
   const course=catalog?.courses.find(c=>c.id===exam),sourceCollection=course?.collections.find(c=>c.id===selected),collection=sourceCollection??(combined?.id===selected?combined:undefined);
   if(error)return <p role="alert" className="mcq-alert error">{error}</p>;
   if(!course)return <p role="status" className="mcq-loading">Loading sourced past papers and downloads…</p>;
-  const head=<div className="section-head"><h2>Past papers<span>{course.collections.length} sourced</span></h2><p>Original sourced questions only; ungraded items stay in the source archive. Take a paper, resume a saved attempt, or combine several into one session.</p></div>;
+  const head=<div className="section-head"><h2>Past papers<span>{course.collections.length} sourced</span></h2><p>Past-paper questions, with any study repairs clearly identified and original wording preserved in downloads. Take a paper, resume a saved attempt, or combine several into one session.</p></div>;
   if(exam==='term2-cvs')return <section className="past-exam-hub">
     {!active&&<>{head}<HubTools course={course} open={library} onToggle={()=>setLibrary(v=>!v)}/>{library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}</>}
     <CvsPastExams onSessionActiveChange={setActive} downloads={Object.fromEntries(course.collections.map(item=>[item.id,item]))}/>

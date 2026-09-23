@@ -2,7 +2,7 @@
 
 The cover identifies semester 2, February 2025, dentistry. Photographed source; handwritten ticks are student marks, not an official key.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2025-feb-dds
 Course: Biochemistry II - Metabolism
@@ -48,7 +48,9 @@ Source: Original Q3; page 2.
 
 ### 4 · biochemistry-2025-feb-dds-q004
 
-In cystic fibrosis patients, all of the following are major complications, EXCEPT:
+Edited study version; original wording follows below.
+
+Which complication of cystic fibrosis is hepatobiliary, rather than part of its pancreatic, pulmonary or male reproductive manifestations?
 
 A. pancreatic insufficiency
 B. chronie lung infections
@@ -57,7 +59,7 @@ D. cholestasis
 
 Source: Original Q4; page 2.
 
-Status: Ungraded - Cholestasis is a recognized complication of cystic fibrosis too. Without defining major by frequency or the intended restricted context, this is not a clean EXCEPT question.
+Note: Original stem: In cystic fibrosis patients, all of the following are major complications, EXCEPT: Original choices: A) pancreatic insufficiency | B) chronie lung infections | C) male infertility | D) cholestasis
 
 ### 5 · biochemistry-2025-feb-dds-q005
 
@@ -105,7 +107,9 @@ Source: Original Q8; page 3.
 
 ### 9 · biochemistry-2025-feb-dds-q009
 
-If the cholesterol influx in the liver is higher than the cholesterol efflux, which of the following will happen?
+Edited study version; original wording follows below.
+
+Persistent hepatic cholesterol accumulation, especially together with excess hepatic triglyceride, can contribute to progression of which listed liver disease?
 
 A. fatty liver disease
 B. pancreatic insufficiency
@@ -114,7 +118,7 @@ D. cholestasis
 
 Source: Original Q9; page 3.
 
-Status: Ungraded - Influx exceeding efflux establishes hepatic cholesterol accumulation, but does not by itself establish cholestasis or uniquely distinguish the listed liver conditions.
+Note: Original stem: If the cholesterol influx in the liver is higher than the cholesterol efflux, which of the following will happen? Original choices: A) fatty liver disease | B) pancreatic insufficiency | C) plaque formation | D) cholestasis
 
 ### 10 · biochemistry-2025-feb-dds-q010
 

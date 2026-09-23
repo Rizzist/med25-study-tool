@@ -106,7 +106,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 1, source page 2.",
-          "Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products."
+          "Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products."
         ]
       },
       "explanation": "Activate at an acidic pH is the editorial study answer for the printed question. Review: Dietary lipid digestion: from meal to absorbable products."
@@ -137,7 +137,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 2, source page 2.",
-          "Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products."
+          "Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products."
         ]
       },
       "explanation": "release of bicarbonate from the pancreas is the editorial study answer for the printed question. Review: Dietary lipid digestion: from meal to absorbable products."
@@ -168,7 +168,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 3, source page 2.",
-          "Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake."
+          "Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake."
         ]
       },
       "explanation": "triacylglycerol is the editorial study answer for the printed question. Review: Micelles, enterocytes, chylomicrons and remnant uptake."
@@ -176,7 +176,7 @@
     {
       "number": 4,
       "page": 2,
-      "prompt": "In cystic fibrosis patients, all of the following are major complications, EXCEPT:",
+      "prompt": "Which complication of cystic fibrosis is hepatobiliary, rather than part of its pancreatic, pulmonary or male reproductive manifestations?",
       "options": [
         "pancreatic insufficiency",
         "chronie lung infections",
@@ -184,24 +184,46 @@
         "cholestasis"
       ],
       "providedKey": null,
-      "key": null,
-      "note": "Cholestasis is a recognized complication of cystic fibrosis too. Without defining major by frequency or the intended restricted context, this is not a clean EXCEPT question.",
+      "key": "D",
+      "note": "Cholestasis is the hepatobiliary complication. The source EXCEPT question was defective because all four choices can occur in CF. The study stem is narrowed to organ-system classification; D does NOT mean cholestasis is absent in CF.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "D",
+        "confidence": "high",
+        "prompt": "Which complication of cystic fibrosis is hepatobiliary, rather than part of its pancreatic, pulmonary or male reproductive manifestations?",
+        "explanation": "Cholestasis is the hepatobiliary complication. The source EXCEPT question was defective because all four choices can occur in CF. The study stem is narrowed to organ-system classification; D does NOT mean cholestasis is absent in CF.",
+        "evidence": [
+          "https://www.cff.org/medical-professionals/cystic-fibrosis-screening-evaluation-and-management-hepatobiliary-disease"
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "In cystic fibrosis patients, all of the following are major complications, EXCEPT:",
+        "options": [
+          "pancreatic insufficiency",
+          "chronie lung infections",
+          "male infertility",
+          "cholestasis"
+        ],
+        "providedKey": null,
+        "key": null,
+        "note": "Cholestasis is a recognized complication of cystic fibrosis too. Without defining major by frequency or the intended restricted context, this is not a clean EXCEPT question."
+      },
       "id": "biochemistry-2025-feb-dds-q004",
       "sectionId": "biochemistry/biochem-liver-tests",
       "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-2025-feb-dds-q004",
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 4, source page 2.",
-          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.",
-          "https://pubmed.ncbi.nlm.nih.gov/24436365/"
+          "Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.",
+          "https://www.cff.org/medical-professionals/cystic-fibrosis-screening-evaluation-and-management-hepatobiliary-disease"
         ]
       },
-      "explanation": "Cholestasis is a recognized complication of cystic fibrosis too. Without defining major by frequency or the intended restricted context, this is not a clean EXCEPT question."
+      "explanation": "Cholestasis is the hepatobiliary complication. The source EXCEPT question was defective because all four choices can occur in CF. The study stem is narrowed to organ-system classification; D does NOT mean cholestasis is absent in CF."
     },
     {
       "number": 5,
@@ -229,7 +251,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 5, source page 2.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "CoA is the editorial study answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation."
@@ -261,7 +283,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 6, source page 2.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "Both mitochondrial beta-oxidation and smooth-ER cholesterol synthesis are valid cellular associations."
@@ -292,7 +314,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 7, source page 3.",
-          "Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization."
+          "Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization."
         ]
       },
       "explanation": "are used by the brain is the editorial study answer for the printed question. Review: Ketogenesis and ketone utilization."
@@ -323,7 +345,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 8, source page 3.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "NADPH is the editorial study answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation."
@@ -331,7 +353,7 @@
     {
       "number": 9,
       "page": 3,
-      "prompt": "If the cholesterol influx in the liver is higher than the cholesterol efflux, which of the following will happen?",
+      "prompt": "Persistent hepatic cholesterol accumulation, especially together with excess hepatic triglyceride, can contribute to progression of which listed liver disease?",
       "options": [
         "fatty liver disease",
         "pancreatic insufficiency",
@@ -339,9 +361,32 @@
         "cholestasis"
       ],
       "providedKey": null,
-      "key": null,
-      "note": "Influx exceeding efflux establishes hepatic cholesterol accumulation, but does not by itself establish cholestasis or uniquely distinguish the listed liver conditions.",
+      "key": "A",
+      "note": "Fatty liver disease is the best match to this repaired lipid-accumulation stem. Free-cholesterol lipotoxicity can contribute to steatohepatitis. The original statement of influx exceeding efflux establishes accumulation only; it cannot diagnose a particular disease or prove cholestasis. This is an explanatory study reconstruction, not a recovered official key.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "A",
+        "confidence": "medium",
+        "prompt": "Persistent hepatic cholesterol accumulation, especially together with excess hepatic triglyceride, can contribute to progression of which listed liver disease?",
+        "explanation": "Fatty liver disease is the best match to this repaired lipid-accumulation stem. Free-cholesterol lipotoxicity can contribute to steatohepatitis. The original statement of influx exceeding efflux establishes accumulation only; it cannot diagnose a particular disease or prove cholestasis. This is an explanatory study reconstruction, not a recovered official key.",
+        "evidence": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC3186822/",
+          "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, cholesterol and lipid metabolism chapters."
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "If the cholesterol influx in the liver is higher than the cholesterol efflux, which of the following will happen?",
+        "options": [
+          "fatty liver disease",
+          "pancreatic insufficiency",
+          "plaque formation",
+          "cholestasis"
+        ],
+        "providedKey": null,
+        "key": null,
+        "note": "Influx exceeding efflux establishes hepatic cholesterol accumulation, but does not by itself establish cholestasis or uniquely distinguish the listed liver conditions."
+      },
       "id": "biochemistry-2025-feb-dds-q009",
       "sectionId": "biochemistry/biochem-cholesterol",
       "uncertain": false,
@@ -352,10 +397,12 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 9, source page 3.",
-          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis."
+          "Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC3186822/",
+          "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, cholesterol and lipid metabolism chapters."
         ]
       },
-      "explanation": "Influx exceeding efflux establishes hepatic cholesterol accumulation, but does not by itself establish cholestasis or uniquely distinguish the listed liver conditions."
+      "explanation": "Fatty liver disease is the best match to this repaired lipid-accumulation stem. Free-cholesterol lipotoxicity can contribute to steatohepatitis. The original statement of influx exceeding efflux establishes accumulation only; it cannot diagnose a particular disease or prove cholestasis. This is an explanatory study reconstruction, not a recovered official key."
     },
     {
       "number": 10,
@@ -383,7 +430,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 10, source page 3.",
-          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis."
+          "Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis."
         ]
       },
       "explanation": "bile acids is the editorial study answer for the printed question. Review: Cholesterol, bile acids and steroid synthesis."
@@ -414,7 +461,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 11, source page 3.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "cholesterol transformation from liver to peripheral tissues is the editorial study answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -445,7 +492,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 12, source page 4.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Apo B-100 is the editorial study answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -476,7 +523,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 13, source page 4.",
-          "Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection."
+          "Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection."
         ]
       },
       "explanation": "Transamination reactions require pyridoxal-5'-phosphate (PLP) is the editorial study answer for the printed question. Review: Protein digestion, amino-acid transport and nitrogen collection."
@@ -507,7 +554,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 14, source page 4.",
-          "Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+          "Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
         ]
       },
       "explanation": "- Leucine and lysine is the editorial study answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
@@ -538,7 +585,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 15, source page 4.",
-          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
+          "Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "Isoleucine is the editorial study answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
@@ -569,7 +616,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 16, source page 4.",
-          "Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+          "Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
         ]
       },
       "explanation": "Methionine is the editorial study answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
@@ -600,7 +647,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 17, source page 4.",
-          "Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules."
+          "Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules."
         ]
       },
       "explanation": "Decarboxylation is the editorial study answer for the printed question. Review: Amino acids as precursors of signaling and storage molecules."
@@ -632,7 +679,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 18, source page 4.",
-          "Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.",
+          "Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.",
           "https://theses.ncl.ac.uk/jspui/bitstream/10443/4897/1/Albalawi%20M%20S%202020.pdf"
         ]
       },
@@ -664,7 +711,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 19, source page 5.",
-          "Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection."
+          "Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection."
         ]
       },
       "explanation": "Ubiquitin is the editorial study answer for the printed question. Review: Protein digestion, amino-acid transport and nitrogen collection."
@@ -695,7 +742,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 20, source page 5.",
-          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
+          "Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "Homogentisate dioxygenase is the editorial study answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
@@ -726,7 +773,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 21, source page 5.",
-          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
+          "Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Amylase is the editorial study answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
@@ -757,7 +804,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 22, source page 5.",
-          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
+          "Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Creatine kinase is the editorial study answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
@@ -788,7 +835,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 23, source page 5.",
-          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
+          "Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Nonalcoholic Fatty Liver Disease is the editorial study answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
@@ -819,7 +866,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 24, source page 5.",
-          "Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products."
+          "Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products."
         ]
       },
       "explanation": "Aldolase is the editorial study answer for the printed question. Review: Dietary lipid digestion: from meal to absorbable products."
@@ -912,7 +959,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 27, source page 6.",
-          "Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event."
+          "Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event."
         ]
       },
       "explanation": "Pyruvate kinase catalyzes the final ATP-producing reaction of glycolysis."
@@ -943,7 +990,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 28, source page 6.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "1,3-biphosphoglycerate is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -974,7 +1021,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 29, source page 6.",
-          "Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event."
+          "Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event."
         ]
       },
       "explanation": "NAD+ is the editorial study answer for the printed question. Review: Glycolysis: every step, carbon count and energy event."
@@ -1036,7 +1083,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 31, source page 6.",
-          "Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities."
+          "Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities."
         ]
       },
       "explanation": "GLUT-2 is the editorial study answer for the printed question. Review: Glucose transport, trapping and tissue priorities."
@@ -1067,7 +1114,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 32, source page 6.",
-          "Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits."
+          "Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits."
         ]
       },
       "explanation": "Phosphorylase is the editorial study answer for the printed question. Review: Gluconeogenesis, redox transfer and substrate limits."
@@ -1098,7 +1145,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 33, source page 7.",
-          "Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits."
+          "Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits."
         ]
       },
       "explanation": "From two pyruvate to one glucose: 4 ATP plus 2 GTP and 2 NADH. Asking ATP alone gives four; high-energy phosphate bonds total six."
@@ -1160,7 +1207,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 35, source page 7.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "30-32 is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -1191,7 +1238,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 36, source page 7.",
-          "Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event."
+          "Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event."
         ]
       },
       "explanation": "Pyruvic acid is the editorial study answer for the printed question. Review: Glycolysis: every step, carbon count and energy event."
@@ -1222,7 +1269,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 37, source page 7.",
-          "Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules."
+          "Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules."
         ]
       },
       "explanation": "Creatine phosphate is the editorial study answer for the printed question. Review: Amino acids as precursors of signaling and storage molecules."
@@ -1253,7 +1300,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 38, source page 7.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "High amount of fatty acid is the editorial study answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -1284,7 +1331,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 39, source page 7.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "There is a defect or lack in HGPRT enzyme is the editorial study answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -1315,7 +1362,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 40, source page 8.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Aspartic acid is the editorial study answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -1346,7 +1393,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 41, source page 8.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "NADPH and oxygen is the editorial study answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -1377,7 +1424,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 42, source page 8.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Xanthine oxidase is the editorial study answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -1408,7 +1455,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 43, source page 8.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Delta aminolevulinic formation is the editorial study answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -1439,7 +1486,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 44, source page 8.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Thymidine synthase is the editorial study answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -1470,7 +1517,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 45, source page 8.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "Succinate Q reductase is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -1501,7 +1548,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 46, source page 8.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "Atractyloside is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -1532,7 +1579,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 47, source page 9.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "FMN is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -1563,7 +1610,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 48, source page 9.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "IV is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -1594,7 +1641,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 49, source page 9.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Decreased carnitine palmitoyltransferase 1 activity is the editorial study answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -1625,7 +1672,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 50, source page 9.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "Hormone-sensitive lipase (HSL) is the editorial study answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation."
@@ -1656,7 +1703,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 51, source page 9.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Gluconeogenesis is the editorial study answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -1687,7 +1734,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 52, source page 9.",
-          "Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities."
+          "Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities."
         ]
       },
       "explanation": "GLUT-4 is the editorial study answer for the printed question. Review: Glucose transport, trapping and tissue priorities."
@@ -1718,7 +1765,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 53, source page 9.",
-          "Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport."
+          "Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport."
         ]
       },
       "explanation": "Steroids is the editorial study answer for the printed question. Review: Hormone receptors, second messengers and steroid transport."
@@ -1749,7 +1796,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 54, source page 10.",
-          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
+          "Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function."
         ]
       },
       "explanation": "Defect in V2 receptor signaling is the editorial study answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function."
@@ -1780,7 +1827,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 55, source page 10.",
-          "Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport."
+          "Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport."
         ]
       },
       "explanation": "Testosterone and estrogen is the editorial study answer for the printed question. Review: Hormone receptors, second messengers and steroid transport."
@@ -1811,7 +1858,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 56, source page 10.",
-          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis."
+          "Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis."
         ]
       },
       "explanation": "Cortisol is the editorial study answer for the printed question. Review: Cholesterol, bile acids and steroid synthesis."
@@ -1842,7 +1889,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 57, source page 10.",
-          "Biochemistry II review, PDF p. 47: Diabetes and metabolic perturbations: causal review."
+          "Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review."
         ]
       },
       "explanation": "Frequent urination, and excessive thirst is the editorial study answer for the printed question. Review: Diabetes and metabolic perturbations: causal review."
@@ -1873,7 +1920,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 58, source page 10.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Hypoglycemia is the editorial study answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -1904,7 +1951,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 59, source page 10.",
-          "Biochemistry II review, PDF p. 47: Diabetes and metabolic perturbations: causal review."
+          "Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review."
         ]
       },
       "explanation": "Insulin resistance is the editorial study answer for the printed question. Review: Diabetes and metabolic perturbations: causal review."
@@ -1935,7 +1982,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 60, source page 11.",
-          "Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport."
+          "Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport."
         ]
       },
       "explanation": "Phospholipase C is the editorial study answer for the printed question. Review: Hormone receptors, second messengers and steroid transport."
@@ -1966,7 +2013,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 61, source page 11.",
-          "Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport."
+          "Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport."
         ]
       },
       "explanation": "Impaired conversion of testosterone to dihydrotestosterone is the editorial study answer for the printed question. Review: Hormone receptors, second messengers and steroid transport."
@@ -1997,7 +2044,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 62, source page 11.",
-          "Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport."
+          "Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport."
         ]
       },
       "explanation": "Steroids is the editorial study answer for the printed question. Review: Hormone receptors, second messengers and steroid transport."
@@ -2028,7 +2075,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 63, source page 11.",
-          "Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport."
+          "Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport."
         ]
       },
       "explanation": "Glucagon is the editorial study answer for the printed question. Review: Hormone receptors, second messengers and steroid transport."
@@ -2059,7 +2106,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry II · February 2025 semester · DDS, original question 64, source page 11.",
-          "Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport."
+          "Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport."
         ]
       },
       "explanation": "Thyroid hormones is the editorial study answer for the printed question. Review: Hormone receptors, second messengers and steroid transport."

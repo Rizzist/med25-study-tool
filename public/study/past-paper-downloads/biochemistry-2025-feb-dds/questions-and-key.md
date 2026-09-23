@@ -2,7 +2,7 @@
 
 The cover identifies semester 2, February 2025, dentistry. Photographed source; handwritten ticks are student marks, not an official key.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2025-feb-dds
 Course: Biochemistry II - Metabolism
@@ -48,7 +48,9 @@ Source: Original Q3; page 2.
 
 ### 4 · biochemistry-2025-feb-dds-q004
 
-In cystic fibrosis patients, all of the following are major complications, EXCEPT:
+Edited study version; original wording follows below.
+
+Which complication of cystic fibrosis is hepatobiliary, rather than part of its pancreatic, pulmonary or male reproductive manifestations?
 
 A. pancreatic insufficiency
 B. chronie lung infections
@@ -57,7 +59,7 @@ D. cholestasis
 
 Source: Original Q4; page 2.
 
-Status: Ungraded - Cholestasis is a recognized complication of cystic fibrosis too. Without defining major by frequency or the intended restricted context, this is not a clean EXCEPT question.
+Note: Original stem: In cystic fibrosis patients, all of the following are major complications, EXCEPT: Original choices: A) pancreatic insufficiency | B) chronie lung infections | C) male infertility | D) cholestasis
 
 ### 5 · biochemistry-2025-feb-dds-q005
 
@@ -105,7 +107,9 @@ Source: Original Q8; page 3.
 
 ### 9 · biochemistry-2025-feb-dds-q009
 
-If the cholesterol influx in the liver is higher than the cholesterol efflux, which of the following will happen?
+Edited study version; original wording follows below.
+
+Persistent hepatic cholesterol accumulation, especially together with excess hepatic triglyceride, can contribute to progression of which listed liver disease?
 
 A. fatty liver disease
 B. pancreatic insufficiency
@@ -114,7 +118,7 @@ D. cholestasis
 
 Source: Original Q9; page 3.
 
-Status: Ungraded - Influx exceeding efflux establishes hepatic cholesterol accumulation, but does not by itself establish cholestasis or uniquely distinguish the listed liver conditions.
+Note: Original stem: If the cholesterol influx in the liver is higher than the cholesterol efflux, which of the following will happen? Original choices: A) fatty liver disease | B) pancreatic insufficiency | C) plaque formation | D) cholestasis
 
 ### 10 · biochemistry-2025-feb-dds-q010
 
@@ -736,7 +740,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q1; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 1, source page 2.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 2 · biochemistry-2025-feb-dds-q002
 
@@ -751,7 +755,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q2; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 2, source page 2.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 3 · biochemistry-2025-feb-dds-q003
 
@@ -766,23 +770,23 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 3, source page 2.
-Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 4 · biochemistry-2025-feb-dds-q004
 
-Key: Ungraded - no defensible single key
+Key: D — cholestasis
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Cholestasis is a recognized complication of cystic fibrosis too. Without defining major by frequency or the intended restricted context, this is not a clean EXCEPT question.
+Existing answer note: Cholestasis is the hepatobiliary complication. The source EXCEPT question was defective because all four choices can occur in CF. The study stem is narrowed to organ-system classification; D does NOT mean cholestasis is absent in CF.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q4; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 4, source page 2.
-Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
-https://pubmed.ncbi.nlm.nih.gov/24436365/
+Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+https://www.cff.org/medical-professionals/cystic-fibrosis-screening-evaluation-and-management-hepatobiliary-disease
 
 ### 5 · biochemistry-2025-feb-dds-q005
 
@@ -797,7 +801,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 5, source page 2.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 6 · biochemistry-2025-feb-dds-q006
 
@@ -814,7 +818,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q6; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 6, source page 2.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 7 · biochemistry-2025-feb-dds-q007
 
@@ -829,7 +833,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q7; page 3.
 
 Biochemistry II · February 2025 semester · DDS, original question 7, source page 3.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 8 · biochemistry-2025-feb-dds-q008
 
@@ -844,22 +848,24 @@ Provenance note: No authoritative key supplied.
 Source: Original Q8; page 3.
 
 Biochemistry II · February 2025 semester · DDS, original question 8, source page 3.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 9 · biochemistry-2025-feb-dds-q009
 
-Key: Ungraded - no defensible single key
+Key: A — fatty liver disease
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Influx exceeding efflux establishes hepatic cholesterol accumulation, but does not by itself establish cholestasis or uniquely distinguish the listed liver conditions.
+Existing answer note: Fatty liver disease is the best match to this repaired lipid-accumulation stem. Free-cholesterol lipotoxicity can contribute to steatohepatitis. The original statement of influx exceeding efflux establishes accumulation only; it cannot diagnose a particular disease or prove cholestasis. This is an explanatory study reconstruction, not a recovered official key.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q9; page 3.
 
 Biochemistry II · February 2025 semester · DDS, original question 9, source page 3.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
+https://pmc.ncbi.nlm.nih.gov/articles/PMC3186822/
+Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, cholesterol and lipid metabolism chapters.
 
 ### 10 · biochemistry-2025-feb-dds-q010
 
@@ -874,7 +880,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 3.
 
 Biochemistry II · February 2025 semester · DDS, original question 10, source page 3.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 11 · biochemistry-2025-feb-dds-q011
 
@@ -889,7 +895,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q11; page 3.
 
 Biochemistry II · February 2025 semester · DDS, original question 11, source page 3.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 12 · biochemistry-2025-feb-dds-q012
 
@@ -904,7 +910,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 12, source page 4.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 13 · biochemistry-2025-feb-dds-q013
 
@@ -919,7 +925,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 13, source page 4.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 14 · biochemistry-2025-feb-dds-q014
 
@@ -934,7 +940,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 14, source page 4.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 15 · biochemistry-2025-feb-dds-q015
 
@@ -949,7 +955,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 15, source page 4.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 16 · biochemistry-2025-feb-dds-q016
 
@@ -964,7 +970,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 16, source page 4.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 17 · biochemistry-2025-feb-dds-q017
 
@@ -979,7 +985,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 17, source page 4.
-Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
 
 ### 18 · biochemistry-2025-feb-dds-q018
 
@@ -996,7 +1002,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q18; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 18, source page 4.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 https://theses.ncl.ac.uk/jspui/bitstream/10443/4897/1/Albalawi%20M%20S%202020.pdf
 
 ### 19 · biochemistry-2025-feb-dds-q019
@@ -1012,7 +1018,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 19, source page 5.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 20 · biochemistry-2025-feb-dds-q020
 
@@ -1027,7 +1033,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 20, source page 5.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 21 · biochemistry-2025-feb-dds-q021
 
@@ -1042,7 +1048,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 21, source page 5.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 22 · biochemistry-2025-feb-dds-q022
 
@@ -1057,7 +1063,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 22, source page 5.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 23 · biochemistry-2025-feb-dds-q023
 
@@ -1072,7 +1078,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 23, source page 5.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 24 · biochemistry-2025-feb-dds-q024
 
@@ -1087,7 +1093,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 24, source page 5.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 25 · biochemistry-2025-feb-dds-q025
 
@@ -1132,7 +1138,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 6.
 
 Biochemistry II · February 2025 semester · DDS, original question 27, source page 6.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.
 
 ### 28 · biochemistry-2025-feb-dds-q028
 
@@ -1147,7 +1153,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 6.
 
 Biochemistry II · February 2025 semester · DDS, original question 28, source page 6.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 29 · biochemistry-2025-feb-dds-q029
 
@@ -1162,7 +1168,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q29; page 6.
 
 Biochemistry II · February 2025 semester · DDS, original question 29, source page 6.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.
 
 ### 30 · biochemistry-2025-feb-dds-q030
 
@@ -1192,7 +1198,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 6.
 
 Biochemistry II · February 2025 semester · DDS, original question 31, source page 6.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 32 · biochemistry-2025-feb-dds-q032
 
@@ -1207,7 +1213,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q32; page 6.
 
 Biochemistry II · February 2025 semester · DDS, original question 32, source page 6.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 33 · biochemistry-2025-feb-dds-q033
 
@@ -1222,7 +1228,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q33; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 33, source page 7.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 34 · biochemistry-2025-feb-dds-q034
 
@@ -1252,7 +1258,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q35; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 35, source page 7.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 36 · biochemistry-2025-feb-dds-q036
 
@@ -1267,7 +1273,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q36; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 36, source page 7.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.
 
 ### 37 · biochemistry-2025-feb-dds-q037
 
@@ -1282,7 +1288,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 37, source page 7.
-Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
 
 ### 38 · biochemistry-2025-feb-dds-q038
 
@@ -1297,7 +1303,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q38; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 38, source page 7.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 39 · biochemistry-2025-feb-dds-q039
 
@@ -1312,7 +1318,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q39; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 39, source page 7.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 40 · biochemistry-2025-feb-dds-q040
 
@@ -1327,7 +1333,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q40; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 40, source page 8.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 41 · biochemistry-2025-feb-dds-q041
 
@@ -1342,7 +1348,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q41; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 41, source page 8.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 42 · biochemistry-2025-feb-dds-q042
 
@@ -1357,7 +1363,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q42; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 42, source page 8.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 43 · biochemistry-2025-feb-dds-q043
 
@@ -1372,7 +1378,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q43; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 43, source page 8.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 44 · biochemistry-2025-feb-dds-q044
 
@@ -1387,7 +1393,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q44; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 44, source page 8.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 45 · biochemistry-2025-feb-dds-q045
 
@@ -1402,7 +1408,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q45; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 45, source page 8.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 46 · biochemistry-2025-feb-dds-q046
 
@@ -1417,7 +1423,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q46; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 46, source page 8.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 47 · biochemistry-2025-feb-dds-q047
 
@@ -1432,7 +1438,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q47; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 47, source page 9.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 48 · biochemistry-2025-feb-dds-q048
 
@@ -1447,7 +1453,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 48, source page 9.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 49 · biochemistry-2025-feb-dds-q049
 
@@ -1462,7 +1468,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q49; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 49, source page 9.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 50 · biochemistry-2025-feb-dds-q050
 
@@ -1477,7 +1483,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q50; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 50, source page 9.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 51 · biochemistry-2025-feb-dds-q051
 
@@ -1492,7 +1498,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q51; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 51, source page 9.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 52 · biochemistry-2025-feb-dds-q052
 
@@ -1507,7 +1513,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q52; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 52, source page 9.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 53 · biochemistry-2025-feb-dds-q053
 
@@ -1522,7 +1528,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q53; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 53, source page 9.
-Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
 
 ### 54 · biochemistry-2025-feb-dds-q054
 
@@ -1537,7 +1543,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q54; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 54, source page 10.
-Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 55 · biochemistry-2025-feb-dds-q055
 
@@ -1552,7 +1558,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q55; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 55, source page 10.
-Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
 
 ### 56 · biochemistry-2025-feb-dds-q056
 
@@ -1567,7 +1573,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q56; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 56, source page 10.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 57 · biochemistry-2025-feb-dds-q057
 
@@ -1582,7 +1588,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q57; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 57, source page 10.
-Biochemistry II review, PDF p. 47: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
 
 ### 58 · biochemistry-2025-feb-dds-q058
 
@@ -1597,7 +1603,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q58; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 58, source page 10.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 59 · biochemistry-2025-feb-dds-q059
 
@@ -1612,7 +1618,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q59; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 59, source page 10.
-Biochemistry II review, PDF p. 47: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
 
 ### 60 · biochemistry-2025-feb-dds-q060
 
@@ -1627,7 +1633,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q60; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 60, source page 11.
-Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
 
 ### 61 · biochemistry-2025-feb-dds-q061
 
@@ -1642,7 +1648,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q61; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 61, source page 11.
-Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
 
 ### 62 · biochemistry-2025-feb-dds-q062
 
@@ -1657,7 +1663,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q62; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 62, source page 11.
-Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
 
 ### 63 · biochemistry-2025-feb-dds-q063
 
@@ -1672,7 +1678,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q63; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 63, source page 11.
-Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
 
 ### 64 · biochemistry-2025-feb-dds-q064
 
@@ -1687,4 +1693,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q64; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 64, source page 11.
-Biochemistry II review, PDF p. 56: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.

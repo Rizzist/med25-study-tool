@@ -2,7 +2,7 @@
 
 Two supplied English versions of the same 21-item source grouped together.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-1399-metabolism
 Course: Biochemistry II - Metabolism
@@ -70,16 +70,18 @@ Source: Original Q5; page 3.
 
 ### 6 · biochemistry-1399-metabolism-q006
 
+Edited study version; original wording follows below.
+
 In Gilbert syndrome, serum unconjugated bilirubin ....... and urine urobilinogen ....... .
 
 A. Decrease – Increase
 B. Decrease – Decrease
 C. Increase – Increase
-D. Increase – Decrease
+D. Increase – usually normal or variable, not a defining diagnostic change
 
 Source: Original Q6; page 3.
 
-Status: Ungraded - Gilbert syndrome raises unconjugated bilirubin, but a consistently decreased urine urobilinogen is not established by this stem. The normal-urobilinogen alternative is missing.
+Note: Original stem: In Gilbert syndrome, serum unconjugated bilirubin ....... and urine urobilinogen ....... . Original choices: A) Decrease – Increase | B) Decrease – Decrease | C) Increase – Increase | D) Increase – Decrease
 
 ### 7 · biochemistry-1399-metabolism-q007
 
@@ -105,16 +107,19 @@ Source: Original Q8; page 4.
 
 ### 9 · biochemistry-1399-metabolism-q009
 
+Edited study version; original wording follows below.
+
 All of the following statements about neonatal hyperbilirubinemia (jaundice) are correct, EXCEPT:
 
 A. The capacity for conjugation with glucuronic acid in the liver is low.
 B. Unconjugated bilirubin crosses the blood–brain barrier.
 C. Phototherapy makes unconjugated bilirubin more soluble.
 D. Uptake of unconjugated bilirubin by the liver is impaired.
+E. None of the above: all can be true in neonatal unconjugated hyperbilirubinemia
 
 Source: Original Q9; page 4.
 
-Status: Ungraded - Reduced hepatic uptake can contribute to neonatal hyperbilirubinemia too. The unqualified neonatal-jaundice stem has no clean false option; preserve the printed D mark but do not score it.
+Note: Original stem: All of the following statements about neonatal hyperbilirubinemia (jaundice) are correct, EXCEPT: Original choices: A) The capacity for conjugation with glucuronic acid in the liver is low. | B) Unconjugated bilirubin crosses the blood–brain barrier. | C) Phototherapy makes unconjugated bilirubin more soluble. | D) Uptake of unconjugated bilirubin by the liver is impaired.
 
 ### 10 · biochemistry-1399-metabolism-q010
 

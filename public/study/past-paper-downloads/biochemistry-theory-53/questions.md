@@ -2,7 +2,7 @@
 
 Undated 53-item report. Clean and annotated versions grouped; source marks are preserved separately from editorial answers.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-theory-53
 Course: Biochemistry II - Metabolism
@@ -147,16 +147,19 @@ Source: Original Q12; page 3.
 
 ### 13 · biochemistry-theory-53-q013
 
+Edited study version; original wording follows below.
+
 Which of the following IS NOT an NPN compound in the blood?
 
 A. Glutamine
 B. Uric acid
 C. Urea
 D. Creatinine
+E. None of the above: all four are non-protein nitrogen compounds
 
 Source: Original Q13; page 3.
 
-Status: Ungraded - Every listed compound contains non-protein nitrogen; no defensible EXCEPT answer.
+Note: Original stem: Which of the following IS NOT an NPN compound in the blood? Original choices: A) Glutamine | B) Uric acid | C) Urea | D) Creatinine
 
 ### 14 · biochemistry-theory-53-q014
 
@@ -294,7 +297,9 @@ Source: Original Q25; page 6.
 
 ### 26 · biochemistry-theory-53-q026
 
-All the following organs are involved in creatine formation, EXCEPT…………..?
+Edited study version; original wording follows below.
+
+Which organ also has local creatine-synthesis capacity, despite being omitted from the simplified liver-kidney-muscle creatine diagram?
 
 A. Liver
 B. Muscle
@@ -303,7 +308,7 @@ D. kidney
 
 Source: Original Q26; page 6.
 
-Status: Ungraded - Brain also synthesizes creatine; the traditional liver-kidney-muscle formulation does not justify excluding brain.
+Note: Original stem: All the following organs are involved in creatine formation, EXCEPT…………..? Original choices: A) Liver | B) Muscle | C) Brain | D) kidney
 
 ### 27 · biochemistry-theory-53-q027
 
@@ -329,7 +334,9 @@ Source: Original Q28; page 7.
 
 ### 29 · biochemistry-theory-53-q029
 
-Azotemia is the same as ……………..?
+Edited study version; original wording follows below.
+
+What is the clinical syndrome of systemic manifestations associated with severe retention of nitrogenous waste in kidney failure, as distinct from the laboratory finding azotemia?
 
 A. Hyperuricemia
 B. Uremia
@@ -338,7 +345,7 @@ D. Hyperbilirubinemia
 
 Source: Original Q29; page 7.
 
-Status: Ungraded - Azotemia (laboratory elevation) and uremia (clinical syndrome) are not synonyms; no precise correct choice.
+Note: Original stem: Azotemia is the same as ……………..? Original choices: A) Hyperuricemia | B) Uremia | C) Hyperammonemia | D) Hyperbilirubinemia
 
 ### 30 · biochemistry-theory-53-q030
 

@@ -52,7 +52,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 1, source page 1.",
-          "Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits."
+          "Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits."
         ]
       },
       "explanation": "Phosphorylase is the retained source answer for the printed question. Review: Gluconeogenesis, redox transfer and substrate limits."
@@ -114,7 +114,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 3, source page 1.",
-          "Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event."
+          "Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event."
         ]
       },
       "explanation": "Enolase is the retained source answer for the printed question. Review: Glycolysis: every step, carbon count and energy event."
@@ -145,7 +145,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 4, source page 1.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "30-32 is the retained source answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -302,7 +302,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 9, source page 2.",
-          "Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection."
+          "Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection."
         ]
       },
       "explanation": "Alanine is the retained source answer for the printed question. Review: Protein digestion, amino-acid transport and nitrogen collection."
@@ -333,7 +333,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 10, source page 2.",
-          "Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities."
+          "Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities."
         ]
       },
       "explanation": "GLUT-4 is the retained source answer for the printed question. Review: Glucose transport, trapping and tissue priorities."
@@ -395,7 +395,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 12, source page 3.",
-          "Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event."
+          "Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event."
         ]
       },
       "explanation": "Pyruvic Acid is the retained source answer for the printed question. Review: Glycolysis: every step, carbon count and energy event."
@@ -408,26 +408,54 @@
         "Glutamine",
         "Uric acid",
         "Urea",
-        "Creatinine"
+        "Creatinine",
+        "None of the above: all four are non-protein nitrogen compounds"
       ],
       "providedKey": "A",
-      "key": null,
-      "note": "Every listed compound contains non-protein nitrogen; no defensible EXCEPT answer.",
+      "key": "E",
+      "note": "Free glutamine, urate, urea and creatinine all contribute non-protein nitrogen. Glutamine is an amino acid, not a protein. Added E corrects the original EXCEPT question; the supplied A mark is not a valid biochemical distinction.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "E",
+        "confidence": "high",
+        "optionPatches": {
+          "E": "None of the above: all four are non-protein nitrogen compounds"
+        },
+        "explanation": "Free glutamine, urate, urea and creatinine all contribute non-protein nitrogen. Glutamine is an amino acid, not a protein. Added E corrects the original EXCEPT question; the supplied A mark is not a valid biochemical distinction.",
+        "evidence": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK305/",
+          "Biochemistry II review: renal biochemistry and nonprotein nitrogen."
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "Which of the following IS NOT an NPN compound in the blood?",
+        "options": [
+          "Glutamine",
+          "Uric acid",
+          "Urea",
+          "Creatinine"
+        ],
+        "providedKey": "A",
+        "key": null,
+        "note": "Every listed compound contains non-protein nitrogen; no defensible EXCEPT answer."
+      },
       "id": "biochemistry-theory-53-q013",
       "sectionId": "biochemistry/biochem-renal-tests",
       "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-theory-53-q013",
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 13, source page 3.",
-          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
+          "Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.",
+          "https://www.ncbi.nlm.nih.gov/books/NBK305/",
+          "Biochemistry II review: renal biochemistry and nonprotein nitrogen."
         ]
       },
-      "explanation": "Every listed compound contains non-protein nitrogen; no defensible EXCEPT answer."
+      "explanation": "Free glutamine, urate, urea and creatinine all contribute non-protein nitrogen. Glutamine is an amino acid, not a protein. Added E corrects the original EXCEPT question; the supplied A mark is not a valid biochemical distinction."
     },
     {
       "number": 14,
@@ -455,7 +483,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 14, source page 3.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "OMP is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -486,7 +514,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 15, source page 3.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Birds and reptiles excrete uric acid as the purine catabolic end product; the supplied allantoin mark is incorrect."
@@ -521,7 +549,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 16, source page 4.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Glutamine, Aspartate, CO2 is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -552,7 +580,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 17, source page 4.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Hypoxanthine is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -583,7 +611,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 18, source page 4.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "ADA deficiency is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -614,7 +642,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 19, source page 4.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Purine bases is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -645,7 +673,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 20, source page 5.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Xanthine oxidase is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -676,7 +704,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 21, source page 5.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Adenosine deaminase is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -707,7 +735,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 22, source page 5.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Hyperuricemia is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -738,7 +766,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 23, source page 5.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Thymine is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -769,7 +797,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 24, source page 6.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "dATP is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -800,7 +828,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 25, source page 6.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "There is a defect or lack in the HGPRT enzyme is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -808,7 +836,7 @@
     {
       "number": 26,
       "page": 6,
-      "prompt": "All the following organs are involved in creatine formation, EXCEPT…………..?",
+      "prompt": "Which organ also has local creatine-synthesis capacity, despite being omitted from the simplified liver-kidney-muscle creatine diagram?",
       "options": [
         "Liver",
         "Muscle",
@@ -816,23 +844,48 @@
         "kidney"
       ],
       "providedKey": "C",
-      "key": null,
-      "note": "Brain also synthesizes creatine; the traditional liver-kidney-muscle formulation does not justify excluding brain.",
+      "key": "C",
+      "note": "Brain cells have creatine-synthesis capacity as well as creatine uptake. The supplied C mark cannot mean the brain never synthesizes creatine. The study stem explicitly tests this correction rather than repeating the original false exclusion.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "C",
+        "confidence": "high",
+        "prompt": "Which organ also has local creatine-synthesis capacity, despite being omitted from the simplified liver-kidney-muscle creatine diagram?",
+        "explanation": "Brain cells have creatine-synthesis capacity as well as creatine uptake. The supplied C mark cannot mean the brain never synthesizes creatine. The study stem explicitly tests this correction rather than repeating the original false exclusion.",
+        "evidence": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC3355046/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC1175845/"
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "All the following organs are involved in creatine formation, EXCEPT…………..?",
+        "options": [
+          "Liver",
+          "Muscle",
+          "Brain",
+          "kidney"
+        ],
+        "providedKey": "C",
+        "key": null,
+        "note": "Brain also synthesizes creatine; the traditional liver-kidney-muscle formulation does not justify excluding brain."
+      },
       "id": "biochemistry-theory-53-q026",
       "sectionId": "biochemistry/biochem-special-products",
       "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-theory-53-q026",
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 26, source page 6.",
-          "Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules."
+          "Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC3355046/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC1175845/"
         ]
       },
-      "explanation": "Brain also synthesizes creatine; the traditional liver-kidney-muscle formulation does not justify excluding brain."
+      "explanation": "Brain cells have creatine-synthesis capacity as well as creatine uptake. The supplied C mark cannot mean the brain never synthesizes creatine. The study stem explicitly tests this correction rather than repeating the original false exclusion."
     },
     {
       "number": 27,
@@ -860,7 +913,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 27, source page 6.",
-          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
+          "Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "Tyrosine is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
@@ -891,7 +944,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 28, source page 7.",
-          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
+          "Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function."
         ]
       },
       "explanation": "Creatinine is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function."
@@ -899,7 +952,7 @@
     {
       "number": 29,
       "page": 7,
-      "prompt": "Azotemia is the same as ……………..?",
+      "prompt": "What is the clinical syndrome of systemic manifestations associated with severe retention of nitrogenous waste in kidney failure, as distinct from the laboratory finding azotemia?",
       "options": [
         "Hyperuricemia",
         "Uremia",
@@ -907,23 +960,48 @@
         "Hyperbilirubinemia"
       ],
       "providedKey": "B",
-      "key": null,
-      "note": "Azotemia (laboratory elevation) and uremia (clinical syndrome) are not synonyms; no precise correct choice.",
+      "key": "B",
+      "note": "Uremia is the clinical syndrome. Azotemia means biochemical elevation of nitrogenous wastes; it is not a synonym. The stem is repaired to preserve the likely intended B while retaining the clinically important distinction.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "B",
+        "confidence": "high",
+        "prompt": "What is the clinical syndrome of systemic manifestations associated with severe retention of nitrogenous waste in kidney failure, as distinct from the laboratory finding azotemia?",
+        "explanation": "Uremia is the clinical syndrome. Azotemia means biochemical elevation of nitrogenous wastes; it is not a synonym. The stem is repaired to preserve the likely intended B while retaining the clinically important distinction.",
+        "evidence": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK305/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK507821/"
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "Azotemia is the same as ……………..?",
+        "options": [
+          "Hyperuricemia",
+          "Uremia",
+          "Hyperammonemia",
+          "Hyperbilirubinemia"
+        ],
+        "providedKey": "B",
+        "key": null,
+        "note": "Azotemia (laboratory elevation) and uremia (clinical syndrome) are not synonyms; no precise correct choice."
+      },
       "id": "biochemistry-theory-53-q029",
       "sectionId": "biochemistry/biochem-renal-tests",
       "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-theory-53-q029",
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 29, source page 7.",
-          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
+          "Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.",
+          "https://www.ncbi.nlm.nih.gov/books/NBK305/",
+          "https://www.ncbi.nlm.nih.gov/books/NBK507821/"
         ]
       },
-      "explanation": "Azotemia (laboratory elevation) and uremia (clinical syndrome) are not synonyms; no precise correct choice."
+      "explanation": "Uremia is the clinical syndrome. Azotemia means biochemical elevation of nitrogenous wastes; it is not a synonym. The stem is repaired to preserve the likely intended B while retaining the clinically important distinction."
     },
     {
       "number": 30,
@@ -951,7 +1029,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 30, source page 7.",
-          "Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection."
+          "Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection."
         ]
       },
       "explanation": "Proelastase is the retained source answer for the printed question. Review: Protein digestion, amino-acid transport and nitrogen collection."
@@ -982,7 +1060,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 31, source page 7.",
-          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
+          "Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "Hartnup disease affects neutral amino-acid transport. Phenylalanine is the best listed example; tryptophan is the clinically important classic association."
@@ -1013,7 +1091,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 32, source page 7.",
-          "Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+          "Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
         ]
       },
       "explanation": "Lysine is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
@@ -1044,7 +1122,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 33, source page 8.",
-          "Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts."
+          "Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts."
         ]
       },
       "explanation": "Argininemia is the retained source answer for the printed question. Review: Urea cycle: atom origins, compartments and diagnostic contrasts."
@@ -1075,7 +1153,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 34, source page 8.",
-          "Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection."
+          "Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection."
         ]
       },
       "explanation": "Pyridoxine is the retained source answer for the printed question. Review: Protein digestion, amino-acid transport and nitrogen collection."
@@ -1106,7 +1184,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 35, source page 8.",
-          "Biochemistry II review, PDF p. 52: Nutrition, nitrogen balance and final integration checkpoints."
+          "Biochemistry II review, PDF p. 49: Nutrition, nitrogen balance and final integration checkpoints."
         ]
       },
       "explanation": "During pregnancy is the retained source answer for the printed question. Review: Nutrition, nitrogen balance and final integration checkpoints."
@@ -1137,7 +1215,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 36, source page 8.",
-          "Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts."
+          "Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts."
         ]
       },
       "explanation": "Ammonia and aspartate is the retained source answer for the printed question. Review: Urea cycle: atom origins, compartments and diagnostic contrasts."
@@ -1168,7 +1246,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 37, source page 8.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Prehpatic bilirubinemia is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -1199,7 +1277,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 38, source page 9.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Glucose is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -1231,7 +1309,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 39, source page 9.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Epinephrine stimulates glycogenolysis, not glycogenesis. Glucagon has no direct major action on skeletal muscle, making C another false statement as written."
@@ -1262,7 +1340,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 40, source page 9.",
-          "Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits."
+          "Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits."
         ]
       },
       "explanation": "Ketone bodies is the retained source answer for the printed question. Review: Gluconeogenesis, redox transfer and substrate limits."
@@ -1293,7 +1371,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 41, source page 9.",
-          "Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities."
+          "Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities."
         ]
       },
       "explanation": "The intended contrast is insulin-independent renal glucose transport versus GLUT4 in muscle. Hyperglycemia still changes filtered glucose and may exceed the renal threshold."
@@ -1324,7 +1402,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 42, source page 9.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Muscle can use ketones; during prolonged starvation its preference shifts toward fatty acids. The heart is metabolically flexible, so the exclusive alternatives are imperfect."
@@ -1355,7 +1433,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 43, source page 10.",
-          "Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake."
+          "Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake."
         ]
       },
       "explanation": "Carbohydrate maldigestion or malabsorption causes steatorrhea is the retained source answer for the printed question. Review: Micelles, enterocytes, chylomicrons and remnant uptake."
@@ -1386,7 +1464,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 44, source page 10.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "Hormone-sensitive lipase (HSL) is activated by insuline to lyse TAG is the retained source answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation."
@@ -1417,7 +1495,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 45, source page 10.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "The inner mitochondrial membrane is selective for other ions as well as protons; they cannot all freely diffuse."
@@ -1448,7 +1526,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 46, source page 10.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "Operation of the electron transport chain without ATP production is the retained source answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -1479,7 +1557,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 47, source page 11.",
-          "Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization."
+          "Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization."
         ]
       },
       "explanation": "Ketoacidosis is seen in cases of high fat diet feeding is the retained source answer for the printed question. Review: Ketogenesis and ketone utilization."
@@ -1510,7 +1588,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 48, source page 11.",
-          "Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products."
+          "Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products."
         ]
       },
       "explanation": "Hydrolyze FA from TAG molecules long-chain length (›18 carbons) is the retained source answer for the printed question. Review: Dietary lipid digestion: from meal to absorbable products."
@@ -1541,7 +1619,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 49, source page 11.",
-          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis."
+          "Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis."
         ]
       },
       "explanation": "7-alfa Hydroxylase is the retained source answer for the printed question. Review: Cholesterol, bile acids and steroid synthesis."
@@ -1572,7 +1650,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 50, source page 11.",
-          "Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization."
+          "Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization."
         ]
       },
       "explanation": "Hydroxybutarate is the retained source answer for the printed question. Review: Ketogenesis and ketone utilization."
@@ -1603,7 +1681,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 51, source page 12.",
-          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
+          "Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Lipoprotein lipase is the retained source answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
@@ -1634,7 +1712,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 52, source page 12.",
-          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
+          "Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Paget disease is the retained source answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
@@ -1665,7 +1743,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry theory · 53-item report, original question 53, source page 12.",
-          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
+          "Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Cholecystitis is the retained source answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."

@@ -2,7 +2,7 @@
 
 Date is supported by the report/filename. Includes clean, annotated and reordered copies of the same 48 items; only one question sequence is imported.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2022-jan-26
 Course: Biochemistry II - Metabolism
@@ -510,16 +510,18 @@ Source: Original Q45; page 9.
 
 ### 46 · biochemistry-2022-jan-26-q046
 
+Edited study version; original wording follows below.
+
 Inhibiting the rate limiting enzyme of cholesterol biosynthesis would be beneficiary in lowering blood cholesterol levels by one of the following mechanisms:
 
-A. Inhibiting the formation of HMG-CoA
+A. Inhibiting the reduction of HMG-CoA to mevalonate
 B. Preventing the reabsorption of bile acids from the intestine
 C. Inhibiting the absorption of cholesterol from the diet
 D. Increasing the conversion of cholesterol to bile acids
 
 Source: Original Q46; page 9.
 
-Status: Ungraded - No choice states inhibition of HMG-CoA reduction to mevalonate. Inhibiting HMG-CoA formation is not the action of HMG-CoA reductase inhibition.
+Note: Original stem: Inhibiting the rate limiting enzyme of cholesterol biosynthesis would be beneficiary in lowering blood cholesterol levels by one of the following mechanisms: Original choices: A) Inhibiting the formation of HMG-CoA | B) Preventing the reabsorption of bile acids from the intestine | C) Inhibiting the absorption of cholesterol from the diet | D) Increasing the conversion of cholesterol to bile acids
 
 ### 47 · biochemistry-2022-jan-26-q047
 

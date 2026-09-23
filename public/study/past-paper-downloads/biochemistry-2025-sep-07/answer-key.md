@@ -2,7 +2,7 @@
 
 Date comes from the supplied answer-document filename, not an independently authenticated exam cover.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2025-sep-07
 Course: Biochemistry II - Metabolism
@@ -26,7 +26,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q1; page 1.
 
 Biochemistry theory · 7 September 2025, original question 1, source page 1.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 2 · biochemistry-2025-sep-07-q002
 
@@ -41,7 +41,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q2; page 1.
 
 Biochemistry theory · 7 September 2025, original question 2, source page 1.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 https://www.ncbi.nlm.nih.gov/books/NBK493179/
 
 ### 3 · biochemistry-2025-sep-07-q003
@@ -57,7 +57,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 1.
 
 Biochemistry theory · 7 September 2025, original question 3, source page 1.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 4 · biochemistry-2025-sep-07-q004
 
@@ -72,7 +72,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 1.
 
 Biochemistry theory · 7 September 2025, original question 4, source page 1.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 5 · biochemistry-2025-sep-07-q005
 
@@ -87,7 +87,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 1.
 
 Biochemistry theory · 7 September 2025, original question 5, source page 1.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 6 · biochemistry-2025-sep-07-q006
 
@@ -104,7 +104,7 @@ Note: Accepted source alternatives: B, D.
 Source: Original Q6; page 2.
 
 Biochemistry theory · 7 September 2025, original question 6, source page 2.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 7 · biochemistry-2025-sep-07-q007
 
@@ -119,7 +119,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q7; page 2.
 
 Biochemistry theory · 7 September 2025, original question 7, source page 2.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 8 · biochemistry-2025-sep-07-q008
 
@@ -134,7 +134,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q8; page 2.
 
 Biochemistry theory · 7 September 2025, original question 8, source page 2.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 9 · biochemistry-2025-sep-07-q009
 
@@ -149,7 +149,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q9; page 2.
 
 Biochemistry theory · 7 September 2025, original question 9, source page 2.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 10 · biochemistry-2025-sep-07-q010
 
@@ -164,7 +164,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 2.
 
 Biochemistry theory · 7 September 2025, original question 10, source page 2.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 11 · biochemistry-2025-sep-07-q011
 
@@ -181,7 +181,7 @@ Note: Accepted source alternatives: A, D.
 Source: Original Q11; page 3.
 
 Biochemistry theory · 7 September 2025, original question 11, source page 3.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 12 · biochemistry-2025-sep-07-q012
 
@@ -196,7 +196,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 3.
 
 Biochemistry theory · 7 September 2025, original question 12, source page 3.
-Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 13 · biochemistry-2025-sep-07-q013
 
@@ -211,7 +211,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 3.
 
 Biochemistry theory · 7 September 2025, original question 13, source page 3.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 14 · biochemistry-2025-sep-07-q014
 
@@ -226,7 +226,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 4.
 
 Biochemistry theory · 7 September 2025, original question 14, source page 4.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 15 · biochemistry-2025-sep-07-q015
 
@@ -241,7 +241,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 4.
 
 Biochemistry theory · 7 September 2025, original question 15, source page 4.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 16 · biochemistry-2025-sep-07-q016
 
@@ -256,7 +256,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Biochemistry theory · 7 September 2025, original question 16, source page 4.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 17 · biochemistry-2025-sep-07-q017
 
@@ -271,7 +271,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 4.
 
 Biochemistry theory · 7 September 2025, original question 17, source page 4.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 18 · biochemistry-2025-sep-07-q018
 
@@ -286,7 +286,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q18; page 4.
 
 Biochemistry theory · 7 September 2025, original question 18, source page 4.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 19 · biochemistry-2025-sep-07-q019
 
@@ -301,7 +301,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 5.
 
 Biochemistry theory · 7 September 2025, original question 19, source page 5.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 20 · biochemistry-2025-sep-07-q020
 
@@ -316,7 +316,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 5.
 
 Biochemistry theory · 7 September 2025, original question 20, source page 5.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 21 · biochemistry-2025-sep-07-q021
 
@@ -331,7 +331,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Biochemistry theory · 7 September 2025, original question 21, source page 5.
-Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
 
 ### 22 · biochemistry-2025-sep-07-q022
 
@@ -348,7 +348,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q22; page 5.
 
 Biochemistry theory · 7 September 2025, original question 22, source page 5.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 https://theses.ncl.ac.uk/jspui/bitstream/10443/4897/1/Albalawi%20M%20S%202020.pdf
 
 ### 23 · biochemistry-2025-sep-07-q023
@@ -364,7 +364,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Biochemistry theory · 7 September 2025, original question 23, source page 5.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 24 · biochemistry-2025-sep-07-q024
 
@@ -379,7 +379,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 5.
 
 Biochemistry theory · 7 September 2025, original question 24, source page 5.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 25 · biochemistry-2025-sep-07-q025
 
@@ -394,7 +394,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q25; page 6.
 
 Biochemistry theory · 7 September 2025, original question 25, source page 6.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 26 · biochemistry-2025-sep-07-q026
 
@@ -409,7 +409,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 6.
 
 Biochemistry theory · 7 September 2025, original question 26, source page 6.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 27 · biochemistry-2025-sep-07-q027
 
@@ -424,7 +424,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 6.
 
 Biochemistry theory · 7 September 2025, original question 27, source page 6.
-Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 28 · biochemistry-2025-sep-07-q028
 
@@ -439,7 +439,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 6.
 
 Biochemistry theory · 7 September 2025, original question 28, source page 6.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 29 · biochemistry-2025-sep-07-q029
 
@@ -484,7 +484,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 7.
 
 Biochemistry theory · 7 September 2025, original question 31, source page 7.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 32 · biochemistry-2025-sep-07-q032
 
@@ -574,7 +574,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 8.
 
 Biochemistry theory · 7 September 2025, original question 37, source page 8.
-Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway.
+Biochemistry II review, PDF p. 14: Fructose, galactose, mannose and the polyol pathway.
 
 ### 38 · biochemistry-2025-sep-07-q038
 
@@ -589,7 +589,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q38; page 8.
 
 Biochemistry theory · 7 September 2025, original question 38, source page 8.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.
 
 ### 39 · biochemistry-2025-sep-07-q039
 
@@ -619,7 +619,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q40; page 8.
 
 Biochemistry theory · 7 September 2025, original question 40, source page 8.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 41 · biochemistry-2025-sep-07-q041
 
@@ -634,7 +634,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q41; page 9.
 
 Biochemistry theory · 7 September 2025, original question 41, source page 9.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 42 · biochemistry-2025-sep-07-q042
 
@@ -649,7 +649,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q42; page 9.
 
 Biochemistry theory · 7 September 2025, original question 42, source page 9.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 43 · biochemistry-2025-sep-07-q043
 
@@ -664,7 +664,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q43; page 9.
 
 Biochemistry theory · 7 September 2025, original question 43, source page 9.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 44 · biochemistry-2025-sep-07-q044
 
@@ -679,7 +679,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q44; page 9.
 
 Biochemistry theory · 7 September 2025, original question 44, source page 9.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 45 · biochemistry-2025-sep-07-q045
 
@@ -694,7 +694,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q45; page 9.
 
 Biochemistry theory · 7 September 2025, original question 45, source page 9.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 46 · biochemistry-2025-sep-07-q046
 
@@ -709,7 +709,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q46; page 10.
 
 Biochemistry theory · 7 September 2025, original question 46, source page 10.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 47 · biochemistry-2025-sep-07-q047
 
@@ -724,7 +724,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q47; page 10.
 
 Biochemistry theory · 7 September 2025, original question 47, source page 10.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 48 · biochemistry-2025-sep-07-q048
 
@@ -739,7 +739,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 10.
 
 Biochemistry theory · 7 September 2025, original question 48, source page 10.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 49 · biochemistry-2025-sep-07-q049
 
@@ -754,7 +754,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q49; page 10.
 
 Biochemistry theory · 7 September 2025, original question 49, source page 10.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 50 · biochemistry-2025-sep-07-q050
 
@@ -769,7 +769,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q50; page 10.
 
 Biochemistry theory · 7 September 2025, original question 50, source page 10.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 51 · biochemistry-2025-sep-07-q051
 
@@ -784,7 +784,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q51; page 11.
 
 Biochemistry theory · 7 September 2025, original question 51, source page 11.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 52 · biochemistry-2025-sep-07-q052
 
@@ -799,4 +799,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q52; page 11.
 
 Biochemistry theory · 7 September 2025, original question 52, source page 11.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.

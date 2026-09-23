@@ -2,7 +2,7 @@
 
 Cover: September 2022 semester, examination 29 January 2023. Source highlights are not uniformly correct.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2023-jan-29
 Course: Biochemistry II - Metabolism
@@ -114,16 +114,18 @@ Source: Original Q9; page 3.
 
 ### 10 · biochemistry-2023-jan-29-q010
 
+Edited study version; original wording follows below.
+
 For cellulose synthesis which molecule is important in glucose activation?
 
 A. ADP
 B. CDP
-C. GDP
+C. UDP
 D. TDP
 
 Source: Original Q10; page 3.
 
-Status: Ungraded - Cellulose uses UDP-glucose; UDP is absent. Preserve the printed cellulose wording rather than silently replace it with starch.
+Note: Original stem: For cellulose synthesis which molecule is important in glucose activation? Original choices: A) ADP | B) CDP | C) GDP | D) TDP
 
 ### 11 · biochemistry-2023-jan-29-q011
 

@@ -2,7 +2,7 @@
 
 Cover: February 2023 semester, examination 23 July 2023. Handwritten answers are not an official key.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2023-july-23
 Course: Biochemistry II - Metabolism
@@ -26,7 +26,9 @@ Source: Original Q1; page 2.
 
 ### 2 · biochemistry-2023-july-23-q002
 
-All of the following are true about citrate, except:
+Edited study version; original wording follows below.
+
+Which effect of citrate is INDIRECT, through increased malonyl-CoA and inhibition of CPT-I, rather than direct enzyme regulation or export of acetyl units?
 
 A. It inhibits phosphofructokinase.
 B. Transport two-carbon units from mitochondria.
@@ -35,7 +37,7 @@ D. It inhibits beta oxidation.
 
 Source: Original Q2; page 2.
 
-Status: Ungraded - All four statements are defensible: citrate inhibits PFK-1, exports acetyl units and activates ACC; malonyl-CoA then inhibits CPT-I and beta-oxidation.
+Note: Original stem: All of the following are true about citrate, except: Original choices: A) It inhibits phosphofructokinase. | B) Transport two-carbon units from mitochondria. | C) Activates Acetyl CoA carboxylase. | D) It inhibits beta oxidation.
 
 ### 3 · biochemistry-2023-july-23-q003
 
@@ -558,22 +560,23 @@ Provenance note: No authoritative key supplied.
 Source: Original Q1; page 2.
 
 Biochemistry metabolism · 23 July 2023, original question 1, source page 2.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 2 · biochemistry-2023-july-23-q002
 
-Key: Ungraded - no defensible single key
+Key: D — It inhibits beta oxidation.
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: All four statements are defensible: citrate inhibits PFK-1, exports acetyl units and activates ACC; malonyl-CoA then inhibits CPT-I and beta-oxidation.
+Existing answer note: Inhibition of beta-oxidation is indirect: citrate activates ACC, malonyl-CoA rises, and CPT-I is inhibited. The other choices describe direct PFK-1 inhibition, acetyl-unit export and ACC activation. All four original statements are defensible; adding INDIRECT repairs the EXCEPT item without teaching that citrate has no effect on fatty-acid oxidation.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q2; page 2.
 
 Biochemistry metabolism · 23 July 2023, original question 2, source page 2.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
+Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, chapters 8, 16 and 17; Biochemistry II review: fatty-acid synthesis.
 
 ### 3 · biochemistry-2023-july-23-q003
 
@@ -588,7 +591,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 2.
 
 Biochemistry metabolism · 23 July 2023, original question 3, source page 2.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 4 · biochemistry-2023-july-23-q004
 
@@ -603,7 +606,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 2.
 
 Biochemistry metabolism · 23 July 2023, original question 4, source page 2.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 5 · biochemistry-2023-july-23-q005
 
@@ -618,7 +621,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Biochemistry metabolism · 23 July 2023, original question 5, source page 2.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 6 · biochemistry-2023-july-23-q006
 
@@ -633,7 +636,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q6; page 2.
 
 Biochemistry metabolism · 23 July 2023, original question 6, source page 2.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 7 · biochemistry-2023-july-23-q007
 
@@ -648,7 +651,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q7; page 3.
 
 Biochemistry metabolism · 23 July 2023, original question 7, source page 3.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 8 · biochemistry-2023-july-23-q008
 
@@ -663,7 +666,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q8; page 3.
 
 Biochemistry metabolism · 23 July 2023, original question 8, source page 3.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 9 · biochemistry-2023-july-23-q009
 
@@ -678,7 +681,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q9; page 3.
 
 Biochemistry metabolism · 23 July 2023, original question 9, source page 3.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 10 · biochemistry-2023-july-23-q010
 
@@ -693,7 +696,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 3.
 
 Biochemistry metabolism · 23 July 2023, original question 10, source page 3.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 11 · biochemistry-2023-july-23-q011
 
@@ -708,7 +711,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q11; page 3.
 
 Biochemistry metabolism · 23 July 2023, original question 11, source page 3.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 12 · biochemistry-2023-july-23-q012
 
@@ -723,7 +726,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 3.
 
 Biochemistry metabolism · 23 July 2023, original question 12, source page 3.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 https://www.bu.edu/aldolase/biochemistry2/17_LipidCatabolism_V2026.pdf
 
 ### 13 · biochemistry-2023-july-23-q013
@@ -739,7 +742,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 4.
 
 Biochemistry metabolism · 23 July 2023, original question 13, source page 4.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 14 · biochemistry-2023-july-23-q014
 
@@ -754,7 +757,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 4.
 
 Biochemistry metabolism · 23 July 2023, original question 14, source page 4.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 15 · biochemistry-2023-july-23-q015
 
@@ -769,7 +772,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 4.
 
 Biochemistry metabolism · 23 July 2023, original question 15, source page 4.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 16 · biochemistry-2023-july-23-q016
 
@@ -784,7 +787,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Biochemistry metabolism · 23 July 2023, original question 16, source page 4.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 17 · biochemistry-2023-july-23-q017
 
@@ -799,7 +802,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 4.
 
 Biochemistry metabolism · 23 July 2023, original question 17, source page 4.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 18 · biochemistry-2023-july-23-q018
 
@@ -814,7 +817,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q18; page 4.
 
 Biochemistry metabolism · 23 July 2023, original question 18, source page 4.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 19 · biochemistry-2023-july-23-q019
 
@@ -829,7 +832,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 5.
 
 Biochemistry metabolism · 23 July 2023, original question 19, source page 5.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 20 · biochemistry-2023-july-23-q020
 
@@ -844,7 +847,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 5.
 
 Biochemistry metabolism · 23 July 2023, original question 20, source page 5.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 21 · biochemistry-2023-july-23-q021
 
@@ -859,7 +862,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Biochemistry metabolism · 23 July 2023, original question 21, source page 5.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 22 · biochemistry-2023-july-23-q022
 
@@ -874,7 +877,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 5.
 
 Biochemistry metabolism · 23 July 2023, original question 22, source page 5.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 23 · biochemistry-2023-july-23-q023
 
@@ -889,7 +892,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Biochemistry metabolism · 23 July 2023, original question 23, source page 5.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 24 · biochemistry-2023-july-23-q024
 
@@ -904,7 +907,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 5.
 
 Biochemistry metabolism · 23 July 2023, original question 24, source page 5.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 25 · biochemistry-2023-july-23-q025
 
@@ -919,7 +922,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q25; page 6.
 
 Biochemistry metabolism · 23 July 2023, original question 25, source page 6.
-Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
+Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 26 · biochemistry-2023-july-23-q026
 
@@ -934,7 +937,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 6.
 
 Biochemistry metabolism · 23 July 2023, original question 26, source page 6.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 27 · biochemistry-2023-july-23-q027
 
@@ -949,7 +952,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 6.
 
 Biochemistry metabolism · 23 July 2023, original question 27, source page 6.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 28 · biochemistry-2023-july-23-q028
 
@@ -964,7 +967,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 6.
 
 Biochemistry metabolism · 23 July 2023, original question 28, source page 6.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 29 · biochemistry-2023-july-23-q029
 
@@ -979,7 +982,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q29; page 6.
 
 Biochemistry metabolism · 23 July 2023, original question 29, source page 6.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 30 · biochemistry-2023-july-23-q030
 
@@ -996,7 +999,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q30; page 6.
 
 Biochemistry metabolism · 23 July 2023, original question 30, source page 6.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 https://theses.ncl.ac.uk/jspui/bitstream/10443/4897/1/Albalawi%20M%20S%202020.pdf
 
 ### 31 · biochemistry-2023-july-23-q031
@@ -1012,7 +1015,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 6.
 
 Biochemistry metabolism · 23 July 2023, original question 31, source page 6.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 32 · biochemistry-2023-july-23-q032
 
@@ -1027,7 +1030,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q32; page 7.
 
 Biochemistry metabolism · 23 July 2023, original question 32, source page 7.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 33 · biochemistry-2023-july-23-q033
 
@@ -1042,7 +1045,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q33; page 7.
 
 Biochemistry metabolism · 23 July 2023, original question 33, source page 7.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 34 · biochemistry-2023-july-23-q034
 
@@ -1057,7 +1060,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q34; page 7.
 
 Biochemistry metabolism · 23 July 2023, original question 34, source page 7.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 35 · biochemistry-2023-july-23-q035
 
@@ -1072,7 +1075,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q35; page 7.
 
 Biochemistry metabolism · 23 July 2023, original question 35, source page 7.
-Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 36 · biochemistry-2023-july-23-q036
 
@@ -1087,7 +1090,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q36; page 7.
 
 Biochemistry metabolism · 23 July 2023, original question 36, source page 7.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 37 · biochemistry-2023-july-23-q037
 
@@ -1117,7 +1120,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q38; page 7.
 
 Biochemistry metabolism · 23 July 2023, original question 38, source page 7.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 39 · biochemistry-2023-july-23-q039
 
@@ -1162,7 +1165,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q41; page 8.
 
 Biochemistry metabolism · 23 July 2023, original question 41, source page 8.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 42 · biochemistry-2023-july-23-q042
 
@@ -1177,7 +1180,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q42; page 8.
 
 Biochemistry metabolism · 23 July 2023, original question 42, source page 8.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 43 · biochemistry-2023-july-23-q043
 
@@ -1192,7 +1195,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q43; page 8.
 
 Biochemistry metabolism · 23 July 2023, original question 43, source page 8.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 44 · biochemistry-2023-july-23-q044
 
@@ -1222,7 +1225,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q45; page 8.
 
 Biochemistry metabolism · 23 July 2023, original question 45, source page 8.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 46 · biochemistry-2023-july-23-q046
 
@@ -1267,4 +1270,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 9.
 
 Biochemistry metabolism · 23 July 2023, original question 48, source page 9.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.

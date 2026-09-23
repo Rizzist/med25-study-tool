@@ -2,7 +2,7 @@
 
 Cover identifies September 2017 semester; exam date 8 January 2018. Alternate annotated copy grouped here.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2017-kish
 Course: Biochemistry II - Metabolism
@@ -26,7 +26,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q1; page 2.
 
 Kish metabolism · September 2017 semester, original question 1, source page 2.
-Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 2 · biochemistry-2017-kish-q002
 
@@ -41,7 +41,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q2; page 2.
 
 Kish metabolism · September 2017 semester, original question 2, source page 2.
-Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
+Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 3 · biochemistry-2017-kish-q003
 
@@ -56,7 +56,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 2.
 
 Kish metabolism · September 2017 semester, original question 3, source page 2.
-Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
 
 ### 4 · biochemistry-2017-kish-q004
 
@@ -71,7 +71,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 2.
 
 Kish metabolism · September 2017 semester, original question 4, source page 2.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 5 · biochemistry-2017-kish-q005
 
@@ -86,7 +86,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Kish metabolism · September 2017 semester, original question 5, source page 2.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 6 · biochemistry-2017-kish-q006
 
@@ -101,7 +101,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q6; page 2.
 
 Kish metabolism · September 2017 semester, original question 6, source page 2.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 7 · biochemistry-2017-kish-q007
 
@@ -116,7 +116,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q7; page 2.
 
 Kish metabolism · September 2017 semester, original question 7, source page 2.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 8 · biochemistry-2017-kish-q008
 
@@ -131,7 +131,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q8; page 3.
 
 Kish metabolism · September 2017 semester, original question 8, source page 3.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 9 · biochemistry-2017-kish-q009
 
@@ -146,22 +146,23 @@ Provenance note: No authoritative key supplied.
 Source: Original Q9; page 3.
 
 Kish metabolism · September 2017 semester, original question 9, source page 3.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 10 · biochemistry-2017-kish-q010
 
-Key: Ungraded - no defensible single key
+Key: E — None of the above: all four processes can occur in liver
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: All four reactions can occur in liver; there is no defensible NOT TRUE choice.
+Existing answer note: Liver can transaminate alanine to pyruvate, form glutamate from alpha-ketoglutarate, perform gluconeogenesis and use glucose for energy. The absent 'none' option has been added; these processes need not all dominate simultaneously in the same nutritional state.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q10; page 3.
 
 Kish metabolism · September 2017 semester, original question 10, source page 3.
-Biochemistry II review, PDF p. 58: Past-paper audit: flawed items and conventions to keep separate.
+Biochemistry II review, PDF p. 54: Past-paper audit: flawed items and conventions to keep separate.
+Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, carbohydrate metabolism, nitrogen metabolism and fed-fast integration chapters.
 
 ### 11 · biochemistry-2017-kish-q011
 
@@ -176,7 +177,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q11; page 3.
 
 Kish metabolism · September 2017 semester, original question 11, source page 3.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 12 · biochemistry-2017-kish-q012
 
@@ -191,7 +192,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 3.
 
 Kish metabolism · September 2017 semester, original question 12, source page 3.
-Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
+Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 13 · biochemistry-2017-kish-q013
 
@@ -206,7 +207,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 3.
 
 Kish metabolism · September 2017 semester, original question 13, source page 3.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 14 · biochemistry-2017-kish-q014
 
@@ -221,7 +222,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 3.
 
 Kish metabolism · September 2017 semester, original question 14, source page 3.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 15 · biochemistry-2017-kish-q015
 
@@ -236,7 +237,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 4.
 
 Kish metabolism · September 2017 semester, original question 15, source page 4.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 16 · biochemistry-2017-kish-q016
 
@@ -251,7 +252,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Kish metabolism · September 2017 semester, original question 16, source page 4.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 17 · biochemistry-2017-kish-q017
 
@@ -266,7 +267,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 4.
 
 Kish metabolism · September 2017 semester, original question 17, source page 4.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 18 · biochemistry-2017-kish-q018
 
@@ -281,7 +282,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q18; page 4.
 
 Kish metabolism · September 2017 semester, original question 18, source page 4.
-Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 19 · biochemistry-2017-kish-q019
 
@@ -296,7 +297,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 4.
 
 Kish metabolism · September 2017 semester, original question 19, source page 4.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 20 · biochemistry-2017-kish-q020
 
@@ -311,7 +312,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 4.
 
 Kish metabolism · September 2017 semester, original question 20, source page 4.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 21 · biochemistry-2017-kish-q021
 
@@ -326,7 +327,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Kish metabolism · September 2017 semester, original question 21, source page 5.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 22 · biochemistry-2017-kish-q022
 
@@ -341,7 +342,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 5.
 
 Kish metabolism · September 2017 semester, original question 22, source page 5.
-Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 23 · biochemistry-2017-kish-q023
 
@@ -356,7 +357,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Kish metabolism · September 2017 semester, original question 23, source page 5.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 24 · biochemistry-2017-kish-q024
 
@@ -371,7 +372,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 5.
 
 Kish metabolism · September 2017 semester, original question 24, source page 5.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 25 · biochemistry-2017-kish-q025
 
@@ -386,7 +387,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q25; page 5.
 
 Kish metabolism · September 2017 semester, original question 25, source page 5.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.
 
 ### 26 · biochemistry-2017-kish-q026
 
@@ -401,7 +402,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 5.
 
 Kish metabolism · September 2017 semester, original question 26, source page 5.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.
 
 ### 27 · biochemistry-2017-kish-q027
 
@@ -431,7 +432,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 6.
 
 Kish metabolism · September 2017 semester, original question 28, source page 6.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 29 · biochemistry-2017-kish-q029
 
@@ -461,7 +462,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q30; page 6.
 
 Kish metabolism · September 2017 semester, original question 30, source page 6.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 31 · biochemistry-2017-kish-q031
 

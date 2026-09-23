@@ -2,7 +2,7 @@
 
 A supplied question-and-answer reconstruction, not an authenticated original exam paper. Date is from filename. Both copies have the same page content. Optional supplement, excluded from Select all.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2026-july-reconstruction
 Course: Biochemistry II - Metabolism
@@ -56,7 +56,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 1.
 
 Biochemistry · July 2026-labelled reconstruction, original question 3, source page 1.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 4 · biochemistry-2026-july-reconstruction-q004
 
@@ -146,7 +146,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q9; page 3.
 
 Biochemistry · July 2026-labelled reconstruction, original question 9, source page 3.
-Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway.
+Biochemistry II review, PDF p. 14: Fructose, galactose, mannose and the polyol pathway.
 
 ### 10 · biochemistry-2026-july-reconstruction-q010
 
@@ -161,7 +161,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 3.
 
 Biochemistry · July 2026-labelled reconstruction, original question 10, source page 3.
-Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
+Biochemistry II review, PDF p. 17: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 11 · biochemistry-2026-july-reconstruction-q011
 
@@ -206,7 +206,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 3.
 
 Biochemistry · July 2026-labelled reconstruction, original question 13, source page 3.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 14 · biochemistry-2026-july-reconstruction-q014
 
@@ -221,7 +221,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 4.
 
 Biochemistry · July 2026-labelled reconstruction, original question 14, source page 4.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 15 · biochemistry-2026-july-reconstruction-q015
 
@@ -236,7 +236,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 4.
 
 Biochemistry · July 2026-labelled reconstruction, original question 15, source page 4.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 16 · biochemistry-2026-july-reconstruction-q016
 
@@ -251,7 +251,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Biochemistry · July 2026-labelled reconstruction, original question 16, source page 4.
-Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
+Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 17 · biochemistry-2026-july-reconstruction-q017
 
@@ -266,7 +266,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 5.
 
 Biochemistry · July 2026-labelled reconstruction, original question 17, source page 5.
-Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
 
 ### 18 · biochemistry-2026-july-reconstruction-q018
 
@@ -283,7 +283,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q18; page 5.
 
 Biochemistry · July 2026-labelled reconstruction, original question 18, source page 5.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 https://theses.ncl.ac.uk/jspui/bitstream/10443/4897/1/Albalawi%20M%20S%202020.pdf
 
 ### 19 · biochemistry-2026-july-reconstruction-q019
@@ -299,7 +299,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 5.
 
 Biochemistry · July 2026-labelled reconstruction, original question 19, source page 5.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 20 · biochemistry-2026-july-reconstruction-q020
 
@@ -314,7 +314,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 5.
 
 Biochemistry · July 2026-labelled reconstruction, original question 20, source page 5.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 21 · biochemistry-2026-july-reconstruction-q021
 
@@ -329,7 +329,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 6.
 
 Biochemistry · July 2026-labelled reconstruction, original question 21, source page 6.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 22 · biochemistry-2026-july-reconstruction-q022
 
@@ -344,7 +344,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 6.
 
 Biochemistry · July 2026-labelled reconstruction, original question 22, source page 6.
-Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 23 · biochemistry-2026-july-reconstruction-q023
 
@@ -359,7 +359,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 6.
 
 Biochemistry · July 2026-labelled reconstruction, original question 23, source page 6.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 24 · biochemistry-2026-july-reconstruction-q024
 
@@ -374,7 +374,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 7.
 
 Biochemistry · July 2026-labelled reconstruction, original question 24, source page 7.
-Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 25 · biochemistry-2026-july-reconstruction-q025
 
@@ -389,7 +389,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q25; page 7.
 
 Biochemistry · July 2026-labelled reconstruction, original question 25, source page 7.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 26 · biochemistry-2026-july-reconstruction-q026
 
@@ -404,7 +404,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 7.
 
 Biochemistry · July 2026-labelled reconstruction, original question 26, source page 7.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 27 · biochemistry-2026-july-reconstruction-q027
 
@@ -419,7 +419,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 8.
 
 Biochemistry · July 2026-labelled reconstruction, original question 27, source page 8.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 28 · biochemistry-2026-july-reconstruction-q028
 
@@ -434,7 +434,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 8.
 
 Biochemistry · July 2026-labelled reconstruction, original question 28, source page 8.
-Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
+Biochemistry II review, PDF p. 25: Ketogenesis and ketone utilization.
 
 ### 29 · biochemistry-2026-july-reconstruction-q029
 
@@ -449,7 +449,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q29; page 8.
 
 Biochemistry · July 2026-labelled reconstruction, original question 29, source page 8.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 30 · biochemistry-2026-july-reconstruction-q030
 
@@ -466,7 +466,7 @@ Note: Accepted source alternatives: A, D.
 Source: Original Q30; page 8.
 
 Biochemistry · July 2026-labelled reconstruction, original question 30, source page 8.
-Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
+Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products.
 
 ### 31 · biochemistry-2026-july-reconstruction-q031
 
@@ -481,7 +481,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 8.
 
 Biochemistry · July 2026-labelled reconstruction, original question 31, source page 8.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 32 · biochemistry-2026-july-reconstruction-q032
 
@@ -496,7 +496,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q32; page 9.
 
 Biochemistry · July 2026-labelled reconstruction, original question 32, source page 9.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 33 · biochemistry-2026-july-reconstruction-q033
 
@@ -511,7 +511,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q33; page 9.
 
 Biochemistry · July 2026-labelled reconstruction, original question 33, source page 9.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 34 · biochemistry-2026-july-reconstruction-q034
 
@@ -526,7 +526,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q34; page 9.
 
 Biochemistry · July 2026-labelled reconstruction, original question 34, source page 9.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 35 · biochemistry-2026-july-reconstruction-q035
 
@@ -541,7 +541,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q35; page 9.
 
 Biochemistry · July 2026-labelled reconstruction, original question 35, source page 9.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 36 · biochemistry-2026-july-reconstruction-q036
 
@@ -556,7 +556,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q36; page 9.
 
 Biochemistry · July 2026-labelled reconstruction, original question 36, source page 9.
-Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 37 · biochemistry-2026-july-reconstruction-q037
 
@@ -571,7 +571,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 10.
 
 Biochemistry · July 2026-labelled reconstruction, original question 37, source page 10.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 38 · biochemistry-2026-july-reconstruction-q038
 
@@ -586,7 +586,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q38; page 10.
 
 Biochemistry · July 2026-labelled reconstruction, original question 38, source page 10.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 39 · biochemistry-2026-july-reconstruction-q039
 
@@ -601,7 +601,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q39; page 10.
 
 Biochemistry · July 2026-labelled reconstruction, original question 39, source page 10.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 40 · biochemistry-2026-july-reconstruction-q040
 
@@ -616,7 +616,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q40; page 11.
 
 Biochemistry · July 2026-labelled reconstruction, original question 40, source page 11.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 41 · biochemistry-2026-july-reconstruction-q041
 
@@ -631,7 +631,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q41; page 11.
 
 Biochemistry · July 2026-labelled reconstruction, original question 41, source page 11.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 42 · biochemistry-2026-july-reconstruction-q042
 
@@ -648,7 +648,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q42; page 11.
 
 Biochemistry · July 2026-labelled reconstruction, original question 42, source page 11.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 43 · biochemistry-2026-july-reconstruction-q043
 
@@ -663,7 +663,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q43; page 11.
 
 Biochemistry · July 2026-labelled reconstruction, original question 43, source page 11.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 44 · biochemistry-2026-july-reconstruction-q044
 
@@ -678,7 +678,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q44; page 11.
 
 Biochemistry · July 2026-labelled reconstruction, original question 44, source page 11.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 45 · biochemistry-2026-july-reconstruction-q045
 
@@ -693,7 +693,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q45; page 12.
 
 Biochemistry · July 2026-labelled reconstruction, original question 45, source page 12.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 46 · biochemistry-2026-july-reconstruction-q046
 
@@ -708,7 +708,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q46; page 12.
 
 Biochemistry · July 2026-labelled reconstruction, original question 46, source page 12.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 47 · biochemistry-2026-july-reconstruction-q047
 
@@ -723,7 +723,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q47; page 12.
 
 Biochemistry · July 2026-labelled reconstruction, original question 47, source page 12.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 48 · biochemistry-2026-july-reconstruction-q048
 
@@ -738,7 +738,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 48, source page 13.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
 
 ### 49 · biochemistry-2026-july-reconstruction-q049
 
@@ -753,7 +753,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q49; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 49, source page 13.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 50 · biochemistry-2026-july-reconstruction-q050
 
@@ -768,7 +768,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q50; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 50, source page 13.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 51 · biochemistry-2026-july-reconstruction-q051
 
@@ -783,7 +783,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q51; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 51, source page 13.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 52 · biochemistry-2026-july-reconstruction-q052
 
@@ -798,4 +798,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q52; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 52, source page 13.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.

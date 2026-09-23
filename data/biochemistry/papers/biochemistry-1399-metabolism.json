@@ -52,7 +52,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 1, source page 2.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "Stearic acid is the retained source answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation."
@@ -83,7 +83,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 2, source page 2.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Under stress conditions, insulin secretion decreases via epinephrine. is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -114,7 +114,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 3, source page 2.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Hepatic lipase is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -145,7 +145,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 4, source page 3.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "TMP is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -176,7 +176,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 5, source page 3.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Apo B48 is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -189,12 +189,37 @@
         "Decrease – Increase",
         "Decrease – Decrease",
         "Increase – Increase",
-        "Increase – Decrease"
+        "Increase – usually normal or variable, not a defining diagnostic change"
       ],
       "providedKey": "D",
-      "key": null,
-      "note": "Gilbert syndrome raises unconjugated bilirubin, but a consistently decreased urine urobilinogen is not established by this stem. The normal-urobilinogen alternative is missing.",
+      "key": "D",
+      "note": "Unconjugated bilirubin rises in Gilbert syndrome. A fixed decrease in urinary urobilinogen is not a reliable defining finding. D is repaired to reflect that limitation; absence of urine bilirubin should not be confused with absence of urobilinogen.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "D",
+        "confidence": "medium",
+        "optionPatches": {
+          "D": "Increase – usually normal or variable, not a defining diagnostic change"
+        },
+        "explanation": "Unconjugated bilirubin rises in Gilbert syndrome. A fixed decrease in urinary urobilinogen is not a reliable defining finding. D is repaired to reflect that limitation; absence of urine bilirubin should not be confused with absence of urobilinogen.",
+        "evidence": [
+          "https://medlineplus.gov/genetics/gene/ugt1a1/",
+          "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism; Biochemistry II review: heme and bilirubin disorders."
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "In Gilbert syndrome, serum unconjugated bilirubin ....... and urine urobilinogen ....... .",
+        "options": [
+          "Decrease – Increase",
+          "Decrease – Decrease",
+          "Increase – Increase",
+          "Increase – Decrease"
+        ],
+        "providedKey": "D",
+        "key": null,
+        "note": "Gilbert syndrome raises unconjugated bilirubin, but a consistently decreased urine urobilinogen is not established by this stem. The normal-urobilinogen alternative is missing."
+      },
       "id": "biochemistry-1399-metabolism-q006",
       "sectionId": "biochemistry/biochem-heme",
       "uncertain": false,
@@ -205,10 +230,12 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 6, source page 3.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.",
+          "https://medlineplus.gov/genetics/gene/ugt1a1/",
+          "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism; Biochemistry II review: heme and bilirubin disorders."
         ]
       },
-      "explanation": "Gilbert syndrome raises unconjugated bilirubin, but a consistently decreased urine urobilinogen is not established by this stem. The normal-urobilinogen alternative is missing."
+      "explanation": "Unconjugated bilirubin rises in Gilbert syndrome. A fixed decrease in urinary urobilinogen is not a reliable defining finding. D is repaired to reflect that limitation; absence of urine bilirubin should not be confused with absence of urobilinogen."
     },
     {
       "number": 7,
@@ -236,7 +263,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 7, source page 4.",
-          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
+          "Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
       "explanation": "Biliary duct obstruction – Hepatitis is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns."
@@ -267,7 +294,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 8, source page 4.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "NADPH+H⁺ is the retained source answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation."
@@ -280,27 +307,55 @@
         "The capacity for conjugation with glucuronic acid in the liver is low.",
         "Unconjugated bilirubin crosses the blood–brain barrier.",
         "Phototherapy makes unconjugated bilirubin more soluble.",
-        "Uptake of unconjugated bilirubin by the liver is impaired."
+        "Uptake of unconjugated bilirubin by the liver is impaired.",
+        "None of the above: all can be true in neonatal unconjugated hyperbilirubinemia"
       ],
       "providedKey": "D",
-      "key": null,
-      "note": "Reduced hepatic uptake can contribute to neonatal hyperbilirubinemia too. The unqualified neonatal-jaundice stem has no clean false option; preserve the printed D mark but do not score it.",
+      "key": "E",
+      "note": "Immature hepatic uptake and conjugation both contribute. Unbound unconjugated bilirubin can enter the brain, and phototherapy forms more water-soluble photoisomers. Added E corrects the flawed EXCEPT list; the original D mark would wrongly deny impaired uptake.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "E",
+        "confidence": "high",
+        "optionPatches": {
+          "E": "None of the above: all can be true in neonatal unconjugated hyperbilirubinemia"
+        },
+        "explanation": "Immature hepatic uptake and conjugation both contribute. Unbound unconjugated bilirubin can enter the brain, and phototherapy forms more water-soluble photoisomers. Added E corrects the flawed EXCEPT list; the original D mark would wrongly deny impaired uptake.",
+        "evidence": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK532930/",
+          "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism."
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "All of the following statements about neonatal hyperbilirubinemia (jaundice) are correct, EXCEPT:",
+        "options": [
+          "The capacity for conjugation with glucuronic acid in the liver is low.",
+          "Unconjugated bilirubin crosses the blood–brain barrier.",
+          "Phototherapy makes unconjugated bilirubin more soluble.",
+          "Uptake of unconjugated bilirubin by the liver is impaired."
+        ],
+        "providedKey": "D",
+        "key": null,
+        "note": "Reduced hepatic uptake can contribute to neonatal hyperbilirubinemia too. The unqualified neonatal-jaundice stem has no clean false option; preserve the printed D mark but do not score it."
+      },
       "id": "biochemistry-1399-metabolism-q009",
       "sectionId": "biochemistry/biochem-heme",
       "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1399-metabolism-q009",
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 9, source page 4.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.",
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.",
+          "https://www.ncbi.nlm.nih.gov/books/NBK532930/",
+          "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism.",
           "https://www.ncbi.nlm.nih.gov/books/NBK532930/"
         ]
       },
-      "explanation": "Reduced hepatic uptake can contribute to neonatal hyperbilirubinemia too. The unqualified neonatal-jaundice stem has no clean false option; preserve the printed D mark but do not score it."
+      "explanation": "Immature hepatic uptake and conjugation both contribute. Unbound unconjugated bilirubin can enter the brain, and phototherapy forms more water-soluble photoisomers. Added E corrects the flawed EXCEPT list; the original D mark would wrongly deny impaired uptake."
     },
     {
       "number": 10,
@@ -328,7 +383,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 10, source page 4.",
-          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis."
+          "Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis."
         ]
       },
       "explanation": "Malonyl-CoA is the retained source answer for the printed question. Review: Cholesterol, bile acids and steroid synthesis."
@@ -359,7 +414,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 11, source page 5.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "LDL is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -390,7 +445,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 12, source page 5.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "It increases urine xanthine levels. is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -421,7 +476,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 13, source page 5.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Muscles use ketone bodies to produce energy. is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -452,7 +507,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 14, source page 5.",
-          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
+          "Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
       "explanation": "Bone disease is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns."
@@ -483,7 +538,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 15, source page 6.",
-          "Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage."
+          "Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage."
         ]
       },
       "explanation": "cAMP is the retained source answer for the printed question. Review: Fatty-acid synthesis and TAG storage."
@@ -514,7 +569,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 16, source page 6.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "ALAS2 is expressed in all tissues. is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -545,7 +600,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 17, source page 6.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Uracil produces β-alanine. is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -576,7 +631,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 18, source page 6.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "ABCA1 is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -607,7 +662,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 19, source page 7.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Uric acid production decreases. is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -638,7 +693,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 20, source page 7.",
-          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
+          "Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
       "explanation": "ALT is more liver-specific than AST but is not exclusive to liver tissue. B is the intended comparative exam answer; its absolute wording overstates specificity."
@@ -669,7 +724,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1399, original question 21, source page 7.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "LDL is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."

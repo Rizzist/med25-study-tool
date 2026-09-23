@@ -2,7 +2,7 @@
 
 Supplied English translation; Iranian year label retained without inventing a Gregorian sitting date.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-1401-metabolism
 Course: Biochemistry II - Metabolism
@@ -114,16 +114,18 @@ Source: Original Q9; page 4.
 
 ### 10 · biochemistry-1401-metabolism-q010
 
+Edited study version; original wording follows below.
+
 In which reaction of the Krebs cycle is GTP produced?
 
 A. Oxaloacetate → Malate
-B. Succinate → Succinyl-CoA
+B. Succinyl-CoA → Succinate
 C. Succinyl-CoA → α-ketoglutarate
 D. Isocitrate → cis-aconitate
 
 Source: Original Q10; page 5.
 
-Status: Ungraded - The listed succinate → succinyl-CoA reaction is reversed: GTP is produced in succinyl-CoA → succinate. No correctly directed option.
+Note: Original stem: In which reaction of the Krebs cycle is GTP produced? Original choices: A) Oxaloacetate → Malate | B) Succinate → Succinyl-CoA | C) Succinyl-CoA → α-ketoglutarate | D) Isocitrate → cis-aconitate
 
 ### 11 · biochemistry-1401-metabolism-q011
 

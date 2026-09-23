@@ -2,7 +2,7 @@
 
 Cover identifies September 2017 semester; exam date 8 January 2018. Alternate annotated copy grouped here.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-2017-kish
 Course: Biochemistry II - Metabolism
@@ -114,16 +114,19 @@ Source: Original Q9; page 3.
 
 ### 10 · biochemistry-2017-kish-q010
 
+Edited study version; original wording follows below.
+
 Which is NOT TRUE in the liver ………..?
 
 A. Alanine converts to pyruvate
 B. Alpha-ketoglutarate becomes glutamate
 C. Pyruvate becomes converted to glucose
 D. Glucose is used by live tissue to preoduce energy
+E. None of the above: all four processes can occur in liver
 
 Source: Original Q10; page 3.
 
-Status: Ungraded - All four reactions can occur in liver; there is no defensible NOT TRUE choice.
+Note: Original stem: Which is NOT TRUE in the liver ………..? Original choices: A) Alanine converts to pyruvate | B) Alpha-ketoglutarate becomes glutamate | C) Pyruvate becomes converted to glucose | D) Glucose is used by live tissue to preoduce energy
 
 ### 11 · biochemistry-2017-kish-q011
 

@@ -52,7 +52,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 1, source page 2.",
-          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
+          "Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
       "explanation": "Significant increase in ALT and AST is the editorial study answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns."
@@ -83,7 +83,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 2, source page 2.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "The contrast is with thiazides, but non-thiazide antihypertensives are heterogeneous and this is not a universal drug-class statement."
@@ -114,7 +114,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 3, source page 2.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Measurement of urinary delta-aminolevulinic acid (delta-ALA) is the editorial study answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -145,7 +145,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 4, source page 2.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "The person has lymphocytosis (increased blood lymphocytes). is the editorial study answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -176,7 +176,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 5, source page 2.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Lesch–Nyhan disease is caused by a disorder in the enzyme involved in the purine salvage pathway. is the editorial study answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply."
@@ -207,7 +207,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 6, source page 3.",
-          "Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply."
+          "Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply."
         ]
       },
       "explanation": "Sulfamethoxazole inhibits bacterial folate synthesis and thereby nucleotide synthesis; this is indirect, not a selective pyrimidine-enzyme inhibitor."
@@ -219,27 +219,52 @@
       "options": [
         "The increased bilirubin has toxic effects on the patient.",
         "More than 80% of UDP-glucuronosyltransferase enzyme activity is lost.",
-        "The disease has a high prevalence in Black African populations.",
+        "Reduced UGT1A1 activity causes mild, usually benign unconjugated hyperbilirubinemia",
         "Patients require blood transfusion to reduce bilirubin levels."
       ],
       "providedKey": null,
-      "key": null,
-      "note": "No unambiguously correct option: Gilbert syndrome usually retains roughly 30% UGT1A1 activity and does not require transfusion. The ancestry statement needs a defined population reference.",
+      "key": "C",
+      "note": "Gilbert syndrome reduces bilirubin glucuronidation, commonly leaving about 30% of normal UGT activity. The ancestry statement is replaced with the established mechanism; ancestry alone is not a diagnostic rule. Toxic hyperbilirubinemia requiring transfusion is not the usual Gilbert phenotype.",
       "acceptedOptionIds": [],
+      "aiResolution": {
+        "kind": "repaired",
+        "key": "C",
+        "confidence": "high",
+        "optionPatches": {
+          "C": "Reduced UGT1A1 activity causes mild, usually benign unconjugated hyperbilirubinemia"
+        },
+        "explanation": "Gilbert syndrome reduces bilirubin glucuronidation, commonly leaving about 30% of normal UGT activity. The ancestry statement is replaced with the established mechanism; ancestry alone is not a diagnostic rule. Toxic hyperbilirubinemia requiring transfusion is not the usual Gilbert phenotype.",
+        "evidence": [
+          "https://medlineplus.gov/genetics/gene/ugt1a1/"
+        ]
+      },
+      "originalQuestion": {
+        "prompt": "Which of the following statements about a person with Gilbert's disease is correct?",
+        "options": [
+          "The increased bilirubin has toxic effects on the patient.",
+          "More than 80% of UDP-glucuronosyltransferase enzyme activity is lost.",
+          "The disease has a high prevalence in Black African populations.",
+          "Patients require blood transfusion to reduce bilirubin levels."
+        ],
+        "providedKey": null,
+        "key": null,
+        "note": "No unambiguously correct option: Gilbert syndrome usually retains roughly 30% UGT1A1 activity and does not require transfusion. The ancestry statement needs a defined population reference."
+      },
       "id": "biochemistry-1403-1404-group-b-q007",
       "sectionId": "biochemistry/biochem-heme",
       "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-1404-group-b-q007",
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 7, source page 3.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.",
+          "https://medlineplus.gov/genetics/gene/ugt1a1/"
         ]
       },
-      "explanation": "No unambiguously correct option: Gilbert syndrome usually retains roughly 30% UGT1A1 activity and does not require transfusion. The ancestry statement needs a defined population reference."
+      "explanation": "Gilbert syndrome reduces bilirubin glucuronidation, commonly leaving about 30% of normal UGT activity. The ancestry statement is replaced with the established mechanism; ancestry alone is not a diagnostic rule. Toxic hyperbilirubinemia requiring transfusion is not the usual Gilbert phenotype."
     },
     {
       "number": 8,
@@ -268,7 +293,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 8, source page 3.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Unconjugated bilirubin rises. Phototherapy uses blue visible light, not ultraviolet, making the UV wording in C false too."
@@ -299,7 +324,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 9, source page 3.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Ferrochelatase deficiency causes erythropoietic protoporphyria, not acute hepatic porphyria. Photosensitivity varies among the acute hepatic porphyrias."
@@ -330,7 +355,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 10, source page 3.",
-          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
+          "Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Increase – Decrease is the editorial study answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -361,7 +386,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 11, source page 4.",
-          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
+          "Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
       "explanation": "Acute pancreatitis caused by gallstones is the editorial study answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns."
@@ -392,7 +417,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 12, source page 4.",
-          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
+          "Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Measuring bilirubin and reticulocyte count is the editorial study answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
@@ -423,7 +448,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 13, source page 4.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "Phosphoenolpyruvate is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -454,7 +479,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 14, source page 4.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "Oligomycin is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -485,7 +510,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 15, source page 5.",
-          "Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting."
+          "Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting."
         ]
       },
       "explanation": "FMN and Fe-S is the editorial study answer for the printed question. Review: Respiratory chain and transparent ATP accounting."
@@ -516,7 +541,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 16, source page 5.",
-          "Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products."
+          "Biochemistry II review, PDF p. 19: Dietary lipid digestion: from meal to absorbable products."
         ]
       },
       "explanation": "Glucagon is the editorial study answer for the printed question. Review: Dietary lipid digestion: from meal to absorbable products."
@@ -547,7 +572,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 17, source page 5.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Apo E is the editorial study answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -578,7 +603,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 18, source page 5.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Cholesterol and Apo B100 is the editorial study answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -609,7 +634,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 19, source page 5.",
-          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
+          "Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Hypothyroidism is the editorial study answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -640,7 +665,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 20, source page 6.",
-          "Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage."
+          "Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage."
         ]
       },
       "explanation": "Metformin is the editorial study answer for the printed question. Review: Fatty-acid synthesis and TAG storage."
@@ -671,7 +696,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 21, source page 6.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Carnitine Palmitoyltransferase I is the editorial study answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -702,7 +727,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 22, source page 6.",
-          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
+          "Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Increase in carnitine shuttle activity is the editorial study answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -733,7 +758,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 23, source page 6.",
-          "Biochemistry II review, PDF p. 47: Diabetes and metabolic perturbations: causal review."
+          "Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review."
         ]
       },
       "explanation": "In a state of insulin resistance, lipolysis increases. is the editorial study answer for the printed question. Review: Diabetes and metabolic perturbations: causal review."
@@ -764,7 +789,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 24, source page 6.",
-          "Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation."
+          "Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation."
         ]
       },
       "explanation": "Malonyl-CoA is the editorial study answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation."
@@ -981,7 +1006,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 31, source page 8.",
-          "Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway."
+          "Biochemistry II review, PDF p. 14: Fructose, galactose, mannose and the polyol pathway."
         ]
       },
       "explanation": "In the lens of the eye, sorbitol is converted to fructose by sorbitol dehydrogenase. is the editorial study answer for the printed question. Review: Fructose, galactose, mannose and the polyol pathway."
@@ -1076,7 +1101,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 34, source page 8.",
-          "Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts."
+          "Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts."
         ]
       },
       "explanation": "The most common form is hyperammonemia type I. is the editorial study answer for the printed question. Review: Urea cycle: atom origins, compartments and diagnostic contrasts."
@@ -1107,7 +1132,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 35, source page 9.",
-          "Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection."
+          "Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection."
         ]
       },
       "explanation": "The question specifies entry INTO PORTAL BLOOD (basolateral exit), not sodium-coupled apical uptake. Di/tripeptide apical uptake uses an H+ gradient."
@@ -1138,7 +1163,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 36, source page 9.",
-          "Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+          "Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
         ]
       },
       "explanation": "Threonine and arginine is the editorial study answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
@@ -1169,7 +1194,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 37, source page 9.",
-          "Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+          "Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
         ]
       },
       "explanation": "Pyruvate, fumarate, succinyl-CoA is the editorial study answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
@@ -1200,7 +1225,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 38, source page 9.",
-          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
+          "Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "The amount of methionine in the urine increases. is the editorial study answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
@@ -1231,7 +1256,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Biochemistry metabolism · 1403–1404 · Group B, original question 39, source page 9.",
-          "Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules."
+          "Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules."
         ]
       },
       "explanation": "It causes contraction of smooth muscle. is the editorial study answer for the printed question. Review: Amino acids as precursors of signaling and storage molecules."

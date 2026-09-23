@@ -39,6 +39,7 @@ shutil.copy2(PDF,REPO/'public/study/reviews/biochemistry.pdf')
 write(lockfile,locks); write(coursefile,course)
 
 papers=read(REPO/'data/biochemistry/past-papers.json')
+resolutions=read(REPO/'data/biochemistry/ai-resolutions.json')['questions']
 routes=read(REPO/'data/biochemistry/review-routing.json')
 byid={s['id']:s for s in course['sections']}
 source_sections={s['id']:s for s in author['sections']}
@@ -48,18 +49,23 @@ for paper in papers['papers']:
     codes=routes['paperSequences'][paper['sourceId']].split()
     assert len(codes)==len(paper['questions']), (paper['sourceId'],len(codes),len(paper['questions']))
     for q,code in zip(paper['questions'],codes):
+        qid=paper['id']+'-q'+str(q['number']).zfill(3)
+        resolution=resolutions.get(qid)
         target='biochemistry/biochem-'+routes['codes'][code]
         section=byid[target]; s=source_sections[target.split('/')[1]]
         references=[{k:v for k,v in src.items() if k in ('title','locator','url')} for src in s['sources']]
         row={'questionId':paper['id']+'-q'+str(q['number']).zfill(3),'paperId':paper['id'],'sourceNumber':q['number'],'prompt':q['prompt'],'sectionId':target,'sectionTitle':section['title'],'pdfPage':section['pdfPage'],'beforeAudit':'missing dedicated teaching section' if routes['codes'][code] in new_ids else 'existing section; detail reviewed and expanded as needed','afterAudit':'concept covered; source item remains ungraded' if not q['key'] else 'concept covered','sourceCaveat':q['note'],'graded':bool(q['key']),'references':references}
+        if resolution:
+            row.update(graded=True,afterAudit='concept covered; AI-repaired study version' if resolution['kind']=='repaired' else 'concept covered; AI key accepts both defensible choices',resolutionKind=resolution['kind'],studyPrompt=resolution.get('prompt',q['prompt']))
         rows.append(row); counts[target]=counts.get(target,0)+1
 audit={'version':'2026-09-23','scope':'All imported source occurrences, including optional reconstruction and flawed items. Concept-level educational coverage, not an official exam blueprint or clinical guideline.','reviewSha256':sha(PDF),'reviewPages':len(pdf),'reviewSections':len(author['sections']),'sourceItems':len(rows),'scoredItems':sum(r['graded'] for r in rows),'ungradedItems':sum(not r['graded'] for r in rows),'missingDestinations':0,'questionDestinations':rows}
+audit['aiResolvedItems']=len(resolutions)
 write(REPO/'data/biochemistry/review-coverage.json',audit)
 write(ARCHIVE/'_build/audit/biochemistry-past-paper-coverage.json',audit)
 report=['# Biochemistry II review coverage audit','',f'Updated 23 September 2026. Review: {len(pdf)} pages, {len(author["sections"])} teaching sections.','',f'{len(rows)} source occurrences reviewed: {audit["scoredItems"]} scored and {audit["ungradedItems"]} intentionally ungraded. All have a conceptual review destination; this does not authenticate a defective answer key.','', '## Was the previous review complete?','', 'No. Core metabolism was covered, but clinical enzyme interpretation, liver/renal diagnostic patterns, endocrine signaling and thyroid questions lacked dedicated coverage. Fine pathway and inherited-disease details also needed expansion. The original carbohydrate and first lipid slide PDFs were found outside the Term 2 folder.','', '## What changed','', '| Review section | Source occurrences | PDF page |','|---|---:|---:|']
 for s in course['sections']:
     if s['id'] in counts: report.append(f'| {s["title"]} | {counts[s["id"]]} | {s["pdfPage"]} |')
-report+=['','## Boundaries','', '- Fourteen main collections plus one unauthenticated reconstruction; duplicate concepts recur across papers.', '- Twenty-three flawed or insufficiently supported items remain ungraded. Their general principles or reasons for withholding are explained, not converted into invented answers.', '- Later missing lecture decks and future exam contents cannot be certified covered. Practical biochemistry is a separate volume and was not changed.', '- Existing diagrams and all six lecture-transcript attachments are preserved.', '- The row-level JSON records every source number, destination, page, citation and caveat. Original notes/books/slides were not modified.','', '## Every source item','', '| Paper / question | Review destination | Page | Status |','|---|---|---:|---|']
+report+=['','## Boundaries','', '- Fourteen main collections plus one unauthenticated reconstruction; duplicate concepts recur across papers.', '- The 23 formerly ungraded items now have AI study resolutions: 22 explicitly repaired questions and one accepting both defensible alternatives. All 641 are scored. Original defects, wording and source marks are retained; repairs are not authenticated examiner keys.', '- Later missing lecture decks and future exam contents cannot be certified covered. Practical biochemistry is a separate volume and was not changed.', '- Existing diagrams and all six lecture-transcript attachments are preserved.', '- The row-level JSON records every source number, destination, page, citation and caveat. Original notes/books/slides were not modified.','', '## Every source item','', '| Paper / question | Review destination | Page | Status |','|---|---|---:|---|']
 for r in rows: report.append(f'| {r["paperId"]} Q{r["sourceNumber"]} | {r["sectionTitle"]} | {r["pdfPage"]} | {r["afterAudit"]} |')
 text='\n'.join(report)+'\n'
 (REPO/'data/biochemistry/REVIEW-COVERAGE.md').write_text(text)

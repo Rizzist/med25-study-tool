@@ -2,7 +2,7 @@
 
 Supplied English translation paired with the Persian scan. Academic-year label comes from the English filename; Persian filename contains a conflicting year string. No exact sitting date assigned.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-1403-1404-group-b
 Course: Biochemistry II - Metabolism
@@ -81,16 +81,18 @@ Source: Original Q6; page 3.
 
 ### 7 · biochemistry-1403-1404-group-b-q007
 
+Edited study version; original wording follows below.
+
 Which of the following statements about a person with Gilbert's disease is correct?
 
 A. The increased bilirubin has toxic effects on the patient.
 B. More than 80% of UDP-glucuronosyltransferase enzyme activity is lost.
-C. The disease has a high prevalence in Black African populations.
+C. Reduced UGT1A1 activity causes mild, usually benign unconjugated hyperbilirubinemia
 D. Patients require blood transfusion to reduce bilirubin levels.
 
 Source: Original Q7; page 3.
 
-Status: Ungraded - No unambiguously correct option: Gilbert syndrome usually retains roughly 30% UGT1A1 activity and does not require transfusion. The ancestry statement needs a defined population reference.
+Note: Original stem: Which of the following statements about a person with Gilbert's disease is correct? Original choices: A) The increased bilirubin has toxic effects on the patient. | B) More than 80% of UDP-glucuronosyltransferase enzyme activity is lost. | C) The disease has a high prevalence in Black African populations. | D) Patients require blood transfusion to reduce bilirubin levels.
 
 ### 8 · biochemistry-1403-1404-group-b-q008
 

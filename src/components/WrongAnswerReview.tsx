@@ -70,6 +70,7 @@ function ReviewController({exam,attemptId,questions,outcomes}:Props) {
         <article className="wrong-review-question" key={q.id}>
           <h2 ref={heading} tabIndex={-1} dir="auto">{q.prompt}</h2>
           {q.imageUrl&&<img className="wrong-review-image" src={q.imageUrl} alt="Original question figure"/>}
+          {q.mediaQuestion?.qualityFlags.includes('editorially-repaired-source-question')&&<p className="term2-scope-note">Edited study version · original wording is retained in the paper downloads.</p>}
           {q.mediaQuestion&&<QuestionMedia question={q.mediaQuestion} review={Boolean(answer)} locationAnswered={Boolean(answer)} onLocationSubmit={regionId=>submit(locationOptionId(q.mediaQuestion!,regionId))}/>}
           {location?<p>Choose the location on the image, then submit it.</p>:<div className={'options'+(answer?' locked':'')}>
             {q.options.map(option=><button type="button" key={option.id} disabled={Boolean(answer)} className={(answer?(q.correctIds.includes(option.id)?'correct':answer.optionId===option.id?'wrong':''):'')+(q.inferred?' inferred-answer':'')} onClick={()=>submit(option.id)}><span className="option-letter">{option.id}</span><span className="option-copy"><b>{option.text}</b></span></button>)}

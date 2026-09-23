@@ -2,7 +2,7 @@
 
 Supplied English translation; Iranian year label retained without inventing a Gregorian sitting date.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-1401-metabolism
 Course: Biochemistry II - Metabolism
@@ -26,7 +26,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q1; page 2.
 
 Biochemistry metabolism · 1401, original question 1, source page 2.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 2 · biochemistry-1401-metabolism-q002
 
@@ -41,7 +41,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q2; page 2.
 
 Biochemistry metabolism · 1401, original question 2, source page 2.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 3 · biochemistry-1401-metabolism-q003
 
@@ -56,7 +56,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q3; page 2.
 
 Biochemistry metabolism · 1401, original question 3, source page 2.
-Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
 
 ### 4 · biochemistry-1401-metabolism-q004
 
@@ -71,7 +71,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q4; page 3.
 
 Biochemistry metabolism · 1401, original question 4, source page 3.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 5 · biochemistry-1401-metabolism-q005
 
@@ -86,7 +86,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q5; page 3.
 
 Biochemistry metabolism · 1401, original question 5, source page 3.
-Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
+Biochemistry II review, PDF p. 7: Glycolysis: every step, carbon count and energy event.
 
 ### 6 · biochemistry-1401-metabolism-q006
 
@@ -146,15 +146,15 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q9; page 4.
 
 Biochemistry metabolism · 1401, original question 9, source page 4.
-Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
+Biochemistry II review, PDF p. 6: Glucose transport, trapping and tissue priorities.
 
 ### 10 · biochemistry-1401-metabolism-q010
 
-Key: Ungraded - no defensible single key
+Key: B — Succinyl-CoA → Succinate
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: The listed succinate → succinyl-CoA reaction is reversed: GTP is produced in succinyl-CoA → succinate. No correctly directed option.
+Existing answer note: Succinyl-CoA synthetase couples succinyl-CoA conversion to succinate to substrate-level phosphorylation, producing GTP in the GDP-forming reaction. The original B arrow is reversed; that direction consumes rather than produces the nucleotide triphosphate.
 
 Provenance note: Printed source mark B; retained separately from the study key.
 
@@ -162,6 +162,7 @@ Source: Original Q10; page 5.
 
 Biochemistry metabolism · 1401, original question 10, source page 5.
 Biochemistry II review, PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation.
+Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, TCA-cycle chapter; carbohydrate metabolism MD Kish slide deck, TCA cycle.
 
 ### 11 · biochemistry-1401-metabolism-q011
 
@@ -206,7 +207,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q13; page 6.
 
 Biochemistry metabolism · 1401, original question 13, source page 6.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 14 · biochemistry-1401-metabolism-q014
 
@@ -221,7 +222,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q14; page 6.
 
 Biochemistry metabolism · 1401, original question 14, source page 6.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 15 · biochemistry-1401-metabolism-q015
 
@@ -236,7 +237,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q15; page 6.
 
 Biochemistry metabolism · 1401, original question 15, source page 6.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 16 · biochemistry-1401-metabolism-q016
 
@@ -251,7 +252,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q16; page 7.
 
 Biochemistry metabolism · 1401, original question 16, source page 7.
-Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
+Biochemistry II review, PDF p. 27: Cholesterol, bile acids and steroid synthesis.
 
 ### 17 · biochemistry-1401-metabolism-q017
 
@@ -266,7 +267,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q17; page 7.
 
 Biochemistry metabolism · 1401, original question 17, source page 7.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 18 · biochemistry-1401-metabolism-q018
 
@@ -281,7 +282,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q18; page 7.
 
 Biochemistry metabolism · 1401, original question 18, source page 7.
-Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
+Biochemistry II review, PDF p. 28: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 19 · biochemistry-1401-metabolism-q019
 
@@ -296,7 +297,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q19; page 8.
 
 Biochemistry metabolism · 1401, original question 19, source page 8.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 20 · biochemistry-1401-metabolism-q020
 
@@ -311,7 +312,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q20; page 8.
 
 Biochemistry metabolism · 1401, original question 20, source page 8.
-Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
+Biochemistry II review, PDF p. 23: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 21 · biochemistry-1401-metabolism-q021
 
@@ -326,7 +327,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q21; page 8.
 
 Biochemistry metabolism · 1401, original question 21, source page 8.
-Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
+Biochemistry II review, PDF p. 22: Fatty-acid synthesis and TAG storage.
 
 ### 22 · biochemistry-1401-metabolism-q022
 
@@ -341,7 +342,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q22; page 9.
 
 Biochemistry metabolism · 1401, original question 22, source page 9.
-Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
 
 ### 23 · biochemistry-1401-metabolism-q023
 
@@ -356,7 +357,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q23; page 9.
 
 Biochemistry metabolism · 1401, original question 23, source page 9.
-Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
 
 ### 24 · biochemistry-1401-metabolism-q024
 
@@ -371,7 +372,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q24; page 9.
 
 Biochemistry metabolism · 1401, original question 24, source page 9.
-Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
+Biochemistry II review, PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 25 · biochemistry-1401-metabolism-q025
 
@@ -386,7 +387,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q25; page 10.
 
 Biochemistry metabolism · 1401, original question 25, source page 10.
-Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Biochemistry II review, PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 26 · biochemistry-1401-metabolism-q026
 
@@ -401,7 +402,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q26; page 10.
 
 Biochemistry metabolism · 1401, original question 26, source page 10.
-Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
+Biochemistry II review, PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 27 · biochemistry-1401-metabolism-q027
 
@@ -416,7 +417,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q27; page 10.
 
 Biochemistry metabolism · 1401, original question 27, source page 10.
-Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
+Biochemistry II review, PDF p. 37: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 28 · biochemistry-1401-metabolism-q028
 
@@ -431,7 +432,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q28; page 11.
 
 Biochemistry metabolism · 1401, original question 28, source page 11.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 29 · biochemistry-1401-metabolism-q029
 
@@ -446,7 +447,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q29; page 11.
 
 Biochemistry metabolism · 1401, original question 29, source page 11.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 30 · biochemistry-1401-metabolism-q030
 
@@ -461,7 +462,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q30; page 11.
 
 Biochemistry metabolism · 1401, original question 30, source page 11.
-Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-1401-metabolism-q031
 
@@ -476,7 +477,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q31; page 12.
 
 Biochemistry metabolism · 1401, original question 31, source page 12.
-Biochemistry II review, PDF p. 57: Thyroid biochemistry and metabolic laboratory patterns.
+Biochemistry II review, PDF p. 53: Thyroid biochemistry and metabolic laboratory patterns.
 
 ### 32 · biochemistry-1401-metabolism-q032
 
@@ -491,7 +492,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q32; page 12.
 
 Biochemistry metabolism · 1401, original question 32, source page 12.
-Biochemistry II review, PDF p. 57: Thyroid biochemistry and metabolic laboratory patterns.
+Biochemistry II review, PDF p. 53: Thyroid biochemistry and metabolic laboratory patterns.
 
 ### 33 · biochemistry-1401-metabolism-q033
 
@@ -506,4 +507,4 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q33; page 12.
 
 Biochemistry metabolism · 1401, original question 33, source page 12.
-Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.

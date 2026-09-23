@@ -2,7 +2,7 @@
 
 Theory questions on metabolic disease, clinical enzymes and biochemical diagnostics, not a practical laboratory exam. Supplied English translation.
 
-Study answers, not an official university key. Inferred and corrected answers retain provenance. Defective items remain in the archive but are not auto-scored. Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.
+Study keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.
 
 Collection ID: biochemistry-1400-clinical
 Course: Biochemistry II - Metabolism
@@ -103,16 +103,18 @@ Source: Original Q8; page 3.
 
 ### 9 · biochemistry-1400-clinical-q009
 
-In SLOS and mevalonic aciduria patients, what are the hematologic findings?
+Edited study version; original wording follows below.
 
-A. Thrombocytopenia – increased RBC
-B. Thrombocytopenia – leukocytosis
-C. Thrombocytosis – leukocytosis
-D. Anemia – leukopenia
+Which paired biochemical abnormalities characterize SLOS and mevalonic aciduria, respectively?
+
+A. Low 7-dehydrocholesterol – low urine mevalonate
+B. High 7-dehydrocholesterol – high urine mevalonate
+C. High lanosterol – low urine mevalonate
+D. High cholesterol – low urine mevalonate
 
 Source: Original Q9; page 3.
 
-Status: Ungraded - The paired rare-disease hematologic claim needs source confirmation before scoring.
+Note: Original stem: In SLOS and mevalonic aciduria patients, what are the hematologic findings? Original choices: A) Thrombocytopenia – increased RBC | B) Thrombocytopenia – leukocytosis | C) Thrombocytosis – leukocytosis | D) Anemia – leukopenia
 
 ### 10 · biochemistry-1400-clinical-q010
 
@@ -215,16 +217,19 @@ Source: Original Q18; page 4.
 
 ### 19 · biochemistry-1400-clinical-q019
 
+Edited study version; original wording follows below.
+
 In liver cirrhosis, all of the following changes are observed EXCEPT:
 
 A. Increased conjugated bilirubin
 B. Increased PT
 C. Increased PTT
 D. Decreased serum albumin
+E. None of the above: all can occur in cirrhosis
 
 Source: Original Q19; page 5.
 
-Status: Ungraded - Cirrhosis may elevate conjugated bilirubin, PT and PTT and lower albumin. No reliable universal EXCEPT answer.
+Note: Original stem: In liver cirrhosis, all of the following changes are observed EXCEPT: Original choices: A) Increased conjugated bilirubin | B) Increased PT | C) Increased PTT | D) Decreased serum albumin
 
 ### 20 · biochemistry-1400-clinical-q020
 
@@ -259,7 +264,7 @@ D. 5′-nucleotidase
 
 Source: Original Q22; page 5.
 
-Status: Ungraded - ALT is soluble, but GGT is membrane-anchored rather than GPI-anchored; the wording does not yield one clean answer.
+Note: Original stem: Which of the following liver enzymes is NOT GPI-anchored? Original choices: A) GGT | B) ALP | C) SGPT (ALT) | D) 5′-nucleotidase
 
 ### 23 · biochemistry-1400-clinical-q023
 
@@ -307,20 +312,24 @@ Source: Original Q26; page 6.
 
 ### 27 · biochemistry-1400-clinical-q027
 
+Edited study version; original wording follows below.
+
 Brain damage in MSUD (Maple Syrup Urine Disease) results from the accumulation of which of the following?
 
 A. Ammonia
 B. GABA
-C. Decreased alpha-keto acids of branched-chain amino acids
+C. Increased leucine and branched-chain alpha-keto acids
 D. Increased propionyl-CoA
 
 Source: Original Q27; page 6.
 
-Status: Ungraded - MSUD neurotoxicity involves leucine and branched-chain ketoacid accumulation; none of these options expresses that.
+Note: Original stem: Brain damage in MSUD (Maple Syrup Urine Disease) results from the accumulation of which of the following? Original choices: A) Ammonia | B) GABA | C) Decreased alpha-keto acids of branched-chain amino acids | D) Increased propionyl-CoA
 
 ### 28 · biochemistry-1400-clinical-q028
 
-In which of the following conditions does a caramel or burnt-sugar (maple syrup) odor of urine caused by the presence of sotolon NOT occur?
+Edited study version; original wording follows below.
+
+Which listed inherited metabolic disease is classically associated with a maple-syrup or burnt-sugar odor caused by sotolon?
 
 A. Tyrosinemia type III
 B. Pregnancy
@@ -329,7 +338,7 @@ D. MSUD
 
 Source: Original Q28; page 6.
 
-Status: Ungraded - The broad sotolon/odor claim is insufficiently supported for automatic scoring.
+Note: Original stem: In which of the following conditions does a caramel or burnt-sugar (maple syrup) odor of urine caused by the presence of sotolon NOT occur? Original choices: A) Tyrosinemia type III | B) Pregnancy | C) Prolonged starvation | D) MSUD
 
 ### 29 · biochemistry-1400-clinical-q029
 

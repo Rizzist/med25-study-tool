@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import {resolveBiochemistryItem} from './lib/biochemistry-resolution.mjs';
 
 // Portable authoring input: no dependency on Downloads, OCR or the local medical archive.
 const root=path.resolve(import.meta.dirname,'..');
@@ -10,6 +11,8 @@ const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const emit=(file,text)=>{const target=path.join(root,file);if(check)assert.equal(fs.readFileSync(target,'utf8'),text,`Stale ${file}`);else{fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,text);}};
 const hash=value=>createHash('sha256').update(value).digest('hex');
 const data=read('data/biochemistry/past-papers.json');
+const resolutions=read('data/biochemistry/ai-resolutions.json');
+const resolvedIds=new Set();
 const curriculum=read('data/review-curriculum/courses/term2-biochemistry.json');
 const evidence=read('data/review-curriculum/evidence/question-review-map-v2.json');
 const sourceCatalog=read('data/mcq-refactor/past-source-catalog.json');
@@ -81,8 +84,11 @@ const finalQuestions=[],collections=[],assets=[],ids=new Set();
 for(const paper of data.papers){
  const questionIds=[],gradedQuestionIds=[],records=[];
  assert.equal(new Set(paper.questions.map(q=>q.number)).size,paper.questions.length,`Repeated source number ${paper.id}`);
- for(const row of paper.questions){
-  const id=`${paper.id}-q${String(row.number).padStart(3,'0')}`;
+ for(const original of paper.questions){
+  const id=`${paper.id}-q${String(original.number).padStart(3,'0')}`;
+  const resolution=resolutions.questions[id];
+  const row=resolveBiochemistryItem(original,resolution);
+  if(resolution)resolvedIds.add(id);
   assert(!ids.has(id));ids.add(id);questionIds.push(id);
   const options=row.options.map((text,i)=>({id:String.fromCharCode(65+i),text}));
   assert(options.length>=4&&options.length<=5&&options.every(o=>o.text.trim()),id);
@@ -92,15 +98,24 @@ for(const paper of data.papers){
   const section=curriculum.sections.find(s=>s.id===mapping.sectionId);
   assert(!mapping.sectionId||section,`Unknown section ${mapping.sectionId}`);
   const status=mapping.sectionId?(mapping.uncertain?'needs-review':'mapped'):'needs-crosswalk';
-  const inferred=!row.providedKey||row.key!==row.providedKey||row.acceptedOptionIds.length>1;
+  const inferred=Boolean(resolution)||!row.providedKey||row.key!==row.providedKey||row.acceptedOptionIds.length>1;
   const basis=inferred?'ai-inferred':'source-reviewed';
- const reviewed=reviewCoverage.questionDestinations.find(r=>r.questionId===id);
- const refs=[`${paper.title}, original question ${row.number}, source page ${row.page}.`,...(reviewed?[`Biochemistry II review, PDF p. ${reviewed.pdfPage}: ${reviewed.sectionTitle}.`]:[]),...evidenceFor(row)];
+  const reviewed=reviewCoverage.questionDestinations.find(r=>r.questionId===id);
+  const refs=[`${paper.title}, original question ${row.number}, source page ${row.page}.`,...(reviewed?[`Biochemistry II review, PDF p. ${reviewed.pdfPage}: ${reviewed.sectionTitle}.`]:[]),...(resolution?.evidence??[]),...evidenceFor(row)];
   const explanation=row.note||`${options.find(o=>o.id===row.key)?.text??'Withheld'} is the ${inferred?'editorial study answer':'retained source answer'} for the printed question. ${section?`Review: ${section.title}.`:'This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.'}`;
-  const record={...row,id,sectionId:mapping.sectionId,uncertain:mapping.uncertain,answerReview:{basis,confidence:row.note||mapping.uncertain?'medium':'high',canonicalSourceId:id,auditedAt:data.importedAt,evidence:refs},explanation};
+  const record={...row,id,sectionId:mapping.sectionId,uncertain:mapping.uncertain,answerReview:{basis,confidence:resolution?.confidence??(row.note||mapping.uncertain?'medium':'high'),canonicalSourceId:id,auditedAt:data.importedAt,evidence:refs},explanation};
   records.push(record);
   if(!row.key)continue;
   const q={schemaVersion:'1.0.0',id,revision:1,status:'verified',kind:row.media?'image_single_best_answer':'single_best_answer',subject:'biochemistry',topic:section?.title??'Clinical biochemistry · additional source topics',chapter:section?`Biochemistry II review: ${section.title}`:paper.title,difficulty:2,prompt:row.prompt,options,correctOptionId:row.key,acceptedOptionIds:row.acceptedOptionIds,explanation,answerReview:record.answerReview,distractorExplanations:{},learningObjective:`Review source question ${row.number}: ${section?.title??'clinical biochemistry'}`,source:{title:paper.original.title,chapter:`${paper.title} · Original Q${row.number}`,page:String(row.page),lecture:paper.note,excerpt:`${row.providedKey?`Supplied mark: ${row.providedKey}. `:''}Study key: ${row.key}; not an authenticated official university key. ${row.note}`},tags:['term-2','exam-term2-biochemistry','biochemistry-metabolism-past-paper',`final-bank-${bank}`,paper.id,...(section?[`review-section-${section.id}`]:[])],examPriority:'standard',qualityFlags:['source-question-not-authored','key-not-official',inferred?'ai-inferred-answer':'source-key-transcribed',...(row.note?['qualified-source-wording']:[]),...(mapping.uncertain?['review-map-uncertain']:[])]};
+  if(resolution){
+   q.revision=2;
+   q.qualityFlags.push('ai-resolved-source-item');
+   q.source.excerpt+=` Original stem: ${original.prompt} Original choices: ${original.options.map((text,i)=>`${String.fromCharCode(65+i)}) ${text}`).join(' | ')} Original audit: ${original.note}`;
+   if(resolution.kind==='repaired'){
+    q.qualityFlags=q.qualityFlags.filter(f=>f!=='source-question-not-authored');
+    q.qualityFlags.push('editorially-repaired-source-question');
+   }
+  }
   if(row.media){assert(fs.existsSync(path.join(root,'public/study',row.media.path)),id);q.media=[{id:id+'-figure',type:'image',...row.media,caption:'Original source figure; numbering retained.',attribution:paper.title}];}
   finalQuestions.push(q);gradedQuestionIds.push(id);
   evidence.questions[id]={examId:exam,bankId:bank,kind:q.kind,sectionId:mapping.sectionId,uncertain:mapping.uncertain,status,specificity:section?'section':'unmapped',method:reviewed?'source-question-review-audit':section?'source-stem-topic-routing':'no-exact-review-heading',evidence:reviewed?`${section.id}: explicit question-level review audit, PDF p. ${reviewed.pdfPage}; concept coverage does not certify the source key.`:section?`${section.id}: ${mapping.uncertain?'suggested by choices; not a confirmed exact match':'matched to the source stem topic'}`:'The source asks a clinical detail not explicitly covered by a review heading.',sourceQualityFlags:q.qualityFlags};
@@ -110,8 +125,8 @@ for(const paper of data.papers){
  const originalBytes=fs.readFileSync(path.join(root,'public',paper.original.url));assert.equal(hash(originalBytes),paper.original.sha256,`Source drift ${paper.id}`);
  assets.push({collectionId:paper.id,url:paper.original.url,bytes:originalBytes.length,sha256:paper.original.sha256});
  const downloads={questions:`/study/past-paper-downloads/${paper.id}/questions.md`,answerKey:`/study/past-paper-downloads/${paper.id}/answer-key.md`,questionsAndKey:`/study/past-paper-downloads/${paper.id}/questions-and-key.md`};
- const intro=`# ${paper.title}\n\n${paper.note}\n\n${data.keyPolicy} Supplied translations are reproduced as supplied. OCR spacing and obvious recognition errors were repaired; original choice order and numbering are retained.\n\nCollection ID: ${paper.id}\nCourse: Biochemistry II - Metabolism\n\n## Original sources\n\n${sources.map(s=>`- ${s.title}: ${s.publicUrl} — ${s.note}`).join('\n')}\n\n`;
- const questionText=`## Questions\n\n${records.map(r=>`### ${r.number} · ${r.id}\n\n${r.prompt}\n\n${r.options.map((o,i)=>`${String.fromCharCode(65+i)}. ${o}`).join('\n')}\n\nSource: Original Q${r.number}; page ${r.page}.\n${r.media?`\nOriginal figure: /study/${r.media.path}\n`:''}${!r.key?`\nStatus: Ungraded - ${r.note}\n`:''}`).join('\n')}`;
+ const intro=`# ${paper.title}\n\n${paper.note}\n\nStudy keys include source-reviewed and AI-inferred answers; they are not official university keys. Previously defective items have explicit study repairs or accepted alternatives. Numbering is retained; original text and choices are preserved alongside repaired versions and in the original PDF.\n\nCollection ID: ${paper.id}\nCourse: Biochemistry II - Metabolism\n\n## Original sources\n\n${sources.map(s=>`- ${s.title}: ${s.publicUrl} — ${s.note}`).join('\n')}\n\n`;
+ const questionText=`## Questions\n\n${records.map(r=>`### ${r.number} · ${r.id}\n\n${r.aiResolution?.kind==='repaired'?'Edited study version; original wording follows below.\n\n':''}${r.prompt}\n\n${r.options.map((o,i)=>`${String.fromCharCode(65+i)}. ${o}`).join('\n')}\n\nSource: Original Q${r.number}; page ${r.page}.\n${r.originalQuestion?`\nNote: Original stem: ${r.originalQuestion.prompt} Original choices: ${r.originalQuestion.options.map((o,i)=>`${String.fromCharCode(65+i)}) ${o}`).join(' | ')}\n`:''}${r.media?`\nOriginal figure: /study/${r.media.path}\n`:''}${!r.key?`\nStatus: Ungraded - ${r.note}\n`:''}`).join('\n')}`;
  const keyText=`## Answer key and provenance\n\n${records.map(r=>`### ${r.number} · ${r.id}\n\nKey: ${r.key?`${r.key} — ${r.options[r.key.charCodeAt(0)-65]}`:'Ungraded - no defensible single key'}\n\nKey provenance: ${r.answerReview.basis==='ai-inferred'?'AI-inferred editorial answer':'Transcribed source answer with editorial checks'}; not an official university key.\n\nExisting answer note: ${r.explanation}\n\nProvenance note: ${r.providedKey?`Printed source mark ${r.providedKey}; retained separately from the study key.`:'No authoritative key supplied.'}\n${r.acceptedOptionIds.length>1?`\nNote: Accepted source alternatives: ${r.acceptedOptionIds.join(', ')}.\n`:''}\nSource: Original Q${r.number}; page ${r.page}.\n\n${r.answerReview.evidence.join('\n')}\n`).join('\n')}`;
  for(const [type,text] of Object.entries({questions:intro+questionText,answerKey:intro+keyText,questionsAndKey:intro+questionText+'\n'+keyText})){
   emit('public'+downloads[type],text);assets.push({collectionId:paper.id,url:downloads[type],bytes:Buffer.byteLength(text),sha256:hash(text)});
@@ -119,6 +134,7 @@ for(const paper of data.papers){
  collections.push({id:paper.id,courseId:exam,bankId:bank,bankKey,title:paper.title,note:paper.note,kind:paper.defaultEligible?'supplied-source-paper':'supplied-reconstruction',date:paper.date,dateEvidence:paper.note,courseMatch:paper.defaultEligible?'metabolism-and-clinical-theory':'metabolism-reconstruction',defaultEligible:paper.defaultEligible,originalOrderClaim:true,sources,sourceRecordCount:records.length,transcribedQuestionCount:records.length,gradedQuestionCount:gradedQuestionIds.length,sourceKeyCount:records.filter(r=>r.providedKey).length,editorialKeyCount:gradedQuestionIds.length,inferredKeyCount:records.filter(r=>r.key&&r.answerReview.basis==='ai-inferred').length,ungradedCount:records.length-gradedQuestionIds.length,missingSourceNumbers:paper.missingSourceNumbers,questionIds,gradedQuestionIds,downloads,originals:[{name:paper.original.title,url:paper.original.url}]});
  emit(`data/biochemistry/papers/${paper.id}.json`,JSON.stringify({...paper,questions:records},null,2)+'\n');
 }
+assert.deepEqual([...resolvedIds].sort(),Object.keys(resolutions.questions).sort(),'Orphan AI resolution');
 sourceCatalog.collections=[...sourceCatalog.collections.filter(c=>c.courseId!==exam),...collections];
 sourceCatalog.assets=[...sourceCatalog.assets.filter(a=>!a.collectionId?.startsWith('biochemistry-')),...assets];
 const course=downloadCatalog.courses.find(c=>c.id===exam);assert(course);
