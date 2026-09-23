@@ -41,14 +41,15 @@
       ],
       "id": "biochemistry-1403-clinical-q001",
       "sectionId": "biochemistry/biochem-insulin-glucagon",
-      "uncertain": true,
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q001",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 1, source page 2."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 1, source page 2.",
+          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
         ]
       },
       "explanation": "Type I diabetes is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
@@ -70,7 +71,7 @@
         "D"
       ],
       "id": "biochemistry-1403-clinical-q002",
-      "sectionId": "biochemistry/biochem-diabetes-integration",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
       "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
@@ -78,10 +79,11 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q002",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 2, source page 2."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 2, source page 2.",
+          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle."
         ]
       },
-      "explanation": "Other specific types of diabetes is the retained source answer for the printed question. Review: Diabetes and metabolic perturbations: causal review."
+      "explanation": "Other specific types of diabetes is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle."
     },
     {
       "number": 3,
@@ -107,6 +109,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Clinical biochemistry · 1403 · numbered fragment, original question 3, source page 2.",
+          "Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.",
           "https://pubmed.ncbi.nlm.nih.gov/14744022/"
         ]
       },
@@ -129,18 +132,19 @@
         "C"
       ],
       "id": "biochemistry-1403-clinical-q004",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-diabetes-integration",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q004",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 4, source page 2."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 4, source page 2.",
+          "Biochemistry II review, PDF p. 47: Diabetes and metabolic perturbations: causal review."
         ]
       },
-      "explanation": "Cardiac (cardiovascular) is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Cardiac (cardiovascular) is the retained source answer for the printed question. Review: Diabetes and metabolic perturbations: causal review."
     },
     {
       "number": 5,
@@ -159,18 +163,19 @@
         "C"
       ],
       "id": "biochemistry-1403-clinical-q005",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q005",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 5, source page 2."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 5, source page 2.",
+          "Biochemistry II review, PDF p. 16: Glycogen structure, synthesis, degradation and control."
         ]
       },
-      "explanation": "Hypouricemia is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Hypouricemia is the retained source answer for the printed question. Review: Glycogen structure, synthesis, degradation and control."
     },
     {
       "number": 6,
@@ -197,7 +202,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q006",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 6, source page 2."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 6, source page 2.",
+          "Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway."
         ]
       },
       "explanation": "Aldolase B – GLUT5 is the retained source answer for the printed question. Review: Fructose, galactose, mannose and the polyol pathway."
@@ -218,14 +224,15 @@
       "acceptedOptionIds": [],
       "id": "biochemistry-1403-clinical-q007",
       "sectionId": "biochemistry/biochem-other-sugars",
-      "uncertain": true,
+      "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
         "confidence": "medium",
         "canonicalSourceId": "biochemistry-1403-clinical-q007",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 7, source page 3."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 7, source page 3.",
+          "Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway."
         ]
       },
       "explanation": "The item combines cataract and advanced glycation without a clear mechanism; the supplied key is insufficient to settle the broad wording."
@@ -247,18 +254,19 @@
         "A"
       ],
       "id": "biochemistry-1403-clinical-q008",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-glycogen",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q008",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 8, source page 3."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 8, source page 3.",
+          "Biochemistry II review, PDF p. 16: Glycogen structure, synthesis, degradation and control."
         ]
       },
-      "explanation": "Hepatomegaly is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Hepatomegaly is the retained source answer for the printed question. Review: Glycogen structure, synthesis, degradation and control."
     },
     {
       "number": 9,
@@ -285,7 +293,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q009",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 9, source page 3."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 9, source page 3.",
+          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis."
         ]
       },
       "explanation": "Farnesyl pyrophosphate supplies isoprenoid pathways including dolichol formation; it is downstream, not a precursor of HMG-CoA."
@@ -315,7 +324,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q010",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 10, source page 3."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 10, source page 3.",
+          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis."
         ]
       },
       "explanation": "Two five-carbon isoprene equivalents yield geranyl-PP; more exactly these are one DMAPP plus one IPP."
@@ -344,6 +354,7 @@
         "auditedAt": "2026-09-23",
         "evidence": [
           "Clinical biochemistry · 1403 · numbered fragment, original question 11, source page 3.",
+          "Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.",
           "https://www.ncbi.nlm.nih.gov/books/NBK1143/"
         ]
       },
@@ -374,7 +385,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q012",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 12, source page 3."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 12, source page 3.",
+          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Apo A-I is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -404,7 +416,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q013",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 13, source page 4."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 13, source page 4.",
+          "Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map."
         ]
       },
       "explanation": "Type II-a is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map."
@@ -426,18 +439,19 @@
         "B"
       ],
       "id": "biochemistry-1403-clinical-q014",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q014",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 14, source page 4."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 14, source page 4.",
+          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
         ]
       },
-      "explanation": "Triamterene is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Triamterene is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function."
     },
     {
       "number": 15,
@@ -456,18 +470,19 @@
         "B"
       ],
       "id": "biochemistry-1403-clinical-q015",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q015",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 15, source page 4."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 15, source page 4.",
+          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
         ]
       },
-      "explanation": "High hemoglobin is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "High hemoglobin is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function."
     },
     {
       "number": 16,
@@ -486,18 +501,19 @@
         "A"
       ],
       "id": "biochemistry-1403-clinical-q016",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q016",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 16, source page 4."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 16, source page 4.",
+          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
         ]
       },
-      "explanation": "Less than 15 is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Less than 15 is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function."
     },
     {
       "number": 17,
@@ -516,18 +532,19 @@
         "C"
       ],
       "id": "biochemistry-1403-clinical-q017",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q017",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 17, source page 4."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 17, source page 4.",
+          "Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function."
         ]
       },
-      "explanation": "Microalbuminuria is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Microalbuminuria is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function."
     },
     {
       "number": 18,
@@ -546,18 +563,19 @@
         "D"
       ],
       "id": "biochemistry-1403-clinical-q018",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q018",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 18, source page 4."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 18, source page 4.",
+          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
-      "explanation": "Hepatitis A is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Hepatitis A is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns."
     },
     {
       "number": 19,
@@ -576,7 +594,7 @@
         "A"
       ],
       "id": "biochemistry-1403-clinical-q019",
-      "sectionId": "biochemistry/biochem-vitamins",
+      "sectionId": "biochemistry/biochem-liver-tests",
       "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
@@ -584,10 +602,11 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q019",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 19, source page 5."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 19, source page 5.",
+          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
-      "explanation": "B6 is the retained source answer for the printed question. Review: Vitamin and cofactor integration for metabolism."
+      "explanation": "B6 is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns."
     },
     {
       "number": 20,
@@ -614,7 +633,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q020",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 20, source page 5."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 20, source page 5.",
+          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Dubin–Johnson syndrome is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -636,18 +656,19 @@
         "C"
       ],
       "id": "biochemistry-1403-clinical-q021",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q021",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 21, source page 5."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 21, source page 5.",
+          "Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns."
         ]
       },
-      "explanation": "Biliary duct obstruction is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "Biliary duct obstruction is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns."
     },
     {
       "number": 22,
@@ -674,7 +695,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q022",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 22, source page 5."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 22, source page 5.",
+          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "CEP is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -704,7 +726,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q023",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 23, source page 5."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 23, source page 5.",
+          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "PCT (Porphyria Cutanea Tarda) is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -734,7 +757,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q024",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 24, source page 5."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 24, source page 5.",
+          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "Uroporphyrin in urine or feces is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -764,7 +788,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q025",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 25, source page 6."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 25, source page 6.",
+          "Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling."
         ]
       },
       "explanation": "ALA synthase is the retained source answer for the printed question. Review: Heme synthesis, porphyrias and bilirubin handling."
@@ -794,7 +819,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q027",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 27, source page 6."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 27, source page 6.",
+          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "Liver cirrhosis is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
@@ -824,7 +850,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q028",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 28, source page 6."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 28, source page 6.",
+          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "Ochronosis is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
@@ -854,7 +881,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q030",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 30, source page 6."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 30, source page 6.",
+          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "B3 is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
@@ -876,7 +904,7 @@
         "D"
       ],
       "id": "biochemistry-1403-clinical-q031",
-      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionId": "biochemistry/biochem-aa-disorders",
       "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
@@ -884,10 +912,11 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q031",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 31, source page 6."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 31, source page 6.",
+          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
-      "explanation": "Arg is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
+      "explanation": "Arg is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
     },
     {
       "number": 32,
@@ -912,7 +941,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q032",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 32, source page 6."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 32, source page 6.",
+          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
       "explanation": "The broad sotolon/odor claim needs a defined source before scoring."
@@ -934,18 +964,19 @@
         "D"
       ],
       "id": "biochemistry-1403-clinical-q033",
-      "sectionId": "biochemistry/biochem-ppp",
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q033",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 33, source page 7."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 33, source page 7.",
+          "Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction."
         ]
       },
-      "explanation": "Cu is the retained source answer for the printed question. Review: Pentose phosphate pathway and antioxidant defense."
+      "explanation": "Cu is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction."
     },
     {
       "number": 34,
@@ -972,7 +1003,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q034",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 34, source page 7."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 34, source page 7.",
+          "Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
         ]
       },
       "explanation": "Serine is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
@@ -1002,7 +1034,8 @@
         "canonicalSourceId": "biochemistry-1403-clinical-q035",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 35, source page 7."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 35, source page 7.",
+          "Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
         ]
       },
       "explanation": "B5 is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism."
@@ -1025,15 +1058,16 @@
         "B"
       ],
       "id": "biochemistry-1403-clinical-q036",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
         "confidence": "medium",
         "canonicalSourceId": "biochemistry-1403-clinical-q036",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 36, source page 7."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 36, source page 7.",
+          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Troponin is valuable in both STEMI and NSTEMI; the diagnostic contrast is particularly important in NSTEMI."
@@ -1055,18 +1089,19 @@
         "C"
       ],
       "id": "biochemistry-1403-clinical-q037",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
-        "confidence": "medium",
+        "confidence": "high",
         "canonicalSourceId": "biochemistry-1403-clinical-q037",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 37, source page 7."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 37, source page 7.",
+          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
-      "explanation": "LDH is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes."
+      "explanation": "LDH is the retained source answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
     },
     {
       "number": 38,
@@ -1085,15 +1120,16 @@
         "B"
       ],
       "id": "biochemistry-1403-clinical-q038",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "uncertain": false,
       "answerReview": {
         "basis": "source-reviewed",
         "confidence": "medium",
         "canonicalSourceId": "biochemistry-1403-clinical-q038",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 38, source page 7."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 38, source page 7.",
+          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "Historical early-marker question: myoglobin rises rapidly but is nonspecific. Current assessment relies on high-sensitivity cardiac troponin; do not apply this old ranking as modern practice."
@@ -1113,15 +1149,16 @@
       "note": "BNP supports heart-failure evaluation while D-dimer supports selected thromboembolism workups. This wording does not specify which diagnostic role it asks for.",
       "acceptedOptionIds": [],
       "id": "biochemistry-1403-clinical-q039",
-      "sectionId": null,
-      "uncertain": true,
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "uncertain": false,
       "answerReview": {
         "basis": "ai-inferred",
         "confidence": "medium",
         "canonicalSourceId": "biochemistry-1403-clinical-q039",
         "auditedAt": "2026-09-23",
         "evidence": [
-          "Clinical biochemistry · 1403 · numbered fragment, original question 39, source page 8."
+          "Clinical biochemistry · 1403 · numbered fragment, original question 39, source page 8.",
+          "Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers."
         ]
       },
       "explanation": "BNP supports heart-failure evaluation while D-dimer supports selected thromboembolism workups. This wording does not specify which diagnostic role it asks for."

@@ -19,13 +19,14 @@ Key: A — Urea
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Urea is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Urea is the editorial study answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q1; page 2.
 
 Kish metabolism · September 2017 semester, original question 1, source page 2.
+Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 2 · biochemistry-2017-kish-q002
 
@@ -33,13 +34,14 @@ Key: C — End stage liver disease
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: End stage liver disease is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: End stage liver disease is the editorial study answer for the printed question. Review: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q2; page 2.
 
 Kish metabolism · September 2017 semester, original question 2, source page 2.
+Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 3 · biochemistry-2017-kish-q003
 
@@ -54,6 +56,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 2.
 
 Kish metabolism · September 2017 semester, original question 3, source page 2.
+Biochemistry II review, PDF p. 43: Amino acids as precursors of signaling and storage molecules.
 
 ### 4 · biochemistry-2017-kish-q004
 
@@ -68,6 +71,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 2.
 
 Kish metabolism · September 2017 semester, original question 4, source page 2.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 5 · biochemistry-2017-kish-q005
 
@@ -82,6 +86,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Kish metabolism · September 2017 semester, original question 5, source page 2.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 6 · biochemistry-2017-kish-q006
 
@@ -89,13 +94,14 @@ Key: D — Lysine
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Lysine is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Lysine is the editorial study answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q6; page 2.
 
 Kish metabolism · September 2017 semester, original question 6, source page 2.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 7 · biochemistry-2017-kish-q007
 
@@ -103,13 +109,14 @@ Key: A — Acetoacetyl coA and can form ketone bodies in the liver
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Acetoacetyl coA and can form ketone bodies in the liver is the editorial study answer for the printed question. Review: Ketogenesis and ketone utilization.
+Existing answer note: Acetoacetyl coA and can form ketone bodies in the liver is the editorial study answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q7; page 2.
 
 Kish metabolism · September 2017 semester, original question 7, source page 2.
+Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 8 · biochemistry-2017-kish-q008
 
@@ -117,13 +124,14 @@ Key: A — Ile, Trp
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Ile, Trp is the editorial study answer for the printed question. Review: Ketogenesis and ketone utilization.
+Existing answer note: Ile, Trp is the editorial study answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q8; page 3.
 
 Kish metabolism · September 2017 semester, original question 8, source page 3.
+Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 9 · biochemistry-2017-kish-q009
 
@@ -131,13 +139,14 @@ Key: B — NADP+ to NADPH
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: NADP+ to NADPH is the editorial study answer for the printed question. Review: Pentose phosphate pathway and antioxidant defense.
+Existing answer note: NADP+ to NADPH is the editorial study answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q9; page 3.
 
 Kish metabolism · September 2017 semester, original question 9, source page 3.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 10 · biochemistry-2017-kish-q010
 
@@ -152,6 +161,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 3.
 
 Kish metabolism · September 2017 semester, original question 10, source page 3.
+Biochemistry II review, PDF p. 58: Past-paper audit: flawed items and conventions to keep separate.
 
 ### 11 · biochemistry-2017-kish-q011
 
@@ -166,6 +176,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q11; page 3.
 
 Kish metabolism · September 2017 semester, original question 11, source page 3.
+Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 12 · biochemistry-2017-kish-q012
 
@@ -180,6 +191,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 3.
 
 Kish metabolism · September 2017 semester, original question 12, source page 3.
+Biochemistry II review, PDF p. 32: Urea cycle: atom origins, compartments and diagnostic contrasts.
 
 ### 13 · biochemistry-2017-kish-q013
 
@@ -194,6 +206,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 3.
 
 Kish metabolism · September 2017 semester, original question 13, source page 3.
+Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
 
 ### 14 · biochemistry-2017-kish-q014
 
@@ -208,6 +221,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 3.
 
 Kish metabolism · September 2017 semester, original question 14, source page 3.
+Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
 
 ### 15 · biochemistry-2017-kish-q015
 
@@ -215,13 +229,14 @@ Key: C — Very long chain fatty acids
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Very long chain fatty acids is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Very long chain fatty acids is the editorial study answer for the printed question. Review: Lipolysis, carnitine transport and beta-oxidation.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q15; page 4.
 
 Kish metabolism · September 2017 semester, original question 15, source page 4.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 16 · biochemistry-2017-kish-q016
 
@@ -236,6 +251,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Kish metabolism · September 2017 semester, original question 16, source page 4.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 
 ### 17 · biochemistry-2017-kish-q017
 
@@ -243,13 +259,14 @@ Key: D — Acetyl CoA is converted into citrate, enters into cytosol and acetyl 
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Acetyl CoA is converted into citrate, enters into cytosol and acetyl CoA is regenerated is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Acetyl CoA is converted into citrate, enters into cytosol and acetyl CoA is regenerated is the editorial study answer for the printed question. Review: Fatty-acid synthesis and TAG storage.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q17; page 4.
 
 Kish metabolism · September 2017 semester, original question 17, source page 4.
+Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
 
 ### 18 · biochemistry-2017-kish-q018
 
@@ -257,13 +274,14 @@ Key: B — Chylomicrons
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Chylomicrons is the editorial study answer for the printed question. Review: Dietary lipid digestion: from meal to absorbable products.
+Existing answer note: Chylomicrons is the editorial study answer for the printed question. Review: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q18; page 4.
 
 Kish metabolism · September 2017 semester, original question 18, source page 4.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 19 · biochemistry-2017-kish-q019
 
@@ -278,6 +296,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 4.
 
 Kish metabolism · September 2017 semester, original question 19, source page 4.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 20 · biochemistry-2017-kish-q020
 
@@ -292,6 +311,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 4.
 
 Kish metabolism · September 2017 semester, original question 20, source page 4.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 21 · biochemistry-2017-kish-q021
 
@@ -306,6 +326,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Kish metabolism · September 2017 semester, original question 21, source page 5.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 
 ### 22 · biochemistry-2017-kish-q022
 
@@ -313,13 +334,14 @@ Key: A — Alkaline phosphatase
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Alkaline phosphatase is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Alkaline phosphatase is the editorial study answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q22; page 5.
 
 Kish metabolism · September 2017 semester, original question 22, source page 5.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 23 · biochemistry-2017-kish-q023
 
@@ -327,13 +349,14 @@ Key: A — In the heart muscle (initial stage of myocardium infarction)
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: In the heart muscle (initial stage of myocardium infarction) is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: In the heart muscle (initial stage of myocardium infarction) is the editorial study answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q23; page 5.
 
 Kish metabolism · September 2017 semester, original question 23, source page 5.
+Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 24 · biochemistry-2017-kish-q024
 
@@ -341,13 +364,14 @@ Key: B — Amylase
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Amylase is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Amylase is the editorial study answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q24; page 5.
 
 Kish metabolism · September 2017 semester, original question 24, source page 5.
+Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 25 · biochemistry-2017-kish-q025
 
@@ -355,13 +379,14 @@ Key: A — Cytoplasm
 
 Key provenance: AI-inferred editorial answer; not an official university key.
 
-Existing answer note: Cytoplasm is the editorial study answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Cytoplasm is the editorial study answer for the printed question. Review: Glycolysis: every step, carbon count and energy event.
 
 Provenance note: No authoritative key supplied.
 
 Source: Original Q25; page 5.
 
 Kish metabolism · September 2017 semester, original question 25, source page 5.
+Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
 
 ### 26 · biochemistry-2017-kish-q026
 
@@ -376,6 +401,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 5.
 
 Kish metabolism · September 2017 semester, original question 26, source page 5.
+Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
 
 ### 27 · biochemistry-2017-kish-q027
 
@@ -390,6 +416,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 5.
 
 Kish metabolism · September 2017 semester, original question 27, source page 5.
+Biochemistry II review, PDF p. 9: PFK-1, pyruvate kinase and the lactate shunt.
 
 ### 28 · biochemistry-2017-kish-q028
 
@@ -404,6 +431,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 6.
 
 Kish metabolism · September 2017 semester, original question 28, source page 6.
+Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
 
 ### 29 · biochemistry-2017-kish-q029
 
@@ -418,6 +446,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q29; page 6.
 
 Kish metabolism · September 2017 semester, original question 29, source page 6.
+Biochemistry II review, PDF p. 16: Glycogen structure, synthesis, degradation and control.
 
 ### 30 · biochemistry-2017-kish-q030
 
@@ -432,6 +461,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q30; page 6.
 
 Kish metabolism · September 2017 semester, original question 30, source page 6.
+Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 31 · biochemistry-2017-kish-q031
 
@@ -446,6 +476,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 6.
 
 Kish metabolism · September 2017 semester, original question 31, source page 6.
+Biochemistry II review, PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation.
 
 ### 32 · biochemistry-2017-kish-q032
 
@@ -460,6 +491,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q32; page 6.
 
 Kish metabolism · September 2017 semester, original question 32, source page 6.
+Biochemistry II review, PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation.
 
 ### 33 · biochemistry-2017-kish-q033
 
@@ -474,3 +506,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q33; page 6.
 
 Kish metabolism · September 2017 semester, original question 33, source page 6.
+Biochemistry II review, PDF p. 19: Pentose phosphate pathway and antioxidant defense.

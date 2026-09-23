@@ -263,6 +263,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q1; page 2.
 
 Biochemistry metabolism · 1399, original question 1, source page 2.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 2 · biochemistry-1399-metabolism-q002
 
@@ -277,6 +278,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q2; page 2.
 
 Biochemistry metabolism · 1399, original question 2, source page 2.
+Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
 
 ### 3 · biochemistry-1399-metabolism-q003
 
@@ -291,6 +293,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q3; page 2.
 
 Biochemistry metabolism · 1399, original question 3, source page 2.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 4 · biochemistry-1399-metabolism-q004
 
@@ -298,13 +301,14 @@ Key: C — TMP
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: TMP is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: TMP is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q4; page 3.
 
 Biochemistry metabolism · 1399, original question 4, source page 3.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 5 · biochemistry-1399-metabolism-q005
 
@@ -312,13 +316,14 @@ Key: C — Apo B48
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Apo B48 is the retained source answer for the printed question. Review: Cholesterol, bile acids and steroid synthesis.
+Existing answer note: Apo B48 is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q5; page 3.
 
 Biochemistry metabolism · 1399, original question 5, source page 3.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 6 · biochemistry-1399-metabolism-q006
 
@@ -333,6 +338,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q6; page 3.
 
 Biochemistry metabolism · 1399, original question 6, source page 3.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 7 · biochemistry-1399-metabolism-q007
 
@@ -340,13 +346,14 @@ Key: A — Biliary duct obstruction – Hepatitis
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Biliary duct obstruction – Hepatitis is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Biliary duct obstruction – Hepatitis is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q7; page 4.
 
 Biochemistry metabolism · 1399, original question 7, source page 4.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 8 · biochemistry-1399-metabolism-q008
 
@@ -361,6 +368,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q8; page 4.
 
 Biochemistry metabolism · 1399, original question 8, source page 4.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 9 · biochemistry-1399-metabolism-q009
 
@@ -375,6 +383,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q9; page 4.
 
 Biochemistry metabolism · 1399, original question 9, source page 4.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 https://www.ncbi.nlm.nih.gov/books/NBK532930/
 
 ### 10 · biochemistry-1399-metabolism-q010
@@ -390,6 +399,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q10; page 4.
 
 Biochemistry metabolism · 1399, original question 10, source page 4.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 
 ### 11 · biochemistry-1399-metabolism-q011
 
@@ -404,6 +414,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q11; page 5.
 
 Biochemistry metabolism · 1399, original question 11, source page 5.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 12 · biochemistry-1399-metabolism-q012
 
@@ -418,6 +429,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q12; page 5.
 
 Biochemistry metabolism · 1399, original question 12, source page 5.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 13 · biochemistry-1399-metabolism-q013
 
@@ -432,6 +444,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q13; page 5.
 
 Biochemistry metabolism · 1399, original question 13, source page 5.
+Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
 
 ### 14 · biochemistry-1399-metabolism-q014
 
@@ -439,13 +452,14 @@ Key: A — Bone disease
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Bone disease is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Bone disease is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q14; page 5.
 
 Biochemistry metabolism · 1399, original question 14, source page 5.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 15 · biochemistry-1399-metabolism-q015
 
@@ -460,6 +474,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q15; page 6.
 
 Biochemistry metabolism · 1399, original question 15, source page 6.
+Biochemistry II review, PDF p. 23: Fatty-acid synthesis and TAG storage.
 
 ### 16 · biochemistry-1399-metabolism-q016
 
@@ -474,6 +489,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q16; page 6.
 
 Biochemistry metabolism · 1399, original question 16, source page 6.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 17 · biochemistry-1399-metabolism-q017
 
@@ -488,6 +504,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q17; page 6.
 
 Biochemistry metabolism · 1399, original question 17, source page 6.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 18 · biochemistry-1399-metabolism-q018
 
@@ -495,13 +512,14 @@ Key: C — ABCA1
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: ABCA1 is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: ABCA1 is the retained source answer for the printed question. Review: Lipoproteins and apoproteins: an integrated transport map.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q18; page 6.
 
 Biochemistry metabolism · 1399, original question 18, source page 6.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 19 · biochemistry-1399-metabolism-q019
 
@@ -516,6 +534,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q19; page 7.
 
 Biochemistry metabolism · 1399, original question 19, source page 7.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 20 · biochemistry-1399-metabolism-q020
 
@@ -530,6 +549,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q20; page 7.
 
 Biochemistry metabolism · 1399, original question 20, source page 7.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 21 · biochemistry-1399-metabolism-q021
 
@@ -544,3 +564,4 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q21; page 7.
 
 Biochemistry metabolism · 1399, original question 21, source page 7.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.

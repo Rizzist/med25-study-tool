@@ -26,6 +26,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q1; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 1, source page 2.
+Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
 
 ### 2 · biochemistry-1403-clinical-q002
 
@@ -33,13 +34,14 @@ Key: D — Other specific types of diabetes
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Other specific types of diabetes is the retained source answer for the printed question. Review: Diabetes and metabolic perturbations: causal review.
+Existing answer note: Other specific types of diabetes is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle.
 
 Provenance note: Printed source mark D; retained separately from the study key.
 
 Source: Original Q2; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 2, source page 2.
+Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
 
 ### 3 · biochemistry-1403-clinical-q003
 
@@ -54,6 +56,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q3; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 3, source page 2.
+Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
 https://pubmed.ncbi.nlm.nih.gov/14744022/
 
 ### 4 · biochemistry-1403-clinical-q004
@@ -62,13 +65,14 @@ Key: C — Cardiac (cardiovascular)
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Cardiac (cardiovascular) is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Cardiac (cardiovascular) is the retained source answer for the printed question. Review: Diabetes and metabolic perturbations: causal review.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q4; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 4, source page 2.
+Biochemistry II review, PDF p. 47: Diabetes and metabolic perturbations: causal review.
 
 ### 5 · biochemistry-1403-clinical-q005
 
@@ -76,13 +80,14 @@ Key: C — Hypouricemia
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Hypouricemia is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Hypouricemia is the retained source answer for the printed question. Review: Glycogen structure, synthesis, degradation and control.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q5; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 5, source page 2.
+Biochemistry II review, PDF p. 16: Glycogen structure, synthesis, degradation and control.
 
 ### 6 · biochemistry-1403-clinical-q006
 
@@ -97,6 +102,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q6; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 6, source page 2.
+Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway.
 
 ### 7 · biochemistry-1403-clinical-q007
 
@@ -111,6 +117,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q7; page 3.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 7, source page 3.
+Biochemistry II review, PDF p. 15: Fructose, galactose, mannose and the polyol pathway.
 
 ### 8 · biochemistry-1403-clinical-q008
 
@@ -118,13 +125,14 @@ Key: A — Hepatomegaly
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Hepatomegaly is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Hepatomegaly is the retained source answer for the printed question. Review: Glycogen structure, synthesis, degradation and control.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q8; page 3.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 8, source page 3.
+Biochemistry II review, PDF p. 16: Glycogen structure, synthesis, degradation and control.
 
 ### 9 · biochemistry-1403-clinical-q009
 
@@ -139,6 +147,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q9; page 3.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 9, source page 3.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 
 ### 10 · biochemistry-1403-clinical-q010
 
@@ -153,6 +162,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q10; page 3.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 10, source page 3.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 
 ### 11 · biochemistry-1403-clinical-q011
 
@@ -167,6 +177,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q11; page 3.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 11, source page 3.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 https://www.ncbi.nlm.nih.gov/books/NBK1143/
 
 ### 12 · biochemistry-1403-clinical-q012
@@ -182,6 +193,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q12; page 3.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 12, source page 3.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 13 · biochemistry-1403-clinical-q013
 
@@ -196,6 +208,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q13; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 13, source page 4.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 14 · biochemistry-1403-clinical-q014
 
@@ -203,13 +216,14 @@ Key: B — Triamterene
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Triamterene is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Triamterene is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 Provenance note: Printed source mark B; retained separately from the study key.
 
 Source: Original Q14; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 14, source page 4.
+Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 15 · biochemistry-1403-clinical-q015
 
@@ -217,13 +231,14 @@ Key: B — High hemoglobin
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: High hemoglobin is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: High hemoglobin is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 Provenance note: Printed source mark B; retained separately from the study key.
 
 Source: Original Q15; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 15, source page 4.
+Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 16 · biochemistry-1403-clinical-q016
 
@@ -231,13 +246,14 @@ Key: A — Less than 15
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Less than 15 is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Less than 15 is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q16; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 16, source page 4.
+Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 17 · biochemistry-1403-clinical-q017
 
@@ -245,13 +261,14 @@ Key: C — Microalbuminuria
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Microalbuminuria is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Microalbuminuria is the retained source answer for the printed question. Review: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q17; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 17, source page 4.
+Biochemistry II review, PDF p. 55: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 18 · biochemistry-1403-clinical-q018
 
@@ -259,13 +276,14 @@ Key: D — Hepatitis A
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Hepatitis A is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Hepatitis A is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns.
 
 Provenance note: Printed source mark D; retained separately from the study key.
 
 Source: Original Q18; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 18, source page 4.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 19 · biochemistry-1403-clinical-q019
 
@@ -273,13 +291,14 @@ Key: A — B6
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: B6 is the retained source answer for the printed question. Review: Vitamin and cofactor integration for metabolism.
+Existing answer note: B6 is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q19; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 19, source page 5.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 20 · biochemistry-1403-clinical-q020
 
@@ -294,6 +313,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q20; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 20, source page 5.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 21 · biochemistry-1403-clinical-q021
 
@@ -301,13 +321,14 @@ Key: C — Biliary duct obstruction
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Biliary duct obstruction is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Biliary duct obstruction is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q21; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 21, source page 5.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 22 · biochemistry-1403-clinical-q022
 
@@ -322,6 +343,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q22; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 22, source page 5.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 23 · biochemistry-1403-clinical-q023
 
@@ -336,6 +358,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q23; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 23, source page 5.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 24 · biochemistry-1403-clinical-q024
 
@@ -350,6 +373,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q24; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 24, source page 5.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 25 · biochemistry-1403-clinical-q025
 
@@ -364,6 +388,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q25; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 25, source page 6.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 27 · biochemistry-1403-clinical-q027
 
@@ -378,6 +403,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q27; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 27, source page 6.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 28 · biochemistry-1403-clinical-q028
 
@@ -392,6 +418,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q28; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 28, source page 6.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 30 · biochemistry-1403-clinical-q030
 
@@ -406,6 +433,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q30; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 30, source page 6.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 31 · biochemistry-1403-clinical-q031
 
@@ -413,13 +441,14 @@ Key: D — Arg
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Arg is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
+Existing answer note: Arg is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction.
 
 Provenance note: Printed source mark D; retained separately from the study key.
 
 Source: Original Q31; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 31, source page 6.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 32 · biochemistry-1403-clinical-q032
 
@@ -434,6 +463,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q32; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 32, source page 6.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 33 · biochemistry-1403-clinical-q033
 
@@ -441,13 +471,14 @@ Key: D — Cu
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Cu is the retained source answer for the printed question. Review: Pentose phosphate pathway and antioxidant defense.
+Existing answer note: Cu is the retained source answer for the printed question. Review: Amino-acid disorders: reason from the blocked reaction.
 
 Provenance note: Printed source mark D; retained separately from the study key.
 
 Source: Original Q33; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 33, source page 7.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 34 · biochemistry-1403-clinical-q034
 
@@ -462,6 +493,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q34; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 34, source page 7.
+Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 35 · biochemistry-1403-clinical-q035
 
@@ -476,6 +508,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q35; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 35, source page 7.
+Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 36 · biochemistry-1403-clinical-q036
 
@@ -492,6 +525,7 @@ Note: Accepted source alternatives: A, B.
 Source: Original Q36; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 36, source page 7.
+Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 37 · biochemistry-1403-clinical-q037
 
@@ -499,13 +533,14 @@ Key: C — LDH
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: LDH is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: LDH is the retained source answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q37; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 37, source page 7.
+Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 38 · biochemistry-1403-clinical-q038
 
@@ -520,6 +555,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q38; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 38, source page 7.
+Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 39 · biochemistry-1403-clinical-q039
 
@@ -534,3 +570,4 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q39; page 8.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 39, source page 8.
+Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.

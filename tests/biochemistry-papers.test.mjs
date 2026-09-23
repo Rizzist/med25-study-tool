@@ -68,6 +68,26 @@ test('every scored final has an honest existing review section or explicit unmap
   if(m.sectionId)assert(curriculum.sections.some(s=>s.id===m.sectionId));else assert(m.uncertain);
  }
 });
+test('expanded review locks all 641 conceptual destinations without promoting flawed items',()=>{
+ const audit=read('data/biochemistry/review-coverage.json');
+ const curriculum=read('data/review-curriculum/courses/term2-biochemistry.json');
+ const pdf=fs.readFileSync(new URL('../public/study/reviews/biochemistry.pdf',import.meta.url));
+ assert.equal(createHash('sha256').update(pdf).digest('hex'),audit.reviewSha256);
+ assert.equal(audit.questionDestinations.length,641);
+ assert.equal(new Set(audit.questionDestinations.map(r=>r.questionId)).size,641);
+ assert.equal(audit.ungradedItems,23);assert.equal(audit.reviewSections,36);
+ for(const r of audit.questionDestinations){
+  const section=curriculum.sections.find(s=>s.id===r.sectionId);
+  assert(section,r.questionId);assert.equal(r.pdfPage,section.pdfPage);
+  assert(r.references.length>0,r.questionId);
+  assert.equal(Boolean(questions.find(q=>q.id===r.questionId)),r.graded);
+  if(r.graded){assert.equal(curriculum.questions[r.questionId].sectionId,r.sectionId);assert.equal(curriculum.questions[r.questionId].uncertain,false);}
+ }
+ for(const [src,n,id] of [['23',36,'ppp'],['23',37,'other-sugars'],['2',21,'lipoprotein-map'],['2',22,'liver-tests'],['2',30,'pdh-tca'],['39',34,'aa-carbon'],['3',31,'thyroid'],['photos',55,'endocrine-signaling']]){
+  const p=data.papers.find(p=>p.sourceId===src);
+  assert.equal(audit.questionDestinations.find(r=>r.questionId===`${p.id}-q${String(n).padStart(3,'0')}`).sectionId,`biochemistry/biochem-${id}`);
+ }
+});
 test('per-paper and combined biochemistry sessions survive reload without touching original scores',async()=>{
  const key=finalPaperKey(data.courseId,collections[0].id);
  assert.equal(key,`${data.courseId}:${data.bankId}:collection:${collections[0].id}`);

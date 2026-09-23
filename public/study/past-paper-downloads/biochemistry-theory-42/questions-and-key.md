@@ -490,6 +490,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q1; page 1.
 
 Biochemistry II theory · 42-item report, original question 1, source page 1.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 2 · biochemistry-theory-42-q002
 
@@ -504,6 +505,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q2; page 1.
 
 Biochemistry II theory · 42-item report, original question 2, source page 1.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 
 ### 3 · biochemistry-theory-42-q003
 
@@ -518,6 +520,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q3; page 1.
 
 Biochemistry II theory · 42-item report, original question 3, source page 1.
+Biochemistry II review, PDF p. 29: Lipoproteins and apoproteins: an integrated transport map.
 
 ### 4 · biochemistry-theory-42-q004
 
@@ -525,13 +528,14 @@ Key: D — Taken up by liver
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Taken up by liver is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Taken up by liver is the retained source answer for the printed question. Review: Gluconeogenesis, redox transfer and substrate limits.
 
 Provenance note: Printed source mark D; retained separately from the study key.
 
 Source: Original Q4; page 2.
 
 Biochemistry II theory · 42-item report, original question 4, source page 2.
+Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 5 · biochemistry-theory-42-q005
 
@@ -539,13 +543,14 @@ Key: A — Pancreatic lipase
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Pancreatic lipase is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Pancreatic lipase is the retained source answer for the printed question. Review: Dietary lipid digestion: from meal to absorbable products.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q5; page 2.
 
 Biochemistry II theory · 42-item report, original question 5, source page 2.
+Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
 
 ### 6 · biochemistry-theory-42-q006
 
@@ -553,13 +558,14 @@ Key: D — Histidine
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Histidine is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Histidine is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 Provenance note: Printed source mark D; retained separately from the study key.
 
 Source: Original Q6; page 2.
 
 Biochemistry II theory · 42-item report, original question 6, source page 2.
+Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 7 · biochemistry-theory-42-q007
 
@@ -567,13 +573,14 @@ Key: C — Muscle
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Muscle is the retained source answer for the printed question. Review: Ketogenesis and ketone utilization.
+Existing answer note: Muscle is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q7; page 2.
 
 Biochemistry II theory · 42-item report, original question 7, source page 2.
+Biochemistry II review, PDF p. 45: Insulin, glucagon and the fed-fast cycle.
 
 ### 8 · biochemistry-theory-42-q008
 
@@ -588,6 +595,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q8; page 3.
 
 Biochemistry II theory · 42-item report, original question 8, source page 3.
+Biochemistry II review, PDF p. 26: Ketogenesis and ketone utilization.
 
 ### 9 · biochemistry-theory-42-q009
 
@@ -602,6 +610,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q9; page 3.
 
 Biochemistry II theory · 42-item report, original question 9, source page 3.
+Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 10 · biochemistry-theory-42-q010
 
@@ -609,13 +618,14 @@ Key: A — glutamine, glycine, aspartate
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: glutamine, glycine, aspartate is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: glutamine, glycine, aspartate is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q10; page 3.
 
 Biochemistry II theory · 42-item report, original question 10, source page 3.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 11 · biochemistry-theory-42-q011
 
@@ -630,6 +640,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q11; page 3.
 
 Biochemistry II theory · 42-item report, original question 11, source page 3.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 12 · biochemistry-theory-42-q012
 
@@ -644,6 +655,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q12; page 4.
 
 Biochemistry II theory · 42-item report, original question 12, source page 4.
+Biochemistry II review, PDF p. 38: Amino-acid disorders: reason from the blocked reaction.
 
 ### 13 · biochemistry-theory-42-q013
 
@@ -651,13 +663,14 @@ Key: C — Phenylalanine
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Phenylalanine is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Phenylalanine is the retained source answer for the printed question. Review: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q13; page 4.
 
 Biochemistry II theory · 42-item report, original question 13, source page 4.
+Biochemistry II review, PDF p. 35: Amino-acid carbon skeletons, essentiality and one-carbon metabolism.
 
 ### 14 · biochemistry-theory-42-q014
 
@@ -665,13 +678,14 @@ Key: A — Streptokinase
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Streptokinase is the retained source answer for the printed question. Review: Protein digestion, amino-acid transport and nitrogen collection.
+Existing answer note: Streptokinase is the retained source answer for the printed question. Review: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q14; page 4.
 
 Biochemistry II theory · 42-item report, original question 14, source page 4.
+Biochemistry II review, PDF p. 53: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 15 · biochemistry-theory-42-q015
 
@@ -686,6 +700,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q15; page 5.
 
 Biochemistry II theory · 42-item report, original question 15, source page 5.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 16 · biochemistry-theory-42-q016
 
@@ -693,13 +708,14 @@ Key: C — Glutamine
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Glutamine is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: Glutamine is the retained source answer for the printed question. Review: Purines, pyrimidines, salvage and DNA precursor supply.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q16; page 5.
 
 Biochemistry II theory · 42-item report, original question 16, source page 5.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 17 · biochemistry-theory-42-q017
 
@@ -714,6 +730,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q17; page 5.
 
 Biochemistry II theory · 42-item report, original question 17, source page 5.
+Biochemistry II review, PDF p. 24: Lipolysis, carnitine transport and beta-oxidation.
 
 ### 18 · biochemistry-theory-42-q018
 
@@ -728,6 +745,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q18; page 5.
 
 Biochemistry II theory · 42-item report, original question 18, source page 5.
+Biochemistry II review, PDF p. 31: Protein digestion, amino-acid transport and nitrogen collection.
 
 ### 19 · biochemistry-theory-42-q019
 
@@ -742,6 +760,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q19; page 6.
 
 Biochemistry II theory · 42-item report, original question 19, source page 6.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 20 · biochemistry-theory-42-q020
 
@@ -749,13 +768,14 @@ Key: A — After a meal
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: After a meal is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: After a meal is the retained source answer for the printed question. Review: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q20; page 6.
 
 Biochemistry II theory · 42-item report, original question 20, source page 6.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 21 · biochemistry-theory-42-q021
 
@@ -770,6 +790,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q21; page 6.
 
 Biochemistry II theory · 42-item report, original question 21, source page 6.
+Biochemistry II review, PDF p. 28: Cholesterol, bile acids and steroid synthesis.
 
 ### 22 · biochemistry-theory-42-q022
 
@@ -786,6 +807,7 @@ Note: Accepted source alternatives: C, D.
 Source: Original Q22; page 6.
 
 Biochemistry II theory · 42-item report, original question 22, source page 6.
+Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 23 · biochemistry-theory-42-q023
 
@@ -800,6 +822,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q23; page 7.
 
 Biochemistry II theory · 42-item report, original question 23, source page 7.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 24 · biochemistry-theory-42-q024
 
@@ -807,13 +830,14 @@ Key: C — GGT
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: GGT is the retained source answer for the printed question. This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.
+Existing answer note: GGT is the retained source answer for the printed question. Review: Liver injury, cholestasis and synthetic-function patterns.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q24; page 7.
 
 Biochemistry II theory · 42-item report, original question 24, source page 7.
+Biochemistry II review, PDF p. 54: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 25 · biochemistry-theory-42-q025
 
@@ -828,6 +852,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q25; page 7.
 
 Biochemistry II theory · 42-item report, original question 25, source page 7.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 26 · biochemistry-theory-42-q026
 
@@ -844,6 +869,7 @@ Note: Accepted source alternatives: B, D.
 Source: Original Q26; page 8.
 
 Biochemistry II theory · 42-item report, original question 26, source page 8.
+Biochemistry II review, PDF p. 20: Dietary lipid digestion: from meal to absorbable products.
 
 ### 27 · biochemistry-theory-42-q027
 
@@ -858,6 +884,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q27; page 8.
 
 Biochemistry II theory · 42-item report, original question 27, source page 8.
+Biochemistry II review, PDF p. 39: Heme synthesis, porphyrias and bilirubin handling.
 
 ### 28 · biochemistry-theory-42-q028
 
@@ -865,13 +892,14 @@ Key: C — Phosphorylase
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Phosphorylase is the retained source answer for the printed question. Review: Insulin, glucagon and the fed-fast cycle.
+Existing answer note: Phosphorylase is the retained source answer for the printed question. Review: Glycogen structure, synthesis, degradation and control.
 
 Provenance note: Printed source mark C; retained separately from the study key.
 
 Source: Original Q28; page 8.
 
 Biochemistry II theory · 42-item report, original question 28, source page 8.
+Biochemistry II review, PDF p. 16: Glycogen structure, synthesis, degradation and control.
 
 ### 29 · biochemistry-theory-42-q029
 
@@ -886,6 +914,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q29; page 8.
 
 Biochemistry II theory · 42-item report, original question 29, source page 8.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 30 · biochemistry-theory-42-q030
 
@@ -900,6 +929,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q30; page 9.
 
 Biochemistry II theory · 42-item report, original question 30, source page 9.
+Biochemistry II review, PDF p. 44: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-theory-42-q031
 
@@ -914,6 +944,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q31; page 9.
 
 Biochemistry II theory · 42-item report, original question 31, source page 9.
+Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 32 · biochemistry-theory-42-q032
 
@@ -928,6 +959,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q32; page 9.
 
 Biochemistry II theory · 42-item report, original question 32, source page 9.
+Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 33 · biochemistry-theory-42-q033
 
@@ -942,6 +974,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q33; page 10.
 
 Biochemistry II theory · 42-item report, original question 33, source page 10.
+Biochemistry II review, PDF p. 19: Pentose phosphate pathway and antioxidant defense.
 
 ### 34 · biochemistry-theory-42-q034
 
@@ -956,6 +989,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q34; page 10.
 
 Biochemistry II theory · 42-item report, original question 34, source page 10.
+Biochemistry II review, PDF p. 19: Pentose phosphate pathway and antioxidant defense.
 
 ### 35 · biochemistry-theory-42-q035
 
@@ -970,6 +1004,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q35; page 10.
 
 Biochemistry II theory · 42-item report, original question 35, source page 10.
+Biochemistry II review, PDF p. 18: Gluconeogenesis, redox transfer and substrate limits.
 
 ### 36 · biochemistry-theory-42-q036
 
@@ -984,6 +1019,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q36; page 10.
 
 Biochemistry II theory · 42-item report, original question 36, source page 10.
+Biochemistry II review, PDF p. 9: PFK-1, pyruvate kinase and the lactate shunt.
 
 ### 37 · biochemistry-theory-42-q037
 
@@ -1000,6 +1036,7 @@ Note: Accepted source alternatives: B, C, D.
 Source: Original Q37; page 11.
 
 Biochemistry II theory · 42-item report, original question 37, source page 11.
+Biochemistry II review, PDF p. 19: Pentose phosphate pathway and antioxidant defense.
 
 ### 38 · biochemistry-theory-42-q038
 
@@ -1014,6 +1051,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q38; page 11.
 
 Biochemistry II theory · 42-item report, original question 38, source page 11.
+Biochemistry II review, PDF p. 19: Pentose phosphate pathway and antioxidant defense.
 
 ### 39 · biochemistry-theory-42-q039
 
@@ -1028,6 +1066,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q39; page 11.
 
 Biochemistry II theory · 42-item report, original question 39, source page 11.
+Biochemistry II review, PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation.
 
 ### 40 · biochemistry-theory-42-q040
 
@@ -1042,6 +1081,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q40; page 11.
 
 Biochemistry II theory · 42-item report, original question 40, source page 11.
+Biochemistry II review, PDF p. 6: Glycolysis: every step, carbon count and energy event.
 
 ### 41 · biochemistry-theory-42-q041
 
@@ -1056,6 +1096,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q41; page 12.
 
 Biochemistry II theory · 42-item report, original question 41, source page 12.
+Biochemistry II review, PDF p. 5: Glucose transport, trapping and tissue priorities.
 
 ### 42 · biochemistry-theory-42-q042
 
@@ -1063,10 +1104,11 @@ Key: A — Urea
 
 Key provenance: Transcribed source answer with editorial checks; not an official university key.
 
-Existing answer note: Urea is the retained source answer for the printed question. Review: PFK-1, pyruvate kinase and the lactate shunt.
+Existing answer note: Urea is the retained source answer for the printed question. Review: PDH and the TCA cycle: enzymes, cofactors and regulation.
 
 Provenance note: Printed source mark A; retained separately from the study key.
 
 Source: Original Q42; page 12.
 
 Biochemistry II theory · 42-item report, original question 42, source page 12.
+Biochemistry II review, PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation.

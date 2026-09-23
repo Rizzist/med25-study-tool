@@ -51,6 +51,8 @@ const routes=[
  ['nutrition-review',/nitrogen balance|kwashiorkor|marasmus|nutrition|calori|protein.*(quality|value)/i],
 ];
 function sectionFor(paper,q){
+ const reviewed = reviewCoverage.questionDestinations.find(r=>r.questionId===`${paper.id}-q${String(q.number).padStart(3,'0')}`);
+ if(reviewed) return {sectionId:reviewed.sectionId,uncertain:false};
  if(paper.sourceId==='41'&&q.number===16)return {sectionId:'biochemistry/biochem-nucleotides',uncertain:false};
  if(/(serum|plasma|diagnos|disease|urine|kidney|hepat|myocard|rhabdomy|aminotransferase|alkaline|acid phosphatase|troponin|bun|azotemia)/i.test(q.prompt)
    && !/bilirubin|jaundice|porphyr|insulin|diabet|glyco|phenyl|hartnup|maple syrup|alkapton|urea cycle|sphing|uric acid/i.test(q.prompt))
@@ -60,6 +62,9 @@ function sectionFor(paper,q){
  const contextual=routes.find(([,re])=>re.test(q.options.join(' ')));
  return {sectionId:contextual?'biochemistry/biochem-'+contextual[0]:null,uncertain:true};
 }
+// Exact question-level destinations are reviewed against the expanded source PDF.
+// Older heuristic rules above remain only for source items not yet audited.
+const reviewCoverage=read('data/biochemistry/review-coverage.json');
 function evidenceFor(q){
  const refs=[];const text=q.prompt+' '+q.note;
  if(/hmg.*synthase|key ketogenic/i.test(text))refs.push('https://www.ncbi.nlm.nih.gov/books/NBK493179/');
@@ -89,7 +94,8 @@ for(const paper of data.papers){
   const status=mapping.sectionId?(mapping.uncertain?'needs-review':'mapped'):'needs-crosswalk';
   const inferred=!row.providedKey||row.key!==row.providedKey||row.acceptedOptionIds.length>1;
   const basis=inferred?'ai-inferred':'source-reviewed';
-  const refs=[`${paper.title}, original question ${row.number}, source page ${row.page}.`,...evidenceFor(row)];
+ const reviewed=reviewCoverage.questionDestinations.find(r=>r.questionId===id);
+ const refs=[`${paper.title}, original question ${row.number}, source page ${row.page}.`,...(reviewed?[`Biochemistry II review, PDF p. ${reviewed.pdfPage}: ${reviewed.sectionTitle}.`]:[]),...evidenceFor(row)];
   const explanation=row.note||`${options.find(o=>o.id===row.key)?.text??'Withheld'} is the ${inferred?'editorial study answer':'retained source answer'} for the printed question. ${section?`Review: ${section.title}.`:'This clinical/theory detail has no exact section in the current review PDF; consult the original paper and your course notes.'}`;
   const record={...row,id,sectionId:mapping.sectionId,uncertain:mapping.uncertain,answerReview:{basis,confidence:row.note||mapping.uncertain?'medium':'high',canonicalSourceId:id,auditedAt:data.importedAt,evidence:refs},explanation};
   records.push(record);
@@ -97,7 +103,7 @@ for(const paper of data.papers){
   const q={schemaVersion:'1.0.0',id,revision:1,status:'verified',kind:row.media?'image_single_best_answer':'single_best_answer',subject:'biochemistry',topic:section?.title??'Clinical biochemistry · additional source topics',chapter:section?`Biochemistry II review: ${section.title}`:paper.title,difficulty:2,prompt:row.prompt,options,correctOptionId:row.key,acceptedOptionIds:row.acceptedOptionIds,explanation,answerReview:record.answerReview,distractorExplanations:{},learningObjective:`Review source question ${row.number}: ${section?.title??'clinical biochemistry'}`,source:{title:paper.original.title,chapter:`${paper.title} · Original Q${row.number}`,page:String(row.page),lecture:paper.note,excerpt:`${row.providedKey?`Supplied mark: ${row.providedKey}. `:''}Study key: ${row.key}; not an authenticated official university key. ${row.note}`},tags:['term-2','exam-term2-biochemistry','biochemistry-metabolism-past-paper',`final-bank-${bank}`,paper.id,...(section?[`review-section-${section.id}`]:[])],examPriority:'standard',qualityFlags:['source-question-not-authored','key-not-official',inferred?'ai-inferred-answer':'source-key-transcribed',...(row.note?['qualified-source-wording']:[]),...(mapping.uncertain?['review-map-uncertain']:[])]};
   if(row.media){assert(fs.existsSync(path.join(root,'public/study',row.media.path)),id);q.media=[{id:id+'-figure',type:'image',...row.media,caption:'Original source figure; numbering retained.',attribution:paper.title}];}
   finalQuestions.push(q);gradedQuestionIds.push(id);
-  evidence.questions[id]={examId:exam,bankId:bank,kind:q.kind,sectionId:mapping.sectionId,uncertain:mapping.uncertain,status,specificity:section?'section':'unmapped',method:section?'source-stem-topic-routing':'no-exact-review-heading',evidence:section?`${section.id}: ${mapping.uncertain?'suggested by choices; not a confirmed exact match':'matched to the source stem topic'}`:'The source asks a clinical detail not explicitly covered by a review heading.',sourceQualityFlags:q.qualityFlags};
+  evidence.questions[id]={examId:exam,bankId:bank,kind:q.kind,sectionId:mapping.sectionId,uncertain:mapping.uncertain,status,specificity:section?'section':'unmapped',method:reviewed?'source-question-review-audit':section?'source-stem-topic-routing':'no-exact-review-heading',evidence:reviewed?`${section.id}: explicit question-level review audit, PDF p. ${reviewed.pdfPage}; concept coverage does not certify the source key.`:section?`${section.id}: ${mapping.uncertain?'suggested by choices; not a confirmed exact match':'matched to the source stem topic'}`:'The source asks a clinical detail not explicitly covered by a review heading.',sourceQualityFlags:q.qualityFlags};
   curriculum.questions[id]={sectionId:mapping.sectionId,uncertain:mapping.uncertain,status,livePractice:false,bankId:bank};
  }
  const sources=[{title:paper.original.title,publicUrl:paper.original.url,sha256:paper.original.sha256,exists:true,note:paper.note}];

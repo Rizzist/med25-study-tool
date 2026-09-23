@@ -1,0 +1,24 @@
+{
+  "version": "2026-09-23-source-question-audit",
+  "policy": "Explicit editorial review destinations after reading source stems and choices; not inferred from an arbitrary option. Order matches each paper's original question-number sequence, including ungraded items. A destination is conceptual coverage, not validation of a flawed source key.",
+  "codes": {
+    "ld": "lipid-digestion", "ch": "micelles-chylomicrons", "bo": "beta-oxidation", "ke": "ketones", "co": "cholesterol", "lp": "lipoprotein-map", "pn": "protein-nitrogen", "ac": "aa-carbon", "ad": "aa-disorders", "sp": "special-products", "ce": "clinical-enzymes", "pp": "ppp", "gy": "glycolysis", "gr": "glycolysis-regulation", "gg": "glycogen", "ge": "glucose-entry", "gn": "gluconeogenesis", "tc": "pdh-tca", "ox": "oxphos", "he": "heme", "nu": "nucleotides", "ig": "insulin-glucagon", "es": "endocrine-signaling", "dt": "diabetes-integration", "th": "thyroid", "li": "liver-tests", "re": "renal-tests", "fs": "fatty-acid-synthesis", "cl": "complex-lipids", "ur": "urea", "no": "nutrition-review", "os": "other-sugars", "ec": "exam-corrections"
+  },
+  "paperSequences": {
+    "photos": "ld ld ch li bo bo ke bo co co lp lp pn ac ad ac sp pn pn ad ce ce ce ld pp pp gy ox gy gg ge gn gn tc ox gy sp he nu nu he nu he nu ox ox ox ox ig bo ig ge es re es co dt ig dt es es es es es",
+    "23": "lp ke ke ke co ld ig bo lp ig ig ch ld ig ke co pn ac ad ac sp pn pn ad ce ce li ld pp gr gn gr tc gg gg pp os gy gg ge he nu nu he he nu nu nu ox ox ox ox",
+    "20": "ke fs bo lp bo fs lp fs lp fs bo bo he nu nu he he nu nu nu ox ox ox ox ur pn ac ac pn pn pn ad ce ld li ce pp ox gr gg ge gn gn tc ox gg pp gy",
+    "12": "pp ox gr gg ge gn gn gy ox gg pp gy co cl lp gn fs bo bo fs co fs bo bo ox ox ox ox nu nu nu nu he nu nu sp ce ld ce ld ur pn ac ac pn pn pn ad ad pn",
+    "18": "ce ke nu ac co bo gn gn nu co bo nu nu pn gy nu gy ge nu lp tc ig gn ig no fs gn ox pn nu gy nu ox tc ad li sp fs co pn ld tc sp pp gr co bo ur",
+    "27": "re ur sp nu nu nu ac ac ad ec pn ur ke ig bo co fs ch bo bo co li ce ce gy gy gr ge gg gn tc tc pp",
+    "6": "bo co lp gn ld ac ig ke pn nu bo ad ac ce ox nu bo pn nu ch co gn nu li nu ld he gg ox nu gn gn pp pp gn gr pp pp tc gy ge tc",
+    "41": "gn tc gy ox pp pp gg gr pn ge tc gy re nu nu nu nu nu nu nu nu nu nu nu nu sp ad re re pn ad ac ur pn no ur he ig ig gn ge ig ch bo ox ox ke ld co ke ce ce ce",
+    "4": "li nu he nu nu nu he he he he li ce ox ox ox ld lp lp lp fs ig ig dt bo tc tc tc gr gr gr os gg pp ur pn ac ac ad sp",
+    "10": "ge tc pp ge ox gr gn os gg ur ad ad ac pn pn ce ce ce ld lp lp lp ig co bo fs fs he nu nu nu he nu ox ox ox ig ke ge",
+    "3": "ox ox ox ge gy gr gr gr ge tc gg gg lp lp fs co lp lp bo bo fs ad sp pn ac ur he nu nu nu th th ig",
+    "14": "bo ig lp nu lp he li bo he co lp nu ig li fs he nu lp nu li lp",
+    "2": "ig dt dt os os os gg co co lp lp re re re re li li co li li lp li lp ad ad ad ad ad ad tc",
+    "39": "ig ig ig dt gg os os gg co co co lp lp re re re re li li he li he he he he ad ad ad ad ad ad ac ac ce ce ce ce",
+    "7": "pp gr ge gr tc gg gg pp os gn tc tc ad pn ac ur sp pn pn ad ce li ld ce lp co ke ke ld ld co bo lp ig lp ch nu nu nu nu he he he he ig bo ig ig ox ox ox ox"
+  }
+}
