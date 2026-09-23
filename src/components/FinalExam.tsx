@@ -11,6 +11,7 @@ import {
   isFinalAnswerCorrect,
 } from "@/src/lib/mcq/final-exam-state.mjs";
 import {cachedJson} from '@/src/lib/mcq/client-cache';
+import {selectCollectionQuestions,finalSessionSeed,type ExamCollection} from '@/src/lib/mcq/curated-core.mjs';
 import {QuestionMedia} from './QuestionMedia';
 import {CourseReviewReport} from './CourseReview';
 import {FinalExamStatusBanner} from './FinalExamStatusBanner';
@@ -53,7 +54,7 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
   return `${bridgeUrl}/api/media?${query}`;
 }
 
-export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: {id:string;title:string;gradedQuestionIds:string[]}; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';onProgressSaved?:()=>void;onExit?:()=>void }) {
+export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: ExamCollection; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';onProgressSaved?:()=>void;onExit?:()=>void }) {
   const [bank, setBank] = useState<FinalExamBankId>(exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
@@ -90,7 +91,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
     void cachedJson<{questions:MCQQuestion[];fingerprint:string;label:string;description:string}>(`${bridgeUrl}/api/final-exam?exam=${exam}&bank=${bank}`,true)
       .then((payload) => {
         if (cancelled) return;
-        const allLoaded = (payload.questions ?? []).filter(q=>!collection||collection.gradedQuestionIds.includes(q.id));
+        const allLoaded = selectCollectionQuestions(payload.questions ?? [],collection);
         const loaded = filterFinalExamQuestions(allLoaded, metabolismFilterActive);
         const rawFingerprint = payload.fingerprint ?? `${exam}-${allLoaded.length}`;
         const nextFingerprint = `${rawFingerprint}:${collection?.id??"all"}:${metabolismFilterActive ? "without-carb-lipid-metabolism" : "all-topics"}`;
@@ -98,8 +99,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
         try {
           stored = parseFinalExamProgress(window.localStorage.getItem(FINAL_EXAM_STORAGE_KEY)) as FinalProgress;
         } catch { /* Continue with an empty final-exam record. */ }
-        const saved = stored.sessions[sessionKey];
-        const migrationSeed = initialIntent==='new'?null:saved ?? ((collection||metabolismFilterActive) ? stored.sessions[baseSessionKey] ?? stored.sessions[baseSessionKey+':no-carb-lipid-metabolism'] : null);
+        const migrationSeed = finalSessionSeed(stored.sessions,sessionKey,baseSessionKey,collection,initialIntent,metabolismFilterActive);
         const nextSession = migrationSeed||initialIntent!=='review' ? reconcileFinalExamSession(migrationSeed, loaded, nextFingerprint) as FinalSession : null;
         setQuestions(loaded);
         setFilteredOutCount(allLoaded.length - loaded.length);
@@ -211,6 +211,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
   }
 
   if (active && session && question) {
+    const coreEvidence=collection?.coreEvidence?.[question.id];
     const chosen = question.options.find((option) => option.id === answer?.selectedOptionId);
     const correct = question.options.find((option) => option.id === question.correctOptionId);
     const inferred = question.answerReview?.basis === 'ai-inferred';
@@ -228,7 +229,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
       <section className="final-exam-body">
         <div className="final-question-scroll">
           <article className="final-question-card">
-            <div className="question-meta"><span>Past paper</span><span>{question.subject}</span><span>{question.topic}</span></div>
+            <div className="question-meta"><span>{coreEvidence?'Core · '+(coreEvidence.kind==='repeat'?`${coreEvidence.sourceCollectionCount} source collections`:'Additional coverage'):'Past paper'}</span><span>{question.subject}</span><span>{question.topic}</span></div>
             <h1>{question.prompt}</h1>
             {question.qualityFlags.includes('editorially-repaired-source-question') && <p className="term2-scope-note">Edited study version · the original item had a wording or choice defect. Original text is retained in Sources &amp; answer notes and downloads.</p>}
             {exam === "term2-religion" && <p className="term2-scope-note">Original wording · source-reviewed editorial key, not an official answer. Interpret within the source framework; qualifications and corrections appear with feedback.</p>}
@@ -246,6 +247,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
               <div className="instant-feedback-title"><b>{answer.correct ? provisional ? "✓ Best available choice" : "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · page ${question.source.page}` : ""}</span></div>
               <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer.selectedOptionId}</b></div><div><span>{provisional ? 'Best available choice · wording uncertain' : (question.acceptedOptionIds?.length ?? 0) > 1 ? 'Preferred answer' : 'Correct answer'}</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b>{(question.acceptedOptionIds?.length ?? 0) > 1 && <small>Accepted choices: {question.acceptedOptionIds!.join(', ')}</small>}</div></div>
               <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{!answer.correct && question.distractorExplanations[answer.selectedOptionId] && <p className="distractor-note"><b>Why {answer.selectedOptionId} loses:</b> {question.distractorExplanations[answer.selectedOptionId]}</p>}</div>
+              {coreEvidence&&<details className="answer-review-evidence"><summary>Core selection &amp; source occurrences</summary><p>{coreEvidence.reason}. {coreEvidence.kind==='repeat'?`${coreEvidence.sourceCollectionCount} source collections, one representative.`:'Supplemental coverage, not counted as a repeated pattern.'} Historical evidence, not an exam prediction.</p><p>{coreEvidence.sectionTitle} · PDF p. {coreEvidence.pdfPage}</p><ul>{coreEvidence.members.map(m=><li key={m.questionId}><a href={m.sourceUrl} target="_blank" rel="noreferrer">{m.paperId} · original Q{m.sourceNumber}</a></li>)}</ul></details>}
               {question.answerReview && <details className="answer-review-evidence"><summary>Sources & answer notes</summary><p>Editorial review · {question.answerReview.confidence} confidence · {question.answerReview.auditedAt}. Not an official university key.</p>{question.answerReview.evidence.map(ref=><p key={ref}>{ref}</p>)}<p>{question.source.excerpt}</p></details>}
             </section>}
           </article>

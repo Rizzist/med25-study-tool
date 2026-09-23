@@ -560,7 +560,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q1; page 1.
 
 Biochemistry metabolism · 26 January 2022 report, original question 1, source page 1.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 2 · biochemistry-2022-jan-26-q002
 
@@ -590,7 +590,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q3; page 1.
 
 Biochemistry metabolism · 26 January 2022 report, original question 3, source page 1.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 4 · biochemistry-2022-jan-26-q004
 
@@ -682,7 +682,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q9; page 2.
 
 Biochemistry metabolism · 26 January 2022 report, original question 9, source page 2.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 10 · biochemistry-2022-jan-26-q010
 
@@ -727,7 +727,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q12; page 3.
 
 Biochemistry metabolism · 26 January 2022 report, original question 12, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 13 · biochemistry-2022-jan-26-q013
 
@@ -742,7 +742,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q13; page 3.
 
 Biochemistry metabolism · 26 January 2022 report, original question 13, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 14 · biochemistry-2022-jan-26-q014
 
@@ -787,7 +787,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q16; page 3.
 
 Biochemistry metabolism · 26 January 2022 report, original question 16, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 17 · biochemistry-2022-jan-26-q017
 
@@ -832,7 +832,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q19; page 4.
 
 Biochemistry metabolism · 26 January 2022 report, original question 19, source page 4.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 20 · biochemistry-2022-jan-26-q020
 
@@ -877,7 +877,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q22; page 5.
 
 Biochemistry metabolism · 26 January 2022 report, original question 22, source page 5.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 23 · biochemistry-2022-jan-26-q023
 
@@ -907,7 +907,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q24; page 5.
 
 Biochemistry metabolism · 26 January 2022 report, original question 24, source page 5.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 25 · biochemistry-2022-jan-26-q025
 
@@ -922,7 +922,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q25; page 5.
 
 Biochemistry metabolism · 26 January 2022 report, original question 25, source page 5.
-Biochemistry II review, PDF p. 49: Nutrition, nitrogen balance and final integration checkpoints.
+Biochemistry II review, PDF p. 47: Nutrition, nitrogen balance and final integration checkpoints.
 
 ### 26 · biochemistry-2022-jan-26-q026
 
@@ -967,7 +967,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q28; page 6.
 
 Biochemistry metabolism · 26 January 2022 report, original question 28, source page 6.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 29 · biochemistry-2022-jan-26-q029
 
@@ -997,7 +997,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q30; page 6.
 
 Biochemistry metabolism · 26 January 2022 report, original question 30, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-2022-jan-26-q031
 
@@ -1027,7 +1027,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q32; page 6.
 
 Biochemistry metabolism · 26 January 2022 report, original question 32, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 33 · biochemistry-2022-jan-26-q033
 
@@ -1042,7 +1042,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q33; page 7.
 
 Biochemistry metabolism · 26 January 2022 report, original question 33, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 34 · biochemistry-2022-jan-26-q034
 
@@ -1072,7 +1072,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q35; page 7.
 
 Biochemistry metabolism · 26 January 2022 report, original question 35, source page 7.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 36 · biochemistry-2022-jan-26-q036
 
@@ -1089,7 +1089,7 @@ Note: Accepted source alternatives: A, C.
 Source: Original Q36; page 7.
 
 Biochemistry metabolism · 26 January 2022 report, original question 36, source page 7.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 37 · biochemistry-2022-jan-26-q037
 
@@ -1104,7 +1104,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q37; page 7.
 
 Biochemistry metabolism · 26 January 2022 report, original question 37, source page 7.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 38 · biochemistry-2022-jan-26-q038
 
@@ -1194,7 +1194,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q43; page 9.
 
 Biochemistry metabolism · 26 January 2022 report, original question 43, source page 9.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 44 · biochemistry-2022-jan-26-q044
 

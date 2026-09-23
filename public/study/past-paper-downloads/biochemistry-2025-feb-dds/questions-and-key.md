@@ -770,7 +770,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 3, source page 2.
-Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 4 · biochemistry-2025-feb-dds-q004
 
@@ -785,7 +785,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 2.
 
 Biochemistry II · February 2025 semester · DDS, original question 4, source page 2.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 https://www.cff.org/medical-professionals/cystic-fibrosis-screening-evaluation-and-management-hepatobiliary-disease
 
 ### 5 · biochemistry-2025-feb-dds-q005
@@ -955,7 +955,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 15, source page 4.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 16 · biochemistry-2025-feb-dds-q016
 
@@ -985,7 +985,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 4.
 
 Biochemistry II · February 2025 semester · DDS, original question 17, source page 4.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 18 · biochemistry-2025-feb-dds-q018
 
@@ -1033,7 +1033,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 20, source page 5.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 21 · biochemistry-2025-feb-dds-q021
 
@@ -1048,7 +1048,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 21, source page 5.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 22 · biochemistry-2025-feb-dds-q022
 
@@ -1063,7 +1063,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 22, source page 5.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 23 · biochemistry-2025-feb-dds-q023
 
@@ -1078,7 +1078,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Biochemistry II · February 2025 semester · DDS, original question 23, source page 5.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 24 · biochemistry-2025-feb-dds-q024
 
@@ -1153,7 +1153,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 6.
 
 Biochemistry II · February 2025 semester · DDS, original question 28, source page 6.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 29 · biochemistry-2025-feb-dds-q029
 
@@ -1258,7 +1258,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q35; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 35, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 36 · biochemistry-2025-feb-dds-q036
 
@@ -1288,7 +1288,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 37, source page 7.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 38 · biochemistry-2025-feb-dds-q038
 
@@ -1318,7 +1318,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q39; page 7.
 
 Biochemistry II · February 2025 semester · DDS, original question 39, source page 7.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 40 · biochemistry-2025-feb-dds-q040
 
@@ -1333,7 +1333,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q40; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 40, source page 8.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 41 · biochemistry-2025-feb-dds-q041
 
@@ -1363,7 +1363,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q42; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 42, source page 8.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 43 · biochemistry-2025-feb-dds-q043
 
@@ -1393,7 +1393,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q44; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 44, source page 8.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 45 · biochemistry-2025-feb-dds-q045
 
@@ -1408,7 +1408,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q45; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 45, source page 8.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 46 · biochemistry-2025-feb-dds-q046
 
@@ -1423,7 +1423,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q46; page 8.
 
 Biochemistry II · February 2025 semester · DDS, original question 46, source page 8.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 47 · biochemistry-2025-feb-dds-q047
 
@@ -1438,7 +1438,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q47; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 47, source page 9.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 48 · biochemistry-2025-feb-dds-q048
 
@@ -1453,7 +1453,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 48, source page 9.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 49 · biochemistry-2025-feb-dds-q049
 
@@ -1468,7 +1468,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q49; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 49, source page 9.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 50 · biochemistry-2025-feb-dds-q050
 
@@ -1498,7 +1498,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q51; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 51, source page 9.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 52 · biochemistry-2025-feb-dds-q052
 
@@ -1528,7 +1528,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q53; page 9.
 
 Biochemistry II · February 2025 semester · DDS, original question 53, source page 9.
-Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 51: Hormone receptors, second messengers and steroid transport.
 
 ### 54 · biochemistry-2025-feb-dds-q054
 
@@ -1543,7 +1543,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q54; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 54, source page 10.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 55 · biochemistry-2025-feb-dds-q055
 
@@ -1558,7 +1558,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q55; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 55, source page 10.
-Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 51: Hormone receptors, second messengers and steroid transport.
 
 ### 56 · biochemistry-2025-feb-dds-q056
 
@@ -1588,7 +1588,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q57; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 57, source page 10.
-Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 44: Diabetes and metabolic perturbations: causal review.
 
 ### 58 · biochemistry-2025-feb-dds-q058
 
@@ -1603,7 +1603,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q58; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 58, source page 10.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 59 · biochemistry-2025-feb-dds-q059
 
@@ -1618,7 +1618,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q59; page 10.
 
 Biochemistry II · February 2025 semester · DDS, original question 59, source page 10.
-Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 44: Diabetes and metabolic perturbations: causal review.
 
 ### 60 · biochemistry-2025-feb-dds-q060
 
@@ -1633,7 +1633,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q60; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 60, source page 11.
-Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 51: Hormone receptors, second messengers and steroid transport.
 
 ### 61 · biochemistry-2025-feb-dds-q061
 
@@ -1648,7 +1648,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q61; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 61, source page 11.
-Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 51: Hormone receptors, second messengers and steroid transport.
 
 ### 62 · biochemistry-2025-feb-dds-q062
 
@@ -1663,7 +1663,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q62; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 62, source page 11.
-Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 51: Hormone receptors, second messengers and steroid transport.
 
 ### 63 · biochemistry-2025-feb-dds-q063
 
@@ -1678,7 +1678,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q63; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 63, source page 11.
-Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 51: Hormone receptors, second messengers and steroid transport.
 
 ### 64 · biochemistry-2025-feb-dds-q064
 
@@ -1693,4 +1693,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q64; page 11.
 
 Biochemistry II · February 2025 semester · DDS, original question 64, source page 11.
-Biochemistry II review, PDF p. 53: Hormone receptors, second messengers and steroid transport.
+Biochemistry II review, PDF p. 51: Hormone receptors, second messengers and steroid transport.

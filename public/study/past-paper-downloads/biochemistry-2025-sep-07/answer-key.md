@@ -119,7 +119,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q7; page 2.
 
 Biochemistry theory · 7 September 2025, original question 7, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 8 · biochemistry-2025-sep-07-q008
 
@@ -164,7 +164,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 2.
 
 Biochemistry theory · 7 September 2025, original question 10, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 11 · biochemistry-2025-sep-07-q011
 
@@ -181,7 +181,7 @@ Note: Accepted source alternatives: A, D.
 Source: Original Q11; page 3.
 
 Biochemistry theory · 7 September 2025, original question 11, source page 3.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 12 · biochemistry-2025-sep-07-q012
 
@@ -196,7 +196,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 3.
 
 Biochemistry theory · 7 September 2025, original question 12, source page 3.
-Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 13 · biochemistry-2025-sep-07-q013
 
@@ -226,7 +226,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 4.
 
 Biochemistry theory · 7 September 2025, original question 14, source page 4.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 15 · biochemistry-2025-sep-07-q015
 
@@ -301,7 +301,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q19; page 5.
 
 Biochemistry theory · 7 September 2025, original question 19, source page 5.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 20 · biochemistry-2025-sep-07-q020
 
@@ -331,7 +331,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 5.
 
 Biochemistry theory · 7 September 2025, original question 21, source page 5.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 22 · biochemistry-2025-sep-07-q022
 
@@ -379,7 +379,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 5.
 
 Biochemistry theory · 7 September 2025, original question 24, source page 5.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 25 · biochemistry-2025-sep-07-q025
 
@@ -394,7 +394,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q25; page 6.
 
 Biochemistry theory · 7 September 2025, original question 25, source page 6.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 26 · biochemistry-2025-sep-07-q026
 
@@ -409,7 +409,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 6.
 
 Biochemistry theory · 7 September 2025, original question 26, source page 6.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 27 · biochemistry-2025-sep-07-q027
 
@@ -424,7 +424,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 6.
 
 Biochemistry theory · 7 September 2025, original question 27, source page 6.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 28 · biochemistry-2025-sep-07-q028
 
@@ -649,7 +649,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q42; page 9.
 
 Biochemistry theory · 7 September 2025, original question 42, source page 9.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 43 · biochemistry-2025-sep-07-q043
 
@@ -664,7 +664,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q43; page 9.
 
 Biochemistry theory · 7 September 2025, original question 43, source page 9.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 44 · biochemistry-2025-sep-07-q044
 
@@ -709,7 +709,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q46; page 10.
 
 Biochemistry theory · 7 September 2025, original question 46, source page 10.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 47 · biochemistry-2025-sep-07-q047
 
@@ -724,7 +724,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q47; page 10.
 
 Biochemistry theory · 7 September 2025, original question 47, source page 10.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 48 · biochemistry-2025-sep-07-q048
 
@@ -739,7 +739,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 10.
 
 Biochemistry theory · 7 September 2025, original question 48, source page 10.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 49 · biochemistry-2025-sep-07-q049
 
@@ -754,7 +754,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q49; page 10.
 
 Biochemistry theory · 7 September 2025, original question 49, source page 10.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 50 · biochemistry-2025-sep-07-q050
 
@@ -769,7 +769,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q50; page 10.
 
 Biochemistry theory · 7 September 2025, original question 50, source page 10.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 51 · biochemistry-2025-sep-07-q051
 
@@ -784,7 +784,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q51; page 11.
 
 Biochemistry theory · 7 September 2025, original question 51, source page 11.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 52 · biochemistry-2025-sep-07-q052
 
@@ -799,4 +799,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q52; page 11.
 
 Biochemistry theory · 7 September 2025, original question 52, source page 11.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.

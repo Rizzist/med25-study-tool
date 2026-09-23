@@ -1,0 +1,6 @@
+export type CoreEvidence={questionId:string;kind:'repeat'|'coverage';reason:string;paperId:string;sectionId:string;sectionTitle:string;pdfPage:number;sourceCollectionCount:number;topicCollectionCount:number;sourcePaperIds:string[];members:Array<{questionId:string;paperId:string;sourceNumber:number;sourceUrl:string}>};
+export type CoreManifest={fingerprint:string;sourceQuestionCount:number;sourceCollectionCount:number;optionalQuestionCount:number;repeatedPatternCount:number;repeatedSourceOccurrenceCount:number;supplementalCount:number;methodology:string;papers:Array<{id:string;title:string;url:string}>;sections:Array<{id:string;title:string;pdfPage:number;count:number;repeated:number;sourceCollectionCount:number}>;questions:CoreEvidence[]};
+export type ExamCollection={id:string;title:string;gradedQuestionIds:string[];independent?:boolean;coreEvidence?:Record<string,CoreEvidence>};
+export function coreSelection(manifest:CoreManifest,scope?:string):ExamCollection;
+export function selectCollectionQuestions<T extends {id:string}>(questions:T[],collection?:ExamCollection):T[];
+export function finalSessionSeed<T>(sessions:Record<string,T|null>,key:string,baseKey:string,collection:ExamCollection|undefined,initialIntent:string,filtered?:boolean):T|null|undefined;

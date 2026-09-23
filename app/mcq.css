@@ -305,6 +305,20 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 .paper-view-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:0 0 10px}.paper-view-head h2{font-size:18px}
 .paper-view .paper-note{margin:0 0 10px}
 .mcq-app .mcq-content article.past-paper-card.featured{border-color:#dcc783;background:linear-gradient(160deg,#fffbef,#fff)}
+.biochemistry-core-card{margin:12px 0}
+.biochemistry-core-card .past-paper-card.featured{animation:biochem-core-glow 4s ease-in-out infinite}
+.core-scope-launch{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.core-scope-launch small{font-size:12px;color:var(--mcq-muted)}
+.core-section-picker{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px}
+.core-section-picker select{min-width:0;max-width:100%;flex:1 1 280px;padding:10px;border:1px solid var(--mcq-line);border-radius:10px;background:var(--mcq-card);color:var(--mcq-ink);font:inherit}
+.core-evidence{font-size:12px}.core-evidence summary{cursor:pointer;padding-block:6px}
+.core-pattern-list{max-height:360px;overflow:auto;overscroll-behavior:contain}
+.core-pattern-list>details{padding:5px;border-top:1px solid var(--mcq-line)}
+.core-pattern-list summary span{display:inline-block;min-width:120px;font-weight:700}
+.core-pattern-list ul{padding-left:20px}
+@keyframes biochem-core-glow{50%{box-shadow:0 0 0 3px #ddbf5729}}
+@media(prefers-reduced-motion:reduce){.biochemistry-core-card .past-paper-card.featured{animation:none}}
+@media(max-width:600px){.core-section-picker{display:grid;grid-template-columns:minmax(0,1fr)}.core-scope-launch button{min-height:44px}.core-pattern-list summary span{display:block}}
 .past-paper-badge{display:inline-block;margin:0 8px 0 0;padding:2px 8px;border-radius:999px;background:#f2e2a8;color:#5c4614;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;vertical-align:2px}
 .mcq-app .mcq-content article.past-paper-card p.paper-lead{color:var(--mcq-ink)}
 .paper-evidence{font-size:12px;color:var(--mcq-muted)}.paper-evidence>summary{display:flex;align-items:center;min-height:30px;cursor:pointer;font-weight:600;color:var(--mcq-green)}.paper-evidence p{margin:6px 0;line-height:1.5}

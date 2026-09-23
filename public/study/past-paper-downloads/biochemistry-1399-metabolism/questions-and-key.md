@@ -283,7 +283,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q2; page 2.
 
 Biochemistry metabolism · 1399, original question 2, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 3 · biochemistry-1399-metabolism-q003
 
@@ -313,7 +313,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q4; page 3.
 
 Biochemistry metabolism · 1399, original question 4, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 5 · biochemistry-1399-metabolism-q005
 
@@ -360,7 +360,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q7; page 4.
 
 Biochemistry metabolism · 1399, original question 7, source page 4.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 8 · biochemistry-1399-metabolism-q008
 
@@ -438,7 +438,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q12; page 5.
 
 Biochemistry metabolism · 1399, original question 12, source page 5.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 13 · biochemistry-1399-metabolism-q013
 
@@ -453,7 +453,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q13; page 5.
 
 Biochemistry metabolism · 1399, original question 13, source page 5.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 14 · biochemistry-1399-metabolism-q014
 
@@ -468,7 +468,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q14; page 5.
 
 Biochemistry metabolism · 1399, original question 14, source page 5.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 15 · biochemistry-1399-metabolism-q015
 
@@ -513,7 +513,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q17; page 6.
 
 Biochemistry metabolism · 1399, original question 17, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 18 · biochemistry-1399-metabolism-q018
 
@@ -543,7 +543,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q19; page 7.
 
 Biochemistry metabolism · 1399, original question 19, source page 7.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 20 · biochemistry-1399-metabolism-q020
 
@@ -558,7 +558,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q20; page 7.
 
 Biochemistry metabolism · 1399, original question 20, source page 7.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 21 · biochemistry-1399-metabolism-q021
 

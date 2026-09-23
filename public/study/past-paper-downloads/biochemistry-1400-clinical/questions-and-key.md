@@ -377,7 +377,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q1; page 2.
 
 Clinical biochemistry · 1400, original question 1, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 2 · biochemistry-1400-clinical-q002
 
@@ -392,7 +392,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q2; page 2.
 
 Clinical biochemistry · 1400, original question 2, source page 2.
-Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 44: Diabetes and metabolic perturbations: causal review.
 
 ### 3 · biochemistry-1400-clinical-q003
 
@@ -407,7 +407,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q3; page 2.
 
 Clinical biochemistry · 1400, original question 3, source page 2.
-Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 44: Diabetes and metabolic perturbations: causal review.
 
 ### 4 · biochemistry-1400-clinical-q004
 
@@ -546,7 +546,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q12; page 3.
 
 Clinical biochemistry · 1400, original question 12, source page 3.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 13 · biochemistry-1400-clinical-q013
 
@@ -561,7 +561,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q13; page 4.
 
 Clinical biochemistry · 1400, original question 13, source page 4.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 14 · biochemistry-1400-clinical-q014
 
@@ -576,7 +576,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q14; page 4.
 
 Clinical biochemistry · 1400, original question 14, source page 4.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 15 · biochemistry-1400-clinical-q015
 
@@ -591,7 +591,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q15; page 4.
 
 Clinical biochemistry · 1400, original question 15, source page 4.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 16 · biochemistry-1400-clinical-q016
 
@@ -606,7 +606,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q16; page 4.
 
 Clinical biochemistry · 1400, original question 16, source page 4.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 17 · biochemistry-1400-clinical-q017
 
@@ -621,7 +621,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q17; page 4.
 
 Clinical biochemistry · 1400, original question 17, source page 4.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 18 · biochemistry-1400-clinical-q018
 
@@ -651,7 +651,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q19; page 5.
 
 Clinical biochemistry · 1400, original question 19, source page 5.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 https://www.ncbi.nlm.nih.gov/books/NBK482489/
 
 ### 20 · biochemistry-1400-clinical-q020
@@ -667,7 +667,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q20; page 5.
 
 Clinical biochemistry · 1400, original question 20, source page 5.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 21 · biochemistry-1400-clinical-q021
 
@@ -699,7 +699,7 @@ Note: Accepted source alternatives: A, C.
 Source: Original Q22; page 5.
 
 Clinical biochemistry · 1400, original question 22, source page 5.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 https://www.uniprot.org/uniprotkb/P19440/entry
 https://www.uniprot.org/uniprotkb/P05186/entry
 https://www.uniprot.org/uniprotkb/P21589/entry
@@ -732,7 +732,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q24; page 5.
 
 Clinical biochemistry · 1400, original question 24, source page 5.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 25 · biochemistry-1400-clinical-q025
 
@@ -747,7 +747,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q25; page 6.
 
 Clinical biochemistry · 1400, original question 25, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 26 · biochemistry-1400-clinical-q026
 
@@ -762,7 +762,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q26; page 6.
 
 Clinical biochemistry · 1400, original question 26, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 27 · biochemistry-1400-clinical-q027
 
@@ -777,7 +777,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q27; page 6.
 
 Clinical biochemistry · 1400, original question 27, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 https://www.ncbi.nlm.nih.gov/books/NBK1319/
 Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, branched-chain amino-acid metabolism.
 
@@ -794,7 +794,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q28; page 6.
 
 Clinical biochemistry · 1400, original question 28, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 https://pubmed.ncbi.nlm.nih.gov/10234605/
 
 ### 29 · biochemistry-1400-clinical-q029
@@ -810,7 +810,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q29; page 6.
 
 Clinical biochemistry · 1400, original question 29, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 30 · biochemistry-1400-clinical-q030
 

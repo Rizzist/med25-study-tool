@@ -26,7 +26,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q1; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 1, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 2 · biochemistry-1403-clinical-q002
 
@@ -41,7 +41,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q2; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 2, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 3 · biochemistry-1403-clinical-q003
 
@@ -56,7 +56,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q3; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 3, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, PDF pp. 562-563.
 
 ### 4 · biochemistry-1403-clinical-q004
@@ -72,7 +72,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q4; page 2.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 4, source page 2.
-Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 44: Diabetes and metabolic perturbations: causal review.
 
 ### 5 · biochemistry-1403-clinical-q005
 
@@ -225,7 +225,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q14; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 14, source page 4.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 15 · biochemistry-1403-clinical-q015
 
@@ -240,7 +240,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q15; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 15, source page 4.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 16 · biochemistry-1403-clinical-q016
 
@@ -255,7 +255,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q16; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 16, source page 4.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 17 · biochemistry-1403-clinical-q017
 
@@ -270,7 +270,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q17; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 17, source page 4.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 18 · biochemistry-1403-clinical-q018
 
@@ -285,7 +285,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q18; page 4.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 18, source page 4.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 19 · biochemistry-1403-clinical-q019
 
@@ -300,7 +300,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q19; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 19, source page 5.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 20 · biochemistry-1403-clinical-q020
 
@@ -330,7 +330,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q21; page 5.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 21, source page 5.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 22 · biochemistry-1403-clinical-q022
 
@@ -405,7 +405,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q27; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 27, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 28 · biochemistry-1403-clinical-q028
 
@@ -420,7 +420,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q28; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 28, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 30 · biochemistry-1403-clinical-q030
 
@@ -435,7 +435,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q30; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 30, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 31 · biochemistry-1403-clinical-q031
 
@@ -450,7 +450,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q31; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 31, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 32 · biochemistry-1403-clinical-q032
 
@@ -465,7 +465,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q32; page 6.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 32, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 https://pubmed.ncbi.nlm.nih.gov/10234605/
 
 ### 33 · biochemistry-1403-clinical-q033
@@ -481,7 +481,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q33; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 33, source page 7.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 34 · biochemistry-1403-clinical-q034
 
@@ -528,7 +528,7 @@ Note: Accepted source alternatives: A, B.
 Source: Original Q36; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 36, source page 7.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 37 · biochemistry-1403-clinical-q037
 
@@ -543,7 +543,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q37; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 37, source page 7.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 38 · biochemistry-1403-clinical-q038
 
@@ -558,7 +558,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q38; page 7.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 38, source page 7.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 39 · biochemistry-1403-clinical-q039
 
@@ -573,6 +573,6 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q39; page 8.
 
 Clinical biochemistry · 1403 · numbered fragment, original question 39, source page 8.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 https://www.nice.org.uk/guidance/ng158/chapter/recommendations
 https://www.ncbi.nlm.nih.gov/books/NBK545216/

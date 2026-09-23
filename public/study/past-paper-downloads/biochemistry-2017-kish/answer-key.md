@@ -26,7 +26,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q1; page 2.
 
 Kish metabolism · September 2017 semester, original question 1, source page 2.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 2 · biochemistry-2017-kish-q002
 
@@ -56,7 +56,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q3; page 2.
 
 Kish metabolism · September 2017 semester, original question 3, source page 2.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 4 · biochemistry-2017-kish-q004
 
@@ -71,7 +71,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 2.
 
 Kish metabolism · September 2017 semester, original question 4, source page 2.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 5 · biochemistry-2017-kish-q005
 
@@ -86,7 +86,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Kish metabolism · September 2017 semester, original question 5, source page 2.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 6 · biochemistry-2017-kish-q006
 
@@ -101,7 +101,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q6; page 2.
 
 Kish metabolism · September 2017 semester, original question 6, source page 2.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 7 · biochemistry-2017-kish-q007
 
@@ -146,7 +146,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q9; page 3.
 
 Kish metabolism · September 2017 semester, original question 9, source page 3.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 10 · biochemistry-2017-kish-q010
 
@@ -161,7 +161,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q10; page 3.
 
 Kish metabolism · September 2017 semester, original question 10, source page 3.
-Biochemistry II review, PDF p. 54: Past-paper audit: flawed items and conventions to keep separate.
+Biochemistry II review, PDF p. 52: Past-paper audit: flawed items and conventions to keep separate.
 Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, carbohydrate metabolism, nitrogen metabolism and fed-fast integration chapters.
 
 ### 11 · biochemistry-2017-kish-q011
@@ -222,7 +222,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 3.
 
 Kish metabolism · September 2017 semester, original question 14, source page 3.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 15 · biochemistry-2017-kish-q015
 
@@ -282,7 +282,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q18; page 4.
 
 Kish metabolism · September 2017 semester, original question 18, source page 4.
-Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 19 · biochemistry-2017-kish-q019
 
@@ -342,7 +342,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 5.
 
 Kish metabolism · September 2017 semester, original question 22, source page 5.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 23 · biochemistry-2017-kish-q023
 
@@ -357,7 +357,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Kish metabolism · September 2017 semester, original question 23, source page 5.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 24 · biochemistry-2017-kish-q024
 
@@ -372,7 +372,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 5.
 
 Kish metabolism · September 2017 semester, original question 24, source page 5.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 25 · biochemistry-2017-kish-q025
 

@@ -780,7 +780,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 3.
 
 Biochemistry · July 2026-labelled reconstruction, original question 13, source page 3.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 14 · biochemistry-2026-july-reconstruction-q014
 
@@ -840,7 +840,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 5.
 
 Biochemistry · July 2026-labelled reconstruction, original question 17, source page 5.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 18 · biochemistry-2026-july-reconstruction-q018
 
@@ -888,7 +888,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q20; page 5.
 
 Biochemistry · July 2026-labelled reconstruction, original question 20, source page 5.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 21 · biochemistry-2026-july-reconstruction-q021
 
@@ -903,7 +903,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 6.
 
 Biochemistry · July 2026-labelled reconstruction, original question 21, source page 6.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 22 · biochemistry-2026-july-reconstruction-q022
 
@@ -918,7 +918,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 6.
 
 Biochemistry · July 2026-labelled reconstruction, original question 22, source page 6.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 23 · biochemistry-2026-july-reconstruction-q023
 
@@ -948,7 +948,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q24; page 7.
 
 Biochemistry · July 2026-labelled reconstruction, original question 24, source page 7.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 25 · biochemistry-2026-july-reconstruction-q025
 
@@ -1100,7 +1100,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q34; page 9.
 
 Biochemistry · July 2026-labelled reconstruction, original question 34, source page 9.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 35 · biochemistry-2026-july-reconstruction-q035
 
@@ -1130,7 +1130,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q36; page 9.
 
 Biochemistry · July 2026-labelled reconstruction, original question 36, source page 9.
-Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 37 · biochemistry-2026-july-reconstruction-q037
 
@@ -1145,7 +1145,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 10.
 
 Biochemistry · July 2026-labelled reconstruction, original question 37, source page 10.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 38 · biochemistry-2026-july-reconstruction-q038
 
@@ -1160,7 +1160,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q38; page 10.
 
 Biochemistry · July 2026-labelled reconstruction, original question 38, source page 10.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 39 · biochemistry-2026-july-reconstruction-q039
 
@@ -1175,7 +1175,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q39; page 10.
 
 Biochemistry · July 2026-labelled reconstruction, original question 39, source page 10.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 40 · biochemistry-2026-july-reconstruction-q040
 
@@ -1190,7 +1190,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q40; page 11.
 
 Biochemistry · July 2026-labelled reconstruction, original question 40, source page 11.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 41 · biochemistry-2026-july-reconstruction-q041
 
@@ -1267,7 +1267,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q45; page 12.
 
 Biochemistry · July 2026-labelled reconstruction, original question 45, source page 12.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 46 · biochemistry-2026-july-reconstruction-q046
 
@@ -1297,7 +1297,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q47; page 12.
 
 Biochemistry · July 2026-labelled reconstruction, original question 47, source page 12.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 48 · biochemistry-2026-july-reconstruction-q048
 
@@ -1312,7 +1312,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 48, source page 13.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 49 · biochemistry-2026-july-reconstruction-q049
 
@@ -1327,7 +1327,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q49; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 49, source page 13.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 50 · biochemistry-2026-july-reconstruction-q050
 
@@ -1342,7 +1342,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q50; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 50, source page 13.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 51 · biochemistry-2026-july-reconstruction-q051
 
@@ -1357,7 +1357,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q51; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 51, source page 13.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 52 · biochemistry-2026-july-reconstruction-q052
 
@@ -1372,4 +1372,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q52; page 13.
 
 Biochemistry · July 2026-labelled reconstruction, original question 52, source page 13.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.

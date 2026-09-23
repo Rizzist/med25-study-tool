@@ -86,7 +86,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Biochemistry theory · 1401–1402 · Group A, original question 5, source page 2.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 https://www.bu.edu/aldolase/biochemistry2/17_LipidCatabolism_V2026.pdf
 
 ### 6 · biochemistry-1401-1402-group-a-q006
@@ -177,7 +177,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q11; page 3.
 
 Biochemistry theory · 1401–1402 · Group A, original question 11, source page 3.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 12 · biochemistry-1401-1402-group-a-q012
 
@@ -192,7 +192,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 3.
 
 Biochemistry theory · 1401–1402 · Group A, original question 12, source page 3.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 13 · biochemistry-1401-1402-group-a-q013
 
@@ -254,7 +254,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q16; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 16, source page 4.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 17 · biochemistry-1401-1402-group-a-q017
 
@@ -269,7 +269,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q17; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 17, source page 4.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 18 · biochemistry-1401-1402-group-a-q018
 
@@ -284,7 +284,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q18; page 4.
 
 Biochemistry theory · 1401–1402 · Group A, original question 18, source page 4.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 19 · biochemistry-1401-1402-group-a-q019
 
@@ -361,7 +361,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 5.
 
 Biochemistry theory · 1401–1402 · Group A, original question 23, source page 5.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 24 · biochemistry-1401-1402-group-a-q024
 
@@ -453,7 +453,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q29; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 29, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 30 · biochemistry-1401-1402-group-a-q030
 
@@ -468,7 +468,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q30; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 30, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-1401-1402-group-a-q031
 
@@ -483,7 +483,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 6.
 
 Biochemistry theory · 1401–1402 · Group A, original question 31, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 32 · biochemistry-1401-1402-group-a-q032
 
@@ -513,7 +513,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q33; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 33, source page 7.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 34 · biochemistry-1401-1402-group-a-q034
 
@@ -528,7 +528,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q34; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 34, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 35 · biochemistry-1401-1402-group-a-q035
 
@@ -543,7 +543,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q35; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 35, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 36 · biochemistry-1401-1402-group-a-q036
 
@@ -558,7 +558,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q36; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 36, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 37 · biochemistry-1401-1402-group-a-q037
 
@@ -573,7 +573,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 7.
 
 Biochemistry theory · 1401–1402 · Group A, original question 37, source page 7.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 38 · biochemistry-1401-1402-group-a-q038
 

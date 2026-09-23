@@ -461,7 +461,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q1; page 2.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 1, source page 2.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 2 · biochemistry-1403-1404-group-b-q002
 
@@ -476,7 +476,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q2; page 2.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 2, source page 2.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 3 · biochemistry-1403-1404-group-b-q003
 
@@ -506,7 +506,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q4; page 2.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 4, source page 2.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 5 · biochemistry-1403-1404-group-b-q005
 
@@ -521,7 +521,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q5; page 2.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 5, source page 2.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 6 · biochemistry-1403-1404-group-b-q006
 
@@ -536,7 +536,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q6; page 3.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 6, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 7 · biochemistry-1403-1404-group-b-q007
 
@@ -614,7 +614,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q11; page 4.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 11, source page 4.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 12 · biochemistry-1403-1404-group-b-q012
 
@@ -629,7 +629,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q12; page 4.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 12, source page 4.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 13 · biochemistry-1403-1404-group-b-q013
 
@@ -644,7 +644,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q13; page 4.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 13, source page 4.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 14 · biochemistry-1403-1404-group-b-q014
 
@@ -659,7 +659,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q14; page 4.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 14, source page 4.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 15 · biochemistry-1403-1404-group-b-q015
 
@@ -674,7 +674,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q15; page 5.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 15, source page 5.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 16 · biochemistry-1403-1404-group-b-q016
 
@@ -764,7 +764,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q21; page 6.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 21, source page 6.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 22 · biochemistry-1403-1404-group-b-q022
 
@@ -779,7 +779,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q22; page 6.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 22, source page 6.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 23 · biochemistry-1403-1404-group-b-q023
 
@@ -794,7 +794,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q23; page 6.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 23, source page 6.
-Biochemistry II review, PDF p. 45: Diabetes and metabolic perturbations: causal review.
+Biochemistry II review, PDF p. 44: Diabetes and metabolic perturbations: causal review.
 
 ### 24 · biochemistry-1403-1404-group-b-q024
 
@@ -1023,7 +1023,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q38; page 9.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 38, source page 9.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 39 · biochemistry-1403-1404-group-b-q039
 
@@ -1038,4 +1038,4 @@ Provenance note: No authoritative key supplied.
 Source: Original Q39; page 9.
 
 Biochemistry metabolism · 1403–1404 · Group B, original question 39, source page 9.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.

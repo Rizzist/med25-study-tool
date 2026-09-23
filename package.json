@@ -6,6 +6,8 @@
     "node": "22.x"
   },
   "scripts": {
+    "biochemistry:core:generate": "node scripts/content/build-biochemistry-core.mjs",
+    "biochemistry:core:check": "node scripts/content/build-biochemistry-core.mjs --check && node --test tests/biochemistry-core.test.mjs",
     "biochemistry:papers:generate": "node scripts/build-biochemistry-papers.mjs",
     "biochemistry:papers:check": "node scripts/build-biochemistry-papers.mjs --check && node --test tests/biochemistry-papers.test.mjs",
     "religion:generate": "node scripts/build-religion.mjs",

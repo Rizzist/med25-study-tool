@@ -116,7 +116,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q7; page 2.
 
 Biochemistry II theory · 42-item report, original question 7, source page 2.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 8 · biochemistry-theory-42-q008
 
@@ -161,7 +161,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q10; page 3.
 
 Biochemistry II theory · 42-item report, original question 10, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 11 · biochemistry-theory-42-q011
 
@@ -191,7 +191,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q12; page 4.
 
 Biochemistry II theory · 42-item report, original question 12, source page 4.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 13 · biochemistry-theory-42-q013
 
@@ -221,7 +221,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q14; page 4.
 
 Biochemistry II theory · 42-item report, original question 14, source page 4.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 15 · biochemistry-theory-42-q015
 
@@ -236,7 +236,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q15; page 5.
 
 Biochemistry II theory · 42-item report, original question 15, source page 5.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 16 · biochemistry-theory-42-q016
 
@@ -251,7 +251,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q16; page 5.
 
 Biochemistry II theory · 42-item report, original question 16, source page 5.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 17 · biochemistry-theory-42-q017
 
@@ -296,7 +296,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q19; page 6.
 
 Biochemistry II theory · 42-item report, original question 19, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 20 · biochemistry-theory-42-q020
 
@@ -311,7 +311,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q20; page 6.
 
 Biochemistry II theory · 42-item report, original question 20, source page 6.
-Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 21 · biochemistry-theory-42-q021
 
@@ -358,7 +358,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q23; page 7.
 
 Biochemistry II theory · 42-item report, original question 23, source page 7.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 24 · biochemistry-theory-42-q024
 
@@ -373,7 +373,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q24; page 7.
 
 Biochemistry II theory · 42-item report, original question 24, source page 7.
-Biochemistry II review, PDF p. 51: Liver injury, cholestasis and synthetic-function patterns.
+Biochemistry II review, PDF p. 49: Liver injury, cholestasis and synthetic-function patterns.
 
 ### 25 · biochemistry-theory-42-q025
 
@@ -388,7 +388,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q25; page 7.
 
 Biochemistry II theory · 42-item report, original question 25, source page 7.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 26 · biochemistry-theory-42-q026
 
@@ -450,7 +450,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q29; page 8.
 
 Biochemistry II theory · 42-item report, original question 29, source page 8.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 30 · biochemistry-theory-42-q030
 
@@ -465,7 +465,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q30; page 9.
 
 Biochemistry II theory · 42-item report, original question 30, source page 9.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-theory-42-q031
 

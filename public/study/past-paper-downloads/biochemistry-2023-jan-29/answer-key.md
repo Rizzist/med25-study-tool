@@ -41,7 +41,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q2; page 2.
 
 Biochemistry metabolism · 29 January 2023, original question 2, source page 2.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 3 · biochemistry-2023-jan-29-q003
 
@@ -147,7 +147,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q9; page 3.
 
 Biochemistry metabolism · 29 January 2023, original question 9, source page 3.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 10 · biochemistry-2023-jan-29-q010
 
@@ -389,7 +389,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q25; page 6.
 
 Biochemistry metabolism · 29 January 2023, original question 25, source page 6.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 26 · biochemistry-2023-jan-29-q026
 
@@ -404,7 +404,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q26; page 7.
 
 Biochemistry metabolism · 29 January 2023, original question 26, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 27 · biochemistry-2023-jan-29-q027
 
@@ -419,7 +419,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q27; page 7.
 
 Biochemistry metabolism · 29 January 2023, original question 27, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 28 · biochemistry-2023-jan-29-q028
 
@@ -434,7 +434,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q28; page 7.
 
 Biochemistry metabolism · 29 January 2023, original question 28, source page 7.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 29 · biochemistry-2023-jan-29-q029
 
@@ -449,7 +449,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q29; page 7.
 
 Biochemistry metabolism · 29 January 2023, original question 29, source page 7.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 30 · biochemistry-2023-jan-29-q030
 
@@ -464,7 +464,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q30; page 7.
 
 Biochemistry metabolism · 29 January 2023, original question 30, source page 7.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-2023-jan-29-q031
 
@@ -479,7 +479,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q31; page 8.
 
 Biochemistry metabolism · 29 January 2023, original question 31, source page 8.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 32 · biochemistry-2023-jan-29-q032
 
@@ -494,7 +494,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q32; page 8.
 
 Biochemistry metabolism · 29 January 2023, original question 32, source page 8.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 33 · biochemistry-2023-jan-29-q033
 
@@ -524,7 +524,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q34; page 8.
 
 Biochemistry metabolism · 29 January 2023, original question 34, source page 8.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 35 · biochemistry-2023-jan-29-q035
 
@@ -539,7 +539,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q35; page 8.
 
 Biochemistry metabolism · 29 January 2023, original question 35, source page 8.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 36 · biochemistry-2023-jan-29-q036
 
@@ -554,7 +554,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q36; page 9.
 
 Biochemistry metabolism · 29 January 2023, original question 36, source page 9.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 37 · biochemistry-2023-jan-29-q037
 
@@ -569,7 +569,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q37; page 9.
 
 Biochemistry metabolism · 29 January 2023, original question 37, source page 9.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 38 · biochemistry-2023-jan-29-q038
 
@@ -599,7 +599,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q39; page 9.
 
 Biochemistry metabolism · 29 January 2023, original question 39, source page 9.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 40 · biochemistry-2023-jan-29-q040
 
@@ -737,7 +737,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q48; page 11.
 
 Biochemistry metabolism · 29 January 2023, original question 48, source page 11.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 49 · biochemistry-2023-jan-29-q049
 
@@ -752,7 +752,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q49; page 11.
 
 Biochemistry metabolism · 29 January 2023, original question 49, source page 11.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 50 · biochemistry-2023-jan-29-q050
 

@@ -9,13 +9,15 @@ import {PaperPdfDownload} from './PaperPdfDownload';
 import {StudyIcon} from './StudyIcon';
 import {FINAL_EXAM_STORAGE_KEY,parseFinalExamProgress} from '@/src/lib/mcq/final-exam-state.mjs';
 import {combinedSourceSelection,paperAttemptSummary,readCombinedSelections,COMBINED_PAPER_SELECTIONS_KEY} from '@/src/lib/mcq/paper-selection.mjs';
+import type {ExamCollection} from '@/src/lib/mcq/curated-core.mjs';
+const BiochemistryCoreCard=dynamic(()=>import('./BiochemistryCoreCard').then(m=>m.BiochemistryCoreCard),{loading:()=> <p role="status" className="mcq-loading">Loading Core Exam…</p>});
 const CvsPastExams=dynamic(()=>import('./CvsPastExams').then(m=>m.CvsPastExams),{loading:()=> <p role="status" className="mcq-loading">Loading CVS paper tools…</p>});
 const FinalExam=dynamic(()=>import('./FinalExam').then(m=>m.FinalExam),{loading:()=> <p role="status" className="mcq-loading">Loading selected paper…</p>});
 const NutritionArchive=dynamic(()=>import('./NutritionExam').then(m=>m.NutritionPaperArchive));
 const ReligionArchive=dynamic(()=>import('./ReligionExam').then(m=>m.ReligionPaperArchive));
 type Collection=DownloadCollection;
 type Catalog={courses:Array<{id:string;title:string;emptyReason:string|null;collections:Collection[]}>};
-type Selection={id:string;title:string;gradedQuestionIds:string[]};
+type Selection=ExamCollection;
 /** Toolbar shared by every course: bundle PDF and the all-downloads panel toggle. */
 function HubTools({course,open,onToggle,children}:{course:Catalog['courses'][number];open:boolean;onToggle:()=>void;children?:React.ReactNode}) {
   return <div className="pill-row hub-tools">
@@ -52,6 +54,10 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
     const previous=paperAttemptSummary(saved,exam,item);
     setIntent(fresh?'new':previous?.completedAt?'review':'start');setSelected(item.id);window.scrollTo({top:0,behavior:'instant'});
   }
+  function openCore(selection:Selection,fresh=false) {
+    if(fresh&&!window.confirm('Start a new attempt for this Core scope? Its current answers will be replaced; source-paper attempts are unaffected.'))return;
+    setCombined(selection);setIntent(fresh?'new':paperAttemptSummary(saved,exam,selection)?.completedAt?'review':'start');setSelected(selection.id);window.scrollTo({top:0,behavior:'instant'});
+  }
   async function openCombined(ids=selectedPapers) {
     if(!course)return;
     setCombining(true);setSelectionError('');
@@ -74,6 +80,7 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
       {library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}
       {exam==='july29'&&<p className="mcq-note">The authored “Core Distilled” questions are now in Practice MCQs, not Final Exam. The separate PharmD paper below is cross-course material, not confirmed medical-exam scope. The all-bank option retains legacy answers and includes both source groups.</p>}
       {archive&&(exam==='term2-nutrition'?<NutritionArchive/>:<ReligionArchive/>)}
+      {exam==='term2-biochemistry'&&<BiochemistryCoreCard saved={saved} onOpen={openCore}/>}
       <section className="paper-combiner" aria-label="Combine past papers">
         <div className="section-head compact"><h3><StudyIcon name="layers"/>Combine papers</h3><p>One continuous session; repeated question IDs count once. Results map to your review sections.</p><div className="pill-row"><button type="button" className="pill small" onClick={()=>setSelectedPapers(course.collections.filter(c=>c.gradedQuestionCount&&c.defaultEligible).map(c=>c.id))}>Select all</button><button type="button" className="pill small" onClick={()=>setSelectedPapers([])}>Clear</button></div></div>
         <div className="paper-selection">{course.collections.map(item=><label key={item.id}><input type="checkbox" disabled={!item.gradedQuestionCount||combining} checked={selectedPapers.includes(item.id)} onChange={e=>setSelectedPapers(current=>e.target.checked?[...current,item.id]:current.filter(id=>id!==item.id))}/>{item.title}<small>{item.gradedQuestionCount}{!item.defaultEligible?' · supplement':''}</small></label>)}</div>

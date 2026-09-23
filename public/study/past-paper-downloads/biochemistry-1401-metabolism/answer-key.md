@@ -26,7 +26,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q1; page 2.
 
 Biochemistry metabolism · 1401, original question 1, source page 2.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 2 · biochemistry-1401-metabolism-q002
 
@@ -41,7 +41,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q2; page 2.
 
 Biochemistry metabolism · 1401, original question 2, source page 2.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 3 · biochemistry-1401-metabolism-q003
 
@@ -56,7 +56,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q3; page 2.
 
 Biochemistry metabolism · 1401, original question 3, source page 2.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 4 · biochemistry-1401-metabolism-q004
 
@@ -342,7 +342,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q22; page 9.
 
 Biochemistry metabolism · 1401, original question 22, source page 9.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 23 · biochemistry-1401-metabolism-q023
 
@@ -357,7 +357,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q23; page 9.
 
 Biochemistry metabolism · 1401, original question 23, source page 9.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 
 ### 24 · biochemistry-1401-metabolism-q024
 
@@ -432,7 +432,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q28; page 11.
 
 Biochemistry metabolism · 1401, original question 28, source page 11.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 29 · biochemistry-1401-metabolism-q029
 
@@ -447,7 +447,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q29; page 11.
 
 Biochemistry metabolism · 1401, original question 29, source page 11.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 30 · biochemistry-1401-metabolism-q030
 
@@ -462,7 +462,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q30; page 11.
 
 Biochemistry metabolism · 1401, original question 30, source page 11.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 31 · biochemistry-1401-metabolism-q031
 
@@ -477,7 +477,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q31; page 12.
 
 Biochemistry metabolism · 1401, original question 31, source page 12.
-Biochemistry II review, PDF p. 53: Thyroid biochemistry and metabolic laboratory patterns.
+Biochemistry II review, PDF p. 52: Thyroid biochemistry and metabolic laboratory patterns.
 
 ### 32 · biochemistry-1401-metabolism-q032
 
@@ -492,7 +492,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q32; page 12.
 
 Biochemistry metabolism · 1401, original question 32, source page 12.
-Biochemistry II review, PDF p. 53: Thyroid biochemistry and metabolic laboratory patterns.
+Biochemistry II review, PDF p. 52: Thyroid biochemistry and metabolic laboratory patterns.
 
 ### 33 · biochemistry-1401-metabolism-q033
 
@@ -507,4 +507,4 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q33; page 12.
 
 Biochemistry metabolism · 1401, original question 33, source page 12.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.

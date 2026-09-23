@@ -671,7 +671,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q4; page 1.
 
 Biochemistry theory · 53-item report, original question 4, source page 1.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 5 · biochemistry-theory-53-q005
 
@@ -808,7 +808,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q13; page 3.
 
 Biochemistry theory · 53-item report, original question 13, source page 3.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 https://www.ncbi.nlm.nih.gov/books/NBK305/
 Biochemistry II review: renal biochemistry and nonprotein nitrogen.
 
@@ -825,7 +825,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q14; page 3.
 
 Biochemistry theory · 53-item report, original question 14, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 15 · biochemistry-theory-53-q015
 
@@ -840,7 +840,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q15; page 3.
 
 Biochemistry theory · 53-item report, original question 15, source page 3.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 16 · biochemistry-theory-53-q016
 
@@ -855,7 +855,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q16; page 4.
 
 Biochemistry theory · 53-item report, original question 16, source page 4.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 17 · biochemistry-theory-53-q017
 
@@ -870,7 +870,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q17; page 4.
 
 Biochemistry theory · 53-item report, original question 17, source page 4.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 18 · biochemistry-theory-53-q018
 
@@ -885,7 +885,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q18; page 4.
 
 Biochemistry theory · 53-item report, original question 18, source page 4.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 19 · biochemistry-theory-53-q019
 
@@ -900,7 +900,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q19; page 4.
 
 Biochemistry theory · 53-item report, original question 19, source page 4.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 20 · biochemistry-theory-53-q020
 
@@ -915,7 +915,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q20; page 5.
 
 Biochemistry theory · 53-item report, original question 20, source page 5.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 21 · biochemistry-theory-53-q021
 
@@ -930,7 +930,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q21; page 5.
 
 Biochemistry theory · 53-item report, original question 21, source page 5.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 22 · biochemistry-theory-53-q022
 
@@ -945,7 +945,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q22; page 5.
 
 Biochemistry theory · 53-item report, original question 22, source page 5.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 23 · biochemistry-theory-53-q023
 
@@ -960,7 +960,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q23; page 5.
 
 Biochemistry theory · 53-item report, original question 23, source page 5.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 24 · biochemistry-theory-53-q024
 
@@ -975,7 +975,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q24; page 6.
 
 Biochemistry theory · 53-item report, original question 24, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 25 · biochemistry-theory-53-q025
 
@@ -990,7 +990,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q25; page 6.
 
 Biochemistry theory · 53-item report, original question 25, source page 6.
-Biochemistry II review, PDF p. 41: Purines, pyrimidines, salvage and DNA precursor supply.
+Biochemistry II review, PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply.
 
 ### 26 · biochemistry-theory-53-q026
 
@@ -1005,7 +1005,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q26; page 6.
 
 Biochemistry theory · 53-item report, original question 26, source page 6.
-Biochemistry II review, PDF p. 40: Amino acids as precursors of signaling and storage molecules.
+Biochemistry II review, PDF p. 39: Amino acids as precursors of signaling and storage molecules.
 https://pmc.ncbi.nlm.nih.gov/articles/PMC3355046/
 https://pmc.ncbi.nlm.nih.gov/articles/PMC1175845/
 
@@ -1022,7 +1022,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q27; page 6.
 
 Biochemistry theory · 53-item report, original question 27, source page 6.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 28 · biochemistry-theory-53-q028
 
@@ -1037,7 +1037,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q28; page 7.
 
 Biochemistry theory · 53-item report, original question 28, source page 7.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 
 ### 29 · biochemistry-theory-53-q029
 
@@ -1052,7 +1052,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q29; page 7.
 
 Biochemistry theory · 53-item report, original question 29, source page 7.
-Biochemistry II review, PDF p. 52: Renal biochemistry: urea, creatinine, albumin and tubular function.
+Biochemistry II review, PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function.
 https://www.ncbi.nlm.nih.gov/books/NBK305/
 https://www.ncbi.nlm.nih.gov/books/NBK507821/
 
@@ -1084,7 +1084,7 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q31; page 7.
 
 Biochemistry theory · 53-item report, original question 31, source page 7.
-Biochemistry II review, PDF p. 36: Amino-acid disorders: reason from the blocked reaction.
+Biochemistry II review, PDF p. 35: Amino-acid disorders: reason from the blocked reaction.
 
 ### 32 · biochemistry-theory-53-q032
 
@@ -1144,7 +1144,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q35; page 8.
 
 Biochemistry theory · 53-item report, original question 35, source page 8.
-Biochemistry II review, PDF p. 49: Nutrition, nitrogen balance and final integration checkpoints.
+Biochemistry II review, PDF p. 47: Nutrition, nitrogen balance and final integration checkpoints.
 
 ### 36 · biochemistry-theory-53-q036
 
@@ -1189,7 +1189,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q38; page 9.
 
 Biochemistry theory · 53-item report, original question 38, source page 9.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 39 · biochemistry-theory-53-q039
 
@@ -1206,7 +1206,7 @@ Note: Accepted source alternatives: B, C.
 Source: Original Q39; page 9.
 
 Biochemistry theory · 53-item report, original question 39, source page 9.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 40 · biochemistry-theory-53-q040
 
@@ -1251,7 +1251,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q42; page 9.
 
 Biochemistry theory · 53-item report, original question 42, source page 9.
-Biochemistry II review, PDF p. 43: Insulin, glucagon and the fed-fast cycle.
+Biochemistry II review, PDF p. 42: Insulin, glucagon and the fed-fast cycle.
 
 ### 43 · biochemistry-theory-53-q043
 
@@ -1266,7 +1266,7 @@ Provenance note: Printed source mark D; retained separately from the study key.
 Source: Original Q43; page 10.
 
 Biochemistry theory · 53-item report, original question 43, source page 10.
-Biochemistry II review, PDF p. 20: Micelles, enterocytes, chylomicrons and remnant uptake.
+Biochemistry II review, PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake.
 
 ### 44 · biochemistry-theory-53-q044
 
@@ -1296,7 +1296,7 @@ Provenance note: No authoritative key supplied.
 Source: Original Q45; page 10.
 
 Biochemistry theory · 53-item report, original question 45, source page 10.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 46 · biochemistry-theory-53-q046
 
@@ -1311,7 +1311,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q46; page 10.
 
 Biochemistry theory · 53-item report, original question 46, source page 10.
-Biochemistry II review, PDF p. 11: Respiratory chain and transparent ATP accounting.
+Biochemistry II review, PDF p. 12: Respiratory chain and transparent ATP accounting.
 
 ### 47 · biochemistry-theory-53-q047
 
@@ -1386,7 +1386,7 @@ Provenance note: Printed source mark C; retained separately from the study key.
 Source: Original Q51; page 12.
 
 Biochemistry theory · 53-item report, original question 51, source page 12.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 52 · biochemistry-theory-53-q052
 
@@ -1401,7 +1401,7 @@ Provenance note: Printed source mark A; retained separately from the study key.
 Source: Original Q52; page 12.
 
 Biochemistry theory · 53-item report, original question 52, source page 12.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
 
 ### 53 · biochemistry-theory-53-q053
 
@@ -1416,4 +1416,4 @@ Provenance note: Printed source mark B; retained separately from the study key.
 Source: Original Q53; page 12.
 
 Biochemistry theory · 53-item report, original question 53, source page 12.
-Biochemistry II review, PDF p. 50: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.
+Biochemistry II review, PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers.

@@ -1,0 +1,4977 @@
+{
+  "revision": "2026-09-23-v1",
+  "title": "Biochemistry Core Exam",
+  "sourceFingerprint": "a09b7a91543eecef6d96e4065c9cf5874e4f92d852c86890b95c26b83e7dc59d",
+  "sourceQuestionCount": 589,
+  "sourceCollectionCount": 14,
+  "optionalQuestionCount": 52,
+  "repeatedPatternCount": 81,
+  "repeatedSourceOccurrenceCount": 237,
+  "supplementalCount": 80,
+  "methodology": "One representative per detected repeated question pattern, followed by explicitly selected core-coverage questions. Exact stem/answer matching plus reviewed relationship groups; never whole-topic matching alone. Each main collection counts once, including when a question occurs twice within it. Alternate scans/translations are already grouped by source. Counts describe source collections, not authenticated independent sittings or exam probabilities. The optional reconstruction and edited study repairs do not establish recurrence. Detection is conservative; unrecognized paraphrases may remain.",
+  "papers": [
+    {
+      "id": "biochemistry-2025-feb-dds",
+      "title": "Biochemistry II · February 2025 semester · DDS",
+      "url": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf"
+    },
+    {
+      "id": "biochemistry-2025-sep-07",
+      "title": "Biochemistry theory · 7 September 2025",
+      "url": "/study/biochemistry/past-papers/2025-sep-07/original.pdf"
+    },
+    {
+      "id": "biochemistry-2023-july-23",
+      "title": "Biochemistry metabolism · 23 July 2023",
+      "url": "/study/biochemistry/past-papers/2023-july-23/original.pdf"
+    },
+    {
+      "id": "biochemistry-2023-jan-29",
+      "title": "Biochemistry metabolism · 29 January 2023",
+      "url": "/study/biochemistry/past-papers/2023-jan-29/original.pdf"
+    },
+    {
+      "id": "biochemistry-2022-jan-26",
+      "title": "Biochemistry metabolism · 26 January 2022 report",
+      "url": "/study/biochemistry/past-papers/2022-jan-26/original.pdf"
+    },
+    {
+      "id": "biochemistry-2017-kish",
+      "title": "Kish metabolism · September 2017 semester",
+      "url": "/study/biochemistry/past-papers/2017-kish/original.pdf"
+    },
+    {
+      "id": "biochemistry-theory-42",
+      "title": "Biochemistry II theory · 42-item report",
+      "url": "/study/biochemistry/past-papers/theory-42/original.pdf"
+    },
+    {
+      "id": "biochemistry-theory-53",
+      "title": "Biochemistry theory · 53-item report",
+      "url": "/study/biochemistry/past-papers/theory-53/original.pdf"
+    },
+    {
+      "id": "biochemistry-1403-1404-group-b",
+      "title": "Biochemistry metabolism · 1403–1404 · Group B",
+      "url": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf"
+    },
+    {
+      "id": "biochemistry-1401-1402-group-a",
+      "title": "Biochemistry theory · 1401–1402 · Group A",
+      "url": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf"
+    },
+    {
+      "id": "biochemistry-1401-metabolism",
+      "title": "Biochemistry metabolism · 1401",
+      "url": "/study/biochemistry/past-papers/1401-metabolism/original.pdf"
+    },
+    {
+      "id": "biochemistry-1399-metabolism",
+      "title": "Biochemistry metabolism · 1399",
+      "url": "/study/biochemistry/past-papers/1399-metabolism/original.pdf"
+    },
+    {
+      "id": "biochemistry-1400-clinical",
+      "title": "Clinical biochemistry · 1400",
+      "url": "/study/biochemistry/past-papers/1400-clinical/original.pdf"
+    },
+    {
+      "id": "biochemistry-1403-clinical",
+      "title": "Clinical biochemistry · 1403 · numbered fragment",
+      "url": "/study/biochemistry/past-papers/1403-clinical/original.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "biochemistry/biochem-glucose-entry",
+      "title": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "count": 4,
+      "repeated": 3,
+      "sourceCollectionCount": 10
+    },
+    {
+      "id": "biochemistry/biochem-glycolysis",
+      "title": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "count": 5,
+      "repeated": 4,
+      "sourceCollectionCount": 9
+    },
+    {
+      "id": "biochemistry/biochem-glycolysis-regulation",
+      "title": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "count": 4,
+      "repeated": 1,
+      "sourceCollectionCount": 10
+    },
+    {
+      "id": "biochemistry/biochem-pdh-tca",
+      "title": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "count": 5,
+      "repeated": 3,
+      "sourceCollectionCount": 11
+    },
+    {
+      "id": "biochemistry/biochem-oxphos",
+      "title": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "count": 11,
+      "repeated": 8,
+      "sourceCollectionCount": 10
+    },
+    {
+      "id": "biochemistry/biochem-other-sugars",
+      "title": "Fructose, galactose, mannose and the polyol pathway",
+      "pdfPage": 14,
+      "count": 3,
+      "repeated": 0,
+      "sourceCollectionCount": 5
+    },
+    {
+      "id": "biochemistry/biochem-glycogen",
+      "title": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "count": 5,
+      "repeated": 1,
+      "sourceCollectionCount": 12
+    },
+    {
+      "id": "biochemistry/biochem-gluconeogenesis",
+      "title": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "count": 5,
+      "repeated": 3,
+      "sourceCollectionCount": 9
+    },
+    {
+      "id": "biochemistry/biochem-ppp",
+      "title": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "count": 4,
+      "repeated": 3,
+      "sourceCollectionCount": 10
+    },
+    {
+      "id": "biochemistry/biochem-lipid-digestion",
+      "title": "Dietary lipid digestion: from meal to absorbable products",
+      "pdfPage": 19,
+      "count": 3,
+      "repeated": 1,
+      "sourceCollectionCount": 9
+    },
+    {
+      "id": "biochemistry/biochem-micelles-chylomicrons",
+      "title": "Micelles, enterocytes, chylomicrons and remnant uptake",
+      "pdfPage": 21,
+      "count": 2,
+      "repeated": 0,
+      "sourceCollectionCount": 5
+    },
+    {
+      "id": "biochemistry/biochem-fatty-acid-synthesis",
+      "title": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "count": 5,
+      "repeated": 3,
+      "sourceCollectionCount": 8
+    },
+    {
+      "id": "biochemistry/biochem-beta-oxidation",
+      "title": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "count": 8,
+      "repeated": 5,
+      "sourceCollectionCount": 12
+    },
+    {
+      "id": "biochemistry/biochem-ketones",
+      "title": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "count": 2,
+      "repeated": 1,
+      "sourceCollectionCount": 8
+    },
+    {
+      "id": "biochemistry/biochem-complex-lipids",
+      "title": "Membrane lipids, sphingolipidoses and eicosanoids",
+      "pdfPage": 26,
+      "count": 1,
+      "repeated": 0,
+      "sourceCollectionCount": 1
+    },
+    {
+      "id": "biochemistry/biochem-cholesterol",
+      "title": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "count": 6,
+      "repeated": 4,
+      "sourceCollectionCount": 12
+    },
+    {
+      "id": "biochemistry/biochem-lipoprotein-map",
+      "title": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "count": 10,
+      "repeated": 3,
+      "sourceCollectionCount": 12
+    },
+    {
+      "id": "biochemistry/biochem-protein-nitrogen",
+      "title": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "count": 6,
+      "repeated": 5,
+      "sourceCollectionCount": 11
+    },
+    {
+      "id": "biochemistry/biochem-urea",
+      "title": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "count": 5,
+      "repeated": 2,
+      "sourceCollectionCount": 8
+    },
+    {
+      "id": "biochemistry/biochem-aa-carbon",
+      "title": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "count": 6,
+      "repeated": 4,
+      "sourceCollectionCount": 12
+    },
+    {
+      "id": "biochemistry/biochem-aa-disorders",
+      "title": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "count": 8,
+      "repeated": 5,
+      "sourceCollectionCount": 13
+    },
+    {
+      "id": "biochemistry/biochem-heme",
+      "title": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "count": 6,
+      "repeated": 3,
+      "sourceCollectionCount": 11
+    },
+    {
+      "id": "biochemistry/biochem-special-products",
+      "title": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "count": 4,
+      "repeated": 2,
+      "sourceCollectionCount": 8
+    },
+    {
+      "id": "biochemistry/biochem-nucleotides",
+      "title": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "count": 17,
+      "repeated": 10,
+      "sourceCollectionCount": 12
+    },
+    {
+      "id": "biochemistry/biochem-insulin-glucagon",
+      "title": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "count": 5,
+      "repeated": 3,
+      "sourceCollectionCount": 12
+    },
+    {
+      "id": "biochemistry/biochem-diabetes-integration",
+      "title": "Diabetes and metabolic perturbations: causal review",
+      "pdfPage": 44,
+      "count": 2,
+      "repeated": 0,
+      "sourceCollectionCount": 4
+    },
+    {
+      "id": "biochemistry/biochem-nutrition-review",
+      "title": "Nutrition, nitrogen balance and final integration checkpoints",
+      "pdfPage": 47,
+      "count": 1,
+      "repeated": 0,
+      "sourceCollectionCount": 2
+    },
+    {
+      "id": "biochemistry/biochem-clinical-enzymes",
+      "title": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "count": 5,
+      "repeated": 3,
+      "sourceCollectionCount": 11
+    },
+    {
+      "id": "biochemistry/biochem-liver-tests",
+      "title": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "count": 3,
+      "repeated": 0,
+      "sourceCollectionCount": 10
+    },
+    {
+      "id": "biochemistry/biochem-renal-tests",
+      "title": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "count": 5,
+      "repeated": 1,
+      "sourceCollectionCount": 5
+    },
+    {
+      "id": "biochemistry/biochem-endocrine-signaling",
+      "title": "Hormone receptors, second messengers and steroid transport",
+      "pdfPage": 51,
+      "count": 3,
+      "repeated": 0,
+      "sourceCollectionCount": 1
+    },
+    {
+      "id": "biochemistry/biochem-thyroid",
+      "title": "Thyroid biochemistry and metabolic laboratory patterns",
+      "pdfPage": 52,
+      "count": 2,
+      "repeated": 0,
+      "sourceCollectionCount": 1
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "biochemistry-2025-sep-07-q040",
+      "kind": "repeat",
+      "reason": "GLUT4 in insulin-responsive muscle/adipose tissue",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "sectionTitle": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism",
+        "biochemistry-2017-kish",
+        "biochemistry-2022-jan-26",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07",
+        "biochemistry-theory-42",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 8,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q052",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 52,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q040",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q041",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 41,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2022-jan-26-q018",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q028",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q041",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 41,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=12"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q010",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=2"
+        },
+        {
+          "questionId": "biochemistry-1401-metabolism-q009",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q033",
+      "kind": "repeat",
+      "reason": "HGPRT deficiency in Lesch-Nyhan syndrome",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-1403-1404-group-b",
+        "biochemistry-2022-jan-26",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-42",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 7,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q039",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 39,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q032",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2022-jan-26-q016",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q019",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q025",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q005",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=2"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q033",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q030",
+      "kind": "repeat",
+      "reason": "Glycogen phosphorylase and glycogenolysis",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-glycogen",
+      "sectionTitle": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-42",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 6,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q030",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 30,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q040",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q004",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 4,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=2"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q029",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 29,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q028",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q007",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q029",
+      "kind": "repeat",
+      "reason": "Glycine does not supply the pyrimidine ring",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-1401-metabolism",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q043",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 43,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q015",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q030",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 30,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q030",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 30,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-1401-metabolism-q029",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 29,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q030",
+      "kind": "repeat",
+      "reason": "5-FU targets thymidylate synthase",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-1401-metabolism",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q044",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 44,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q046",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 46,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q018",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q031",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-1401-metabolism-q030",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 30,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q003",
+      "kind": "repeat",
+      "reason": "ADA deficiency and SCID",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-1401-metabolism",
+        "biochemistry-2022-jan-26",
+        "biochemistry-2023-jan-29",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q029",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 29,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2022-jan-26-q003",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=1"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q021",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q029",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 29,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-1401-metabolism-q028",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q045",
+      "kind": "repeat",
+      "reason": "Complex II does not pump protons",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q045",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 45,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q049",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 49,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q021",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q028",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q034",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q046",
+      "kind": "repeat",
+      "reason": "Atractyloside inhibits adenine nucleotide translocase",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q046",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 46,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q050",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 50,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q022",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q027",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q035",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q047",
+      "kind": "repeat",
+      "reason": "FMN has the lowest oxidation potential among the listed carriers",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q047",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 47,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q051",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 51,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=11"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q023",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q026",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q036",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q034",
+      "kind": "repeat",
+      "reason": "Mitochondrial location of TCA reactions",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-2022-jan-26",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q034",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q044",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 44,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2022-jan-26-q034",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q031",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q002",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-1404-group-b-q035",
+      "kind": "repeat",
+      "reason": "Basolateral amino-acid release into portal blood",
+      "paperId": "biochemistry-1403-1404-group-b",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "biochemistry-1403-1404-group-b",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q018",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q022",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q030",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 30,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q046",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 46,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=11"
+        },
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q035",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q013",
+      "kind": "repeat",
+      "reason": "PLP in transamination",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 5,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q013",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q017",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q026",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q042",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 42,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q034",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q020",
+      "kind": "repeat",
+      "reason": "Alkaptonuria results from homogentisate dioxygenase deficiency",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q020",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q032",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q048",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 48,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=11"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q012",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q021",
+      "kind": "repeat",
+      "reason": "Amylase filtration and urinary appearance",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q021",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q025",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q036",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q039",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 39,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q006",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q032",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q042",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 42,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q006",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q001",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q005",
+      "kind": "repeat",
+      "reason": "Pyruvate is the aerobic glycolytic end product",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism",
+        "biochemistry-2022-jan-26",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q036",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2022-jan-26-q017",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q012",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-1401-metabolism-q005",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q024",
+      "kind": "repeat",
+      "reason": "Aldolase is not a pancreatic-specific enzyme",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "sectionTitle": "Dietary lipid digestion: from meal to absorbable products",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q024",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q028",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q034",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q038",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 38,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q040",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q035",
+      "kind": "repeat",
+      "reason": "Xanthine oxidase inhibition for gout",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q042",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 42,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q042",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 42,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q014",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q035",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q035",
+      "kind": "repeat",
+      "reason": "Modern complete glucose oxidation yield",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q035",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q045",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 45,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q009",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q004",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 4,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q048",
+      "kind": "repeat",
+      "reason": "Cytochromes a and a3 belong to complex IV",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 4,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q048",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 48,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q052",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 52,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=11"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q024",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q025",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q008",
+      "kind": "repeat",
+      "reason": "NADPH is not a beta-oxidation product",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-1399-metabolism",
+        "biochemistry-1401-metabolism",
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q008",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-1401-metabolism-q020",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-1399-metabolism-q008",
+          "paperId": "biochemistry-1399-metabolism",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/biochemistry/past-papers/1399-metabolism/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q021",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-2022-jan-26",
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q039",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 39,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q021",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q021",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q037",
+      "kind": "repeat",
+      "reason": "Functional plasma enzyme: lipoprotein lipase",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q033",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q037",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 37,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q051",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 51,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=12"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q015",
+      "kind": "repeat",
+      "reason": "Net glycolytic ATP yield",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q048",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 48,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q012",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2022-jan-26-q015",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q032",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q045",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 45,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q017",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q032",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-july-23-q013",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-july-23",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "sourcePaperIds": [
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q041",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 41,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q041",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 41,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q013",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-july-23-q016",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-july-23",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "sourcePaperIds": [
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q043",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 43,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q044",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 44,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q016",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q023",
+      "kind": "repeat",
+      "reason": "Fed state suppresses CPT-I/carnitine shuttle",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-1403-1404-group-b",
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q049",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 49,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q022",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q023",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q015",
+      "kind": "repeat",
+      "reason": "LPL deficiency and type I hyperlipoproteinemia",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q009",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q015",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1400-clinical-q010",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q028",
+      "kind": "repeat",
+      "reason": "1,3-BPG is a high-energy intermediate",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q028",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q038",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 38,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q002",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-july-23-q037",
+      "kind": "repeat",
+      "reason": "NADPH generation by the pentose phosphate pathway",
+      "paperId": "biochemistry-2023-july-23",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q037",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 37,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q001",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=2"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q011",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q005",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q029",
+      "kind": "repeat",
+      "reason": "PPP produces NADPH and ribose",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-2025-sep-07",
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q029",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 29,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q033",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q034",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-july-23-q029",
+      "kind": "repeat",
+      "reason": "Glucose-alanine cycle transports muscle nitrogen",
+      "paperId": "biochemistry-2023-july-23",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q029",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 29,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q045",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 45,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q009",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q019",
+      "kind": "repeat",
+      "reason": "Ubiquitin-mediated protein degradation",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07",
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q019",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q023",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q009",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q003",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-2023-jan-29",
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q037",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 37,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q036",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q003",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q043",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q027",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q043",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 43,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q044",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q028",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q044",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 44,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q014",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q014",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q018",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q016",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q016",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q020",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q027",
+      "kind": "repeat",
+      "reason": "PKU is not a cause of liver cirrhosis in these choices",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical",
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q024",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-1403-clinical-q027",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q028",
+      "kind": "repeat",
+      "reason": "Alkaptonuria and ochronosis",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical",
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q025",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-1403-clinical-q028",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q035",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26",
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q049",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 49,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=11"
+        },
+        {
+          "questionId": "biochemistry-2022-jan-26-q035",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q015",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q015",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q019",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-1404-group-b-q024",
+      "kind": "repeat",
+      "reason": "Malonyl-CoA is not a beta-oxidation product",
+      "paperId": "biochemistry-1403-1404-group-b",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-1403-1404-group-b"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q024",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q025",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q019",
+      "kind": "repeat",
+      "reason": "Water is consumed, not generated, in the beta-oxidation spiral",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q011",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q019",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q023",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q012",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q023",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q024",
+      "kind": "repeat",
+      "reason": "Odd-chain fatty acids yield propionyl-CoA",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q024",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q020",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q016",
+      "kind": "repeat",
+      "reason": "Cholesterol synthesis does not require malonyl-CoA",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "sourcePaperIds": [
+        "biochemistry-1399-metabolism",
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q016",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-1399-metabolism-q010",
+          "paperId": "biochemistry-1399-metabolism",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/biochemistry/past-papers/1399-metabolism/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q013",
+      "kind": "repeat",
+      "reason": "Insulin activates HMG-CoA reductase",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q013",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q024",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q005",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q005",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=1"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q049",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 49,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q022",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q022",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q026",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1399-metabolism-q015",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-1399-metabolism",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "sourcePaperIds": [
+        "biochemistry-1399-metabolism",
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q021",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-1399-metabolism-q015",
+          "paperId": "biochemistry-1399-metabolism",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/1399-metabolism/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q026",
+      "kind": "repeat",
+      "reason": "Citrate carries acetyl units to the cytosol",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2017-kish"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2017-kish-q017",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q026",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q017",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q010",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q017",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q007",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q043",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 43,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q007",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-42-q031",
+      "kind": "repeat",
+      "reason": "Ketone bodies are not substrates for net gluconeogenesis",
+      "paperId": "biochemistry-theory-42",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "biochemistry-theory-42",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-42-q031",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q040",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q039",
+      "kind": "repeat",
+      "reason": "Renal glucose transport is insulin independent",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "sectionTitle": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-53-q041",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 41,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=9"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q039",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 39,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q005",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "sectionTitle": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q031",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q005",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q008",
+      "kind": "repeat",
+      "reason": "Glycolysis occurs in the cytosol",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q008",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-2017-kish-q025",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q027",
+      "kind": "repeat",
+      "reason": "Pyruvate kinase substrate-level phosphorylation",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q027",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q040",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q027",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "sectionTitle": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2017-kish-q027",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q008",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q037",
+      "kind": "repeat",
+      "reason": "Fasting does not stimulate hepatic glycogenesis",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q014",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q037",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 37,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q002",
+      "kind": "repeat",
+      "reason": "Diazoxide-related diabetes is a secondary/other specific type",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical",
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q001",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=2"
+        },
+        {
+          "questionId": "biochemistry-1403-clinical-q002",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q038",
+      "kind": "repeat",
+      "reason": "Skeletal muscle does not produce ketone bodies",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-ketones",
+      "sectionTitle": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q015",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q038",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 38,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q012",
+      "kind": "repeat",
+      "reason": "ApoA-I in HDL formation",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical",
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q023",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-1403-clinical-q012",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-july-23-q004",
+      "kind": "repeat",
+      "reason": "Hepatic lipase converts IDL to LDL",
+      "paperId": "biochemistry-2023-july-23",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1399-metabolism",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q004",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 4,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=2"
+        },
+        {
+          "questionId": "biochemistry-1399-metabolism-q003",
+          "paperId": "biochemistry-1399-metabolism",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/biochemistry/past-papers/1399-metabolism/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q004",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2017-kish-q004",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 4,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=2"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q022",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q013",
+      "kind": "repeat",
+      "reason": "Thymine breakdown gives beta-aminoisobutyrate",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q013",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=3"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q023",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-july-23-q019",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-july-23",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q047",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 47,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q019",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-july-23-q020",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-july-23",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2023-july-23",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q048",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 48,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-2023-july-23-q020",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-42-q023",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-theory-42",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-theory-42",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-42-q023",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=7"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q019",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-1404-group-b-q014",
+      "kind": "repeat",
+      "reason": "Oligomycin inhibits ATP synthase",
+      "paperId": "biochemistry-1403-1404-group-b",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-1403-1404-group-b",
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-42-q015",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=5"
+        },
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q014",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-42-q029",
+      "kind": "repeat",
+      "reason": "Uncoupling separates electron transport from ATP synthesis",
+      "paperId": "biochemistry-theory-42",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-theory-42",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-42-q029",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 29,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=8"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q046",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 46,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q032",
+      "kind": "repeat",
+      "reason": "Isocitrate oxidation generates high-energy reducing equivalents",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish",
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2017-kish-q032",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q039",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 39,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q021",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q021",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q011",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q026",
+      "kind": "repeat",
+      "reason": "PPP does not directly generate ATP",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q026",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-theory-42-q033",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q047",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q031",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q047",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 47,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q014",
+      "kind": "repeat",
+      "reason": "Triamterene can cause hyperkalemia",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "sectionTitle": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical",
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q014",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-1403-clinical-q014",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q017",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds",
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q017",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=4"
+        },
+        {
+          "questionId": "biochemistry-2025-sep-07-q021",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q048",
+      "kind": "repeat",
+      "reason": "Urea nitrogen donors",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26",
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q048",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 48,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=10"
+        },
+        {
+          "questionId": "biochemistry-theory-53-q036",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q041",
+      "kind": "repeat",
+      "reason": "Same question wording and accepted answer across source collections",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29",
+        "biochemistry-2023-july-23"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-july-23-q025",
+          "paperId": "biochemistry-2023-july-23",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-july-23/original.pdf#page=6"
+        },
+        {
+          "questionId": "biochemistry-2023-jan-29-q041",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 41,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q001",
+      "kind": "coverage",
+      "reason": "Acid-active lingual lipase",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "sectionTitle": "Dietary lipid digestion: from meal to absorbable products",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q001",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q002",
+      "kind": "coverage",
+      "reason": "CCK versus secretin functions",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "sectionTitle": "Dietary lipid digestion: from meal to absorbable products",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q002",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q003",
+      "kind": "coverage",
+      "reason": "Mixed micelles versus intact triglyceride",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "sectionTitle": "Micelles, enterocytes, chylomicrons and remnant uptake",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q003",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q012",
+      "kind": "coverage",
+      "reason": "Portal absorption of shorter-chain fatty acids",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "sectionTitle": "Micelles, enterocytes, chylomicrons and remnant uptake",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q012",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q018",
+      "kind": "coverage",
+      "reason": "Carnitine shuttle",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q018",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q015",
+      "kind": "coverage",
+      "reason": "Peroxisomal very-long-chain fatty-acid oxidation",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2017-kish-q015",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q019",
+      "kind": "coverage",
+      "reason": "Calculate beta-oxidation cycle count",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2017-kish-q019",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q002",
+      "kind": "coverage",
+      "reason": "Ketogenesis: HMG-CoA synthase, not reductase",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-ketones",
+      "sectionTitle": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q002",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q010",
+      "kind": "coverage",
+      "reason": "Late fasting muscle fuel selection",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q010",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q016",
+      "kind": "coverage",
+      "reason": "Statin target",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q016",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1400-clinical-q008",
+      "kind": "coverage",
+      "reason": "SLOS biochemical block",
+      "paperId": "biochemistry-1400-clinical",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q008",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q012",
+      "kind": "coverage",
+      "reason": "Nascent VLDL apoprotein",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q012",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q020",
+      "kind": "coverage",
+      "reason": "Familial hypercholesterolemia: LDL receptor",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q020",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q013",
+      "kind": "coverage",
+      "reason": "Type III dysbetalipoproteinemia",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q013",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q014",
+      "kind": "coverage",
+      "reason": "LCAT in HDL metabolism",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q014",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q018",
+      "kind": "coverage",
+      "reason": "Triglyceride-rich chylomicrons",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q018",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1399-metabolism-q018",
+      "kind": "coverage",
+      "reason": "ABCA1 and reverse cholesterol transport",
+      "paperId": "biochemistry-1399-metabolism",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1399-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1399-metabolism-q018",
+          "paperId": "biochemistry-1399-metabolism",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/1399-metabolism/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1400-clinical-q021",
+      "kind": "coverage",
+      "reason": "Tangier disease",
+      "paperId": "biochemistry-1400-clinical",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q021",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q001",
+      "kind": "coverage",
+      "reason": "Hexokinase versus glucokinase kinetics",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "sectionTitle": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q001",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q006",
+      "kind": "coverage",
+      "reason": "Feed-forward regulation of pyruvate kinase",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "sectionTitle": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q006",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q032",
+      "kind": "coverage",
+      "reason": "Pyruvate kinase deficiency and RBC energy",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "sectionTitle": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q032",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q007",
+      "kind": "coverage",
+      "reason": "Rapoport shunt and 2,3-BPG",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "sectionTitle": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q007",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q031",
+      "kind": "coverage",
+      "reason": "Glycolytic NADH-producing step",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q031",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q034",
+      "kind": "coverage",
+      "reason": "UDP-glucose in glycogen synthesis",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-glycogen",
+      "sectionTitle": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q034",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q009",
+      "kind": "coverage",
+      "reason": "McArdle enzyme defect",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-glycogen",
+      "sectionTitle": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q009",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q012",
+      "kind": "coverage",
+      "reason": "Cori/debranching-enzyme defect",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-glycogen",
+      "sectionTitle": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q012",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q035",
+      "kind": "coverage",
+      "reason": "Pompe/acid maltase deficiency",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-glycogen",
+      "sectionTitle": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q035",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q033",
+      "kind": "coverage",
+      "reason": "Gluconeogenesis ATP cost, distinct from precursor count",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q033",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q007",
+      "kind": "coverage",
+      "reason": "PEPCK bypass reaction",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 9,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q007",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-1404-group-b-q025",
+      "kind": "coverage",
+      "reason": "Three regulated TCA enzymes",
+      "paperId": "biochemistry-1403-1404-group-b",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "biochemistry-1403-1404-group-b"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q025",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-1404-group-b-q027",
+      "kind": "coverage",
+      "reason": "PDH coenzyme sequence",
+      "paperId": "biochemistry-1403-1404-group-b",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "biochemistry-1403-1404-group-b"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q027",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q001",
+      "kind": "coverage",
+      "reason": "Complex I oxidizes NADH",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q001",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q003",
+      "kind": "coverage",
+      "reason": "Complex IV inhibitors",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q003",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q002",
+      "kind": "coverage",
+      "reason": "Electrical and pH components of proton motive force",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q002",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q003",
+      "kind": "coverage",
+      "reason": "G6PD, glutathione and oxidant hemolysis",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q003",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-sep-07-q037",
+      "kind": "coverage",
+      "reason": "Classic galactosemia enzyme defect",
+      "paperId": "biochemistry-2025-sep-07",
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "sectionTitle": "Fructose, galactose, mannose and the polyol pathway",
+      "pdfPage": 14,
+      "sourcePaperIds": [
+        "biochemistry-2025-sep-07"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-sep-07-q037",
+          "paperId": "biochemistry-2025-sep-07",
+          "sourceNumber": 37,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-sep-07/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q006",
+      "kind": "coverage",
+      "reason": "Hereditary fructose intolerance versus malabsorption",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "sectionTitle": "Fructose, galactose, mannose and the polyol pathway",
+      "pdfPage": 14,
+      "sourcePaperIds": [
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-clinical-q006",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1400-clinical-q005",
+      "kind": "coverage",
+      "reason": "Polyol pathway and NADPH consumption",
+      "paperId": "biochemistry-1400-clinical",
+      "sectionId": "biochemistry/biochem-other-sugars",
+      "sectionTitle": "Fructose, galactose, mannose and the polyol pathway",
+      "pdfPage": 14,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q005",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q022",
+      "kind": "coverage",
+      "reason": "Citrate activates fatty-acid synthesis",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q022",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q038",
+      "kind": "coverage",
+      "reason": "Human fatty-acid desaturation limits",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q038",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 38,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q040",
+      "kind": "coverage",
+      "reason": "Transdeamination and glutamate dehydrogenase",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q040",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q026",
+      "kind": "coverage",
+      "reason": "N-acetylglutamate activates CPS-I",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q026",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q010",
+      "kind": "coverage",
+      "reason": "Urea-cycle energy requirement",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q010",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2017-kish-q012",
+      "kind": "coverage",
+      "reason": "Fumarate links urea and TCA cycles",
+      "paperId": "biochemistry-2017-kish",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "biochemistry-2017-kish"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2017-kish-q012",
+          "paperId": "biochemistry-2017-kish",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/2017-kish/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-1404-group-b-q037",
+      "kind": "coverage",
+      "reason": "Amino-acid carbon-skeleton destinations",
+      "paperId": "biochemistry-1403-1404-group-b",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "sourcePaperIds": [
+        "biochemistry-1403-1404-group-b"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q037",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 37,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q035",
+      "kind": "coverage",
+      "reason": "Homocysteine vitamin requirements",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "sourcePaperIds": [
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-clinical-q035",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-42-q012",
+      "kind": "coverage",
+      "reason": "PKU and tetrahydrobiopterin",
+      "paperId": "biochemistry-theory-42",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-42-q012",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q022",
+      "kind": "coverage",
+      "reason": "Hartnup neutral amino-acid transport",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q022",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q011",
+      "kind": "coverage",
+      "reason": "BH4-dependent hydroxylases",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 13,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q011",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q043",
+      "kind": "coverage",
+      "reason": "Creatine precursor amino acids",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q043",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 43,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q023",
+      "kind": "coverage",
+      "reason": "Tyrosine-derived special products",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q023",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q020",
+      "kind": "coverage",
+      "reason": "Conjugated hyperbilirubinemia",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "sourcePaperIds": [
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-clinical-q020",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-42-q027",
+      "kind": "coverage",
+      "reason": "Bilirubin conjugation and solubility",
+      "paperId": "biochemistry-theory-42",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "sourcePaperIds": [
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-42-q027",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-1404-group-b-q003",
+      "kind": "coverage",
+      "reason": "Lead poisoning and heme synthesis",
+      "paperId": "biochemistry-1403-1404-group-b",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "sourcePaperIds": [
+        "biochemistry-1403-1404-group-b"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-1404-group-b-q003",
+          "paperId": "biochemistry-1403-1404-group-b",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-1404-group-b/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q040",
+      "kind": "coverage",
+      "reason": "Purine ring nitrogen origins",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q040",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-53-q016",
+      "kind": "coverage",
+      "reason": "Original pyrimidine ring-origin image",
+      "paperId": "biochemistry-theory-53",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-53-q016",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-53-q024",
+      "kind": "coverage",
+      "reason": "ADA deficiency, dATP and ribonucleotide reductase",
+      "paperId": "biochemistry-theory-53",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-53-q024",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q034",
+      "kind": "coverage",
+      "reason": "IMP versus pyrimidine OMP",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q034",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-53-q014",
+      "kind": "coverage",
+      "reason": "First ribose-linked pyrimidine nucleotide",
+      "paperId": "biochemistry-theory-53",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-53-q014",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q032",
+      "kind": "coverage",
+      "reason": "Thioredoxin and deoxyribonucleotide production",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q032",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1399-metabolism-q004",
+      "kind": "coverage",
+      "reason": "Methotrexate and nucleotide synthesis",
+      "paperId": "biochemistry-1399-metabolism",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "sourcePaperIds": [
+        "biochemistry-1399-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1399-metabolism-q004",
+          "paperId": "biochemistry-1399-metabolism",
+          "sourceNumber": 4,
+          "sourceUrl": "/study/biochemistry/past-papers/1399-metabolism/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q059",
+      "kind": "coverage",
+      "reason": "Type 2 diabetes and insulin resistance",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-diabetes-integration",
+      "sectionTitle": "Diabetes and metabolic perturbations: causal review",
+      "pdfPage": 44,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q059",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 59,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1400-clinical-q002",
+      "kind": "coverage",
+      "reason": "Hyperosmolar state versus ketoacidosis",
+      "paperId": "biochemistry-1400-clinical",
+      "sectionId": "biochemistry/biochem-diabetes-integration",
+      "sectionTitle": "Diabetes and metabolic perturbations: causal review",
+      "pdfPage": 44,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q002",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q001",
+      "kind": "coverage",
+      "reason": "C-peptide and endogenous insulin",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "sourcePaperIds": [
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 12,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-clinical-q001",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q060",
+      "kind": "coverage",
+      "reason": "PLC generates IP3 and DAG",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-endocrine-signaling",
+      "sectionTitle": "Hormone receptors, second messengers and steroid transport",
+      "pdfPage": 51,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 1,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q060",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 60,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q053",
+      "kind": "coverage",
+      "reason": "Intracellular steroid receptors",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-endocrine-signaling",
+      "sectionTitle": "Hormone receptors, second messengers and steroid transport",
+      "pdfPage": 51,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 1,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q053",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 53,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q063",
+      "kind": "coverage",
+      "reason": "Glucagon/cAMP signaling",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-endocrine-signaling",
+      "sectionTitle": "Hormone receptors, second messengers and steroid transport",
+      "pdfPage": 51,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 1,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q063",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 63,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2025-feb-dds-q054",
+      "kind": "coverage",
+      "reason": "V2 resistance in nephrogenic DI",
+      "paperId": "biochemistry-2025-feb-dds",
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "sectionTitle": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "sourcePaperIds": [
+        "biochemistry-2025-feb-dds"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-2025-feb-dds-q054",
+          "paperId": "biochemistry-2025-feb-dds",
+          "sourceNumber": 54,
+          "sourceUrl": "/study/biochemistry/past-papers/2025-feb-dds/original.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1400-clinical-q012",
+      "kind": "coverage",
+      "reason": "Urine albumin/creatinine for early renal injury",
+      "paperId": "biochemistry-1400-clinical",
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "sectionTitle": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q012",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1400-clinical-q015",
+      "kind": "coverage",
+      "reason": "Prerenal urea versus creatinine",
+      "paperId": "biochemistry-1400-clinical",
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "sectionTitle": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "sourcePaperIds": [
+        "biochemistry-1400-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-1400-clinical-q015",
+          "paperId": "biochemistry-1400-clinical",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/biochemistry/past-papers/1400-clinical/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-53-q028",
+      "kind": "coverage",
+      "reason": "Creatinine and estimated filtration",
+      "paperId": "biochemistry-theory-53",
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "sectionTitle": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "sourcePaperIds": [
+        "biochemistry-theory-53"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-53-q028",
+          "paperId": "biochemistry-theory-53",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-53/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-theory-42-q024",
+      "kind": "coverage",
+      "reason": "GGT distinguishes hepatobiliary from bone ALP",
+      "paperId": "biochemistry-theory-42",
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "sectionTitle": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "sourcePaperIds": [
+        "biochemistry-theory-42"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-theory-42-q024",
+          "paperId": "biochemistry-theory-42",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/biochemistry/past-papers/theory-42/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1399-metabolism-q014",
+      "kind": "coverage",
+      "reason": "High ALP with normal GGT",
+      "paperId": "biochemistry-1399-metabolism",
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "sectionTitle": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "sourcePaperIds": [
+        "biochemistry-1399-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1399-metabolism-q014",
+          "paperId": "biochemistry-1399-metabolism",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/1399-metabolism/original.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q018",
+      "kind": "coverage",
+      "reason": "Marked ALT elevation",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "sectionTitle": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "sourcePaperIds": [
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 10,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-clinical-q018",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-1402-group-a-q017",
+      "kind": "coverage",
+      "reason": "Hemolysis interferes with LDH interpretation",
+      "paperId": "biochemistry-1401-1402-group-a",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "sourcePaperIds": [
+        "biochemistry-1401-1402-group-a"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-1402-group-a-q017",
+          "paperId": "biochemistry-1401-1402-group-a",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-1402-group-a/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1403-clinical-q036",
+      "kind": "coverage",
+      "reason": "Troponin and myocardial injury",
+      "paperId": "biochemistry-1403-clinical",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "sourcePaperIds": [
+        "biochemistry-1403-clinical"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 11,
+      "members": [
+        {
+          "questionId": "biochemistry-1403-clinical-q036",
+          "paperId": "biochemistry-1403-clinical",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/biochemistry/past-papers/1403-clinical/original.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q031",
+      "kind": "coverage",
+      "reason": "Primary hypothyroidism feedback",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-thyroid",
+      "sectionTitle": "Thyroid biochemistry and metabolic laboratory patterns",
+      "pdfPage": 52,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 1,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q031",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=12"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-1401-metabolism-q032",
+      "kind": "coverage",
+      "reason": "Hyperthyroidism biochemical tendencies",
+      "paperId": "biochemistry-1401-metabolism",
+      "sectionId": "biochemistry/biochem-thyroid",
+      "sectionTitle": "Thyroid biochemistry and metabolic laboratory patterns",
+      "pdfPage": 52,
+      "sourcePaperIds": [
+        "biochemistry-1401-metabolism"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 1,
+      "members": [
+        {
+          "questionId": "biochemistry-1401-metabolism-q032",
+          "paperId": "biochemistry-1401-metabolism",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/biochemistry/past-papers/1401-metabolism/original.pdf#page=12"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2023-jan-29-q014",
+      "kind": "coverage",
+      "reason": "Corticosteroid effects on phospholipase A2",
+      "paperId": "biochemistry-2023-jan-29",
+      "sectionId": "biochemistry/biochem-complex-lipids",
+      "sectionTitle": "Membrane lipids, sphingolipidoses and eicosanoids",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "biochemistry-2023-jan-29"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 1,
+      "members": [
+        {
+          "questionId": "biochemistry-2023-jan-29-q014",
+          "paperId": "biochemistry-2023-jan-29",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/biochemistry/past-papers/2023-jan-29/original.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2022-jan-26-q025",
+      "kind": "coverage",
+      "reason": "Positive nitrogen balance",
+      "paperId": "biochemistry-2022-jan-26",
+      "sectionId": "biochemistry/biochem-nutrition-review",
+      "sectionTitle": "Nutrition, nitrogen balance and final integration checkpoints",
+      "pdfPage": 47,
+      "sourcePaperIds": [
+        "biochemistry-2022-jan-26"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 2,
+      "members": [
+        {
+          "questionId": "biochemistry-2022-jan-26-q025",
+          "paperId": "biochemistry-2022-jan-26",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/biochemistry/past-papers/2022-jan-26/original.pdf#page=5"
+        }
+      ]
+    }
+  ],
+  "fingerprint": "f5901e2714387380a86a7a4ebddf1d04965022b450a2272123d5c6832b868d02"
+}
