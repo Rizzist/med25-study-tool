@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { nutritionPractice } from "./content/nutrition-practice.mjs";
 import { nutritionPastPapers } from "./content/nutrition-past-papers.mjs";
+import { extendNutrition } from "./lib/nutrition-imports.mjs";
 const root = resolve(import.meta.dirname,"..");
 const sources = JSON.parse(readFileSync(resolve(root,"data/nutrition/sources.json"),"utf8"));
 const modules = new Map(sources.sections.map(s => [s.id,s]));
@@ -84,7 +85,8 @@ function output(path,value){
   if(process.argv.includes("--check")){ assert.equal(readFileSync(file,"utf8"),text,`${path} is stale`); }
   else { mkdirSync(resolve(file,".."),{recursive:true});writeFileSync(file,text); }
 }
+const extended=extendNutrition(root,sources,final,catalog,output);
 output("data/bank/questions/term2-nutrition.jsonl",practice.map(q=>JSON.stringify(q)).join("\n")+"\n");
-output("data/final-exams/nutrition-past-papers.jsonl",final.map(q=>JSON.stringify(q)).join("\n")+"\n");
-output("data/nutrition/catalog.json",catalog);
-console.log(`Nutrition: ${practice.length} review/book practice MCQs; ${final.length} scored original-paper MCQs; all ${catalog.archive.length} source items retained in Final Exam.`);
+output("data/final-exams/nutrition-past-papers.jsonl",extended.final.map(q=>JSON.stringify(q)).join("\n")+"\n");
+output("data/nutrition/catalog.json",extended.catalog);
+console.log(`Nutrition: ${practice.length} review/book practice MCQs; ${extended.final.length} scored original-paper MCQs; all ${extended.catalog.archive.length} source items retained in Final Exam.`);

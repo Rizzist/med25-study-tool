@@ -49,13 +49,14 @@ export function NutritionPaperArchive() {
   const visible = useMemo(() => catalog.archive.filter(r => (paperId === "all" || r.paperId === paperId) && `${r.id} ${r.topic} ${r.sectionId} ${r.originalQuestion?.prompt ?? ""}`.toLowerCase().includes(search.toLowerCase().trim())), [paperId,search]);
   const selected = visible.find(r => r.id === selectedId) ?? visible[0];
   const source = catalog.papers.find(p => p.id === selected?.paperId);
+  const sourceOriginal = selected && 'sourceOriginal' in selected ? selected.sourceOriginal : null;
   const index = visible.findIndex(r => r.id === selected?.id);
   function choose(id: string) { setSelectedId(id); setRevealed(false); setDocumentOpen(false); }
   const pdfUrl = source && selected ? `${source.file}#page=${selected.page}&view=FitH` : "";
   return <section aria-label="Complete nutrition source archive">
-    <header className={styles.heading}><div><h1>Every original question, with answer notes</h1><p>{catalog.counts.allSourceItems} source items: 92 general-nutrition and 36 oral-health items. Duplicates remain visible but do not get extra scored weight.</p></div><span>{reviewed.length}/{catalog.counts.allSourceItems} reviewed</span></header>
+    <header className={styles.heading}><div><h1>Every original question, with answer notes</h1><p>{catalog.counts.allSourceItems} source items across {catalog.papers.length} collections, including the separately labelled oral-health supplement. Duplicate scans remain visible without extra scored weight.</p></div><span>{reviewed.length}/{catalog.counts.allSourceItems} reviewed</span></header>
     <div className={styles.filters}>
-      <label>Paper<select value={paperId} onChange={e => { setPaperId(e.target.value); choose(""); }}><option value="all">All four papers · 128 items</option>{catalog.papers.map(p => <option key={p.id} value={p.id}>{p.id} · {p.title} ({p.itemCount})</option>)}</select></label>
+      <label>Paper<select value={paperId} onChange={e => { setPaperId(e.target.value); choose(""); }}><option value="all">All {catalog.papers.length} collections · {catalog.counts.allSourceItems} items</option>{catalog.papers.map(p => <option key={p.id} value={p.id}>{p.id} · {p.title} ({p.itemCount})</option>)}</select></label>
       <label>Find a question<input type="search" placeholder="ID or topic, e.g. F21, iron" value={search} onChange={e => { setSearch(e.target.value); choose(""); }} /></label>
     </div>
     <div className={styles.archiveLayout}>
@@ -63,6 +64,7 @@ export function NutritionPaperArchive() {
       {selected && source ? <article className={styles.item} key={selected.id}>
         <div className={styles.itemMeta}><b>{selected.id} · {source.originalFilename} · {selected.locator}</b><span>{index+1}/{visible.length} in this view</span></div>
         <h2>{selected.originalQuestion?.prompt ?? selected.topic}</h2>
+        {selected.status==='study-repair'&&<section className={styles.warning}><b>Edited study version</b><p>The original item had a wording or choice defect. The question above uses the documented study repair, not the original wording.</p>{sourceOriginal&&<details><summary>Read the original stem and choices</summary><p>{sourceOriginal.prompt}</p><ol type="A">{sourceOriginal.options.map((text,index)=><li key={index}>{text}</li>)}</ol></details>}</section>}
         {!selected.gradedQuestionId && <p className={styles.warning}>{selected.ungradedReason}</p>}
         {selected.originalQuestion && <ol type="A" className={styles.originalOptions}>{selected.originalQuestion.options.map(o => <li key={o.id}>{o.text}</li>)}</ol>}
         <p className={styles.note}>The original PDF contains the complete source wording and choices. Original pages may already show a student's selected option; treat those marks as source evidence, not proof of correctness. Some questions span pages.</p>

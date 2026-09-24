@@ -3,13 +3,13 @@
 Supplied source paper/collection. Current course match and syllabus are unconfirmed in the existing catalog; no examination date is invented. The original PDF supplies all wording, including ungraded questions that have no structured transcription.
 
 Collection ID: nutrition-d
-Course: term2-nutrition
+Course: Nutrition
 
-40 retained source records; 29 transcribed prompts; 29 currently graded questions. This is a source collection export, not a claim that the selected items constitute a complete historical examination. Dates are reproduced only as qualified source metadata.
+Study answers are editorial, not authenticated official university keys. Explicit repairs preserve original wording and options.
 
 ## Original sources
 
-- تغذیه.docx (locally rendered to PDF): /study/nutrition/past-papers/bilingual-compilation.pdf — Original source document may contain visible marks.
+- تغذیه.docx (locally rendered to PDF): /study/nutrition/past-papers/bilingual-compilation.pdf
 
 ## Questions
 
@@ -22,7 +22,8 @@ B. Minerals, proteins, and vitamins
 C. Fats, minerals, and water
 D. Carbohydrates, fats, and proteins
 
-Source: Q1 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=1
+Source: Original Q1; page 1.
+
 
 ### 2 · D2
 
@@ -33,7 +34,8 @@ B. Nutrition
 C. Emotional state
 D. Ethnic heritage or regional cuisine
 
-Source: Q2 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=1
+Source: Original Q2; page 1.
+
 
 ### 3 · D3
 
@@ -44,7 +46,8 @@ B. Most likely low in fiber
 C. Most likely poor in vitamins and minerals
 D. Most likely disease promoting
 
-Source: Q3 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=2
+Source: Original Q3; page 2.
+
 
 ### 4 · D4
 
@@ -55,7 +58,8 @@ B. Galactose, starch, and glycogen
 C. Lactose, maltose, and glycogen
 D. Sucrose, fructose, and glucose
 
-Source: Q4 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=2
+Source: Original Q4; page 2.
+
 
 ### 5 · D5
 
@@ -66,7 +70,8 @@ B. Protein
 C. Glucose
 D. Triglycerides
 
-Source: Q5 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=3
+Source: Original Q5; page 3.
+
 
 ### 6 · D6
 
@@ -77,7 +82,8 @@ B. Maintenance of heartbeat and running
 C. Maintenance of body temperature and walking
 D. Maintenance of heartbeat and body temperature
 
-Source: Q6 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=3
+Source: Original Q6; page 3.
+
 
 ### 7 · D7
 
@@ -88,7 +94,8 @@ B. Physical activity
 C. Indirect calorimetry
 D. Thermic effect of food
 
-Source: Q7 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=4
+Source: Original Q7; page 4.
+
 
 ### 8 · D8
 
@@ -99,7 +106,8 @@ B. Central obesity
 C. Waist circumference
 D. Body composition
 
-Source: Q8 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=4
+Source: Original Q8; page 4.
+
 
 ### 9 · D9
 
@@ -110,7 +118,8 @@ B. Consuming fewer and smaller portions of foods and beverages that contain soli
 C. Replacing liquid oils with solid fats whenever possible
 D. Checking Nutrition Facts labels and selecting foods with little saturated fat and no trans fat
 
-Source: Q9 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=4
+Source: Original Q9; page 4.
+
 
 ### 10 · D10
 
@@ -121,7 +130,8 @@ B. Each food group contributes key nutrients, a feature that provides flexibilit
 C. The quantity of food served or eaten at one meal or snack is a standard amount
 D. MyPlate is an educational tool used to illustrate the five food groups
 
-Source: Q10 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=5
+Source: Original Q10; page 5.
+
 
 ### 11 · D11
 
@@ -132,7 +142,8 @@ B. Banana
 C. Peanut
 D. Milk
 
-Source: Q11 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=6
+Source: Original Q11; page 6.
+
 
 ### 12 · D12
 
@@ -143,7 +154,8 @@ B. A
 C. K
 D. D
 
-Source: Q12 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=6
+Source: Original Q12; page 6.
+
 
 ### 13 · D13
 
@@ -154,15 +166,24 @@ B. Niacin
 C. Thiamine
 D. Cobalamin
 
-Source: Q13 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=6
+Source: Original Q13; page 6.
+
 
 ### 14 · D14
 
-Original wording is available only in the linked source PDF. Topic index: Vitamin most affected by drugs. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Methotrexate is an antagonist of which listed vitamin?
 
+A. Thiamine
+B. Folic acid
+C. Pyridoxine
+D. Ascorbic acid
 
-Source: Q14 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=7
+Source: Original Q14; page 7.
+
+Note: Original stem: Which of the following is the most vulnerable vitamin to drug interactions? Original choices: A) Thiamine | B) Folic acid | C) Pyridoxine | D) Ascorbic acid
+
 
 ### 15 · D15
 
@@ -173,7 +194,8 @@ B. Carrot juice
 C. Liver
 D. Squash
 
-Source: Q15 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=7
+Source: Original Q15; page 7.
+
 
 ### 16 · D16
 
@@ -184,7 +206,8 @@ B. Pyridoxine
 C. Thiamine
 D. Folic acid
 
-Source: Q16 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=8
+Source: Original Q16; page 8.
+
 
 ### 17 · D17
 
@@ -195,7 +218,8 @@ B. Catalyzer
 C. Coenzyme
 D. Hormone
 
-Source: Q17 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=8
+Source: Original Q17; page 8.
+
 
 ### 18 · D18
 
@@ -206,7 +230,8 @@ B. A
 C. E
 D. K
 
-Source: Q18 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=9
+Source: Original Q18; page 9.
+
 
 ### 19 · D19
 
@@ -217,7 +242,8 @@ B. Pyridoxine
 C. Zinc
 D. Copper
 
-Source: Q19 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=9
+Source: Original Q19; page 9.
+
 
 ### 20 · D20
 
@@ -228,15 +254,22 @@ B. Apricot
 C. Broccoli
 D. Cucumber
 
-Source: Q20 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=10
+Source: Original Q20; page 10.
+
 
 ### 21 · D21
 
-Original wording is available only in the linked source PDF. Topic index: Vitamin associated with adrenoleukodystrophy. No wording has been reconstructed for this export.
+Which vitamin deficiency is associated with adrenal leukodystrophy?
 
+A. A
+B. B1
+C. D
+D. E
 
+Source: Original Q21; page 10.
 
-Source: Q21 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=10
+Status: Ungraded - Held: unsupported disease premise. No replacement disease or invented correct option is passed off as a past-paper answer.
+
 
 ### 22 · D22
 
@@ -247,23 +280,36 @@ B. C
 C. D
 D. K
 
-Source: Q22 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=11
+Source: Original Q22; page 11.
+
 
 ### 23 · D23
 
-Original wording is available only in the linked source PDF. Topic index: Mineral deficiency and attention symptoms. No wording has been reconstructed for this export.
+Which of the following nutrient deficiency is better known to be associated with attention deficit disorder in children?
 
+A. Zinc, iron
+B. Copper, iron
+C. Choline, iodine
+D. Vitamin A, DHA
 
+Source: Original Q23; page 11.
 
-Source: Q23 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=11
+Status: Ungraded - Held pending the lecturer's supporting study or an authenticated key with qualification.
+
 
 ### 24 · D24
 
-Original wording is available only in the linked source PDF. Topic index: Supplement and older-adult memory. No wording has been reconstructed for this export.
+In an aged individual with primary evidence for memory loss and likelihood of Alzheimer development, supplementation or co-supplementation of which micronutrient(s) is recommended?
 
+A. Folate
+B. Vitamin B12
+C. Vitamins D and E
+D. Vitamins K and D
 
+Source: Original Q24; page 11.
 
-Source: Q24 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=11
+Status: Ungraded - Held: the original stem lacks a specified deficiency, trial population or clinical assessment.
+
 
 ### 25 · D25
 
@@ -274,47 +320,78 @@ B. Cauliflower
 C. Liver
 D. Banana
 
-Source: Q25 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=12
+Source: Original Q25; page 12.
+
 
 ### 26 · D26
 
-Original wording is available only in the linked source PDF. Topic index: Earliest complementary food among choices. No wording has been reconstructed for this export.
+In a dietary plan of an infant under 1 year, which food item is usually started earlier than the others?
 
+A. Almond porridge
+B. Legumes
+C. Wheat sprout
+D. Hazelnut
 
+Source: Original Q26; page 12.
 
-Source: Q26 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=12
+Status: Ungraded - Held: course-specific sequence unverified; no universal first-food ranking invented.
+
 
 ### 27 · D27
 
-Original wording is available only in the linked source PDF. Topic index: High-frequency hearing loss nutrient association. No wording has been reconstructed for this export.
+Which micronutrient deficiency may lead to high-frequency hearing loss?
 
+A. Vitamin B12
+B. Vitamin D and calcium
+C. Folate
+D. Zinc
 
+Source: Original Q27; page 13.
 
-Source: Q27 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=13
+Status: Ungraded - Held: multiple plausible associations among the choices, not a sound single-best-answer item.
+
 
 ### 28 · D28
 
-Original wording is available only in the linked source PDF. Topic index: Exception to breastfeeding contraindications. No wording has been reconstructed for this export.
+Which is not a contraindication for lactation?
 
+A. Galactosemia
+B. Brucellosis in the mother
+C. Active extrapulmonary tuberculosis
+D. Mothers under lithium therapy
 
+Source: Original Q28; page 14.
 
-Source: Q28 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=14
+Status: Ungraded - Held: clinically consequential under-specified exceptions require a qualified source stem.
+
 
 ### 29 · D29
 
-Original wording is available only in the linked source PDF. Topic index: Least allergenic fruit at 10 months. No wording has been reconstructed for this export.
+In a 10-month-old infant, which fruit is less likely associated with food allergy?
 
+A. Orange fruit
+B. Lemon
+C. Pineapple
+D. Strawberry
 
+Source: Original Q29; page 14.
 
-Source: Q29 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=14
+Status: Ungraded - Held: unsupported comparative allergy claim, not scored from the source mark.
+
 
 ### 30 · D30
 
-Original wording is available only in the linked source PDF. Topic index: Supplement preventing auditory-brainstem decline. No wording has been reconstructed for this export.
+Which supplement is effective in preventing reduction of the auditory brainstem response in the elderly?
 
+A. Beta carotene
+B. Selenium
+C. Resveratrol
+D. Vitamin B12
 
+Source: Original Q30; page 15.
 
-Source: Q30 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=15
+Status: Ungraded - Held pending the precise lecturer-cited study; no forced answer.
+
 
 ### 31 · D31
 
@@ -325,7 +402,8 @@ B. 0.8
 C. 1.5
 D. 0.5
 
-Source: Q31 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=15
+Source: Original Q31; page 15.
+
 
 ### 32 · D32
 
@@ -336,7 +414,8 @@ B. Wasting
 C. Kwashiorkor
 D. Osteoporosis
 
-Source: Q32 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=15
+Source: Original Q32; page 15.
+
 
 ### 33 · D33
 
@@ -347,7 +426,8 @@ B. Glutamine
 C. Arginine
 D. Turin
 
-Source: Q33 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=16
+Source: Original Q33; page 16.
+
 
 ### 34 · D34
 
@@ -358,7 +438,8 @@ B. Proline to Cysteine
 C. Glutamine to Cysteine
 D. Methionine to Cysteine
 
-Source: Q34 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=16
+Source: Original Q34; page 16.
+
 
 ### 35 · D35
 
@@ -369,15 +450,24 @@ B. Essential fatty acids deficiency
 C. Marasmus
 D. Acute severe malnutrition
 
-Source: Q35 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=17
+Source: Original Q35; page 17.
+
 
 ### 36 · D36
 
-Original wording is available only in the linked source PDF. Topic index: Not an omega-3 fatty acid. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which of the following is NOT an omega-3 fatty acid?
 
+A. Alpha-linolenic acid
+B. Oleic acid
+C. EPA
+D. DHA
 
-Source: Q36 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=17
+Source: Original Q36; page 17.
+
+Note: Original stem: Which of the following fatty acid is not omega 3 fatty acid? Original choices: A) Linolnic acid | B) Oleic acid | C) EPA | D) DHA
+
 
 ### 37 · D37
 
@@ -388,7 +478,8 @@ B. 77
 C. 91
 D. 56
 
-Source: Q37 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=18
+Source: Original Q37; page 18.
+
 
 ### 38 · D38
 
@@ -399,7 +490,8 @@ B. Rheumatic heart disease
 C. Fatty liver disease
 D. Atherosclerosis
 
-Source: Q38 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=18
+Source: Original Q38; page 18.
+
 
 ### 39 · D39
 
@@ -410,12 +502,20 @@ B. Linoleic acid
 C. Stearic acid
 D. Palmitic acid
 
-Source: Q39 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=19
+Source: Original Q39; page 19.
+
 
 ### 40 · D40
 
-Original wording is available only in the linked source PDF. Topic index: Very-low-fat diet and essential-fat deficiency. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+What percentage of total energy is the lower boundary of the adult AMDR for fat?
 
+A. 30%
+B. 25%
+C. 20%
+D. 10%
 
-Source: Q40 — /study/nutrition/past-papers/bilingual-compilation.pdf#page=19
+Source: Original Q40; page 19.
+
+Note: Original stem: Fat and oil intakes below than ........ percent of kcalories increase the risk of inadequate essential fatty acids intakes? Original choices: A) 30 | B) 25 | C) 20 | D) 10

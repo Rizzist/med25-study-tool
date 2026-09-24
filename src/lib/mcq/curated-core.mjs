@@ -6,7 +6,7 @@ export function coreSelection(manifest,scope='all') {
   const ids=rows.map(r=>r.questionId);
   if(new Set(ids).size!==ids.length)throw Error('Duplicate Core Exam representative.');
   const suffix=section?section.id.split('/').at(-1):scope;
-  return {id:`biochemistry-core-${suffix}`,title:`Biochemistry Core · ${section?.title??(scope==='repeats'?'Repeated patterns':'Full core')} · ${rows.length}`,
+  return {id:`${manifest.idPrefix??'biochemistry-core'}-${suffix}`,title:`${manifest.title?.replace(/ Exam$/,'')??'Biochemistry Core'} · ${section?.title??(scope==='repeats'?'Repeated patterns':'Full core')} · ${rows.length}`,
     gradedQuestionIds:ids,independent:true,coreEvidence:Object.fromEntries(rows.map(r=>[r.questionId,r]))};
 }
 /** Curated ordering is authoritative. Missing members must not silently shorten a test. */

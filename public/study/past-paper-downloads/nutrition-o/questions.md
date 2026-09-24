@@ -3,300 +3,407 @@
 Supplied source paper/collection. Current course match and syllabus are unconfirmed in the existing catalog; no examination date is invented. The original PDF supplies all wording, including ungraded questions that have no structured transcription.
 
 Collection ID: nutrition-o
-Course: term2-nutrition
+Course: Nutrition
 
-36 retained source records; 0 transcribed prompts; 0 currently graded questions. This is a source collection export, not a claim that the selected items constitute a complete historical examination. Dates are reproduced only as qualified source metadata.
+Study answers are editorial, not authenticated official university keys. Explicit repairs preserve original wording and options.
 
 ## Original sources
 
-- تغذیه.pdf: /study/nutrition/past-papers/oral-health.pdf — Original source document may contain visible marks.
+- تغذیه.pdf: /study/nutrition/past-papers/oral-health.pdf
 
 ## Questions
 
 ### 1 · O1
 
-Original wording is available only in the linked source PDF. Topic index: Exception among weight-gain disorders. No wording has been reconstructed for this export.
+Exception among weight-gain disorders
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q1; page 1.
 
-Source: Q1 — /study/nutrition/past-papers/oral-health.pdf#page=1
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 2 · O2
 
-Original wording is available only in the linked source PDF. Topic index: Remineralizing compound / product. No wording has been reconstructed for this export.
+Remineralizing compound / product
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q2; page 1.
 
-Source: Q2 — /study/nutrition/past-papers/oral-health.pdf#page=1
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 3 · O3
 
-Original wording is available only in the linked source PDF. Topic index: Cariogenic food among choices. No wording has been reconstructed for this export.
+Cariogenic food among choices
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q3; page 1.
 
-Source: Q3 — /study/nutrition/past-papers/oral-health.pdf#page=1
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 4 · O4
 
-Original wording is available only in the linked source PDF. Topic index: Nutrient not essential for tooth development. No wording has been reconstructed for this export.
+Nutrient not essential for tooth development
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q4; page 2.
 
-Source: Q4 — /study/nutrition/past-papers/oral-health.pdf#page=2
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 5 · O5
 
-Original wording is available only in the linked source PDF. Topic index: Iron in reproductive-age women versus men. No wording has been reconstructed for this export.
+Iron in reproductive-age women versus men
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q5; page 2.
 
-Source: Q5 — /study/nutrition/past-papers/oral-health.pdf#page=2
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 6 · O6
 
-Original wording is available only in the linked source PDF. Topic index: Oral effects of protein-energy malnutrition. No wording has been reconstructed for this export.
+Oral effects of protein-energy malnutrition
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q6; page 2.
 
-Source: Q6 — /study/nutrition/past-papers/oral-health.pdf#page=2
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 7 · O7
 
-Original wording is available only in the linked source PDF. Topic index: Protective milk/cheese property. No wording has been reconstructed for this export.
+Protective milk/cheese property
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q7; page 2.
 
-Source: Q7 — /study/nutrition/past-papers/oral-health.pdf#page=2
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 8 · O8
 
-Original wording is available only in the linked source PDF. Topic index: Pregnancy supplement and neural-tube development. No wording has been reconstructed for this export.
+Pregnancy supplement and neural-tube development
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q8; page 3.
 
-Source: Q8 — /study/nutrition/past-papers/oral-health.pdf#page=3
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 9 · O9
 
-Original wording is available only in the linked source PDF. Topic index: Caries-associated organism. No wording has been reconstructed for this export.
+Caries-associated organism
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q9; page 3.
 
-Source: Q9 — /study/nutrition/past-papers/oral-health.pdf#page=3
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 10 · O10
 
-Original wording is available only in the linked source PDF. Topic index: Age of infantile beriberi. No wording has been reconstructed for this export.
+Age of infantile beriberi
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q10; page 3.
 
-Source: Q10 — /study/nutrition/past-papers/oral-health.pdf#page=3
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 11 · O11
 
-Original wording is available only in the linked source PDF. Topic index: Drug associated with weight gain. No wording has been reconstructed for this export.
+Drug associated with weight gain
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q11; page 3.
 
-Source: Q11 — /study/nutrition/past-papers/oral-health.pdf#page=3
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 12 · O12
 
-Original wording is available only in the linked source PDF. Topic index: Keshan disease mineral. No wording has been reconstructed for this export.
+Keshan disease mineral
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q12; page 4.
 
-Source: Q12 — /study/nutrition/past-papers/oral-health.pdf#page=4
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 13 · O13
 
-Original wording is available only in the linked source PDF. Topic index: Less cariogenic fruit among choices. No wording has been reconstructed for this export.
+Less cariogenic fruit among choices
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q13; page 4.
 
-Source: Q13 — /study/nutrition/past-papers/oral-health.pdf#page=4
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 14 · O14
 
-Original wording is available only in the linked source PDF. Topic index: Nutrients in periodontal health. No wording has been reconstructed for this export.
+Nutrients in periodontal health
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q14; page 4.
 
-Source: Q14 — /study/nutrition/past-papers/oral-health.pdf#page=4
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 15 · O15
 
-Original wording is available only in the linked source PDF. Topic index: Wernicke-Korsakoff nutrient. No wording has been reconstructed for this export.
+Wernicke-Korsakoff nutrient
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q15; page 4.
 
-Source: Q15 — /study/nutrition/past-papers/oral-health.pdf#page=4
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 16 · O16
 
-Original wording is available only in the linked source PDF. Topic index: Trace element and insulin sensitivity. No wording has been reconstructed for this export.
+Trace element and insulin sensitivity
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q16; page 5.
 
-Source: Q16 — /study/nutrition/past-papers/oral-health.pdf#page=5
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 17 · O17
 
-Original wording is available only in the linked source PDF. Topic index: Components of DRI framework. No wording has been reconstructed for this export.
+Components of DRI framework
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q17; page 5.
 
-Source: Q17 — /study/nutrition/past-papers/oral-health.pdf#page=5
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 18 · O18
 
-Original wording is available only in the linked source PDF. Topic index: C deficiency during tooth development. No wording has been reconstructed for this export.
+C deficiency during tooth development
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q18; page 5.
 
-Source: Q18 — /study/nutrition/past-papers/oral-health.pdf#page=5
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 19 · O19
 
-Original wording is available only in the linked source PDF. Topic index: Protective components in cheese. No wording has been reconstructed for this export.
+Protective components in cheese
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q19; page 5.
 
-Source: Q19 — /study/nutrition/past-papers/oral-health.pdf#page=5
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 20 · O20
 
-Original wording is available only in the linked source PDF. Topic index: Cariostatic food. No wording has been reconstructed for this export.
+Cariostatic food
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q20; page 6.
 
-Source: Q20 — /study/nutrition/past-papers/oral-health.pdf#page=6
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 21 · O21
 
-Original wording is available only in the linked source PDF. Topic index: Saccharin and caries. No wording has been reconstructed for this export.
+Saccharin and caries
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q21; page 6.
 
-Source: Q21 — /study/nutrition/past-papers/oral-health.pdf#page=6
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 22 · O22
 
-Original wording is available only in the linked source PDF. Topic index: Group at B12-deficiency risk. No wording has been reconstructed for this export.
+Group at B12-deficiency risk
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q22; page 6.
 
-Source: Q22 — /study/nutrition/past-papers/oral-health.pdf#page=6
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 23 · O23
 
-Original wording is available only in the linked source PDF. Topic index: Angular cheilitis nutrient exception. No wording has been reconstructed for this export.
+Angular cheilitis nutrient exception
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q23; page 6.
 
-Source: Q23 — /study/nutrition/past-papers/oral-health.pdf#page=6
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 24 · O24
 
-Original wording is available only in the linked source PDF. Topic index: Xerostomia context. No wording has been reconstructed for this export.
+Xerostomia context
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q24; page 7.
 
-Source: Q24 — /study/nutrition/past-papers/oral-health.pdf#page=7
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 25 · O25
 
-Original wording is available only in the linked source PDF. Topic index: Exception among enamel-solubility modifiers. No wording has been reconstructed for this export.
+Exception among enamel-solubility modifiers
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q25; page 7.
 
-Source: Q25 — /study/nutrition/past-papers/oral-health.pdf#page=7
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 26 · O26
 
-Original wording is available only in the linked source PDF. Topic index: Cause of iron deficiency. No wording has been reconstructed for this export.
+Cause of iron deficiency
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q26; page 7.
 
-Source: Q26 — /study/nutrition/past-papers/oral-health.pdf#page=7
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 27 · O27
 
-Original wording is available only in the linked source PDF. Topic index: Weight-loss drug approval exception. No wording has been reconstructed for this export.
+Weight-loss drug approval exception
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q27; page 7.
 
-Source: Q27 — /study/nutrition/past-papers/oral-health.pdf#page=7
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 28 · O28
 
-Original wording is available only in the linked source PDF. Topic index: Cariostatic food. No wording has been reconstructed for this export.
+Cariostatic food
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q28; page 8.
 
-Source: Q28 — /study/nutrition/past-papers/oral-health.pdf#page=8
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 29 · O29
 
-Original wording is available only in the linked source PDF. Topic index: Dental development in C deficiency. No wording has been reconstructed for this export.
+Dental development in C deficiency
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q29; page 8.
 
-Source: Q29 — /study/nutrition/past-papers/oral-health.pdf#page=8
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 30 · O30
 
-Original wording is available only in the linked source PDF. Topic index: Cariogenic substrate. No wording has been reconstructed for this export.
+Cariogenic substrate
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q30; page 8.
 
-Source: Q30 — /study/nutrition/past-papers/oral-health.pdf#page=8
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 31 · O31
 
-Original wording is available only in the linked source PDF. Topic index: Largest calcium source. No wording has been reconstructed for this export.
+Largest calcium source
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q31; page 8.
 
-Source: Q31 — /study/nutrition/past-papers/oral-health.pdf#page=8
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 32 · O32
 
-Original wording is available only in the linked source PDF. Topic index: Anticariogenic option. No wording has been reconstructed for this export.
+Anticariogenic option
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q32; page 9.
 
-Source: Q32 — /study/nutrition/past-papers/oral-health.pdf#page=9
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 33 · O33
 
-Original wording is available only in the linked source PDF. Topic index: Vitamin whose deficiency is not first noticed orally. No wording has been reconstructed for this export.
+Vitamin whose deficiency is not first noticed orally
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q33; page 9.
 
-Source: Q33 — /study/nutrition/past-papers/oral-health.pdf#page=9
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 34 · O34
 
-Original wording is available only in the linked source PDF. Topic index: Infant gum bleeding and maternal vitamin C. No wording has been reconstructed for this export.
+Infant gum bleeding and maternal vitamin C
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q34; page 9.
 
-Source: Q34 — /study/nutrition/past-papers/oral-health.pdf#page=9
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 35 · O35
 
-Original wording is available only in the linked source PDF. Topic index: Anticariogenic food among bread, cheese, apple, pasta. No wording has been reconstructed for this export.
+Anticariogenic food among bread, cheese, apple, pasta
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q35; page 10.
 
-Source: Q35 — /study/nutrition/past-papers/oral-health.pdf#page=10
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.
+
 
 ### 36 · O36
 
-Original wording is available only in the linked source PDF. Topic index: Most cariogenic food group. No wording has been reconstructed for this export.
+Most cariogenic food group
 
+Original question and options: consult the source PDF; not fully transcribed.
 
+Source: Original Q36; page 10.
 
-Source: Q36 — /study/nutrition/past-papers/oral-health.pdf#page=10
+Status: Ungraded - Separate oral-health paper: retained in full; current course match and original keys are not confirmed.

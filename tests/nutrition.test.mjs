@@ -13,31 +13,34 @@ const json = path => JSON.parse(readFileSync(new URL(`../${path}`,import.meta.ur
 const jsonl = path => readFileSync(new URL(`../${path}`,import.meta.url),"utf8").trim().split("\n").map(JSON.parse);
 const practice=jsonl("data/bank/questions/term2-nutrition.jsonl"), final=jsonl("data/final-exams/nutrition-past-papers.jsonl");
 const catalog=json("data/nutrition/catalog.json"), sources=json("data/nutrition/sources.json");
+const resolutions=json('data/nutrition/legacy-resolutions.json');
 const validate=new Ajv2020({allErrors:true}).compile(json("schemas/mcq-question.schema.json"));
 
 test("nutrition: all items satisfy schema, key membership and per-option teaching",()=>{
   for(const q of [...practice,...final]){
     assert(validate(q),`${q.id}: ${JSON.stringify(validate.errors)}`);
     assert(q.options.some(o=>o.id===q.correctOptionId));
-    assert.equal(new Set(q.options.map(o=>o.text.toLowerCase())).size,4);
-    for(const o of q.options.filter(o=>o.id!==q.correctOptionId)) assert(q.distractorExplanations[o.id]?.length>20,`${q.id}/${o.id}`);
+    if(!q.qualityFlags.includes('duplicate-source-distractor'))assert.equal(new Set(q.options.map(o=>o.text.toLowerCase())).size,q.options.length);
+    if(!q.answerReview)for(const o of q.options.filter(o=>o.id!==q.correctOptionId)) assert(q.distractorExplanations[o.id]?.length>20,`${q.id}/${o.id}`);
+    else assert(q.answerReview.evidence.length&&q.explanation.length>30,`${q.id}: sourced answer rationale`);
     assert(q.source.page && q.source.chapter && q.source.excerpt);
     assert(matchesTerm2Exam(q,"term2-nutrition"));
     assert(!matchesTerm2Exam(q,"term2-biochemistry"));
   }
 });
 test("nutrition: original final options/order and keys match the hand-checked transcription",()=>{
-  assert.equal(final.length,nutritionPastPapers.length);
+  assert(final.length>=nutritionPastPapers.length);
   for(const [id,section,prompt,options,key] of nutritionPastPapers){
     const q=final.find(q=>q.id===`nutrition-past-${id.toLowerCase()}`);
+    if(resolutions.questions[id]){const r=resolutions.questions[id];if(r.key){assert(q);assert.equal(q.prompt,r.prompt);assert.deepEqual(q.options.map(o=>o.text),r.options);assert.equal(q.correctOptionId,r.key);}else assert(!q);continue;}
     assert.equal(q.prompt,prompt);assert.deepEqual(q.options.map(o=>o.text),options);
     assert.equal(q.correctOptionId,"ABCD"[key]);
     assert(q.tags.includes(nutritionFinalBank.requiredTag));
     assert(sources.records.some(r=>r.id===id));
   }
 });
-test("nutrition: every one of the 128 source items remains accessible in Final Exam",()=>{
-  assert.equal(catalog.archive.length,128);assert.equal(new Set(catalog.archive.map(r=>r.id)).size,128);
+test("nutrition: all original 128 source items plus imports remain accessible in Final Exam",()=>{
+  assert(catalog.archive.length>128);assert.equal(new Set(catalog.archive.map(r=>r.id)).size,catalog.archive.length);
   for(const [prefix,count] of [["F",24],["N",28],["D",40],["O",36]]){
     for(let n=1;n<=count;n++) assert(catalog.archive.some(r=>r.id===`${prefix}${n}`));
   }
@@ -55,10 +58,12 @@ test("nutrition: every one of the 128 source items remains accessible in Final E
   assert.equal(catalog.archive.find(r=>r.id==="N18").gradingStatus,"duplicate-source");
   assert.equal(catalog.archive.find(r=>r.id==="N24").gradingStatus,"duplicate-source");
 });
-test("nutrition: uncertain keys are visible but never forced into the scored bank",()=>{
+test("nutrition: previously uncertain keys are withheld or transparently resolved, never silently forced",()=>{
   for(const id of ["F4","F11","F13","F16","F19","F21","D14","D21","D24","D28","D29","D30"]){
     const item=catalog.archive.find(r=>r.id===id);
-    assert(item && !item.gradedQuestionId, id);
+    assert(item,id);
+    if(item.gradedQuestionId){const r=resolutions.questions[id];assert(r?.key&&r.evidence.length,id);assert(final.find(q=>q.id===item.gradedQuestionId).answerReview);if(r.repair){assert(r.originalQuestion);assert(final.find(q=>q.id===item.gradedQuestionId).source.excerpt.includes(r.originalQuestion.prompt));}}
+    else assert(item.ungradedReason,id);
   }
   assert.match(catalog.archive.find(r=>r.id==="F21").explanation,/24-hydroxylation/);
   assert.match(catalog.archive.find(r=>r.id==="F11").explanation,/2\.4/);

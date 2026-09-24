@@ -1,0 +1,303 @@
+{
+  "version": "2026-09-24",
+  "scope": "F, N and D general-nutrition source collections only. Editorial teaching keys, not authenticated university answer keys. A scan tick is a provided selection, not proof of correctness. Repairs retain the original wording and choices. Unresolved clinical claims remain ungraded.",
+  "questions": {
+    "F4": {
+      "sectionId": "carbohydrate",
+      "prompt": "Under the FAO/WHO degree-of-polymerization convention, oligosaccharides contain how many monosaccharide units?",
+      "options": ["1 to 2", "3 to 9", "20 to 60", "3 to 20"],
+      "key": "B", "providedKey": "B", "repair": true,
+      "originalQuestion": {"prompt": "Olygosaccharides contain ............... simple sugars.", "options": ["1 to 2", "2 to 5", "20 to 60", "3 to 20"]},
+      "explanation": "The stated FAO/WHO convention assigns degrees of polymerization 3-9 to oligosaccharides. Other texts use slightly different boundaries. The source's marked 2-5 range is not this convention; the study version names the convention and repairs the option.",
+      "evidence": ["https://www.fao.org/4/w8079e/w8079e07.htm"],
+      "note": "Explicit convention-specific repair; no claim that the original flawed choices had a unique official answer."
+    },
+    "F11": {
+      "sectionId": "folate-b12",
+      "prompt": "What is the daily vitamin B12 RDA for a healthy nonpregnant, nonlactating adult?",
+      "options": ["5 mg", "2 mg", "2.4 micrograms", "5 micrograms"],
+      "key": "C", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "How much vitamin B12 is recommended daily?", "options": ["5 mg", "2 mg", "2 microgram", "5 microgram"]},
+      "explanation": "The adult RDA is 2.4 micrograms/day. The marked 2-microgram source option was rounded or outdated and has been explicitly corrected; milligrams would be a thousandfold different unit.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/"],
+      "note": "Option C updated from 2 to 2.4 micrograms and life stage specified."
+    },
+    "F13": {
+      "sectionId": "minerals", "prompt": "What is the zinc RDA for a healthy adult man?",
+      "options": ["30 mg", "18 mg", "11 mg", "40 mg"],
+      "key": "C", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "How much zinc is recommended for adults?", "options": ["30 mg", "18 mg", "11 mg", "40 mg"]},
+      "explanation": "Adult men require 11 mg/day in the DRI framework; nonpregnant adult women require 8 mg/day. The source omitted sex. 40 mg/day is the adult upper intake level, not the RDA.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/Zinc-HealthProfessional/"],
+      "note": "Sex specified so the original male reference value is not generalized to all adults."
+    },
+    "F16": {
+      "sectionId": "protein", "prompt": "Which amino acid has a side chain that closes into a ring with its alpha-amino nitrogen?",
+      "options": ["Phenylalanine", "Serine", "Proline", "Tryptophan"],
+      "key": "C", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "Which amino acid is cyclic?", "options": ["Phenylalanine", "Serine", "Proline", "Tryptophan"]},
+      "explanation": "Proline's side chain links back to its amino nitrogen. Phenylalanine and tryptophan also contain rings, so the unqualified word 'cyclic' does not identify a unique answer.",
+      "evidence": ["https://pubchem.ncbi.nlm.nih.gov/compound/proline"],
+      "note": "The ring relationship, rather than simply presence of any ring, is now specified."
+    },
+    "F19": {
+      "sectionId": "minerals", "prompt": "Ceruloplasmin principally carries which mineral in plasma?",
+      "options": ["Fluoride", "Calcium", "Selenium", "Copper"],
+      "key": "D", "providedKey": "D", "repair": true,
+      "originalQuestion": {"prompt": "Which element is transported and stored by ceruloplasmin?", "options": ["Fluoride", "Calcium", "Selenium", "Copper"]},
+      "explanation": "Ceruloplasmin contains most circulating plasma copper and has ferroxidase activity. It is not the body's general copper storage depot; the source's 'stored by' wording has been removed.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/Copper-HealthProfessional/"],
+      "note": "Study wording corrects the transport-versus-storage conflation."
+    },
+    "F21": {
+      "sectionId": "vitamin-d", "prompt": "Which renal hydroxylation converts 25-hydroxyvitamin D to the active hormone calcitriol?",
+      "options": ["25-hydroxylation", "1-alpha-hydroxylation", "25-1 hydroxylation", "24-hydroxylation"],
+      "key": "B", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "Which hydroxylation of vitamin D takes place in kidneys?", "options": ["25 hydroxylation", "1 hydroxylation", "25 - 1 hydroxylation", "24 hydroxylation"]},
+      "explanation": "The activating renal step adds a hydroxyl group at carbon 1-alpha to 25(OH)D. The liver performs the main 25-hydroxylation. Renal 24-hydroxylation also occurs but is a different, largely inactivating pathway; naming activation removes that ambiguity.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"],
+      "note": "The scan marks C; the corrected activating step is B. The source selection is preserved, not treated as an official key."
+    },
+    "N1": {
+      "sectionId": "foundations", "prompt": "What is the adult acceptable macronutrient distribution range (AMDR) for protein?",
+      "options": ["10-35% of total energy", "50% of total energy", "25-35% of total energy", "Less than 10% of total energy"],
+      "key": "A", "providedKey": null, "repair": true,
+      "originalQuestion": {"prompt": "Proteins are considered to provide...", "options": ["10-15% of total energy", "50% of total energy", "25-35% of total energy", "Less than 10% of total energy"]},
+      "explanation": "The adult protein AMDR is 10-35% of energy. A conventional teaching distribution such as 10-15% is not the whole AMDR. The study version now asks a named standard and includes its full range.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF p. 32, Acceptable Macronutrient Distribution Ranges"],
+      "note": "No source tick is reliably established. Explicit standard-and-option repair."
+    },
+    "N2": {
+      "sectionId": "assessment", "prompt": "Which listed serum measurement should NOT be used by itself as a marker of an older adult's protein intake or total muscle stores?",
+      "options": ["Serum albumin", "Measured percentage of lean body mass", "A dietary protein history", "A longitudinal assessment of weight, intake and illness"],
+      "key": "A", "providedKey": "A", "repair": true,
+      "originalQuestion": {"prompt": "Which is better for evaluating protein intake status in older adults?", "options": ["Serum albumin level", "Calculation of percentage lean body mass", "Blood globulin level", "Calculation of daily energy intake because energy and protein are interdependent"]},
+      "explanation": "Albumin is influenced by inflammation, fluid distribution and illness and must not stand alone as a protein-intake or muscle-mass proxy. Assessment combines intake, clinical context and body/functional changes. This repair teaches the limitation instead of endorsing the misleading source selection.",
+      "evidence": ["https://open.bu.edu/items/01636723-8f00-477e-9307-117d2f24c238"],
+      "note": "Explicit teaching repair, not a transcription of the original question's claim."
+    },
+    "N3": {
+      "sectionId": "protein", "prompt": "Which listed process can use the carbon skeletons of glucogenic nonessential amino acids?",
+      "options": ["Production of ammonia", "Storage in the liver for starvation", "Storage as protein and increase in weight", "Entry into gluconeogenesis"],
+      "key": "D", "providedKey": "D", "repair": true,
+      "originalQuestion": {"prompt": "Which is a use of nonessential amino acids in the body?", "options": ["Production of ammonia", "Storage in the liver for starvation", "Storage as protein and increase in weight", "Entry into gluconeogenesis"]},
+      "explanation": "Glucogenic carbon skeletons can support gluconeogenesis after amino-nitrogen handling. There is no specialized inert amino-acid store. The carbon-skeleton qualifier separates this metabolic use from ammonia formation during nitrogen removal.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 114-115, protein as glucose and energy"],
+      "note": "Duplicate question appears as N24 with reordered options; it must not inflate recurrence."
+    },
+    "N4": {
+      "sectionId": "assessment", "prompt": "Which listed pair combines an index of body size with an index of fat distribution when assessing cardiometabolic risk?",
+      "options": ["Dietary pattern and eating habits", "Waist circumference (WC)", "Body mass index (BMI)", "BMI and waist-to-hip ratio (WHR)"],
+      "key": "D", "providedKey": "D", "repair": true,
+      "originalQuestion": {"prompt": "Which of the following indices better evaluates the risk of heart disease?", "options": ["Assessment of dietary pattern and eating habits", "WC", "BMI", "BMI and WHR"]},
+      "explanation": "BMI describes mass relative to height; WHR adds a fat-distribution measure. Waist circumference is also useful. The original nonspecific 'better' comparison is not proof that this pair universally outperforms every other cardiovascular-risk assessment.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 169-174, BMI and central obesity"],
+      "note": "The study version tests what the indices measure, not an unsupported universal ranking."
+    },
+    "N8": {
+      "sectionId": "ageing", "prompt": "Which statement about nutrition in older adults is most appropriate among these choices?",
+      "options": ["Reduced mobility and sun exposure increase concern about adequate vitamin D intake", "Every older adult should reduce daily energy intake", "Their need for water is not substantial", "All should take iron tablets to prevent anemia"],
+      "key": "A", "providedKey": "A", "repair": true,
+      "originalQuestion": {"prompt": "Which statement about nutrition in older adults is correct?", "options": ["Because of reduced mobility and less sun exposure, vitamin D requirements increase", "It is better to reduce daily energy intake", "Their need for water is not substantial", "It is better for them to take iron tablets to prevent anemia"]},
+      "explanation": "Older adults can be vulnerable to vitamin D inadequacy, particularly with low sunlight exposure. Requirements and intake advice depend on age and circumstances; calorie restriction, low fluid intake and universal iron supplementation are not appropriate blanket rules.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/", "Nutrition & Diet Therapy, 9th ed., later adulthood chapter"],
+      "note": "Clarifies risk versus a universally increased requirement and removes ambiguous generalizations."
+    },
+    "N9": {
+      "sectionId": "clinical-diets", "prompt": "Which choice gives the historical Therapeutic Lifestyle Changes (TLC) saturated-fat target for cholesterol reduction?",
+      "options": ["Increase fiber intake as tolerated", "Reduce saturated fatty acids to less than 7% of total daily energy", "Reduce serum total cholesterol to below 200 mg/dL", "Reduce calorie intake and body weight"],
+      "key": "B", "providedKey": "B", "repair": true,
+      "originalQuestion": {"prompt": "Which is correct regarding nutritional goals in a patient with cardiovascular disease?", "options": ["Increase fiber intake as tolerated", "Reduce saturated fatty acids to less than 7% of total daily energy", "Reduce serum total cholesterol to below 200 mg/dL", "Reduce calorie intake and body weight"]},
+      "explanation": "Less than 7% of energy from saturated fat is the historical TLC target. Other choices may also have value for selected patients, so the original broad stem was not a clean single-best-answer item. This is a historical target, not complete individualized contemporary cardiovascular care.",
+      "evidence": ["https://www.nhlbi.nih.gov/education/TLC-Therapeutic-Lifestyle-Changes-Lower-Cholesterol"],
+      "note": "Historical framework explicitly named to preserve the source concept without implying all other advice is false."
+    },
+    "N11": {
+      "sectionId": "assessment", "prompt": "Which statement best describes a person with abdominal obesity?",
+      "options": ["A normal BMI means there is no problem", "If BMI is below normal, abdominal fat never needs assessment", "Measure hip circumference and make no other assessment", "Cardiovascular risk may be elevated and should be assessed even when BMI is normal"],
+      "key": "D", "providedKey": "D", "repair": true,
+      "originalQuestion": {"prompt": "A person with abdominal obesity:", "options": ["Has no problem if BMI is good", "Should not take action to reduce abdominal fat if BMI is below normal", "It is better to measure hip circumference and then decide", "Has greater cardiovascular risk and action must be taken"]},
+      "explanation": "Central adiposity can confer additional cardiometabolic risk not captured by BMI alone. The next action is contextual risk assessment, not automatic weight loss in every underweight or normal-weight person.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 169-174, body fat distribution"],
+      "note": "The study repair replaces an absolute treatment command with risk assessment."
+    },
+    "N13": {
+      "sectionId": "pregnancy", "prompt": "Under FDA/EPA advice, how often should a pregnant adult eat fish from the lower-mercury 'Best Choices' list (one serving = 4 ounces)?",
+      "options": ["Every day without restriction", "Avoid all fish because of allergy risk", "2-3 servings per week", "Once per month"],
+      "key": "C", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "How many times per week do you recommend that pregnant mothers eat fish?", "options": ["3 times per week", "It is better not to eat it because of allergy risk", "Twice per week", "Every day"]},
+      "explanation": "The named FDA/EPA framework recommends 2-3 weekly servings from Best Choices, totaling 8-12 ounces. Species, mercury level and local advisories matter; the source's unrestricted frequency question could make both two and three reasonable.",
+      "evidence": ["https://www.fda.gov/food/consumers/advice-about-eating-fish"],
+      "note": "Explicit current-guidance repair; do not apply the frequency to high-mercury fish."
+    },
+    "N17": {
+      "sectionId": "protein", "prompt": "Which nutrient should be added to the diet of patients with phenylketonuria?",
+      "options": ["Metunin (source spelling)", "Alanine", "Phenylalanine", "Tyrosine"],
+      "key": "D", "providedKey": "D",
+      "explanation": "In classical phenylketonuria, impaired conversion of phenylalanine to tyrosine makes tyrosine conditionally essential. Phenylalanine is controlled, not completely eliminated; management is specialist-directed.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 111 and 487-490"],
+      "note": "The first source option is misspelled 'metunin' and is not silently reinterpreted as an authenticated amino-acid name."
+    },
+    "N18": {
+      "sectionId": "carbohydrate", "prompt": "Which of the following has the greater role in excreting cholesterol through the gastrointestinal tract?",
+      "options": ["Lignin", "Lactose", "Hemicellulose", "Pectin"],
+      "key": "D", "providedKey": null,
+      "explanation": "Pectin is the intended viscous soluble-fiber answer. This is a duplicate of N6 with a different option order; the answer letter must follow the local order.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 69-74"],
+      "note": "Duplicate-scan copy of N6; excluded from independent repeat counts. The clipped scan does not establish a reliable provided tick."
+    },
+    "N19": {
+      "sectionId": "clinical-diets", "prompt": "Which is the best qualified statement about diet in a metabolically stable adult with chronic kidney disease who is not on dialysis?",
+      "options": ["Always increase protein because every kidney patient needs more", "Always increase fluids to wash out waste", "Restrict every mineral regardless of laboratory results", "A clinician may prescribe moderate protein intake, adjusted to kidney function, nutritional status and treatment"],
+      "key": "D", "providedKey": "B", "repair": true,
+      "originalQuestion": {"prompt": "In the appropriate diet for kidney patients:", "options": ["Increase protein intake because the patient needs more", "It is better for the patient to receive more fluids to excrete waste better", "Mineral intake should be reduced to preserve the kidneys", "If the patient is not dialyzed and serum creatinine is high, a low-protein diet should be used"]},
+      "explanation": "Protein and fluid advice must be individualized. Some nondialysis CKD patients need protein moderation; dialysis can increase protein requirements. Extra fluid is not universally safe, and serum creatinine alone does not specify a diet.",
+      "evidence": ["https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/healthy-eating-adults-chronic-kidney-disease"],
+      "note": "The scan's B is not accepted. D is explicitly repaired to avoid a creatinine-only prescription."
+    },
+    "N21": {
+      "sectionId": "clinical-diets", "prompt": "For a person receiving dialysis, which listed statement is the safest general principle?",
+      "options": ["Monitor fluid intake to avoid fluid overload and edema", "They can consume more minerals without restriction because dialysis completes kidney function", "They can follow an unrestricted diet because dialysis completes kidney function", "They can consume cereals without restriction because dialysis completes kidney function"],
+      "key": "A", "providedKey": "A",
+      "explanation": "Fluid and dietary allowances require monitoring. Dialysis does not eliminate all nutritional restrictions; allowances depend on residual urine output, volume status, modality and laboratory findings.",
+      "evidence": ["https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/healthy-eating-adults-chronic-kidney-disease"],
+      "note": "The scan crops the introductory stem; the dialysis context is evident in the choices. Stem is reconstructed for readability, not claimed verbatim.", "repair": true,
+      "originalQuestion": {"prompt": "[Introductory stem cropped in the scan; options concern dialysis]", "options": ["We should monitor water intake so edema does not occur", "They can receive more minerals because dialysis completes kidney function", "They can have a freer diet because dialysis completes kidney function", "They can consume cereals more freely because dialysis completes kidney function"]}
+    },
+    "N22": {
+      "sectionId": "iron", "prompt": "In which listed state is a physiological fall in hemoglobin concentration classically caused by maternal plasma-volume expansion exceeding red-cell-mass expansion?",
+      "options": ["Anemia in athletes", "Anemia in thalassemia minor", "Anemia in old age", "Anemia in pregnancy"],
+      "key": "D", "providedKey": "D", "repair": true,
+      "originalQuestion": {"prompt": "Which of the following anemia is considered physiological?", "options": ["Anemia in athletes", "Anemia in thalassemia minor", "Anemia in old age", "Anemia in pregnancy"]},
+      "explanation": "Pregnancy is the intended hemodilution example. Athletes can also have dilutional changes, so the original wording is not uniquely discriminating. True iron deficiency may coexist with pregnancy and must not be dismissed as normal.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 318-319"],
+      "note": "Study stem identifies the classical pregnancy mechanism; source's broad physiological-anemia label is qualified."
+    },
+    "N23": {
+      "sectionId": "pregnancy", "prompt": "Adequate folic acid before conception and in early pregnancy reduces the risk of which fetal condition?",
+      "options": ["Neural tube defects", "All respiratory diseases", "All cardiovascular diseases", "All digestive diseases"],
+      "key": "A", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "Taking a special preconception multivitamin reduces the risk of which diseases in the fetus?", "options": ["Neurological diseases", "Respiratory diseases", "Cardiovascular diseases", "Digestive diseases"]},
+      "explanation": "Adequate periconceptional folic acid reduces neural-tube-defect risk. It does not prevent all neurological disease or all congenital disease. The source screenshot marks cardiovascular diseases; that choice does not establish an official or defensible universal key.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/"],
+      "note": "Explicit folic-acid/NTD repair; source selection C preserved separately."
+    },
+    "N24": {
+      "sectionId": "protein", "prompt": "Which listed process can use the carbon skeletons of glucogenic nonessential amino acids?",
+      "options": ["Entry into gluconeogenesis", "Storage in the liver for starvation", "Storage as protein and increase in weight", "Production of ammonia"],
+      "key": "A", "providedKey": "A", "repair": true,
+      "originalQuestion": {"prompt": "Which is a use of nonessential amino acids in the body?", "options": ["Entry into gluconeogenesis", "Storage in the liver for starvation", "Storage as protein and increase in weight", "Production of ammonia"]},
+      "explanation": "This is the N3 carbon-skeleton/gluconeogenesis item with reordered options. The locally correct letter is A, not D.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 114-115"],
+      "note": "Duplicate-scan copy of N3; do not inflate independent recurrence."
+    },
+    "N26": {
+      "sectionId": "energy", "prompt": "Which listed method measures energy expenditure by directly measuring heat released by the body?",
+      "options": ["Direct calorimetry", "Food recall or a food record", "Predictive formulas based on age, sex, activity and weight", "Indirect calorimetry"],
+      "key": "A", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "What is the most accurate method for assessing a person's daily basal energy requirement?", "options": ["Direct calorimetry", "Food recall or a food record", "Accurate formulas based on age, sex, physical activity and weight", "Indirect calorimetry"]},
+      "explanation": "Direct calorimetry measures heat; indirect calorimetry estimates expenditure from respiratory gas exchange. Predictive equations estimate rather than directly measure an individual's expenditure. The original 'most accurate' wording did not define the conditions or measurement standard.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 654-656; calorimetry versus prediction"],
+      "note": "Explicit measurement-principle repair; the source's selected formula answer is not promoted as a measured gold standard."
+    },
+    "N27": {
+      "sectionId": "iron", "prompt": "Which of the following does not usually cause iron-deficiency anemia by itself?",
+      "options": ["Menstruation", "Chronic infection", "Strenuous exercise in adolescent girls", "Occult blood loss in the stool for a year"],
+      "key": "B", "providedKey": "D",
+      "explanation": "Chronic infection more characteristically causes anemia of inflammation with iron sequestration, rather than absolute iron depletion. Sustained gastrointestinal blood loss is a classic cause of iron deficiency. These mechanisms can coexist.",
+      "evidence": ["https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia", "Nutrition & Diet Therapy, 9th ed., PDF pp. 261-265"],
+      "note": "The screenshot marks D; that selection is clinically incorrect for the EXCEPT stem and is retained only as source metadata."
+    },
+    "N28": {
+      "sectionId": "iron", "prompt": "Which is the best food-based advice for reducing iron-deficiency risk among these choices?",
+      "options": ["Give iron tablets regularly to everyone", "Cook food in copper pots", "Include iron-containing foods regularly and avoid taking tea with iron-rich meals", "Avoid all dairy products"],
+      "key": "C", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "What do you recommend to prevent iron deficiency?", "options": ["Regular iron tablets", "Cooking food in copper pots", "Daily iron-containing foods, avoiding excess dairy and tea with iron-containing foods", "Reducing dairy consumption"]},
+      "explanation": "Adequate iron-containing foods and avoiding inhibitory tea with relevant meals are reasonable food-based measures; vitamin C can aid nonheme iron absorption. Supplementation and dietary restrictions depend on need and clinical circumstances, not a universal ban on dairy.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"],
+      "note": "The partially clipped source choice is paraphrased into qualified advice and explicitly preserved above."
+    },
+    "D14": {
+      "sectionId": "folate-b12", "prompt": "Methotrexate is an antagonist of which listed vitamin?",
+      "options": ["Thiamine", "Folic acid", "Pyridoxine", "Ascorbic acid"],
+      "key": "B", "providedKey": "B", "repair": true,
+      "originalQuestion": {"prompt": "Which of the following is the most vulnerable vitamin to drug interactions?", "options": ["Thiamine", "Folic acid", "Pyridoxine", "Ascorbic acid"]},
+      "explanation": "Methotrexate is a folate antagonist. There is no universal 'most vulnerable vitamin' ranking without naming the drug, dose and clinical context. Supplement decisions in a treated patient require the prescriber's guidance.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/"],
+      "note": "A named drug replaces the unsupported universal superlative."
+    },
+    "D21": {
+      "sectionId": "integrated-recall", "prompt": "Which vitamin deficiency is associated with adrenal leukodystrophy?",
+      "options": ["A", "B1", "D", "E"], "key": null, "providedKey": "A",
+      "explanation": "No defensible single answer is established from these choices. X-linked adrenoleukodystrophy is an ABCD1-related peroxisomal disorder, not a disease established to be caused by vitamin A deficiency. The original mark is retained but not scored.",
+      "evidence": ["https://medlineplus.gov/genetics/condition/x-linked-adrenoleukodystrophy/"],
+      "note": "Held: unsupported disease premise. No replacement disease or invented correct option is passed off as a past-paper answer."
+    },
+    "D23": {
+      "sectionId": "minerals", "prompt": "Which of the following nutrient deficiency is better known to be associated with attention deficit disorder in children?",
+      "options": ["Zinc, iron", "Copper, iron", "Choline, iodine", "Vitamin A, DHA"], "key": null, "providedKey": "A",
+      "explanation": "The source marks zinc/iron, but it supplies no study or comparator establishing 'better known' as a unique answer. Associations with nutrient status do not establish that attention disorders are caused by deficiency or that supplements benefit unselected children.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., child nutrition and micronutrient chapters; no matching comparative claim located"],
+      "note": "Held pending the lecturer's supporting study or an authenticated key with qualification."
+    },
+    "D24": {
+      "sectionId": "ageing", "prompt": "In an aged individual with primary evidence for memory loss and likelihood of Alzheimer development, supplementation or co-supplementation of which micronutrient(s) is recommended?",
+      "options": ["Folate", "Vitamin B12", "Vitamins D and E", "Vitamins K and D"], "key": null, "providedKey": "A",
+      "explanation": "The source marks folate, but a universal supplement recommendation does not follow from memory symptoms. Assess reversible causes and deficiencies; folate can obscure hematological signs of B12 deficiency. No uniquely valid universal choice is established.",
+      "evidence": ["https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/", "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/"],
+      "note": "Held: the original stem lacks a specified deficiency, trial population or clinical assessment."
+    },
+    "D26": {
+      "sectionId": "infancy", "prompt": "In a dietary plan of an infant under 1 year, which food item is usually started earlier than the others?",
+      "options": ["Almond porridge", "Legumes", "Wheat sprout", "Hazelnut"], "key": null, "providedKey": "A",
+      "explanation": "The source marks almond porridge, apparently reflecting a local feeding schedule. No matching course schedule is supplied. Readiness, age, safe texture and allergy context matter; whole nuts are a choking risk and cannot be compared to porridge without specifying preparation.",
+      "evidence": ["https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"],
+      "note": "Held: course-specific sequence unverified; no universal first-food ranking invented."
+    },
+    "D27": {
+      "sectionId": "ageing", "prompt": "Which micronutrient deficiency may lead to high-frequency hearing loss?",
+      "options": ["Vitamin B12", "Vitamin D and calcium", "Folate", "Zinc"], "key": null, "providedKey": "A",
+      "explanation": "The source marks B12, but primary observational research reports both B12 and folate associations, and causation or a unique diagnostic answer is not established. A 2010 study found folate, but not B12, remained associated after adjustment for age.",
+      "evidence": ["https://pubmed.ncbi.nlm.nih.gov/21109085/", "https://pubmed.ncbi.nlm.nih.gov/10075346/"],
+      "note": "Held: multiple plausible associations among the choices, not a sound single-best-answer item."
+    },
+    "D28": {
+      "sectionId": "pregnancy", "prompt": "Which is not a contraindication for lactation?",
+      "options": ["Galactosemia", "Brucellosis in the mother", "Active extrapulmonary tuberculosis", "Mothers under lithium therapy"], "key": null, "providedKey": "C",
+      "explanation": "Classic infant galactosemia contraindicates breast milk, while infection and medication advice depends on treatment, disease site, infectivity, infant factors and direct versus expressed feeding. The source does not specify these conditions, and lithium is not a universal absolute prohibition. C cannot be taught as an unconditional rule.",
+      "evidence": ["https://www.cdc.gov/breastfeeding-special-circumstances/hcp/contraindications/index.html", "https://www.ncbi.nlm.nih.gov/books/NBK501153/"],
+      "note": "Held: clinically consequential under-specified exceptions require a qualified source stem."
+    },
+    "D29": {
+      "sectionId": "infancy", "prompt": "In a 10-month-old infant, which fruit is less likely associated with food allergy?",
+      "options": ["Orange fruit", "Lemon", "Pineapple", "Strawberry"], "key": null, "providedKey": "C",
+      "explanation": "The source marks pineapple but provides no validated universal allergy-risk ranking for these four fruits. Individual reactions, preparation and history matter. None can be promised to be the least allergenic for every infant.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., infant feeding chapter; no matching four-fruit comparative ranking located"],
+      "note": "Held: unsupported comparative allergy claim, not scored from the source mark."
+    },
+    "D30": {
+      "sectionId": "ageing", "prompt": "Which supplement is effective in preventing reduction of the auditory brainstem response in the elderly?",
+      "options": ["Beta carotene", "Selenium", "Resveratrol", "Vitamin B12"], "key": null, "providedKey": "D",
+      "explanation": "The source marks B12, but prevention of age-related auditory-brainstem decline is not established by the supplied evidence. B12-deficiency studies report limited or conflicting electrophysiological findings; a short-term supplementation study did not improve hearing. Correcting deficiency is not a universal prevention claim.",
+      "evidence": ["https://pubmed.ncbi.nlm.nih.gov/18032219/", "https://pubmed.ncbi.nlm.nih.gov/33496416/", "https://pubmed.ncbi.nlm.nih.gov/32002975/"],
+      "note": "Held pending the precise lecturer-cited study; no forced answer."
+    },
+    "D36": {
+      "sectionId": "lipids", "prompt": "Which of the following is NOT an omega-3 fatty acid?",
+      "options": ["Alpha-linolenic acid", "Oleic acid", "EPA", "DHA"], "key": "B", "providedKey": "B", "repair": true,
+      "originalQuestion": {"prompt": "Which of the following fatty acid is not omega 3 fatty acid?", "options": ["Linolnic acid", "Oleic acid", "EPA", "DHA"]},
+      "explanation": "Oleic acid is an omega-9 fatty acid. Alpha-linolenic acid, EPA and DHA are omega-3. The source's unspecified/misspelled linolenic option has been clarified to alpha-linolenic; gamma-linolenic is omega-6.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF pp. 86-91"],
+      "note": "Explicit alpha qualifier removes an avoidable ambiguity."
+    },
+    "D40": {
+      "sectionId": "lipids", "prompt": "What percentage of total energy is the lower boundary of the adult AMDR for fat?",
+      "options": ["30%", "25%", "20%", "10%"], "key": "C", "providedKey": "C", "repair": true,
+      "originalQuestion": {"prompt": "Fat and oil intakes below than ........ percent of kcalories increase the risk of inadequate essential fatty acids intakes?", "options": ["30", "25", "20", "10"]},
+      "explanation": "The adult fat AMDR is 20-35% of energy. That lower boundary is not a precise biological essential-fatty-acid deficiency threshold: actual linoleic and alpha-linolenic intake matters. The study version tests the verified numerical standard.",
+      "evidence": ["Nutrition & Diet Therapy, 9th ed., PDF p. 32, AMDR"],
+      "note": "The unsupported sharp deficiency threshold is replaced with the named distribution-range boundary."
+    }
+  },
+  "duplicates": {"N18": "N6", "N24": "N3"}
+}

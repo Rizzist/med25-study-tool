@@ -6,6 +6,9 @@
     "node": "22.x"
   },
   "scripts": {
+    "nutrition:generate": "node scripts/build-nutrition.mjs",
+    "nutrition:core:generate": "node scripts/content/build-nutrition-core.mjs",
+    "nutrition:check": "node scripts/build-nutrition.mjs --check && node scripts/content/build-nutrition-core.mjs --check && node --test tests/nutrition.test.mjs tests/nutrition-imports-core.test.mjs",
     "biochemistry:core:generate": "node scripts/content/build-biochemistry-core.mjs",
     "biochemistry:core:check": "node scripts/content/build-biochemistry-core.mjs --check && node --test tests/biochemistry-core.test.mjs",
     "biochemistry:papers:generate": "node scripts/build-biochemistry-papers.mjs",

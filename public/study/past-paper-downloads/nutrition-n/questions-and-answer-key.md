@@ -3,47 +3,79 @@
 Supplied source paper/collection. Current course match and syllabus are unconfirmed in the existing catalog; no examination date is invented. The original PDF supplies all wording, including ungraded questions that have no structured transcription.
 
 Collection ID: nutrition-n
-Course: term2-nutrition
+Course: Nutrition
 
-28 retained source records; 10 transcribed prompts; 10 currently graded questions. This is a source collection export, not a claim that the selected items constitute a complete historical examination. Dates are reproduced only as qualified source metadata.
+Study answers are editorial, not authenticated official university keys. Explicit repairs preserve original wording and options.
 
 ## Original sources
 
-- Nutrition .pdf: /study/nutrition/past-papers/nutrition-scans.pdf — Original source document may contain visible marks.
+- Nutrition .pdf: /study/nutrition/past-papers/nutrition-scans.pdf
 
 ## Questions
 
 ### 1 · N1
 
-Original wording is available only in the linked source PDF. Topic index: Protein percentage of energy. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+What is the adult acceptable macronutrient distribution range (AMDR) for protein?
 
+A. 10-35% of total energy
+B. 50% of total energy
+C. 25-35% of total energy
+D. Less than 10% of total energy
 
-Source: PDF p. 1 — /study/nutrition/past-papers/nutrition-scans.pdf#page=1
+Source: Original Q1; page 1.
+
+Note: Original stem: Proteins are considered to provide... Original choices: A) 10-15% of total energy | B) 50% of total energy | C) 25-35% of total energy | D) Less than 10% of total energy
+
 
 ### 2 · N2
 
-Original wording is available only in the linked source PDF. Topic index: Older-adult protein assessment. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which listed serum measurement should NOT be used by itself as a marker of an older adult's protein intake or total muscle stores?
 
+A. Serum albumin
+B. Measured percentage of lean body mass
+C. A dietary protein history
+D. A longitudinal assessment of weight, intake and illness
 
-Source: PDF p. 2 — /study/nutrition/past-papers/nutrition-scans.pdf#page=2
+Source: Original Q2; page 2.
+
+Note: Original stem: Which is better for evaluating protein intake status in older adults? Original choices: A) Serum albumin level | B) Calculation of percentage lean body mass | C) Blood globulin level | D) Calculation of daily energy intake because energy and protein are interdependent
+
 
 ### 3 · N3
 
-Original wording is available only in the linked source PDF. Topic index: Use of nonessential amino acids. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which listed process can use the carbon skeletons of glucogenic nonessential amino acids?
 
+A. Production of ammonia
+B. Storage in the liver for starvation
+C. Storage as protein and increase in weight
+D. Entry into gluconeogenesis
 
-Source: PDF p. 3 — /study/nutrition/past-papers/nutrition-scans.pdf#page=3
+Source: Original Q3; page 3.
+
+Note: Original stem: Which is a use of nonessential amino acids in the body? Original choices: A) Production of ammonia | B) Storage in the liver for starvation | C) Storage as protein and increase in weight | D) Entry into gluconeogenesis
+
 
 ### 4 · N4
 
-Original wording is available only in the linked source PDF. Topic index: Anthropometry and CVD risk. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which listed pair combines an index of body size with an index of fat distribution when assessing cardiometabolic risk?
 
+A. Dietary pattern and eating habits
+B. Waist circumference (WC)
+C. Body mass index (BMI)
+D. BMI and waist-to-hip ratio (WHR)
 
-Source: PDF p. 4 — /study/nutrition/past-papers/nutrition-scans.pdf#page=4
+Source: Original Q4; page 4.
+
+Note: Original stem: Which of the following indices better evaluates the risk of heart disease? Original choices: A) Assessment of dietary pattern and eating habits | B) WC | C) BMI | D) BMI and WHR
+
 
 ### 5 · N5
 
@@ -54,7 +86,8 @@ B. Marasmus
 C. Rickets
 D. Iron-deficiency anemia
 
-Source: PDF p. 5 — /study/nutrition/past-papers/nutrition-scans.pdf#page=5
+Source: Original Q5; page 5.
+
 
 ### 6 · N6
 
@@ -65,7 +98,8 @@ B. Lignin
 C. Pectin
 D. Hemicellulose
 
-Source: PDF p. 6 — /study/nutrition/past-papers/nutrition-scans.pdf#page=6
+Source: Original Q6; page 6.
+
 
 ### 7 · N7
 
@@ -76,23 +110,40 @@ B. Weight loss
 C. Inactivity
 D. Loss of lean and muscle mass
 
-Source: PDF p. 7 — /study/nutrition/past-papers/nutrition-scans.pdf#page=7
+Source: Original Q7; page 7.
+
 
 ### 8 · N8
 
-Original wording is available only in the linked source PDF. Topic index: Nutrient concerns in older people. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which statement about nutrition in older adults is most appropriate among these choices?
 
+A. Reduced mobility and sun exposure increase concern about adequate vitamin D intake
+B. Every older adult should reduce daily energy intake
+C. Their need for water is not substantial
+D. All should take iron tablets to prevent anemia
 
-Source: PDF p. 8 — /study/nutrition/past-papers/nutrition-scans.pdf#page=8
+Source: Original Q8; page 8.
+
+Note: Original stem: Which statement about nutrition in older adults is correct? Original choices: A) Because of reduced mobility and less sun exposure, vitamin D requirements increase | B) It is better to reduce daily energy intake | C) Their need for water is not substantial | D) It is better for them to take iron tablets to prevent anemia
+
 
 ### 9 · N9
 
-Original wording is available only in the linked source PDF. Topic index: CVD dietary target. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which choice gives the historical Therapeutic Lifestyle Changes (TLC) saturated-fat target for cholesterol reduction?
 
+A. Increase fiber intake as tolerated
+B. Reduce saturated fatty acids to less than 7% of total daily energy
+C. Reduce serum total cholesterol to below 200 mg/dL
+D. Reduce calorie intake and body weight
 
-Source: PDF p. 9 — /study/nutrition/past-papers/nutrition-scans.pdf#page=9
+Source: Original Q9; page 9.
+
+Note: Original stem: Which is correct regarding nutritional goals in a patient with cardiovascular disease? Original choices: A) Increase fiber intake as tolerated | B) Reduce saturated fatty acids to less than 7% of total daily energy | C) Reduce serum total cholesterol to below 200 mg/dL | D) Reduce calorie intake and body weight
+
 
 ### 10 · N10
 
@@ -103,15 +154,24 @@ B. Less than 8.8 kg
 C. 10 kg
 D. 11.3–15.8 kg
 
-Source: PDF p. 10 — /study/nutrition/past-papers/nutrition-scans.pdf#page=10
+Source: Original Q10; page 10.
+
 
 ### 11 · N11
 
-Original wording is available only in the linked source PDF. Topic index: Central obesity at normal BMI. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which statement best describes a person with abdominal obesity?
 
+A. A normal BMI means there is no problem
+B. If BMI is below normal, abdominal fat never needs assessment
+C. Measure hip circumference and make no other assessment
+D. Cardiovascular risk may be elevated and should be assessed even when BMI is normal
 
-Source: PDF p. 11 — /study/nutrition/past-papers/nutrition-scans.pdf#page=11
+Source: Original Q11; page 11.
+
+Note: Original stem: A person with abdominal obesity: Original choices: A) Has no problem if BMI is good | B) Should not take action to reduce abdominal fat if BMI is below normal | C) It is better to measure hip circumference and then decide | D) Has greater cardiovascular risk and action must be taken
+
 
 ### 12 · N12
 
@@ -122,15 +182,24 @@ B. Is a diet in which fats are reduced overall to reduce metabolic problems
 C. Is the diet of choice for weight loss
 D. Is rich in fiber and relatively high in protein
 
-Source: PDF p. 12 — /study/nutrition/past-papers/nutrition-scans.pdf#page=12
+Source: Original Q12; page 12.
+
 
 ### 13 · N13
 
-Original wording is available only in the linked source PDF. Topic index: Fish during pregnancy. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Under FDA/EPA advice, how often should a pregnant adult eat fish from the lower-mercury 'Best Choices' list (one serving = 4 ounces)?
 
+A. Every day without restriction
+B. Avoid all fish because of allergy risk
+C. 2-3 servings per week
+D. Once per month
 
-Source: PDF p. 13 — /study/nutrition/past-papers/nutrition-scans.pdf#page=13
+Source: Original Q13; page 13.
+
+Note: Original stem: How many times per week do you recommend that pregnant mothers eat fish? Original choices: A) 3 times per week | B) It is better not to eat it because of allergy risk | C) Twice per week | D) Every day
+
 
 ### 14 · N14
 
@@ -141,7 +210,8 @@ B. Assess and modify his eating pattern and lifestyle
 C. Recommend as much nuts and fiber as possible
 D. Recommend weight loss and increased physical activity
 
-Source: PDF p. 14 — /study/nutrition/past-papers/nutrition-scans.pdf#page=14
+Source: Original Q14; page 14.
+
 
 ### 15 · N15
 
@@ -152,7 +222,8 @@ B. Sickle cell anemia
 C. Protein energy malnutrition
 D. Thalassemia
 
-Source: PDF p. 15 — /study/nutrition/past-papers/nutrition-scans.pdf#page=15
+Source: Original Q15; page 15.
+
 
 ### 16 · N16
 
@@ -163,31 +234,50 @@ B. Direct methods
 C. General assessment
 D. Holistic methods
 
-Source: PDF p. 16 — /study/nutrition/past-papers/nutrition-scans.pdf#page=16
+Source: Original Q16; page 16.
+
 
 ### 17 · N17
 
-Original wording is available only in the linked source PDF. Topic index: Conditionally essential amino acid in PKU. No wording has been reconstructed for this export.
+Which nutrient should be added to the diet of patients with phenylketonuria?
 
+A. Metunin (source spelling)
+B. Alanine
+C. Phenylalanine
+D. Tyrosine
 
+Source: Original Q17; page 17.
 
-Source: PDF p. 17 — /study/nutrition/past-papers/nutrition-scans.pdf#page=17
 
 ### 18 · N18
 
-Original wording is available only in the linked source PDF. Topic index: Fiber and cholesterol excretion. No wording has been reconstructed for this export.
+Which of the following has the greater role in excreting cholesterol through the gastrointestinal tract?
 
+A. Lignin
+B. Lactose
+C. Hemicellulose
+D. Pectin
 
+Source: Original Q18; page 18.
 
-Source: PDF p. 18 — /study/nutrition/past-papers/nutrition-scans.pdf#page=18
+Status: Ungraded - Repeated scan of N6; preserved without extra scored weight.
+
 
 ### 19 · N19
 
-Original wording is available only in the linked source PDF. Topic index: Kidney disease diet. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which is the best qualified statement about diet in a metabolically stable adult with chronic kidney disease who is not on dialysis?
 
+A. Always increase protein because every kidney patient needs more
+B. Always increase fluids to wash out waste
+C. Restrict every mineral regardless of laboratory results
+D. A clinician may prescribe moderate protein intake, adjusted to kidney function, nutritional status and treatment
 
-Source: PDF p. 19 — /study/nutrition/past-papers/nutrition-scans.pdf#page=19
+Source: Original Q19; page 19.
+
+Note: Original stem: In the appropriate diet for kidney patients: Original choices: A) Increase protein intake because the patient needs more | B) It is better for the patient to receive more fluids to excrete waste better | C) Mineral intake should be reduced to preserve the kidneys | D) If the patient is not dialyzed and serum creatinine is high, a low-protein diet should be used
+
 
 ### 20 · N20
 
@@ -198,39 +288,74 @@ B. An amount of a nutrient that meets the needs of more than 97% of a specific a
 C. The sum of AI and EAR
 D. An amount of a food that all healthy people in a community have consumed without problems
 
-Source: PDF p. 20 — /study/nutrition/past-papers/nutrition-scans.pdf#page=20
+Source: Original Q20; page 20.
+
 
 ### 21 · N21
 
-Original wording is available only in the linked source PDF. Topic index: Dialysis and fluids. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+For a person receiving dialysis, which listed statement is the safest general principle?
 
+A. Monitor fluid intake to avoid fluid overload and edema
+B. They can consume more minerals without restriction because dialysis completes kidney function
+C. They can follow an unrestricted diet because dialysis completes kidney function
+D. They can consume cereals without restriction because dialysis completes kidney function
 
-Source: PDF p. 21 — /study/nutrition/past-papers/nutrition-scans.pdf#page=21
+Source: Original Q21; page 21.
+
+Note: Original stem: [Introductory stem cropped in the scan; options concern dialysis] Original choices: A) We should monitor water intake so edema does not occur | B) They can receive more minerals because dialysis completes kidney function | C) They can have a freer diet because dialysis completes kidney function | D) They can consume cereals more freely because dialysis completes kidney function
+
 
 ### 22 · N22
 
-Original wording is available only in the linked source PDF. Topic index: Physiological anemia. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+In which listed state is a physiological fall in hemoglobin concentration classically caused by maternal plasma-volume expansion exceeding red-cell-mass expansion?
 
+A. Anemia in athletes
+B. Anemia in thalassemia minor
+C. Anemia in old age
+D. Anemia in pregnancy
 
-Source: PDF p. 22 — /study/nutrition/past-papers/nutrition-scans.pdf#page=22
+Source: Original Q22; page 22.
+
+Note: Original stem: Which of the following anemia is considered physiological? Original choices: A) Anemia in athletes | B) Anemia in thalassemia minor | C) Anemia in old age | D) Anemia in pregnancy
+
 
 ### 23 · N23
 
-Original wording is available only in the linked source PDF. Topic index: Preconception multivitamin benefit. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Adequate folic acid before conception and in early pregnancy reduces the risk of which fetal condition?
 
+A. Neural tube defects
+B. All respiratory diseases
+C. All cardiovascular diseases
+D. All digestive diseases
 
-Source: PDF p. 23 — /study/nutrition/past-papers/nutrition-scans.pdf#page=23
+Source: Original Q23; page 23.
+
+Note: Original stem: Taking a special preconception multivitamin reduces the risk of which diseases in the fetus? Original choices: A) Neurological diseases | B) Respiratory diseases | C) Cardiovascular diseases | D) Digestive diseases
+
 
 ### 24 · N24
 
-Original wording is available only in the linked source PDF. Topic index: Use of nonessential amino acids. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which listed process can use the carbon skeletons of glucogenic nonessential amino acids?
 
+A. Entry into gluconeogenesis
+B. Storage in the liver for starvation
+C. Storage as protein and increase in weight
+D. Production of ammonia
 
-Source: PDF p. 24 — /study/nutrition/past-papers/nutrition-scans.pdf#page=24
+Source: Original Q24; page 24.
+
+Note: Original stem: Which is a use of nonessential amino acids in the body? Original choices: A) Entry into gluconeogenesis | B) Storage in the liver for starvation | C) Storage as protein and increase in weight | D) Production of ammonia
+
+Status: Ungraded - Repeated scan of N3; preserved without extra scored weight.
+
 
 ### 25 · N25
 
@@ -241,418 +366,389 @@ B. 112 + (340–360) kcal
 C. The same as before pregnancy
 D. 340–360 kcal
 
-Source: PDF p. 25 — /study/nutrition/past-papers/nutrition-scans.pdf#page=25
+Source: Original Q25; page 25.
+
 
 ### 26 · N26
 
-Original wording is available only in the linked source PDF. Topic index: Most accurate basal-energy assessment. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which listed method measures energy expenditure by directly measuring heat released by the body?
 
+A. Direct calorimetry
+B. Food recall or a food record
+C. Predictive formulas based on age, sex, activity and weight
+D. Indirect calorimetry
 
-Source: PDF p. 26 — /study/nutrition/past-papers/nutrition-scans.pdf#page=26
+Source: Original Q26; page 26.
+
+Note: Original stem: What is the most accurate method for assessing a person's daily basal energy requirement? Original choices: A) Direct calorimetry | B) Food recall or a food record | C) Accurate formulas based on age, sex, physical activity and weight | D) Indirect calorimetry
+
 
 ### 27 · N27
 
-Original wording is available only in the linked source PDF. Topic index: Exception among causes of iron-deficiency anemia. No wording has been reconstructed for this export.
+Which of the following does not usually cause iron-deficiency anemia by itself?
 
+A. Menstruation
+B. Chronic infection
+C. Strenuous exercise in adolescent girls
+D. Occult blood loss in the stool for a year
 
+Source: Original Q27; page 27.
 
-Source: PDF p. 27 — /study/nutrition/past-papers/nutrition-scans.pdf#page=27
 
 ### 28 · N28
 
-Original wording is available only in the linked source PDF. Topic index: Preventing iron-deficiency anemia. No wording has been reconstructed for this export.
+Edited study version; original wording is retained below.
 
+Which is the best food-based advice for reducing iron-deficiency risk among these choices?
 
+A. Give iron tablets regularly to everyone
+B. Cook food in copper pots
+C. Include iron-containing foods regularly and avoid taking tea with iron-rich meals
+D. Avoid all dairy products
 
-Source: PDF p. 28 — /study/nutrition/past-papers/nutrition-scans.pdf#page=28
+Source: Original Q28; page 28.
 
+Note: Original stem: What do you recommend to prevent iron deficiency? Original choices: A) Regular iron tablets | B) Cooking food in copper pots | C) Daily iron-containing foods, avoiding excess dairy and tea with iron-containing foods | D) Reducing dairy consumption
 
-# Mixed-language nutrition scans
-
-Supplied source paper/collection. Current course match and syllabus are unconfirmed in the existing catalog; no examination date is invented. The original PDF supplies all wording, including ungraded questions that have no structured transcription.
-
-Collection ID: nutrition-n
-Course: term2-nutrition
-
-28 retained source records; 10 transcribed prompts; 10 currently graded questions. This is a source collection export, not a claim that the selected items constitute a complete historical examination. Dates are reproduced only as qualified source metadata.
-
-## Original sources
-
-- Nutrition .pdf: /study/nutrition/past-papers/nutrition-scans.pdf — Original source document may contain visible marks.
 
 ## Answer key and provenance
 
-Keys below are source marks or existing editorial teaching answers, never certified university keys. Unresolved and duplicate records remain ungraded; commentary mentioning a likely answer is not promoted to a scoring key.
-
 ### 1 · N1
 
-UNGRADED
+Key: A — 10-35% of total energy
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: The adult protein AMDR is 10-35% of energy. A conventional teaching distribution such as 10-15% is not the whole AMDR. The study version now asks a named standard and includes its full range.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q1; page 1.
 
-Existing answer note: 10-15% is a conventional teaching distribution; the adult AMDR is 10-35%. No offered choice gives the full AMDR, so the intended lecture convention is unresolved.
-
-Question source: PDF p. 1 — /study/nutrition/past-papers/nutrition-scans.pdf#page=1
+Nutrition & Diet Therapy, 9th ed., PDF p. 32, Acceptable Macronutrient Distribution Ranges
 
 ### 2 · N2
 
-UNGRADED
+Key: A — Serum albumin
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Albumin is influenced by inflammation, fluid distribution and illness and must not stand alone as a protein-intake or muscle-mass proxy. Assessment combines intake, clinical context and body/functional changes. This repair teaches the limitation instead of endorsing the misleading source selection.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q2; page 2.
 
-Existing answer note: Albumin is selected, but it is not a reliable standalone measure of intake or muscle stores. Use dietary history, trajectory, examination and illness context.
-
-Question source: PDF p. 2 — /study/nutrition/past-papers/nutrition-scans.pdf#page=2
+https://open.bu.edu/items/01636723-8f00-477e-9307-117d2f24c238
 
 ### 3 · N3
 
-UNGRADED
+Key: D — Entry into gluconeogenesis
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Glucogenic carbon skeletons can support gluconeogenesis after amino-nitrogen handling. There is no specialized inert amino-acid store. The carbon-skeleton qualifier separates this metabolic use from ammonia formation during nitrogen removal.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q3; page 3.
 
-Existing answer note: Glucogenic amino-acid carbon can contribute to glucose synthesis. There is no dedicated inert amino-acid storage depot.
-
-Question source: PDF p. 3 — /study/nutrition/past-papers/nutrition-scans.pdf#page=3
+Nutrition & Diet Therapy, 9th ed., PDF pp. 114-115, protein as glucose and energy
 
 ### 4 · N4
 
-UNGRADED
+Key: D — BMI and waist-to-hip ratio (WHR)
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: BMI describes mass relative to height; WHR adds a fat-distribution measure. Waist circumference is also useful. The original nonspecific 'better' comparison is not proof that this pair universally outperforms every other cardiovascular-risk assessment.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q4; page 4.
 
-Existing answer note: Waist assesses central adiposity; BMI plus fat distribution adds context. No anthropometric measure alone is a complete CVD-risk assessment. Exact “best” option depends on the course comparison.
-
-Question source: PDF p. 4 — /study/nutrition/past-papers/nutrition-scans.pdf#page=4
+Nutrition & Diet Therapy, 9th ed., PDF pp. 169-174, BMI and central obesity
 
 ### 5 · N5
 
 Key: C — Rickets
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: A rachitic rosary reflects enlargement at the costochondral junctions in rickets.
 
-Question source: PDF p. 5 — /study/nutrition/past-papers/nutrition-scans.pdf#page=5
+Source: Original Q5; page 5.
+
+
 
 ### 6 · N6
 
 Key: C — Pectin
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: Viscous soluble fiber such as pectin can increase fecal bile-acid loss and reduce cholesterol absorption. The original comparison intends pectin, not a claim that all other fibers have identical effects.
 
-Question source: PDF p. 6 — /study/nutrition/past-papers/nutrition-scans.pdf#page=6
+Source: Original Q6; page 6.
+
+
 
 ### 7 · N7
 
 Key: D — Loss of lean and muscle mass
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: Loss of metabolically active lean mass is the intended physiological explanation. Reduced activity also contributes; actual energy needs differ among older adults.
 
-Question source: PDF p. 7 — /study/nutrition/past-papers/nutrition-scans.pdf#page=7
+Source: Original Q7; page 7.
+
+
 
 ### 8 · N8
 
-UNGRADED
+Key: A — Reduced mobility and sun exposure increase concern about adequate vitamin D intake
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Older adults can be vulnerable to vitamin D inadequacy, particularly with low sunlight exposure. Requirements and intake advice depend on age and circumstances; calorie restriction, low fluid intake and universal iron supplementation are not appropriate blanket rules.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q8; page 8.
 
-Existing answer note: Vitamin D risk/need is important, particularly with reduced exposure/synthesis. Do not infer universally higher iron needs or lower fluid needs.
-
-Question source: PDF p. 8 — /study/nutrition/past-papers/nutrition-scans.pdf#page=8
+https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/
+Nutrition & Diet Therapy, 9th ed., later adulthood chapter
 
 ### 9 · N9
 
-UNGRADED
+Key: B — Reduce saturated fatty acids to less than 7% of total daily energy
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Less than 7% of energy from saturated fat is the historical TLC target. Other choices may also have value for selected patients, so the original broad stem was not a clean single-best-answer item. This is a historical target, not complete individualized contemporary cardiovascular care.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q9; page 9.
 
-Existing answer note: Saturated fat below 7% of energy is a historical therapeutic convention among the options. Overall risk, lipid management and the replacement nutrient matter; it is not a complete modern treatment target.
-
-Question source: PDF p. 9 — /study/nutrition/past-papers/nutrition-scans.pdf#page=9
+https://www.nhlbi.nih.gov/education/TLC-Therapeutic-Lifestyle-Changes-Lower-Cholesterol
 
 ### 10 · N10
 
 Key: D — 11.3–15.8 kg
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: The last choice is the source's approximate conversion of the 25–35 lb singleton-pregnancy range, usually stated as 11.5–16 kg. It refers to normal prepregnancy BMI, not every pregnancy.
 
-Question source: PDF p. 10 — /study/nutrition/past-papers/nutrition-scans.pdf#page=10
+Source: Original Q10; page 10.
+
+
 
 ### 11 · N11
 
-UNGRADED
+Key: D — Cardiovascular risk may be elevated and should be assessed even when BMI is normal
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Central adiposity can confer additional cardiometabolic risk not captured by BMI alone. The next action is contextual risk assessment, not automatic weight loss in every underweight or normal-weight person.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q11; page 11.
 
-Existing answer note: Abdominal fat distribution can confer elevated risk even when BMI is in the reference range. Individualize the response.
-
-Question source: PDF p. 11 — /study/nutrition/past-papers/nutrition-scans.pdf#page=11
+Nutrition & Diet Therapy, 9th ed., PDF pp. 169-174, body fat distribution
 
 ### 12 · N12
 
 Key: D — Is rich in fiber and relatively high in protein
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: The fourth statement is the best description among the original choices: DASH supplies fiber-rich foods and suitable protein sources. 'Relatively high' is a source comparison, not a prescription for a high-protein diet or a complete definition of DASH.
 
-Question source: PDF p. 12 — /study/nutrition/past-papers/nutrition-scans.pdf#page=12
+Source: Original Q12; page 12.
+
+
 
 ### 13 · N13
 
-UNGRADED
+Key: C — 2-3 servings per week
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: The named FDA/EPA framework recommends 2-3 weekly servings from Best Choices, totaling 8-12 ounces. Species, mercury level and local advisories matter; the source's unrestricted frequency question could make both two and three reasonable.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q13; page 13.
 
-Existing answer note: Current FDA/EPA guidance: 2-3 servings weekly from lower-mercury Best Choices, 8-12 oz total. A historical “twice” answer must not become an all-species rule.
-
-Question source: PDF p. 13 — /study/nutrition/past-papers/nutrition-scans.pdf#page=13
+https://www.fda.gov/food/consumers/advice-about-eating-fish
 
 ### 14 · N14
 
 Key: B — Assess and modify his eating pattern and lifestyle
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: Assessment and individualized modification of the existing eating pattern and lifestyle is the best starting response. The stem does not establish obesity, renal status or other details for a universal prescription.
 
-Question source: PDF p. 14 — /study/nutrition/past-papers/nutrition-scans.pdf#page=14
+Source: Original Q14; page 14.
+
+
 
 ### 15 · N15
 
 Key: A — Iron deficiency anemia
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English source; original option order retained. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: Progressive iron deficiency can limit hemoglobin synthesis and cause iron-deficiency anemia. Early deficiency can precede anemia.
 
-Question source: PDF p. 15 — /study/nutrition/past-papers/nutrition-scans.pdf#page=15
+Source: Original Q15; page 15.
+
+
 
 ### 16 · N16
 
 Key: A — Indirect methods
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: Community morbidity, mortality and related health indices are indirect nutritional indicators; they do not directly measure an individual's intake or tissue status.
 
-Question source: PDF p. 16 — /study/nutrition/past-papers/nutrition-scans.pdf#page=16
+Source: Original Q16; page 16.
+
+
 
 ### 17 · N17
 
-UNGRADED
+Key: D — Tyrosine
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: In classical phenylketonuria, impaired conversion of phenylalanine to tyrosine makes tyrosine conditionally essential. Phenylalanine is controlled, not completely eliminated; management is specialist-directed.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q17; page 17.
 
-Existing answer note: Tyrosine, because phenylalanine-to-tyrosine conversion is impaired. Phenylalanine still requires controlled provision.
-
-Question source: PDF p. 17 — /study/nutrition/past-papers/nutrition-scans.pdf#page=17
+Nutrition & Diet Therapy, 9th ed., PDF pp. 111 and 487-490
 
 ### 18 · N18
 
-UNGRADED
+Key: Ungraded - Repeated scan of N6; preserved without extra scored weight.
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Repeated source item retained in the archive without giving it extra scored weight.
+Existing answer note: Pectin is the intended viscous soluble-fiber answer. This is a duplicate of N6 with a different option order; the answer letter must follow the local order.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q18; page 18.
 
-Existing answer note: Duplicate of N6: pectin. Retained only for source traceability.
-
-Question source: PDF p. 18 — /study/nutrition/past-papers/nutrition-scans.pdf#page=18
+Nutrition & Diet Therapy, 9th ed., PDF pp. 69-74
 
 ### 19 · N19
 
-UNGRADED
+Key: D — A clinician may prescribe moderate protein intake, adjusted to kidney function, nutritional status and treatment
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Protein and fluid advice must be individualized. Some nondialysis CKD patients need protein moderation; dialysis can increase protein requirements. Extra fluid is not universally safe, and serum creatinine alone does not specify a diet.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q19; page 19.
 
-Existing answer note: Extra fluid is not universally appropriate. Supervised protein moderation may fit nondialysis CKD, but creatinine alone does not specify protein/fluid needs.
-
-Question source: PDF p. 19 — /study/nutrition/past-papers/nutrition-scans.pdf#page=19
+https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/healthy-eating-adults-chronic-kidney-disease
 
 ### 20 · N20
 
 Key: B — An amount of a nutrient that meets the needs of more than 97% of a specific age and sex group
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: The RDA is intended to cover about 97–98% of healthy individuals in the specified life-stage/sex group, as a usual intake planning reference.
 
-Question source: PDF p. 20 — /study/nutrition/past-papers/nutrition-scans.pdf#page=20
+Source: Original Q20; page 20.
+
+
 
 ### 21 · N21
 
-UNGRADED
+Key: A — Monitor fluid intake to avoid fluid overload and edema
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Fluid and dietary allowances require monitoring. Dialysis does not eliminate all nutritional restrictions; allowances depend on residual urine output, volume status, modality and laboratory findings.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q21; page 21.
 
-Existing answer note: Avoid fluid accumulation; actual allowance depends on urine output, treatment and volume status. Dialysis may also increase protein needs.
-
-Question source: PDF p. 21 — /study/nutrition/past-papers/nutrition-scans.pdf#page=21
+https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/healthy-eating-adults-chronic-kidney-disease
 
 ### 22 · N22
 
-UNGRADED
+Key: D — Anemia in pregnancy
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Pregnancy is the intended hemodilution example. Athletes can also have dilutional changes, so the original wording is not uniquely discriminating. True iron deficiency may coexist with pregnancy and must not be dismissed as normal.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q22; page 22.
 
-Existing answer note: Pregnancy hemodilution: plasma volume expands more than red-cell mass. Athletes can also have dilutional patterns, so exact options/context matter.
-
-Question source: PDF p. 22 — /study/nutrition/past-papers/nutrition-scans.pdf#page=22
+Nutrition & Diet Therapy, 9th ed., PDF pp. 318-319
 
 ### 23 · N23
 
-UNGRADED
+Key: A — Neural tube defects
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Adequate periconceptional folic acid reduces neural-tube-defect risk. It does not prevent all neurological disease or all congenital disease. The source screenshot marks cardiovascular diseases; that choice does not establish an official or defensible universal key.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q23; page 23.
 
-Existing answer note: Neural-tube-defect risk reduction through adequate folic acid. Do not generalize to prevention of every neurological disorder.
-
-Question source: PDF p. 23 — /study/nutrition/past-papers/nutrition-scans.pdf#page=23
+https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/
 
 ### 24 · N24
 
-UNGRADED
+Key: Ungraded - Repeated scan of N3; preserved without extra scored weight.
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Repeated source item retained in the archive without giving it extra scored weight.
+Existing answer note: This is the N3 carbon-skeleton/gluconeogenesis item with reordered options. The locally correct letter is A, not D.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q24; page 24.
 
-Existing answer note: Duplicate of N3: amino-acid carbon and gluconeogenesis.
-
-Question source: PDF p. 24 — /study/nutrition/past-papers/nutrition-scans.pdf#page=24
+Nutrition & Diet Therapy, 9th ed., PDF pp. 114-115
 
 ### 25 · N25
 
 Key: B — 112 + (340–360) kcal
 
-Key provenance: existing-editorial-teaching-key.
-
-Provenance note: English translation; original Persian choices preserved in source order. Student marks are not an official key.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
 Existing answer note: The original choices describe an INCREMENT above prepregnancy needs, despite the loose stem. 112 + 340 is approximately 452 kcal, corresponding to the book's roughly +450 kcal/day third-trimester increment; it is not the whole daily requirement.
 
-Question source: PDF p. 25 — /study/nutrition/past-papers/nutrition-scans.pdf#page=25
+Source: Original Q25; page 25.
+
+
 
 ### 26 · N26
 
-UNGRADED
+Key: A — Direct calorimetry
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Direct calorimetry measures heat; indirect calorimetry estimates expenditure from respiratory gas exchange. Predictive equations estimate rather than directly measure an individual's expenditure. The original 'most accurate' wording did not define the conditions or measurement standard.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q26; page 26.
 
-Existing answer note: A formula is a prediction. Direct calorimetry measures heat; indirect calorimetry uses respiratory gas exchange. Which measured method is intended depends on the wording.
-
-Question source: PDF p. 26 — /study/nutrition/past-papers/nutrition-scans.pdf#page=26
+Nutrition & Diet Therapy, 9th ed., PDF pp. 654-656; calorimetry versus prediction
 
 ### 27 · N27
 
-UNGRADED
+Key: B — Chronic infection
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Chronic infection more characteristically causes anemia of inflammation with iron sequestration, rather than absolute iron depletion. Sustained gastrointestinal blood loss is a classic cause of iron deficiency. These mechanisms can coexist.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q27; page 27.
 
-Existing answer note: Chronic infection more typically causes anemia of inflammation. The marked chronic occult fecal bleeding is wrong: sustained blood loss is a classic iron-deficiency cause. Coexistence remains possible.
-
-Question source: PDF p. 27 — /study/nutrition/past-papers/nutrition-scans.pdf#page=27
+https://www.nhlbi.nih.gov/health/anemia/iron-deficiency-anemia
+Nutrition & Diet Therapy, 9th ed., PDF pp. 261-265
 
 ### 28 · N28
 
-UNGRADED
+Key: C — Include iron-containing foods regularly and avoid taking tea with iron-rich meals
 
-Key provenance: unresolved-or-duplicate.
+Key provenance: Editorial study answer / source review note; not an official university key.
 
-Reason: Original retained below. Wording, key, historical convention, choice legibility or single-best-answer status requires clarification before automated scoring.
+Existing answer note: Adequate iron-containing foods and avoiding inhibitory tea with relevant meals are reasonable food-based measures; vitamin C can aid nonheme iron absorption. Supplementation and dietary restrictions depend on need and clinical circumstances, not a universal ban on dairy.
 
-Provenance note: No official answer key. Existing checked teaching answer only.
+Source: Original Q28; page 28.
 
-Existing answer note: Suitable iron-rich foods plus vitamin C; separate tea from iron-rich meals where relevant. Do not give everyone iron supplements or prohibit all dairy.
-
-Question source: PDF p. 28 — /study/nutrition/past-papers/nutrition-scans.pdf#page=28
+https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/

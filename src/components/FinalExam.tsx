@@ -233,7 +233,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
             <h1>{question.prompt}</h1>
             {question.qualityFlags.includes('editorially-repaired-source-question') && <p className="term2-scope-note">Edited study version · the original item had a wording or choice defect. Original text is retained in Sources &amp; answer notes and downloads.</p>}
             {exam === "term2-religion" && <p className="term2-scope-note">Original wording · source-reviewed editorial key, not an official answer. Interpret within the source framework; qualifications and corrections appear with feedback.</p>}
-            {exam === "term2-nutrition" && question.qualityFlags.includes("qualified-source-wording") && <p className="term2-scope-note">Historical / qualified wording: scoring uses the source's intended convention. Read the explanation for its limits; a marked answer is not an official key.</p>}
+            {exam === "term2-nutrition" && question.qualityFlags.includes("qualified-source-wording") && <p className="term2-scope-note">Qualified source item: the study answer includes qualifications or corrections. Read the explanation and original wording; source marks are not an official key.</p>}
             <QuestionMedia question={question} review={Boolean(answer)}/>
             <div className={`final-options ${answer ? "locked" : ""} ${answer && inferred ? "inferred-answer" : ""}`}>
               {question.options.map((option) => {

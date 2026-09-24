@@ -1,0 +1,3162 @@
+{
+  "revision": "2026-09-24",
+  "idPrefix": "nutrition-core",
+  "title": "Nutrition Core Exam",
+  "sourceFingerprint": "7aa00707df1fcb9ffba11e6d46c67f74558e0fa5964588a82f02d9ae0c1a6682",
+  "sourceQuestionCount": 288,
+  "scoredSourceQuestionCount": 276,
+  "sourceCollectionCount": 8,
+  "optionalQuestionCount": 36,
+  "repeatedPatternCount": 17,
+  "repeatedSourceOccurrenceCount": 38,
+  "supplementalCount": 110,
+  "exclusionNote": "Duplicate file aliases and our own exported answer PDF are not extra papers. Oral-health supplements are excluded. Edited study repairs do not establish recurrence.",
+  "methodology": "One representative per detected repeated question pattern, then explicitly selected core-coverage items. Only exact normalized stems, choices and accepted answers or manually reviewed equivalent relationships are merged. Each source collection counts once; shared or copied questions do not prove independent exam sittings. Repaired questions and ungraded items cannot establish repeats. Historical frequency is not an exam probability. Detection is conservative; unrecognized paraphrases may remain.",
+  "papers": [
+    {
+      "id": "F",
+      "title": "English nutrition final",
+      "url": "/study/nutrition/past-papers/english-final.pdf"
+    },
+    {
+      "id": "N",
+      "title": "Mixed-language nutrition scans",
+      "url": "/study/nutrition/past-papers/nutrition-scans.pdf"
+    },
+    {
+      "id": "D",
+      "title": "Bilingual nutrition compilation",
+      "url": "/study/nutrition/past-papers/bilingual-compilation.pdf"
+    },
+    {
+      "id": "dds-tums",
+      "title": "Nutrition DDS · TUMS · undated 40-item photographed paper",
+      "url": "/study/nutrition/past-papers/dds-tums.pdf"
+    },
+    {
+      "id": "kish-2019",
+      "title": "Nutrition · Kish · June 2019",
+      "url": "/study/nutrition/past-papers/kish-2019.pdf"
+    },
+    {
+      "id": "sums-retake",
+      "title": "Nutrition · SUMS · 1st-batch retake",
+      "url": "/study/nutrition/past-papers/sums-retake.pdf"
+    },
+    {
+      "id": "tums-feb-2024",
+      "title": "Nutrition MD · TUMS · February 2024 semester (exam 29 June 2024)",
+      "url": "/study/nutrition/past-papers/tums-feb-2024.pdf"
+    },
+    {
+      "id": "tums-jan-2025",
+      "title": "Nutrition · TUMS · January 2025",
+      "url": "/study/nutrition/past-papers/tums-jan-2025.pdf"
+    }
+  ],
+  "sections": [
+    {
+      "id": "nutrition/foundations",
+      "title": "02 / Nutrients, DRIs and food choices",
+      "pdfPage": 5,
+      "count": 4,
+      "repeated": 1,
+      "sourceCollectionCount": 5
+    },
+    {
+      "id": "nutrition/carbohydrate",
+      "title": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "count": 10,
+      "repeated": 1,
+      "sourceCollectionCount": 8
+    },
+    {
+      "id": "nutrition/lipids",
+      "title": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "count": 11,
+      "repeated": 0,
+      "sourceCollectionCount": 7
+    },
+    {
+      "id": "nutrition/protein",
+      "title": "05 / Protein, amino acids and nitrogen balance",
+      "pdfPage": 10,
+      "count": 6,
+      "repeated": 0,
+      "sourceCollectionCount": 7
+    },
+    {
+      "id": "nutrition/digestion",
+      "title": "06 / Digestion and absorption: predict the deficiency",
+      "pdfPage": 12,
+      "count": 4,
+      "repeated": 0,
+      "sourceCollectionCount": 3
+    },
+    {
+      "id": "nutrition/energy",
+      "title": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "count": 16,
+      "repeated": 4,
+      "sourceCollectionCount": 7
+    },
+    {
+      "id": "nutrition/assessment",
+      "title": "08 / Assessment, BMI and body composition",
+      "pdfPage": 15,
+      "count": 6,
+      "repeated": 0,
+      "sourceCollectionCount": 6
+    },
+    {
+      "id": "nutrition/malnutrition",
+      "title": "09 / Protein-energy malnutrition and refeeding",
+      "pdfPage": 17,
+      "count": 6,
+      "repeated": 2,
+      "sourceCollectionCount": 4
+    },
+    {
+      "id": "nutrition/vitamin-a",
+      "title": "10 / Vitamin A: vision, epithelium and toxicity",
+      "pdfPage": 18,
+      "count": 5,
+      "repeated": 2,
+      "sourceCollectionCount": 6
+    },
+    {
+      "id": "nutrition/vitamin-d",
+      "title": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "count": 7,
+      "repeated": 1,
+      "sourceCollectionCount": 8
+    },
+    {
+      "id": "nutrition/vitamin-ek",
+      "title": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "count": 7,
+      "repeated": 1,
+      "sourceCollectionCount": 6
+    },
+    {
+      "id": "nutrition/b-vitamins",
+      "title": "13 / B vitamins: enzymes and deficiency patterns",
+      "pdfPage": 21,
+      "count": 6,
+      "repeated": 3,
+      "sourceCollectionCount": 6
+    },
+    {
+      "id": "nutrition/folate-b12",
+      "title": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "count": 8,
+      "repeated": 0,
+      "sourceCollectionCount": 5
+    },
+    {
+      "id": "nutrition/vitamin-c",
+      "title": "15 / Vitamin C, connective tissue and antioxidant logic",
+      "pdfPage": 24,
+      "count": 4,
+      "repeated": 0,
+      "sourceCollectionCount": 5
+    },
+    {
+      "id": "nutrition/iron",
+      "title": "16 / Iron: intake, transport, stores and anemia",
+      "pdfPage": 25,
+      "count": 4,
+      "repeated": 1,
+      "sourceCollectionCount": 6
+    },
+    {
+      "id": "nutrition/minerals",
+      "title": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "count": 9,
+      "repeated": 0,
+      "sourceCollectionCount": 7
+    },
+    {
+      "id": "nutrition/pregnancy",
+      "title": "18 / Pregnancy and lactation",
+      "pdfPage": 28,
+      "count": 5,
+      "repeated": 0,
+      "sourceCollectionCount": 5
+    },
+    {
+      "id": "nutrition/infancy",
+      "title": "19 / Infant and child nutrition",
+      "pdfPage": 30,
+      "count": 3,
+      "repeated": 0,
+      "sourceCollectionCount": 2
+    },
+    {
+      "id": "nutrition/ageing",
+      "title": "20 / Ageing: muscle, hydration, B12 and D",
+      "pdfPage": 31,
+      "count": 3,
+      "repeated": 0,
+      "sourceCollectionCount": 3
+    },
+    {
+      "id": "nutrition/clinical-diets",
+      "title": "21 / CVD, diabetes and renal diet principles",
+      "pdfPage": 32,
+      "count": 3,
+      "repeated": 1,
+      "sourceCollectionCount": 5
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "nutrition-past-d33",
+      "kind": "repeat",
+      "reason": "Tryptophan is a niacin precursor",
+      "paperId": "D",
+      "sectionId": "nutrition/b-vitamins",
+      "sectionTitle": "13 / B vitamins: enzymes and deficiency patterns",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "D",
+        "dds-tums",
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-d33",
+          "paperId": "D",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=16"
+        },
+        {
+          "questionId": "nutrition-past-dds-tums-q007",
+          "paperId": "dds-tums",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=1"
+        },
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q025",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d12",
+      "kind": "repeat",
+      "reason": "Vitamin D promotes calcium/phosphorus absorption",
+      "paperId": "D",
+      "sectionId": "nutrition/vitamin-d",
+      "sectionTitle": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "D",
+        "dds-tums",
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-d12",
+          "paperId": "D",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=6"
+        },
+        {
+          "questionId": "nutrition-past-dds-tums-q004",
+          "paperId": "dds-tums",
+          "sourceNumber": 4,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=1"
+        },
+        {
+          "questionId": "nutrition-past-dds-tums-q013",
+          "paperId": "dds-tums",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=2"
+        },
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q014",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f10",
+      "kind": "repeat",
+      "reason": "Vitamin E and antioxidant protection",
+      "paperId": "F",
+      "sectionId": "nutrition/vitamin-ek",
+      "sectionTitle": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "sourcePaperIds": [
+        "D",
+        "F",
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 3,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-f10",
+          "paperId": "F",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=10"
+        },
+        {
+          "questionId": "nutrition-past-d17",
+          "paperId": "D",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=8"
+        },
+        {
+          "questionId": "nutrition-past-dds-tums-q005",
+          "paperId": "dds-tums",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d13",
+      "kind": "repeat",
+      "reason": "Riboflavin deficiency and photophobia in the source context",
+      "paperId": "D",
+      "sectionId": "nutrition/b-vitamins",
+      "sectionTitle": "13 / B vitamins: enzymes and deficiency patterns",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "D",
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-d13",
+          "paperId": "D",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=6"
+        },
+        {
+          "questionId": "nutrition-past-kish-2019-q011",
+          "paperId": "kish-2019",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f15",
+      "kind": "repeat",
+      "reason": "Thiamin deficiency and beriberi",
+      "paperId": "F",
+      "sectionId": "nutrition/b-vitamins",
+      "sectionTitle": "13 / B vitamins: enzymes and deficiency patterns",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "F",
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-f15",
+          "paperId": "F",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=15"
+        },
+        {
+          "questionId": "nutrition-past-kish-2019-q009",
+          "paperId": "kish-2019",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n6",
+      "kind": "repeat",
+      "reason": "Pectin/soluble fiber and cholesterol lowering",
+      "paperId": "N",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "N",
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-n6",
+          "paperId": "N",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=6"
+        },
+        {
+          "questionId": "nutrition-past-kish-2019-q018",
+          "paperId": "kish-2019",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q040",
+      "kind": "repeat",
+      "reason": "Enteral feeding can attenuate the catabolic response",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/clinical-diets",
+      "sectionTitle": "21 / CVD, diabetes and renal diet principles",
+      "pdfPage": 32,
+      "sourcePaperIds": [
+        "sums-retake",
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q040",
+          "paperId": "sums-retake",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=6"
+        },
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q017",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q020",
+      "kind": "repeat",
+      "reason": "Resting/basal energy expenditure generally falls with age",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "dds-tums",
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q020",
+          "paperId": "dds-tums",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=4"
+        },
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q002",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f2",
+      "kind": "repeat",
+      "reason": "Fat supplies approximately 9 kcal/g",
+      "paperId": "F",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "F",
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-f2",
+          "paperId": "F",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=2"
+        },
+        {
+          "questionId": "nutrition-past-sums-retake-q012",
+          "paperId": "sums-retake",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q001",
+      "kind": "repeat",
+      "reason": "Energy density: energy per gram of food",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "sums-retake",
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q001",
+          "paperId": "sums-retake",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=1"
+        },
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q001",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q015",
+      "kind": "repeat",
+      "reason": "RQ greater than one and net lipogenesis",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "sums-retake",
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q015",
+          "paperId": "sums-retake",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=3"
+        },
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q011",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q002",
+      "kind": "repeat",
+      "reason": "Blanket food-group exclusion is not a diet-planning principle",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/foundations",
+      "sectionTitle": "02 / Nutrients, DRIs and food choices",
+      "pdfPage": 5,
+      "sourcePaperIds": [
+        "sums-retake",
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q002",
+          "paperId": "sums-retake",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=1"
+        },
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q002",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n15",
+      "kind": "repeat",
+      "reason": "Iron deficiency can cause anemia",
+      "paperId": "N",
+      "sectionId": "nutrition/iron",
+      "sectionTitle": "16 / Iron: intake, transport, stores and anemia",
+      "pdfPage": 25,
+      "sourcePaperIds": [
+        "N",
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-n15",
+          "paperId": "N",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=15"
+        },
+        {
+          "questionId": "nutrition-past-sums-retake-q036",
+          "paperId": "sums-retake",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d32",
+      "kind": "repeat",
+      "reason": "Historical protein-deficiency description of kwashiorkor",
+      "paperId": "D",
+      "sectionId": "nutrition/malnutrition",
+      "sectionTitle": "09 / Protein-energy malnutrition and refeeding",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "D",
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "nutrition-past-d32",
+          "paperId": "D",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=15"
+        },
+        {
+          "questionId": "nutrition-past-sums-retake-q023",
+          "paperId": "sums-retake",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q019",
+      "kind": "repeat",
+      "reason": "Edema is characteristic of kwashiorkor",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/malnutrition",
+      "sectionTitle": "09 / Protein-energy malnutrition and refeeding",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "dds-tums",
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q019",
+          "paperId": "dds-tums",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=4"
+        },
+        {
+          "questionId": "nutrition-past-sums-retake-q024",
+          "paperId": "sums-retake",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d18",
+      "kind": "repeat",
+      "reason": "Vitamin A excess and teratogenicity",
+      "paperId": "D",
+      "sectionId": "nutrition/vitamin-a",
+      "sectionTitle": "10 / Vitamin A: vision, epithelium and toxicity",
+      "pdfPage": 18,
+      "sourcePaperIds": [
+        "D",
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-d18",
+          "paperId": "D",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=9"
+        },
+        {
+          "questionId": "nutrition-past-dds-tums-q022",
+          "paperId": "dds-tums",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f24",
+      "kind": "repeat",
+      "reason": "Vitamin A deficiency and night blindness",
+      "paperId": "F",
+      "sectionId": "nutrition/vitamin-a",
+      "sectionTitle": "10 / Vitamin A: vision, epithelium and toxicity",
+      "pdfPage": 18,
+      "sourcePaperIds": [
+        "F",
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 2,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-f24",
+          "paperId": "F",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=24"
+        },
+        {
+          "questionId": "nutrition-past-sums-retake-q028",
+          "paperId": "sums-retake",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f1",
+      "kind": "coverage",
+      "reason": "Pregnancy iron requirement",
+      "paperId": "F",
+      "sectionId": "nutrition/iron",
+      "sectionTitle": "16 / Iron: intake, transport, stores and anemia",
+      "pdfPage": 25,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-f1",
+          "paperId": "F",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f5",
+      "kind": "coverage",
+      "reason": "Monosaccharide versus disaccharide",
+      "paperId": "F",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-f5",
+          "paperId": "F",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f6",
+      "kind": "coverage",
+      "reason": "Selenium and vitamin E antioxidant relationship",
+      "paperId": "F",
+      "sectionId": "nutrition/vitamin-ek",
+      "sectionTitle": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-f6",
+          "paperId": "F",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f7",
+      "kind": "coverage",
+      "reason": "Retinal in the visual cycle",
+      "paperId": "F",
+      "sectionId": "nutrition/vitamin-a",
+      "sectionTitle": "10 / Vitamin A: vision, epithelium and toxicity",
+      "pdfPage": 18,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-f7",
+          "paperId": "F",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f8",
+      "kind": "coverage",
+      "reason": "Thermic effect of food",
+      "paperId": "F",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-f8",
+          "paperId": "F",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f9",
+      "kind": "coverage",
+      "reason": "Vitamin D and cholesterol-derived precursors",
+      "paperId": "F",
+      "sectionId": "nutrition/vitamin-d",
+      "sectionTitle": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-f9",
+          "paperId": "F",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f12",
+      "kind": "coverage",
+      "reason": "Thromboxane and platelet aggregation",
+      "paperId": "F",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-f12",
+          "paperId": "F",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=12"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f14",
+      "kind": "coverage",
+      "reason": "Phosphate in nucleic acids",
+      "paperId": "F",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-f14",
+          "paperId": "F",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=14"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f17",
+      "kind": "coverage",
+      "reason": "Relative sugar sweetness",
+      "paperId": "F",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-f17",
+          "paperId": "F",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=17"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f18",
+      "kind": "coverage",
+      "reason": "Folate and neural-tube defect prevention",
+      "paperId": "F",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-f18",
+          "paperId": "F",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=18"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f20",
+      "kind": "coverage",
+      "reason": "Lecithin as a phospholipid",
+      "paperId": "F",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-f20",
+          "paperId": "F",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=20"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f22",
+      "kind": "coverage",
+      "reason": "Glycine as the smallest amino acid",
+      "paperId": "F",
+      "sectionId": "nutrition/protein",
+      "sectionTitle": "05 / Protein, amino acids and nitrogen balance",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-f22",
+          "paperId": "F",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=22"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n5",
+      "kind": "coverage",
+      "reason": "Rachitic rosary and mineralization failure",
+      "paperId": "N",
+      "sectionId": "nutrition/vitamin-d",
+      "sectionTitle": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "N"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-n5",
+          "paperId": "N",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n7",
+      "kind": "coverage",
+      "reason": "Ageing and declining lean tissue/energy needs",
+      "paperId": "N",
+      "sectionId": "nutrition/ageing",
+      "sectionTitle": "20 / Ageing: muscle, hydration, B12 and D",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "N"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 3,
+      "members": [
+        {
+          "questionId": "nutrition-past-n7",
+          "paperId": "N",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n10",
+      "kind": "coverage",
+      "reason": "Pregnancy weight gain depends on prepregnancy BMI",
+      "paperId": "N",
+      "sectionId": "nutrition/pregnancy",
+      "sectionTitle": "18 / Pregnancy and lactation",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "N"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-n10",
+          "paperId": "N",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n14",
+      "kind": "coverage",
+      "reason": "Individualized diabetes nutrition assessment",
+      "paperId": "N",
+      "sectionId": "nutrition/clinical-diets",
+      "sectionTitle": "21 / CVD, diabetes and renal diet principles",
+      "pdfPage": 32,
+      "sourcePaperIds": [
+        "N"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-n14",
+          "paperId": "N",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=14"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n20",
+      "kind": "coverage",
+      "reason": "RDA population coverage",
+      "paperId": "N",
+      "sectionId": "nutrition/foundations",
+      "sectionTitle": "02 / Nutrients, DRIs and food choices",
+      "pdfPage": 5,
+      "sourcePaperIds": [
+        "N"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-n20",
+          "paperId": "N",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=20"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n25",
+      "kind": "coverage",
+      "reason": "Third-trimester additional energy requirement",
+      "paperId": "N",
+      "sectionId": "nutrition/pregnancy",
+      "sectionTitle": "18 / Pregnancy and lactation",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "N"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-n25",
+          "paperId": "N",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=25"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d1",
+      "kind": "coverage",
+      "reason": "Energy-yielding nutrient categories",
+      "paperId": "D",
+      "sectionId": "nutrition/foundations",
+      "sectionTitle": "02 / Nutrients, DRIs and food choices",
+      "pdfPage": 5,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-d1",
+          "paperId": "D",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d4",
+      "kind": "coverage",
+      "reason": "Polysaccharide classification",
+      "paperId": "D",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-d4",
+          "paperId": "D",
+          "sourceNumber": 4,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d6",
+      "kind": "coverage",
+      "reason": "Basal maintenance functions versus physical activity",
+      "paperId": "D",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d6",
+          "paperId": "D",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d7",
+      "kind": "coverage",
+      "reason": "Largest usual component of energy expenditure",
+      "paperId": "D",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d7",
+          "paperId": "D",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d8",
+      "kind": "coverage",
+      "reason": "BMI relates body weight to height",
+      "paperId": "D",
+      "sectionId": "nutrition/assessment",
+      "sectionTitle": "08 / Assessment, BMI and body composition",
+      "pdfPage": 15,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-d8",
+          "paperId": "D",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d9",
+      "kind": "coverage",
+      "reason": "Unsaturated oils versus solid fats",
+      "paperId": "D",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d9",
+          "paperId": "D",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d10",
+      "kind": "coverage",
+      "reason": "Portion size is not a standardized serving size",
+      "paperId": "D",
+      "sectionId": "nutrition/foundations",
+      "sectionTitle": "02 / Nutrients, DRIs and food choices",
+      "pdfPage": 5,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-d10",
+          "paperId": "D",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d11",
+      "kind": "coverage",
+      "reason": "Food sources of zinc",
+      "paperId": "D",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d11",
+          "paperId": "D",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d15",
+      "kind": "coverage",
+      "reason": "Liver as a concentrated preformed vitamin A source",
+      "paperId": "D",
+      "sectionId": "nutrition/vitamin-a",
+      "sectionTitle": "10 / Vitamin A: vision, epithelium and toxicity",
+      "pdfPage": 18,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-d15",
+          "paperId": "D",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d16",
+      "kind": "coverage",
+      "reason": "Thiamin deficiency: neurological and cardiac features",
+      "paperId": "D",
+      "sectionId": "nutrition/b-vitamins",
+      "sectionTitle": "13 / B vitamins: enzymes and deficiency patterns",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-d16",
+          "paperId": "D",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d19",
+      "kind": "coverage",
+      "reason": "Zinc deficiency: taste, hair and wound healing",
+      "paperId": "D",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d19",
+          "paperId": "D",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d20",
+      "kind": "coverage",
+      "reason": "Relative potassium content of foods",
+      "paperId": "D",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d20",
+          "paperId": "D",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d22",
+      "kind": "coverage",
+      "reason": "Ascorbate in carnitine synthesis",
+      "paperId": "D",
+      "sectionId": "nutrition/vitamin-c",
+      "sectionTitle": "15 / Vitamin C, connective tissue and antioxidant logic",
+      "pdfPage": 24,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-d22",
+          "paperId": "D",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d31",
+      "kind": "coverage",
+      "reason": "Adult protein RDA per kilogram",
+      "paperId": "D",
+      "sectionId": "nutrition/protein",
+      "sectionTitle": "05 / Protein, amino acids and nitrogen balance",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d31",
+          "paperId": "D",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=15"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d34",
+      "kind": "coverage",
+      "reason": "Homocysteine and transsulfuration",
+      "paperId": "D",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-d34",
+          "paperId": "D",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=16"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d35",
+      "kind": "coverage",
+      "reason": "Fatty liver and immune dysfunction in kwashiorkor",
+      "paperId": "D",
+      "sectionId": "nutrition/malnutrition",
+      "sectionTitle": "09 / Protein-energy malnutrition and refeeding",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "nutrition-past-d35",
+          "paperId": "D",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=17"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d37",
+      "kind": "coverage",
+      "reason": "Calculate energy from fat and protein grams",
+      "paperId": "D",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d37",
+          "paperId": "D",
+          "sourceNumber": 37,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=18"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d38",
+      "kind": "coverage",
+      "reason": "Atherosclerotic lipid deposition",
+      "paperId": "D",
+      "sectionId": "nutrition/clinical-diets",
+      "sectionTitle": "21 / CVD, diabetes and renal diet principles",
+      "pdfPage": 32,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-d38",
+          "paperId": "D",
+          "sourceNumber": 38,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=18"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d39",
+      "kind": "coverage",
+      "reason": "Linoleic acid in traditional sunflower/safflower oils",
+      "paperId": "D",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d39",
+          "paperId": "D",
+          "sourceNumber": 39,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=19"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f11",
+      "kind": "coverage",
+      "reason": "Adult vitamin B12 RDA (corrected study choices)",
+      "paperId": "F",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-f11",
+          "paperId": "F",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=11"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-f21",
+      "kind": "coverage",
+      "reason": "Renal activating step in vitamin D metabolism (clarified study wording)",
+      "paperId": "F",
+      "sectionId": "nutrition/vitamin-d",
+      "sectionTitle": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "F"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-f21",
+          "paperId": "F",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/nutrition/past-papers/english-final.pdf#page=21"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-n26",
+      "kind": "coverage",
+      "reason": "Direct calorimetry measures heat release (clarified study wording)",
+      "paperId": "N",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "N"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-n26",
+          "paperId": "N",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/nutrition/past-papers/nutrition-scans.pdf#page=26"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-d36",
+      "kind": "coverage",
+      "reason": "Omega-3 versus omega-6 classification (corrected study choices)",
+      "paperId": "D",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "D"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-d36",
+          "paperId": "D",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/nutrition/past-papers/bilingual-compilation.pdf#page=17"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q001",
+      "kind": "coverage",
+      "reason": "Source convention for fructose sweetness relative to sucrose",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q001",
+          "paperId": "kish-2019",
+          "sourceNumber": 1,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q002",
+      "kind": "coverage",
+      "reason": "Aspartame amino-acid components",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q002",
+          "paperId": "kish-2019",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q006",
+      "kind": "coverage",
+      "reason": "Parathyroid hormone and serum calcium",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/vitamin-d",
+      "sectionTitle": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q006",
+          "paperId": "kish-2019",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q007",
+      "kind": "coverage",
+      "reason": "Selenium deficiency and Keshan disease",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q007",
+          "paperId": "kish-2019",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q008",
+      "kind": "coverage",
+      "reason": "Vitamin B6 in transamination",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q008",
+          "paperId": "kish-2019",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q010",
+      "kind": "coverage",
+      "reason": "Niacin deficiency and pellagra",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/b-vitamins",
+      "sectionTitle": "13 / B vitamins: enzymes and deficiency patterns",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q010",
+          "paperId": "kish-2019",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q012",
+      "kind": "coverage",
+      "reason": "Ileal absorption of vitamin B12",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q012",
+          "paperId": "kish-2019",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q013",
+      "kind": "coverage",
+      "reason": "Folate/B12 deficiency and megaloblastic anemia",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q013",
+          "paperId": "kish-2019",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q016",
+      "kind": "coverage",
+      "reason": "Retinoic-acid regulation of gene expression (corrected study wording)",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/vitamin-a",
+      "sectionTitle": "10 / Vitamin A: vision, epithelium and toxicity",
+      "pdfPage": 18,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q016",
+          "paperId": "kish-2019",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q019",
+      "kind": "coverage",
+      "reason": "Smokers require additional vitamin C (corrected study choices)",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/vitamin-c",
+      "sectionTitle": "15 / Vitamin C, connective tissue and antioxidant logic",
+      "pdfPage": 24,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q019",
+          "paperId": "kish-2019",
+          "sourceNumber": 19,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-kish-2019-q021",
+      "kind": "coverage",
+      "reason": "Consistent vitamin K intake during warfarin treatment (corrected study wording)",
+      "paperId": "kish-2019",
+      "sectionId": "nutrition/vitamin-ek",
+      "sectionTitle": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "sourcePaperIds": [
+        "kish-2019"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-kish-2019-q021",
+          "paperId": "kish-2019",
+          "sourceNumber": 21,
+          "sourceUrl": "/study/nutrition/past-papers/kish-2019.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q002",
+      "kind": "coverage",
+      "reason": "Raffinose is a trisaccharide",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q002",
+          "paperId": "dds-tums",
+          "sourceNumber": 2,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q006",
+      "kind": "coverage",
+      "reason": "Vitamin K1 and neonatal vitamin-K-deficiency bleeding",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/vitamin-ek",
+      "sectionTitle": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q006",
+          "paperId": "dds-tums",
+          "sourceNumber": 6,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q015",
+      "kind": "coverage",
+      "reason": "Most body iron is incorporated in hemoglobin",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/iron",
+      "sectionTitle": "16 / Iron: intake, transport, stores and anemia",
+      "pdfPage": 25,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q015",
+          "paperId": "dds-tums",
+          "sourceNumber": 15,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q018",
+      "kind": "coverage",
+      "reason": "Protein nitrogen content and the conventional conversion factor",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/protein",
+      "sectionTitle": "05 / Protein, amino acids and nitrogen balance",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q018",
+          "paperId": "dds-tums",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q023",
+      "kind": "coverage",
+      "reason": "Dietary fat slows gastric emptying",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/digestion",
+      "sectionTitle": "06 / Digestion and absorption: predict the deficiency",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 3,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q023",
+          "paperId": "dds-tums",
+          "sourceNumber": 23,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q024",
+      "kind": "coverage",
+      "reason": "Unsaturated fats as healthier replacement choices",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q024",
+          "paperId": "dds-tums",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q028",
+      "kind": "coverage",
+      "reason": "Skeletal muscle contains the greatest total glycogen mass",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q028",
+          "paperId": "dds-tums",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q033",
+      "kind": "coverage",
+      "reason": "Definition of the thermic effect of food",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q033",
+          "paperId": "dds-tums",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q035",
+      "kind": "coverage",
+      "reason": "Adult overweight BMI range",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/assessment",
+      "sectionTitle": "08 / Assessment, BMI and body composition",
+      "pdfPage": 15,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q035",
+          "paperId": "dds-tums",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-dds-tums-q040",
+      "kind": "coverage",
+      "reason": "Infants have the highest protein requirement per kilogram",
+      "paperId": "dds-tums",
+      "sectionId": "nutrition/protein",
+      "sectionTitle": "05 / Protein, amino acids and nitrogen balance",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "dds-tums"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-dds-tums-q040",
+          "paperId": "dds-tums",
+          "sourceNumber": 40,
+          "sourceUrl": "/study/nutrition/past-papers/dds-tums.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q003",
+      "kind": "coverage",
+      "reason": "Fat malabsorption: steatorrhea and fat-soluble vitamins",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/digestion",
+      "sectionTitle": "06 / Digestion and absorption: predict the deficiency",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 3,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q003",
+          "paperId": "sums-retake",
+          "sourceNumber": 3,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q005",
+      "kind": "coverage",
+      "reason": "Whole oats and a slower glycemic response",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q005",
+          "paperId": "sums-retake",
+          "sourceNumber": 5,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=1"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q007",
+      "kind": "coverage",
+      "reason": "Major fuel transitions during prolonged fasting",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q007",
+          "paperId": "sums-retake",
+          "sourceNumber": 7,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q008",
+      "kind": "coverage",
+      "reason": "Lactase deficiency and colonic fermentation",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/digestion",
+      "sectionTitle": "06 / Digestion and absorption: predict the deficiency",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 3,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q008",
+          "paperId": "sums-retake",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q009",
+      "kind": "coverage",
+      "reason": "Replacing trans fats with polyunsaturated fats",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q009",
+          "paperId": "sums-retake",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q010",
+      "kind": "coverage",
+      "reason": "Partial hydrogenation and industrial trans fats",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q010",
+          "paperId": "sums-retake",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q013",
+      "kind": "coverage",
+      "reason": "Loss of lean tissue lowers resting expenditure",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q013",
+          "paperId": "sums-retake",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q016",
+      "kind": "coverage",
+      "reason": "Hyperthyroidism raises basal expenditure",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q016",
+          "paperId": "sums-retake",
+          "sourceNumber": 16,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q017",
+      "kind": "coverage",
+      "reason": "Phenylalanine hydroxylase deficiency in PKU",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/protein",
+      "sectionTitle": "05 / Protein, amino acids and nitrogen balance",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q017",
+          "paperId": "sums-retake",
+          "sourceNumber": 17,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q020",
+      "kind": "coverage",
+      "reason": "Lysine is commonly limiting in cereal proteins",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/protein",
+      "sectionTitle": "05 / Protein, amino acids and nitrogen balance",
+      "pdfPage": 10,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q020",
+          "paperId": "sums-retake",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q022",
+      "kind": "coverage",
+      "reason": "Interpret a pediatric anthropometric z-score",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/assessment",
+      "sectionTitle": "08 / Assessment, BMI and body composition",
+      "pdfPage": 15,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q022",
+          "paperId": "sums-retake",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q025",
+      "kind": "coverage",
+      "reason": "Marasmus and severe energy depletion",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/malnutrition",
+      "sectionTitle": "09 / Protein-energy malnutrition and refeeding",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q025",
+          "paperId": "sums-retake",
+          "sourceNumber": 25,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q032",
+      "kind": "coverage",
+      "reason": "Vitamin E deficiency and peripheral neuropathy",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/vitamin-ek",
+      "sectionTitle": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q032",
+          "paperId": "sums-retake",
+          "sourceNumber": 32,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q033",
+      "kind": "coverage",
+      "reason": "Vitamin K and coagulation",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/vitamin-ek",
+      "sectionTitle": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q033",
+          "paperId": "sums-retake",
+          "sourceNumber": 33,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q034",
+      "kind": "coverage",
+      "reason": "Vitamin C deficiency and scurvy",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/vitamin-c",
+      "sectionTitle": "15 / Vitamin C, connective tissue and antioxidant logic",
+      "pdfPage": 24,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q034",
+          "paperId": "sums-retake",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q035",
+      "kind": "coverage",
+      "reason": "Heme versus nonheme dietary iron",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/iron",
+      "sectionTitle": "16 / Iron: intake, transport, stores and anemia",
+      "pdfPage": 25,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q035",
+          "paperId": "sums-retake",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-sums-retake-q038",
+      "kind": "coverage",
+      "reason": "Iodine as a component of thyroid hormones",
+      "paperId": "sums-retake",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "sums-retake"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-sums-retake-q038",
+          "paperId": "sums-retake",
+          "sourceNumber": 38,
+          "sourceUrl": "/study/nutrition/past-papers/sums-retake.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q008",
+      "kind": "coverage",
+      "reason": "Zinc deficiency and poor wound healing",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q008",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q009",
+      "kind": "coverage",
+      "reason": "Olive oil and monounsaturated fatty acids",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q009",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 9,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q011",
+      "kind": "coverage",
+      "reason": "Malnutrition includes imbalance, not just deficient intake",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/malnutrition",
+      "sectionTitle": "09 / Protein-energy malnutrition and refeeding",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q011",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 11,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q013",
+      "kind": "coverage",
+      "reason": "Indirect calorimetry measures oxygen use and carbon-dioxide production",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q013",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q018",
+      "kind": "coverage",
+      "reason": "Colonic fermentation of raffinose",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/carbohydrate",
+      "sectionTitle": "03 / Carbohydrate, fiber and glycemic control",
+      "pdfPage": 7,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q018",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 18,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q020",
+      "kind": "coverage",
+      "reason": "GLUT5-mediated fructose absorption (clarified study wording)",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/digestion",
+      "sectionTitle": "06 / Digestion and absorption: predict the deficiency",
+      "pdfPage": 12,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 3,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q020",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 20,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q024",
+      "kind": "coverage",
+      "reason": "Osteomalacia: defective adult bone mineralization",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/vitamin-d",
+      "sectionTitle": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q024",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 24,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q028",
+      "kind": "coverage",
+      "reason": "Pregnancy weight-gain range for overweight prepregnancy BMI",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/pregnancy",
+      "sectionTitle": "18 / Pregnancy and lactation",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q028",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=5"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q030",
+      "kind": "coverage",
+      "reason": "Colostrum has more protein than mature milk",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/infancy",
+      "sectionTitle": "19 / Infant and child nutrition",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 2,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q030",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 30,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q031",
+      "kind": "coverage",
+      "reason": "Avoid fruit juice during the first year",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/infancy",
+      "sectionTitle": "19 / Infant and child nutrition",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 2,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q031",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q034",
+      "kind": "coverage",
+      "reason": "Scurvy can cause petechiae",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/vitamin-c",
+      "sectionTitle": "15 / Vitamin C, connective tissue and antioxidant logic",
+      "pdfPage": 24,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q034",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 34,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q035",
+      "kind": "coverage",
+      "reason": "Essential fatty-acid deficiency in fat-free parenteral nutrition (clarified study wording)",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q035",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 35,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=6"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-feb-2024-q038",
+      "kind": "coverage",
+      "reason": "Refeeding electrolyte shifts: phosphate, potassium and magnesium (clarified study wording)",
+      "paperId": "tums-feb-2024",
+      "sectionId": "nutrition/malnutrition",
+      "sectionTitle": "09 / Protein-energy malnutrition and refeeding",
+      "pdfPage": 17,
+      "sourcePaperIds": [
+        "tums-feb-2024"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 4,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-feb-2024-q038",
+          "paperId": "tums-feb-2024",
+          "sourceNumber": 38,
+          "sourceUrl": "/study/nutrition/past-papers/tums-feb-2024.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q008",
+      "kind": "coverage",
+      "reason": "Omega numbering starts from the methyl end",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/lipids",
+      "sectionTitle": "04 / Lipids, essential fatty acids and eicosanoids",
+      "pdfPage": 9,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q008",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 8,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=2"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q010",
+      "kind": "coverage",
+      "reason": "Energy calculation from food mass and macronutrient percentages",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q010",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 10,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=3"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q012",
+      "kind": "coverage",
+      "reason": "Physical activity is the most variable expenditure component",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/energy",
+      "sectionTitle": "07 / Energy calculations, BMR and fasting",
+      "pdfPage": 13,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q012",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 12,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q013",
+      "kind": "coverage",
+      "reason": "Albumin is a negative acute-phase protein",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/assessment",
+      "sectionTitle": "08 / Assessment, BMI and body composition",
+      "pdfPage": 15,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q013",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 13,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q014",
+      "kind": "coverage",
+      "reason": "Food-frequency questionnaires describe habitual dietary variety",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/assessment",
+      "sectionTitle": "08 / Assessment, BMI and body composition",
+      "pdfPage": 15,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q014",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 14,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=4"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q022",
+      "kind": "coverage",
+      "reason": "Bacterial origin of vitamin K2",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/vitamin-ek",
+      "sectionTitle": "12 / Vitamins E and K: antioxidant versus clotting roles",
+      "pdfPage": 20,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q022",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 22,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=7"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q026",
+      "kind": "coverage",
+      "reason": "Biotin can interfere with laboratory assays",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/b-vitamins",
+      "sectionTitle": "13 / B vitamins: enzymes and deficiency patterns",
+      "pdfPage": 21,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q026",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 26,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=8"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q027",
+      "kind": "coverage",
+      "reason": "Vitamin B12 deficiency and the methylfolate trap",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q027",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 27,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q028",
+      "kind": "coverage",
+      "reason": "Bariatric surgery and vitamin B12 deficiency risk",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/folate-b12",
+      "sectionTitle": "14 / B6, folate and B12: connect the pathways",
+      "pdfPage": 23,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q028",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 28,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q030",
+      "kind": "coverage",
+      "reason": "Iodine deficiency: goiter and neurodevelopmental consequences",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q030",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 30,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=9"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q031",
+      "kind": "coverage",
+      "reason": "Magnesium-containing laxatives/antacids and toxicity",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/minerals",
+      "sectionTitle": "17 / Water, major minerals and trace elements",
+      "pdfPage": 26,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 7,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q031",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 31,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=10"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q036",
+      "kind": "coverage",
+      "reason": "Protein intake estimate for healthy older adults",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/ageing",
+      "sectionTitle": "20 / Ageing: muscle, hydration, B12 and D",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 3,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q036",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 36,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=12"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q039",
+      "kind": "coverage",
+      "reason": "Fortified foods can help older adults meet B12 needs",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/ageing",
+      "sectionTitle": "20 / Ageing: muscle, hydration, B12 and D",
+      "pdfPage": 31,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 3,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q039",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 39,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=13"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q041",
+      "kind": "coverage",
+      "reason": "AMDRs for children aged 1–3 years",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/infancy",
+      "sectionTitle": "19 / Infant and child nutrition",
+      "pdfPage": 30,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 2,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q041",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 41,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=14"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q044",
+      "kind": "coverage",
+      "reason": "Vitamin D recommendations differ for infants and children",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/vitamin-d",
+      "sectionTitle": "11 / Vitamin D, calcium and mineralization",
+      "pdfPage": 19,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 8,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q044",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 44,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=16"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q046",
+      "kind": "coverage",
+      "reason": "Pediatric BMI-for-age percentiles",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/assessment",
+      "sectionTitle": "08 / Assessment, BMI and body composition",
+      "pdfPage": 15,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 6,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q046",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 46,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=17"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q050",
+      "kind": "coverage",
+      "reason": "Second- and third-trimester energy increments",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/pregnancy",
+      "sectionTitle": "18 / Pregnancy and lactation",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q050",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 50,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=19"
+        }
+      ]
+    },
+    {
+      "questionId": "nutrition-past-tums-jan-2025-q051",
+      "kind": "coverage",
+      "reason": "Pregnancy protein requirement",
+      "paperId": "tums-jan-2025",
+      "sectionId": "nutrition/pregnancy",
+      "sectionTitle": "18 / Pregnancy and lactation",
+      "pdfPage": 28,
+      "sourcePaperIds": [
+        "tums-jan-2025"
+      ],
+      "sourceCollectionCount": 1,
+      "topicCollectionCount": 5,
+      "members": [
+        {
+          "questionId": "nutrition-past-tums-jan-2025-q051",
+          "paperId": "tums-jan-2025",
+          "sourceNumber": 51,
+          "sourceUrl": "/study/nutrition/past-papers/tums-jan-2025.pdf#page=19"
+        }
+      ]
+    }
+  ],
+  "fingerprint": "8f059ae08496bba9f8dbf32279b2c77c4ea975bb2c545f6e35db6e6ed7a0573f"
+}

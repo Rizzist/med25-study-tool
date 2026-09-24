@@ -1,5 +1,7 @@
 # Nutrition in MED25 — 14 September 2026
 
+> Historical implementation snapshot, superseded on 24 September 2026. Current totals are 276 scored past-paper questions, 324 retained source items and a 127-question Nutrition Core Exam. See [current expansion status](nutrition-expansion-status.md), [Core selection audit](nutrition-core-exam.md) and [legacy answer audit](nutrition-existing-audit.md). The earlier ungraded counts and local-only handoff below describe the original import, not the current bank.
+
 Implemented locally as `term2-nutrition`, separate from Biochemistry II.
 
 ## What is where
