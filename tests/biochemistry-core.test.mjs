@@ -14,13 +14,13 @@ const full=coreSelection(core),repeats=coreSelection(core,'repeats');
 const id=s=>'biochemistry-'+s.replace(':','-q');
 
 test('honest smaller selection: total archive, repeat patterns, source occurrences and supplements are distinct',()=>{
- assert.equal(core.sourceQuestionCount,589);assert.equal(core.sourceCollectionCount,14);assert.equal(core.optionalQuestionCount,52);
- assert.equal(core.repeatedPatternCount,81);assert.equal(core.supplementalCount,80);assert.equal(core.questions.length,161);
+ assert.equal(core.sourceQuestionCount,717);assert.equal(core.sourceCollectionCount,17);assert.equal(core.optionalQuestionCount,102);
+ assert.equal(core.repeatedPatternCount,97);assert.equal(core.supplementalCount,106);assert.equal(core.questions.length,203);
  assert.equal(core.questions.length,core.repeatedPatternCount+core.supplementalCount);
  const repeatRows=core.questions.filter(q=>q.kind==='repeat');
  assert.equal(repeatRows.length,core.repeatedPatternCount);
  assert.equal(repeatRows.reduce((n,r)=>n+r.members.length,0),core.repeatedSourceOccurrenceCount);
- assert.equal(core.repeatedSourceOccurrenceCount,237);
+ assert.equal(core.repeatedSourceOccurrenceCount,321);
  assert(core.questions.length<core.sourceQuestionCount);
  assert.equal(new Set(core.questions.map(q=>q.questionId)).size,core.questions.length);
 });
@@ -62,7 +62,7 @@ test('all selected questions preserve current original IDs, options, accepted ke
  for(const q of selected){assert.equal(q,bank.find(v=>v.id===q.id));assert(q.options.some(o=>o.id===q.correctOptionId));assert(q.answerReview.evidence.length);}
  assert(selected.find(q=>q.id===id('theory-53:016')).media?.length);
  assert.throws(()=>selectCollectionQuestions(bank.slice(1),full),/versions differ/);
- assert.equal(selectCollectionQuestions(bank).length,641);
+ assert.equal(selectCollectionQuestions(bank).length,819);
 });
 
 test('PDF page metadata and all 32 review-section starts agree with current curriculum',()=>{
@@ -87,7 +87,7 @@ test('full/repeats/sections persist separately and never inherit all-bank or sou
  const session=reconcileFinalExamSession(null,selectCollectionQuestions(bank,full),core.fingerprint);
  const parsed=parseFinalExamProgress(JSON.stringify({version:2,sessions:{[fullKey]:session,[base]:legacy}}));
  assert.deepEqual(parsed.sessions[fullKey],session);assert.deepEqual(parsed.sessions[base],legacy);
- assert.equal(paperAttemptSummary(parsed,exam,full).total,161);
+ assert.equal(paperAttemptSummary(parsed,exam,full).total,203);
 });
 
 test('representative results remain complete after reload and core routes do not change the original score',()=>{
@@ -97,6 +97,6 @@ test('representative results remain complete after reload and core routes do not
  const raw=JSON.stringify({version:2,sessions:{[key]:completed}});
  const restored=parseFinalExamProgress(raw);assert.equal(paperAttemptSummary(restored,'term2-biochemistry',repeats).completedAt,completed.completedAt);
  const reviewSession=reconcileFinalExamSession(completed,[q],core.fingerprint);
- assert.equal(Object.keys(completed.answers).length,81);assert.equal(Object.keys(reviewSession.answers).length,1);
+ assert.equal(Object.keys(completed.answers).length,97);assert.equal(Object.keys(reviewSession.answers).length,1);
  assert.equal(JSON.stringify({version:2,sessions:{[key]:completed}}),raw);
 });

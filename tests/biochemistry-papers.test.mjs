@@ -15,10 +15,10 @@ const collections=read('data/mcq-refactor/past-source-catalog.json').collections
 const question=(src,n)=>questions.find(q=>q.id===data.papers.find(p=>p.sourceId===src).id+'-q'+String(n).padStart(3,'0'));
 
 test('metabolism-only import groups alternate files, preserves all source occurrences and missing numbers',()=>{
- assert.equal(data.papers.length,15);assert.equal(data.papers.flatMap(p=>p.questions).length,641);
+ assert.equal(data.papers.length,19);assert.equal(data.papers.flatMap(p=>p.questions).length,819);
  assert.equal(data.papers.find(p=>p.sourceId==='photos').questions.length,64);
  assert.deepEqual(data.papers.find(p=>p.sourceId==='39').missingSourceNumbers,[26,29]);
- assert.equal(data.papers.find(p=>p.sourceId==='18').sources.length,3);
+ assert.equal(data.papers.find(p=>p.sourceId==='18').sources.length,4);
  assert(!data.papers.some(p=>p.sourceId==='9'));
  assert.equal(data.excluded.length,8);assert(data.excluded.some(e=>e.reason.includes('foundations')));
  assert(data.excluded.filter(e=>e.reason.includes('Practical')).length===6);
@@ -26,7 +26,7 @@ test('metabolism-only import groups alternate files, preserves all source occurr
  assert.equal(new Set(questions.map(q=>q.id)).size,questions.length);
 });
 test('all usable answers and only usable answers reach the scored bank',()=>{
- assert.equal(questions.length,641);
+ assert.equal(questions.length,819);
  for(const p of data.papers)for(const original of p.questions){
   const r=resolved(p,original);
   const q=question(p.sourceId,r.number);assert.equal(Boolean(q),Boolean(r.key),`${p.id}/${r.number}`);
@@ -73,14 +73,14 @@ test('every scored final has an honest existing review section or explicit unmap
   if(m.sectionId)assert(curriculum.sections.some(s=>s.id===m.sectionId));else assert(m.uncertain);
  }
 });
-test('expanded review locks 641 conceptual destinations and identifies the 23 study resolutions',()=>{
+test('expanded bank locks 819 review destinations and identifies the 35 study resolutions',()=>{
  const audit=read('data/biochemistry/review-coverage.json');
  const curriculum=read('data/review-curriculum/courses/term2-biochemistry.json');
  const pdf=fs.readFileSync(new URL('../public/study/reviews/biochemistry.pdf',import.meta.url));
  assert.equal(createHash('sha256').update(pdf).digest('hex'),audit.reviewSha256);
- assert.equal(audit.questionDestinations.length,641);
- assert.equal(new Set(audit.questionDestinations.map(r=>r.questionId)).size,641);
- assert.equal(audit.ungradedItems,0);assert.equal(audit.aiResolvedItems,23);assert.equal(audit.reviewSections,36);
+ assert.equal(audit.questionDestinations.length,819);
+ assert.equal(new Set(audit.questionDestinations.map(r=>r.questionId)).size,819);
+ assert.equal(audit.ungradedItems,0);assert.equal(audit.aiResolvedItems,35);assert.equal(audit.reviewSections,36);
  for(const r of audit.questionDestinations){
   const section=curriculum.sections.find(s=>s.id===r.sectionId);
   assert(section,r.questionId);assert.equal(r.pdfPage,section.pdfPage);
@@ -94,8 +94,8 @@ test('expanded review locks 641 conceptual destinations and identifies the 23 st
  }
 });
 test('AI study repairs preserve originals and use darker-answer provenance even when matching printed keys',()=>{
- assert.equal(Object.keys(resolutions).length,23);
- assert.equal(Object.values(resolutions).filter(r=>r.kind==='repaired').length,22);
+ assert.equal(Object.keys(resolutions).length,35);
+ assert.equal(Object.values(resolutions).filter(r=>r.kind==='repaired').length,34);
  for(const p of data.papers)for(const row of p.questions){
   const id=`${p.id}-q${String(row.number).padStart(3,'0')}`;
   const resolution=resolutions[id];

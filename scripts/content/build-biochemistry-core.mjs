@@ -59,12 +59,13 @@ const sections=curriculum.sections.filter(s=>rows.some(r=>r.sectionId===s.id)).m
 const result={revision,title:'Biochemistry Core Exam',sourceFingerprint:hash(JSON.stringify([questions,curriculum.sections,merges,supplements])),
   sourceQuestionCount:questions.length,sourceCollectionCount:papers.length,optionalQuestionCount:all.length-questions.length,
   repeatedPatternCount:repeated.length,repeatedSourceOccurrenceCount:repeated.reduce((n,g)=>n+g.length,0),supplementalCount:rows.filter(r=>r.kind==='coverage').length,
+  exclusionNote:'The optional reconstruction and undated question-bank report are excluded from recurrence counts. Alternate scans and reordered copies count as one source paper.',
   methodology:'One representative per detected repeated question pattern, followed by explicitly selected core-coverage questions. Exact stem/answer matching plus reviewed relationship groups; never whole-topic matching alone. Each main collection counts once, including when a question occurs twice within it. Alternate scans/translations are already grouped by source. Counts describe source collections, not authenticated independent sittings or exam probabilities. The optional reconstruction and edited study repairs do not establish recurrence. Detection is conservative; unrecognized paraphrases may remain.',
   papers:papers.map(p=>({id:p.id,title:p.title,url:p.original.url})),sections,questions:rows};
 result.fingerprint=hash(JSON.stringify(result));
 emit('public/study/biochemistry/core-exam.json',result);
 const report=['# Biochemistry Core Exam','',`${rows.length} selected = ${result.repeatedPatternCount} repeated patterns + ${result.supplementalCount} supplemental core-coverage questions.`,
-  '',`${questions.length} is the total main source-item count, NOT the repeat count. ${result.repeatedSourceOccurrenceCount} source occurrences are represented by the repeated patterns. ${result.optionalQuestionCount} reconstruction items are excluded.`,
+  '',`${questions.length} is the total main source-item count, NOT the repeat count. ${result.repeatedSourceOccurrenceCount} source occurrences are represented by the repeated patterns. ${result.optionalQuestionCount} optional reconstruction/report items are excluded.`,
   '',result.methodology,'','## Selection audit','','| Representative | Basis | Source collections | Review section | PDF page |','|---|---|---:|---|---:|',
   ...rows.map(r=>`| ${r.questionId} | ${r.kind}: ${r.reason} | ${r.sourceCollectionCount} | ${r.sectionTitle} | ${r.pdfPage} |`),
   '','## Regeneration','','Edit `data/biochemistry/core-selection.mjs`; run `npm run biochemistry:core:generate`, then `npm run biochemistry:core:check`. The generated manifest retains every repeat member and original source-page link. The question bank and original answers are not copied or rewritten by this selector.',

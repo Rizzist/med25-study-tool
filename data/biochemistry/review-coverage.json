@@ -1,11 +1,11 @@
 {
-  "version": "2026-09-23",
+  "version": "2026-09-25",
   "scope": "All imported source occurrences, including optional reconstruction and flawed items. Concept-level educational coverage, not an official exam blueprint or clinical guideline.",
   "reviewSha256": "74ae4621633234addcd532e301c479ed7ff45ee9ca6f712b027c58d49b6c1a32",
   "reviewPages": 56,
   "reviewSections": 36,
-  "sourceItems": 641,
-  "scoredItems": 641,
+  "sourceItems": 819,
+  "scoredItems": 819,
   "ungradedItems": 0,
   "missingDestinations": 0,
   "questionDestinations": [
@@ -18494,7 +18494,3389 @@
           "locator": "PDF pp. 143-155"
         }
       ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q001",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 1,
+      "prompt": "Which of the following is not an enzyme involved in glycolysis?",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q002",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 2,
+      "prompt": "Creatinine is the product of……. creatine or …… phosphocreatine in muscles.",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "B is the source-style shorthand. Creatinine forms by spontaneous nonenzymatic cyclization of creatine/phosphocreatine; dehydration and phosphate loss should not be mistaken for an enzyme-catalyzed energy pathway.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 39: Amino acids as precursors of signaling and storage molecules"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q003",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 3,
+      "prompt": "Cori’s cycle transfers …………….?",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 17: Gluconeogenesis, redox transfer and substrate limits"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q004",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 4,
+      "prompt": "Which amino acids are found in urine in cystinuria?",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 35: Amino-acid disorders: reason from the blocked reaction"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q005",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 5,
+      "prompt": "High level of uric acid in blood is also called ……………?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "The precise term for elevated blood urate is hyperuricemia. The printed uricemia merely denotes urate in blood; option B is explicitly corrected.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q006",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 6,
+      "prompt": "Glycogen is converted to glucose-1-phosphate by …….?",
+      "sectionId": "biochemistry/biochem-glycogen",
+      "sectionTitle": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 16: Glycogen structure, synthesis, degradation and control"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q007",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 7,
+      "prompt": "Two important byproducts of the Hexose monophosphate (HMP) shunt are ………?",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Pentose phosphate pathway and antioxidant defense"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q008",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 8,
+      "prompt": "Which amino acid is not required for creatine synthesis?",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 39: Amino acids as precursors of signaling and storage molecules"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q009",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 9,
+      "prompt": "Conversion of glucose to glucose-6-phosphate in human liver is catalyzed by………?",
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "sectionTitle": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Both hexokinase and glucokinase can phosphorylate glucose in liver. Glucokinase is the high-Km, high-capacity hepatic isoenzyme; it is not the only possible isoenzyme.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 6: Glucose transport, trapping and tissue priorities"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q010",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 10,
+      "prompt": "Carbamoyl phosphate synthetase I regulates the urea cycle. Which of the following compounds activates this enzyme?",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q011",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 11,
+      "prompt": "The reaction succinyl COA to succinate requires ……………..?",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "GDP is the conventional GTP-forming TCA teaching answer. Mammals also have an ADP-dependent succinyl-CoA synthetase isoenzyme; either nucleotide is accepted for this unqualified stem.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q012",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 12,
+      "prompt": "Which of the following enzyme is required for the hexose monophosphate (HMP) shunt pathway?",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Pentose phosphate pathway and antioxidant defense"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q013",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 13,
+      "prompt": "From which amino acid is carnitine obtained?",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 39: Amino acids as precursors of signaling and storage molecules"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q014",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 14,
+      "prompt": "Which vitamin is needed to convert serine to glycine?",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q015",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 15,
+      "prompt": "Which enzyme is missing in Alkaptonuria?",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 35: Amino-acid disorders: reason from the blocked reaction"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q016",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 16,
+      "prompt": "Which of the following is an enzyme required for glycolysis?",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q017",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 17,
+      "prompt": "Which amino acid is needed in the urea cycle to convert Citrulline to Arginiosuccinate?",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q018",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 18,
+      "prompt": "Which enzyme plays an important role in the final stage of purine base catabolism to uric acid?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q019",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 19,
+      "prompt": "Which enzyme converts chymotrypsinogen to chymotrypsin?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q020",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 20,
+      "prompt": "Which one of the following is the major blood NPN?",
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "sectionTitle": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q021",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 21,
+      "prompt": "Which of the following is correct about decreasing fat absorption?",
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "sectionTitle": "Dietary lipid digestion: from meal to absorbable products",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Three statements are true: ezetimibe reduces intestinal cholesterol absorption; orlistat inhibits both gastric and pancreatic lipases. Accept A, B or D. Humans cannot completely degrade the steroid ring to CO2 and water.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Dietary lipid digestion: from meal to absorbable products"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q022",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 22,
+      "prompt": "The acetyl CoA is produced in the mitochondria and must be transported into cytosol for synthesis of fatty acid. Which of the following is true regarding its transport?",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q023",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 23,
+      "prompt": "Net generation of energy on complete oxidation of a 15-carbon fatty acid is…..?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "C is correct: activation and propionyl-CoA carboxylation cost energy, and the final three-carbon fragment enters at succinyl-CoA rather than yielding another acetyl-CoA. Odd-chain C15 yields less net ATP than C14 under the stated complete-oxidation convention.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q024",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 24,
+      "prompt": "Glycerol released from adipose tissue by hydrolysis of triglycerides is mainly….?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q025",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 25,
+      "prompt": "Which of the following is correct about liver enzymes?",
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "sectionTitle": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Both A and C are defensible: ALT has a longer circulating half-life and is more liver-specific than AST. A blanket rule for all chronic liver disease is not valid; the AST/ALT ratio depends on etiology and stage.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 49: Liver injury, cholestasis and synthetic-function patterns"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q026",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 26,
+      "prompt": "The key regulatory enzyme of cholesterol synthesis is HMG Co-A reductase. All of the following inhibit the enzyme except ……………?",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Insulin promotes HMG-CoA reductase activity in the fed state. The original blanket EXCEPT wording about cortisol/glucocorticoids is replaced with a direct regulatory question.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 27: Cholesterol, bile acids and steroid synthesis"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q027",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 27,
+      "prompt": "The process by which bile acid sequestrants lower serum cholesterol level is …..?",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "B is the compensatory hepatic pathway: loss of bile acids increases conversion of cholesterol to bile acids. Broad source alternatives about excretion/catabolism overlap, so the study stem asks for the specific pathway.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 27: Cholesterol, bile acids and steroid synthesis"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q028",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 28,
+      "prompt": "Which of the following compounds is a member of the electron transport chain?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q029",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 29,
+      "prompt": "All of the following are correct about bile acids production, except ………?",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 27: Cholesterol, bile acids and steroid synthesis"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q030",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 30,
+      "prompt": "Which of the following mechanisms would lead to the inhibition of cholesterol biosynthesis?",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 27: Cholesterol, bile acids and steroid synthesis"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q031",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 31,
+      "prompt": "In persons with diabetes, excess acetyl-CoA produced by the liver, cannot be used by the TCA cycle, it accumulates in their blood circulation as …………?",
+      "sectionId": "biochemistry/biochem-ketones",
+      "sectionTitle": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 25: Ketogenesis and ketone utilization"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q032",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 32,
+      "prompt": "What would be the consequence of carnitine consumption as a supplement?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Carnitine carries long-chain acyl groups across the inner mitochondrial membrane. This mechanistic exam answer does not establish a benefit from supplements in people without deficiency.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q033",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 33,
+      "prompt": "Which of the following is correct about introducing double bonds into fatty acyl chains?",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q034",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 34,
+      "prompt": "Which of the following statements about the long-term fasting is correct?",
+      "sectionId": "biochemistry/biochem-ketones",
+      "sectionTitle": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Liver produces but does not oxidize ketone bodies. Brain adapts to their use; muscle can use them, although muscle increasingly relies on fatty acids during prolonged starvation.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 25: Ketogenesis and ketone utilization"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q035",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 35,
+      "prompt": "A patient presents initial stage of myocardium infarction. Which of the following tests are more useful for diagnosis?",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "B is the historical enzyme panel among these options. Modern suspected MI evaluation uses cardiac troponin and clinical/ECG assessment; LDH and AST are not contemporary first-line diagnostic tests.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q036",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 36,
+      "prompt": "Steatorrhea is the presence of excess fat in feces. All of the following causes Steatorrhea except ………?",
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "sectionTitle": "Dietary lipid digestion: from meal to absorbable products",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "D is the best classroom answer for uncomplicated diabetes. Diabetes can coexist with pancreatic insufficiency or other causes of malabsorption; the answer is not an absolute exclusion.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Dietary lipid digestion: from meal to absorbable products"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q037",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 37,
+      "prompt": "If all potential sources of ATP production are taken into account, the net number of ATP molecules formed per molecule of glucose in aerobic glycolysis is …..?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Aerobic glycolysis itself makes 2 ATP and 2 cytosolic NADH: 5 ATP equivalents with the glycerol-3-phosphate shuttle or 7 with malate-aspartate, using modern P/O values. None of the four source options correctly gives this; an explicit E is added. Complete glucose oxidation is a different question.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q038",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 38,
+      "prompt": "Which one is an indicator for jaundice in plasma?",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q039",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 39,
+      "prompt": "A 7-year-old boy suffers from mental retardation and self-mutilation and has increased levels of serum uric acid. The symptoms are characteristic of Lesch Nyhan syndrome. Which of the following defective?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2021-june-23-izam-q040",
+      "paperId": "biochemistry-2021-june-23-izam",
+      "sourceNumber": 40,
+      "prompt": "The ammonia from proteins degraded in muscle tissue is brought in the blood stream to the liver mainly via …………..?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Alanine carries muscle nitrogen coupled to the glucose-alanine cycle, but glutamine is another major nontoxic nitrogen carrier. Both A and B are accepted for this unqualified wording.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q001",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 1,
+      "prompt": "Which of the following enzymes is required for the regeneration of reduced glutathione?",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "G6PD supplies NADPH needed by glutathione reductase; it does not itself reduce GSSG. Glutathione reductase is not among the choices.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Pentose phosphate pathway and antioxidant defense"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q002",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 2,
+      "prompt": "Pentose phosphate pathway is responsible to make all the following EXCEPT ...",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "The intended B refers to free fructose, not fructose-6-phosphate, which IS a nonoxidative PPP product. CO2, NADPH and pentose phosphates are PPP products.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Pentose phosphate pathway and antioxidant defense"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q003",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 3,
+      "prompt": "In glycolysis, the synthesis of ATP is produced by ...",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q004",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 4,
+      "prompt": "Which of the following is a high energy molecule in glycolysis?",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q005",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 5,
+      "prompt": "Which of the following molecules is synthesized in fermentation?",
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "sectionTitle": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 9: PFK-1, pyruvate kinase and the lactate shunt"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q006",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 6,
+      "prompt": "Which of the following enzymes is important in glycogenolysis?",
+      "sectionId": "biochemistry/biochem-glycogen",
+      "sectionTitle": "Glycogen structure, synthesis, degradation and control",
+      "pdfPage": 16,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 16: Glycogen structure, synthesis, degradation and control"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q007",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 7,
+      "prompt": "Which glucose transporter is active in muscle tissues?",
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "sectionTitle": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 6: Glucose transport, trapping and tissue priorities"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q008",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 8,
+      "prompt": "All the following enzymes are important in gluconeogenesis except:",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 17: Gluconeogenesis, redox transfer and substrate limits"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q009",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 9,
+      "prompt": "How many pyruvate molecules are required for gluconeogenesis?",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Two pyruvate molecules supply the six carbons for one glucose molecule.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 17: Gluconeogenesis, redox transfer and substrate limits"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q010",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 10,
+      "prompt": "Where does TCA cycle take place?",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q011",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 11,
+      "prompt": "Oxidation of one glucose molecule in glycolysis and TCA cycle yields how many ATP molecules (NADH=2.5, FADH=1.5)?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "30-32 includes oxidation of the NADH/FADH2 through oxidative phosphorylation; glycolysis and the TCA cycle alone do not directly synthesize this many ATP.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q012",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 12,
+      "prompt": "The end product of glycolysis under AEROBIC conditions is ...",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q013",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 13,
+      "prompt": "Which tissue plays a central role in processing and distributing dietary nutrients during the absorptive state?",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 42: Insulin, glucagon and the fed-fast cycle"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q014",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 14,
+      "prompt": "What is the primary source of cytosolic acetyl coenzyme A (acetyl CoA) for fatty acid synthesis in the liver?",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Of the choices, pyruvate is the carbon precursor via mitochondrial PDH. Acetyl units then leave mitochondria as citrate; pyruvate is not directly converted to acetyl-CoA by cytosolic PDH.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q015",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 15,
+      "prompt": "Which of the following is a result of decreased insulin levels during fasting?",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 42: Insulin, glucagon and the fed-fast cycle"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q016",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 16,
+      "prompt": "Glucagon stimulates which process in the liver?",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 42: Insulin, glucagon and the fed-fast cycle"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q017",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 17,
+      "prompt": "All the following molecules are present in the path of cholesterol synthesis, except:",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 27: Cholesterol, bile acids and steroid synthesis"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q018",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 18,
+      "prompt": "What is the role of citrate in fatty acid synthesis in the cell?",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q019",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 19,
+      "prompt": "How many ATP or its equivalent is produced from the aerobic and complete catabolism of oleic acid (delta9 18:1) (NADH=3, FADH=2)?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "The question explicitly uses legacy P/O values: stearate 146 net ATP minus one FADH2 (2 ATP) bypassed at the double bond gives 144. Modern accounting would give about 118.5, not 144.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q020",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 20,
+      "prompt": "All the following factors are involved in chylomicron metabolism, except:",
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "sectionTitle": "Micelles, enterocytes, chylomicrons and remnant uptake",
+      "pdfPage": 21,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q021",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 21,
+      "prompt": "For the synthesis of palmitic acid, all of the following are needed, except:",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q022",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 22,
+      "prompt": "From beta oxidation of lauric acid in mitochondria, all the following compounds are produced, except:",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q023",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 23,
+      "prompt": "In familial hypercholesterolemia, there is a mutation in which one of the following genes?",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "LDLR is the classic and most common cause, but pathogenic APOB variants also cause autosomal-dominant familial hypercholesterolemia. Both A and D are accepted for the broad source stem.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q024",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 24,
+      "prompt": "Which of the following complexes in the electron transport chain is not involved in pumping protons across the mitochondrial membrane?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q025",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 25,
+      "prompt": "Which compound inhibits ATP synthase by directly binding to it and preventing proton translocation?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q026",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 26,
+      "prompt": "Which of the following compounds uncouples oxidative phosphorylation by dissipating the proton gradient across the mitochondrial membrane?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q027",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 27,
+      "prompt": "What is the main purpose of the proton gradient established by the electron transport chain?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q028",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 28,
+      "prompt": "What is the final product of beta-oxidation of odd-chain fatty acids?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "The distinctive final three-carbon fragment is propionyl-CoA; acetyl-CoA is also released during preceding cycles.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q029",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 29,
+      "prompt": "All statements regarding 3-OH-3 methyl glutaryl CoA are true except:",
+      "sectionId": "biochemistry/biochem-ketones",
+      "sectionTitle": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 25: Ketogenesis and ketone utilization"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q030",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 30,
+      "prompt": "Which of the following is the rate-limiting step of fatty acid oxidation and is also inhibited by malonyl CoA?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q031",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 31,
+      "prompt": "Which type of hyperlipidemia is associated with defects in ApoE protein variants?",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q032",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 32,
+      "prompt": "Adipose tissue lacks:",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Adipose has low physiologically relevant glycerol kinase activity, not an absolute absence under every condition; most liberated glycerol goes to the liver.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q033",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 33,
+      "prompt": "Which of the following is not true regarding ribonucleotide reductase?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Ribonucleotide reductase supplies deoxyribonucleotide precursors and therefore contributes indirectly to dTMP production. The source D wording is too broad to call false. D is explicitly changed to a false direct-enzyme claim; thymidylate synthase, not RNR, directly methylates dUMP.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q034",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 34,
+      "prompt": "... donates its phosphate to ADP to yield ATP during muscle exertion.",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 39: Amino acids as precursors of signaling and storage molecules"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q035",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 35,
+      "prompt": "Tophus is a clinical sign of which condition?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q036",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 36,
+      "prompt": "Jaundice is caused by all of the following, except for ...?",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q037",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 37,
+      "prompt": "Which of the following is incorrectly paired regarding the disease and its indicator?",
+      "sectionId": "biochemistry/biochem-renal-tests",
+      "sectionTitle": "Renal biochemistry: urea, creatinine, albumin and tubular function",
+      "pdfPage": 50,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "D is the clear mismatch: uricemia concerns urate, whereas urea relates to azotemia/renal nitrogen handling. Creatine in muscle disease is historical shorthand, not a substitute for creatine kinase in modern diagnosis.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 50: Renal biochemistry: urea, creatinine, albumin and tubular function"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q038",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 38,
+      "prompt": "In Lesch-Nyhan syndrome:",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q039",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 39,
+      "prompt": "According to the biosynthetic origin of purine ring, nitrogen atom N1 originates from?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q040",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 40,
+      "prompt": "What is a primary source of non-protein nitrogen (NPN) in ruminant diets?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "This source item concerns ruminant nutrition: rumen microbes can use urea nitrogen. It is not advice to consume urea and is not evidence of a human dietary nitrogen requirement.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q041",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 41,
+      "prompt": "Histamine, a chemical mediator of allergies and anaphylaxis, is synthesized from amino acid histidine by which of the following process?",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 39: Amino acids as precursors of signaling and storage molecules"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q042",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 42,
+      "prompt": "Which of the following statements about the urea cycle is correct?",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q043",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 43,
+      "prompt": "Which of the following statements about transamination reactions is correct?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q044",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 44,
+      "prompt": "Which of the following amino acids cannot provide a substrate for gluconeogenesis?",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q045",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 45,
+      "prompt": "Which of the following transport system is responsible for transferring dipeptides from the intestinal lumen to enterocytes?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q046",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 46,
+      "prompt": "Which of the following enzyme is deficient in alkaptonuria?",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 35: Amino-acid disorders: reason from the blocked reaction"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q047",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 47,
+      "prompt": "Which of the following amino acids are involved in the transfer of ammonia from tissues to the liver?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q048",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 48,
+      "prompt": "Identify the amino acid that participates in methyl group transfer:",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q049",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 49,
+      "prompt": "Which of the following is the only plasma enzyme normally found in urine?",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q050",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 50,
+      "prompt": "Which of the following are the most important cause of increased alkaline phosphatase activity in serum?",
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "sectionTitle": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 49: Liver injury, cholestasis and synthetic-function patterns"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q051",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 51,
+      "prompt": "Serum nonfunctional enzymes are all, except:",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-july-13-izam-q052",
+      "paperId": "biochemistry-2024-july-13-izam",
+      "sourceNumber": 52,
+      "prompt": "Which enzyme in the body is measured to diagnose rhabdomyolysis?",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q001",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 1,
+      "prompt": "Maple syrup disease is a disorder due to a deficiency of pathway that degrades:",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 35: Amino-acid disorders: reason from the blocked reaction"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q002",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 2,
+      "prompt": "Which of the following statements about the urea cycle is correct?",
+      "sectionId": "biochemistry/biochem-urea",
+      "sectionTitle": "Urea cycle: atom origins, compartments and diagnostic contrasts",
+      "pdfPage": 31,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 31: Urea cycle: atom origins, compartments and diagnostic contrasts"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q003",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 3,
+      "prompt": "Which of the following statements about transamination reactions is correct?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q004",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 4,
+      "prompt": "Which of the following amino acids cannot provide a substrate for gluconeogenesis?",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q005",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 5,
+      "prompt": "Amino acids are released into the portal system by:",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Basolateral release into portal blood is carrier-mediated facilitated transport. Passive transport is sometimes used as its broad umbrella; accept C or D, not apical sodium-dependent uptake.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q006",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 6,
+      "prompt": "Which of the following enzyme is deficient in alkaptonuria?",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 35: Amino-acid disorders: reason from the blocked reaction"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q007",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 7,
+      "prompt": "Which of the following enzyme catalyze the major mechanism for transporting ammonia in a nontoxic form?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q008",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 8,
+      "prompt": "Identify the amino acid that participates in methyl group transfer:",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q009",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 9,
+      "prompt": "Which of the following is the only plasma enzyme normally found in urine?",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q010",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 10,
+      "prompt": "Which of the following is the most important cause of increased aminotransaminase activity in serum?",
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "sectionTitle": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 49: Liver injury, cholestasis and synthetic-function patterns"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q011",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 11,
+      "prompt": "Serum nonfunctional enzymes are all, except:",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q012",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 12,
+      "prompt": "What enzyme in the body is measured to diagnose rhabdomyolysis?",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q013",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 13,
+      "prompt": "All the following compounds are involved in the biosynthesis of purine nucleotides except:",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q014",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 14,
+      "prompt": "In which of the following diseases conjugated bilirubin increases?",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q015",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 15,
+      "prompt": "Allopurinol inhibits which of the following enzymes?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q016",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 16,
+      "prompt": "What is the end product of urobilinogen metabolism in the kidney?",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q017",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 17,
+      "prompt": "Creatine is synthesized from which of the following compounds in the liver and kidneys?",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 39: Amino acids as precursors of signaling and storage molecules"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q018",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 18,
+      "prompt": "Fluorouracil inhibits which of the following enzymes?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q019",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 19,
+      "prompt": "Which of the following is an inhibitor of ATP/ADP transporter in the mitochondrial inner membrane?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q020",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 20,
+      "prompt": "Which part of the respiratory chain has the lowest tendency to oxidize?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "FMN has the lowest reduction potential among the listed respiratory carriers. The ambiguous phrase tendency to oxidize is clarified to oxidizing power.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q021",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 21,
+      "prompt": "Which of the following is an uncoupler of oxidation from phosphorylation?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q022",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 22,
+      "prompt": "In the conversion of pyruvic acid to acetyl coenzyme A, all of the following are involved, EXCEPT:",
+      "sectionId": "biochemistry/biochem-pdh-tca",
+      "sectionTitle": "PDH and the TCA cycle: enzymes, cofactors and regulation",
+      "pdfPage": 10,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 10: PDH and the TCA cycle: enzymes, cofactors and regulation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q023",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 23,
+      "prompt": "All of the following factors play a role in chylomicron metabolism, except:",
+      "sectionId": "biochemistry/biochem-micelles-chylomicrons",
+      "sectionTitle": "Micelles, enterocytes, chylomicrons and remnant uptake",
+      "pdfPage": 21,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "CETP transfers neutral lipids between lipoproteins and can interact with triglyceride-rich particles. It is not an obligatory component of the canonical ApoC-II/LPL hydrolysis step; the original broad assertion that it has no role is avoided.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 21: Micelles, enterocytes, chylomicrons and remnant uptake"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q024",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 24,
+      "prompt": "Which of the following activates the enzyme HMG-CoA reductase?",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 27: Cholesterol, bile acids and steroid synthesis"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q025",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 25,
+      "prompt": "From the beta-oxidation of myristic acid in the mitochondria, all of the following compounds are produced, except:",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q026",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 26,
+      "prompt": "Which compound is involved in the transfer of acetyl-CoA from the mitochondria to the cytosol?",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q027",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 27,
+      "prompt": "For the synthesis of palmitic acid, all of the following are required, except:",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q028",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 28,
+      "prompt": "An enzyme that is essential for both ketone body synthesis and cholesterol synthesis is:",
+      "sectionId": "biochemistry/biochem-ketones",
+      "sectionTitle": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 25: Ketogenesis and ketone utilization"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q029",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 29,
+      "prompt": "Type I hyperlipoproteinemia is characterized by:",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q030",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 30,
+      "prompt": "Net ATP generation on complete oxidation of stearic acid is?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "C (146) uses the legacy convention of 3 ATP/NADH and 2 ATP/FADH2: 9 acetyl-CoA x 12 + 8 cycles x 5 - 2 activation equivalents. Modern net yield for stearate is 120 ATP; the options imply the old convention.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q031",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 31,
+      "prompt": "Which of the following apolipoproteins activates LCAT?",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q032",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 32,
+      "prompt": "Which of the following is the rate-limiting step of fatty acid oxidation and is also inhibited by malonyl CoA?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q033",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 33,
+      "prompt": "Which one of the following enzymes is involved in the conversion of IDL to LDL?",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q034",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 34,
+      "prompt": "Lesch-Nyhan syndrome, which is an X-linked recessive disorder, is caused by a deficiency of which enzyme?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q035",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 35,
+      "prompt": "Porphyria cutanea tarda is caused by a deficiency in which one of the following enzymes?",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-2024-dec-05-izam-q036",
+      "paperId": "biochemistry-2024-dec-05-izam",
+      "sourceNumber": 36,
+      "prompt": "Where are FAD and cytochrome aa3 located in the electron transport chain?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "This refers to FAD in succinate dehydrogenase (complex II) and cytochromes a/a3 in complex IV. FAD also occurs in other flavoproteins, so the usual respiratory-chain context matters.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q001",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 1,
+      "prompt": "Which of the following enzymes is important in HMP shunt?",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Pentose phosphate pathway and antioxidant defense"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q002",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 2,
+      "prompt": "Pentose phosphate pathway is responsible to make all the following EXCEPT ...?",
+      "sectionId": "biochemistry/biochem-ppp",
+      "sectionTitle": "Pentose phosphate pathway and antioxidant defense",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "The intended B refers to free fructose, not fructose-6-phosphate, which IS a nonoxidative PPP product. CO2, NADPH and pentose phosphates are PPP products.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Pentose phosphate pathway and antioxidant defense"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q003",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 3,
+      "prompt": "In glycolysis, the synthesis of ATP is catalyzed by ...",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q004",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 4,
+      "prompt": "Which of the following is a high energy molecule?",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q005",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 5,
+      "prompt": "Which of the following molecules is synthesized in fermentation?",
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "sectionTitle": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 9: PFK-1, pyruvate kinase and the lactate shunt"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q006",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 6,
+      "prompt": "In Cori's cycle high amounts of which of the following synthesizes lactate?",
+      "sectionId": "biochemistry/biochem-glycolysis-regulation",
+      "sectionTitle": "PFK-1, pyruvate kinase and the lactate shunt",
+      "pdfPage": 9,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 9: PFK-1, pyruvate kinase and the lactate shunt"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q007",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 7,
+      "prompt": "Which glucose transporter is active in liver tissues?",
+      "sectionId": "biochemistry/biochem-glucose-entry",
+      "sectionTitle": "Glucose transport, trapping and tissue priorities",
+      "pdfPage": 6,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 6: Glucose transport, trapping and tissue priorities"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q008",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 8,
+      "prompt": "Which of the following enzymes is important in gluconeogenesis:",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 17: Gluconeogenesis, redox transfer and substrate limits"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q009",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 9,
+      "prompt": "How many ATP molecules are required for gluconeogenesis?",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Per glucose from two pyruvates: 4 ATP plus 2 GTP and 2 NADH. Four counts ATP molecules specifically, not all six high-energy phosphate equivalents.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 17: Gluconeogenesis, redox transfer and substrate limits"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q010",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 10,
+      "prompt": "Where does glycolysis take place?",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q011",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 11,
+      "prompt": "Oxidation of one glucose molecule yields how many ATP molecules?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q012",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 12,
+      "prompt": "The end product of glycolysis under AEROBIC conditions is ...",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q013",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 13,
+      "prompt": "All of the following conditions can lead to hyperuricemia (elevated blood uric acid) and gout, except:",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "The original non-thiazide antihypertensive category is too broad (loop diuretics and some other drugs can increase urate). D is repaired to losartan, which can lower serum urate.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q014",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 14,
+      "prompt": "All of the following statements about a patient with severe combined immunodeficiency syndrome (SCID) are correct, except:",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "ADA deficiency causes one form of SCID, not every SCID. The source is narrowed to that form; lymphopenia, not lymphocytosis, is expected.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q015",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 15,
+      "prompt": "All of the following statements about a patient with acute hepatic porphyria are correct, except:",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Ferrochelatase deficiency causes erythropoietic protoporphyria. Photosensitivity depends on the acute hepatic porphyria subtype and is absent in acute intermittent porphyria, making the original blanket EXCEPT stem unsafe.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q016",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 16,
+      "prompt": "Which of the following antibiotics is used to treat bacterial infections by inhibiting pyrimidine synthesis?",
+      "sectionId": "biochemistry/biochem-nucleotides",
+      "sectionTitle": "Purines, pyrimidines, salvage and DNA precursor supply",
+      "pdfPage": 40,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Sulfamethoxazole inhibits bacterial dihydropteroate synthase and folate production, indirectly limiting nucleotide synthesis. It is not a direct pyrimidine-pathway-specific inhibitor.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 40: Purines, pyrimidines, salvage and DNA precursor supply"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q017",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 17,
+      "prompt": "Which of the following statements about a patient with Gilbert's syndrome is correct?",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Gilbert syndrome usually causes mild benign unconjugated hyperbilirubinemia with reduced UGT1A1 activity. An ancestry claim is not a reliable general diagnostic statement; C is explicitly replaced with the mechanism.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q018",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 18,
+      "prompt": "All of the following statements about neonatal jaundice are correct, except:",
+      "sectionId": "biochemistry/biochem-heme",
+      "sectionTitle": "Heme synthesis, porphyrias and bilirubin handling",
+      "pdfPage": 37,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Physiologic neonatal jaundice is predominantly unconjugated. Phototherapy uses visible blue light, not ultraviolet; the source UV distractor is corrected so D remains the sole false statement.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 37: Heme synthesis, porphyrias and bilirubin handling"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q019",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 19,
+      "prompt": "Identify the amino acid that is considered a precursor of melanin:",
+      "sectionId": "biochemistry/biochem-special-products",
+      "sectionTitle": "Amino acids as precursors of signaling and storage molecules",
+      "pdfPage": 39,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 39: Amino acids as precursors of signaling and storage molecules"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q020",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 20,
+      "prompt": "Which of the following enzyme is deficient in phenylketonuria (PKU)?",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 35: Amino-acid disorders: reason from the blocked reaction"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q021",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 21,
+      "prompt": "Male patient, 52 years old complained about darkening of urine. Also the urine test for homogentisic acid in the 24-hour urine was positive. What can be diagnosed?",
+      "sectionId": "biochemistry/biochem-aa-disorders",
+      "sectionTitle": "Amino-acid disorders: reason from the blocked reaction",
+      "pdfPage": 35,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 35: Amino-acid disorders: reason from the blocked reaction"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q022",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 22,
+      "prompt": "Which of the following amino acids cannot provide a substrate for gluconeogenesis?",
+      "sectionId": "biochemistry/biochem-aa-carbon",
+      "sectionTitle": "Amino-acid carbon skeletons, essentiality and one-carbon metabolism",
+      "pdfPage": 33,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 33: Amino-acid carbon skeletons, essentiality and one-carbon metabolism"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q023",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 23,
+      "prompt": "Which vitamin is required as a coenzyme for transamination?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q024",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 24,
+      "prompt": "Amino acids are released into the portal system by:",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Basolateral release into portal blood is carrier-mediated facilitated transport. Passive transport is sometimes used as its broad umbrella; accept C or D, not apical sodium-dependent uptake.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q025",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 25,
+      "prompt": "For the ATP-dependent proteasome system, which of the following proteins is required to degrade proteins?",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q026",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 26,
+      "prompt": "The amino acid which serves as a carrier of ammonia from skeletal muscle to liver is:",
+      "sectionId": "biochemistry/biochem-protein-nitrogen",
+      "sectionTitle": "Protein digestion, amino-acid transport and nitrogen collection",
+      "pdfPage": 30,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Alanine is the glucose-alanine-cycle carrier; glutamine also transports skeletal-muscle nitrogen. Both A and D are accepted for the unqualified source wording.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 30: Protein digestion, amino-acid transport and nitrogen collection"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q027",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 27,
+      "prompt": "Which of the following are the most important cause of increased alkaline phosphatase activity in serum?",
+      "sectionId": "biochemistry/biochem-liver-tests",
+      "sectionTitle": "Liver injury, cholestasis and synthetic-function patterns",
+      "pdfPage": 49,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 49: Liver injury, cholestasis and synthetic-function patterns"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q028",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 28,
+      "prompt": "Which enzyme in the body is measured to diagnose Duchenne sex-linked muscular dystrophy?",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "CK is often markedly elevated in Duchenne muscular dystrophy, but diagnosis requires the appropriate clinical/genetic assessment; CK alone is not specific.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q029",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 29,
+      "prompt": "Which of the following enzyme is small enough to pass through the glomeruli of the kidneys?",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q030",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 30,
+      "prompt": "Nonfunctional plasma enzymes are all, except:",
+      "sectionId": "biochemistry/biochem-clinical-enzymes",
+      "sectionTitle": "Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers",
+      "pdfPage": 48,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 48: Diagnostic enzymes, isoenzymes and cardiac/pancreatic markers"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q031",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 31,
+      "prompt": "Which of the complexes of the respiratory chain does not act as a proton pump?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q032",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 32,
+      "prompt": "Which component of the electron transfer chain is involved in the onset of apoptosis?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q033",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 33,
+      "prompt": "Which of the complexes of the respiratory chain is inhibited by rotenone?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q034",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 34,
+      "prompt": "Which of the following compounds is not a high-energy compound?",
+      "sectionId": "biochemistry/biochem-glycolysis",
+      "sectionTitle": "Glycolysis: every step, carbon count and energy event",
+      "pdfPage": 7,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 7: Glycolysis: every step, carbon count and energy event"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q035",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 35,
+      "prompt": "Which of the following compounds acts as a separator of phosphorylation from oxidation?",
+      "sectionId": "biochemistry/biochem-oxphos",
+      "sectionTitle": "Respiratory chain and transparent ATP accounting",
+      "pdfPage": 12,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 12: Respiratory chain and transparent ATP accounting"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q036",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 36,
+      "prompt": "What are the primary products of hydrolysis of TAG molecules?",
+      "sectionId": "biochemistry/biochem-lipid-digestion",
+      "sectionTitle": "Dietary lipid digestion: from meal to absorbable products",
+      "pdfPage": 19,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 19: Dietary lipid digestion: from meal to absorbable products"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q037",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 37,
+      "prompt": "Which of the following is a rare, autosomal-recessive disorder caused by a deficiency of LPL or its coenzyme apo C-II?",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q038",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 38,
+      "prompt": "What is necessary for VLDL particles to become functional?",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q039",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 39,
+      "prompt": "Which apolipoprotein is recognized by LDL receptors?",
+      "sectionId": "biochemistry/biochem-lipoprotein-map",
+      "sectionTitle": "Lipoproteins and apoproteins: an integrated transport map",
+      "pdfPage": 28,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "LDL receptors recognize both apoB-100 and apoE. Accept A or C; apoB-48 lacks the LDL-receptor-binding domain.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 28: Lipoproteins and apoproteins: an integrated transport map"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q040",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 40,
+      "prompt": "Acyl carrier protein contains the vitamin:",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q041",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 41,
+      "prompt": "Acetyl CoA formed from pyruvate can be used for the synthesis of all the following except:",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 17: Gluconeogenesis, redox transfer and substrate limits"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q042",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 42,
+      "prompt": "NADPH is produced when this enzyme acts:",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q043",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 43,
+      "prompt": "What activates and inhibits ACC?",
+      "sectionId": "biochemistry/biochem-fatty-acid-synthesis",
+      "sectionTitle": "Fatty-acid synthesis and TAG storage",
+      "pdfPage": 22,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Both A and B describe real inhibitory influences. Citrate and long-chain acyl-CoA are direct allosteric regulators; glucagon inhibits ACC through signaling/phosphorylation. Accept A or B because direct allostery is not specified.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 22: Fatty-acid synthesis and TAG storage"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q044",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 44,
+      "prompt": "An enzyme required for the synthesis of ketone bodies as well as cholesterol is:",
+      "sectionId": "biochemistry/biochem-ketones",
+      "sectionTitle": "Ketogenesis and ketone utilization",
+      "pdfPage": 25,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 25: Ketogenesis and ketone utilization"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q045",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 45,
+      "prompt": "Propionyl CoA formed in oxidation of fatty acids having an odd number of carbon atoms is converted into:",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q046",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 46,
+      "prompt": "Net generation of energy on complete oxidation of palmitoleic acid is:",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "The printed 127 ATP uses legacy 3/2 P/O values: palmitate 129 minus one FADH2 (2 ATP). Modern net accounting for palmitoleate is 104.5 ATP.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q047",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 47,
+      "prompt": "Lovastatin is a:",
+      "sectionId": "biochemistry/biochem-cholesterol",
+      "sectionTitle": "Cholesterol, bile acids and steroid synthesis",
+      "pdfPage": 27,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 27: Cholesterol, bile acids and steroid synthesis"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q048",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 48,
+      "prompt": "During the absorptive state, which hormone is primarily responsible for promoting the uptake of glucose by tissues?",
+      "sectionId": "biochemistry/biochem-insulin-glucagon",
+      "sectionTitle": "Insulin, glucagon and the fed-fast cycle",
+      "pdfPage": 42,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 42: Insulin, glucagon and the fed-fast cycle"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q049",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 49,
+      "prompt": "Which enzyme is responsible for the hydrolysis of stored triacylglycerols in adipose tissue?",
+      "sectionId": "biochemistry/biochem-beta-oxidation",
+      "sectionTitle": "Lipolysis, carnitine transport and beta-oxidation",
+      "pdfPage": 23,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "HSL is the best listed hormone-regulated lipase; adipose triglyceride lipase (ATGL), absent from the options, initiates most TAG hydrolysis, with HSL especially important for diacylglycerol.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 23: Lipolysis, carnitine transport and beta-oxidation"
+        }
+      ]
+    },
+    {
+      "questionId": "biochemistry-undated-50-izam-q050",
+      "paperId": "biochemistry-undated-50-izam",
+      "sourceNumber": 50,
+      "prompt": "What is the main source of carbon skeletons for gluconeogenesis during fasting?",
+      "sectionId": "biochemistry/biochem-gluconeogenesis",
+      "sectionTitle": "Gluconeogenesis, redox transfer and substrate limits",
+      "pdfPage": 17,
+      "beforeAudit": "New IZAM source; existing PDF not rewritten.",
+      "afterAudit": "Topic mapped to existing review section; detailed source caveats remain with question.",
+      "sourceCaveat": "Amino acids are gluconeogenic substrates among these options. Lactate and glycerol also contribute, and their relative importance changes with fasting duration; the stem does not establish a universal dominant substrate.",
+      "graded": true,
+      "references": [
+        {
+          "title": "Biochemistry II review",
+          "locator": "PDF p. 17: Gluconeogenesis, redox transfer and substrate limits"
+        }
+      ]
     }
   ],
-  "aiResolvedItems": 23
+  "aiResolvedItems": 35
 }

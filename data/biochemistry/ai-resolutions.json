@@ -1,144 +1,419 @@
 {
-  "version": "2026-09-23-ai-repairs-v1",
-  "policy": "AI-authored study resolutions for the 23 previously ungraded source items. Repairs are explicit study variants, not claims about an official key or exact examiner intent. Original text, choices and marks remain immutable in past-papers.json and are reproduced alongside each repair.",
+  "version": "2026-09-25-izam-audit",
+  "policy": "Explicit editorial study repairs and accepted alternatives. Original text, choices and supplied marks are preserved; no official-key claim.",
   "questions": {
     "biochemistry-2025-feb-dds-q004": {
-      "kind": "repaired", "key": "D", "confidence": "high",
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
       "prompt": "Which complication of cystic fibrosis is hepatobiliary, rather than part of its pancreatic, pulmonary or male reproductive manifestations?",
       "explanation": "Cholestasis is the hepatobiliary complication. The source EXCEPT question was defective because all four choices can occur in CF. The study stem is narrowed to organ-system classification; D does NOT mean cholestasis is absent in CF.",
-      "evidence": ["https://www.cff.org/medical-professionals/cystic-fibrosis-screening-evaluation-and-management-hepatobiliary-disease"]
+      "evidence": [
+        "https://www.cff.org/medical-professionals/cystic-fibrosis-screening-evaluation-and-management-hepatobiliary-disease"
+      ]
     },
     "biochemistry-2025-feb-dds-q009": {
-      "kind": "repaired", "key": "A", "confidence": "medium",
+      "kind": "repaired",
+      "key": "A",
+      "confidence": "medium",
       "prompt": "Persistent hepatic cholesterol accumulation, especially together with excess hepatic triglyceride, can contribute to progression of which listed liver disease?",
       "explanation": "Fatty liver disease is the best match to this repaired lipid-accumulation stem. Free-cholesterol lipotoxicity can contribute to steatohepatitis. The original statement of influx exceeding efflux establishes accumulation only; it cannot diagnose a particular disease or prove cholestasis. This is an explanatory study reconstruction, not a recovered official key.",
-      "evidence": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC3186822/", "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, cholesterol and lipid metabolism chapters."]
+      "evidence": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3186822/",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, cholesterol and lipid metabolism chapters."
+      ]
     },
     "biochemistry-2023-july-23-q002": {
-      "kind": "repaired", "key": "D", "confidence": "high",
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
       "prompt": "Which effect of citrate is INDIRECT, through increased malonyl-CoA and inhibition of CPT-I, rather than direct enzyme regulation or export of acetyl units?",
       "explanation": "Inhibition of beta-oxidation is indirect: citrate activates ACC, malonyl-CoA rises, and CPT-I is inhibited. The other choices describe direct PFK-1 inhibition, acetyl-unit export and ACC activation. All four original statements are defensible; adding INDIRECT repairs the EXCEPT item without teaching that citrate has no effect on fatty-acid oxidation.",
-      "evidence": ["Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, chapters 8, 16 and 17; Biochemistry II review: fatty-acid synthesis."]
+      "evidence": [
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, chapters 8, 16 and 17; Biochemistry II review: fatty-acid synthesis."
+      ]
     },
     "biochemistry-2023-jan-29-q010": {
-      "kind": "repaired", "key": "C", "confidence": "high",
-      "optionPatches": {"C": "UDP"},
+      "kind": "repaired",
+      "key": "C",
+      "confidence": "high",
+      "optionPatches": {
+        "C": "UDP"
+      },
       "explanation": "Cellulose synthesis uses UDP-glucose. The original choices omit UDP; choice C is repaired from GDP to UDP. ADP-glucose is the starch donor, not the cellulose donor. The assigned C refers to the repaired choice, not the printed GDP option.",
-      "evidence": ["Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, activated sugar nucleotides; carbohydrate metabolism MD Kish slide deck, carbohydrate biosynthesis section."]
+      "evidence": [
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, activated sugar nucleotides; carbohydrate metabolism MD Kish slide deck, carbohydrate biosynthesis section."
+      ]
     },
     "biochemistry-2022-jan-26-q046": {
-      "kind": "repaired", "key": "A", "confidence": "high",
-      "optionPatches": {"A": "Inhibiting the reduction of HMG-CoA to mevalonate"},
+      "kind": "repaired",
+      "key": "A",
+      "confidence": "high",
+      "optionPatches": {
+        "A": "Inhibiting the reduction of HMG-CoA to mevalonate"
+      },
       "explanation": "HMG-CoA reductase makes mevalonate from HMG-CoA. Its inhibition reduces cholesterol synthesis and promotes hepatic LDL-receptor expression. The supplied A mark is plausible only after repairing the option: inhibiting formation of HMG-CoA would target a different step.",
-      "evidence": ["Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, PDF pp. 410-414."]
+      "evidence": [
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, PDF pp. 410-414."
+      ]
     },
     "biochemistry-2017-kish-q010": {
-      "kind": "repaired", "key": "E", "confidence": "high",
-      "optionPatches": {"E": "None of the above: all four processes can occur in liver"},
+      "kind": "repaired",
+      "key": "E",
+      "confidence": "high",
+      "optionPatches": {
+        "E": "None of the above: all four processes can occur in liver"
+      },
       "explanation": "Liver can transaminate alanine to pyruvate, form glutamate from alpha-ketoglutarate, perform gluconeogenesis and use glucose for energy. The absent 'none' option has been added; these processes need not all dominate simultaneously in the same nutritional state.",
-      "evidence": ["Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, carbohydrate metabolism, nitrogen metabolism and fed-fast integration chapters."]
+      "evidence": [
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, carbohydrate metabolism, nitrogen metabolism and fed-fast integration chapters."
+      ]
     },
     "biochemistry-theory-53-q013": {
-      "kind": "repaired", "key": "E", "confidence": "high",
-      "optionPatches": {"E": "None of the above: all four are non-protein nitrogen compounds"},
+      "kind": "repaired",
+      "key": "E",
+      "confidence": "high",
+      "optionPatches": {
+        "E": "None of the above: all four are non-protein nitrogen compounds"
+      },
       "explanation": "Free glutamine, urate, urea and creatinine all contribute non-protein nitrogen. Glutamine is an amino acid, not a protein. Added E corrects the original EXCEPT question; the supplied A mark is not a valid biochemical distinction.",
-      "evidence": ["https://www.ncbi.nlm.nih.gov/books/NBK305/", "Biochemistry II review: renal biochemistry and nonprotein nitrogen."]
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK305/",
+        "Biochemistry II review: renal biochemistry and nonprotein nitrogen."
+      ]
     },
     "biochemistry-theory-53-q026": {
-      "kind": "repaired", "key": "C", "confidence": "high",
+      "kind": "repaired",
+      "key": "C",
+      "confidence": "high",
       "prompt": "Which organ also has local creatine-synthesis capacity, despite being omitted from the simplified liver-kidney-muscle creatine diagram?",
       "explanation": "Brain cells have creatine-synthesis capacity as well as creatine uptake. The supplied C mark cannot mean the brain never synthesizes creatine. The study stem explicitly tests this correction rather than repeating the original false exclusion.",
-      "evidence": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC3355046/", "https://pmc.ncbi.nlm.nih.gov/articles/PMC1175845/"]
+      "evidence": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3355046/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC1175845/"
+      ]
     },
     "biochemistry-theory-53-q029": {
-      "kind": "repaired", "key": "B", "confidence": "high",
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
       "prompt": "What is the clinical syndrome of systemic manifestations associated with severe retention of nitrogenous waste in kidney failure, as distinct from the laboratory finding azotemia?",
       "explanation": "Uremia is the clinical syndrome. Azotemia means biochemical elevation of nitrogenous wastes; it is not a synonym. The stem is repaired to preserve the likely intended B while retaining the clinically important distinction.",
-      "evidence": ["https://www.ncbi.nlm.nih.gov/books/NBK305/", "https://www.ncbi.nlm.nih.gov/books/NBK507821/"]
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK305/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK507821/"
+      ]
     },
     "biochemistry-1403-1404-group-b-q007": {
-      "kind": "repaired", "key": "C", "confidence": "high",
-      "optionPatches": {"C": "Reduced UGT1A1 activity causes mild, usually benign unconjugated hyperbilirubinemia"},
+      "kind": "repaired",
+      "key": "C",
+      "confidence": "high",
+      "optionPatches": {
+        "C": "Reduced UGT1A1 activity causes mild, usually benign unconjugated hyperbilirubinemia"
+      },
       "explanation": "Gilbert syndrome reduces bilirubin glucuronidation, commonly leaving about 30% of normal UGT activity. The ancestry statement is replaced with the established mechanism; ancestry alone is not a diagnostic rule. Toxic hyperbilirubinemia requiring transfusion is not the usual Gilbert phenotype.",
-      "evidence": ["https://medlineplus.gov/genetics/gene/ugt1a1/"]
+      "evidence": [
+        "https://medlineplus.gov/genetics/gene/ugt1a1/"
+      ]
     },
     "biochemistry-1401-metabolism-q010": {
-      "kind": "repaired", "key": "B", "confidence": "high",
-      "optionPatches": {"B": "Succinyl-CoA → Succinate"},
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
+      "optionPatches": {
+        "B": "Succinyl-CoA → Succinate"
+      },
       "explanation": "Succinyl-CoA synthetase couples succinyl-CoA conversion to succinate to substrate-level phosphorylation, producing GTP in the GDP-forming reaction. The original B arrow is reversed; that direction consumes rather than produces the nucleotide triphosphate.",
-      "evidence": ["Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, TCA-cycle chapter; carbohydrate metabolism MD Kish slide deck, TCA cycle."]
+      "evidence": [
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, TCA-cycle chapter; carbohydrate metabolism MD Kish slide deck, TCA cycle."
+      ]
     },
     "biochemistry-1399-metabolism-q006": {
-      "kind": "repaired", "key": "D", "confidence": "medium",
-      "optionPatches": {"D": "Increase – usually normal or variable, not a defining diagnostic change"},
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "medium",
+      "optionPatches": {
+        "D": "Increase – usually normal or variable, not a defining diagnostic change"
+      },
       "explanation": "Unconjugated bilirubin rises in Gilbert syndrome. A fixed decrease in urinary urobilinogen is not a reliable defining finding. D is repaired to reflect that limitation; absence of urine bilirubin should not be confused with absence of urobilinogen.",
-      "evidence": ["https://medlineplus.gov/genetics/gene/ugt1a1/", "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism; Biochemistry II review: heme and bilirubin disorders."]
+      "evidence": [
+        "https://medlineplus.gov/genetics/gene/ugt1a1/",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism; Biochemistry II review: heme and bilirubin disorders."
+      ]
     },
     "biochemistry-1399-metabolism-q009": {
-      "kind": "repaired", "key": "E", "confidence": "high",
-      "optionPatches": {"E": "None of the above: all can be true in neonatal unconjugated hyperbilirubinemia"},
+      "kind": "repaired",
+      "key": "E",
+      "confidence": "high",
+      "optionPatches": {
+        "E": "None of the above: all can be true in neonatal unconjugated hyperbilirubinemia"
+      },
       "explanation": "Immature hepatic uptake and conjugation both contribute. Unbound unconjugated bilirubin can enter the brain, and phototherapy forms more water-soluble photoisomers. Added E corrects the flawed EXCEPT list; the original D mark would wrongly deny impaired uptake.",
-      "evidence": ["https://www.ncbi.nlm.nih.gov/books/NBK532930/", "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism."]
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK532930/",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, bilirubin metabolism."
+      ]
     },
     "biochemistry-1400-clinical-q009": {
-      "kind": "repaired", "key": "B", "confidence": "high",
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
       "prompt": "Which paired biochemical abnormalities characterize SLOS and mevalonic aciduria, respectively?",
-      "optionPatches": {"A": "Low 7-dehydrocholesterol – low urine mevalonate", "B": "High 7-dehydrocholesterol – high urine mevalonate", "C": "High lanosterol – low urine mevalonate", "D": "High cholesterol – low urine mevalonate"},
+      "optionPatches": {
+        "A": "Low 7-dehydrocholesterol – low urine mevalonate",
+        "B": "High 7-dehydrocholesterol – high urine mevalonate",
+        "C": "High lanosterol – low urine mevalonate",
+        "D": "High cholesterol – low urine mevalonate"
+      },
       "explanation": "SLOS impairs DHCR7 and raises 7-dehydrocholesterol; mevalonate-kinase deficiency can cause mevalonic aciduria. The original paired hematologic claim could not be substantiated as a reliable discriminator, so this is an explicitly reconstructed biochemical version—not verification of its thrombocytopenia/leukocytosis key.",
-      "evidence": ["https://www.ncbi.nlm.nih.gov/books/NBK1143/", "https://pubmed.ncbi.nlm.nih.gov/2850914/"]
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK1143/",
+        "https://pubmed.ncbi.nlm.nih.gov/2850914/"
+      ]
     },
     "biochemistry-1400-clinical-q019": {
-      "kind": "repaired", "key": "E", "confidence": "high",
-      "optionPatches": {"E": "None of the above: all can occur in cirrhosis"},
+      "kind": "repaired",
+      "key": "E",
+      "confidence": "high",
+      "optionPatches": {
+        "E": "None of the above: all can occur in cirrhosis"
+      },
       "explanation": "Cirrhosis may raise conjugated bilirubin, prolong PT and aPTT and reduce albumin. These changes vary with severity and are not obligatory in every patient. Added E repairs the all-true EXCEPT list; increased conjugated bilirubin is not excluded by cirrhosis.",
-      "evidence": ["https://www.ncbi.nlm.nih.gov/books/NBK482489/"]
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK482489/"
+      ]
     },
     "biochemistry-1400-clinical-q022": {
-      "kind": "inferred", "key": "C", "acceptedOptionIds": ["A", "C"], "confidence": "high",
+      "kind": "inferred",
+      "key": "C",
+      "acceptedOptionIds": [
+        "A",
+        "C"
+      ],
+      "confidence": "high",
       "explanation": "Both A (GGT) and C (ALT) are accepted for the exact printed wording. ALT is soluble; GGT is membrane anchored by a transmembrane segment, not a GPI anchor. ALP and ecto-5-prime-nucleotidase are GPI anchored. C is the supplied/preferred teaching key, but marking A wrong would be unjustified.",
-      "evidence": ["https://www.uniprot.org/uniprotkb/P19440/entry", "https://www.uniprot.org/uniprotkb/P05186/entry", "https://www.uniprot.org/uniprotkb/P21589/entry"]
+      "evidence": [
+        "https://www.uniprot.org/uniprotkb/P19440/entry",
+        "https://www.uniprot.org/uniprotkb/P05186/entry",
+        "https://www.uniprot.org/uniprotkb/P21589/entry"
+      ]
     },
     "biochemistry-1400-clinical-q027": {
-      "kind": "repaired", "key": "C", "confidence": "high",
-      "optionPatches": {"C": "Increased leucine and branched-chain alpha-keto acids"},
+      "kind": "repaired",
+      "key": "C",
+      "confidence": "high",
+      "optionPatches": {
+        "C": "Increased leucine and branched-chain alpha-keto acids"
+      },
       "explanation": "MSUD blocks branched-chain alpha-ketoacid dehydrogenase. Accumulated leucine and its ketoacid contribute to neurotoxicity. The source C has the direction reversed and omits leucine; it is repaired rather than accepting the unsupported ammonia key.",
-      "evidence": ["https://www.ncbi.nlm.nih.gov/books/NBK1319/", "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, branched-chain amino-acid metabolism."]
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK1319/",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, branched-chain amino-acid metabolism."
+      ]
     },
     "biochemistry-1400-clinical-q028": {
-      "kind": "repaired", "key": "D", "confidence": "high",
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
       "prompt": "Which listed inherited metabolic disease is classically associated with a maple-syrup or burnt-sugar odor caused by sotolon?",
       "explanation": "MSUD is the established disease association. Sotolon was identified in urine from affected patients. The original NOT-occur list makes unsupported general claims about pregnancy and starvation; the study question instead tests the demonstrated association. Odor alone is not diagnostic and dietary exposure can mimic it.",
-      "evidence": ["https://pubmed.ncbi.nlm.nih.gov/10234605/"]
+      "evidence": [
+        "https://pubmed.ncbi.nlm.nih.gov/10234605/"
+      ]
     },
     "biochemistry-1403-clinical-q003": {
-      "kind": "repaired", "key": "B", "confidence": "high",
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
       "prompt": "How many disulfide bonds connect the A and B chains of mature insulin?",
       "explanation": "There are TWO interchain bridges, plus ONE intrachain bridge within the A chain, giving THREE in total. The original choices omit three. Specifying bonds between the chains makes the supplied B (two) correct without teaching the wrong total.",
-      "evidence": ["Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, PDF pp. 562-563."]
+      "evidence": [
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, PDF pp. 562-563."
+      ]
     },
     "biochemistry-1403-clinical-q007": {
-      "kind": "repaired", "key": "B", "confidence": "high",
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
       "prompt": "Which listed carbohydrate can be reduced to galactitol and cause cataracts when its metabolism is defective?",
       "explanation": "Galactose is reduced by aldose reductase to galactitol, which accumulates in the lens. The source conflates this polyol mechanism with advanced glycation. The repaired question isolates the cataract mechanism; AGE formation is a separate nonenzymatic process.",
-      "evidence": ["Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, PDF pp. 230-245."]
+      "evidence": [
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition, PDF pp. 230-245."
+      ]
     },
     "biochemistry-1403-clinical-q011": {
-      "kind": "repaired", "key": "E", "confidence": "high",
-      "optionPatches": {"E": "Increased 7-dehydrocholesterol"},
+      "kind": "repaired",
+      "key": "E",
+      "confidence": "high",
+      "optionPatches": {
+        "E": "Increased 7-dehydrocholesterol"
+      },
       "explanation": "Increased 7-dehydrocholesterol is the characteristic biochemical finding of DHCR7 deficiency. The original anemia/platelet choices are not reliable SLOS diagnostic discriminators. Added E supplies the established missing answer; the printed D mark is retained only as source provenance.",
-      "evidence": ["https://www.ncbi.nlm.nih.gov/books/NBK1143/"]
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK1143/"
+      ]
     },
     "biochemistry-1403-clinical-q032": {
-      "kind": "repaired", "key": "D", "confidence": "high",
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
       "prompt": "Which listed inherited metabolic disease is classically associated with a maple-syrup or burnt-sugar odor caused by sotolon?",
       "explanation": "MSUD has a demonstrated sotolon-associated odor. The original EXCEPT list does not establish the other claimed associations, so this explicitly repaired version tests the supported positive association. This repair does not authenticate the source A key.",
-      "evidence": ["https://pubmed.ncbi.nlm.nih.gov/10234605/"]
+      "evidence": [
+        "https://pubmed.ncbi.nlm.nih.gov/10234605/"
+      ]
     },
     "biochemistry-1403-clinical-q039": {
-      "kind": "repaired", "key": "A", "confidence": "high",
+      "kind": "repaired",
+      "key": "A",
+      "confidence": "high",
       "prompt": "In a patient with dyspnea and a low clinical probability of pulmonary embolism, which fibrin-breakdown marker can help exclude venous thromboembolism when negative in an appropriate diagnostic pathway?",
       "explanation": "D-dimer measures breakdown products of cross-linked fibrin. A negative result can help exclude thromboembolism in appropriately selected patients; a positive result is nonspecific. BNP instead reflects cardiac wall stress and supports heart-failure assessment. The original stem did not distinguish these roles, so the intended clot-related role is now explicit.",
-      "evidence": ["https://www.nice.org.uk/guidance/ng158/chapter/recommendations", "https://www.ncbi.nlm.nih.gov/books/NBK545216/"]
+      "evidence": [
+        "https://www.nice.org.uk/guidance/ng158/chapter/recommendations",
+        "https://www.ncbi.nlm.nih.gov/books/NBK545216/"
+      ]
+    },
+    "biochemistry-2021-june-23-izam-q005": {
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
+      "explanation": "The precise term for elevated blood urate is hyperuricemia. The printed uricemia merely denotes urate in blood; option B is explicitly corrected.",
+      "evidence": [
+        "Biochemistry II review: Purines, pyrimidines, salvage and DNA precursor supply",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "optionPatches": {
+        "B": "Hyperuricemia"
+      }
+    },
+    "biochemistry-2021-june-23-izam-q026": {
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
+      "explanation": "Insulin promotes HMG-CoA reductase activity in the fed state. The original blanket EXCEPT wording about cortisol/glucocorticoids is replaced with a direct regulatory question.",
+      "evidence": [
+        "Biochemistry II review: Cholesterol, bile acids and steroid synthesis",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "prompt": "Which listed hormone promotes activation of HMG-CoA reductase in the fed state?"
+    },
+    "biochemistry-2021-june-23-izam-q027": {
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
+      "explanation": "B is the compensatory hepatic pathway: loss of bile acids increases conversion of cholesterol to bile acids. Broad source alternatives about excretion/catabolism overlap, so the study stem asks for the specific pathway.",
+      "evidence": [
+        "Biochemistry II review: Cholesterol, bile acids and steroid synthesis",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "prompt": "Which listed hepatic metabolic change compensates for interruption of enterohepatic bile-acid recycling by bile-acid sequestrants?"
+    },
+    "biochemistry-2021-june-23-izam-q037": {
+      "kind": "repaired",
+      "key": "E",
+      "confidence": "high",
+      "explanation": "Aerobic glycolysis itself makes 2 ATP and 2 cytosolic NADH: 5 ATP equivalents with the glycerol-3-phosphate shuttle or 7 with malate-aspartate, using modern P/O values. None of the four source options correctly gives this; an explicit E is added. Complete glucose oxidation is a different question.",
+      "evidence": [
+        "Biochemistry II review: Respiratory chain and transparent ATP accounting",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "optionPatches": {
+        "E": "5 or 7 ATP equivalents, depending on the cytosolic NADH shuttle"
+      }
+    },
+    "biochemistry-2024-july-13-izam-q033": {
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
+      "explanation": "Ribonucleotide reductase supplies deoxyribonucleotide precursors and therefore contributes indirectly to dTMP production. The source D wording is too broad to call false. D is explicitly changed to a false direct-enzyme claim; thymidylate synthase, not RNR, directly methylates dUMP.",
+      "evidence": [
+        "Biochemistry II review: Purines, pyrimidines, salvage and DNA precursor supply",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "optionPatches": {
+        "D": "Directly converts dUMP into dTMP by methylation"
+      }
+    },
+    "biochemistry-2024-dec-05-izam-q020": {
+      "kind": "repaired",
+      "key": "A",
+      "confidence": "high",
+      "explanation": "FMN has the lowest reduction potential among the listed respiratory carriers. The ambiguous phrase tendency to oxidize is clarified to oxidizing power.",
+      "evidence": [
+        "Biochemistry II review: Respiratory chain and transparent ATP accounting",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "prompt": "Which listed respiratory-chain carrier has the lowest reduction potential (weakest tendency to accept electrons)?"
+    },
+    "biochemistry-2024-dec-05-izam-q023": {
+      "kind": "repaired",
+      "key": "B",
+      "confidence": "high",
+      "explanation": "CETP transfers neutral lipids between lipoproteins and can interact with triglyceride-rich particles. It is not an obligatory component of the canonical ApoC-II/LPL hydrolysis step; the original broad assertion that it has no role is avoided.",
+      "evidence": [
+        "Biochemistry II review: Micelles, enterocytes, chylomicrons and remnant uptake",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "prompt": "Which listed factor is NOT required for the canonical ApoC-II-activated LPL hydrolysis of chylomicron triglycerides, with HDL serving as an apoprotein donor?"
+    },
+    "biochemistry-undated-50-izam-q013": {
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
+      "explanation": "The original non-thiazide antihypertensive category is too broad (loop diuretics and some other drugs can increase urate). D is repaired to losartan, which can lower serum urate.",
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK459284/"
+      ],
+      "optionPatches": {
+        "D": "Losartan, an angiotensin II receptor blocker with a uricosuric effect"
+      }
+    },
+    "biochemistry-undated-50-izam-q014": {
+      "kind": "repaired",
+      "key": "A",
+      "confidence": "high",
+      "explanation": "ADA deficiency causes one form of SCID, not every SCID. The source is narrowed to that form; lymphopenia, not lymphocytosis, is expected.",
+      "evidence": [
+        "Biochemistry II review: Purines, pyrimidines, salvage and DNA precursor supply",
+        "Ferrier, Lippincott Illustrated Reviews: Biochemistry, 6th edition; corresponding pathway chapter."
+      ],
+      "prompt": "All of the following statements about untreated ADA-deficiency SCID are correct, EXCEPT:"
+    },
+    "biochemistry-undated-50-izam-q015": {
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
+      "explanation": "Ferrochelatase deficiency causes erythropoietic protoporphyria. Photosensitivity depends on the acute hepatic porphyria subtype and is absent in acute intermittent porphyria, making the original blanket EXCEPT stem unsafe.",
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK22229/"
+      ],
+      "prompt": "Which statement identifies the enzyme defect of erythropoietic protoporphyria, rather than an acute hepatic porphyria?"
+    },
+    "biochemistry-undated-50-izam-q017": {
+      "kind": "repaired",
+      "key": "C",
+      "confidence": "high",
+      "explanation": "Gilbert syndrome usually causes mild benign unconjugated hyperbilirubinemia with reduced UGT1A1 activity. An ancestry claim is not a reliable general diagnostic statement; C is explicitly replaced with the mechanism.",
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK470200/"
+      ],
+      "optionPatches": {
+        "C": "Reduced UGT1A1 activity causes mild, usually benign unconjugated hyperbilirubinemia"
+      }
+    },
+    "biochemistry-undated-50-izam-q018": {
+      "kind": "repaired",
+      "key": "D",
+      "confidence": "high",
+      "explanation": "Physiologic neonatal jaundice is predominantly unconjugated. Phototherapy uses visible blue light, not ultraviolet; the source UV distractor is corrected so D remains the sole false statement.",
+      "evidence": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK532930/"
+      ],
+      "prompt": "All of the following statements about physiologic neonatal jaundice are correct, EXCEPT:",
+      "optionPatches": {
+        "C": "Visible blue-light phototherapy is used when treatment thresholds are reached."
+      }
     }
   }
 }

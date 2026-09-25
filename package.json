@@ -12,7 +12,7 @@
     "biochemistry:core:generate": "node scripts/content/build-biochemistry-core.mjs",
     "biochemistry:core:check": "node scripts/content/build-biochemistry-core.mjs --check && node --test tests/biochemistry-core.test.mjs",
     "biochemistry:papers:generate": "node scripts/build-biochemistry-papers.mjs",
-    "biochemistry:papers:check": "node scripts/build-biochemistry-papers.mjs --check && node --test tests/biochemistry-papers.test.mjs",
+    "biochemistry:papers:check": "node scripts/build-biochemistry-papers.mjs --check && node --test tests/biochemistry-papers.test.mjs tests/biochemistry-izam.test.mjs",
     "religion:generate": "node scripts/build-religion.mjs",
     "religion:validate": "node scripts/build-religion.mjs --check && node --test tests/religion.test.mjs",
     "dev": "node scripts/build-mcq-runtime.mjs && node scripts/build-pdf-manifest.mjs && next dev --port 3000",
