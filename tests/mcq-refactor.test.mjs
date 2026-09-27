@@ -113,7 +113,7 @@ test('collection sessions and retired legacy sessions survive parse',()=>{
 });
 test('all source download URLs resolve, and none exposes local paths',()=>{
   const c=read('public/study/past-paper-downloads/catalog.json');assert(!/\/Users\/|\/tmp\//.test(JSON.stringify(c)));
-  assert.equal(c.courses.flatMap(c=>c.collections).length,54); // 50 existing + 3 dated IZAM papers + 1 optional report
+  assert.equal(c.courses.flatMap(c=>c.collections).length,77); // 54 existing + 23 deduplicated Respiratory source collections
   assert.equal(c.courses.find(c=>c.id==='term2-nutrition').collections.length,9);
   for(const item of c.courses.flatMap(c=>c.collections))for(const url of [...Object.values(item.downloads),...item.originals.map(o=>o.url)])assert(fs.statSync(path.join(root,'public',url.split(/[?#]/)[0])).size>0,url);
 });

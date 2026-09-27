@@ -1,0 +1,986 @@
+{
+  "id": "respiratory-13",
+  "title": "Undated Tabiya respiratory photo paper",
+  "note": "Thirteen preferred images forwarded from a 2024-07-23 post; no verified exam date. Contains physiology 1-22, anatomy 1-11, histology 1-5 and embryology 1-2 (40 items). Actual anatomy numbering is 5-8 on source image 9 and 1-4 on image 10, contrary to the archive filenames; the printed numbers are preserved. Highlights are unofficial. Persian numerals/option letters are normalized.",
+  "defaultEligible": true,
+  "kind": "supplied-source-paper",
+  "questions": [
+    {
+      "number": "physiology-1",
+      "sourceNumber": "1",
+      "page": 1,
+      "prompt": "Which one of the following is correct about \"Transpulmonary Pressure\"?",
+      "options": [
+        "At the beginning of the inspiration is equal to +7.5 cm of water",
+        "The minimum value of this pressure is at the beginning of the inspiration",
+        "At the beginning of exhalation is equal to +0 cm of water",
+        "It is difference between the pleural pressure and the atmospheric pressure"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "In quiet breathing, TPP is least at end expiration/start inspiration and increases as the lungs inflate. It is alveolar minus pleural pressure.",
+      "reviewTerms": [
+        "transpulmonary pressure"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/001_physiology_Q01-03.jpg",
+        "public/study/reviews/respiratory.pdf#page=93"
+      ]
+    },
+    {
+      "number": "physiology-2",
+      "sourceNumber": "2",
+      "page": 1,
+      "prompt": "Which of the following relationship is correct between lung volumes and capacities?",
+      "options": [
+        "Vital capacity (VC) is equal to inspiratory capacity (IC) + expiratory reserve volume (ERV)",
+        "Functional residual capacity (FRC) equals inspiratory reserve volume (IRV) + expiratory reserve volume + residual volume (RV)",
+        "Total lung capacity (TLC) equals functional residual capacity + inspiratory reserve volume",
+        "Total lung capacity equals vital capacity + functional residual capacity"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "VC = IRV + TV + ERV = IC + ERV. FRC = ERV + RV; TLC = VC + RV.",
+      "reviewTerms": [
+        "lung capacities"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/001_physiology_Q01-03.jpg",
+        "public/study/reviews/respiratory.pdf#page=97"
+      ]
+    },
+    {
+      "number": "physiology-3",
+      "sourceNumber": "3",
+      "page": 1,
+      "prompt": "What is the consequence of reducing alveolar oxygen pressure to less than 73 mmHg?",
+      "options": [
+        "Pulmonary vascular resistance decreases",
+        "Potassium channel opens in the smooth muscle cell membrane of the pulmonary arteries",
+        "Calcium entry is inhibited into the smooth muscle cells of the pulmonary arteries",
+        "Release of the vasodilators (such as; nitric oxide) decreases"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "D is consistent with the textbook account of hypoxic pulmonary vasoconstriction; low oxygen inhibits relevant K+ channels and promotes Ca2+ entry. The numerical threshold and mediator model are simplified.",
+      "reviewTerms": [
+        "hypoxic vasoconstriction",
+        "nitric oxide"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/001_physiology_Q01-03.jpg",
+        "public/study/reviews/respiratory.pdf#page=107"
+      ]
+    },
+    {
+      "number": "physiology-4",
+      "sourceNumber": "4",
+      "page": 2,
+      "prompt": "Which one the following type of blood flow is there at the \"middle of the lung\" in a healthy standing person?",
+      "options": [
+        "The blood flow is zone-1 type",
+        "There is blood flow only during systole",
+        "There is continuous blood flow during systole and diastole",
+        "The blood flow is intermittent"
+      ],
+      "providedKey": "C",
+      "key": null,
+      "subject": "physiology",
+      "note": "The source highlights C, but middle does not specify vascular pressures or position relative to the heart. The zone-2/zone-3 boundary varies; B and D also describe the same intermittent pattern. Insufficiently localized for a unique key.",
+      "reviewTerms": [
+        "West zones",
+        "regional blood flow"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/002_physiology_Q04-05.jpg",
+        "public/study/reviews/respiratory.pdf#page=107",
+        "public/study/reviews/respiratory.pdf#page=108"
+      ]
+    },
+    {
+      "number": "physiology-5",
+      "sourceNumber": "5",
+      "page": 2,
+      "prompt": "If during exercise, 500 ml of O2 is exchanged per minute for a pressure difference of 10 mmHg between two sides of the respiratory membrane, what will be the diffusing capacity of this gas?",
+      "options": [
+        "25 ml/mmHg/min",
+        "50 ml/mmHg/min",
+        "100 ml/mmHg/min",
+        "500 ml/mmHg/min"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Diffusing capacity = transfer rate / pressure gradient = 500/10 = 50 mL/min/mmHg. Persian numerals were visually verified and normalized.",
+      "reviewTerms": [
+        "diffusing capacity",
+        "calculation"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/002_physiology_Q04-05.jpg",
+        "public/study/reviews/respiratory.pdf#page=113"
+      ]
+    },
+    {
+      "number": "physiology-6",
+      "sourceNumber": "6",
+      "page": 3,
+      "prompt": "Which of the following is correct about the diffusion of a gas from the respiratory membrane?",
+      "options": [
+        "The diffusion coefficient of each gas is inversely related to the molecular weight of that gas.",
+        "The oxygen diffusion coefficient is lower than that of carbon monoxide",
+        "Increasing the thickness of the respiratory membrane increases gas diffusion",
+        "The diffusion coefficient of carbon dioxide is about 20 times more than oxygen."
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "CO2 has approximately 20 times the diffusion coefficient of oxygen. Molecular-weight dependence uses its square root, and thickness reduces diffusion.",
+      "reviewTerms": [
+        "gas diffusion"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/003_physiology_Q06.jpg",
+        "public/study/reviews/respiratory.pdf#page=111",
+        "public/study/reviews/respiratory.pdf#page=113"
+      ]
+    },
+    {
+      "number": "physiology-7",
+      "sourceNumber": "7",
+      "page": 4,
+      "prompt": "According to Haldane effect, which of the following does increase?",
+      "options": [
+        "Hemoglobin affinity for CO2 in pulmonary capillaries",
+        "Release of O2 in the blood of tissue capillaries",
+        "Displace of CO2 from the blood of the pulmonary capillaries",
+        "Hemoglobin affinity for O2 in pulmonary capillary blood"
+      ],
+      "providedKey": "A",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Oxygenation of hemoglobin promotes CO2 release in pulmonary capillaries. Source A incorrectly states increased CO2 affinity.",
+      "reviewTerms": [
+        "Haldane effect"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/004_physiology_Q07-10.jpg",
+        "public/study/reviews/respiratory.pdf#page=125",
+        "public/study/reviews/respiratory.pdf#page=126"
+      ]
+    },
+    {
+      "number": "physiology-8",
+      "sourceNumber": "8",
+      "page": 4,
+      "prompt": "What is the effect of reducing the activity of the penotaxic center in breathing?",
+      "options": [
+        "Activation of inspiratory neurons in VRG",
+        "A decrease in respiratory rate",
+        "A decrease in tidal volume",
+        "Inhibition of Herring-Brewer reflex"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Reduced pontine inspiratory switch-off prolongs inspiration and tends to lower respiratory rate in the teaching model.",
+      "reviewTerms": [
+        "pneumotaxic center"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/004_physiology_Q07-10.jpg",
+        "public/study/reviews/respiratory.pdf#page=128"
+      ]
+    },
+    {
+      "number": "physiology-9",
+      "sourceNumber": "9",
+      "page": 4,
+      "prompt": "During normal breathing, for how long (sec) the ramp signal is suppressed by the inhibitory signals from the pneumotaxic center?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "7"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "The traditional illustrative cycle has about 2 seconds of inspiratory ramp and 3 seconds of suppression/expiration. This is a teaching timing example, not a fixed physiological constant.",
+      "reviewTerms": [
+        "inspiratory ramp"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/004_physiology_Q07-10.jpg",
+        "public/study/reviews/respiratory.pdf#page=128"
+      ]
+    },
+    {
+      "number": "physiology-10",
+      "sourceNumber": "10",
+      "page": 4,
+      "prompt": "How many milliliters (ml) of CO2 are there in each deciliter (dl) of venous blood?",
+      "options": [
+        "40",
+        "45",
+        "48",
+        "52"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "The conventional rounded reference is about 52 mL CO2/dL in mixed venous blood, compared with about 48 in arterial blood.",
+      "reviewTerms": [
+        "carbon dioxide content"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/004_physiology_Q07-10.jpg",
+        "public/study/reviews/respiratory.pdf#page=125",
+        "public/study/reviews/respiratory.pdf#page=126"
+      ]
+    },
+    {
+      "number": "physiology-11",
+      "sourceNumber": "11",
+      "page": 5,
+      "prompt": "Which of the following does cause bronchoconstriction?",
+      "options": [
+        "Parasympathetic inhibition",
+        "Inhibition of histamine release",
+        "Cold air inhalation",
+        "Sympathetic stimulation"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Cold air can provoke bronchoconstriction; parasympathetic inhibition and sympathoadrenal stimulation generally promote dilation.",
+      "reviewTerms": [
+        "bronchoconstriction"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/005_physiology_Q11-13.jpg",
+        "public/study/reviews/respiratory.pdf#page=101"
+      ]
+    },
+    {
+      "number": "physiology-12",
+      "sourceNumber": "12",
+      "page": 5,
+      "prompt": "Which of the following is correct about respiratory work?",
+      "options": [
+        "The tissue resistance work is more than the airway resistance work.",
+        "The least amount of respiratory work is related to the airway resistance work.",
+        "The airway resistance work is more than the elastic work.",
+        "In asthmatic patients, airway resistance work increases."
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "Asthma narrows airways and increases the work required to overcome airway resistance.",
+      "reviewTerms": [
+        "work of breathing",
+        "asthma"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/005_physiology_Q11-13.jpg",
+        "public/study/reviews/respiratory.pdf#page=95",
+        "public/study/reviews/respiratory.pdf#page=100"
+      ]
+    },
+    {
+      "number": "physiology-13",
+      "sourceNumber": "13",
+      "page": 5,
+      "prompt": "In response to a decrease in arterial O2 pressure less than 60 mmHg, which neurotransmitter is released by \"Glomus cells\" in the carotid bodies?",
+      "options": [
+        "Acetylcholine",
+        "Norepinephrine",
+        "Histamine",
+        "SRS-A"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "subject": "physiology",
+      "note": "The source selects acetylcholine, and hypoxia-induced release has been measured in human carotid bodies. However, noradrenergic and histaminergic glomus-cell signaling is also supported in primary carotid-body research; the species-unspecified wording does not establish one uniquely released transmitter among these choices.",
+      "reviewTerms": [
+        "glomus cells",
+        "acetylcholine"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/005_physiology_Q11-13.jpg",
+        "public/study/reviews/respiratory.pdf#page=130",
+        "https://pubmed.ncbi.nlm.nih.gov/24887113/",
+        "https://pubmed.ncbi.nlm.nih.gov/6809933/",
+        "https://pubmed.ncbi.nlm.nih.gov/18824142/"
+      ]
+    },
+    {
+      "number": "physiology-14",
+      "sourceNumber": "14",
+      "page": 6,
+      "prompt": "If in a normal-sized alveolus, the reduction of surfactant causes the surface tension increases to triple, what does the collapse pressure change?",
+      "options": [
+        "It reduces to a third",
+        "It triples",
+        "It becomes six times",
+        "It doesn't change because the alveolar size remains constant."
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "At fixed radius, Laplace pressure P = 2T/r triples when surface tension triples.",
+      "reviewTerms": [
+        "Laplace law",
+        "surface tension"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/006_physiology_Q14-16.jpg",
+        "public/study/reviews/respiratory.pdf#page=96"
+      ]
+    },
+    {
+      "number": "physiology-15",
+      "sourceNumber": "15",
+      "page": 6,
+      "prompt": "What is the initial difference in CO2 pressure between the beginning of the pulmonary capillary and the alveoli?",
+      "options": [
+        "1 mmHg",
+        "5 mmHg",
+        "11 mmHg",
+        "21 mmHg"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "The usual incoming venous-to-alveolar PCO2 gradient is about 5-6 mmHg; 5 is the closest supplied reference value.",
+      "reviewTerms": [
+        "carbon dioxide gradient"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/006_physiology_Q14-16.jpg",
+        "public/study/reviews/respiratory.pdf#page=118",
+        "public/study/reviews/respiratory.pdf#page=119"
+      ]
+    },
+    {
+      "number": "physiology-16",
+      "sourceNumber": "16",
+      "page": 6,
+      "prompt": "Which of the following lung volume or capacity is less than the others?",
+      "options": [
+        "Inspiratory reserve volume",
+        "Inspiratory capacity",
+        "Vital capacity",
+        "Functional residual capacity"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "In standard reference volumes, FRC (about 2300 mL) is less than IRV, IC and VC. Individual values depend on body size and conditions.",
+      "reviewTerms": [
+        "lung capacities",
+        "FRC"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/006_physiology_Q14-16.jpg",
+        "public/study/reviews/respiratory.pdf#page=97"
+      ]
+    },
+    {
+      "number": "physiology-17",
+      "sourceNumber": "17",
+      "page": 7,
+      "prompt": "Which of the following change is caused by the removal of elastin and collagen from the lung parenchyma?",
+      "options": [
+        "Increased surface tension",
+        "Decreased pleural pressure",
+        "Increased lung compliance",
+        "Decreased ratio of ventilation to blood flow (V/Q)"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Loss of supporting elastic tissue reduces recoil and increases compliance, as in emphysema.",
+      "reviewTerms": [
+        "compliance",
+        "elastic recoil"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/007_physiology_Q17-19.jpg",
+        "public/study/reviews/respiratory.pdf#page=95"
+      ]
+    },
+    {
+      "number": "physiology-18",
+      "sourceNumber": "18",
+      "page": 7,
+      "prompt": "Which factor does reduce intracellular oxygen consumption?",
+      "options": [
+        "An increase in intracellular ADP concentration.",
+        "A decrease in intracellular ATP concentration",
+        "An increase in tissue blood flow",
+        "An increase in cellular metabolism"
+      ],
+      "providedKey": null,
+      "key": null,
+      "subject": "physiology",
+      "note": "The entire question is crossed out and annotated حذف (deleted) in the source. None of the choices is a reliable direct cause of reduced oxygen consumption; increased ADP/metabolic demand usually increases it. Retained as a documented defective item, not scored.",
+      "reviewTerms": [
+        "cellular oxygen consumption",
+        "ADP"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/007_physiology_Q17-19.jpg",
+        "public/study/reviews/respiratory.pdf#page=123"
+      ]
+    },
+    {
+      "number": "physiology-19",
+      "sourceNumber": "19",
+      "page": 7,
+      "prompt": "Which of the ions are exchanged between two sides of red blood cells in venous blood?",
+      "options": [
+        "HCO3- goes out and H+ goes in",
+        "H+ moves out and Cl- moves in",
+        "HCO3- goes in and Cl- goes out",
+        "HCO3- moves out and Cl- moves in"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "At systemic tissues, bicarbonate exits RBCs as chloride enters.",
+      "reviewTerms": [
+        "chloride shift"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/007_physiology_Q17-19.jpg",
+        "public/study/reviews/respiratory.pdf#page=125",
+        "public/study/reviews/respiratory.pdf#page=126"
+      ]
+    },
+    {
+      "number": "physiology-20",
+      "sourceNumber": "20",
+      "page": 8,
+      "prompt": "Which of the following gas has more \"diffusing capacity\" than others in resting?",
+      "options": [
+        "CO2 during rest",
+        "CO during exercise",
+        "O2 during rest",
+        "O2 during exercise"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "CO2's much greater solubility gives a higher reference diffusing capacity even at rest than the listed oxygen/CO exercise values. The stem's resting phrase conflicts with some distractors but does not change this comparison.",
+      "reviewTerms": [
+        "diffusing capacity"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/008_physiology_Q20-22.jpg",
+        "public/study/reviews/respiratory.pdf#page=111",
+        "public/study/reviews/respiratory.pdf#page=113"
+      ]
+    },
+    {
+      "number": "physiology-21",
+      "sourceNumber": "21",
+      "page": 8,
+      "prompt": "What is the Minute Respiratory Volume (L/min) in a subject with 15 respiration/min, 600 ml tidal volume and 200 ml anatomic dead space?",
+      "options": [
+        "4.2",
+        "6",
+        "9",
+        "12"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Minute ventilation = respiratory rate x tidal volume = 15 x 600 = 9000 mL/min = 9 L/min. Dead space would be subtracted for alveolar ventilation, not minute ventilation.",
+      "reviewTerms": [
+        "minute ventilation",
+        "calculation"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/008_physiology_Q20-22.jpg",
+        "public/study/reviews/respiratory.pdf#page=99"
+      ]
+    },
+    {
+      "number": "physiology-22",
+      "sourceNumber": "22",
+      "page": 8,
+      "prompt": "Which effect of exercise on the respiratory system is correct?",
+      "options": [
+        "It changes blood flow type from zone-1 to zone-2",
+        "It multiplies the hydrostatic pressure in the pulmonary artery",
+        "It reduces the affinity of hemoglobin to oxygen in the blood of muscle's capillaries",
+        "It inhibits the ventral respiratory center (VRG) in the medulla"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Exercise-generated heat, CO2 and H+ shift the curve right and promote oxygen unloading. Normal apical recruitment is chiefly zone 2 toward zone 3.",
+      "reviewTerms": [
+        "exercise",
+        "oxygen unloading"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/008_physiology_Q20-22.jpg",
+        "public/study/reviews/respiratory.pdf#page=107",
+        "public/study/reviews/respiratory.pdf#page=122",
+        "public/study/reviews/respiratory.pdf#page=128"
+      ]
+    },
+    {
+      "number": "anatomy-5",
+      "sourceNumber": "5",
+      "page": 9,
+      "prompt": "All the following elements are attached to the thyroid cartilage except...?",
+      "options": [
+        "transverse pyramidal muscle",
+        "Vocal ligaments",
+        "false vocal cords",
+        "vocal muscles"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The source's transverse pyramidal muscle denotes transverse arytenoid in this context; it connects the arytenoids rather than thyroid. The unusual source wording is preserved.",
+      "reviewTerms": [
+        "thyroid cartilage",
+        "arytenoid muscles"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/009_anatomy_Q01-04.jpg",
+        "public/study/reviews/respiratory.pdf#page=29",
+        "public/study/reviews/respiratory.pdf#page=31"
+      ]
+    },
+    {
+      "number": "anatomy-6",
+      "sourceNumber": "6",
+      "page": 9,
+      "prompt": "All the following vessels are involved in the blood supply of the nasal cavity except...?",
+      "options": [
+        "Sphenopalatine",
+        "Subclavian",
+        "Anterior ethmoidal",
+        "Posterior ethmoidal"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The named nasal arterial supply comes from external/internal carotid branches, not a direct subclavian branch.",
+      "reviewTerms": [
+        "nasal blood supply"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/009_anatomy_Q01-04.jpg",
+        "public/study/reviews/respiratory.pdf#page=14"
+      ]
+    },
+    {
+      "number": "anatomy-7",
+      "sourceNumber": "7",
+      "page": 9,
+      "prompt": "The apex of the lung posteriorly is adjacent to which of the following?",
+      "options": [
+        "Clavicle",
+        "Phrenic nerve",
+        "neck of the first rib",
+        "Subclavian artery"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "The neck of the first rib is a posterior relation of the lung apex; subclavian vessels cross anterior aspects of the cupola.",
+      "reviewTerms": [
+        "lung apex"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/009_anatomy_Q01-04.jpg",
+        "public/study/reviews/respiratory.pdf#page=39",
+        "public/study/reviews/respiratory.pdf#page=47"
+      ]
+    },
+    {
+      "number": "anatomy-8",
+      "sourceNumber": "8",
+      "page": 9,
+      "prompt": "Which of the following items is involved in the formation of the lower side of the posterior nasal cavity fromen (choana)?",
+      "options": [
+        "Epiglottic",
+        "Palatal bone",
+        "Sphenoid bone",
+        "Vomer"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The horizontal plate of palatine forms the inferior choanal boundary.",
+      "reviewTerms": [
+        "choanae",
+        "palatine"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/009_anatomy_Q01-04.jpg",
+        "public/study/reviews/respiratory.pdf#page=6"
+      ]
+    },
+    {
+      "number": "anatomy-1",
+      "sourceNumber": "1",
+      "page": 10,
+      "prompt": "All the following option can be seen in the lateral wall of the nasal cavity except...",
+      "options": [
+        "Palate bone",
+        "Ethmoidal bulla",
+        "Lacrimal bone",
+        "Prependicular plate of the ethmoid bone"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The ethmoid perpendicular plate belongs to the septum/medial wall; the other structures contribute to the lateral wall.",
+      "reviewTerms": [
+        "nasal walls",
+        "ethmoid"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/010_anatomy_Q05-08.jpg",
+        "public/study/reviews/respiratory.pdf#page=6",
+        "public/study/reviews/respiratory.pdf#page=8"
+      ]
+    },
+    {
+      "number": "anatomy-2",
+      "sourceNumber": "2",
+      "page": 10,
+      "prompt": "The nasopalatine nerve is a branch of which of the following nerves?",
+      "options": [
+        "Ophtalmic",
+        "Greater Palatine",
+        "Maxillary nerve",
+        "Posterior Ethmoidal"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "Nasopalatine carries maxillary-division (V2) sensory fibers via the pterygopalatine ganglion.",
+      "reviewTerms": [
+        "nasopalatine",
+        "maxillary nerve"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/010_anatomy_Q05-08.jpg",
+        "public/study/reviews/respiratory.pdf#page=15"
+      ]
+    },
+    {
+      "number": "anatomy-3",
+      "sourceNumber": "3",
+      "page": 10,
+      "prompt": "Which of the following cartilages articulates with the thyroid cartilage?",
+      "options": [
+        "Cricoid",
+        "Corniculate",
+        "Epiglottis",
+        "Arythnoid"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The thyroid inferior horns form synovial cricothyroid joints with cricoid.",
+      "reviewTerms": [
+        "cricothyroid joint"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/010_anatomy_Q05-08.jpg",
+        "public/study/reviews/respiratory.pdf#page=22",
+        "public/study/reviews/respiratory.pdf#page=31"
+      ]
+    },
+    {
+      "number": "anatomy-4",
+      "sourceNumber": "4",
+      "page": 10,
+      "prompt": "Which of the following options is correct about the larynx?",
+      "options": [
+        "The vestibule is located below the false vocal folds",
+        "The position of the true vocal folds is higher than the false one",
+        "The opening of the saccule opens to the ventricle",
+        "thyroid cartilage is formed the inlet of larynx."
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "The saccule is an upward extension opening into the laryngeal ventricle; the vestibule is above the false folds and true folds are inferior.",
+      "reviewTerms": [
+        "laryngeal saccule",
+        "ventricle"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/010_anatomy_Q05-08.jpg",
+        "public/study/reviews/respiratory.pdf#page=27"
+      ]
+    },
+    {
+      "number": "anatomy-9",
+      "sourceNumber": "9",
+      "page": 11,
+      "prompt": "How many sections does the pharynx have?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The pharynx has nasal, oral and laryngeal regions. Persian numerals normalized.",
+      "reviewTerms": [
+        "pharynx"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/011_anatomy_Q09-11.jpg",
+        "public/study/reviews/respiratory.pdf#page=17"
+      ]
+    },
+    {
+      "number": "anatomy-10",
+      "sourceNumber": "10",
+      "page": 11,
+      "prompt": "All the following structures are adjacent to the medial surface of the left lung except?",
+      "options": [
+        "Thoracic aorta",
+        "Vena cava inferior",
+        "Aortic arch",
+        "Esophagus"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "Inferior vena cava is a right-sided relation; the left lung relates to aortic arch, descending aorta and esophagus.",
+      "reviewTerms": [
+        "left lung",
+        "mediastinal relations"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/011_anatomy_Q09-11.jpg",
+        "public/study/reviews/respiratory.pdf#page=39",
+        "public/study/reviews/respiratory.pdf#page=41"
+      ]
+    },
+    {
+      "number": "anatomy-11",
+      "sourceNumber": "11",
+      "page": 11,
+      "prompt": "What is the correct path air takes when it enters the trachea on its way to the lungs?",
+      "options": [
+        "Bronchi /bronchioles/alveoli / pulmonary capillaries",
+        "Bronchi/bronchioles/pulmonary capillaries/alveoli",
+        "Bronchioles/bronchi/alveoli/pulmonary capillaries",
+        "Bronchi/pulmonary capillaries/alveoli/bronchiles"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "subject": "anatomy",
+      "note": "A has the intended airway sequence, but every option says air proceeds into pulmonary capillaries. Air stops in alveoli; individual gases diffuse across the barrier. The literal question has no fully correct option.",
+      "reviewTerms": [
+        "airway sequence",
+        "gas exchange"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/011_anatomy_Q09-11.jpg",
+        "public/study/reviews/respiratory.pdf#page=37",
+        "public/study/reviews/respiratory.pdf#page=53",
+        "public/study/reviews/respiratory.pdf#page=67"
+      ]
+    },
+    {
+      "number": "histology-1",
+      "sourceNumber": "1",
+      "page": 12,
+      "prompt": "In which of the following is observed the Vocal Cord?",
+      "options": [
+        "Vestibuli Zone",
+        "Olfactory Zone",
+        "Larynx",
+        "Respiratory Zone"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "histology",
+      "note": "Vocal cords are laryngeal structures.",
+      "reviewTerms": [
+        "vocal folds"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/012_histology_Q01-05.jpg",
+        "public/study/reviews/respiratory.pdf#page=59"
+      ]
+    },
+    {
+      "number": "histology-2",
+      "sourceNumber": "2",
+      "page": 12,
+      "prompt": "Which part of the lung tissue has a simple squamous cells?",
+      "options": [
+        "Bronchus",
+        "Terminal Bronchiole",
+        "Alveolar Duct",
+        "Bronchiole"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "histology",
+      "note": "Alveolar ducts are bounded by alveoli whose type I cells are squamous; the other listed conducting airways have taller lining cells.",
+      "reviewTerms": [
+        "alveolar ducts"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/012_histology_Q01-05.jpg",
+        "public/study/reviews/respiratory.pdf#page=65",
+        "public/study/reviews/respiratory.pdf#page=68"
+      ]
+    },
+    {
+      "number": "histology-3",
+      "sourceNumber": "3",
+      "page": 12,
+      "prompt": "What is the name Macrophage Alveolar Of Lunge?",
+      "options": [
+        "Pneumocyte I",
+        "Pneumocyte II",
+        "Pneumocyte III",
+        "Pneumocyte IV"
+      ],
+      "providedKey": "C",
+      "key": null,
+      "subject": "histology",
+      "note": "The source selects Pneumocyte III. The review uses alveolar macrophage/dust cell and distinguishes it from epithelial pneumocytes; no standard correct label is offered.",
+      "reviewTerms": [
+        "alveolar macrophages"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/012_histology_Q01-05.jpg",
+        "public/study/reviews/respiratory.pdf#page=70"
+      ]
+    },
+    {
+      "number": "histology-4",
+      "sourceNumber": "4",
+      "page": 12,
+      "prompt": "Where is Hyaline Cartilge In Around of Burnouse?",
+      "options": [
+        "Adventitia",
+        "Mucous",
+        "Muscularis",
+        "Nothing"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "subject": "histology",
+      "note": "Burnouse appears to mean bronchus. Bronchial hyaline plates form a cartilage layer external to smooth muscle, while adventitia is the outer connective tissue. The question omits the cartilage layer and does not define its layer convention; source A is retained but not certified.",
+      "reviewTerms": [
+        "bronchial wall",
+        "hyaline cartilage"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/012_histology_Q01-05.jpg",
+        "public/study/reviews/respiratory.pdf#page=62"
+      ]
+    },
+    {
+      "number": "histology-5",
+      "sourceNumber": "5",
+      "page": 12,
+      "prompt": "In which of the following is observed the Unicell Gland Or Goblet Cell?",
+      "options": [
+        "Vestibuli Zone",
+        "Theracea",
+        "Terminal Bronshiol",
+        "Alveolar Duct"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "histology",
+      "note": "Tracheal respiratory epithelium contains goblet cells. Terminal bronchioles and alveolar ducts normally lack them.",
+      "reviewTerms": [
+        "goblet cells",
+        "trachea"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/012_histology_Q01-05.jpg",
+        "public/study/reviews/respiratory.pdf#page=55",
+        "public/study/reviews/respiratory.pdf#page=60",
+        "public/study/reviews/respiratory.pdf#page=62"
+      ]
+    },
+    {
+      "number": "embryology-1",
+      "sourceNumber": "1",
+      "page": 13,
+      "prompt": "Which of the following options is wrong?",
+      "options": [
+        "The lung bud appears in the 4th week of the fetal life.",
+        "In the last two weeks of fetal life, the amount of surfactant increases",
+        "Tracheal cartilages originate from the splanchnic mesoderm",
+        "The inner layer of the larynx is of mesodermal origin"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "embryology",
+      "note": "Laryngeal epithelial lining is endodermal; supporting cartilage/connective tissue is mesenchymal. The source uses fetal life loosely for the early embryonic fourth week.",
+      "reviewTerms": [
+        "endoderm",
+        "lung development"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/013_embryology_Q01-02.jpg",
+        "public/study/reviews/respiratory.pdf#page=76",
+        "public/study/reviews/respiratory.pdf#page=77",
+        "public/study/reviews/respiratory.pdf#page=88"
+      ]
+    },
+    {
+      "number": "embryology-2",
+      "sourceNumber": "2",
+      "page": 13,
+      "prompt": "Respiratory bronchioles appear in which of the following stages?",
+      "options": [
+        "Canalicular",
+        "Pseudoglandular",
+        "Saccular",
+        "Alveolar"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "embryology",
+      "note": "Respiratory bronchioles emerge during the canalicular period; terminal bronchioles belong to the earlier conducting-tree stage.",
+      "reviewTerms": [
+        "canalicular",
+        "respiratory bronchioles"
+      ],
+      "evidence": [
+        "Past Exams/01_Theory/Undated_Tabiya_forwarded-2024-07-23/images/013_embryology_Q01-02.jpg",
+        "public/study/reviews/respiratory.pdf#page=86"
+      ]
+    }
+  ],
+  "excludedItems": [
+    {
+      "page": 1,
+      "reason": "Partial background view of physiology Q17 and neighboring sheets is duplicate incidental content; Q17 is fully retained from image 7."
+    }
+  ],
+  "audit": {
+    "status": "SHIP",
+    "notes": "All preferred source images visually reviewed; OCR used only as a drafting aid. All supplied complete items retained. Source annotations are unofficial, preserved separately from the audited answer. Null audited keys deliberately quarantine ambiguous or defective questions. Numbered options 1-4 and Persian letters are normalized to A-D in displayed order."
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "date": "2026-09-27",
+  "sourceFolders": 24,
+  "catalogCollections": 23,
+  "retainedRecords": 690,
+  "distinctScoredQuestions": 579,
+  "ungradedRecords": 85,
+  "duplicateMappings": [
+    {
+      "source": "respiratory-14",
+      "canonical": "respiratory-10",
+      "reason": "All 42 stems, ordered choices and study keys match; separate formatting/annotations, no evidence of a separate sitting."
+    },
+    {
+      "source": "respiratory-22-qp01",
+      "canonical": "respiratory-05-q025",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp02",
+      "canonical": "respiratory-05-q008",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp03",
+      "canonical": "respiratory-05-q023",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp04",
+      "canonical": "respiratory-05-q007",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp05",
+      "canonical": "respiratory-05-q030",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp06",
+      "canonical": "respiratory-05-q028",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp07",
+      "canonical": "respiratory-05-q004",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp08",
+      "canonical": "respiratory-05-q003",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp09",
+      "canonical": "respiratory-05-q005",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp10",
+      "canonical": "respiratory-05-q012",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp11",
+      "canonical": "respiratory-05-q002",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp12",
+      "canonical": "respiratory-05-q031",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp13",
+      "canonical": "respiratory-05-q013",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp14",
+      "canonical": "respiratory-05-q011",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp15",
+      "canonical": "respiratory-05-q009",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp16",
+      "canonical": "respiratory-05-q026",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp17",
+      "canonical": "respiratory-05-q010",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp18",
+      "canonical": "respiratory-05-q016",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp21",
+      "canonical": "respiratory-05-q029",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp22",
+      "canonical": "respiratory-05-q024",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp23",
+      "canonical": "respiratory-05-q015",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp24",
+      "canonical": "respiratory-05-q017",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp25",
+      "canonical": "respiratory-05-q034",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp26",
+      "canonical": "respiratory-05-q033",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp27",
+      "canonical": "respiratory-05-q027",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    },
+    {
+      "source": "respiratory-22-qp28",
+      "canonical": "respiratory-05-q032",
+      "reason": "Independent visual comparison of screenshot and July 2022 paper; same question and ordered choices."
+    }
+  ],
+  "policy": "Keep distinct sittings separate. Merge proven same-paper photo recaptures; reference screenshots share canonical exam IDs. Ungraded and non-MCQ materials remain downloadable, never fabricated as MCQs.",
+  "papers": [
+    {
+      "id": "respiratory-01",
+      "sourceItems": 40,
+      "scored": 36,
+      "ungraded": 4,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-02",
+      "sourceItems": 40,
+      "scored": 36,
+      "ungraded": 4,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-03",
+      "sourceItems": 39,
+      "scored": 35,
+      "ungraded": 4,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-04",
+      "sourceItems": 38,
+      "scored": 34,
+      "ungraded": 4,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-05",
+      "sourceItems": 34,
+      "scored": 32,
+      "ungraded": 2,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-06",
+      "sourceItems": 40,
+      "scored": 33,
+      "ungraded": 7,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-07",
+      "sourceItems": 29,
+      "scored": 26,
+      "ungraded": 3,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-08",
+      "sourceItems": 40,
+      "scored": 35,
+      "ungraded": 5,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-09",
+      "sourceItems": 38,
+      "scored": 33,
+      "ungraded": 5,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-10",
+      "sourceItems": 42,
+      "scored": 38,
+      "ungraded": 4,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-11",
+      "sourceItems": 36,
+      "scored": 31,
+      "ungraded": 5,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-12",
+      "sourceItems": 40,
+      "scored": 34,
+      "ungraded": 6,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-13",
+      "sourceItems": 40,
+      "scored": 34,
+      "ungraded": 6,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-15",
+      "sourceItems": 40,
+      "scored": 38,
+      "ungraded": 2,
+      "defaultEligible": true
+    },
+    {
+      "id": "respiratory-16",
+      "sourceItems": 14,
+      "scored": 14,
+      "ungraded": 0,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-17",
+      "sourceItems": 0,
+      "scored": 0,
+      "ungraded": 0,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-18",
+      "sourceItems": 0,
+      "scored": 0,
+      "ungraded": 0,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-19",
+      "sourceItems": 20,
+      "scored": 18,
+      "ungraded": 2,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-20",
+      "sourceItems": 9,
+      "scored": 9,
+      "ungraded": 0,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-21",
+      "sourceItems": 7,
+      "scored": 7,
+      "ungraded": 0,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-22",
+      "sourceItems": 32,
+      "scored": 26,
+      "ungraded": 6,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-23",
+      "sourceItems": 72,
+      "scored": 56,
+      "ungraded": 16,
+      "defaultEligible": false
+    },
+    {
+      "id": "respiratory-24",
+      "sourceItems": 0,
+      "scored": 0,
+      "ungraded": 0,
+      "defaultEligible": false
+    }
+  ]
+}

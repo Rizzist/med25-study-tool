@@ -93,11 +93,51 @@
     {
       "id": "term2-respiratory",
       "title": "Respiratory",
-      "collectionIds": [],
-      "defaultCollectionIds": [],
-      "hasSourceCollections": false,
-      "sourceRecordCount": 0,
-      "emptyReason": "No imported past-paper source collection is available. Keep Final Exam empty; ordinary practice questions are not a fallback."
+      "collectionIds": [
+        "respiratory-01",
+        "respiratory-02",
+        "respiratory-03",
+        "respiratory-04",
+        "respiratory-05",
+        "respiratory-06",
+        "respiratory-07",
+        "respiratory-08",
+        "respiratory-09",
+        "respiratory-10",
+        "respiratory-11",
+        "respiratory-12",
+        "respiratory-13",
+        "respiratory-15",
+        "respiratory-16",
+        "respiratory-17",
+        "respiratory-18",
+        "respiratory-19",
+        "respiratory-20",
+        "respiratory-21",
+        "respiratory-22",
+        "respiratory-23",
+        "respiratory-24"
+      ],
+      "defaultCollectionIds": [
+        "respiratory-01",
+        "respiratory-02",
+        "respiratory-03",
+        "respiratory-04",
+        "respiratory-05",
+        "respiratory-06",
+        "respiratory-07",
+        "respiratory-08",
+        "respiratory-09",
+        "respiratory-10",
+        "respiratory-11",
+        "respiratory-12",
+        "respiratory-13",
+        "respiratory-15"
+      ],
+      "hasSourceCollections": true,
+      "sourceRecordCount": 690,
+      "emptyReason": null,
+      "gradedQuestionCount": 579
     },
     {
       "id": "term2-limbs",
@@ -7938,6 +7978,2793 @@
           "url": "/study/biochemistry/past-papers/biochemistry-undated-50-izam/original.pdf"
         }
       ]
+    },
+    {
+      "id": "respiratory-01",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory theory — report dated 9 February 2021",
+      "note": "Report header 2/9/2021; TestId 19422. This is a report date, not an independently confirmed sitting date. The 9-page alternate repeats the final page. One preferred copy is shown here; the redundant export is in the recoverable archive. Supplied report marks are preserved separately from audited answers; neither report date nor reordered questions independently establishes a distinct sitting.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Report header 2/9/2021; TestId 19422. This is a report date, not an independently confirmed sitting date. The 9-page alternate repeats the final page. One preferred copy is shown here; the redundant export is in the recoverable archive.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2021-02-09_report.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-01/01.pdf",
+          "sha256": "b77466c98cbfd867dca3b19576bb9e8d707d0025494f2d692b11ff73550b93fb",
+          "exists": true,
+          "note": "Report header 2/9/2021; TestId 19422. This is a report date, not an independently confirmed sitting date. The 9-page alternate repeats the final page. One preferred copy is shown here; the redundant export is in the recoverable archive."
+        }
+      ],
+      "sourceRecordCount": 40,
+      "transcribedQuestionCount": 40,
+      "gradedQuestionCount": 36,
+      "sourceKeyCount": 40,
+      "editorialKeyCount": 36,
+      "inferredKeyCount": 1,
+      "ungradedCount": 4,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-01-q001",
+        "respiratory-01-q002",
+        "respiratory-01-q003",
+        "respiratory-01-q004",
+        "respiratory-01-q005",
+        "respiratory-01-q006",
+        "respiratory-01-q007",
+        "respiratory-01-q008",
+        "respiratory-01-q009",
+        "respiratory-01-q010",
+        "respiratory-01-q011",
+        "respiratory-01-q012",
+        "respiratory-01-q013",
+        "respiratory-01-q014",
+        "respiratory-01-q015",
+        "respiratory-01-q016",
+        "respiratory-01-q017",
+        "respiratory-01-q018",
+        "respiratory-01-q019",
+        "respiratory-01-q020",
+        "respiratory-01-q021",
+        "respiratory-01-q022",
+        "respiratory-01-q023",
+        "respiratory-01-q024",
+        "respiratory-01-q025",
+        "respiratory-01-q026",
+        "respiratory-01-q027",
+        "respiratory-01-q028",
+        "respiratory-01-q029",
+        "respiratory-01-q030",
+        "respiratory-01-q031",
+        "respiratory-01-q032",
+        "respiratory-01-q033",
+        "respiratory-01-q034",
+        "respiratory-01-q035",
+        "respiratory-01-q036",
+        "respiratory-01-q037",
+        "respiratory-01-q038",
+        "respiratory-01-q039",
+        "respiratory-01-q040"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-01-q002",
+        "respiratory-01-q003",
+        "respiratory-01-q004",
+        "respiratory-01-q005",
+        "respiratory-01-q006",
+        "respiratory-01-q007",
+        "respiratory-01-q008",
+        "respiratory-01-q009",
+        "respiratory-01-q010",
+        "respiratory-01-q011",
+        "respiratory-01-q012",
+        "respiratory-01-q013",
+        "respiratory-01-q015",
+        "respiratory-01-q016",
+        "respiratory-01-q017",
+        "respiratory-01-q018",
+        "respiratory-01-q019",
+        "respiratory-01-q020",
+        "respiratory-01-q021",
+        "respiratory-01-q022",
+        "respiratory-01-q024",
+        "respiratory-01-q025",
+        "respiratory-01-q027",
+        "respiratory-01-q028",
+        "respiratory-01-q029",
+        "respiratory-01-q030",
+        "respiratory-01-q031",
+        "respiratory-01-q032",
+        "respiratory-01-q033",
+        "respiratory-01-q034",
+        "respiratory-01-q035",
+        "respiratory-01-q036",
+        "respiratory-01-q037",
+        "respiratory-01-q038",
+        "respiratory-01-q039",
+        "respiratory-01-q040"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-01/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-01/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-01/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2021-02-09_report.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-01/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-02",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory theory — report dated 17 April 2021",
+      "note": "Report header 4/17/2021; TestId 19422. Retained separately from the February report: the questions/order differ despite the same TestId. One preferred copy is shown here; the redundant export is in the recoverable archive. Supplied report marks are preserved separately from audited answers; neither report date nor reordered questions independently establishes a distinct sitting.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Report header 4/17/2021; TestId 19422. Retained separately from the February report: the questions/order differ despite the same TestId. One preferred copy is shown here; the redundant export is in the recoverable archive.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2021-04-17_report.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-02/01.pdf",
+          "sha256": "514d5856adea8002ac1a2d382207056f8bf0196924c03881b6baae6213ef024f",
+          "exists": true,
+          "note": "Report header 4/17/2021; TestId 19422. Retained separately from the February report: the questions/order differ despite the same TestId. One preferred copy is shown here; the redundant export is in the recoverable archive."
+        }
+      ],
+      "sourceRecordCount": 40,
+      "transcribedQuestionCount": 40,
+      "gradedQuestionCount": 36,
+      "sourceKeyCount": 40,
+      "editorialKeyCount": 36,
+      "inferredKeyCount": 1,
+      "ungradedCount": 4,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-02-q001",
+        "respiratory-02-q002",
+        "respiratory-02-q003",
+        "respiratory-02-q004",
+        "respiratory-02-q005",
+        "respiratory-02-q006",
+        "respiratory-02-q007",
+        "respiratory-02-q008",
+        "respiratory-02-q009",
+        "respiratory-02-q010",
+        "respiratory-02-q011",
+        "respiratory-02-q012",
+        "respiratory-02-q013",
+        "respiratory-02-q014",
+        "respiratory-02-q015",
+        "respiratory-02-q016",
+        "respiratory-02-q017",
+        "respiratory-02-q018",
+        "respiratory-02-q019",
+        "respiratory-02-q020",
+        "respiratory-02-q021",
+        "respiratory-02-q022",
+        "respiratory-02-q023",
+        "respiratory-02-q024",
+        "respiratory-02-q025",
+        "respiratory-02-q026",
+        "respiratory-02-q027",
+        "respiratory-02-q028",
+        "respiratory-02-q029",
+        "respiratory-02-q030",
+        "respiratory-02-q031",
+        "respiratory-02-q032",
+        "respiratory-02-q033",
+        "respiratory-02-q034",
+        "respiratory-02-q035",
+        "respiratory-02-q036",
+        "respiratory-02-q037",
+        "respiratory-02-q038",
+        "respiratory-02-q039",
+        "respiratory-02-q040"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-02-q001",
+        "respiratory-02-q002",
+        "respiratory-02-q003",
+        "respiratory-02-q004",
+        "respiratory-02-q005",
+        "respiratory-02-q006",
+        "respiratory-02-q007",
+        "respiratory-02-q008",
+        "respiratory-02-q009",
+        "respiratory-02-q010",
+        "respiratory-02-q012",
+        "respiratory-02-q013",
+        "respiratory-02-q014",
+        "respiratory-02-q016",
+        "respiratory-02-q017",
+        "respiratory-02-q018",
+        "respiratory-02-q019",
+        "respiratory-02-q020",
+        "respiratory-02-q021",
+        "respiratory-02-q022",
+        "respiratory-02-q025",
+        "respiratory-02-q026",
+        "respiratory-02-q027",
+        "respiratory-02-q028",
+        "respiratory-02-q029",
+        "respiratory-02-q030",
+        "respiratory-02-q031",
+        "respiratory-02-q032",
+        "respiratory-02-q033",
+        "respiratory-02-q034",
+        "respiratory-02-q035",
+        "respiratory-02-q036",
+        "respiratory-02-q037",
+        "respiratory-02-q038",
+        "respiratory-02-q039",
+        "respiratory-02-q040"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-02/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-02/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-02/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2021-04-17_report.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-02/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-03",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory theory — report dated 24 July 2021",
+      "note": "Report header 7/24/2021; TestId 22549. Report date rather than verified sitting date. Supplied report marks are preserved separately from audited answers; neither report date nor reordered questions independently establishes a distinct sitting. This report contains visible Q1–39; no Q40 has been fabricated.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Report header 7/24/2021; TestId 22549. Report date rather than verified sitting date.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2021-07-24_report.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-03/01.pdf",
+          "sha256": "9254e0b3693503286323986f455936ae39f3afe6acd723352ea989268f0b44e2",
+          "exists": true,
+          "note": "Report header 7/24/2021; TestId 22549. Report date rather than verified sitting date."
+        }
+      ],
+      "sourceRecordCount": 39,
+      "transcribedQuestionCount": 39,
+      "gradedQuestionCount": 35,
+      "sourceKeyCount": 39,
+      "editorialKeyCount": 35,
+      "inferredKeyCount": 2,
+      "ungradedCount": 4,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-03-q001",
+        "respiratory-03-q002",
+        "respiratory-03-q003",
+        "respiratory-03-q004",
+        "respiratory-03-q005",
+        "respiratory-03-q006",
+        "respiratory-03-q007",
+        "respiratory-03-q008",
+        "respiratory-03-q009",
+        "respiratory-03-q010",
+        "respiratory-03-q011",
+        "respiratory-03-q012",
+        "respiratory-03-q013",
+        "respiratory-03-q014",
+        "respiratory-03-q015",
+        "respiratory-03-q016",
+        "respiratory-03-q017",
+        "respiratory-03-q018",
+        "respiratory-03-q019",
+        "respiratory-03-q020",
+        "respiratory-03-q021",
+        "respiratory-03-q022",
+        "respiratory-03-q023",
+        "respiratory-03-q024",
+        "respiratory-03-q025",
+        "respiratory-03-q026",
+        "respiratory-03-q027",
+        "respiratory-03-q028",
+        "respiratory-03-q029",
+        "respiratory-03-q030",
+        "respiratory-03-q031",
+        "respiratory-03-q032",
+        "respiratory-03-q033",
+        "respiratory-03-q034",
+        "respiratory-03-q035",
+        "respiratory-03-q036",
+        "respiratory-03-q037",
+        "respiratory-03-q038",
+        "respiratory-03-q039"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-03-q001",
+        "respiratory-03-q002",
+        "respiratory-03-q003",
+        "respiratory-03-q004",
+        "respiratory-03-q005",
+        "respiratory-03-q006",
+        "respiratory-03-q007",
+        "respiratory-03-q008",
+        "respiratory-03-q009",
+        "respiratory-03-q010",
+        "respiratory-03-q011",
+        "respiratory-03-q012",
+        "respiratory-03-q013",
+        "respiratory-03-q014",
+        "respiratory-03-q016",
+        "respiratory-03-q017",
+        "respiratory-03-q018",
+        "respiratory-03-q019",
+        "respiratory-03-q020",
+        "respiratory-03-q022",
+        "respiratory-03-q023",
+        "respiratory-03-q024",
+        "respiratory-03-q027",
+        "respiratory-03-q028",
+        "respiratory-03-q029",
+        "respiratory-03-q030",
+        "respiratory-03-q031",
+        "respiratory-03-q032",
+        "respiratory-03-q033",
+        "respiratory-03-q034",
+        "respiratory-03-q035",
+        "respiratory-03-q036",
+        "respiratory-03-q037",
+        "respiratory-03-q038",
+        "respiratory-03-q039"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-03/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-03/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-03/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2021-07-24_report.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-03/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-04",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory theory — 15 January 2022 (filename date)",
+      "note": "Date comes from the filename and Telegram caption; the question report does not independently confirm a sitting date. One preferred copy is shown here; the redundant export is in the recoverable archive. Supplied report marks are preserved separately from audited answers; neither report date nor reordered questions independently establishes a distinct sitting.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Date comes from the filename and Telegram caption; the question report does not independently confirm a sitting date. One preferred copy is shown here; the redundant export is in the recoverable archive.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2022-01-15_filename.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-04/01.pdf",
+          "sha256": "95c268a4e5a0a7c8c6a9b915792e5d82748665ae3f011ac18575585f9bde7e0f",
+          "exists": true,
+          "note": "Date comes from the filename and Telegram caption; the question report does not independently confirm a sitting date. One preferred copy is shown here; the redundant export is in the recoverable archive."
+        }
+      ],
+      "sourceRecordCount": 38,
+      "transcribedQuestionCount": 38,
+      "gradedQuestionCount": 34,
+      "sourceKeyCount": 38,
+      "editorialKeyCount": 34,
+      "inferredKeyCount": 1,
+      "ungradedCount": 4,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-04-q001",
+        "respiratory-04-q002",
+        "respiratory-04-q003",
+        "respiratory-04-q004",
+        "respiratory-04-q005",
+        "respiratory-04-q006",
+        "respiratory-04-q007",
+        "respiratory-04-q008",
+        "respiratory-04-q009",
+        "respiratory-04-q010",
+        "respiratory-04-q011",
+        "respiratory-04-q012",
+        "respiratory-04-q013",
+        "respiratory-04-q014",
+        "respiratory-04-q015",
+        "respiratory-04-q016",
+        "respiratory-04-q017",
+        "respiratory-04-q018",
+        "respiratory-04-q019",
+        "respiratory-04-q020",
+        "respiratory-04-q021",
+        "respiratory-04-q022",
+        "respiratory-04-q023",
+        "respiratory-04-q024",
+        "respiratory-04-q025",
+        "respiratory-04-q026",
+        "respiratory-04-q027",
+        "respiratory-04-q028",
+        "respiratory-04-q029",
+        "respiratory-04-q030",
+        "respiratory-04-q031",
+        "respiratory-04-q032",
+        "respiratory-04-q033",
+        "respiratory-04-q034",
+        "respiratory-04-q035",
+        "respiratory-04-q036",
+        "respiratory-04-q037",
+        "respiratory-04-q038"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-04-q001",
+        "respiratory-04-q002",
+        "respiratory-04-q003",
+        "respiratory-04-q004",
+        "respiratory-04-q005",
+        "respiratory-04-q006",
+        "respiratory-04-q007",
+        "respiratory-04-q008",
+        "respiratory-04-q009",
+        "respiratory-04-q010",
+        "respiratory-04-q011",
+        "respiratory-04-q012",
+        "respiratory-04-q013",
+        "respiratory-04-q015",
+        "respiratory-04-q017",
+        "respiratory-04-q018",
+        "respiratory-04-q019",
+        "respiratory-04-q020",
+        "respiratory-04-q021",
+        "respiratory-04-q022",
+        "respiratory-04-q023",
+        "respiratory-04-q024",
+        "respiratory-04-q025",
+        "respiratory-04-q026",
+        "respiratory-04-q027",
+        "respiratory-04-q028",
+        "respiratory-04-q029",
+        "respiratory-04-q030",
+        "respiratory-04-q031",
+        "respiratory-04-q032",
+        "respiratory-04-q033",
+        "respiratory-04-q034",
+        "respiratory-04-q035",
+        "respiratory-04-q038"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-04/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-04/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-04/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2022-01-15_filename.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-04/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-05",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory final exam — July 4, 2022",
+      "note": "Manually transcribed against every page of the 12-page supplied study PDF. Green answer-cell highlights are recorded as supplied marks, not certified official answers. Questions are sorted by printed number; page values retain actual study-PDF order, which is not fully numerical. Spelling, capitalization and units are lightly normalized without changing option order.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Cover explicitly states Date of Exam: Jul 04, 2022; February 2022 semester. Annotated/key-bearing scan; source markings have not been re-graded. Study copy follows question order Q1-34, with the blank final page removed; unmodified source remains recoverable.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2022-07-04_ordered.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-05/01.pdf",
+          "sha256": "4e50a0c9d2817b420cd9d9dda68b5573b51c07d15c5b235afb30d579d1f20d3f",
+          "exists": true,
+          "note": "Cover explicitly states Date of Exam: Jul 04, 2022; February 2022 semester. Annotated/key-bearing scan; source markings have not been re-graded. Study copy follows question order Q1-34, with the blank final page removed; unmodified source remains recoverable."
+        }
+      ],
+      "sourceRecordCount": 34,
+      "transcribedQuestionCount": 34,
+      "gradedQuestionCount": 32,
+      "sourceKeyCount": 33,
+      "editorialKeyCount": 32,
+      "inferredKeyCount": 1,
+      "ungradedCount": 2,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-05-q001",
+        "respiratory-05-q002",
+        "respiratory-05-q003",
+        "respiratory-05-q004",
+        "respiratory-05-q005",
+        "respiratory-05-q006",
+        "respiratory-05-q007",
+        "respiratory-05-q008",
+        "respiratory-05-q009",
+        "respiratory-05-q010",
+        "respiratory-05-q011",
+        "respiratory-05-q012",
+        "respiratory-05-q013",
+        "respiratory-05-q014",
+        "respiratory-05-q015",
+        "respiratory-05-q016",
+        "respiratory-05-q017",
+        "respiratory-05-q018",
+        "respiratory-05-q019",
+        "respiratory-05-q020",
+        "respiratory-05-q021",
+        "respiratory-05-q022",
+        "respiratory-05-q023",
+        "respiratory-05-q024",
+        "respiratory-05-q025",
+        "respiratory-05-q026",
+        "respiratory-05-q027",
+        "respiratory-05-q028",
+        "respiratory-05-q029",
+        "respiratory-05-q030",
+        "respiratory-05-q031",
+        "respiratory-05-q032",
+        "respiratory-05-q033",
+        "respiratory-05-q034"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-05-q001",
+        "respiratory-05-q002",
+        "respiratory-05-q003",
+        "respiratory-05-q004",
+        "respiratory-05-q005",
+        "respiratory-05-q006",
+        "respiratory-05-q007",
+        "respiratory-05-q008",
+        "respiratory-05-q009",
+        "respiratory-05-q010",
+        "respiratory-05-q011",
+        "respiratory-05-q012",
+        "respiratory-05-q013",
+        "respiratory-05-q015",
+        "respiratory-05-q016",
+        "respiratory-05-q017",
+        "respiratory-05-q019",
+        "respiratory-05-q020",
+        "respiratory-05-q021",
+        "respiratory-05-q022",
+        "respiratory-05-q023",
+        "respiratory-05-q024",
+        "respiratory-05-q025",
+        "respiratory-05-q026",
+        "respiratory-05-q027",
+        "respiratory-05-q028",
+        "respiratory-05-q029",
+        "respiratory-05-q030",
+        "respiratory-05-q031",
+        "respiratory-05-q032",
+        "respiratory-05-q033",
+        "respiratory-05-q034"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-05/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-05/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-05/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2022-07-04_ordered.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-05/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-06",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory final exam — July 2, 2023",
+      "note": "All ten supplied study-PDF pages visually reviewed. No answers are marked; audited answers are editorial inferences with cited course evidence. The crossed-out renal Q34–35 are accounted for as exclusions; the separate respiratory replacement Q34–35 are imported. Source spelling and grammar are lightly normalized, with material wording repairs documented per item. The downloadable PDF is a legible reduced-size web copy; the full-resolution original is preserved in the local archive.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Cover explicitly states Date of Exam: July 2, 2023; February 2023 semester; 40 MCQ questions. Original large scan is preserved without recompression. Study copy corrects the swapped Q31-33 and Q34-35 pages.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2023-07-02_ordered.pdf (web copy)",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-06/01-web.pdf",
+          "sha256": "4d8526a3933fd0c014edeca13f5f50c0a40f432df0f1f3552c9a8d12b95b0e45",
+          "exists": true,
+          "note": "Cover explicitly states Date of Exam: July 2, 2023; February 2023 semester; 40 MCQ questions. Original large scan is preserved without recompression. Study copy corrects the swapped Q31-33 and Q34-35 pages."
+        }
+      ],
+      "sourceRecordCount": 40,
+      "transcribedQuestionCount": 40,
+      "gradedQuestionCount": 33,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 33,
+      "inferredKeyCount": 33,
+      "ungradedCount": 7,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-06-q001",
+        "respiratory-06-q002",
+        "respiratory-06-q003",
+        "respiratory-06-q004",
+        "respiratory-06-q005",
+        "respiratory-06-q006",
+        "respiratory-06-q007",
+        "respiratory-06-q008",
+        "respiratory-06-q009",
+        "respiratory-06-q010",
+        "respiratory-06-q011",
+        "respiratory-06-q012",
+        "respiratory-06-q013",
+        "respiratory-06-q014",
+        "respiratory-06-q015",
+        "respiratory-06-q016",
+        "respiratory-06-q017",
+        "respiratory-06-q018",
+        "respiratory-06-q019",
+        "respiratory-06-q020",
+        "respiratory-06-q021",
+        "respiratory-06-q022",
+        "respiratory-06-q023",
+        "respiratory-06-q024",
+        "respiratory-06-q025",
+        "respiratory-06-q026",
+        "respiratory-06-q027",
+        "respiratory-06-q028",
+        "respiratory-06-q029",
+        "respiratory-06-q030",
+        "respiratory-06-q031",
+        "respiratory-06-q032",
+        "respiratory-06-q033",
+        "respiratory-06-q034",
+        "respiratory-06-q035",
+        "respiratory-06-q036",
+        "respiratory-06-q037",
+        "respiratory-06-q038",
+        "respiratory-06-q039",
+        "respiratory-06-q040"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-06-q002",
+        "respiratory-06-q003",
+        "respiratory-06-q004",
+        "respiratory-06-q005",
+        "respiratory-06-q006",
+        "respiratory-06-q007",
+        "respiratory-06-q008",
+        "respiratory-06-q010",
+        "respiratory-06-q011",
+        "respiratory-06-q012",
+        "respiratory-06-q013",
+        "respiratory-06-q015",
+        "respiratory-06-q016",
+        "respiratory-06-q018",
+        "respiratory-06-q019",
+        "respiratory-06-q020",
+        "respiratory-06-q021",
+        "respiratory-06-q022",
+        "respiratory-06-q023",
+        "respiratory-06-q024",
+        "respiratory-06-q025",
+        "respiratory-06-q027",
+        "respiratory-06-q028",
+        "respiratory-06-q029",
+        "respiratory-06-q030",
+        "respiratory-06-q031",
+        "respiratory-06-q032",
+        "respiratory-06-q033",
+        "respiratory-06-q034",
+        "respiratory-06-q035",
+        "respiratory-06-q037",
+        "respiratory-06-q039",
+        "respiratory-06-q040"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-06/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-06/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-06/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2023-07-02_ordered.pdf (web copy)",
+          "url": "/study/respiratory/past-papers/respiratory-06/01-web.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-07",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory System - 29-question digital paper (September 2025 filename)",
+      "note": "Complete supplied 29-question digital version, distinct from the 40-question February-semester photo paper. September 2025 is the filename/posting label, not an inferred exam day. The original Persian cover/header visibly prints ۱۴۰۴/۶/۸; this literal date is retained without calendar conversion or matching another key. No systematic answer marks are present.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "September 2025 comes from the filename; posted 4 September 2025. Do not automatically pair this with another key solely because both were posted that day.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2025-09_filename.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-07/01.pdf",
+          "sha256": "172c86fba7c8c7d7cbd82c203e2eb68c9a3d13a02c3ed5b009b924fc000190c5",
+          "exists": true,
+          "note": "September 2025 comes from the filename; posted 4 September 2025. Do not automatically pair this with another key solely because both were posted that day."
+        }
+      ],
+      "sourceRecordCount": 29,
+      "transcribedQuestionCount": 29,
+      "gradedQuestionCount": 26,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 26,
+      "inferredKeyCount": 26,
+      "ungradedCount": 3,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-07-q001",
+        "respiratory-07-q002",
+        "respiratory-07-q003",
+        "respiratory-07-q004",
+        "respiratory-07-q005",
+        "respiratory-07-q006",
+        "respiratory-07-q007",
+        "respiratory-07-q008",
+        "respiratory-07-q009",
+        "respiratory-07-q010",
+        "respiratory-07-q011",
+        "respiratory-07-q012",
+        "respiratory-07-q013",
+        "respiratory-07-q014",
+        "respiratory-07-q015",
+        "respiratory-07-q016",
+        "respiratory-07-q017",
+        "respiratory-07-q018",
+        "respiratory-07-q019",
+        "respiratory-07-q020",
+        "respiratory-07-q021",
+        "respiratory-07-q022",
+        "respiratory-07-q023",
+        "respiratory-07-q024",
+        "respiratory-07-q025",
+        "respiratory-07-q026",
+        "respiratory-07-q027",
+        "respiratory-07-q028",
+        "respiratory-07-q029"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-07-q001",
+        "respiratory-07-q002",
+        "respiratory-07-q003",
+        "respiratory-07-q004",
+        "respiratory-07-q005",
+        "respiratory-07-q006",
+        "respiratory-07-q007",
+        "respiratory-07-q008",
+        "respiratory-07-q011",
+        "respiratory-07-q012",
+        "respiratory-07-q014",
+        "respiratory-07-q015",
+        "respiratory-07-q016",
+        "respiratory-07-q017",
+        "respiratory-07-q018",
+        "respiratory-07-q019",
+        "respiratory-07-q020",
+        "respiratory-07-q021",
+        "respiratory-07-q022",
+        "respiratory-07-q023",
+        "respiratory-07-q024",
+        "respiratory-07-q025",
+        "respiratory-07-q026",
+        "respiratory-07-q027",
+        "respiratory-07-q028",
+        "respiratory-07-q029"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-07/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-07/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-07/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2025-09_filename.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-07/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-08",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory System - February 2025 semester photo paper",
+      "note": "Cover explicitly says February 2025 semester, 40 questions and 40 minutes. This does not establish an exact exam date. All nine images inspected; no option-specific answer marks are visible. Source spelling is retained with minimal whitespace/chemical-symbol normalization.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "001_cover_February-2025-semester.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/01.jpg",
+          "sha256": "20700368f8a1518ff39b66461310c5a2aa61ee7b2ace91be9e9e98a6f6169926",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "002_questions_part-1_sideways.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/02.jpg",
+          "sha256": "0b0659fce73ea833a910e5533a425e6e8d1d66956cfc2fb08b8a09305275eefd",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "003_questions_part-2_sideways.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/03.jpg",
+          "sha256": "71b2262b7addcbb6b0d8e0390f90f720c0a4f14ce96c07949470de0bfb8636ae",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "004_questions_part-3.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/04.jpg",
+          "sha256": "86ce2f6a86fe971e8535a130ce2deaad811abf24e3bade13187947fad0c8a17c",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "005_questions_part-4_sideways.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/05.jpg",
+          "sha256": "58c5e0f29151d4502cbf622d0adae653a846c019a46542b412bab9e605a94caa",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "006_questions_part-5.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/06.jpg",
+          "sha256": "caba6b72b02f9362f304457e541d436f96da7c2fed2ede66c56d0e9559d8c3e4",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "007_questions_part-6.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/07.jpg",
+          "sha256": "6f4198d253657897c58a80fb702c9981dd906a1ccc1ef6833fea9d12377daaf1",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "008_questions_part-7.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/08.jpg",
+          "sha256": "c7fec42691f3d85d03b833592fe42814b8fcdfdfeec70f73347530288b8dd590",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        },
+        {
+          "title": "009_questions_part-8.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-08/09.jpg",
+          "sha256": "e71566422be377019c409bb8fb551b6c0cb00b4735a8f208c4696f64dc7209f7",
+          "exists": true,
+          "note": "Cover explicitly says February 2025 semester, MD Program, 40 MCQs. Photographs were posted 25 December 2025; do not label December as the sitting date. Nine photos including cover; several sideways views are preserved."
+        }
+      ],
+      "sourceRecordCount": 40,
+      "transcribedQuestionCount": 40,
+      "gradedQuestionCount": 35,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 35,
+      "inferredKeyCount": 35,
+      "ungradedCount": 5,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-08-q001",
+        "respiratory-08-q002",
+        "respiratory-08-q003",
+        "respiratory-08-q004",
+        "respiratory-08-q005",
+        "respiratory-08-q006",
+        "respiratory-08-q007",
+        "respiratory-08-q008",
+        "respiratory-08-q009",
+        "respiratory-08-q010",
+        "respiratory-08-q011",
+        "respiratory-08-q012",
+        "respiratory-08-q013",
+        "respiratory-08-q014",
+        "respiratory-08-q015",
+        "respiratory-08-q016",
+        "respiratory-08-q017",
+        "respiratory-08-q018",
+        "respiratory-08-q019",
+        "respiratory-08-q020",
+        "respiratory-08-q021",
+        "respiratory-08-q022",
+        "respiratory-08-q023",
+        "respiratory-08-q024",
+        "respiratory-08-q025",
+        "respiratory-08-q026",
+        "respiratory-08-q027",
+        "respiratory-08-q028",
+        "respiratory-08-q029",
+        "respiratory-08-q030",
+        "respiratory-08-q031",
+        "respiratory-08-q032",
+        "respiratory-08-q033",
+        "respiratory-08-q034",
+        "respiratory-08-q035",
+        "respiratory-08-q036",
+        "respiratory-08-q037",
+        "respiratory-08-q038",
+        "respiratory-08-q039",
+        "respiratory-08-q040"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-08-q001",
+        "respiratory-08-q002",
+        "respiratory-08-q003",
+        "respiratory-08-q004",
+        "respiratory-08-q005",
+        "respiratory-08-q006",
+        "respiratory-08-q007",
+        "respiratory-08-q008",
+        "respiratory-08-q009",
+        "respiratory-08-q010",
+        "respiratory-08-q011",
+        "respiratory-08-q012",
+        "respiratory-08-q013",
+        "respiratory-08-q014",
+        "respiratory-08-q016",
+        "respiratory-08-q019",
+        "respiratory-08-q020",
+        "respiratory-08-q021",
+        "respiratory-08-q022",
+        "respiratory-08-q023",
+        "respiratory-08-q024",
+        "respiratory-08-q025",
+        "respiratory-08-q026",
+        "respiratory-08-q027",
+        "respiratory-08-q028",
+        "respiratory-08-q029",
+        "respiratory-08-q032",
+        "respiratory-08-q033",
+        "respiratory-08-q034",
+        "respiratory-08-q035",
+        "respiratory-08-q036",
+        "respiratory-08-q037",
+        "respiratory-08-q038",
+        "respiratory-08-q039",
+        "respiratory-08-q040"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-08/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-08/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-08/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "001_cover_February-2025-semester.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/01.jpg"
+        },
+        {
+          "name": "002_questions_part-1_sideways.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/02.jpg"
+        },
+        {
+          "name": "003_questions_part-2_sideways.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/03.jpg"
+        },
+        {
+          "name": "004_questions_part-3.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/04.jpg"
+        },
+        {
+          "name": "005_questions_part-4_sideways.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/05.jpg"
+        },
+        {
+          "name": "006_questions_part-5.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/06.jpg"
+        },
+        {
+          "name": "007_questions_part-6.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/07.jpg"
+        },
+        {
+          "name": "008_questions_part-7.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/08.jpg"
+        },
+        {
+          "name": "009_questions_part-8.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-08/09.jpg"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-09",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory supplied key report — archive labelled August 2026",
+      "note": "All six photographed report pages were manually checked. They contain Q1–38 and asterisks marking one supplied answer per question. Photographs show August 15, 2026 timestamps; no exam date or authenticated official-key status is established. Spelling and grammar are lightly normalized with substantive repairs documented.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Filename says August 2026; scanned report footer says Aug 15, 2026, 12:54. Report timestamp is not proof of the exam sitting date.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2026-08_key-report.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-09/01.pdf",
+          "sha256": "de77b740a4241d2334bde2674902a4cff812c8d2e9fccb94cba198201696383a",
+          "exists": true,
+          "note": "Filename says August 2026; scanned report footer says Aug 15, 2026, 12:54. Report timestamp is not proof of the exam sitting date."
+        }
+      ],
+      "sourceRecordCount": 38,
+      "transcribedQuestionCount": 38,
+      "gradedQuestionCount": 33,
+      "sourceKeyCount": 38,
+      "editorialKeyCount": 33,
+      "inferredKeyCount": 0,
+      "ungradedCount": 5,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-09-q001",
+        "respiratory-09-q002",
+        "respiratory-09-q003",
+        "respiratory-09-q004",
+        "respiratory-09-q005",
+        "respiratory-09-q006",
+        "respiratory-09-q007",
+        "respiratory-09-q008",
+        "respiratory-09-q009",
+        "respiratory-09-q010",
+        "respiratory-09-q011",
+        "respiratory-09-q012",
+        "respiratory-09-q013",
+        "respiratory-09-q014",
+        "respiratory-09-q015",
+        "respiratory-09-q016",
+        "respiratory-09-q017",
+        "respiratory-09-q018",
+        "respiratory-09-q019",
+        "respiratory-09-q020",
+        "respiratory-09-q021",
+        "respiratory-09-q022",
+        "respiratory-09-q023",
+        "respiratory-09-q024",
+        "respiratory-09-q025",
+        "respiratory-09-q026",
+        "respiratory-09-q027",
+        "respiratory-09-q028",
+        "respiratory-09-q029",
+        "respiratory-09-q030",
+        "respiratory-09-q031",
+        "respiratory-09-q032",
+        "respiratory-09-q033",
+        "respiratory-09-q034",
+        "respiratory-09-q035",
+        "respiratory-09-q036",
+        "respiratory-09-q037",
+        "respiratory-09-q038"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-09-q001",
+        "respiratory-09-q002",
+        "respiratory-09-q003",
+        "respiratory-09-q004",
+        "respiratory-09-q005",
+        "respiratory-09-q006",
+        "respiratory-09-q007",
+        "respiratory-09-q008",
+        "respiratory-09-q009",
+        "respiratory-09-q011",
+        "respiratory-09-q012",
+        "respiratory-09-q014",
+        "respiratory-09-q015",
+        "respiratory-09-q016",
+        "respiratory-09-q017",
+        "respiratory-09-q018",
+        "respiratory-09-q019",
+        "respiratory-09-q020",
+        "respiratory-09-q021",
+        "respiratory-09-q022",
+        "respiratory-09-q023",
+        "respiratory-09-q027",
+        "respiratory-09-q028",
+        "respiratory-09-q029",
+        "respiratory-09-q030",
+        "respiratory-09-q031",
+        "respiratory-09-q032",
+        "respiratory-09-q033",
+        "respiratory-09-q034",
+        "respiratory-09-q035",
+        "respiratory-09-q036",
+        "respiratory-09-q037",
+        "respiratory-09-q038"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-09/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-09/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-09/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2026-08_key-report.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-09/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-10",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Undated 42-item photographed respiratory paper",
+      "note": "Seven preferred photographs posted 2025-09-04; posting date is not an exam date. Printed numbering runs 1-42; archive image 005 ends at Q31 and image 006 begins with Q32 despite filename labels. Pencil marks are unofficial selections, not an institutional answer key. Two photographed versions are combined here: the 42-item set and the seven photos posted 5 September 2025. Same questions and order; no second exam card or extra recurrence count.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "001_Q01-06.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-10/01.jpg",
+          "sha256": "191928ed92f4dfe02becd124b144925645e390e0642cd51f74a90b1106869357",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "002_Q07-12.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-10/02.jpg",
+          "sha256": "b5bf2821af5c661b4bb21a741e20197bb686f578872a20ef4102f03bce325097",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "003_Q13-18.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-10/03.jpg",
+          "sha256": "f338d9d46621828f4712ec245890f41dd02dd4e6e7b1bec9299c6d6548d8ef44",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "004_Q19-25.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-10/04.jpg",
+          "sha256": "0c82bcccdc2b9caa32fde81e8572c11a1b92d45104ea7d1ef09dbb5d7c0cc26e",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "005_Q26-32.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-10/05.jpg",
+          "sha256": "0072b47a5e98294e829fb0fa55514e76787b34b3c115a36b48b7d8664c5b8637",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "006_Q33-36.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-10/06.jpg",
+          "sha256": "c5ad5204e6ee4eb7f538e52cf6ad92153d064258cea6205db2fb83b339b31a6e",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "007_Q37-42.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-10/07.jpg",
+          "sha256": "1f03d5d14ccee70953ec894b756223c4d6a208750d212d39e9bf9a7d329e251b",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "001_physiology_part-1.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-14/01.jpg",
+          "sha256": "37ab3dd776ae3b578d30d5a4e7d6a626f550bca6db6d69d3f34452db62c9a2c9",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "002_physiology_part-2.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-14/02.jpg",
+          "sha256": "c74972de55ba3c92b5a395ba934c39bd414d380618cf7a8d1e9ca8f204afbd2e",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "003_physiology_part-3.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-14/03.jpg",
+          "sha256": "f447e95cc74ae0fb92dd2320b2b2949952ad931e39930c263a7cee14849900eb",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "004_anatomy_part-1.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-14/04.jpg",
+          "sha256": "dd6574e06dc7b3f527d7be2a8ee89a6dc9ba281ef1d1fb1baf2619c603b43ad8",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "005_anatomy_part-2_sideways.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-14/05.jpg",
+          "sha256": "b4f2c447de7cb631ae4ba8b2cc987a65a240972245bf1dddeb118cadcd76dded",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "006_histology.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-14/06.jpg",
+          "sha256": "8f75ccc8a29bf0b863b08c61a98c1e707f9790240b6cdd798c5ce31cb841409d",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        },
+        {
+          "title": "007_embryology.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-14/07.jpg",
+          "sha256": "67c5290964dabdb1a20f827a77bc5dfd704b30e52b08430b82d2b50a4c45739f",
+          "exists": true,
+          "note": "Seven photographs, in Q1-42 order, posted 4 September 2025. Printed pages are 3-8 and 11, but the visible question-number run is 1-42; no missing cover or printed pages are fabricated. The 24r PDF is only a five-page recapture of this set and is kept as an alternate."
+        }
+      ],
+      "sourceRecordCount": 42,
+      "transcribedQuestionCount": 42,
+      "gradedQuestionCount": 38,
+      "sourceKeyCount": 39,
+      "editorialKeyCount": 38,
+      "inferredKeyCount": 18,
+      "ungradedCount": 4,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-10-q001",
+        "respiratory-10-q002",
+        "respiratory-10-q003",
+        "respiratory-10-q004",
+        "respiratory-10-q005",
+        "respiratory-10-q006",
+        "respiratory-10-q007",
+        "respiratory-10-q008",
+        "respiratory-10-q009",
+        "respiratory-10-q010",
+        "respiratory-10-q011",
+        "respiratory-10-q012",
+        "respiratory-10-q013",
+        "respiratory-10-q014",
+        "respiratory-10-q015",
+        "respiratory-10-q016",
+        "respiratory-10-q017",
+        "respiratory-10-q018",
+        "respiratory-10-q019",
+        "respiratory-10-q020",
+        "respiratory-10-q021",
+        "respiratory-10-q022",
+        "respiratory-10-q023",
+        "respiratory-10-q024",
+        "respiratory-10-q025",
+        "respiratory-10-q026",
+        "respiratory-10-q027",
+        "respiratory-10-q028",
+        "respiratory-10-q029",
+        "respiratory-10-q030",
+        "respiratory-10-q031",
+        "respiratory-10-q032",
+        "respiratory-10-q033",
+        "respiratory-10-q034",
+        "respiratory-10-q035",
+        "respiratory-10-q036",
+        "respiratory-10-q037",
+        "respiratory-10-q038",
+        "respiratory-10-q039",
+        "respiratory-10-q040",
+        "respiratory-10-q041",
+        "respiratory-10-q042"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-10-q001",
+        "respiratory-10-q002",
+        "respiratory-10-q003",
+        "respiratory-10-q004",
+        "respiratory-10-q005",
+        "respiratory-10-q006",
+        "respiratory-10-q007",
+        "respiratory-10-q008",
+        "respiratory-10-q009",
+        "respiratory-10-q010",
+        "respiratory-10-q011",
+        "respiratory-10-q012",
+        "respiratory-10-q014",
+        "respiratory-10-q015",
+        "respiratory-10-q016",
+        "respiratory-10-q017",
+        "respiratory-10-q018",
+        "respiratory-10-q019",
+        "respiratory-10-q020",
+        "respiratory-10-q021",
+        "respiratory-10-q022",
+        "respiratory-10-q023",
+        "respiratory-10-q024",
+        "respiratory-10-q025",
+        "respiratory-10-q026",
+        "respiratory-10-q028",
+        "respiratory-10-q029",
+        "respiratory-10-q030",
+        "respiratory-10-q031",
+        "respiratory-10-q032",
+        "respiratory-10-q033",
+        "respiratory-10-q034",
+        "respiratory-10-q035",
+        "respiratory-10-q037",
+        "respiratory-10-q038",
+        "respiratory-10-q040",
+        "respiratory-10-q041",
+        "respiratory-10-q042"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-10/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-10/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-10/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "001_Q01-06.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-10/01.jpg"
+        },
+        {
+          "name": "002_Q07-12.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-10/02.jpg"
+        },
+        {
+          "name": "003_Q13-18.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-10/03.jpg"
+        },
+        {
+          "name": "004_Q19-25.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-10/04.jpg"
+        },
+        {
+          "name": "005_Q26-32.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-10/05.jpg"
+        },
+        {
+          "name": "006_Q33-36.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-10/06.jpg"
+        },
+        {
+          "name": "007_Q37-42.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-10/07.jpg"
+        },
+        {
+          "name": "001_physiology_part-1.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-14/01.jpg"
+        },
+        {
+          "name": "002_physiology_part-2.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-14/02.jpg"
+        },
+        {
+          "name": "003_physiology_part-3.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-14/03.jpg"
+        },
+        {
+          "name": "004_anatomy_part-1.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-14/04.jpg"
+        },
+        {
+          "name": "005_anatomy_part-2_sideways.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-14/05.jpg"
+        },
+        {
+          "name": "006_histology.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-14/06.jpg"
+        },
+        {
+          "name": "007_embryology.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-14/07.jpg"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-11",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Undated Abdulrazzak respiratory paper",
+      "note": "Seven preferred images forwarded from a 2025-01-05 post; this is provenance, not a verified exam date. All 36 supplied items retained with section numbering. Highlighting and stars are unofficial source marks. The archive's Sarwar recaptures are redundant versions and not additional questions.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "001_physiology_Q01-07.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-11/01.jpg",
+          "sha256": "da28a7c46bad5c3dbdbbdb86a94e5d60595b3f89e0584e46d5ceae0487530fb8",
+          "exists": true,
+          "note": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established."
+        },
+        {
+          "title": "002_physiology_Q08-13.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-11/02.jpg",
+          "sha256": "b206092bb5f787439162b48cea12bb24f60c3c095653d200f3d3d2bf27db3bae",
+          "exists": true,
+          "note": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established."
+        },
+        {
+          "title": "003_physiology_Q14-19.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-11/03.jpg",
+          "sha256": "ef1ef714a74bbf9414e436f6e2f6f8a9be2f8ac6cc4162e315414535cea77dc3",
+          "exists": true,
+          "note": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established."
+        },
+        {
+          "title": "004_physiology_Q20-22.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-11/04.jpg",
+          "sha256": "7fb4c136d132b758eb70be9c3be1b6efb230b80b5b344240c3a8d98be9dff99b",
+          "exists": true,
+          "note": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established."
+        },
+        {
+          "title": "005_anatomy_Q01-07.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-11/05.jpg",
+          "sha256": "71c2e715f101564dcfa040839e0f02927c48ee45c849f85720285104c5e5ceba",
+          "exists": true,
+          "note": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established."
+        },
+        {
+          "title": "006_anatomy_Q08-10.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-11/06.jpg",
+          "sha256": "e60e28e8ba906a52ef5477ad746802e160737df471fa0ddbb4d968738409a788",
+          "exists": true,
+          "note": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established."
+        },
+        {
+          "title": "007_histology_Q01-04.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-11/07.jpg",
+          "sha256": "72ad2814d5b536b9a881e3790b62b6feba62ba6079f926e7a7fa4f659c6896fc",
+          "exists": true,
+          "note": "Seven clearer original photos are the study set. Seven Sarwar screenshot recaptures of these same pages were moved to recoverable duplicates. Source forward dates: 5 January and 16 March 2025; sitting date unknown. Physiology 1-22, anatomy 1-10 and histology 1-4 are present; no separate embryology page is established."
+        }
+      ],
+      "sourceRecordCount": 36,
+      "transcribedQuestionCount": 36,
+      "gradedQuestionCount": 31,
+      "sourceKeyCount": 35,
+      "editorialKeyCount": 31,
+      "inferredKeyCount": 1,
+      "ungradedCount": 5,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-11-qphysiology-1",
+        "respiratory-11-qphysiology-2",
+        "respiratory-11-qphysiology-3",
+        "respiratory-11-qphysiology-4",
+        "respiratory-11-qphysiology-5",
+        "respiratory-11-qphysiology-6",
+        "respiratory-11-qphysiology-7",
+        "respiratory-11-qphysiology-8",
+        "respiratory-11-qphysiology-9",
+        "respiratory-11-qphysiology-10",
+        "respiratory-11-qphysiology-11",
+        "respiratory-11-qphysiology-12",
+        "respiratory-11-qphysiology-13",
+        "respiratory-11-qphysiology-14",
+        "respiratory-11-qphysiology-15",
+        "respiratory-11-qphysiology-16",
+        "respiratory-11-qphysiology-17",
+        "respiratory-11-qphysiology-18",
+        "respiratory-11-qphysiology-19",
+        "respiratory-11-qphysiology-20",
+        "respiratory-11-qphysiology-21",
+        "respiratory-11-qphysiology-22",
+        "respiratory-11-qanatomy-1",
+        "respiratory-11-qanatomy-2",
+        "respiratory-11-qanatomy-3",
+        "respiratory-11-qanatomy-4",
+        "respiratory-11-qanatomy-5",
+        "respiratory-11-qanatomy-6",
+        "respiratory-11-qanatomy-7",
+        "respiratory-11-qanatomy-8",
+        "respiratory-11-qanatomy-9",
+        "respiratory-11-qanatomy-10",
+        "respiratory-11-qhistology-1",
+        "respiratory-11-qhistology-2",
+        "respiratory-11-qhistology-3",
+        "respiratory-11-qhistology-4"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-11-qphysiology-1",
+        "respiratory-11-qphysiology-2",
+        "respiratory-11-qphysiology-3",
+        "respiratory-11-qphysiology-4",
+        "respiratory-11-qphysiology-5",
+        "respiratory-11-qphysiology-6",
+        "respiratory-11-qphysiology-7",
+        "respiratory-11-qphysiology-8",
+        "respiratory-11-qphysiology-9",
+        "respiratory-11-qphysiology-10",
+        "respiratory-11-qphysiology-11",
+        "respiratory-11-qphysiology-12",
+        "respiratory-11-qphysiology-13",
+        "respiratory-11-qphysiology-14",
+        "respiratory-11-qphysiology-15",
+        "respiratory-11-qphysiology-16",
+        "respiratory-11-qphysiology-17",
+        "respiratory-11-qphysiology-19",
+        "respiratory-11-qphysiology-20",
+        "respiratory-11-qphysiology-21",
+        "respiratory-11-qphysiology-22",
+        "respiratory-11-qanatomy-1",
+        "respiratory-11-qanatomy-2",
+        "respiratory-11-qanatomy-3",
+        "respiratory-11-qanatomy-4",
+        "respiratory-11-qanatomy-5",
+        "respiratory-11-qanatomy-6",
+        "respiratory-11-qanatomy-7",
+        "respiratory-11-qanatomy-8",
+        "respiratory-11-qanatomy-9",
+        "respiratory-11-qhistology-1"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-11/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-11/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-11/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "001_physiology_Q01-07.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-11/01.jpg"
+        },
+        {
+          "name": "002_physiology_Q08-13.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-11/02.jpg"
+        },
+        {
+          "name": "003_physiology_Q14-19.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-11/03.jpg"
+        },
+        {
+          "name": "004_physiology_Q20-22.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-11/04.jpg"
+        },
+        {
+          "name": "005_anatomy_Q01-07.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-11/05.jpg"
+        },
+        {
+          "name": "006_anatomy_Q08-10.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-11/06.jpg"
+        },
+        {
+          "name": "007_histology_Q01-04.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-11/07.jpg"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-12",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory paper — Dr Imani, Dr Hasanzadeh and Dr Rastegar (undated)",
+      "note": "All seven supplied ordered-PDF pages visually checked; Q1–40 are present. Source headings name the three teachers. Handwritten circles/ticks are preserved as supplied answer marks, not authenticated official keys. Printed page footers begin at 3; page fields use actual one-based PDF indices. No exam date is inferred.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Undated Dr Imani theory paper, Q1-40. The complete seven-page source is now in question order. The other key-answer PDF repeats three pages and omits three different question ranges; retained as an annotated alternate, not a second exam. Filename Dr.imami is preserved in provenance.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "dr-imani_ordered.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-12/01.pdf",
+          "sha256": "48298cb54fc8ad06ac269d4e698b5ea66dfeec6f807212799e987436756a4e31",
+          "exists": true,
+          "note": "Undated Dr Imani theory paper, Q1-40. The complete seven-page source is now in question order. The other key-answer PDF repeats three pages and omits three different question ranges; retained as an annotated alternate, not a second exam. Filename Dr.imami is preserved in provenance."
+        }
+      ],
+      "sourceRecordCount": 40,
+      "transcribedQuestionCount": 40,
+      "gradedQuestionCount": 34,
+      "sourceKeyCount": 40,
+      "editorialKeyCount": 34,
+      "inferredKeyCount": 0,
+      "ungradedCount": 6,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-12-q001",
+        "respiratory-12-q002",
+        "respiratory-12-q003",
+        "respiratory-12-q004",
+        "respiratory-12-q005",
+        "respiratory-12-q006",
+        "respiratory-12-q007",
+        "respiratory-12-q008",
+        "respiratory-12-q009",
+        "respiratory-12-q010",
+        "respiratory-12-q011",
+        "respiratory-12-q012",
+        "respiratory-12-q013",
+        "respiratory-12-q014",
+        "respiratory-12-q015",
+        "respiratory-12-q016",
+        "respiratory-12-q017",
+        "respiratory-12-q018",
+        "respiratory-12-q019",
+        "respiratory-12-q020",
+        "respiratory-12-q021",
+        "respiratory-12-q022",
+        "respiratory-12-q023",
+        "respiratory-12-q024",
+        "respiratory-12-q025",
+        "respiratory-12-q026",
+        "respiratory-12-q027",
+        "respiratory-12-q028",
+        "respiratory-12-q029",
+        "respiratory-12-q030",
+        "respiratory-12-q031",
+        "respiratory-12-q032",
+        "respiratory-12-q033",
+        "respiratory-12-q034",
+        "respiratory-12-q035",
+        "respiratory-12-q036",
+        "respiratory-12-q037",
+        "respiratory-12-q038",
+        "respiratory-12-q039",
+        "respiratory-12-q040"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-12-q001",
+        "respiratory-12-q002",
+        "respiratory-12-q003",
+        "respiratory-12-q004",
+        "respiratory-12-q005",
+        "respiratory-12-q006",
+        "respiratory-12-q007",
+        "respiratory-12-q008",
+        "respiratory-12-q009",
+        "respiratory-12-q010",
+        "respiratory-12-q011",
+        "respiratory-12-q014",
+        "respiratory-12-q015",
+        "respiratory-12-q016",
+        "respiratory-12-q017",
+        "respiratory-12-q018",
+        "respiratory-12-q019",
+        "respiratory-12-q020",
+        "respiratory-12-q021",
+        "respiratory-12-q022",
+        "respiratory-12-q023",
+        "respiratory-12-q025",
+        "respiratory-12-q026",
+        "respiratory-12-q028",
+        "respiratory-12-q029",
+        "respiratory-12-q030",
+        "respiratory-12-q031",
+        "respiratory-12-q032",
+        "respiratory-12-q033",
+        "respiratory-12-q034",
+        "respiratory-12-q035",
+        "respiratory-12-q038",
+        "respiratory-12-q039",
+        "respiratory-12-q040"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-12/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-12/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-12/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "dr-imani_ordered.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-12/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-13",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Undated Tabiya respiratory photo paper",
+      "note": "Thirteen preferred images forwarded from a 2024-07-23 post; no verified exam date. Contains physiology 1-22, anatomy 1-11, histology 1-5 and embryology 1-2 (40 items). Actual anatomy numbering is 5-8 on source image 9 and 1-4 on image 10, contrary to the archive filenames; the printed numbers are preserved. Highlights are unofficial. Persian numerals/option letters are normalized.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "001_physiology_Q01-03.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/01.jpg",
+          "sha256": "00c5b94c7506edd7042412aea7a83b38d58b3b76fc51d07054ce4edc407d162d",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "002_physiology_Q04-05.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/02.jpg",
+          "sha256": "c3c516f944dddb988f5264a72b4c55bef3fd9c0a75736d91f99fe17d2822c9d2",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "003_physiology_Q06.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/03.jpg",
+          "sha256": "7d598abc0e786f5b9cfbed372afec219c82d9f953d4af686db1a09f9d7648ef1",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "004_physiology_Q07-10.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/04.jpg",
+          "sha256": "79fa6a634f1450cef8752a177946df3c69103e4687732aec1a3ce3142b34d89f",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "005_physiology_Q11-13.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/05.jpg",
+          "sha256": "152e3bcc927778d7900bd1a7df560b0e214daf9a1233f430c24257eb3e37ab19",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "006_physiology_Q14-16.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/06.jpg",
+          "sha256": "b9cd6d7332315987aefc1dbd2347d7451e1782ea28379e1cfea68d296c0cb42a",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "007_physiology_Q17-19.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/07.jpg",
+          "sha256": "d2a28fba7d5ee661926c31b9cd426c806e329f7f110e3d62abebb94a99f42aa2",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "008_physiology_Q20-22.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/08.jpg",
+          "sha256": "9490b05bd937cc07ab931249f53320f0e53d65505e5ec91d10531ec50c29b519",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "009_anatomy_Q01-04.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/09.jpg",
+          "sha256": "ce3b288d086a335b59fa6e8dc8d46cfaa720f2c61e7bf62f262fc85d23182a9f",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "010_anatomy_Q05-08.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/10.jpg",
+          "sha256": "505488615497dd7dd6abad2df33ebe5398945a663a4eb51febecf651a590b9f0",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "011_anatomy_Q09-11.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/11.jpg",
+          "sha256": "ccc9d1741234c0d084f25604fb03aac3760818841a56701a4bbb9a4a30121ab1",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "012_histology_Q01-05.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/12.jpg",
+          "sha256": "cbdcd4caae86d266de21d7b3051fdeb51f733f29e520bbae55867b2bebadc375",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        },
+        {
+          "title": "013_embryology_Q01-02.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-13/13.jpg",
+          "sha256": "a3aecbfe3989f6590410ff5e5f5db80e0afe6400b71ae8c128e44cee9a666f45",
+          "exists": true,
+          "note": "Two albums (10 + 3 photos), same forwarder and original 23 July 2024 post. Now ordered by subject and printed question number: physiology 1-22, anatomy 1-11, histology 1-5, embryology 1-2. Q18 physiology is crossed out in the source; preserved, not silently removed. The date is a forwarding date, not a proven sitting date."
+        }
+      ],
+      "sourceRecordCount": 40,
+      "transcribedQuestionCount": 40,
+      "gradedQuestionCount": 34,
+      "sourceKeyCount": 39,
+      "editorialKeyCount": 34,
+      "inferredKeyCount": 1,
+      "ungradedCount": 6,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-13-qphysiology-1",
+        "respiratory-13-qphysiology-2",
+        "respiratory-13-qphysiology-3",
+        "respiratory-13-qphysiology-4",
+        "respiratory-13-qphysiology-5",
+        "respiratory-13-qphysiology-6",
+        "respiratory-13-qphysiology-7",
+        "respiratory-13-qphysiology-8",
+        "respiratory-13-qphysiology-9",
+        "respiratory-13-qphysiology-10",
+        "respiratory-13-qphysiology-11",
+        "respiratory-13-qphysiology-12",
+        "respiratory-13-qphysiology-13",
+        "respiratory-13-qphysiology-14",
+        "respiratory-13-qphysiology-15",
+        "respiratory-13-qphysiology-16",
+        "respiratory-13-qphysiology-17",
+        "respiratory-13-qphysiology-18",
+        "respiratory-13-qphysiology-19",
+        "respiratory-13-qphysiology-20",
+        "respiratory-13-qphysiology-21",
+        "respiratory-13-qphysiology-22",
+        "respiratory-13-qanatomy-5",
+        "respiratory-13-qanatomy-6",
+        "respiratory-13-qanatomy-7",
+        "respiratory-13-qanatomy-8",
+        "respiratory-13-qanatomy-1",
+        "respiratory-13-qanatomy-2",
+        "respiratory-13-qanatomy-3",
+        "respiratory-13-qanatomy-4",
+        "respiratory-13-qanatomy-9",
+        "respiratory-13-qanatomy-10",
+        "respiratory-13-qanatomy-11",
+        "respiratory-13-qhistology-1",
+        "respiratory-13-qhistology-2",
+        "respiratory-13-qhistology-3",
+        "respiratory-13-qhistology-4",
+        "respiratory-13-qhistology-5",
+        "respiratory-13-qembryology-1",
+        "respiratory-13-qembryology-2"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-13-qphysiology-1",
+        "respiratory-13-qphysiology-2",
+        "respiratory-13-qphysiology-3",
+        "respiratory-13-qphysiology-5",
+        "respiratory-13-qphysiology-6",
+        "respiratory-13-qphysiology-7",
+        "respiratory-13-qphysiology-8",
+        "respiratory-13-qphysiology-9",
+        "respiratory-13-qphysiology-10",
+        "respiratory-13-qphysiology-11",
+        "respiratory-13-qphysiology-12",
+        "respiratory-13-qphysiology-14",
+        "respiratory-13-qphysiology-15",
+        "respiratory-13-qphysiology-16",
+        "respiratory-13-qphysiology-17",
+        "respiratory-13-qphysiology-19",
+        "respiratory-13-qphysiology-20",
+        "respiratory-13-qphysiology-21",
+        "respiratory-13-qphysiology-22",
+        "respiratory-13-qanatomy-5",
+        "respiratory-13-qanatomy-6",
+        "respiratory-13-qanatomy-7",
+        "respiratory-13-qanatomy-8",
+        "respiratory-13-qanatomy-1",
+        "respiratory-13-qanatomy-2",
+        "respiratory-13-qanatomy-3",
+        "respiratory-13-qanatomy-4",
+        "respiratory-13-qanatomy-9",
+        "respiratory-13-qanatomy-10",
+        "respiratory-13-qhistology-1",
+        "respiratory-13-qhistology-2",
+        "respiratory-13-qhistology-5",
+        "respiratory-13-qembryology-1",
+        "respiratory-13-qembryology-2"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-13/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-13/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-13/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "001_physiology_Q01-03.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/01.jpg"
+        },
+        {
+          "name": "002_physiology_Q04-05.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/02.jpg"
+        },
+        {
+          "name": "003_physiology_Q06.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/03.jpg"
+        },
+        {
+          "name": "004_physiology_Q07-10.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/04.jpg"
+        },
+        {
+          "name": "005_physiology_Q11-13.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/05.jpg"
+        },
+        {
+          "name": "006_physiology_Q14-16.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/06.jpg"
+        },
+        {
+          "name": "007_physiology_Q17-19.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/07.jpg"
+        },
+        {
+          "name": "008_physiology_Q20-22.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/08.jpg"
+        },
+        {
+          "name": "009_anatomy_Q01-04.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/09.jpg"
+        },
+        {
+          "name": "010_anatomy_Q05-08.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/10.jpg"
+        },
+        {
+          "name": "011_anatomy_Q09-11.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/11.jpg"
+        },
+        {
+          "name": "012_histology_Q01-05.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/12.jpg"
+        },
+        {
+          "name": "013_embryology_Q01-02.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-13/13.jpg"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-15",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory theory key - undated, posted 4 September 2025",
+      "note": "Undated 40-question theory paper with yellow-highlighted supplied answers. 4 September 2025 is a posting date, not a verified exam date. All highlights were read from the original color PDF and are preserved separately from independently audited keys. This paper begins with parasympathetic bronchoconstriction and is not the 29-question anatomy-first version.",
+      "kind": "supplied-source-paper",
+      "date": null,
+      "dateEvidence": "Date is Telegram posting date, not a verified exam date. Q1 concerns parasympathetic bronchoconstriction; distinct from the September PDF beginning with anatomy.",
+      "courseMatch": "respiratory-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_Undated_theory-key_posted-2025-09-04.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-15/01.pdf",
+          "sha256": "a60db9d8eb12f75b6af39897c960fbd02f97fc415f256fd822144da8c49b4ebd",
+          "exists": true,
+          "note": "Date is Telegram posting date, not a verified exam date. Q1 concerns parasympathetic bronchoconstriction; distinct from the September PDF beginning with anatomy."
+        }
+      ],
+      "sourceRecordCount": 40,
+      "transcribedQuestionCount": 40,
+      "gradedQuestionCount": 38,
+      "sourceKeyCount": 40,
+      "editorialKeyCount": 38,
+      "inferredKeyCount": 2,
+      "ungradedCount": 2,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-15-q001",
+        "respiratory-15-q002",
+        "respiratory-15-q003",
+        "respiratory-15-q004",
+        "respiratory-15-q005",
+        "respiratory-15-q006",
+        "respiratory-15-q007",
+        "respiratory-15-q008",
+        "respiratory-15-q009",
+        "respiratory-15-q010",
+        "respiratory-15-q011",
+        "respiratory-15-q012",
+        "respiratory-15-q013",
+        "respiratory-15-q014",
+        "respiratory-15-q015",
+        "respiratory-15-q016",
+        "respiratory-15-q017",
+        "respiratory-15-q018",
+        "respiratory-15-q019",
+        "respiratory-15-q020",
+        "respiratory-15-q021",
+        "respiratory-15-q022",
+        "respiratory-15-q023",
+        "respiratory-15-q024",
+        "respiratory-15-q025",
+        "respiratory-15-q026",
+        "respiratory-15-q027",
+        "respiratory-15-q028",
+        "respiratory-15-q029",
+        "respiratory-15-q030",
+        "respiratory-15-q031",
+        "respiratory-15-q032",
+        "respiratory-15-q033",
+        "respiratory-15-q034",
+        "respiratory-15-q035",
+        "respiratory-15-q036",
+        "respiratory-15-q037",
+        "respiratory-15-q038",
+        "respiratory-15-q039",
+        "respiratory-15-q040"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-15-q001",
+        "respiratory-15-q002",
+        "respiratory-15-q003",
+        "respiratory-15-q004",
+        "respiratory-15-q005",
+        "respiratory-15-q006",
+        "respiratory-15-q007",
+        "respiratory-15-q008",
+        "respiratory-15-q009",
+        "respiratory-15-q010",
+        "respiratory-15-q011",
+        "respiratory-15-q012",
+        "respiratory-15-q013",
+        "respiratory-15-q014",
+        "respiratory-15-q015",
+        "respiratory-15-q016",
+        "respiratory-15-q017",
+        "respiratory-15-q018",
+        "respiratory-15-q019",
+        "respiratory-15-q020",
+        "respiratory-15-q021",
+        "respiratory-15-q023",
+        "respiratory-15-q024",
+        "respiratory-15-q025",
+        "respiratory-15-q026",
+        "respiratory-15-q027",
+        "respiratory-15-q029",
+        "respiratory-15-q030",
+        "respiratory-15-q031",
+        "respiratory-15-q032",
+        "respiratory-15-q033",
+        "respiratory-15-q034",
+        "respiratory-15-q035",
+        "respiratory-15-q036",
+        "respiratory-15-q037",
+        "respiratory-15-q038",
+        "respiratory-15-q039",
+        "respiratory-15-q040"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-15/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-15/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-15/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_Undated_theory-key_posted-2025-09-04.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-15/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-16",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory practical - 17 January 2022 (filename date)",
+      "note": "Fourteen original practical MCQs with supplied ticks. The date is from the filename. Source spellings and image arrows retained; answer ticks are excluded from live figure extracts.",
+      "kind": "supplied-fragment",
+      "date": null,
+      "dateEvidence": "Date comes from filename and Telegram caption. Download recovered during this task; anatomy spotters and other source pages retained.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2022-01-17_filename.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-16/01.pdf",
+          "sha256": "dfa0a615992b7a22f7d3988d6d1c5f64367cf628ef775bba148e60359fef2daa",
+          "exists": true,
+          "note": "Date comes from filename and Telegram caption. Download recovered during this task; anatomy spotters and other source pages retained."
+        }
+      ],
+      "sourceRecordCount": 14,
+      "transcribedQuestionCount": 14,
+      "gradedQuestionCount": 14,
+      "sourceKeyCount": 14,
+      "editorialKeyCount": 14,
+      "inferredKeyCount": 0,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-16-q001",
+        "respiratory-16-q002",
+        "respiratory-16-q003",
+        "respiratory-16-q004",
+        "respiratory-16-q005",
+        "respiratory-16-q006",
+        "respiratory-16-q007",
+        "respiratory-16-q008",
+        "respiratory-16-q009",
+        "respiratory-16-q010",
+        "respiratory-16-q011",
+        "respiratory-16-q012",
+        "respiratory-16-q013",
+        "respiratory-16-q014"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-16-q001",
+        "respiratory-16-q002",
+        "respiratory-16-q003",
+        "respiratory-16-q004",
+        "respiratory-16-q005",
+        "respiratory-16-q006",
+        "respiratory-16-q007",
+        "respiratory-16-q008",
+        "respiratory-16-q009",
+        "respiratory-16-q010",
+        "respiratory-16-q011",
+        "respiratory-16-q012",
+        "respiratory-16-q013",
+        "respiratory-16-q014"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-16/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-16/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-16/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2022-01-17_filename.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-16/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-17",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Histology practical reference - 28 January 2024",
+      "note": "Dated teaching reference with labelled micrographs and handwritten identification notes; no original question stems or MCQ options. Kept outside the default exam-paper pool.",
+      "kind": "reference-collection",
+      "date": null,
+      "dateEvidence": "Cover names Dr Noor Alhuda Ammar, Dr Kumait Kabbani, and Dr Yahya Salim Talib, dated 28/1/2024. This is an externally authored reference; TUMS exam provenance is not established.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_2024-01-28_histology-reference.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-17/01.pdf",
+          "sha256": "3a563e45425cdc10064bc2347c4a7c8c38717e2bec99834c608c9fd4dbc4774b",
+          "exists": true,
+          "note": "Cover names Dr Noor Alhuda Ammar, Dr Kumait Kabbani, and Dr Yahya Salim Talib, dated 28/1/2024. This is an externally authored reference; TUMS exam provenance is not established."
+        }
+      ],
+      "sourceRecordCount": 0,
+      "transcribedQuestionCount": 0,
+      "gradedQuestionCount": 0,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 0,
+      "inferredKeyCount": 0,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [],
+      "gradedQuestionIds": [],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-17/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-17/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-17/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_2024-01-28_histology-reference.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-17/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-18",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Undated CVS and respiratory practical reference",
+      "note": "Thirty-page mixed anatomy teaching collection. Labelled models and diagrams cover respiratory, cardiovascular and other skeletal structures; not a recoverable exam question paper.",
+      "kind": "reference-collection",
+      "date": null,
+      "dateEvidence": "30-page mixed practical reference collection forwarded from Nick on 22 March 2025. Keep the CVS content because it is part of the supplied combined file; this is not labeled as a single respiratory sitting.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_Undated_CVS-and-respiratory.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-18/01.pdf",
+          "sha256": "b166f10f75c8639376557bdbe21fb37bd44cd31fdb4b0939bfe4aa78fbd7a58f",
+          "exists": true,
+          "note": "30-page mixed practical reference collection forwarded from Nick on 22 March 2025. Keep the CVS content because it is part of the supplied combined file; this is not labeled as a single respiratory sitting."
+        }
+      ],
+      "sourceRecordCount": 0,
+      "transcribedQuestionCount": 0,
+      "gradedQuestionCount": 0,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 0,
+      "inferredKeyCount": 0,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [],
+      "gradedQuestionIds": [],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-18/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-18/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-18/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_Undated_CVS-and-respiratory.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-18/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-19",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Undated respiratory practical answer-key paper",
+      "note": "Twenty original MCQs, including a shared spirogram and sixteen image spotters. Posting date 4 September 2025 is not an exam date. Yellow highlights are supplied answers and were audited separately.",
+      "kind": "supplied-fragment",
+      "date": null,
+      "dateEvidence": "Posting date only; includes spirometry and practical questions. Original key preserved without independently grading its answers.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_Undated_key_posted-2025-09-04.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-19/01.pdf",
+          "sha256": "4f2123439dc57fa57f421c97dd515db8b1ad7fca6fba0d55c63b0e2b130a96d9",
+          "exists": true,
+          "note": "Posting date only; includes spirometry and practical questions. Original key preserved without independently grading its answers."
+        }
+      ],
+      "sourceRecordCount": 20,
+      "transcribedQuestionCount": 20,
+      "gradedQuestionCount": 18,
+      "sourceKeyCount": 20,
+      "editorialKeyCount": 18,
+      "inferredKeyCount": 0,
+      "ungradedCount": 2,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-19-q001",
+        "respiratory-19-q002",
+        "respiratory-19-q003",
+        "respiratory-19-q004",
+        "respiratory-19-q005",
+        "respiratory-19-q006",
+        "respiratory-19-q007",
+        "respiratory-19-q008",
+        "respiratory-19-q009",
+        "respiratory-19-q010",
+        "respiratory-19-q011",
+        "respiratory-19-q012",
+        "respiratory-19-q013",
+        "respiratory-19-q014",
+        "respiratory-19-q015",
+        "respiratory-19-q016",
+        "respiratory-19-q017",
+        "respiratory-19-q018",
+        "respiratory-19-q019",
+        "respiratory-19-q020"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-19-q002",
+        "respiratory-19-q003",
+        "respiratory-19-q004",
+        "respiratory-19-q006",
+        "respiratory-19-q007",
+        "respiratory-19-q008",
+        "respiratory-19-q009",
+        "respiratory-19-q010",
+        "respiratory-19-q011",
+        "respiratory-19-q012",
+        "respiratory-19-q013",
+        "respiratory-19-q014",
+        "respiratory-19-q015",
+        "respiratory-19-q016",
+        "respiratory-19-q017",
+        "respiratory-19-q018",
+        "respiratory-19-q019",
+        "respiratory-19-q020"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-19/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-19/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-19/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_Undated_key_posted-2025-09-04.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-19/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-20",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "DDS physiology photographed fragment",
+      "note": "Single cropped image forwarded from a 2024-07-20 post; DDS labeling is archive provenance. Nine visible items retained, including two cardiovascular questions. Original question numbers are not reliably visible; fragment-N identifies their top-to-bottom order. Circled marks and ticks are unofficial. This fragment is not default-eligible.",
+      "kind": "supplied-fragment",
+      "date": null,
+      "dateEvidence": "Caption identifies the respiratory physiology portion of the DDS physiology exam. One photographed page; no claim that it is a complete respiratory final.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "001_physiology_fragment.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-20/01.jpg",
+          "sha256": "3c9f7ed41ef248bc9b16aff526a4cd875b931ab2ce6e76423ca4c83fc660a43f",
+          "exists": true,
+          "note": "Caption identifies the respiratory physiology portion of the DDS physiology exam. One photographed page; no claim that it is a complete respiratory final."
+        }
+      ],
+      "sourceRecordCount": 9,
+      "transcribedQuestionCount": 9,
+      "gradedQuestionCount": 9,
+      "sourceKeyCount": 9,
+      "editorialKeyCount": 9,
+      "inferredKeyCount": 3,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-20-qfragment-1",
+        "respiratory-20-qfragment-2",
+        "respiratory-20-qfragment-3",
+        "respiratory-20-qfragment-4",
+        "respiratory-20-qfragment-5",
+        "respiratory-20-qfragment-6",
+        "respiratory-20-qfragment-7",
+        "respiratory-20-qfragment-8",
+        "respiratory-20-qfragment-9"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-20-qfragment-1",
+        "respiratory-20-qfragment-2",
+        "respiratory-20-qfragment-3",
+        "respiratory-20-qfragment-4",
+        "respiratory-20-qfragment-5",
+        "respiratory-20-qfragment-6",
+        "respiratory-20-qfragment-7",
+        "respiratory-20-qfragment-8",
+        "respiratory-20-qfragment-9"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-20/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-20/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-20/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "001_physiology_fragment.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-20/01.jpg"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-21",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "MidPul respiratory physiology fragment Q34-40",
+      "note": "Two preferred photos forwarded from a 2024-07-21 post. Only source Q34-40 are supplied; Q1-33 are not fabricated. Yellow highlights are unofficial selections. Source numbering and option order retained.",
+      "kind": "supplied-fragment",
+      "date": null,
+      "dateEvidence": "Two-page fragment forwarded from TUMS MidPul / Ahmad Nawab Hamrah. Original post date is not a confirmed sitting date.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "001_physiology_Q34-37.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-21/01.jpg",
+          "sha256": "38c1994db7a505de924f404f31c6ed1cb81848753fd26b9d01cdd512ff0d0808",
+          "exists": true,
+          "note": "Two-page fragment forwarded from TUMS MidPul / Ahmad Nawab Hamrah. Original post date is not a confirmed sitting date."
+        },
+        {
+          "title": "002_physiology_Q38-40.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-21/02.jpg",
+          "sha256": "e8f82e530872f875fb7e73ba0d08e23873f2c22d5994eafa14e4b4e1a36f7365",
+          "exists": true,
+          "note": "Two-page fragment forwarded from TUMS MidPul / Ahmad Nawab Hamrah. Original post date is not a confirmed sitting date."
+        }
+      ],
+      "sourceRecordCount": 7,
+      "transcribedQuestionCount": 7,
+      "gradedQuestionCount": 7,
+      "sourceKeyCount": 7,
+      "editorialKeyCount": 7,
+      "inferredKeyCount": 0,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-21-q034",
+        "respiratory-21-q035",
+        "respiratory-21-q036",
+        "respiratory-21-q037",
+        "respiratory-21-q038",
+        "respiratory-21-q039",
+        "respiratory-21-q040"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-21-q034",
+        "respiratory-21-q035",
+        "respiratory-21-q036",
+        "respiratory-21-q037",
+        "respiratory-21-q038",
+        "respiratory-21-q039",
+        "respiratory-21-q040"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-21/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-21/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-21/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "001_physiology_Q34-37.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-21/01.jpg"
+        },
+        {
+          "name": "002_physiology_Q38-40.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-21/02.jpg"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-22",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Online respiratory exam screenshots - reference collection",
+      "note": "Twenty-nine preferred screenshot pages from multiple screens; most MCQs overlap the 4 July 2022 paper. The archive already removed nine repeated screenshots from the original 38-page file. Preserved as a reference collection outside default-paper selection. Filled student radio buttons are unofficial supplied selections. The 28 screenshot MCQs reuse the July 2022 canonical question IDs, so combined sessions do not repeat them. Four original short-answer prompts are preserved in downloads.",
+      "kind": "reference-collection",
+      "date": null,
+      "dateEvidence": "29 distinct page contents from 38 screenshot pages; final mixed prompt page retained. Most MCQs also occur in July 2022, but this collection is not asserted to be that exam. Repeated captures are omitted only from this derivative; all 38 original pages remain in the source PDF. Unconfirmed date, not a separate verified sitting.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "online-screenshots_unique-pages.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-22/01.pdf",
+          "sha256": "67ea66834825f0a6c3d3a8bed7a58dfa9ce20f1d33e31915f788345f063f0000",
+          "exists": true,
+          "note": "29 distinct page contents from 38 screenshot pages; final mixed prompt page retained. Most MCQs also occur in July 2022, but this collection is not asserted to be that exam. Repeated captures are omitted only from this derivative; all 38 original pages remain in the source PDF. Unconfirmed date, not a separate verified sitting."
+        }
+      ],
+      "sourceRecordCount": 32,
+      "transcribedQuestionCount": 32,
+      "gradedQuestionCount": 26,
+      "sourceKeyCount": 3,
+      "editorialKeyCount": 26,
+      "inferredKeyCount": 26,
+      "ungradedCount": 6,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-22-qp01",
+        "respiratory-22-qp02",
+        "respiratory-22-qp03",
+        "respiratory-22-qp04",
+        "respiratory-22-qp05",
+        "respiratory-22-qp06",
+        "respiratory-22-qp07",
+        "respiratory-22-qp08",
+        "respiratory-22-qp09",
+        "respiratory-22-qp10",
+        "respiratory-22-qp11",
+        "respiratory-22-qp12",
+        "respiratory-22-qp13",
+        "respiratory-22-qp14",
+        "respiratory-22-qp15",
+        "respiratory-22-qp16",
+        "respiratory-22-qp17",
+        "respiratory-22-qp18",
+        "respiratory-22-qp19",
+        "respiratory-22-qp20",
+        "respiratory-22-qp21",
+        "respiratory-22-qp22",
+        "respiratory-22-qp23",
+        "respiratory-22-qp24",
+        "respiratory-22-qp25",
+        "respiratory-22-qp26",
+        "respiratory-22-qp27",
+        "respiratory-22-qp28",
+        "respiratory-22-qp29-1",
+        "respiratory-22-qp29-2",
+        "respiratory-22-qp29-3",
+        "respiratory-22-qp29-4"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-05-q025",
+        "respiratory-05-q008",
+        "respiratory-05-q023",
+        "respiratory-05-q007",
+        "respiratory-05-q030",
+        "respiratory-05-q028",
+        "respiratory-05-q004",
+        "respiratory-05-q003",
+        "respiratory-05-q005",
+        "respiratory-05-q012",
+        "respiratory-05-q002",
+        "respiratory-05-q031",
+        "respiratory-05-q013",
+        "respiratory-05-q011",
+        "respiratory-05-q009",
+        "respiratory-05-q026",
+        "respiratory-05-q010",
+        "respiratory-05-q016",
+        "respiratory-05-q029",
+        "respiratory-05-q024",
+        "respiratory-05-q015",
+        "respiratory-05-q017",
+        "respiratory-05-q034",
+        "respiratory-05-q033",
+        "respiratory-05-q027",
+        "respiratory-05-q032"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-22/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-22/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-22/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "online-screenshots_unique-pages.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-22/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-23",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Respiratory physiology MCQ reference collection",
+      "note": "Undated 72-item physiology teaching bank with five options per item and no supplied answer key. Kept outside default exam-paper selection. Source variants and defective stems are retained; validated keys are editorial checks, not official exam answers.",
+      "kind": "reference-collection",
+      "date": null,
+      "dateEvidence": "10-page topic-organized MCQ reference. No verified course sitting/date; kept separate from dated past papers.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "respiratory_Physiology_MCQ_collection.pdf",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-23/01.pdf",
+          "sha256": "c767f014b1741acc7f4032aa83459dd4a17b7f61f86fffc544acebf938af9ee3",
+          "exists": true,
+          "note": "10-page topic-organized MCQ reference. No verified course sitting/date; kept separate from dated past papers."
+        }
+      ],
+      "sourceRecordCount": 72,
+      "transcribedQuestionCount": 72,
+      "gradedQuestionCount": 56,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 56,
+      "inferredKeyCount": 56,
+      "ungradedCount": 16,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "respiratory-23-q001",
+        "respiratory-23-q002",
+        "respiratory-23-q003",
+        "respiratory-23-q004",
+        "respiratory-23-q005",
+        "respiratory-23-q006",
+        "respiratory-23-q007",
+        "respiratory-23-q008",
+        "respiratory-23-q009",
+        "respiratory-23-q010",
+        "respiratory-23-q011",
+        "respiratory-23-q012",
+        "respiratory-23-q013",
+        "respiratory-23-q014",
+        "respiratory-23-q015",
+        "respiratory-23-q016",
+        "respiratory-23-q017",
+        "respiratory-23-q018",
+        "respiratory-23-q019",
+        "respiratory-23-q020",
+        "respiratory-23-q021",
+        "respiratory-23-q022",
+        "respiratory-23-q023",
+        "respiratory-23-q024",
+        "respiratory-23-q025",
+        "respiratory-23-q026",
+        "respiratory-23-q027",
+        "respiratory-23-q028",
+        "respiratory-23-q029",
+        "respiratory-23-q030",
+        "respiratory-23-q031",
+        "respiratory-23-q032",
+        "respiratory-23-q033",
+        "respiratory-23-q034",
+        "respiratory-23-q035",
+        "respiratory-23-q036",
+        "respiratory-23-q037",
+        "respiratory-23-q038",
+        "respiratory-23-q039",
+        "respiratory-23-q040",
+        "respiratory-23-q041",
+        "respiratory-23-q042",
+        "respiratory-23-q043",
+        "respiratory-23-q044",
+        "respiratory-23-q045",
+        "respiratory-23-q046",
+        "respiratory-23-q047",
+        "respiratory-23-q048",
+        "respiratory-23-q049",
+        "respiratory-23-q050",
+        "respiratory-23-q051",
+        "respiratory-23-q052",
+        "respiratory-23-q053",
+        "respiratory-23-q054",
+        "respiratory-23-q055",
+        "respiratory-23-q056",
+        "respiratory-23-q057",
+        "respiratory-23-q058",
+        "respiratory-23-q059",
+        "respiratory-23-q060",
+        "respiratory-23-q061",
+        "respiratory-23-q062",
+        "respiratory-23-q063",
+        "respiratory-23-q064",
+        "respiratory-23-q065",
+        "respiratory-23-q066",
+        "respiratory-23-q067",
+        "respiratory-23-q068",
+        "respiratory-23-q069",
+        "respiratory-23-q070",
+        "respiratory-23-q071",
+        "respiratory-23-q072"
+      ],
+      "gradedQuestionIds": [
+        "respiratory-23-q001",
+        "respiratory-23-q002",
+        "respiratory-23-q003",
+        "respiratory-23-q005",
+        "respiratory-23-q006",
+        "respiratory-23-q007",
+        "respiratory-23-q008",
+        "respiratory-23-q009",
+        "respiratory-23-q010",
+        "respiratory-23-q011",
+        "respiratory-23-q012",
+        "respiratory-23-q013",
+        "respiratory-23-q014",
+        "respiratory-23-q015",
+        "respiratory-23-q016",
+        "respiratory-23-q017",
+        "respiratory-23-q018",
+        "respiratory-23-q019",
+        "respiratory-23-q021",
+        "respiratory-23-q022",
+        "respiratory-23-q024",
+        "respiratory-23-q026",
+        "respiratory-23-q027",
+        "respiratory-23-q028",
+        "respiratory-23-q029",
+        "respiratory-23-q030",
+        "respiratory-23-q031",
+        "respiratory-23-q032",
+        "respiratory-23-q034",
+        "respiratory-23-q036",
+        "respiratory-23-q037",
+        "respiratory-23-q038",
+        "respiratory-23-q039",
+        "respiratory-23-q040",
+        "respiratory-23-q042",
+        "respiratory-23-q043",
+        "respiratory-23-q044",
+        "respiratory-23-q045",
+        "respiratory-23-q046",
+        "respiratory-23-q048",
+        "respiratory-23-q049",
+        "respiratory-23-q050",
+        "respiratory-23-q052",
+        "respiratory-23-q054",
+        "respiratory-23-q055",
+        "respiratory-23-q056",
+        "respiratory-23-q057",
+        "respiratory-23-q058",
+        "respiratory-23-q060",
+        "respiratory-23-q061",
+        "respiratory-23-q062",
+        "respiratory-23-q064",
+        "respiratory-23-q065",
+        "respiratory-23-q066",
+        "respiratory-23-q068",
+        "respiratory-23-q072"
+      ],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-23/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-23/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-23/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "respiratory_Physiology_MCQ_collection.pdf",
+          "url": "/study/respiratory/past-papers/respiratory-23/01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "respiratory-24",
+      "courseId": "term2-respiratory",
+      "bankId": "respiratory-past-papers",
+      "bankKey": "term2-respiratory:respiratory-past-papers",
+      "title": "Unmatched respiratory 40-item bubble answer key",
+      "note": "Single image forwarded 16 July 2024. The handwritten Respiratory system key has no matched question paper or independently verified sitting. NEVER apply these bubbles to another source.",
+      "kind": "unmatched-key",
+      "date": null,
+      "dateEvidence": "Forwarded from Mahmoud Qassem, original post 16 July 2024. Q9 is marked deleted. No secure paper match established; do not apply to the July 2023 paper merely because both have 40 items.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "001_unmatched-answer-key_Q01-40.jpg",
+          "publicUrl": "/study/respiratory/past-papers/respiratory-24/01.jpg",
+          "sha256": "f1c610f0790cfc131fb057b913c11e1da8dd8a463dd108f77ee720b78b6ca232",
+          "exists": true,
+          "note": "Forwarded from Mahmoud Qassem, original post 16 July 2024. Q9 is marked deleted. No secure paper match established; do not apply to the July 2023 paper merely because both have 40 items."
+        }
+      ],
+      "sourceRecordCount": 0,
+      "transcribedQuestionCount": 0,
+      "gradedQuestionCount": 0,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 0,
+      "inferredKeyCount": 0,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [],
+      "gradedQuestionIds": [],
+      "downloads": {
+        "questions": "/study/past-paper-downloads/respiratory-24/questions.md",
+        "answerKey": "/study/past-paper-downloads/respiratory-24/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/respiratory-24/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "001_unmatched-answer-key_Q01-40.jpg",
+          "url": "/study/respiratory/past-papers/respiratory-24/01.jpg"
+        }
+      ]
     }
   ],
   "excludedBanks": [
@@ -9404,6 +12231,798 @@
       "url": "/study/past-paper-downloads/biochemistry-undated-50-izam/questions-and-key.md",
       "bytes": 45788,
       "sha256": "21d97fc2eb2f4db1b34424edec1a8c07d3b8a442726fab8b3e53a719ce066eb8"
+    },
+    {
+      "collectionId": "respiratory-01",
+      "url": "/study/respiratory/past-papers/respiratory-01/01.pdf",
+      "bytes": 373367,
+      "sha256": "b77466c98cbfd867dca3b19576bb9e8d707d0025494f2d692b11ff73550b93fb"
+    },
+    {
+      "collectionId": "respiratory-01",
+      "url": "/study/past-paper-downloads/respiratory-01/questions.md",
+      "bytes": 12648,
+      "sha256": "b9c96a833a1a7259bf94ee4a7041b69b8ac05d87a1fb836d3b0a91b8df595533"
+    },
+    {
+      "collectionId": "respiratory-01",
+      "url": "/study/past-paper-downloads/respiratory-01/answer-key.md",
+      "bytes": 28056,
+      "sha256": "78a585bce5a55640d17f8d42ba2e09f8517099906a06eae80db5b95a10ef568b"
+    },
+    {
+      "collectionId": "respiratory-01",
+      "url": "/study/past-paper-downloads/respiratory-01/questions-and-key.md",
+      "bytes": 39796,
+      "sha256": "efda2e6d41da8d418b6f9eac0b1030d914b376cdc82ade61cd8e3f6eeddd1c4e"
+    },
+    {
+      "collectionId": "respiratory-02",
+      "url": "/study/respiratory/past-papers/respiratory-02/01.pdf",
+      "bytes": 380292,
+      "sha256": "514d5856adea8002ac1a2d382207056f8bf0196924c03881b6baae6213ef024f"
+    },
+    {
+      "collectionId": "respiratory-02",
+      "url": "/study/past-paper-downloads/respiratory-02/questions.md",
+      "bytes": 12568,
+      "sha256": "6a7be25393de3599a9e6276181ca441ca7032a86b526c62f225fc644f3ef89bb"
+    },
+    {
+      "collectionId": "respiratory-02",
+      "url": "/study/past-paper-downloads/respiratory-02/answer-key.md",
+      "bytes": 27784,
+      "sha256": "be588530bd4e25f2d43419872e8598b52f681661fad3cc0263b4b661287197fb"
+    },
+    {
+      "collectionId": "respiratory-02",
+      "url": "/study/past-paper-downloads/respiratory-02/questions-and-key.md",
+      "bytes": 39460,
+      "sha256": "95c841c93ae0e8aa546d4fbf893948bbc834ca0a596dfa7b41a4a03eb881895e"
+    },
+    {
+      "collectionId": "respiratory-03",
+      "url": "/study/respiratory/past-papers/respiratory-03/01.pdf",
+      "bytes": 396193,
+      "sha256": "9254e0b3693503286323986f455936ae39f3afe6acd723352ea989268f0b44e2"
+    },
+    {
+      "collectionId": "respiratory-03",
+      "url": "/study/past-paper-downloads/respiratory-03/questions.md",
+      "bytes": 11418,
+      "sha256": "20b13cc78d5f280ed7f7d15e2cb9f4f7f09e342586e95821965ba7a241c6abbe"
+    },
+    {
+      "collectionId": "respiratory-03",
+      "url": "/study/past-paper-downloads/respiratory-03/answer-key.md",
+      "bytes": 27799,
+      "sha256": "1b8bf73b035b5931e03696bf1ed34599b12ba3e3bc4f86d9a11cd8b5d1aa986d"
+    },
+    {
+      "collectionId": "respiratory-03",
+      "url": "/study/past-paper-downloads/respiratory-03/questions-and-key.md",
+      "bytes": 38397,
+      "sha256": "fb8b61e31bba0307bae3211c69c5219aa7bc51f8682ccc5824c8f6ba8c9b7468"
+    },
+    {
+      "collectionId": "respiratory-04",
+      "url": "/study/respiratory/past-papers/respiratory-04/01.pdf",
+      "bytes": 66632,
+      "sha256": "95c268a4e5a0a7c8c6a9b915792e5d82748665ae3f011ac18575585f9bde7e0f"
+    },
+    {
+      "collectionId": "respiratory-04",
+      "url": "/study/past-paper-downloads/respiratory-04/questions.md",
+      "bytes": 11861,
+      "sha256": "9ecc55ef928a8d2e2b1338845520d5c3de54de72e3ed7ff46ae60807d4b2a1cf"
+    },
+    {
+      "collectionId": "respiratory-04",
+      "url": "/study/past-paper-downloads/respiratory-04/answer-key.md",
+      "bytes": 28346,
+      "sha256": "ba43a005491fa357175730ff99beda380adc6f0ff2c8729e15240424f7803e16"
+    },
+    {
+      "collectionId": "respiratory-04",
+      "url": "/study/past-paper-downloads/respiratory-04/questions-and-key.md",
+      "bytes": 39327,
+      "sha256": "29f4fd5f66a99c5b127f442e1ce49a17a07f7b03050066249f2e29838706baef"
+    },
+    {
+      "collectionId": "respiratory-05",
+      "url": "/study/respiratory/past-papers/respiratory-05/01.pdf",
+      "bytes": 1008870,
+      "sha256": "4e50a0c9d2817b420cd9d9dda68b5573b51c07d15c5b235afb30d579d1f20d3f"
+    },
+    {
+      "collectionId": "respiratory-05",
+      "url": "/study/past-paper-downloads/respiratory-05/questions.md",
+      "bytes": 10817,
+      "sha256": "36de122f9d5793f59387ee88fed2b4c7b835c6e2b4f704b32984f752d6cf897f"
+    },
+    {
+      "collectionId": "respiratory-05",
+      "url": "/study/past-paper-downloads/respiratory-05/answer-key.md",
+      "bytes": 20226,
+      "sha256": "9ebaf142c415170d77bf5712c414f2285c7e7dca1c8ba710f08bfb665f5cac58"
+    },
+    {
+      "collectionId": "respiratory-05",
+      "url": "/study/past-paper-downloads/respiratory-05/questions-and-key.md",
+      "bytes": 30170,
+      "sha256": "af428873d278a086ab01463d7df188b2789e6964203a805eb3ce5c848249ab5d"
+    },
+    {
+      "collectionId": "respiratory-06",
+      "url": "/study/respiratory/past-papers/respiratory-06/01-web.pdf",
+      "bytes": 6087369,
+      "sha256": "4d8526a3933fd0c014edeca13f5f50c0a40f432df0f1f3552c9a8d12b95b0e45"
+    },
+    {
+      "collectionId": "respiratory-06",
+      "url": "/study/past-paper-downloads/respiratory-06/questions.md",
+      "bytes": 14014,
+      "sha256": "271cdacced1e965011b250a0c5060c9024195c9e0de13070eab340174962b96b"
+    },
+    {
+      "collectionId": "respiratory-06",
+      "url": "/study/past-paper-downloads/respiratory-06/answer-key.md",
+      "bytes": 23114,
+      "sha256": "64d60886db7fc47147ff205b1dd751d9bd44fd633ec946c957e2163f6e891e21"
+    },
+    {
+      "collectionId": "respiratory-06",
+      "url": "/study/past-paper-downloads/respiratory-06/questions-and-key.md",
+      "bytes": 36085,
+      "sha256": "7eeeae53f99e66f73c48b9ee54af75558bfd725641527bdc43a78301355be49b"
+    },
+    {
+      "collectionId": "respiratory-07",
+      "url": "/study/respiratory/past-papers/respiratory-07/01.pdf",
+      "bytes": 792799,
+      "sha256": "172c86fba7c8c7d7cbd82c203e2eb68c9a3d13a02c3ed5b009b924fc000190c5"
+    },
+    {
+      "collectionId": "respiratory-07",
+      "url": "/study/past-paper-downloads/respiratory-07/questions.md",
+      "bytes": 11693,
+      "sha256": "4d7e6b4c53c6be357758a652eb4db12d199be232cfd60ed4876dbfcf51650d81"
+    },
+    {
+      "collectionId": "respiratory-07",
+      "url": "/study/past-paper-downloads/respiratory-07/answer-key.md",
+      "bytes": 21889,
+      "sha256": "1c08627cced09aaa6ce2005616487eed7d3d1444393eaf6ffb5956fde4c63c66"
+    },
+    {
+      "collectionId": "respiratory-07",
+      "url": "/study/past-paper-downloads/respiratory-07/questions-and-key.md",
+      "bytes": 32680,
+      "sha256": "31fb2914a07adcec03c1c60faf6d393abdc8f166c6ab03c0b0b16b6925427d18"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/01.jpg",
+      "bytes": 89655,
+      "sha256": "20700368f8a1518ff39b66461310c5a2aa61ee7b2ace91be9e9e98a6f6169926"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/02.jpg",
+      "bytes": 145282,
+      "sha256": "0b0659fce73ea833a910e5533a425e6e8d1d66956cfc2fb08b8a09305275eefd"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/03.jpg",
+      "bytes": 157611,
+      "sha256": "71b2262b7addcbb6b0d8e0390f90f720c0a4f14ce96c07949470de0bfb8636ae"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/04.jpg",
+      "bytes": 156087,
+      "sha256": "86ce2f6a86fe971e8535a130ce2deaad811abf24e3bade13187947fad0c8a17c"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/05.jpg",
+      "bytes": 150424,
+      "sha256": "58c5e0f29151d4502cbf622d0adae653a846c019a46542b412bab9e605a94caa"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/06.jpg",
+      "bytes": 136136,
+      "sha256": "caba6b72b02f9362f304457e541d436f96da7c2fed2ede66c56d0e9559d8c3e4"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/07.jpg",
+      "bytes": 134527,
+      "sha256": "6f4198d253657897c58a80fb702c9981dd906a1ccc1ef6833fea9d12377daaf1"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/08.jpg",
+      "bytes": 141262,
+      "sha256": "c7fec42691f3d85d03b833592fe42814b8fcdfdfeec70f73347530288b8dd590"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/respiratory/past-papers/respiratory-08/09.jpg",
+      "bytes": 104324,
+      "sha256": "e71566422be377019c409bb8fb551b6c0cb00b4735a8f208c4696f64dc7209f7"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/past-paper-downloads/respiratory-08/questions.md",
+      "bytes": 15021,
+      "sha256": "54797506fc05727ed69eaa16c1b4d562138c5e4cc452edad1c7a1c1cc32d55f2"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/past-paper-downloads/respiratory-08/answer-key.md",
+      "bytes": 27802,
+      "sha256": "756079c711e3e846ceb56c7e8b609023f31fa60a0e1cefc00c93e94512e6cc6f"
+    },
+    {
+      "collectionId": "respiratory-08",
+      "url": "/study/past-paper-downloads/respiratory-08/questions-and-key.md",
+      "bytes": 41081,
+      "sha256": "d812f8bc7d5ce18aa7876322d5248b90b1ce7d10e42ee19467b4f5e15817a70f"
+    },
+    {
+      "collectionId": "respiratory-09",
+      "url": "/study/respiratory/past-papers/respiratory-09/01.pdf",
+      "bytes": 4421974,
+      "sha256": "de77b740a4241d2334bde2674902a4cff812c8d2e9fccb94cba198201696383a"
+    },
+    {
+      "collectionId": "respiratory-09",
+      "url": "/study/past-paper-downloads/respiratory-09/questions.md",
+      "bytes": 11147,
+      "sha256": "7c8e0c343ea48b69af9861081566741af065dff8f12daf9695d16a535b222294"
+    },
+    {
+      "collectionId": "respiratory-09",
+      "url": "/study/past-paper-downloads/respiratory-09/answer-key.md",
+      "bytes": 23148,
+      "sha256": "67a302e95cd9c200277e710967a5013d54335d474e7230d82435141688cda955"
+    },
+    {
+      "collectionId": "respiratory-09",
+      "url": "/study/past-paper-downloads/respiratory-09/questions-and-key.md",
+      "bytes": 33443,
+      "sha256": "685976b89eaf703d6be2ff9494417876128faa7261f078dc213b731eff2fc18b"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-10/01.jpg",
+      "bytes": 63979,
+      "sha256": "191928ed92f4dfe02becd124b144925645e390e0642cd51f74a90b1106869357"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-10/02.jpg",
+      "bytes": 63052,
+      "sha256": "b5bf2821af5c661b4bb21a741e20197bb686f578872a20ef4102f03bce325097"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-10/03.jpg",
+      "bytes": 62629,
+      "sha256": "f338d9d46621828f4712ec245890f41dd02dd4e6e7b1bec9299c6d6548d8ef44"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-10/04.jpg",
+      "bytes": 81073,
+      "sha256": "0c82bcccdc2b9caa32fde81e8572c11a1b92d45104ea7d1ef09dbb5d7c0cc26e"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-10/05.jpg",
+      "bytes": 83545,
+      "sha256": "0072b47a5e98294e829fb0fa55514e76787b34b3c115a36b48b7d8664c5b8637"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-10/06.jpg",
+      "bytes": 56091,
+      "sha256": "c5ad5204e6ee4eb7f538e52cf6ad92153d064258cea6205db2fb83b339b31a6e"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-10/07.jpg",
+      "bytes": 59196,
+      "sha256": "1f03d5d14ccee70953ec894b756223c4d6a208750d212d39e9bf9a7d329e251b"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-14/01.jpg",
+      "bytes": 65731,
+      "sha256": "37ab3dd776ae3b578d30d5a4e7d6a626f550bca6db6d69d3f34452db62c9a2c9"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-14/02.jpg",
+      "bytes": 71476,
+      "sha256": "c74972de55ba3c92b5a395ba934c39bd414d380618cf7a8d1e9ca8f204afbd2e"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-14/03.jpg",
+      "bytes": 65643,
+      "sha256": "f447e95cc74ae0fb92dd2320b2b2949952ad931e39930c263a7cee14849900eb"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-14/04.jpg",
+      "bytes": 93411,
+      "sha256": "dd6574e06dc7b3f527d7be2a8ee89a6dc9ba281ef1d1fb1baf2619c603b43ad8"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-14/05.jpg",
+      "bytes": 88232,
+      "sha256": "b4f2c447de7cb631ae4ba8b2cc987a65a240972245bf1dddeb118cadcd76dded"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-14/06.jpg",
+      "bytes": 48522,
+      "sha256": "8f75ccc8a29bf0b863b08c61a98c1e707f9790240b6cdd798c5ce31cb841409d"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/respiratory/past-papers/respiratory-14/07.jpg",
+      "bytes": 43684,
+      "sha256": "67c5290964dabdb1a20f827a77bc5dfd704b30e52b08430b82d2b50a4c45739f"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/past-paper-downloads/respiratory-10/questions.md",
+      "bytes": 15178,
+      "sha256": "0f48b137283fcc78af806f877eba6877f9d81d58771f73f541feceac3526d388"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/past-paper-downloads/respiratory-10/answer-key.md",
+      "bytes": 29722,
+      "sha256": "0bcf1d35a8de90f78e2a828ea9bc149bf8df406b039ed68d00d92c9bbc6b1408"
+    },
+    {
+      "collectionId": "respiratory-10",
+      "url": "/study/past-paper-downloads/respiratory-10/questions-and-key.md",
+      "bytes": 42534,
+      "sha256": "ecd5ff849d2feb83e55f47545c29c94416399de169f2c1a3e0c5df7d1bd24588"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/respiratory/past-papers/respiratory-11/01.jpg",
+      "bytes": 71589,
+      "sha256": "da28a7c46bad5c3dbdbbdb86a94e5d60595b3f89e0584e46d5ceae0487530fb8"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/respiratory/past-papers/respiratory-11/02.jpg",
+      "bytes": 55348,
+      "sha256": "b206092bb5f787439162b48cea12bb24f60c3c095653d200f3d3d2bf27db3bae"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/respiratory/past-papers/respiratory-11/03.jpg",
+      "bytes": 66013,
+      "sha256": "ef1ef714a74bbf9414e436f6e2f6f8a9be2f8ac6cc4162e315414535cea77dc3"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/respiratory/past-papers/respiratory-11/04.jpg",
+      "bytes": 41482,
+      "sha256": "7fb4c136d132b758eb70be9c3be1b6efb230b80b5b344240c3a8d98be9dff99b"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/respiratory/past-papers/respiratory-11/05.jpg",
+      "bytes": 158508,
+      "sha256": "71c2e715f101564dcfa040839e0f02927c48ee45c849f85720285104c5e5ceba"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/respiratory/past-papers/respiratory-11/06.jpg",
+      "bytes": 140181,
+      "sha256": "e60e28e8ba906a52ef5477ad746802e160737df471fa0ddbb4d968738409a788"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/respiratory/past-papers/respiratory-11/07.jpg",
+      "bytes": 110876,
+      "sha256": "72ad2814d5b536b9a881e3790b62b6feba62ba6079f926e7a7fa4f659c6896fc"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/past-paper-downloads/respiratory-11/questions.md",
+      "bytes": 13278,
+      "sha256": "688298189814f61ca1f7f2931a048bac7e40fecd80e1b276c094f76d4ef20257"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/past-paper-downloads/respiratory-11/answer-key.md",
+      "bytes": 25527,
+      "sha256": "c8524637ae2aa868a563e5705340b4517be8f4f2771045ecac1ac3b236df6ee1"
+    },
+    {
+      "collectionId": "respiratory-11",
+      "url": "/study/past-paper-downloads/respiratory-11/questions-and-key.md",
+      "bytes": 37331,
+      "sha256": "1766d4edb3d0da166b8c62d4436de2f9ec2de99e33cdb4f95133540f3e987770"
+    },
+    {
+      "collectionId": "respiratory-12",
+      "url": "/study/respiratory/past-papers/respiratory-12/01.pdf",
+      "bytes": 1142691,
+      "sha256": "48298cb54fc8ad06ac269d4e698b5ea66dfeec6f807212799e987436756a4e31"
+    },
+    {
+      "collectionId": "respiratory-12",
+      "url": "/study/past-paper-downloads/respiratory-12/questions.md",
+      "bytes": 13259,
+      "sha256": "162f1f8bbb0bf75e6cd9a42547e986e867339e2e5f24866360959fd99d15fcfe"
+    },
+    {
+      "collectionId": "respiratory-12",
+      "url": "/study/past-paper-downloads/respiratory-12/answer-key.md",
+      "bytes": 26382,
+      "sha256": "84074e31bd64e9b001dfe9c02a605c1a81ece04683c02a2f6beee1bc998a30ed"
+    },
+    {
+      "collectionId": "respiratory-12",
+      "url": "/study/past-paper-downloads/respiratory-12/questions-and-key.md",
+      "bytes": 38801,
+      "sha256": "0332724bcfd3bab69e57f677155a7425bfbf653ef46d20b8a82d5c74fff1c2a6"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/01.jpg",
+      "bytes": 113735,
+      "sha256": "00c5b94c7506edd7042412aea7a83b38d58b3b76fc51d07054ce4edc407d162d"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/02.jpg",
+      "bytes": 95125,
+      "sha256": "c3c516f944dddb988f5264a72b4c55bef3fd9c0a75736d91f99fe17d2822c9d2"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/03.jpg",
+      "bytes": 67215,
+      "sha256": "7d598abc0e786f5b9cfbed372afec219c82d9f953d4af686db1a09f9d7648ef1"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/04.jpg",
+      "bytes": 104298,
+      "sha256": "79fa6a634f1450cef8752a177946df3c69103e4687732aec1a3ce3142b34d89f"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/05.jpg",
+      "bytes": 92431,
+      "sha256": "152e3bcc927778d7900bd1a7df560b0e214daf9a1233f430c24257eb3e37ab19"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/06.jpg",
+      "bytes": 86769,
+      "sha256": "b9cd6d7332315987aefc1dbd2347d7451e1782ea28379e1cfea68d296c0cb42a"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/07.jpg",
+      "bytes": 95859,
+      "sha256": "d2a28fba7d5ee661926c31b9cd426c806e329f7f110e3d62abebb94a99f42aa2"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/08.jpg",
+      "bytes": 90319,
+      "sha256": "9490b05bd937cc07ab931249f53320f0e53d65505e5ec91d10531ec50c29b519"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/09.jpg",
+      "bytes": 112824,
+      "sha256": "ce3b288d086a335b59fa6e8dc8d46cfaa720f2c61e7bf62f262fc85d23182a9f"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/10.jpg",
+      "bytes": 113211,
+      "sha256": "505488615497dd7dd6abad2df33ebe5398945a663a4eb51febecf651a590b9f0"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/11.jpg",
+      "bytes": 99071,
+      "sha256": "ccc9d1741234c0d084f25604fb03aac3760818841a56701a4bbb9a4a30121ab1"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/12.jpg",
+      "bytes": 106474,
+      "sha256": "cbdcd4caae86d266de21d7b3051fdeb51f733f29e520bbae55867b2bebadc375"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/respiratory/past-papers/respiratory-13/13.jpg",
+      "bytes": 79302,
+      "sha256": "a3aecbfe3989f6590410ff5e5f5db80e0afe6400b71ae8c128e44cee9a666f45"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/past-paper-downloads/respiratory-13/questions.md",
+      "bytes": 16151,
+      "sha256": "4c5c6aef759c559cdc7c143851beb47ab59ed0dd37a6860f976ee0041c678bf7"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/past-paper-downloads/respiratory-13/answer-key.md",
+      "bytes": 29651,
+      "sha256": "34898f2d7c0dc185b0945554ccf4f2acd7ed250e5ef214cdc4898177c1e18495"
+    },
+    {
+      "collectionId": "respiratory-13",
+      "url": "/study/past-paper-downloads/respiratory-13/questions-and-key.md",
+      "bytes": 43546,
+      "sha256": "b26e6475b24c110f6987e3b752abdf6447be855105569e893f3f8c8224178530"
+    },
+    {
+      "collectionId": "respiratory-15",
+      "url": "/study/respiratory/past-papers/respiratory-15/01.pdf",
+      "bytes": 503193,
+      "sha256": "a60db9d8eb12f75b6af39897c960fbd02f97fc415f256fd822144da8c49b4ebd"
+    },
+    {
+      "collectionId": "respiratory-15",
+      "url": "/study/past-paper-downloads/respiratory-15/questions.md",
+      "bytes": 11829,
+      "sha256": "4634a5b9adf572aaf64fae2f11840d1be9f3a4196df23ca06335e6d5dac0d8af"
+    },
+    {
+      "collectionId": "respiratory-15",
+      "url": "/study/past-paper-downloads/respiratory-15/answer-key.md",
+      "bytes": 30940,
+      "sha256": "05c37c134c2992c5bc268c1707667075ac32b4bae154b2c408864e13c428c792"
+    },
+    {
+      "collectionId": "respiratory-15",
+      "url": "/study/past-paper-downloads/respiratory-15/questions-and-key.md",
+      "bytes": 41871,
+      "sha256": "dcaa60e64a0c7a3d38a0072dbc2dfe40b3bf44ef9860b38a734a91b9a93a676b"
+    },
+    {
+      "collectionId": "respiratory-16",
+      "url": "/study/respiratory/past-papers/respiratory-16/01.pdf",
+      "bytes": 6565280,
+      "sha256": "dfa0a615992b7a22f7d3988d6d1c5f64367cf628ef775bba148e60359fef2daa"
+    },
+    {
+      "collectionId": "respiratory-16",
+      "url": "/study/past-paper-downloads/respiratory-16/questions.md",
+      "bytes": 4864,
+      "sha256": "31036daa6f4026c3e8230dfa0a36805065ee2d74ba04fa03f2839f86e4d397a5"
+    },
+    {
+      "collectionId": "respiratory-16",
+      "url": "/study/past-paper-downloads/respiratory-16/answer-key.md",
+      "bytes": 9096,
+      "sha256": "c934a3960b5534544655f1b72feaf354dffcab5489c9f82c18c0d71908b9423d"
+    },
+    {
+      "collectionId": "respiratory-16",
+      "url": "/study/past-paper-downloads/respiratory-16/questions-and-key.md",
+      "bytes": 13258,
+      "sha256": "91f4f5ef33a5324b868ca22c555f88f2fb20695976b6ee50d316fb96f9a4db5b"
+    },
+    {
+      "collectionId": "respiratory-17",
+      "url": "/study/respiratory/past-papers/respiratory-17/01.pdf",
+      "bytes": 3771859,
+      "sha256": "3a563e45425cdc10064bc2347c4a7c8c38717e2bec99834c608c9fd4dbc4774b"
+    },
+    {
+      "collectionId": "respiratory-17",
+      "url": "/study/past-paper-downloads/respiratory-17/questions.md",
+      "bytes": 1774,
+      "sha256": "08543f0933f04cb1b3c436336cc18291edbe9bb39e6679c9caf8ce1523bec951"
+    },
+    {
+      "collectionId": "respiratory-17",
+      "url": "/study/past-paper-downloads/respiratory-17/answer-key.md",
+      "bytes": 727,
+      "sha256": "14049580fed0d8624ee371635f2bd6ead75471bbbdbb7a93351e7da9c93a5d35"
+    },
+    {
+      "collectionId": "respiratory-17",
+      "url": "/study/past-paper-downloads/respiratory-17/questions-and-key.md",
+      "bytes": 1804,
+      "sha256": "4cc8acc3a7b6efdac7ff49439e3498b1c44372b651ddfc4105ad498f0403bed1"
+    },
+    {
+      "collectionId": "respiratory-18",
+      "url": "/study/respiratory/past-papers/respiratory-18/01.pdf",
+      "bytes": 8053523,
+      "sha256": "b166f10f75c8639376557bdbe21fb37bd44cd31fdb4b0939bfe4aa78fbd7a58f"
+    },
+    {
+      "collectionId": "respiratory-18",
+      "url": "/study/past-paper-downloads/respiratory-18/questions.md",
+      "bytes": 4064,
+      "sha256": "64839150c6900c26c4561d314de336115fbda8df486e252de39017f23085ec27"
+    },
+    {
+      "collectionId": "respiratory-18",
+      "url": "/study/past-paper-downloads/respiratory-18/answer-key.md",
+      "bytes": 730,
+      "sha256": "893a76d7794eee32bb84b5f8efaaf16e4e6fe22d7969af1464095c1599fc55e5"
+    },
+    {
+      "collectionId": "respiratory-18",
+      "url": "/study/past-paper-downloads/respiratory-18/questions-and-key.md",
+      "bytes": 4094,
+      "sha256": "e1dd6d20d530b70770337476cd84e1fbc95a6e06f5251c835fc4d6d55e9767b7"
+    },
+    {
+      "collectionId": "respiratory-19",
+      "url": "/study/respiratory/past-papers/respiratory-19/01.pdf",
+      "bytes": 1285201,
+      "sha256": "4f2123439dc57fa57f421c97dd515db8b1ad7fca6fba0d55c63b0e2b130a96d9"
+    },
+    {
+      "collectionId": "respiratory-19",
+      "url": "/study/past-paper-downloads/respiratory-19/questions.md",
+      "bytes": 6954,
+      "sha256": "9d07956ab9f07505b677a036b8e43bc83994ad2ad295a8198609f1303a8d6ff5"
+    },
+    {
+      "collectionId": "respiratory-19",
+      "url": "/study/past-paper-downloads/respiratory-19/answer-key.md",
+      "bytes": 13059,
+      "sha256": "81dd705bf558a9f4a507a16daa5614aca34748e2b482a684acf9da4ade94ecd6"
+    },
+    {
+      "collectionId": "respiratory-19",
+      "url": "/study/past-paper-downloads/respiratory-19/questions-and-key.md",
+      "bytes": 19294,
+      "sha256": "c15aac2009473fad2f6bb0dd43c0f466ea4c47a1ea95c4f19aafc576beb26ef8"
+    },
+    {
+      "collectionId": "respiratory-20",
+      "url": "/study/respiratory/past-papers/respiratory-20/01.jpg",
+      "bytes": 103392,
+      "sha256": "3c9f7ed41ef248bc9b16aff526a4cd875b931ab2ce6e76423ca4c83fc660a43f"
+    },
+    {
+      "collectionId": "respiratory-20",
+      "url": "/study/past-paper-downloads/respiratory-20/questions.md",
+      "bytes": 3232,
+      "sha256": "6fc90142f4ad0a7c8fd382210ab39ce192f107b9e1529c7ae515e09ace2de66b"
+    },
+    {
+      "collectionId": "respiratory-20",
+      "url": "/study/past-paper-downloads/respiratory-20/answer-key.md",
+      "bytes": 7278,
+      "sha256": "39ff0bf611b45fc900a2f6344f9fdec9eacfd3f9a67afc55497ef62ae300c6b4"
+    },
+    {
+      "collectionId": "respiratory-20",
+      "url": "/study/past-paper-downloads/respiratory-20/questions-and-key.md",
+      "bytes": 9679,
+      "sha256": "e07ffb44b9986b5fdae7ccc715fcd042fc1854eee5b0d27f77375a7a8e5c5af3"
+    },
+    {
+      "collectionId": "respiratory-21",
+      "url": "/study/respiratory/past-papers/respiratory-21/01.jpg",
+      "bytes": 51863,
+      "sha256": "38c1994db7a505de924f404f31c6ed1cb81848753fd26b9d01cdd512ff0d0808"
+    },
+    {
+      "collectionId": "respiratory-21",
+      "url": "/study/respiratory/past-papers/respiratory-21/02.jpg",
+      "bytes": 57355,
+      "sha256": "e8f82e530872f875fb7e73ba0d08e23873f2c22d5994eafa14e4b4e1a36f7365"
+    },
+    {
+      "collectionId": "respiratory-21",
+      "url": "/study/past-paper-downloads/respiratory-21/questions.md",
+      "bytes": 2560,
+      "sha256": "79c6f058c9c5a81eccddf54c7ec37e5bf8fe930020aeac6f5a571148ab6af05d"
+    },
+    {
+      "collectionId": "respiratory-21",
+      "url": "/study/past-paper-downloads/respiratory-21/answer-key.md",
+      "bytes": 5488,
+      "sha256": "1bec30bc7dc06c2a018c9e37244c035d45a8e584ee28d544ae11e99c2b4df4c1"
+    },
+    {
+      "collectionId": "respiratory-21",
+      "url": "/study/past-paper-downloads/respiratory-21/questions-and-key.md",
+      "bytes": 7229,
+      "sha256": "b87a4c2faf9f0dc380d4613b8813ce62d320f0246711499f1e1bc3ece130b2e1"
+    },
+    {
+      "collectionId": "respiratory-22",
+      "url": "/study/respiratory/past-papers/respiratory-22/01.pdf",
+      "bytes": 2255245,
+      "sha256": "67ea66834825f0a6c3d3a8bed7a58dfa9ce20f1d33e31915f788345f063f0000"
+    },
+    {
+      "collectionId": "respiratory-22",
+      "url": "/study/past-paper-downloads/respiratory-22/questions.md",
+      "bytes": 10801,
+      "sha256": "e9d985b9a7b71767efcf189f37e8c4743646401adfcb66a0016dc99455e4533d"
+    },
+    {
+      "collectionId": "respiratory-22",
+      "url": "/study/past-paper-downloads/respiratory-22/answer-key.md",
+      "bytes": 23581,
+      "sha256": "0d68e84961bf65614babcd12a1d6c66b75d25fb4c82ec73bf975a12081e0b983"
+    },
+    {
+      "collectionId": "respiratory-22",
+      "url": "/study/past-paper-downloads/respiratory-22/questions-and-key.md",
+      "bytes": 33367,
+      "sha256": "6d1412a05d755b91041a24392cbc963fc78a267707ec7de1c4be0ce2290dab32"
+    },
+    {
+      "collectionId": "respiratory-23",
+      "url": "/study/respiratory/past-papers/respiratory-23/01.pdf",
+      "bytes": 192963,
+      "sha256": "c767f014b1741acc7f4032aa83459dd4a17b7f61f86fffc544acebf938af9ee3"
+    },
+    {
+      "collectionId": "respiratory-23",
+      "url": "/study/past-paper-downloads/respiratory-23/questions.md",
+      "bytes": 27401,
+      "sha256": "3dcf29f04ce21d9ce535ed640b1d0cf894679a8c6f94adde4e56f3e339100225"
+    },
+    {
+      "collectionId": "respiratory-23",
+      "url": "/study/past-paper-downloads/respiratory-23/answer-key.md",
+      "bytes": 46668,
+      "sha256": "ecfa7b1961186969ddc72f784529e79b67ab06984b364abbb9d56bac4de566bc"
+    },
+    {
+      "collectionId": "respiratory-23",
+      "url": "/study/past-paper-downloads/respiratory-23/questions-and-key.md",
+      "bytes": 73300,
+      "sha256": "d3d4634d74f11c1c4ec6d85d3d24c34672e0999dfe69413b9b472a32c40eb672"
+    },
+    {
+      "collectionId": "respiratory-24",
+      "url": "/study/respiratory/past-papers/respiratory-24/01.jpg",
+      "bytes": 141675,
+      "sha256": "f1c610f0790cfc131fb057b913c11e1da8dd8a463dd108f77ee720b78b6ca232"
+    },
+    {
+      "collectionId": "respiratory-24",
+      "url": "/study/past-paper-downloads/respiratory-24/questions.md",
+      "bytes": 1003,
+      "sha256": "3f07eb0a3f2d5e74749074aea018b7d65dd78e596dc9d1b856e957c719a56da6"
+    },
+    {
+      "collectionId": "respiratory-24",
+      "url": "/study/past-paper-downloads/respiratory-24/answer-key.md",
+      "bytes": 5319,
+      "sha256": "94fe575fc8855b48d2cd3295c6bad4cd567804587f2c96b1429966bf379ebcad"
+    },
+    {
+      "collectionId": "respiratory-24",
+      "url": "/study/past-paper-downloads/respiratory-24/questions-and-key.md",
+      "bytes": 5624,
+      "sha256": "a618b43a99738d3807f51b2687d91f51649d0ecf06a2426ac4f0f7c4827c8a21"
     }
   ]
 }

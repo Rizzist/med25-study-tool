@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "./physiology-practical.css";
 import "./mcq.css";
+import "./guided-exam.css";
 
 const geistSans = localFont({
   src: "../node_modules/next/dist/next-devtools/server/font/geist-latin.woff2",

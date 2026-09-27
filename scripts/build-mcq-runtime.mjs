@@ -67,7 +67,7 @@ for(const course of summary.exams) {
   course.collectionQuestionIds=Object.fromEntries(collections.map(c=>[c,questions.filter(q=>policy.matchesCollection(q,c)).map(q=>q.id)]));
   const topics=[...new Set(questions.map(q=>q.topic))].map(title=>({id:title,title,questionIds:questions.filter(q=>q.topic===title).map(q=>q.id)}));
   course.finalExamBanks=course.finalExamBanks.filter(b=>b.id!=='downloaded-core').map(b=>({...b,questionCount:finals[course.id+':'+b.id]?.count??0}));
-  course.finalExamQuestionCount=past.collections.filter(c=>c.courseId===course.id).reduce((n,c)=>n+c.gradedQuestionCount,0);
+  course.finalExamQuestionCount=new Set(past.collections.filter(c=>c.courseId===course.id).flatMap(c=>c.gradedQuestionIds)).size;
   const detail={...course,topics,version};write('public/study/runtime/'+course.id+'.json',detail);
   delete course.collectionQuestionIds;delete course.biochemistryChapters;
   course.version=version;course.detailUrl='/study/runtime/'+course.id+'.json?v='+hash(detail);

@@ -11,6 +11,7 @@ import "./build-nutrition.mjs";
 import "./build-religion.mjs";
 import "./build-divine-ethics.mjs";
 import "./build-biochemistry-papers.mjs";
+import "./build-respiratory-papers.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const questionDirectory = resolve(root, "data/bank/questions");
@@ -39,6 +40,7 @@ const embeddedBank = {
     "july29:downloaded-core": readJsonLines(resolve(downloadedFinalExamDirectory, "aug25-downloaded-core.jsonl")),
     "term2-nutrition:nutrition-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "nutrition-past-papers.jsonl")),
     "term2-biochemistry:biochemistry-metabolism-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "biochemistry-metabolism-past-papers.jsonl")),
+    "term2-respiratory:respiratory-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "respiratory-past-papers.jsonl")),
     "term2-religion:religion-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "religion-past-papers.jsonl")),
   },
 };

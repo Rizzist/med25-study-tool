@@ -1,0 +1,1474 @@
+{
+  "id": "respiratory-09",
+  "title": "Respiratory supplied key report — archive labelled August 2026",
+  "note": "All six photographed report pages were manually checked. They contain Q1–38 and asterisks marking one supplied answer per question. Photographs show August 15, 2026 timestamps; no exam date or authenticated official-key status is established. Spelling and grammar are lightly normalized with substantive repairs documented.",
+  "defaultEligible": true,
+  "kind": "supplied-source-paper",
+  "questions": [
+    {
+      "number": "1",
+      "sourceNumber": "1",
+      "page": 1,
+      "prompt": "Which lung volume cannot be measured by spirometry?",
+      "options": [
+        "Tidal volume",
+        "Inspiratory reserve volume",
+        "Expiratory reserve volume",
+        "Residual volume"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "Residual volume cannot be exhaled into a spirometer; capacities containing it also require another measurement method.",
+      "reviewTerms": [
+        "spirometric limits"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=97"
+      ],
+      "id": "respiratory-09-q001",
+      "canonicalQuestionId": "respiratory-09-q001",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-lung-volumes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q001",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 1; source page 1.",
+          "/study/reviews/respiratory.pdf#page=97"
+        ]
+      }
+    },
+    {
+      "number": "2",
+      "sourceNumber": "2",
+      "page": 1,
+      "prompt": "Which muscle plays a key role during inspiration?",
+      "options": [
+        "Diaphragm",
+        "Scalene muscles",
+        "Abdominal muscles",
+        "Internal intercostal muscles"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "The diaphragm is the main muscle of quiet inspiration. Scalenes may assist inspiration; the wording 'key role' is interpreted as principal rather than exclusive.",
+      "reviewTerms": [
+        "breathing muscles"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=93"
+      ],
+      "id": "respiratory-09-q002",
+      "canonicalQuestionId": "respiratory-09-q002",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-mechanics",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q002",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 2; source page 1.",
+          "/study/reviews/respiratory.pdf#page=93"
+        ]
+      }
+    },
+    {
+      "number": "3",
+      "sourceNumber": "3",
+      "page": 1,
+      "prompt": "Under normal conditions, which compartment has negative pressure?",
+      "options": [
+        "Atmosphere",
+        "Air within the trachea",
+        "Pleural space",
+        "Air within the pharynx"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Pleural pressure is normally subatmospheric during quiet spontaneous breathing. Airway pressures vary with airflow, whereas the pleural space is the intended persistently negative compartment.",
+      "reviewTerms": [
+        "pleural pressure"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=93"
+      ],
+      "id": "respiratory-09-q003",
+      "canonicalQuestionId": "respiratory-09-q003",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-mechanics",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q003",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 3; source page 1.",
+          "/study/reviews/respiratory.pdf#page=93"
+        ]
+      }
+    },
+    {
+      "number": "4",
+      "sourceNumber": "4",
+      "page": 1,
+      "prompt": "Which is not part of anatomical dead space?",
+      "options": [
+        "Alveoli",
+        "Trachea",
+        "Sinuses",
+        "Bronchi"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Gas-exchanging alveoli are outside anatomical conducting dead space. Unperfused alveoli can contribute alveolar dead space, a separate concept.",
+      "reviewTerms": [
+        "anatomical dead space"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=99"
+      ],
+      "id": "respiratory-09-q004",
+      "canonicalQuestionId": "respiratory-09-q004",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-alveolar-ventilation",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q004",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 4; source page 1.",
+          "/study/reviews/respiratory.pdf#page=99"
+        ]
+      }
+    },
+    {
+      "number": "5",
+      "sourceNumber": "5",
+      "page": 1,
+      "prompt": "Which factor shifts the oxygen-hemoglobin dissociation curve to the right?",
+      "options": [
+        "Decreased acidity",
+        "Decreased temperature",
+        "Increased carbon dioxide concentration",
+        "Decreased 2,3-bisphosphoglycerate (2,3-BPG)"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Increased CO2 lowers oxygen affinity and shifts the curve right. The other listed changes favor a left shift.",
+      "reviewTerms": [
+        "Bohr effect",
+        "hemoglobin dissociation curve"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=122"
+      ],
+      "id": "respiratory-09-q005",
+      "canonicalQuestionId": "respiratory-09-q005",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-affinity-shifts",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q005",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 5; source page 1.",
+          "/study/reviews/respiratory.pdf#page=122"
+        ]
+      }
+    },
+    {
+      "number": "6",
+      "sourceNumber": "6",
+      "page": 1,
+      "prompt": "What is the principal mechanism by which oxygen is transported in blood?",
+      "options": [
+        "Binding to albumin",
+        "Binding to hemoglobin",
+        "Dissolution in blood",
+        "Diffusion"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Most blood oxygen is reversibly bound to hemoglobin; only a small fraction is physically dissolved under normal conditions.",
+      "reviewTerms": [
+        "hemoglobin oxygen content"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=120"
+      ],
+      "id": "respiratory-09-q006",
+      "canonicalQuestionId": "respiratory-09-q006",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-oxygen-content",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q006",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 6; source page 1.",
+          "/study/reviews/respiratory.pdf#page=120"
+        ]
+      }
+    },
+    {
+      "number": "7",
+      "sourceNumber": "7",
+      "page": 1,
+      "prompt": "What is the principal mechanism by which CO2 is transported in blood?",
+      "options": [
+        "Binding to albumin",
+        "Binding to hemoglobin",
+        "Dissolution in blood",
+        "Transport as bicarbonate ions"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "Most CO2 is transported after conversion to bicarbonate; carbamino and dissolved forms account for smaller fractions.",
+      "reviewTerms": [
+        "carbon dioxide carriage"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=125"
+      ],
+      "id": "respiratory-09-q007",
+      "canonicalQuestionId": "respiratory-09-q007",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-carbon-dioxide-transport",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q007",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 7; source page 1.",
+          "/study/reviews/respiratory.pdf#page=125"
+        ]
+      }
+    },
+    {
+      "number": "8",
+      "sourceNumber": "8",
+      "page": 2,
+      "prompt": "In spirometry, measurement of which volume requires maximal effort?",
+      "options": [
+        "Tidal volume",
+        "Inspiratory reserve volume",
+        "Functional residual capacity",
+        "Residual volume"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Inspiratory reserve volume requires a maximal inspiration after an ordinary inspiration. FRC and RV cannot be measured directly by simple spirometry.",
+      "reviewTerms": [
+        "lung volumes",
+        "inspiratory reserve"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=97"
+      ],
+      "id": "respiratory-09-q008",
+      "canonicalQuestionId": "respiratory-09-q008",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-lung-volumes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q008",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 8; source page 2.",
+          "/study/reviews/respiratory.pdf#page=97"
+        ]
+      }
+    },
+    {
+      "number": "9",
+      "sourceNumber": "9",
+      "page": 2,
+      "prompt": "Which is a non-respiratory function of the respiratory system?",
+      "options": [
+        "Production of angiotensin II",
+        "Transport of CO2 from tissues to lungs",
+        "Regulation of respiratory gas concentrations",
+        "Contraction of the diaphragm"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Pulmonary endothelial ACE converts angiotensin I to angiotensin II, an endocrine/metabolic function of the lung.",
+      "reviewTerms": [
+        "pulmonary circulation",
+        "angiotensin converting enzyme"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=104",
+        "https://pubmed.ncbi.nlm.nih.gov/6253244/"
+      ],
+      "id": "respiratory-09-q009",
+      "canonicalQuestionId": "respiratory-09-q009",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-two-circulations",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q009",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 9; source page 2.",
+          "/study/reviews/respiratory.pdf#page=104",
+          "https://pubmed.ncbi.nlm.nih.gov/6253244/"
+        ]
+      }
+    },
+    {
+      "number": "10",
+      "sourceNumber": "10",
+      "page": 2,
+      "prompt": "In which region of the lung is physiological dead space present?",
+      "options": [
+        "Base of the lung",
+        "Middle of the lung",
+        "Apex of the lung",
+        "Throughout the lung"
+      ],
+      "providedKey": "C",
+      "key": null,
+      "subject": "physiology",
+      "note": "The supplied answer C appears to mean the increased high-V/Q alveolar-dead-space contribution at the apex. Physiological dead space also includes conducting anatomical dead space throughout the lungs, so the printed question is not uniquely answered by C. Held ungraded rather than silently replacing physiological with alveolar.",
+      "reviewTerms": [
+        "physiological dead space",
+        "regional matching"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=117"
+      ],
+      "id": "respiratory-09-q010",
+      "canonicalQuestionId": "respiratory-09-q010",
+      "graded": false,
+      "sectionId": "respiratory/resp-phys-co2-dead-space",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "respiratory-09-q010",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 10; source page 2.",
+          "/study/reviews/respiratory.pdf#page=117"
+        ]
+      }
+    },
+    {
+      "number": "11",
+      "sourceNumber": "11",
+      "page": 2,
+      "prompt": "In which region of the lung is alveolar ventilation less than perfusion?",
+      "options": [
+        "Apex of the lung",
+        "Base of the lung",
+        "They are always equal",
+        "It never occurs"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "In the upright lung the basal V/Q ratio is lower than one; apical V/Q is higher because perfusion falls more than ventilation.",
+      "reviewTerms": [
+        "regional matching",
+        "ventilation perfusion"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=115"
+      ],
+      "id": "respiratory-09-q011",
+      "canonicalQuestionId": "respiratory-09-q011",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-regional-vq",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q011",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 11; source page 2.",
+          "/study/reviews/respiratory.pdf#page=115"
+        ]
+      }
+    },
+    {
+      "number": "12",
+      "sourceNumber": "12",
+      "page": 2,
+      "prompt": "Which part of the respiratory tree belongs to the conducting zone?",
+      "options": [
+        "Alveolar duct",
+        "Alveolar sac",
+        "Respiratory bronchiole",
+        "Bronchus"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "histology",
+      "note": "Bronchi conduct air without alveolar exchange surfaces. Respiratory bronchioles, alveolar ducts and sacs belong to the respiratory region.",
+      "reviewTerms": [
+        "conducting versus respiratory regions"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=53"
+      ],
+      "id": "respiratory-09-q012",
+      "canonicalQuestionId": "respiratory-09-q012",
+      "graded": true,
+      "sectionId": "respiratory/resp-hist-functional-map",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q012",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 12; source page 2.",
+          "/study/reviews/respiratory.pdf#page=53"
+        ]
+      }
+    },
+    {
+      "number": "13",
+      "sourceNumber": "13",
+      "page": 2,
+      "prompt": "Which structure is inactive during quiet normal inspiration?",
+      "options": [
+        "Ventral respiratory group (VRG)",
+        "Dorsal respiratory group (DRG)",
+        "Diaphragm",
+        "All of the above"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "subject": "physiology",
+      "note": "The source marks A, reflecting the older simplified description of the VRG as recruited during forceful breathing. It is too absolute: inspiratory neurons in the ventral respiratory column participate in quiet breathing. DRG and diaphragm are active, so no literally correct option is available.",
+      "reviewTerms": [
+        "brainstem networks",
+        "ventral respiratory group"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=128",
+        "https://pubmed.ncbi.nlm.nih.gov/7643160/"
+      ],
+      "id": "respiratory-09-q013",
+      "canonicalQuestionId": "respiratory-09-q013",
+      "graded": false,
+      "sectionId": "respiratory/resp-phys-brainstem-pattern",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "respiratory-09-q013",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 13; source page 2.",
+          "/study/reviews/respiratory.pdf#page=128",
+          "https://pubmed.ncbi.nlm.nih.gov/7643160/"
+        ]
+      }
+    },
+    {
+      "number": "14",
+      "sourceNumber": "14",
+      "page": 2,
+      "prompt": "Which center is responsible for the inspiratory switch-off signal?",
+      "options": [
+        "Pneumotaxic center",
+        "Dorsal respiratory group (DRG)",
+        "Diaphragm",
+        "Ventral respiratory group (VRG)"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Pontine pneumotaxic-region input limits inspiratory duration in the classic center model.",
+      "reviewTerms": [
+        "inspiratory switch-off",
+        "pneumotaxic center"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=128"
+      ],
+      "id": "respiratory-09-q014",
+      "canonicalQuestionId": "respiratory-09-q014",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-brainstem-pattern",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q014",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 14; source page 2.",
+          "/study/reviews/respiratory.pdf#page=128"
+        ]
+      }
+    },
+    {
+      "number": "15",
+      "sourceNumber": "15",
+      "page": 3,
+      "prompt": "What is the direct stimulus for the chemosensitive area?",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Hydrogen ion",
+        "Bicarbonate ion"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Local H+ directly excites central chemosensitive neurons; CO2 is a powerful indirect stimulus because it enters brain fluids and produces H+.",
+      "reviewTerms": [
+        "central CO2 H sensing"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=129"
+      ],
+      "id": "respiratory-09-q015",
+      "canonicalQuestionId": "respiratory-09-q015",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-central-chemoreception",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q015",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 15; source page 3.",
+          "/study/reviews/respiratory.pdf#page=129"
+        ]
+      }
+    },
+    {
+      "number": "16",
+      "sourceNumber": "16",
+      "page": 3,
+      "prompt": "In an environment with high oxygen concentration, what happens?",
+      "options": [
+        "Oxygen binds to hemoglobin",
+        "Oxygen is released from hemoglobin",
+        "There is no change in oxygen binding or release",
+        "Oxygen binding and release rates remain in equilibrium"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Higher PO2 favors hemoglobin oxygen loading, provided binding sites remain available. This describes the shift after exposure, not the final equilibrium state.",
+      "reviewTerms": [
+        "oxygen loading",
+        "hemoglobin"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=120"
+      ],
+      "id": "respiratory-09-q016",
+      "canonicalQuestionId": "respiratory-09-q016",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-oxygen-content",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q016",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 16; source page 3.",
+          "/study/reviews/respiratory.pdf#page=120"
+        ]
+      }
+    },
+    {
+      "number": "17",
+      "sourceNumber": "17",
+      "page": 3,
+      "prompt": "Which factor increases lung compliance?",
+      "options": [
+        "Surface tension",
+        "Surfactant",
+        "Lung collapse",
+        "High lung volume"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Surfactant lowers alveolar surface tension, reducing recoil and the pressure needed for expansion.",
+      "reviewTerms": [
+        "surfactant",
+        "compliance"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=96"
+      ],
+      "id": "respiratory-09-q017",
+      "canonicalQuestionId": "respiratory-09-q017",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-surfactant",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q017",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 17; source page 3.",
+          "/study/reviews/respiratory.pdf#page=96"
+        ]
+      }
+    },
+    {
+      "number": "18",
+      "sourceNumber": "18",
+      "page": 3,
+      "prompt": "Which finding indicates an obstructive ventilatory pattern?",
+      "options": [
+        "Decreased FEV1/VC",
+        "Increased FEV1/VC",
+        "Unchanged FEV1/VC",
+        "It cannot be assessed"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Airflow obstruction lowers FEV1 disproportionately relative to vital capacity, decreasing the ratio. The ratio alone does not establish a disease-specific diagnosis.",
+      "reviewTerms": [
+        "forced expiration",
+        "obstructive pattern"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=145"
+      ],
+      "id": "respiratory-09-q018",
+      "canonicalQuestionId": "respiratory-09-q018",
+      "graded": true,
+      "sectionId": "respiratory/comp-resp-flow",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q018",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 18; source page 3.",
+          "/study/reviews/respiratory.pdf#page=145"
+        ]
+      }
+    },
+    {
+      "number": "19",
+      "sourceNumber": "19",
+      "page": 3,
+      "prompt": "Which molecule binds at the same hemoglobin site as oxygen?",
+      "options": [
+        "Carbon dioxide",
+        "Carbon monoxide",
+        "Bicarbonate",
+        "Hydrogen ion"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "CO binds heme iron at the oxygen-binding site; CO2 binds amino groups rather than that heme site.",
+      "reviewTerms": [
+        "carbon monoxide",
+        "heme binding"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=124"
+      ],
+      "id": "respiratory-09-q019",
+      "canonicalQuestionId": "respiratory-09-q019",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-dissolved-oxygen-co",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q019",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 19; source page 3.",
+          "/study/reviews/respiratory.pdf#page=124"
+        ]
+      }
+    },
+    {
+      "number": "20",
+      "sourceNumber": "20",
+      "page": 3,
+      "prompt": "In which environment is oxygen partial pressure greatest?",
+      "options": [
+        "Atmosphere",
+        "Arterial blood",
+        "Alveoli",
+        "Venous blood"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "For ordinary room air at sea level, dry atmospheric PO2 exceeds alveolar and blood PO2. This assumes the same ambient conditions and no supplemental oxygen.",
+      "reviewTerms": [
+        "partial pressure",
+        "humidification"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=111"
+      ],
+      "id": "respiratory-09-q020",
+      "canonicalQuestionId": "respiratory-09-q020",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-gas-physics",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q020",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 20; source page 3.",
+          "/study/reviews/respiratory.pdf#page=111"
+        ]
+      }
+    },
+    {
+      "number": "21",
+      "sourceNumber": "21",
+      "page": 3,
+      "prompt": "Which respiratory center is active during forced expiration?",
+      "options": [
+        "Pneumotaxic center",
+        "Ventral respiratory group (VRG)",
+        "Dorsal respiratory group (DRG)",
+        "Phrenic nerves"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Expiratory neurons of the ventral respiratory group provide drive to expiratory muscles during increased ventilatory demand.",
+      "reviewTerms": [
+        "active expiration"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=128"
+      ],
+      "id": "respiratory-09-q021",
+      "canonicalQuestionId": "respiratory-09-q021",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-brainstem-pattern",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q021",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 21; source page 3.",
+          "/study/reviews/respiratory.pdf#page=128"
+        ]
+      }
+    },
+    {
+      "number": "22",
+      "sourceNumber": "22",
+      "page": 4,
+      "prompt": "In which compartment is CO2 partial pressure highest?",
+      "options": [
+        "Tissues",
+        "Arterial blood",
+        "Venous blood",
+        "Alveoli"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "In the resting textbook comparison, metabolically active tissue cells have slightly higher PCO2 than venous/interstitial blood, and both exceed alveolar/arterial PCO2.",
+      "reviewTerms": [
+        "tissue carbon dioxide",
+        "gas gradients"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=118"
+      ],
+      "id": "respiratory-09-q022",
+      "canonicalQuestionId": "respiratory-09-q022",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-gas-cascade",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q022",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 22; source page 4.",
+          "/study/reviews/respiratory.pdf#page=118"
+        ]
+      }
+    },
+    {
+      "number": "23",
+      "sourceNumber": "23",
+      "page": 4,
+      "prompt": "In which microscopic tissue are bipolar neurons observed?",
+      "options": [
+        "Vestibule of the nasal cavity",
+        "Olfactory-zone tissue",
+        "Respiratory-zone tissue",
+        "Pharyngeal tissue"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "histology",
+      "note": "Olfactory receptor cells are bipolar neurons in the olfactory epithelium.",
+      "reviewTerms": [
+        "olfactory mucosa",
+        "receptor neurons"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=56"
+      ],
+      "id": "respiratory-09-q023",
+      "canonicalQuestionId": "respiratory-09-q023",
+      "graded": true,
+      "sectionId": "respiratory/resp-hist-olfactory-mucosa",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q023",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 23; source page 4.",
+          "/study/reviews/respiratory.pdf#page=56"
+        ]
+      }
+    },
+    {
+      "number": "24",
+      "sourceNumber": "24",
+      "page": 4,
+      "prompt": "In which part of the respiratory air duct is a bundle of elastic fibers observed?",
+      "options": [
+        "Pharyngeal tissue",
+        "Part of the nasal cavity",
+        "Laryngeal tissue",
+        "Part of a bronchus"
+      ],
+      "providedKey": "C",
+      "key": null,
+      "subject": "histology",
+      "note": "C is the supplied mark, likely alluding to the elastic vocal ligament. The stem does not specify that structure, and bronchial walls also contain elastic fibers; the broad location question does not establish a unique answer.",
+      "reviewTerms": [
+        "elastic fibers",
+        "true vocal fold"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=59"
+      ],
+      "id": "respiratory-09-q024",
+      "canonicalQuestionId": "respiratory-09-q024",
+      "graded": false,
+      "sectionId": "respiratory/resp-hist-vocal-folds",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "respiratory-09-q024",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 24; source page 4.",
+          "/study/reviews/respiratory.pdf#page=59"
+        ]
+      }
+    },
+    {
+      "number": "25",
+      "sourceNumber": "25",
+      "page": 4,
+      "prompt": "Which part of a lung lobule has simple cuboidal epithelial tissue?",
+      "options": [
+        "Alveoli",
+        "Bronchioles",
+        "Respiratory bronchiole",
+        "Trachea"
+      ],
+      "providedKey": "C",
+      "key": null,
+      "subject": "histology",
+      "note": "Both terminal/small bronchioles (included in B) and respiratory bronchioles (C) have simple cuboidal epithelial portions. These overlapping options make the source's C non-unique.",
+      "reviewTerms": [
+        "bronchiolar epithelium",
+        "respiratory bronchiole"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=65"
+      ],
+      "id": "respiratory-09-q025",
+      "canonicalQuestionId": "respiratory-09-q025",
+      "graded": false,
+      "sectionId": "respiratory/resp-hist-distal-transitions",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "respiratory-09-q025",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 25; source page 4.",
+          "/study/reviews/respiratory.pdf#page=65"
+        ]
+      }
+    },
+    {
+      "number": "26",
+      "sourceNumber": "26",
+      "page": 4,
+      "prompt": "Where in the microscopic structure of the lung are pneumocytes type III observed?",
+      "options": [
+        "In alveolar spaces",
+        "Bronchial epithelial tissue",
+        "In the tracheal lumen",
+        "Tracheal epithelial tissue"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "subject": "histology",
+      "note": "The scan clearly says pneumocytes type III and marks A. Type III is nonstandard and has been used inconsistently; if the author meant dust cells, A is plausible, but macrophages are not type I/II epithelial pneumocytes. The undefined terminology prevents a defensible single key.",
+      "reviewTerms": [
+        "alveolar macrophages",
+        "pneumocytes"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=70"
+      ],
+      "id": "respiratory-09-q026",
+      "canonicalQuestionId": "respiratory-09-q026",
+      "graded": false,
+      "sectionId": "respiratory/resp-hist-alveolar-macrophages",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "respiratory-09-q026",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 26; source page 4.",
+          "/study/reviews/respiratory.pdf#page=70"
+        ]
+      }
+    },
+    {
+      "number": "27",
+      "sourceNumber": "27",
+      "page": 4,
+      "prompt": "All of the following muscles are innervated by the recurrent laryngeal nerve except:",
+      "options": [
+        "Lateral cricoarytenoid",
+        "Vocalis",
+        "Cricothyroid",
+        "Thyroarytenoid"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "Cricothyroid receives the external branch of the superior laryngeal nerve; the other listed intrinsic muscles receive recurrent laryngeal supply.",
+      "reviewTerms": [
+        "laryngeal motor exceptions"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=33"
+      ],
+      "id": "respiratory-09-q027",
+      "canonicalQuestionId": "respiratory-09-q027",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-nerves",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q027",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 27; source page 4.",
+          "/study/reviews/respiratory.pdf#page=33"
+        ]
+      }
+    },
+    {
+      "number": "28",
+      "sourceNumber": "28",
+      "page": 4,
+      "prompt": "At the midclavicular line, at which rib is the inferior border of the lung?",
+      "options": [
+        "Twelfth rib",
+        "Tenth rib",
+        "Eighth rib",
+        "Sixth rib"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The inferior lung margin reaches approximately rib 6 in the midclavicular line; the pleural reflection lies around rib 8.",
+      "reviewTerms": [
+        "lung surface projection"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=39"
+      ],
+      "id": "respiratory-09-q028",
+      "canonicalQuestionId": "respiratory-09-q028",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-pleural-recesses",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q028",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 28; source page 4.",
+          "/study/reviews/respiratory.pdf#page=39"
+        ]
+      }
+    },
+    {
+      "number": "29",
+      "sourceNumber": "29",
+      "page": 5,
+      "prompt": "All of the following are found in the middle meatus except:",
+      "options": [
+        "Ethmoidal infundibulum",
+        "Maxillary sinus opening",
+        "Ethmoidal bulla",
+        "Nasolacrimal duct opening"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The nasolacrimal duct opens into the inferior meatus.",
+      "reviewTerms": [
+        "meatuses",
+        "sinus drainage"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=8"
+      ],
+      "id": "respiratory-09-q029",
+      "canonicalQuestionId": "respiratory-09-q029",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-nasal-drainage",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q029",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 29; source page 5.",
+          "/study/reviews/respiratory.pdf#page=8"
+        ]
+      }
+    },
+    {
+      "number": "30",
+      "sourceNumber": "30",
+      "page": 5,
+      "prompt": "Where is the uncinate process found?",
+      "options": [
+        "In the vomer bone",
+        "In the medial wall of the nasal cavity",
+        "On the inferior surface of the ethmoidal labyrinth",
+        "In the cribriform plate of the ethmoid"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "The uncinate process arises from the ethmoidal labyrinth and projects into the lateral nasal wall near the middle meatus.",
+      "reviewTerms": [
+        "ethmoid",
+        "uncinate process"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=8"
+      ],
+      "id": "respiratory-09-q030",
+      "canonicalQuestionId": "respiratory-09-q030",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-nasal-drainage",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q030",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 30; source page 5.",
+          "/study/reviews/respiratory.pdf#page=8"
+        ]
+      }
+    },
+    {
+      "number": "31",
+      "sourceNumber": "31",
+      "page": 5,
+      "prompt": "A patient has frequent severe epistaxis from the anterior-inferior nasal septum. Which artery is not responsible for this bleeding?",
+      "options": [
+        "Sphenopalatine",
+        "External nasal",
+        "Superior labial",
+        "Greater palatine"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The other listed arteries contribute septal branches to the anterior septal anastomosis. External nasal supply primarily serves the external nose; the expected additional septal contributor is the anterior ethmoidal artery.",
+      "reviewTerms": [
+        "epistaxis",
+        "nasal blood supply"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=14"
+      ],
+      "id": "respiratory-09-q031",
+      "canonicalQuestionId": "respiratory-09-q031",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-nasal-vessels",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q031",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 31; source page 5.",
+          "/study/reviews/respiratory.pdf#page=14"
+        ]
+      }
+    },
+    {
+      "number": "32",
+      "sourceNumber": "32",
+      "page": 5,
+      "prompt": "Which bone contributes to both the roof and lateral wall of the nasal cavity?",
+      "options": [
+        "Vomer",
+        "Ethmoid",
+        "Lacrimal",
+        "Palatine"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The ethmoid contributes its cribriform plate to the roof and its labyrinth/conchae to the lateral wall.",
+      "reviewTerms": [
+        "nasal walls",
+        "ethmoid"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=6"
+      ],
+      "id": "respiratory-09-q032",
+      "canonicalQuestionId": "respiratory-09-q032",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-nasal-framework",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q032",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 32; source page 5.",
+          "/study/reviews/respiratory.pdf#page=6"
+        ]
+      }
+    },
+    {
+      "number": "33",
+      "sourceNumber": "33",
+      "page": 5,
+      "prompt": "Which muscle attaches to the anterior surface of the pyramidal (arytenoid) cartilage?",
+      "options": [
+        "Transverse arytenoid",
+        "Posterior cricoarytenoid",
+        "Vocalis",
+        "Oblique arytenoid"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "Vocalis/medial thyroarytenoid attaches at the anterior vocal-process region. Posterior cricoarytenoid uses the muscular process, and the arytenoid muscles lie posteriorly.",
+      "reviewTerms": [
+        "vocalis",
+        "arytenoid attachments"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=31"
+      ],
+      "id": "respiratory-09-q033",
+      "canonicalQuestionId": "respiratory-09-q033",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-tension-joints",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q033",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 33; source page 5.",
+          "/study/reviews/respiratory.pdf#page=31"
+        ]
+      }
+    },
+    {
+      "number": "34",
+      "sourceNumber": "34",
+      "page": 5,
+      "prompt": "The quadrangular membrane attaches to all of the following except:",
+      "options": [
+        "Cricoid cartilage",
+        "Thyroid cartilage",
+        "Arytenoid cartilage",
+        "Epiglottic cartilage"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The quadrangular membrane extends between epiglottic/thyroid and arytenoid regions; cricoid is associated with the conus elasticus below.",
+      "reviewTerms": [
+        "quadrangular membrane",
+        "intrinsic membranes"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=26"
+      ],
+      "id": "respiratory-09-q034",
+      "canonicalQuestionId": "respiratory-09-q034",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-membranes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q034",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 34; source page 5.",
+          "/study/reviews/respiratory.pdf#page=26"
+        ]
+      }
+    },
+    {
+      "number": "35",
+      "sourceNumber": "35",
+      "page": 5,
+      "prompt": "Which nerve passes through the incisive canal?",
+      "options": [
+        "External branch of the superior laryngeal nerve",
+        "Nasopalatine",
+        "Internal branch of the superior laryngeal nerve",
+        "Phrenic"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The nasopalatine nerve passes through the incisive canal toward the anterior hard palate.",
+      "reviewTerms": [
+        "incisive canal",
+        "nasopalatine"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=13"
+      ],
+      "id": "respiratory-09-q035",
+      "canonicalQuestionId": "respiratory-09-q035",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-nasal-gateways",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q035",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 35; source page 5.",
+          "/study/reviews/respiratory.pdf#page=13"
+        ]
+      }
+    },
+    {
+      "number": "36",
+      "sourceNumber": "36",
+      "page": 6,
+      "prompt": "Which nerve passes through an opening in the thyrohyoid membrane?",
+      "options": [
+        "Internal branch of the superior laryngeal nerve",
+        "Recurrent laryngeal",
+        "Nasopalatine",
+        "External branch of the superior laryngeal nerve"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The internal laryngeal nerve pierces the thyrohyoid membrane with the superior laryngeal vessels.",
+      "reviewTerms": [
+        "thyrohyoid membrane",
+        "internal laryngeal nerve"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=33"
+      ],
+      "id": "respiratory-09-q036",
+      "canonicalQuestionId": "respiratory-09-q036",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-nerves",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q036",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 36; source page 6.",
+          "/study/reviews/respiratory.pdf#page=33"
+        ]
+      }
+    },
+    {
+      "number": "37",
+      "sourceNumber": "37",
+      "page": 6,
+      "prompt": "All of the following statements are correct except:",
+      "options": [
+        "The azygos vein is adjacent to the medial surface of the right lung",
+        "The visceral pleura is innervated by the phrenic nerve",
+        "The lung apex is at the root of the neck",
+        "The pulmonary vein is the most anterior element in the left lung hilum"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The phrenic nerve supplies mediastinal and central diaphragmatic parietal pleura, not visceral pleura. Source 'umbilicus' is normalized to hilum in option D.",
+      "reviewTerms": [
+        "pleural innervation",
+        "lung root"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=50"
+      ],
+      "id": "respiratory-09-q037",
+      "canonicalQuestionId": "respiratory-09-q037",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-pleural-pain-clinical",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q037",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 37; source page 6.",
+          "/study/reviews/respiratory.pdf#page=50"
+        ]
+      }
+    },
+    {
+      "number": "38",
+      "sourceNumber": "38",
+      "page": 6,
+      "prompt": "All of the following attach to the thyroid cartilage except:",
+      "options": [
+        "True vocal fold",
+        "Aryepiglottic fold",
+        "False vocal cord",
+        "Inferior pharyngeal constrictor muscle"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The aryepiglottic fold extends from the epiglottis to the arytenoid region. Vocal and vestibular structures attach anteriorly to thyroid cartilage, and thyropharyngeus originates from its oblique line. The source stem ends with the nonsensical words 'the and the calyx'; those words are omitted without changing the anatomical question.",
+      "reviewTerms": [
+        "laryngeal attachments",
+        "aryepiglottic folds"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=26"
+      ],
+      "id": "respiratory-09-q038",
+      "canonicalQuestionId": "respiratory-09-q038",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-membranes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-09-q038",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Respiratory supplied key report — archive labelled August 2026; printed question 38; source page 6.",
+          "/study/reviews/respiratory.pdf#page=26"
+        ]
+      }
+    }
+  ],
+  "excludedItems": [],
+  "audit": {
+    "status": "SHIP",
+    "notes": [
+      "All 6 pages and all 38 visible MCQs accounted for; no cover, Q39 or Q40 is present. No absent questions were invented.",
+      "All 38 supplied asterisk marks preserved. Audited keys withheld for Q10, Q13, Q24, Q25 and Q26.",
+      "Page map: p1 Q1–7; p2 Q8–14; p3 Q15–21; p4 Q22–28; p5 Q29–35; p6 Q36–38.",
+      "SHIP denotes a completed transcription/audit and includes the explicit null-key quarantines."
+    ]
+  },
+  "archive": {
+    "id": "respiratory-09",
+    "title": "Respiratory system — August 2026 key report",
+    "note": "Filename says August 2026; scanned report footer says Aug 15, 2026, 12:54. Report timestamp is not proof of the exam sitting date.",
+    "folder": "01_Theory/2026-08_key-report",
+    "sources": [
+      {
+        "title": "respiratory_2026-08_key-report.pdf",
+        "url": "/study/respiratory/past-papers/respiratory-09/01.pdf",
+        "sha256": "de77b740a4241d2334bde2674902a4cff812c8d2e9fccb94cba198201696383a",
+        "bytes": 4421974,
+        "archivePath": "01_Theory/2026-08_key-report/respiratory_2026-08_key-report.pdf",
+        "archiveSha256": "de77b740a4241d2334bde2674902a4cff812c8d2e9fccb94cba198201696383a",
+        "webOptimized": false,
+        "pageCount": 6
+      }
+    ]
+  }
+}

@@ -8,6 +8,7 @@ export const FINAL_EXAM_SESSION_KEYS: {
   readonly nutrition: "term2-nutrition:nutrition-past-papers";
   readonly religion: "term2-religion:religion-past-papers";
   readonly biochemistry: "term2-biochemistry:biochemistry-metabolism-past-papers";
+  readonly respiratory: "term2-respiratory:respiratory-past-papers";
   readonly july29TelegramWithoutCarbLipidMetabolism: "july29:telegram-past-papers:no-carb-lipid-metabolism";
   readonly july29DownloadedWithoutCarbLipidMetabolism: "july29:downloaded-core:no-carb-lipid-metabolism";
 };
@@ -21,6 +22,7 @@ export type StoredFinalAnswer = {
 };
 
 export type StoredFinalExamSession = {
+  guidance?: "guided" | "unguided";
   bankFingerprint: string;
   questionIds: string[];
   currentIndex: number;
@@ -37,6 +39,7 @@ export type StoredFinalExamProgress = {
     | "term2-nutrition:nutrition-past-papers"
     | "term2-religion:religion-past-papers"
     | "term2-biochemistry:biochemistry-metabolism-past-papers"
+    | "term2-respiratory:respiratory-past-papers"
     | "july29:telegram-past-papers"
     | "july29:downloaded-core"
     | "july29:telegram-past-papers:no-carb-lipid-metabolism"
@@ -58,6 +61,7 @@ export function parseFinalExamProgress(
     | "term2-nutrition:nutrition-past-papers"
     | "term2-religion:religion-past-papers"
     | "term2-biochemistry:biochemistry-metabolism-past-papers"
+    | "term2-respiratory:respiratory-past-papers"
     | "july29:telegram-past-papers"
     | "july29:downloaded-core"
     | "july29:telegram-past-papers:no-carb-lipid-metabolism"

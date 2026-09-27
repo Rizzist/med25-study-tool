@@ -14,6 +14,9 @@ import { isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/ex
 import { createEmptyProgress, parseProgress, type StudyProgress } from '@/src/lib/mcq/study-progress.mjs';
 import { cachedJson, rememberQuestions, recallQuestions, setQuestionCacheVersion } from '@/src/lib/mcq/client-cache';
 import {mcqReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
+import {guidanceMode,supportsGuidedExam,type GuidanceMode} from '@/src/lib/mcq/guided-exam.mjs';
+import {ExamModeChooser} from '@/src/components/ExamModeChooser';
+import {GuidedExamLayout} from '@/src/components/GuidedExamLayout';
 const PastExamHub = dynamic(() => import('@/src/components/PastExamHub').then(m=>m.PastExamHub), {loading:()=> <p role="status">Loading past papers…</p>});
 const ReviewTopics = dynamic(() => import('@/src/components/CourseReview').then(m=>m.ReviewTopics), {loading:()=> <p role="status">Loading review sections…</p>});
 const ReviewDownloads = dynamic(() => import('@/src/components/CourseReview').then(m=>m.ReviewDownloads), {loading:()=> <p role="status">Loading review PDFs…</p>});
@@ -67,6 +70,7 @@ type ActiveSessionSnapshot = {
   questionIndex: number;
   startedAt: string;
   studyMode: BiochemistryStudyMode;
+  guidance?: GuidanceMode;
   biochemistryChapterId?: string;
   respiratoryScopeId?: string;
   respiratoryPracticeIds?: string[];
@@ -202,6 +206,7 @@ function cleanActiveSession(value: unknown): ActiveSessionSnapshot | null {
     questionIndex,
     startedAt: typeof session.startedAt === "string" ? session.startedAt : new Date().toISOString(),
     studyMode: session.studyMode === "exam" ? "exam" : "learn",
+    guidance: guidanceMode(migratedExam,session.guidance),
     biochemistryChapterId: isBiochemistryChapterId(session.biochemistryChapterId) ? session.biochemistryChapterId : undefined,
     respiratoryScopeId: typeof session.respiratoryScopeId === "string" ? session.respiratoryScopeId : undefined,
     respiratoryPracticeIds: cleanIds(session.respiratoryPracticeIds),
@@ -416,6 +421,8 @@ export default function Home() {
   const [sessionArchiveReady, setSessionArchiveReady] = useState(false);
   const [sessionStartedAt, setSessionStartedAt] = useState("");
   const [studyMode, setStudyMode] = useState<BiochemistryStudyMode>("learn");
+  const [guidance,setGuidance]=useState<GuidanceMode>('unguided');
+  const [pendingGuidance,setPendingGuidance]=useState<((mode:GuidanceMode)=>void)|null>(null);
   const [activeBiochemistryChapterId, setActiveBiochemistryChapterId] = useState<string>();
   const [activeRespiratoryScopeId, setActiveRespiratoryScopeId] = useState<string>();
   const [activeRespiratoryPracticeIds, setActiveRespiratoryPracticeIds] = useState<string[]>();
@@ -512,6 +519,7 @@ export default function Home() {
         questionIndex,
         startedAt,
         studyMode,
+        guidance,
         biochemistryChapterId: activeBiochemistryChapterId,
         respiratoryScopeId: activeRespiratoryScopeId,
         respiratoryPracticeIds: activeRespiratoryPracticeIds,
@@ -519,7 +527,7 @@ export default function Home() {
         coursePracticeIds: activeCoursePracticeIds,
       },
     }));
-  }, [activeBiochemistryChapterId, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, activeCoursePracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, visitedQuestionIds]);
+  }, [activeBiochemistryChapterId, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, activeCoursePracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, guidance, visitedQuestionIds]);
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const subjectIds = selectedExam?.collectionQuestionIds;
@@ -572,6 +580,7 @@ export default function Home() {
   });
 
   function chooseExam(nextExam: ExamId) {
+    setPendingGuidance(null);setGuidance('unguided');
     sessionRequest.current++;
     setPhase('setup');
     setExam(nextExam);
@@ -593,7 +602,12 @@ export default function Home() {
     respiratoryScopeId?: string;
     mode?: BiochemistryStudyMode;
     limit?: number;
+    guidance?: GuidanceMode;
   } = {}) {
+    if(supportsGuidedExam(exam)&&!options.guidance){
+      setPendingGuidance(()=>(mode:GuidanceMode)=>{setPendingGuidance(null);void startSession(nextCollection,exactIds,{...options,guidance:mode});});
+      return;
+    }
     if (phase === "setup" && sessionArchive.active && !window.confirm("Starting a new session replaces your unfinished sprint. Completed results and progress stay saved. Start the new session?")) return;
     const requestId=++sessionRequest.current;
     const requestedLimit = options.limit ?? (exactIds ? exactIds.length : sessionSize);
@@ -601,6 +615,7 @@ export default function Home() {
     setCollection(nextCollection);
     setSessionSize(requestedLimit);
     setStudyMode(nextStudyMode);
+    setGuidance(guidanceMode(exam,options.guidance));
     setActiveBiochemistryChapterId(options.biochemistryChapterId);
     setActivePracticalPracticeIds(exactIds ? cleanIds(exactIds) : undefined);
     setActiveCoursePracticeIds(isTerm2CourseExam(exam) && exactIds ? cleanIds(exactIds) : undefined);
@@ -727,6 +742,7 @@ export default function Home() {
       questionIndex: Math.max(0, completion.seenIds.length - 1),
       startedAt: sessionStartedAt || completedAt,
       studyMode,
+      guidance,
       biochemistryChapterId: activeBiochemistryChapterId,
       respiratoryScopeId: activeRespiratoryScopeId,
       respiratoryPracticeIds: activeRespiratoryPracticeIds,
@@ -801,6 +817,7 @@ export default function Home() {
     setSessionSize(saved.sessionSize);
     setSessionStartedAt(saved.startedAt);
     setStudyMode(saved.studyMode);
+    setGuidance(guidanceMode(saved.exam,saved.guidance));
     setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     setActiveRespiratoryScopeId(saved.respiratoryScopeId);
     setActiveRespiratoryPracticeIds(saved.respiratoryPracticeIds);
@@ -863,6 +880,7 @@ export default function Home() {
     setSessionSize(saved.sessionSize);
     setSessionStartedAt(saved.startedAt);
     setStudyMode(saved.studyMode);
+    setGuidance(guidanceMode(saved.exam,saved.guidance));
     setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     setActiveRespiratoryScopeId(saved.respiratoryScopeId);
     setActiveRespiratoryPracticeIds(saved.respiratoryPracticeIds);
@@ -907,13 +925,14 @@ export default function Home() {
     const openedUnansweredCount = questions.filter((item) => effectiveVisitedIds.has(item.id) && !isAnswered(answers[item.id])).length;
     const untouchedCount = questions.filter((item) => !effectiveVisitedIds.has(item.id)).length;
     return (
-      <main className="session-shell">
+      <main className={`session-shell ${guidance==='guided'?'is-guided':''}`}>
         <header className="session-header">
-          <div className="session-mark"><b>MED//25</b><span>{examLabel} · {sessionLabel}</span></div>
+          <div className="session-mark"><b>MED//25</b><span>{examLabel} · {sessionLabel}{supportsGuidedExam(exam)?` · ${guidance==='guided'?'Guided':'Unguided'}`:''}</span></div>
           <div className="session-progress"><span>Question {questionIndex + 1} of {questions.length}</span><div><i style={{ width: `${((questionIndex + 1) / questions.length) * 100}%` }} /></div><small>{answeredCount} answered</small></div>
           <div className="session-end-stack"><span className={`session-mode-badge ${studyMode}`}>{studyMode === "exam" ? "Exam · answers hidden" : "Learn · instant teaching"}</span><button className="end-button" onClick={() => setConfirmEnd(true)}>End session</button></div>
         </header>
 
+        <GuidedExamLayout exam={exam} mode={guidance} questionId={question.id} answered={hasAnswer}>
         <section className="session-body">
           <div className="question-scroll">
             <article className="question-card">
@@ -982,6 +1001,7 @@ export default function Home() {
             {questionIndex === questions.length - 1 ? <button className="primary" onClick={() => setConfirmEnd(true)}>Finish & grade</button> : <button className="primary" onClick={() => setQuestionIndex((index) => Math.min(questions.length - 1, index + 1))}>Next question →</button>}
           </footer>
         </section>
+        </GuidedExamLayout>
 
         {confirmEnd && <div className="modal-backdrop"><div className="end-modal" role="dialog" aria-modal="true"><span className="eyebrow">Finish sprint</span><h2>Ready to save this review?</h2><p>{openedUnansweredCount ? `${openedUnansweredCount} opened but unanswered ${openedUnansweredCount === 1 ? "question" : "questions"} will be saved for repair. ` : ""}{untouchedCount ? `${untouchedCount} untouched ${untouchedCount === 1 ? "question remains" : "questions remain"} unseen and will return with priority.` : "Every question in this sprint was opened."}</p><div><button onClick={() => setConfirmEnd(false)}>Keep working</button><button className="primary" onClick={finishSession}>Grade seen questions</button></div></div></div>}
       </main>
@@ -995,6 +1015,7 @@ export default function Home() {
     const visible = questions.filter((question) => reviewFilter === "all" || (reviewFilter === "wrong" ? !isCorrect(question, answers[question.id]) : answers[question.id]?.flagged));
     const score = Math.round((correctCount / questions.length) * 100);
     return <main className="review-shell">
+      {pendingGuidance&&<ExamModeChooser onChoose={pendingGuidance} onCancel={()=>setPendingGuidance(null)}/>}
       <header className="review-header"><div className="session-mark"><b>MED//25</b><span>Session review</span></div><button onClick={resetSession}>Return to practice</button></header>
       <section className="review-page">
         <div className="score-hero"><div><span className="eyebrow">{studyMode === "exam" ? isTerm2Exam(exam) ? "Source-based test complete" : "Chapter exam complete" : "Learning sprint complete"}{activeBiochemistryChapterId ? ` · ${biochemistryChapterById(activeBiochemistryChapterId)?.shortTitle}` : ""}</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Every option now explains the concept it represents, so repair the misses while your reasoning is fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
@@ -1037,6 +1058,7 @@ export default function Home() {
   const resumeAnswered=resumable?Object.values(resumable.answers).filter(isAnswered).length:0;
   const scoreTone=(value:number)=>value>=75?'good':value>=50?'mid':'low';
   return <StudyShell exam={exam} activeSection={tab} onCourseChange={chooseExam} onSectionChange={section=>setTab(section as Tab)} immersive={cvsPaperActive} status={bankStatus==='loading'?'Loading catalog…':bankStatus==='error'?'Offline · cached sessions available':'Saved on this device'} courses={Object.entries(examConfig).map(([id,c])=>({id:id as ExamId,title:c.title,date:c.date,count:bank?.exams?.find(e=>e.id===id)?.questionCount}))}>
+    {pendingGuidance&&<ExamModeChooser onChoose={pendingGuidance} onCancel={()=>setPendingGuidance(null)}/>}
     {!cvsPaperActive&&<header className="course-head">
       <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{selectedConfig.title}</h1><p>{selectedConfig.focus}</p></div>
       <div className="course-head-side">

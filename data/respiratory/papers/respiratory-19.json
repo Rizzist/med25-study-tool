@@ -1,0 +1,893 @@
+{
+  "id": "respiratory-19",
+  "title": "Undated respiratory practical answer-key paper",
+  "note": "Twenty original MCQs, including a shared spirogram and sixteen image spotters. Posting date 4 September 2025 is not an exam date. Yellow highlights are supplied answers and were audited separately.",
+  "defaultEligible": false,
+  "kind": "supplied-fragment",
+  "questions": [
+    {
+      "number": "1",
+      "sourceNumber": "1",
+      "page": 2,
+      "prompt": "A 25-year-old man, height 175 cm, has the shown spirogram; temperature coefficient = 1.1. Which one is the following patient’s Tidal Volume?",
+      "options": [
+        "330 ml",
+        "300 ml",
+        "270 ml",
+        "240 ml"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "subject": "physiology",
+      "note": "Disputed: the source highlights A (330 mL), but the displayed tidal swings run from 1000 to 1400 mL. Applying the stated 1.1 correction gives 440 mL, which is absent from the options. Do not score.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+        "public/study/reviews/respiratory.pdf#page=97"
+      ],
+      "reviewTerms": [
+        "spirometry"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-spirogram.png",
+        "alt": "Original spirogram with volume scale and time calibration."
+      },
+      "id": "respiratory-19-q001",
+      "canonicalQuestionId": "respiratory-19-q001",
+      "graded": false,
+      "sectionId": "respiratory/resp-phys-lung-volumes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "respiratory-19-q001",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 1; source page 2.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+          "/study/reviews/respiratory.pdf#page=97"
+        ]
+      }
+    },
+    {
+      "number": "2",
+      "sourceNumber": "2",
+      "page": 2,
+      "prompt": "A 25-year-old man, height 175 cm, has the shown spirogram; temperature coefficient = 1.1. What is his Vital Capacity (VC)?",
+      "options": [
+        "3000 ml",
+        "3300 ml",
+        "4000 ml",
+        "4400 ml"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "The displayed maximal volume change is 3000 mL; multiplying by 1.1 gives 3300 mL.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+        "public/study/reviews/respiratory.pdf#page=97"
+      ],
+      "reviewTerms": [
+        "spirometry"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-spirogram.png",
+        "alt": "Original spirogram with volume scale and time calibration."
+      },
+      "id": "respiratory-19-q002",
+      "canonicalQuestionId": "respiratory-19-q002",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-lung-volumes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q002",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 2; source page 2.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+          "/study/reviews/respiratory.pdf#page=97"
+        ]
+      }
+    },
+    {
+      "number": "3",
+      "sourceNumber": "3",
+      "page": 2,
+      "prompt": "Which internal factors play a role in determining a person’s Predicted Vital Capacity (PVC)?",
+      "options": [
+        "Gender-body temperature- weight",
+        "Height-body temperature- weight",
+        "Gender-height-age",
+        "Age- weight- height"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Age, height and sex are inputs to predicted spirometric values.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+        "public/study/reviews/respiratory.pdf#page=97"
+      ],
+      "reviewTerms": [
+        "spirometry"
+      ],
+      "id": "respiratory-19-q003",
+      "canonicalQuestionId": "respiratory-19-q003",
+      "graded": true,
+      "sectionId": "respiratory/resp-phys-lung-volumes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q003",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 3; source page 2.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+          "/study/reviews/respiratory.pdf#page=97"
+        ]
+      }
+    },
+    {
+      "number": "4",
+      "sourceNumber": "4",
+      "page": 2,
+      "prompt": "What is the normal value for ratio of FEV1/FVC?",
+      "options": [
+        "Less than 60%",
+        "More than 60%",
+        "Less than 80%",
+        "More than 80%"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "D is the conventional young-adult teaching answer. Clinical interpretation uses age-appropriate reference values and lower limits of normal rather than a universal 80% diagnostic threshold.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+        "public/study/reviews/respiratory.pdf#page=145"
+      ],
+      "reviewTerms": [
+        "spirometry"
+      ],
+      "id": "respiratory-19-q004",
+      "canonicalQuestionId": "respiratory-19-q004",
+      "graded": true,
+      "sectionId": "respiratory/comp-resp-flow",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q004",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 4; source page 2.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=2",
+          "/study/reviews/respiratory.pdf#page=145"
+        ]
+      }
+    },
+    {
+      "number": "5",
+      "sourceNumber": "5",
+      "page": 3,
+      "prompt": "What is the name of cell shown by arrow?",
+      "options": [
+        "Pneumococcus Type III",
+        "Pneumococcus Type II",
+        "Pneumococcus Type I",
+        "Clara cells"
+      ],
+      "providedKey": "A",
+      "key": null,
+      "subject": "histology",
+      "note": "Unresolved: the source highlights 'Pneumococcus Type III', a nonstandard answer for alveolar epithelial identification. 'Pneumococcus' appears to be a repeated printing error for pneumocyte; no Type III pneumocyte option can be validated from this figure. Preserve the image and supplied key without scoring.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=3",
+        "public/study/reviews/respiratory.pdf#page=68"
+      ],
+      "reviewTerms": [
+        "histology practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q05.png",
+        "alt": "Original practical question 5 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q005",
+      "canonicalQuestionId": "respiratory-19-q005",
+      "graded": false,
+      "sectionId": "respiratory/resp-hist-type-one-cells",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "respiratory-19-q005",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 5; source page 3.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=3",
+          "/study/reviews/respiratory.pdf#page=68"
+        ]
+      }
+    },
+    {
+      "number": "6",
+      "sourceNumber": "6",
+      "page": 3,
+      "prompt": "What is the name of cells shown as (B) and (C), respectively?",
+      "options": [
+        "Kolchitsky - cuboidal",
+        "Goblet- Ciliated columnar",
+        "Brush border -DNES",
+        "Stem cells - Striated"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "histology",
+      "note": "B marks mucus-filled goblet cells and C the apical cilia of columnar cells.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=3",
+        "public/study/reviews/respiratory.pdf#page=55"
+      ],
+      "reviewTerms": [
+        "histology practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q06.png",
+        "alt": "Original practical question 6 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q006",
+      "canonicalQuestionId": "respiratory-19-q006",
+      "graded": true,
+      "sectionId": "respiratory/resp-hist-respiratory-cell-types",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q006",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 6; source page 3.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=3",
+          "/study/reviews/respiratory.pdf#page=55"
+        ]
+      }
+    },
+    {
+      "number": "7",
+      "sourceNumber": "7",
+      "page": 4,
+      "prompt": "What is the name of structure shown by arrow?",
+      "options": [
+        "bronchi",
+        "trachea",
+        "Artery",
+        "bronchiole"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "histology",
+      "note": "The arrow marks a small airway with smooth muscle and no cartilage or submucosal glands, consistent with a bronchiole.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=4",
+        "public/study/reviews/respiratory.pdf#page=62"
+      ],
+      "reviewTerms": [
+        "histology practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q07.png",
+        "alt": "Original practical question 7 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q007",
+      "canonicalQuestionId": "respiratory-19-q007",
+      "graded": true,
+      "sectionId": "respiratory/resp-hist-bronchus-bronchiole",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q007",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 7; source page 4.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=4",
+          "/study/reviews/respiratory.pdf#page=62"
+        ]
+      }
+    },
+    {
+      "number": "8",
+      "sourceNumber": "8",
+      "page": 4,
+      "prompt": "What is the name of the structure shown by arrow?",
+      "options": [
+        "bronchiole",
+        "trachea",
+        "Bronchus",
+        "Alveolar duct"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "histology",
+      "note": "The figure is supplied as a bronchus; identify the wall organization as well as its airway lumen.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=4",
+        "public/study/reviews/respiratory.pdf#page=62"
+      ],
+      "reviewTerms": [
+        "histology practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q08.png",
+        "alt": "Original practical question 8 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q008",
+      "canonicalQuestionId": "respiratory-19-q008",
+      "graded": true,
+      "sectionId": "respiratory/resp-hist-bronchus-bronchiole",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q008",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 8; source page 4.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=4",
+          "/study/reviews/respiratory.pdf#page=62"
+        ]
+      }
+    },
+    {
+      "number": "9",
+      "sourceNumber": "9",
+      "page": 5,
+      "prompt": "What is the name of item pointed by arrow?",
+      "options": [
+        "Sphenoidal sinus",
+        "Sphenoethmoidal sinus",
+        "Ethmoidal sinus",
+        "Maxillary sinus"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The arrow enters the sphenoidal sinus posterior to the nasal cavity.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=5",
+        "public/study/reviews/respiratory.pdf#page=12"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q09.png",
+        "alt": "Original practical question 9 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q009",
+      "canonicalQuestionId": "respiratory-19-q009",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-maxillary-sphenoidal",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q009",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 9; source page 5.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=5",
+          "/study/reviews/respiratory.pdf#page=12"
+        ]
+      }
+    },
+    {
+      "number": "10",
+      "sourceNumber": "10",
+      "page": 5,
+      "prompt": "Which structure is pointed by arrow?",
+      "options": [
+        "Septal cartilage",
+        "Lateral nasal cartilage",
+        "Alar cartilage",
+        "Nasal bone"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "The paired arrows mark the alar cartilages around the anterior nares.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=5",
+        "public/study/reviews/respiratory.pdf#page=163"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q10.png",
+        "alt": "Original practical question 10 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q010",
+      "canonicalQuestionId": "respiratory-19-q010",
+      "graded": true,
+      "sectionId": "respiratory/resp-visual-atlas-resp-2d-nasal-skeleton",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q010",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 10; source page 5.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=5",
+          "/study/reviews/respiratory.pdf#page=163"
+        ]
+      }
+    },
+    {
+      "number": "11",
+      "sourceNumber": "11",
+      "page": 5,
+      "prompt": "What is the name of the item pointed by arrow?",
+      "options": [
+        "Pharyngotympanic tube",
+        "Pharyngeal tonsil",
+        "Palatine tonsil",
+        "Uvula"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The arrow marks the pharyngotympanic tube opening in the lateral nasopharynx.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=5",
+        "public/study/reviews/respiratory.pdf#page=17"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q11.png",
+        "alt": "Original practical question 11 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q011",
+      "canonicalQuestionId": "respiratory-19-q011",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-pharyngeal-regions",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q011",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 11; source page 5.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=5",
+          "/study/reviews/respiratory.pdf#page=17"
+        ]
+      }
+    },
+    {
+      "number": "12",
+      "sourceNumber": "12",
+      "page": 6,
+      "prompt": "What is the name of area pointed by arrow?",
+      "options": [
+        "Frontal sinus",
+        "Middle nasal concha",
+        "Sphenoethmoidal recess",
+        "Bulla ethmoidalis"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The prominence shown on the lateral nasal wall is the ethmoidal bulla.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=6",
+        "public/study/reviews/respiratory.pdf#page=8"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q12.png",
+        "alt": "Original practical question 12 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q012",
+      "canonicalQuestionId": "respiratory-19-q012",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-nasal-drainage",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q012",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 12; source page 6.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=6",
+          "/study/reviews/respiratory.pdf#page=8"
+        ]
+      }
+    },
+    {
+      "number": "13",
+      "sourceNumber": "13",
+      "page": 6,
+      "prompt": "Which structure is pointed by arrow?",
+      "options": [
+        "Otic ganglion",
+        "Pterygopalatine ganglion",
+        "Olfactory bulb",
+        "Olfactory nerve"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The arrow identifies the pterygopalatine ganglion.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=6",
+        "public/study/reviews/respiratory.pdf#page=15"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q13.png",
+        "alt": "Original practical question 13 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q013",
+      "canonicalQuestionId": "respiratory-19-q013",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-nasal-nerves-lymph",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q013",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 13; source page 6.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=6",
+          "/study/reviews/respiratory.pdf#page=15"
+        ]
+      }
+    },
+    {
+      "number": "14",
+      "sourceNumber": "14",
+      "page": 6,
+      "prompt": "What is the name of the area pointed by arrow?",
+      "options": [
+        "Choana",
+        "Piriform recess",
+        "Tonsilar fossa",
+        "Laryngeal inlet"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The arrow marks the piriform recess lateral to the laryngeal inlet.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=6",
+        "public/study/reviews/respiratory.pdf#page=27"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q14.png",
+        "alt": "Original practical question 14 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q014",
+      "canonicalQuestionId": "respiratory-19-q014",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-pharyngeal-regions",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q014",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 14; source page 6.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=6",
+          "/study/reviews/respiratory.pdf#page=27"
+        ]
+      }
+    },
+    {
+      "number": "15",
+      "sourceNumber": "15",
+      "page": 7,
+      "prompt": "Which structure is pointed by arrow?",
+      "options": [
+        "Epiglottis",
+        "Arytenoid cartilage",
+        "Thyroid cartilage",
+        "Cricoid cartilage"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The anterior ring below the thyroid cartilage is the cricoid cartilage.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=7",
+        "public/study/reviews/respiratory.pdf#page=22"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q15.png",
+        "alt": "Original practical question 15 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q015",
+      "canonicalQuestionId": "respiratory-19-q015",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-skeleton",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q015",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 15; source page 7.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=7",
+          "/study/reviews/respiratory.pdf#page=22"
+        ]
+      }
+    },
+    {
+      "number": "16",
+      "sourceNumber": "16",
+      "page": 7,
+      "prompt": "What is the name of muscle pointed by arrow?",
+      "options": [
+        "Posterior cricoarytenoid muscle",
+        "Lateral cricoarytenois muscle",
+        "Transverse arytenoid muscle",
+        "Oblique arytenoid muscle"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The posterior cricoarytenoid is on the posterior lamina of the cricoid.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=7",
+        "public/study/reviews/respiratory.pdf#page=29"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q16.png",
+        "alt": "Original practical question 16 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q016",
+      "canonicalQuestionId": "respiratory-19-q016",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-abduction-adduction",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q016",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 16; source page 7.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=7",
+          "/study/reviews/respiratory.pdf#page=29"
+        ]
+      }
+    },
+    {
+      "number": "17",
+      "sourceNumber": "17",
+      "page": 7,
+      "prompt": "Which structure is pointed by arrow?",
+      "options": [
+        "Recurrent laryngeal nerve",
+        "Internal laryngeal nerve",
+        "External laryngeal nerve",
+        "Vagus nerve"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The arrows follow the recurrent laryngeal nerve ascending toward the larynx.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=7",
+        "public/study/reviews/respiratory.pdf#page=33"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q17.png",
+        "alt": "Original practical question 17 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q017",
+      "canonicalQuestionId": "respiratory-19-q017",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-nerves",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q017",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 17; source page 7.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=7",
+          "/study/reviews/respiratory.pdf#page=33"
+        ]
+      }
+    },
+    {
+      "number": "18",
+      "sourceNumber": "18",
+      "page": 8,
+      "prompt": "Which structure is pointed by arrow?",
+      "options": [
+        "Laryngeal inlet",
+        "Rima glottides",
+        "Infraglottis",
+        "Vestibule of larynx"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The arrow points to the vestibule of the larynx above the vestibular fold.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=8",
+        "public/study/reviews/respiratory.pdf#page=27"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q18.png",
+        "alt": "Original practical question 18 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q018",
+      "canonicalQuestionId": "respiratory-19-q018",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-cavity",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q018",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 18; source page 8.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=8",
+          "/study/reviews/respiratory.pdf#page=27"
+        ]
+      }
+    },
+    {
+      "number": "19",
+      "sourceNumber": "19",
+      "page": 8,
+      "prompt": "Which structure is pointed by arrow?",
+      "options": [
+        "Cricothyroid membrane",
+        "Thyrohyoid membrane",
+        "Quadrangular membrane",
+        "Conus elasticus"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The arrow marks the membrane between hyoid and thyroid cartilage.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=8",
+        "public/study/reviews/respiratory.pdf#page=25"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q19.png",
+        "alt": "Original practical question 19 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q019",
+      "canonicalQuestionId": "respiratory-19-q019",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-membranes",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q019",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 19; source page 8.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=8",
+          "/study/reviews/respiratory.pdf#page=25"
+        ]
+      }
+    },
+    {
+      "number": "20",
+      "sourceNumber": "20",
+      "page": 8,
+      "prompt": "Which structure is pointed by arrow?",
+      "options": [
+        "Conus elasticus",
+        "Thyrohyoid membrane",
+        "Hyoepiglottic ligament",
+        "Lateral cricothyroid ligament"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "The arrow marks the ligament connecting hyoid to epiglottis.",
+      "evidence": [
+        "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=8",
+        "public/study/reviews/respiratory.pdf#page=25"
+      ],
+      "reviewTerms": [
+        "anatomy practical"
+      ],
+      "media": {
+        "path": "respiratory/past-papers/figures/respiratory-19-q20.png",
+        "alt": "Original practical question 20 figure with its source arrow or letters."
+      },
+      "id": "respiratory-19-q020",
+      "canonicalQuestionId": "respiratory-19-q020",
+      "graded": true,
+      "sectionId": "respiratory/resp-anat-laryngeal-skeleton",
+      "uncertain": false,
+      "answerReview": {
+        "basis": "source-reviewed",
+        "confidence": "high",
+        "canonicalSourceId": "respiratory-19-q020",
+        "auditedAt": "2026-09-27",
+        "evidence": [
+          "Undated respiratory practical answer-key paper; printed question 20; source page 8.",
+          "Past Exams/02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf#page=8",
+          "/study/reviews/respiratory.pdf#page=25"
+        ]
+      }
+    }
+  ],
+  "excludedItems": [
+    {
+      "page": 1,
+      "reason": "Shared introductory spirogram used as media in Q1 and Q2; no independent question on this page."
+    }
+  ],
+  "audit": {
+    "status": "reviewed-with-explicit-limitations",
+    "notes": [
+      "All eight source pages accounted for. Shared graph on page 1 supports Q1-2 on page 2.",
+      "Q1 is internally inconsistent and Q5 has an invalid supplied cell name; both remain unscored.",
+      "Original question image regions preserve arrows but exclude yellow-highlighted choices."
+    ]
+  },
+  "archive": {
+    "id": "respiratory-19",
+    "title": "Respiratory practical answer key — posted 4 September 2025",
+    "note": "Posting date only; includes spirometry and practical questions. Original key preserved without independently grading its answers.",
+    "folder": "02_Practicals/Undated_key_posted-2025-09-04",
+    "sources": [
+      {
+        "title": "respiratory_Undated_key_posted-2025-09-04.pdf",
+        "url": "/study/respiratory/past-papers/respiratory-19/01.pdf",
+        "sha256": "4f2123439dc57fa57f421c97dd515db8b1ad7fca6fba0d55c63b0e2b130a96d9",
+        "bytes": 1285201,
+        "archivePath": "02_Practicals/Undated_key_posted-2025-09-04/respiratory_Undated_key_posted-2025-09-04.pdf",
+        "archiveSha256": "4f2123439dc57fa57f421c97dd515db8b1ad7fca6fba0d55c63b0e2b130a96d9",
+        "webOptimized": false,
+        "pageCount": 8
+      }
+    ]
+  }
+}

@@ -18,9 +18,12 @@ import {FinalExamStatusBanner} from './FinalExamStatusBanner';
 import {WrongAnswerReview} from './WrongAnswerReview';
 import {mcqReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
 import type { MCQQuestion } from "@/src/lib/mcq/types";
+import {GuidedExamLayout} from './GuidedExamLayout';
+import {ExamModeChooser} from './ExamModeChooser';
+import {guidanceMode,supportsGuidedExam,type GuidanceMode} from '@/src/lib/mcq/guided-exam.mjs';
 
-type ExamId = "july25" | "july29" | "term2-nutrition" | "term2-religion" | "term2-biochemistry";
-type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers";
+type ExamId = "july25" | "july29" | "term2-nutrition" | "term2-religion" | "term2-biochemistry" | "term2-respiratory";
+type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers";
 type FinalBaseSessionKey = `${ExamId}:${FinalExamBankId}`;
 type FinalSessionKey = string;
 type FinalAnswer = {
@@ -38,10 +41,12 @@ type FinalSession = {
   startedAt: string;
   updatedAt: string;
   completedAt: string | null;
+  guidance?: GuidanceMode;
 };
 type FinalProgress = { version: 2; sessions: Record<FinalSessionKey, FinalSession | null> };
 
 const examLabels: Record<ExamId, { date: string; title: string }> = {
+  "term2-respiratory": {date:"Respiratory · past finals",title:"Respiratory · sourced past papers"},
   july25: { date: "July 25", title: "Tissue Development & Function" },
   july29: { date: "Aug 25", title: "Cell & Molecules" },
   "term2-nutrition": { date: "Nutrition · date TBA", title: "Nutrition · downloaded past papers" },
@@ -54,8 +59,8 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
   return `${bridgeUrl}/api/media?${query}`;
 }
 
-export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: ExamCollection; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';onProgressSaved?:()=>void;onExit?:()=>void }) {
-  const [bank, setBank] = useState<FinalExamBankId>(exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
+export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',initialGuidance,onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: ExamCollection; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';initialGuidance?:GuidanceMode;onProgressSaved?:()=>void;onExit?:()=>void }) {
+  const [bank, setBank] = useState<FinalExamBankId>(exam === 'term2-respiratory' ? 'respiratory-past-papers' : exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
   const [bankLabel, setBankLabel] = useState(exam === "term2-biochemistry" ? "Biochemistry II · Metabolism Past Papers" : exam === "term2-religion" ? "Religion · Downloaded Past Papers" : exam === "term2-nutrition" ? "Nutrition · Downloaded Past Papers" : "Telegram Past Papers");
@@ -67,6 +72,8 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [active, setActive] = useState(false);
+  const [chooseGuidance,setChooseGuidance]=useState(false);
+  const [restartPending,setRestartPending]=useState(false);
   useEffect(()=>{onSessionActiveChange?.(active);return()=>onSessionActiveChange?.(false);},[active,onSessionActiveChange]);
 
   const byId = useMemo(() => new Map(questions.map((question) => [question.id, question])), [questions]);
@@ -100,15 +107,20 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
           stored = parseFinalExamProgress(window.localStorage.getItem(FINAL_EXAM_STORAGE_KEY)) as FinalProgress;
         } catch { /* Continue with an empty final-exam record. */ }
         const migrationSeed = finalSessionSeed(stored.sessions,sessionKey,baseSessionKey,collection,initialIntent,metabolismFilterActive);
-        const nextSession = migrationSeed||initialIntent!=='review' ? reconcileFinalExamSession(migrationSeed, loaded, nextFingerprint) as FinalSession : null;
+        const needsChoice=supportsGuidedExam(exam)&&initialIntent!=='review'&&!initialGuidance&&!migrationSeed?.guidance;
+        const nextSession = !needsChoice&&(migrationSeed||initialIntent!=='review') ? reconcileFinalExamSession(migrationSeed, loaded, nextFingerprint) as FinalSession : null;
+        if(nextSession&&initialGuidance)nextSession.guidance=guidanceMode(exam,initialGuidance);
         setQuestions(loaded);
         setFilteredOutCount(allLoaded.length - loaded.length);
         setFingerprint(nextFingerprint);
         setBankLabel(collection?.title ?? payload.label ?? "Sourced past papers");
         setBankDescription(payload.description ?? "A source-traceable final-exam bank.");
-        setProgress({ ...stored, sessions: { ...stored.sessions, [sessionKey]: nextSession } });
+        setProgress(needsChoice?stored:{ ...stored, sessions: { ...stored.sessions, [sessionKey]: nextSession } });
         setReady(true);
-        if(initialIntent!=='review'&&loaded.length)setActive(true);
+        if(initialIntent!=='review'&&loaded.length){
+          if(needsChoice){setRestartPending(initialIntent==='new');setChooseGuidance(true);}
+          else setActive(true);
+        }
       })
       .catch((cause) => {
         if (!cancelled) setError(cause instanceof Error ? cause.message : "Could not load the final-exam bank.");
@@ -117,7 +129,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
         if (!cancelled) setLoading(false);
       });
     return () => { cancelled = true; };
-  }, [bank, baseSessionKey, bridgeUrl, exam, metabolismFilterActive, sessionKey, collection,initialIntent]);
+  }, [bank, baseSessionKey, bridgeUrl, exam, metabolismFilterActive, sessionKey, collection,initialIntent,initialGuidance]);
 
   useEffect(() => {
     if (!ready) return;
@@ -138,6 +150,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
 
   function startOrResume() {
     if (!questions.length) return;
+    if(supportsGuidedExam(exam)&&!session?.guidance){setChooseGuidance(true);return;}
     if (!session) {
       const next = reconcileFinalExamSession(null, questions, fingerprint) as FinalSession;
       setProgress((current) => ({ ...current, sessions: { ...current.sessions, [sessionKey]: next } }));
@@ -151,9 +164,17 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
 
   function resetProgress() {
     if (!window.confirm(`Delete all saved ${bankLabel} answers for ${examLabels[exam].date} and restart from question 1?`)) return;
+    if(supportsGuidedExam(exam)){setRestartPending(true);setChooseGuidance(true);return;}
     const next = reconcileFinalExamSession(null, questions, fingerprint) as FinalSession;
     setProgress((current) => ({ ...current, sessions: { ...current.sessions, [sessionKey]: next } }));
     setActive(true);
+  }
+
+  function startWithGuidance(mode:GuidanceMode) {
+    setProgress(current=>({...current,sessions:{...current.sessions,[sessionKey]:{
+      ...((restartPending?null:current.sessions[sessionKey])??reconcileFinalExamSession(null,questions,fingerprint)),guidance:guidanceMode(exam,mode)
+    } as FinalSession}}));
+    setRestartPending(false);setChooseGuidance(false);setActive(true);
   }
 
   function moveTo(index: number) {
@@ -216,7 +237,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
     const correct = question.options.find((option) => option.id === question.correctOptionId);
     const inferred = question.answerReview?.basis === 'ai-inferred';
     const provisional = question.qualityFlags.includes('provisional-answer');
-    return <main className="final-exam-shell">
+    return <main className={`final-exam-shell ${guidanceMode(exam,session.guidance)==='guided'?'is-guided':''}`}>
       <header className="final-exam-header">
         <div className="session-mark"><b>MED//25</b><span>{examLabels[exam].date} · {completed ? 'Answer review' : 'Final exam'}</span></div>
         <div className="final-live-progress">
@@ -226,6 +247,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
         </div>
         <button onClick={() => {setActive(false);onExit?.();}}>Save & exit</button>
       </header>
+      <GuidedExamLayout exam={exam} mode={guidanceMode(exam,session.guidance)} questionId={question.id} answered={Boolean(answer)}>
       <section className="final-exam-body">
         <div className="final-question-scroll">
           <article className="final-question-card">
@@ -264,10 +286,12 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
                 : <button className="next-unanswered" onClick={nextUnanswered}>Next unanswered</button>}
         </footer>
       </section>
+      </GuidedExamLayout>
     </main>;
   }
 
   return <section className="final-exam-home">
+    {chooseGuidance&&<ExamModeChooser onChoose={startWithGuidance} onCancel={()=>{setRestartPending(false);setChooseGuidance(false);onExit?.();}}/>}
     <div className="final-exam-copy">
       {!collection && <><span className="eyebrow">{bankLabel} · {examLabels[exam].date}</span><h1>Final exam mode.</h1></>}
       <p>{completed ? 'This paper is complete. Your saved score and review topics are below; you can revisit the locked answers without changing your result.' : <>{collection ? "" : bankDescription + " "}Each answer locks immediately, shows the explanation, and stays saved on this device so you can leave and resume at the same question.</>}</p>

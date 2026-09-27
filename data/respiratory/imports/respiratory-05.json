@@ -1,0 +1,802 @@
+{
+  "id": "respiratory-05",
+  "title": "Respiratory final exam — July 4, 2022",
+  "note": "Manually transcribed against every page of the 12-page supplied study PDF. Green answer-cell highlights are recorded as supplied marks, not certified official answers. Questions are sorted by printed number; page values retain actual study-PDF order, which is not fully numerical. Spelling, capitalization and units are lightly normalized without changing option order.",
+  "defaultEligible": true,
+  "kind": "supplied-source-paper",
+  "questions": [
+    {
+      "number": "1",
+      "sourceNumber": "1",
+      "page": 2,
+      "prompt": "Which muscle contraction makes the pleural pressure more positive?",
+      "options": [
+        "Internal intercostal",
+        "Sternocleidomastoid",
+        "Scaleni",
+        "Diaphragm"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Contraction of the expiratory internal intercostals raises pleural pressure. The inspiratory muscles expand the thorax.",
+      "reviewTerms": [
+        "breathing muscles",
+        "expiration"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=93"
+      ]
+    },
+    {
+      "number": "2",
+      "sourceNumber": "2",
+      "page": 2,
+      "prompt": "According to V/Q mismatch, what is the difference between the oxygen pressure of the lower, middle and upper alveoli in a healthy upright subject?",
+      "options": [
+        "Oxygen pressure in the lower alveoli is higher than the middle and upper",
+        "Oxygen pressure in the upper alveoli is higher than the middle and lower",
+        "Oxygen pressure in the middle alveoli is higher than the lower and upper",
+        "Oxygen pressure is the same in all alveoli"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "The apex has the highest V/Q ratio because perfusion falls more steeply than ventilation; alveolar PO2 is consequently higher there.",
+      "reviewTerms": [
+        "regional matching",
+        "ventilation perfusion"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=115"
+      ]
+    },
+    {
+      "number": "3",
+      "sourceNumber": "3",
+      "page": 2,
+      "prompt": "What is the effect of pleural pressure changes on alveolar pressure during inspiration?",
+      "options": [
+        "The more negative the pleural pressure, the more positive the alveolar pressure",
+        "The more positive the pleural pressure, the more positive the alveolar pressure",
+        "The more positive the pleural pressure, the more negative the alveolar pressure",
+        "The more negative the pleural pressure, the more negative the alveolar pressure"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "During inspiratory airflow, falling pleural pressure expands the lungs and lowers alveolar pressure below atmospheric pressure. This describes the inspiratory phase, not a universal proportional relation; alveolar pressure returns to atmospheric at end inspiration.",
+      "reviewTerms": [
+        "alveolar pressure",
+        "pleural pressure"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=93"
+      ]
+    },
+    {
+      "number": "4",
+      "sourceNumber": "4",
+      "page": 5,
+      "prompt": "If in a premature infant the size of the alveoli is one-third of normal and surface tension is tripled due to low surfactant production, how does the collapse pressure change compared with a normal infant?",
+      "options": [
+        "It triples",
+        "It increases six times",
+        "It increases nine times",
+        "It does not change"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "By the spherical Laplace approximation P=2T/r, tripling tension and reducing radius to one-third multiplies collapse pressure by nine.",
+      "reviewTerms": [
+        "surfactant",
+        "surface tension",
+        "Laplace"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=96"
+      ]
+    },
+    {
+      "number": "5",
+      "sourceNumber": "5",
+      "page": 5,
+      "prompt": "If lung compliance and thoracic compliance are equal, each 300 mL/cmH2O, what is total pulmonary-system compliance in mL/cmH2O?",
+      "options": [
+        "150",
+        "300",
+        "450",
+        "600"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Reciprocal compliances add: 1/Ctotal=1/300+1/300, so Ctotal=150 mL/cmH2O.",
+      "reviewTerms": [
+        "compliance",
+        "lung-chest interaction"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=95"
+      ]
+    },
+    {
+      "number": "6",
+      "sourceNumber": "6",
+      "page": 4,
+      "prompt": "What part of the lung in an upright subject has zone 2 blood flow during exercise?",
+      "options": [
+        "Top of the lung",
+        "Middle of the lung",
+        "Bottom of the lung",
+        "Zone 2 does not exist"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "In the simplified exercise model used by the paper, increased pulmonary vascular pressure converts apical zone 2 to continuous zone 3 flow. The answer is model-dependent; actual zones depend on vascular and alveolar pressures.",
+      "reviewTerms": [
+        "flow zones",
+        "exercise"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=108"
+      ]
+    },
+    {
+      "number": "7",
+      "sourceNumber": "7",
+      "page": 4,
+      "prompt": "The diffusion coefficient of a gas in a liquid depends on which factor?",
+      "options": [
+        "Pressure difference between the two ends of the diffusion path",
+        "Diffusion distance",
+        "Gas solubility",
+        "Cross-sectional area"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "The diffusion coefficient is proportional to gas solubility and inversely proportional to the square root of molecular weight. The other options affect diffusion rate through geometry or the pressure gradient.",
+      "reviewTerms": [
+        "solubility",
+        "gas diffusion"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=111"
+      ]
+    },
+    {
+      "number": "8",
+      "sourceNumber": "8",
+      "page": 4,
+      "prompt": "If the thickness of the respiratory membrane doubles due to pulmonary fibrosis, what will the CO2 diffusing capacity be, approximately?",
+      "options": [
+        "50 mL/min/mmHg",
+        "100 mL/min/mmHg",
+        "200 mL/min/mmHg",
+        "300 mL/min/mmHg"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "Doubling thickness halves diffusing capacity. The supplied answer assumes the conventional resting CO2 diffusing capacity of about 400-450 mL/min/mmHg, giving about 200-225; 200 is the nearest offered value. This unstated reference assumption is essential.",
+      "reviewTerms": [
+        "diffusing capacity",
+        "fibrosis"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=113"
+      ]
+    },
+    {
+      "number": "9",
+      "sourceNumber": "9",
+      "page": 3,
+      "prompt": "Which statement is NOT correct about anatomical shunt?",
+      "options": [
+        "Oxygen pressure decreases from 104 to 95 mmHg",
+        "Arterial blood CO2 pressure increases from 40 to 45 mmHg",
+        "Pulmonary vein and bronchial vein blood are mixed",
+        "It forms part of the physiological shunt"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Normal venous admixture reduces systemic arterial PO2 below ideal end-capillary PO2. It does not raise normal arterial PCO2 to the mixed-venous value of 45 mmHg.",
+      "reviewTerms": [
+        "venous admixture",
+        "anatomical shunt"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=118"
+      ]
+    },
+    {
+      "number": "10",
+      "sourceNumber": "10",
+      "page": 3,
+      "prompt": "Inhibition of beta receptors in the airways leads to an increase in which of the following?",
+      "options": [
+        "Anatomical dead space",
+        "Surface tension",
+        "Pleural pressure",
+        "Airway resistance"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "physiology",
+      "note": "Beta2 activation relaxes airway smooth muscle; inhibiting this effect favors bronchoconstriction and increased airway resistance.",
+      "reviewTerms": [
+        "bronchiolar tone",
+        "airway resistance"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=101"
+      ]
+    },
+    {
+      "number": "11",
+      "sourceNumber": "11",
+      "page": 3,
+      "prompt": "What is the role of the Haldane effect in the respiratory system?",
+      "options": [
+        "It increases the release of O2 from hemoglobin",
+        "It increases the excretion of CO2 from the lungs",
+        "It reduces the tendency of Fe2+ in hemoglobin to bind oxygen",
+        "It reduces the diffusion of CO2 from peripheral tissue into the capillaries"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Oxygenation of hemoglobin decreases CO2 carriage and releases buffered H+, assisting CO2 unloading in the lungs.",
+      "reviewTerms": [
+        "Haldane effect",
+        "carbon dioxide carriage"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=126"
+      ]
+    },
+    {
+      "number": "12",
+      "sourceNumber": "12",
+      "page": 6,
+      "prompt": "Which respiratory center provides strong signals for contraction of rectus abdominis to increase pulmonary ventilation during deep expiration?",
+      "options": [
+        "VRG",
+        "DRG",
+        "Pneumotaxic center",
+        "Chemosensitive area in the medulla"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Ventral respiratory neurons recruit abdominal and other expiratory muscles during forceful ventilation.",
+      "reviewTerms": [
+        "active expiration",
+        "ventral respiratory group"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=128"
+      ]
+    },
+    {
+      "number": "13",
+      "sourceNumber": "13",
+      "page": 6,
+      "prompt": "What is the initial pressure difference for O2 diffusion from alveoli into pulmonary capillaries?",
+      "options": [
+        "64 mmHg",
+        "21 mmHg",
+        "11 mmHg",
+        "5 mmHg"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "physiology",
+      "note": "Using the paper's sea-level reference values, alveolar PO2 is 104 and entering mixed-venous PO2 is 40 mmHg: the initial gradient is 64 mmHg.",
+      "reviewTerms": [
+        "lung-to-tissue gas gradients"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=118"
+      ]
+    },
+    {
+      "number": "14",
+      "sourceNumber": "14",
+      "page": 6,
+      "prompt": "What is the effect of using acetazolamide, an inhibitor of carbonic anhydrase, on respiratory gases?",
+      "options": [
+        "A decrease in arterial blood O2 pressure",
+        "An increase in O2 pressure in interstitial fluid",
+        "A decrease in arterial blood CO2 pressure",
+        "An increase in CO2 pressure in interstitial fluid"
+      ],
+      "providedKey": "D",
+      "key": null,
+      "subject": "physiology",
+      "note": "Unresolved single-best answer: the scan marks D, consistent with tissue CO2 retention during substantial acute carbonic-anhydrase inhibition. Oral acetazolamide can also lower arterial PCO2 through metabolic acidosis and increased ventilation (C). Dose, timing and experimental context are omitted, so the supplied mark is preserved but not graded.",
+      "reviewTerms": [
+        "carbonic anhydrase",
+        "carbon dioxide carriage"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=125",
+        "https://pubmed.ncbi.nlm.nih.gov/6032197/",
+        "https://pubmed.ncbi.nlm.nih.gov/31595565/"
+      ]
+    },
+    {
+      "number": "15",
+      "sourceNumber": "15",
+      "page": 7,
+      "prompt": "What is the role of the pneumotaxic center in regulation of respiration?",
+      "options": [
+        "Stimulation of DRG",
+        "Stimulation of VRG",
+        "Inhibition of DRG",
+        "Inhibition of VRG"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "physiology",
+      "note": "In the paper's simplified center model, pontine input terminates the dorsal inspiratory ramp. C is the intended shorthand for inspiratory switch-off; the modern network is more distributed.",
+      "reviewTerms": [
+        "inspiratory ramp",
+        "pneumotaxic center"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=128"
+      ]
+    },
+    {
+      "number": "16",
+      "sourceNumber": "16",
+      "page": 7,
+      "prompt": "Which factor does NOT stimulate the chemosensitive area in the medulla?",
+      "options": [
+        "Increased H+ concentration in the cerebrospinal fluid",
+        "Decreased O2 concentration in blood",
+        "Increased CO2 concentration in interstitial fluid of the medulla",
+        "Increased CO2 concentration in blood"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "physiology",
+      "note": "Low arterial PO2 mainly stimulates peripheral chemoreceptors. CO2 crosses into brain fluids and generates H+, stimulating central chemosensitive neurons.",
+      "reviewTerms": [
+        "central CO2 H sensing"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=129"
+      ]
+    },
+    {
+      "number": "17",
+      "sourceNumber": "17",
+      "page": 7,
+      "prompt": "In histology, in which part of the nasal cavity are goblet cells observed?",
+      "options": [
+        "Vestibule",
+        "Choanae",
+        "Palate",
+        "Respiratory region"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "histology",
+      "note": "Goblet cells are a standard population in nasal respiratory epithelium. Source spelling is normalized; option order is preserved.",
+      "reviewTerms": [
+        "respiratory epithelium",
+        "goblet cells"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=55"
+      ]
+    },
+    {
+      "number": "18",
+      "sourceNumber": "18",
+      "page": 7,
+      "prompt": "In which part of the air ducts is true elastic fiber observed?",
+      "options": [
+        "Pharynx tissue",
+        "Bronchus",
+        "Trachea",
+        "Larynx"
+      ],
+      "providedKey": "D",
+      "key": null,
+      "subject": "histology",
+      "note": "The supplied mark is D, probably referring to elastic fibers of the true vocal ligament. As written, the stem only asks about elastic fibers, which also occur in tracheal and bronchial walls; it does not uniquely identify the larynx.",
+      "reviewTerms": [
+        "true and vestibular folds",
+        "elastic fibers"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=59"
+      ]
+    },
+    {
+      "number": "19",
+      "sourceNumber": "19",
+      "page": 8,
+      "prompt": "What is the name of the macrophage in lung tissue?",
+      "options": [
+        "Dust cell",
+        "Goblet cell",
+        "Columnar cell",
+        "Clara cell"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "histology",
+      "note": "Alveolar macrophages are also called dust cells. Clara cells are now called club cells and are secretory epithelial cells.",
+      "reviewTerms": [
+        "dust cells",
+        "airway clearance"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=70"
+      ]
+    },
+    {
+      "number": "20",
+      "sourceNumber": "20",
+      "page": 8,
+      "prompt": "In which part of the lung are Clara cells observed?",
+      "options": [
+        "Trachea",
+        "Bronchus",
+        "Alveolar ducts",
+        "Bronchiole"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "histology",
+      "note": "Clara, now club, cells characterize bronchiolar epithelium.",
+      "reviewTerms": [
+        "club cells",
+        "bronchiolar secretion"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=63"
+      ]
+    },
+    {
+      "number": "21",
+      "sourceNumber": "21",
+      "page": 8,
+      "prompt": "Which alveolar cell has a circular nucleus and granules in its cytoplasm?",
+      "options": [
+        "Pneumocyte II",
+        "Pneumocyte I",
+        "Pneumocyte IV",
+        "Pneumocyte III"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "histology",
+      "note": "Type II pneumocytes are cuboidal with rounded nuclei and surfactant-containing lamellar bodies. The source's 'nuclease' is normalized to nucleus.",
+      "reviewTerms": [
+        "type II pneumocytes",
+        "lamellar bodies"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=69"
+      ]
+    },
+    {
+      "number": "22",
+      "sourceNumber": "22",
+      "page": 9,
+      "prompt": "The nasal septum consists of all of the following except:",
+      "options": [
+        "Septal nasal cartilage",
+        "Vomer bone",
+        "Perpendicular plate of the ethmoid bone",
+        "Lacrimal bone"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The lacrimal bone contributes to the lateral nasal wall; septal cartilage, vomer and the ethmoid perpendicular plate contribute to the septum.",
+      "reviewTerms": [
+        "nasal walls",
+        "septum"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=6"
+      ]
+    },
+    {
+      "number": "23",
+      "sourceNumber": "23",
+      "page": 9,
+      "prompt": "All of the following statements about the maxillary sinus are correct except:",
+      "options": [
+        "The roof of the sinus forms the floor of the orbit",
+        "The maxillary sinus opens into the middle meatus",
+        "It is the largest paranasal sinus",
+        "The floor of the maxillary sinus is related to the sphenopalatine foramen"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The sinus floor relates to the alveolar process and upper teeth. The sphenopalatine foramen is a posterior nasal gateway, not a floor relation.",
+      "reviewTerms": [
+        "maxillary sinus",
+        "paranasal sinuses"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=12"
+      ]
+    },
+    {
+      "number": "24",
+      "sourceNumber": "24",
+      "page": 9,
+      "prompt": "The posterior inferior nasal nerve is a branch of which nerve?",
+      "options": [
+        "Nasopalatine nerve",
+        "Greater palatine nerve",
+        "Anterior ethmoidal nerve",
+        "Posterior ethmoidal nerve"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "Posterior inferior lateral nasal branches arise through the greater palatine nerve pathway.",
+      "reviewTerms": [
+        "nasal sensation",
+        "greater palatine"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=15"
+      ]
+    },
+    {
+      "number": "25",
+      "sourceNumber": "25",
+      "page": 10,
+      "prompt": "All of the following cartilages have articular facets except:",
+      "options": [
+        "Thyroid",
+        "Cricoid",
+        "Epiglottis",
+        "Arytenoid"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "The epiglottis does not participate in the synovial cricothyroid or cricoarytenoid joints. The clear answer-cell highlight is C; a separate horizontal pen stroke near B is not treated as a second key.",
+      "reviewTerms": [
+        "laryngeal cartilages",
+        "articular facets"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=22"
+      ]
+    },
+    {
+      "number": "26",
+      "sourceNumber": "26",
+      "page": 10,
+      "prompt": "All of the following statements about the larynx are correct except:",
+      "options": [
+        "The middle cavity of the larynx is limited above by vestibular folds",
+        "The middle cavity of the larynx expands laterally into a ventricle",
+        "The laryngeal saccule opens into the vestibule",
+        "Mucous glands in the saccules lubricate the vocal folds"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "The saccule extends upward from the laryngeal ventricle, rather than opening directly into the vestibule.",
+      "reviewTerms": [
+        "laryngeal cavity",
+        "saccules"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=27"
+      ]
+    },
+    {
+      "number": "27",
+      "sourceNumber": "27",
+      "page": 10,
+      "prompt": "All of the following attach to the arytenoid cartilage except:",
+      "options": [
+        "Hyoid bone",
+        "Vocal ligaments",
+        "Quadrangular membrane",
+        "Vestibular ligaments"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The arytenoid provides attachment for vocal and vestibular structures and the quadrangular membrane; it has no direct hyoid attachment.",
+      "reviewTerms": [
+        "intrinsic membranes",
+        "arytenoid"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=25"
+      ]
+    },
+    {
+      "number": "28",
+      "sourceNumber": "28",
+      "page": 11,
+      "prompt": "All of the following arteries supply the nasal cavity except:",
+      "options": [
+        "Superior labial",
+        "Greater palatine",
+        "Internal carotid",
+        "Superior thyroid"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "Internal-carotid supply reaches the nose through ophthalmic and ethmoidal branches. Superior labial and greater palatine branches contribute; the superior thyroid artery does not normally supply the nasal cavity.",
+      "reviewTerms": [
+        "nasal blood supply"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=14"
+      ]
+    },
+    {
+      "number": "29",
+      "sourceNumber": "29",
+      "page": 11,
+      "prompt": "All of the following nerves innervate the nasal cavity except:",
+      "options": [
+        "Olfactory",
+        "Ophthalmic",
+        "Recurrent laryngeal",
+        "Maxillary"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "anatomy",
+      "note": "Olfaction uses CN I and general sensation uses V1/V2. The recurrent laryngeal nerve supplies the larynx, not the nasal cavity.",
+      "reviewTerms": [
+        "nasal nerves"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=15"
+      ]
+    },
+    {
+      "number": "30",
+      "sourceNumber": "30",
+      "page": 11,
+      "prompt": "What forms the anterior margin of the laryngeal inlet?",
+      "options": [
+        "Epiglottis",
+        "Aryepiglottic folds",
+        "Vestibular ligament",
+        "Interarytenoid notch"
+      ],
+      "providedKey": "A",
+      "key": "A",
+      "subject": "anatomy",
+      "note": "The epiglottis forms the anterior inlet margin; aryepiglottic folds form its lateral boundaries.",
+      "reviewTerms": [
+        "laryngeal inlet"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=27"
+      ]
+    },
+    {
+      "number": "31",
+      "sourceNumber": "31",
+      "page": 11,
+      "prompt": "The left lung is related to all of the following structures except:",
+      "options": [
+        "Spleen",
+        "Arch of the azygos vein",
+        "Esophagus",
+        "Thoracic aorta"
+      ],
+      "providedKey": "B",
+      "key": "B",
+      "subject": "anatomy",
+      "note": "The azygos arch passes over the right lung root. The spleen is an inferior relation of the left lung through the diaphragm; the esophagus and thoracic aorta are medial relations.",
+      "reviewTerms": [
+        "lung surfaces",
+        "mediastinal relations"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=39"
+      ]
+    },
+    {
+      "number": "32",
+      "sourceNumber": "32",
+      "page": 12,
+      "prompt": "In surface anatomy, at which rib is the pleural shadow in the midaxillary line?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "providedKey": "D",
+      "key": "D",
+      "subject": "anatomy",
+      "note": "The inferior pleural reflection is at approximately rib 10 in the midaxillary line; the lung border is two ribs higher.",
+      "reviewTerms": [
+        "pleural recesses",
+        "inferior surface landmarks"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=49"
+      ]
+    },
+    {
+      "number": "33",
+      "sourceNumber": "33",
+      "page": 12,
+      "prompt": "The cartilaginous, muscular and connective-tissue components of the trachea and lungs derive from which tissue surrounding the foregut?",
+      "options": [
+        "Splanchnic mesoderm",
+        "Endoderm",
+        "Neural crest cells",
+        "Second pharyngeal arch"
+      ],
+      "providedKey": null,
+      "key": "A",
+      "subject": "embryology",
+      "note": "No unambiguous answer-cell highlight is visible in the scan. The audited answer is A: splanchnic mesoderm forms these supporting tissues, while endoderm forms the airway epithelium and glands.",
+      "reviewTerms": [
+        "supporting-tissue lineages"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=77"
+      ]
+    },
+    {
+      "number": "34",
+      "sourceNumber": "34",
+      "page": 12,
+      "prompt": "By the end of the sixth month, approximately how many generations of subdivisions have formed in the lungs?",
+      "options": [
+        "12",
+        "6",
+        "17",
+        "4"
+      ],
+      "providedKey": "C",
+      "key": "C",
+      "subject": "embryology",
+      "note": "The course account gives about 17 prenatal branching generations by the end of the sixth month. The Persian numerals in the scan were visually read as 12, 6, 17 and 4.",
+      "reviewTerms": [
+        "branching hierarchy"
+      ],
+      "evidence": [
+        "/study/reviews/respiratory.pdf#page=84"
+      ]
+    }
+  ],
+  "excludedItems": [
+    {
+      "page": 1,
+      "reason": "Cover and directions only. The cover states 34 MCQs and 6 short-answer questions; all 34 MCQs are present, but no short-answer questions are supplied in this 12-page PDF. No missing short-answer content has been invented."
+    }
+  ],
+  "audit": {
+    "status": "SHIP",
+    "notes": [
+      "All 12 pages visually reviewed; all 34 printed MCQs transcribed, including unmarked Q33.",
+      "Unresolved single-best answers Q14 and Q18 remain key:null and must be excluded from scored practice.",
+      "Page map: p2 Q1–3; p3 Q9–11; p4 Q6–8; p5 Q4–5; p6 Q12–14; p7 Q15–18; p8 Q19–21; p9 Q22–24; p10 Q25–27; p11 Q28–31; p12 Q32–34.",
+      "SHIP denotes completed transcription and audit; it does not imply that every source question has a valid single-best answer."
+    ]
+  }
+}

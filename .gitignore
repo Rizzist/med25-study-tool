@@ -51,3 +51,5 @@ next-env.d.ts
 
 # generated at every dev/build by scripts/build-mcq-runtime.mjs (108 MB of runtime JSON)
 /data/mcq-runtime/
+# Generated from the exact pinned pdfjs-dist version during dev/build.
+/public/vendor/pdfjs/

@@ -18,7 +18,7 @@ import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuesti
 
 export { isExamId };
 export type { ExamId };
-export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers";
+export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers";
 type FinalExamBankKey = `${ExamId}:${FinalExamBankId}`;
 export type CollectionId =
   | "all"
@@ -227,6 +227,13 @@ let verifiedCache: MCQQuestion[] | null = null;
 const finalCache: Partial<Record<FinalExamBankKey, MCQQuestion[]>> = {};
 
 const FINAL_EXAM_BANKS = [
+  {
+    id: "respiratory-past-papers" as const,
+    exam: "term2-respiratory" as const,
+    label: "Respiratory · Past Papers",
+    description: "Audited, source-preserved theory and practical papers; references and fragments identified separately.",
+    requiredTag: "final-bank-respiratory-past-papers",
+  },
   nutritionFinalBank,
   religionFinalBank,
   {
@@ -260,11 +267,11 @@ const FINAL_EXAM_BANKS = [
 ] as const;
 
 export function isFinalExamBankId(value: unknown): value is FinalExamBankId {
-  return value === "biochemistry-metabolism-past-papers" || value === "telegram-past-papers" || value === "downloaded-core" || value === "nutrition-past-papers" || value === "religion-past-papers";
+  return value === "respiratory-past-papers" || value === "biochemistry-metabolism-past-papers" || value === "telegram-past-papers" || value === "downloaded-core" || value === "nutrition-past-papers" || value === "religion-past-papers";
 }
 
 export function defaultFinalExamBank(exam?: ExamId): FinalExamBankId {
-  return exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers";
+  return exam === "term2-respiratory" ? "respiratory-past-papers" : exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers";
 }
 
 function finalExamBankDefinition(exam: ExamId, bank: FinalExamBankId) {

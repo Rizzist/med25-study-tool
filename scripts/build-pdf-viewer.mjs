@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const pkg=JSON.parse(fs.readFileSync(path.join(root,'node_modules/pdfjs-dist/package.json'),'utf8'));
+const dest=path.join(root,'public/vendor/pdfjs');
+fs.mkdirSync(dest,{recursive:true});
+fs.copyFileSync(path.join(root,'node_modules/pdfjs-dist/build/pdf.worker.min.mjs'),path.join(dest,`pdf.worker-${pkg.version}.min.mjs`));
+fs.copyFileSync(path.join(root,'node_modules/pdfjs-dist/LICENSE'),path.join(dest,'LICENSE'));
+console.log(`PDF reader worker ready: ${pkg.version}`);
