@@ -21,6 +21,7 @@ const PastExamHub = dynamic(() => import('@/src/components/PastExamHub').then(m=
 const ReviewTopics = dynamic(() => import('@/src/components/CourseReview').then(m=>m.ReviewTopics), {loading:()=> <p role="status">Loading review sections…</p>});
 const ReviewDownloads = dynamic(() => import('@/src/components/CourseReview').then(m=>m.ReviewDownloads), {loading:()=> <p role="status">Loading review PDFs…</p>});
 const WrongAnswerReview = dynamic(() => import('@/src/components/WrongAnswerReview').then(m=>m.WrongAnswerReview));
+const SchoolMap = dynamic(() => import('@/src/components/SchoolMap').then(m=>m.SchoolMap), {loading:()=> <p role="status">Loading School Map…</p>});
 type BiochemistryStudyMode = 'learn' | 'exam';
 type BiochemistryChapterProgress = (typeof biochemistryChapters)[number] & {questionCount:number;questionIds:string[];seenCount:number;unseenCount:number;wrongCount:number;repairCount:number;masteredCount:number;mastery:number};
 
@@ -89,7 +90,7 @@ type SessionArchive = { version: 1; active: ActiveSessionSnapshot | null; histor
 const bridgeUrl = ''; // Same-origin Next APIs; no tutor/CLI bridge dependency.
 const progressStorageKey = "med25-study-progress-v1";
 const sessionArchiveStorageKey = "med25-session-archive-v1";
-const tabs = ["Practice MCQs", "Past exams", "Review topics", "Results"] as const;
+const tabs = ["Practice MCQs", "Past exams", "Review topics", "Results", "School Map"] as const;
 const sprintLengths = [10, 20, 40, 60, 100, 150, 200, 250] as const;
 const examConfig: Record<ExamId, {
   date: string;
@@ -1059,7 +1060,7 @@ export default function Home() {
   const scoreTone=(value:number)=>value>=75?'good':value>=50?'mid':'low';
   return <StudyShell exam={exam} activeSection={tab} onCourseChange={chooseExam} onSectionChange={section=>setTab(section as Tab)} immersive={cvsPaperActive} status={bankStatus==='loading'?'Loading catalog…':bankStatus==='error'?'Offline · cached sessions available':'Saved on this device'} courses={Object.entries(examConfig).map(([id,c])=>({id:id as ExamId,title:c.title,date:c.date,count:bank?.exams?.find(e=>e.id===id)?.questionCount}))}>
     {pendingGuidance&&<ExamModeChooser onChoose={pendingGuidance} onCancel={()=>setPendingGuidance(null)}/>}
-    {!cvsPaperActive&&<header className="course-head">
+    {!cvsPaperActive&&tab!=='School Map'&&<header className="course-head">
       <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{selectedConfig.title}</h1><p>{selectedConfig.focus}</p></div>
       <div className="course-head-side">
         <div className="course-stat"><strong>{displayCount((selectedExam?.questionCount??0).toLocaleString())}</strong><span>practice MCQs</span></div>
@@ -1088,6 +1089,7 @@ export default function Home() {
       </div>
     </>}
     {tab==='Review topics'&&(term2?<ReviewTopics key={exam} exam={exam} subjectOf={subjectOf} disabled={phase==='loading'} onPractice={ids=>void startSession('all',ids,{mode:studyMode,limit:sessionSize})}/>:<section className="topic-section"><div className="section-head"><h2>Topics</h2><p>Term 1 keeps its question topics and chapter breakdown. Each opens a session in the current feedback mode.</p></div>{exam==='july29'&&<div className="mcq-topic-grid">{biochemistryChapterProgress.map(ch=><button key={ch.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('biochemistry',undefined,{biochemistryChapterId:ch.id,mode:studyMode})}><StudyIcon name="book"/><b>{ch.chapterLabel} · {ch.title}</b><span>{ch.questionCount} questions</span></button>)}</div>}<div className="mcq-topic-grid">{selectedExam?.topics?.map(topic=><button key={topic.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('all',topic.questionIds,{mode:studyMode,limit:sessionSize})}><StudyIcon name="layers"/><b>{topic.title}</b><span>{topic.questionIds.length} questions</span></button>)}</div></section>)}
+    {tab==='School Map'&&<SchoolMap/>}
     {tab==='Past exams'&&<PastExamHub key={exam} exam={exam} onSessionActiveChange={setCvsPaperActive}/>}
     {tab==='Results'&&<section className="results-section"><div className="section-head"><h2>Practice results<span>{examHistory.length} session{examHistory.length===1?'':'s'}</span></h2><p>Saved on this device. Past-paper results stay with each paper.</p></div>{!examHistory.length&&<div className="mcq-empty"><StudyIcon name="results"/><b>No completed sessions yet</b><p>Finish a practice session and its review will appear here.</p></div>}<div className="result-rows">{examHistory.map(saved=>{const score=Math.round(saved.correctCount/Math.max(1,saved.answeredCount)*100);return <article className="result-row" key={saved.id}><span className="result-date">{formatSessionDate(saved.completedAt)}</span><div className="result-copy"><b>{savedScopeLabel(saved)} · {saved.questionIds.length} questions</b><small>{saved.correctCount} correct · {saved.answeredCount} answered · {saved.studyMode==='exam'?'Test mode':'Learn mode'}</small></div><strong className={`score-pill ${scoreTone(score)}`}>{score}%</strong><button type="button" className="pill small" disabled={phase==='loading'} onClick={()=>void openSavedReview(saved)}>Open review<StudyIcon name="arrow"/></button></article>;})}</div></section>}
     </StudyShell>;

@@ -1,0 +1,16 @@
+export type CampusFeature={id:string;osmUrl:string;tags:Record<string,string>;points:[number,number][]};
+export type CampusData={version:number;retrievedAt:string;source:string;attribution:string;license:string;bounds:number[];features:CampusFeature[]};
+export type CampusPlace={id:string;name:string;nativeName?:string;aliases?:string[];kind:string;coordinates?:number[];sourceUrl?:string;sourceLabel?:string;positionQuality?:string;floor?:string;number?:string;notes?:string;buildingName?:string};
+export type SchoolRoom={id:string;buildingId:string;name:string;floor:string;number:string;notes:string;source:string};
+export const SCHOOL_ROOMS_KEY:string;
+export const SCHOOL_MAP_CENTER:number[];
+export const CAMPUS_PLACES:{id:string;name:string;aliases:string[];kind:string}[];
+export const SNAPP_URL:string;
+export function normalizeSearch(value:unknown):string;
+export function matchesSearch(place:CampusPlace,query:string):boolean;
+export function featureCenter(feature:CampusFeature):number[];
+export function projectLocation(coordinates:number[]):number[];
+export function campusDirectory(features:CampusFeature[]):CampusPlace[];
+export function googleMapsUrl(place:CampusPlace,mode?:string):string;
+export function destinationText(place:CampusPlace):string;
+export function parseRooms(raw:unknown,buildingIds:string[]):SchoolRoom[];

@@ -1,7 +1,8 @@
 import type {ReactNode} from 'react';
 
-export type StudyIconName = 'practice' | 'papers' | 'book' | 'results' | 'download' | 'search' | 'arrow' | 'check' | 'layers' | 'heart' | 'flag';
+export type StudyIconName = 'practice' | 'papers' | 'book' | 'results' | 'download' | 'search' | 'arrow' | 'check' | 'layers' | 'heart' | 'flag' | 'map';
 const paths: Record<StudyIconName, ReactNode> = {
+  map: <><path d="m2 6 6-3 8 3 6-3v15l-6 3-8-3-6 3Zm6-3v15M16 6v15"/></>,
   practice: <><rect x="4" y="3" width="16" height="18" rx="3"/><path d="m8 9 1.5 1.5L12 8M14 9h3M8 15h9"/></>,
   papers: <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></>,
   book: <><path d="M12 5C8 2 4 3 2 4v15c3-1 6-1 10 2 4-3 7-3 10-2V4c-2-1-6-2-10 1Zm0 0v16"/></>,

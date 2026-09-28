@@ -20,7 +20,7 @@ function fixture(options={}){
     }
     return new Response(files.get(url.pathname)??'not found',{status:files.has(url.pathname)?200:404,headers:{'content-type':'application/pdf',etag:'"pdf"'}});
   };
-  return {pdf:createPdfCache({origin,fetch,caches,crypto:webcrypto,...options}),map,calls,files,offline:()=>{offline=true;}};
+  return {pdf:createPdfCache({authorize:async()=>{},origin,fetch,caches,crypto:webcrypto,...options}),map,calls,files,offline:()=>{offline=true;}};
 }
 test('first download caches complete bytes; repeat downloads and opens make no PDF request',async()=>{
   const f=fixture(),body=f.files.get(path),url=versionUrl(body);
@@ -64,7 +64,7 @@ test('non-PDF or wrong-version responses are never saved',async()=>{
 test('PDF storage budget evicts only PDF entries and never caches partial responses',async()=>{
   const f=fixture({maxFiles:1});await f.pdf.load(origin+path);const other='/study/second.pdf';f.files.set(other,'%PDF-1.7\nsecond');await f.pdf.load(versionUrl(f.files.get(other),other));
   assert.equal([...f.map.keys()].filter(k=>new URL(k).pathname.endsWith('.pdf')).length,1);assert(f.map.has(origin+'/study/pdf-manifest.json'));
-  const partial=createPdfCache({origin,fetch:async()=>new Response('%PDF-partial',{status:206}),caches:{open:async()=>{throw Error('disabled');}}});
+  const partial=createPdfCache({authorize:async()=>{},origin,fetch:async()=>new Response('%PDF-partial',{status:206}),caches:{open:async()=>{throw Error('disabled');}}});
   await assert.rejects(partial.load(origin+path+'?v='+sha('partial')),/complete PDF/);
 });
 test('only local study PDF URLs can enter the PDF cache',async()=>{

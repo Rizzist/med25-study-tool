@@ -1,4 +1,5 @@
 // Shared by the download button and service worker. Answers never enter this cache.
+import {requireStudySession} from './med25-auth-cache.mjs';
 export const PDF_CACHE='med25-pdfs-v1';
 const MANIFEST='/study/pdf-manifest.json';
 export function createPdfCache(env={}) {
@@ -39,6 +40,7 @@ export function createPdfCache(env={}) {
   async function load(input) {
     const url=new URL(input,origin());url.hash='';
     if(url.origin!==origin()||!url.pathname.startsWith('/study/')||!url.pathname.toLowerCase().endsWith('.pdf'))throw Error('Only local study PDFs can be cached.');
+    await (env.authorize??requireStudySession)();
     const cache=await open();
     if(!url.searchParams.has('v')) {
       const index=await manifest(cache),version=index?.files?.[url.pathname]?.version;

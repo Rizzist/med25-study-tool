@@ -22,12 +22,12 @@ function load(file){
 }
 const server=load(path.join(root,'src/lib/server/study-bank.ts')),runtime=read('data/mcq-runtime/index.json');
 
-test('navigation retains source-style course cards and only the four MCQ destinations',()=>{
+test('navigation retains source-style course cards, four MCQ destinations and the general School Map',()=>{
   const {StudyShell}=load(path.join(root,'src/components/StudyShell.tsx'));
   const html=renderToStaticMarkup(createElement(StudyShell,{exam:'term2-cvs',activeSection:'Practice MCQs',onCourseChange:()=>{},onSectionChange:()=>{},status:'Loading catalog…',immersive:false,courses:[{id:'term2-cvs',title:'CVS',date:'Date TBA'},{id:'term2-religion',title:'Religion',date:'Date TBA',count:75},{id:'july25',title:'Term one',date:'July 25',count:713}]},'Study content'));
   assert.match(html,/Choose term/);assert.match(html,/Term 2 courses/);assert.match(html,/Date TBA/);assert.match(html,/75 MCQs/);assert.match(html,/Loading questions/);
   assert(!html.includes('Term one'));assert(!html.includes('0 MCQs'));assert.match(html,/aria-current="page"/);
-  for(const label of ['Practice MCQs','Past exams','Review topics','Results'])assert(html.includes(label));
+  for(const label of ['Practice MCQs','Past exams','Review topics','Results','School Map'])assert(html.includes(label));
   const css=fs.readFileSync(path.join(root,'app/mcq.css'),'utf8');
   assert.match(css,/\.mcq-sidebar\{position:fixed/);assert.match(css,/\.mcq-topbar\{position:sticky/);
   assert.match(css,/body:has\(\.mcq-app\),body:has\(\.review-shell\)\{[^}]*overflow:visible/);

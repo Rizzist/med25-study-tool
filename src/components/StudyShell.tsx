@@ -3,12 +3,14 @@ import {useRef,type ReactNode} from 'react';
 import Link from 'next/link';
 import {isTerm2Exam,type ExamId} from '@/src/lib/mcq/exams.mjs';
 import {StudyIcon,type StudyIconName} from './StudyIcon';
+import {SignOutButton} from './AuthBoundary';
 
 const navigation: Array<{title:string;hint:string;icon:StudyIconName}> = [
   {title:'Practice MCQs',hint:'Learn & test yourself',icon:'practice'},
   {title:'Past exams',hint:'Original papers & keys',icon:'papers'},
   {title:'Review topics',hint:'Sections & review PDFs',icon:'book'},
   {title:'Results',hint:'Progress & weak points',icon:'results'},
+  {title:'School Map',hint:'TUMS campus, rooms & travel',icon:'map'},
 ];
 /** Study chrome: a slim dark rail (desktop) or bottom tab bar (phone), one compact
  * course strip, and the page. Question sessions hide all of it (immersive). */
@@ -39,10 +41,12 @@ export function StudyShell({exam,courses,activeSection,onCourseChange,onSectionC
         const active=activeSection===item.title;
         return <button key={item.title} type="button" title={item.hint} className={active?'active':''} aria-current={active?'page':undefined} onClick={()=>{onSectionChange(item.title);window.scrollTo({top:0,behavior:'instant'});}}><StudyIcon name={item.icon}/><b>{item.title}</b></button>;
       })}</nav>
+      <div className="mcq-account"><a href="/change-password">Password</a><SignOutButton/></div>
       <p className="mcq-sidebar-foot" role="status"><StudyIcon name="check"/><span>{status}</span></p>
     </aside>
     <div className="mcq-workspace">
-      <header className="mcq-topbar">
+      <div className="mcq-account-mobile"><a href="/change-password">Password</a><SignOutButton/></div>
+      {activeSection!=='School Map'&&<header className="mcq-topbar">
         <Link className="mcq-brand mcq-topbar-brand" href="/">MED//25</Link>
         <div className="mcq-term-picker" role="group" aria-label="Choose term">{([1,2] as const).map(t=><button key={t} type="button" aria-pressed={term===t} onClick={()=>chooseTerm(t)}>Term {t}</button>)}</div>
         <nav className="mcq-course-picker" aria-label={`Term ${term} courses`}>{termCourses.map(c=>{
@@ -52,7 +56,7 @@ export function StudyShell({exam,courses,activeSection,onCourseChange,onSectionC
             <small>{!tba&&<>{c.date.split(' · ')[0]}<i>·</i></>}{c.count===undefined?'Loading questions…':c.count===0?'No MCQs yet':`${c.count.toLocaleString()} MCQs`}</small>
           </button>;
         })}</nav>
-      </header>
+      </header>}
       <div className="mcq-content" id="study-content" tabIndex={-1}>{children}</div>
     </div>
   </main>;

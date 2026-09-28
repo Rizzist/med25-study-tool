@@ -33,3 +33,12 @@
 }
 @media(orientation:landscape) and (max-height:550px){.guided-question-pane .question-card{margin:12px auto}.guided-question-pane .question-dots{display:none}}
 @container guided-reader (max-width:420px){.guided-review-header{gap:5px;padding-inline:6px}.guided-review-title>span{display:none}.guided-review-controls form{gap:3px}.guided-review-controls input[type=number]{width:40px}.guided-review-controls button{min-width:26px;width:26px}}
+
+/* A real separator track, so neither pane steals the other's resize target. */
+.guided-splitter{position:relative;z-index:10;display:grid;place-items:center;min-width:14px;background:#dfe7df;cursor:col-resize;touch-action:none;outline-offset:-3px}
+.guided-splitter span{width:3px;height:40px;border-radius:4px;background:#7d9785}
+.guided-splitter:hover,.guided-splitter:focus-visible,.is-resizing>.guided-splitter{background:#c4d6c6;outline:2px solid #347657}
+.guided-exam-layout.is-resizing{user-select:none;cursor:col-resize}
+.guided-exam-layout.is-resizing .guided-review-pane{pointer-events:none}
+@media(min-width:701px),(orientation:landscape){.guided-exam-layout{grid-template-columns:minmax(0,calc(var(--guided-question-share,54%) - 7px)) 14px minmax(0,1fr)}}
+@media(max-width:700px) and (orientation:portrait){.guided-splitter{display:none}}

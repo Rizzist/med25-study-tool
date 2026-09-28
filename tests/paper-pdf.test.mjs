@@ -66,7 +66,7 @@ test('browser generator caches by content hash, serves repeats from cache, and e
   const fakeCaches={open:async()=>({match:async key=>store.get(key),put:async(key,response)=>{store.set(key,response);},keys:async()=>[...store.keys()].map(url=>({url})),delete:async request=>store.delete(request.url)})};
   let markdown=read(collections[0].downloads.questions),renders=0,fetches=0;
   const env={origin:'https://study.test',crypto:webcrypto,caches:fakeCaches,fetch:async url=>{fetches++;assert.match(String(url),/^https:\/\/study\.test\/study\//);return new Response(markdown);},render:async definition=>{renders++;assert.ok(definition.content.length>1);return new Blob(['%PDF-fake-'+renders],{type:'application/pdf'});}};
-  const paperPdf=createPaperPdf(env);
+  const paperPdf=createPaperPdf({...env,authorize:async()=>{}});
   const request={sources:[{url:collections[0].downloads.questions,collection:collections[0]}],variant:'questions',courseTitle:'T',footerLabel:'f'};
   const first=await paperPdf(request);
   assert.equal(first.fromCache,false);assert.equal(first.cached,true);assert.equal(renders,1);assert.match(first.key,/^https:\/\/study\.test\/study\/paper-pdf\/[^?]+-questions\.pdf\?v=[a-f0-9]{64}$/);
@@ -115,7 +115,7 @@ test('a slow render that finishes after a fresher one does not evict the fresher
   const fakeCaches={open:async()=>({match:async key=>store.get(key),put:async(key,response)=>{store.set(key,response);},keys:async()=>[...store.keys()].map(url=>({url})),delete:async request=>store.delete(request.url)})};
   let markdown=read(collections[1].downloads.questions);const gates=[];
   const env={origin:'https://study.test',crypto:webcrypto,caches:fakeCaches,fetch:async()=>new Response(markdown),render:()=>new Promise(resolve=>gates.push(()=>resolve(new Blob(['%PDF'],{type:'application/pdf'}))))};
-  const paperPdf=createPaperPdf(env);
+  const paperPdf=createPaperPdf({...env,authorize:async()=>{}});
   const request={sources:[{url:collections[1].downloads.questions,collection:collections[1]}],variant:'questions',courseTitle:'T',footerLabel:'f'};
   const slow=paperPdf(request);
   while(gates.length<1)await new Promise(r=>setTimeout(r,5));

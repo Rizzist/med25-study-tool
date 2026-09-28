@@ -4,6 +4,7 @@
 // and the stale copy is evicted the next time that paper is requested. Answers and
 // results never enter this cache; it holds only regenerable documents.
 import {parseExport} from './parse-export.mjs';
+import {requireStudySession} from '../../../public/med25-auth-cache.mjs';
 import {buildPaperDocument,PAPER_PDF_TEMPLATE,paperFonts,type PaperPart,type PaperVariant} from './document';
 import type {TDocumentDefinitions} from 'pdfmake/interfaces';
 
@@ -11,7 +12,7 @@ export const PAPER_PDF_CACHE='med25-paper-pdfs-v1';
 export type PaperSource={url:string;collection:PaperPart['collection']};
 export type PaperRequest={sources:PaperSource[];variant:PaperVariant;courseTitle:string;footerLabel:string};
 export type PaperResult={blob:Blob;fromCache:boolean;cached:boolean;key:string};
-type Env={fetch?:typeof fetch;caches?:CacheStorage;crypto?:Crypto;origin?:string;render?:(definition:TDocumentDefinitions)=>Promise<Blob>;maxFiles?:number};
+type Env={authorize?:()=>Promise<unknown>;fetch?:typeof fetch;caches?:CacheStorage;crypto?:Crypto;origin?:string;render?:(definition:TDocumentDefinitions)=>Promise<Blob>;maxFiles?:number};
 type PdfMakeLike={addFonts:(fonts:Record<string,Record<string,string>>)=>void;addVirtualFileSystem:(vfs:Record<string,string>)=>void;createPdf:(definition:TDocumentDefinitions,options?:Record<string,unknown>)=>{getBlob:()=>Promise<Blob>}};
 const fontFiles={[paperFonts.latin]:{normal:'NotoSans-Regular.ttf',bold:'NotoSans-Bold.ttf'},[paperFonts.arabic]:{normal:'NotoSansArabic-Regular.ttf',bold:'NotoSansArabic-Regular.ttf'}};
 let fontVfs:Promise<Record<string,string>>|undefined;
@@ -68,6 +69,7 @@ export function createPaperPdf(env:Env={}) {
     }
   }
   return async function paperPdf(request:PaperRequest):Promise<PaperResult> {
+    await (env.authorize??requireStudySession)();
     if(!request.sources.length)throw new Error('Nothing to typeset.');
     const texts=await Promise.all(request.sources.map(async source=>{
       const url=new URL(source.url,origin());
