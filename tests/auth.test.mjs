@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdtemp,readFile,stat} from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import {createAuth as createAuthCore,verifyPassword,passwordProblem,displayNameProblem,parseAccountConfig,requestToken,safeReturnTo} from '../src/lib/server/auth-core.mjs';
+import {createAuth as createAuthCore,verifyPassword,passwordProblem,displayNameProblem,parseAccountConfig,requestToken,safeReturnTo,SESSION_SECONDS} from '../src/lib/server/auth-core.mjs';
 import {authStore} from '../src/lib/server/auth-store.mjs';
 import {postgresAuthStore} from '../src/lib/server/auth-postgres.mjs';
 import {createPdfCache} from '../public/med25-pdf-cache.mjs';
@@ -40,7 +40,28 @@ test('Only authorized ID can log in, first session is restricted, password chang
   await assert.rejects(auth.changePassword(normal.token,replacement+'new',replacement+'new','wrong','Primary Fixture'));
   await auth.logout(normal.token);assert.equal(await auth.session(normal.token),null);
   assert.equal(await auth.session(changed.token+'forged'),null);
-  clock+=8*24*60*60*1000;assert.equal(await auth.session(changed.token),null);
+  clock+=8*24*60*60*1000;assert.ok(await auth.session(changed.token),'Full login survives the old seven-day expiry');
+  clock+=SESSION_SECONDS*1000;assert.equal(await auth.session(changed.token,{renew:true}),null,'Expired tokens cannot renew');
+});
+test('Persistent logins renew near expiry only; old sessions upgrade without token/password changes',async()=>{
+  const backing=memory();let clock=1000000,writes=0,revokeOnWrite=false;
+  const store={read:backing.read,cas:async(before,after)=>{
+    if(revokeOnWrite){revokeOnWrite=false;const state=JSON.parse(before);state.accounts[STUDENT_ID].sessions=[];await backing.cas(before,JSON.stringify(state));return false;}
+    writes++;return backing.cas(before,after);
+  }};
+  const auth=createAuth({store,now:()=>clock}),first=await auth.login(STUDENT_ID,STUDENT_ID);
+  const limited=await auth.session(first.token),limitedWrites=writes;
+  assert.equal((await auth.session(first.token,{renew:true})).expiresAt,limited.expiresAt);assert.equal(writes,limitedWrites);
+  const full=await auth.changePassword(first.token,replacement,replacement,'','Primary Fixture');
+  assert.equal(full.maxAge,365*24*60*60);
+  const raw=await store.read(),legacy=JSON.parse(raw),hash=legacy.accounts[STUDENT_ID].passwordHash;
+  legacy.accounts[STUDENT_ID].sessions[0].expiresAt=clock+7*24*60*60*1000;
+  await store.cas(raw,JSON.stringify(legacy));const before=writes;
+  const upgraded=await auth.session(full.token,{renew:true});assert.equal(upgraded.expiresAt,clock+SESSION_SECONDS*1000);assert.equal(writes,before+1);
+  for(let i=0;i<10;i++)await auth.session(full.token,{renew:true});assert.equal(writes,before+1,'Normal traffic does not rewrite the session');
+  assert.equal(JSON.parse(await store.read()).accounts[STUDENT_ID].passwordHash,hash);
+  clock+=340*24*60*60*1000;revokeOnWrite=true;
+  assert.equal(await auth.session(full.token,{renew:true}),null,'A concurrent logout cannot be undone by renewal');
 });
 test('Rate limit persists across auth instances; corrupt state never resets to bootstrap credentials',async()=>{
   const store=memory();const auth=createAuth({store});await assert.rejects(auth.login('invalid','wrong'));

@@ -41,6 +41,7 @@ try{
   const testPassword='HTTP-fixture-only-password!672';
   assert.equal((await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:''},limited)).status,400);
   const change=await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:DISPLAY_NAME},limited);assert.equal(change.status,200);const full=cookieOf(change);
+  assert.match(change.headers.get('set-cookie'),/Max-Age=31536000/i);
   assert.equal((await get('/api/auth/session',limited)).status,401);
   const fullSession=await (await get('/api/auth/session',full)).json();assert.equal(fullSession.displayName,DISPLAY_NAME);assert.equal(fullSession.isAdmin,true);assert.equal(fullSession.isOwner,true);
   const adminAccounts=await get('/api/admin/accounts',full);assert.equal(adminAccounts.status,200);assert.equal((await adminAccounts.json()).accounts.length,1);
@@ -62,7 +63,8 @@ try{
   assert.equal((await get('/api/admin/accounts',friend)).status,403);
   const demoted=await (await get('/api/auth/session',friend)).json();assert.equal(demoted.isAdmin,false);assert.equal(demoted.isOwner,false);
   const redirected=await get('/admin',friend);assert.equal(redirected.status,307);assert.equal(new URL(redirected.headers.get('location'),origin).pathname,'/');
-  const page=await get('/',full);assert.equal(page.status,200);assert.match(page.headers.get('cache-control'),/no-store/);assert.doesNotMatch(await page.text(),/id="auth-title"/,'Authorized page must not be a cached login form');
+  const page=await get('/',full,{accept:'text/html'});assert.equal(page.status,200);assert.match(page.headers.get('cache-control'),/no-store/);assert.ok(cookieOf(page));
+  const pageHtml=await page.text();assert.doesNotMatch(pageHtml,/id="auth-title"/,'Authorized page must not be a cached login form');assert.doesNotMatch(pageHtml,/Checking your secure session/,'Authenticated server HTML must not hide behind another auth check');assert.match(pageHtml,/Study navigation/);
   const summary=await get('/api/bank/summary',full);assert.equal(summary.status,200);assert.ok(await summary.json());
   assert.equal((await get('/study/runtime/catalog.json',full)).status,200);
   const pdf=await fetch(origin+'/study/religion/past-papers/original-40.pdf',{method:'HEAD',headers:{cookie:full}});assert.equal(pdf.status,200);assert.match(pdf.headers.get('cache-control'),/no-store/);

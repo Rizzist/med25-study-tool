@@ -6,7 +6,7 @@ Implemented 2026-09-28 and upgraded to a small named allowlist on 2026-09-29. Th
 
 1. Open the app. Sign in using an authorized student ID as both username and temporary password.
 2. This creates a **restricted 15-minute session**, not access to study content. Confirm the full name and set a new unique password (12–128 characters). There is no skip.
-3. Setting the password revokes all existing sessions and issues a normal 7-day session. The original temporary password no longer works.
+3. Setting the password revokes all existing sessions and issues a persistent 365-day session. Normal page visits or an on-demand cache check renew it when fewer than 30 days remain. The original temporary password no longer works. Existing valid seven-day sessions are upgraded on the next normal visit, without another login.
 4. Use **Change password** or **Sign out** in the navigation. Later password changes require the current password and revoke other sessions.
 
 The user must choose their own replacement password. Automated tests use separate disposable credential stores and do not set the user's password.
@@ -74,7 +74,10 @@ Self-hosted production on a persistent private disk can explicitly set `MED25_AU
 - All existing content APIs also independently check the session. A server template checks before rendering the study UI. Cookie access remains outside storage-error catches so Next cannot prerender a permanent login shell.
 - Cookies are HttpOnly, SameSite=Strict, Secure in production. Sessions are opaque server records, not a localStorage login flag.
 - Same-origin, JSON and custom-header checks protect authentication writes. Persistent per-account rate limiting allows 12 login attempts per 15 minutes, with a separate unsupported-ID bucket. At the owner's request, unsupported student IDs receive an explicit `UNSUPPORTED_ACCOUNT` message; an allowed ID with a wrong password receives `INCORRECT_PASSWORD`. Neither error displays any permitted ID or issues a cookie. This intentionally distinguishes account eligibility; both cases remain rate-limited. A successful login resets only that account's counter.
-- Each cache read requires a live authenticated session; offline sign-in authorization is not allowed. Content-addressed caches still reduce downloads while signed in. Logout clears MED25 Cache Storage but retains exam answers/results. Cross-tab logout and periodic/focus checks lock the UI.
+- The authenticated server response renders study content immediately. There is no hydration auth request, focus/visibility recheck, timer polling or full-screen client auth loader. Switching tabs does not contact the auth endpoint or hide the current question/PDF.
+- Cache access reuses an in-memory server-verified lease for up to 15 minutes (never beyond session expiry). Only the next actual cache use after expiry makes one shared on-demand check; no idle requests are sent. The service worker has its own short-lived lease. No localStorage flag or persisted client identity authorizes access. A cold page still requires the server.
+- Protected network requests and admin writes always check current server state. Revoked users cannot fetch new content; already-received cached content can remain available until its bounded lease expires. Confirmed authorization denial clears the lease and redirects to login; temporary network outages do not replace the whole study screen or log the user out. Logout clears MED25 Cache Storage and both page/worker leases, notifies other tabs, and retains exam answers/results. Restoring a suspended page checks only the local logout signal, not the API.
+- Persistent cookies use the existing HttpOnly/Secure/SameSite protections. Renewal rechecks current authorization atomically and cannot revive expired, logged-out, disabled or password-reset sessions. It writes only near expiry, not on every visit. Clearing browser cookies, a year without activity, password resets or revoked access can still require a fresh login.
 - A previously downloaded/exported PDF cannot be revoked, nor can already received data be erased from another person's files. The new worker replaces the old cache-first worker after visiting the updated site; it cannot retroactively control an old offline copy that has never received the update.
 - No self-service recovery/email reset is provided. Password loss requires an authorized administrator reset; only the owner can reset other admins. Do not expose a public reset endpoint.
 
@@ -95,6 +98,12 @@ Self-hosted production on a persistent private disk can explicitly set `MED25_AU
 - Mobile page width remains 390px; only the table scrolls horizontally (610px content in a 364px container). The account editor fits inside the viewport. The initial overflow and late non-admin redirect found during review were fixed and retested.
 
 ## Reference decisions
+
+### Non-disruptive persistent login verification (2026-09-29)
+
+- Production build/typecheck, 20 auth/session tests and isolated HTTP integration passed. Old seven-day sessions renew without a password reset; expiry, concurrent logout, forced setup, role boundaries and CSRF remain enforced.
+- Browser fixture opened directly to authenticated content with no auth loader. A practice draft stayed intact while idle/backgrounded for several minutes; test-server tracing recorded zero `/api/auth/session` calls across hydration and this idle period. Explicit logout in a second tab redirected both tabs to login.
+- Lease tests cover 50 cache reads with zero extra checks, 30 simultaneous expired-lease reads sharing one check, late-response rejection after logout and failed verification never authorizing cache access. Focus/polling and loading-gate regression guards run during every deployment build.
 
 Server checks follow the [Next authentication guide](https://nextjs.org/docs/app/guides/authentication). Durable production storage is required because [Vercel function filesystems are not a persistent database](https://vercel.com/kb/guide/is-sqlite-supported-in-vercel). Redis commands use the [Upstash REST API](https://upstash.com/docs/redis/features/restapi).
 

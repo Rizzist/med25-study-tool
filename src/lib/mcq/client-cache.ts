@@ -1,5 +1,5 @@
 import type {MCQQuestion} from './types';
-import {requireStudySession} from '../../../public/med25-auth-cache.mjs';
+import {requireStudySession,denyStudySession} from '../../../public/med25-auth-cache.mjs';
 
 const DATA_CACHE='med25-mcq-data-v1';
 const inFlight=new Map<string,Promise<unknown>>();
@@ -26,7 +26,7 @@ export async function cachedJson<T>(url:string,revalidate=false):Promise<T> {
       const etag=saved?.headers.get('etag');
       const response=await fetch(key,{cache:'no-cache',headers:etag?{'if-none-match':etag}:undefined,signal:AbortSignal.timeout(12000)});
       if(response.status===304&&saved)return saved.json() as Promise<T>;
-      if(response.status===401||response.status===403)throw Object.assign(Error('Sign in required.'),{code:'AUTH_REQUIRED'});
+      if(response.status===401||response.status===403)throw denyStudySession();
       if(!response.ok)throw Error('Could not load '+new URL(key).pathname);
       const payload=await response.clone().json();
       await store(key,response);

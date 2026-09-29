@@ -70,3 +70,11 @@ test('PDF storage budget evicts only PDF entries and never caches partial respon
 test('only local study PDF URLs can enter the PDF cache',async()=>{
   const f=fixture();for(const url of ['https://external.test/a.pdf',origin+'/private/a.pdf',origin+'/study/a.png'])await assert.rejects(f.pdf.load(url),/Only local study PDFs/);assert.equal(f.calls.length,0);
 });
+test('A denied manifest or PDF never falls back to protected cached content',async()=>{
+  for(const status of [401,403]){
+    for(const suffix of ['', '?v='+sha('fixture')]){
+      const pdf=createPdfCache({origin,authorize:async()=>{},fetch:async()=>new Response(null,{status}),caches:{open:async()=>({match:async()=>undefined})}});
+      await assert.rejects(pdf.load(origin+path+suffix),{code:'AUTH_REQUIRED'});
+    }
+  }
+});

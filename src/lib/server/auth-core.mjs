@@ -7,7 +7,8 @@ const scrypt=promisify(scryptCallback);
 export const STUDENT_ID=process.env.MED25_STUDENT_ID??'';
 export const ADMIN_STUDENT_ID=process.env.MED25_ADMIN_STUDENT_ID??STUDENT_ID;
 export const AUTH_COOKIE='med25_session';
-export const SESSION_SECONDS=60*60*24*7;
+export const SESSION_SECONDS=60*60*24*365;
+const RENEW_WINDOW_MS=30*24*60*60*1000;
 const LIMITED_SECONDS=60*15;
 const WINDOW=15*60*1000;
 const MAX_ATTEMPTS=12;
@@ -120,8 +121,9 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
   }
   async function ensureInitialized(){
     const state=decode(await store.read());
-    if(state?.schema===2)return;
+    if(state?.schema===2)return state;
     await configureAccounts();
+    return decode(await store.read());
   }
   function issue(account,limited){
     const token=randomBytes(32).toString('base64url'),seconds=limited?LIMITED_SECONDS:SESSION_SECONDS;
@@ -142,7 +144,20 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
   }
   return {
     configureAccounts,
-    async session(token){if(!token)return null;await ensureInitialized();return validSession(decode(await store.read()),token,now(),effectiveAdminId);},
+    async session(token,{renew=false}={}){
+      if(!token)return null;
+      const current=validSession(await ensureInitialized(),token,now(),effectiveAdminId);
+      if(!renew||!current||current.mustChangePassword||current.expiresAt-now()>RENEW_WINDOW_MS)return current;
+      // Renew on real activity, at most near expiry. Also upgrades existing
+      // seven-day logins without resetting passwords or issuing new tokens.
+      return mutate(state=>{
+        const session=validSession(state,token,now(),effectiveAdminId);
+        if(!session||session.mustChangePassword||session.expiresAt-now()>RENEW_WINDOW_MS)return {unchanged:true,value:session};
+        const stored=state.accounts[session.userId].sessions.find(item=>item.hash===digest(token));
+        stored.expiresAt=now()+SESSION_SECONDS*1000;
+        return {state,value:{...session,expiresAt:stored.expiresAt}};
+      });
+    },
     async login(username,password){
       if(typeof username!=='string'||typeof password!=='string'||username.length>80||password.length>128)throw new AuthError('Invalid student ID or password.',401);
       await ensureInitialized();

@@ -1,5 +1,5 @@
 // Shared by the download button and service worker. Answers never enter this cache.
-import {requireStudySession} from './med25-auth-cache.mjs';
+import {requireStudySession,denyStudySession} from './med25-auth-cache.mjs';
 export const PDF_CACHE='med25-pdfs-v1';
 const MANIFEST='/study/pdf-manifest.json';
 export function createPdfCache(env={}) {
@@ -16,12 +16,13 @@ export function createPdfCache(env={}) {
       const saved=await match(cache,key),etag=saved?.headers.get('etag');
       try {
         const response=await network(key,{cache:'no-cache',headers:etag?{'if-none-match':etag}:undefined});
+        if(response.status===401||response.status===403)throw denyStudySession();
         if(response.status===304&&saved)return saved.json();
         if(!response.ok)throw Error('PDF index unavailable');
         const data=await response.clone().json();
         try{await cache?.put(key,response);}catch{/* quota / private browsing */}
         return data;
-      }catch{try{return await saved?.json();}catch{return null;}}
+      }catch(error){if(error.code==='AUTH_REQUIRED')throw error;try{return await saved?.json();}catch{return null;}}
     })();
     try{return await manifestRequest;}finally{manifestRequest=undefined;}
   }
@@ -53,6 +54,7 @@ export function createPdfCache(env={}) {
       const task=(async()=>{
         // Always fetch a complete entity. A 206 must never replace the full cached file.
         const response=await network(key,{cache:'no-cache',headers:{accept:'application/pdf'}});
+        if(response.status===401||response.status===403)throw denyStudySession();
         if(response.status!==200)throw Error('Could not download the complete PDF. Please retry when connected.');
         const bytes=await response.arrayBuffer();
         if(!new TextDecoder().decode(bytes.slice(0,1024)).includes('%PDF-'))throw Error('The server did not return a PDF.');

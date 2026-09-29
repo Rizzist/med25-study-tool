@@ -4,7 +4,7 @@
 // and the stale copy is evicted the next time that paper is requested. Answers and
 // results never enter this cache; it holds only regenerable documents.
 import {parseExport} from './parse-export.mjs';
-import {requireStudySession} from '../../../public/med25-auth-cache.mjs';
+import {requireStudySession,denyStudySession} from '../../../public/med25-auth-cache.mjs';
 import {buildPaperDocument,PAPER_PDF_TEMPLATE,paperFonts,type PaperPart,type PaperVariant} from './document';
 import type {TDocumentDefinitions} from 'pdfmake/interfaces';
 
@@ -75,6 +75,7 @@ export function createPaperPdf(env:Env={}) {
       const url=new URL(source.url,origin());
       if(url.origin!==origin()||!url.pathname.startsWith('/study/')||!url.pathname.endsWith('.md'))throw new Error('Only local study exports can be typeset.');
       const response=await network(url.href);
+      if(response.status===401||response.status===403)throw denyStudySession();
       if(!response.ok)throw new Error('The paper export could not be loaded. Please retry when connected.');
       return response.text();
     }));

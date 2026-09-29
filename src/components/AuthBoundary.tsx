@@ -1,6 +1,6 @@
 "use client";
-import {createContext,useContext,useEffect,useState,type ReactNode} from 'react';
-import {clearStudyCaches,requireStudySession} from '../../public/med25-auth-cache.mjs';
+import {createContext,useContext,useEffect,useLayoutEffect,useState,type ReactNode} from 'react';
+import {clearStudyCaches,seedStudySession,invalidateStudySession} from '../../public/med25-auth-cache.mjs';
 
 type AccountSession={displayName:string|null;isOwner:boolean;isAdmin:boolean};
 const AccountContext=createContext<AccountSession>({displayName:null,isOwner:false,isAdmin:false});
@@ -14,23 +14,24 @@ export async function signOut(){
   await clearStudyCaches().catch(()=>{});location.replace('/login');
 }
 export function SignOutButton(){const [error,setError]=useState(''),[busy,setBusy]=useState(false);return <><button type="button" className="auth-signout" disabled={busy} onClick={async()=>{setBusy(true);setError('');try{await signOut();}catch{setError('Sign out failed. Retry.');setBusy(false);}}}>{busy?'Signing out…':'Sign out'}</button>{error&&<span role="alert">{error}</span>}</>;}
-export function AuthBoundary({children,initialSession}:{children:ReactNode;initialSession:AccountSession}){
-  const [account,setAccount]=useState<AccountSession>(initialSession);
-  const [ready,setReady]=useState(false);
-  const [verifiedOnce,setVerifiedOnce]=useState(false);
-  const [unavailable,setUnavailable]=useState(false),[retry,setRetry]=useState(0);
+export function AuthBoundary({children,initialSession}:{children:ReactNode;initialSession:AccountSession&{expiresAt:number}}){
+  // The server has already checked the HttpOnly session before rendering this
+  // tree. Do not hide it or repeat that request on hydration/focus/a timer.
+  useLayoutEffect(()=>{seedStudySession({...initialSession,authenticated:true,mustChangePassword:false});},[initialSession]);
   useEffect(()=>{
-    let alive=true;
-    const lock=()=>{setReady(false);location.replace('/login');};
-    const check=async()=>{if(!alive)return;try{const session=await requireStudySession();if(alive){setAccount({displayName:session.displayName??null,isOwner:session.isOwner===true,isAdmin:session.isAdmin===true});setReady(true);setVerifiedOnce(true);setUnavailable(false);}}catch(error){if(alive){if((error as {code?:string}).code==='AUTH_REQUIRED')lock();else{setReady(false);setUnavailable(true);}}}};
-    const wake=()=>{if(document.visibilityState==='visible'){setReady(false);void check();}};
-    const storage=(event:StorageEvent)=>{if(event.key==='med25-auth-logout')lock();};
+    const logoutMarker=()=>{try{return localStorage.getItem('med25-auth-logout');}catch{return null;}};
+    const initialLogoutMarker=logoutMarker();
+    const lock=()=>{invalidateStudySession();location.replace('/login');};
+    // Back/forward-cache restoration needs only the local logout signal, not an API call.
+    const restored=()=>{if(logoutMarker()!==initialLogoutMarker)lock();};
+    const storage=(event:StorageEvent)=>{if(event.key==='med25-auth-logout'||event.key===null)lock();};
+    const workerMessage=(event:MessageEvent)=>{if(event.data?.type==='med25-auth-required')lock();};
     const channel=typeof BroadcastChannel!=='undefined'?new BroadcastChannel('med25-auth'):null;if(channel)channel.onmessage=lock;
-    void check();const timer=setInterval(check,60000);window.addEventListener('pageshow',wake);window.addEventListener('storage',storage);document.addEventListener('visibilitychange',wake);
+    window.addEventListener('pageshow',restored);window.addEventListener('storage',storage);window.addEventListener('med25-auth-required',lock);
+    navigator.serviceWorker?.addEventListener('message',workerMessage);
     // Replace old cache-first workers, including the pre-auth version.
     if('serviceWorker' in navigator)void navigator.serviceWorker.register('/med25-sw.js',{type:'module',updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});
-    return()=>{alive=false;clearInterval(timer);channel?.close();window.removeEventListener('pageshow',wake);window.removeEventListener('storage',storage);document.removeEventListener('visibilitychange',wake);};
-  },[retry]);
-  // Hide during revalidation without discarding an in-progress question/PDF state.
-  return <AccountContext.Provider value={account}>{verifiedOnce&&<div hidden={!ready} style={{display:ready?'contents':'none'}}>{children}</div>}{!ready&&<main className="auth-screen">{unavailable?<section className="auth-card"><h1>Session check unavailable</h1><p>Reconnect to verify your sign-in. Your saved study progress is unchanged.</p><button type="button" className="primary" onClick={()=>{setUnavailable(false);setRetry(value=>value+1);}}>Retry</button></section>:<p role="status">Checking your secure session…</p>}</main>}</AccountContext.Provider>;
+    return()=>{channel?.close();window.removeEventListener('pageshow',restored);window.removeEventListener('storage',storage);window.removeEventListener('med25-auth-required',lock);navigator.serviceWorker?.removeEventListener('message',workerMessage);};
+  },[]);
+  return <AccountContext.Provider value={initialSession}>{children}</AccountContext.Provider>;
 }
