@@ -74,7 +74,7 @@ function validSession(state,token,now,adminId){
 
 export function createAuth({store=authStore(),now=Date.now,accounts,studentId,adminId}={}){
   const configured=accounts!==undefined?parseAccountConfig(JSON.stringify(accounts),''):studentId!==undefined?parseAccountConfig('',studentId):parseAccountConfig();
-  const effectiveAdminId=adminId||process.env.MED25_ADMIN_STUDENT_ID||studentId||STUDENT_ID||configured[0].id;
+  const effectiveAdminId=adminId||studentId||(accounts!==undefined?configured[0].id:process.env.MED25_ADMIN_STUDENT_ID||STUDENT_ID||configured[0].id);
   if(!/^\d{5,32}$/.test(effectiveAdminId))throw new AuthError('The administrator account is not configured correctly.',503,'AUTH_UNAVAILABLE');
   async function mutate(fn){
     for(let i=0;i<12;i++){
