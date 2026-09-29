@@ -3,7 +3,7 @@ import {useRef,type ReactNode} from 'react';
 import Link from 'next/link';
 import {isTerm2Exam,type ExamId} from '@/src/lib/mcq/exams.mjs';
 import {StudyIcon,type StudyIconName} from './StudyIcon';
-import {SignOutButton} from './AuthBoundary';
+import {SignOutButton,useAuthAccount} from './AuthBoundary';
 
 const navigation: Array<{title:string;hint:string;icon:StudyIconName}> = [
   {title:'Practice MCQs',hint:'Learn & test yourself',icon:'practice'},
@@ -19,6 +19,7 @@ export function StudyShell({exam,courses,activeSection,onCourseChange,onSectionC
   onCourseChange:(id:ExamId)=>void;onSectionChange:(section:string)=>void;
   status:string;immersive:boolean;children:ReactNode;
 }) {
+  const {displayName}=useAuthAccount();
   const term=isTerm2Exam(exam)?2:1;
   const lastCourse=useRef<Partial<Record<1|2,ExamId>>>({});
   const termCourses=courses.filter(c=>isTerm2Exam(c.id)===(term===2));
@@ -41,11 +42,11 @@ export function StudyShell({exam,courses,activeSection,onCourseChange,onSectionC
         const active=activeSection===item.title;
         return <button key={item.title} type="button" title={item.hint} className={active?'active':''} aria-current={active?'page':undefined} onClick={()=>{onSectionChange(item.title);window.scrollTo({top:0,behavior:'instant'});}}><StudyIcon name={item.icon}/><b>{item.title}</b></button>;
       })}</nav>
-      <div className="mcq-account"><a href="/change-password">Password</a><SignOutButton/></div>
+      <div className="mcq-account"><strong>{displayName??'Student'}</strong><a href="/change-password">Password</a><SignOutButton/></div>
       <p className="mcq-sidebar-foot" role="status"><StudyIcon name="check"/><span>{status}</span></p>
     </aside>
     <div className="mcq-workspace">
-      <div className="mcq-account-mobile"><a href="/change-password">Password</a><SignOutButton/></div>
+      <div className="mcq-account-mobile"><strong>{displayName??'Student'}</strong><a href="/change-password">Password</a><SignOutButton/></div>
       {activeSection!=='School Map'&&<header className="mcq-topbar">
         <Link className="mcq-brand mcq-topbar-brand" href="/">MED//25</Link>
         <div className="mcq-term-picker" role="group" aria-label="Choose term">{([1,2] as const).map(t=><button key={t} type="button" aria-pressed={term===t} onClick={()=>chooseTerm(t)}>Term {t}</button>)}</div>

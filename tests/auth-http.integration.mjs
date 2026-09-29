@@ -8,7 +8,8 @@ import path from 'node:path';
 const STUDENT_ID='00000000001'; // Synthetic fixture, not the owner's private configuration.
 
 const directory=await mkdtemp(path.join(os.tmpdir(),'med25-auth-http-'));
-const env={...process.env,NODE_ENV:'production',MED25_STUDENT_ID:STUDENT_ID,MED25_AUTH_STORAGE:'file',MED25_AUTH_FILE:path.join(directory,'state.json')};
+const DISPLAY_NAME='HTTP Fixture';
+const env={...process.env,NODE_ENV:'production',MED25_STUDENT_ID:STUDENT_ID,MED25_AUTH_ACCOUNTS:JSON.stringify([{id:STUDENT_ID,name:DISPLAY_NAME}]),MED25_AUTH_STORAGE:'file',MED25_AUTH_FILE:path.join(directory,'state.json')};
 for(const key of ['VERCEL','UPSTASH_REDIS_REST_URL','UPSTASH_REDIS_REST_TOKEN','KV_REST_API_URL','KV_REST_API_TOKEN'])delete env[key];
 const port=3911,origin=`http://localhost:${port}`;
 const child=spawn(process.execPath,['node_modules/next/dist/bin/next','start','--port',String(port)],{env,stdio:['ignore','pipe','pipe']});
@@ -34,11 +35,13 @@ try{
   const first=await post('/api/auth/login',credentials);assert.equal(first.status,200);assert.equal((await first.json()).next,'/change-password');const limited=cookieOf(first);
   for(const url of ['/api/bank/summary','/study/runtime/catalog.json','/study/religion/past-papers/original-40.pdf'])assert.equal((await get(url,limited)).status,403,url);
   assert.match((await get('/',limited)).headers.get('location'),/\/change-password/);
-  assert.match(await (await get('/change-password',limited)).text(),/Set your private password/);
+  const passwordPage=await (await get('/change-password',limited)).text();assert.match(passwordPage,/Set your private password/);assert.match(passwordPage,/Full name/);assert.match(passwordPage,/HTTP Fixture/);
   assert.equal((await post('/api/auth/password',{password:STUDENT_ID,confirmation:STUDENT_ID},limited)).status,400);
   const testPassword='HTTP-fixture-only-password!672';
-  const change=await post('/api/auth/password',{password:testPassword,confirmation:testPassword},limited);assert.equal(change.status,200);const full=cookieOf(change);
+  assert.equal((await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:''},limited)).status,400);
+  const change=await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:DISPLAY_NAME},limited);assert.equal(change.status,200);const full=cookieOf(change);
   assert.equal((await get('/api/auth/session',limited)).status,401);
+  assert.equal((await (await get('/api/auth/session',full)).json()).displayName,DISPLAY_NAME);
   const page=await get('/',full);assert.equal(page.status,200);assert.match(page.headers.get('cache-control'),/no-store/);assert.doesNotMatch(await page.text(),/id="auth-title"/,'Authorized page must not be a cached login form');
   const summary=await get('/api/bank/summary',full);assert.equal(summary.status,200);assert.ok(await summary.json());
   assert.equal((await get('/study/runtime/catalog.json',full)).status,200);

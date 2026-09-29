@@ -1,14 +1,17 @@
 import {scrypt as scryptCallback,randomBytes,createHash,timingSafeEqual} from 'node:crypto';
 import {promisify} from 'node:util';
 import {authStore} from './auth-store.mjs';
+
 const scrypt=promisify(scryptCallback);
-// Server only. No registration route, other users, or reusable client-side password.
+// Server only. Account IDs and names are supplied by private environment configuration.
 export const STUDENT_ID=process.env.MED25_STUDENT_ID??'';
 export const AUTH_COOKIE='med25_session';
 export const SESSION_SECONDS=60*60*24*7;
 const LIMITED_SECONDS=60*15;
 const WINDOW=15*60*1000;
+const MAX_ATTEMPTS=12;
 export class AuthError extends Error {constructor(message,status=400,code='AUTH_ERROR'){super(message);this.status=status;this.code=code;}}
+
 export async function hashPassword(password){
   const salt=randomBytes(16).toString('hex');
   const key=await scrypt(password,salt,32,{N:65536,r:8,p:2,maxmem:128*1024*1024});
@@ -27,63 +30,144 @@ export function passwordProblem(value,studentId=STUDENT_ID){
   if(/^(.)\1+$/.test(value)||['password1234','123456789012','qwertyuiop12','abcdefghijkl'].includes(value.toLowerCase()))return 'Choose a less predictable password or passphrase.';
   return null;
 }
-function decode(raw,studentId){
+export function displayNameProblem(value){
+  if(typeof value!=='string'||value.trim().length<2||value.trim().length>80)return 'Enter your full name (2–80 characters).';
+  if(!/^[\p{L}\p{M}][\p{L}\p{M} .’'\-]*$/u.test(value.trim()))return 'Use letters, spaces, apostrophes, periods, or hyphens in your name.';
+  return null;
+}
+export function parseAccountConfig(raw=process.env.MED25_AUTH_ACCOUNTS,legacyId=STUDENT_ID){
+  let accounts;
+  if(raw){try{accounts=JSON.parse(raw);}catch{throw new AuthError('The authorized student accounts are not configured correctly.',503,'AUTH_UNAVAILABLE');}}
+  else accounts=legacyId?[{id:legacyId,name:null}]:[];
+  if(!Array.isArray(accounts)||accounts.length<1||accounts.length>20)throw new AuthError('The authorized student accounts are not configured correctly.',503,'AUTH_UNAVAILABLE');
+  const seen=new Set();
+  return accounts.map(entry=>{
+    const id=entry?.id,name=entry?.name??null;
+    if(typeof id!=='string'||!/^\d{5,32}$/.test(id)||seen.has(id)||(name!==null&&displayNameProblem(name)))throw new AuthError('The authorized student accounts are not configured correctly.',503,'AUTH_UNAVAILABLE');
+    seen.add(id);return {id,name:name===null?null:name.trim()};
+  });
+}
+function validAttempts(value){return Number.isInteger(value?.count)&&Number.isFinite(value?.start);}
+function validAccount(account,id){return account?.userId===id&&(account.displayName===null||typeof account.displayName==='string')&&typeof account.passwordHash==='string'&&typeof account.mustChangePassword==='boolean'&&Array.isArray(account.sessions)&&validAttempts(account.attempts);}
+function decode(raw){
   if(raw===null)return null;
   const state=JSON.parse(raw);
-  if(state.schema!==1||state.userId!==studentId||typeof state.passwordHash!=='string'||typeof state.mustChangePassword!=='boolean'||!Array.isArray(state.sessions)||!Number.isInteger(state.attempts?.count)||!Number.isFinite(state.attempts?.start))throw new Error('Invalid authentication state; refusing to reset account.');
+  if(state.schema===1){
+    if(typeof state.userId!=='string'||typeof state.passwordHash!=='string'||typeof state.mustChangePassword!=='boolean'||!Array.isArray(state.sessions)||!validAttempts(state.attempts))throw new Error('Invalid authentication state; refusing to reset accounts.');
+    return state;
+  }
+  if(state.schema!==2||!state.accounts||Array.isArray(state.accounts)||typeof state.accounts!=='object'||!validAttempts(state.unsupportedAttempts))throw new Error('Invalid authentication state; refusing to reset accounts.');
+  for(const [id,account] of Object.entries(state.accounts))if(!validAccount(account,id))throw new Error('Invalid authentication state; refusing to reset accounts.');
   return state;
 }
-function validSession(state,token,now){
-  if(!state||typeof token!=='string'||! /^[A-Za-z0-9_-]{43}$/.test(token))return null;
-  const session=state.sessions.find(s=>s.hash===digest(token)&&s.expiresAt>now);
-  return session?{userId:state.userId,mustChangePassword:state.mustChangePassword||session.limited,expiresAt:session.expiresAt}:null;
+function validSession(state,token,now,allowed){
+  if(!state||state.schema!==2||typeof token!=='string'||!/^[A-Za-z0-9_-]{43}$/.test(token))return null;
+  for(const [id,account] of Object.entries(state.accounts)){
+    if(!allowed.has(id))continue;
+    const session=account.sessions.find(item=>item.hash===digest(token)&&item.expiresAt>now);
+    if(session)return {userId:id,displayName:account.displayName,mustChangePassword:account.mustChangePassword||session.limited,expiresAt:session.expiresAt};
+  }
+  return null;
 }
-export function createAuth({store=authStore(),now=Date.now,studentId=STUDENT_ID}={}){
-  if(typeof studentId!=='string'||!/^\d{5,32}$/.test(studentId))throw new AuthError('The authorized student account is not configured.',503,'AUTH_UNAVAILABLE');
+
+export function createAuth({store=authStore(),now=Date.now,accounts,studentId}={}){
+  const configured=accounts!==undefined?parseAccountConfig(JSON.stringify(accounts),''):studentId!==undefined?parseAccountConfig('',studentId):parseAccountConfig();
+  const allowed=new Set(configured.map(account=>account.id));
   async function mutate(fn){
-    for(let i=0;i<12;i++){const raw=await store.read(),state=decode(raw,studentId);const result=await fn(state);if(result.unchanged)return result.value;if(await store.cas(raw,JSON.stringify(result.state)))return result.value;}
+    for(let i=0;i<12;i++){
+      const raw=await store.read(),state=decode(raw),result=await fn(state);
+      if(result.unchanged)return result.value;
+      if(await store.cas(raw,JSON.stringify(result.state)))return result.value;
+    }
     throw new AuthError('Please retry in a moment.',503);
   }
-  async function initialize(){
-    if(await store.read()!==null)return;
-    const initial={schema:1,userId:studentId,passwordHash:await hashPassword(studentId),mustChangePassword:true,sessions:[],attempts:{start:now(),count:0}};
-    await store.cas(null,JSON.stringify(initial));
+  async function configuredState(state){
+    const timestamp=now(),hashes=new Map(await Promise.all(configured.map(async account=>[account.id,await hashPassword(account.id)])));
+    if(state?.schema===1){
+      const legacy=configured.find(account=>account.id===state.userId);
+      if(!legacy)throw new Error('The existing authentication account is not in the authorized account list.');
+      state={schema:2,accounts:{[state.userId]:{userId:state.userId,displayName:legacy.name,passwordHash:state.passwordHash,mustChangePassword:state.mustChangePassword,sessions:state.sessions,attempts:state.attempts}},unsupportedAttempts:{start:timestamp,count:0}};
+    }else if(!state)state={schema:2,accounts:{},unsupportedAttempts:{start:timestamp,count:0}};
+    let added=0,updated=0;
+    for(const config of configured){
+      const existing=state.accounts[config.id];
+      if(!existing){state.accounts[config.id]={userId:config.id,displayName:config.name,passwordHash:hashes.get(config.id),mustChangePassword:true,sessions:[],attempts:{start:timestamp,count:0}};added++;}
+      else if(config.name!==null&&existing.displayName!==config.name){existing.displayName=config.name;updated++;}
+    }
+    return {state,summary:{added,updated,accountCount:Object.keys(state.accounts).length}};
   }
-  function issue(state,limited){
-    const token=randomBytes(32).toString('base64url');const seconds=limited?LIMITED_SECONDS:SESSION_SECONDS;
-    state.sessions=state.sessions.filter(s=>s.expiresAt>now()).slice(-9);
-    state.sessions.push({hash:digest(token),limited,expiresAt:now()+seconds*1000});
-    return {token,maxAge:seconds,mustChangePassword:limited};
+  async function configureAccounts(){
+    return mutate(async state=>{const result=await configuredState(state);return {state:result.state,value:result.summary};});
   }
-  async function reserveAttempt(){
+  async function ensureInitialized(){
+    const state=decode(await store.read());
+    if(state?.schema===2)return;
+    await configureAccounts();
+  }
+  function issue(account,limited){
+    const token=randomBytes(32).toString('base64url'),seconds=limited?LIMITED_SECONDS:SESSION_SECONDS;
+    account.sessions=account.sessions.filter(session=>session.expiresAt>now()).slice(-9);
+    account.sessions.push({hash:digest(token),limited,expiresAt:now()+seconds*1000});
+    return {token,maxAge:seconds,mustChangePassword:limited,displayName:account.displayName};
+  }
+  async function reserveAttempt(userId){
     return mutate(state=>{
-      if(!state)throw new AuthError('Please retry.',503);
-      if(now()-state.attempts.start>=WINDOW)state.attempts={start:now(),count:0};
-      if(state.attempts.count>=12)throw new AuthError('Too many attempts. Try again in 15 minutes.',429,'RATE_LIMITED');
-      state.attempts.count++;return {state,value:state.passwordHash};
+      if(!state||state.schema!==2)throw new AuthError('Please retry.',503);
+      const account=state.accounts[userId],attempts=account?.attempts??state.unsupportedAttempts;
+      if(now()-attempts.start>=WINDOW){attempts.start=now();attempts.count=0;}
+      if(attempts.count>=MAX_ATTEMPTS)throw new AuthError('Too many attempts. Try again in 15 minutes.',429,'RATE_LIMITED');
+      attempts.count++;
+      const fallback=Object.values(state.accounts)[0]?.passwordHash;
+      return {state,value:account?.passwordHash??fallback};
     });
   }
   return {
-    async session(token){if(!token)return null;return validSession(decode(await store.read(),studentId),token,now());},
+    configureAccounts,
+    async session(token){if(!token)return null;await ensureInitialized();return validSession(decode(await store.read()),token,now(),allowed);},
     async login(username,password){
       if(typeof username!=='string'||typeof password!=='string'||username.length>80||password.length>128)throw new AuthError('Invalid student ID or password.',401);
-      await initialize();const hash=await reserveAttempt();const valid=await verifyPassword(password,hash);
-      if(username!==studentId)throw new AuthError('This student account is not supported. MED25 is currently available only to its authorized student account.',401,'UNSUPPORTED_ACCOUNT');
+      await ensureInitialized();
+      const state=decode(await store.read());
+      if(!allowed.has(username)){
+        const hash=await reserveAttempt(username);if(hash)await verifyPassword(password,hash);
+        throw new AuthError('This student account is not supported. Ask the MED25 owner to add your student ID.',401,'UNSUPPORTED_ACCOUNT');
+      }
+      if(!state?.accounts[username])throw new AuthError('This account has not been provisioned yet.',503,'AUTH_UNAVAILABLE');
+      const hash=await reserveAttempt(username),valid=await verifyPassword(password,hash);
       if(!valid)throw new AuthError('Incorrect password. Please try again.',401,'INCORRECT_PASSWORD');
-      return mutate(state=>{if(!state||state.passwordHash!==hash)throw new AuthError('Invalid student ID or password.',401);state.attempts={start:now(),count:0};return {state,value:issue(state,state.mustChangePassword)};});
+      return mutate(current=>{
+        const account=current?.schema===2?current.accounts[username]:null;
+        if(!account||account.passwordHash!==hash)throw new AuthError('Invalid student ID or password.',401);
+        account.attempts={start:now(),count:0};return {state:current,value:issue(account,account.mustChangePassword)};
+      });
     },
-    async changePassword(token,password,confirmation,currentPassword){
-      const snapshot=decode(await store.read(),studentId),session=validSession(snapshot,token,now());
+    async changePassword(token,password,confirmation,currentPassword,displayName){
+      await ensureInitialized();
+      const snapshot=decode(await store.read()),session=validSession(snapshot,token,now(),allowed);
       if(!session)throw new AuthError('Please sign in again.',401);
-      const problem=passwordProblem(password,studentId);if(problem)throw new AuthError(problem);
+      const account=snapshot.accounts[session.userId],nameProblem=displayNameProblem(displayName);
+      if(nameProblem)throw new AuthError(nameProblem);
+      const problem=passwordProblem(password,session.userId);if(problem)throw new AuthError(problem);
       if(password!==confirmation)throw new AuthError('The new passwords do not match.');
-      if(!session.mustChangePassword){await reserveAttempt();if(typeof currentPassword!=='string'||currentPassword.length>128||!await verifyPassword(currentPassword,snapshot.passwordHash))throw new AuthError('Current password is incorrect.',400);}
-      if(await verifyPassword(password,snapshot.passwordHash))throw new AuthError('Choose a different password.');
-      const hash=await hashPassword(password);
-      return mutate(state=>{if(!validSession(state,token,now())||state.passwordHash!==snapshot.passwordHash)throw new AuthError('Please sign in again.',401);state.passwordHash=hash;state.mustChangePassword=false;state.sessions=[];state.attempts={start:now(),count:0};return {state,value:issue(state,false)};});
+      if(!session.mustChangePassword){await reserveAttempt(session.userId);if(typeof currentPassword!=='string'||currentPassword.length>128||!await verifyPassword(currentPassword,account.passwordHash))throw new AuthError('Current password is incorrect.',400);}
+      if(await verifyPassword(password,account.passwordHash))throw new AuthError('Choose a different password.');
+      const hash=await hashPassword(password),normalizedName=displayName.trim();
+      return mutate(state=>{
+        const currentSession=validSession(state,token,now(),allowed),current=currentSession?state.accounts[currentSession.userId]:null;
+        if(!current||currentSession.userId!==session.userId||current.passwordHash!==account.passwordHash)throw new AuthError('Please sign in again.',401);
+        current.passwordHash=hash;current.displayName=normalizedName;current.mustChangePassword=false;current.sessions=[];current.attempts={start:now(),count:0};
+        return {state,value:issue(current,false)};
+      });
     },
-    async logout(token){if(!token)return;await mutate(state=>{if(!state)return {unchanged:true};state.sessions=state.sessions.filter(s=>s.hash!==digest(token));return {state};});},
+    async logout(token){
+      if(!token)return;await ensureInitialized();
+      await mutate(state=>{
+        if(!state||state.schema!==2)return {unchanged:true};
+        let changed=false;for(const account of Object.values(state.accounts)){const before=account.sessions.length;account.sessions=account.sessions.filter(session=>session.hash!==digest(token));changed ||= before!==account.sessions.length;}
+        return changed?{state}:{unchanged:true};
+      });
+    },
   };
 }
-export function requestToken(request){return request.headers.get('cookie')?.split(';').map(v=>v.trim()).find(v=>v.startsWith(AUTH_COOKIE+'='))?.slice(AUTH_COOKIE.length+1)??null;}
+export function requestToken(request){return request.headers.get('cookie')?.split(';').map(value=>value.trim()).find(value=>value.startsWith(AUTH_COOKIE+'='))?.slice(AUTH_COOKIE.length+1)??null;}
 export function safeReturnTo(value){if(typeof value!=='string'||!value.startsWith('/')||value.startsWith('//')||value.includes('\\'))return '/';const url=new URL(value,'https://med25.invalid');return url.origin==='https://med25.invalid'&&url.pathname==='/'?url.pathname+url.search:'/';}
