@@ -16,6 +16,7 @@ const child=spawn(process.execPath,['node_modules/next/dist/bin/next','start','-
 let log='';child.stdout.on('data',v=>{log+=v;});child.stderr.on('data',v=>{log+=v;});
 const get=(url,cookie,extra={})=>fetch(origin+url,{redirect:'manual',headers:{...(cookie?{cookie}:{}),...extra}});
 const post=(url,body,cookie,extra={})=>fetch(origin+url,{method:'POST',redirect:'manual',headers:{origin,'content-type':'application/json','x-med25-auth':'1',...(cookie?{cookie}:{}),...extra},body:JSON.stringify(body)});
+const patch=(body,cookie,extra={})=>fetch(origin+'/api/admin/accounts',{method:'PATCH',headers:{origin,'content-type':'application/json','x-med25-auth':'1',cookie,...extra},body:JSON.stringify(body)});
 const cookieOf=response=>{const raw=response.headers.get('set-cookie');assert.ok(raw);assert.match(raw,/HttpOnly/i);assert.match(raw,/Secure/i);assert.match(raw,/SameSite=strict/i);return raw.split(';')[0];};
 try{
   let ready=false;
@@ -41,8 +42,26 @@ try{
   assert.equal((await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:''},limited)).status,400);
   const change=await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:DISPLAY_NAME},limited);assert.equal(change.status,200);const full=cookieOf(change);
   assert.equal((await get('/api/auth/session',limited)).status,401);
-  const fullSession=await (await get('/api/auth/session',full)).json();assert.equal(fullSession.displayName,DISPLAY_NAME);assert.equal(fullSession.isAdmin,true);
+  const fullSession=await (await get('/api/auth/session',full)).json();assert.equal(fullSession.displayName,DISPLAY_NAME);assert.equal(fullSession.isAdmin,true);assert.equal(fullSession.isOwner,true);
   const adminAccounts=await get('/api/admin/accounts',full);assert.equal(adminAccounts.status,200);assert.equal((await adminAccounts.json()).accounts.length,1);
+  const friendId='00000000002',studentId='00000000003';
+  assert.equal((await post('/api/admin/accounts',{userId:friendId,displayName:'Admin Fixture'},full)).status,201);
+  const friendLimitedResponse=await post('/api/auth/login',{username:friendId,password:friendId});assert.equal(friendLimitedResponse.status,200);const friendLimited=cookieOf(friendLimitedResponse);
+  assert.equal((await patch({action:'role',userId:friendId,role:'admin'},full)).status,200);
+  assert.equal((await get('/api/admin/accounts',friendLimited)).status,403);
+  const friendChange=await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:'Admin Fixture'},friendLimited);assert.equal(friendChange.status,200);const friend=cookieOf(friendChange);
+  assert.equal((await get('/api/admin/accounts',friend)).status,200);assert.equal((await get('/admin',friend)).status,200);
+  assert.equal((await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture',role:'admin'},friend)).status,400);
+  assert.equal((await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture'},friend)).status,201);
+  assert.equal((await patch({action:'role',userId:studentId,role:'admin'},friend)).status,403);
+  assert.equal((await patch({userId:STUDENT_ID,displayName:'Hijacked Owner'},friend)).status,403);
+  assert.equal((await post('/api/admin/accounts',{action:'reset',userId:STUDENT_ID},friend)).status,400);
+  assert.equal((await patch({action:'role',userId:STUDENT_ID,role:'student'},full)).status,400);
+  assert.equal((await patch({action:'role',userId:studentId,role:'admin'},full,{origin:'https://evil.invalid'})).status,403);
+  assert.equal((await patch({action:'role',userId:friendId,role:'student'},full)).status,200);
+  assert.equal((await get('/api/admin/accounts',friend)).status,403);
+  const demoted=await (await get('/api/auth/session',friend)).json();assert.equal(demoted.isAdmin,false);assert.equal(demoted.isOwner,false);
+  const redirected=await get('/admin',friend);assert.equal(redirected.status,307);assert.equal(new URL(redirected.headers.get('location'),origin).pathname,'/');
   const page=await get('/',full);assert.equal(page.status,200);assert.match(page.headers.get('cache-control'),/no-store/);assert.doesNotMatch(await page.text(),/id="auth-title"/,'Authorized page must not be a cached login form');
   const summary=await get('/api/bank/summary',full);assert.equal(summary.status,200);assert.ok(await summary.json());
   assert.equal((await get('/study/runtime/catalog.json',full)).status,200);
@@ -50,5 +69,5 @@ try{
   assert.equal((await post('/api/auth/login',credentials)).status,401);
   const returning=await post('/api/auth/login',{username:STUDENT_ID,password:testPassword,next:'//evil.invalid'});assert.equal(returning.status,200);assert.equal((await returning.json()).next,'/');const returningCookie=cookieOf(returning);
   assert.equal((await post('/api/auth/logout',{},returningCookie)).status,200);assert.equal((await get('/api/auth/session',returningCookie)).status,401);assert.equal((await get('/study/runtime/catalog.json',returningCookie)).status,401);
-  console.log('PASS: production HTTP auth gate, forced change, PDF/API/static protection, secure cookies, password rotation, CSRF checks and logout. Student credential store untouched.');
+  console.log('PASS: production HTTP auth gate, owner/admin/student roles, escalation denial, immediate demotion, forced change, content protection, CSRF and logout. Real credential store untouched.');
 }finally{child.kill('SIGTERM');if(child.exitCode===null)await once(child,'exit');}

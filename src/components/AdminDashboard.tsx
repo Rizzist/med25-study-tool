@@ -1,39 +1,99 @@
 "use client";
-import {useCallback,useEffect,useState,type FormEvent} from 'react';
+import {useCallback,useEffect,useRef,useState,type FormEvent} from 'react';
+import type {ManagedAccount} from '../lib/server/auth-core.mjs';
+import {useAuthAccount} from './AuthBoundary';
 
-type ManagedAccount={userId:string;displayName:string|null;active:boolean;mustChangePassword:boolean;sessionCount:number;isAdmin:boolean};
 const headers={'content-type':'application/json','x-med25-auth':'1'};
+type Editor={kind:'add'}|{kind:'manage';account:ManagedAccount};
 
 export function AdminDashboard(){
-  const [accounts,setAccounts]=useState<ManagedAccount[]>([]),[drafts,setDrafts]=useState<Record<string,string>>({});
-  const [loading,setLoading]=useState(true),[busy,setBusy]=useState(''),[error,setError]=useState(''),[notice,setNotice]=useState('');
+  const {isOwner,isAdmin}=useAuthAccount();
+  const [accounts,setAccounts]=useState<ManagedAccount[]>([]);
+  const [loading,setLoading]=useState(true),[busy,setBusy]=useState(false);
+  const [error,setError]=useState(''),[notice,setNotice]=useState(''),[query,setQuery]=useState('');
+  const [editor,setEditor]=useState<Editor|null>(null),[editorError,setEditorError]=useState('');
+  const [name,setName]=useState('');
+  const dialog=useRef<HTMLDialogElement>(null);
   const load=useCallback(async()=>{
-    setError('');try{const response=await fetch('/api/admin/accounts',{cache:'no-store'}),body=await response.json();if(!response.ok)throw new Error(body.error??'Could not load accounts.');setAccounts(body.accounts);setDrafts(Object.fromEntries(body.accounts.map((account:ManagedAccount)=>[account.userId,account.displayName??''])));}
-    catch(error){setError(error instanceof Error?error.message:'Could not load accounts.');}finally{setLoading(false);}
+    setLoading(true);
+    try{
+      const response=await fetch('/api/admin/accounts',{cache:'no-store'}),body=await response.json();
+      if(!response.ok)throw new Error(body.error??'Could not load accounts.');
+      setAccounts(body.accounts);setError('');
+    }catch(error){setError(error instanceof Error?error.message:'Could not load accounts.');}
+    finally{setLoading(false);}
   },[]);
   useEffect(()=>{void load();},[load]);
-  async function mutate(key:string,url:string,method:string,body:Record<string,unknown>,success:string){
-    setBusy(key);setError('');setNotice('');try{const response=await fetch(url,{method,headers,body:JSON.stringify(body)}),result=await response.json();if(!response.ok)throw new Error(result.error??'Could not update the account.');setNotice(success);await load();return true;}
-    catch(error){setError(error instanceof Error?error.message:'Could not update the account.');return false;}finally{setBusy('');}
+  useEffect(()=>{if(editor)dialog.current?.showModal();else dialog.current?.close();},[editor]);
+  function openEditor(value:Editor){setEditorError('');setName(value.kind==='manage'?value.account.displayName??'':'');setEditor(value);}
+  async function mutate(method:string,body:Record<string,unknown>,success:string,inDialog=false){
+    setBusy(true);setError('');setEditorError('');setNotice('');
+    try{
+      const response=await fetch('/api/admin/accounts',{method,headers,body:JSON.stringify(body)}),result=await response.json();
+      if(!response.ok)throw new Error(result.error??'Could not update the account.');
+      setNotice(success);if(inDialog)setEditor(null);await load();return true;
+    }catch(error){(inDialog?setEditorError:setError)(error instanceof Error?error.message:'Could not update the account.');return false;}
+    finally{setBusy(false);}
   }
-  async function add(event:FormEvent<HTMLFormElement>){
-    event.preventDefault();const form=event.currentTarget,fields=Object.fromEntries(new FormData(form));
-    if(await mutate('add','/api/admin/accounts','POST',{userId:fields.userId,displayName:fields.displayName},'Student added. Their temporary password is their student ID; a new name and password are required before study access.'))form.reset();
+  function save(event:FormEvent<HTMLFormElement>){
+    event.preventDefault();if(!editor)return;
+    if(editor.kind==='add'){
+      const fields=new FormData(event.currentTarget);
+      void mutate('POST',{userId:fields.get('userId'),displayName:name},'Student added. They sign in with their student ID, then confirm their name and change their password.',true);
+    }else{
+      const account=editor.account;
+      void mutate(account.active?'PATCH':'POST',{userId:account.userId,displayName:name},account.active?'Name updated.':'Access restored as a student. First-login setup is required.',true);
+    }
   }
+  const filtered=accounts.filter(account=>(account.displayName??'Name pending').toLowerCase().includes(query.trim().toLowerCase())||account.userId.includes(query.trim()));
+  const current=editor?.kind==='manage'?editor.account:null;
   return <main className="admin-screen">
-    <header className="admin-header"><div><a href="/">← Back to MED//25</a><p className="auth-eyebrow">Owner controls</p><h1>Account dashboard</h1><p>Add students, update names, revoke access, or reset a forgotten password.</p></div><span>{accounts.filter(account=>account.active).length} active</span></header>
-    {error&&<p className="auth-error" role="alert">{error}</p>}{notice&&<p className="admin-notice" role="status">{notice}</p>}
-    <section className="admin-add" aria-labelledby="add-student"><div><h2 id="add-student">Add a student</h2><p>Their student ID becomes a one-time password. They cannot reach study content until they set their full name and a new private password.</p></div><form onSubmit={add}><label>Student ID<input name="userId" inputMode="numeric" pattern="[0-9]{5,32}" required placeholder="Student ID"/></label><label>Full name<input name="displayName" autoComplete="off" minLength={2} maxLength={80} required placeholder="Full name"/></label><button className="primary" disabled={busy!==''}>{busy==='add'?'Adding…':'Add student'}</button></form></section>
-    <section className="admin-list" aria-labelledby="student-accounts"><div className="admin-list-heading"><h2 id="student-accounts">Student accounts</h2><button type="button" onClick={()=>void load()} disabled={loading||busy!==''}>Refresh</button></div>
-      {loading?<p role="status">Loading secure account list…</p>:accounts.map(account=><article key={account.userId} className={!account.active?'disabled':''}>
-        <div className="admin-account-summary"><div><h3>{account.displayName??'Name pending'} {account.isAdmin&&<small>Owner</small>}</h3><code>{account.userId}</code></div><div className="admin-status"><span className={account.active?'active':'inactive'}>{account.active?'Active':'Removed'}</span>{account.active&&<span>{account.mustChangePassword?'Setup required':'Password set'}</span>}<span>{account.sessionCount} session{account.sessionCount===1?'':'s'}</span></div></div>
-        <div className="admin-account-actions"><label>Display name<input value={drafts[account.userId]??''} minLength={2} maxLength={80} onChange={event=>setDrafts(current=>({...current,[account.userId]:event.target.value}))}/></label>
-          <button type="button" disabled={!account.active||busy!==''||drafts[account.userId]===account.displayName} onClick={()=>void mutate('name-'+account.userId,'/api/admin/accounts','PATCH',{userId:account.userId,displayName:drafts[account.userId]},'Name updated.')}>Save name</button>
-          {!account.isAdmin&&account.active&&<><button type="button" disabled={busy!==''} onClick={()=>{if(confirm(`Reset ${account.displayName??'this student'}'s password to their student ID and sign out all their sessions?`))void mutate('reset-'+account.userId,'/api/admin/accounts','POST',{action:'reset',userId:account.userId},'Temporary password restored; the student must change it at next login.');}}>Reset password</button><button type="button" className="danger" disabled={busy!==''} onClick={()=>{if(confirm(`Remove access for ${account.displayName??'this student'}? Their current sessions will be revoked immediately.`))void mutate('remove-'+account.userId,'/api/admin/accounts','DELETE',{userId:account.userId},'Student access removed and sessions revoked.');}}>Remove access</button></>}
-          {!account.active&&<button type="button" disabled={busy!==''} onClick={()=>void mutate('restore-'+account.userId,'/api/admin/accounts','POST',{userId:account.userId,displayName:drafts[account.userId]||account.displayName},'Student restored with their student ID as a one-time password.')}>Restore access</button>}
-        </div>
-      </article>)}
+    <header className="admin-header">
+      <a href="/" aria-label="Back to MED25">← MED//25</a><h1>Accounts</h1>
+      <span className="admin-count">{loading&&!accounts.length?'Loading…':accounts.filter(account=>account.active).length+' active'}</span>
+      <button type="button" className="primary" disabled={busy||!isAdmin} onClick={()=>openEditor({kind:'add'})}>+ Add student</button>
+    </header>
+    <p className="admin-permissions">{isOwner?'You control admin access. Admins can manage students; only you can change roles.':'Manage student accounts. Administrator roles are controlled by the owner.'}</p>
+    {error&&<p className="auth-error" role="alert">{error}</p>}
+    {notice&&<p className="admin-notice" role="status">{notice}</p>}
+    <section className="admin-list" aria-label="Student accounts">
+      <div className="admin-toolbar">
+        <input type="search" aria-label="Find a student by name or ID" placeholder="Find name or student ID…" value={query} onChange={event=>setQuery(event.target.value)}/>
+        <span>{filtered.length} {filtered.length===1?'account':'accounts'}</span>
+        <button type="button" disabled={loading||busy} onClick={()=>void load()}>{loading?'Loading…':'Refresh'}</button>
+      </div>
+      <div className="admin-table-scroll" tabIndex={0} role="region" aria-label="Student account table, scroll horizontally on smaller screens" aria-busy={loading}>
+        <table className="admin-table">
+          <thead><tr><th scope="col">Name</th><th scope="col">Student ID</th><th scope="col">Role</th><th scope="col">Access</th><th scope="col" className="admin-sessions">Sessions</th><th scope="col"><span className="admin-sr-only">Actions</span></th></tr></thead>
+          <tbody>{filtered.map(account=>{
+            const canManage=isAdmin&&(isOwner||!account.isAdmin);
+            return <tr key={account.userId} className={account.active?'':'admin-inactive'}>
+              <th scope="row"><span className="admin-name" title={account.displayName??'Name pending'}>{account.displayName??'Name pending'}</span></th>
+              <td><code>{account.userId}</code></td>
+              <td>{isOwner&&!account.isOwner?<select aria-label={'Role for '+(account.displayName??account.userId)} value={account.role} disabled={busy||!account.active} onChange={event=>{void mutate('PATCH',{action:'role',userId:account.userId,role:event.target.value},event.target.value==='admin'?'Admin access granted. Only you can assign roles.':'Admin access revoked. Student access remains active.');}}><option value="student">Student</option><option value="admin">Admin</option></select>:<span className={'admin-role '+account.role}>{account.isOwner?'Owner':account.isAdmin?'Admin':'Student'}</span>}</td>
+              <td><span className={'admin-access '+(!account.active?'removed':account.mustChangePassword?'pending':'active')}>{!account.active?'Removed':account.mustChangePassword?'Setup required':'Active'}</span></td>
+              <td className="admin-sessions">{account.sessionCount}</td>
+              <td><button type="button" disabled={busy||!canManage} aria-label={'Manage '+(account.displayName??account.userId)} title={canManage?'Edit name, reset password, or change access':'Only the owner can manage admins'} onClick={()=>openEditor({kind:'manage',account})}>Manage</button></td>
+            </tr>;
+          })}</tbody>
+        </table>
+        {!filtered.length&&<p className="admin-empty" role="status">{loading?'Loading accounts…':query?'No matching students.':'No accounts to show.'}</p>}
+      </div>
     </section>
-    <p className="admin-security-note">Account changes are stored in the private MED25 database. Passwords are never shown here; resetting creates a one-time student-ID password and revokes every existing session for that student.</p>
+    <dialog ref={dialog} className="admin-dialog" aria-labelledby="admin-editor-title" onCancel={event=>{if(busy)event.preventDefault();}} onClose={()=>setEditor(null)}>
+      <div className="admin-dialog-heading"><h2 id="admin-editor-title">{editor?.kind==='add'?'Add student':'Manage account'}</h2><button type="button" aria-label="Close account editor" disabled={busy} onClick={()=>setEditor(null)}>×</button></div>
+      {current&&<p className="admin-dialog-id">{current.userId} · {current.isOwner?'Owner':current.isAdmin?'Admin':'Student'}</p>}
+      {editorError&&<p role="alert" className="auth-error">{editorError}</p>}
+      <form onSubmit={save}>
+        {editor?.kind==='add'&&<label>Student ID<input name="userId" inputMode="numeric" pattern="[0-9]{5,32}" maxLength={32} required autoFocus autoComplete="off"/></label>}
+        <label>Full name<input value={name} onChange={event=>setName(event.target.value)} minLength={2} maxLength={80} required autoComplete="off" autoFocus={editor?.kind==='manage'}/></label>
+        {(editor?.kind==='add'||current&&!current.active)&&<p className="admin-dialog-help">The student ID is the temporary password. They must confirm their name and set a new password before studying.</p>}
+        <button className="primary" disabled={busy||!isAdmin}>{busy?'Saving…':editor?.kind==='add'?'Add student':current?.active?'Save name':'Restore as student'}</button>
+      </form>
+      {current?.active&&!current.isOwner&&<div className="admin-dialog-actions">
+        <button type="button" disabled={busy} onClick={()=>{if(confirm('Reset the password for '+(current.displayName??current.userId)+' to their student ID? This signs out all their sessions and requires a new password.'))void mutate('POST',{action:'reset',userId:current.userId},'Password reset. First-login setup is required.',true);}}>Reset password</button>
+        <button type="button" className="danger" disabled={busy} onClick={()=>{if(confirm('Remove access for '+(current.displayName??current.userId)+'? All their sessions will be signed out.'))void mutate('DELETE',{userId:current.userId},'Access removed and sessions signed out.',true);}}>Remove access</button>
+      </div>}
+    </dialog>
   </main>;
 }

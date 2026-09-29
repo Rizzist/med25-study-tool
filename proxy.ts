@@ -12,6 +12,10 @@ export async function proxy(request:NextRequest){
     if(pathname.startsWith('/api/')||pathname.startsWith('/study/')||pathname.startsWith('/anatomy3d/')||pathname==='/_next/image'||/\.[a-z\d]+$/i.test(pathname))return NextResponse.json({error:'Authentication required.',code:session?'PASSWORD_CHANGE_REQUIRED':'LOGIN_REQUIRED'},{status:session?403:401,headers:{'Cache-Control':'no-store'}});
     const url=request.nextUrl.clone();url.pathname=session?'/change-password':'/login';url.search='';if(!session)url.searchParams.set('next',safeReturnTo(pathname+request.nextUrl.search));return NextResponse.redirect(url);
   }
+  if(!session?.isAdmin&&(pathname==='/admin'||pathname.startsWith('/admin/')||pathname.startsWith('/api/admin/'))){
+    if(pathname.startsWith('/api/'))return NextResponse.json({error:'Administrator access required.',code:'ADMIN_REQUIRED'},{status:403,headers:{'Cache-Control':'no-store'}});
+    const url=request.nextUrl.clone();url.pathname='/';url.search='';return NextResponse.redirect(url);
+  }
   const response=NextResponse.next();response.headers.set('Cache-Control','private, no-store, max-age=0');response.headers.set('CDN-Cache-Control','no-store');response.headers.set('Vercel-CDN-Cache-Control','no-store');return response;
 }
 export const config={matcher:['/((?!_next/static|_next/webpack-hmr).*)']};

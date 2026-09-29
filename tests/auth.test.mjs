@@ -68,7 +68,9 @@ test('Each configured account has an isolated name, password and session set',as
   await assert.rejects(auth.login(FRIEND_ID,FRIEND_ID),{status:401,code:'INCORRECT_PASSWORD'});
 });
 test('Only the owner can manage accounts; removal revokes sessions and reset restores forced setup',async()=>{
-  const auth=createAuth({store:memory()}),owner=await auth.login(STUDENT_ID,STUDENT_ID),friend=await auth.login(FRIEND_ID,FRIEND_ID),addedId='00000000003';
+  const auth=createAuth({store:memory()}),limited=await auth.login(STUDENT_ID,STUDENT_ID),friendLimited=await auth.login(FRIEND_ID,FRIEND_ID),addedId='00000000003';
+  await assert.rejects(auth.listAccounts(limited.token),{code:'PASSWORD_CHANGE_REQUIRED'});
+  const owner=await auth.changePassword(limited.token,replacement,replacement,'','Primary Fixture'),friend=await auth.changePassword(friendLimited.token,replacement,replacement,'','Second Fixture');
   assert.equal((await auth.session(owner.token)).isAdmin,true);assert.equal((await auth.session(friend.token)).isAdmin,false);
   await assert.rejects(auth.listAccounts(friend.token),{status:403,code:'ADMIN_REQUIRED'});
   await assert.rejects(auth.removeAccount(owner.token,STUDENT_ID),{code:'OWNER_PROTECTED'});
@@ -81,6 +83,58 @@ test('Only the owner can manage accounts; removal revokes sessions and reset res
   await assert.rejects(auth.login(addedId,addedId),{status:401,code:'UNSUPPORTED_ACCOUNT'});
   const removed=(await auth.listAccounts(owner.token)).find(account=>account.userId===addedId);assert.equal(removed.active,false);
   await auth.addAccount(owner.token,addedId,'Restored Fixture');assert.equal((await auth.login(addedId,addedId)).mustChangePassword,true);
+});
+test('Only the permanent owner assigns roles; delegated admins manage students without controlling admins',async()=>{
+  const store=memory(),auth=createAuth({store}),extraId='00000000004';
+  const firstOwner=await auth.login(STUDENT_ID,STUDENT_ID),firstFriend=await auth.login(FRIEND_ID,FRIEND_ID);
+  const owner=await auth.changePassword(firstOwner.token,replacement,replacement,'','Owner Fixture');
+  await auth.setAccountRole(owner.token,FRIEND_ID,'admin');
+  await assert.rejects(auth.listAccounts(firstFriend.token),{code:'PASSWORD_CHANGE_REQUIRED'});
+  await assert.rejects(auth.addAccount(firstFriend.token,extraId,'Unfinished Fixture'),{code:'PASSWORD_CHANGE_REQUIRED'});
+  const admin=await auth.changePassword(firstFriend.token,replacement,replacement,'','Admin Fixture');
+  assert.equal((await auth.session(admin.token)).isAdmin,true);assert.equal((await auth.session(admin.token)).isOwner,false);
+  const list=await auth.listAccounts(admin.token);assert.equal(list.find(a=>a.userId===STUDENT_ID).role,'owner');
+  assert.equal((await auth.addAccount(admin.token,extraId,'Student Fixture')).role,'student');
+  await auth.updateAccount(admin.token,extraId,'Renamed Student');
+  for(const target of [STUDENT_ID,FRIEND_ID]){
+    await assert.rejects(auth.setAccountRole(admin.token,target,'admin'),{code:'OWNER_REQUIRED'});
+    await assert.rejects(auth.updateAccount(admin.token,target,'Impersonated Owner'),{code:'OWNER_REQUIRED'});
+    await assert.rejects(auth.resetAccount(admin.token,target));
+    await assert.rejects(auth.removeAccount(admin.token,target));
+    await assert.rejects(auth.addAccount(admin.token,target,'Replaced Owner'));
+  }
+  await assert.rejects(auth.setAccountRole(admin.token,extraId,'admin'),{code:'OWNER_REQUIRED'});
+  await assert.rejects(auth.setAccountRole(owner.token,STUDENT_ID,'student'),{code:'OWNER_PROTECTED'});
+  await assert.rejects(auth.setAccountRole(owner.token,extraId,'owner'),{code:'INVALID_ROLE'});
+  await auth.resetAccount(admin.token,extraId);await auth.removeAccount(admin.token,extraId);
+  await assert.rejects(auth.setAccountRole(owner.token,extraId,'admin'),{code:'ACCOUNT_NOT_FOUND'});
+  await auth.addAccount(admin.token,extraId,'Restored Student');
+  await auth.setAccountRole(owner.token,extraId,'admin');
+  await assert.rejects(auth.resetAccount(admin.token,extraId),{code:'OWNER_REQUIRED'});
+  await auth.removeAccount(owner.token,extraId);
+  await assert.rejects(auth.addAccount(admin.token,extraId,'Hijacked Admin'),{code:'OWNER_REQUIRED'});
+  assert.equal((await auth.addAccount(owner.token,extraId,'Restored Student')).role,'student');
+  await auth.setAccountRole(owner.token,FRIEND_ID,'student');
+  assert.equal((await auth.session(admin.token)).isAdmin,false);
+  await assert.rejects(auth.listAccounts(admin.token),{code:'ADMIN_REQUIRED'});
+  await assert.rejects(auth.setAccountRole(admin.token,FRIEND_ID,'admin'),{code:'ADMIN_REQUIRED'});
+  await auth.updateAccount(owner.token,FRIEND_ID,'Owner Fixture');
+  assert.equal((await auth.session(admin.token)).isOwner,false,'A display name cannot confer owner access');
+  await auth.setAccountRole(owner.token,FRIEND_ID,'admin');await auth.removeAccount(owner.token,FRIEND_ID);
+  await auth.configureAccounts();
+  const persisted=JSON.parse(await store.read()).accounts[FRIEND_ID];
+  assert.equal(persisted.active,false);assert.equal(persisted.role,'admin');assert.equal(persisted.displayName,'Owner Fixture');
+  assert.equal(await auth.session(admin.token),null);
+});
+test('Role authorization is rechecked after a concurrent demotion',async()=>{
+  const base=memory();let intercept=null;
+  const store={read:base.read,cas:async(before,after)=>{if(intercept){const task=intercept;intercept=null;await task();}return base.cas(before,after);}};
+  const auth=createAuth({store}),ownerFirst=await auth.login(STUDENT_ID,STUDENT_ID),friendFirst=await auth.login(FRIEND_ID,FRIEND_ID);
+  const owner=await auth.changePassword(ownerFirst.token,replacement,replacement,'','Owner Fixture'),admin=await auth.changePassword(friendFirst.token,replacement,replacement,'','Admin Fixture');
+  await auth.setAccountRole(owner.token,FRIEND_ID,'admin');
+  intercept=()=>auth.setAccountRole(owner.token,FRIEND_ID,'student');
+  await assert.rejects(auth.addAccount(admin.token,'00000000005','Race Fixture'),{code:'ADMIN_REQUIRED'});
+  assert.equal(JSON.parse(await base.read()).accounts['00000000005'],undefined);
 });
 test('Schema-one account migrates without resetting its password and adds configured friends explicitly',async()=>{
   const oldHash=await (await import('../src/lib/server/auth-core.mjs')).hashPassword(replacement);

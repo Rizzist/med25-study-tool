@@ -2,8 +2,8 @@
 import {createContext,useContext,useEffect,useState,type ReactNode} from 'react';
 import {clearStudyCaches,requireStudySession} from '../../public/med25-auth-cache.mjs';
 
-type AccountSession={displayName:string|null;isAdmin:boolean};
-const AccountContext=createContext<AccountSession>({displayName:null,isAdmin:false});
+type AccountSession={displayName:string|null;isOwner:boolean;isAdmin:boolean};
+const AccountContext=createContext<AccountSession>({displayName:null,isOwner:false,isAdmin:false});
 export const useAuthAccount=()=>useContext(AccountContext);
 
 export async function signOut(){
@@ -22,7 +22,7 @@ export function AuthBoundary({children,initialSession}:{children:ReactNode;initi
   useEffect(()=>{
     let alive=true;
     const lock=()=>{setReady(false);location.replace('/login');};
-    const check=async()=>{if(!alive)return;try{const session=await requireStudySession();if(alive){setAccount({displayName:session.displayName??null,isAdmin:session.isAdmin===true});setReady(true);setVerifiedOnce(true);setUnavailable(false);}}catch(error){if(alive){if((error as {code?:string}).code==='AUTH_REQUIRED')lock();else{setReady(false);setUnavailable(true);}}}};
+    const check=async()=>{if(!alive)return;try{const session=await requireStudySession();if(alive){setAccount({displayName:session.displayName??null,isOwner:session.isOwner===true,isAdmin:session.isAdmin===true});setReady(true);setVerifiedOnce(true);setUnavailable(false);}}catch(error){if(alive){if((error as {code?:string}).code==='AUTH_REQUIRED')lock();else{setReady(false);setUnavailable(true);}}}};
     const wake=()=>{if(document.visibilityState==='visible'){setReady(false);void check();}};
     const storage=(event:StorageEvent)=>{if(event.key==='med25-auth-logout')lock();};
     const channel=typeof BroadcastChannel!=='undefined'?new BroadcastChannel('med25-auth'):null;if(channel)channel.onmessage=lock;

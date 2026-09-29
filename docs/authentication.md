@@ -33,9 +33,11 @@ The table `public.med25_auth_state` holds one versioned record containing isolat
 
 ## Owner administration
 
-Set `MED25_ADMIN_STUDENT_ID` to the owner's authorized student ID as a private server-only variable. The authenticated owner then receives an **Admin** navigation link to `/admin`. The dashboard can add an account, edit its display name, disable or restore access, and reset a forgotten password. It never displays a password or password hash.
+Set `MED25_ADMIN_STUDENT_ID` to the permanent owner's authorized student ID as a private server-only variable. Ownership is bound to that ID, never the display name. The authenticated owner and delegated admins receive an **Admin** navigation link to `/admin`. Each account occupies one compact table row; name editing, access changes and password reset are available through **Manage**. The owner has an inline **Student / Admin** selector for other active accounts. No other account can assign roles or change ownership.
 
-Adding or restoring an account sets its temporary password to its student ID, requires the student to confirm their name and choose a new password at first login, and revokes any earlier sessions. Resetting does the same for an existing account. Disabling access immediately revokes that account's sessions. The owner account cannot be disabled or reset from the dashboard. Every admin API operation checks the live server session and owner identity; there is still no public registration endpoint.
+Adding or restoring an account creates a student role, sets its temporary password to its student ID, requires name confirmation and a new password at first login, and revokes earlier sessions. Resetting forces setup again and revokes sessions. Disabling access immediately revokes sessions. The owner cannot be disabled, reset or demoted from the dashboard. Delegated admins can add, edit, reset, disable and restore student accounts, but cannot manage the owner or other admins (including disabled admins). Only the owner can grant or revoke an admin role. Demotion takes effect on the next server request, including an already-open admin page.
+
+Every admin operation independently validates the current session, completed first-login setup and current database role. Atomic writes recheck permissions after conflicts, so concurrent demotion cannot retain authority. Existing accounts without a stored role remain students; the configured owner remains the owner. The setup script preserves existing roles, disabled access and names. There is no public registration endpoint.
 
 After connecting and securely pulling the MED25-only environment variables:
 
@@ -74,7 +76,7 @@ Self-hosted production on a persistent private disk can explicitly set `MED25_AU
 - Same-origin, JSON and custom-header checks protect authentication writes. Persistent per-account rate limiting allows 12 login attempts per 15 minutes, with a separate unsupported-ID bucket. At the owner's request, unsupported student IDs receive an explicit `UNSUPPORTED_ACCOUNT` message; an allowed ID with a wrong password receives `INCORRECT_PASSWORD`. Neither error displays any permitted ID or issues a cookie. This intentionally distinguishes account eligibility; both cases remain rate-limited. A successful login resets only that account's counter.
 - Each cache read requires a live authenticated session; offline sign-in authorization is not allowed. Content-addressed caches still reduce downloads while signed in. Logout clears MED25 Cache Storage but retains exam answers/results. Cross-tab logout and periodic/focus checks lock the UI.
 - A previously downloaded/exported PDF cannot be revoked, nor can already received data be erased from another person's files. The new worker replaces the old cache-first worker after visiting the updated site; it cannot retroactively control an old offline copy that has never received the update.
-- No self-service recovery/email reset is provided. Password loss requires an explicit owner-controlled maintenance/reset process; do not expose a public reset endpoint.
+- No self-service recovery/email reset is provided. Password loss requires an authorized administrator reset; only the owner can reset other admins. Do not expose a public reset endpoint.
 
 ## Verification
 
@@ -84,6 +86,13 @@ Self-hosted production on a persistent private disk can explicitly set `MED25_AU
 - `npm run mcq:check`: existing MCQ/progress/review regression suite.
 - Verified locally: production build and isolated HTTP integration passed; authentication, PDF-cache and MCQ regression checks passed. Desktop and 390×844 mobile login/required-password screens were checked in Chrome during initial implementation. The owner subsequently completed the local password change personally; later checks preserve that account and use synthetic credentials in disposable stores.
 - Existing unrelated `tests/paper-pdf.test.mjs` failures at implementation time: stale 30-PDF manifest expectation (actual 77) and missing math glyphs in export fonts. Cache authorization fixture tests pass; this auth task does not rewrite paper content/font pipelines.
+
+### Compact administration and delegated roles — SHIP verification (2026-09-29)
+
+- Production build/typecheck passed; 14 authentication/security, 2 hook-order, 20 guided/map and 7 Respiratory Core tests passed.
+- Isolated production HTTP integration passed: owner/admin/student boundaries, role-injection rejection, forced setup, protected owner, CSRF, immediate demotion, content protection and logout. Synthetic stores only; existing real passwords and roles were not changed.
+- Chrome verified owner role selectors and the delegated-admin view with no role selectors and disabled owner/admin management. Desktop and 390×844 mobile show a 40px header and approximately 49px single-line student rows.
+- Mobile page width remains 390px; only the table scrolls horizontally (610px content in a 364px container). The account editor fits inside the viewport. The initial overflow and late non-admin redirect found during review were fixed and retested.
 
 ## Reference decisions
 
