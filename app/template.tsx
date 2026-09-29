@@ -5,5 +5,5 @@ export default async function AuthenticatedTemplate({children}:{children:React.R
   const session=await pageSession();
   if(!session)return <AuthForm/>;
   if(session.mustChangePassword)return <AuthForm mode="password" forced displayName={session.displayName}/>;
-  return <AuthBoundary initialSession={{displayName:session.displayName}}>{children}</AuthBoundary>;
+  return <AuthBoundary initialSession={{displayName:session.displayName,isAdmin:session.isAdmin}}>{children}</AuthBoundary>;
 }

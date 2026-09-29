@@ -67,6 +67,21 @@ test('Each configured account has an isolated name, password and session set',as
   assert.equal((await auth.login(FRIEND_ID,replacement)).displayName,'Second Fixture');
   await assert.rejects(auth.login(FRIEND_ID,FRIEND_ID),{status:401,code:'INCORRECT_PASSWORD'});
 });
+test('Only the owner can manage accounts; removal revokes sessions and reset restores forced setup',async()=>{
+  const auth=createAuth({store:memory()}),owner=await auth.login(STUDENT_ID,STUDENT_ID),friend=await auth.login(FRIEND_ID,FRIEND_ID),addedId='00000000003';
+  assert.equal((await auth.session(owner.token)).isAdmin,true);assert.equal((await auth.session(friend.token)).isAdmin,false);
+  await assert.rejects(auth.listAccounts(friend.token),{status:403,code:'ADMIN_REQUIRED'});
+  await assert.rejects(auth.removeAccount(owner.token,STUDENT_ID),{code:'OWNER_PROTECTED'});
+  const added=await auth.addAccount(owner.token,addedId,'Added Fixture');assert.equal(added.mustChangePassword,true);
+  const addedLogin=await auth.login(addedId,addedId);assert.equal((await auth.session(addedLogin.token)).displayName,'Added Fixture');
+  await auth.updateAccount(owner.token,addedId,'Renamed Fixture');assert.equal((await auth.session(addedLogin.token)).displayName,'Renamed Fixture');
+  const changed=await auth.changePassword(addedLogin.token,replacement,replacement,'','Renamed Fixture');assert.equal(changed.mustChangePassword,false);
+  await auth.resetAccount(owner.token,addedId);assert.equal(await auth.session(changed.token),null);assert.equal((await auth.login(addedId,addedId)).mustChangePassword,true);
+  const activeToken=(await auth.login(addedId,addedId)).token;await auth.removeAccount(owner.token,addedId);assert.equal(await auth.session(activeToken),null);
+  await assert.rejects(auth.login(addedId,addedId),{status:401,code:'UNSUPPORTED_ACCOUNT'});
+  const removed=(await auth.listAccounts(owner.token)).find(account=>account.userId===addedId);assert.equal(removed.active,false);
+  await auth.addAccount(owner.token,addedId,'Restored Fixture');assert.equal((await auth.login(addedId,addedId)).mustChangePassword,true);
+});
 test('Schema-one account migrates without resetting its password and adds configured friends explicitly',async()=>{
   const oldHash=await (await import('../src/lib/server/auth-core.mjs')).hashPassword(replacement);
   const old=JSON.stringify({schema:1,userId:STUDENT_ID,passwordHash:oldHash,mustChangePassword:false,sessions:[],attempts:{start:1,count:0}}),store=memory();
@@ -95,6 +110,7 @@ test('Cached PDFs cannot be served when session authorization is denied',async()
 test('Every content API, static content proxy and server-rendered template has an auth guard',async()=>{
   const routes=['bank/summary','questions','questions/by-ids','questions/sprint','final-exam','media','health','tutor/grade'];
   for(const route of routes)assert.match(await readFile(new URL(`../app/api/${route}/route.ts`,import.meta.url),'utf8'),/await requireApiSession\(request\)/);
+  const adminRoute=await readFile(new URL('../app/api/admin/accounts/route.ts',import.meta.url),'utf8');assert.match(adminRoute,/\.listAccounts\(requestToken\(request\)\)/);assert.match(adminRoute,/await readAuthBody\(request\)/);
   const proxy=await readFile(new URL('../proxy.ts',import.meta.url),'utf8');assert.match(proxy,/createAuth\(\)\.session/);assert.match(proxy,/mustChangePassword/);assert.match(proxy,/private, no-store/);
   assert.match(await readFile(new URL('../app/template.tsx',import.meta.url),'utf8'),/await pageSession\(\)/);
   const client=await readFile(new URL('../src/components/AuthForm.tsx',import.meta.url),'utf8');assert.equal(client.includes(STUDENT_ID),false);

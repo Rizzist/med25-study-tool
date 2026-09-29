@@ -5,6 +5,7 @@ import {authStore} from './auth-store.mjs';
 const scrypt=promisify(scryptCallback);
 // Server only. Account IDs and names are supplied by private environment configuration.
 export const STUDENT_ID=process.env.MED25_STUDENT_ID??'';
+export const ADMIN_STUDENT_ID=process.env.MED25_ADMIN_STUDENT_ID??STUDENT_ID;
 export const AUTH_COOKIE='med25_session';
 export const SESSION_SECONDS=60*60*24*7;
 const LIMITED_SECONDS=60*15;
@@ -24,6 +25,7 @@ export async function verifyPassword(password,encoded){
   return timingSafeEqual(key,Buffer.from(hash,'hex'));
 }
 const digest=value=>createHash('sha256').update(value).digest('hex');
+function managedUserId(value){if(typeof value!=='string'||!/^\d{5,32}$/.test(value))throw new AuthError('Enter a valid student ID.');return value;}
 export function passwordProblem(value,studentId=STUDENT_ID){
   if(typeof value!=='string'||value.length<12||value.length>128)return 'Use 12–128 characters for your new password.';
   if(value.trim().length<12||(studentId&&value.includes(studentId)))return 'Choose a password that is not your student ID.';
@@ -48,7 +50,7 @@ export function parseAccountConfig(raw=process.env.MED25_AUTH_ACCOUNTS,legacyId=
   });
 }
 function validAttempts(value){return Number.isInteger(value?.count)&&Number.isFinite(value?.start);}
-function validAccount(account,id){return account?.userId===id&&(account.displayName===null||typeof account.displayName==='string')&&typeof account.passwordHash==='string'&&typeof account.mustChangePassword==='boolean'&&Array.isArray(account.sessions)&&validAttempts(account.attempts);}
+function validAccount(account,id){return account?.userId===id&&(account.displayName===null||typeof account.displayName==='string')&&typeof account.passwordHash==='string'&&typeof account.mustChangePassword==='boolean'&&Array.isArray(account.sessions)&&validAttempts(account.attempts)&&(account.active===undefined||typeof account.active==='boolean');}
 function decode(raw){
   if(raw===null)return null;
   const state=JSON.parse(raw);
@@ -60,19 +62,20 @@ function decode(raw){
   for(const [id,account] of Object.entries(state.accounts))if(!validAccount(account,id))throw new Error('Invalid authentication state; refusing to reset accounts.');
   return state;
 }
-function validSession(state,token,now,allowed){
+function validSession(state,token,now,adminId){
   if(!state||state.schema!==2||typeof token!=='string'||!/^[A-Za-z0-9_-]{43}$/.test(token))return null;
   for(const [id,account] of Object.entries(state.accounts)){
-    if(!allowed.has(id))continue;
+    if(account.active===false)continue;
     const session=account.sessions.find(item=>item.hash===digest(token)&&item.expiresAt>now);
-    if(session)return {userId:id,displayName:account.displayName,mustChangePassword:account.mustChangePassword||session.limited,expiresAt:session.expiresAt};
+    if(session)return {userId:id,displayName:account.displayName,isAdmin:id===adminId,mustChangePassword:account.mustChangePassword||session.limited,expiresAt:session.expiresAt};
   }
   return null;
 }
 
-export function createAuth({store=authStore(),now=Date.now,accounts,studentId}={}){
+export function createAuth({store=authStore(),now=Date.now,accounts,studentId,adminId}={}){
   const configured=accounts!==undefined?parseAccountConfig(JSON.stringify(accounts),''):studentId!==undefined?parseAccountConfig('',studentId):parseAccountConfig();
-  const allowed=new Set(configured.map(account=>account.id));
+  const effectiveAdminId=adminId||process.env.MED25_ADMIN_STUDENT_ID||studentId||STUDENT_ID||configured[0].id;
+  if(!/^\d{5,32}$/.test(effectiveAdminId))throw new AuthError('The administrator account is not configured correctly.',503,'AUTH_UNAVAILABLE');
   async function mutate(fn){
     for(let i=0;i<12;i++){
       const raw=await store.read(),state=decode(raw),result=await fn(state);
@@ -86,13 +89,13 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId}={
     if(state?.schema===1){
       const legacy=configured.find(account=>account.id===state.userId);
       if(!legacy)throw new Error('The existing authentication account is not in the authorized account list.');
-      state={schema:2,accounts:{[state.userId]:{userId:state.userId,displayName:legacy.name,passwordHash:state.passwordHash,mustChangePassword:state.mustChangePassword,sessions:state.sessions,attempts:state.attempts}},unsupportedAttempts:{start:timestamp,count:0}};
+      state={schema:2,accounts:{[state.userId]:{userId:state.userId,displayName:legacy.name,active:true,passwordHash:state.passwordHash,mustChangePassword:state.mustChangePassword,sessions:state.sessions,attempts:state.attempts}},unsupportedAttempts:{start:timestamp,count:0}};
     }else if(!state)state={schema:2,accounts:{},unsupportedAttempts:{start:timestamp,count:0}};
     let added=0,updated=0;
     for(const config of configured){
       const existing=state.accounts[config.id];
-      if(!existing){state.accounts[config.id]={userId:config.id,displayName:config.name,passwordHash:hashes.get(config.id),mustChangePassword:true,sessions:[],attempts:{start:timestamp,count:0}};added++;}
-      else if(config.name!==null&&existing.displayName!==config.name){existing.displayName=config.name;updated++;}
+      if(!existing){state.accounts[config.id]={userId:config.id,displayName:config.name,active:true,passwordHash:hashes.get(config.id),mustChangePassword:true,sessions:[],attempts:{start:timestamp,count:0}};added++;}
+      else if(existing.displayName===null&&config.name!==null){existing.displayName=config.name;updated++;}
     }
     return {state,summary:{added,updated,accountCount:Object.keys(state.accounts).length}};
   }
@@ -123,16 +126,16 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId}={
   }
   return {
     configureAccounts,
-    async session(token){if(!token)return null;await ensureInitialized();return validSession(decode(await store.read()),token,now(),allowed);},
+    async session(token){if(!token)return null;await ensureInitialized();return validSession(decode(await store.read()),token,now(),effectiveAdminId);},
     async login(username,password){
       if(typeof username!=='string'||typeof password!=='string'||username.length>80||password.length>128)throw new AuthError('Invalid student ID or password.',401);
       await ensureInitialized();
       const state=decode(await store.read());
-      if(!allowed.has(username)){
+      const account=state?.schema===2?state.accounts[username]:null;
+      if(!account||account.active===false){
         const hash=await reserveAttempt(username);if(hash)await verifyPassword(password,hash);
         throw new AuthError('This student account is not supported. Ask the MED25 owner to add your student ID.',401,'UNSUPPORTED_ACCOUNT');
       }
-      if(!state?.accounts[username])throw new AuthError('This account has not been provisioned yet.',503,'AUTH_UNAVAILABLE');
       const hash=await reserveAttempt(username),valid=await verifyPassword(password,hash);
       if(!valid)throw new AuthError('Incorrect password. Please try again.',401,'INCORRECT_PASSWORD');
       return mutate(current=>{
@@ -143,7 +146,7 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId}={
     },
     async changePassword(token,password,confirmation,currentPassword,displayName){
       await ensureInitialized();
-      const snapshot=decode(await store.read()),session=validSession(snapshot,token,now(),allowed);
+      const snapshot=decode(await store.read()),session=validSession(snapshot,token,now(),effectiveAdminId);
       if(!session)throw new AuthError('Please sign in again.',401);
       const account=snapshot.accounts[session.userId],nameProblem=displayNameProblem(displayName);
       if(nameProblem)throw new AuthError(nameProblem);
@@ -153,7 +156,7 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId}={
       if(await verifyPassword(password,account.passwordHash))throw new AuthError('Choose a different password.');
       const hash=await hashPassword(password),normalizedName=displayName.trim();
       return mutate(state=>{
-        const currentSession=validSession(state,token,now(),allowed),current=currentSession?state.accounts[currentSession.userId]:null;
+        const currentSession=validSession(state,token,now(),effectiveAdminId),current=currentSession?state.accounts[currentSession.userId]:null;
         if(!current||currentSession.userId!==session.userId||current.passwordHash!==account.passwordHash)throw new AuthError('Please sign in again.',401);
         current.passwordHash=hash;current.displayName=normalizedName;current.mustChangePassword=false;current.sessions=[];current.attempts={start:now(),count:0};
         return {state,value:issue(current,false)};
@@ -165,6 +168,53 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId}={
         if(!state||state.schema!==2)return {unchanged:true};
         let changed=false;for(const account of Object.values(state.accounts)){const before=account.sessions.length;account.sessions=account.sessions.filter(session=>session.hash!==digest(token));changed ||= before!==account.sessions.length;}
         return changed?{state}:{unchanged:true};
+      });
+    },
+    async listAccounts(token){
+      await ensureInitialized();const state=decode(await store.read()),session=validSession(state,token,now(),effectiveAdminId);
+      if(!session)throw new AuthError('Please sign in again.',401);
+      if(!session.isAdmin)throw new AuthError('Administrator access required.',403,'ADMIN_REQUIRED');
+      return Object.values(state.accounts).map(account=>({userId:account.userId,displayName:account.displayName,active:account.active!==false,mustChangePassword:account.mustChangePassword,sessionCount:account.sessions.filter(item=>item.expiresAt>now()).length,isAdmin:account.userId===effectiveAdminId})).sort((a,b)=>Number(b.isAdmin)-Number(a.isAdmin)||(a.displayName??a.userId).localeCompare(b.displayName??b.userId));
+    },
+    async addAccount(token,userId,displayName){
+      userId=managedUserId(userId);
+      const nameProblem=displayNameProblem(displayName);if(nameProblem)throw new AuthError(nameProblem);
+      const snapshot=decode(await store.read()),adminSession=validSession(snapshot,token,now(),effectiveAdminId);if(!adminSession)throw new AuthError('Please sign in again.',401);if(!adminSession.isAdmin)throw new AuthError('Administrator access required.',403,'ADMIN_REQUIRED');
+      const hash=await hashPassword(userId),normalizedName=displayName.trim();
+      return mutate(state=>{
+        const session=validSession(state,token,now(),effectiveAdminId);if(!session)throw new AuthError('Please sign in again.',401);if(!session.isAdmin)throw new AuthError('Administrator access required.',403,'ADMIN_REQUIRED');
+        const existing=state.accounts[userId];if(existing&&existing.active!==false)throw new AuthError('That student account already exists.',409,'ACCOUNT_EXISTS');
+        state.accounts[userId]={userId,displayName:normalizedName,active:true,passwordHash:hash,mustChangePassword:true,sessions:[],attempts:{start:now(),count:0}};
+        return {state,value:{userId,displayName:normalizedName,active:true,mustChangePassword:true,sessionCount:0,isAdmin:userId===effectiveAdminId}};
+      });
+    },
+    async updateAccount(token,userId,displayName){
+      userId=managedUserId(userId);
+      const nameProblem=displayNameProblem(displayName);if(nameProblem)throw new AuthError(nameProblem);
+      return mutate(state=>{
+        const session=validSession(state,token,now(),effectiveAdminId);if(!session)throw new AuthError('Please sign in again.',401);if(!session.isAdmin)throw new AuthError('Administrator access required.',403,'ADMIN_REQUIRED');
+        const account=state.accounts[userId];if(!account)throw new AuthError('Student account not found.',404,'ACCOUNT_NOT_FOUND');account.displayName=displayName.trim();
+        return {state,value:{updated:true}};
+      });
+    },
+    async removeAccount(token,userId){
+      userId=managedUserId(userId);
+      return mutate(state=>{
+        const session=validSession(state,token,now(),effectiveAdminId);if(!session)throw new AuthError('Please sign in again.',401);if(!session.isAdmin)throw new AuthError('Administrator access required.',403,'ADMIN_REQUIRED');
+        if(userId===effectiveAdminId)throw new AuthError('The owner account cannot be removed.',400,'OWNER_PROTECTED');
+        const account=state.accounts[userId];if(!account||account.active===false)throw new AuthError('Student account not found.',404,'ACCOUNT_NOT_FOUND');account.active=false;account.sessions=[];
+        return {state,value:{removed:true}};
+      });
+    },
+    async resetAccount(token,userId){
+      userId=managedUserId(userId);
+      if(userId===effectiveAdminId)throw new AuthError('Use Change password for the owner account.',400,'OWNER_PROTECTED');
+      const snapshot=decode(await store.read()),adminSession=validSession(snapshot,token,now(),effectiveAdminId);if(!adminSession)throw new AuthError('Please sign in again.',401);if(!adminSession.isAdmin)throw new AuthError('Administrator access required.',403,'ADMIN_REQUIRED');
+      const hash=await hashPassword(userId);
+      return mutate(state=>{
+        const session=validSession(state,token,now(),effectiveAdminId);if(!session)throw new AuthError('Please sign in again.',401);if(!session.isAdmin)throw new AuthError('Administrator access required.',403,'ADMIN_REQUIRED');
+        const account=state.accounts[userId];if(!account||account.active===false)throw new AuthError('Student account not found.',404,'ACCOUNT_NOT_FOUND');account.passwordHash=hash;account.mustChangePassword=true;account.sessions=[];account.attempts={start:now(),count:0};
+        return {state,value:{reset:true}};
       });
     },
   };

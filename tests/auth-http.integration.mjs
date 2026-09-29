@@ -9,7 +9,7 @@ const STUDENT_ID='00000000001'; // Synthetic fixture, not the owner's private co
 
 const directory=await mkdtemp(path.join(os.tmpdir(),'med25-auth-http-'));
 const DISPLAY_NAME='HTTP Fixture';
-const env={...process.env,NODE_ENV:'production',MED25_STUDENT_ID:STUDENT_ID,MED25_AUTH_ACCOUNTS:JSON.stringify([{id:STUDENT_ID,name:DISPLAY_NAME}]),MED25_AUTH_STORAGE:'file',MED25_AUTH_FILE:path.join(directory,'state.json')};
+const env={...process.env,NODE_ENV:'production',MED25_STUDENT_ID:STUDENT_ID,MED25_ADMIN_STUDENT_ID:STUDENT_ID,MED25_AUTH_ACCOUNTS:JSON.stringify([{id:STUDENT_ID,name:DISPLAY_NAME}]),MED25_AUTH_STORAGE:'file',MED25_AUTH_FILE:path.join(directory,'state.json')};
 for(const key of ['VERCEL','UPSTASH_REDIS_REST_URL','UPSTASH_REDIS_REST_TOKEN','KV_REST_API_URL','KV_REST_API_TOKEN'])delete env[key];
 const port=3911,origin=`http://localhost:${port}`;
 const child=spawn(process.execPath,['node_modules/next/dist/bin/next','start','--port',String(port)],{env,stdio:['ignore','pipe','pipe']});
@@ -41,7 +41,8 @@ try{
   assert.equal((await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:''},limited)).status,400);
   const change=await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:DISPLAY_NAME},limited);assert.equal(change.status,200);const full=cookieOf(change);
   assert.equal((await get('/api/auth/session',limited)).status,401);
-  assert.equal((await (await get('/api/auth/session',full)).json()).displayName,DISPLAY_NAME);
+  const fullSession=await (await get('/api/auth/session',full)).json();assert.equal(fullSession.displayName,DISPLAY_NAME);assert.equal(fullSession.isAdmin,true);
+  const adminAccounts=await get('/api/admin/accounts',full);assert.equal(adminAccounts.status,200);assert.equal((await adminAccounts.json()).accounts.length,1);
   const page=await get('/',full);assert.equal(page.status,200);assert.match(page.headers.get('cache-control'),/no-store/);assert.doesNotMatch(await page.text(),/id="auth-title"/,'Authorized page must not be a cached login form');
   const summary=await get('/api/bank/summary',full);assert.equal(summary.status,200);assert.ok(await summary.json());
   assert.equal((await get('/study/runtime/catalog.json',full)).status,200);

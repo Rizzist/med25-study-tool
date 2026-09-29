@@ -20,4 +20,4 @@ try{
   }
   const summary=await createAuth({store,accounts}).configureAccounts();
   console.log(`MED25 authentication table ready for ${summary.accountCount} account(s). No credential values printed.`);
-}catch(error){console.error(error.message);process.exitCode=1;}
+}catch(error){console.error(error instanceof Error?error.message:String(error));process.exitCode=1;}

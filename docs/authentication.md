@@ -13,7 +13,7 @@ The user must choose their own replacement password. Automated tests use separat
 
 ## Local development
 
-Set `MED25_AUTH_ACCOUNTS` in ignored `.env.local` before running the app. Its value is a JSON array of `{ "id": "…", "name": "…" }` objects; `name` may be `null` when the student must enter it during first login. Keep this file private; do not use a `NEXT_PUBLIC_` prefix. Adding entries requires running the explicit setup script; normal requests never silently provision an account.
+Set `MED25_AUTH_ACCOUNTS` in ignored `.env.local` before running the app. Its value is a JSON array of `{ "id": "…", "name": "…" }` objects; `name` may be `null` when the student must enter it during first login. Keep this file private; do not use a `NEXT_PUBLIC_` prefix. The setup script uses this list only to bootstrap missing accounts; it never reactivates accounts disabled in the dashboard.
 
 `npm run dev` uses `.med25-auth/state.json`, outside Git. The directory is mode 0700; the account file is mode 0600. Passwords are salted scrypt hashes, not plaintext; only hashes of random session tokens are stored. Do not delete this file to sign out: deleting an account record re-enables the initial-password bootstrap. Back it up securely if local credentials must survive checkout replacement.
 
@@ -29,7 +29,13 @@ Production redeployment `DCk56ZQ8FseKoLWtAxtzHRJQuRd9` reached Ready using commi
 
 Use a dedicated `MED25_DATABASE_URL` server environment variable for this database, in Production and local Development. Unlike a generic `DATABASE_URL`, this explicit prefix cannot accidentally select another application's connection. The adapter validates a Neon Postgres endpoint and never falls back to local files when the connection is invalid/unavailable. Keep it out of browser variables and Git. Do not connect public preview deployments to the production account; use a separate resource/key if previews need auth testing.
 
-The table `public.med25_auth_state` holds one versioned record containing isolated per-account salted password hashes, names, forced-change flags, hashed session tokens and rate-limit state. Password changes revoke only that account's sessions. Parameterized `INSERT ... ON CONFLICT DO NOTHING` and conditional `UPDATE ... WHERE state_json = ...` provide atomic updates across server instances. It is not exposed through a client data API. Account additions run through the explicit setup script, never on page/API requests or during builds.
+The table `public.med25_auth_state` holds one versioned record containing isolated per-account salted password hashes, names, forced-change flags, hashed session tokens and rate-limit state. Password changes revoke only that account's sessions. Parameterized `INSERT ... ON CONFLICT DO NOTHING` and conditional `UPDATE ... WHERE state_json = ...` provide atomic updates across server instances. It is not exposed through a client data API. The environment list and setup script bootstrap missing accounts; after that, the database record is authoritative.
+
+## Owner administration
+
+Set `MED25_ADMIN_STUDENT_ID` to the owner's authorized student ID as a private server-only variable. The authenticated owner then receives an **Admin** navigation link to `/admin`. The dashboard can add an account, edit its display name, disable or restore access, and reset a forgotten password. It never displays a password or password hash.
+
+Adding or restoring an account sets its temporary password to its student ID, requires the student to confirm their name and choose a new password at first login, and revokes any earlier sessions. Resetting does the same for an existing account. Disabling access immediately revokes that account's sessions. The owner account cannot be disabled or reset from the dashboard. Every admin API operation checks the live server session and owner identity; there is still no public registration endpoint.
 
 After connecting and securely pulling the MED25-only environment variables:
 
