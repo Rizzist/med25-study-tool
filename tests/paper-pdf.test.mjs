@@ -23,6 +23,14 @@ const read=url=>fs.readFileSync(path.join(root,'public',url),'utf8');
 const {buildPaperDocument,runs,glyphSafe,PAPER_PDF_TEMPLATE,paperFonts}=load(path.join(root,'src/lib/paper-pdf/document.ts'));
 const {createPaperPdf,PAPER_PDF_CACHE}=load(path.join(root,'src/lib/paper-pdf/client.ts'));
 
+test('shared past-paper toolbar offers separate questions-only and keyed bundles',()=>{
+  const hub=fs.readFileSync(path.join(root,'src/components/PastExamHub.tsx'),'utf8');
+  assert.match(hub,/sources=\{course\.collections\.map\(c=>paperSource\(c,c\.downloads\.questions\)\)\} variant="questions" filename=\{`\$\{course\.id\}-all-papers-without-keys\.pdf`\}/);
+  assert.match(hub,/All papers without keys/);
+  assert.match(hub,/downloads\.questionsAndKey\)\)\} variant="both"/);
+  assert.match(hub,/All papers \+ keys/);
+});
+
 test('every published export parses into its transcribed questions and graded keys',()=>{
   assert.equal(collections.length,30);
   for(const item of collections){

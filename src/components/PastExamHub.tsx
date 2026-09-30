@@ -25,6 +25,7 @@ type Selection=ExamCollection;
 function HubTools({course,open,onToggle,children}:{course:Catalog['courses'][number];open:boolean;onToggle:()=>void;children?:React.ReactNode}) {
   return <div className="pill-row hub-tools">
     {children}
+    {course.collections.some(c=>c.sourceRecordCount)&&<PaperPdfDownload sources={course.collections.map(c=>paperSource(c,c.downloads.questions))} variant="questions" filename={`${course.id}-all-papers-without-keys.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · every sourced past paper without answer keys`}><StudyIcon name="download"/>All papers without keys<small>PDF</small></PaperPdfDownload>}
     {course.collections.some(c=>c.gradedQuestionCount)&&<PaperPdfDownload sources={course.collections.map(c=>paperSource(c,c.downloads.questionsAndKey))} variant="both" filename={`${course.id}-all-papers.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · every sourced past paper with answer keys`}><StudyIcon name="download"/>All papers + keys<small>PDF</small></PaperPdfDownload>}
     <button type="button" className="pill" aria-expanded={open} onClick={onToggle}><StudyIcon name="download"/>{open?'Hide downloads':'All downloads'}</button>
   </div>;
