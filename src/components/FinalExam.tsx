@@ -46,7 +46,7 @@ type FinalSession = {
 type FinalProgress = { version: 2; sessions: Record<FinalSessionKey, FinalSession | null> };
 
 const examLabels: Record<ExamId, { date: string; title: string }> = {
-  "term1-biochemistry-retake": {date:"Term 1 · Biochemistry Retake",title:"Biochemistry Retake · sourced past papers"},
+  "term1-biochemistry-retake": {date:"Term 2 · Biochemistry Retake",title:"Biochemistry Retake · sourced past papers"},
   "term2-limbs": {date:"Upper & lower limbs · past papers",title:"Upper & Lower Limbs · sourced past papers"},
   "term2-respiratory": {date:"Respiratory · past finals",title:"Respiratory · sourced past papers"},
   july25: { date: "July 25", title: "Tissue Development & Function" },

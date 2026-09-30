@@ -1,7 +1,7 @@
 "use client";
 import {useRef,type ReactNode} from 'react';
 import Link from 'next/link';
-import {isTerm2Exam,type ExamId} from '@/src/lib/mcq/exams.mjs';
+import {examTerm,type ExamId} from '@/src/lib/mcq/exams.mjs';
 import {StudyIcon,type StudyIconName} from './StudyIcon';
 import {SignOutButton,useAuthAccount} from './AuthBoundary';
 import {InstallAppButton} from './PwaProvider';
@@ -22,9 +22,9 @@ export function StudyShell({exam,courses,activeSection,onCourseChange,onSectionC
   status:string;immersive:boolean;children:ReactNode;
 }) {
   const {displayName,canAccessAdmin}=useAuthAccount();
-  const term=isTerm2Exam(exam)?2:1;
+  const term=examTerm(exam);
   const lastCourse=useRef<Partial<Record<1|2,ExamId>>>({});
-  const termCourses=courses.filter(c=>isTerm2Exam(c.id)===(term===2));
+  const termCourses=courses.filter(c=>examTerm(c.id)===term);
   function chooseCourse(id:ExamId) {
     if(id===exam)return;
     onCourseChange(id);
@@ -33,7 +33,7 @@ export function StudyShell({exam,courses,activeSection,onCourseChange,onSectionC
   function chooseTerm(next:1|2) {
     if(next===term)return;
     lastCourse.current[term]=exam;
-    const course=lastCourse.current[next]??courses.find(c=>isTerm2Exam(c.id)===(next===2))?.id;
+    const course=lastCourse.current[next]??courses.find(c=>examTerm(c.id)===next)?.id;
     if(course)chooseCourse(course);
   }
   return <main className={'mcq-app '+(immersive?'mcq-immersive':'')}>

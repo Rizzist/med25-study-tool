@@ -10,10 +10,13 @@ export const term2Exams = [
   { id: "term2-divine-ethics", date: null, title: "Divine Ethics", scope: "The new 15-page course extract: planning, sincerity and ostentation, trust, remembrance, gratitude, prayer and repentance. Twelve teaching pages plus three contents pages; source-based practice, not past papers", status: "ready" },
 ];
 
-export const biochemistryRetake = {id:'term1-biochemistry-retake',date:null,title:'Biochemistry Retake',scope:'Cells and Molecules · confirmed Term 1 biochemistry only. Review, practice and four biochemistry-only source-paper selections; retake-specific exclusions await an announcement.',status:'ready'};
+// Keep this persistent ID so existing attempts and bookmarks remain valid.
+export const biochemistryRetake = {id:'term1-biochemistry-retake',date:null,title:'Biochemistry Retake',scope:'Term 2 retake of Cells and Molecules biochemistry. Reuses the existing biochemistry Practice bank; past papers offer full-paper and biochemistry-only scopes. The review retains its confirmed original syllabus.',status:'ready'};
 export const examIds = ["july25", "aug22", "july29", biochemistryRetake.id, ...term2Exams.map((exam) => exam.id)];
 export const isExamId = (value) => typeof value === "string" && examIds.includes(value);
 export const isTerm2Exam = (value) => term2Exams.some((exam) => exam.id === value);
+// Navigation term is separate from the original content/tag classification.
+export const examTerm = (value) => value === biochemistryRetake.id || isTerm2Exam(value) ? 2 : 1;
 export const hasReviewCurriculum = (value) => isTerm2Exam(value) || value === biochemistryRetake.id;
 export const isTerm2Question = (question) => question.tags?.some((tag) => tag === "term-2" || tag.startsWith("exam-term2-")) ?? false;
 export const matchesTerm2Exam = (question, exam) => isTerm2Exam(exam) && (question.tags ?? []).includes(`exam-${exam}`);

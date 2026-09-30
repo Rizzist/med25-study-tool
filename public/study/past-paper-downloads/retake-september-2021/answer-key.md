@@ -1,6 +1,6 @@
 # Cell & Molecules · September 2021 · Biochemistry
 
-Biochemistry only. Original question numbers 1–63. Study transcriptions normalize some wording and option order; displayed answer letters apply to these choices, not automatically to the original PDF. Defective items have explicit editorial repairs. These are study keys, not certified university keys.
+Biochemistry only. Original question numbers 1–64. Study transcriptions normalize some wording and option order; displayed answer letters apply to these choices, not automatically to the original PDF. Defective items have explicit editorial repairs. These are study keys, not certified university keys.
 
 Original: /study/past-paper-downloads/originals/term1-source-6.pdf
 
@@ -765,3 +765,15 @@ Review: /study/reviews/biochemistry-retake.pdf#page=33 — Carbohydrate structur
 Provenance: Original Q63, SEP2021 T.pdf, PDF page 13. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Cellulose and chitin. Imported for examId july29.
 
 Original source transcription (may contain source defects; use the qualified study key above): Structural polysaccharides include: Cellulose and starch Glycogen and starch Chitin and glycogen Cellulose and chitin
+
+### 64 · retake-final-september-2021-q064
+
+Key: C — Only L-amino acids are found in biological systems
+
+D-amino acids occur, for example, in bacterial peptidoglycan and as D-serine in humans. Most ribosomally incorporated amino acids are L, with achiral glycine. The vague source phrase “tyrosine is a modified amino acid” is clarified here.
+
+Review: /study/reviews/biochemistry-retake.pdf#page=10 — Amino acids
+
+Provenance: Original Q64, SEP2021 T.pdf, PDF page 13. The printed key selects the vague tyrosine statement. Study wording/options use the already-reviewed equivalent 2022 Q19: the claim that biological systems contain only L-amino acids is false.
+
+Original source transcription (may contain source defects; use the qualified study key above): 64- Choose the incorrect statement out of the following. Glycine is optically inactive Selenocysteine is 21st amino acid  Tyrosine is a modified amino acid Only L-amino acids are found in the biological system Cell Physiology

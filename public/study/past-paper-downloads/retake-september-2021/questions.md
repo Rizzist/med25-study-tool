@@ -1,6 +1,6 @@
 # Cell & Molecules · September 2021 · Biochemistry
 
-Biochemistry only. Original question numbers 1–63. Study transcriptions normalize some wording and option order; displayed answer letters apply to these choices, not automatically to the original PDF. Defective items have explicit editorial repairs. These are study keys, not certified university keys.
+Biochemistry only. Original question numbers 1–64. Study transcriptions normalize some wording and option order; displayed answer letters apply to these choices, not automatically to the original PDF. Defective items have explicit editorial repairs. These are study keys, not certified university keys.
 
 Original: /study/past-paper-downloads/originals/term1-source-6.pdf
 
@@ -701,3 +701,14 @@ C. Cellulose and chitin
 D. Glycogen and starch
 
 Source: original Q63, page 13.
+
+### 64 · retake-final-september-2021-q064
+
+Choose the incorrect statement about amino acids.
+
+A. Glycine is optically inactive
+B. Selenocysteine is the 21st genetically encoded amino acid
+C. Only L-amino acids are found in biological systems
+D. Tyrosine can be formed by hydroxylation of phenylalanine
+
+Source: original Q64, page 13.

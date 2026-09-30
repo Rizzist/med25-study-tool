@@ -11,7 +11,7 @@ import { biochemistryChapterById, biochemistryChapters, isBiochemistryChapterId 
 import { classifySessionCompletion } from '@/src/lib/mcq/sprint-selection.mjs';
 import {LIMB_PRACTICE_SCOPES,limbPracticeLabel,savedLimbPracticeScope,type LimbPracticeScope,type LimbPracticeIndex} from '@/src/lib/mcq/limb-practice-scope.mjs';
 import type { MCQMedia, MCQQuestion, StudentAnswer } from '@/src/lib/mcq/types';
-import { biochemistryRetake, hasReviewCurriculum, isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
+import { biochemistryRetake, examTerm, hasReviewCurriculum, isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
 import { createEmptyProgress, parseProgress, type StudyProgress } from '@/src/lib/mcq/study-progress.mjs';
 import { cachedJson, rememberQuestions, recallQuestions, setQuestionCacheVersion } from '@/src/lib/mcq/client-cache';
 import {mcqReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
@@ -566,7 +566,7 @@ export default function Home() {
   const statsReady = Boolean(bank) && progressReady && sessionArchiveReady;
   const displayCount = (value: string | number) => statsReady ? value : bankStatus === "error" ? "—" : <span className="loading-stat" aria-label="Loading count">…</span>;
   const selectedConfig = examConfig[exam];
-  const examLabel = isTerm2Exam(exam) ? selectedConfig.title : selectedConfig.date;
+  const examLabel = examTerm(exam) === 2 ? selectedConfig.title : selectedConfig.date;
   const examProgress = progress.exams[exam];
   const inPracticeRegion = (ids: string[]) => regionalIds ? ids.filter(id => regionalIds.has(id)) : ids;
   const practiceCountsReady = statsReady && (exam !== 'term2-limbs' || Boolean(limbPracticeIndex));
@@ -1091,7 +1091,7 @@ export default function Home() {
 
   const examHistory=sessionArchive.history.filter(s=>s.exam===exam);
   const resumable=sessionArchive.active;
-  const term2=isTerm2Exam(exam);
+  const term2=examTerm(exam)===2;
   const reviewEnabled=hasReviewCurriculum(exam);
   const collectionChips=selectedConfig.collections.map(id=>({id,label:collectionLabel[id],count:practiceCountsReady?practiceCollectionCount(id):undefined}));
   const resumeAnswered=resumable?Object.values(resumable.answers).filter(isAnswered).length:0;

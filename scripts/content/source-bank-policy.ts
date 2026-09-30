@@ -227,7 +227,7 @@ let verifiedCache: MCQQuestion[] | null = null;
 const finalCache: Partial<Record<FinalExamBankKey, MCQQuestion[]>> = {};
 
 const FINAL_EXAM_BANKS = [
-  {id:'biochemistry-retake-past-papers' as const,exam:'term1-biochemistry-retake' as const,label:'Term 1 Biochemistry · Past Papers',description:'Biochemistry-only source selections with qualified study keys.',requiredTag:'final-bank-biochemistry-retake-past-papers'},
+  {id:'biochemistry-retake-past-papers' as const,exam:'term1-biochemistry-retake' as const,label:'Biochemistry Retake · Past Papers',description:'Original Cells & Molecules papers with full and biochemistry-only selections and qualified study keys.',requiredTag:'final-bank-biochemistry-retake-past-papers'},
   {
     id: "limbs-past-papers" as const,
     exam: "term2-limbs" as const,

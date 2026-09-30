@@ -3,6 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {biochemistryChapterIdForQuestion} from '../src/lib/biochemistry/chapter-mapping.mjs';
+import {expandRetakePapers} from './content/retake-full-papers.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
@@ -24,14 +25,18 @@ const definitions=[
  ['ch-31','Translation'],['ch-32','Gene regulation'],['ch-33','Biotechnology'],['lab-practical','Laboratory principles and tests'],
 ];
 const scope=new Set(definitions.map(([id])=>id));
-const curated=read('data/bank/biochemistry-core-concepts.json').chapters.filter(c=>scope.has(c.chapterId));
+const allCurated=read('data/bank/biochemistry-core-concepts.json').chapters;
+const curated=allCurated.filter(c=>scope.has(c.chapterId));
 const byOriginal=new Map(fs.readdirSync(path.join(root,'data/bank/questions')).filter(f=>f.endsWith('.jsonl')&&f!=='biochemistry-retake.jsonl').flatMap(f=>lines('data/bank/questions/'+f)).map(q=>[q.id,q]));
 const questionConcepts=new Map();
-for(const ch of curated)for(const c of ch.concepts)for(const id of c.selectedQuestionIds)if(!questionConcepts.has(id))questionConcepts.set(id,c);
+for(const ch of allCurated)for(const c of ch.concepts)for(const id of c.selectedQuestionIds)if(!questionConcepts.has(id))questionConcepts.set(id,c);
 const practice=[...questionConcepts].map(([id,c])=>{
  const q=byOriginal.get(id);assert(q&&q.subject==='biochemistry'&&q.status==='verified',id);
- return {...q,id:'retake-practice-'+id,tags:[...q.tags.filter(t=>!t.startsWith('exam-')&&!t.startsWith('term-')),'term-1',`exam-${exam}`,`review-section-${volume}/${c.chapterId}`],qualityFlags:[...q.qualityFlags,'retake-scope-confirmed'],retakeOriginalId:id};
+ return {...q,id:'retake-practice-'+id,tags:[...q.tags.filter(t=>!t.startsWith('exam-')&&!t.startsWith('term-')),'term-1',`exam-${exam}`,...(scope.has(c.chapterId)?[`review-section-${volume}/${c.chapterId}`]:[])],qualityFlags:[...q.qualityFlags,'reused-cells-and-molecules-biochemistry'],retakeOriginalId:id};
 });
+// Same authored supplement that the Cells & Molecules runtime adds to Practice.
+// It is not a past paper and must never enter the Final Exam bank.
+practice.push(...lines('data/final-exams/aug25-downloaded-core.jsonl').filter(q=>q.subject==='biochemistry').map(q=>({...q,id:'retake-practice-'+q.id,tags:[...q.tags.filter(t=>!t.startsWith('exam-')&&!t.startsWith('term-')&&!t.startsWith('final-bank-')&&!['past-paper','telegram-final'].includes(t)),'term-1',`exam-${exam}`,'authored-practice'],qualityFlags:[...q.qualityFlags,'not-a-past-paper-question','reused-cells-and-molecules-biochemistry'],retakeOriginalId:q.id})));
 const old=lines('data/telegram-final/july29.jsonl').filter(q=>q.subject==='biochemistry'&&!q.source.title.toLowerCase().includes('clinical biochemistry'));
 const corrections={
  '56dd13c5004c':{accepted:['A','D'],note:'The intended comparison is lactose/cellobiose (both beta-1,4). Sucrose also has a beta-D-fructofuranosyl anomeric linkage, so the literal wording also allows lactose/sucrose.'},
@@ -81,7 +86,7 @@ const chapterOverrides={...Object.fromEntries(['9d719f83e120','b676127404ca','e7
 const sectionFor=q=>Object.entries(chapterOverrides).find(([id])=>q.id?.includes(id))?.[1]??(scope.has(q.chapter)?q.chapter:biochemistryChapterIdForQuestion(q));
 const sources=read('data/biochemistry-retake/source-extract.json');
 const titles={'cell-block':'Cell & Molecules · April 2021 report · Biochemistry','february-2021':'Cell & Molecules · February 2021 · Biochemistry','biochemistry-2022':'Biochemistry 1 · Finals 2022','september-2021':'Cell & Molecules · September 2021 · Biochemistry'};
-const papers=sources.map(p=>({...p,id:`retake-${p.id}`,sourceId:p.id,title:titles[p.id],questions:p.questions.map(row=>{
+const legacyPapers=sources.map(p=>({...p,id:`retake-${p.id}`,sourceId:p.id,title:titles[p.id],questions:p.questions.map(row=>{
  const match=old.find(q=>q.source.page.split(';').some(loc=>loc.trim()===`${p.name} p.${row.page} q.${row.number}`));
  const base=extras[`${p.id}:${row.number}`]??(match?corrected(match):null);
  assert(base,`Unaccounted source question ${p.id}:${row.number}`);
@@ -99,21 +104,24 @@ const papers=sources.map(p=>({...p,id:`retake-${p.id}`,sourceId:p.id,title:title
  delete question.image;delete question.repair;delete question.acceptedFreeText;
  return {number:row.number,page:row.page,originalText:row.text,question};
 })}));
-const finals=papers.flatMap(p=>p.questions.map(r=>r.question));
-assert.equal(finals.length,242);assert.equal(new Set(finals.map(q=>q.id)).size,finals.length);
+const legacyFinals=legacyPapers.flatMap(p=>p.questions.map(r=>r.question));
+const {papers,finals}=expandRetakePapers(legacyPapers,read('data/biochemistry-retake/full-source-extract.json'),lines('data/telegram-final/july29.jsonl'));
+assert.equal(new Set(finals.map(q=>q.id)).size,finals.length);
 for(const q of [...practice,...finals])assert(q.options.some(o=>o.id===q.correctOptionId),q.id);
 const bankRecord=({retakeOriginalId,...q})=>({...q,tags:[...new Set(q.tags)],qualityFlags:[...new Set(q.qualityFlags)]});
 emit('data/bank/questions/biochemistry-retake.jsonl',practice.map(q=>JSON.stringify(bankRecord(q))).join('\n')+'\n');
 emit(`data/final-exams/${bank}.jsonl`,finals.map(q=>JSON.stringify(bankRecord(q))).join('\n')+'\n');
 const sections=definitions.map(([id,title],index)=>{
+ // Preserve the version-locked manuscript. Expanded source banks do not silently
+ // rewrite its confirmed syllabus or invalidate students' cached review PDF.
  const concepts=curated.find(c=>c.chapterId===id).concepts;
- const checks=[...new Map(finals.filter(q=>q.chapter===id).map(q=>[q.retakeOriginalId??q.prompt,q])).values()];
- return {id,title,order:index+1,concepts,tables:read('data/biochemistry-retake/review-tables.json')[id]??[],checkpoints:checks.map(q=>({id:q.id,title:q.prompt,summary:q.explanation,source:q.source.title+'; '+q.source.chapter,questionIds:finals.filter(f=>(q.retakeOriginalId&&q.retakeOriginalId===f.retakeOriginalId)||q.prompt===f.prompt).map(f=>f.id)}))};
+ const checks=[...new Map(legacyFinals.filter(q=>q.chapter===id).map(q=>[q.retakeOriginalId??q.prompt,q])).values()];
+ return {id,title,order:index+1,concepts,tables:read('data/biochemistry-retake/review-tables.json')[id]??[],checkpoints:checks.map(q=>({id:q.id,title:q.prompt,summary:q.explanation,source:q.source.title+'; '+q.source.chapter,questionIds:legacyFinals.filter(f=>(q.retakeOriginalId&&q.retakeOriginalId===f.retakeOriginalId)||q.prompt===f.prompt).map(f=>f.id)}))};
 });
 const manuscript={title:'Biochemistry Retake',subtitle:'Cells and Molecules · Term 1',version:'2026-09-30',scope:'Original confirmed Term 1 syllabus: Lippincott Chapters 1–7, 14–18 and 23–33, plus foundations, water/buffers and laboratory-derived theory. Retake-specific exclusions have not been announced here. Chapters 8–13 and 19–22 are not standalone sections. Physiology, histology and the Term 2 metabolism course are excluded.',
  sources:['Latest original course-scope reconciliation, 20 August 2026; original syllabus and teacher-material archive.','Ferrier, D. R. Lippincott Illustrated Reviews: Biochemistry, 6th edition (2014): confirmed chapters listed above.','Teacher foundations: INTRODUCTION.ppt; Water and Buffer 1404; Marks Essentials water/buffers reference.','Teacher biomolecules: Amino acids and Proteins Parts 1–2; Lipid structure (Esmaeili); Vitamin 2024.','Teacher enzymes and genetics: Enzyme Kinetics and Regulation; DNA Structure; DNA Replication; Transcription 2025; Translation 2025; Regulation of Gene Expression 2025.','Teacher laboratories: Laboratory Equipment, Titration and Carbohydrate Qualification Test (Esmaeili, January 2026), plus the original laboratory scope.','Four source-paper biochemistry sections: April 2021 Cell & Molecules report, February 2021, September 2021, Biochemistry 1 Finals 2022. Filename dates are retained; a report date is not proof of the exam sitting date.','Source caveats: human DNA repair — https://www.ncbi.nlm.nih.gov/books/NBK1397/ ; enzyme kinetics — https://www.ncbi.nlm.nih.gov/books/NBK92007/ ; hepatic HDL/VLDL — https://www.ncbi.nlm.nih.gov/books/NBK351/ .'],sections};
 json('data/biochemistry-retake/review.json',manuscript);
-json('data/biochemistry-retake/papers.json',papers);
+json('data/biochemistry-retake/papers.json',papers.map(({fullQuestions,...paper})=>({...paper,fullQuestionIds:fullQuestions.map(r=>r.question.id)})));
 
 // PDF generation is an explicit authoring step, never a side effect of next build.
 const layoutPath=path.join(root,'data/biochemistry-retake/pdf-layout.json');
@@ -128,12 +136,11 @@ for(const [id,m]of Object.entries(evidence.questions))if(m.examId===exam)delete 
 const anchors={version:1,pdfSha256:layout.sha256,sections:Object.fromEntries(sections.map(s=>[`${volume}/${s.id}`,layout.sections[s.id]])),questions:{}};
 for(const q of [...practice,...finals]){
  const live=practice.includes(q),concept=live?questionConcepts.get(q.retakeOriginalId):null;
- const chapter=concept?.chapterId??q.chapter,sectionId=`${volume}/${chapter}`;
- const mapping={sectionId,uncertain:false,status:'mapped',livePractice:live,bankId:live?'practice':bank};
- canonical.questions[q.id]=mapping;evidence.questions[q.id]={examId:exam,...mapping,kind:q.kind,specificity:'paragraph',method:'confirmed-chapter-and-reviewed-concept',evidence:'Explicit concept/checkpoint in version-locked retake review; original Term 1 scope.'};
- const point=concept?layout.concepts[concept.id]:layout.checkpoints[q.id];
- assert(point,`No PDF teaching anchor ${q.id}`);
- anchors.questions[q.id]={...point,sectionId};
+ const chapter=concept?.chapterId??sectionFor(q),sectionId=q.subject==='biochemistry'&&scope.has(chapter)?`${volume}/${chapter}`:null;
+ const mapping={sectionId,uncertain:!sectionId,status:sectionId?'mapped':'needs-crosswalk',livePractice:live,bankId:live?'practice':bank};
+ const point=concept?layout.concepts[concept.id]:layout.checkpoints[q.id==='retake-final-september-2021-q064'?'retake-final-biochemistry-2022-q019':q.id];
+ canonical.questions[q.id]=mapping;evidence.questions[q.id]={examId:exam,...mapping,kind:q.kind,specificity:point?'paragraph':sectionId?'section':'unmapped',method:point?'confirmed-chapter-and-reviewed-concept':'existing-bank-chapter',evidence:point?'Explicit concept/checkpoint in version-locked retake review; original Term 1 scope.':sectionId?'Existing source-bank chapter maps to this review section; no exact paragraph claimed.':'Reused source content outside the version-locked biochemistry review; no substitute PDF reference assigned.'};
+ if(point&&sectionId)anchors.questions[q.id]={...point,sectionId};
 }
 json(`data/review-curriculum/courses/${exam}.json`,canonical);json('data/review-curriculum/evidence/question-review-map-v2.json',evidence);
 const locks=read('data/review-curriculum/source-locks.json');
@@ -143,22 +150,26 @@ locks.volumes.push({id:volume,examId:exam,pdfPath:`public/study/reviews/${volume
 json('data/review-curriculum/source-locks.json',locks);json(`public/study/guided/${exam}.json`,anchors);
 const sourceCatalog=read('data/mcq-refactor/past-source-catalog.json'),downloads=read('public/study/past-paper-downloads/catalog.json');
 const collections=[],assets=[];
-for(const paper of papers){
+for(const original of papers)for(const full of [false,true]){
+ const paper=full?{...original,id:original.id+'--full',title:original.title.replace(/ · Biochemistry$/,'')+' · Full paper',first:1,last:original.fullQuestions.length,questions:original.fullQuestions}:original;
  const urls={questions:`/study/past-paper-downloads/${paper.id}/questions.md`,answerKey:`/study/past-paper-downloads/${paper.id}/answer-key.md`,questionsAndKey:`/study/past-paper-downloads/${paper.id}/questions-and-key.md`};
  const originals=[{name:paper.name,url:`/study/past-paper-downloads/originals/term1-source-${paper.asset}.pdf`}];
- const intro=`# ${paper.title}\n\nBiochemistry only. Original question numbers ${paper.first}–${paper.last}. Study transcriptions normalize some wording and option order; displayed answer letters apply to these choices, not automatically to the original PDF. Defective items have explicit editorial repairs. These are study keys, not certified university keys.\n\nOriginal: ${originals[0].url}\n\n`;
+ const intro=`# ${paper.title}\n\n${full?'Full original paper, including other subjects where present.':'Biochemistry only.'} Original question numbers ${paper.first}–${paper.last}. Study transcriptions normalize some wording and option order; displayed answer letters apply to these choices, not automatically to the original PDF. Defective items have explicit editorial repairs. These are study keys, not certified university keys.\n\nOriginal: ${originals[0].url}\n\n`;
  const questions='## Questions\n\n'+paper.questions.map(r=>`### ${r.number} · ${r.question.id}\n\n${r.question.prompt}\n\n${r.question.options.map(o=>`${o.id}. ${o.text}`).join('\n')}\n\nSource: original Q${r.number}, page ${r.page}.${r.question.media?`\n\nOriginal figure: /study/${r.question.media[0].path}`:''}\n`).join('\n');
- const key='## Answer key and review locations\n\n'+paper.questions.map(r=>{const q=r.question,s=canonical.sections.find(s=>s.id===`${volume}/${q.chapter}`);return `### ${r.number} · ${q.id}\n\nKey: ${q.correctOptionId} — ${q.options.find(o=>o.id===q.correctOptionId).text}${q.acceptedOptionIds?`\n\nAccepted choices: ${q.acceptedOptionIds.join(', ')}`:''}\n\n${q.explanation}\n\nReview: /study/reviews/${volume}.pdf#page=${s.pdfPage} — ${s.title}\n\nProvenance: ${q.source.excerpt}\n\nOriginal source transcription (may contain source defects; use the qualified study key above): ${r.originalText.replace(/\s+/g," ").trim()}\n`;}).join('\n');
+ const key='## Answer key and review locations\n\n'+paper.questions.map(r=>{const q=r.question,s=canonical.sections.find(s=>s.id===canonical.questions[q.id]?.sectionId);return `### ${r.number} · ${q.id}\n\nKey: ${q.correctOptionId} — ${q.options.find(o=>o.id===q.correctOptionId).text}${q.acceptedOptionIds?`\n\nAccepted choices: ${q.acceptedOptionIds.join(', ')}`:''}\n\n${q.explanation}\n\nReview: ${s?`/study/reviews/${volume}.pdf#page=${s.pdfPage} — ${s.title}`:`${q.topic}; outside the biochemistry review. Original PDF page ${r.page}.`}\n\nProvenance: ${q.source.excerpt}\n\nOriginal source transcription (may contain source defects; use the qualified study key above): ${r.originalText.replace(/\s+/g," ").trim()}\n`;}).join('\n');
  for(const [kind,content]of Object.entries({questions:intro+questions,answerKey:intro+key,questionsAndKey:intro+questions+key})){const text=content.replace(/[ \t]+$/gm,'');emit('public'+urls[kind],text);assets.push({collectionId:paper.id,url:urls[kind],bytes:Buffer.byteLength(text),sha256:hash(text)});}
  const collection={id:paper.id,courseId:exam,bankId:bank,bankKey:exam+':'+bank,title:paper.title,note:'Biochemistry-only source selection. Original question numbers retained; some wording/options normalized and defective keys qualified. Downloaded keys apply to displayed options. Original PDF also includes other subjects where present.',kind:'source-paper-selection',date:null,dateEvidence:paper.sourceId==='cell-block'?'April 2021 is the printed report date, not an independently verified sitting date.':'Year/month from original source title; exact sitting date unconfirmed.',courseMatch:'source-course',defaultEligible:true,originalOrderClaim:false,sources:originals.map(s=>({name:s.name,publicUrl:s.url,sha256:hash(fs.readFileSync(path.join(root,'public',s.url))),exists:true})),sourceRecordCount:paper.questions.length,transcribedQuestionCount:paper.questions.length,gradedQuestionCount:paper.questions.length,sourceKeyCount:paper.questions.filter(r=>r.question.answerReview.basis==='source-reviewed').length,editorialKeyCount:paper.questions.filter(r=>r.question.answerReview.basis==='ai-inferred').length,ungradedCount:0,questionIds:paper.questions.map(r=>r.question.id),gradedQuestionIds:paper.questions.map(r=>r.question.id),downloads:urls,originals};
+ collection.independent=full;
+ if(full)collection.note='Complete original paper. Includes physiology/histology where present; the Biochemistry 1 paper is entirely biochemistry. Separate progress from the biochemistry-only selection. Printed keys and any editorial corrections are distinguished in explanations and downloads.';
  collections.push(collection);
  for(const s of originals){const bytes=fs.readFileSync(path.join(root,'public',s.url));assets.push({collectionId:paper.id,url:s.url,bytes:bytes.length,sha256:hash(bytes)});}
 }
-const course={id:exam,title:'Biochemistry Retake',hasSourceCollections:true,sourceRecordCount:finals.length,gradedQuestionCount:finals.length,defaultCollectionIds:collections.map(c=>c.id),emptyReason:null};
+const course={id:exam,title:'Biochemistry Retake',hasSourceCollections:true,sourceRecordCount:finals.length,gradedQuestionCount:finals.length,defaultCollectionIds:collections.filter(c=>!c.id.endsWith('--full')).map(c=>c.id),emptyReason:null};
 sourceCatalog.collections=[...sourceCatalog.collections.filter(c=>c.courseId!==exam),...collections];
 sourceCatalog.courses=[...sourceCatalog.courses.filter(c=>c.id!==exam),{...course,collectionIds:collections.map(c=>c.id)}];
 sourceCatalog.assets=[...(sourceCatalog.assets??[]).filter(a=>!a.collectionId?.startsWith('retake-')),...assets];
-downloads.courses=[...downloads.courses.filter(c=>c.id!==exam),{...course,collections:collections.map(({sources,bankKey,...c})=>c)}];
+const publicCollections=collections.map(({sources,bankKey,...c})=>c);
+downloads.courses=[...downloads.courses.filter(c=>c.id!==exam),{...course,collections:publicCollections.filter(c=>!c.id.endsWith('--full')).map(c=>({...c,fullPaper:publicCollections.find(f=>f.id===c.id+'--full')}))}];
 json('data/mcq-refactor/past-source-catalog.json',sourceCatalog);json('public/study/past-paper-downloads/catalog.json',downloads);
-json('data/biochemistry-retake/audit.json',{examId:exam,scope:[...scope],practiceCount:practice.length,conceptCount:curated.reduce((n,c)=>n+c.concepts.length,0),paperCount:papers.length,sourceOccurrences:finals.length,editorialKeys:finals.filter(q=>q.answerReview.basis==='ai-inferred').length,reviewPages:layout.pageCount,excluded:'Physiology, histology, PharmD Clinical Biochemistry and unconfirmed standalone Chapters 8–13/19–22. February alternate copy deduplicated.',scopeCaveat:manuscript.scope});
-console.log(`Biochemistry Retake: ${practice.length} practice MCQs; ${finals.length} source occurrences; ${layout.pageCount}-page review; all ${anchors.questions?Object.keys(anchors.questions).length:0} guided anchors mapped.`);
+json('data/biochemistry-retake/audit.json',{examId:exam,displayTerm:2,scope:[...scope],practiceCount:practice.length,practiceSource:'All existing biochemistry Practice questions from Cells & Molecules, with stable retake-prefixed IDs.',conceptCount:curated.reduce((n,c)=>n+c.concepts.length,0),paperCount:papers.length,sourceOccurrences:finals.length,biochemistryOccurrences:finals.filter(q=>q.subject==='biochemistry').length,editorialKeys:finals.filter(q=>q.answerReview.basis==='ai-inferred').length,reviewPages:layout.pageCount,paragraphAnchors:Object.keys(anchors.questions).length,excluded:'PharmD Clinical Biochemistry; alternate duplicate February scan. Non-biochemistry is included only in full-paper mode, never Practice or biochemistry-only mode.',scopeCaveat:'Practice reuses the original biochemistry bank in full. The existing PDF retains its confirmed review syllabus; additional questions receive a section reference only where supported, otherwise no substitute reference. '+manuscript.scope});
+console.log(`Biochemistry Retake: ${practice.length} practice MCQs; ${finals.length} full-paper occurrences; 243 biochemistry-only; ${Object.keys(anchors.questions).length} exact guided anchors.`);

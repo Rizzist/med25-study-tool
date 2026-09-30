@@ -13,6 +13,7 @@ import type {ExamCollection} from '@/src/lib/mcq/curated-core.mjs';
 import {supportsGuidedExam,type GuidanceMode} from '@/src/lib/mcq/guided-exam.mjs';
 import {ExamModeChooser} from './ExamModeChooser';
 import {scopeLimbPaper,limbBankSelection,type LimbScope} from '@/src/lib/mcq/limb-paper-scope.mjs';
+import {scopeRetakePaper,retakeBankSelection,type RetakePaperScope} from '@/src/lib/mcq/retake-paper-scope.mjs';
 const BiochemistryCoreCard=dynamic(()=>import('./BiochemistryCoreCard').then(m=>m.BiochemistryCoreCard),{loading:()=> <p role="status" className="mcq-loading">Loading Core Exam…</p>});
 const CvsPastExams=dynamic(()=>import('./CvsPastExams').then(m=>m.CvsPastExams),{loading:()=> <p role="status" className="mcq-loading">Loading CVS paper tools…</p>});
 const FinalExam=dynamic(()=>import('./FinalExam').then(m=>m.FinalExam),{loading:()=> <p role="status" className="mcq-loading">Loading selected paper…</p>});
@@ -40,14 +41,21 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
   const [pendingStart,setPendingStart]=useState<{id:string;intent:'start'|'new'}|null>(null);
   const [launchGuidance,setLaunchGuidance]=useState<GuidanceMode|undefined>();
   const [limbScope,setLimbScope]=useState<LimbScope>('all');
+  const [retakeScope,setRetakeScope]=useState<RetakePaperScope>('biochemistry');
   const [savedCombinations,setSavedCombinations]=useState<ReturnType<typeof readCombinedSelections>>([]);
   const refreshSaved=useCallback(()=>{try{setSaved(parseFinalExamProgress(localStorage.getItem(FINAL_EXAM_STORAGE_KEY)));setSavedCombinations(readCombinedSelections(localStorage.getItem(COMBINED_PAPER_SELECTIONS_KEY)));}catch{setSaved(null);}},[]);
   useEffect(()=>{queueMicrotask(refreshSaved);window.addEventListener('storage',refreshSaved);return()=>window.removeEventListener('storage',refreshSaved);},[refreshSaved]);
   useEffect(()=>{let cancelled=false;void cachedJson<Catalog>('/study/past-paper-downloads/catalog.json').then(c=>{if(!cancelled)setCatalog(c);}).catch(e=>{if(!cancelled)setError(e.message);});return()=>{cancelled=true;};},[]);
   useEffect(()=>{onSessionActiveChange?.(active);return()=>onSessionActiveChange?.(false);},[active,onSessionActiveChange]);
   const originalCourse=catalog?.courses.find(c=>c.id===exam);
+  const fullRetakeAvailable=Boolean(originalCourse?.collections.length&&originalCourse.collections.every(c=>c.fullPaper));
   // Stable collection identity prevents progress-save renders from restarting FinalExam's loading effect.
-  const course=useMemo(()=>originalCourse&&exam==='term2-limbs'?{...originalCourse,collections:originalCourse.collections.map(c=>scopeLimbPaper(c,limbScope)).filter(c=>limbScope==='all'||c.sourceRecordCount>0).sort((a,b)=>Number(b.defaultEligible)-Number(a.defaultEligible))}:originalCourse,[originalCourse,exam,limbScope]);
+  const course=useMemo(()=>{
+    if(!originalCourse)return originalCourse;
+    if(exam==='term1-biochemistry-retake')return {...originalCourse,collections:originalCourse.collections.map(c=>scopeRetakePaper(c,fullRetakeAvailable?retakeScope:'biochemistry'))};
+    if(exam==='term2-limbs')return {...originalCourse,collections:originalCourse.collections.map(c=>scopeLimbPaper(c,limbScope)).filter(c=>limbScope==='all'||c.sourceRecordCount>0).sort((a,b)=>Number(b.defaultEligible)-Number(a.defaultEligible))};
+    return originalCourse;
+  },[originalCourse,exam,limbScope,retakeScope,fullRetakeAvailable]);
   const visibleCombinations=savedCombinations.filter(r=>r.exam===exam&&r.sourcePaperIds.every(id=>course?.collections.some(c=>c.id===id)));
   const sourceCollection=course?.collections.find(c=>c.id===selected),collection=sourceCollection??(combined?.id===selected?combined:undefined);
   if(error)return <p role="alert" className="mcq-alert error">{error}</p>;
@@ -101,13 +109,14 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
       setLaunchGuidance(mode);setIntent(pendingStart.intent);setSelected(pendingStart.id);setPendingStart(null);window.scrollTo({top:0,behavior:'instant'});
     }}/>}
     {head}
+    {exam==='term1-biochemistry-retake'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['biochemistry','full'] as RetakePaperScope[]).map(scope=><button type="button" key={scope} disabled={scope==='full'&&!fullRetakeAvailable} className={retakeScope===scope?'primary':'pill'} aria-pressed={retakeScope===scope} onClick={()=>{setRetakeScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='biochemistry'?'Biochemistry only':'Full paper'}</button>)}<small>{!fullRetakeAvailable?'Reconnect and reload to download the full-paper catalog. ':''}Full paper includes the original physiology and histology questions where present. Both options support guided or unguided study, scoped downloads and separate saved results. Practice remains biochemistry only.</small></fieldset>}
     {exam==='term2-limbs'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['all','upper','lower'] as LimbScope[]).map(scope=><button type="button" key={scope} className={limbScope===scope?'primary':'pill'} aria-pressed={limbScope===scope} onClick={()=>{setLimbScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='all'?'Upper & lower':scope==='upper'?'Upper only':'Lower only'}</button>)}<small>Filters exam questions and the bundle PDFs below. Each scope saves its own results. Individual paper downloads and original scans remain complete.</small></fieldset>}
     {!course.collections.length?<div className="mcq-empty"><StudyIcon name="papers"/><b>No past papers imported yet</b><p>{course.emptyReason||'Practice MCQs are available, but they are not past-exam questions.'}</p></div>:<>
       <HubTools course={course} limbScope={exam==='term2-limbs'?limbScope:'all'} open={library} onToggle={()=>setLibrary(v=>!v)}>
-        {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');if(exam==='term2-limbs'){const scope=limbBankSelection(course.collections,limbScope);setCombined(scope);setSelected(scope.id);}else setSelected('all');}}><StudyIcon name="results"/>All-paper bank &amp; saved results</button>}
+        {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');if(exam==='term2-limbs'||exam==='term1-biochemistry-retake'){const scope=exam==='term2-limbs'?limbBankSelection(course.collections,limbScope):retakeBankSelection(course.collections,retakeScope);setCombined(scope);setSelected(scope.id);}else setSelected('all');}}><StudyIcon name="results"/>All-paper bank &amp; saved results</button>}
         {archived&&<button type="button" className="pill" aria-expanded={archive} onClick={()=>setArchive(!archive)}><StudyIcon name="book"/>{archive?'Close':'Open'} source archive</button>}
       </HubTools>
-      {library&&<DownloadLibrary collections={(originalCourse??course).collections} courseTitle={course.title}/>}
+      {library&&<DownloadLibrary collections={(exam==='term1-biochemistry-retake'?course:originalCourse??course).collections} courseTitle={course.title}/>}
       {exam==='july29'&&<p className="mcq-note">The authored “Core Distilled” questions are now in Practice MCQs, not Final Exam. The separate PharmD paper below is cross-course material, not confirmed medical-exam scope. The all-bank option retains legacy answers and includes both source groups.</p>}
       {archive&&(exam==='term2-nutrition'?<NutritionArchive/>:<ReligionArchive/>)}
       <section className="paper-combiner" aria-label="Combine past papers">

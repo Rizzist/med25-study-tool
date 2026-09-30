@@ -7,6 +7,7 @@ export const term2Exams: Array<{ id: Term2ExamId; date: string | null; title: st
 export const examIds: ExamId[];
 export function isExamId(value: unknown): value is ExamId;
 export function isTerm2Exam(value: unknown): value is Term2ExamId;
+export function examTerm(value: unknown): 1 | 2;
 export function isTerm2Question(question: MCQQuestion): boolean;
 export function matchesTerm2Exam(question: MCQQuestion, exam: ExamId): boolean;
 export function isImageQuestion(question: MCQQuestion): boolean;

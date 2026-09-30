@@ -5,7 +5,7 @@ import {StudyIcon} from './StudyIcon';
 import type {PaperSource} from '@/src/lib/paper-pdf/client';
 
 /** One sourced past-paper collection as published in the downloads catalog. */
-export type DownloadCollection={id:string;courseId:string;title:string;note:string;kind:string;courseMatch:string;defaultEligible:boolean;sourceRecordCount:number;gradedQuestionCount:number;ungradedCount:number;gradedQuestionIds:string[];limbQuestionIds?:{upper:string[];lower:string[]};limbSourceCounts?:{upper:number;lower:number};date?:string|null;downloads:{questions:string;answerKey:string;questionsAndKey:string};originals:Array<{name:string;url:string}>};
+export type DownloadCollection={id:string;courseId:string;title:string;note:string;kind:string;courseMatch:string;defaultEligible:boolean;sourceRecordCount:number;gradedQuestionCount:number;ungradedCount:number;gradedQuestionIds:string[];fullPaper?:DownloadCollection;independent?:boolean;limbQuestionIds?:{upper:string[];lower:string[]};limbSourceCounts?:{upper:number;lower:number};date?:string|null;downloads:{questions:string;answerKey:string;questionsAndKey:string};originals:Array<{name:string;url:string}>};
 const isPdf=(url:string)=>/\.pdf(?:[?#]|$)/i.test(url);
 export const paperSource=(item:DownloadCollection,url:string):PaperSource=>({url,collection:{id:item.id,title:item.title,gradedQuestionCount:item.gradedQuestionCount,sourceRecordCount:item.sourceRecordCount,ungradedCount:item.ungradedCount,date:item.date??null}});
 /** Every artefact of one paper as a download pill: typeset questions, answer key, both, and the originals. */
