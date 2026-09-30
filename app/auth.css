@@ -22,7 +22,7 @@
 .admin-toolbar>span{color:#6c796d;font-size:12px;white-space:nowrap}
 .admin-toolbar>button{margin-left:auto}
 .admin-table-scroll{position:relative;overflow-x:auto;overscroll-behavior-x:contain}
-.admin-table{border-collapse:collapse;width:100%;min-width:710px;font-size:13px}
+.admin-table{border-collapse:collapse;width:100%;min-width:860px;font-size:13px}
 .admin-table :is(th,td){padding:7px 12px;text-align:left;white-space:nowrap;height:48px;border-bottom:1px solid #e8ece5}
 .admin-table thead th{height:34px;padding-top:6px;padding-bottom:6px;font-size:11px;color:#647566;font-weight:700;background:#f8faf6}
 .admin-table tbody th{font-weight:650}
@@ -30,8 +30,10 @@
 .admin-table tbody tr:hover>*{background:#f8faf6}
 .admin-table code{font-size:12px;color:#657267}
 .admin-table .admin-sessions{text-align:center;width:75px;color:#657267}
-.admin-table td:last-child{width:1%;text-align:right}
+.admin-table .admin-actions-cell{width:1%;text-align:right}
 .admin-name{display:block;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.admin-creator{display:block;max-width:180px;overflow:hidden;text-overflow:ellipsis;font-size:12px;color:#365c47}
+.admin-creator.unknown{color:#738076}
 .admin-inactive{color:#738076}
 .admin-role{font-size:12px;padding:5px 8px;text-transform:capitalize}
 .admin-role.owner{background:#e4edde;border-radius:6px;color:#245c42;font-weight:750}
@@ -65,7 +67,7 @@
  .admin-toolbar{gap:8px;padding:8px}
  .admin-toolbar input{flex:1;width:0;font-size:16px;height:38px}
  .admin-toolbar>span{display:none}
- .admin-table{min-width:610px}
+ .admin-table{min-width:760px}
  .admin-table .admin-sessions{display:none}
  .admin-table :is(th,td){padding:6px 9px;height:48px}
  .admin-table th:first-child{position:sticky;left:0;z-index:1;background:#fff;box-shadow:1px 0 #e3e9df}

@@ -8,6 +8,7 @@ import {selectCoverageSprint} from '@/src/lib/mcq/sprint-selection.mjs';
 import {selectRespiratorySprint} from '@/src/lib/mcq/respiratory-selection.mjs';
 import {selectPracticalSprint} from '@/src/lib/mcq/practical-selection.mjs';
 import {selectTerm2Sprint} from '@/src/lib/mcq/term2-selection.mjs';
+import {matchesLimbPracticeScope,requestedLimbPracticeScope} from '@/src/lib/mcq/limb-practice-scope.mjs';
 import {isExamId,isTerm2Exam,isImageQuestion,type ExamId} from '@/src/lib/mcq/exams.mjs';
 export {isExamId};export type {ExamId};
 export type FinalExamBankId='telegram-past-papers'|'nutrition-past-papers'|'religion-past-papers'|'biochemistry-metabolism-past-papers'|'respiratory-past-papers'|'limbs-past-papers'|'biochemistry-retake-past-papers';
@@ -83,7 +84,7 @@ function cappedLimit(value: unknown, fallback: number, maximum = 250): number {
 function cleanIds(value: unknown, maximum: number): string[] {
   if (!Array.isArray(value)) return [];
   return [...new Set(value.filter((id): id is string => (
-    typeof id === "string" && id.length > 0 && id.length <= 160
+    typeof id === "string" && id.length > 0 && id.length <= 256
   )))].slice(0, maximum);
 }
 
@@ -91,6 +92,7 @@ export function questionSet(searchParams: URLSearchParams) {
   const exam = searchParams.get("exam");
   const collection = searchParams.get("collection");
   if (!isExamId(exam)) throw new Error("A valid exam is required");
+  const limbScope = requestedLimbPracticeScope(exam, searchParams.get('limbScope'));
   if (collection !== null && !isCollectionId(collection)) throw new Error("A valid collection is required");
 
   const subject = searchParams.get("subject");
@@ -101,6 +103,7 @@ export function questionSet(searchParams: URLSearchParams) {
   if (chapterId && !isBiochemistryChapterId(chapterId)) throw new Error("A valid biochemistry chapter is required");
   const limit = cappedLimit(searchParams.get("limit"), 20);
   const filtered = loadVerifiedQuestions(exam).filter((question) => {
+    if (!matchesLimbPracticeScope(question, limbScope)) return false;
     if (collection && !matchesCollection(question, collection)) return false;
     if (subject && question.subject !== subject) return false;
     if (kind && question.kind !== kind) return false;
@@ -116,6 +119,7 @@ export function coverageQuestionSet(body: unknown) {
   const input = body as Record<string, unknown> | null;
   if (!input || !isExamId(input.exam)) throw new Error("A valid exam is required");
   const exam = input.exam;
+  const limbScope = requestedLimbPracticeScope(exam, input.limbScope);
   const collection = typeof input.collection === "string" ? input.collection : "all";
   if (!isCollectionId(collection)) throw new Error("A valid collection is required");
 
@@ -126,6 +130,7 @@ export function coverageQuestionSet(body: unknown) {
   const repairIds = cleanIds(input.repairIds, 5_000);
   const filtered = loadVerifiedQuestions(exam)
     .filter((question) => matchesCollection(question, collection)
+      && matchesLimbPracticeScope(question, limbScope)
       && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
   const selection = exam === "term2-respiratory"
     ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
@@ -143,6 +148,7 @@ export function coverageQuestionSet(body: unknown) {
       ordinaryReviewCount: selection.ordinaryReviewCount,
     },
     biochemistryChapterId: chapterId,
+    limbScope,
   };
 }
 
@@ -151,12 +157,17 @@ export function questionSetByIds(body: unknown) {
   if (!input || !Array.isArray(input.ids)) throw new Error("Question ids are required");
   if (!isExamId(input.exam)) throw new Error("A valid exam is required");
   const exam = input.exam;
+  const limbScope = requestedLimbPracticeScope(exam, input.limbScope);
   const ids = cleanIds(input.ids, 10_000);
   const limit = cappedLimit(input.limit, ids.length || 1);
   const idSet = new Set(ids);
   const pool = input.purpose === "history" ? readQuestions(runtime.courses[exam].historyFile) : loadVerifiedQuestions(exam);
-  const filtered = pool
+  const validQuestions = pool
     .filter((question) => idSet.has(question.id));
+  // validIds describes availability, not the regional filter. Otherwise reviewing
+  // upper-only mistakes could erase the student's saved lower-limb mistakes.
+  const filtered = input.purpose === 'history' ? validQuestions
+    : validQuestions.filter(question => matchesLimbPracticeScope(question, limbScope));
   const byId = new Map(filtered.map((question) => [question.id, question]));
   const ordered = input.prioritize === true
     ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : isTerm2Exam(exam) ? selectTerm2Sprint : selectCoverageSprint)(filtered, {
@@ -173,7 +184,7 @@ export function questionSetByIds(body: unknown) {
       : shuffle(filtered);
   return {
     availableCount: filtered.length,
-    validIds: filtered.map((question) => question.id),
+    validIds: validQuestions.map((question) => question.id),
     questions: ordered.slice(0, limit),
   };
 }

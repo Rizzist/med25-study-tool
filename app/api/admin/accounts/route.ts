@@ -5,6 +5,10 @@ import {authFailure,privateHeaders,readAuthBody} from '@/src/lib/server/auth';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 
+function rejectCreationFields(body:Record<string,unknown>){
+  if('createdBy' in body||'createdAt' in body)throw new AuthError('Account creation details are recorded automatically and cannot be changed.');
+}
+
 export async function GET(request:Request){
   try{return NextResponse.json({accounts:await createAuth().listAccounts(requestToken(request))},{headers:privateHeaders});}
   catch(error){return authFailure(error);}
@@ -12,6 +16,7 @@ export async function GET(request:Request){
 export async function POST(request:Request){
   try{
     const body=await readAuthBody(request),auth=createAuth(),token=requestToken(request);
+    rejectCreationFields(body);
     if('role' in body||'isAdmin' in body||'isOwner' in body)throw new AuthError('Use the owner role control to change roles.');
     if(body.action==='reset')return NextResponse.json(await auth.resetAccount(token,body.userId),{headers:privateHeaders});
     if(body.action!==undefined)throw new AuthError('Unknown account action.');
@@ -21,6 +26,7 @@ export async function POST(request:Request){
 export async function PATCH(request:Request){
   try{
     const body=await readAuthBody(request),auth=createAuth(),token=requestToken(request);
+    rejectCreationFields(body);
     if(body.action==='role')return NextResponse.json(await auth.setAccountRole(token,body.userId,body.role),{headers:privateHeaders});
     if(body.action!==undefined||'role' in body||'isAdmin' in body||'isOwner' in body)throw new AuthError('Use the owner role control to change roles.');
     return NextResponse.json(await auth.updateAccount(token,body.userId,body.displayName),{headers:privateHeaders});

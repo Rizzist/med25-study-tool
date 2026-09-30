@@ -52,7 +52,12 @@ export function parseAccountConfig(raw=process.env.MED25_AUTH_ACCOUNTS,legacyId=
   });
 }
 function validAttempts(value){return Number.isInteger(value?.count)&&Number.isFinite(value?.start);}
-function validAccount(account,id){return account?.userId===id&&(account.displayName===null||typeof account.displayName==='string')&&typeof account.passwordHash==='string'&&typeof account.mustChangePassword==='boolean'&&Array.isArray(account.sessions)&&validAttempts(account.attempts)&&(account.active===undefined||typeof account.active==='boolean')&&(account.role===undefined||['student','admin'].includes(account.role))&&(account.moderator===undefined||typeof account.moderator==='boolean');}
+function validCreation(account){
+  if(account.createdBy===undefined&&account.createdAt===undefined)return true;
+  const creator=account.createdBy;
+  return !!creator&&typeof creator.userId==='string'&&/^\d{5,32}$/.test(creator.userId)&&(creator.displayName===null||typeof creator.displayName==='string')&&Number.isSafeInteger(account.createdAt)&&account.createdAt>=0;
+}
+function validAccount(account,id){return account?.userId===id&&(account.displayName===null||typeof account.displayName==='string')&&typeof account.passwordHash==='string'&&typeof account.mustChangePassword==='boolean'&&Array.isArray(account.sessions)&&validAttempts(account.attempts)&&(account.active===undefined||typeof account.active==='boolean')&&(account.role===undefined||['student','admin'].includes(account.role))&&(account.moderator===undefined||typeof account.moderator==='boolean')&&validCreation(account);}
 function decode(raw){
   if(raw===null)return null;
   const state=JSON.parse(raw);
@@ -94,7 +99,7 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
     if(!session.isOwner&&accountRole(account,effectiveAdminId)!=='student')throw new AuthError('Only the owner can manage an administrator account.',403,'OWNER_REQUIRED');
     return account;
   }
-  function publicAccount(account,viewer){const role=accountRole(account,effectiveAdminId);return {userId:account.userId,displayName:account.displayName,role,isOwner:role==='owner',isAdmin:role==='owner'||role==='admin',active:account.active!==false,mustChangePassword:account.mustChangePassword,sessionCount:viewer?.isOwner?account.sessions.filter(item=>item.expiresAt>now()).length:null};}
+  function publicAccount(account,viewer){const role=accountRole(account,effectiveAdminId);return {userId:account.userId,displayName:account.displayName,role,isOwner:role==='owner',isAdmin:role==='owner'||role==='admin',active:account.active!==false,mustChangePassword:account.mustChangePassword,createdBy:account.createdBy?{userId:account.createdBy.userId,displayName:account.createdBy.displayName}:null,createdAt:account.createdAt??null,sessionCount:viewer?.isOwner?account.sessions.filter(item=>item.expiresAt>now()).length:null};}
   async function mutate(fn){
     for(let i=0;i<12;i++){
       const raw=await store.read(),state=decode(raw),result=await fn(state);
@@ -219,7 +224,10 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
         if(existing&&session.role==='moderator')throw new AuthError('That ID already exists. Ask an administrator to manage or restore it.',409,'ACCOUNT_EXISTS');
         if(existing){managedTarget(state,session,userId);if(existing.active!==false)throw new AuthError('That student account already exists.',409,'ACCOUNT_EXISTS');}
         if(userId===effectiveAdminId)throw new AuthError('The owner account cannot be replaced.',400,'OWNER_PROTECTED');
-        state.accounts[userId]={userId,displayName:normalizedName,role:'student',active:true,passwordHash:hash,mustChangePassword:true,sessions:[],attempts:{start:now(),count:0}};
+        // Capture the authorized actor inside the atomic write, never from the
+        // request body. Restoring access must not rewrite creation history.
+        const creation=existing?(existing.createdBy?{createdBy:existing.createdBy,createdAt:existing.createdAt}:{}):{createdBy:{userId:session.userId,displayName:session.displayName},createdAt:now()};
+        state.accounts[userId]={userId,displayName:normalizedName,role:'student',active:true,passwordHash:hash,mustChangePassword:true,sessions:[],attempts:{start:now(),count:0},...creation};
         return {state,value:publicAccount(state.accounts[userId],session)};
       });
     },

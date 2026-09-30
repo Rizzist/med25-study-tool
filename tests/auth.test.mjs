@@ -115,7 +115,8 @@ test('Only the permanent owner assigns roles; delegated admins manage students w
   const admin=await auth.changePassword(firstFriend.token,replacement,replacement,'','Admin Fixture');
   assert.equal((await auth.session(admin.token)).isAdmin,true);assert.equal((await auth.session(admin.token)).isOwner,false);
   const list=await auth.listAccounts(admin.token);assert.equal(list.find(a=>a.userId===STUDENT_ID).role,'owner');
-  assert.equal((await auth.addAccount(admin.token,extraId,'Student Fixture')).role,'student');
+  const adminAdded=await auth.addAccount(admin.token,extraId,'Student Fixture');
+  assert.equal(adminAdded.role,'student');assert.deepEqual(adminAdded.createdBy,{userId:FRIEND_ID,displayName:'Admin Fixture'});
   await auth.updateAccount(admin.token,extraId,'Renamed Student');
   for(const target of [STUDENT_ID,FRIEND_ID]){
     await assert.rejects(auth.setAccountRole(admin.token,target,'admin'),{code:'OWNER_REQUIRED'});
@@ -180,12 +181,63 @@ test('Moderators can add valid new students, never restore, manage, promote, or 
   await assert.rejects(auth.addAccount(moderator.token,'40000000007','Another Student'),{code:'ADMIN_REQUIRED'});
   assert.equal(JSON.parse(await store.read()).accounts[FRIEND_ID].moderator,false);
 });
+test('Creation attribution survives rename, setup, roles, reset, removal and restore; legacy creators stay unknown',async()=>{
+  const store=memory();let clock=1000000;
+  const auth=createAuth({store,now:()=>clock}),studentId='40000000010',legacyId='40000000011';
+  const ownerFirst=await auth.login(STUDENT_ID,STUDENT_ID),friendFirst=await auth.login(FRIEND_ID,FRIEND_ID);
+  const owner=await auth.changePassword(ownerFirst.token,replacement,replacement,'','Owner Fixture');
+  const moderator=await auth.changePassword(friendFirst.token,replacement,replacement,'','Moderator Fixture');
+  await auth.setAccountRole(owner.token,FRIEND_ID,'moderator');
+  const created=await auth.addAccount(moderator.token,studentId,'New Student');
+  const expected={userId:FRIEND_ID,displayName:'Moderator Fixture'};
+  assert.deepEqual(created.createdBy,expected);assert.equal(created.createdAt,clock);
+  const studentFirst=await auth.login(studentId,studentId);
+  const student=await auth.changePassword(studentFirst.token,replacement,replacement,'','Student Renamed');
+  assert.equal('createdBy' in await auth.session(student.token),false,'No manager metadata in student sessions');
+  await assert.rejects(auth.listAccounts(student.token),{status:403});
+  await auth.updateAccount(owner.token,FRIEND_ID,'Creator Renamed');
+  await auth.setAccountRole(owner.token,studentId,'admin');await auth.setAccountRole(owner.token,studentId,'student');
+  await auth.resetAccount(owner.token,studentId);await auth.removeAccount(owner.token,studentId);
+  await auth.removeAccount(owner.token,FRIEND_ID);clock+=1000;
+  const restored=await auth.addAccount(owner.token,studentId,'Restored Student');
+  assert.deepEqual(restored.createdBy,expected);assert.equal(restored.createdAt,1000000,'Restore is not creation');
+  const reloaded=createAuth({store,now:()=>clock});await reloaded.configureAccounts();
+  const list=await reloaded.listAccounts(owner.token);
+  assert.deepEqual(list.find(a=>a.userId===studentId).createdBy,expected,'Snapshot survives renamed/disabled creator and a new server instance');
+  assert.equal(list.find(a=>a.userId===STUDENT_ID).createdBy,null);assert.equal(list.find(a=>a.userId===STUDENT_ID).createdAt,null);
+  const ownerAdded=await auth.addAccount(owner.token,'40000000012','Owner Added Student');
+  assert.deepEqual(ownerAdded.createdBy,{userId:STUDENT_ID,displayName:'Owner Fixture'});assert.equal(ownerAdded.createdAt,clock);
+  assert.doesNotMatch(JSON.stringify(list),/passwordHash|sessionHash|"sessions"/);
+  await createAuth({store,accounts:[...TEST_ACCOUNTS,{id:legacyId,name:'Legacy Student'}]}).configureAccounts();
+  await auth.removeAccount(owner.token,legacyId);
+  const legacyRestore=await auth.addAccount(owner.token,legacyId,'Legacy Restored');
+  assert.equal(legacyRestore.createdBy,null);assert.equal(legacyRestore.createdAt,null,'Do not invent a creator for pre-existing accounts');
+});
+test('Creation attribution uses the actor from the winning atomic write, including concurrent renames',async()=>{
+  const base=memory();let intercept=null;
+  const store={read:base.read,cas:async(before,after)=>{if(intercept){const task=intercept;intercept=null;await task();}return base.cas(before,after);}};
+  const auth=createAuth({store}),first=await auth.login(STUDENT_ID,STUDENT_ID);
+  const owner=await auth.changePassword(first.token,replacement,replacement,'','Original Owner Name');
+  intercept=()=>auth.updateAccount(owner.token,STUDENT_ID,'Current Owner Name');
+  const added=await auth.addAccount(owner.token,'40000000013','Race Student');
+  assert.deepEqual(added.createdBy,{userId:STUDENT_ID,displayName:'Current Owner Name'});
+});
+test('Malformed creation history fails closed without overwriting existing credentials',async()=>{
+  const store=memory(),auth=createAuth({store});await auth.configureAccounts();
+  const original=JSON.parse(await store.read());
+  for(const metadata of [{createdAt:10},{createdBy:{userId:STUDENT_ID,displayName:'Fixture'}},{createdAt:-1,createdBy:{userId:STUDENT_ID,displayName:'Fixture'}},{createdAt:10,createdBy:{userId:'invalid',displayName:'Fixture'}}]){
+    const state=structuredClone(original);Object.assign(state.accounts[FRIEND_ID],metadata);
+    const invalid={read:async()=>JSON.stringify(state),cas:async()=>assert.fail('Must not overwrite invalid state')};
+    await assert.rejects(createAuth({store:invalid}).listAccounts(null),/Invalid authentication state/);
+  }
+});
 test('Schema-one account migrates without resetting its password and adds configured friends explicitly',async()=>{
   const oldHash=await (await import('../src/lib/server/auth-core.mjs')).hashPassword(replacement);
   const old=JSON.stringify({schema:1,userId:STUDENT_ID,passwordHash:oldHash,mustChangePassword:false,sessions:[],attempts:{start:1,count:0}}),store=memory();
   await store.cas(null,old);const auth=createAuth({store});const summary=await auth.configureAccounts();
   assert.equal(summary.accountCount,2);assert.equal(await verifyPassword(replacement,JSON.parse(await store.read()).accounts[STUDENT_ID].passwordHash),true);
-  assert.equal((await auth.login(STUDENT_ID,replacement)).displayName,'Primary Fixture');
+  const owner=await auth.login(STUDENT_ID,replacement);assert.equal(owner.displayName,'Primary Fixture');
+  assert.ok((await auth.listAccounts(owner.token)).every(a=>a.createdBy===null&&a.createdAt===null),'Schema-one migration must not invent creator history');
   assert.equal((await auth.login(FRIEND_ID,FRIEND_ID)).mustChangePassword,true);
 });
 test('Local store survives a new instance, serializes races and restricts file permissions',async()=>{

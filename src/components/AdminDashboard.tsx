@@ -68,7 +68,7 @@ export function AdminDashboard(){
       </div>
       <div className="admin-table-scroll" tabIndex={0} role="region" aria-label="Student account table, scroll horizontally on smaller screens" aria-busy={loading}>
         <table className="admin-table">
-          <thead><tr><th scope="col">Name</th><th scope="col">Student ID</th><th scope="col">Role</th><th scope="col">Access</th>{isOwner&&<th scope="col" className="admin-sessions" title="Valid login tokens, not visits">Logins</th>}{isAdmin&&<th scope="col"><span className="admin-sr-only">Actions</span></th>}</tr></thead>
+          <thead><tr><th scope="col">Name</th><th scope="col">Student ID</th><th scope="col">Role</th><th scope="col">Access</th><th scope="col">Added by</th>{isOwner&&<th scope="col" className="admin-sessions" title="Valid login tokens, not visits">Logins</th>}{isAdmin&&<th scope="col"><span className="admin-sr-only">Actions</span></th>}</tr></thead>
           <tbody>{filtered.map(account=>{
             const canManage=isAdmin&&(isOwner||account.role==='student');
             return <tr key={account.userId} className={account.active?'':'admin-inactive'}>
@@ -76,8 +76,9 @@ export function AdminDashboard(){
               <td><code>{account.userId}</code></td>
               <td>{isOwner&&!account.isOwner?<select aria-label={'Role for '+(account.displayName??account.userId)} value={account.role} disabled={busy||!account.active} onChange={event=>{const role=event.target.value;if(confirm('Change '+(account.displayName??account.userId)+' to '+role+'?'))void mutate('PATCH',{action:'role',userId:account.userId,role},'Role updated to '+role+'.');}}><option value="student">Student</option><option value="moderator">Moderator</option><option value="admin">Admin</option></select>:<span className={'admin-role '+account.role}>{account.role}</span>}</td>
               <td><span className={'admin-access '+(!account.active?'removed':account.mustChangePassword?'pending':'active')}>{!account.active?'Removed':account.mustChangePassword?'Setup required':'Active'}</span></td>
+              <td><span className={'admin-creator'+(account.createdBy?'':' unknown')} title={account.createdBy?[account.createdBy.displayName,account.createdBy.userId,account.createdAt===null?null:'Added '+new Date(account.createdAt).toLocaleString()].filter(Boolean).join(' · '):'Creator history was not recorded for this existing or configured account.'}>{account.createdBy?.displayName||account.createdBy?.userId||'Not recorded'}</span></td>
               {isOwner&&<td className="admin-sessions">{account.sessionCount}</td>}
-              {isAdmin&&<td><button type="button" disabled={busy||!canManage} aria-label={'Manage '+(account.displayName??account.userId)} title={canManage?'Edit name, reset password, or change access':'Only the owner can manage moderators and admins'} onClick={()=>openEditor({kind:'manage',account})}>Manage</button></td>}
+              {isAdmin&&<td className="admin-actions-cell"><button type="button" disabled={busy||!canManage} aria-label={'Manage '+(account.displayName??account.userId)} title={canManage?'Edit name, reset password, or change access':'Only the owner can manage moderators and admins'} onClick={()=>openEditor({kind:'manage',account})}>Manage</button></td>}
             </tr>;
           })}</tbody>
         </table>
@@ -87,6 +88,7 @@ export function AdminDashboard(){
     <dialog ref={dialog} className="admin-dialog" aria-labelledby="admin-editor-title" onCancel={event=>{if(busy)event.preventDefault();}} onClose={()=>setEditor(null)}>
       <div className="admin-dialog-heading"><h2 id="admin-editor-title">{editor?.kind==='add'?'Add student':'Manage account'}</h2><button type="button" aria-label="Close account editor" disabled={busy} onClick={()=>setEditor(null)}>×</button></div>
       {current&&<p className="admin-dialog-id">{current.userId} · {current.role}</p>}
+      {current?.createdBy&&<p className="admin-dialog-id">Added by {current.createdBy.displayName||current.createdBy.userId}{current.createdBy.displayName&&<> ({current.createdBy.userId})</>}{current.createdAt!==null&&<> · {new Date(current.createdAt).toLocaleString()}</>}</p>}
       {editorError&&<p role="alert" className="auth-error">{editorError}</p>}
       <form onSubmit={save}>
         {editor?.kind==='add'&&<label>Student ID<input name="userId" inputMode="numeric" pattern="4[0-9]{10}" minLength={11} maxLength={11} title="11 digits, starting with 4" required autoFocus autoComplete="off"/><small>11 digits, starting with 4. Format is checked; university enrollment is not verified.</small></label>}

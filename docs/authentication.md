@@ -39,6 +39,14 @@ Adding or restoring an account creates a student role, sets its temporary passwo
 
 Every admin operation independently validates the current session, completed first-login setup and current database role. Atomic writes recheck permissions after conflicts, so concurrent demotion cannot retain authority. Existing accounts without a stored role remain students; the configured owner remains the owner. The setup script preserves existing roles, disabled access and names. There is no public registration endpoint.
 
+### Account creation attribution
+
+New dashboard-created accounts record `createdBy` (authenticated creator ID and a snapshot of their name) and `createdAt` (server timestamp) atomically. The compact **Added by** column is visible to owners, admins and moderators. Hover for the creator ID/date, or open **Manage** for those details on touch screens. Only the owner still sees login counts and activity. Attribution is not included in student session responses.
+
+Creator history cannot be supplied or edited by clients. Renaming either account, changing roles, password setup/reset, disabling and restoring access all preserve the original attribution. A creator's later name change does not rewrite the historical name; their ID remains the stable reference. Legacy and environment-configured accounts show **Not recorded** rather than inferring an owner. This is backward-compatible optional metadata in the existing private auth record; no account/password reset or database-table migration is required.
+
+Verified 2026-10-01: 41 auth/activity/PWA tests, 2 hook-order tests, Next production compilation/typecheck and isolated production HTTP integration passed. Checks include creator spoofing, atomic-write retries, unchanged permissions, legacy migration and restore preservation. Chrome owner/moderator views show attribution; at 390×844 the page remains 390px wide with approximately 49px rows, horizontal table scrolling and readable creator details in Manage. Verification used synthetic accounts and a separate local store, never real passwords or production accounts. SHIP for local implementation; deployment is a separate action.
+
 After connecting and securely pulling the MED25-only environment variables:
 
 Also configure `MED25_AUTH_ACCOUNTS` as a private Production environment variable before deploying. Neither this value nor the database URL is supplied by a Git push.

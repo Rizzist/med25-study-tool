@@ -1,0 +1,11 @@
+import type {MCQQuestion} from './types';
+export type LimbPracticeScope = 'all' | 'upper' | 'lower';
+export type LimbPracticeIndex = Record<LimbPracticeScope | 'shared', string[]>;
+export const LIMB_PRACTICE_SCOPES: {id: LimbPracticeScope; label: string}[];
+export function isLimbPracticeScope(value: unknown): value is LimbPracticeScope;
+export function savedLimbPracticeScope(exam: string, value: unknown): LimbPracticeScope;
+export function requestedLimbPracticeScope(exam: string, value: unknown): LimbPracticeScope;
+export function limbPracticeLabel(scope: LimbPracticeScope): string;
+export function limbPracticeRegion(question: MCQQuestion): LimbPracticeScope | 'shared' | 'unclassified';
+export function matchesLimbPracticeScope(question: MCQQuestion, scope?: LimbPracticeScope): boolean;
+export function buildLimbPracticeIndex(questions: MCQQuestion[]): LimbPracticeIndex;

@@ -50,7 +50,8 @@ try{
   const fullSession=await (await get('/api/auth/session',full)).json();assert.equal(fullSession.displayName,DISPLAY_NAME);assert.equal(fullSession.isAdmin,true);assert.equal(fullSession.isOwner,true);
   const adminAccounts=await get('/api/admin/accounts',full);assert.equal(adminAccounts.status,200);assert.equal((await adminAccounts.json()).accounts.length,1);
   const friendId='40000000002',studentId='40000000003';
-  assert.equal((await post('/api/admin/accounts',{userId:friendId,displayName:'Admin Fixture'},full)).status,201);
+  const ownerAdded=await post('/api/admin/accounts',{userId:friendId,displayName:'Admin Fixture'},full);assert.equal(ownerAdded.status,201);
+  const ownerAddedAccount=await ownerAdded.json();assert.deepEqual(ownerAddedAccount.createdBy,{userId:STUDENT_ID,displayName:DISPLAY_NAME});assert.ok(Number.isSafeInteger(ownerAddedAccount.createdAt));
   const friendLimitedResponse=await post('/api/auth/login',{username:friendId,password:friendId});assert.equal(friendLimitedResponse.status,200);const friendLimited=cookieOf(friendLimitedResponse);
   assert.equal((await patch({action:'role',userId:friendId,role:'admin'},full)).status,200);
   assert.equal((await get('/api/admin/accounts',friendLimited)).status,403);
@@ -58,7 +59,12 @@ try{
   assert.equal((await get('/api/admin/accounts',friend)).status,200);assert.equal((await get('/admin',friend)).status,200);
   assert.equal((await get('/api/admin/activity',friend)).status,403,'Delegated admin cannot see activity');
   assert.equal((await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture',role:'admin'},friend)).status,400);
-  assert.equal((await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture'},friend)).status,201);
+  for(const forged of [{createdBy:{userId:STUDENT_ID,displayName:DISPLAY_NAME}},{createdAt:1}]){
+    assert.equal((await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture',...forged},friend)).status,400,'Reject forged creation history');
+    assert.equal((await patch({userId:friendId,displayName:'Admin Fixture',...forged},full)).status,400,'Creation history cannot be edited');
+  }
+  const adminAdded=await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture'},friend);assert.equal(adminAdded.status,201);
+  assert.deepEqual((await adminAdded.json()).createdBy,{userId:friendId,displayName:'Admin Fixture'});
   assert.equal((await patch({action:'role',userId:studentId,role:'admin'},friend)).status,403);
   assert.equal((await patch({userId:STUDENT_ID,displayName:'Hijacked Owner'},friend)).status,403);
   assert.equal((await post('/api/admin/accounts',{action:'reset',userId:STUDENT_ID},friend)).status,400);
@@ -68,9 +74,12 @@ try{
   assert.equal((await get('/admin',friend)).status,200);
   const moderatorAccounts=(await (await get('/api/admin/accounts',friend)).json()).accounts;
   assert.ok(moderatorAccounts.every(a=>a.sessionCount===null));
+  assert.deepEqual(moderatorAccounts.find(a=>a.userId===studentId).createdBy,{userId:friendId,displayName:'Admin Fixture'},'Moderators can see creator attribution without activity data');
+  assert.equal(moderatorAccounts.find(a=>a.userId===STUDENT_ID).createdBy,null,'Configured owner has no recorded creator');
   assert.equal((await get('/api/admin/activity',friend)).status,403,'Moderator cannot see activity');
   assert.equal((await post('/api/admin/accounts',{userId:'30000000004',displayName:'Invalid Student'},friend)).status,400);
-  assert.equal((await post('/api/admin/accounts',{userId:'40000000004',displayName:'New Student'},friend)).status,201);
+  const modAdded=await post('/api/admin/accounts',{userId:'40000000004',displayName:'New Student'},friend);assert.equal(modAdded.status,201);
+  assert.deepEqual((await modAdded.json()).createdBy,{userId:friendId,displayName:'Admin Fixture'});
   assert.equal((await patch({userId:studentId,displayName:'Changed Name'},friend)).status,403);
   assert.equal((await patch({action:'role',userId:studentId,role:'moderator'},friend)).status,403);
   assert.equal((await post('/api/admin/accounts',{action:'reset',userId:studentId},friend)).status,403);

@@ -5,6 +5,7 @@ import path from 'node:path';
 import {createRequire} from 'node:module';
 import {createHash} from 'node:crypto';
 import ts from 'typescript';
+import {buildLimbPracticeIndex} from '../src/lib/mcq/limb-practice-scope.mjs';
 const root=path.resolve(new URL('..',import.meta.url).pathname);
 const require=createRequire(import.meta.url),modules=new Map();
 function load(file) {
@@ -68,7 +69,7 @@ for(const course of summary.exams) {
   const topics=[...new Set(questions.map(q=>q.topic))].map(title=>({id:title,title,questionIds:questions.filter(q=>q.topic===title).map(q=>q.id)}));
   course.finalExamBanks=course.finalExamBanks.filter(b=>b.id!=='downloaded-core').map(b=>({...b,questionCount:finals[course.id+':'+b.id]?.count??0}));
   course.finalExamQuestionCount=new Set(past.collections.filter(c=>c.courseId===course.id).flatMap(c=>c.gradedQuestionIds)).size;
-  const detail={...course,topics,version};write('public/study/runtime/'+course.id+'.json',detail);
+  const detail={...course,topics,version,...(course.id==='term2-limbs'?{limbPracticeQuestionIds:buildLimbPracticeIndex(questions)}:{})};write('public/study/runtime/'+course.id+'.json',detail);
   delete course.collectionQuestionIds;delete course.biochemistryChapters;
   course.version=version;course.detailUrl='/study/runtime/'+course.id+'.json?v='+hash(detail);
 }

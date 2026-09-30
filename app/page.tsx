@@ -9,6 +9,7 @@ import { StudyIcon } from '@/src/components/StudyIcon';
 import { isLocationQuestion, locationOptionId, locationLabel, restoredLocationResponse, canRevealAnatomyFigure } from '@/src/lib/mcq/anatomy-location.mjs';
 import { biochemistryChapterById, biochemistryChapters, isBiochemistryChapterId } from '@/src/lib/biochemistry/chapters';
 import { classifySessionCompletion } from '@/src/lib/mcq/sprint-selection.mjs';
+import {LIMB_PRACTICE_SCOPES,limbPracticeLabel,savedLimbPracticeScope,type LimbPracticeScope,type LimbPracticeIndex} from '@/src/lib/mcq/limb-practice-scope.mjs';
 import type { MCQMedia, MCQQuestion, StudentAnswer } from '@/src/lib/mcq/types';
 import { biochemistryRetake, hasReviewCurriculum, isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
 import { createEmptyProgress, parseProgress, type StudyProgress } from '@/src/lib/mcq/study-progress.mjs';
@@ -52,6 +53,7 @@ type BankSummary = {
     interactive3dCount?: number;
     collectionCounts: Partial<Record<CollectionId, number>>;
     collectionQuestionIds?: Partial<Record<CollectionId, string[]>>;
+    limbPracticeQuestionIds?: LimbPracticeIndex;
     biochemistryChapters?: Array<{ id: string; questionCount: number; questionIds: string[] }>;
   }>;
 };
@@ -72,6 +74,7 @@ type ActiveSessionSnapshot = {
   startedAt: string;
   studyMode: BiochemistryStudyMode;
   guidance?: GuidanceMode;
+  limbScope?: LimbPracticeScope;
   biochemistryChapterId?: string;
   respiratoryScopeId?: string;
   respiratoryPracticeIds?: string[];
@@ -151,7 +154,12 @@ function isTerm2CourseExam(examId: ExamId): boolean {
 
 function cleanIds(value: unknown) {
   if (!Array.isArray(value)) return [];
-  return [...new Set(value.filter((id): id is string => typeof id === "string" && id.length > 0 && id.length <= 160))];
+  return [...new Set(value.filter((id): id is string => typeof id === "string" && id.length > 0 && id.length <= 256))];
+}
+
+function optionalPracticeIds(value: unknown, maximum = 10_000) {
+  const ids = cleanIds(value).slice(0, maximum);
+  return ids.length ? ids : undefined;
 }
 
 function isCollectionId(value: unknown): value is CollectionId {
@@ -209,11 +217,12 @@ function cleanActiveSession(value: unknown): ActiveSessionSnapshot | null {
     startedAt: typeof session.startedAt === "string" ? session.startedAt : new Date().toISOString(),
     studyMode: session.studyMode === "exam" ? "exam" : "learn",
     guidance: guidanceMode(migratedExam,session.guidance),
+    limbScope: savedLimbPracticeScope(migratedExam, session.limbScope),
     biochemistryChapterId: isBiochemistryChapterId(session.biochemistryChapterId) ? session.biochemistryChapterId : undefined,
     respiratoryScopeId: typeof session.respiratoryScopeId === "string" ? session.respiratoryScopeId : undefined,
-    respiratoryPracticeIds: cleanIds(session.respiratoryPracticeIds),
-    practicalPracticeIds: cleanIds(session.practicalPracticeIds),
-    coursePracticeIds: isTerm2CourseExam(migratedExam) ? cleanIds(session.coursePracticeIds).slice(0, 500) : undefined,
+    respiratoryPracticeIds: optionalPracticeIds(session.respiratoryPracticeIds),
+    practicalPracticeIds: optionalPracticeIds(session.practicalPracticeIds),
+    coursePracticeIds: isTerm2CourseExam(migratedExam) ? optionalPracticeIds(session.coursePracticeIds, 500) : undefined,
   };
 }
 
@@ -251,7 +260,8 @@ function formatSessionDate(value: string) {
 }
 
 function savedScopeLabel(session: ActiveSessionSnapshot) {
-  return biochemistryChapterById(session.biochemistryChapterId)?.shortTitle ?? collectionLabel[session.collection];
+  const label = biochemistryChapterById(session.biochemistryChapterId)?.shortTitle ?? collectionLabel[session.collection];
+  return session.exam === 'term2-limbs' ? `${limbPracticeLabel(savedLimbPracticeScope(session.exam, session.limbScope))} · ${label}` : label;
 }
 
 function isSavedCollection(value: CollectionId): value is SavedCollectionId {
@@ -424,6 +434,7 @@ export default function Home() {
   const [sessionStartedAt, setSessionStartedAt] = useState("");
   const [studyMode, setStudyMode] = useState<BiochemistryStudyMode>("learn");
   const [guidance,setGuidance]=useState<GuidanceMode>('unguided');
+  const [limbPracticeScope,setLimbPracticeScope]=useState<LimbPracticeScope>('all');
   const [pendingGuidance,setPendingGuidance]=useState<((mode:GuidanceMode)=>void)|null>(null);
   const [activeBiochemistryChapterId, setActiveBiochemistryChapterId] = useState<string>();
   const [activeRespiratoryScopeId, setActiveRespiratoryScopeId] = useState<string>();
@@ -442,7 +453,13 @@ export default function Home() {
       const summary = await cachedJson<BankSummary>('/study/runtime/catalog.json', true);
       if (!Array.isArray(summary.exams)) throw new Error('Question catalog unavailable');
       for(const course of summary.exams)if(course.version)setQuestionCacheVersion(course.id,course.version);
-      setBank(summary); setBankStatus('ready');
+      // A catalog refresh must not discard already loaded regional/collection
+      // metadata. Keep it only while its content-versioned URL is unchanged.
+      setBank(current => ({...summary, exams: summary.exams?.map(course => {
+        const cached = current?.exams?.find(item => item.id === course.id && item.detailUrl === course.detailUrl);
+        return cached?.collectionQuestionIds ? {...course, ...cached} : course;
+      })}));
+      setBankStatus('ready');
     } catch { setBankStatus('error');
     } finally {
       setChecking(false);
@@ -522,6 +539,7 @@ export default function Home() {
         startedAt,
         studyMode,
         guidance,
+        limbScope: savedLimbPracticeScope(exam, limbPracticeScope),
         biochemistryChapterId: activeBiochemistryChapterId,
         respiratoryScopeId: activeRespiratoryScopeId,
         respiratoryPracticeIds: activeRespiratoryPracticeIds,
@@ -529,10 +547,14 @@ export default function Home() {
         coursePracticeIds: activeCoursePracticeIds,
       },
     }));
-  }, [activeBiochemistryChapterId, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, activeCoursePracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, guidance, visitedQuestionIds]);
+  }, [activeBiochemistryChapterId, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, activeCoursePracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, guidance, limbPracticeScope, visitedQuestionIds]);
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const subjectIds = selectedExam?.collectionQuestionIds;
+  const limbPracticeIndex = selectedExam?.limbPracticeQuestionIds;
+  const regionalIds = useMemo(() => exam === 'term2-limbs' && limbPracticeScope !== 'all'
+    ? new Set(limbPracticeIndex?.[limbPracticeScope] ?? []) : null,
+  [exam, limbPracticeScope, limbPracticeIndex]);
   // Keep setup helpers above the active/review returns: every render must run the same hooks.
   const subjectOf = useMemo(() => {
     const map = new Map<string, string>();
@@ -546,8 +568,13 @@ export default function Home() {
   const selectedConfig = examConfig[exam];
   const examLabel = isTerm2Exam(exam) ? selectedConfig.title : selectedConfig.date;
   const examProgress = progress.exams[exam];
-  const savedCount = (id: SavedCollectionId) => id === "wrong" ? examProgress.wrongIds.length : examProgress.flaggedIds.length;
-  const collectionCount = isSavedCollection(collection) ? savedCount(collection) : selectedExam?.collectionCounts[collection] ?? 0;
+  const inPracticeRegion = (ids: string[]) => regionalIds ? ids.filter(id => regionalIds.has(id)) : ids;
+  const practiceCountsReady = statsReady && (exam !== 'term2-limbs' || Boolean(limbPracticeIndex));
+  const savedCount = (id: SavedCollectionId) => inPracticeRegion(id === 'wrong' ? examProgress.wrongIds : examProgress.flaggedIds).length;
+  const practiceCollectionCount = (id: CollectionId) => isSavedCollection(id) ? savedCount(id)
+    : regionalIds ? inPracticeRegion(selectedExam?.collectionQuestionIds?.[id] ?? []).length
+    : selectedExam?.collectionCounts[id] ?? 0;
+  const collectionCount = practiceCollectionCount(collection);
   const seenQuestionIds = new Set(cleanIds([
     ...sessionArchive.history
       .filter((session) => session.exam === exam)
@@ -555,9 +582,9 @@ export default function Home() {
     ...examProgress.wrongIds,
     ...examProgress.flaggedIds,
   ]));
-  const selectedCollectionQuestionIds = isSavedCollection(collection)
+  const selectedCollectionQuestionIds = inPracticeRegion(isSavedCollection(collection)
     ? examProgress[`${collection}Ids`]
-    : selectedExam?.collectionQuestionIds?.[collection] ?? [];
+    : selectedExam?.collectionQuestionIds?.[collection] ?? []);
   const seenCollectionCount = selectedCollectionQuestionIds.filter((id) => seenQuestionIds.has(id)).length;
   const unseenCollectionCount = Math.max(0, collectionCount - seenCollectionCount);
   const biochemistryChapterProgress: BiochemistryChapterProgress[] = biochemistryChapters.flatMap((definition) => {
@@ -586,6 +613,7 @@ export default function Home() {
     sessionRequest.current++;
     setPhase('setup');
     setExam(nextExam);
+    setLimbPracticeScope('all');
     setCollection(examConfig[nextExam].collections[0]);
     setSessionError("");
     setStudyMode("learn");
@@ -605,6 +633,7 @@ export default function Home() {
     mode?: BiochemistryStudyMode;
     limit?: number;
     guidance?: GuidanceMode;
+    limbScope?: LimbPracticeScope;
   } = {}) {
     if(supportsGuidedExam(exam)&&!options.guidance){
       setPendingGuidance(()=>(mode:GuidanceMode)=>{setPendingGuidance(null);void startSession(nextCollection,exactIds,{...options,guidance:mode});});
@@ -614,6 +643,10 @@ export default function Home() {
     const requestId=++sessionRequest.current;
     const requestedLimit = options.limit ?? (exactIds ? exactIds.length : sessionSize);
     const nextStudyMode = options.mode ?? "learn";
+    // Review topics is an explicit section selection, not a hidden regional
+    // filter from the Practice tab. New sprints/resumes retain their own region.
+    const nextLimbScope = savedLimbPracticeScope(exam, options.limbScope ?? (tab === 'Review topics' && phase === 'setup' && exactIds ? 'all' : limbPracticeScope));
+    setLimbPracticeScope(nextLimbScope);
     setCollection(nextCollection);
     setSessionSize(requestedLimit);
     setStudyMode(nextStudyMode);
@@ -644,19 +677,19 @@ export default function Home() {
         response = await fetch(`${bridgeUrl}/api/questions/by-ids`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ exam, ids: requestedIds, limit: requestedLimit, prioritize: true, seenIds, repairIds, studyMode: nextStudyMode }),
+          body: JSON.stringify({ exam, ids: requestedIds, limit: requestedLimit, prioritize: true, seenIds, repairIds, studyMode: nextStudyMode, limbScope: nextLimbScope }),
         });
       } else {
         response = await fetch(`${bridgeUrl}/api/questions/sprint`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ limit: requestedLimit, exam, collection: nextCollection, seenIds, repairIds, studyMode: nextStudyMode, biochemistryChapterId: options.biochemistryChapterId }),
+          body: JSON.stringify({ limit: requestedLimit, exam, collection: nextCollection, seenIds, repairIds, studyMode: nextStudyMode, biochemistryChapterId: options.biochemistryChapterId, limbScope: nextLimbScope }),
         });
       }
       if (!response.ok) throw new Error("Could not load the question bank.");
       const payload = await response.json() as { questions: MCQQuestion[]; validIds?: string[] };
       if(requestId!==sessionRequest.current)return;
-      if (!payload.questions.length) throw new Error("This collection has no verified questions yet.");
+      if (!payload.questions.length) throw new Error(exam === 'term2-limbs' ? `No questions in this collection for ${limbPracticeLabel(nextLimbScope).toLowerCase()}. Try another collection or Upper + Lower.` : 'This collection has no verified questions yet.');
       if (!exactIds && isSavedCollection(nextCollection) && payload.validIds) {
         const validIds = new Set(payload.validIds);
         setProgress((current) => ({
@@ -745,6 +778,7 @@ export default function Home() {
       startedAt: sessionStartedAt || completedAt,
       studyMode,
       guidance,
+      limbScope: savedLimbPracticeScope(exam, limbPracticeScope),
       biochemistryChapterId: activeBiochemistryChapterId,
       respiratoryScopeId: activeRespiratoryScopeId,
       respiratoryPracticeIds: activeRespiratoryPracticeIds,
@@ -820,10 +854,11 @@ export default function Home() {
     setSessionStartedAt(saved.startedAt);
     setStudyMode(saved.studyMode);
     setGuidance(guidanceMode(saved.exam,saved.guidance));
+    setLimbPracticeScope(savedLimbPracticeScope(saved.exam, saved.limbScope));
     setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     setActiveRespiratoryScopeId(saved.respiratoryScopeId);
     setActiveRespiratoryPracticeIds(saved.respiratoryPracticeIds);
-    setActivePracticalPracticeIds(cleanIds(saved.practicalPracticeIds));
+    setActivePracticalPracticeIds(optionalPracticeIds(saved.practicalPracticeIds));
     setActiveCoursePracticeIds(saved.coursePracticeIds);
     if (saved.respiratoryScopeId) setLastRespiratoryScopeId(saved.respiratoryScopeId);
     try {
@@ -883,10 +918,11 @@ export default function Home() {
     setSessionStartedAt(saved.startedAt);
     setStudyMode(saved.studyMode);
     setGuidance(guidanceMode(saved.exam,saved.guidance));
+    setLimbPracticeScope(savedLimbPracticeScope(saved.exam, saved.limbScope));
     setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     setActiveRespiratoryScopeId(saved.respiratoryScopeId);
     setActiveRespiratoryPracticeIds(saved.respiratoryPracticeIds);
-    setActivePracticalPracticeIds(cleanIds(saved.practicalPracticeIds));
+    setActivePracticalPracticeIds(optionalPracticeIds(saved.practicalPracticeIds));
     setActiveCoursePracticeIds(saved.coursePracticeIds);
     if (saved.respiratoryScopeId) setLastRespiratoryScopeId(saved.respiratoryScopeId);
     try {
@@ -920,7 +956,7 @@ export default function Home() {
     const hasImmediateFeedback = studyMode === "learn" && hasAnswer && figureReady;
     const hasSavedWrittenAnswer = answer.mode === "write" && answer.writtenSubmitted === true;
     const activeChapter = biochemistryChapterById(activeBiochemistryChapterId);
-    const sessionLabel = activeChapter ? `${activeChapter.chapterLabel} · ${activeChapter.shortTitle}` : collectionLabel[collection];
+    const sessionLabel = activeChapter ? `${activeChapter.chapterLabel} · ${activeChapter.shortTitle}` : `${exam === 'term2-limbs' ? `${limbPracticeLabel(limbPracticeScope)} · ` : ''}${collectionLabel[collection]}`;
     const writtenInterpretation = answer.mode === "write" ? interpretWrittenAnswer(question, answer) : undefined;
     const answeredCount = questions.filter((item) => isAnswered(answers[item.id])).length;
     const effectiveVisitedIds = new Set([...visitedQuestionIds, question.id]);
@@ -1018,7 +1054,7 @@ export default function Home() {
     const score = Math.round((correctCount / questions.length) * 100);
     return <main className="review-shell">
       {pendingGuidance&&<ExamModeChooser onChoose={pendingGuidance} onCancel={()=>setPendingGuidance(null)}/>}
-      <header className="review-header"><div className="session-mark"><b>MED//25</b><span>Session review</span></div><button onClick={resetSession}>Return to practice</button></header>
+      <header className="review-header"><div className="session-mark"><b>MED//25</b><span>Session review{exam === 'term2-limbs' ? ` · ${limbPracticeLabel(limbPracticeScope)}` : ''}</span></div><button onClick={resetSession}>Return to practice</button></header>
       <section className="review-page">
         <div className="score-hero"><div><span className="eyebrow">{studyMode === "exam" ? isTerm2Exam(exam) ? "Source-based test complete" : "Chapter exam complete" : "Learning sprint complete"}{activeBiochemistryChapterId ? ` · ${biochemistryChapterById(activeBiochemistryChapterId)?.shortTitle}` : ""}</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Every option now explains the concept it represents, so repair the misses while your reasoning is fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
         <div className="result-stats"><div><strong>{correctCount}</strong><span>Correct</span></div><div><strong>{questions.length - correctCount}</strong><span>To repair</span></div><div><strong>{questions.length - answeredCount}</strong><span>Unanswered</span></div><div><strong>{flaggedCount}</strong><span>Flagged</span></div></div>
@@ -1057,7 +1093,7 @@ export default function Home() {
   const resumable=sessionArchive.active;
   const term2=isTerm2Exam(exam);
   const reviewEnabled=hasReviewCurriculum(exam);
-  const collectionChips=selectedConfig.collections.map(id=>({id,label:collectionLabel[id],count:isSavedCollection(id)?savedCount(id):statsReady?selectedExam?.collectionCounts[id]??0:undefined}));
+  const collectionChips=selectedConfig.collections.map(id=>({id,label:collectionLabel[id],count:practiceCountsReady?practiceCollectionCount(id):undefined}));
   const resumeAnswered=resumable?Object.values(resumable.answers).filter(isAnswered).length:0;
   const scoreTone=(value:number)=>value>=75?'good':value>=50?'mid':'low';
   return <StudyShell exam={exam} activeSection={tab} onCourseChange={chooseExam} onSectionChange={section=>setTab(section as Tab)} immersive={cvsPaperActive} status={bankStatus==='loading'?'Loading catalog…':bankStatus==='error'?'Offline · cached sessions available':'Saved on this device'} courses={Object.entries(examConfig).map(([id,c])=>({id:id as ExamId,title:c.title,date:c.date,count:bank?.exams?.find(e=>e.id===id)?.questionCount}))}>
@@ -1073,15 +1109,19 @@ export default function Home() {
     {bankStatus==='error'&&<p role="alert" className="mcq-alert">Catalog could not refresh. <button type="button" className="pill small" onClick={()=>void refresh()}>Retry</button></p>}
     {phase==='loading'&&<p role="status" className="mcq-loading">Loading your question set and saving it on this device…</p>}
     {tab==='Practice MCQs'&&<>
-      {resumable&&<section className="resume-strip" aria-label="Unfinished session"><StudyIcon name="practice"/><div><b>Unfinished session</b><span>{examConfig[resumable.exam].title} · {resumeAnswered}/{resumable.questionIds.length} answered</span></div><div className="pill-row"><button type="button" className="primary small" disabled={phase==='loading'} onClick={()=>void continueSavedSprint()}>Resume</button><button type="button" className="pill small" onClick={deleteSavedSprint}>Discard</button></div></section>}
+      {resumable&&<section className="resume-strip" aria-label="Unfinished session"><StudyIcon name="practice"/><div><b>Unfinished session</b><span>{examConfig[resumable.exam].title} · {savedScopeLabel(resumable)} · {resumeAnswered}/{resumable.questionIds.length} answered</span></div><div className="pill-row"><button type="button" className="primary small" disabled={phase==='loading'} onClick={()=>void continueSavedSprint()}>Resume</button><button type="button" className="pill small" onClick={deleteSavedSprint}>Discard</button></div></section>}
       <section className="launch" aria-label="Start a practice session">
+        {exam === 'term2-limbs' && <>
+          <div className="launch-row"><span className="launch-label">Region</span><div className="chip-set" role="group" aria-label="Practice region">{LIMB_PRACTICE_SCOPES.map(scope => <button key={scope.id} type="button" aria-pressed={limbPracticeScope === scope.id} disabled={phase === 'loading' || !limbPracticeIndex} onClick={() => setLimbPracticeScope(scope.id)}>{scope.label}<b>{limbPracticeIndex?.[scope.id].length.toLocaleString() ?? '…'}</b></button>)}</div></div>
+          <p className="launch-hint">General bone, muscle and development questions are included in both regions. Collection and saved-question counts follow your selection.</p>
+        </>}
         <div className="launch-row"><span className="launch-label">Collection</span><div className="chip-set" role="group" aria-label="Question collection">{collectionChips.map(c=><button key={c.id} type="button" aria-pressed={collection===c.id} disabled={phase==='loading'||c.count===0} onClick={()=>setCollection(c.id)}>{c.label}<b>{c.count===undefined?'…':c.count.toLocaleString()}</b></button>)}</div></div>
         <div className="launch-row">
           <div className="launch-group"><span className="launch-label">Questions</span><div className="seg" role="group" aria-label="Questions per session">{sprintLengths.map(n=><button key={n} type="button" aria-pressed={sessionSize===n} disabled={phase==='loading'} onClick={()=>setSessionSize(n)}>{n}</button>)}</div></div>
           <div className="launch-group"><span className="launch-label">Feedback</span><div className="seg" role="group" aria-label="Feedback timing"><button type="button" aria-pressed={studyMode==='learn'} disabled={phase==='loading'} onClick={()=>setStudyMode('learn')}>Learn · instant</button><button type="button" aria-pressed={studyMode==='exam'} disabled={phase==='loading'} onClick={()=>setStudyMode('exam')}>Test · at the end</button></div></div>
-          <button type="button" className="primary launch-start" disabled={phase==='loading'||!bank||!collectionCount} onClick={()=>void startSession(collection,undefined,{mode:studyMode})}>Start practice<StudyIcon name="arrow"/></button>
+          <button type="button" className="primary launch-start" disabled={phase==='loading'||!practiceCountsReady||!collectionCount} onClick={()=>void startSession(collection,undefined,{mode:studyMode})}>Start practice<StudyIcon name="arrow"/></button>
         </div>
-        <p className="launch-hint">{statsReady?collectionCount?`${Math.min(sessionSize,collectionCount)} ${collectionLabel[collection].toLowerCase()} questions · ${unseenCollectionCount} unseen · ${seenCollectionCount} seen before`:'Nothing saved in this collection yet.':'Counting questions…'}</p>
+        <p className="launch-hint" aria-live="polite">{practiceCountsReady?collectionCount?`${Math.min(sessionSize,collectionCount)} ${collectionLabel[collection].toLowerCase()} questions · ${unseenCollectionCount} unseen · ${seenCollectionCount} seen before`:'No questions in this collection for the selected region.':'Counting questions…'}</p>
       </section>
       <div className="pill-row quick-row" aria-label="Quick actions">
         <button type="button" className="pill" disabled={!savedCount('wrong')||phase==='loading'} onClick={()=>void startSession('wrong')}><StudyIcon name="practice"/>Review mistakes<b>{displayCount(savedCount('wrong'))}</b></button>

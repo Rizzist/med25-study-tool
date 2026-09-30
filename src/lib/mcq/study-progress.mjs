@@ -1,6 +1,6 @@
 import { examIds } from "./exams.mjs";
 
-const clean = (value) => Array.isArray(value) ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 160))] : [];
+const clean = (value) => Array.isArray(value) ? [...new Set(value.filter((id) => typeof id === "string" && id.length > 0 && id.length <= 256))] : [];
 
 export function createEmptyProgress() {
   return { version: 1, exams: Object.fromEntries(examIds.map((id) => [id, { wrongIds: [], flaggedIds: [] }])) };
