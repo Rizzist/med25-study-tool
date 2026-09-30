@@ -22,11 +22,14 @@ type Collection=DownloadCollection;
 type Catalog={courses:Array<{id:string;title:string;emptyReason:string|null;collections:Collection[]}>};
 type Selection=ExamCollection;
 /** Toolbar shared by every course: bundle PDF and the all-downloads panel toggle. */
-function HubTools({course,open,onToggle,children}:{course:Catalog['courses'][number];open:boolean;onToggle:()=>void;children?:React.ReactNode}) {
+function HubTools({course,open,onToggle,children,limbScope='all'}:{course:Catalog['courses'][number];open:boolean;onToggle:()=>void;children?:React.ReactNode;limbScope?:LimbScope}) {
+  const label=limbScope==='all'?'All papers':limbScope==='upper'?'Upper-only papers':'Lower-only papers';
+  const suffix=limbScope==='all'?'':`-${limbScope}-only`;
+  const source=(c:Collection,url:string)=>({...paperSource(c,url),...(limbScope==='all'?{}:{limbScope})});
   return <div className="pill-row hub-tools">
     {children}
-    {course.collections.some(c=>c.sourceRecordCount)&&<PaperPdfDownload sources={course.collections.map(c=>paperSource(c,c.downloads.questions))} variant="questions" filename={`${course.id}-all-papers-without-keys.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · every sourced past paper without answer keys`}><StudyIcon name="download"/>All papers without keys<small>PDF</small></PaperPdfDownload>}
-    {course.collections.some(c=>c.gradedQuestionCount)&&<PaperPdfDownload sources={course.collections.map(c=>paperSource(c,c.downloads.questionsAndKey))} variant="both" filename={`${course.id}-all-papers.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · every sourced past paper with answer keys`}><StudyIcon name="download"/>All papers + keys<small>PDF</small></PaperPdfDownload>}
+    {course.collections.some(c=>c.sourceRecordCount)&&<PaperPdfDownload sources={course.collections.map(c=>source(c,c.downloads.questions))} variant="questions" filename={`${course.id}-all-papers${suffix}-without-keys.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · ${label} without answer keys`}><StudyIcon name="download"/>{label} without keys<small>PDF</small></PaperPdfDownload>}
+    {course.collections.some(c=>c.gradedQuestionCount)&&<PaperPdfDownload sources={course.collections.map(c=>source(c,c.downloads.questionsAndKey))} variant="both" filename={`${course.id}-all-papers${suffix}.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · ${label} with answer keys`}><StudyIcon name="download"/>{label} + keys<small>PDF</small></PaperPdfDownload>}
     <button type="button" className="pill" aria-expanded={open} onClick={onToggle}><StudyIcon name="download"/>{open?'Hide downloads':'All downloads'}</button>
   </div>;
 }
@@ -98,9 +101,9 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
       setLaunchGuidance(mode);setIntent(pendingStart.intent);setSelected(pendingStart.id);setPendingStart(null);window.scrollTo({top:0,behavior:'instant'});
     }}/>}
     {head}
-    {exam==='term2-limbs'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['all','upper','lower'] as LimbScope[]).map(scope=><button type="button" key={scope} className={limbScope===scope?'primary':'pill'} aria-pressed={limbScope===scope} onClick={()=>{setLimbScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='all'?'Upper & lower':scope==='upper'?'Upper only':'Lower only'}</button>)}<small>Filters questions within each paper. Each scope saves its own results. Downloads retain the complete original paper.</small></fieldset>}
+    {exam==='term2-limbs'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['all','upper','lower'] as LimbScope[]).map(scope=><button type="button" key={scope} className={limbScope===scope?'primary':'pill'} aria-pressed={limbScope===scope} onClick={()=>{setLimbScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='all'?'Upper & lower':scope==='upper'?'Upper only':'Lower only'}</button>)}<small>Filters exam questions and the bundle PDFs below. Each scope saves its own results. Individual paper downloads and original scans remain complete.</small></fieldset>}
     {!course.collections.length?<div className="mcq-empty"><StudyIcon name="papers"/><b>No past papers imported yet</b><p>{course.emptyReason||'Practice MCQs are available, but they are not past-exam questions.'}</p></div>:<>
-      <HubTools course={originalCourse??course} open={library} onToggle={()=>setLibrary(v=>!v)}>
+      <HubTools course={course} limbScope={exam==='term2-limbs'?limbScope:'all'} open={library} onToggle={()=>setLibrary(v=>!v)}>
         {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');if(exam==='term2-limbs'){const scope=limbBankSelection(course.collections,limbScope);setCombined(scope);setSelected(scope.id);}else setSelected('all');}}><StudyIcon name="results"/>All-paper bank &amp; saved results</button>}
         {archived&&<button type="button" className="pill" aria-expanded={archive} onClick={()=>setArchive(!archive)}><StudyIcon name="book"/>{archive?'Close':'Open'} source archive</button>}
       </HubTools>

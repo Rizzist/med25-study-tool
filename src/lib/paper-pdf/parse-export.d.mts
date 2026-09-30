@@ -2,3 +2,4 @@ export type ExportBlock={number:string;id:string;paragraphs:string[];options:Arr
 export type ParsedExport={title:string;intro:string[];meta:Record<string,string>;sources:Array<{name:string;url:string;note:string}>;questions:ExportBlock[];keys:ExportBlock[];keyIntro:string[]};
 export function parseExport(markdown:string):ParsedExport;
 export function keyOf(block:ExportBlock):{letter:string;text:string};
+export function scopeLimbExport(doc:ParsedExport,scope:'upper'|'lower'):ParsedExport;

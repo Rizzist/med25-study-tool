@@ -5,7 +5,7 @@ import path from 'node:path';
 import {createRequire} from 'node:module';
 import {webcrypto} from 'node:crypto';
 import ts from 'typescript';
-import {parseExport,keyOf} from '../src/lib/paper-pdf/parse-export.mjs';
+import {parseExport,keyOf,scopeLimbExport} from '../src/lib/paper-pdf/parse-export.mjs';
 
 const root=path.resolve(import.meta.dirname,'..'),require=createRequire(import.meta.url),modules=new Map();
 function load(file){
@@ -25,10 +25,46 @@ const {createPaperPdf,PAPER_PDF_CACHE}=load(path.join(root,'src/lib/paper-pdf/cl
 
 test('shared past-paper toolbar offers separate questions-only and keyed bundles',()=>{
   const hub=fs.readFileSync(path.join(root,'src/components/PastExamHub.tsx'),'utf8');
-  assert.match(hub,/sources=\{course\.collections\.map\(c=>paperSource\(c,c\.downloads\.questions\)\)\} variant="questions" filename=\{`\$\{course\.id\}-all-papers-without-keys\.pdf`\}/);
-  assert.match(hub,/All papers without keys/);
+  assert.match(hub,/downloads\.questions\)\)\} variant="questions"/);
+  assert.match(hub,/\{label\} without keys/);
   assert.match(hub,/downloads\.questionsAndKey\)\)\} variant="both"/);
-  assert.match(hub,/All papers \+ keys/);
+  assert.match(hub,/\{label\} \+ keys/);
+  assert.match(hub,/Upper-only papers/);assert.match(hub,/Lower-only papers/);
+});
+
+test('limb PDF scopes partition all source questions and keys, including mixed papers and ungraded items',()=>{
+  let upper=0,lower=0;
+  for(const item of collections.filter(c=>c.courseId==='term2-limbs')){
+    const doc=parseExport(read(item.downloads.questionsAndKey)),before=JSON.stringify(doc);
+    const u=scopeLimbExport(doc,'upper'),l=scopeLimbExport(doc,'lower');
+    assert.equal(JSON.stringify(doc),before);
+    assert.equal(u.questions.length+l.questions.length,doc.questions.length);
+    assert.equal(u.keys.length+l.keys.length,doc.keys.length);
+    for(const [scope,part] of [['upper',u],['lower',l]]){
+      assert.equal(part.questions.length,item.limbSourceCounts[scope]);
+      assert(part.keys.every(k=>part.questions.some(q=>q.id===k.id)));
+      assert.equal(scopeLimbExport(parseExport(read(item.downloads.questions)),scope).questions.length,part.questions.length);
+    }
+    upper+=u.questions.length;lower+=l.questions.length;
+  }
+  assert.equal(upper+lower,475);
+  const mixed=collections.find(c=>c.id==='limbs-mixed-theory-2022');
+  assert.equal(scopeLimbExport(parseExport(read(mixed.downloads.questionsAndKey)),'upper').questions.length,25);
+  assert.equal(scopeLimbExport(parseExport(read(mixed.downloads.questionsAndKey)),'lower').questions.length,20);
+  assert.throws(()=>scopeLimbExport(parseExport('# Test\n\n## Questions\n\n### 1 · x\n\nMissing region'),'upper'),/Missing limb region/);
+});
+
+test('browser PDF renderer receives only the selected limb and uses distinct cache fingerprints',async()=>{
+  const item=collections.find(c=>c.id==='limbs-mixed-theory-2022');
+  let definition;
+  const make=createPaperPdf({authorize:async()=>{},origin:'https://study.test',crypto:webcrypto,fetch:async()=>new Response(read(item.downloads.questionsAndKey)),render:async d=>{definition=JSON.stringify(d.content);return new Blob(['%PDF-fixture']);}});
+  const request={sources:[{url:item.downloads.questionsAndKey,collection:item,limbScope:'upper'}],variant:'both',courseTitle:'Limbs',footerLabel:'Fixture'};
+  const upper=await make(request);
+  const doc=parseExport(read(item.downloads.questionsAndKey));
+  for(const q of doc.questions)assert.equal(definition.includes(q.id),q.fields.Source.startsWith('upper limb'));
+  const lower=await make({...request,sources:[{...request.sources[0],limbScope:'lower'}]});
+  assert.notEqual(upper.key,lower.key);
+  for(const q of doc.questions)assert.equal(definition.includes(q.id),q.fields.Source.startsWith('lower limb'));
 });
 
 test('every published export parses into its transcribed questions and graded keys',()=>{

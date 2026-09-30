@@ -3,13 +3,13 @@
 // version and the variant, so an edited paper or a new layout produces a new key
 // and the stale copy is evicted the next time that paper is requested. Answers and
 // results never enter this cache; it holds only regenerable documents.
-import {parseExport} from './parse-export.mjs';
+import {parseExport,scopeLimbExport} from './parse-export.mjs';
 import {requireStudySession,denyStudySession} from '../../../public/med25-auth-cache.mjs';
 import {buildPaperDocument,PAPER_PDF_TEMPLATE,paperFonts,type PaperPart,type PaperVariant} from './document';
 import type {TDocumentDefinitions} from 'pdfmake/interfaces';
 
 export const PAPER_PDF_CACHE='med25-paper-pdfs-v1';
-export type PaperSource={url:string;collection:PaperPart['collection']};
+export type PaperSource={url:string;collection:PaperPart['collection'];limbScope?:'upper'|'lower'};
 export type PaperRequest={sources:PaperSource[];variant:PaperVariant;courseTitle:string;footerLabel:string};
 export type PaperResult={blob:Blob;fromCache:boolean;cached:boolean;key:string};
 type Env={authorize?:()=>Promise<unknown>;fetch?:typeof fetch;caches?:CacheStorage;crypto?:Crypto;origin?:string;render?:(definition:TDocumentDefinitions)=>Promise<Blob>;maxFiles?:number};
@@ -80,7 +80,7 @@ export function createPaperPdf(env:Env={}) {
       return response.text();
     }));
     const name=request.sources.length===1?request.sources[0].collection.id:`${request.sources.map(s=>s.collection.id).join('+').slice(0,40)}-bundle`;
-    const version=await sha256(env,JSON.stringify({template:PAPER_PDF_TEMPLATE,fonts:fontFiles,variant:request.variant,footer:request.footerLabel,course:request.courseTitle,collections:request.sources.map(s=>s.collection),texts}));
+    const version=await sha256(env,JSON.stringify({template:PAPER_PDF_TEMPLATE,fonts:fontFiles,variant:request.variant,footer:request.footerLabel,course:request.courseTitle,collections:request.sources.map(s=>s.collection),limbScopes:request.sources.map(s=>s.limbScope??'all'),texts}));
     const key=new URL(`/study/paper-pdf/${encodeURIComponent(name)}-${request.variant}.pdf?v=${version}`,origin()).href;
     latest.set(new URL(key).pathname,key);
     const cache=await open();
@@ -92,7 +92,7 @@ export function createPaperPdf(env:Env={}) {
     }
     if(!pending.has(key)){
       const task=(async()=>{
-        const parts:PaperPart[]=request.sources.map((source,i)=>({doc:parseExport(texts[i]),courseTitle:request.courseTitle,collection:source.collection}));
+        const parts:PaperPart[]=request.sources.map((source,i)=>{const parsed=parseExport(texts[i]);return {doc:source.limbScope?scopeLimbExport(parsed,source.limbScope):parsed,courseTitle:request.courseTitle,collection:source.collection};});
         const definition=buildPaperDocument(parts,request.variant,request.footerLabel);
         const blob=await (env.render??(d=>defaultRender(d,env)))(definition);
         let cached=false;

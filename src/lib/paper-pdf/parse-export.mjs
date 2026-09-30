@@ -68,3 +68,12 @@ export function keyOf(block) {
   const m=key.match(/^([A-F])(?:\s+[—–-]\s+(.*))?$/);
   return m?{letter:m[1],text:m[2]??''}:{letter:'',text:key};
 }
+
+/** Filter mixed limb exports by each question's source region, preserving source numbering. */
+export function scopeLimbExport(doc, scope) {
+  if(scope!=='upper'&&scope!=='lower')throw new Error('Invalid PDF limb scope.');
+  if(doc.questions.some(q=>! /^(upper|lower) limb\b/.test(q.fields.Source??'')))throw new Error('Missing limb region in paper export.');
+  const questions=doc.questions.filter(q=>(q.fields.Source??'').startsWith(scope+' limb'));
+  const ids=new Set(questions.map(q=>q.id));
+  return {...doc,title:`${doc.title} · ${scope==='upper'?'Upper':'Lower'} only`,questions,keys:doc.keys.filter(k=>ids.has(k.id))};
+}
