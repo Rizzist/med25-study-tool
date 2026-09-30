@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "MED25 · Medical Study",
+  "short_name": "MED25",
+  "description": "Medical MCQs, past papers, review PDFs and your saved study progress.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f5ef",
+  "theme_color": "#14291f",
+  "categories": ["education"],
+  "prefer_related_applications": false,
+  "icons": [
+    {"src": "/pwa/icon-192-v1.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/pwa/icon-512-v1.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/pwa/icon-maskable-v1.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

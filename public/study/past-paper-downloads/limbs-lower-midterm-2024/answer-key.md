@@ -1,0 +1,234 @@
+# Lower limb midterm · 10 July 2024
+
+TUMS International Campus MD; Dr Kashani. The cover explicitly says Midterm Exam, not Final. Preserved as an optional past-paper supplement.
+
+Collection ID: limbs-lower-midterm-2024
+Course: Upper & Lower Limbs
+
+Source questions, not newly authored MCQs. Study answers are reviewed/inferred and are not authenticated official university keys. Original wording defects and alternative acceptable answers are disclosed below.
+
+## Original sources
+
+- lower limb 2024.pdf: /study/limbs/past-papers/limbs-lower-midterm-2024/01-paper.pdf — SHA-256 9f406e5a072370472468e7a12a27bca279a7efb2afb7acabd1ad7116a7c0ba5f
+
+## Answer key and review locations
+
+### 1 · limbs-lower-midterm-2024-q001
+
+Key: C — L2, L3 and L4
+
+Existing answer note: Femoral nerve is formed from posterior divisions of L2–4 ventral rami.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q1, source page 2.
+/study/reviews/limbs.pdf#page=52 — Lumbar and sacral plexuses: complete named route map
+
+### 2 · limbs-lower-midterm-2024-q002
+
+Key: B — Gluteus medius
+
+Existing answer note: Gluteus medius is a major hip abductor.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q2, source page 2.
+/study/reviews/limbs.pdf#page=46 — Gluteal muscles, rotators and neurovascular relations
+
+### 3 · limbs-lower-midterm-2024-q003
+
+Key: D — It adducts the thigh at the hip
+
+Existing answer note: Sartorius abducts and laterally rotates the thigh while flexing hip and knee.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q3, source page 2.
+/study/reviews/limbs.pdf#page=48 — Anterior thigh and iliopsoas
+
+### 4 · limbs-lower-midterm-2024-q004
+
+Key: C — Around lateral side of fibular neck
+
+Existing answer note: The nerve is superficial around the fibular neck.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q4, source page 2.
+/study/reviews/limbs.pdf#page=52 — Lumbar and sacral plexuses: complete named route map
+
+### 5 · limbs-lower-midterm-2024-q005
+
+Key: B — It enters the thigh beneath inguinal ligament
+
+Existing answer note: Obturator nerve enters through the obturator canal, not beneath the inguinal ligament.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q5, source page 2.
+/study/reviews/limbs.pdf#page=52 — Lumbar and sacral plexuses: complete named route map
+
+### 6 · limbs-lower-midterm-2024-q006
+
+Key: B — Gluteus minimus
+
+Existing answer note: Gluteus minimus mainly abducts and medially rotates; actions vary with fiber group and position.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q6, source page 2.
+/study/reviews/limbs.pdf#page=46 — Gluteal muscles, rotators and neurovascular relations
+
+### 7 · limbs-lower-midterm-2024-q007
+
+Key: C — Femoral nerve
+
+Existing answer note: The femoral nerve trunk is not a canal content. Nerve-to-vastus-medialis relation varies with the canal boundary definition.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q7, source page 2.
+/study/reviews/limbs.pdf#page=51 — Femoral triangle, sheath, canal and adductor canal
+
+### 8 · limbs-lower-midterm-2024-q008
+
+Key: C — Is innervated by inferior gluteal nerve
+
+Existing answer note: Gluteus maximus is inferior gluteal-supplied and inserts onto IT tract as well as gluteal tuberosity.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q8, source page 3.
+/study/reviews/limbs.pdf#page=46 — Gluteal muscles, rotators and neurovascular relations
+
+### 9 · limbs-lower-midterm-2024-q009
+
+Key: A — Superior gluteal artery
+
+Existing answer note: The standard cruciate network uses inferior gluteal, both circumflex femoral and first perforating branches.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q9, source page 3.
+/study/reviews/limbs.pdf#page=54 — Lower-limb arteries, veins and lymphatics
+
+### 10 · limbs-lower-midterm-2024-q010
+
+Key: B — Middle genicular artery supplies cruciate ligaments
+
+Existing answer note: The middle genicular pierces the posterior capsule. Superficial-to-deep order is nerve, vein, artery.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q10, source page 3.
+/study/reviews/limbs.pdf#page=58 — Popliteal fossa and proximal calf
+
+### 11 · limbs-lower-midterm-2024-q011
+
+Key: D — Plantar-flex the foot
+
+Existing answer note: The best listed answer is loss of powerful plantar flexion/toe rise. Some weak plantar flexion remains through other muscles; absolute inability is an overstatement.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q11, source page 3.
+/study/reviews/limbs.pdf#page=64 — Posterior leg: plantarflexors, deep flexors and tendon crossings
+
+### 12 · limbs-lower-midterm-2024-q012
+
+Key: C — S1
+
+Existing answer note: The lateral border of the foot is classically S1.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q12, source page 3.
+/study/reviews/limbs.pdf#page=52 — Lumbar and sacral plexuses: complete named route map
+
+### 13 · limbs-lower-midterm-2024-q013
+
+Key: A — Inability to evert the foot
+
+Existing answer note: Superficial fibular motor loss impairs eversion; deep branch loss also causes foot drop.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q13, source page 3.
+/study/reviews/limbs.pdf#page=52 — Lumbar and sacral plexuses: complete named route map
+
+### 14 · limbs-lower-midterm-2024-q014
+
+Key: C — Femoral condylar origin and knee flexion
+
+Existing answer note: Only gastrocnemius crosses the knee and originates on femur; soleus does not.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q14, source page 3.
+/study/reviews/limbs.pdf#page=64 — Posterior leg: plantarflexors, deep flexors and tendon crossings
+
+### 15 · limbs-lower-midterm-2024-q015
+
+Key: A — Inferior gluteal artery
+
+Existing answer note: Inferior gluteal exits the greater foramen and does not re-enter the lesser.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q15, source page 4.
+/study/reviews/limbs.pdf#page=46 — Gluteal muscles, rotators and neurovascular relations
+
+### 16 · limbs-lower-midterm-2024-q016
+
+Key: C — Anterior cruciate
+
+Existing answer note: ACL is the principal restraint to anterior tibial translation.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q16, source page 4.
+/study/reviews/limbs.pdf#page=56 — Knee ligaments, menisci and locking
+
+### 17 · limbs-lower-midterm-2024-q017
+
+Key: D — Forms superior lateral popliteal boundary
+
+Existing answer note: Semimembranosus forms the superomedial boundary; biceps femoris forms superolateral.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q17, source page 4.
+/study/reviews/limbs.pdf#page=49 — Medial and posterior thigh muscle tables
+
+### 18 · limbs-lower-midterm-2024-q018
+
+Key: B — Navicular
+
+Existing answer note: The head of talus articulates anteriorly with navicular.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q18, source page 4.
+/study/reviews/limbs.pdf#page=66 — All seven tarsals and foot osteology
+
+### 19 · limbs-lower-midterm-2024-q019
+
+Key: C — Medial meniscus
+
+Existing answer note: The anterior horn of medial meniscus lies anterior to the ACL attachment.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q19, source page 4.
+/study/reviews/limbs.pdf#page=56 — Knee ligaments, menisci and locking
+
+### 20 · limbs-lower-midterm-2024-q020
+
+Key: D — Flexor hallucis brevis in first
+
+Existing answer note: Flexor hallucis brevis is third-layer, not first-layer.
+
+Key provenance: No reliable source answer selection. Editorial study answer.
+
+Lower limb midterm · 10 July 2024; original Q20, source page 4.
+/study/reviews/limbs.pdf#page=72 — Four plantar layers and dorsal foot muscles

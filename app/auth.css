@@ -33,9 +33,9 @@
 .admin-table td:last-child{width:1%;text-align:right}
 .admin-name{display:block;max-width:260px;overflow:hidden;text-overflow:ellipsis}
 .admin-inactive{color:#738076}
-.admin-role{font-size:12px;padding:5px 8px}
+.admin-role{font-size:12px;padding:5px 8px;text-transform:capitalize}
 .admin-role.owner{background:#e4edde;border-radius:6px;color:#245c42;font-weight:750}
-.admin-table select{width:96px;height:32px;font-size:12px}
+.admin-table select{width:110px;height:32px;font-size:12px}
 .admin-access{font-size:11px;border-radius:5px;padding:4px 7px}
 .admin-access.active{background:#e1f1e4;color:#23663f}
 .admin-access.pending{background:#f7f0db;color:#7a5c21}
@@ -75,3 +75,20 @@
  .admin-dialog-actions button{flex:1;min-height:40px}
 }
 @media(max-width:370px){.admin-header .admin-count{display:none}.admin-header{gap:8px}}
+.admin-views{display:flex;gap:8px;margin:0 0 12px}
+.admin-views button[aria-pressed=true]{background:#183c2b;color:#fff;border-color:#183c2b}
+.admin-activity{border:1px solid #d4ded0;border-radius:10px;background:white;overflow:hidden}
+.activity-help,.activity-updated{font-size:12px;line-height:1.55;color:#607363;margin:12px}
+.activity-user{border-top:1px solid #e2e9dd}
+.activity-user summary{display:flex;align-items:center;gap:16px;padding:12px;cursor:pointer;font-size:12px;list-style:revert}
+.activity-user summary>span:first-child{min-width:190px;flex:1}
+.activity-user summary code{display:block;font-size:11px;color:#6c796d;margin-top:3px}
+.activity-user summary>span:last-child{font-weight:650}
+.activity-user summary:focus-visible{outline:2px solid #176b48;outline-offset:-2px}
+.activity-table{border-collapse:collapse;width:100%;min-width:530px;font-size:12px;background:#f7faf6}
+.activity-table th,.activity-table td{padding:9px 12px;text-align:left;border-bottom:1px solid #e2e9dd;white-space:nowrap}
+.activity-notice{font-size:10px;line-height:1.5;flex-basis:100%;color:inherit;opacity:.85}
+.activity-notice summary{cursor:pointer}
+.activity-notice p{font-size:11px;max-width:44ch;margin:6px 0}
+@media(max-width:700px){.activity-user summary{flex-wrap:wrap;gap:7px}.activity-user summary>span:first-child{flex-basis:100%}.activity-user summary>span:last-child{margin-left:auto}.admin-views button{min-height:40px}.mcq-account-mobile .activity-notice{flex-basis:auto}.mcq-account-mobile .activity-notice[open]{flex-basis:100%}}
+@media(max-width:800px){.mcq-account-mobile{flex-wrap:wrap;column-gap:10px;row-gap:4px}.mcq-account-mobile strong{min-width:100px;flex:1 1 130px;max-width:180px}.mcq-account-mobile .activity-notice[open]{flex-basis:100%}}

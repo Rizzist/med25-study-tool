@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata,Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./physiology-practical.css";
@@ -6,6 +6,10 @@ import "./mcq.css";
 import "./guided-exam.css";
 import "./school-map.css";
 import "./auth.css";
+import "./pwa.css";
+import {PwaProvider} from '@/src/components/PwaProvider';
+
+export const viewport:Viewport={width:'device-width',initialScale:1,viewportFit:'cover',themeColor:'#14291f'};
 
 const geistSans = localFont({
   src: "../node_modules/next/dist/next-devtools/server/font/geist-latin.woff2",
@@ -22,6 +26,10 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "MED//25 Exam Sprint",
     description,
+    manifest:'/manifest.webmanifest',
+    applicationName:'MED25',
+    appleWebApp:{capable:true,title:'MED25',statusBarStyle:'default'},
+    icons:{icon:[{url:'/pwa/icon-192-v1.png',sizes:'192x192',type:'image/png'}],apple:[{url:'/pwa/apple-touch-icon-v1.png',sizes:'180x180',type:'image/png'}]},
     openGraph: {
       title: "MED//25 · Exam Sprint",
       description,
@@ -37,5 +45,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body></html>;
+  return <html lang="en"><body className={`${geistSans.variable} ${geistMono.variable}`}><PwaProvider>{children}</PwaProvider></body></html>;
 }

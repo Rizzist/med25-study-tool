@@ -22,6 +22,10 @@ try{
   let ready=false;
   for(let i=0;i<100;i++){if(child.exitCode!==null)throw Error('Test server failed: '+log);try{const r=await get('/login');if(r.status===200){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}
   assert.ok(ready,'Test server must start');
+  for(const url of ['/manifest.webmanifest','/med25-pwa-shell.mjs','/pwa/offline.html','/pwa/icon-192-v1.png','/pwa/icon-512-v1.png','/pwa/icon-maskable-v1.png','/pwa/apple-touch-icon-v1.png']){const r=await get(url);assert.equal(r.status,200,url);assert.equal(r.headers.get('set-cookie'),null);}
+  const manifest=await (await get('/manifest.webmanifest')).json();assert.equal(manifest.display,'standalone');
+  const worker=await get('/med25-sw.js');assert.equal(worker.headers.get('service-worker-allowed'),'/');assert.match(worker.headers.get('cache-control'),/no-cache/);
+  assert.match(await (await get('/login')).text(),/manifest.webmanifest/);
   const anonymous=await get('/?exam=term2-cvs');assert.equal(anonymous.status,307);assert.match(anonymous.headers.get('location'),/\/login/);
   for(const url of ['/api/bank/summary','/api/questions?exam=term2-cvs','/study/runtime/catalog.json','/study/religion/past-papers/original-40.pdf','/study/school-map/campus.json','/_next/image?url=%2Fstudy%2Fprivate.png&w=640&q=75'])assert.equal((await get(url)).status,401,url);
   assert.equal((await get('/study/religion/past-papers/original-40.pdf',null,{range:'bytes=0-100'})).status,401);
@@ -45,13 +49,14 @@ try{
   assert.equal((await get('/api/auth/session',limited)).status,401);
   const fullSession=await (await get('/api/auth/session',full)).json();assert.equal(fullSession.displayName,DISPLAY_NAME);assert.equal(fullSession.isAdmin,true);assert.equal(fullSession.isOwner,true);
   const adminAccounts=await get('/api/admin/accounts',full);assert.equal(adminAccounts.status,200);assert.equal((await adminAccounts.json()).accounts.length,1);
-  const friendId='00000000002',studentId='00000000003';
+  const friendId='40000000002',studentId='40000000003';
   assert.equal((await post('/api/admin/accounts',{userId:friendId,displayName:'Admin Fixture'},full)).status,201);
   const friendLimitedResponse=await post('/api/auth/login',{username:friendId,password:friendId});assert.equal(friendLimitedResponse.status,200);const friendLimited=cookieOf(friendLimitedResponse);
   assert.equal((await patch({action:'role',userId:friendId,role:'admin'},full)).status,200);
   assert.equal((await get('/api/admin/accounts',friendLimited)).status,403);
   const friendChange=await post('/api/auth/password',{password:testPassword,confirmation:testPassword,displayName:'Admin Fixture'},friendLimited);assert.equal(friendChange.status,200);const friend=cookieOf(friendChange);
   assert.equal((await get('/api/admin/accounts',friend)).status,200);assert.equal((await get('/admin',friend)).status,200);
+  assert.equal((await get('/api/admin/activity',friend)).status,403,'Delegated admin cannot see activity');
   assert.equal((await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture',role:'admin'},friend)).status,400);
   assert.equal((await post('/api/admin/accounts',{userId:studentId,displayName:'Student Fixture'},friend)).status,201);
   assert.equal((await patch({action:'role',userId:studentId,role:'admin'},friend)).status,403);
@@ -59,9 +64,27 @@ try{
   assert.equal((await post('/api/admin/accounts',{action:'reset',userId:STUDENT_ID},friend)).status,400);
   assert.equal((await patch({action:'role',userId:STUDENT_ID,role:'student'},full)).status,400);
   assert.equal((await patch({action:'role',userId:studentId,role:'admin'},full,{origin:'https://evil.invalid'})).status,403);
+  assert.equal((await patch({action:'role',userId:friendId,role:'moderator'},full)).status,200);
+  assert.equal((await get('/admin',friend)).status,200);
+  const moderatorAccounts=(await (await get('/api/admin/accounts',friend)).json()).accounts;
+  assert.ok(moderatorAccounts.every(a=>a.sessionCount===null));
+  assert.equal((await get('/api/admin/activity',friend)).status,403,'Moderator cannot see activity');
+  assert.equal((await post('/api/admin/accounts',{userId:'30000000004',displayName:'Invalid Student'},friend)).status,400);
+  assert.equal((await post('/api/admin/accounts',{userId:'40000000004',displayName:'New Student'},friend)).status,201);
+  assert.equal((await patch({userId:studentId,displayName:'Changed Name'},friend)).status,403);
+  assert.equal((await patch({action:'role',userId:studentId,role:'moderator'},friend)).status,403);
+  assert.equal((await post('/api/admin/accounts',{action:'reset',userId:studentId},friend)).status,403);
   assert.equal((await patch({action:'role',userId:friendId,role:'student'},full)).status,200);
   assert.equal((await get('/api/admin/accounts',friend)).status,403);
   const demoted=await (await get('/api/auth/session',friend)).json();assert.equal(demoted.isAdmin,false);assert.equal(demoted.isOwner,false);
+  const activity={id:'00000000-0000-4000-8000-000000000001',sequence:1,activeMs:0};
+  assert.equal((await post('/api/activity',activity)).status,401);
+  assert.equal((await post('/api/activity',activity,full,{origin:'https://evil.invalid'})).status,403);
+  assert.equal((await post('/api/activity',{...activity,userId:STUDENT_ID},friend)).status,400);
+  assert.equal((await post('/api/activity',activity,friend)).status,204);
+  assert.equal((await get('/api/admin/activity',friend)).status,403);
+  const activityResponse=await get('/api/admin/activity',full);assert.equal(activityResponse.status,200);assert.match(activityResponse.headers.get('cache-control'),/no-store/);
+  const activityReport=await activityResponse.json();assert.equal(activityReport.users.find(u=>u.userId===friendId).visits.length,1);
   const redirected=await get('/admin',friend);assert.equal(redirected.status,307);assert.equal(new URL(redirected.headers.get('location'),origin).pathname,'/');
   const page=await get('/',full,{accept:'text/html'});assert.equal(page.status,200);assert.match(page.headers.get('cache-control'),/no-store/);assert.ok(cookieOf(page));
   const pageHtml=await page.text();assert.doesNotMatch(pageHtml,/id="auth-title"/,'Authorized page must not be a cached login form');assert.doesNotMatch(pageHtml,/Checking your secure session/,'Authenticated server HTML must not hide behind another auth check');assert.match(pageHtml,/Study navigation/);

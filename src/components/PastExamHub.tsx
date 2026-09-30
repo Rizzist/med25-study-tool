@@ -1,5 +1,5 @@
 "use client";
-import {useCallback,useEffect,useState} from 'react';
+import {useCallback,useEffect,useMemo,useState} from 'react';
 import dynamic from 'next/dynamic';
 import {cachedJson} from '@/src/lib/mcq/client-cache';
 import type {ExamId} from '@/src/lib/mcq/exams.mjs';
@@ -12,6 +12,7 @@ import {combinedSourceSelection,finalPaperKey,paperAttemptSummary,readCombinedSe
 import type {ExamCollection} from '@/src/lib/mcq/curated-core.mjs';
 import {supportsGuidedExam,type GuidanceMode} from '@/src/lib/mcq/guided-exam.mjs';
 import {ExamModeChooser} from './ExamModeChooser';
+import {scopeLimbPaper,limbBankSelection,type LimbScope} from '@/src/lib/mcq/limb-paper-scope.mjs';
 const BiochemistryCoreCard=dynamic(()=>import('./BiochemistryCoreCard').then(m=>m.BiochemistryCoreCard),{loading:()=> <p role="status" className="mcq-loading">Loading Core Exam…</p>});
 const CvsPastExams=dynamic(()=>import('./CvsPastExams').then(m=>m.CvsPastExams),{loading:()=> <p role="status" className="mcq-loading">Loading CVS paper tools…</p>});
 const FinalExam=dynamic(()=>import('./FinalExam').then(m=>m.FinalExam),{loading:()=> <p role="status" className="mcq-loading">Loading selected paper…</p>});
@@ -34,12 +35,17 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
   const [intent,setIntent]=useState<'start'|'new'|'review'>('start'),[saved,setSaved]=useState<unknown>(null);
   const [pendingStart,setPendingStart]=useState<{id:string;intent:'start'|'new'}|null>(null);
   const [launchGuidance,setLaunchGuidance]=useState<GuidanceMode|undefined>();
+  const [limbScope,setLimbScope]=useState<LimbScope>('all');
   const [savedCombinations,setSavedCombinations]=useState<ReturnType<typeof readCombinedSelections>>([]);
   const refreshSaved=useCallback(()=>{try{setSaved(parseFinalExamProgress(localStorage.getItem(FINAL_EXAM_STORAGE_KEY)));setSavedCombinations(readCombinedSelections(localStorage.getItem(COMBINED_PAPER_SELECTIONS_KEY)));}catch{setSaved(null);}},[]);
   useEffect(()=>{queueMicrotask(refreshSaved);window.addEventListener('storage',refreshSaved);return()=>window.removeEventListener('storage',refreshSaved);},[refreshSaved]);
   useEffect(()=>{let cancelled=false;void cachedJson<Catalog>('/study/past-paper-downloads/catalog.json').then(c=>{if(!cancelled)setCatalog(c);}).catch(e=>{if(!cancelled)setError(e.message);});return()=>{cancelled=true;};},[]);
   useEffect(()=>{onSessionActiveChange?.(active);return()=>onSessionActiveChange?.(false);},[active,onSessionActiveChange]);
-  const course=catalog?.courses.find(c=>c.id===exam),sourceCollection=course?.collections.find(c=>c.id===selected),collection=sourceCollection??(combined?.id===selected?combined:undefined);
+  const originalCourse=catalog?.courses.find(c=>c.id===exam);
+  // Stable collection identity prevents progress-save renders from restarting FinalExam's loading effect.
+  const course=useMemo(()=>originalCourse&&exam==='term2-limbs'?{...originalCourse,collections:originalCourse.collections.map(c=>scopeLimbPaper(c,limbScope)).filter(c=>limbScope==='all'||c.sourceRecordCount>0).sort((a,b)=>Number(b.defaultEligible)-Number(a.defaultEligible))}:originalCourse,[originalCourse,exam,limbScope]);
+  const visibleCombinations=savedCombinations.filter(r=>r.exam===exam&&r.sourcePaperIds.every(id=>course?.collections.some(c=>c.id===id)));
+  const sourceCollection=course?.collections.find(c=>c.id===selected),collection=sourceCollection??(combined?.id===selected?combined:undefined);
   if(error)return <p role="alert" className="mcq-alert error">{error}</p>;
   if(!course)return <p role="status" className="mcq-loading">Loading sourced past papers and downloads…</p>;
   const head=<div className="section-head"><h2>Past papers<span>{course.collections.length} sourced</span></h2><p>Past-paper questions, with any study repairs clearly identified and original wording preserved in downloads. Take a paper, resume a saved attempt, or combine several into one session.</p></div>;
@@ -47,10 +53,10 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
     {!active&&<>{head}<HubTools course={course} open={library} onToggle={()=>setLibrary(v=>!v)}/>{library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}</>}
     <CvsPastExams onSessionActiveChange={setActive} downloads={Object.fromEntries(course.collections.map(item=>[item.id,item]))}/>
   </section>;
-  const supported=exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory';
+  const supported=exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory'||exam==='term2-limbs';
   if(selected&&supported)return <>{!active&&<div className="paper-view">
     <div className="paper-view-head"><button type="button" className="pill" onClick={()=>setSelected(null)}><StudyIcon name="arrow" className="flip"/>All papers</button>{collection&&<h2>{collection.title}</h2>}</div>
-    {sourceCollection&&<><p className="paper-note">{sourceCollection.note}</p><PaperDownloads item={sourceCollection} courseTitle={course.title}/></>}
+    {sourceCollection&&<><p className="paper-note">{sourceCollection.note}</p><PaperDownloads item={originalCourse?.collections.find(c=>c.downloads.questions===sourceCollection.downloads.questions)??sourceCollection} courseTitle={course.title}/></>}
   </div>}<FinalExam key={selected} exam={exam} bridgeUrl="" collection={collection} initialIntent={intent} initialGuidance={launchGuidance} onProgressSaved={refreshSaved} onExit={()=>{setActive(false);setSelected(null);}} onSessionActiveChange={setActive}/></>;
   const selectedIds=[...new Set(course.collections.filter(c=>selectedPapers.includes(c.id)).flatMap(c=>c.gradedQuestionIds))];
   function requestOpen(id:string,nextIntent:'start'|'new'|'review') {
@@ -91,20 +97,22 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
       setLaunchGuidance(mode);setIntent(pendingStart.intent);setSelected(pendingStart.id);setPendingStart(null);window.scrollTo({top:0,behavior:'instant'});
     }}/>}
     {head}
+    {exam==='term2-limbs'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['all','upper','lower'] as LimbScope[]).map(scope=><button type="button" key={scope} className={limbScope===scope?'primary':'pill'} aria-pressed={limbScope===scope} onClick={()=>{setLimbScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='all'?'Upper & lower':scope==='upper'?'Upper only':'Lower only'}</button>)}<small>Filters questions within each paper. Each scope saves its own results. Downloads retain the complete original paper.</small></fieldset>}
     {!course.collections.length?<div className="mcq-empty"><StudyIcon name="papers"/><b>No past papers imported yet</b><p>{course.emptyReason||'Practice MCQs are available, but they are not past-exam questions.'}</p></div>:<>
-      <HubTools course={course} open={library} onToggle={()=>setLibrary(v=>!v)}>
-        {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');setSelected('all');}}><StudyIcon name="results"/>All-paper bank &amp; saved results</button>}
+      <HubTools course={originalCourse??course} open={library} onToggle={()=>setLibrary(v=>!v)}>
+        {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');if(exam==='term2-limbs'){const scope=limbBankSelection(course.collections,limbScope);setCombined(scope);setSelected(scope.id);}else setSelected('all');}}><StudyIcon name="results"/>All-paper bank &amp; saved results</button>}
         {archived&&<button type="button" className="pill" aria-expanded={archive} onClick={()=>setArchive(!archive)}><StudyIcon name="book"/>{archive?'Close':'Open'} source archive</button>}
       </HubTools>
-      {library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}
+      {library&&<DownloadLibrary collections={(originalCourse??course).collections} courseTitle={course.title}/>}
       {exam==='july29'&&<p className="mcq-note">The authored “Core Distilled” questions are now in Practice MCQs, not Final Exam. The separate PharmD paper below is cross-course material, not confirmed medical-exam scope. The all-bank option retains legacy answers and includes both source groups.</p>}
       {archive&&(exam==='term2-nutrition'?<NutritionArchive/>:<ReligionArchive/>)}
       <section className="paper-combiner" aria-label="Combine past papers">
         <div className="section-head compact"><h3><StudyIcon name="layers"/>Combine papers</h3><p>One continuous session; repeated question IDs count once. Results map to your review sections.</p><div className="pill-row"><button type="button" className="pill small" onClick={()=>setSelectedPapers(course.collections.filter(c=>c.gradedQuestionCount&&c.defaultEligible).map(c=>c.id))}>Select all</button><button type="button" className="pill small" onClick={()=>setSelectedPapers([])}>Clear</button></div></div>
+        {exam==='term2-limbs'&&<p className="paper-note">Select all includes the main paper collections. Midterms and scope-unconfirmed supplements are optional: tick them individually to add them.</p>}
         <div className="paper-selection">{course.collections.map(item=><label key={item.id}><input type="checkbox" disabled={!item.gradedQuestionCount||combining} checked={selectedPapers.includes(item.id)} onChange={e=>setSelectedPapers(current=>e.target.checked?[...current,item.id]:current.filter(id=>id!==item.id))}/>{item.title}<small>{item.gradedQuestionCount}{!item.defaultEligible?' · supplement':''}</small></label>)}</div>
         <div className="paper-combiner-footer"><span>{selectedPapers.length} papers · {selectedIds.length} scored questions</span><button type="button" className="primary" disabled={!selectedIds.length||combining} onClick={()=>void openCombined()}>{combining?'Preparing…':'Start combined session'}<StudyIcon name="arrow"/></button></div>
         {selectionError&&<p role="alert" className="mcq-alert error">{selectionError}</p>}
-        {savedCombinations.some(r=>r.exam===exam)&&<details className="paper-saved-combinations"><summary>Saved combined sessions</summary>{savedCombinations.filter(r=>r.exam===exam).map(row=>{const included=course.collections.filter(c=>row.sourcePaperIds.includes(c.id)),summary=paperAttemptSummary(saved,exam,{id:row.id,gradedQuestionIds:[...new Set(included.flatMap(c=>c.gradedQuestionIds))]});return <article key={row.id}><b>{included.map(c=>c.title).join(' + ')}</b><p>{summary?`${summary.answered}/${summary.total} answered · ${summary.correct} correct`:'Ready to resume'}{summary?.completedAt?' · Completed':''}</p><button type="button" className="pill small" disabled={combining||!included.length} onClick={()=>void openCombined(row.sourcePaperIds)}>{summary?.completedAt?'Results & review':'Resume'}</button></article>;})}</details>}
+        {visibleCombinations.length>0&&<details className="paper-saved-combinations"><summary>Saved combined sessions</summary>{visibleCombinations.map(row=>{const included=course.collections.filter(c=>row.sourcePaperIds.includes(c.id)),summary=paperAttemptSummary(saved,exam,{id:row.id,gradedQuestionIds:[...new Set(included.flatMap(c=>c.gradedQuestionIds))]});return <article key={row.id}><b>{included.map(c=>c.title).join(' + ')}</b><p>{summary?`${summary.answered}/${summary.total} answered · ${summary.correct} correct`:'Ready to resume'}{summary?.completedAt?' · Completed':''}</p><button type="button" className="pill small" disabled={combining||!included.length} onClick={()=>void openCombined(row.sourcePaperIds)}>{summary?.completedAt?'Results & review':'Resume'}</button></article>;})}</details>}
       </section>
       <div className="paper-grid">
       {exam==='term2-biochemistry'&&<BiochemistryCoreCard saved={saved} onOpen={openCore}/>}
@@ -119,7 +127,7 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
             ?<p className="paper-saved-result"><strong>{Math.round(previous.correct/Math.max(1,previous.total)*100)}%</strong><span>{previous.correct}/{previous.total} correct · {new Date(previous.completedAt).toLocaleDateString()}</span></p>
             :<p className="paper-saved-result">{previous?`${previous.answered}/${previous.total} answered · saved on this device`:'Not attempted yet'}</p>)}
           {!referenceOnly&&<div className="paper-card-actions"><button type="button" className="primary" disabled={!item.gradedQuestionCount} onClick={()=>openPaper(item)}>{previous?previous.completedAt?'Results & review':'Resume paper':'Take paper'}</button>{previous&&<button type="button" className="pill" onClick={()=>openPaper(item,true)}>New attempt</button>}</div>}
-          <PaperDownloads item={item} courseTitle={course.title}/>
+          <PaperDownloads item={originalCourse?.collections.find(c=>c.downloads.questions===item.downloads.questions)??item} courseTitle={course.title}/>
         </PastPaperCard>;
       })}</div>
     </>}

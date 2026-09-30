@@ -15,6 +15,7 @@ export const FINAL_EXAM_SESSION_KEYS = {
   religion: "term2-religion:religion-past-papers",
   biochemistry: "term2-biochemistry:biochemistry-metabolism-past-papers",
   respiratory: "term2-respiratory:respiratory-past-papers",
+  limbs: "term2-limbs:limbs-past-papers",
   july29TelegramWithoutCarbLipidMetabolism: "july29:telegram-past-papers:no-carb-lipid-metabolism",
   july29DownloadedWithoutCarbLipidMetabolism: "july29:downloaded-core:no-carb-lipid-metabolism",
 };
@@ -30,6 +31,7 @@ export function emptyFinalExamProgress() {
       [FINAL_EXAM_SESSION_KEYS.religion]: null,
       [FINAL_EXAM_SESSION_KEYS.biochemistry]: null,
       [FINAL_EXAM_SESSION_KEYS.respiratory]: null,
+      [FINAL_EXAM_SESSION_KEYS.limbs]: null,
       [FINAL_EXAM_SESSION_KEYS.july29TelegramWithoutCarbLipidMetabolism]: null,
       [FINAL_EXAM_SESSION_KEYS.july29DownloadedWithoutCarbLipidMetabolism]: null,
     },
@@ -109,7 +111,7 @@ export function parseFinalExamProgress(raw, banks = {}) {
     const sessions = { ...empty.sessions };
     // Collection-specific sessions share the legacy container without erasing old attempts.
     for(const key of Object.keys(sourceSessions)) {
-      if(/^(july25|july29|term2-nutrition|term2-religion|term2-biochemistry|term2-respiratory):(telegram-past-papers|nutrition-past-papers|religion-past-papers|biochemistry-metabolism-past-papers|respiratory-past-papers):collection:[a-z0-9-]+(?::no-carb-lipid-metabolism)?$/.test(key)&&key.length<200)sessions[key]=null;
+      if(/^(july25|july29|term2-nutrition|term2-religion|term2-biochemistry|term2-respiratory|term2-limbs):(telegram-past-papers|nutrition-past-papers|religion-past-papers|biochemistry-metabolism-past-papers|respiratory-past-papers|limbs-past-papers):collection:[a-z0-9-]+(?::no-carb-lipid-metabolism)?$/.test(key)&&key.length<200)sessions[key]=null;
     }
     for (const key of Object.keys(sessions)) {
       sessions[key] = banks[key]

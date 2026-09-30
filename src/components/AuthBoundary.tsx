@@ -1,12 +1,14 @@
 "use client";
 import {createContext,useContext,useEffect,useLayoutEffect,useState,type ReactNode} from 'react';
 import {clearStudyCaches,seedStudySession,invalidateStudySession} from '../../public/med25-auth-cache.mjs';
+import {ActivityTracker} from './ActivityTracker';
 
-type AccountSession={displayName:string|null;isOwner:boolean;isAdmin:boolean};
-const AccountContext=createContext<AccountSession>({displayName:null,isOwner:false,isAdmin:false});
+type AccountSession={displayName:string|null;isOwner:boolean;isAdmin:boolean;canAccessAdmin:boolean};
+const AccountContext=createContext<AccountSession>({displayName:null,isOwner:false,isAdmin:false,canAccessAdmin:false});
 export const useAuthAccount=()=>useContext(AccountContext);
 
 export async function signOut(){
+  window.dispatchEvent(new Event('med25-signing-out'));
   const response=await fetch('/api/auth/logout',{method:'POST',headers:{'content-type':'application/json','x-med25-auth':'1'},body:'{}'});
   if(!response.ok)throw new Error('Could not sign out. Please retry.');
   try{localStorage.setItem('med25-auth-logout',String(Date.now()));}catch{/* Optional cross-tab notification. */}
@@ -29,9 +31,7 @@ export function AuthBoundary({children,initialSession}:{children:ReactNode;initi
     const channel=typeof BroadcastChannel!=='undefined'?new BroadcastChannel('med25-auth'):null;if(channel)channel.onmessage=lock;
     window.addEventListener('pageshow',restored);window.addEventListener('storage',storage);window.addEventListener('med25-auth-required',lock);
     navigator.serviceWorker?.addEventListener('message',workerMessage);
-    // Replace old cache-first workers, including the pre-auth version.
-    if('serviceWorker' in navigator)void navigator.serviceWorker.register('/med25-sw.js',{type:'module',updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});
     return()=>{channel?.close();window.removeEventListener('pageshow',restored);window.removeEventListener('storage',storage);window.removeEventListener('med25-auth-required',lock);navigator.serviceWorker?.removeEventListener('message',workerMessage);};
   },[]);
-  return <AccountContext.Provider value={initialSession}>{children}</AccountContext.Provider>;
+  return <AccountContext.Provider value={initialSession}><ActivityTracker/>{children}</AccountContext.Provider>;
 }

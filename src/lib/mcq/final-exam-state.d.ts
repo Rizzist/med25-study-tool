@@ -9,6 +9,7 @@ export const FINAL_EXAM_SESSION_KEYS: {
   readonly religion: "term2-religion:religion-past-papers";
   readonly biochemistry: "term2-biochemistry:biochemistry-metabolism-past-papers";
   readonly respiratory: "term2-respiratory:respiratory-past-papers";
+  readonly limbs: "term2-limbs:limbs-past-papers";
   readonly july29TelegramWithoutCarbLipidMetabolism: "july29:telegram-past-papers:no-carb-lipid-metabolism";
   readonly july29DownloadedWithoutCarbLipidMetabolism: "july29:downloaded-core:no-carb-lipid-metabolism";
 };
@@ -40,6 +41,7 @@ export type StoredFinalExamProgress = {
     | "term2-religion:religion-past-papers"
     | "term2-biochemistry:biochemistry-metabolism-past-papers"
     | "term2-respiratory:respiratory-past-papers"
+    | "term2-limbs:limbs-past-papers"
     | "july29:telegram-past-papers"
     | "july29:downloaded-core"
     | "july29:telegram-past-papers:no-carb-lipid-metabolism"
@@ -62,6 +64,7 @@ export function parseFinalExamProgress(
     | "term2-religion:religion-past-papers"
     | "term2-biochemistry:biochemistry-metabolism-past-papers"
     | "term2-respiratory:respiratory-past-papers"
+    | "term2-limbs:limbs-past-papers"
     | "july29:telegram-past-papers"
     | "july29:downloaded-core"
     | "july29:telegram-past-papers:no-carb-lipid-metabolism"

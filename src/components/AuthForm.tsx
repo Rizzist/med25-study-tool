@@ -2,10 +2,11 @@
 import {useEffect,useState,type FormEvent} from 'react';
 import {clearStudyCaches} from '../../public/med25-auth-cache.mjs';
 import {SignOutButton} from './AuthBoundary';
+import {InstallAppButton} from './PwaProvider';
 
 export function AuthForm({mode='login',forced=false,displayName=null}:{mode?:'login'|'password';forced?:boolean;displayName?:string|null}){
   const [busy,setBusy]=useState(false),[error,setError]=useState('');
-  useEffect(()=>{if(mode==='login'){void clearStudyCaches().catch(()=>{});if('serviceWorker' in navigator)void navigator.serviceWorker.register('/med25-sw.js',{type:'module',updateViaCache:'none'}).then(r=>r.update()).catch(()=>{});}},[mode]);
+  useEffect(()=>{if(mode==='login')void clearStudyCaches().catch(()=>{});},[mode]);
   async function submit(event:FormEvent<HTMLFormElement>){
     event.preventDefault();setBusy(true);setError('');
     const fields=Object.fromEntries(new FormData(event.currentTarget));
@@ -22,6 +23,7 @@ export function AuthForm({mode='login',forced=false,displayName=null}:{mode?:'lo
       <button className="primary" type="submit" disabled={busy}>{busy?'Please wait…':mode==='login'?'Sign in':'Save password & continue'}</button>
     </form>
     {mode==='password'&&<div className="auth-actions">{!forced&&<a href="/">Cancel</a>}<SignOutButton/></div>}
-    <p className="auth-footnote">Only authorized student accounts can sign in. Your study progress stays on this device.</p>
+    <InstallAppButton/>
+    <p className="auth-footnote">Only authorized student accounts can sign in. Your study progress stays on this device. The owner can see visit times and approximate active duration, but not your answers or keystrokes. Up to 100 recent visits per account are kept; entries older than 90 days are pruned when next accessed.</p>
   </section></main>;
 }

@@ -56,6 +56,10 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 .mcq-side-nav svg{width:17px;height:17px}
 .mcq-app .mcq-side-nav button:hover:not(:disabled){background:#203429;color:#fff}
 .mcq-app .mcq-side-nav button.active{background:var(--mcq-lime);color:var(--mcq-deep)}
+.mcq-app .mcq-side-nav button:disabled{opacity:.55;cursor:not-allowed}
+.nav-short-title{display:none}
+.nav-soon{font-size:9px;display:block;font-weight:400;line-height:1.2}
+@media(max-width:800px){.mcq-app .mcq-side-nav{grid-template-columns:repeat(6,minmax(0,1fr))!important}.nav-short-title{display:inline}.nav-full-title{display:none}.mcq-side-nav .nav-soon{font-size:8px}}
 .mcq-sidebar-foot{display:flex;gap:8px;align-items:flex-start;margin:auto 0 0;padding:10px 8px;font-size:11px;line-height:1.45;color:#8aa094}
 .mcq-sidebar-foot svg{width:14px;height:14px;margin-top:2px;color:var(--mcq-lime)}
 
@@ -117,10 +121,10 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 .resume-strip{display:flex;align-items:center;gap:12px;margin:0 0 12px;padding:10px 14px;border:1px solid #bfd3c3;border-radius:var(--mcq-radius);background:#e9f2e8}
 .resume-strip>svg{color:var(--mcq-green)}
 .resume-strip>div{flex:1;min-width:0;display:grid;gap:1px}.resume-strip b{font-size:13px}.resume-strip span{font-size:12px;color:#4f6357}
-.launch{display:grid;gap:14px;padding:16px 18px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
-.launch-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.launch{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;padding:16px 18px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
+.launch-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;min-width:0;max-width:100%}
 .launch-label{flex:none;min-width:74px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--mcq-muted)}
-.launch-group{display:flex;align-items:center;gap:10px}.launch-group .launch-label{min-width:0}
+.launch-group{display:flex;align-items:center;gap:10px;min-width:0;max-width:100%}.launch-group .launch-label{min-width:0}
 .launch-start{margin-left:auto}
 .launch-hint{margin:-4px 0 0;font-size:12px;color:var(--mcq-muted)}
 .quick-row{margin:14px 0 0}
@@ -349,3 +353,9 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 .pill-status.error{display:inline-grid;place-items:center;width:14px;height:14px;border-radius:50%;background:#8b2a23;color:#fff;font-size:10px;font-weight:800;line-height:1}
 @keyframes mcq-spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.pill-status.busy{animation:none;border-top-color:#bfd3c3}}
+/* Limb scopes remain compact and wrap without changing the question order. */
+.limb-paper-scope{border:1px solid var(--line,#dce3da);border-radius:14px;padding:12px;margin:0 0 16px;gap:8px;align-items:center}
+.limb-paper-scope legend{font-size:.8rem;font-weight:700;padding:0 5px}
+.limb-paper-scope small{flex-basis:100%;font-size:.78rem;color:var(--muted,#68766c)}
+.limb-paper-scope button{min-height:40px;padding:8px 14px}
+@media(max-width:600px){.limb-paper-scope{padding:8px}.limb-paper-scope button{flex:1;padding:8px;font-size:.82rem}}

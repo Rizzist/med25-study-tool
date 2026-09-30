@@ -458,7 +458,7 @@ export default function Home() {
     return payload.questions;
   }, []);
 
-  useEffect(() => { void refresh(); if('serviceWorker' in navigator) void navigator.serviceWorker.register('/med25-sw.js',{type:'module',updateViaCache:'none'}).catch(()=>{}); }, [refresh]);
+  useEffect(() => { void refresh(); }, [refresh]);
   const detailUrl = bank?.exams?.find(item=>item.id===exam)?.detailUrl;
   useEffect(()=>{let cancelled=false;if(detailUrl) void cachedJson<NonNullable<BankSummary['exams']>[number]>(detailUrl).then(detail=>{if(!cancelled)setBank(current=>current?{...current,exams:current.exams?.map(c=>c.id===exam?{...c,...detail}:c)}:current);}).catch(()=>{});return()=>{cancelled=true;};},[exam,detailUrl]);
 

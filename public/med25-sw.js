@@ -1,13 +1,20 @@
 /* Content-addressed media survive app updates. Never cache API writes or answers. */
 import {loadCachedPdf,pdfRangeResponse} from './med25-pdf-cache.mjs';
 import {requireStudySession,denyStudySession,clearStudyCaches} from './med25-auth-cache.mjs';
+import {installPublicShell,removeOldShells,networkPageOrOffline} from './med25-pwa-shell.mjs';
 const MEDIA='med25-requested-media-v1';
-self.addEventListener('install',()=>self.skipWaiting());
-self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
+self.addEventListener('install',event=>event.waitUntil(installPublicShell().catch(()=>{/* Storage is optional; the inline offline fallback remains safe. */}).then(()=>self.skipWaiting())));
+self.addEventListener('activate',event=>event.waitUntil(removeOldShells().then(()=>self.clients.claim())));
 self.addEventListener('message',event=>{if(event.data?.type==='med25-auth-clear')event.waitUntil(clearStudyCaches());});
 self.addEventListener('fetch',event=>{
   const request=event.request,url=new URL(request.url);
-  if(request.method!=='GET'||url.origin!==self.location.origin||!url.pathname.startsWith('/study/'))return;
+  if(request.method!=='GET'||url.origin!==self.location.origin)return;
+  if(request.mode==='navigate'&&!url.pathname.startsWith('/study/')&&!url.pathname.startsWith('/api/')){
+    // Never cache authenticated HTML. Network replies (including auth denial)
+    // pass through unchanged; only a failed connection gets the public fallback.
+    event.respondWith(networkPageOrOffline(request));return;
+  }
+  if(!url.pathname.startsWith('/study/'))return;
   if(url.pathname.toLowerCase().endsWith('.pdf')){
     event.respondWith(loadCachedPdf(url.href).then(({response})=>pdfRangeResponse(response,request.headers.get('range'),request.headers.get('if-range'))).catch(error=>error.code?.startsWith('AUTH_')?new Response('Sign-in verification required',{status:error.code==='AUTH_REQUIRED'?401:503,headers:{'cache-control':'no-store'}}):fetch(request)));
     return;

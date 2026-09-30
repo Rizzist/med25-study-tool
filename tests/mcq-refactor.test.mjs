@@ -28,6 +28,8 @@ test('navigation retains source-style course cards, four MCQ destinations and th
   assert.match(html,/Choose term/);assert.match(html,/Term 2 courses/);assert.match(html,/Date TBA/);assert.match(html,/75 MCQs/);assert.match(html,/Loading questions/);
   assert(!html.includes('Term one'));assert(!html.includes('0 MCQs'));assert.match(html,/aria-current="page"/);
   for(const label of ['Practice MCQs','Past exams','Review topics','Results','School Map'])assert(html.includes(label));
+  assert.match(html,/<button[^>]*disabled=""[^>]*aria-label="Med School Books · coming soon"/);
+  assert.match(html,/nav-short-title">Books/);
   const css=fs.readFileSync(path.join(root,'app/mcq.css'),'utf8');
   assert.match(css,/\.mcq-sidebar\{position:fixed/);assert.match(css,/\.mcq-topbar\{position:sticky/);
   assert.match(css,/body:has\(\.mcq-app\),body:has\(\.review-shell\)\{[^}]*overflow:visible/);
@@ -78,7 +80,8 @@ test('all course data retain live 2D but never 3D; history covers every current 
 });
 test('final API refuses authored bank; source banks match approved IDs exactly',()=>{
   assert.equal(server.isFinalExamBankId('downloaded-core'),false);assert.throws(()=>server.finalExamSet('july29','downloaded-core'));
-  assert.throws(()=>server.finalExamSet('term2-limbs'));
+  assert.equal(server.finalExamSet('term2-limbs').bank,'limbs-past-papers');
+  assert.throws(()=>server.finalExamSet('term2-limbs','telegram-past-papers'));
   const catalog=read('data/mcq-refactor/past-source-catalog.json');
   for(const [key,entry] of Object.entries(runtime.finals)){
     const expected=new Set(catalog.collections.filter(c=>c.bankKey===key).flatMap(c=>c.gradedQuestionIds));
@@ -113,7 +116,7 @@ test('collection sessions and retired legacy sessions survive parse',()=>{
 });
 test('all source download URLs resolve, and none exposes local paths',()=>{
   const c=read('public/study/past-paper-downloads/catalog.json');assert(!/\/Users\/|\/tmp\//.test(JSON.stringify(c)));
-  assert.equal(c.courses.flatMap(c=>c.collections).length,77); // 54 existing + 23 deduplicated Respiratory source collections
+  assert.equal(c.courses.flatMap(c=>c.collections).length,96); // 77 existing + 19 limb source collections
   assert.equal(c.courses.find(c=>c.id==='term2-nutrition').collections.length,9);
   for(const item of c.courses.flatMap(c=>c.collections))for(const url of [...Object.values(item.downloads),...item.originals.map(o=>o.url)])assert(fs.statSync(path.join(root,'public',url.split(/[?#]/)[0])).size>0,url);
 });

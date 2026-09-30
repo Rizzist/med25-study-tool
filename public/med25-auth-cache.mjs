@@ -46,5 +46,5 @@ export async function clearStudyCaches(){
   invalidateStudySession();
   if(typeof navigator!=='undefined')navigator.serviceWorker?.controller?.postMessage({type:'med25-auth-clear'});
   if(!globalThis.caches)return;
-  const names=await caches.keys();await Promise.all(names.filter(name=>name.startsWith('med25-')).map(name=>caches.delete(name)));
+  const names=await caches.keys();await Promise.all(names.filter(name=>name.startsWith('med25-')&&!name.startsWith('med25-public-shell-')).map(name=>caches.delete(name)));
 }

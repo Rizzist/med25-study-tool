@@ -1,14 +1,17 @@
 "use client";
 import {useCallback,useEffect,useRef,useState,type FormEvent} from 'react';
+import dynamic from 'next/dynamic';
 import type {ManagedAccount} from '../lib/server/auth-core.mjs';
 import {useAuthAccount} from './AuthBoundary';
 
 const headers={'content-type':'application/json','x-med25-auth':'1'};
+const ActivityDashboard=dynamic(()=>import('./ActivityDashboard').then(m=>m.ActivityDashboard),{loading:()=> <p role="status">Loading activity view…</p>});
 type Editor={kind:'add'}|{kind:'manage';account:ManagedAccount};
 
 export function AdminDashboard(){
-  const {isOwner,isAdmin}=useAuthAccount();
+  const {isOwner,isAdmin,canAccessAdmin}=useAuthAccount();
   const [accounts,setAccounts]=useState<ManagedAccount[]>([]);
+  const [view,setView]=useState<'accounts'|'activity'>('accounts');
   const [loading,setLoading]=useState(true),[busy,setBusy]=useState(false);
   const [error,setError]=useState(''),[notice,setNotice]=useState(''),[query,setQuery]=useState('');
   const [editor,setEditor]=useState<Editor|null>(null),[editorError,setEditorError]=useState('');
@@ -51,12 +54,13 @@ export function AdminDashboard(){
     <header className="admin-header">
       <a href="/" aria-label="Back to MED25">← MED//25</a><h1>Accounts</h1>
       <span className="admin-count">{loading&&!accounts.length?'Loading…':accounts.filter(account=>account.active).length+' active'}</span>
-      <button type="button" className="primary" disabled={busy||!isAdmin} onClick={()=>openEditor({kind:'add'})}>+ Add student</button>
+      <button type="button" className="primary" disabled={busy||!canAccessAdmin} onClick={()=>openEditor({kind:'add'})}>+ Add student</button>
     </header>
-    <p className="admin-permissions">{isOwner?'You control admin access. Admins can manage students; only you can change roles.':'Manage student accounts. Administrator roles are controlled by the owner.'}</p>
+    <p className="admin-permissions">{isOwner?'Only you assign roles. Moderators add students; admins also manage student accounts.':isAdmin?'Manage student accounts. Only the owner can assign roles.':'Moderator access · Add new students. Existing accounts and roles are managed by the owner or an admin.'}</p>
+    {isOwner&&<div className="admin-views" role="group" aria-label="Owner dashboard view"><button type="button" aria-pressed={view==='accounts'} onClick={()=>setView('accounts')}>Accounts</button><button type="button" aria-pressed={view==='activity'} onClick={()=>setView('activity')}>Activity · owner only</button></div>}
     {error&&<p className="auth-error" role="alert">{error}</p>}
     {notice&&<p className="admin-notice" role="status">{notice}</p>}
-    <section className="admin-list" aria-label="Student accounts">
+    {view==='activity'&&isOwner?<ActivityDashboard/>:<section className="admin-list" aria-label="Student accounts">
       <div className="admin-toolbar">
         <input type="search" aria-label="Find a student by name or ID" placeholder="Find name or student ID…" value={query} onChange={event=>setQuery(event.target.value)}/>
         <span>{filtered.length} {filtered.length===1?'account':'accounts'}</span>
@@ -64,31 +68,31 @@ export function AdminDashboard(){
       </div>
       <div className="admin-table-scroll" tabIndex={0} role="region" aria-label="Student account table, scroll horizontally on smaller screens" aria-busy={loading}>
         <table className="admin-table">
-          <thead><tr><th scope="col">Name</th><th scope="col">Student ID</th><th scope="col">Role</th><th scope="col">Access</th><th scope="col" className="admin-sessions">Sessions</th><th scope="col"><span className="admin-sr-only">Actions</span></th></tr></thead>
+          <thead><tr><th scope="col">Name</th><th scope="col">Student ID</th><th scope="col">Role</th><th scope="col">Access</th>{isOwner&&<th scope="col" className="admin-sessions" title="Valid login tokens, not visits">Logins</th>}{isAdmin&&<th scope="col"><span className="admin-sr-only">Actions</span></th>}</tr></thead>
           <tbody>{filtered.map(account=>{
-            const canManage=isAdmin&&(isOwner||!account.isAdmin);
+            const canManage=isAdmin&&(isOwner||account.role==='student');
             return <tr key={account.userId} className={account.active?'':'admin-inactive'}>
               <th scope="row"><span className="admin-name" title={account.displayName??'Name pending'}>{account.displayName??'Name pending'}</span></th>
               <td><code>{account.userId}</code></td>
-              <td>{isOwner&&!account.isOwner?<select aria-label={'Role for '+(account.displayName??account.userId)} value={account.role} disabled={busy||!account.active} onChange={event=>{void mutate('PATCH',{action:'role',userId:account.userId,role:event.target.value},event.target.value==='admin'?'Admin access granted. Only you can assign roles.':'Admin access revoked. Student access remains active.');}}><option value="student">Student</option><option value="admin">Admin</option></select>:<span className={'admin-role '+account.role}>{account.isOwner?'Owner':account.isAdmin?'Admin':'Student'}</span>}</td>
+              <td>{isOwner&&!account.isOwner?<select aria-label={'Role for '+(account.displayName??account.userId)} value={account.role} disabled={busy||!account.active} onChange={event=>{const role=event.target.value;if(confirm('Change '+(account.displayName??account.userId)+' to '+role+'?'))void mutate('PATCH',{action:'role',userId:account.userId,role},'Role updated to '+role+'.');}}><option value="student">Student</option><option value="moderator">Moderator</option><option value="admin">Admin</option></select>:<span className={'admin-role '+account.role}>{account.role}</span>}</td>
               <td><span className={'admin-access '+(!account.active?'removed':account.mustChangePassword?'pending':'active')}>{!account.active?'Removed':account.mustChangePassword?'Setup required':'Active'}</span></td>
-              <td className="admin-sessions">{account.sessionCount}</td>
-              <td><button type="button" disabled={busy||!canManage} aria-label={'Manage '+(account.displayName??account.userId)} title={canManage?'Edit name, reset password, or change access':'Only the owner can manage admins'} onClick={()=>openEditor({kind:'manage',account})}>Manage</button></td>
+              {isOwner&&<td className="admin-sessions">{account.sessionCount}</td>}
+              {isAdmin&&<td><button type="button" disabled={busy||!canManage} aria-label={'Manage '+(account.displayName??account.userId)} title={canManage?'Edit name, reset password, or change access':'Only the owner can manage moderators and admins'} onClick={()=>openEditor({kind:'manage',account})}>Manage</button></td>}
             </tr>;
           })}</tbody>
         </table>
         {!filtered.length&&<p className="admin-empty" role="status">{loading?'Loading accounts…':query?'No matching students.':'No accounts to show.'}</p>}
       </div>
-    </section>
+    </section>}
     <dialog ref={dialog} className="admin-dialog" aria-labelledby="admin-editor-title" onCancel={event=>{if(busy)event.preventDefault();}} onClose={()=>setEditor(null)}>
       <div className="admin-dialog-heading"><h2 id="admin-editor-title">{editor?.kind==='add'?'Add student':'Manage account'}</h2><button type="button" aria-label="Close account editor" disabled={busy} onClick={()=>setEditor(null)}>×</button></div>
-      {current&&<p className="admin-dialog-id">{current.userId} · {current.isOwner?'Owner':current.isAdmin?'Admin':'Student'}</p>}
+      {current&&<p className="admin-dialog-id">{current.userId} · {current.role}</p>}
       {editorError&&<p role="alert" className="auth-error">{editorError}</p>}
       <form onSubmit={save}>
-        {editor?.kind==='add'&&<label>Student ID<input name="userId" inputMode="numeric" pattern="[0-9]{5,32}" maxLength={32} required autoFocus autoComplete="off"/></label>}
+        {editor?.kind==='add'&&<label>Student ID<input name="userId" inputMode="numeric" pattern="4[0-9]{10}" minLength={11} maxLength={11} title="11 digits, starting with 4" required autoFocus autoComplete="off"/><small>11 digits, starting with 4. Format is checked; university enrollment is not verified.</small></label>}
         <label>Full name<input value={name} onChange={event=>setName(event.target.value)} minLength={2} maxLength={80} required autoComplete="off" autoFocus={editor?.kind==='manage'}/></label>
         {(editor?.kind==='add'||current&&!current.active)&&<p className="admin-dialog-help">The student ID is the temporary password. They must confirm their name and set a new password before studying.</p>}
-        <button className="primary" disabled={busy||!isAdmin}>{busy?'Saving…':editor?.kind==='add'?'Add student':current?.active?'Save name':'Restore as student'}</button>
+        <button className="primary" disabled={busy||!canAccessAdmin}>{busy?'Saving…':editor?.kind==='add'?'Add student':current?.active?'Save name':'Restore as student'}</button>
       </form>
       {current?.active&&!current.isOwner&&<div className="admin-dialog-actions">
         <button type="button" disabled={busy} onClick={()=>{if(confirm('Reset the password for '+(current.displayName??current.userId)+' to their student ID? This signs out all their sessions and requires a new password.'))void mutate('POST',{action:'reset',userId:current.userId},'Password reset. First-login setup is required.',true);}}>Reset password</button>
