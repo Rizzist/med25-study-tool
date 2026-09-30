@@ -14,11 +14,11 @@ import { selectCoverageSprint } from "@/src/lib/mcq/sprint-selection.mjs";
 import { selectRespiratorySprint } from "@/src/lib/mcq/respiratory-selection.mjs";
 import { selectPracticalSprint } from "@/src/lib/mcq/practical-selection.mjs";
 import { selectTerm2Sprint } from "@/src/lib/mcq/term2-selection.mjs";
-import { isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, isInteractive3dQuestion, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
+import { biochemistryRetake, isExamId, isTerm2Exam, isTerm2Question, matchesTerm2Exam, isImageQuestion, isInteractive3dQuestion, term2Exams, type ExamId } from "@/src/lib/mcq/exams.mjs";
 
 export { isExamId };
 export type { ExamId };
-export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers" | "limbs-past-papers";
+export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers" | "limbs-past-papers" | "biochemistry-retake-past-papers";
 type FinalExamBankKey = `${ExamId}:${FinalExamBankId}`;
 export type CollectionId =
   | "all"
@@ -227,6 +227,7 @@ let verifiedCache: MCQQuestion[] | null = null;
 const finalCache: Partial<Record<FinalExamBankKey, MCQQuestion[]>> = {};
 
 const FINAL_EXAM_BANKS = [
+  {id:'biochemistry-retake-past-papers' as const,exam:'term1-biochemistry-retake' as const,label:'Term 1 Biochemistry · Past Papers',description:'Biochemistry-only source selections with qualified study keys.',requiredTag:'final-bank-biochemistry-retake-past-papers'},
   {
     id: "limbs-past-papers" as const,
     exam: "term2-limbs" as const,
@@ -274,10 +275,12 @@ const FINAL_EXAM_BANKS = [
 ] as const;
 
 export function isFinalExamBankId(value: unknown): value is FinalExamBankId {
+  if(value === 'biochemistry-retake-past-papers') return true;
   return value === "limbs-past-papers" || value === "respiratory-past-papers" || value === "biochemistry-metabolism-past-papers" || value === "telegram-past-papers" || value === "downloaded-core" || value === "nutrition-past-papers" || value === "religion-past-papers";
 }
 
 export function defaultFinalExamBank(exam?: ExamId): FinalExamBankId {
+  if(exam === 'term1-biochemistry-retake') return 'biochemistry-retake-past-papers';
   return exam === "term2-limbs" ? "limbs-past-papers" : exam === "term2-respiratory" ? "respiratory-past-papers" : exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers";
 }
 
@@ -333,6 +336,9 @@ function isPracticalDerived(question: MCQQuestion): boolean {
 }
 
 export function matchesExam(question: MCQQuestion, exam: ExamId): boolean {
+  const retake=(question.tags??[]).includes('exam-term1-biochemistry-retake');
+  if(exam === 'term1-biochemistry-retake') return retake && question.subject==='biochemistry';
+  if(retake) return false;
   if (isTerm2Exam(exam)) return matchesTerm2Exam(question, exam);
   if (isTerm2Question(question)) return false;
   const isHistologyPractical = (question.tags ?? []).includes("histo-practical");
@@ -401,6 +407,7 @@ export function bankSummary() {
     { id: "july25" as const, date: "2026-07-25", title: "Tissue Development & Function" },
     { id: "aug22" as const, date: "2026-08-22", title: "Histology Practical" },
     { id: "july29" as const, date: "2026-08-25", title: "Cell & Molecules" },
+    biochemistryRetake,
     ...term2Exams,
   ]).map((exam) => {
     const questions = verified.filter((question) => matchesExam(question, exam.id));

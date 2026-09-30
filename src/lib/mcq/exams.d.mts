@@ -1,6 +1,8 @@
 import type { MCQQuestion } from "./types";
 export type Term2ExamId = "term2-cvs" | "term2-respiratory" | "term2-limbs" | "term2-biochemistry" | "term2-physiology-practical" | "term2-nutrition" | "term2-religion" | "term2-divine-ethics";
-export type ExamId = "july25" | "aug22" | "july29" | Term2ExamId;
+export type ExamId = "july25" | "aug22" | "july29" | "term1-biochemistry-retake" | Term2ExamId;
+export const biochemistryRetake: {id:'term1-biochemistry-retake';date:null;title:string;scope:string;status:string};
+export function hasReviewCurriculum(value: unknown): boolean;
 export const term2Exams: Array<{ id: Term2ExamId; date: string | null; title: string; scope: string; status: string }>;
 export const examIds: ExamId[];
 export function isExamId(value: unknown): value is ExamId;

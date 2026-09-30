@@ -29,7 +29,7 @@ function PdfPage({pdf,page,root,width,ratio,highlight}:{pdf:PDFDocumentProxy;pag
     return()=>{cancelled=true;render?.cancel();};
   },[pdf,page,width,visible]);
   return <div ref={element} className="guided-pdf-page" data-page={page} style={{aspectRatio:ratio,width}} aria-label={`Review PDF page ${page}`}>
-    {visible?<canvas ref={canvas} role="img" aria-label={`Respiratory review, page ${page}`}/>:<span className="guided-page-placeholder">Page {page}</span>}
+    {visible?<canvas ref={canvas} role="img" aria-label={`Course review, page ${page}`}/>:<span className="guided-page-placeholder">Page {page}</span>}
     {error&&<p role="alert">{error}</p>}
     {highlight!==undefined&&<span className="guided-paragraph-marker" style={{top:`${highlight*100}%`}} aria-label="Linked paragraph starts here"/>}
     <small className="guided-page-number">{page}</small>

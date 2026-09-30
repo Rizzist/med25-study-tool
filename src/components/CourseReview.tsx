@@ -3,14 +3,14 @@ import {useEffect,useMemo,useState} from 'react';
 import {cachedJson} from '@/src/lib/mcq/client-cache';
 import {reviewBreakdown,type ReviewCourse,type ReviewOutcome} from '@/src/lib/mcq/review-results.mjs';
 import {wrongReviewStats,type ReviewAnswer} from '@/src/lib/mcq/wrong-answer-review.mjs';
-import {isTerm2Exam} from '@/src/lib/mcq/exams.mjs';
+import {hasReviewCurriculum} from '@/src/lib/mcq/exams.mjs';
 import {CachedPdfDownload} from './CachedPdfDownload';
 import {StudyIcon} from './StudyIcon';
 
 function useReview(exam:string) {
   const [course,setCourse]=useState<ReviewCourse|null>(null),[error,setError]=useState('');
   useEffect(()=>{let cancelled=false;setCourse(null);setError('');
-    if(isTerm2Exam(exam))void cachedJson<{courses:Record<string,{url:string}>}>('/study/reviews/index.json').then(index=>{
+    if(hasReviewCurriculum(exam))void cachedJson<{courses:Record<string,{url:string}>}>('/study/reviews/index.json').then(index=>{
       if(!index.courses[exam])throw Error('No review document is available for this course.');
       return cachedJson<ReviewCourse>(index.courses[exam].url);
     }).then(data=>{if(!cancelled)setCourse(data);}).catch(e=>{if(!cancelled)setError(e.message);});
@@ -22,7 +22,7 @@ function sectionUrl(course:ReviewCourse,id:string) {const s=course.sections.find
 /** Review PDF download pills for the course header. */
 export function ReviewDownloads({exam}:{exam:string}) {
   const {course,error}=useReview(exam);
-  if(!isTerm2Exam(exam))return null;
+  if(!hasReviewCurriculum(exam))return null;
   return error?<span className="pill-note" role="alert">{error}</span>:!course?<span className="pill-note" role="status">Loading review PDFs…</span>:<ReviewDownloadLinks course={course}/>;
 }
 function ReviewDownloadLinks({course}:{course:ReviewCourse}) {
@@ -97,7 +97,7 @@ export function ReviewTopics({exam,onPractice,disabled=false,subjectOf}:{exam:st
   </section>;
 }
 export function CourseReviewReport({exam,outcomes,onPractice,reviewOnly=false,onRetryWrong,reviewAnswers,retryableIds=[]}:{exam:string;outcomes:ReviewOutcome[];onPractice?:(ids:string[])=>void;reviewOnly?:boolean;onRetryWrong?:(ids:string[],title:string)=>void;reviewAnswers?:Record<string,ReviewAnswer>;retryableIds?:string[]}) {
-  const {course,error}=useReview(exam),term2=isTerm2Exam(exam);
+  const {course,error}=useReview(exam),term2=hasReviewCurriculum(exam);
   if(term2&&!course&&!error)return <p role="status" className="mcq-loading">Matching your answers to review sections…</p>;
   const rows=reviewBreakdown(outcomes,course);
   return <section className="course-review-report" aria-label="Review section results"><h2>Your next review steps</h2><p>Green shows correct answers among those you attempted. Skipped and ungraded items are listed separately. This is a snapshot of tested material, not a mastery score for the entire course.</p>{error&&<p role="alert" className="mcq-alert">Review mapping unavailable. Showing question topics instead; your answers are safe.</p>}

@@ -28,7 +28,7 @@ const crosswalk=read(path.join(data,'evidence/concept-review-crosswalk-v2.json')
 const runtime=read(path.join(repo,'data/mcq-runtime/index.json'));
 for(const v of [locks,evidence,occurrence,crosswalk])privacy(v);
 unique(locks.courses,'course');unique(locks.volumes.map(v=>v.id),'volume');
-equalIds(locks.courses,Object.keys(runtime.courses).filter(id=>id.startsWith('term2-')),'All Term 2 courses must be explicit');
+equalIds(locks.courses,Object.keys(runtime.courses).filter(id=>id.startsWith('term2-')||id==='term1-biochemistry-retake'),'All review-enabled courses must be explicit');
 equalIds(fs.readdirSync(path.join(data,'courses')).filter(f=>f.endsWith('.json')),locks.courses.map(id=>id+'.json'),'Canonical course files');
 const index={version:'',courses:{}},files=new Map(),allSections=new Map(),globalLiveIds=new Set();
 const totals={courses:0,volumes:0,sections:0,questionRecords:0,livePractice:0,establishedLive:0,suggestedLive:0,unmappedLive:0,sourceOccurrences:0,scoredFinals:0};

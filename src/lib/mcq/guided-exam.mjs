@@ -1,5 +1,5 @@
 /** Rollout gate shared by practice and the future sourced-paper adapter. */
-export const GUIDED_COURSES = ['term2-respiratory'];
+export const GUIDED_COURSES = ['term2-respiratory','term1-biochemistry-retake'];
 export function supportsGuidedExam(exam) { return GUIDED_COURSES.includes(exam); }
 export function guidanceMode(exam, value) { return supportsGuidedExam(exam) && value === 'guided' ? 'guided' : 'unguided'; }
 

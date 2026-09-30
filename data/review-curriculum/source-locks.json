@@ -8,7 +8,8 @@
     "term2-physiology-practical",
     "term2-nutrition",
     "term2-religion",
-    "term2-divine-ethics"
+    "term2-divine-ethics",
+    "term1-biochemistry-retake"
   ],
   "policy": "PDF hashes lock previously verified bookmarks/page counts. A changed PDF fails closed and requires explicit outline revalidation before updating this manifest. Authoring JSON hashes can be checked with --archive without requiring an archive path during normal builds.",
   "volumes": [
@@ -3258,6 +3259,177 @@
           "sourceSectionId": "integrated-recall",
           "title": "Earlier packet: Integrated ethical comparisons",
           "pdfPage": 20
+        }
+      ]
+    },
+    {
+      "id": "biochemistry-retake",
+      "examId": "term1-biochemistry-retake",
+      "pdfPath": "public/study/reviews/biochemistry-retake.pdf",
+      "sha256": "aac1788f1076a2f3bdc70a538a943bdbe4bf37f25c0849fbfaef35c2b4b57dee",
+      "pageCount": 92,
+      "originalPdfFilename": "Biochemistry Retake Review.pdf",
+      "authoringJson": {
+        "relativePath": "data/biochemistry-retake/review.json",
+        "sha256": "5492f15b512aa49c360e39c17e20912f0b283c8188bca5c20592a38bb666f908"
+      },
+      "pageEvidence": "Generated reportlab bookmarks and exact paragraph positions; verified against rendered PDF.",
+      "sections": [
+        {
+          "id": "biochemistry-retake/foundations",
+          "sourceSectionId": "foundations",
+          "title": "Biochemical foundations",
+          "pdfPage": 3
+        },
+        {
+          "id": "biochemistry-retake/water-buffers",
+          "sourceSectionId": "water-buffers",
+          "title": "Water, acids, bases and buffers",
+          "pdfPage": 6
+        },
+        {
+          "id": "biochemistry-retake/ch-1",
+          "sourceSectionId": "ch-1",
+          "title": "Amino acids",
+          "pdfPage": 10
+        },
+        {
+          "id": "biochemistry-retake/ch-2",
+          "sourceSectionId": "ch-2",
+          "title": "Protein structure and folding",
+          "pdfPage": 13
+        },
+        {
+          "id": "biochemistry-retake/ch-3",
+          "sourceSectionId": "ch-3",
+          "title": "Hemoglobin and globular proteins",
+          "pdfPage": 17
+        },
+        {
+          "id": "biochemistry-retake/ch-4",
+          "sourceSectionId": "ch-4",
+          "title": "Collagen, elastin and fibrous proteins",
+          "pdfPage": 21
+        },
+        {
+          "id": "biochemistry-retake/ch-5",
+          "sourceSectionId": "ch-5",
+          "title": "Enzymes, kinetics and regulation",
+          "pdfPage": 25
+        },
+        {
+          "id": "biochemistry-retake/ch-6",
+          "sourceSectionId": "ch-6",
+          "title": "Bioenergetics and oxidative phosphorylation",
+          "pdfPage": 31
+        },
+        {
+          "id": "biochemistry-retake/ch-7",
+          "sourceSectionId": "ch-7",
+          "title": "Carbohydrate structure and stereochemistry",
+          "pdfPage": 33
+        },
+        {
+          "id": "biochemistry-retake/ch-14",
+          "sourceSectionId": "ch-14",
+          "title": "Glycoconjugates",
+          "pdfPage": 37
+        },
+        {
+          "id": "biochemistry-retake/ch-15",
+          "sourceSectionId": "ch-15",
+          "title": "Dietary lipids and absorption",
+          "pdfPage": 39
+        },
+        {
+          "id": "biochemistry-retake/ch-16",
+          "sourceSectionId": "ch-16",
+          "title": "Fatty acids, triacylglycerols and ketones",
+          "pdfPage": 41
+        },
+        {
+          "id": "biochemistry-retake/ch-17",
+          "sourceSectionId": "ch-17",
+          "title": "Complex lipids and eicosanoids",
+          "pdfPage": 44
+        },
+        {
+          "id": "biochemistry-retake/ch-18",
+          "sourceSectionId": "ch-18",
+          "title": "Cholesterol, lipoproteins and steroids",
+          "pdfPage": 47
+        },
+        {
+          "id": "biochemistry-retake/ch-23",
+          "sourceSectionId": "ch-23",
+          "title": "Insulin and glucagon",
+          "pdfPage": 50
+        },
+        {
+          "id": "biochemistry-retake/ch-24",
+          "sourceSectionId": "ch-24",
+          "title": "Fed-fast integration",
+          "pdfPage": 52
+        },
+        {
+          "id": "biochemistry-retake/ch-25",
+          "sourceSectionId": "ch-25",
+          "title": "Diabetes mellitus",
+          "pdfPage": 54
+        },
+        {
+          "id": "biochemistry-retake/ch-26",
+          "sourceSectionId": "ch-26",
+          "title": "Obesity and energy balance",
+          "pdfPage": 56
+        },
+        {
+          "id": "biochemistry-retake/ch-27",
+          "sourceSectionId": "ch-27",
+          "title": "Nutrition",
+          "pdfPage": 57
+        },
+        {
+          "id": "biochemistry-retake/ch-28",
+          "sourceSectionId": "ch-28",
+          "title": "Vitamins",
+          "pdfPage": 59
+        },
+        {
+          "id": "biochemistry-retake/ch-29",
+          "sourceSectionId": "ch-29",
+          "title": "DNA structure, replication and repair",
+          "pdfPage": 66
+        },
+        {
+          "id": "biochemistry-retake/ch-30",
+          "sourceSectionId": "ch-30",
+          "title": "RNA, transcription and processing",
+          "pdfPage": 72
+        },
+        {
+          "id": "biochemistry-retake/ch-31",
+          "sourceSectionId": "ch-31",
+          "title": "Translation",
+          "pdfPage": 76
+        },
+        {
+          "id": "biochemistry-retake/ch-32",
+          "sourceSectionId": "ch-32",
+          "title": "Gene regulation",
+          "pdfPage": 81
+        },
+        {
+          "id": "biochemistry-retake/ch-33",
+          "sourceSectionId": "ch-33",
+          "title": "Biotechnology",
+          "pdfPage": 85
+        },
+        {
+          "id": "biochemistry-retake/lab-practical",
+          "sourceSectionId": "lab-practical",
+          "title": "Laboratory principles and tests",
+          "pdfPage": 87
         }
       ]
     }

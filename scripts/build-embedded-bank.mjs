@@ -13,6 +13,7 @@ import "./build-divine-ethics.mjs";
 import "./build-biochemistry-papers.mjs";
 import "./build-respiratory-papers.mjs";
 import "./build-limbs-papers.mjs";
+import "./build-biochemistry-retake.mjs";
 
 const root = resolve(import.meta.dirname, "..");
 const questionDirectory = resolve(root, "data/bank/questions");
@@ -36,6 +37,7 @@ const embeddedBank = {
   manifest: JSON.parse(readFileSync(resolve(root, "data/bank/manifest.json"), "utf8")),
   questions,
   finalExams: {
+    "term1-biochemistry-retake:biochemistry-retake-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "biochemistry-retake-past-papers.jsonl")),
     "july25:telegram-past-papers": readJsonLines(resolve(finalExamDirectory, "july25.jsonl")),
     "july29:telegram-past-papers": readJsonLines(resolve(finalExamDirectory, "july29.jsonl")),
     "july29:downloaded-core": readJsonLines(resolve(downloadedFinalExamDirectory, "aug25-downloaded-core.jsonl")),

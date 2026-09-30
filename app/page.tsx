@@ -10,7 +10,7 @@ import { isLocationQuestion, locationOptionId, locationLabel, restoredLocationRe
 import { biochemistryChapterById, biochemistryChapters, isBiochemistryChapterId } from '@/src/lib/biochemistry/chapters';
 import { classifySessionCompletion } from '@/src/lib/mcq/sprint-selection.mjs';
 import type { MCQMedia, MCQQuestion, StudentAnswer } from '@/src/lib/mcq/types';
-import { isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
+import { biochemistryRetake, hasReviewCurriculum, isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
 import { createEmptyProgress, parseProgress, type StudyProgress } from '@/src/lib/mcq/study-progress.mjs';
 import { cachedJson, rememberQuestions, recallQuestions, setQuestionCacheVersion } from '@/src/lib/mcq/client-cache';
 import {mcqReviewQuestions} from '@/src/lib/mcq/wrong-answer-review.mjs';
@@ -116,6 +116,7 @@ const examConfig: Record<ExamId, {
     focus: "Teacher-confirmed Lippincott chapters, chapter-by-chapter self-testing, cellular histology, membrane physiology and confirmed laboratory methods; partial, supplementary and unconfirmed chapters are labeled clearly",
     collections: ["all", "wrong", "flagged", "biochemistry", "histology", "physiology", "images", "stains", "practical"],
   },
+  "term1-biochemistry-retake": {date:'Date TBA',title:biochemistryRetake.title,focus:biochemistryRetake.scope,collections:['all','biochemistry','practical','images','wrong','flagged']},
   "term2-cvs": { date: "Date TBA", title: "CVS", focus: term2Exams[0].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
   "term2-respiratory": { date: "Date TBA", title: "Respiratory", focus: term2Exams[1].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
   "term2-limbs": { date: "Date TBA", title: "Upper & Lower Limbs", focus: term2Exams[2].scope, collections: ["all", "anatomy", "histology", "embryology", "physiology", "dynamic-anatomy", "images", "wrong", "flagged"] },
@@ -1055,6 +1056,7 @@ export default function Home() {
   const examHistory=sessionArchive.history.filter(s=>s.exam===exam);
   const resumable=sessionArchive.active;
   const term2=isTerm2Exam(exam);
+  const reviewEnabled=hasReviewCurriculum(exam);
   const collectionChips=selectedConfig.collections.map(id=>({id,label:collectionLabel[id],count:isSavedCollection(id)?savedCount(id):statsReady?selectedExam?.collectionCounts[id]??0:undefined}));
   const resumeAnswered=resumable?Object.values(resumable.answers).filter(isAnswered).length:0;
   const scoreTone=(value:number)=>value>=75?'good':value>=50?'mid':'low';
@@ -1064,7 +1066,7 @@ export default function Home() {
       <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{selectedConfig.title}</h1><p>{selectedConfig.focus}</p></div>
       <div className="course-head-side">
         <div className="course-stat"><strong>{displayCount((selectedExam?.questionCount??0).toLocaleString())}</strong><span>practice MCQs</span></div>
-        <div className="pill-row">{term2&&<ReviewDownloads key={exam} exam={exam}/>}{tab!=='Past exams'&&<button type="button" className="pill" onClick={()=>setTab('Past exams')}><StudyIcon name="papers"/>Past papers</button>}</div>
+        <div className="pill-row">{reviewEnabled&&<ReviewDownloads key={exam} exam={exam}/>}{tab!=='Past exams'&&<button type="button" className="pill" onClick={()=>setTab('Past exams')}><StudyIcon name="papers"/>Past papers</button>}</div>
       </div>
     </header>}
     {sessionError&&<p role="alert" className="mcq-alert error">{sessionError}</p>}
@@ -1084,11 +1086,11 @@ export default function Home() {
       <div className="pill-row quick-row" aria-label="Quick actions">
         <button type="button" className="pill" disabled={!savedCount('wrong')||phase==='loading'} onClick={()=>void startSession('wrong')}><StudyIcon name="practice"/>Review mistakes<b>{displayCount(savedCount('wrong'))}</b></button>
         <button type="button" className="pill" disabled={!savedCount('flagged')||phase==='loading'} onClick={()=>void startSession('flagged')}><StudyIcon name="flag"/>Flagged<b>{displayCount(savedCount('flagged'))}</b></button>
-        <button type="button" className="pill" onClick={()=>setTab('Review topics')}><StudyIcon name="layers"/>{term2?'Practise a review section':'Practise a topic'}<StudyIcon name="arrow"/></button>
+        <button type="button" className="pill" onClick={()=>setTab('Review topics')}><StudyIcon name="layers"/>{reviewEnabled?'Practise a review section':'Practise a topic'}<StudyIcon name="arrow"/></button>
         {examHistory.length>0&&<button type="button" className="pill" onClick={()=>setTab('Results')}><StudyIcon name="results"/>Results<b>{examHistory.length}</b></button>}
       </div>
     </>}
-    {tab==='Review topics'&&(term2?<ReviewTopics key={exam} exam={exam} subjectOf={subjectOf} disabled={phase==='loading'} onPractice={ids=>void startSession('all',ids,{mode:studyMode,limit:sessionSize})}/>:<section className="topic-section"><div className="section-head"><h2>Topics</h2><p>Term 1 keeps its question topics and chapter breakdown. Each opens a session in the current feedback mode.</p></div>{exam==='july29'&&<div className="mcq-topic-grid">{biochemistryChapterProgress.map(ch=><button key={ch.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('biochemistry',undefined,{biochemistryChapterId:ch.id,mode:studyMode})}><StudyIcon name="book"/><b>{ch.chapterLabel} · {ch.title}</b><span>{ch.questionCount} questions</span></button>)}</div>}<div className="mcq-topic-grid">{selectedExam?.topics?.map(topic=><button key={topic.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('all',topic.questionIds,{mode:studyMode,limit:sessionSize})}><StudyIcon name="layers"/><b>{topic.title}</b><span>{topic.questionIds.length} questions</span></button>)}</div></section>)}
+    {tab==='Review topics'&&(reviewEnabled?<ReviewTopics key={exam} exam={exam} subjectOf={subjectOf} disabled={phase==='loading'} onPractice={ids=>void startSession('all',ids,{mode:studyMode,limit:sessionSize})}/>:<section className="topic-section"><div className="section-head"><h2>Topics</h2><p>Term 1 keeps its question topics and chapter breakdown. Each opens a session in the current feedback mode.</p></div>{exam==='july29'&&<div className="mcq-topic-grid">{biochemistryChapterProgress.map(ch=><button key={ch.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('biochemistry',undefined,{biochemistryChapterId:ch.id,mode:studyMode})}><StudyIcon name="book"/><b>{ch.chapterLabel} · {ch.title}</b><span>{ch.questionCount} questions</span></button>)}</div>}<div className="mcq-topic-grid">{selectedExam?.topics?.map(topic=><button key={topic.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('all',topic.questionIds,{mode:studyMode,limit:sessionSize})}><StudyIcon name="layers"/><b>{topic.title}</b><span>{topic.questionIds.length} questions</span></button>)}</div></section>)}
     {tab==='School Map'&&<SchoolMap/>}
     {tab==='Past exams'&&<PastExamHub key={exam} exam={exam} onSessionActiveChange={setCvsPaperActive}/>}
     {tab==='Results'&&<section className="results-section"><div className="section-head"><h2>Practice results<span>{examHistory.length} session{examHistory.length===1?'':'s'}</span></h2><p>Saved on this device. Past-paper results stay with each paper.</p></div>{!examHistory.length&&<div className="mcq-empty"><StudyIcon name="results"/><b>No completed sessions yet</b><p>Finish a practice session and its review will appear here.</p></div>}<div className="result-rows">{examHistory.map(saved=>{const score=Math.round(saved.correctCount/Math.max(1,saved.answeredCount)*100);return <article className="result-row" key={saved.id}><span className="result-date">{formatSessionDate(saved.completedAt)}</span><div className="result-copy"><b>{savedScopeLabel(saved)} · {saved.questionIds.length} questions</b><small>{saved.correctCount} correct · {saved.answeredCount} answered · {saved.studyMode==='exam'?'Test mode':'Learn mode'}</small></div><strong className={`score-pill ${scoreTone(score)}`}>{score}%</strong><button type="button" className="pill small" disabled={phase==='loading'} onClick={()=>void openSavedReview(saved)}>Open review<StudyIcon name="arrow"/></button></article>;})}</div></section>}

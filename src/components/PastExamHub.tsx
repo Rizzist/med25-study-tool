@@ -57,7 +57,7 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
     {!active&&<>{head}<HubTools course={course} open={library} onToggle={()=>setLibrary(v=>!v)}/>{library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}</>}
     <CvsPastExams onSessionActiveChange={setActive} downloads={Object.fromEntries(course.collections.map(item=>[item.id,item]))}/>
   </section>;
-  const supported=exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory'||exam==='term2-limbs';
+  const supported=exam==='term1-biochemistry-retake'||exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory'||exam==='term2-limbs';
   if(selected&&supported)return <>{!active&&<div className="paper-view">
     <div className="paper-view-head"><button type="button" className="pill" onClick={()=>setSelected(null)}><StudyIcon name="arrow" className="flip"/>All papers</button>{collection&&<h2>{collection.title}</h2>}</div>
     {sourceCollection&&<><p className="paper-note">{sourceCollection.note}</p><PaperDownloads item={originalCourse?.collections.find(c=>c.downloads.questions===sourceCollection.downloads.questions)??sourceCollection} courseTitle={course.title}/></>}

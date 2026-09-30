@@ -10,7 +10,8 @@ const course=JSON.parse(read('public/study/reviews/term2-respiratory.json'));
 const anchors=JSON.parse(read('public/study/guided/term2-respiratory.json'));
 const bank=JSON.parse(read('data/mcq-runtime/term2-respiratory.json'));
 
-test('Guided rollout is Respiratory-only and legacy attempts remain Unguided',()=>{
+test('Guided rollout supports Respiratory and the retake; legacy attempts remain Unguided',()=>{
+  assert.equal(supportsGuidedExam('term1-biochemistry-retake'),true);
   assert.equal(supportsGuidedExam('term2-respiratory'),true);
   assert.equal(guidanceMode('term2-respiratory','guided'),'guided');
   for(const value of [undefined,null,'invalid','unguided'])assert.equal(guidanceMode('term2-respiratory',value),'unguided');
