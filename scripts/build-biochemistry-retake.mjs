@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {biochemistryChapterIdForQuestion} from '../src/lib/biochemistry/chapter-mapping.mjs';
 import {expandRetakePapers} from './content/retake-full-papers.mjs';
+import {expandRetakePractice} from './content/retake-practice.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
@@ -18,17 +19,16 @@ const units=[
  ['foundations','Foundations',[['foundations','Biochemical foundations'],['water-buffers','Water, acids, bases and buffers']]],
  ['proteins','Proteins',[['ch-1','Amino acids'],['ch-2','Protein structure and folding'],['ch-3','Hemoglobin and globular proteins'],['ch-4','Collagen, elastin and fibrous proteins']]],
  ['enzymes-energy','Enzymes and energy',[['ch-5','Enzymes, kinetics and regulation'],['ch-6','Bioenergetics and oxidative phosphorylation']]],
- ['carbohydrates','Carbohydrates',[['ch-7','Carbohydrate structure and stereochemistry'],['ch-8','Glycolysis'],['ch-9','Pyruvate dehydrogenase and the TCA cycle'],['ch-10','Gluconeogenesis'],['ch-11','Glycogen metabolism'],['ch-12','Fructose, galactose and lactose'],['ch-13','Pentose phosphate pathway and NADPH'],['ch-14','Glycoconjugates']]],
+ ['carbohydrates','Carbohydrates',[['ch-7','Carbohydrate structure and stereochemistry'],['ch-14','Glycoconjugates']]],
  ['lipids','Lipids',[['ch-15','Dietary lipids and absorption'],['ch-16','Fatty acids, triacylglycerols and ketones'],['ch-17','Complex lipids and eicosanoids'],['ch-18','Cholesterol, lipoproteins and steroids']]],
- ['nitrogen','Nitrogen metabolism',[['ch-19','Amino acids: disposal of nitrogen'],['ch-20','Amino acid degradation and synthesis'],['ch-21','Heme, bilirubin and amine products'],['ch-22','Nucleotide metabolism']]],
  ['integration','Metabolic integration',[['ch-23','Insulin and glucagon'],['ch-24','Fed-fast integration'],['ch-25','Diabetes mellitus'],['ch-26','Obesity and energy balance']]],
  ['nutrition','Nutrition and vitamins',[['ch-27','Nutrition'],['ch-28','Vitamins']]],
  ['molecular','Molecular biology',[['ch-29','DNA structure, replication and repair'],['ch-30','RNA, transcription and processing'],['ch-31','Translation'],['ch-32','Gene regulation'],['ch-33','Biotechnology']]],
  ['laboratory','Laboratory',[['lab-practical','Laboratory principles and tests']]],
 ];
 const definitions=units.flatMap(([unit,,list])=>list.map(([id,title])=>[id,title,unit]));
-// Chapters 8-13 and 19-22 sit outside the confirmed Term 1 syllabus; they are taught because the reused practice bank tests them.
-const practiceExtension=new Set(['ch-8','ch-9','ch-10','ch-11','ch-12','ch-13','ch-19','ch-20','ch-21','ch-22']);
+// Chapters 8-13 and 19-22 (carbohydrate and nitrogen metabolism) belong to Term 2 Biochemistry II and are excluded.
+const practiceExtension=new Set();
 const scope=new Set(definitions.map(([id])=>id));
 const allCurated=read('data/bank/biochemistry-core-concepts.json').chapters;
 // Retake expansion: extra concepts (empty selectedQuestionIds, so Practice is unchanged) and explicit
@@ -40,13 +40,24 @@ const curated=allCurated.filter(c=>scope.has(c.chapterId));
 const byOriginal=new Map(fs.readdirSync(path.join(root,'data/bank/questions')).filter(f=>f.endsWith('.jsonl')&&f!=='biochemistry-retake.jsonl').flatMap(f=>lines('data/bank/questions/'+f)).map(q=>[q.id,q]));
 const questionConcepts=new Map();
 for(const ch of allCurated)for(const c of ch.concepts)for(const id of c.selectedQuestionIds)if(!questionConcepts.has(id))questionConcepts.set(id,c);
-const practice=[...questionConcepts].map(([id,c])=>{
+let practice=[...questionConcepts].map(([id,c])=>{
  const q=byOriginal.get(id);assert(q&&q.subject==='biochemistry'&&q.status==='verified',id);
  return {...q,id:'retake-practice-'+id,tags:[...q.tags.filter(t=>!t.startsWith('exam-')&&!t.startsWith('term-')),'term-1',`exam-${exam}`,...(scope.has(c.chapterId)?[`review-section-${volume}/${c.chapterId}`]:[])],qualityFlags:[...q.qualityFlags,'reused-cells-and-molecules-biochemistry'],retakeOriginalId:id};
 });
 // Same authored supplement that the Cells & Molecules runtime adds to Practice.
 // It is not a past paper and must never enter the Final Exam bank.
 practice.push(...lines('data/final-exams/aug25-downloaded-core.jsonl').filter(q=>q.subject==='biochemistry').map(q=>({...q,id:'retake-practice-'+q.id,tags:[...q.tags.filter(t=>!t.startsWith('exam-')&&!t.startsWith('term-')&&!t.startsWith('final-bank-')&&!['past-paper','telegram-final'].includes(t)),'term-1',`exam-${exam}`,'authored-practice'],qualityFlags:[...q.qualityFlags,'not-a-past-paper-question','reused-cells-and-molecules-biochemistry'],retakeOriginalId:q.id})));
+// Keep the retake lean: only practice questions whose topic is in the Term 1 scope. A question's chapter comes from its
+// curated concept, else from the reviewed expansion link, else from the bank's chapter mapping.
+const conceptChapter=new Map([...allCurated,...expansion.chapters].flatMap(ch=>ch.concepts.map(c=>[c.id,c.chapterId])));
+const practiceChapter=q=>questionConcepts.get(q.retakeOriginalId)?.chapterId??conceptChapter.get(expansion.links?.[q.id])??biochemistryChapterIdForQuestion(q);
+practice=practice.filter(q=>scope.has(practiceChapter(q)));
+const reusedPracticeCount=practice.length;
+const depthAdditions=read('data/biochemistry-retake/practice-expansion.json');
+// Repairs for questions removed by the Term 1 scope cut are skipped.
+const practiceRepairs=Object.fromEntries(Object.entries(read('data/biochemistry-retake/practice-repairs.json')).filter(([id])=>practice.some(q=>q.id===id)));
+const depth=expandRetakePractice(practice,depthAdditions,practiceRepairs,definitions);
+practice=depth.practice;
 const old=lines('data/telegram-final/july29.jsonl').filter(q=>q.subject==='biochemistry'&&!q.source.title.toLowerCase().includes('clinical biochemistry'));
 const corrections={
  '56dd13c5004c':{accepted:['A','D'],note:'The intended comparison is lactose/cellobiose (both beta-1,4). Sucrose also has a beta-D-fructofuranosyl anomeric linkage, so the literal wording also allows lactose/sucrose.'},
@@ -129,7 +140,7 @@ const sections=definitions.map(([id,title,unit],index)=>{
  const checks=[...new Map(legacyFinals.filter(q=>q.chapter===id).map(q=>[q.retakeOriginalId??q.prompt,q])).values()];
  return {id,title,unit,unitTitle:units.find(u=>u[0]===unit)[1],extension:practiceExtension.has(id),order:index+1,concepts,tables:read('data/biochemistry-retake/review-tables.json')[id]??expansion.tables?.[id]??[],checkpoints:checks.map(q=>({id:q.id,title:q.prompt,summary:q.explanation,source:q.source.title+'; '+q.source.chapter,questionIds:legacyFinals.filter(f=>(q.retakeOriginalId&&q.retakeOriginalId===f.retakeOriginalId)||q.prompt===f.prompt).map(f=>f.id)}))};
 });
-const manuscript={title:'Biochemistry Retake',subtitle:'Cells and Molecules · Term 1',version:'2026-10-01',scope:'Original confirmed Term 1 syllabus: Lippincott Chapters 1–7, 14–18 and 23–33, plus foundations, water/buffers and laboratory-derived theory. Retake-specific exclusions have not been announced here. Chapters 8–13 and 19–22 are outside that confirmed syllabus but are taught here as clearly marked practice-bank sections, because the reused Cells & Molecules practice bank tests them. Physiology, histology and the Term 2 metabolism course are excluded.',
+const manuscript={title:'Biochemistry Retake',subtitle:'Cells and Molecules · Term 1',version:'2026-10-01',scope:'Original confirmed Term 1 syllabus: Lippincott Chapters 1–7, 14–18 and 23–33, plus foundations, water/buffers and laboratory-derived theory. Retake-specific exclusions have not been announced here. Chapters 8–13 and 19–22 (carbohydrate and nitrogen metabolism) belong to Term 2 Biochemistry II and are excluded, together with their practice questions. Physiology, histology and the Term 2 metabolism course are excluded.',
  sources:['Latest original course-scope reconciliation, 20 August 2026; original syllabus and teacher-material archive.','Ferrier, D. R. Lippincott Illustrated Reviews: Biochemistry, 6th edition (2014): confirmed chapters listed above.','Teacher foundations: INTRODUCTION.ppt; Water and Buffer 1404; Marks Essentials water/buffers reference.','Teacher biomolecules: Amino acids and Proteins Parts 1–2; Lipid structure (Esmaeili); Vitamin 2024.','Teacher enzymes and genetics: Enzyme Kinetics and Regulation; DNA Structure; DNA Replication; Transcription 2025; Translation 2025; Regulation of Gene Expression 2025.','Teacher laboratories: Laboratory Equipment, Titration and Carbohydrate Qualification Test (Esmaeili, January 2026), plus the original laboratory scope.','Four source-paper biochemistry sections: April 2021 Cell & Molecules report, February 2021, September 2021, Biochemistry 1 Finals 2022. Filename dates are retained; a report date is not proof of the exam sitting date.','Source caveats: human DNA repair — https://www.ncbi.nlm.nih.gov/books/NBK1397/ ; enzyme kinetics — https://www.ncbi.nlm.nih.gov/books/NBK92007/ ; hepatic HDL/VLDL — https://www.ncbi.nlm.nih.gov/books/NBK351/ .'],sections};
 json('data/biochemistry-retake/review.json',manuscript);
 json('data/biochemistry-retake/papers.json',papers.map(({fullQuestions,...paper})=>({...paper,fullQuestionIds:fullQuestions.map(r=>r.question.id)})));
@@ -141,16 +152,18 @@ const layout=read('data/biochemistry-retake/pdf-layout.json');
 assert.equal(layout.manuscriptSha256,hash(fs.readFileSync(path.join(root,'data/biochemistry-retake/review.json'))),'Review manuscript changed: re-render PDF before publishing mappings');
 const pdfBytes=fs.readFileSync(path.join(root,`public/study/reviews/${volume}.pdf`));
 assert.equal(hash(pdfBytes),layout.sha256,'PDF/layout hash mismatch');
-const canonical={examId:exam,title:'Biochemistry Retake',volumes:[{id:volume,title:'Biochemistry Retake · Cells and Molecules',url:`/study/reviews/${volume}.pdf?v=${layout.sha256}`,sha256:layout.sha256,pageCount:layout.pageCount}],sections:sections.map(s=>({id:`${volume}/${s.id}`,title:s.title,volumeId:volume,order:s.order,role:'teaching',sourceBasis:'confirmed-term1-scope',pdfPage:layout.sections[s.id].page})),questions:{}};
+const canonical={examId:exam,title:'Biochemistry Retake',volumes:[{id:volume,title:'Biochemistry Retake · Cells and Molecules',url:`/study/reviews/${volume}.pdf?v=${layout.sha256}`,sha256:layout.sha256,pageCount:layout.pageCount}],sections:sections.map(s=>({id:`${volume}/${s.id}`,title:s.title,volumeId:volume,order:s.order,role:'teaching',sourceBasis:s.extension?'practice-supplement':'confirmed-term1-scope',pdfPage:layout.sections[s.id].page})),questions:{}};
 const evidence=read('data/review-curriculum/evidence/question-review-map-v2.json');
 for(const [id,m]of Object.entries(evidence.questions))if(m.examId===exam)delete evidence.questions[id];
 const live0=q=>practice.includes(q);
 const conceptById=new Map(sections.flatMap(s=>s.concepts.map(c=>[c.id,c])));
-for(const [qid,cid] of Object.entries(expansion.links??{}))assert(conceptById.has(cid),'Expansion link to unknown concept '+qid+' -> '+cid);
+for(const [qid,cid] of Object.entries(expansion.links??{}))assert(conceptById.has(cid)||!practice.some(q=>q.id===qid),'In-scope question linked to a concept outside the review: '+qid+' -> '+cid);
+for(const [qid,cid] of depth.links)assert(conceptById.has(cid),'Practice link to unknown concept '+qid+' -> '+cid);
 const anchors={version:1,pdfSha256:layout.sha256,sections:Object.fromEntries(sections.map(s=>[`${volume}/${s.id}`,layout.sections[s.id]])),questions:{}};
 for(const q of [...practice,...finals]){
  const own=live0(q)?questionConcepts.get(q.retakeOriginalId):null;
- const live=live0(q),concept=live?((own&&scope.has(own.chapterId))?own:(conceptById.get(expansion.links?.[q.id])??own)):null;
+ const live=live0(q),concept=live?((own&&scope.has(own.chapterId))?own:(conceptById.get(depth.links.get(q.id)??expansion.links?.[q.id])??own)):null;
+ if(depth.links.has(q.id))assert.equal(concept.chapterId,q.chapter,'Practice concept belongs to another chapter: '+q.id);
  const chapter=concept?.chapterId??sectionFor(q),sectionId=q.subject==='biochemistry'&&scope.has(chapter)?`${volume}/${chapter}`:null;
  const mapping={sectionId,uncertain:!sectionId,status:sectionId?'mapped':'needs-crosswalk',livePractice:live,bankId:live?'practice':bank};
  const point=concept?layout.concepts[concept.id]:layout.checkpoints[q.id==='retake-final-september-2021-q064'?'retake-final-biochemistry-2022-q019':q.id];
@@ -186,5 +199,9 @@ sourceCatalog.assets=[...(sourceCatalog.assets??[]).filter(a=>!a.collectionId?.s
 const publicCollections=collections.map(({sources,bankKey,...c})=>c);
 downloads.courses=[...downloads.courses.filter(c=>c.id!==exam),{...course,collections:publicCollections.filter(c=>!c.id.endsWith('--full')).map(c=>({...c,fullPaper:publicCollections.find(f=>f.id===c.id+'--full')}))}];
 json('data/mcq-refactor/past-source-catalog.json',sourceCatalog);json('public/study/past-paper-downloads/catalog.json',downloads);
-json('data/biochemistry-retake/audit.json',{examId:exam,displayTerm:2,scope:[...scope],practiceCount:practice.length,practiceSource:'All existing biochemistry Practice questions from Cells & Molecules, with stable retake-prefixed IDs.',conceptCount:sections.reduce((n,s)=>n+s.concepts.length,0),expansionLinks:Object.keys(expansion.links??{}).length,paperCount:papers.length,sourceOccurrences:finals.length,biochemistryOccurrences:finals.filter(q=>q.subject==='biochemistry').length,editorialKeys:finals.filter(q=>q.answerReview.basis==='ai-inferred').length,reviewPages:layout.pageCount,paragraphAnchors:Object.keys(anchors.questions).length,excluded:'PharmD Clinical Biochemistry; alternate duplicate February scan. Non-biochemistry is included only in full-paper mode, never Practice or biochemistry-only mode.',scopeCaveat:'Practice reuses the original biochemistry bank in full. The existing PDF retains its confirmed review syllabus; additional questions receive a section reference only where supported, otherwise no substitute reference. '+manuscript.scope});
+const chapterCoverage=sections.map(s=>{
+ const questions=practice.filter(q=>canonical.questions[q.id].sectionId===`${volume}/${s.id}`);
+ return {id:s.id,title:s.title,supplemental:s.extension,questionCount:questions.length,added:questions.filter(q=>q.id.startsWith('retake-depth-')).length,subtopics:[...new Set(questions.map(q=>q.subtopic??q.topic))]};
+});
+json('data/biochemistry-retake/audit.json',{examId:exam,displayTerm:2,scope:[...scope],practiceCount:practice.length,reusedPracticeCount,addedPracticeCount:depthAdditions.length,repairedPracticeCount:Object.keys(practiceRepairs).length,chapterCoverage,practiceSource:'Existing Cells & Molecules biochemistry questions with stable retake-prefixed IDs, reviewed options and original chapter-depth practice additions.',conceptCount:sections.reduce((n,s)=>n+s.concepts.length,0),expansionLinks:Object.keys(expansion.links??{}).length,paperCount:papers.length,sourceOccurrences:finals.length,biochemistryOccurrences:finals.filter(q=>q.subject==='biochemistry').length,editorialKeys:finals.filter(q=>q.answerReview.basis==='ai-inferred').length,reviewPages:layout.pageCount,paragraphAnchors:Object.keys(anchors.questions).length,excluded:'PharmD Clinical Biochemistry; alternate duplicate February scan. Non-biochemistry is included only in full-paper mode, never Practice or biochemistry-only mode.',scopeCaveat:'Confirmed chapters and slide extras are selected by default; supplemental chapters remain optional. The source PDF is unchanged; additional questions use an existing verified paragraph when appropriate and otherwise the relevant section. '+manuscript.scope});
 console.log(`Biochemistry Retake: ${practice.length} practice MCQs; ${finals.length} full-paper occurrences; 243 biochemistry-only; ${Object.keys(anchors.questions).length} exact guided anchors.`);

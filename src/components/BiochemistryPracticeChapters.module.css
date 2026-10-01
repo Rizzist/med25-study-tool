@@ -1,0 +1,23 @@
+.panel { margin-bottom: 16px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.panel summary { display: flex; align-items: center; gap: 9px; padding: 12px 14px; cursor: pointer; font-size: 14px; }
+.panel summary span { margin-left: auto; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.panel summary::after { content: '＋'; font-size: 16px; }
+.panel[open] summary::after { content: '−'; }
+.content { padding: 0 12px 10px; }
+.toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.search { display: flex; align-items: center; gap: 6px; flex: 1 1 200px; border: 1px solid var(--line); border-radius: 9px; padding: 0 9px; }
+.search input { width: 100%; min-width: 0; padding: 10px 0; border: 0; outline-offset: 3px; background: transparent; font-size: 13px; }
+.actions { display: flex; gap: 5px; flex-wrap: wrap; }
+.actions button { min-height: 38px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: #f8faf7; font-size: 12px; color: var(--green); }
+.hint { margin: 9px 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.chapter { min-width: 0; display: flex; align-items: center; gap: 9px; min-height: 58px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 9px; cursor: pointer; }
+.chapter.selected { border-color: #93b4a2; background: #f1f7f2; }
+.chapter input { flex: none; width: 18px; height: 18px; accent-color: var(--green); }
+.chapter:focus-within { outline: 2px solid var(--green); outline-offset: 2px; }
+.copy { min-width: 0; display: grid; gap: 2px; }
+.copy small { color: var(--muted); font-size: 10px; }
+.copy b { font-size: 12px; line-height: 1.3; font-weight: 650; }
+.count { margin-left: auto; padding-left: 3px; color: var(--green); font-size: 12px; font-variant-numeric: tabular-nums; }
+@media (max-width: 1050px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) { .grid { grid-template-columns: 1fr; } .panel summary { flex-wrap: wrap; font-size: 13px; padding: 10px; } .panel summary span { font-size: 11px; } .actions { width: 100%; } .actions button { flex: 1; min-height: 42px; } .chapter { min-height: 52px; } }

@@ -126,5 +126,140 @@
     "alt": "Three clockwise PCR steps show denaturation at 94–95 °C, annealing at 50–65 °C, and extension at 72 °C. Antiparallel templates receive primers with inward-facing 3′ ends. Taq extends each complementary strand 5′ to 3′, producing two duplexes.",
     "attempts": 2,
     "checked": true
+  },
+  {
+    "name": "central-dogma",
+    "section": "foundations",
+    "caption": "DNA information is transcribed into mRNA, translated, and expressed as protein and phenotype.",
+    "alt": "DNA in a nucleus has a replication loop and a mutation note. Transcription makes mRNA, which exits to a cytoplasmic ribosome for translation into polypeptide, folded protein, and phenotype.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "foundations-information-flow"
+  },
+  {
+    "name": "atp-coupling",
+    "section": "foundations",
+    "caption": "ATP couples energy released by catabolism to biosynthesis, transport, and muscle work.",
+    "alt": "Fuel breakdown releases energy for ATP synthesis from ADP and phosphate. Adenine, ribose, and three phosphates compose ATP, whose hydrolysis powers assembly of small molecules into a macromolecule. Listed ATP uses include biosynthesis, transport, and muscle work.",
+    "attempts": 2,
+    "checked": true,
+    "concept": "foundations-metabolism-and-atp-coupling"
+  },
+  {
+    "name": "co2-transport-bohr",
+    "section": "ch-3",
+    "caption": "Tissue CO2 transport and the chloride shift reverse in the lungs; lower pH and higher CO2 reduce hemoglobin oxygen affinity.",
+    "alt": "Paired red blood cells show carbonic anhydrase reactions, H+ buffering by deoxyhemoglobin and tissue O2 release. Tissue bicarbonate efflux and chloride influx reverse in the lungs, with O2 binding, H+ release, and CO2 exhalation.",
+    "attempts": 3,
+    "checked": true,
+    "concept": "ch3-bohr-effect-and-co2-transport"
+  },
+  {
+    "name": "sickle-hbs",
+    "section": "ch-3",
+    "caption": "The β-globin Glu-to-Val substitution promotes deoxy-HbS polymerization, sickling, hemolysis, and vaso-occlusion.",
+    "alt": "A DNA-to-protein row highlights β-globin position 6, followed by red cells showing deoxy-HbS polymer fibers and sickling. Consequences include hemolysis and obstructed vessels causing pain crises. Blue notes state that oxy-HbS does not polymerize and hydroxyurea increases HbF and reduces polymerization.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "ch3-sickle-cell-disease"
+  },
+  {
+    "name": "lysosomal-targeting-m6p",
+    "section": "ch-14",
+    "caption": "N-linked glycosylation and mannose-6-phosphate tagging direct lysosomal enzymes from the rough ER through the Golgi to lysosomes.",
+    "alt": "A glycan assembled on dolichol transfers to protein asparagine in rough ER. Golgi phosphorylation creates the mannose-6-phosphate sorting signal for receptor-mediated vesicle transport to lysosomes. An I-cell disease inset shows missorted secreted enzymes and lysosomal inclusions.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "ch14-glycosylation-lysosomal-targeting"
+  },
+  {
+    "name": "ketogenesis",
+    "section": "ch-16",
+    "caption": "Ketone body synthesis in liver mitochondria and use by extrahepatic tissues.",
+    "alt": "Fatty acid β-oxidation supplies acetyl-CoA for HMG-CoA synthase and acetoacetate production. Acetoacetate interconverts with β-hydroxybutyrate or forms exhaled acetone. Ketones travel to brain during prolonged fasting, heart and muscle for acetyl-CoA and the TCA cycle. The liver lacks thiophorase, and excess ketones cause high anion gap metabolic acidosis.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "ch16-ketone-bodies"
+  },
+  {
+    "name": "fatty-acid-synthesis",
+    "section": "ch-16",
+    "caption": "Cytosolic fatty acid synthesis and regulation of acetyl-CoA carboxylase.",
+    "alt": "Mitochondrial citrate is exported to cytosol and converted to acetyl-CoA, then by biotin-dependent acetyl-CoA carboxylase to malonyl-CoA. Fatty acid synthase uses NADPH to produce palmitate (16C). Insulin activates ACC, glucagon and AMPK inhibit ACC, and malonyl-CoA inhibits CPT-I to block β-oxidation.",
+    "attempts": 3,
+    "checked": true,
+    "concept": "ch16-fatty-acid-synthesis"
+  },
+  {
+    "name": "eicosanoid-pathways",
+    "section": "ch-17",
+    "caption": "Arachidonic acid pathways and the targets of glucocorticoids, NSAIDs and aspirin.",
+    "alt": "Phospholipase A2 releases arachidonic acid from membrane phospholipid and is inhibited by glucocorticoids. COX-1 and COX-2 produce prostaglandins, platelet thromboxane A2 and prostacyclin; NSAIDs and aspirin inhibit COX. Lipoxygenase produces leukotrienes associated with bronchoconstriction.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "ch17-eicosanoids-cox"
+  },
+  {
+    "name": "cholesterol-synthesis-statins",
+    "section": "ch-18",
+    "caption": "Cholesterol synthesis, reductase inhibition and the effect of statins on LDL clearance.",
+    "alt": "Acetyl-CoA leads to HMG-CoA, which HMG-CoA reductase uses with NADPH in the rate-limiting step to mevalonate and subsequently cholesterol. Statins, cholesterol feedback and AMPK phosphorylation inhibit the reductase. Statins increase hepatic LDL receptors and LDL clearance.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "ch18-cholesterol-synthesis"
+  },
+  {
+    "name": "ldl-receptor-cycle",
+    "section": "ch-18",
+    "caption": "LDL receptor recycling, cholesterol feedback and unregulated scavenger uptake.",
+    "alt": "ApoB-100 on LDL binds an LDL receptor in a clathrin-coated pit. Endocytosis delivers LDL to an acidic endosome, the receptor recycles and LDL is degraded in lysosomes to free cholesterol, which decreases HMG-CoA reductase and LDL receptor synthesis. Defective LDL receptors cause familial hypercholesterolemia with high LDL and early atherosclerosis. Macrophage scavenger receptors take up oxidized LDL without downregulation, forming foam cells.",
+    "attempts": 2,
+    "checked": true,
+    "concept": "ch18-ldl-atherosclerosis"
+  },
+  {
+    "name": "insulin-secretion",
+    "section": "ch-23",
+    "caption": "Glucose-stimulated insulin secretion and proinsulin processing.",
+    "alt": "Glucose enters a pancreatic beta cell via GLUT and is metabolized after glucokinase, increasing ATP/ADP, closing KATP channels, depolarizing the membrane and opening voltage-gated calcium channels. Calcium influx triggers insulin granule exocytosis. Preproinsulin becomes proinsulin, then insulin plus C-peptide, which marks endogenous insulin.",
+    "attempts": 2,
+    "checked": true,
+    "concept": "ch23-insulin-synthesis-secretion"
+  },
+  {
+    "name": "fed-fast-fuel-flow",
+    "section": "ch-24",
+    "caption": "Organ fuel handling in fed and fasting states.",
+    "alt": "Parallel fed and fasting panels show liver, adipose, muscle, brain and red blood cells. High insulin relative to glucagon favors hepatic glycogen and fat synthesis, adipose TAG storage, muscle glycogen and protein synthesis, and glucose use by brain and RBC. Low insulin relative to glucagon favors hepatic glycogenolysis then gluconeogenesis, adipose lipolysis, muscle fatty acid use, brain glucose then ketones, and continuing RBC glycolysis.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "ch24-fed-state"
+  },
+  {
+    "name": "dna-repair-pathways",
+    "section": "ch-29",
+    "caption": "Mismatch, nucleotide excision and base excision repair compared.",
+    "alt": "Three columns show mismatch repair cutting out and resynthesizing a stretch of the new strand, nucleotide excision repair removing an oligonucleotide containing a bulky UV thymine dimer, and base excision repair removing a small damaged base by glycosylase, creating an AP site and replacing one nucleotide. All use the intact complementary strand. Lynch syndrome and xeroderma pigmentosum identify associated repair defects.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "bio-29-single-strand-dna-repair"
+  },
+  {
+    "name": "srp-protein-targeting",
+    "section": "ch-31",
+    "caption": "Signal-directed targeting to the ER, nucleus and mitochondrion.",
+    "alt": "SRP recognizes an emerging signal sequence on a free ribosome, pauses translation and docks at an ER SRP receptor. The cytosolic ribosome feeds protein through a translocon into the ER lumen, where signal peptidase removes the signal. Side panels show a retained nuclear localization signal at the nuclear pore and a mitochondrial amphipathic targeting sequence passing through TOM/TIM. Free and ER-bound ribosomes are identical; signals determine targeting.",
+    "attempts": 2,
+    "checked": true,
+    "concept": "bio-31-protein-targeting"
+  },
+  {
+    "name": "blotting-and-cloning",
+    "section": "ch-33",
+    "caption": "Blotting methods and the plasmid cloning workflow.",
+    "alt": "Gel separation is followed by membrane transfer and probe detection. Southern detects DNA with a DNA probe, Northern detects RNA with a DNA probe, and Western detects protein with antibody. Restriction enzymes cut vector and insert at sticky ends, ligase seals a recombinant plasmid carrying a labelled origin of replication, antibiotic-resistance marker and cloning site, and bacteria are transformed and selected.",
+    "attempts": 1,
+    "checked": true,
+    "concept": "bio-33-southern-northern-western"
   }
 ]

@@ -6,6 +6,7 @@ import {createRequire} from 'node:module';
 import {createHash} from 'node:crypto';
 import ts from 'typescript';
 import {buildLimbPracticeIndex} from '../src/lib/mcq/limb-practice-scope.mjs';
+import {RETAKE_PRACTICE_CHAPTERS} from '../src/lib/biochemistry/retake-practice-scope.mjs';
 const root=path.resolve(new URL('..',import.meta.url).pathname);
 const require=createRequire(import.meta.url),modules=new Map();
 function load(file) {
@@ -66,6 +67,16 @@ for(const course of summary.exams) {
   const collections=Object.keys(course.collectionCounts);
   course.collectionCounts=Object.fromEntries(collections.map(c=>[c,questions.filter(q=>policy.matchesCollection(q,c)).length]));
   course.collectionQuestionIds=Object.fromEntries(collections.map(c=>[c,questions.filter(q=>policy.matchesCollection(q,c)).map(q=>q.id)]));
+  if(course.id==='term1-biochemistry-retake') {
+    // Reuse the audited PDF/section crosswalk, not the older topic-name heuristic.
+    // Every Practice ID belongs to one chapter, including optional metabolism.
+    const crosswalk=read('data/review-curriculum/courses/'+course.id+'.json');
+    course.biochemistryChapters=RETAKE_PRACTICE_CHAPTERS.map(chapter=>{
+      const questionIds=questions.filter(q=>crosswalk.questions[q.id]?.sectionId==='biochemistry-retake/'+chapter.id).map(q=>q.id);
+      return {...chapter,questionCount:questionIds.length,questionIds};
+    });
+    if(course.biochemistryChapters.reduce((n,c)=>n+c.questionCount,0)!==questions.length) throw Error('Retake practice requires complete one-chapter membership');
+  }
   const topics=[...new Set(questions.map(q=>q.topic))].map(title=>({id:title,title,questionIds:questions.filter(q=>q.topic===title).map(q=>q.id)}));
   course.finalExamBanks=course.finalExamBanks.filter(b=>b.id!=='downloaded-core').map(b=>({...b,questionCount:finals[course.id+':'+b.id]?.count??0}));
   course.finalExamQuestionCount=new Set(past.collections.filter(c=>c.courseId===course.id).flatMap(c=>c.gradedQuestionIds)).size;

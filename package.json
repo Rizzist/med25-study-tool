@@ -13,7 +13,7 @@
     "nutrition:check": "node scripts/build-nutrition.mjs --check && node scripts/content/build-nutrition-core.mjs --check && node --test tests/nutrition.test.mjs tests/nutrition-imports-core.test.mjs",
     "biochemistry:core:generate": "node scripts/content/build-biochemistry-core.mjs",
     "biochemistry:retake:generate": "node scripts/build-biochemistry-retake.mjs",
-    "biochemistry:retake:check": "node --test tests/biochemistry-retake.test.mjs",
+    "biochemistry:retake:check": "node --test tests/biochemistry-retake.test.mjs tests/biochemistry-practice-chapters.test.mjs",
     "biochemistry:core:check": "node scripts/content/build-biochemistry-core.mjs --check && node --test tests/biochemistry-core.test.mjs",
     "biochemistry:papers:generate": "node scripts/build-biochemistry-papers.mjs",
     "biochemistry:papers:check": "node scripts/build-biochemistry-papers.mjs --check && node --test tests/biochemistry-papers.test.mjs tests/biochemistry-izam.test.mjs",

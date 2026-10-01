@@ -19,8 +19,10 @@ for group in ['concepts','checkpoints']:
     for key,point in layout[group].items():
         quote=normalize(point['quote'])
         assert quote[:100] in texts[point['page']-1],(group,key,point['page'],'Anchor text absent from page')
-for p in reader.pages:
-    assert len(p.extract_text() or '')>100,'Unexpected empty page'
+for i,p in enumerate(reader.pages):
+    # A page may be a full-width process figure with only its title and caption as text.
+    has_image='/XObject' in (p.get('/Resources') or {})
+    assert len(p.extract_text() or '')>100 or has_image,f'Unexpected empty page {i+1}'
 folder=ROOT/'tmp/pdfs/retake'
 files=sorted(folder.glob('all-*.png'))
 if files:

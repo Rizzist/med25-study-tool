@@ -11,6 +11,7 @@ import {isFinalAnswerCorrect} from '../src/lib/mcq/final-exam-state.mjs';
 import {combinedSourceSelection,finalPaperKey,paperAttemptSummary,readCombinedSelections} from '../src/lib/mcq/paper-selection.mjs';
 import {parseExport} from '../src/lib/paper-pdf/parse-export.mjs';
 import {reviewBreakdown} from '../src/lib/mcq/review-results.mjs';
+import {DEFAULT_RETAKE_CHAPTER_IDS,RETAKE_PRACTICE_CHAPTERS} from '../src/lib/biochemistry/retake-practice-scope.mjs';
 const exam='term1-biochemistry-retake',bank='biochemistry-retake-past-papers';
 const text=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const read=p=>JSON.parse(text(p));
@@ -27,14 +28,20 @@ test('Retake appears in Term 2 but preserves its original source identity and gu
  assert.match(text('app/page.tsx'),/reviewEnabled\?<ReviewTopics/);assert.match(text('src/components/CourseReview.tsx'),/hasReviewCurriculum\(exam\)/);
  assert(!text('src/components/ExamModeChooser.tsx').includes('Respiratory · exam mode'));
 });
-test('Practice reuses all and only existing Cells & Molecules biochemistry questions',()=>{
- assert.equal(practice.length,703);assert.equal(course.sections.length,36);assert.equal(audit.conceptCount,256);
+test('Practice preserves existing identities and adds source-checked depth without importing past papers',()=>{
+ assert.equal(practice.length,audit.practiceCount);assert.equal(course.sections.length,26);assert.equal(audit.conceptCount,192);
  const old=new Map(read('data/mcq-runtime/july29.json').filter(q=>q.subject==='biochemistry').map(q=>[q.id,q]));
- assert.equal(old.size,practice.length);
- for(const q of practice){assert.equal(q.subject,'biochemistry');assert(q.id.startsWith('retake-practice-'));assert(!old.has(q.id));assert(q.tags.includes('exam-'+exam));assert(!q.tags.some(t=>t.startsWith('exam-term2')));assert(!q.tags.includes('past-paper'));const original=old.get(q.id.slice('retake-practice-'.length));assert(original,q.id);assert.equal(q.prompt,original.prompt);assert.deepEqual(q.options,original.options);assert.equal(q.correctOptionId,original.correctOptionId);}
+ const repairs=read('data/biochemistry-retake/practice-repairs.json');
+ const additions=read('data/biochemistry-retake/practice-expansion.json');
+ const retained=practice.filter(q=>q.id.startsWith('retake-practice-'));
+ // Term 2 metabolism questions (Lippincott 8-13, 19-22) are excluded; every kept question is an unchanged original.
+ assert(retained.length<old.size&&retained.length>500);assert(retained.every(q=>old.has(q.id.slice('retake-practice-'.length))));
+ assert(practice.every(q=>!/^ch-(8|9|10|11|12|13|19|20|21|22)$/.test(course.questions[q.id]?.sectionId?.split('/')[1]??'')),'no Term 2 metabolism sections');
+ assert.equal(practice.length,retained.length+additions.length);assert.equal(audit.addedPracticeCount,additions.length);
+ for(const q of practice){assert.equal(q.subject,'biochemistry');assert(!old.has(q.id));assert(q.tags.includes('exam-'+exam));assert(!q.tags.some(t=>t.startsWith('exam-term2')));assert(!q.tags.includes('past-paper'));if(q.id.startsWith('retake-depth-'))continue;const original=old.get(q.id.slice('retake-practice-'.length));assert(original,q.id);if(repairs[q.id]){assert.equal(q.revision,original.revision+1);assert.deepEqual(q.options,repairs[q.id].options);assert.equal(q.correctOptionId,repairs[q.id].correctOptionId);}else{assert.equal(q.prompt,original.prompt);assert.deepEqual(q.options,original.options);assert.equal(q.correctOptionId,original.correctOptionId);}}
  const runtime=read(`data/mcq-runtime/${exam}.json`);assert.deepEqual(runtime.map(q=>q.id).sort(),practice.map(q=>q.id).sort());
 });
-test('All 1017 exported MCQs satisfy the current strict schema',()=>{
+test('All exported MCQs satisfy the current strict schema',()=>{
  const validate=new Ajv2020({allErrors:true}).compile(read('schemas/mcq-question.schema.json'));
  for(const q of [...practice,...finals]){assert(validate(q),q.id+' '+JSON.stringify(validate.errors));assert(q.options.some(o=>o.id===q.correctOptionId));for(const id of q.acceptedOptionIds??[])assert(q.options.some(o=>o.id===id));}
 });
@@ -58,11 +65,21 @@ test('Existing paragraph anchors are preserved; expanded scope never invents rev
  const bytes=fs.readFileSync(new URL('../public/study/reviews/biochemistry-retake.pdf',import.meta.url));
  assert.equal(createHash('sha256').update(bytes).digest('hex'),anchors.pdfSha256);
  assert.equal(course.volumes[0].sha256,anchors.pdfSha256);
- assert.equal(Object.keys(anchors.questions).length,946);
- for(const q of practice)assert(anchors.questions[q.id],"every practice question opens an exact review paragraph: "+q.id);
+ assert.equal(Object.keys(anchors.questions).length,audit.paragraphAnchors);
+ for(const q of practice.filter(q=>q.id.startsWith('retake-practice-')))assert(anchors.questions[q.id],"existing practice keeps its exact review paragraph: "+q.id);
  for(const q of [...practice,...finals]){const ref=resolveGuidedReference(course,anchors,q.id);if(anchors.questions[q.id]){assert.equal(ref.precision,'paragraph',q.id);assert(ref.quote.length>20);assert(ref.page<=course.volumes[0].pageCount);assert(ref.top>=0&&ref.top<1);}else if(course.questions[q.id].sectionId){assert.equal(ref.precision,'section');}else{assert.equal(ref,null);assert(course.questions[q.id].uncertain);}}
  for(const q of finals.filter(q=>q.subject!=='biochemistry'))assert.equal(resolveGuidedReference(course,anchors,q.id),null);
  assert.equal(resolveGuidedReference(course,{...anchors,pdfSha256:'outdated'},practice[0].id).precision,'section');
+});
+test('Every confirmed chapter has substantial practice and every item belongs to exactly one selectable chapter',()=>{
+ const detail=read(`public/study/runtime/${exam}.json`);
+ const chapters=detail.biochemistryChapters;
+ assert.deepEqual(chapters.map(c=>c.id),RETAKE_PRACTICE_CHAPTERS.map(c=>c.id));
+ const ids=chapters.flatMap(c=>c.questionIds);
+ assert.equal(new Set(ids).size,ids.length);
+ assert.deepEqual([...ids].sort(),practice.map(q=>q.id).sort());
+ for(const c of chapters){assert.equal(c.questionCount,c.questionIds.length);for(const id of c.questionIds)assert.equal(course.questions[id].sectionId,`biochemistry-retake/${c.id}`);if(DEFAULT_RETAKE_CHAPTER_IDS.includes(c.id))assert(c.questionCount>=25,`${c.id} needs at least25 substantive questions; found${c.questionCount}`);}
+ for(const q of practice.filter(q=>q.id.startsWith('retake-depth-'))){assert(q.source.title&&q.source.chapter);assert(q.explanation.length>50);assert.equal(new Set(q.options.map(o=>o.text.toLowerCase().trim())).size,4);assert(!q.acceptedOptionIds);assert.equal(q.options.filter(o=>o.id===q.correctOptionId).length,1);for(const o of q.options.filter(o=>o.id!==q.correctOptionId))assert(q.distractorExplanations[o.id]?.length>=20);assert(course.questions[q.id].sectionId);assert(resolveGuidedReference(course,anchors,q.id));}
 });
 test('Paper downloads parse into exactly the scored rows and keep provenance and images',()=>{
  for(const p of papers.collections.flatMap(p=>[p,p.fullPaper])){const q=parseExport(text('public'+p.downloads.questions)),both=parseExport(text('public'+p.downloads.questionsAndKey));assert.equal(q.questions.length,p.gradedQuestionCount);assert.equal(both.keys.length,p.gradedQuestionCount);assert.deepEqual(q.questions.map(q=>q.id),p.gradedQuestionIds);assert(q.intro.join(' ').includes('not certified university keys'));for(const r of q.questions)assert(r.fields.Source);}

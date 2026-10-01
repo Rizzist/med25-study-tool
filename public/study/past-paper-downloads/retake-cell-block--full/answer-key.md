@@ -324,7 +324,7 @@ Key: A — Menaquinone
 
 Menaquinone is the best answer. Fat-soluble vitamins A, D, E, and K have distinct stored functions and deficiency patterns.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q27, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 9. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Menaquinone. Imported for examId july29.
 
@@ -336,7 +336,7 @@ Key: C — DNA ligase
 
 DNA ligase is the best answer. Replication requires directional synthesis, proofreading, and coordinated fork enzymes.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=135 — DNA structure, replication and repair
+Review: /study/reviews/biochemistry-retake.pdf#page=64 — DNA structure, replication and repair
 
 Provenance: Original Q28, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 9. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: DNA ligase. Imported for examId july29.
 
@@ -348,7 +348,7 @@ Key: C — 3 amino acids and 2 peptide bonds
 
 3 amino acids and 2 peptide bonds is the best answer. Three amino acids are linked by two peptide bonds.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=17 — Protein structure and folding
+Review: /study/reviews/biochemistry-retake.pdf#page=12 — Protein structure and folding
 
 Provenance: Original Q29, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 10. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: 3 amino acids and 2 peptide bonds. Imported for examId july29.
 
@@ -360,7 +360,7 @@ Key: A — Water
 
 Water is the best answer. Condensation joins monomers while releasing water.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=4 — Biochemical foundations
+Review: /study/reviews/biochemistry-retake.pdf#page=3 — Biochemical foundations
 
 Provenance: Original Q30, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 10. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Water. Imported for examId july29.
 
@@ -372,7 +372,7 @@ Key: A — 3.68
 
 3.68 is the best answer. Henderson-Hasselbalch gives 3.74 + log(0.070/0.080) ≈ 3.68.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=7 — Water, acids, bases and buffers
+Review: /study/reviews/biochemistry-retake.pdf#page=6 — Water, acids, bases and buffers
 
 Provenance: Original Q31, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 10. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: 3.68. Imported for examId july29.
 
@@ -384,7 +384,7 @@ Key: C — Deletion of one β -globin locus
 
 Deletion of one β -globin locus is the best answer. Loss of one β-globin locus can produce β-thalassemia trait/minor.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=22 — Hemoglobin and globular proteins
+Review: /study/reviews/biochemistry-retake.pdf#page=15 — Hemoglobin and globular proteins
 
 Provenance: Original Q32, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 10. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Deletion of one β -globin locus. Imported for examId july29.
 
@@ -396,7 +396,7 @@ Key: B — Hemoglobin is the best example
 
 Hemoglobin is the best example is the best answer. Hemoglobin is globular, whereas collagen and keratin are fibrous structural proteins.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=29 — Collagen, elastin and fibrous proteins
+Review: /study/reviews/biochemistry-retake.pdf#page=19 — Collagen, elastin and fibrous proteins
 
 Provenance: Original Q33, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 11. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Hemoglobin is the best example. Imported for examId july29.
 
@@ -408,7 +408,7 @@ Key: D — 8.5
 
 8.5 is the best answer. pH 8.5 is clearly alkaline; values below 7 are acidic.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=7 — Water, acids, bases and buffers
+Review: /study/reviews/biochemistry-retake.pdf#page=6 — Water, acids, bases and buffers
 
 Provenance: Original Q34, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 11. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: 8.5. Imported for examId july29.
 
@@ -420,7 +420,7 @@ Key: D — i
 
 i is the best answer. lacI is expressed constitutively to supply the repressor protein.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=155 — Gene regulation
+Review: /study/reviews/biochemistry-retake.pdf#page=77 — Gene regulation
 
 Provenance: Original Q35, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 11. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: i. Imported for examId july29.
 
@@ -434,7 +434,7 @@ Accepted choices: A, B
 
 A low Km indicates a high affinity of an enzyme for its substrate. is the best answer. Michaelis-Menten parameters relate substrate concentration to reaction velocity. Km is independent of total enzyme concentration in the Michaelis-Menten model. Low Km is often used as an affinity shorthand, but Km is not universally a dissociation constant. The original wording permits both A and the customary textbook interpretation of B.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=34 — Enzymes, kinetics and regulation
+Review: /study/reviews/biochemistry-retake.pdf#page=22 — Enzymes, kinetics and regulation
 
 Provenance: Original Q36, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 11. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: A low Km indicates a high affinity of an enzyme for its substrate.. Imported for examId july29. Original choices: A. The Km of an enzyme is unchanged when the enzyme concentration is increased.; B. A low Km indicates a high affinity of an enzyme for its substrate.; C. A high Km indicates a high affinity of an enzyme for its substrate.; D. The Km of an enzyme increases when the enzyme concentration is increased. Review: Km is independent of total enzyme concentration in the Michaelis-Menten model. Low Km is often used as an affinity shorthand, but Km is not universally a dissociation constant. The original wording permits both A and the customary textbook interpretation of B.
 
@@ -446,7 +446,7 @@ Key: A — Lactose-lactase
 
 Lactose-lactase is the best answer. Monosaccharide composition and glycosidic linkage define carbohydrate behavior.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=47 — Carbohydrate structure and stereochemistry
+Review: /study/reviews/biochemistry-retake.pdf#page=30 — Carbohydrate structure and stereochemistry
 
 Provenance: Original Q37, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 12. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Lactose-lactase. Imported for examId july29.
 
@@ -458,7 +458,7 @@ Key: B — 4
 
 4 is the best answer. There are four fat-soluble vitamins: A, D, E, and K.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q38, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 12. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: 4. Imported for examId july29.
 
@@ -470,7 +470,7 @@ Key: D — Covalent bond
 
 Covalent bond is the best answer. A peptide bond is a covalent amide bond.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=17 — Protein structure and folding
+Review: /study/reviews/biochemistry-retake.pdf#page=12 — Protein structure and folding
 
 Provenance: Original Q39, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 12. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Covalent bond. Imported for examId july29.
 
@@ -482,7 +482,7 @@ Key: A — 3.89-5.89
 
 3.89-5.89 is the best answer. A weak acid buffers effectively within about one pH unit of its pKa.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=7 — Water, acids, bases and buffers
+Review: /study/reviews/biochemistry-retake.pdf#page=6 — Water, acids, bases and buffers
 
 Provenance: Original Q40, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 13. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: 3.89-5.89. Imported for examId july29.
 
@@ -496,7 +496,7 @@ Accepted choices: A, D
 
 Phosphatidylinositol is the best answer. Phosphatidylinositol derivatives generate the IP3 and DAG second-messenger pathway. Phosphatidylinositol derivatives participate in signaling; phosphatidic acid is also a signaling lipid. Both choices are valid under this broad stem.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=86 — Complex lipids and eicosanoids
+Review: /study/reviews/biochemistry-retake.pdf#page=43 — Complex lipids and eicosanoids
 
 Provenance: Original Q41, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 13. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Phosphatidylinositol. Imported for examId july29. Original choices: A. Phosphatidylinositol; B. Cardiolipin; C. Phosphatidylcholine; D. Phosphatidic acid Review: Phosphatidylinositol derivatives participate in signaling; phosphatidic acid is also a signaling lipid. Both choices are valid under this broad stem.
 
@@ -508,7 +508,7 @@ Key: A — Chylomicron
 
 Chylomicron is the best answer. Enterocytes package absorbed dietary lipids into chylomicrons.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=91 — Cholesterol, lipoproteins and steroids
+Review: /study/reviews/biochemistry-retake.pdf#page=46 — Cholesterol, lipoproteins and steroids
 
 Provenance: Original Q42, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 13. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Chylomicron. Imported for examId july29.
 
@@ -520,7 +520,7 @@ Key: B — Dihydroxyacetone
 
 Dihydroxyacetone is the best answer. Dihydroxyacetone has no stereogenic carbon.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=47 — Carbohydrate structure and stereochemistry
+Review: /study/reviews/biochemistry-retake.pdf#page=30 — Carbohydrate structure and stereochemistry
 
 Provenance: Original Q43, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 13. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Dihydroxyacetone. Imported for examId july29.
 
@@ -534,7 +534,7 @@ Accepted choices: B, D
 
 The trp operon encodes enzymes for tryptophan biosynthesis, so it controls an anabolic pathway and is repressible by its end product. Both tryptophan and phenylalanine biosynthetic operons are anabolic. The original intended trp answer is not uniquely correct when phe is also offered.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=155 — Gene regulation
+Review: /study/reviews/biochemistry-retake.pdf#page=77 — Gene regulation
 
 Provenance: Original Q44, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 14. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Past-paper question 44; the printed checkmark was visually verified on the rendered source page. Original choices: A. Ara operon; B. Trp operon; C. Lac operon; D. Phe operon Review: Both tryptophan and phenylalanine biosynthetic operons are anabolic. The original intended trp answer is not uniquely correct when phe is also offered.
 
@@ -546,7 +546,7 @@ Key: D — 1/2 Vmax
 
 1/2 Vmax is the best answer. Michaelis-Menten parameters relate substrate concentration to reaction velocity.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=34 — Enzymes, kinetics and regulation
+Review: /study/reviews/biochemistry-retake.pdf#page=22 — Enzymes, kinetics and regulation
 
 Provenance: Original Q45, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 14. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: 1/2 Vmax. Imported for examId july29.
 
@@ -558,7 +558,7 @@ Key: B — α -D-Glucose and β -D-glucose
 
 α -D-Glucose and β -D-glucose is the best answer. Monosaccharide composition and glycosidic linkage define carbohydrate behavior.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=47 — Carbohydrate structure and stereochemistry
+Review: /study/reviews/biochemistry-retake.pdf#page=30 — Carbohydrate structure and stereochemistry
 
 Provenance: Original Q46, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 14. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: α -D-Glucose and β -D-glucose. Imported for examId july29.
 
@@ -570,7 +570,7 @@ Key: A — Preventing binding of aminoacyl tRNA
 
 Preventing binding of aminoacyl tRNA is the best answer. Tetracycline binds the bacterial 30S subunit and blocks aminoacyl-tRNA entry into the A site.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=149 — Translation
+Review: /study/reviews/biochemistry-retake.pdf#page=73 — Translation
 
 Provenance: Original Q47, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 14. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Preventing binding of aminoacyl tRNA. Imported for examId july29.
 
@@ -582,7 +582,7 @@ Key: B — Sigma factor
 
 Sigma factor is the best answer. Bacterial sigma factor gives RNA polymerase promoter specificity.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=143 — RNA, transcription and processing
+Review: /study/reviews/biochemistry-retake.pdf#page=70 — RNA, transcription and processing
 
 Provenance: Original Q48, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 15. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Sigma factor. Imported for examId july29.
 
@@ -594,7 +594,7 @@ Key: C — Collagen
 
 Collagen is the best answer. Protein function follows primary sequence and higher-order folding interactions.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=29 — Collagen, elastin and fibrous proteins
+Review: /study/reviews/biochemistry-retake.pdf#page=19 — Collagen, elastin and fibrous proteins
 
 Provenance: Original Q49, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 15. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Collagen. Imported for examId july29.
 
@@ -606,7 +606,7 @@ Key: B — Eukaryotic hnRNA
 
 Eukaryotic hnRNA is the best answer. Splice sites are present in eukaryotic hnRNA/pre-mRNA before introns are removed.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=143 — RNA, transcription and processing
+Review: /study/reviews/biochemistry-retake.pdf#page=70 — RNA, transcription and processing
 
 Provenance: Original Q50, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 15. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Eukaryotic hnRNA. Imported for examId july29.
 
@@ -618,7 +618,7 @@ Key: D — Pyridoxal phosphate-Vitamin B6
 
 Pyridoxal phosphate-Vitamin B6 is the best answer. Pyridoxal phosphate is the active coenzyme form of vitamin B6.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q51, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 15. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Pyridoxal phosphate-Vitamin B6. Imported for examId july29.
 
@@ -630,7 +630,7 @@ Key: A — Vitamin B12
 
 Vitamin B12 is the best answer. Water-soluble vitamins commonly serve as coenzyme precursors and have characteristic deficiency syndromes.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q52, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 16. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Vitamin B12. Imported for examId july29.
 
@@ -642,7 +642,7 @@ Key: A — End product
 
 End product is the best answer. An end product commonly inhibits an early committed enzyme in its own biosynthetic pathway.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=34 — Enzymes, kinetics and regulation
+Review: /study/reviews/biochemistry-retake.pdf#page=22 — Enzymes, kinetics and regulation
 
 Provenance: Original Q53, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 16. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: End product. Imported for examId july29.
 
@@ -654,7 +654,7 @@ Key: D — Night blindness
 
 Night blindness is the best answer. Niacin deficiency causes pellagra—dermatitis, diarrhea, and dementia—not night blindness.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q54, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 16. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Night blindness. Imported for examId july29.
 
@@ -666,7 +666,7 @@ Key: A — Lung surfactant
 
 Lung surfactant is the best answer. Dipalmitoyl phosphatidylcholine is the major surface-tension-lowering phospholipid of pulmonary surfactant.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=86 — Complex lipids and eicosanoids
+Review: /study/reviews/biochemistry-retake.pdf#page=43 — Complex lipids and eicosanoids
 
 Provenance: Original Q55, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 16. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Lung surfactant. Imported for examId july29.
 
@@ -678,7 +678,7 @@ Key: C — Cellulose
 
 Cellulose is the best answer. Cellulose is a homopolymer of glucose.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=47 — Carbohydrate structure and stereochemistry
+Review: /study/reviews/biochemistry-retake.pdf#page=30 — Carbohydrate structure and stereochemistry
 
 Provenance: Original Q56, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 17. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Cellulose. Imported for examId july29.
 
@@ -690,7 +690,7 @@ Key: A — GC-rich regions are more resistant to denaturation than AT-rich regio
 
 GC-rich DNA has greater thermal stability and a higher melting temperature than AT-rich DNA because GC base pairs provide three hydrogen bonds and stronger stacking interactions.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=135 — DNA structure, replication and repair
+Review: /study/reviews/biochemistry-retake.pdf#page=64 — DNA structure, replication and repair
 
 Provenance: Original Q57, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 17. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Past-paper question 57; the printed checkmark was visually verified on the rendered source page.
 
@@ -702,7 +702,7 @@ Key: C — Valine
 
 Valine is the best answer. Valine is nonpolar and is therefore favored in the hydrophobic interior of a globular protein.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=17 — Protein structure and folding
+Review: /study/reviews/biochemistry-retake.pdf#page=12 — Protein structure and folding
 
 Provenance: Original Q58, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 17. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Valine. Imported for examId july29.
 
@@ -714,7 +714,7 @@ Key: C — Beta-carotene
 
 Beta-carotene is the best answer. β-Carotene can be cleaved to form vitamin A.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q59, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 17. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Beta-carotene. Imported for examId july29.
 
@@ -726,7 +726,7 @@ Key: D — Linoleic acid
 
 Linoleic acid is the best answer. Linoleic and α-linolenic acids are essential because humans cannot introduce the required distal double bonds.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=79 — Fatty acids, triacylglycerols and ketones
+Review: /study/reviews/biochemistry-retake.pdf#page=38 — Fatty acids, triacylglycerols and ketones
 
 Provenance: Original Q60, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 18. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Linoleic acid. Imported for examId july29.
 
@@ -738,7 +738,7 @@ Key: B — All amino acids contain both positive and negative charges
 
 All amino acids contain both positive and negative charges is the best answer. At physiological pH, free amino acids generally contain both NH3+ and COO- groups as zwitterions.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=13 — Amino acids
+Review: /study/reviews/biochemistry-retake.pdf#page=10 — Amino acids
 
 Provenance: Original Q61, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 18. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: All amino acids contain both positive and negative charges. Imported for examId july29.
 
@@ -750,7 +750,7 @@ Key: D — Amylase
 
 Amylase is the best answer. Amylase cleaves α(1→4) bonds in starch, producing maltose and oligosaccharides.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=47 — Carbohydrate structure and stereochemistry
+Review: /study/reviews/biochemistry-retake.pdf#page=30 — Carbohydrate structure and stereochemistry
 
 Provenance: Original Q62, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 18. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Amylase. Imported for examId july29.
 
@@ -762,7 +762,7 @@ Key: D — Formation of a triple helix
 
 Formation of a triple helix is the best answer. Protein function follows primary sequence and higher-order folding interactions.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=29 — Collagen, elastin and fibrous proteins
+Review: /study/reviews/biochemistry-retake.pdf#page=19 — Collagen, elastin and fibrous proteins
 
 Provenance: Original Q63, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 18. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Formation of a triple helix. Imported for examId july29.
 
@@ -774,7 +774,7 @@ Key: B — Xylitol
 
 Xylitol is the best answer. Reduction of xylose yields the sugar alcohol xylitol.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=47 — Carbohydrate structure and stereochemistry
+Review: /study/reviews/biochemistry-retake.pdf#page=30 — Carbohydrate structure and stereochemistry
 
 Provenance: Original Q64, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 19. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Xylitol. Imported for examId july29.
 
@@ -786,7 +786,7 @@ Key: B — Enzyme precursor
 
 Enzyme precursor is the best answer. A zymogen is an inactive enzyme precursor activated by a later step such as proteolysis.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=34 — Enzymes, kinetics and regulation
+Review: /study/reviews/biochemistry-retake.pdf#page=22 — Enzymes, kinetics and regulation
 
 Provenance: Original Q65, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 19. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Enzyme precursor. Imported for examId july29.
 
@@ -798,7 +798,7 @@ Key: B — Sucrose
 
 Sucrose is the best answer. Sucrose links both anomeric carbons, making it nonreducing.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=47 — Carbohydrate structure and stereochemistry
+Review: /study/reviews/biochemistry-retake.pdf#page=30 — Carbohydrate structure and stereochemistry
 
 Provenance: Original Q66, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 19. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Sucrose. Imported for examId july29.
 
@@ -810,7 +810,7 @@ Key: B — Eicosapentaenoic acid
 
 Eicosapentaenoic acid is the best answer. More cis double bonds introduce more kinks and lower fatty-acid melting temperature.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=79 — Fatty acids, triacylglycerols and ketones
+Review: /study/reviews/biochemistry-retake.pdf#page=38 — Fatty acids, triacylglycerols and ketones
 
 Provenance: Original Q67, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 20. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Eicosapentaenoic acid. Imported for examId july29.
 
@@ -822,7 +822,7 @@ Key: D — α -helix
 
 α -helix is the best answer. An α-helix is stabilized by intrachain backbone hydrogen bonds.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=17 — Protein structure and folding
+Review: /study/reviews/biochemistry-retake.pdf#page=12 — Protein structure and folding
 
 Provenance: Original Q68, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 20. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: α -helix. Imported for examId july29.
 
@@ -834,7 +834,7 @@ Key: D — Coenzyme A
 
 Coenzyme A is the best answer. Pantothenate is incorporated into coenzyme A.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q69, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 20. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Coenzyme A. Imported for examId july29.
 
@@ -846,7 +846,7 @@ Key: D — Liver and intestine
 
 Liver and intestine is the best answer. Nascent HDL is produced by both liver and intestine.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=91 — Cholesterol, lipoproteins and steroids
+Review: /study/reviews/biochemistry-retake.pdf#page=46 — Cholesterol, lipoproteins and steroids
 
 Provenance: Original Q70, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 20. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Liver and intestine. Imported for examId july29.
 
@@ -858,7 +858,7 @@ Key: C — Increasing the substrate concentration
 
 Increasing the substrate concentration is the best answer. High substrate can outcompete a reversible competitive inhibitor for the active site.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=34 — Enzymes, kinetics and regulation
+Review: /study/reviews/biochemistry-retake.pdf#page=22 — Enzymes, kinetics and regulation
 
 Provenance: Original Q71, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 21. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Increasing the substrate concentration. Imported for examId july29.
 
@@ -870,7 +870,7 @@ Key: D — Human nucleotide-excision repair proteins
 
 Editorial repair: the source offered bacterial UvrABC as the human xeroderma pigmentosum defect. Human XP usually involves NER proteins XPA-XPG; the XP variant involves POLH/translesion synthesis. UvrABC is bacterial, not a human gene.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=135 — DNA structure, replication and repair
+Review: /study/reviews/biochemistry-retake.pdf#page=64 — DNA structure, replication and repair
 
 Provenance: Original Q72, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 21. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: uvr ABC exonuclease. Imported for examId july29. Original choices: A. DNA polymerase III; B. DNA polymerase I; C. DNA ligase; D. uvr ABC exonuclease Review: Editorial repair: the source offered bacterial UvrABC as the human xeroderma pigmentosum defect. Human XP usually involves NER proteins XPA-XPG; the XP variant involves POLH/translesion synthesis. UvrABC is bacterial, not a human gene.
 
@@ -882,7 +882,7 @@ Key: C — Z-DNA
 
 Z-DNA is the best answer. Z-DNA is a left-handed helix.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=135 — DNA structure, replication and repair
+Review: /study/reviews/biochemistry-retake.pdf#page=64 — DNA structure, replication and repair
 
 Provenance: Original Q73, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 21. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: Z-DNA. Imported for examId july29.
 
@@ -894,7 +894,7 @@ Key: D — DNA
 
 DNA is the best answer. Okazaki fragments are short DNA segments synthesized on the lagging strand.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=135 — DNA structure, replication and repair
+Review: /study/reviews/biochemistry-retake.pdf#page=64 — DNA structure, replication and repair
 
 Provenance: Original Q74, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 21. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: DNA. Imported for examId july29.
 
@@ -906,7 +906,7 @@ Key: D — Vitamins
 
 Vitamins is the best answer. Many vitamins are precursors of coenzymes required for enzyme function.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q75, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 22. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Vitamins. Imported for examId july29.
 
@@ -918,7 +918,7 @@ Key: B — Vit D
 
 Vit D is the best answer. Vitamin D supports calcium and phosphate absorption and normal bone mineralization.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q76, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 22. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Vit D. Imported for examId july29.
 
@@ -930,7 +930,7 @@ Key: A — Cerebrosides
 
 Cerebrosides is the best answer. Cerebrosides are glycosphingolipids consisting of ceramide plus one sugar.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=86 — Complex lipids and eicosanoids
+Review: /study/reviews/biochemistry-retake.pdf#page=43 — Complex lipids and eicosanoids
 
 Provenance: Original Q77, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 22. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed A: Cerebrosides. Imported for examId july29.
 
@@ -942,7 +942,7 @@ Key: C — Template strand
 
 Template strand is the best answer. mRNA is complementary to the DNA template strand and matches the coding strand except U replaces T.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=143 — RNA, transcription and processing
+Review: /study/reviews/biochemistry-retake.pdf#page=70 — RNA, transcription and processing
 
 Provenance: Original Q78, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 23. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Coding strand. Imported for examId july29.
 
@@ -954,7 +954,7 @@ Key: B — DNA gyrase
 
 DNA gyrase is the best answer. Ciprofloxacin inhibits bacterial DNA gyrase/topoisomerase II, disrupting DNA topology and replication.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=135 — DNA structure, replication and repair
+Review: /study/reviews/biochemistry-retake.pdf#page=64 — DNA structure, replication and repair
 
 Provenance: Original Q79, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 23. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: DNA gyrase. Imported for examId july29.
 
@@ -966,7 +966,7 @@ Key: B — Ehlers-Danlos
 
 Ehlers-Danlos is the best answer. Protein function follows primary sequence and higher-order folding interactions.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=29 — Collagen, elastin and fibrous proteins
+Review: /study/reviews/biochemistry-retake.pdf#page=19 — Collagen, elastin and fibrous proteins
 
 Provenance: Original Q80, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 23. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed B: Ehlers-Danlos. Imported for examId july29.
 
@@ -978,7 +978,7 @@ Key: C — Biotin
 
 Biotin supports propionyl-CoA carboxylase, shared by odd-chain fatty-acid and several amino-acid catabolic routes. B6 and B1 participate elsewhere in branched-chain amino-acid breakdown; they do not supply this shared carboxylase. B12 is also important downstream but is not offered.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=126 — Vitamins
+Review: /study/reviews/biochemistry-retake.pdf#page=59 — Vitamins
 
 Provenance: Original Q81, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 23. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.
 
@@ -990,7 +990,7 @@ Key: D — Clover leaf
 
 Clover leaf is the best answer. The classic two-dimensional structure of tRNA is a cloverleaf.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=143 — RNA, transcription and processing
+Review: /study/reviews/biochemistry-retake.pdf#page=70 — RNA, transcription and processing
 
 Provenance: Original Q82, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 24. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: Clover leaf. Imported for examId july29.
 
@@ -1002,7 +1002,7 @@ Key: D — In contrast to myoglobin, hemoglobin exhibits greater changes in seco
 
 In contrast to myoglobin, hemoglobin exhibits greater changes in secondary and tertiary structure after oxygen binding is the best answer. Oxygen binding produces cooperative conformational changes in hemoglobin, unlike monomeric myoglobin.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=22 — Hemoglobin and globular proteins
+Review: /study/reviews/biochemistry-retake.pdf#page=15 — Hemoglobin and globular proteins
 
 Provenance: Original Q83, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 24. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed D: In contrast to myoglobin, hemoglobin exhibits greater changes in secondary and tertiary structure after oxygen binding. Imported for examId july29.
 
@@ -1014,7 +1014,7 @@ Key: C — LDL
 
 LDL is the best answer. LDL is the most cholesterol-rich major plasma lipoprotein.
 
-Review: /study/reviews/biochemistry-retake.pdf#page=91 — Cholesterol, lipoproteins and steroids
+Review: /study/reviews/biochemistry-retake.pdf#page=46 — Cholesterol, lipoproteins and steroids
 
 Provenance: Original Q84, CELL BLOCK THEORY FINAL EXAM.pdf, PDF page 24. Canonical study wording/options may be normalized; keys apply to displayed options, not necessarily the original letter.  Original answer mark keyed C: LDL. Imported for examId july29.
 

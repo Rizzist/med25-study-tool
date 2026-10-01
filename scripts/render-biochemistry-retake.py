@@ -153,6 +153,8 @@ def font_url(name): return (FONTS / name).as_uri()
 
 CSS = f"""
 @font-face{{font-family:'Notes';src:url('{font_url('PatrickHand-Regular.ttf')}')}}
+@font-face{{font-family:'Sans';src:url('{(ROOT / 'public/fonts/NotoSans-Regular.ttf').as_uri()}')}}
+@font-face{{font-family:'Sans';font-weight:700;src:url('{(ROOT / 'public/fonts/NotoSans-Bold.ttf').as_uri()}')}}
 @font-face{{font-family:'Pen';src:url('{font_url('NanumPenScript-Regular.ttf')}')}}
 @page{{size:A4;margin:15mm 15mm 17mm 17mm;
   @bottom-right{{content:counter(page);font-family:'Notes';font-size:9pt;color:#9a9a9a}}
@@ -175,13 +177,36 @@ h1,h2,h3,.pen{{font-family:'Pen',cursive;font-weight:400;color:{CORAL}}}
 .legend .sw{{font-family:'Pen';font-size:17pt}}
 .cover .small{{font-size:9pt;color:#808080;line-height:1.4}}
 /* contents */
-.toc h2{{font-size:40pt;margin:0 0 3mm}}
-.toc .unit{{font-family:'Pen';font-size:21pt;color:{BLUE};margin:4mm 0 1mm;break-after:avoid}}
-.toc .row{{display:flex;gap:2mm;font-size:11.5pt;line-height:1.45}}
+.toc{{font-family:'Sans',sans-serif}}
+.toc h2{{font-family:'Sans',sans-serif;font-weight:700;font-size:24pt;color:#1f1f1f;margin:0 0 4mm}}
+.toc .unit{{font-family:'Sans',sans-serif;font-weight:700;font-size:10pt;letter-spacing:.06em;text-transform:uppercase;color:{CORAL};margin:3.5mm 0 .8mm;break-after:avoid}}
+.toc .row{{display:flex;gap:2mm;font-size:10.3pt;line-height:1.5;color:#222}}
 .toc .row .t{{flex:0 1 auto}}
 .toc .row .dl{{flex:1 1 auto;border-bottom:1.5px dotted #b9b9b9;margin-bottom:1.6mm}}
-.toc .row .p{{flex:0 0 auto;color:{CORAL};min-width:8mm;text-align:right}}
+.toc .row .p{{flex:0 0 auto;color:#222;font-variant-numeric:tabular-nums;min-width:8mm;text-align:right}}
 .toc .ext{{color:{BLUE};font-size:9.5pt}}
+/* compact ideas: title left, points right */
+table.ideas{{width:100%;border-collapse:collapse;margin:2mm 0 3mm;font-size:10.8pt;line-height:1.38}}
+table.ideas td{{vertical-align:top;border-bottom:1px dashed #cfcfcf;padding:2mm 2mm 2.2mm}}
+table.ideas tr{{break-inside:avoid}}
+table.ideas td.t{{width:34%;font-family:'Pen';font-size:17pt;line-height:1.02;color:{CORAL}}}
+ul.kp{{margin:0;padding:0;list-style:none}}
+ul.kp li{{position:relative;padding-left:4.5mm;margin:0 0 .4mm;break-inside:avoid}}
+ul.kp li::before{{content:'•';position:absolute;left:.5mm;color:{CORAL}}}
+.idea{{margin:4mm 0;break-inside:avoid}}
+.idea h3{{font-size:20pt}}
+.idea .pair{{display:grid;grid-template-columns:62% 1fr;gap:5mm;align-items:center;font-size:10.6pt;line-height:1.38}}
+.idea .pair figure{{margin:0}}
+.idea .cols2{{columns:2;column-gap:7mm;font-size:10.6pt;line-height:1.38}}
+.fig-only figure img{{max-height:92mm}}
+.fig-only.wide figure img,.fig-only figure.wide img{{max-height:110mm;width:auto;max-width:100%}}
+table.pp{{width:100%;border-collapse:collapse;font-size:9.8pt;line-height:1.32;margin:1mm 0 3mm}}
+table.pp th{{font-family:'Pen';font-weight:400;font-size:15pt;color:#666;border-bottom:1.6px solid #2b2b2b;padding:.8mm 2mm;text-align:left}}
+table.pp td{{background:#efefef;border-bottom:2px solid #fbfbfb;padding:1.6mm 2.2mm;vertical-align:top;width:42%}}
+table.pp td.ans{{width:58%;color:#333}}
+table.pp tr{{break-inside:avoid}}
+.tabletitle.grey{{color:#666}}
+.srcs{{font-size:8.2pt;color:#9a9a9a;line-height:1.35;margin:3mm 0 0}}
 /* section */
 .section{{break-before:page}}
 .unitstrip{{font-family:'Pen';font-size:17pt;color:{BLUE};border-bottom:1.5px solid #2b2b2b;padding-bottom:1mm;margin-bottom:3mm;display:flex;justify-content:space-between}}
@@ -229,16 +254,18 @@ figcaption .pen{{font-size:15pt;margin-right:1.5mm}}
 .end li{{margin-bottom:1.5mm}}
 """
 
-def concept_html(c):
-    kp = ''.join(f'<li>{esc(k)}</li>' for k in c.get('keyPoints', []))
-    clin = ''.join(f'<p class="clin"><span class="pen">→ clinic:</span> {esc(x)}</p>' for x in c.get('clinicalLinks', []))
-    return (f'<div class="concept" id="c-{esc(c["id"])}"><h3>{esc(c["title"])}</h3>'
-            f'<p class="summary">{esc(c["summary"])}</p>'
-            + (f'<ol class="kp">{kp}</ol>' if kp else '') + clin
-            + f'<p class="src">{esc(" · ".join(c.get("sourceEvidence", [])))}</p></div>')
+def points_html(c, limit=None):
+    kp = c.get('keyPoints', [])[:limit] if limit else c.get('keyPoints', [])
+    items = ''.join(f'<li>{esc(k)}</li>' for k in kp)
+    clin = c.get('clinicalLinks', [])[:1]
+    return (f'<ul class="kp">{items}</ul>' if items else '') + ''.join(f'<p class="clin"><span class="pen">→</span> {esc(x)}</p>' for x in clin)
+
+def concept_quote(c, image_only=False):
+    """Text Guided mode quotes and the PDF is searched for: the idea's points, or its title when it is shown as an image."""
+    return c['title'] if image_only or not c.get('keyPoints') else ' '.join(c['keyPoints'])
 
 # Label-dense diagrams print at full text width so their smallest labels stay readable.
-DENSE = {'collagen-synthesis', 'lipoprotein-metabolism', 'replication-fork', 'mrna-processing', 'carbohydrate-metabolism-map', 'electron-transport-chain', 'carnitine-shuttle-beta-oxidation', 'translation-ribosome'}
+DENSE = {'collagen-synthesis', 'lipoprotein-metabolism', 'replication-fork', 'mrna-processing', 'carbohydrate-metabolism-map', 'electron-transport-chain', 'carnitine-shuttle-beta-oxidation', 'translation-ribosome', 'fed-fast-fuel-flow', 'dna-repair-pathways', 'blotting-and-cloning', 'srp-protein-targeting'}
 fig_counter = [0]
 DISPLAY = Path(tempfile.gettempdir()) / 'med25-retake-figures'
 def display_copy(name):
@@ -263,32 +290,49 @@ def chart_html(kind):
     svg, cap = chart(kind)
     return f'<figure>{svg}<figcaption><span class="pen c">fig. {fig_counter[0]}</span>{esc(cap)}</figcaption></figure>'
 
-def section_html(s, pages):
-    figs_by_concept, figs_at_start = {}, []
+def figures_for(s):
+    """Map each figure to the idea it belongs to (explicit concept, else placement table, else keyword)."""
+    owned = {}
+    ids = {c['id'] for c in s['concepts']}
     for f in figures:
-        if f['section'] != s['id'] and not (s['id'] == 'ch-8' and f['section'] == 'ch-8-13'): continue
-        target = FIG_AFTER.get(f['name'])
+        target = f.get('concept') or FIG_AFTER.get(f['name'])
         if not target and f['name'] in FIG_KEYWORD:
             target = next((c['id'] for c in s['concepts'] if FIG_KEYWORD[f['name']] in c['id']), None)
-        if target and any(c['id'] == target for c in s['concepts']): figs_by_concept.setdefault(target, []).append(f)
-        else: figs_at_start.append(f)
+        if target in ids: owned.setdefault(target, []).append(f)
+    return owned
+
+def section_html(s, pages):
+    owned = figures_for(s)
     basis = ('Lippincott 6e, Chapter ' + s['id'][3:]) if s['id'].startswith('ch-') else 'Teacher slides and laboratory material'
     out = [f'<section class="section dots" id="s-{esc(s["id"])}">',
            f'<div class="unitstrip"><span>{esc(s["unitTitle"])}</span><span>{s["order"]:02d}</span></div>',
-           f'<h2 class="sec">{esc(s["title"])}</h2><div class="basis">{esc(basis)}; teacher slides cited under each idea.</div>']
-    if s.get('extension'):
-        out.append('<div class="ext-note">practice-bank topic · outside the confirmed Term 1 syllabus, taught because the practice questions test it</div>')
-    out += [figure_html(f) for f in figs_at_start]
+           f'<h2 class="sec">{esc(s["title"])}</h2><div class="basis">{esc(basis)} · teacher slides</div>']
     for t in s.get('tables', []):
-        out.append(f'<div class="tabletitle">{esc(t["title"])}</div><table><thead><tr>' + ''.join(f'<th>{esc(c)}</th>' for c in t['columns']) + '</tr></thead><tbody>'
+        out.append(f'<div class="tabletitle">{esc(t["title"])}</div><table class="data"><thead><tr>' + ''.join(f'<th>{esc(c)}</th>' for c in t['columns']) + '</tr></thead><tbody>'
                    + ''.join('<tr>' + ''.join(f'<td>{esc(c)}</td>' for c in row) + '</tr>' for row in t['rows']) + '</tbody></table>')
+    rows = []
+    def flush():
+        if rows: out.append('<table class="ideas"><tbody>' + ''.join(rows) + '</tbody></table>'); rows.clear()
     for c in s['concepts']:
-        out.append(concept_html(c))
-        out += [figure_html(f) for f in figs_by_concept.get(c['id'], [])]
-        if c['id'] in CHART_AFTER: out.append(chart_html(CHART_AFTER[c['id']]))
-    for cp in s.get('checkpoints', []):
-        out.append(f'<div class="quote" id="k-{esc(cp["id"])}"><span class="pen">past paper asked</span><p class="q">{esc(cp["title"])}</p>'
-                   f'<p class="summary">{esc(cp["summary"])}</p><p class="src">{esc(cp["source"])}</p></div>')
+        figs = owned.get(c['id'], [])
+        chart_kind = CHART_AFTER.get(c['id'])
+        if not figs and not chart_kind:
+            rows.append(f'<tr id="c-{esc(c["id"])}"><td class="t">{esc(c["title"])}</td><td class="p">{points_html(c)}</td></tr>')
+            continue
+        flush()
+        image_only = any(f.get('concept') == c['id'] for f in figs)  # diagrams drawn to replace the text
+        media = ''.join(figure_html(f) for f in figs) + (chart_html(chart_kind) if chart_kind else '')
+        dense = any(f['name'] in DENSE for f in figs)
+        if image_only:
+            out.append(f'<div class="idea fig-only" id="c-{esc(c["id"])}"><h3>{esc(c["title"])}</h3>{media}</div>')
+        elif dense:
+            out.append(f'<div class="idea" id="c-{esc(c["id"])}"><h3>{esc(c["title"])}</h3>{media}<div class="cols2">{points_html(c)}</div></div>')
+        else:
+            out.append(f'<div class="idea side" id="c-{esc(c["id"])}"><h3>{esc(c["title"])}</h3><div class="pair"><div>{media}</div><div>{points_html(c)}</div></div></div>')
+    flush()
+    if s.get('checkpoints'):
+        out.append('<div class="tabletitle grey">past papers asked</div><table class="pp"><thead><tr><th>question</th><th>answer and why</th></tr></thead><tbody>'
+                   + ''.join(f'<tr id="k-{esc(cp["id"])}"><td>{esc(cp["title"])}</td><td class="ans">{esc(cp["summary"])}</td></tr>' for cp in s['checkpoints']) + '</tbody></table>')
     qs = pick_mcqs(s['id'])
     if qs:
         items = ''.join(f'<li>{esc(q["prompt"])}<div class="opts">' + ''.join(f'<span>{esc(o["id"])}. {esc(o["text"])}</span>' for o in q['options']) + '</div></li>' for q in qs)
@@ -308,7 +352,7 @@ def build_html(pages):
              '<h1>Biochemistry</h1><div class="sub">retake review notes</div>',
              f'<div class="units">' + ''.join(f'<div><b>{esc(t)}</b><br>' + ' · '.join(esc(s['title']) for s in ss) + '</div>' for _, t, ss in units) + '</div></div>',
              '<div><div class="legend"><span class="sw c">coral</span><span>headings, numbered key points, things to learn</span>'
-             '<span class="sw b">blue</span><span>clinical links and practice-bank topics</span>'
+             '<span class="sw b">blue</span><span>clinical links</span>'
              '<span class="sw" style="color:#555">grey box</span><span>a past paper asked this, with the corrected reasoning</span>'
              '<span class="sw c">✎</span><span>Test yourself: three practice MCQs per topic, answers upside down</span></div>',
              f'<p class="small">{len(sections)} topics · {n_concepts} ideas · Lippincott Illustrated Reviews: Biochemistry (Ferrier, 6th ed.) and the teacher slides (Water and Buffer; Amino acids and Proteins; Lipid structure; Enzyme Kinetics; DNA, Transcription, Translation, Gene Regulation; Vitamins; laboratory decks). '
@@ -321,9 +365,10 @@ def build_html(pages):
             toc.append(f'<div class="row"><span class="t">{s["order"]:02d} &nbsp;{esc(s["title"])}{ext}</span><span class="dl"></span><span class="p">{pages.get(s["id"], "00")}</span></div>')
     toc.append('</section>')
     body = ''.join(section_html(s, pages) for s in sections)
+    by_topic = ''.join(f'<p class="srcs"><b>{s["order"]:02d} {esc(s["title"])}</b> ' + esc(' · '.join(dict.fromkeys(x for c in s['concepts'] for x in c.get('sourceEvidence', [])))) + '</p>' for s in sections)
     end = ('<section class="section end dots"><h2>Sources and limits</h2><ol>' + ''.join(f'<li>{esc(x)}</li>' for x in data['sources']) +
            '</ol><p>' + esc(data['scope']) + ' Study keys are not certified university keys.</p><p>This review covers the confirmed original biochemistry syllabus and the four imported biochemistry past papers, plus clearly marked practice-bank topics. '
-           'It does not certify a new retake announcement or predict future questions. Figures marked as diagrams are teaching illustrations; check details against Lippincott.</p></section>')
+           'It does not certify a new retake announcement or predict future questions. Figures marked as diagrams are teaching illustrations; check details against Lippincott.</p><h3>Sources by topic</h3>' + by_topic + '</section>')
     return f'<!doctype html><html><head><meta charset="utf-8"><title>Biochemistry Retake Review</title><style>{CSS}</style></head><body>{"".join(cover)}{"".join(toc)}{body}{end}</body></html>'
 
 # ---------------------------------------------------------------- render + measure
@@ -356,8 +401,10 @@ def measure(pdf_path):
             sp['size'] > 30 and norm(sp['text']) and title.startswith(norm(sp['text'])[:20])
             for b in doc[i].get_text('dict')['blocks'] if b['type'] == 0 for l in b['lines'] for sp in l['spans']) and title[:20] in texts[i])
         sec[s['id']] = {'page': start + 1, 'top': 0.07}
+        image_only_ids = {f.get('concept') for f in figures if f.get('concept')}
         for c in s['concepts']:
-            con[c['id']] = {**locate(doc, texts, c['summary'], start), 'quote': c['summary']}
+            q = concept_quote(c, c['id'] in image_only_ids)
+            con[c['id']] = {**locate(doc, texts, q, start), 'quote': q}
         for cp in s.get('checkpoints', []):
             point = {**locate(doc, texts, cp['summary'], start), 'quote': cp['summary']}
             for qid in cp['questionIds']: chk[qid] = point
