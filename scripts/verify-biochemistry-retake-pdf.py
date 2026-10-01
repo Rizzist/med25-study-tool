@@ -12,7 +12,9 @@ reader=PdfReader(pdf)
 normalize=lambda s: re.sub(r'\W+','',s).lower()
 texts=[normalize(p.extract_text() or '') for p in reader.pages]
 assert len(texts)==layout['pageCount']
-assert len(reader.outline)==26
+review=json.loads((ROOT/'data/biochemistry-retake/review.json').read_text())
+flat=lambda o:[y for x in o for y in (flat(x) if isinstance(x,list) else [x])]
+assert len([x for x in flat(reader.outline)])==len(review['sections'])+len({s['unit'] for s in review['sections']}),'Bookmarks: one per unit and one per section'
 for group in ['concepts','checkpoints']:
     for key,point in layout[group].items():
         quote=normalize(point['quote'])
@@ -31,4 +33,4 @@ if files:
             x=(i%4)*360+8;y=(i//4)*525+22
             sheet.paste(im,(x,y));draw.text((x,y-17),str(start+i+1),fill='#000000')
         sheet.save(folder/f'contact-{start//16+1}.png')
-print(f'PASS: {len(texts)} pages, 26 bookmarks, all 413 concept/paper paragraph anchors found on their actual pages.')
+print(f"PASS: {len(texts)} pages, {len(review['sections'])} section bookmarks, all {sum(len(layout[g]) for g in ['concepts','checkpoints'])} concept/paper paragraph anchors found on their actual pages.")

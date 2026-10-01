@@ -28,7 +28,7 @@ test('Retake appears in Term 2 but preserves its original source identity and gu
  assert(!text('src/components/ExamModeChooser.tsx').includes('Respiratory · exam mode'));
 });
 test('Practice reuses all and only existing Cells & Molecules biochemistry questions',()=>{
- assert.equal(practice.length,703);assert.equal(course.sections.length,26);assert.equal(audit.conceptCount,171);
+ assert.equal(practice.length,703);assert.equal(course.sections.length,36);assert.equal(audit.conceptCount,256);
  const old=new Map(read('data/mcq-runtime/july29.json').filter(q=>q.subject==='biochemistry').map(q=>[q.id,q]));
  assert.equal(old.size,practice.length);
  for(const q of practice){assert.equal(q.subject,'biochemistry');assert(q.id.startsWith('retake-practice-'));assert(!old.has(q.id));assert(q.tags.includes('exam-'+exam));assert(!q.tags.some(t=>t.startsWith('exam-term2')));assert(!q.tags.includes('past-paper'));const original=old.get(q.id.slice('retake-practice-'.length));assert(original,q.id);assert.equal(q.prompt,original.prompt);assert.deepEqual(q.options,original.options);assert.equal(q.correctOptionId,original.correctOptionId);}
@@ -58,7 +58,8 @@ test('Existing paragraph anchors are preserved; expanded scope never invents rev
  const bytes=fs.readFileSync(new URL('../public/study/reviews/biochemistry-retake.pdf',import.meta.url));
  assert.equal(createHash('sha256').update(bytes).digest('hex'),anchors.pdfSha256);
  assert.equal(course.volumes[0].sha256,anchors.pdfSha256);
- assert.equal(Object.keys(anchors.questions).length,721);
+ assert.equal(Object.keys(anchors.questions).length,946);
+ for(const q of practice)assert(anchors.questions[q.id],"every practice question opens an exact review paragraph: "+q.id);
  for(const q of [...practice,...finals]){const ref=resolveGuidedReference(course,anchors,q.id);if(anchors.questions[q.id]){assert.equal(ref.precision,'paragraph',q.id);assert(ref.quote.length>20);assert(ref.page<=course.volumes[0].pageCount);assert(ref.top>=0&&ref.top<1);}else if(course.questions[q.id].sectionId){assert.equal(ref.precision,'section');}else{assert.equal(ref,null);assert(course.questions[q.id].uncertain);}}
  for(const q of finals.filter(q=>q.subject!=='biochemistry'))assert.equal(resolveGuidedReference(course,anchors,q.id),null);
  assert.equal(resolveGuidedReference(course,{...anchors,pdfSha256:'outdated'},practice[0].id).precision,'section');

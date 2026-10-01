@@ -5,11 +5,39 @@ Requested 2026-09-30; expanded 2026-10-01. Separate course; existing Cell & Mole
 | Lane | Status | Acceptance |
 | --- | --- | --- |
 | Resources and scope | Audited | Teacher decks + latest confirmed original Term 1 syllabus, not the Term 2 bank |
-| Review PDF | Complete | 92 pages, 26 sections, 171 concepts; bookmarks, comparison tables, source references and source-paper checkpoints |
+| Review PDF | Complete (v2, 2026-10-01) | 170 pages, 36 topics in 10 units, 256 concepts, 20 figures; typeset-notes design; every practice question anchored |
 | Practice | Complete | All 703 existing Cells & Molecules biochemistry Practice MCQs reused verbatim with isolated IDs; no physiology/histology |
 | Past papers | Complete | Four papers: 243 biochemistry-only or 314 full-paper occurrences. Independent attempts, combined selections, scoped downloads and preserved source figures |
 | Guided / unguided | Complete with explicit reference limits | Both practice and papers; 721 exact paragraph anchors, 61 additional section references. 164 additional Practice and 71 non-biochemistry paper items have no linked review section; topic feedback remains available |
 | Verification | Passed | 10 retake regression tests, 76 shared MCQ tests, review-map validation, production build and isolated browser checks |
+
+## Review PDF v2: typeset notes, full practice coverage (2026-10-01)
+
+The review was rebuilt in the "typeset handwritten notes" style chosen from the style trials (modelled on Zahraa Fawzi's CVS anatomy notes): dot-grid paper, coral handwritten headings and numbered key points (Nanum Pen Script), Patrick Hand body text, blue clinical links, grey "past paper asked" boxes, and a "Test yourself" box per topic with three linked practice MCQs and upside-down answers.
+
+| Change | Detail |
+| --- | --- |
+| Organization | 36 topics in 10 units following the teacher decks: Foundations, Proteins, Enzymes and energy, Carbohydrates, Lipids, Nitrogen metabolism, Metabolic integration, Nutrition and vitamins, Molecular biology, Laboratory. Section IDs are unchanged; only order and units are presentational. |
+| Coverage | Lippincott Chapters 8–13 (existing curated concepts) and new Chapters 19–22 are now taught, clearly marked "practice-bank topic" because the reused Cells & Molecules practice bank tests them; the confirmed syllabus statement is unchanged. 256 concepts (was 171). |
+| Guided anchors | Every one of the 703 practice questions now opens an exact review paragraph (was 478); 946 anchors in total. Links for the 225 previously unanchored questions live in `data/teacher-materials/biochemistry-concepts-retake-expansion.json` (`links`), so the Practice set itself is unchanged. |
+| Figures | 16 process diagrams generated with Codex image generation (gpt-5.6), each checked for labels and science (strand polarity, compartments, enzyme placement); 4 graphs computed from their equations (weak-acid titration, Hb/Mb O₂ binding, Michaelis–Menten, Lineweaver–Burk with inhibitors). |
+| Corrections | Two curated statements fixed: GALT transfers UMP (not UDP); TCA dehydrogenases are activated by signals of a low-energy state. |
+| Size | 170 pages, about 10.6 MB (dense diagrams print at full width). Figure originals (lossless PNG) are archived in `MED SLIDES/BIOCHEM/08 Retake Review/figures-original/`; the repo keeps high-quality JPEGs. |
+| Review fixes | An independent gpt-5.6 review checked all figures, graphs, 133 new-chapter concepts and 89 Test-yourself keys. Fixed: Ehlers–Danlos leader in the collagen figure (now lysyl hydroxylase and N-procollagen peptidase), per-enzyme TCA regulation, graph axis and legend placement, list-number overflow at page breaks, larger dense figures; one ambiguous practice question (`retake-practice-lippincott-ch1-bank-023-v1`, two defensible options) is excluded from Test-yourself boxes. |
+
+Authoring sources: `data/teacher-materials/biochemistry-concepts-retake-expansion.json` (60 new concepts and four comparison tables, written by gpt-5.6 from Lippincott 6e with page citations, then reviewed), `data/biochemistry-retake/figures/` (+ `figures.json` captions), `data/biochemistry-retake/fonts/` (OFL fonts with licences).
+
+Regenerate:
+
+```sh
+node scripts/build-biochemistry-retake.mjs          # writes review.json; stops at the layout-hash check
+python3 scripts/render-biochemistry-retake.py        # needs PyMuPDF + Pillow and Google Chrome; writes the PDF and pdf-layout.json
+node scripts/build-biochemistry-retake.mjs          # publishes anchors, course file, locks and downloads
+npm run mcq:generate && npm run biochemistry:retake:check
+python3 scripts/verify-biochemistry-retake-pdf.py   # every anchored paragraph is on its recorded page
+```
+
+The renderer prints HTML with headless Chrome, measures each section, concept and past-paper paragraph from the PDF text layer, and keeps every anchored paragraph on one page so Guided mode opens it exactly.
 
 ## Scope decision
 
