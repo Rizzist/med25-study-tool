@@ -9,7 +9,7 @@ import ts from 'typescript';
 import {scopeLimbPaper,limbBankSelection} from '../src/lib/mcq/limb-paper-scope.mjs';
 import {combinedSourceSelection,finalPaperKey,readCombinedSelections} from '../src/lib/mcq/paper-selection.mjs';
 import {parseFinalExamProgress} from '../src/lib/mcq/final-exam-state.mjs';
-import {parseExport,keyOf} from '../src/lib/paper-pdf/parse-export.mjs';
+import {parseExport,keyOf,scopeLimbExport} from '../src/lib/paper-pdf/parse-export.mjs';
 
 const root=path.resolve(import.meta.dirname,'..');
 const text=p=>fs.readFileSync(path.join(root,p),'utf8');
@@ -20,20 +20,20 @@ const cards=catalog.collections.filter(c=>c.courseId===exam);
 const questions=text(`data/final-exams/${bank}.jsonl`).trim().split('\n').map(JSON.parse);
 const papers=cards.map(c=>read(`data/limbs/papers/${c.id}.json`));
 
-test('all collected files are classified; distinct collections retain 475 source items',()=>{
+test('all collected files are classified; distinct collections retain 546 source items',()=>{
  const manifest=read('data/limbs/source-manifest.json');
  for(const source of manifest.collections.flatMap(c=>c.sources)){
   assert(source.bytes<50*1024*1024,`${source.url} exceeds web asset size budget`);
   if(source.processing){assert(source.originalSha256);assert(source.originalBytes>source.bytes);}
  }
  const inventory=read('data/limbs/collection-inventory.json').inventory;
- assert.equal(inventory.length,96);
+ assert.equal(inventory.length,103);
  assert(inventory.every(s=>s.sha256&&(s.collection||s.archivePath)&&s.classification));
- assert.equal(cards.length,19);assert.equal(papers.flatMap(p=>p.questions).length,475);
- assert.equal(questions.length,468);assert.equal(new Set(questions.map(q=>q.id)).size,468);
- assert.equal(cards.reduce((n,c)=>n+c.ungradedCount,0),7);
- assert.equal(cards.filter(c=>c.defaultEligible).length,15);
- assert.equal(limbBankSelection(cards,'all').gradedQuestionIds.length,365);
+ assert.equal(cards.length,22);assert.equal(papers.flatMap(p=>p.questions).length,546);
+ assert.equal(questions.length,536);assert.equal(new Set(questions.map(q=>q.id)).size,536);
+ assert.equal(cards.reduce((n,c)=>n+c.ungradedCount,0),10);
+ assert.equal(cards.filter(c=>c.defaultEligible).length,17);
+ assert.equal(limbBankSelection(cards,'all').gradedQuestionIds.length,410);
  assert.equal(cards.find(c=>c.id==='limbs-upper-online-screenshots').originalOrderClaim,false);
 });
 
@@ -42,25 +42,33 @@ test('all scored items validate, have a review section and retain valid answer p
  const course=read('data/review-curriculum/courses/term2-limbs.json');
  for(const q of questions){
   assert(validate(q),`${q.id}: ${JSON.stringify(validate.errors)}`);
-  assert(course.questions[q.id]?.sectionId,q.id);
+  const mapping=course.questions[q.id];
+  assert(mapping,q.id);
+  if(!mapping.sectionId){
+   assert(q.tags.includes('limb-region-axial'),q.id);
+   assert(mapping.uncertain&&mapping.status==='needs-crosswalk');
+   assert(q.answerReview.evidence.some(e=>/cvs.pdf|Langman's/.test(e)),q.id);
+  }
   assert(['ai-inferred','source-reviewed'].includes(q.answerReview.basis));
   assert(q.explanation.trim());assert(q.options.some(o=>o.id===q.correctOptionId));
   assert.equal(q.tags.filter(t=>/^limb-region-/.test(t)).length,1);
  }
 });
 
-test('upper/lower filtering partitions each mixed paper without mutating original content',()=>{
+test('Full keeps axial/general items while Upper/Lower partition limb items without mutation',()=>{
  let upper=0,lower=0;
  for(const c of cards){
   const before=JSON.stringify(c),u=scopeLimbPaper(c,'upper'),l=scopeLimbPaper(c,'lower');
   assert.equal(scopeLimbPaper(c),c);assert.equal(JSON.stringify(c),before);
   assert(!u.gradedQuestionIds.some(id=>l.gradedQuestionIds.includes(id)));
-  assert.deepEqual(new Set([...u.gradedQuestionIds,...l.gradedQuestionIds]),new Set(c.gradedQuestionIds));
-  assert.equal(u.sourceRecordCount+l.sourceRecordCount,c.sourceRecordCount);
+  const extra=[...(c.limbQuestionIds.axial??[]),...(c.limbQuestionIds.general??[])];
+  assert.deepEqual(new Set([...u.gradedQuestionIds,...l.gradedQuestionIds,...extra]),new Set(c.gradedQuestionIds));
+  assert(!extra.some(id=>u.gradedQuestionIds.includes(id)||l.gradedQuestionIds.includes(id)));
+  assert.equal(u.sourceRecordCount+l.sourceRecordCount+(c.limbSourceCounts.axial??0)+(c.limbSourceCounts.general??0),c.sourceRecordCount);
   assert.equal(u.ungradedCount+l.ungradedCount,c.ungradedCount);
   upper+=u.gradedQuestionCount;lower+=l.gradedQuestionCount;
  }
- assert.equal(upper,255);assert.equal(lower,213);
+ assert.equal(upper,296);assert.equal(lower,227);
  const mixed=cards.find(c=>c.id==='limbs-mixed-theory-2022');
  assert.equal(scopeLimbPaper(mixed,'upper').gradedQuestionCount,25);
  assert.equal(scopeLimbPaper(mixed,'lower').gradedQuestionCount,20);
@@ -110,7 +118,7 @@ test('all public sources and practical figures exist and match their fingerprint
   assert.equal(bytes.length,a.bytes,a.url);
   assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sha256,a.url);
  }
- assert.equal(questions.filter(q=>q.media?.length).length,45);
+ assert.equal(questions.filter(q=>q.media?.length).length,48);
  for(const q of questions)for(const m of q.media??[]){
   assert(!path.isAbsolute(m.path)&&!m.path.includes('..'));
   assert(fs.statSync(path.join(root,'public/study',m.path)).size>1000);
@@ -123,9 +131,9 @@ test('all public sources and practical figures exist and match their fingerprint
 
 test('runtime catalog exposes the source-only bank and all practical assets',()=>{
  const runtime=read('data/mcq-runtime/index.json').finals[`${exam}:${bank}`];
- assert.equal(runtime.count,468);
+ assert.equal(runtime.count,536);
  const course=read('public/study/runtime/catalog.json').exams.find(c=>c.id===exam);
- assert.equal(course.finalExamQuestionCount,468);
+ assert.equal(course.finalExamQuestionCount,536);
  const media=read('data/mcq-runtime/media.json');
  for(const q of questions)for(const m of q.media??[])assert.equal(media[q.id+'::'+m.id].path,m.path);
 });
@@ -164,7 +172,7 @@ test('final API defaults to limb sources only, honors ETags and rejects cross-co
  }
 });
 
-test('PDF document definitions contain 468 graded answers and 7 explicit withheld entries',()=>{
+test('PDF document definitions contain 536 graded answers and 10 explicit withheld entries',()=>{
  const {buildPaperDocument}=load(path.join(root,'src/lib/paper-pdf/document.ts'));
  let scored=0,ungraded=0;
  for(const card of cards){
@@ -173,5 +181,30 @@ test('PDF document definitions contain 468 graded answers and 7 explicit withhel
   scored+=(content.match(/"Answer [A-F]"/g)??[]).length;
   ungraded+=(content.match(/"Not graded"/g)??[]).length;
  }
- assert.equal(scored,468);assert.equal(ungraded,7);
+ assert.equal(scored,536);assert.equal(ungraded,10);
+});
+
+test('October imports retain complete source sets, deduplicate reposts and disclose defective answers',()=>{
+ const expected=[['limbs-iums-upper-2021',25,23,20,0,3],['limbs-upper-axial-fragment',27,26,21,0,5],['limbs-lower-axial-fragment',19,19,0,14,5]];
+ for(const[id,source,scored,upper,lower,fullOnly]of expected){
+  const c=cards.find(c=>c.id===id),p=papers.find(p=>p.id===id);
+  assert.equal(c.sourceRecordCount,source);assert.equal(c.gradedQuestionCount,scored);
+  assert.equal(scopeLimbPaper(c,'upper').gradedQuestionCount,upper);
+  assert.equal(scopeLimbPaper(c,'lower').gradedQuestionCount,lower);
+  assert.equal(c.gradedQuestionCount-upper-lower,fullOnly);
+  const doc=parseExport(text('public'+c.downloads.questionsAndKey));
+  for(const scope of ['upper','lower']){
+   const part=scopeLimbExport(doc,scope),scoped=scopeLimbPaper(c,scope);
+   assert.equal(part.questions.length,scoped.sourceRecordCount);
+   assert.deepEqual(part.keys.filter(k=>keyOf(k).letter).map(k=>k.id),scoped.gradedQuestionIds);
+  }
+  for(const r of p.questions.filter(r=>r.sourcePrompt)){
+   assert(text('public'+c.downloads.questions).includes(r.sourcePrompt));
+   assert(questions.find(q=>q.id===r.id).source.excerpt.includes(r.sourcePrompt));
+  }
+ }
+ assert.equal(papers.find(p=>p.id==='limbs-iums-upper-2021').questions.find(q=>q.number===15).providedKey,'B');
+ assert.equal(papers.find(p=>p.id==='limbs-iums-upper-2021').questions.find(q=>q.number===15).graded,false);
+ assert.equal(papers.find(p=>p.id==='limbs-upper-axial-fragment').questions.find(q=>q.number===19).graded,false);
+ assert.deepEqual(papers.find(p=>p.id==='limbs-upper-axial-fragment').missingSourceNumbers,['11']);
 });

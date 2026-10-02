@@ -2,6 +2,36 @@
 
 Started 2026-09-30. Source retrieval uses Telegram's Chrome UI only.
 
+## 2 October 2026 — new Downloads import
+
+Three distinct question sets from seven new PDFs are now imported. Duplicate/subset copies were merged; the May 2025 midterm was already present, and the 48-page revision book remains reference-only.
+
+| New collection | Source items | Full scored | Upper only | Lower only | Availability |
+| --- | ---: | ---: | ---: | ---: | --- |
+| IUMS upper-limb screenshots · 1399/11/08 | 25 | 23 | 20 | 0 | Optional supplement; non-TUMS source |
+| Upper-limb & axial photographed fragment (`Past year 3`) | 27 | 26 | 21 | 0 | Main bank |
+| Lower-limb & axial photographed fragment (`Past year 2`) | 19 | 19 | 0 | 14 | Main bank |
+| **Added** | **71** | **68** | **41** | **14** | **13 scored axial/general questions are Full-only** |
+
+Current total: **103 source files, 22 collections, 546 source items, 536 scored and 10 ungraded**. Scored scope totals are 296 upper, 227 lower and 13 Full-only. The default main bank has 17 collections / 410 scored; five optional supplements have 126 scored.
+
+The three newly ungraded items are IUMS Q15 (scapular-anastomosis network ambiguity and an incorrect supplied key), IUMS Q18 (insufficient localization of an ulnar lesion), and upper/axial Q19 (all supplied lumbrical statements are false). All remain in the source exports with explanations. Corrected or inferred answers, multiple defensible answers, and reconstructed wording retain provenance; the photographed key is not silently overwritten. Axial items cite CVS or development references explicitly rather than receiving false limb-review mappings.
+
+Originals and one combined exam-and-answer-key Markdown file per new collection are in the MED SLIDES archive. The IUMS originals contain student-identifying UI and stay local; anonymous question/key exports are available in MED25. Full / Upper only / Lower only scopes also govern generated bundle PDFs and combined sessions. Individual paper downloads and original-source PDFs remain whole.
+
+Verification: 10/10 limb checks, 2/2 scoped PDF checks, 76/76 MCQ regressions, and production build pass. All 468 previously scored limb records and unrelated course records are unchanged. A generator-ordering issue was repaired so a limbs check no longer depends on which course was rebuilt last. Chrome checks against an isolated file-backed QA account verified the three scope selectors, new collection counts, a 21-question upper session with a correctly rendered source figure and instant feedback, a 14-question lower combined session, and independent Full/Upper saved progress. No production accounts or results were modified.
+
+Regenerate safely:
+
+1. `node scripts/content/import-limbs-october.mjs`
+2. `npm run mcq:generate`
+3. `node scripts/content/import-limbs-october.mjs` (copies updated combined Markdown into the local archive)
+4. `npm run limbs:papers:check` and `npm run mcq:check`
+
+Do not use the older `finish-limbs-archive.mjs` to rebuild the current inventory: it describes the original September corpus only. The October helper is append-only and checks existing archive bytes before copying. The user authorized committing and pushing this import on 2 October 2026; deployment remains handled by the existing pipeline.
+
+## Historical baseline — 30 September 2026
+
 | Lane | Status | Remaining |
 | --- | --- | --- |
 | Collect originals | Complete for the three accessible channels below | 96 source files indexed; no unclassified files |
@@ -64,7 +94,7 @@ These are retained in source downloads and counted as ungraded, not silently dis
 
 ## Resume / publish
 
-Implementation is ready locally at `http://localhost:3000/?exam=term2-limbs` (normal login required). The user authorized committing and pushing the entire pending worktree, including the preceding account/PWA lanes. To re-run generation: `npm run limbs:papers:generate`, `npm run mcq:generate`, and `node scripts/content/finish-limbs-archive.mjs`, then the verification commands above.
+The September implementation was prepared for `http://localhost:3000/?exam=term2-limbs` (normal login required). The user authorized committing and pushing that worktree, including the preceding account/PWA lanes. For current regeneration, use the October workflow above rather than the historical archive finalizer.
 
 Two large lower-2023 PDF scans have web-optimized full-resolution image encodings for GitHub/web delivery (JPEG quality 90, all pages and text retained). Their untouched originals remain in Downloads and the local archive. `data/limbs/source-manifest.json` records both original and web hashes. Rebuilding those copies via `scripts/content/archive-limbs.mjs` requires Python with pypdf and Pillow; set `MED25_PDF_PYTHON` to the desired interpreter. A size-budget test prevents future oversized published files.
 

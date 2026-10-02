@@ -161,7 +161,10 @@
         "limbs-upper-photographed-a",
         "limbs-upper-photographed-b",
         "limbs-upper-practical-2021",
-        "limbs-upper-theory-2021"
+        "limbs-upper-theory-2021",
+        "limbs-iums-upper-2021",
+        "limbs-upper-axial-fragment",
+        "limbs-lower-axial-fragment"
       ],
       "defaultCollectionIds": [
         "limbs-lower-persian-2021",
@@ -178,12 +181,14 @@
         "limbs-upper-photographed-a",
         "limbs-upper-photographed-b",
         "limbs-upper-practical-2021",
-        "limbs-upper-theory-2021"
+        "limbs-upper-theory-2021",
+        "limbs-upper-axial-fragment",
+        "limbs-lower-axial-fragment"
       ],
       "hasSourceCollections": true,
-      "sourceRecordCount": 475,
+      "sourceRecordCount": 546,
       "emptyReason": null,
-      "gradedQuestionCount": 468
+      "gradedQuestionCount": 536
     },
     {
       "id": "term2-biochemistry",
@@ -10996,11 +11001,15 @@
           "limbs-lower-midterm-2023-q038",
           "limbs-lower-midterm-2023-q039",
           "limbs-lower-midterm-2023-q040"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 0,
-        "lower": 40
+        "lower": 40,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-lower-midterm-2023/questions.md",
@@ -11119,11 +11128,15 @@
           "limbs-lower-midterm-2024-q018",
           "limbs-lower-midterm-2024-q019",
           "limbs-lower-midterm-2024-q020"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 0,
-        "lower": 20
+        "lower": 20,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-lower-midterm-2024/questions.md",
@@ -11256,11 +11269,15 @@
           "limbs-lower-persian-2021-q023",
           "limbs-lower-persian-2021-q024",
           "limbs-lower-persian-2021-q025"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 0,
-        "lower": 25
+        "lower": 25,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-lower-persian-2021/questions.md",
@@ -11403,11 +11420,15 @@
           "limbs-lower-photographed-2025-q018",
           "limbs-lower-photographed-2025-q019",
           "limbs-lower-photographed-2025-q020"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 0,
-        "lower": 20
+        "lower": 20,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-lower-photographed-2025/questions.md",
@@ -11516,11 +11537,15 @@
           "limbs-lower-practical-2021-q012",
           "limbs-lower-practical-2021-q013",
           "limbs-lower-practical-2021-q014"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 0,
-        "lower": 14
+        "lower": 14,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-lower-practical-2021/questions.md",
@@ -11661,11 +11686,15 @@
           "limbs-lower-theory-2021-q028",
           "limbs-lower-theory-2021-q029",
           "limbs-lower-theory-2021-q030"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 0,
-        "lower": 30
+        "lower": 30,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-lower-theory-2021/questions.md",
@@ -11823,11 +11852,15 @@
           "limbs-mixed-online-fragment-q025",
           "limbs-mixed-online-fragment-q028",
           "limbs-mixed-online-fragment-q030"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 13,
-        "lower": 20
+        "lower": 20,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-mixed-online-fragment/questions.md",
@@ -12073,11 +12106,15 @@
           "limbs-mixed-photographed-fragment-q037",
           "limbs-mixed-photographed-fragment-q038",
           "limbs-mixed-photographed-fragment-q039"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 20,
-        "lower": 16
+        "lower": 16,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-mixed-photographed-fragment/questions.md",
@@ -12231,11 +12268,15 @@
           "limbs-mixed-practical-2022-q008",
           "limbs-mixed-practical-2022-q009",
           "limbs-mixed-practical-2022-q010"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 10,
-        "lower": 10
+        "lower": 10,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-mixed-practical-2022/questions.md",
@@ -12422,11 +12463,15 @@
           "limbs-mixed-theory-2022-q018",
           "limbs-mixed-theory-2022-q019",
           "limbs-mixed-theory-2022-q020"
-        ]
+        ],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 25,
-        "lower": 20
+        "lower": 20,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-mixed-theory-2022/questions.md",
@@ -12560,11 +12605,15 @@
           "limbs-upper-final-2023-q022",
           "limbs-upper-final-2023-q023"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 23,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-final-2023/questions.md",
@@ -12668,11 +12717,15 @@
           "limbs-upper-kish-2025-fragment-q019",
           "limbs-upper-kish-2025-fragment-q020"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 13,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-kish-2025-fragment/questions.md",
@@ -12826,11 +12879,15 @@
           "limbs-upper-midterm-2025-q024",
           "limbs-upper-midterm-2025-q025"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 25,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-midterm-2025/questions.md",
@@ -12946,11 +13003,15 @@
           "limbs-upper-online-screenshots-q018",
           "limbs-upper-online-screenshots-q019"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 19,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-online-screenshots/questions.md",
@@ -13056,11 +13117,15 @@
           "limbs-upper-persian-2024-q019",
           "limbs-upper-persian-2024-q020"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 20,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-persian-2024/questions.md",
@@ -13183,11 +13248,15 @@
           "limbs-upper-photographed-a-q019",
           "limbs-upper-photographed-a-q020"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 20,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-photographed-a/questions.md",
@@ -13314,11 +13383,15 @@
           "limbs-upper-photographed-b-q019",
           "limbs-upper-photographed-b-q020"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 20,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-photographed-b/questions.md",
@@ -13413,11 +13486,15 @@
           "limbs-upper-practical-2021-q011",
           "limbs-upper-practical-2021-q012"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 12,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-practical-2021/questions.md",
@@ -13588,11 +13665,15 @@
           "limbs-upper-theory-2021-q039",
           "limbs-upper-theory-2021-q040"
         ],
-        "lower": []
+        "lower": [],
+        "axial": [],
+        "general": []
       },
       "limbSourceCounts": {
         "upper": 40,
-        "lower": 0
+        "lower": 0,
+        "axial": 0,
+        "general": 0
       },
       "downloads": {
         "questions": "/study/past-paper-downloads/limbs-upper-theory-2021/questions.md",
@@ -13603,6 +13684,384 @@
         {
           "name": "UPPER LIMB THEORY FINAL EXAM (1).pdf",
           "url": "/study/limbs/past-papers/limbs-upper-theory-2021/01-paper.pdf"
+        }
+      ]
+    },
+    {
+      "id": "limbs-iums-upper-2021",
+      "courseId": "term2-limbs",
+      "bankId": "limbs-past-papers",
+      "bankKey": "term2-limbs:limbs-past-papers",
+      "title": "IUMS upper limb · 1399/11/08 · 25-question paper",
+      "note": "IUMS online examination screenshots dated 1399/11/08 on the cover; not a confirmed TUMS final. Three overlapping downloads are one paper, with the photographed answer grid retained as supplied (not authenticated official) evidence. Cover screenshots contain a student's name, so originals stay in the private archive. Full includes limb-development and vertebral items; Upper only excludes these. Two defective questions remain in the source download without a score.",
+      "kind": "source-paper",
+      "date": null,
+      "dateEvidence": "IUMS online examination screenshots dated 1399/11/08 on the cover; not a confirmed TUMS final. Three overlapping downloads are one paper, with the photographed answer grid retained as supplied (not authenticated official) evidence. Cover screenshots contain a student's name, so originals stay in the private archive. Full includes limb-development and vertebral items; Upper only excludes these. Two defective questions remain in the source download without a score.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": true,
+      "sources": [],
+      "sourceRecordCount": 25,
+      "transcribedQuestionCount": 25,
+      "gradedQuestionCount": 23,
+      "sourceKeyCount": 25,
+      "editorialKeyCount": 23,
+      "inferredKeyCount": 6,
+      "ungradedCount": 2,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "limbs-iums-upper-2021-q001",
+        "limbs-iums-upper-2021-q002",
+        "limbs-iums-upper-2021-q003",
+        "limbs-iums-upper-2021-q004",
+        "limbs-iums-upper-2021-q005",
+        "limbs-iums-upper-2021-q006",
+        "limbs-iums-upper-2021-q007",
+        "limbs-iums-upper-2021-q008",
+        "limbs-iums-upper-2021-q009",
+        "limbs-iums-upper-2021-q010",
+        "limbs-iums-upper-2021-q011",
+        "limbs-iums-upper-2021-q012",
+        "limbs-iums-upper-2021-q013",
+        "limbs-iums-upper-2021-q014",
+        "limbs-iums-upper-2021-q015",
+        "limbs-iums-upper-2021-q016",
+        "limbs-iums-upper-2021-q017",
+        "limbs-iums-upper-2021-q018",
+        "limbs-iums-upper-2021-q019",
+        "limbs-iums-upper-2021-q020",
+        "limbs-iums-upper-2021-q021",
+        "limbs-iums-upper-2021-q022",
+        "limbs-iums-upper-2021-q023",
+        "limbs-iums-upper-2021-q024",
+        "limbs-iums-upper-2021-q025"
+      ],
+      "gradedQuestionIds": [
+        "limbs-iums-upper-2021-q001",
+        "limbs-iums-upper-2021-q002",
+        "limbs-iums-upper-2021-q003",
+        "limbs-iums-upper-2021-q004",
+        "limbs-iums-upper-2021-q005",
+        "limbs-iums-upper-2021-q006",
+        "limbs-iums-upper-2021-q007",
+        "limbs-iums-upper-2021-q008",
+        "limbs-iums-upper-2021-q009",
+        "limbs-iums-upper-2021-q010",
+        "limbs-iums-upper-2021-q011",
+        "limbs-iums-upper-2021-q012",
+        "limbs-iums-upper-2021-q013",
+        "limbs-iums-upper-2021-q014",
+        "limbs-iums-upper-2021-q016",
+        "limbs-iums-upper-2021-q017",
+        "limbs-iums-upper-2021-q019",
+        "limbs-iums-upper-2021-q020",
+        "limbs-iums-upper-2021-q021",
+        "limbs-iums-upper-2021-q022",
+        "limbs-iums-upper-2021-q023",
+        "limbs-iums-upper-2021-q024",
+        "limbs-iums-upper-2021-q025"
+      ],
+      "limbQuestionIds": {
+        "upper": [
+          "limbs-iums-upper-2021-q001",
+          "limbs-iums-upper-2021-q002",
+          "limbs-iums-upper-2021-q004",
+          "limbs-iums-upper-2021-q005",
+          "limbs-iums-upper-2021-q006",
+          "limbs-iums-upper-2021-q007",
+          "limbs-iums-upper-2021-q008",
+          "limbs-iums-upper-2021-q009",
+          "limbs-iums-upper-2021-q010",
+          "limbs-iums-upper-2021-q011",
+          "limbs-iums-upper-2021-q012",
+          "limbs-iums-upper-2021-q014",
+          "limbs-iums-upper-2021-q016",
+          "limbs-iums-upper-2021-q017",
+          "limbs-iums-upper-2021-q019",
+          "limbs-iums-upper-2021-q020",
+          "limbs-iums-upper-2021-q021",
+          "limbs-iums-upper-2021-q022",
+          "limbs-iums-upper-2021-q024",
+          "limbs-iums-upper-2021-q025"
+        ],
+        "lower": [],
+        "axial": [
+          "limbs-iums-upper-2021-q023"
+        ],
+        "general": [
+          "limbs-iums-upper-2021-q003",
+          "limbs-iums-upper-2021-q013"
+        ]
+      },
+      "limbSourceCounts": {
+        "upper": 22,
+        "lower": 0,
+        "axial": 1,
+        "general": 2
+      },
+      "downloads": {
+        "questions": "/study/past-paper-downloads/limbs-iums-upper-2021/questions.md",
+        "answerKey": "/study/past-paper-downloads/limbs-iums-upper-2021/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/limbs-iums-upper-2021/questions-and-key.md"
+      },
+      "originals": []
+    },
+    {
+      "id": "limbs-upper-axial-fragment",
+      "courseId": "term2-limbs",
+      "bankId": "limbs-past-papers",
+      "bankKey": "term2-limbs:limbs-past-papers",
+      "title": "Upper limb & axial anatomy · Past year 3",
+      "note": "24-page screenshot compilation; institution and exam date unconfirmed. Contains 27 distinct source questions numbered 1-28 with Q11 missing. Q13's repeated partial crop is counted once. Full includes five axial/thoracic items; Upper only excludes them. Q19 has no correct offered choice and remains ungraded. Spelling is normalized and substantive stem repairs are disclosed.",
+      "kind": "source-paper",
+      "date": null,
+      "dateEvidence": "24-page screenshot compilation; institution and exam date unconfirmed. Contains 27 distinct source questions numbered 1-28 with Q11 missing. Q13's repeated partial crop is counted once. Full includes five axial/thoracic items; Upper only excludes them. Q19 has no correct offered choice and remains ungraded. Spelling is normalized and substantive stem repairs are disclosed.",
+      "courseMatch": "limbs-source",
+      "defaultEligible": true,
+      "originalOrderClaim": true,
+      "sources": [
+        {
+          "title": "Past year 3.pdf",
+          "publicUrl": "/study/limbs/past-papers/limbs-upper-axial-fragment/01-paper.pdf",
+          "sha256": "4a502b02fa46ccd15833ccd02f78d3437fe275995d8224822c7dd401e558973e",
+          "exists": true,
+          "note": "24-page screenshot compilation; institution and exam date unconfirmed. Contains 27 distinct source questions numbered 1-28 with Q11 missing. Q13's repeated partial crop is counted once. Full includes five axial/thoracic items; Upper only excludes them. Q19 has no correct offered choice and remains ungraded. Spelling is normalized and substantive stem repairs are disclosed."
+        }
+      ],
+      "sourceRecordCount": 27,
+      "transcribedQuestionCount": 27,
+      "gradedQuestionCount": 26,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 26,
+      "inferredKeyCount": 26,
+      "ungradedCount": 1,
+      "missingSourceNumbers": [
+        "11"
+      ],
+      "questionIds": [
+        "limbs-upper-axial-fragment-q001",
+        "limbs-upper-axial-fragment-q002",
+        "limbs-upper-axial-fragment-q003",
+        "limbs-upper-axial-fragment-q004",
+        "limbs-upper-axial-fragment-q005",
+        "limbs-upper-axial-fragment-q006",
+        "limbs-upper-axial-fragment-q007",
+        "limbs-upper-axial-fragment-q008",
+        "limbs-upper-axial-fragment-q009",
+        "limbs-upper-axial-fragment-q010",
+        "limbs-upper-axial-fragment-q012",
+        "limbs-upper-axial-fragment-q013",
+        "limbs-upper-axial-fragment-q014",
+        "limbs-upper-axial-fragment-q015",
+        "limbs-upper-axial-fragment-q016",
+        "limbs-upper-axial-fragment-q017",
+        "limbs-upper-axial-fragment-q018",
+        "limbs-upper-axial-fragment-q019",
+        "limbs-upper-axial-fragment-q020",
+        "limbs-upper-axial-fragment-q021",
+        "limbs-upper-axial-fragment-q022",
+        "limbs-upper-axial-fragment-q023",
+        "limbs-upper-axial-fragment-q024",
+        "limbs-upper-axial-fragment-q025",
+        "limbs-upper-axial-fragment-q026",
+        "limbs-upper-axial-fragment-q027",
+        "limbs-upper-axial-fragment-q028"
+      ],
+      "gradedQuestionIds": [
+        "limbs-upper-axial-fragment-q001",
+        "limbs-upper-axial-fragment-q002",
+        "limbs-upper-axial-fragment-q003",
+        "limbs-upper-axial-fragment-q004",
+        "limbs-upper-axial-fragment-q005",
+        "limbs-upper-axial-fragment-q006",
+        "limbs-upper-axial-fragment-q007",
+        "limbs-upper-axial-fragment-q008",
+        "limbs-upper-axial-fragment-q009",
+        "limbs-upper-axial-fragment-q010",
+        "limbs-upper-axial-fragment-q012",
+        "limbs-upper-axial-fragment-q013",
+        "limbs-upper-axial-fragment-q014",
+        "limbs-upper-axial-fragment-q015",
+        "limbs-upper-axial-fragment-q016",
+        "limbs-upper-axial-fragment-q017",
+        "limbs-upper-axial-fragment-q018",
+        "limbs-upper-axial-fragment-q020",
+        "limbs-upper-axial-fragment-q021",
+        "limbs-upper-axial-fragment-q022",
+        "limbs-upper-axial-fragment-q023",
+        "limbs-upper-axial-fragment-q024",
+        "limbs-upper-axial-fragment-q025",
+        "limbs-upper-axial-fragment-q026",
+        "limbs-upper-axial-fragment-q027",
+        "limbs-upper-axial-fragment-q028"
+      ],
+      "limbQuestionIds": {
+        "upper": [
+          "limbs-upper-axial-fragment-q001",
+          "limbs-upper-axial-fragment-q002",
+          "limbs-upper-axial-fragment-q003",
+          "limbs-upper-axial-fragment-q005",
+          "limbs-upper-axial-fragment-q006",
+          "limbs-upper-axial-fragment-q007",
+          "limbs-upper-axial-fragment-q008",
+          "limbs-upper-axial-fragment-q010",
+          "limbs-upper-axial-fragment-q012",
+          "limbs-upper-axial-fragment-q013",
+          "limbs-upper-axial-fragment-q014",
+          "limbs-upper-axial-fragment-q015",
+          "limbs-upper-axial-fragment-q016",
+          "limbs-upper-axial-fragment-q018",
+          "limbs-upper-axial-fragment-q020",
+          "limbs-upper-axial-fragment-q021",
+          "limbs-upper-axial-fragment-q022",
+          "limbs-upper-axial-fragment-q023",
+          "limbs-upper-axial-fragment-q024",
+          "limbs-upper-axial-fragment-q025",
+          "limbs-upper-axial-fragment-q026"
+        ],
+        "lower": [],
+        "axial": [
+          "limbs-upper-axial-fragment-q004",
+          "limbs-upper-axial-fragment-q009",
+          "limbs-upper-axial-fragment-q017",
+          "limbs-upper-axial-fragment-q027",
+          "limbs-upper-axial-fragment-q028"
+        ],
+        "general": []
+      },
+      "limbSourceCounts": {
+        "upper": 22,
+        "lower": 0,
+        "axial": 5,
+        "general": 0
+      },
+      "downloads": {
+        "questions": "/study/past-paper-downloads/limbs-upper-axial-fragment/questions.md",
+        "answerKey": "/study/past-paper-downloads/limbs-upper-axial-fragment/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/limbs-upper-axial-fragment/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "Past year 3.pdf",
+          "url": "/study/limbs/past-papers/limbs-upper-axial-fragment/01-paper.pdf"
+        }
+      ]
+    },
+    {
+      "id": "limbs-lower-axial-fragment",
+      "courseId": "term2-limbs",
+      "bankId": "limbs-past-papers",
+      "bankKey": "term2-limbs:limbs-past-papers",
+      "title": "Lower limb & axial anatomy · Past year 2",
+      "note": "23-page screenshot compilation; cover shows a lower-limb examination dated 1399/11/13 but institutional provenance is not independently confirmed. Nineteen distinct questions survive; several lack source numbers. Full includes four spinal items and one general limb-development item; Lower only excludes these. Internal duplicate screenshots are counted once. Visible selections are not treated as an authenticated answer key.",
+      "kind": "source-paper",
+      "date": null,
+      "dateEvidence": "23-page screenshot compilation; cover shows a lower-limb examination dated 1399/11/13 but institutional provenance is not independently confirmed. Nineteen distinct questions survive; several lack source numbers. Full includes four spinal items and one general limb-development item; Lower only excludes these. Internal duplicate screenshots are counted once. Visible selections are not treated as an authenticated answer key.",
+      "courseMatch": "limbs-source",
+      "defaultEligible": true,
+      "originalOrderClaim": false,
+      "sources": [
+        {
+          "title": "Past year 2.pdf",
+          "publicUrl": "/study/limbs/past-papers/limbs-lower-axial-fragment/01-paper.pdf",
+          "sha256": "a86e94fa09af0950ccaeb74418d3684d572c2041d8e727049148d9d879f121ee",
+          "exists": true,
+          "note": "23-page screenshot compilation; cover shows a lower-limb examination dated 1399/11/13 but institutional provenance is not independently confirmed. Nineteen distinct questions survive; several lack source numbers. Full includes four spinal items and one general limb-development item; Lower only excludes these. Internal duplicate screenshots are counted once. Visible selections are not treated as an authenticated answer key."
+        }
+      ],
+      "sourceRecordCount": 19,
+      "transcribedQuestionCount": 19,
+      "gradedQuestionCount": 19,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 19,
+      "inferredKeyCount": 19,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "limbs-lower-axial-fragment-q001",
+        "limbs-lower-axial-fragment-q002",
+        "limbs-lower-axial-fragment-q003",
+        "limbs-lower-axial-fragment-q004",
+        "limbs-lower-axial-fragment-q005",
+        "limbs-lower-axial-fragment-q006",
+        "limbs-lower-axial-fragment-q007",
+        "limbs-lower-axial-fragment-q008",
+        "limbs-lower-axial-fragment-q009",
+        "limbs-lower-axial-fragment-q010",
+        "limbs-lower-axial-fragment-q011",
+        "limbs-lower-axial-fragment-q012",
+        "limbs-lower-axial-fragment-q013",
+        "limbs-lower-axial-fragment-q014",
+        "limbs-lower-axial-fragment-q015",
+        "limbs-lower-axial-fragment-q016",
+        "limbs-lower-axial-fragment-q017",
+        "limbs-lower-axial-fragment-q018",
+        "limbs-lower-axial-fragment-q019"
+      ],
+      "gradedQuestionIds": [
+        "limbs-lower-axial-fragment-q001",
+        "limbs-lower-axial-fragment-q002",
+        "limbs-lower-axial-fragment-q003",
+        "limbs-lower-axial-fragment-q004",
+        "limbs-lower-axial-fragment-q005",
+        "limbs-lower-axial-fragment-q006",
+        "limbs-lower-axial-fragment-q007",
+        "limbs-lower-axial-fragment-q008",
+        "limbs-lower-axial-fragment-q009",
+        "limbs-lower-axial-fragment-q010",
+        "limbs-lower-axial-fragment-q011",
+        "limbs-lower-axial-fragment-q012",
+        "limbs-lower-axial-fragment-q013",
+        "limbs-lower-axial-fragment-q014",
+        "limbs-lower-axial-fragment-q015",
+        "limbs-lower-axial-fragment-q016",
+        "limbs-lower-axial-fragment-q017",
+        "limbs-lower-axial-fragment-q018",
+        "limbs-lower-axial-fragment-q019"
+      ],
+      "limbQuestionIds": {
+        "upper": [],
+        "lower": [
+          "limbs-lower-axial-fragment-q001",
+          "limbs-lower-axial-fragment-q002",
+          "limbs-lower-axial-fragment-q003",
+          "limbs-lower-axial-fragment-q004",
+          "limbs-lower-axial-fragment-q005",
+          "limbs-lower-axial-fragment-q006",
+          "limbs-lower-axial-fragment-q007",
+          "limbs-lower-axial-fragment-q008",
+          "limbs-lower-axial-fragment-q009",
+          "limbs-lower-axial-fragment-q012",
+          "limbs-lower-axial-fragment-q013",
+          "limbs-lower-axial-fragment-q015",
+          "limbs-lower-axial-fragment-q018",
+          "limbs-lower-axial-fragment-q019"
+        ],
+        "axial": [
+          "limbs-lower-axial-fragment-q011",
+          "limbs-lower-axial-fragment-q014",
+          "limbs-lower-axial-fragment-q016",
+          "limbs-lower-axial-fragment-q017"
+        ],
+        "general": [
+          "limbs-lower-axial-fragment-q010"
+        ]
+      },
+      "limbSourceCounts": {
+        "upper": 0,
+        "lower": 14,
+        "axial": 4,
+        "general": 1
+      },
+      "downloads": {
+        "questions": "/study/past-paper-downloads/limbs-lower-axial-fragment/questions.md",
+        "answerKey": "/study/past-paper-downloads/limbs-lower-axial-fragment/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/limbs-lower-axial-fragment/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "Past year 2.pdf",
+          "url": "/study/limbs/past-papers/limbs-lower-axial-fragment/01-paper.pdf"
         }
       ]
     },
@@ -18223,6 +18682,90 @@
       "url": "/study/past-paper-downloads/limbs-upper-theory-2021/questions-and-key.md",
       "bytes": 26942,
       "sha256": "49a81f9366cc62d43c5a7fba69e7ac8f0990e16fcfde8dde81acf44f4b316d43"
+    },
+    {
+      "collectionId": "limbs-iums-upper-2021",
+      "url": "/study/past-paper-downloads/limbs-iums-upper-2021/questions.md",
+      "bytes": 9635,
+      "sha256": "efeb37be1f70f3327e44f4321b051f207bbeaad70a771aa327e294a7cc683611"
+    },
+    {
+      "collectionId": "limbs-iums-upper-2021",
+      "url": "/study/past-paper-downloads/limbs-iums-upper-2021/answer-key.md",
+      "bytes": 18533,
+      "sha256": "342ff53d7d1d96c906bb0dd73c3b404db88648491a37443dc3a8c4354b756caa"
+    },
+    {
+      "collectionId": "limbs-iums-upper-2021",
+      "url": "/study/past-paper-downloads/limbs-iums-upper-2021/questions-and-key.md",
+      "bytes": 27228,
+      "sha256": "f0e343a98540a76646527ea3b0204cb4f8306b422b645fc83bdf3e82adf1dc0e"
+    },
+    {
+      "collectionId": "limbs-upper-axial-fragment",
+      "url": "/study/limbs/figures/limbs-upper-axial-fragment/q001.png",
+      "bytes": 74230,
+      "sha256": "28ba2aeb20f1af1a75611271a6783890ae31a5eaded6970b03b6fa70e7037c11"
+    },
+    {
+      "collectionId": "limbs-upper-axial-fragment",
+      "url": "/study/limbs/figures/limbs-upper-axial-fragment/q004.png",
+      "bytes": 89248,
+      "sha256": "15320445cab6e37e006a676d160c962a6f0977bcbdc5c9124aed2a9ea9d0b01b"
+    },
+    {
+      "collectionId": "limbs-upper-axial-fragment",
+      "url": "/study/limbs/past-papers/limbs-upper-axial-fragment/01-paper.pdf",
+      "bytes": 1064049,
+      "sha256": "4a502b02fa46ccd15833ccd02f78d3437fe275995d8224822c7dd401e558973e"
+    },
+    {
+      "collectionId": "limbs-upper-axial-fragment",
+      "url": "/study/past-paper-downloads/limbs-upper-axial-fragment/questions.md",
+      "bytes": 9083,
+      "sha256": "a4035626eef6edb4d37badc674d27f3c5982c95575e856159d49e488aa57afb7"
+    },
+    {
+      "collectionId": "limbs-upper-axial-fragment",
+      "url": "/study/past-paper-downloads/limbs-upper-axial-fragment/answer-key.md",
+      "bytes": 15772,
+      "sha256": "4839347cddc34ac267cd03d13d52efb5a2a02757429c8675d43adc24099a775a"
+    },
+    {
+      "collectionId": "limbs-upper-axial-fragment",
+      "url": "/study/past-paper-downloads/limbs-upper-axial-fragment/questions-and-key.md",
+      "bytes": 23967,
+      "sha256": "edc87d510c319c2f7629eeca79046b5d9c59708bdb39be699331da878285201e"
+    },
+    {
+      "collectionId": "limbs-lower-axial-fragment",
+      "url": "/study/limbs/figures/limbs-lower-axial-fragment/q017.png",
+      "bytes": 367063,
+      "sha256": "584b902c474fc0b682c45ba83414914d8a1ae26e7f78f1287ae577360d13b4b9"
+    },
+    {
+      "collectionId": "limbs-lower-axial-fragment",
+      "url": "/study/limbs/past-papers/limbs-lower-axial-fragment/01-paper.pdf",
+      "bytes": 862097,
+      "sha256": "a86e94fa09af0950ccaeb74418d3684d572c2041d8e727049148d9d879f121ee"
+    },
+    {
+      "collectionId": "limbs-lower-axial-fragment",
+      "url": "/study/past-paper-downloads/limbs-lower-axial-fragment/questions.md",
+      "bytes": 6571,
+      "sha256": "7e53544cfba17742ce886e9b920ce1fbd9b767e8a01a24fc0c221b6c0a204b99"
+    },
+    {
+      "collectionId": "limbs-lower-axial-fragment",
+      "url": "/study/past-paper-downloads/limbs-lower-axial-fragment/answer-key.md",
+      "bytes": 11579,
+      "sha256": "0f7dda1565caf9513ebfdc7cc8de23ec4f2d35a9f97b9f9110a956cd7398117c"
+    },
+    {
+      "collectionId": "limbs-lower-axial-fragment",
+      "url": "/study/past-paper-downloads/limbs-lower-axial-fragment/questions-and-key.md",
+      "bytes": 17211,
+      "sha256": "101e5a4d7195d130680beaf3ae13b67e19767aed83a012f2ce412241ece6882a"
     },
     {
       "collectionId": "retake-cell-block",

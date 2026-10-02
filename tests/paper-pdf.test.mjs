@@ -38,8 +38,9 @@ test('limb PDF scopes partition all source questions and keys, including mixed p
     const doc=parseExport(read(item.downloads.questionsAndKey)),before=JSON.stringify(doc);
     const u=scopeLimbExport(doc,'upper'),l=scopeLimbExport(doc,'lower');
     assert.equal(JSON.stringify(doc),before);
-    assert.equal(u.questions.length+l.questions.length,doc.questions.length);
-    assert.equal(u.keys.length+l.keys.length,doc.keys.length);
+    const fullOnly=(item.limbSourceCounts.axial??0)+(item.limbSourceCounts.general??0);
+    assert.equal(u.questions.length+l.questions.length+fullOnly,doc.questions.length);
+    assert.equal(u.keys.length+l.keys.length+fullOnly,doc.keys.length);
     for(const [scope,part] of [['upper',u],['lower',l]]){
       assert.equal(part.questions.length,item.limbSourceCounts[scope]);
       assert(part.keys.every(k=>part.questions.some(q=>q.id===k.id)));
@@ -47,7 +48,7 @@ test('limb PDF scopes partition all source questions and keys, including mixed p
     }
     upper+=u.questions.length;lower+=l.questions.length;
   }
-  assert.equal(upper+lower,475);
+  assert.equal(upper+lower,533);
   const mixed=collections.find(c=>c.id==='limbs-mixed-theory-2022');
   assert.equal(scopeLimbExport(parseExport(read(mixed.downloads.questionsAndKey)),'upper').questions.length,25);
   assert.equal(scopeLimbExport(parseExport(read(mixed.downloads.questionsAndKey)),'lower').questions.length,20);

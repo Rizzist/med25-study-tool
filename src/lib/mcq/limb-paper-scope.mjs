@@ -21,7 +21,7 @@ export function scopeLimbPaper(paper, scope = 'all') {
 export function limbBankSelection(papers, scope) {
   return {
     id: `limbs-all-${scope}`,
-    title: `All limb papers · ${scope === 'all' ? 'Upper & lower' : scope === 'upper' ? 'Upper only' : 'Lower only'}`,
+    title: `All limb papers · ${scope === 'all' ? 'Full' : scope === 'upper' ? 'Upper only' : 'Lower only'}`,
     gradedQuestionIds: [...new Set(papers.filter(p => p.defaultEligible).flatMap(p => p.gradedQuestionIds))],
   };
 }
