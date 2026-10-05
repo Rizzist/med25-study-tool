@@ -48,7 +48,7 @@ test('limb PDF scopes partition all source questions and keys, including mixed p
     }
     upper+=u.questions.length;lower+=l.questions.length;
   }
-  assert.equal(upper+lower,533);
+  assert.equal(upper+lower,534);
   const mixed=collections.find(c=>c.id==='limbs-mixed-theory-2022');
   assert.equal(scopeLimbExport(parseExport(read(mixed.downloads.questionsAndKey)),'upper').questions.length,25);
   assert.equal(scopeLimbExport(parseExport(read(mixed.downloads.questionsAndKey)),'lower').questions.length,20);

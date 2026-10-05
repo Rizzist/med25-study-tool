@@ -6432,8 +6432,8 @@
       "id": "term2-limbs",
       "title": "Upper & Lower Limbs",
       "hasSourceCollections": true,
-      "sourceRecordCount": 546,
-      "gradedQuestionCount": 536,
+      "sourceRecordCount": 547,
+      "gradedQuestionCount": 537,
       "defaultCollectionIds": [
         "limbs-lower-persian-2021",
         "limbs-lower-photographed-2025",
@@ -9687,6 +9687,68 @@
               "url": "/study/limbs/past-papers/limbs-lower-axial-fragment/01-paper.pdf"
             }
           ]
+        },
+        {
+          "id": "limbs-lower-attachment-screenshot",
+          "courseId": "term2-limbs",
+          "bankId": "limbs-past-papers",
+          "bankKey": "term2-limbs:limbs-past-papers",
+          "title": "Lower limb · attachment screenshot (exam unconfirmed)",
+          "note": "One additional complete question from the 5 October download batch, labeled Q12 in an isolated screenshot. Institution, sitting date and past-exam provenance are unconfirmed, so this is an optional supplement, not an authenticated TUMS final. The blue text selection is not an official answer key. A companion Q17 repeats the fibular-attachment question already in the January 2023 midterm, with shuffled options, and is not scored twice.",
+          "kind": "source-paper",
+          "date": null,
+          "dateEvidence": "One additional complete question from the 5 October download batch, labeled Q12 in an isolated screenshot. Institution, sitting date and past-exam provenance are unconfirmed, so this is an optional supplement, not an authenticated TUMS final. The blue text selection is not an official answer key. A companion Q17 repeats the fibular-attachment question already in the January 2023 midterm, with shuffled options, and is not scored twice.",
+          "courseMatch": "supplement-or-reference",
+          "defaultEligible": false,
+          "originalOrderClaim": false,
+          "sources": [
+            {
+              "title": "photo_5310277696711949041_x.jpg",
+              "publicUrl": "/study/limbs/past-papers/limbs-lower-attachment-screenshot/01-question-12.jpg",
+              "sha256": "d517be73f68286dafb80a6b187b71556edf30c97fd38822953c3f01ed0ca9a82",
+              "exists": true,
+              "note": "One additional complete question from the 5 October download batch, labeled Q12 in an isolated screenshot. Institution, sitting date and past-exam provenance are unconfirmed, so this is an optional supplement, not an authenticated TUMS final. The blue text selection is not an official answer key. A companion Q17 repeats the fibular-attachment question already in the January 2023 midterm, with shuffled options, and is not scored twice."
+            }
+          ],
+          "sourceRecordCount": 1,
+          "transcribedQuestionCount": 1,
+          "gradedQuestionCount": 1,
+          "sourceKeyCount": 0,
+          "editorialKeyCount": 1,
+          "inferredKeyCount": 1,
+          "ungradedCount": 0,
+          "missingSourceNumbers": [],
+          "questionIds": [
+            "limbs-lower-attachment-screenshot-q012"
+          ],
+          "gradedQuestionIds": [
+            "limbs-lower-attachment-screenshot-q012"
+          ],
+          "limbQuestionIds": {
+            "upper": [],
+            "lower": [
+              "limbs-lower-attachment-screenshot-q012"
+            ],
+            "axial": [],
+            "general": []
+          },
+          "limbSourceCounts": {
+            "upper": 0,
+            "lower": 1,
+            "axial": 0,
+            "general": 0
+          },
+          "downloads": {
+            "questions": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/questions.md",
+            "answerKey": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/answer-key.md",
+            "questionsAndKey": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/questions-and-key.md"
+          },
+          "originals": [
+            {
+              "name": "photo_5310277696711949041_x.jpg",
+              "url": "/study/limbs/past-papers/limbs-lower-attachment-screenshot/01-question-12.jpg"
+            }
+          ]
         }
       ],
       "collectionIds": [
@@ -9711,7 +9773,8 @@
         "limbs-upper-theory-2021",
         "limbs-iums-upper-2021",
         "limbs-upper-axial-fragment",
-        "limbs-lower-axial-fragment"
+        "limbs-lower-axial-fragment",
+        "limbs-lower-attachment-screenshot"
       ]
     },
     {

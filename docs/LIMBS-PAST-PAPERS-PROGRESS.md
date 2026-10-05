@@ -2,6 +2,41 @@
 
 Started 2026-09-30. Source retrieval uses Telegram's Chrome UI only.
 
+## 5 October 2026 — one original PDF per paper
+
+- Every shared past-paper card now offers one **Original PDF** instead of separate numbered image links. Images retain their full pixel data, aspect ratio and source order; existing PDF pages are copied without rasterizing. Mixed PDF/image originals are combined too. A single existing PDF keeps its direct cached download.
+- Original downloads always contain the complete paper regardless of Full / Upper / Lower exam filters. The on-demand source manifest covers 106 collection identities (including four full-retake variants) and 256 published assets. Legacy CVS image collections include their already-published question source pages, not just the first image. Private/unpublished account screenshots remain excluded.
+- Generation and PDF code load only on click, with spinner/error feedback. PDFs and source bytes are cached on the device by content hash; changed sources invalidate the bundle without redownloading unchanged images. Authentication remains required, storage is bounded, and unavailable browser storage does not prevent an online save.
+- Verification: eight new bundle/cache/render tests, ten existing PDF-cache tests, eleven limb checks, two scoped-PDF checks, 76 MCQ regressions, TypeScript, manifest freshness and the complete production build pass. The broader legacy PDF suite's previously documented unrelated failures are not included in this claim.
+- Chrome verification used an isolated file-backed QA account against the production build. The 12-image example saved a valid 12-page PDF; its second click reported **Downloaded from device cache**. First, middle and final pages were rendered and visually inspected for readability/cropping, and all twelve embedded JPEG byte streams matched the originals. No production accounts, attempts or results were changed.
+
+The user authorized committing and pushing this feature together with the pending download-deduplication/import below. Deployment is handled by the existing push pipeline.
+
+## 5 October 2026 — Downloads dedupe and addition
+
+Inspected and organized **51 new downloads**, preserving all original Downloads files. SHA-256 comparisons, source-page inspection and question/choice comparisons distinguish byte duplicates from photographed/reordered reposts.
+
+| Disposition | Files | Action |
+| --- | ---: | --- |
+| Exact duplicates | 36 | 32 match the existing archive; four repeat files within this batch. Point to one canonical original. |
+| January 2023 midterm photos | 6 | Renamed cover + Q1–40 pages under the existing midterm. No new questions; Q31 is still defective. |
+| Reordered fibular-attachment question | 1 | Same stem/choices as January 2023 Q2; duplicate retained locally, not scored twice. |
+| Reformatted reference duplicate | 1 | 32-page version of the existing 107-question, 18-page reference booklet; cross-linked, not a new bank. |
+| New supplemental references | 6 | Four PDFs and two book crops. Reference-only; not mislabeled as TUMS finals. |
+| Additional complete question | 1 | Original screenshot Q12, ischial-tuberosity attachment exception. Added as an optional exam-unconfirmed supplement. |
+
+**MED25 totals: 23 collections, 547 source items, 537 scored, 10 ungraded.** Scored scopes: 296 upper, 228 lower, 13 Full-only. The default final selection remains 17 collections / 410 scored; six optional supplements now have 127 scored. No existing question IDs, answers or saved-progress keys were changed. No new complete dated exam was found.
+
+The new answer is C, superior gemellus. Its ischial-spine origin was checked against the University of Washington muscle atlas; the other three choices' tuberosity attachments were also checked. The screenshot's blue text selection is not treated as an official key. The new record is `limbs-lower-attachment-screenshot-q012`, mapped to the hip-bone review section (PDF p. 41), available in Full and Lower only.
+
+Reference folders: `lower-test-question-compilation` (alternate format of the existing `lower-revision-book/01-source.pdf`), `lower-322-mcq-booklet`, `lower-82-mcq-booklet`, `lower-quizlet-muscles`, `lower-khanfour-revision-fragments`. The first compilation describes old tests but has no identifiable institution/sitting; the other files are revision-book/Quizlet material. Their keys are not represented as verified app answers. The Quizlet test and answer export have different question ordering. Generic booklets were classified by source and file duplicates; their entire question sets were not answer-audited or imported.
+
+Archive inventory: **154 download entries**; 15 new canonical originals copied with descriptive names, no deletions. Audit: `data/limbs/download-audit-2026-10-05.json` and the same file in the MED SLIDES archive. The per-question source, answer rationale, references and duplicate note are included in the new collection's `exam-and-answer-key.md`.
+
+Regenerate this batch with `node scripts/content/import-limbs-oct5.mjs`, the normal MCQ generation chain, then the helper again to sync the combined Markdown. The helper validates hashes, refuses conflicting source overwrites, and does not reclassify the September/2 October sources. It requires the original batch still in Downloads. Do not run the historical archive finalizer.
+
+Verification: **11/11 limb checks, 2/2 limb PDF-scope checks, 76/76 MCQ regressions**, limb/review generator freshness checks, and `git diff --check` pass. All 51 download originals and canonical archive paths were SHA-256 checked; the previous 103 inventory entries, all 536 existing scored limb records, and all existing course collection objects are unchanged. The 18-page and 32-page reference variants also have matching numbered question starts and 99.87% normalized native-text similarity. No new UI code or standalone PDF was introduced; no fresh browser/full production build was run for this data-only update. Changes are local, not committed or pushed in this turn.
+
 ## 2 October 2026 — new Downloads import
 
 Three distinct question sets from seven new PDFs are now imported. Duplicate/subset copies were merged; the May 2025 midterm was already present, and the 48-page revision book remains reference-only.

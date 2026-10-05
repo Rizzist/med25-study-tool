@@ -1,0 +1,61 @@
+{
+  "id": "limbs-lower-attachment-screenshot",
+  "title": "Lower limb · attachment screenshot (exam unconfirmed)",
+  "kind": "source-paper",
+  "defaultEligible": false,
+  "originalOrderClaim": false,
+  "note": "One additional complete question from the 5 October download batch, labeled Q12 in an isolated screenshot. Institution, sitting date and past-exam provenance are unconfirmed, so this is an optional supplement, not an authenticated TUMS final. The blue text selection is not an official answer key. A companion Q17 repeats the fibular-attachment question already in the January 2023 midterm, with shuffled options, and is not scored twice.",
+  "questions": [
+    {
+      "number": 12,
+      "sourceNumber": "12",
+      "page": 1,
+      "sectionOrder": 22,
+      "key": "C",
+      "prompt": "All of the following muscles attach to the ischial tuberosity, EXCEPT:",
+      "options": [
+        "Semitendinosus",
+        "Adductor magnus",
+        "Gemellus superior",
+        "Semimembranosus"
+      ],
+      "note": "Superior gemellus originates from the ischial spine, not the ischial tuberosity. Semitendinosus and semimembranosus originate from the tuberosity, as does the hamstring portion of adductor magnus. Inferior gemellus, unlike superior gemellus, also has an ischial-tuberosity origin. The screenshot's blue selection is not treated as an authenticated source key; this study answer was checked against anatomical references.",
+      "region": "lower",
+      "subject": "anatomy",
+      "providedKey": null,
+      "evidence": [
+        "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/superior-gemellus — ischial-spine origin.",
+        "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/semitendinosus — ischial-tuberosity origin.",
+        "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/semimembranosus — ischial-tuberosity origin.",
+        "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/adductor-magnus — includes an ischial-tuberosity origin."
+      ],
+      "id": "limbs-lower-attachment-screenshot-q012",
+      "graded": true,
+      "sectionId": "limbs/limbs-22-hip-bone",
+      "answerReview": {
+        "basis": "ai-inferred",
+        "confidence": "medium",
+        "canonicalSourceId": "limbs-lower-attachment-screenshot-q012",
+        "auditedAt": "2026-10-05",
+        "evidence": [
+          "Lower limb · attachment screenshot (exam unconfirmed); original Q12, source page 1.",
+          "/study/reviews/limbs.pdf#page=41 — Hip bone and pelvic exits: exact landmarks",
+          "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/superior-gemellus — ischial-spine origin.",
+          "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/semitendinosus — ischial-tuberosity origin.",
+          "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/semimembranosus — ischial-tuberosity origin.",
+          "University of Washington Department of Radiology, Muscle Atlas: https://rad.uw.edu/muscle-atlas/adductor-magnus — includes an ischial-tuberosity origin."
+        ]
+      }
+    }
+  ],
+  "excludedItems": [
+    {
+      "reason": "Companion screenshot photo_5310277696711949091_x.jpg (Q17) repeats limbs-lower-midterm-2023-q002: same fibular-attachment exception and same four alternatives, reordered. Retained locally as a duplicate; no evidence of a separate exam sitting."
+    }
+  ],
+  "audit": {
+    "status": "reviewed",
+    "date": "2026-10-05",
+    "method": "All four choices checked visually against the original screenshot. Compared with all existing limb source prompts/options; the Q6 tuberosity-facet question in the 2023 midterm tests a different relationship and is not a duplicate. Answer checked against four University of Washington muscle-atlas entries. Unknown exam provenance disclosed; excluded from default final selection."
+  }
+}

@@ -193801,6 +193801,22 @@
       "specificity": "unmapped",
       "method": "existing-bank-chapter",
       "evidence": "Reused source content outside the version-locked biochemistry review; no substitute PDF reference assigned."
+    },
+    "limbs-lower-attachment-screenshot-q012": {
+      "examId": "term2-limbs",
+      "bankId": "limbs-past-papers",
+      "kind": "single_best_answer",
+      "sectionId": "limbs/limbs-22-hip-bone",
+      "uncertain": false,
+      "status": "mapped",
+      "specificity": "section",
+      "method": "source-question-review-page-audit",
+      "evidence": "Concept mapped to Hip bone and pelvic exits: exact landmarks, review PDF p. 41. Mapping indicates the review section, not a claim of an exact duplicate paragraph.",
+      "sourceQualityFlags": [
+        "source-question-not-authored",
+        "key-not-official",
+        "ai-inferred-answer"
+      ]
     }
   },
   "counts": {

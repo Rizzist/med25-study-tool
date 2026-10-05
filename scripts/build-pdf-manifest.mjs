@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
+import './build-original-manifest.mjs';
 const root=path.resolve(import.meta.dirname,'..'),base=path.join(root,'public/study');
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walk(path.join(dir,entry.name)):entry.isFile()&&/\.pdf$/i.test(entry.name)?[path.join(dir,entry.name)]:[]);}

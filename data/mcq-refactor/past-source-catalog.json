@@ -164,7 +164,8 @@
         "limbs-upper-theory-2021",
         "limbs-iums-upper-2021",
         "limbs-upper-axial-fragment",
-        "limbs-lower-axial-fragment"
+        "limbs-lower-axial-fragment",
+        "limbs-lower-attachment-screenshot"
       ],
       "defaultCollectionIds": [
         "limbs-lower-persian-2021",
@@ -186,9 +187,9 @@
         "limbs-lower-axial-fragment"
       ],
       "hasSourceCollections": true,
-      "sourceRecordCount": 546,
+      "sourceRecordCount": 547,
       "emptyReason": null,
-      "gradedQuestionCount": 536
+      "gradedQuestionCount": 537
     },
     {
       "id": "term2-biochemistry",
@@ -15530,6 +15531,68 @@
         }
       ],
       "independent": true
+    },
+    {
+      "id": "limbs-lower-attachment-screenshot",
+      "courseId": "term2-limbs",
+      "bankId": "limbs-past-papers",
+      "bankKey": "term2-limbs:limbs-past-papers",
+      "title": "Lower limb · attachment screenshot (exam unconfirmed)",
+      "note": "One additional complete question from the 5 October download batch, labeled Q12 in an isolated screenshot. Institution, sitting date and past-exam provenance are unconfirmed, so this is an optional supplement, not an authenticated TUMS final. The blue text selection is not an official answer key. A companion Q17 repeats the fibular-attachment question already in the January 2023 midterm, with shuffled options, and is not scored twice.",
+      "kind": "source-paper",
+      "date": null,
+      "dateEvidence": "One additional complete question from the 5 October download batch, labeled Q12 in an isolated screenshot. Institution, sitting date and past-exam provenance are unconfirmed, so this is an optional supplement, not an authenticated TUMS final. The blue text selection is not an official answer key. A companion Q17 repeats the fibular-attachment question already in the January 2023 midterm, with shuffled options, and is not scored twice.",
+      "courseMatch": "supplement-or-reference",
+      "defaultEligible": false,
+      "originalOrderClaim": false,
+      "sources": [
+        {
+          "title": "photo_5310277696711949041_x.jpg",
+          "publicUrl": "/study/limbs/past-papers/limbs-lower-attachment-screenshot/01-question-12.jpg",
+          "sha256": "d517be73f68286dafb80a6b187b71556edf30c97fd38822953c3f01ed0ca9a82",
+          "exists": true,
+          "note": "One additional complete question from the 5 October download batch, labeled Q12 in an isolated screenshot. Institution, sitting date and past-exam provenance are unconfirmed, so this is an optional supplement, not an authenticated TUMS final. The blue text selection is not an official answer key. A companion Q17 repeats the fibular-attachment question already in the January 2023 midterm, with shuffled options, and is not scored twice."
+        }
+      ],
+      "sourceRecordCount": 1,
+      "transcribedQuestionCount": 1,
+      "gradedQuestionCount": 1,
+      "sourceKeyCount": 0,
+      "editorialKeyCount": 1,
+      "inferredKeyCount": 1,
+      "ungradedCount": 0,
+      "missingSourceNumbers": [],
+      "questionIds": [
+        "limbs-lower-attachment-screenshot-q012"
+      ],
+      "gradedQuestionIds": [
+        "limbs-lower-attachment-screenshot-q012"
+      ],
+      "limbQuestionIds": {
+        "upper": [],
+        "lower": [
+          "limbs-lower-attachment-screenshot-q012"
+        ],
+        "axial": [],
+        "general": []
+      },
+      "limbSourceCounts": {
+        "upper": 0,
+        "lower": 1,
+        "axial": 0,
+        "general": 0
+      },
+      "downloads": {
+        "questions": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/questions.md",
+        "answerKey": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/answer-key.md",
+        "questionsAndKey": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/questions-and-key.md"
+      },
+      "originals": [
+        {
+          "name": "photo_5310277696711949041_x.jpg",
+          "url": "/study/limbs/past-papers/limbs-lower-attachment-screenshot/01-question-12.jpg"
+        }
+      ]
     }
   ],
   "excludedBanks": [
@@ -18958,6 +19021,30 @@
       "url": "/study/past-paper-downloads/originals/term1-source-6.pdf",
       "bytes": 761507,
       "sha256": "b8216eecbfa936d1ae132691cb431966a0d11692fcf0e826afab7a456b959be9"
+    },
+    {
+      "collectionId": "limbs-lower-attachment-screenshot",
+      "url": "/study/limbs/past-papers/limbs-lower-attachment-screenshot/01-question-12.jpg",
+      "bytes": 18646,
+      "sha256": "d517be73f68286dafb80a6b187b71556edf30c97fd38822953c3f01ed0ca9a82"
+    },
+    {
+      "collectionId": "limbs-lower-attachment-screenshot",
+      "url": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/questions.md",
+      "bytes": 1259,
+      "sha256": "b777f59a94e4b4b85bae8235aa98c7e7d32378b94805ba9d3b853b348646c606"
+    },
+    {
+      "collectionId": "limbs-lower-attachment-screenshot",
+      "url": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/answer-key.md",
+      "bytes": 2657,
+      "sha256": "235868e4c3e974371927d10cb37c0a13e94abaecbbe5924c07d7d5d742be5e8f"
+    },
+    {
+      "collectionId": "limbs-lower-attachment-screenshot",
+      "url": "/study/past-paper-downloads/limbs-lower-attachment-screenshot/questions-and-key.md",
+      "bytes": 2916,
+      "sha256": "24bafc2029ba6b3f90ddc8ccb2d68696e2ed46485014ef8ad9c83abc0d7b84c0"
     }
   ]
 }
