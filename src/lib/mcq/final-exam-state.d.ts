@@ -7,6 +7,7 @@ export const FINAL_EXAM_SESSION_KEYS: {
   readonly july29Downloaded: "july29:downloaded-core";
   readonly nutrition: "term2-nutrition:nutrition-past-papers";
   readonly religion: "term2-religion:religion-past-papers";
+  readonly divineEthics: "term2-divine-ethics:divine-ethics-past-papers";
   readonly biochemistry: "term2-biochemistry:biochemistry-metabolism-past-papers";
   readonly respiratory: "term2-respiratory:respiratory-past-papers";
   readonly limbs: "term2-limbs:limbs-past-papers";
@@ -40,6 +41,7 @@ export type StoredFinalExamProgress = {
     | "july25:telegram-past-papers"
     | "term2-nutrition:nutrition-past-papers"
     | "term2-religion:religion-past-papers"
+    | "term2-divine-ethics:divine-ethics-past-papers"
     | "term2-biochemistry:biochemistry-metabolism-past-papers"
     | "term2-respiratory:respiratory-past-papers"
     | "term2-limbs:limbs-past-papers"
@@ -64,6 +66,7 @@ export function parseFinalExamProgress(
     | "july25:telegram-past-papers"
     | "term2-nutrition:nutrition-past-papers"
     | "term2-religion:religion-past-papers"
+    | "term2-divine-ethics:divine-ethics-past-papers"
     | "term2-biochemistry:biochemistry-metabolism-past-papers"
     | "term2-respiratory:respiratory-past-papers"
     | "term2-limbs:limbs-past-papers"

@@ -6,6 +6,8 @@
     "node": "22.x"
   },
   "scripts": {
+    "ethics:papers:generate": "node scripts/build-divine-ethics-papers.mjs",
+    "ethics:papers:check": "node scripts/build-divine-ethics.mjs --check && node scripts/build-divine-ethics-papers.mjs --check && node --test tests/divine-ethics.test.mjs tests/divine-ethics-papers.test.mjs tests/divine-ethics-routes.test.mjs",
     "limbs:papers:generate": "node scripts/build-limbs-papers.mjs",
     "limbs:papers:check": "node scripts/build-limbs-papers.mjs --check && node --test tests/limbs-papers.test.mjs",
     "nutrition:generate": "node scripts/build-nutrition.mjs",

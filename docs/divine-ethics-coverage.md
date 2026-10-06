@@ -1,6 +1,10 @@
 # Divine Ethics — source-based teaching and practice
 
-Updated 17 September 2026. Local implementation; not committed, pushed or deployed by this task.
+Practice coverage established 17 September 2026; past-paper status updated 6 October 2026.
+
+## October past-paper update
+
+One course-matched Ethics 1 fragment (Q3–12) is now in Final Exams, separate from these 75 authored practice questions. The associated cover's date remains provisional; the full paper is not available. Other unlabelled/mixed downloads are withheld. See [the source-by-source audit](divine-ethics-paper-audit.md) for the classification, review gaps and corrected Q7 key. The existing review PDF is unchanged.
 
 ## Source and boundaries
 
@@ -9,7 +13,7 @@ Updated 17 September 2026. Local implementation; not committed, pushed or deploy
 - Organized original: `/Users/rizzist/Documents/Med Slides/TERM 2/06 Other Courses/Divine Ethics/Divine Ethics - Selected Textbook Pages - 2026-09-17.pdf`.
 - Full book identity/edition, official exam weighting and official answer key are unconfirmed.
 - No past-paper questions were supplied in this extract. The older `Divine Ethics Exam PDF.pdf` also contains teaching pages, not an authenticated exam.
-- Final Exam/Past Exams therefore remains empty. Newly authored questions only enter Practice.
+- At the September import, Final Exam/Past Exams remained empty. The October source fragment is now separate; newly authored questions still only enter Practice.
 
 ## Coverage
 

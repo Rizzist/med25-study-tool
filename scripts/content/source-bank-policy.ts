@@ -18,7 +18,7 @@ import { biochemistryRetake, isExamId, isTerm2Exam, isTerm2Question, matchesTerm
 
 export { isExamId };
 export type { ExamId };
-export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers" | "limbs-past-papers" | "biochemistry-retake-past-papers";
+export type FinalExamBankId = "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "divine-ethics-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers" | "limbs-past-papers" | "biochemistry-retake-past-papers";
 type FinalExamBankKey = `${ExamId}:${FinalExamBankId}`;
 export type CollectionId =
   | "all"
@@ -227,6 +227,7 @@ let verifiedCache: MCQQuestion[] | null = null;
 const finalCache: Partial<Record<FinalExamBankKey, MCQQuestion[]>> = {};
 
 const FINAL_EXAM_BANKS = [
+  {id:'divine-ethics-past-papers' as const,exam:'term2-divine-ethics' as const,label:'Divine Ethics 1 · Past Papers',description:'Course-matched Ethics 1 source fragments only; mixed and unconfirmed course-level papers withheld.',requiredTag:'final-bank-divine-ethics-past-papers'},
   {id:'biochemistry-retake-past-papers' as const,exam:'term1-biochemistry-retake' as const,label:'Biochemistry Retake · Past Papers',description:'Original Cells & Molecules papers with full and biochemistry-only selections and qualified study keys.',requiredTag:'final-bank-biochemistry-retake-past-papers'},
   {
     id: "limbs-past-papers" as const,
@@ -275,11 +276,13 @@ const FINAL_EXAM_BANKS = [
 ] as const;
 
 export function isFinalExamBankId(value: unknown): value is FinalExamBankId {
+  if(value === 'divine-ethics-past-papers') return true;
   if(value === 'biochemistry-retake-past-papers') return true;
   return value === "limbs-past-papers" || value === "respiratory-past-papers" || value === "biochemistry-metabolism-past-papers" || value === "telegram-past-papers" || value === "downloaded-core" || value === "nutrition-past-papers" || value === "religion-past-papers";
 }
 
 export function defaultFinalExamBank(exam?: ExamId): FinalExamBankId {
+  if(exam === 'term2-divine-ethics') return 'divine-ethics-past-papers';
   if(exam === 'term1-biochemistry-retake') return 'biochemistry-retake-past-papers';
   return exam === "term2-limbs" ? "limbs-past-papers" : exam === "term2-respiratory" ? "respiratory-past-papers" : exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers";
 }

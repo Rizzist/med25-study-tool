@@ -22,8 +22,8 @@ import {GuidedExamLayout} from './GuidedExamLayout';
 import {ExamModeChooser} from './ExamModeChooser';
 import {guidanceMode,supportsGuidedExam,type GuidanceMode} from '@/src/lib/mcq/guided-exam.mjs';
 
-type ExamId = "term1-biochemistry-retake" | "july25" | "july29" | "term2-nutrition" | "term2-religion" | "term2-biochemistry" | "term2-respiratory" | "term2-limbs";
-type FinalExamBankId = "biochemistry-retake-past-papers" | "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers" | "limbs-past-papers";
+type ExamId = "term2-divine-ethics" | "term1-biochemistry-retake" | "july25" | "july29" | "term2-nutrition" | "term2-religion" | "term2-biochemistry" | "term2-respiratory" | "term2-limbs";
+type FinalExamBankId = "divine-ethics-past-papers" | "biochemistry-retake-past-papers" | "telegram-past-papers" | "downloaded-core" | "nutrition-past-papers" | "religion-past-papers" | "biochemistry-metabolism-past-papers" | "respiratory-past-papers" | "limbs-past-papers";
 type FinalBaseSessionKey = `${ExamId}:${FinalExamBankId}`;
 type FinalSessionKey = string;
 type FinalAnswer = {
@@ -46,6 +46,7 @@ type FinalSession = {
 type FinalProgress = { version: 2; sessions: Record<FinalSessionKey, FinalSession | null> };
 
 const examLabels: Record<ExamId, { date: string; title: string }> = {
+  "term2-divine-ethics": {date:"Divine Ethics 1 · source fragments",title:"Divine Ethics 1 · sourced past papers"},
   "term1-biochemistry-retake": {date:"Term 2 · Biochemistry Retake",title:"Biochemistry Retake · sourced past papers"},
   "term2-limbs": {date:"Upper & lower limbs · past papers",title:"Upper & Lower Limbs · sourced past papers"},
   "term2-respiratory": {date:"Respiratory · past finals",title:"Respiratory · sourced past papers"},
@@ -62,7 +63,7 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
 }
 
 export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',initialGuidance,onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: ExamCollection; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';initialGuidance?:GuidanceMode;onProgressSaved?:()=>void;onExit?:()=>void }) {
-  const [bank, setBank] = useState<FinalExamBankId>(exam === 'term1-biochemistry-retake' ? 'biochemistry-retake-past-papers' : exam === 'term2-limbs' ? 'limbs-past-papers' : exam === 'term2-respiratory' ? 'respiratory-past-papers' : exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
+  const [bank, setBank] = useState<FinalExamBankId>(exam === 'term2-divine-ethics' ? 'divine-ethics-past-papers' : exam === 'term1-biochemistry-retake' ? 'biochemistry-retake-past-papers' : exam === 'term2-limbs' ? 'limbs-past-papers' : exam === 'term2-respiratory' ? 'respiratory-past-papers' : exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
   const [bankLabel, setBankLabel] = useState(exam === "term2-biochemistry" ? "Biochemistry II · Metabolism Past Papers" : exam === "term2-religion" ? "Religion · Downloaded Past Papers" : exam === "term2-nutrition" ? "Nutrition · Downloaded Past Papers" : "Telegram Past Papers");

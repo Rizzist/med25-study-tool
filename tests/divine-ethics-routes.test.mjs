@@ -1,14 +1,33 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
-const catalog=JSON.parse(readFileSync(new URL('../data/divine-ethics/catalog.json',import.meta.url),'utf8'));
-async function route(path,body){const {default:worker}=await import('../dist/server/index.js');return worker.fetch(new Request(`http://localhost${path}`,body===undefined?undefined:{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)}),{ASSETS:{fetch:async()=>new Response('not found',{status:404})}},{waitUntil(){},passThroughOnException(){}});}
-test('Divine Ethics routes: correct practice count, empty finals and source isolation',async()=>{
- const summary=await route('/api/bank/summary');assert.equal(summary.status,200);
- const exam=(await summary.json()).exams.find(e=>e.id==='term2-divine-ethics');assert(exam);assert.equal(exam.questionCount,75);assert.equal(exam.finalExamQuestionCount,0);
- const ids=catalog.modules[0].questionIds;
- const focused=await route('/api/questions/by-ids',{exam:'term2-divine-ethics',ids,limit:75,preserveOrder:true,purpose:'practice'});assert.equal(focused.status,200);assert.deepEqual((await focused.json()).questions.map(q=>q.id),ids);
- const other=await route('/api/questions/by-ids',{exam:'term2-religion',ids,limit:75,purpose:'practice'});assert.equal((await other.json()).questions.length,0);
- const sprint=await route('/api/questions/sprint',{exam:'term2-divine-ethics',collection:'all',limit:20});assert.equal(sprint.status,200);const qs=(await sprint.json()).questions;assert.equal(qs.length,20);assert(qs.every(q=>q.tags.includes('divine-ethics-practice')));
- assert.equal((await route('/api/final-exam?exam=term2-divine-ethics')).status,400);
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import ts from 'typescript';
+const root=path.resolve(import.meta.dirname,'..'),require=createRequire(import.meta.url),modules=new Map();
+// Current Next handlers, not the retired dist worker. Auth is independently tested.
+function load(file){
+ if(file===path.join(root,'src/lib/server/auth.ts'))return {requireApiSession:async()=>null};
+ if(modules.has(file))return modules.get(file).exports;
+ if(file.endsWith('.json'))return JSON.parse(fs.readFileSync(file,'utf8'));
+ if(file.endsWith('.mjs'))return require(file);
+ const module={exports:{}};modules.set(file,module);
+ const code=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
+ const local=id=>{if(!id.startsWith('@/')&&!id.startsWith('.'))return require(id);const base=id.startsWith('@/')?path.join(root,id.slice(2)):path.resolve(path.dirname(file),id);return load([base,base+'.ts',base+'.json'].find(p=>fs.existsSync(p)));};
+ new Function('require','module','exports',code)(local,module,module.exports);return module.exports;
+}
+test('Divine Ethics API: separate ten-question Ethics 1 final, 75 practice, cache and course isolation',async()=>{
+ const route=load(path.join(root,'app/api/final-exam/route.ts'));
+ const request=(query,headers)=>route.GET(new Request('http://localhost/api/final-exam?'+query,{headers}));
+ const response=await request('exam=term2-divine-ethics'),body=await response.json();
+ assert.equal(response.status,200);assert.equal(body.bank,'divine-ethics-past-papers');assert.equal(body.questions.length,10);
+ assert(body.questions.every(q=>q.tags.includes('divine-ethics-1-past-paper')));
+ assert.equal((await request('exam=term2-divine-ethics&bank=religion-past-papers')).status,400);
+ assert.equal((await request('exam=term2-religion&bank=divine-ethics-past-papers')).status,400);
+ assert.equal((await request('exam=term2-divine-ethics',{'if-none-match':response.headers.get('etag')})).status,304);
+ const policy=load(path.join(root,'src/lib/server/study-bank.ts'));
+ const practice=policy.loadVerifiedQuestions('term2-divine-ethics');assert.equal(practice.length,75);
+ assert(practice.every(q=>!body.questions.some(f=>f.id===q.id)));
+ const summary=policy.bankSummary().exams.find(e=>e.id==='term2-divine-ethics');
+ assert.equal(summary.questionCount,75);assert.equal(summary.finalExamQuestionCount,10);
 });

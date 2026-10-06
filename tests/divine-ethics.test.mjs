@@ -36,7 +36,9 @@ test('Divine Ethics: every teaching page and topic covered without inventing con
 test('Divine Ethics: embedded practice and saved progress separate from Religion and finals',()=>{
  assert(isExamId('term2-divine-ethics'));
  assert.deepEqual(embedded.questions.filter(q=>matchesTerm2Exam(q,'term2-divine-ethics')),questions);
- assert(!Object.values(embedded.finalExams).flat().some(q=>matchesTerm2Exam(q,'term2-divine-ethics')));
+ const finals=Object.values(embedded.finalExams).flat().filter(q=>matchesTerm2Exam(q,'term2-divine-ethics'));
+ assert.equal(finals.length,10);assert(finals.every(q=>q.tags.includes('divine-ethics-1-past-paper')));
+ assert(!finals.some(q=>questions.some(p=>p.id===q.id)));
  const progress=createEmptyProgress();progress.exams['term2-divine-ethics'].wrongIds=[questions[0].id];
  assert.deepEqual(parseProgress(JSON.stringify(progress)),progress);assert.deepEqual(progress.exams['term2-religion'].wrongIds,[]);
 });

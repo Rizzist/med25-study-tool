@@ -5,6 +5,8 @@ import { divineEthicsSource as source, divineEthicsModules as modules } from './
 import { divineEthicsPractice } from './content/divine-ethics-practice.mjs';
 
 const root=resolve(import.meta.dirname,'..');
+const paperManifest=JSON.parse(readFileSync(resolve(root,'data/divine-ethics/paper-source-manifest.json'),'utf8'));
+const pastPaperCount=paperManifest.collections.flatMap(c=>JSON.parse(readFileSync(resolve(root,`data/divine-ethics/imports/${c.id}.json`),'utf8')).questions).filter(q=>q.key).length;
 const letters=['A','B','C','D'];
 const questions=divineEthicsPractice.map((r,i)=>{
   const module=modules.find(m=>m.id===r.module);
@@ -33,7 +35,7 @@ assert.equal(new Set(questions.map(q=>q.prompt)).size,questions.length);
 assert(source.pages.filter(p=>p.kind==='teaching').every(p=>divineEthicsPractice.some(q=>q.page===p.pdf)));
 assert(modules.every(m=>divineEthicsPractice.filter(q=>q.module===m.id).length>=6));
 const catalog={version:1,examId:'term2-divine-ethics',source,
-  counts:{practice:questions.length,topics:modules.length,teachingPages:source.pages.filter(p=>p.kind==='teaching').length,pastPaper:0},
+  counts:{practice:questions.length,topics:modules.length,teachingPages:source.pages.filter(p=>p.kind==='teaching').length,pastPaper:pastPaperCount},
   modules:modules.map(m=>({...m,questionIds:questions.filter(q=>q.tags.includes(`divine-ethics-module-${m.id}`)).map(q=>q.id)}))};
 function output(path,value){
   const file=resolve(root,path),text=typeof value==='string'?value:JSON.stringify(value,null,2)+'\n';
@@ -43,4 +45,4 @@ function output(path,value){
 output('data/bank/questions/term2-divine-ethics.jsonl',questions.map(q=>JSON.stringify(q)).join('\n')+'\n');
 output('data/divine-ethics/catalog.json',catalog);
 output('data/divine-ethics/coverage.json',{source:source.title,pages:source.pages.map(p=>({...p,questionIds:divineEthicsPractice.filter(q=>q.page===p.pdf).map(q=>`divine-ethics-practice-${q.id}`)})),limits:source.limits});
-console.log(`Divine Ethics: ${questions.length} practice MCQs, ${modules.length} topics, ${catalog.counts.teachingPages} teaching pages; no past-paper bank.`);
+console.log(`Divine Ethics: ${questions.length} practice MCQs, ${modules.length} topics, ${catalog.counts.teachingPages} teaching pages; ${pastPaperCount} separately sourced Ethics 1 final questions.`);

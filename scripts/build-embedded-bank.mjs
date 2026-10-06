@@ -10,6 +10,7 @@ import "./build-physiology-practical.mjs";
 import "./build-nutrition.mjs";
 import "./build-religion.mjs";
 import "./build-divine-ethics.mjs";
+import "./build-divine-ethics-papers.mjs";
 import "./build-biochemistry-papers.mjs";
 import "./build-respiratory-papers.mjs";
 import "./build-limbs-papers.mjs";
@@ -37,6 +38,7 @@ const embeddedBank = {
   manifest: JSON.parse(readFileSync(resolve(root, "data/bank/manifest.json"), "utf8")),
   questions,
   finalExams: {
+    "term2-divine-ethics:divine-ethics-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "divine-ethics-past-papers.jsonl")),
     "term1-biochemistry-retake:biochemistry-retake-past-papers": readJsonLines(resolve(downloadedFinalExamDirectory, "biochemistry-retake-past-papers.jsonl")),
     "july25:telegram-past-papers": readJsonLines(resolve(finalExamDirectory, "july25.jsonl")),
     "july29:telegram-past-papers": readJsonLines(resolve(finalExamDirectory, "july29.jsonl")),

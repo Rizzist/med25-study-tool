@@ -80,6 +80,7 @@ for (const source of [
   { directory: downloadedFinalExamDir, metadataFor: (filename) => filename === "nutrition-past-papers.jsonl"
     ? { exam: "term2-nutrition", requiredTag: "final-bank-nutrition-past-papers", bank: "nutrition-past-papers" }
     : filename === "religion-past-papers.jsonl" ? { exam: "term2-religion", requiredTag: "final-bank-religion-past-papers", bank: "religion-past-papers" }
+    : filename === "divine-ethics-past-papers.jsonl" ? { exam: "term2-divine-ethics", requiredTag: "final-bank-divine-ethics-past-papers", bank: "divine-ethics-past-papers" }
     : { exam: "july29", requiredTag: "final-bank-aug25-downloaded-core", bank: "downloaded-core" } },
 ]) {
   if (!existsSync(source.directory)) continue;

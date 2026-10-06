@@ -7,6 +7,7 @@ import {PastPaperCard} from './PastPaperCard';
 import {PaperDownloads,DownloadLibrary,paperSource,type DownloadCollection} from './PaperDownloads';
 import {PaperPdfDownload} from './PaperPdfDownload';
 import {StudyIcon} from './StudyIcon';
+import {CachedPdfDownload} from './CachedPdfDownload';
 import {FINAL_EXAM_STORAGE_KEY,parseFinalExamProgress} from '@/src/lib/mcq/final-exam-state.mjs';
 import {combinedSourceSelection,finalPaperKey,paperAttemptSummary,readCombinedSelections,COMBINED_PAPER_SELECTIONS_KEY} from '@/src/lib/mcq/paper-selection.mjs';
 import type {ExamCollection} from '@/src/lib/mcq/curated-core.mjs';
@@ -65,7 +66,7 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
     {!active&&<>{head}<HubTools course={course} open={library} onToggle={()=>setLibrary(v=>!v)}/>{library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}</>}
     <CvsPastExams onSessionActiveChange={setActive} downloads={Object.fromEntries(course.collections.map(item=>[item.id,item]))}/>
   </section>;
-  const supported=exam==='term1-biochemistry-retake'||exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory'||exam==='term2-limbs';
+  const supported=exam==='term2-divine-ethics'||exam==='term1-biochemistry-retake'||exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory'||exam==='term2-limbs';
   if(selected&&supported)return <>{!active&&<div className="paper-view">
     <div className="paper-view-head"><button type="button" className="pill" onClick={()=>setSelected(null)}><StudyIcon name="arrow" className="flip"/>All papers</button>{collection&&<h2>{collection.title}</h2>}</div>
     {sourceCollection&&<><p className="paper-note">{sourceCollection.note}</p><PaperDownloads item={originalCourse?.collections.find(c=>c.downloads.questions===sourceCollection.downloads.questions)??sourceCollection} courseTitle={course.title}/></>}
@@ -116,6 +117,7 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
         {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');if(exam==='term2-limbs'||exam==='term1-biochemistry-retake'){const scope=exam==='term2-limbs'?limbBankSelection(course.collections,limbScope):retakeBankSelection(course.collections,retakeScope);setCombined(scope);setSelected(scope.id);}else setSelected('all');}}><StudyIcon name="results"/>All-paper bank &amp; saved results</button>}
         {archived&&<button type="button" className="pill" aria-expanded={archive} onClick={()=>setArchive(!archive)}><StudyIcon name="book"/>{archive?'Close':'Open'} source archive</button>}
       </HubTools>
+      {exam==='term2-divine-ethics'&&<div className="mcq-note"><b>Ethics 1 only · incomplete source archive</b><p>Q3–12 are available. Unlabelled or mixed-level papers are withheld. Several topics are missing from the current review PDF; use the first-term notes below.</p><div className="pill-row"><CachedPdfDownload href="/study/divine-ethics/references/first-term-lessons.pdf"><StudyIcon name="book"/>First-term lesson notes</CachedPdfDownload><a className="pill" href="/study/divine-ethics/paper-audit.md" target="_blank" rel="noreferrer">Source comparison &amp; exclusions</a></div></div>}
       {library&&<DownloadLibrary collections={(exam==='term1-biochemistry-retake'?course:originalCourse??course).collections} courseTitle={course.title}/>}
       {exam==='july29'&&<p className="mcq-note">The authored “Core Distilled” questions are now in Practice MCQs, not Final Exam. The separate PharmD paper below is cross-course material, not confirmed medical-exam scope. The all-bank option retains legacy answers and includes both source groups.</p>}
       {archive&&(exam==='term2-nutrition'?<NutritionArchive/>:<ReligionArchive/>)}

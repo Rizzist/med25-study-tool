@@ -6,7 +6,7 @@ export function reviewBreakdown(outcomes,course) {
     const mapping=course?.questions?.[item.questionId];
     const section=course?.sections?.find(s=>s.id===mapping?.sectionId);
     const uncertain=Boolean(mapping?.uncertain);
-    const sourceTopic=course?.examId==='term1-biochemistry-retake'&&!section&&item.topic;
+    const sourceTopic=['term1-biochemistry-retake','term2-divine-ethics'].includes(course?.examId)&&!section&&item.topic;
     const id=course?(section?(uncertain?'suggested:':'')+section.id:sourceTopic?'source-topic:'+sourceTopic:'unmapped'):(item.topic||'Other topics');
     let row=groups.get(id);
     if(!row){row={id,sectionId:section?.id,title:section?.title||(sourceTopic?`${sourceTopic} · no linked review section`:course?'Not yet matched to a review section':item.topic||'Other topics'),uncertain,correct:0,answered:0,skipped:0,ungraded:0,total:0,missedIds:[],wrongIds:[]};groups.set(id,row);}

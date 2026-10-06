@@ -13897,12 +13897,105 @@
     {
       "id": "term2-divine-ethics",
       "title": "Divine Ethics",
-      "hasSourceCollections": false,
-      "sourceRecordCount": 0,
-      "gradedQuestionCount": 0,
-      "defaultCollectionIds": [],
-      "emptyReason": "No past-paper source collection has been imported for this course.",
-      "collections": []
+      "hasSourceCollections": true,
+      "sourceRecordCount": 10,
+      "gradedQuestionCount": 10,
+      "defaultCollectionIds": [
+        "divine-ethics-1-table-fragment"
+      ],
+      "emptyReason": null,
+      "collections": [
+        {
+          "id": "divine-ethics-1-table-fragment",
+          "courseId": "term2-divine-ethics",
+          "bankId": "divine-ethics-past-papers",
+          "bankKey": "term2-divine-ethics:divine-ethics-past-papers",
+          "title": "Divine Ethics 1 · photographed fragment Q3–12",
+          "note": "Ten surviving questions, not a complete 30-question exam. The accompanying cover says Divine Ethics 1, February 2022 semester, exam 5 July 2022; the question pages themselves are undated, so that cover association is provisional. The wording matches the supplied first-term lesson notes. The separate numbered 20-question photographs have not been joined to this fragment. Highlighted selections are study annotations, not an authenticated official key; Q7's supplied answer is corrected with two defensible choices accepted.",
+          "kind": "paper-fragment",
+          "date": null,
+          "dateEvidence": "Accompanying cover: 5 July 2022; question pages lack a date. Association provisional.",
+          "courseMatch": "divine-ethics-1-source",
+          "defaultEligible": true,
+          "originalOrderClaim": true,
+          "sources": [
+            {
+              "title": "Original photographs — cover and Q3–12",
+              "publicUrl": "/study/divine-ethics/past-papers/ethics-1-table-fragment-original.pdf",
+              "sha256": "cc42a5d8d667114d776d009c8b89bd81778e5ac44db4ca0224a38b6140e857c2",
+              "exists": true,
+              "note": "Explicit Divine Ethics 1 cover supplied beside these photos; table questions reproduce first-term lesson topics and wording (lessons 1–4, PDF pages 1–10). Date association is provisional; no claim that all other downloaded papers belong to Ethics 1."
+            }
+          ],
+          "sourceRecordCount": 10,
+          "transcribedQuestionCount": 10,
+          "gradedQuestionCount": 10,
+          "sourceKeyCount": 10,
+          "editorialKeyCount": 10,
+          "inferredKeyCount": 2,
+          "ungradedCount": 0,
+          "missingSourceNumbers": [
+            1,
+            2,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "questionIds": [
+            "divine-ethics-1-table-fragment-q003",
+            "divine-ethics-1-table-fragment-q004",
+            "divine-ethics-1-table-fragment-q005",
+            "divine-ethics-1-table-fragment-q006",
+            "divine-ethics-1-table-fragment-q007",
+            "divine-ethics-1-table-fragment-q008",
+            "divine-ethics-1-table-fragment-q009",
+            "divine-ethics-1-table-fragment-q010",
+            "divine-ethics-1-table-fragment-q011",
+            "divine-ethics-1-table-fragment-q012"
+          ],
+          "gradedQuestionIds": [
+            "divine-ethics-1-table-fragment-q003",
+            "divine-ethics-1-table-fragment-q004",
+            "divine-ethics-1-table-fragment-q005",
+            "divine-ethics-1-table-fragment-q006",
+            "divine-ethics-1-table-fragment-q007",
+            "divine-ethics-1-table-fragment-q008",
+            "divine-ethics-1-table-fragment-q009",
+            "divine-ethics-1-table-fragment-q010",
+            "divine-ethics-1-table-fragment-q011",
+            "divine-ethics-1-table-fragment-q012"
+          ],
+          "downloads": {
+            "questions": "/study/past-paper-downloads/divine-ethics-1-table-fragment/questions.md",
+            "answerKey": "/study/past-paper-downloads/divine-ethics-1-table-fragment/answer-key.md",
+            "questionsAndKey": "/study/past-paper-downloads/divine-ethics-1-table-fragment/questions-and-key.md"
+          },
+          "originals": [
+            {
+              "name": "Original photographs — cover and Q3–12",
+              "url": "/study/divine-ethics/past-papers/ethics-1-table-fragment-original.pdf"
+            }
+          ]
+        }
+      ],
+      "collectionIds": [
+        "divine-ethics-1-table-fragment"
+      ]
     },
     {
       "id": "term1-biochemistry-retake",
