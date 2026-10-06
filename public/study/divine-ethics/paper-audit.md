@@ -1,84 +1,90 @@
-# Divine Ethics 1: downloaded-paper audit
+# Divine Ethics: source and content-admission audit
 
-Audited 6 October 2026. Fifteen already-downloaded files were compared with the supplied teaching extracts, the current 21-page review, and the downloaded first-term lesson notes. A subsequent signed-in Telegram search downloaded ten more files. The private archive now contains 25 source files in 12 groups (24 byte-distinct files). Originals remain unchanged in Downloads.
+Updated 6 October 2026. **105 scored questions in six source collections**, including the original ten-question fragment and **95 additional questions**. The 75 authored practice questions and current 21-page review PDF are unchanged.
 
-## Decision
+## Course scope and corrected admission policy
 
-**The admitted collection contains ten photographed questions, Q3–12, not a complete 30-item exam.** A cover supplied alongside the table-format pages explicitly says **Divine Ethics 1**, February 2022 semester, Dr. Ahmadi, examination **5 July 2022**. The question pages have no identifying header or date: the cover-to-fragment association is provisional, and the site does not claim a confirmed sitting date. Their wording closely matches lessons 1–4 in the first-term notes.
+The first pass admitted only Q3–12 supplied with an Ethics 1 cover. That was too restrictive for the requested comparison with the review and teaching material: other sources contain relevant questions even when their university I/II label cannot be authenticated. Following the user's request, these are now admitted **at question level**, not by relabelling entire mixed papers as confirmed Ethics 1 exams.
 
-Telegram has an explicitly named **Divine Ethics 2** topic, but it also includes an Ethics 1 cover, Religion files and Divine Texts papers. Copies of the compilations also occur under **Past papers Term 1**. This conflicting context does not establish the level of an individual unlabelled paper. Such papers remain *unconfirmed*, not confidently relabelled Ethics 2 or admitted as Ethics 1. None enters the Ethics 1 all-bank or combined sessions.
+The review covers planning, sincerity, remembrance, repentance, prayer, gratitude, trust and self-building. The 24-page first-term lesson notes additionally support foundations, definitions and ethical research, knowledge, moderation, humility, anger, honesty, patience and forgiveness. Specified primary passages support faith, speech and learning questions. Textbook unit numbers and Telegram topic names do not establish university course numbers.
 
-| Source | Evidence and comparison | Site decision |
-| --- | --- | --- |
-| Photos ending 3196–3199 | Explicit Ethics 1 cover plus table-format Q3–12. Foundations, ethical research, piety/knowledge and moderation closely match first-term lessons 1–4. Association with the cover is provisional. | One fragment card; 10 scored source questions. Q1–2 and Q13–30 are absent. |
-| Photos ending 3192–3195 | Separate numbered Q1–20, arranged in reverse page order. No title/level page. Faith, learning, physician responsibilities and social conduct; overlaps the student compilations. | Withheld. Never merged with the 30-item cover: numbering and format differ. |
-| `divine ethics final.pdf` | 20-question TUMS report, TestId 20146, printed date string 2/9/2021 (date format not independently established). Substantial individual/social-ethics overlap, but no I/II designation. Q20 continues on pp. 8–9. | Withheld pending course-level confirmation. |
-| `ethic-online-final-exam.pdf` | 20 screenshots, ordered Q2–20 then Q1. Mixes foundational/social ethics with medical rulings on dissection and forbidden medication. No course numeral. | Withheld; selected radio buttons are not an official key. |
-| `Devine-Ethics-MCQs[1] (1).pdf` | 99 MCQs plus answer sheet. Medical liability, opposite-sex examination, dissection and medication rulings extend beyond the supplied individual-ethics review. Repeats some online/2017 questions. | Mixed/possible professional or Ethics 2 content; level unconfirmed, excluded. |
-| `Divine Ethics EXAM QUESTIONS_Filtered_Edited.pdf` | Self-described student-derived September 2017 compilation; foundations, faith, learning/research, social and physician ethics. No I/II designation or authenticated sitting. | Withheld pending course confirmation. |
-| Same name ending `(1).pdf` | Byte-identical to the filtered 2017 compilation. | Duplicate; no second card. |
-| `Divine Ethics EXAM QUESTIONS(pdf).pdf` | Alternate 2017 version adds a student's identifying information; no additional sitting established. | Kept private; filtered version used for comparison. |
-| `divin ethics 1st term qs.pdf` | 24 pages of lesson questions with prose answers, not a past MCQ paper. Useful corroborating material, including trust and humility. | Teaching reference only; not an exam card or extra authored questions. |
+- The original fragment retains its stable IDs and provisional association with an Ethics 1 cover.
+- New collections are marked `divine-ethics-1-content-match`; their descriptions explicitly state that the original course level is unconfirmed.
+- Medical jurisprudence (liability, opposite-sex examination, dissection and medication rulings), marriage-specific material, unsupported details and ambiguous items are excluded.
+- No questions or exam dates are invented. Light translation/grammar normalization is disclosed in explanations; original PDFs remain available. The unnumbered 2017 compilation uses editorial source-item ordinals, not purported printed question numbers.
+- Original key choices remain separate from checked study answers. New editorial answers use the existing subtly different inferred-answer styling, not an invented official key.
 
-The older `divine-ethics.pdf` in Downloads is byte-identical to the current public review and is not another examination.
+## Published collections
 
-## Telegram search and additional files
+| Source collection | Source items | Scored | Admission and exclusions |
+| --- | ---: | ---: | --- |
+| Ethics 1 table-format fragment | Q3–12 only | 10 | Existing collection retained. Accompanying cover says Ethics 1, February 2022 semester, exam 5 July 2022; association with the unlabelled pages remains provisional. Q1–2 and Q13–30 are genuinely missing. |
+| Five-photo question body | 30 | 29 | Q1–21 and Q23–30. Complete original body is downloadable. Q22 withheld: the divine-hand claim necessary for the apparent all-of-the-above answer was not established by checked references. No cover/date/course code invented. |
+| 2021 Divine ethics report | 20 | 15 | Q1, 2, 5, 7, 8, 10–18 and 20 from the seven-page version. Q3, 4, 6, 9 and 19 excluded for unresolved attribution, interpretation or overlapping options. Reordered nine-page report is an alternate source on the same card. |
+| 99-item compilation | 99 | 35 | Q1, 4, 8, 12, 13, 19, 20, 23–25, 28, 31, 35, 36, 40, 42, 56, 70–75, 77, 79, 83, 85–87, 89, 90, 92–94 and 96. Medical rulings and other unsupported/out-of-scope items excluded. Repeated research/interaction items represented once. Q81's consent/backbiting ambiguity and Q82's two defensible exceptions excluded. |
+| 2017 student compilation: additional items | 73 | 10 | Editorial items 6, 7, 8, 17, 34, 36, 40, 42, 47 and 57, beyond the 99-item selection. Identifying page not published. No authenticated sitting/key claimed. |
+| Separate 20-question photo paper: additional items | 20 | 6 | Q9, 10 and 17–20: faith, emulation/envy, backbiting, ridicule and transmitting knowledge. Repeated source items and medical/unsupported material excluded. Not attached to the unrelated 30-item cover. |
+| **Total** | | **105** | **95 new; six collections, not six independently authenticated university sittings.** |
 
-Searched accessible Telegram All Chats for `ethic`, `divine` and `اخلاق`, followed the relevant source posts in TUMS MCQ BANK and McQ_ANS, and inspected both course-topic histories and their adjacent photo albums. All relevant `ethic` results through January 2021 were reached. This covers accessible searchable messages and the inspected topics, not deleted posts, inaccessible channels or uncaptioned images elsewhere.
+Exact selected IDs, source pages, explanations and exclusions are in `data/divine-ethics/imports/` and the downloadable questions/key. Complete originals remain downloadable even where only relevant items are scored. Excluded questions do not become unanswered/ungraded entries in the selected test.
 
-| Additional source | Content classification | Decision |
-| --- | --- | --- |
-| `Blank 5.pdf` | Seven-page, 23-item authored lesson MCQ compilation with answers; no past-exam cover. Contains a student's identifying information. | Private teaching/comparison reference, not a past-exam card. |
-| `4_6037512510981015930.PDF` | 20-question Divine ethics report. Original TUMS MCQ BANK post dated 1 February 2022 is tagged `#sep2021`; the PDF has no I/II label. | Level unconfirmed. Review overlap is substantial but not proof of enrollment. |
-| Five photos ending 1951, 1952, 1953, 1955, 1956 | Complete question body Q1–30, pages 3–7, posted 18 August 2025 in the mixed Ethics 2 topic. Strong first-term lesson match, but no cover or course numeral. It is a different question sequence from the admitted Q3–12 fragment. | Retained separately pending level confirmation; no invented sitting date or cover association. |
-| `Divine Texts (February 2023).pdf` | Explicit **Divine Texts** cover, February 2023 semester, exam 26 July 2023; 20 questions. | Different named course, excluded. Private original contains student details. |
-| `Divine Texts (September 2023).pdf` | Explicit **Divine Texts** cover, September 2023 semester, exam 4 February 2024; same 20 stems as the February-semester copy. | Different named course, excluded; separate source cover retained. |
-| `Devine_Ethics_MCQs[1].docx` | Original 99-item compilation version, McQ_ANS 21 January 2023. Visually rendered and compared with the edited PDF, not a separate sitting. | Kept with the 99-item PDF, outside the Ethics 1 bank. |
+## Duplicate and non-exam disposition
 
-Telegram's 23 January 2023 correction says **Q18 in `Edited_ethic` is C**. This records the channel's correction, not verification of the rest of its answer sheet. The Word version still contains apparent key problems (for example, its highlighted Q3 answer contradicts the supplied fitrah account). It must not be bulk-imported with those keys.
+The private archive contains 25 files in 12 source groups, including one byte-identical duplicate. Earlier download/Telegram JSON audits preserve discovery-time evidence. Their initial withholding decisions are superseded by this question-level audit.
 
-The private archive is `Downloads/Divine-Ethics-Telegram-2026-10-06/INDEX.md`. It contains numbered source copies, SHA-256 inventory, channel-context screenshots, and clearly labelled machine text/OCR for comparison. Those extractions are **not verified transcripts or answer keys**. No private Telegram account details or student identifying pages have been published.
+| Source/version | Current disposition |
+| --- | --- |
+| `4_6037512510981015930.PDF` and `divine ethics final.pdf` | One report selection; both original versions available. Question order/options differ: seven-page source is the explicit transcript reference. |
+| 99-item PDF and `Devine_Ethics_MCQs[1].docx` | One selection. Word retained privately as an alternate, not a second exam. |
+| `ethic-online-final-exam.pdf` | Relevant items already represented in selected compilations; medical rulings excluded. No duplicate card. Radio selections are not authenticated keys. |
+| Filtered 2017 PDF, its `(1)` copy, and unfiltered version | One selection from filtered PDF. Exact duplicate not published twice; identifying version stays private. |
+| `divin ethics 1st term qs.pdf` | Teaching reference, not an exam. Existing 24-page public reference supports explanations and review gaps. |
+| `Blank 5.pdf` | Authored lesson MCQs without a past-exam cover; private reference, not Final Exam content. |
+| Divine Texts February/September 2023 | Different explicitly named course; excluded. Identifying pages remain private. |
+| `divine-ethics.pdf` in Downloads | Same bytes as current review, not a past examination. |
 
-## Source and review coverage
+Distinct papers can legitimately repeat a concept; deduplication removes duplicate versions/copies, not evidence of recurrence in distinct papers. This is not a claim to cover inaccessible/deleted Telegram material. Originals remain unchanged in Downloads.
 
-The current review summarises selected individual-ethics pages: planning, sincerity, remembrance, repentance, prayer, gratitude, trust and self-building. Its source has a textbook **Unit 1: Individual Ethics** and contents for **Unit 2: Social Ethics**. **Textbook unit numbers do not establish university course numbers.** The older 19-page file called “Divine Ethics Exam PDF” is teaching material, not an exam.
+## Answer-key corrections and ambiguity
 
-| Imported questions | First-term notes | Current review |
-| --- | --- | --- |
-| Q3: divine supervision | Lesson 1, pp. 1–2 | Related principle in the apple case, p. 9; not the exact verse |
-| Q4, Q6: types/methods of ethics | Lesson 2, pp. 4–5 | Not covered in full |
-| Q5, Q7: piety and knowledge | Lesson 3, pp. 7–8 | Full lesson missing |
-| Q8: khulq versus khalq | Lesson 2, pp. 3–4 | Definitions lesson missing |
-| Q9: limits on seeking knowledge | Lesson 3, pp. 6–7 | Full lesson missing; exact hypocrite wording also not established by those note pages |
-| Q10–12: moderation and faculties | Lesson 4, pp. 8–10 | Full lesson missing; planning is not a substitute |
+All 95 additions have checked editorial study answers and per-item explanations. A source mark records what the source chose, not proof that it is correct. No authenticated official key is claimed.
 
-Only Q3 has a substantive review-section mapping. The other nine retain topic-based result groups and direct lesson-page evidence rather than misleading PDF jumps. The existing 75 practice questions and review PDF are unchanged.
+| Source | Original key | Study answer | Reason |
+| --- | --- | --- | --- |
+| Existing fragment Q7 | D | C; B also accepted | Notes p. 7 reject the claim that ungodly people cannot learn; D includes it. |
+| 99-item Q8 | C | D | Notes attribute obstructed discernment to corrupted disposition/desires. Translation defect in D disclosed. |
+| 99-item Q56 | B | A | Friendship should not endorse success achieved by wrongdoing. |
+| 99-item Q72 | B | D | Reasonable questions support learning; contentious dispute is the exception. |
+| 99-item Q73 | D in end key; B on page | B | Body-without-spirit intention analogy; end key conflicts with question page. |
+| 99-item Q75 | B | A | Intention and action, not money invested. Overbroad comparison with other traditions qualified. |
+| 99-item Q93 | D | B | Patient constructive criticism agrees with humility/self-control lessons. |
 
-## Answer-key audit
+Additional ambiguity is scored transparently: photo-30 Q26 accepts A and B (the verse includes proportionate punishment and patience); report Q12 accepts B and C (“wrong” can include “sin”); 99-item Q40 accepts A and C as virtue/vice pairs; photo-20 Q20 displays A (teaching/writing) as the direct interpretation but also accepts the original highlighted B (research), since the incomplete saying does not distinguish knowledge creation from transmission. Photo-30 Q22 and 99-item Q81/Q82 are withheld rather than given unreliable keys.
 
-- Source highlights are preserved as annotations, not presented as an authenticated official key.
-- **Q7:** the photo highlights D (“All of above are true”). Lesson 3, p. 7 explicitly rejects the statement that ungodly people cannot learn. D is not defensible. C directly matches the explanation; B is also compatible with the lesson's discernment account. **Both B and C are accepted**, with C displayed as the preferred study answer and the discrepancy disclosed.
-- **Q9:** D is the intended source answer. Time/place freedom is explicit in the notes. Supplementary primary-text support for taking wisdom even from a hypocrite appears in [Nahjul Balagha, sayings 79–80](https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings/selections-sayings-and-preaching-amir-al-muminin-ali). This supports the answer, not the university course level or authenticity of the annotated key; the answer remains labelled internally as editorially inferred.
-- Q3–6, Q8 and Q10–12 were compared visually with their source choices and against the relevant lesson text. Religious/educational claims are identified as the course's framework, not universal factual claims.
-- No missing questions or fictional exam dates were added. Original numbering and all four source options remain in downloads.
+Photo-30 Q2 was checked at enlarged source resolution: it quotes Quran 3:30 (resurrection/accountability), not the divine-supervision verse in the separate fragment. Its study answer is B and its original Arabic is retained. Similar-looking question templates are not treated as identical questions.
 
-## Files and reproducibility
+Primary passages are linked per question (Quran, Nahjul Balagha and specified hadith collections). Understanding a supplied saying is distinguished from independently authenticating its transmission. Religious claims are framed as course teaching, not universally established secular facts.
 
-- Source fragment: `/study/divine-ethics/past-papers/ethics-1-table-fragment-original.pdf`
-- Lesson reference: `/study/divine-ethics/references/first-term-lessons.pdf`
-- Portable authoring: `data/divine-ethics/imports/`
-- SHA-256 inventory and disposition for every new file: `data/divine-ethics/download-audit-2026-10-06.json`
-- Subsequent Telegram search inventory and source dispositions: `data/divine-ethics/telegram-audit-2026-10-06.json`
-- Regenerate: `node scripts/build-divine-ethics-papers.mjs`, then the normal MCQ/runtime and PDF-manifest builds.
-- Checks: `npm run ethics:papers:check`.
+## Review mapping
 
-To admit the withheld sources safely, obtain a lecturer/course label, matching syllabus, or original cover establishing Ethics 1. Topic overlap alone is insufficient for the requested strict separation.
+Only substantive matches point to review sections. Lessons missing from the current review retain topic-based result groups, first-term-note page references and supplementary evidence. They do not jump to a vaguely similar substitute section. A related mapping does not mean that the review contains the exact verse or question wording.
 
-## Verification status
+Review PDF remains byte-identical: SHA-256 `24cb2e45e92f3125fde928b0fa6a391b651c577baf3dae2f101abae267982ad6`. This delivery expands past-paper coverage, not the review itself or the 75-question practice bank.
 
-- Production Next.js build and TypeScript: passed on 6 October 2026.
-- 37 targeted tests: passed. These cover classification/exclusion including the additional Telegram inventory, API isolation, grading including Q7's alternative keys, saved/completed/combined attempts, wrong-answer review, downloads, source hashes, and English/Arabic glyph coverage for all three Ethics download variants.
-- All four pages of the original-photo PDF were rendered and visually checked. The photographs remain uncropped and unchanged.
-- Review-runtime validation and reproducible Ethics generators: passed. Existing practice questions, existing finals and existing source-collection contents are semantically unchanged.
-- Broader auth, hook-order, cache and PDF suite: 52 of 54 tests passed. The two failures were reproduced against HEAD's pre-import data: a stale assertion expecting 30 collections despite 104 already existing, and missing math/private-use glyphs in Respiratory, Nutrition and Retake exports. The new Ethics exports pass their dedicated glyph check.
-- Signed-in browser verification remains unavailable: localhost redirects to the account sign-in page. Authentication was not bypassed. This is a browser-verification limitation, not a passing visual QA claim. Delivery commit/push status is recorded in Git history.
+## Reproducibility and verification
+
+- Canonical additions: `scripts/content/divine-ethics-expanded-papers.mjs`.
+- Source hashes/sizes: `data/divine-ethics/paper-source-manifest.json`.
+- Source ingestion: `node scripts/build-divine-ethics-source-assets.mjs /absolute/path/to/Downloads`. Original photographs embedded without cropping; existing PDFs copied byte-for-byte. No personal filesystem paths in public data.
+- Generate: `node scripts/build-embedded-bank.mjs` (includes the Divine Ethics paper generator), `node scripts/build-mcq-runtime.mjs`, `node scripts/build-review-runtime.mjs`, `node scripts/build-pdf-manifest.mjs`.
+- Regression coverage: paper and route tests, practice-bank test, completion and wrong-answer-review tests. Delivery verification is recorded below after execution.
+- Browser verification needs an authenticated local session. Authentication is not bypassed; API/data tests are not described as a signed-in visual test.
+
+### Delivery checks — 6 October 2026
+
+- 72 tests passed: source schemas, exact selections, corrections and alternative keys, original/combined/completed saved attempts, wrong-answer reviews, API isolation/cache responses, Arabic and English export glyphs, authentication, hook order and Guided mode regressions.
+- Production Next.js build and TypeScript passed. Deployment-asset validation, review-runtime validation and PDF cache-manifest checks passed.
+- All nine pages of the two new photographed-source bundles were rendered and visually inspected. Original images remain uncropped and legible at their original resolution; low-resolution source limitations are not represented as new scan quality.
+- Every source asset has a checked content hash. Four existing PDFs are preserved byte-for-byte; alternate report versions share one card.
+- Compared against the pre-change Git revision: all unrelated practice/final banks are unchanged. The original Ethics fragment retains its IDs, revision numbers, choices and scoring. Completed collection attempts stay completed; an old all-bank attempt retains its ten answers and can continue into the expanded bank.
+- The existing review PDF and 75 practice questions remain unchanged. No signed-in browser completion claim: local access requires account sign-in.

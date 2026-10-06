@@ -3,9 +3,11 @@
 Ten surviving questions, not a complete 30-question exam. The accompanying cover says Divine Ethics 1, February 2022 semester, exam 5 July 2022; the question pages themselves are undated, so that cover association is provisional. The wording matches the supplied first-term lesson notes. The separate numbered 20-question photographs have not been joined to this fragment. Highlighted selections are study annotations, not an authenticated official key; Q7's supplied answer is corrected with two defensible choices accepted.
 
 Collection ID: divine-ethics-1-table-fragment
-Course: Divine Ethics 1
+Course: Divine Ethics 1-relevant study
 
-Missing from the stated 30-item paper: Q1, Q2, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30. Missing questions are not invented or counted as ungraded items.
+
+
+Missing source questions: Q1, Q2, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30. Missing questions are not invented or counted as ungraded items.
 
 ## Original sources
 
@@ -138,10 +140,10 @@ Existing answer note: Within the course's framework, the verse describes God see
 
 Source: Original Q3; source PDF page 2.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q3; original-photo PDF page 2.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 3; source PDF page 2.
 /study/divine-ethics/references/first-term-lessons.pdf#page=1
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
-/study/reviews/divine-ethics.pdf#page=9 — Remembrance of the heart and the apple case
+/study/reviews/divine-ethics.pdf#page=9 — Remembrance of the heart and the apple case. Related teaching concept; not a claim that the review reproduces the original question.
 
 ### 4 · divine-ethics-1-table-fragment-q004
 
@@ -153,10 +155,10 @@ Existing answer note: The supplied first-term notes assign commanding-and-forbid
 
 Source: Original Q4; source PDF page 2.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q4; original-photo PDF page 2.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 4; source PDF page 2.
 /study/divine-ethics/references/first-term-lessons.pdf#page=4
 /study/divine-ethics/references/first-term-lessons.pdf#page=5
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 5 · divine-ethics-1-table-fragment-q005
 
@@ -168,10 +170,10 @@ Existing answer note: In the notes' religious account, piety restores purity and
 
 Source: Original Q5; source PDF page 2.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q5; original-photo PDF page 2.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 5; source PDF page 2.
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
 /study/divine-ethics/references/first-term-lessons.pdf#page=8
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 6 · divine-ethics-1-table-fragment-q006
 
@@ -183,10 +185,10 @@ Existing answer note: Lesson 2 explicitly calls the method of commanding-and-for
 
 Source: Original Q6; source PDF page 3.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q6; original-photo PDF page 3.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 6; source PDF page 3.
 /study/divine-ethics/references/first-term-lessons.pdf#page=4
 /study/divine-ethics/references/first-term-lessons.pdf#page=5
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 7 · divine-ethics-1-table-fragment-q007
 
@@ -198,10 +200,10 @@ Existing answer note: The green source mark is D, but first-term Lesson 3, quest
 
 Source: Original Q7; source PDF page 3.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q7; original-photo PDF page 3.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 7; source PDF page 3.
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
 /study/divine-ethics/references/first-term-lessons.pdf#page=8
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 8 · divine-ethics-1-table-fragment-q008
 
@@ -213,10 +215,10 @@ Existing answer note: Lesson 2 distinguishes acquired moral character (khulq) fr
 
 Source: Original Q8; source PDF page 3.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q8; original-photo PDF page 3.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 8; source PDF page 3.
 /study/divine-ethics/references/first-term-lessons.pdf#page=3
 /study/divine-ethics/references/first-term-lessons.pdf#page=4
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 9 · divine-ethics-1-table-fragment-q009
 
@@ -228,11 +230,11 @@ Existing answer note: D retains the supplied study mark. Lesson 3 pp. 6–7 supp
 
 Source: Original Q9; source PDF page 3.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q9; original-photo PDF page 3.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 9; source PDF page 3.
 /study/divine-ethics/references/first-term-lessons.pdf#page=6
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
 Nahjul Balagha, sayings 79–80 (supplementary primary text): https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings/selections-sayings-and-preaching-amir-al-muminin-ali
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 10 · divine-ethics-1-table-fragment-q010
 
@@ -244,11 +246,11 @@ Existing answer note: A best captures the lesson's broad balance between respons
 
 Source: Original Q10; source PDF page 4.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q10; original-photo PDF page 4.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 10; source PDF page 4.
 /study/divine-ethics/references/first-term-lessons.pdf#page=8
 /study/divine-ethics/references/first-term-lessons.pdf#page=9
 /study/divine-ethics/references/first-term-lessons.pdf#page=10
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 11 · divine-ethics-1-table-fragment-q011
 
@@ -260,10 +262,10 @@ Existing answer note: The Aristotelian classification taught in Lesson 4 maps ba
 
 Source: Original Q11; source PDF page 4.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q11; original-photo PDF page 4.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 11; source PDF page 4.
 /study/divine-ethics/references/first-term-lessons.pdf#page=8
 /study/divine-ethics/references/first-term-lessons.pdf#page=9
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.
 
 ### 12 · divine-ethics-1-table-fragment-q012
 
@@ -275,8 +277,8 @@ Existing answer note: In this moderation-lesson context, the source's intended a
 
 Source: Original Q12; source PDF page 4.
 
-Divine Ethics 1 · photographed fragment Q3–12; original Q12; original-photo PDF page 4.
+Divine Ethics 1 · photographed fragment Q3–12; original Q 12; source PDF page 4.
 /study/divine-ethics/references/first-term-lessons.pdf#page=8
 /study/divine-ethics/references/first-term-lessons.pdf#page=9
 /study/divine-ethics/references/first-term-lessons.pdf#page=10
-This question has no exact teaching section in the current review PDF. Use the first-term lesson notes above.
+This question has no exact teaching section in the current review PDF. Use the first-term lesson notes and supplementary evidence above.

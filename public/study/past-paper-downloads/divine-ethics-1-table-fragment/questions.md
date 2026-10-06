@@ -3,9 +3,11 @@
 Ten surviving questions, not a complete 30-question exam. The accompanying cover says Divine Ethics 1, February 2022 semester, exam 5 July 2022; the question pages themselves are undated, so that cover association is provisional. The wording matches the supplied first-term lesson notes. The separate numbered 20-question photographs have not been joined to this fragment. Highlighted selections are study annotations, not an authenticated official key; Q7's supplied answer is corrected with two defensible choices accepted.
 
 Collection ID: divine-ethics-1-table-fragment
-Course: Divine Ethics 1
+Course: Divine Ethics 1-relevant study
 
-Missing from the stated 30-item paper: Q1, Q2, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30. Missing questions are not invented or counted as ungraded items.
+
+
+Missing source questions: Q1, Q2, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30. Missing questions are not invented or counted as ungraded items.
 
 ## Original sources
 

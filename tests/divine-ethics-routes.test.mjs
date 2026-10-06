@@ -16,11 +16,11 @@ function load(file){
  const local=id=>{if(!id.startsWith('@/')&&!id.startsWith('.'))return require(id);const base=id.startsWith('@/')?path.join(root,id.slice(2)):path.resolve(path.dirname(file),id);return load([base,base+'.ts',base+'.json'].find(p=>fs.existsSync(p)));};
  new Function('require','module','exports',code)(local,module,module.exports);return module.exports;
 }
-test('Divine Ethics API: separate ten-question Ethics 1 final, 75 practice, cache and course isolation',async()=>{
+test('Divine Ethics API: 105 relevant past questions, 75 practice, cache and course isolation',async()=>{
  const route=load(path.join(root,'app/api/final-exam/route.ts'));
  const request=(query,headers)=>route.GET(new Request('http://localhost/api/final-exam?'+query,{headers}));
  const response=await request('exam=term2-divine-ethics'),body=await response.json();
- assert.equal(response.status,200);assert.equal(body.bank,'divine-ethics-past-papers');assert.equal(body.questions.length,10);
+ assert.equal(response.status,200);assert.equal(body.bank,'divine-ethics-past-papers');assert.equal(body.questions.length,105);
  assert(body.questions.every(q=>q.tags.includes('divine-ethics-1-past-paper')));
  assert.equal((await request('exam=term2-divine-ethics&bank=religion-past-papers')).status,400);
  assert.equal((await request('exam=term2-religion&bank=divine-ethics-past-papers')).status,400);
@@ -29,5 +29,5 @@ test('Divine Ethics API: separate ten-question Ethics 1 final, 75 practice, cach
  const practice=policy.loadVerifiedQuestions('term2-divine-ethics');assert.equal(practice.length,75);
  assert(practice.every(q=>!body.questions.some(f=>f.id===q.id)));
  const summary=policy.bankSummary().exams.find(e=>e.id==='term2-divine-ethics');
- assert.equal(summary.questionCount,75);assert.equal(summary.finalExamQuestionCount,10);
+ assert.equal(summary.questionCount,75);assert.equal(summary.finalExamQuestionCount,105);
 });
