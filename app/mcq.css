@@ -26,6 +26,10 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 .mcq-app .dl-pill,.paper-downloads a,.review-downloads a{color:var(--mcq-green);background:#f7faf5;border-color:#cfdccd}
 .mcq-app .dl-pill svg,.paper-downloads a svg,.review-downloads a svg{width:15px;height:15px}
 .mcq-app .dl-pill[aria-busy=true]{opacity:.6;cursor:progress}
+.practice-pdf-download{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;max-width:100%}
+.practice-pdf-status{max-width:260px;font-size:10.5px;line-height:1.4;color:var(--mcq-muted);overflow-wrap:anywhere}
+.practice-pdf-status.error{color:#8b2a23}
+.mcq-app .practice-pdf-download button:disabled{opacity:.6;cursor:default}
 .cached-pdf-download{display:inline-flex;flex-direction:column;gap:3px;max-width:100%}
 .cached-pdf-download>small{padding-left:6px;font-size:10.5px;line-height:1.4;color:var(--mcq-muted)}
 .review-downloads a small{font-weight:500;color:#6d8073}

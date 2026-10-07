@@ -46,6 +46,10 @@ async function defaultRender(definition:TDocumentDefinitions,env:Env):Promise<Bl
   pdfMake.addFonts(fonts);
   return pdfMake.createPdf(definition).getBlob();
 }
+/** Shared, lazy-loaded renderer for downloadable study documents. */
+export function renderStudyPdf(definition:TDocumentDefinitions):Promise<Blob> {
+  return defaultRender(definition,{});
+}
 async function sha256(env:Env,text:string) {
   const crypto=env.crypto??globalThis.crypto;
   return hex(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)));

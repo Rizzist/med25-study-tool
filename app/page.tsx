@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { QuestionMedia } from '@/src/components/QuestionMedia';
 import { StudyShell } from '@/src/components/StudyShell';
 import { StudyIcon } from '@/src/components/StudyIcon';
+import { PracticePdfDownload } from '@/src/components/PracticePdfDownload';
 import { isLocationQuestion, locationOptionId, locationLabel, restoredLocationResponse, canRevealAnatomyFigure } from '@/src/lib/mcq/anatomy-location.mjs';
 import { biochemistryChapterById, biochemistryChapters, isBiochemistryChapterId } from '@/src/lib/biochemistry/chapters';
 import {DEFAULT_RETAKE_CHAPTER_IDS, isRetakeChapterIndexReady, retakeChapterQuestionIds, retakeChapterSelectionLabel, sanitizeRetakeChapterIds} from '@/src/lib/biochemistry/retake-practice-scope.mjs';
@@ -1138,7 +1139,7 @@ export default function Home() {
       <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{selectedConfig.title}</h1><p>{selectedConfig.focus}</p></div>
       <div className="course-head-side">
         <div className="course-stat"><strong>{displayCount((selectedExam?.questionCount??0).toLocaleString())}</strong><span>practice MCQs</span></div>
-        <div className="pill-row">{reviewEnabled&&<ReviewDownloads key={exam} exam={exam}/>}{tab!=='Past exams'&&<button type="button" className="pill" onClick={()=>setTab('Past exams')}><StudyIcon name="papers"/>Past papers</button>}</div>
+        <div className="pill-row">{reviewEnabled&&<ReviewDownloads key={exam} exam={exam}/>}<PracticePdfDownload key={`${exam}-${selectedExam?.version??bank?.version}`} exam={exam} title={selectedConfig.title} version={selectedExam?.version??bank?.version} questionIds={subjectIds?.all} loadQuestions={ids=>loadQuestionsByIds(exam,ids)}/>{tab!=='Past exams'&&<button type="button" className="pill" onClick={()=>setTab('Past exams')}><StudyIcon name="papers"/>Past papers</button>}</div>
       </div>
     </header>}
     {sessionError&&<p role="alert" className="mcq-alert error">{sessionError}</p>}
