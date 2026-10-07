@@ -6,7 +6,8 @@ import type {Column,Content,ContentText,TDocumentDefinitions,TableCell} from 'pd
 import {keyOf,type ExportBlock,type ParsedExport} from './parse-export.mjs';
 
 export type PaperVariant='questions'|'key'|'both';
-export type PaperPart={doc:ParsedExport;courseTitle:string;collection:{id:string;title:string;gradedQuestionCount?:number;sourceRecordCount?:number;ungradedCount?:number;date?:string|null}};
+export type PaperQuestionExtras={media?:Content[];answer?:{text:string;correctLetters:string[]};unbreakable?:boolean};
+export type PaperPart={doc:ParsedExport;courseTitle:string;collection:{id:string;title:string;gradedQuestionCount?:number;sourceRecordCount?:number;ungradedCount?:number;date?:string|null};questionExtras?:Record<string,PaperQuestionExtras>};
 /** Bump when the layout changes so cached PDFs are regenerated. */
 export const PAPER_PDF_TEMPLATE='2026-09-20.3';
 export const paperFonts={latin:'NotoSans',arabic:'NotoSansArabic'};
@@ -60,14 +61,15 @@ function cover(part:PaperPart,variant:PaperVariant,pageBreak=false):Content {
 function part(title:string,count:number):Content{
   return {stack:[{text:[{text:title,fontSize:12.5,bold:true},{text:`   ${count}`,fontSize:8.5,color:muted,bold:false}],margin:[0,10,0,4]},{canvas:[{type:'line',x1:0,y1:0,x2:515,y2:0,lineWidth:1.2,lineColor:green}],margin:[0,0,0,8]}]};
 }
-function questionCard(q:ExportBlock,key:ExportBlock|undefined,withAnswer:boolean):Content {
+function questionCard(q:ExportBlock,key:ExportBlock|undefined,withAnswer:boolean,extras?:PaperQuestionExtras):Content {
   const k=key?keyOf(key):null;
   const rows:Content[]=[{columns:[{table:{widths:[Math.max(24,8+7*q.number.length)],body:[[{...badge(q.number,ink,'#d9f06b'),margin:[0,3,0,3]}]]},layout:rowLayout,width:'auto'},{text:q.id,fontSize:7.2,color:'#8a978f',margin:[8,4,0,0]}],margin:[0,0,0,4]}];
   q.paragraphs.forEach((p,i)=>rows.push(runs(p,{fontSize:10.2,bold:i===0,lineHeight:1.2,margin:[0,1,0,4]})));
-  if(q.options.length)rows.push({table:{widths:[18,'*'],body:q.options.map((o):TableCell[]=>{const correct=withAnswer&&k?.letter===o.letter;return [badge(o.letter,correct?green:'#f7f9f4',correct?'#fff':'#45564d'),runs(o.text,{fontSize:9.8,lineHeight:1.2,margin:[2,1.5,0,1.5],...(correct?{bold:true,color:'#0f4d35'}:{})})];})},layout:{...rowLayout,paddingBottom:()=>2}});
+  rows.push(...extras?.media??[]);
+  if(q.options.length)rows.push({table:{widths:[18,'*'],body:q.options.map((o):TableCell[]=>{const correct=withAnswer&&(extras?.answer?extras.answer.correctLetters.includes(o.letter):k?.letter===o.letter);return [badge(o.letter,correct?green:'#f7f9f4',correct?'#fff':'#45564d'),runs(o.text,{fontSize:9.8,lineHeight:1.2,margin:[2,1.5,0,1.5],...(correct?{bold:true,color:'#0f4d35'}:{})})];})},layout:{...rowLayout,paddingBottom:()=>2}});
   if(withAnswer){
-    const answer:ContentText=k?.letter?{text:[{text:`Answer ${k.letter}`,bold:true,color:green},runs(k.text?` · ${k.text}`:'')],fontSize:9.3}:{text:[{text:'Not graded',bold:true},runs(k?.text?` · ${k.text}`:' · no defensible reviewed key')],fontSize:9.3,color:'#5d4a17'};
-    rows.push({table:{widths:['*'],body:[[{...answer,fillColor:k?.letter?soft:gold,margin:[6,4,6,4]}]]},layout:rowLayout,margin:[0,6,0,0]});
+    const answer:ContentText=extras?.answer?{text:[{text:'Answer ',bold:true,color:green},runs(extras.answer.text)],fontSize:9.3}:k?.letter?{text:[{text:`Answer ${k.letter}`,bold:true,color:green},runs(k.text?` · ${k.text}`:'')],fontSize:9.3}:{text:[{text:'Not graded',bold:true},runs(k?.text?` · ${k.text}`:' · no defensible reviewed key')],fontSize:9.3,color:'#5d4a17'};
+    rows.push({table:{widths:['*'],body:[[{...answer,fillColor:extras?.answer||k?.letter?soft:gold,margin:[6,4,6,4]}]]},layout:rowLayout,margin:[0,6,0,0]});
     if(key?.fields['Existing answer note'])rows.push(meta('Note',key.fields['Existing answer note']));
     if(key?.fields['Provenance note'])rows.push(meta('Provenance',key.fields['Provenance note']));
     if(key?.fields['Key provenance'])rows.push(meta('Key source',key.fields['Key provenance']));
@@ -75,7 +77,7 @@ function questionCard(q:ExportBlock,key:ExportBlock|undefined,withAnswer:boolean
   }
   for(const [field,value] of Object.entries(q.fields))if(field!=='Source')rows.push(meta(field,value));
   if(q.fields.Source)rows.push(meta('Source',q.fields.Source));
-  return {table:{widths:['*'],body:[[{stack:rows}]]},layout:cardLayout,unbreakable:q.paragraphs.join(' ').length+q.options.reduce((n,o)=>n+o.text.length,0)<1400,margin:[0,0,0,6]};
+  return {table:{widths:['*'],body:[[{stack:rows}]]},layout:cardLayout,unbreakable:extras?.unbreakable??q.paragraphs.join(' ').length+q.options.reduce((n,o)=>n+o.text.length,0)<1400,margin:[0,0,0,6]};
 }
 function keyTable(doc:ParsedExport):Content {
   const head=(t:string):TableCell=>({text:t,fontSize:7.2,bold:true,color:muted,characterSpacing:.8,margin:[0,2,0,2]});
@@ -96,7 +98,7 @@ function keyTable(doc:ParsedExport):Content {
 function partContent(p:PaperPart,variant:PaperVariant,pageBreak:boolean):Content[] {
   const keys=new Map(p.doc.keys.map(k=>[k.id,k]));
   const out:Content[]=[cover(p,variant,pageBreak)];
-  if(variant!=='key'){out.push(part('Questions',p.doc.questions.length));for(const q of p.doc.questions)out.push(questionCard(q,keys.get(q.id),variant==='both'));}
+  if(variant!=='key'){out.push(part('Questions',p.doc.questions.length));for(const q of p.doc.questions)out.push(questionCard(q,keys.get(q.id),variant==='both',p.questionExtras?.[q.id]));}
   if(variant==='key'){out.push(part('Answer key & provenance',p.doc.keys.length));for(const t of p.doc.keyIntro)out.push(runs(t,{fontSize:9,color:muted,lineHeight:1.25,margin:[0,0,0,8]}));out.push(keyTable(p.doc));}
   if(variant==='both'&&p.doc.keyIntro.length)out.push(runs(p.doc.keyIntro.join(' '),{fontSize:8.5,color:muted,lineHeight:1.25,margin:[0,6,0,0]}));
   return out;

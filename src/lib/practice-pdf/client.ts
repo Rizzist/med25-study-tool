@@ -1,12 +1,12 @@
 import {requireStudySession} from '../../../public/med25-auth-cache.mjs';
 import type {MCQQuestion} from '../mcq/types';
 import {renderStudyPdf,type PaperResult} from '../paper-pdf/client';
-import {buildPracticeDocument,PRACTICE_PDF_TEMPLATE,type PracticeFigures} from './document';
+import {buildPracticeDocument,PRACTICE_PDF_TEMPLATE,type PracticeFigures,type PracticePdfVariant} from './document';
 import {preparePracticeFigures} from './media';
 import type {TDocumentDefinitions} from 'pdfmake/interfaces';
 
 export const PRACTICE_PDF_CACHE='med25-practice-pdfs-v1';
-export type PracticePdfRequest={exam:string;title:string;version:string;questionIds:string[];loadQuestions:(ids:string[])=>Promise<MCQQuestion[]>;progress?:(text:string)=>void};
+export type PracticePdfRequest={exam:string;title:string;version:string;variant:PracticePdfVariant;questionIds:string[];loadQuestions:(ids:string[])=>Promise<MCQQuestion[]>;progress?:(text:string)=>void};
 type Env={authorize?:()=>Promise<unknown>;caches?:CacheStorage;crypto?:Crypto;origin?:string;render?:(definition:TDocumentDefinitions)=>Promise<Blob>;figures?:(questions:MCQQuestion[],progress?:PracticePdfRequest['progress'])=>Promise<PracticeFigures>};
 
 export function createPracticePdf(env:Env={}){
@@ -22,12 +22,12 @@ export function createPracticePdf(env:Env={}){
     await (env.authorize??requireStudySession)();
     const ids=[...new Set(request.questionIds)];
     if(!ids.length||!request.version)throw new Error('The practice catalog is still loading. Please retry in a moment.');
-    const fingerprint=JSON.stringify({template:PRACTICE_PDF_TEMPLATE,exam:request.exam,title:request.title,version:request.version,ids});
+    const fingerprint=JSON.stringify({template:PRACTICE_PDF_TEMPLATE,exam:request.exam,title:request.title,version:request.version,variant:request.variant,ids});
     // Deduplicate before asynchronous hashing, including very fast cached/text-only exports.
     if(!pending.has(fingerprint))pending.set(fingerprint,(async()=>{
       const bytes=await (env.crypto??globalThis.crypto).subtle.digest('SHA-256',new TextEncoder().encode(fingerprint));
       const hash=Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');
-      const key=new URL(`/study/practice-pdf/${encodeURIComponent(request.exam)}.pdf?v=${hash}`,env.origin??location.origin).href;
+      const key=new URL(`/study/practice-pdf/${encodeURIComponent(request.exam)}-${request.variant}.pdf?v=${hash}`,env.origin??location.origin).href;
       latest.set(new URL(key).pathname,key);
       let cache:Cache|undefined;try{cache=await (env.caches??globalThis.caches)?.open(PRACTICE_PDF_CACHE);}catch{/* Optional device cache. */}
       const hit=await cache?.match(key).catch(()=>undefined);
@@ -39,8 +39,8 @@ export function createPracticePdf(env:Env={}){
         for(const id of batch){const q=byId.get(id);if(!q||q.status!=='verified')throw new Error('The practice bank changed or did not load completely. Refresh the course and retry.');questions.push(q);}
       }
       const figures=await (env.figures??preparePracticeFigures)(questions,request.progress);
-      request.progress?.(`Creating PDF · ${questions.length} questions and answer key…`);
-      const blob=await (env.render??renderStudyPdf)(buildPracticeDocument(request.title,questions,figures));
+      request.progress?.(`Creating PDF · ${questions.length} questions${request.variant==='both'?' and answers':''}…`);
+      const blob=await (env.render??renderStudyPdf)(buildPracticeDocument(request.title,questions,request.variant,figures));
       // A long export must not repopulate protected caches after the student signs out.
       await (env.authorize??requireStudySession)();
       let cached=false;

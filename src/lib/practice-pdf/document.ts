@@ -1,11 +1,12 @@
 import type {Content,TDocumentDefinitions} from 'pdfmake/interfaces';
 import type {MCQQuestion} from '../mcq/types';
-import {paperFonts,runs} from '../paper-pdf/document';
+import {buildPaperDocument,PAPER_PDF_TEMPLATE,type PaperPart,type PaperVariant} from '../paper-pdf/document';
 
-export const PRACTICE_PDF_TEMPLATE='2026-10-07.1';
+// Include the shared layout version so future past-paper styling updates invalidate these too.
+export const PRACTICE_PDF_TEMPLATE=`2026-10-07.2:${PAPER_PDF_TEMPLATE}`;
+export type PracticePdfVariant=Extract<PaperVariant,'questions'|'both'>;
 export type PracticeFigure={image?:string;link?:string;label?:string};
 export type PracticeFigures=Record<string,PracticeFigure[]>;
-const green='#126747',ink='#172a22',muted='#617268';
 const letter=(index:number)=>String.fromCharCode(65+index);
 export const isPaperLocation=(q:MCQQuestion)=>q.kind==='dynamic_anatomy'&&q.anatomy?.responseMode==='locate';
 
@@ -22,42 +23,28 @@ export function practiceAnswer(q:MCQQuestion):string {
   return answers.join(' / ');
 }
 
-/** All questions first, then a separate answer/explanation section; no student data. */
-export function buildPracticeDocument(title:string,questions:MCQQuestion[],figures:PracticeFigures={}):TDocumentDefinitions {
-  const content:Content[]=[
-    {text:'MED//25 · PRACTICE BANK',fontSize:9,bold:true,color:green,characterSpacing:1},
-    runs(`${title} · Practice MCQs`,{fontSize:22,bold:true,margin:[0,8,0,8]}),
-    runs(`${questions.length} practice questions · Answer key and explanations at the end`,{fontSize:10,color:muted}),
-    {text:'Generated study questions, not a past exam paper. The full course bank is included, independent of session length or collection filters.',fontSize:9,color:muted,margin:[0,5,0,14]},
-  ];
+/** Adapt the practice bank to the same cover, question cards and inline keys as PYQs. */
+export function buildPracticeDocument(title:string,questions:MCQQuestion[],variant:PracticePdfVariant,figures:PracticeFigures={}):TDocumentDefinitions {
+  const part:PaperPart={courseTitle:title,collection:{id:'practice-bank',title:`${title} · Practice MCQs`},
+    doc:{title:`${title} · Practice MCQs`,intro:[`${questions.length} generated practice questions. Full course bank, independent of session length or collection filters. Not a past exam paper.`],meta:{},sources:[],questions:[],keys:[],keyIntro:[]},questionExtras:{}};
   questions.forEach((q,index)=>{
     if(q.kind==='dynamic_anatomy_3d')throw new Error(`Archived 3D item ${q.id} cannot be exported without a verified 2D figure.`);
     if(q.media?.length!==(figures[q.id]?.length??0)&&q.media?.length)throw new Error(`Missing question media for ${q.id}.`);
-    const body:Content[]=[
-      runs(`${index+1}.  ${q.prompt}`,{bold:true,fontSize:10.5,lineHeight:1.15,margin:[0,0,0,6]}),
-      ...(figures[q.id]??[]).map((f):Content=>f.image
-        ?{image:f.image,fit:[495,280],alignment:'center',margin:[0,3,0,8]}
-        :{text:f.label??'Open question media (online)',link:f.link,color:green,decoration:'underline',fontSize:9,margin:[0,3,0,8]}),
-    ];
-    if(isPaperLocation(q))body.push({text:'Write the location number from the figure: __________',fontSize:10,margin:[0,2,0,4]});
-    else q.options.forEach((o,i)=>body.push(runs(`${letter(i)}.  ${o.text}`,{fontSize:10,margin:[12,2,0,2]})));
-    const short=q.prompt.length+q.options.reduce((n,o)=>n+o.text.length,0)<1000&&(q.media?.length??0)<=1;
-    content.push({stack:body,unbreakable:short,margin:[0,5,0,13]});
-  });
-  content.push({text:'Answer key & explanations',pageBreak:'before',fontSize:19,bold:true,color:green,margin:[0,0,0,14]});
-  questions.forEach((q,index)=>{
+    const number=String(index+1),locate=isPaperLocation(q);
     const source=[q.source.title,q.source.chapter,q.source.page?`p. ${q.source.page}`:'',q.source.slide?`slide ${q.source.slide}`:''].filter(Boolean).join(' · ');
-    content.push({stack:[
-      runs(`${index+1}.  ${practiceAnswer(q)}`,{bold:true,color:green,fontSize:10.5,margin:[0,0,0,4]}),
-      runs(q.explanation,{fontSize:9.5,lineHeight:1.2,margin:[0,0,0,5]}),
-      ...q.media?.filter(m=>m.transcript).map(m=>runs(`Media transcript: ${m.transcript}`,{fontSize:9,margin:[0,0,0,4]}))??[],
-      runs(`${q.topic} · ${q.id}`,{fontSize:7.5,color:muted}),
-      runs(`Reference: ${source}`,{fontSize:7.5,color:muted,margin:[0,2,0,0]}),
-      ...q.media?.filter(m=>m.attribution).map(m=>runs(m.attribution!,{fontSize:7.5,color:muted}))??[],
-    ],unbreakable:q.explanation.length<1800,margin:[0,0,0,14]});
+    const options=locate?[]:q.options.map((o,i)=>({letter:letter(i),text:o.text}));
+    part.doc.questions.push({id:q.id,number,paragraphs:[q.prompt,...locate?['Write the location number from the figure: __________']:[]],options,fields:{}});
+    const notes=[q.explanation,`Reference: ${source}`,...q.media?.filter(m=>m.transcript).map(m=>`Media transcript: ${m.transcript}`)??[],...q.media?.filter(m=>m.attribution).map(m=>m.attribution!)??[]];
+    // Neither explanations, references, nor answer metadata enter the questions-only document.
+    if(variant==='both')part.doc.keys.push({id:q.id,number,paragraphs:notes,options:[],fields:{}});
+    const accepted=new Set([q.correctOptionId,...q.acceptedOptionIds??[]]);
+    part.questionExtras![q.id]={
+      ...(variant==='both'?{answer:{text:practiceAnswer(q),correctLetters:locate?[]:q.options.flatMap((o,i)=>accepted.has(o.id)?[letter(i)]:[])}}:{}),
+      media:(figures[q.id]??[]).map((f):Content=>f.image
+        ?{image:f.image,fit:[490,260],alignment:'center',margin:[0,3,0,8]}
+        :{text:f.label??'Open question media (online)',link:f.link,color:'#126747',decoration:'underline',fontSize:9,margin:[0,3,0,8]}),
+      unbreakable:!(q.media?.length)&&q.prompt.length+q.options.reduce((n,o)=>n+o.text.length,0)+(variant==='both'?notes.join(' ').length:0)<1400,
+    };
   });
-  return {pageSize:'A4',pageMargins:[42,38,42,46],info:{title:`${title} · Practice MCQs`,creator:'MED//25'},
-    defaultStyle:{font:paperFonts.latin,fontSize:10,color:ink},content,
-    footer:(page,total)=>({columns:[runs(`${title} · Practice MCQs`,{fontSize:7.5,color:muted}),{text:`${page} / ${total}`,fontSize:7.5,color:muted,alignment:'right'}],margin:[42,17,42,0]}),
-  };
+  return buildPaperDocument([part],variant,`${title} · Practice MCQs · ${variant==='both'?'Questions + key':'Questions only'}`);
 }
