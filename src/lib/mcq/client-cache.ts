@@ -12,7 +12,18 @@ async function store(url:string,response:Response) {
     if(keys.length>400) await Promise.all(keys.slice(0,keys.length-400).map(key=>cache.delete(key)));
   } catch { /* Private browsing / quota cannot block studying. */ }
 }
-/** Versioned files are immutable; mutable manifests revalidate, with offline fallback. */
+// Files under /study/ are static deploy assets: they cannot change until the next deploy.
+// Copies are stamped with the deploy that fetched them, so within a deploy they are served
+// from cache with no network, and the first read after a new deploy revalidates (usually 304).
+const DEPLOY_BUILD=process.env.NEXT_PUBLIC_MED25_BUILD??'';
+const BUILD_HEADER='x-med25-build';
+const deployStatic=(key:string)=>Boolean(DEPLOY_BUILD)&&new URL(key).pathname.startsWith('/study/');
+async function stamped(key:string,response:Response) {
+  if(!deployStatic(key))return response;
+  const headers=new Headers(response.headers);headers.set(BUILD_HEADER,DEPLOY_BUILD);
+  return new Response(await response.blob(),{status:200,headers});
+}
+/** Versioned files are immutable; deploy assets are fresh for their deploy; others revalidate, with offline fallback. */
 export async function cachedJson<T>(url:string,revalidate=false):Promise<T> {
   await requireStudySession();
   const key=new URL(url,window.location.origin).href;
@@ -21,15 +32,19 @@ export async function cachedJson<T>(url:string,revalidate=false):Promise<T> {
     let saved:Response|undefined;
     try {saved=await (await caches.open(DATA_CACHE)).match(key);} catch { /* optional */ }
     const immutable=new URL(key).searchParams.has('v');
-    if(saved&&immutable&&!revalidate)return saved.json() as Promise<T>;
+    if(saved&&!revalidate&&(immutable||(deployStatic(key)&&saved.headers.get(BUILD_HEADER)===DEPLOY_BUILD)))return saved.json() as Promise<T>;
     try {
       const etag=saved?.headers.get('etag');
       const response=await fetch(key,{cache:'no-cache',headers:etag?{'if-none-match':etag}:undefined,signal:AbortSignal.timeout(12000)});
-      if(response.status===304&&saved)return saved.json() as Promise<T>;
+      if(response.status===304&&saved){
+        const fresh=await stamped(key,saved);
+        if(fresh!==saved)await store(key,fresh.clone());
+        return fresh.json() as Promise<T>;
+      }
       if(response.status===401||response.status===403)throw denyStudySession();
       if(!response.ok)throw Error('Could not load '+new URL(key).pathname);
       const payload=await response.clone().json();
-      await store(key,response);
+      await store(key,await stamped(key,response));
       return payload as T;
     } catch(error) {if((error as {code?:string}).code==='AUTH_REQUIRED')throw error;if(saved)return saved.json() as Promise<T>;throw error;}
   })();
