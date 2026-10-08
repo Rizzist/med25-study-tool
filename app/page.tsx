@@ -13,7 +13,8 @@ import {DEFAULT_RETAKE_CHAPTER_IDS, isRetakeChapterIndexReady, retakeChapterQues
 import {BiochemistryPracticeChapters} from '@/src/components/BiochemistryPracticeChapters';
 import { classifySessionCompletion } from '@/src/lib/mcq/sprint-selection.mjs';
 import {LIMB_PRACTICE_SCOPES,limbPracticeLabel,savedLimbPracticeScope,type LimbPracticeScope,type LimbPracticeIndex} from '@/src/lib/mcq/limb-practice-scope.mjs';
-import {CVS_SCOPES,cvsScopeLabel,savedCvsScope,matchesCvsPracticeScope,type CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
+import {cvsScopeLabel,savedCvsScope,matchesCvsPracticeScope,type CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
+import {CvsPortionPicker} from '@/src/components/CvsPortionPicker';
 import type { MCQMedia, MCQQuestion, StudentAnswer } from '@/src/lib/mcq/types';
 import { biochemistryRetake, examTerm, hasReviewCurriculum, isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
 import { createEmptyProgress, parseProgress, type StudyProgress } from '@/src/lib/mcq/study-progress.mjs';
@@ -267,6 +268,11 @@ function formatSessionDate(value: string) {
   return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).format(date);
 }
 
+const CVS_SCOPE_STORAGE_KEY = 'med25:cvs-scope';
+function rememberedCvsScope() {
+  try { return localStorage.getItem(CVS_SCOPE_STORAGE_KEY); } catch { return null; }
+}
+
 function savedScopeLabel(session: ActiveSessionSnapshot) {
   const label = retakeChapterSelectionLabel(session.biochemistryChapterIds) ?? biochemistryChapterById(session.biochemistryChapterId)?.shortTitle ?? collectionLabel[session.collection];
   if (session.exam === 'term2-cvs') return `${cvsScopeLabel(session.cvsScope)} · ${label}`;
@@ -507,7 +513,7 @@ export default function Home() {
     if (isExamId(requestedExam)) {
       setExam(requestedExam);
       setCollection(examConfig[requestedExam].collections[0]);
-      setCvsScope(savedCvsScope(requestedExam, new URLSearchParams(window.location.search).get('cvsScope')));
+      setCvsScope(savedCvsScope(requestedExam, new URLSearchParams(window.location.search).get('cvsScope') ?? rememberedCvsScope()));
     }
   }, []);
 
@@ -598,6 +604,10 @@ export default function Home() {
   }, [subjectIds]);
   const cvsPracticeIds = exam === 'term2-cvs' && cvsScope !== 'all'
     ? new Set((subjectIds?.all ?? []).filter(id => matchesCvsPracticeScope({subject:subjectOf(id)}, cvsScope))) : null;
+  const cvsPortionCounts = exam === 'term2-cvs' && subjectIds?.all ? (() => {
+    const physio = subjectIds.all.filter(id => matchesCvsPracticeScope({subject:subjectOf(id)}, 'physio')).length;
+    return {all: subjectIds.all.length, physio, 'non-physio': subjectIds.all.length - physio};
+  })() : null;
   const statsReady = Boolean(bank) && progressReady && sessionArchiveReady;
   const displayCount = (value: string | number) => statsReady ? value : bankStatus === "error" ? "—" : <span className="loading-stat" aria-label="Loading count">…</span>;
   const selectedConfig = examConfig[exam];
@@ -652,7 +662,7 @@ export default function Home() {
     setPhase('setup');
     setExam(nextExam);
     setLimbPracticeScope('all');
-    setCvsScope('all');
+    setCvsScope(savedCvsScope(nextExam, rememberedCvsScope()));
     setCollection(examConfig[nextExam].collections[0]);
     setSessionError("");
     setStudyMode("learn");
@@ -665,12 +675,14 @@ export default function Home() {
     const url = new URL(window.location.href);
     url.searchParams.set("exam", nextExam);
     url.searchParams.delete('cvsScope');
+    if (nextExam === 'term2-cvs' && savedCvsScope(nextExam, rememberedCvsScope()) !== 'all') url.searchParams.set('cvsScope', savedCvsScope(nextExam, rememberedCvsScope()));
     window.history.replaceState(null, "", url);
   }
 
   function chooseCvsScope(scope:CvsScope) {
     sessionRequest.current++;
     setCvsScope(scope);
+    try { localStorage.setItem(CVS_SCOPE_STORAGE_KEY, scope); } catch { /* The choice still applies for this visit. */ }
     setCollection('all');
     setSessionError('');
     const url = new URL(window.location.href);
@@ -1169,12 +1181,9 @@ export default function Home() {
   const scoreTone=(value:number)=>value>=75?'good':value>=50?'mid':'low';
   return <StudyShell exam={exam} activeSection={tab} onCourseChange={chooseExam} onSectionChange={section=>setTab(section as Tab)} immersive={cvsPaperActive} status={bankStatus==='loading'?'Loading catalog…':bankStatus==='error'?'Offline · cached sessions available':'Saved on this device'} courses={Object.entries(examConfig).map(([id,c])=>({id:id as ExamId,title:c.title,date:c.date,count:bank?.exams?.find(e=>e.id===id)?.questionCount}))}>
     {pendingGuidance&&<ExamModeChooser onChoose={pendingGuidance} onCancel={()=>setPendingGuidance(null)}/>}
-    {exam==='term2-cvs'&&!cvsPaperActive&&tab!=='School Map'&&<section className="cvs-course-scope" aria-label="CVS course portion">
-      <div className="seg" role="group" aria-label="CVS portion">{CVS_SCOPES.map(scope=><button key={scope.id} type="button" aria-pressed={cvsScope===scope.id} disabled={phase==='loading'} onClick={()=>chooseCvsScope(scope.id)}>{scope.label}</button>)}</div>
-      <p>{cvsScope==='all'?'Complete CVS course · existing content and results':cvsScope==='physio'?'Cardiac, circulation and blood physiology':'Anatomy, histology, embryology and other non-physiology topics'}</p>
-    </section>}
+    {exam==='term2-cvs'&&!cvsPaperActive&&tab!=='School Map'&&<CvsPortionPicker scope={cvsScope} onChange={chooseCvsScope} counts={cvsPortionCounts} disabled={phase==='loading'}/>}
     {!cvsPaperActive&&tab!=='School Map'&&<header className="course-head">
-      <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{courseTitle}</h1><p>{exam==='term2-cvs'&&cvsScope!=='all'?'Practice questions, past papers and Core exams follow this portion. Original All attempts remain unchanged.':selectedConfig.focus}</p></div>
+      <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{courseTitle}</h1><p>{exam==='term2-cvs'&&cvsScope==='non-physio'?'Anatomy, histology and embryology of the heart, great vessels, thorax, back and lymphoid organs, with the illustrated review book.':exam==='term2-cvs'&&cvsScope==='physio'?'Cardiac function, circulation, ECG and blood physiology.':selectedConfig.focus}</p></div>
       <div className="course-head-side">
         <div className="course-stat"><strong>{exam==='term2-cvs'&&cvsScope!=='all'?(practiceCountsReady?cvsPracticeIds?.size.toLocaleString():'…'):displayCount((selectedExam?.questionCount??0).toLocaleString())}</strong><span>practice MCQs</span></div>
         <div className="pill-row">{reviewEnabled&&<ReviewDownloads key={`${exam}-${cvsScope}`} exam={exam} cvsScope={cvsScope}/>}<PracticePdfDownload key={`${exam}-${cvsScope}-${selectedExam?.version??bank?.version}`} exam={exam} title={courseTitle} scope={savedCvsScope(exam,cvsScope)} version={selectedExam?.version??bank?.version} questionIds={cvsPracticeIds?[...cvsPracticeIds]:subjectIds?.all} loadQuestions={ids=>loadQuestionsByIds(exam,ids)}/>{tab!=='Past exams'&&<button type="button" className="pill" onClick={()=>setTab('Past exams')}><StudyIcon name="papers"/>Past papers</button>}</div>

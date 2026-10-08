@@ -24,12 +24,11 @@ function useReview(exam:string) {
 export function ReviewDownloads({exam,cvsScope='all'}:{exam:string;cvsScope?:CvsScope}) {
   const {course,error}=useReview(exam);
   if(!hasReviewCurriculum(exam))return null;
-  if(exam==='term2-cvs'&&cvsScope==='non-physio')return <span className="pill-note">Non-Physio review PDF is not available yet.</span>;
   return error?<span className="pill-note" role="alert">{error}</span>:!course?<span className="pill-note" role="status">Loading review PDFs…</span>:<ReviewDownloadLinks course={course} cvsScope={cvsScope}/>;
 }
 function ReviewDownloadLinks({course,cvsScope}:{course:ReviewCourse;cvsScope:CvsScope}) {
   const volumes=reviewVolumes(course,cvsScope);
-  return <div className="review-downloads" aria-label="Course review PDFs">{volumes.map(v=><CachedPdfDownload key={v.id} href={v.url}><StudyIcon name="download"/>{course.examId==='term2-cvs'&&cvsScope==='physio'?'Physiology review PDF':volumes.length>1?v.title:'Review PDF'}<small>{v.pageCount} pp</small></CachedPdfDownload>)}</div>;
+  return <div className="review-downloads" aria-label="Course review PDFs">{volumes.map(v=><CachedPdfDownload key={v.id} href={v.url}><StudyIcon name="download"/>{course.examId==='term2-cvs'&&cvsScope==='physio'?'Physiology review PDF':course.examId==='term2-cvs'&&cvsScope==='non-physio'?'Non-Physio review PDF':volumes.length>1?v.title:'Review PDF'}<small>{v.pageCount} pp</small></CachedPdfDownload>)}</div>;
 }
 const subjectLabels:Record<string,string>={anatomy:'Anatomy',histology:'Histology',embryology:'Embryology',physiology:'Physiology',biochemistry:'Biochemistry',reference:'Reference & checklists'};
 const subjectOrder=['anatomy','histology','embryology','physiology','biochemistry','reference'];
@@ -59,8 +58,7 @@ export function ReviewTopics({exam,onPractice,disabled=false,subjectOf,cvsScope=
   },[course,questionsBySection,subjectOf]);
   if(error)return <p role="alert" className="mcq-alert error">{error} Your MCQs still work; retry this tab when connected.</p>;
   if(!course)return <p role="status" className="mcq-loading">Loading this course’s PDF table of contents…</p>;
-  const sections=reviewSections(course,cvsScope,allowedQuestionIds),volumes=exam==='term2-cvs'&&cvsScope==='physio'?reviewVolumes(course,cvsScope):course.volumes;
-  const unavailable=exam==='term2-cvs'&&cvsScope==='non-physio';
+  const sections=reviewSections(course,cvsScope,allowedQuestionIds),volumes=exam==='term2-cvs'&&cvsScope!=='all'?reviewVolumes(course,cvsScope):course.volumes;
   const subjects=subjectOrder.filter(id=>sections.some(section=>sectionSubject.get(section.id)===id));
   const bySubject=subjects.length>=2;
   const words=search.toLowerCase().trim().split(/\s+/).filter(Boolean);
@@ -70,7 +68,7 @@ export function ReviewTopics({exam,onPractice,disabled=false,subjectOf,cvsScope=
     :volumes.map(v=>({key:v.id,title:v.title,sections:filtered.filter(s=>s.volumeId===v.id)}));
   const countFor=(id:string)=>sections.filter(s=>sectionSubject.get(s.id)===id).length;
   return <section className="review-topics">
-    <div className="section-head"><h2>{unavailable?'Mapped question topics':'Review sections'}<span>{filtered.length} of {sections.length}</span></h2><p>{unavailable?'A Non-Physio review PDF is not available yet. These section labels are retained for mapped MCQ practice.':cvsScope==='all'?'Read a section at its exact PDF page, or practise the MCQs mapped to it.':'Read an available section at its exact PDF page, or practise the MCQs mapped to it.'} {bySubject?'Sections are grouped by the subject of their questions; ':''}reference-only sections have no mapped questions yet.</p></div>
+    <div className="section-head"><h2>Review sections<span>{filtered.length} of {sections.length}</span></h2><p>{cvsScope==='all'?'Read a section at its exact PDF page, or practise the MCQs mapped to it.':'Read an available section at its exact PDF page, or practise the MCQs mapped to it.'} {bySubject?'Sections are grouped by the subject of their questions; ':''}reference-only sections have no mapped questions yet.</p></div>
     {bySubject&&<div className="chip-set review-subjects" role="group" aria-label="Subject">
       <button type="button" aria-pressed={subject==='all'} onClick={()=>setSubject('all')}>All<b>{sections.length}</b></button>
       {subjects.map(id=><button key={id} type="button" aria-pressed={subject===id} onClick={()=>setSubject(id)}>{subjectLabels[id]??id}<b>{countFor(id)}</b></button>)}
@@ -99,9 +97,7 @@ export function CourseReviewReport({exam,outcomes,onPractice,reviewOnly=false,on
   const {course,error}=useReview(exam),term2=hasReviewCurriculum(exam);
   if(term2&&!course&&!error)return <p role="status" className="mcq-loading">Matching your answers to review sections…</p>;
   const rows=reviewBreakdown(outcomes,course);
-  const unavailable=exam==='term2-cvs'&&cvsScope==='non-physio';
   return <section className="course-review-report" aria-label="Review section results"><h2>Your next review steps</h2><p>Green shows correct answers among those you attempted. Skipped and ungraded items are listed separately. This is a snapshot of tested material, not a mastery score for the entire course.</p>{error&&<p role="alert" className="mcq-alert">Review mapping unavailable. Showing question topics instead; your answers are safe.</p>}
-    {unavailable&&<p>Non-Physio review PDF is not available yet. Section labels identify the topics mapped to your questions.</p>}
     <div className="review-bars">{rows.map(row=>{
       const retryIds=row.wrongIds.filter(id=>retryableIds.includes(id)),review=wrongReviewStats(retryIds,reviewAnswers??{}),href=course&&row.sectionId?reviewSectionUrl(course,row.sectionId,cvsScope):undefined;
       return <article key={row.id}><div className="review-bar-heading"><b>{row.title}</b><strong>{row.percent===null?'Not assessed':row.percent+'%'}</strong></div>
@@ -113,6 +109,6 @@ export function CourseReviewReport({exam,outcomes,onPractice,reviewOnly=false,on
         <div className="review-bar-actions">{href&&<a href={href} target="_blank" rel="noreferrer">{row.missedIds.length?'Review this section':'Revisit section'} ↗</a>}{onRetryWrong&&retryIds.length>0&&<button type="button" onClick={()=>onRetryWrong(retryIds,row.title)}>Redo wrong ({retryIds.length})</button>}{onPractice&&row.missedIds.length>0&&<button type="button" onClick={()=>onPractice(row.missedIds)}>{reviewOnly?'Review':'Retry'} {row.missedIds.length} to strengthen this</button>}</div></article>;
     })}</div>
     {!rows.length&&<p>Complete some questions to see your review priorities.</p>}
-    {term2&&course&&!unavailable&&<details><summary>What this session did not assess</summary><p>{reviewSections(course,cvsScope).filter(s=>!rows.some(r=>r.sectionId===s.id&&r.answered>0&&!r.uncertain)).length} review sections were not tested. They are not counted as incorrect or mastered. Use the Review topics tab for {cvsScope==='all'?'the full':'the selected scope’s'} table of contents.</p></details>}
+    {term2&&course&&<details><summary>What this session did not assess</summary><p>{reviewSections(course,cvsScope).filter(s=>!rows.some(r=>r.sectionId===s.id&&r.answered>0&&!r.uncertain)).length} review sections were not tested. They are not counted as incorrect or mastered. Use the Review topics tab for {cvsScope==='all'?'the full':'the selected scope’s'} table of contents.</p></details>}
   </section>;
 }

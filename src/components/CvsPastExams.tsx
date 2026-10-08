@@ -23,6 +23,7 @@ import nonCoreData from '../../public/study/cvs-past-papers/noncore-anatomy.json
 import {NON_CORE_ANATOMY_ID, createNonCoreAnatomyExam, type NonCoreAnatomyManifest} from '@/src/lib/mcq/cvs-noncore-anatomy.mjs';
 import {matchesCvsPaperScope,scopeCvsPaper,scopedCvsPaperId,cvsPaperScopeFingerprint,type CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
 import {cvsTopicMapReady} from '@/src/lib/mcq/cvs-paper-catalog.mjs';
+import {nonPhysioReviewLink} from '@/src/lib/mcq/cvs-review-scope.mjs';
 
 const answerCounts: Record<string, {proposed:number;unresolved:number;corrections:number}> = reviewedCounts;
 const coreManifest: CoreExamManifest = coreData;
@@ -401,7 +402,7 @@ export function CvsPastExams({ onSessionActiveChange, downloads, cvsScope='all' 
                 <details className={styles.source}><summary>Source &amp; what to review</summary>
                     {cvsScope==='all'&&topic?.reviewLocator && <p><b>Review notes:</b> {topic.reviewLocator.documentTitle} → {topic.reviewLocator.sectionTitle}</p>}
                     {cvsScope==='physio'&&topic&&<p><b>Physio topic:</b> {topic.title??topic.label}. Use the Physio review for this scope.</p>}
-                    {cvsScope==='non-physio'&&<p>Non-Physio review notes are not available yet. Original question sources remain available below.</p>}
+                    {cvsScope==='non-physio'&&(()=>{const link=nonPhysioReviewLink(topic?.reviewLocator?.sectionId??topic?.id);return link?<p><b>Review notes:</b> <a href={link.url} target="_blank" rel="noreferrer">{link.documentTitle} → {link.title}, p. {link.page} ↗</a></p>:<p>This question has no mapped review section yet. Original question sources remain available below.</p>;})()}
                     <p>Original pages may contain handwritten answers. Opening them is a study aid, not a closed-book attempt.</p>
                     <div className={styles.actions}><button onClick={() => setSourceOpen(v => !v)}>{sourceOpen ? 'Hide original page' : 'Show original page'}</button>
                         <a href={q.originPaper?.transcriptUrl ?? paper.transcriptUrl} target="_blank" rel="noreferrer">{cvsScope==='all'?'Questions + answer notes (.md)':'Complete original transcript (.md)'}</a><a href={q.originPaper?.sourceUrl ?? paper.sourceUrl} target="_blank" rel="noreferrer">{cvsScope==='all'?'Source document':'Complete original source'}</a></div>

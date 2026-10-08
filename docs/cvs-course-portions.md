@@ -9,7 +9,7 @@ Implemented 8 October 2026. Independent implementation/review loops: SHIP for th
 | Automatically gradable source records | 947 | 563 | 384 |
 | Core Exam | 183 | 89 | 94 |
 | Existing Non-core Anatomy | 119 | Not shown | 119 |
-| Review PDF | Original 98 pages | 29 pages / 27 sections | Not available yet |
+| Review PDF | Original 98 pages | 29 pages / 27 sections | 227 pages / 38 mapped sections |
 
 ## Scope contract
 
@@ -19,14 +19,14 @@ Implemented 8 October 2026. Independent implementation/review loops: SHIP for th
 - Two existing unclassified source records stay in the Non-Physio complement, retain their unclassified/source-review labels, and are not silently discarded. A missing whole topic map blocks scoped launches.
 - `All` remains the default and retains original questions, paper IDs, fingerprints, attempts, and review URLs. Scoped paper/combined/Core attempts have distinct IDs and fingerprints.
 - Scoped practice history stores its portion. Legacy history defaults to All and is never retrospectively repartitioned or re-scored. Wrong/flagged IDs are shared by question but filtered for each portion; filtering does not erase the other portion's mistakes.
-- The selector is shared across practice, past exams, review topics and results; `?cvsScope=physio` or `?cvsScope=non-physio` survives reload. It is hidden during a running test.
+- The selector (`CvsPortionPicker`) is shared across practice, past exams, review topics and results; `?cvsScope=physio` or `?cvsScope=non-physio` survives reload, and the last choice is remembered on the device (`med25:cvs-scope` in localStorage). All stays the default so existing All results stay visible. Non-Physiology is listed first as the next exam; Physiology is marked as done. It is hidden during a running test.
 
 ## Downloads and review
 
 - Generated practice and past-paper PDFs contain only the selected portion, including standalone answer keys and combined exports. Cache paths and filenames distinguish portions. Complete original scans remain available and explicitly labeled as complete originals.
 - Physio's PDF is regenerated from frozen, hash-locked manuscript sections and figure assets in `data/review-variants/cvs-physio`, not sliced from mixed-discipline PDF pages. The full review is unchanged.
 - `public/study/reviews/cvs-physio.json` maps original section IDs to the new PDF's page destinations and content-hashed URL. The PDF is registered in the normal device-cache manifest.
-- Non-Physio retains mapped topic labels, practice actions, weakness reports and wrong-answer review, but has no review PDF download or section PDF links pending the user's future review.
+- Non-Physio uses its own illustrated review (`public/study/reviews/cvs-nonphysio.pdf`, anatomy, histology and embryology, 227 pages). `cvs-nonphysio.json` maps 38 canonical section IDs to the book's pages (orientation maps to its overview page; the old correction ledger has no counterpart because corrections are inline). Review topics list sections in book order, and past-paper topics link to their book page (`nonPhysioReviewLink`).
 - One physiology practice question (`depth-cvs-phys-017`) maps to the integrated pericardium section. It remains reachable as practice, without pretending that anatomy chapter exists in the physiology-only PDF.
 
 ## Rebuilding and verification
@@ -43,3 +43,11 @@ To update the physiology PDF after the canonical source changes:
 Verification completed: 120 focused/compatibility tests, production build, strict canonical-review check, deterministic PDF rebuild, all-page PDF visual review, and isolated desktop/mobile browser checks. Browser checks confirmed correct counts, scoped practice, review links, Core launch/resume, result isolation, no Non-Physio PDF links, and 390px layout without horizontal overflow (44px scope buttons).
 
 Known unrelated baseline: the broader global paper-PDF glyph audit flags unsupported characters in existing respiratory/nutrition/retake exports; it is not a CVS scope regression. No commit/push is part of this task.
+
+## Non-physiology review book
+
+The book is authored and rendered outside this repo (`MED SLIDES/TERM 2/10 Review Summaries/_build/cvs-np/render.py`, print edition `13 - CVS Non-Physiology Review.pdf`). The web edition uses lighter images (`CVS_NP_IMG_WIDTH=820 CVS_NP_IMG_Q=64`). To update it:
+
+1. Render the web edition: `CVS_NP_OUT=<dir>/cvs-nonphysio.pdf CVS_NP_IMG_WIDTH=820 CVS_NP_IMG_Q=64 python3 render.py` (also writes `cvs-nonphysio.layout.json`, the page of every chapter measured from the PDF).
+2. `node scripts/import-cvs-nonphysio-review.mjs <dir>/cvs-nonphysio.pdf <dir>/cvs-nonphysio.layout.json`
+3. `node scripts/build-pdf-manifest.mjs`, then `npm run cvs:scope:check` (runs `scripts/check-cvs-nonphysio-review.mjs`, which locks the PDF hash, layout and page map).

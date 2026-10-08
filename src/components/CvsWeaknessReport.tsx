@@ -35,7 +35,7 @@ export function CvsWeaknessReport({ breakdown, topics, onReview, cvsScope='all' 
         <p className={styles.meta}>Lymphoid organ architecture is under Histology; blood cells, hemostasis and immune function are under Blood / lymph / immune. These are study categories, not official exam weightings.</p>
         <div className={styles.reportTools}><button aria-pressed={subject === 'all'} onClick={() => setSubject('all')}>All subjects</button>
             <label><input type="checkbox" checked={gapsOnly} onChange={e => setGapsOnly(e.target.checked)} /> Show gaps only</label></div>
-        <p className={styles.meta}>{cvsScope==='all'?'Section names match the headings in 01 - Cardiovascular Review.pdf. ':cvsScope==='non-physio'?'Non-Physio review notes are not available yet. ':'Only Physio topics are included. '}Topics with more wrong answers appear first.</p>
+        <p className={styles.meta}>{cvsScope==='all'?'Section names match the headings in 01 - Cardiovascular Review.pdf. ':cvsScope==='non-physio'?'Section names match the chapters of the CVS Non-Physiology Review. ':'Only Physio topics are included. '}Topics with more wrong answers appear first.</p>
         <div className={styles.topicRows}>{filtered.map(row => <TopicRow key={row.id} row={row} onReview={onReview} />)}</div>
         {!filtered.length && <p>No gaps in the graded items for this selection. Check untested sections below; this is not a completeness or mastery claim.</p>}
         {untested.length > 0 && <details className={styles.untested}><summary>{untested.length} {cvsScope==='all'?'review sections':'topics in this scope'} not tested by this paper</summary>

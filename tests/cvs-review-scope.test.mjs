@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
-import {CVS_PHYSIO_REVIEW,reviewVolumes,reviewSections,reviewSectionUrl,reviewPracticeBySection} from '../src/lib/mcq/cvs-review-scope.mjs';
+import {CVS_PHYSIO_REVIEW,CVS_NONPHYSIO_REVIEW,nonPhysioReviewLink,reviewVolumes,reviewSections,reviewSectionUrl,reviewPracticeBySection} from '../src/lib/mcq/cvs-review-scope.mjs';
 import {reviewBreakdown} from '../src/lib/mcq/review-results.mjs';
 const course=JSON.parse(fs.readFileSync(new URL('../public/study/reviews/term2-cvs.json',import.meta.url),'utf8'));
 
@@ -21,13 +21,27 @@ test('Physiology links use only the new hashed 27-section PDF and regenerated pa
   assert.equal(reviewSectionUrl(course,'cvs/heart-histo','physio'),undefined);
   assert.equal(reviewSectionUrl(course,'cvs/pericardium','physio'),undefined);
 });
-test('Non-Physio never exposes a PDF download or section link while preserving result labels',()=>{
-  assert.deepEqual(reviewVolumes(course,'non-physio'),[]);
-  for(const section of course.sections)assert.equal(reviewSectionUrl(course,section.id,'non-physio'),undefined);
-  assert.ok(reviewSections(course,'non-physio').some(section=>section.id==='cvs/heart-histo'));
-  assert.ok(!reviewSections(course,'non-physio').some(section=>section.id==='cvs/cycle'));
+test('Non-Physio links only to its own hashed book, in book order, at its measured pages',()=>{
+  assert.deepEqual(reviewVolumes(course,'non-physio'),[CVS_NONPHYSIO_REVIEW.volume]);
+  assert.match(CVS_NONPHYSIO_REVIEW.volume.url,/^\/study\/reviews\/cvs-nonphysio\.pdf\?v=[0-9a-f]{64}$/);
+  const sections=reviewSections(course,'non-physio');
+  assert.deepEqual(sections.slice(0,CVS_NONPHYSIO_REVIEW.sections.length).map(section=>section.id),CVS_NONPHYSIO_REVIEW.sections.map(section=>section.id));
+  for(const section of CVS_NONPHYSIO_REVIEW.sections)assert.equal(reviewSectionUrl(course,section.id,'non-physio'),CVS_NONPHYSIO_REVIEW.volume.url+'#page='+section.pdfPage);
+  assert.equal(reviewSectionUrl(course,'cvs/cycle','non-physio'),undefined);
+  assert.equal(reviewSectionUrl(course,'cvs/correction-ledger','non-physio'),undefined);
+  assert.ok(!sections.some(section=>section.id==='cvs/cycle'));
+  assert.ok(sections.some(section=>section.id==='cvs/correction-ledger'));
+  for(const section of CVS_NONPHYSIO_REVIEW.sections)assert.ok(!reviewSections(course,'physio').some(item=>item.id===section.id&&reviewSectionUrl(course,item.id,'physio')));
   const [id,mapping]=Object.entries(course.questions).find(([,mapping])=>mapping.sectionId==='cvs/heart-histo');
   assert.equal(reviewBreakdown([{questionId:id,answered:true,correct:false}],course)[0].title,course.sections.find(section=>section.id===mapping.sectionId).title);
+});
+test('Past-paper topics resolve to book pages; physiology topics do not',()=>{
+  const link=nonPhysioReviewLink('pericardium');
+  assert.equal(link.url,CVS_NONPHYSIO_REVIEW.volume.url+'#page='+link.page);
+  assert.equal(nonPhysioReviewLink('cycle'),undefined);
+  assert.equal(nonPhysioReviewLink(undefined),undefined);
+  const topics=JSON.parse(fs.readFileSync(new URL('../public/study/cvs-past-papers/topic-map.json',import.meta.url),'utf8')).topics;
+  for(const topic of topics)if(topic.subjectId!=='physiology'&&topic.subjectId!=='blood-immune'&&topic.id!=='unclassified')assert.ok(nonPhysioReviewLink(topic.id),topic.id);
 });
 test('Allowed IDs restrict every practice choice, including an explicit empty scope',()=>{
   const ids=Object.entries(course.questions).filter(([,mapping])=>mapping.livePractice).slice(0,3).map(([id])=>id);
@@ -50,7 +64,7 @@ test('Every live practice question remains reachable exactly once in its scoped 
     assert.equal(reachable.length,count);
     assert.equal(new Set(reachable).size,count);
     assert.deepEqual([...reachable].sort(),[...allowed].sort());
-    assert.equal(sections.filter(section=>reviewSectionUrl(course,section.id,scope)).length,scope==='physio'?27:0);
+    assert.equal(sections.filter(section=>reviewSectionUrl(course,section.id,scope)).length,scope==='physio'?27:CVS_NONPHYSIO_REVIEW.sections.length);
   }
 });
 test('CVS scope flags do not change other courses',()=>{
@@ -62,4 +76,7 @@ test('CVS scope flags do not change other courses',()=>{
 });
 test('Frozen physiology source, assets, PDF hash and section mapping pass the independent build check',()=>{
   execFileSync(process.execPath,['scripts/check-cvs-physio-review.mjs'],{cwd:new URL('..',import.meta.url),stdio:'pipe'});
+});
+test('Non-physiology book hash, layout and page map pass the independent build check',()=>{
+  execFileSync(process.execPath,['scripts/check-cvs-nonphysio-review.mjs'],{cwd:new URL('..',import.meta.url),stdio:'pipe'});
 });

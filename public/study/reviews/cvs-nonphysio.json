@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "examId": "term2-cvs",
+  "scope": "non-physio",
+  "author": "Rizzist (Syed-Mohammad Raza)",
+  "layoutSha256": "aefd046fac93f7bdb5aa2e8292e614793394f3937eeebae9cbf42d35fe54a2cf",
+  "volume": {
+    "id": "cvs-nonphysio",
+    "title": "CVS Non-Physiology Review",
+    "url": "/study/reviews/cvs-nonphysio.pdf?v=2d538485f55725ad3ae63f6635565f4d8fb98a19a6e416539973b5554122ed6d",
+    "sha256": "2d538485f55725ad3ae63f6635565f4d8fb98a19a6e416539973b5554122ed6d",
+    "pageCount": 227
+  },
+  "sections": [
+    {
+      "id": "cvs/orientation",
+      "title": "Scope, source hierarchy and how to use this volume",
+      "volumeId": "cvs-nonphysio",
+      "order": 1,
+      "role": "orientation-or-checklist",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 4,
+      "bookTitle": "At a glance"
+    },
+    {
+      "id": "cvs/thoracic-map",
+      "title": "Thoracic boundaries, apertures and surface planes",
+      "volumeId": "cvs-nonphysio",
+      "order": 2,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 6,
+      "bookTitle": "Thoracic cage and apertures"
+    },
+    {
+      "id": "cvs/sternum",
+      "title": "Sternum, costal notches and joint types",
+      "volumeId": "cvs-nonphysio",
+      "order": 3,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 8,
+      "bookTitle": "Sternum and anterior thoracic joints"
+    },
+    {
+      "id": "cvs/rib-landmarks",
+      "title": "Typical and atypical ribs: every named landmark",
+      "volumeId": "cvs-nonphysio",
+      "order": 4,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 11,
+      "bookTitle": "Ribs, costal cartilages and joints"
+    },
+    {
+      "id": "cvs/intercostal",
+      "title": "Intercostal muscles, wall layers and respiratory mechanics",
+      "volumeId": "cvs-nonphysio",
+      "order": 11,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 16,
+      "bookTitle": "Intercostal and deep thoracic wall muscles"
+    },
+    {
+      "id": "cvs/wall-neurovascular",
+      "title": "Thoracic arteries, veins and nerves",
+      "volumeId": "cvs-nonphysio",
+      "order": 12,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 20,
+      "bookTitle": "Thoracic arteries, veins and intercostal nerves"
+    },
+    {
+      "id": "cvs/diaphragm",
+      "title": "Diaphragm openings and neurovascular relations",
+      "volumeId": "cvs-nonphysio",
+      "order": 13,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 30,
+      "bookTitle": "Diaphragm, openings and phrenic nerves"
+    },
+    {
+      "id": "cvs/pectoral-muscles",
+      "title": "Pectoral muscles, serratus anterior and clavipectoral fascia",
+      "volumeId": "cvs-nonphysio",
+      "order": 23,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 34,
+      "bookTitle": "Pectoral muscles and clavipectoral fascia"
+    },
+    {
+      "id": "cvs/breast",
+      "title": "Breast and thoracic lymphatic pathways",
+      "volumeId": "cvs-nonphysio",
+      "order": 22,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 37,
+      "bookTitle": "Breast: layers, support and drainage"
+    },
+    {
+      "id": "cvs/vertebrae",
+      "title": "Vertebrae, articular facets and intervertebral foramina",
+      "volumeId": "cvs-nonphysio",
+      "order": 5,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 39,
+      "bookTitle": "Vertebrae, curvatures and the vertebral canal"
+    },
+    {
+      "id": "cvs/spinal-joints",
+      "title": "Spinal joints, ligaments and disc disease",
+      "volumeId": "cvs-nonphysio",
+      "order": 6,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 50,
+      "bookTitle": "Spinal joints and ligaments"
+    },
+    {
+      "id": "cvs/back-muscles",
+      "title": "Back muscles, thoracolumbar fascia and segmental innervation",
+      "volumeId": "cvs-nonphysio",
+      "order": 7,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 57,
+      "bookTitle": "Back muscles and thoracolumbar fascia"
+    },
+    {
+      "id": "cvs/craniovertebral-suboccipital",
+      "title": "Atlas-axis stability and the suboccipital region",
+      "volumeId": "cvs-nonphysio",
+      "order": 8,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 67,
+      "bookTitle": "Craniovertebral joints and suboccipital muscles"
+    },
+    {
+      "id": "cvs/spinal-cord",
+      "title": "Spinal cord, roots, meninges and lumbar cistern",
+      "volumeId": "cvs-nonphysio",
+      "order": 9,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 71,
+      "bookTitle": "Spinal cord, roots and meninges"
+    },
+    {
+      "id": "cvs/cord-vascular",
+      "title": "Spinal cord blood supply and localization",
+      "volumeId": "cvs-nonphysio",
+      "order": 10,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 75,
+      "bookTitle": "Spinal cord and root blood supply"
+    },
+    {
+      "id": "cvs/mediastinum",
+      "title": "Mediastinal compartments and three-dimensional relationships",
+      "volumeId": "cvs-nonphysio",
+      "order": 14,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 78,
+      "bookTitle": "Mediastinal divisions, contents and cross-sections"
+    },
+    {
+      "id": "cvs/esophagus-duct",
+      "title": "Esophagus, thoracic duct and azygos system",
+      "volumeId": "cvs-nonphysio",
+      "order": 15,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 83,
+      "bookTitle": "Esophagus, azygos system and thoracic lymphatics"
+    },
+    {
+      "id": "cvs/pericardium",
+      "title": "Pericardial layers, sinuses and tamponade",
+      "volumeId": "cvs-nonphysio",
+      "order": 16,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 91,
+      "bookTitle": "Pericardial layers, relations and sinuses"
+    },
+    {
+      "id": "cvs/heart-external",
+      "title": "Heart surfaces, borders, grooves and imaging silhouette",
+      "volumeId": "cvs-nonphysio",
+      "order": 17,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 94,
+      "bookTitle": "Heart surfaces, borders, grooves and imaging"
+    },
+    {
+      "id": "cvs/right-heart",
+      "title": "Right atrium and right ventricle: internal examination",
+      "volumeId": "cvs-nonphysio",
+      "order": 18,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 99,
+      "bookTitle": "Right atrium and right ventricle"
+    },
+    {
+      "id": "cvs/left-heart",
+      "title": "Left atrium, left ventricle and valve apparatus",
+      "volumeId": "cvs-nonphysio",
+      "order": 19,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 105,
+      "bookTitle": "Left heart, valves and fibrous skeleton"
+    },
+    {
+      "id": "cvs/coronary",
+      "title": "Coronary arterial territories and venous drainage",
+      "volumeId": "cvs-nonphysio",
+      "order": 20,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 110,
+      "bookTitle": "Coronary anatomy on angiography"
+    },
+    {
+      "id": "cvs/cardiac-nerves",
+      "title": "Autonomic cardiac and mediastinal nerves",
+      "volumeId": "cvs-nonphysio",
+      "order": 21,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 119,
+      "bookTitle": "Cardiac, vagal, phrenic and sympathetic nerves"
+    },
+    {
+      "id": "cvs/vessel-histo",
+      "title": "Vascular tunics, endothelium and artery-vein discrimination",
+      "volumeId": "cvs-nonphysio",
+      "order": 52,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 127,
+      "bookTitle": "Vessel walls, arteries, veins and lymphatics"
+    },
+    {
+      "id": "cvs/capillary-histo",
+      "title": "Capillary types, pericytes and lymphatic microanatomy",
+      "volumeId": "cvs-nonphysio",
+      "order": 53,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 139,
+      "bookTitle": "Capillaries and the microvascular bed"
+    },
+    {
+      "id": "cvs/heart-histo",
+      "title": "Histology of myocardium, endocardium and conduction tissue",
+      "volumeId": "cvs-nonphysio",
+      "order": 51,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 142,
+      "bookTitle": "Heart wall and conducting tissue"
+    },
+    {
+      "id": "cvs/immune-foundations",
+      "title": "Lymphocytes, antigen presentation and antibody responses",
+      "volumeId": "cvs-nonphysio",
+      "order": 54,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 146,
+      "bookTitle": "Immune cells, antibodies and lymphoid tissue"
+    },
+    {
+      "id": "cvs/thymus",
+      "title": "Thymus: epithelial reticulum, selection and blood-thymus barrier",
+      "volumeId": "cvs-nonphysio",
+      "order": 55,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 151,
+      "bookTitle": "Thymus and T-cell education"
+    },
+    {
+      "id": "cvs/lymph-node",
+      "title": "Lymph node compartments and trafficking",
+      "volumeId": "cvs-nonphysio",
+      "order": 56,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 157,
+      "bookTitle": "Lymph node compartments and traffic"
+    },
+    {
+      "id": "cvs/spleen-malt",
+      "title": "Spleen, tonsils, Peyer patches and organ comparison",
+      "volumeId": "cvs-nonphysio",
+      "order": 57,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 162,
+      "bookTitle": "Spleen, tonsils and mucosal lymphoid tissue"
+    },
+    {
+      "id": "cvs/heart-fields",
+      "title": "Cardiogenic fields, folding and heart-tube derivatives",
+      "volumeId": "cvs-nonphysio",
+      "order": 58,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 173,
+      "bookTitle": "Cardiogenic fields, heart tube and looping"
+    },
+    {
+      "id": "cvs/atrial-septation",
+      "title": "Atrial septation, sinus venosus and pulmonary veins",
+      "volumeId": "cvs-nonphysio",
+      "order": 59,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 180,
+      "bookTitle": "Sinus venosus, atrial walls and atrial septation"
+    },
+    {
+      "id": "cvs/ventricular-outflow",
+      "title": "AV cushions, ventricular septation and outflow division",
+      "volumeId": "cvs-nonphysio",
+      "order": 60,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 188,
+      "bookTitle": "AV cushions, ventricular septation and outflow defects"
+    },
+    {
+      "id": "cvs/advanced-heart-development",
+      "title": "Molecular induction, valve formation and developmental traps",
+      "volumeId": "cvs-nonphysio",
+      "order": 61,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 195,
+      "bookTitle": "Cardiac signals, valves, epicardium and conduction"
+    },
+    {
+      "id": "cvs/arch-arteries",
+      "title": "Aortic arch derivatives and recurrent-nerve consequences",
+      "volumeId": "cvs-nonphysio",
+      "order": 62,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 203,
+      "bookTitle": "Aortic arch derivatives and arterial anomalies"
+    },
+    {
+      "id": "cvs/venous-development",
+      "title": "Vitelline, umbilical and cardinal venous development",
+      "volumeId": "cvs-nonphysio",
+      "order": 63,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 211,
+      "bookTitle": "Vitelline, umbilical and cardinal veins"
+    },
+    {
+      "id": "cvs/fetal-circulation",
+      "title": "Fetal circulation, birth transition and remnants",
+      "volumeId": "cvs-nonphysio",
+      "order": 64,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 217,
+      "bookTitle": "Fetal circulation and changes at birth"
+    },
+    {
+      "id": "cvs/lymph-embryo",
+      "title": "Lymphatic development and integrated embryologic reasoning",
+      "volumeId": "cvs-nonphysio",
+      "order": 65,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 220,
+      "bookTitle": "Lymphatic development"
+    }
+  ]
+}

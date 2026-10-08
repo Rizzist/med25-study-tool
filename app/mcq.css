@@ -94,11 +94,39 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 
 /* Course header (shared by every tab) */
 .course-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--mcq-line)}
-.cvs-course-scope{display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap;margin-bottom:14px}
-.cvs-course-scope p{margin:0;color:var(--mcq-muted);font-size:12px;line-height:1.4}
-.cvs-course-scope .seg{flex-shrink:0}
-.cvs-course-scope .seg button{min-height:40px;padding-inline:16px}
-@media(max-width:600px){.cvs-course-scope{gap:6px}.cvs-course-scope .seg{width:100%}.cvs-course-scope .seg button{flex:1;min-height:44px}.cvs-course-scope p{font-size:11px}}
+.cvs-portions{margin:0 0 18px}
+.cvs-portions-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 8px}
+.cvs-portions-head span{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mcq-muted)}
+.cvs-portions-head p{margin:0;font-size:11.5px;color:var(--mcq-muted)}
+.cvs-portion-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:10px}
+.mcq-app .cvs-portion{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:3px;min-height:0;padding:13px 15px 12px;border:1.5px solid var(--mcq-line);border-radius:14px;background:var(--mcq-card);text-align:left;font-weight:500;transition:border-color .15s,box-shadow .15s,transform .15s}
+.mcq-app .cvs-portion:hover:not(:disabled){border-color:#9db5a3;transform:translateY(-1px)}
+.mcq-app .cvs-portion:focus-visible{outline:3px solid #12674740;outline-offset:2px}
+.mcq-app .cvs-portion[aria-checked=true]{border-color:var(--mcq-green);background:linear-gradient(180deg,#f1f7ec 0%,#fff 70%);box-shadow:0 0 0 3px #1267471a,0 10px 24px -16px #126747}
+.mcq-app .cvs-portion:disabled{opacity:.6;cursor:progress}
+.cvs-portion-top{display:flex;align-items:center;gap:8px;width:100%}
+.cvs-portion-top b{display:inline-flex;align-items:center;gap:8px;font-size:15px;letter-spacing:-.01em;color:var(--mcq-ink)}
+.cvs-portion-top b::before{content:'';width:10px;height:10px;flex-shrink:0;border-radius:50%;border:2px solid #b9c5bc;box-sizing:border-box}
+.cvs-portion[aria-checked=true] .cvs-portion-top b::before{border-color:var(--mcq-green);background:var(--mcq-green);box-shadow:inset 0 0 0 2px #fff}
+.cvs-portion-top em{margin-left:auto;padding:3px 8px;border-radius:999px;font-style:normal;font-size:9.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
+.cvs-portion.is-next .cvs-portion-top em{background:var(--mcq-lime);color:var(--mcq-deep)}
+.cvs-portion.is-done .cvs-portion-top em{background:#eceee9;color:#7b857f}
+.cvs-portion-detail{padding-left:18px;font-size:12px;color:var(--mcq-muted)}
+.cvs-portion-meta{display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px;margin-top:5px;padding-left:18px;font-size:12px;color:var(--mcq-muted)}
+.cvs-portion-meta strong{font-size:17px;letter-spacing:-.02em;color:var(--mcq-ink)}
+.cvs-portion-book{display:inline-flex;align-items:center;gap:5px;color:var(--mcq-green);font-weight:650}
+.cvs-portion-book svg{width:14px;height:14px}
+@media(max-width:860px){.cvs-portion-grid{grid-template-columns:1fr 1fr}.mcq-app .cvs-portion.is-next{grid-column:1/-1}}
+@media(max-width:600px){
+  .cvs-portions{margin-bottom:14px}.cvs-portions-head p{display:none}
+  .cvs-portion-grid{grid-template-columns:1fr;gap:7px}
+  .mcq-app .cvs-portion{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:2px;align-items:center;padding:11px 13px;min-height:44px}
+  .cvs-portion-top{grid-column:1;grid-row:1}.cvs-portion-detail{grid-column:1;grid-row:2;font-size:11.5px}
+  .cvs-portion-top{flex-wrap:wrap;row-gap:4px}.cvs-portion-top b{white-space:nowrap}.cvs-portion-top em{margin-left:0}
+  .cvs-portion[aria-checked=false] .cvs-portion-detail{display:none}
+  .cvs-portion-meta{grid-column:2;grid-row:1/3;flex-direction:column;align-items:flex-end;gap:1px;margin:0;padding:0;font-size:11px;text-align:right}
+  .cvs-portion-meta strong{font-size:16px}
+}
 .course-head-copy{min-width:0;max-width:720px}
 .course-head .eyebrow{padding:5px 9px;background:#e4e9e2;font-size:9.5px}
 .course-head h1{margin:10px 0 6px;font-size:26px;line-height:1.15;letter-spacing:-.03em}
