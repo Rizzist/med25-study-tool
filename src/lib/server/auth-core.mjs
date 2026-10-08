@@ -1,6 +1,7 @@
 import {scrypt as scryptCallback,randomBytes,createHash,timingSafeEqual} from 'node:crypto';
 import {promisify} from 'node:util';
 import {authStore} from './auth-store.mjs';
+import {academicSemesterIndex,academicTermProblem,currentAcademicTerm,defaultAcademicTerm,isAcademicTermAnchor,LEGACY_ACADEMIC_TERM_ANCHOR} from '../academic-term.mjs';
 
 const scrypt=promisify(scryptCallback);
 // Server only. Account IDs and names are supplied by private environment configuration.
@@ -57,7 +58,7 @@ function validCreation(account){
   const creator=account.createdBy;
   return !!creator&&typeof creator.userId==='string'&&/^\d{5,32}$/.test(creator.userId)&&(creator.displayName===null||typeof creator.displayName==='string')&&Number.isSafeInteger(account.createdAt)&&account.createdAt>=0;
 }
-function validAccount(account,id){return account?.userId===id&&(account.displayName===null||typeof account.displayName==='string')&&typeof account.passwordHash==='string'&&typeof account.mustChangePassword==='boolean'&&Array.isArray(account.sessions)&&validAttempts(account.attempts)&&(account.active===undefined||typeof account.active==='boolean')&&(account.role===undefined||['student','admin'].includes(account.role))&&(account.moderator===undefined||typeof account.moderator==='boolean')&&validCreation(account);}
+function validAccount(account,id){return account?.userId===id&&(account.displayName===null||typeof account.displayName==='string')&&typeof account.passwordHash==='string'&&typeof account.mustChangePassword==='boolean'&&Array.isArray(account.sessions)&&validAttempts(account.attempts)&&(account.active===undefined||typeof account.active==='boolean')&&(account.role===undefined||['student','admin'].includes(account.role))&&(account.moderator===undefined||typeof account.moderator==='boolean')&&validCreation(account)&&(account.termAnchor===undefined||isAcademicTermAnchor(account.termAnchor));}
 function decode(raw){
   if(raw===null)return null;
   const state=JSON.parse(raw);
@@ -70,6 +71,11 @@ function decode(raw){
   return state;
 }
 function accountRole(account,ownerId){return account.userId===ownerId?'owner':account.role==='admin'?'admin':account.moderator===true?'moderator':'student';}
+function migrateAcademicTerms(state){
+  let changed=false;
+  if(state?.schema===2)for(const account of Object.values(state.accounts))if(account.termAnchor===undefined){account.termAnchor={...LEGACY_ACADEMIC_TERM_ANCHOR};changed=true;}
+  return changed;
+}
 function validSession(state,token,now,ownerId){
   if(!state||state.schema!==2||typeof token!=='string'||!/^[A-Za-z0-9_-]{43}$/.test(token))return null;
   for(const [id,account] of Object.entries(state.accounts)){
@@ -99,12 +105,12 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
     if(!session.isOwner&&accountRole(account,effectiveAdminId)!=='student')throw new AuthError('Only the owner can manage an administrator account.',403,'OWNER_REQUIRED');
     return account;
   }
-  function publicAccount(account,viewer){const role=accountRole(account,effectiveAdminId);return {userId:account.userId,displayName:account.displayName,role,isOwner:role==='owner',isAdmin:role==='owner'||role==='admin',active:account.active!==false,mustChangePassword:account.mustChangePassword,createdBy:account.createdBy?{userId:account.createdBy.userId,displayName:account.createdBy.displayName}:null,createdAt:account.createdAt??null,sessionCount:viewer?.isOwner?account.sessions.filter(item=>item.expiresAt>now()).length:null};}
+  function publicAccount(account,viewer){const role=accountRole(account,effectiveAdminId);return {userId:account.userId,displayName:account.displayName,role,isOwner:role==='owner',isAdmin:role==='owner'||role==='admin',active:account.active!==false,mustChangePassword:account.mustChangePassword,currentTerm:currentAcademicTerm(account,now()),termAnchor:{...account.termAnchor},createdBy:account.createdBy?{userId:account.createdBy.userId,displayName:account.createdBy.displayName}:null,createdAt:account.createdAt??null,sessionCount:viewer?.isOwner?account.sessions.filter(item=>item.expiresAt>now()).length:null};}
   async function mutate(fn){
     for(let i=0;i<12;i++){
-      const raw=await store.read(),state=decode(raw),result=await fn(state);
-      if(result.unchanged)return result.value;
-      if(await store.cas(raw,JSON.stringify(result.state)))return result.value;
+      const raw=await store.read(),state=decode(raw),migrated=migrateAcademicTerms(state),result=await fn(state);
+      if(result.unchanged&&!migrated)return result.value;
+      if(await store.cas(raw,JSON.stringify(result.unchanged?state:result.state)))return result.value;
     }
     throw new AuthError('Please retry in a moment.',503);
   }
@@ -121,6 +127,7 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
       if(!existing){state.accounts[config.id]={userId:config.id,displayName:config.name,active:true,passwordHash:hashes.get(config.id),mustChangePassword:true,sessions:[],attempts:{start:timestamp,count:0}};added++;}
       else if(existing.displayName===null&&config.name!==null){existing.displayName=config.name;updated++;}
     }
+    migrateAcademicTerms(state);
     return {state,summary:{added,updated,accountCount:Object.keys(state.accounts).length}};
   }
   async function configureAccounts(){
@@ -128,7 +135,15 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
   }
   async function ensureInitialized(){
     const state=decode(await store.read());
-    if(state?.schema===2)return state;
+    if(state?.schema===2){
+      if(Object.values(state.accounts).every(account=>account.termAnchor!==undefined))return state;
+      // Persist the migration through the same CAS path for every storage
+      // adapter. A racing writer is re-read, never overwritten with this snapshot.
+      return mutate(current=>{
+        if(current?.schema!==2)throw new AuthError('Please retry.',503);
+        return {unchanged:true,value:current};
+      });
+    }
     await configureAccounts();
     return decode(await store.read());
   }
@@ -212,9 +227,10 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
       const state=await ensureInitialized(),viewer=manager(state,token,'add');
       return Object.values(state.accounts).map(account=>publicAccount(account,viewer)).sort((a,b)=>Number(b.isOwner)-Number(a.isOwner)||Number(b.isAdmin)-Number(a.isAdmin)||(a.displayName??a.userId).localeCompare(b.displayName??b.userId));
     },
-    async addAccount(token,userId,displayName){
+    async addAccount(token,userId,displayName,currentTerm){
       const idProblem=studentIdProblem(userId);if(idProblem)throw new AuthError(idProblem,400,'INVALID_STUDENT_ID');
       const nameProblem=displayNameProblem(displayName);if(nameProblem)throw new AuthError(nameProblem);
+      if(currentTerm!==undefined){const termProblem=academicTermProblem(currentTerm);if(termProblem)throw new AuthError(termProblem,400,'INVALID_ACADEMIC_TERM');}
       const snapshot=decode(await store.read()),adminSession=manager(snapshot,token,'add');
       if(snapshot.accounts[userId]&&adminSession.role==='moderator')throw new AuthError('That ID already exists. Ask an administrator to manage or restore it.',409,'ACCOUNT_EXISTS');
       if(snapshot.accounts[userId])managedTarget(snapshot,adminSession,userId);
@@ -226,16 +242,20 @@ export function createAuth({store=authStore(),now=Date.now,accounts,studentId,ad
         if(userId===effectiveAdminId)throw new AuthError('The owner account cannot be replaced.',400,'OWNER_PROTECTED');
         // Capture the authorized actor inside the atomic write, never from the
         // request body. Restoring access must not rewrite creation history.
-        const creation=existing?(existing.createdBy?{createdBy:existing.createdBy,createdAt:existing.createdAt}:{}):{createdBy:{userId:session.userId,displayName:session.displayName},createdAt:now()};
-        state.accounts[userId]={userId,displayName:normalizedName,role:'student',active:true,passwordHash:hash,mustChangePassword:true,sessions:[],attempts:{start:now(),count:0},...creation};
+        const timestamp=now(),creation=existing?(existing.createdBy?{createdBy:existing.createdBy,createdAt:existing.createdAt}:{}):{createdBy:{userId:session.userId,displayName:session.displayName},createdAt:timestamp};
+        const termAnchor=existing&&currentTerm===undefined?{...existing.termAnchor}:{term:currentTerm??defaultAcademicTerm(timestamp),semesterIndex:academicSemesterIndex(timestamp)};
+        state.accounts[userId]={userId,displayName:normalizedName,role:'student',active:true,passwordHash:hash,mustChangePassword:true,sessions:[],attempts:{start:timestamp,count:0},termAnchor,...creation};
         return {state,value:publicAccount(state.accounts[userId],session)};
       });
     },
-    async updateAccount(token,userId,displayName){
+    async updateAccount(token,userId,displayName,currentTerm){
       userId=managedUserId(userId);
-      const nameProblem=displayNameProblem(displayName);if(nameProblem)throw new AuthError(nameProblem);
+      if(displayName!==undefined||currentTerm===undefined){const nameProblem=displayNameProblem(displayName);if(nameProblem)throw new AuthError(nameProblem);}
+      if(currentTerm!==undefined){const termProblem=academicTermProblem(currentTerm);if(termProblem)throw new AuthError(termProblem,400,'INVALID_ACADEMIC_TERM');}
       return mutate(state=>{
-        const session=manager(state,token),account=managedTarget(state,session,userId);account.displayName=displayName.trim();
+        const session=manager(state,token),account=managedTarget(state,session,userId);
+        if(displayName!==undefined)account.displayName=displayName.trim();
+        if(currentTerm!==undefined)account.termAnchor={term:currentTerm,semesterIndex:academicSemesterIndex(now())};
         return {state,value:{updated:true}};
       });
     },

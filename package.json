@@ -51,7 +51,7 @@
     "reviews:check": "node scripts/build-review-runtime.mjs --check",
     "guided:check": "node --test tests/guided-exam.test.mjs tests/school-map.test.mjs",
     "school-map:check": "node --test tests/school-map.test.mjs",
-    "auth:check": "node --test tests/auth.test.mjs tests/auth-client.test.mjs tests/activity.test.mjs tests/pwa.test.mjs",
+    "auth:check": "node --test tests/auth.test.mjs tests/auth-client.test.mjs tests/academic-term.test.mjs tests/account-terms.test.mjs tests/admin-accounts.test.mjs tests/activity.test.mjs tests/activity-chart.test.mjs tests/pwa.test.mjs",
     "pdfs:check": "node scripts/build-pdf-manifest.mjs --check && node --test tests/pdf-cache.test.mjs tests/original-pdf.test.mjs tests/practice-pdf.test.mjs",
     "mcq:check": "node --test tests/react-hooks.test.mjs tests/mcq-refactor.test.mjs tests/limb-practice-scope.test.mjs tests/final-exam-completion.test.mjs tests/wrong-answer-review.test.mjs tests/cvs-papers.test.mjs tests/cvs-state-upgrade.test.mjs tests/cvs-core-exam.test.mjs tests/cvs-noncore-anatomy.test.mjs tests/cvs-ai-combined.test.mjs",
     "hooks:check": "node --test tests/react-hooks.test.mjs",

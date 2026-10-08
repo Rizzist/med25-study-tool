@@ -5,6 +5,7 @@ import {mkdtemp} from 'node:fs/promises';
 import {once} from 'node:events';
 import os from 'node:os';
 import path from 'node:path';
+import {defaultAcademicTerm} from '../src/lib/academic-term.mjs';
 const STUDENT_ID='00000000001'; // Synthetic fixture, not the owner's private configuration.
 
 const directory=await mkdtemp(path.join(os.tmpdir(),'med25-auth-http-'));
@@ -48,10 +49,16 @@ try{
   assert.match(change.headers.get('set-cookie'),/Max-Age=31536000/i);
   assert.equal((await get('/api/auth/session',limited)).status,401);
   const fullSession=await (await get('/api/auth/session',full)).json();assert.equal(fullSession.displayName,DISPLAY_NAME);assert.equal(fullSession.isAdmin,true);assert.equal(fullSession.isOwner,true);
-  const adminAccounts=await get('/api/admin/accounts',full);assert.equal(adminAccounts.status,200);assert.equal((await adminAccounts.json()).accounts.length,1);
+  const adminAccounts=await get('/api/admin/accounts',full);assert.equal(adminAccounts.status,200);
+  const accountBody=await adminAccounts.json();assert.equal(accountBody.accounts.length,1);assert.equal(accountBody.defaultTerm,defaultAcademicTerm());assert.equal(accountBody.accounts[0].currentTerm,defaultAcademicTerm());
   const friendId='40000000002',studentId='40000000003';
   const ownerAdded=await post('/api/admin/accounts',{userId:friendId,displayName:'Admin Fixture'},full);assert.equal(ownerAdded.status,201);
   const ownerAddedAccount=await ownerAdded.json();assert.deepEqual(ownerAddedAccount.createdBy,{userId:STUDENT_ID,displayName:DISPLAY_NAME});assert.ok(Number.isSafeInteger(ownerAddedAccount.createdAt));
+  assert.equal(ownerAddedAccount.currentTerm,defaultAcademicTerm());
+  assert.equal((await patch({userId:friendId,currentTerm:5},full)).status,200);
+  assert.equal((await (await get('/api/admin/accounts',full)).json()).accounts.find(a=>a.userId===friendId).currentTerm,5);
+  for(const currentTerm of [0,1.5,'3',null,31])assert.equal((await patch({userId:friendId,currentTerm},full)).status,400);
+  assert.equal((await patch({userId:friendId,termAnchor:{term:3,semesterIndex:4053}},full)).status,400);
   const friendLimitedResponse=await post('/api/auth/login',{username:friendId,password:friendId});assert.equal(friendLimitedResponse.status,200);const friendLimited=cookieOf(friendLimitedResponse);
   assert.equal((await patch({action:'role',userId:friendId,role:'admin'},full)).status,200);
   assert.equal((await get('/api/admin/accounts',friendLimited)).status,403);
