@@ -13,6 +13,7 @@ import {DEFAULT_RETAKE_CHAPTER_IDS, isRetakeChapterIndexReady, retakeChapterQues
 import {BiochemistryPracticeChapters} from '@/src/components/BiochemistryPracticeChapters';
 import { classifySessionCompletion } from '@/src/lib/mcq/sprint-selection.mjs';
 import {LIMB_PRACTICE_SCOPES,limbPracticeLabel,savedLimbPracticeScope,type LimbPracticeScope,type LimbPracticeIndex} from '@/src/lib/mcq/limb-practice-scope.mjs';
+import {CVS_SCOPES,cvsScopeLabel,savedCvsScope,matchesCvsPracticeScope,type CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
 import type { MCQMedia, MCQQuestion, StudentAnswer } from '@/src/lib/mcq/types';
 import { biochemistryRetake, examTerm, hasReviewCurriculum, isExamId, isTerm2Exam, term2Exams, type ExamId } from '@/src/lib/mcq/exams.mjs';
 import { createEmptyProgress, parseProgress, type StudyProgress } from '@/src/lib/mcq/study-progress.mjs';
@@ -78,6 +79,7 @@ type ActiveSessionSnapshot = {
   studyMode: BiochemistryStudyMode;
   guidance?: GuidanceMode;
   limbScope?: LimbPracticeScope;
+  cvsScope?: CvsScope;
   biochemistryChapterId?: string;
   biochemistryChapterIds?: string[];
   respiratoryScopeId?: string;
@@ -222,6 +224,7 @@ function cleanActiveSession(value: unknown): ActiveSessionSnapshot | null {
     studyMode: session.studyMode === "exam" ? "exam" : "learn",
     guidance: guidanceMode(migratedExam,session.guidance),
     limbScope: savedLimbPracticeScope(migratedExam, session.limbScope),
+    cvsScope: savedCvsScope(migratedExam, session.cvsScope),
     biochemistryChapterId: isBiochemistryChapterId(session.biochemistryChapterId) ? session.biochemistryChapterId : undefined,
     biochemistryChapterIds: migratedExam === 'term1-biochemistry-retake' ? sanitizeRetakeChapterIds(session.biochemistryChapterIds) : undefined,
     respiratoryScopeId: typeof session.respiratoryScopeId === "string" ? session.respiratoryScopeId : undefined,
@@ -266,6 +269,7 @@ function formatSessionDate(value: string) {
 
 function savedScopeLabel(session: ActiveSessionSnapshot) {
   const label = retakeChapterSelectionLabel(session.biochemistryChapterIds) ?? biochemistryChapterById(session.biochemistryChapterId)?.shortTitle ?? collectionLabel[session.collection];
+  if (session.exam === 'term2-cvs') return `${cvsScopeLabel(session.cvsScope)} · ${label}`;
   return session.exam === 'term2-limbs' ? `${limbPracticeLabel(savedLimbPracticeScope(session.exam, session.limbScope))} · ${label}` : label;
 }
 
@@ -440,6 +444,7 @@ export default function Home() {
   const [studyMode, setStudyMode] = useState<BiochemistryStudyMode>("learn");
   const [guidance,setGuidance]=useState<GuidanceMode>('unguided');
   const [limbPracticeScope,setLimbPracticeScope]=useState<LimbPracticeScope>('all');
+  const [cvsScope,setCvsScope]=useState<CvsScope>('all');
   const [pendingGuidance,setPendingGuidance]=useState<((mode:GuidanceMode)=>void)|null>(null);
   const [activeBiochemistryChapterId, setActiveBiochemistryChapterId] = useState<string>();
   const [selectedRetakeChapterIds, setSelectedRetakeChapterIds] = useState<string[]>([...DEFAULT_RETAKE_CHAPTER_IDS]);
@@ -502,7 +507,7 @@ export default function Home() {
     if (isExamId(requestedExam)) {
       setExam(requestedExam);
       setCollection(examConfig[requestedExam].collections[0]);
-
+      setCvsScope(savedCvsScope(requestedExam, new URLSearchParams(window.location.search).get('cvsScope')));
     }
   }, []);
 
@@ -533,6 +538,15 @@ export default function Home() {
   }, [sessionArchive, sessionArchiveReady]);
 
   useEffect(() => {
+    if (!sessionArchiveReady) return;
+    const url = new URL(window.location.href);
+    url.searchParams.set('exam', exam);
+    if (exam === 'term2-cvs' && cvsScope !== 'all') url.searchParams.set('cvsScope', cvsScope);
+    else url.searchParams.delete('cvsScope');
+    window.history.replaceState(null, '', url);
+  }, [exam, cvsScope, sessionArchiveReady]);
+
+  useEffect(() => {
     if (phase !== "active") return;
     const currentQuestionId = questions[questionIndex]?.id;
     if (!currentQuestionId) return;
@@ -557,6 +571,7 @@ export default function Home() {
         studyMode,
         guidance,
         limbScope: savedLimbPracticeScope(exam, limbPracticeScope),
+        cvsScope: savedCvsScope(exam, cvsScope),
         biochemistryChapterId: activeBiochemistryChapterId,
         biochemistryChapterIds: activeRetakeChapterIds,
         respiratoryScopeId: activeRespiratoryScopeId,
@@ -565,7 +580,7 @@ export default function Home() {
         coursePracticeIds: activeCoursePracticeIds,
       },
     }));
-  }, [activeBiochemistryChapterId, activeRetakeChapterIds, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, activeCoursePracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, guidance, limbPracticeScope, visitedQuestionIds]);
+  }, [activeBiochemistryChapterId, activeRetakeChapterIds, activeRespiratoryScopeId, activeRespiratoryPracticeIds, activePracticalPracticeIds, activeCoursePracticeIds, answers, collection, exam, phase, questionIndex, questions, sessionArchiveReady, sessionSize, sessionStartedAt, studyMode, guidance, limbPracticeScope, cvsScope, visitedQuestionIds]);
 
   const selectedExam = bank?.exams?.find((item) => item.id === exam);
   const subjectIds = selectedExam?.collectionQuestionIds;
@@ -581,6 +596,8 @@ export default function Home() {
     }
     return (id: string) => map.get(id);
   }, [subjectIds]);
+  const cvsPracticeIds = exam === 'term2-cvs' && cvsScope !== 'all'
+    ? new Set((subjectIds?.all ?? []).filter(id => matchesCvsPracticeScope({subject:subjectOf(id)}, cvsScope))) : null;
   const statsReady = Boolean(bank) && progressReady && sessionArchiveReady;
   const displayCount = (value: string | number) => statsReady ? value : bankStatus === "error" ? "—" : <span className="loading-stat" aria-label="Loading count">…</span>;
   const selectedConfig = examConfig[exam];
@@ -589,11 +606,11 @@ export default function Home() {
   const retakeChapterIndex = isRetakeChapterIndexReady(selectedExam?.biochemistryChapters) ? selectedExam.biochemistryChapters : undefined;
   const retakeSelectedIds = exam === 'term1-biochemistry-retake'
     ? new Set(retakeChapterQuestionIds(retakeChapterIndex, selectedRetakeChapterIds)) : null;
-  const inPracticeRegion = (ids: string[]) => ids.filter(id => (!regionalIds || regionalIds.has(id)) && (!retakeSelectedIds || retakeSelectedIds.has(id)));
-  const practiceCountsReady = statsReady && (exam !== 'term2-limbs' || Boolean(limbPracticeIndex)) && (exam !== 'term1-biochemistry-retake' || Boolean(retakeChapterIndex));
+  const inPracticeRegion = (ids: string[]) => ids.filter(id => (!regionalIds || regionalIds.has(id)) && (!retakeSelectedIds || retakeSelectedIds.has(id)) && (!cvsPracticeIds || cvsPracticeIds.has(id)));
+  const practiceCountsReady = statsReady && (exam !== 'term2-cvs' || Boolean(subjectIds)) && (exam !== 'term2-limbs' || Boolean(limbPracticeIndex)) && (exam !== 'term1-biochemistry-retake' || Boolean(retakeChapterIndex));
   const savedCount = (id: SavedCollectionId) => inPracticeRegion(id === 'wrong' ? examProgress.wrongIds : examProgress.flaggedIds).length;
   const practiceCollectionCount = (id: CollectionId) => isSavedCollection(id) ? savedCount(id)
-    : regionalIds || retakeSelectedIds ? inPracticeRegion(selectedExam?.collectionQuestionIds?.[id] ?? []).length
+    : regionalIds || retakeSelectedIds || cvsPracticeIds ? inPracticeRegion(selectedExam?.collectionQuestionIds?.[id] ?? []).length
     : selectedExam?.collectionCounts[id] ?? 0;
   const collectionCount = practiceCollectionCount(collection);
   const seenQuestionIds = new Set(cleanIds([
@@ -635,6 +652,7 @@ export default function Home() {
     setPhase('setup');
     setExam(nextExam);
     setLimbPracticeScope('all');
+    setCvsScope('all');
     setCollection(examConfig[nextExam].collections[0]);
     setSessionError("");
     setStudyMode("learn");
@@ -646,7 +664,19 @@ export default function Home() {
     setActiveCoursePracticeIds(undefined);
     const url = new URL(window.location.href);
     url.searchParams.set("exam", nextExam);
+    url.searchParams.delete('cvsScope');
     window.history.replaceState(null, "", url);
+  }
+
+  function chooseCvsScope(scope:CvsScope) {
+    sessionRequest.current++;
+    setCvsScope(scope);
+    setCollection('all');
+    setSessionError('');
+    const url = new URL(window.location.href);
+    if(scope === 'all') url.searchParams.delete('cvsScope');
+    else url.searchParams.set('cvsScope', scope);
+    window.history.replaceState(null, '', url);
   }
 
   async function startSession(nextCollection: CollectionId = collection, exactIds?: string[], options: {
@@ -709,13 +739,13 @@ export default function Home() {
         response = await fetch(`${bridgeUrl}/api/questions/by-ids`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ exam, ids: requestedIds, limit: requestedLimit, prioritize: true, seenIds, repairIds, studyMode: nextStudyMode, limbScope: nextLimbScope }),
+          body: JSON.stringify({ exam, ids: requestedIds, limit: requestedLimit, prioritize: true, seenIds, repairIds, studyMode: nextStudyMode, limbScope: nextLimbScope, cvsScope: savedCvsScope(exam,cvsScope) }),
         });
       } else {
         response = await fetch(`${bridgeUrl}/api/questions/sprint`, {
           method: "POST",
           headers: { "content-type": "application/json" },
-          body: JSON.stringify({ limit: requestedLimit, exam, collection: nextCollection, seenIds, repairIds, studyMode: nextStudyMode, biochemistryChapterId: options.biochemistryChapterId, limbScope: nextLimbScope }),
+          body: JSON.stringify({ limit: requestedLimit, exam, collection: nextCollection, seenIds, repairIds, studyMode: nextStudyMode, biochemistryChapterId: options.biochemistryChapterId, limbScope: nextLimbScope, cvsScope: savedCvsScope(exam,cvsScope) }),
         });
       }
       if (!response.ok) throw new Error("Could not load the question bank.");
@@ -811,6 +841,7 @@ export default function Home() {
       studyMode,
       guidance,
       limbScope: savedLimbPracticeScope(exam, limbPracticeScope),
+      cvsScope: savedCvsScope(exam, cvsScope),
       biochemistryChapterId: activeBiochemistryChapterId,
       biochemistryChapterIds: activeRetakeChapterIds,
       respiratoryScopeId: activeRespiratoryScopeId,
@@ -887,6 +918,7 @@ export default function Home() {
     setStudyMode(saved.studyMode);
     setGuidance(guidanceMode(saved.exam,saved.guidance));
     setLimbPracticeScope(savedLimbPracticeScope(saved.exam, saved.limbScope));
+    setCvsScope(savedCvsScope(saved.exam, saved.cvsScope));
     setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     setActiveRetakeChapterIds(saved.biochemistryChapterIds);
     if (saved.exam === 'term1-biochemistry-retake' && saved.biochemistryChapterIds) setSelectedRetakeChapterIds(saved.biochemistryChapterIds);
@@ -954,6 +986,7 @@ export default function Home() {
     setStudyMode(saved.studyMode);
     setGuidance(guidanceMode(saved.exam,saved.guidance));
     setLimbPracticeScope(savedLimbPracticeScope(saved.exam, saved.limbScope));
+    setCvsScope(savedCvsScope(saved.exam, saved.cvsScope));
     setActiveBiochemistryChapterId(saved.biochemistryChapterId);
     setActiveRetakeChapterIds(saved.biochemistryChapterIds);
     if (saved.exam === 'term1-biochemistry-retake' && saved.biochemistryChapterIds) setSelectedRetakeChapterIds(saved.biochemistryChapterIds);
@@ -993,7 +1026,7 @@ export default function Home() {
     const hasImmediateFeedback = studyMode === "learn" && hasAnswer && figureReady;
     const hasSavedWrittenAnswer = answer.mode === "write" && answer.writtenSubmitted === true;
     const activeChapter = biochemistryChapterById(activeBiochemistryChapterId);
-    const sessionLabel = retakeChapterSelectionLabel(activeRetakeChapterIds) ?? (activeChapter ? `${activeChapter.chapterLabel} · ${activeChapter.shortTitle}` : `${exam === 'term2-limbs' ? `${limbPracticeLabel(limbPracticeScope)} · ` : ''}${collectionLabel[collection]}`);
+    const sessionLabel = retakeChapterSelectionLabel(activeRetakeChapterIds) ?? (activeChapter ? `${activeChapter.chapterLabel} · ${activeChapter.shortTitle}` : `${exam === 'term2-limbs' ? `${limbPracticeLabel(limbPracticeScope)} · ` : exam === 'term2-cvs' ? `${cvsScopeLabel(cvsScope)} · ` : ''}${collectionLabel[collection]}`);
     const writtenInterpretation = answer.mode === "write" ? interpretWrittenAnswer(question, answer) : undefined;
     const answeredCount = questions.filter((item) => isAnswered(answers[item.id])).length;
     const effectiveVisitedIds = new Set([...visitedQuestionIds, question.id]);
@@ -1091,11 +1124,11 @@ export default function Home() {
     const score = Math.round((correctCount / questions.length) * 100);
     return <main className="review-shell">
       {pendingGuidance&&<ExamModeChooser onChoose={pendingGuidance} onCancel={()=>setPendingGuidance(null)}/>}
-      <header className="review-header"><div className="session-mark"><b>MED//25</b><span>Session review{exam === 'term2-limbs' ? ` · ${limbPracticeLabel(limbPracticeScope)}` : ''}</span></div><button onClick={resetSession}>Return to practice</button></header>
+      <header className="review-header"><div className="session-mark"><b>MED//25</b><span>Session review{exam === 'term2-limbs' ? ` · ${limbPracticeLabel(limbPracticeScope)}` : exam === 'term2-cvs' ? ` · ${cvsScopeLabel(cvsScope)}` : ''}</span></div><button onClick={resetSession}>Return to practice</button></header>
       <section className="review-page">
         <div className="score-hero"><div><span className="eyebrow">{studyMode === "exam" ? isTerm2Exam(exam) ? "Source-based test complete" : "Chapter exam complete" : "Learning sprint complete"}{activeRetakeChapterIds ? ` · ${retakeChapterSelectionLabel(activeRetakeChapterIds)}` : activeBiochemistryChapterId ? ` · ${biochemistryChapterById(activeBiochemistryChapterId)?.shortTitle}` : ""}</span><h1>{score}%</h1><p>{correctCount} correct out of {questions.length}. Every option now explains the concept it represents, so repair the misses while your reasoning is fresh.</p></div><div className="score-ring" style={{ "--score": `${score * 3.6}deg` } as React.CSSProperties}><span>{score}<small>%</small></span></div></div>
         <div className="result-stats"><div><strong>{correctCount}</strong><span>Correct</span></div><div><strong>{questions.length - correctCount}</strong><span>To repair</span></div><div><strong>{questions.length - answeredCount}</strong><span>Unanswered</span></div><div><strong>{flaggedCount}</strong><span>Flagged</span></div></div>
-        <WrongAnswerReview exam={exam} attemptId={`practice:${exam}:${sessionStartedAt}`} questions={mcqReviewQuestions(questions)} outcomes={questions.map(q=>({questionId:q.id,answered:isAnswered(answers[q.id]),correct:isCorrect(q,answers[q.id]),topic:q.topic}))}/>
+        <WrongAnswerReview exam={exam} cvsScope={cvsScope} attemptId={`practice:${exam}:${sessionStartedAt}`} questions={mcqReviewQuestions(questions)} outcomes={questions.map(q=>({questionId:q.id,answered:isAnswered(answers[q.id]),correct:isCorrect(q,answers[q.id]),topic:q.topic}))}/>
         <div className="review-toolbar"><div className="review-filters">{(["wrong", "flagged", "all"] as const).map((value) => <button key={value} className={reviewFilter === value ? "active" : ""} onClick={() => setReviewFilter(value)}>{value === "wrong" ? `Wrong (${questions.length - correctCount})` : value === "flagged" ? `Flagged (${flaggedCount})` : `All (${questions.length})`}</button>)}</div><div className="review-actions"><button className="primary" onClick={() => void startSession(collection, activeRespiratoryPracticeIds ?? activePracticalPracticeIds ?? activeCoursePracticeIds, { biochemistryChapterId: activeBiochemistryChapterId, biochemistryChapterIds: activeRetakeChapterIds, respiratoryScopeId: activeRespiratoryScopeId, mode: studyMode, limit: sessionSize })}>New sprint</button></div></div>
         <div className="review-list">
           {!visible.length && <div className="empty-review"><b>Nothing in this view.</b><span>Switch the filter to inspect all answers.</span></div>}
@@ -1126,20 +1159,25 @@ export default function Home() {
     </main>;
   }
 
-  const examHistory=sessionArchive.history.filter(s=>s.exam===exam);
+  const examHistory=sessionArchive.history.filter(s=>s.exam===exam && (exam !== 'term2-cvs' || cvsScope === 'all' || savedCvsScope(s.exam,s.cvsScope) === cvsScope));
   const resumable=sessionArchive.active;
   const term2=examTerm(exam)===2;
   const reviewEnabled=hasReviewCurriculum(exam);
-  const collectionChips=selectedConfig.collections.map(id=>({id,label:collectionLabel[id],count:practiceCountsReady?practiceCollectionCount(id):undefined}));
+  const collectionChips=selectedConfig.collections.filter(id=>exam!=='term2-cvs'||cvsScope==='all'||(cvsScope==='physio'?!['anatomy','histology','embryology','dynamic-anatomy'].includes(id):id!=='physiology')).map(id=>({id,label:collectionLabel[id],count:practiceCountsReady?practiceCollectionCount(id):undefined}));
+  const courseTitle = selectedConfig.title + (exam === 'term2-cvs' && cvsScope !== 'all' ? ` · ${cvsScopeLabel(cvsScope)}` : '');
   const resumeAnswered=resumable?Object.values(resumable.answers).filter(isAnswered).length:0;
   const scoreTone=(value:number)=>value>=75?'good':value>=50?'mid':'low';
   return <StudyShell exam={exam} activeSection={tab} onCourseChange={chooseExam} onSectionChange={section=>setTab(section as Tab)} immersive={cvsPaperActive} status={bankStatus==='loading'?'Loading catalog…':bankStatus==='error'?'Offline · cached sessions available':'Saved on this device'} courses={Object.entries(examConfig).map(([id,c])=>({id:id as ExamId,title:c.title,date:c.date,count:bank?.exams?.find(e=>e.id===id)?.questionCount}))}>
     {pendingGuidance&&<ExamModeChooser onChoose={pendingGuidance} onCancel={()=>setPendingGuidance(null)}/>}
+    {exam==='term2-cvs'&&!cvsPaperActive&&tab!=='School Map'&&<section className="cvs-course-scope" aria-label="CVS course portion">
+      <div className="seg" role="group" aria-label="CVS portion">{CVS_SCOPES.map(scope=><button key={scope.id} type="button" aria-pressed={cvsScope===scope.id} disabled={phase==='loading'} onClick={()=>chooseCvsScope(scope.id)}>{scope.label}</button>)}</div>
+      <p>{cvsScope==='all'?'Complete CVS course · existing content and results':cvsScope==='physio'?'Cardiac, circulation and blood physiology':'Anatomy, histology, embryology and other non-physiology topics'}</p>
+    </section>}
     {!cvsPaperActive&&tab!=='School Map'&&<header className="course-head">
-      <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{selectedConfig.title}</h1><p>{selectedConfig.focus}</p></div>
+      <div className="course-head-copy"><span className="eyebrow">{term2?'Term 2 exam':'Term 1 exam'} · {selectedConfig.date}</span><h1>{courseTitle}</h1><p>{exam==='term2-cvs'&&cvsScope!=='all'?'Practice questions, past papers and Core exams follow this portion. Original All attempts remain unchanged.':selectedConfig.focus}</p></div>
       <div className="course-head-side">
-        <div className="course-stat"><strong>{displayCount((selectedExam?.questionCount??0).toLocaleString())}</strong><span>practice MCQs</span></div>
-        <div className="pill-row">{reviewEnabled&&<ReviewDownloads key={exam} exam={exam}/>}<PracticePdfDownload key={`${exam}-${selectedExam?.version??bank?.version}`} exam={exam} title={selectedConfig.title} version={selectedExam?.version??bank?.version} questionIds={subjectIds?.all} loadQuestions={ids=>loadQuestionsByIds(exam,ids)}/>{tab!=='Past exams'&&<button type="button" className="pill" onClick={()=>setTab('Past exams')}><StudyIcon name="papers"/>Past papers</button>}</div>
+        <div className="course-stat"><strong>{exam==='term2-cvs'&&cvsScope!=='all'?(practiceCountsReady?cvsPracticeIds?.size.toLocaleString():'…'):displayCount((selectedExam?.questionCount??0).toLocaleString())}</strong><span>practice MCQs</span></div>
+        <div className="pill-row">{reviewEnabled&&<ReviewDownloads key={`${exam}-${cvsScope}`} exam={exam} cvsScope={cvsScope}/>}<PracticePdfDownload key={`${exam}-${cvsScope}-${selectedExam?.version??bank?.version}`} exam={exam} title={courseTitle} scope={savedCvsScope(exam,cvsScope)} version={selectedExam?.version??bank?.version} questionIds={cvsPracticeIds?[...cvsPracticeIds]:subjectIds?.all} loadQuestions={ids=>loadQuestionsByIds(exam,ids)}/>{tab!=='Past exams'&&<button type="button" className="pill" onClick={()=>setTab('Past exams')}><StudyIcon name="papers"/>Past papers</button>}</div>
       </div>
     </header>}
     {sessionError&&<p role="alert" className="mcq-alert error">{sessionError}</p>}
@@ -1168,9 +1206,9 @@ export default function Home() {
         {examHistory.length>0&&<button type="button" className="pill" onClick={()=>setTab('Results')}><StudyIcon name="results"/>Results<b>{examHistory.length}</b></button>}
       </div>
     </>}
-    {tab==='Review topics'&&(reviewEnabled?<ReviewTopics key={exam} exam={exam} subjectOf={subjectOf} disabled={phase==='loading'} onPractice={ids=>void startSession('all',ids,{mode:studyMode,limit:sessionSize})}/>:<section className="topic-section"><div className="section-head"><h2>Topics</h2><p>Term 1 keeps its question topics and chapter breakdown. Each opens a session in the current feedback mode.</p></div>{exam==='july29'&&<div className="mcq-topic-grid">{biochemistryChapterProgress.map(ch=><button key={ch.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('biochemistry',undefined,{biochemistryChapterId:ch.id,mode:studyMode})}><StudyIcon name="book"/><b>{ch.chapterLabel} · {ch.title}</b><span>{ch.questionCount} questions</span></button>)}</div>}<div className="mcq-topic-grid">{selectedExam?.topics?.map(topic=><button key={topic.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('all',topic.questionIds,{mode:studyMode,limit:sessionSize})}><StudyIcon name="layers"/><b>{topic.title}</b><span>{topic.questionIds.length} questions</span></button>)}</div></section>)}
+    {tab==='Review topics'&&(reviewEnabled?<ReviewTopics key={`${exam}-${cvsScope}`} exam={exam} cvsScope={cvsScope} allowedQuestionIds={cvsPracticeIds?[...cvsPracticeIds]:undefined} subjectOf={subjectOf} disabled={phase==='loading'||(exam==='term2-cvs'&&!practiceCountsReady)} onPractice={ids=>void startSession('all',ids,{mode:studyMode,limit:sessionSize})}/>:<section className="topic-section"><div className="section-head"><h2>Topics</h2><p>Term 1 keeps its question topics and chapter breakdown. Each opens a session in the current feedback mode.</p></div>{exam==='july29'&&<div className="mcq-topic-grid">{biochemistryChapterProgress.map(ch=><button key={ch.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('biochemistry',undefined,{biochemistryChapterId:ch.id,mode:studyMode})}><StudyIcon name="book"/><b>{ch.chapterLabel} · {ch.title}</b><span>{ch.questionCount} questions</span></button>)}</div>}<div className="mcq-topic-grid">{selectedExam?.topics?.map(topic=><button key={topic.id} type="button" disabled={phase==='loading'} onClick={()=>void startSession('all',topic.questionIds,{mode:studyMode,limit:sessionSize})}><StudyIcon name="layers"/><b>{topic.title}</b><span>{topic.questionIds.length} questions</span></button>)}</div></section>)}
     {tab==='School Map'&&<SchoolMap/>}
-    {tab==='Past exams'&&<PastExamHub key={exam} exam={exam} onSessionActiveChange={setCvsPaperActive}/>}
+    {tab==='Past exams'&&<PastExamHub key={`${exam}-${cvsScope}`} exam={exam} cvsScope={cvsScope} onSessionActiveChange={setCvsPaperActive}/>}
     {tab==='Results'&&<section className="results-section"><div className="section-head"><h2>Practice results<span>{examHistory.length} session{examHistory.length===1?'':'s'}</span></h2><p>Saved on this device. Past-paper results stay with each paper.</p></div>{!examHistory.length&&<div className="mcq-empty"><StudyIcon name="results"/><b>No completed sessions yet</b><p>Finish a practice session and its review will appear here.</p></div>}<div className="result-rows">{examHistory.map(saved=>{const score=Math.round(saved.correctCount/Math.max(1,saved.answeredCount)*100);return <article className="result-row" key={saved.id}><span className="result-date">{formatSessionDate(saved.completedAt)}</span><div className="result-copy"><b>{savedScopeLabel(saved)} · {saved.questionIds.length} questions</b><small>{saved.correctCount} correct · {saved.answeredCount} answered · {saved.studyMode==='exam'?'Test mode':'Learn mode'}</small></div><strong className={`score-pill ${scoreTone(score)}`}>{score}%</strong><button type="button" className="pill small" disabled={phase==='loading'} onClick={()=>void openSavedReview(saved)}>Open review<StudyIcon name="arrow"/></button></article>;})}</div></section>}
     </StudyShell>;
 }

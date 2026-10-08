@@ -3,3 +3,4 @@ export type ParsedExport={title:string;intro:string[];meta:Record<string,string>
 export function parseExport(markdown:string):ParsedExport;
 export function keyOf(block:ExportBlock):{letter:string;text:string};
 export function scopeLimbExport(doc:ParsedExport,scope:'upper'|'lower'):ParsedExport;
+export function selectPaperExport(doc:ParsedExport,selection:{ids:string[];label:string}):ParsedExport;

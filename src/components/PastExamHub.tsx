@@ -15,6 +15,9 @@ import {supportsGuidedExam,type GuidanceMode} from '@/src/lib/mcq/guided-exam.mj
 import {ExamModeChooser} from './ExamModeChooser';
 import {scopeLimbPaper,limbBankSelection,type LimbScope} from '@/src/lib/mcq/limb-paper-scope.mjs';
 import {scopeRetakePaper,retakeBankSelection,type RetakePaperScope} from '@/src/lib/mcq/retake-paper-scope.mjs';
+import type {CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
+import type {PaperTopicMap} from '@/src/lib/mcq/cvs-paper-state.mjs';
+import {scopeCvsDownloadCollection,cvsTopicMapReady} from '@/src/lib/mcq/cvs-paper-catalog.mjs';
 const BiochemistryCoreCard=dynamic(()=>import('./BiochemistryCoreCard').then(m=>m.BiochemistryCoreCard),{loading:()=> <p role="status" className="mcq-loading">Loading Core Exam…</p>});
 const CvsPastExams=dynamic(()=>import('./CvsPastExams').then(m=>m.CvsPastExams),{loading:()=> <p role="status" className="mcq-loading">Loading CVS paper tools…</p>});
 const FinalExam=dynamic(()=>import('./FinalExam').then(m=>m.FinalExam),{loading:()=> <p role="status" className="mcq-loading">Loading selected paper…</p>});
@@ -24,9 +27,9 @@ type Collection=DownloadCollection;
 type Catalog={courses:Array<{id:string;title:string;emptyReason:string|null;collections:Collection[]}>};
 type Selection=ExamCollection;
 /** Toolbar shared by every course: bundle PDF and the all-downloads panel toggle. */
-function HubTools({course,open,onToggle,children,limbScope='all'}:{course:Catalog['courses'][number];open:boolean;onToggle:()=>void;children?:React.ReactNode;limbScope?:LimbScope}) {
-  const label=limbScope==='all'?'All papers':limbScope==='upper'?'Upper-only papers':'Lower-only papers';
-  const suffix=limbScope==='all'?'':`-${limbScope}-only`;
+function HubTools({course,open,onToggle,children,limbScope='all',cvsScope='all'}:{course:Catalog['courses'][number];open:boolean;onToggle:()=>void;children?:React.ReactNode;limbScope?:LimbScope;cvsScope?:CvsScope}) {
+  const label=cvsScope!=='all'?`${cvsScope==='physio'?'Physio':'Non-Physio'} papers`:limbScope==='all'?'All papers':limbScope==='upper'?'Upper-only papers':'Lower-only papers';
+  const suffix=cvsScope!=='all'?`-cvs-${cvsScope}`:limbScope==='all'?'':`-${limbScope}-only`;
   const source=(c:Collection,url:string)=>({...paperSource(c,url),...(limbScope==='all'?{}:{limbScope})});
   return <div className="pill-row hub-tools">
     {children}
@@ -35,7 +38,7 @@ function HubTools({course,open,onToggle,children,limbScope='all'}:{course:Catalo
     <button type="button" className="pill" aria-expanded={open} onClick={onToggle}><StudyIcon name="download"/>{open?'Hide downloads':'All downloads'}</button>
   </div>;
 }
-export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionActiveChange?:(active:boolean)=>void}) {
+export function PastExamHub({exam,onSessionActiveChange,cvsScope='all'}:{exam:ExamId;onSessionActiveChange?:(active:boolean)=>void;cvsScope?:CvsScope}) {
   const [catalog,setCatalog]=useState<Catalog|null>(null),[error,setError]=useState(''),[selected,setSelected]=useState<string|null>(null),[active,setActive]=useState(false),[archive,setArchive]=useState(false),[library,setLibrary]=useState(false);
   const [selectedPapers,setSelectedPapers]=useState<string[]>([]),[combined,setCombined]=useState<Selection|null>(null),[combining,setCombining]=useState(false),[selectionError,setSelectionError]=useState('');
   const [intent,setIntent]=useState<'start'|'new'|'review'>('start'),[saved,setSaved]=useState<unknown>(null);
@@ -43,10 +46,20 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
   const [launchGuidance,setLaunchGuidance]=useState<GuidanceMode|undefined>();
   const [limbScope,setLimbScope]=useState<LimbScope>('all');
   const [retakeScope,setRetakeScope]=useState<RetakePaperScope>('biochemistry');
+  const [cvsTopics,setCvsTopics]=useState<PaperTopicMap|null>(null),[cvsMappingError,setCvsMappingError]=useState('');
   const [savedCombinations,setSavedCombinations]=useState<ReturnType<typeof readCombinedSelections>>([]);
   const refreshSaved=useCallback(()=>{try{setSaved(parseFinalExamProgress(localStorage.getItem(FINAL_EXAM_STORAGE_KEY)));setSavedCombinations(readCombinedSelections(localStorage.getItem(COMBINED_PAPER_SELECTIONS_KEY)));}catch{setSaved(null);}},[]);
   useEffect(()=>{queueMicrotask(refreshSaved);window.addEventListener('storage',refreshSaved);return()=>window.removeEventListener('storage',refreshSaved);},[refreshSaved]);
   useEffect(()=>{let cancelled=false;void cachedJson<Catalog>('/study/past-paper-downloads/catalog.json').then(c=>{if(!cancelled)setCatalog(c);}).catch(e=>{if(!cancelled)setError(e.message);});return()=>{cancelled=true;};},[]);
+  useEffect(()=>{
+    if(exam!=='term2-cvs'||cvsScope==='all')return;
+    let cancelled=false;
+    void cachedJson<PaperTopicMap>('/study/cvs-past-papers/topic-map.json').then(map=>{
+      if(!cvsTopicMapReady(map))throw new Error('CVS topic mapping is incomplete.');
+      if(!cancelled){setCvsTopics(map);setCvsMappingError('');}
+    }).catch(()=>{if(!cancelled)setCvsMappingError('CVS topic mapping could not load. Reconnect and reload to open scoped papers and downloads.');});
+    return()=>{cancelled=true;};
+  },[exam,cvsScope]);
   useEffect(()=>{onSessionActiveChange?.(active);return()=>onSessionActiveChange?.(false);},[active,onSessionActiveChange]);
   const originalCourse=catalog?.courses.find(c=>c.id===exam);
   const fullRetakeAvailable=Boolean(originalCourse?.collections.length&&originalCourse.collections.every(c=>c.fullPaper));
@@ -55,16 +68,23 @@ export function PastExamHub({exam,onSessionActiveChange}:{exam:ExamId;onSessionA
     if(!originalCourse)return originalCourse;
     if(exam==='term1-biochemistry-retake')return {...originalCourse,collections:originalCourse.collections.map(c=>scopeRetakePaper(c,fullRetakeAvailable?retakeScope:'biochemistry'))};
     if(exam==='term2-limbs')return {...originalCourse,collections:originalCourse.collections.map(c=>scopeLimbPaper(c,limbScope)).filter(c=>limbScope==='all'||c.sourceRecordCount>0).sort((a,b)=>Number(b.defaultEligible)-Number(a.defaultEligible))};
+    if(exam==='term2-cvs'&&cvsScope!=='all'){
+      if(!cvsTopics)return undefined;
+      // A stale catalog without source IDs cannot safely produce scoped downloads.
+      if(originalCourse.collections.some(c=>!c.questionIds||c.questionIds.length!==c.sourceRecordCount))return undefined;
+      return {...originalCourse,collections:originalCourse.collections.map(c=>scopeCvsDownloadCollection(c,cvsScope,cvsTopics)).filter(c=>c.sourceRecordCount>0)};
+    }
     return originalCourse;
-  },[originalCourse,exam,limbScope,retakeScope,fullRetakeAvailable]);
+  },[originalCourse,exam,limbScope,retakeScope,fullRetakeAvailable,cvsScope,cvsTopics]);
   const visibleCombinations=savedCombinations.filter(r=>r.exam===exam&&r.sourcePaperIds.every(id=>course?.collections.some(c=>c.id===id)));
   const sourceCollection=course?.collections.find(c=>c.id===selected),collection=sourceCollection??(combined?.id===selected?combined:undefined);
   if(error)return <p role="alert" className="mcq-alert error">{error}</p>;
+  if(exam==='term2-cvs'&&cvsScope!=='all'&&(cvsMappingError||(originalCourse&&cvsTopics&&!course)))return <p role="alert" className="mcq-alert error">{cvsMappingError||'The CVS catalog is out of date. Reconnect and reload before opening scoped papers.'}</p>;
   if(!course)return <p role="status" className="mcq-loading">Loading sourced past papers and downloads…</p>;
   const head=<div className="section-head"><h2>Past papers<span>{course.collections.length} sourced</span></h2><p>Past-paper questions, with any study repairs clearly identified and original wording preserved in downloads. Take a paper, resume a saved attempt, or combine several into one session.</p></div>;
   if(exam==='term2-cvs')return <section className="past-exam-hub">
-    {!active&&<>{head}<HubTools course={course} open={library} onToggle={()=>setLibrary(v=>!v)}/>{library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}</>}
-    <CvsPastExams onSessionActiveChange={setActive} downloads={Object.fromEntries(course.collections.map(item=>[item.id,item]))}/>
+    {!active&&<>{head}<HubTools course={course} cvsScope={cvsScope} open={library} onToggle={()=>setLibrary(v=>!v)}/>{library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}</>}
+    <CvsPastExams key={cvsScope} cvsScope={cvsScope} onSessionActiveChange={setActive} downloads={Object.fromEntries(course.collections.map(item=>[item.id,item]))}/>
   </section>;
   const supported=exam==='term2-divine-ethics'||exam==='term1-biochemistry-retake'||exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory'||exam==='term2-limbs';
   if(selected&&supported)return <>{!active&&<div className="paper-view">

@@ -21,6 +21,8 @@ import coreData from '../../public/study/cvs-past-papers/core-exam.json';
 import {coreExamId, createCoreExam, type CoreExamManifest} from '@/src/lib/mcq/cvs-core-exam.mjs';
 import nonCoreData from '../../public/study/cvs-past-papers/noncore-anatomy.json';
 import {NON_CORE_ANATOMY_ID, createNonCoreAnatomyExam, type NonCoreAnatomyManifest} from '@/src/lib/mcq/cvs-noncore-anatomy.mjs';
+import {matchesCvsPaperScope,scopeCvsPaper,scopedCvsPaperId,cvsPaperScopeFingerprint,type CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
+import {cvsTopicMapReady} from '@/src/lib/mcq/cvs-paper-catalog.mjs';
 
 const answerCounts: Record<string, {proposed:number;unresolved:number;corrections:number}> = reviewedCounts;
 const coreManifest: CoreExamManifest = coreData;
@@ -29,14 +31,10 @@ const nonCoreTopicCounts = [...new Set(nonCoreManifest.questions.map(row => row.
     id, title: nonCoreManifest.questions.find(row => row.topicId === id)!.topicTitle,
     count: nonCoreManifest.questions.filter(row => row.topicId === id).length,
 }));
-const coreAnatomyCount = coreManifest.questions.filter(row => row.subjectId === 'anatomy').length;
-const coreTopics = [...new Map(coreManifest.questions.map(row => [row.topicId, row])).values()]
-    .sort((a,b) => b.topicPaperCount-a.topicPaperCount);
-
 type Entry = { id: string; title: string; note: string; count: number; keyed: number; file: string; fingerprint: string; category: string };
 type Index = { papers: Entry[]; referenceNote: string };
 
-export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionActiveChange?: (active: boolean) => void; downloads?: Record<string, DownloadCollection> }) {
+export function CvsPastExams({ onSessionActiveChange, downloads, cvsScope='all' }: { onSessionActiveChange?: (active: boolean) => void; downloads?: Record<string, DownloadCollection>; cvsScope?:CvsScope }) {
     const [catalog, setCatalog] = useState<Index | null>(null);
     const [paper, setPaper] = useState<Paper | null>(null);
     const [topics, setTopics] = useState<PaperTopicMap | null>(null);
@@ -59,6 +57,25 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
     const questionHeading = useRef<HTMLHeadingElement>(null);
     const sessionHeader = useRef<HTMLElement>(null);
     const active = Boolean(paper);
+    const scopeLabel = cvsScope === 'physio' ? 'Physio' : 'Non-Physio';
+    const coreQuestions = coreManifest.questions.filter(row=>matchesCvsPaperScope(topics?.questions[row.questionId],cvsScope));
+    const scopedCoreManifest = {...coreManifest,questions:coreQuestions};
+    const coreAnatomyCount = coreQuestions.filter(row=>row.subjectId==='anatomy').length;
+    const coreScopes = (['all','anatomy'] as const).filter(scope=>scope==='all'?coreQuestions.length:coreAnatomyCount);
+    const coreTopics = [...new Map(coreQuestions.map(row=>[row.topicId,row])).values()].sort((a,b)=>b.topicPaperCount-a.topicPaperCount);
+    const nonCoreId = scopedCvsPaperId(NON_CORE_ANATOMY_ID,cvsScope);
+    const coreId = (scope:'all'|'anatomy')=>scopedCvsPaperId(coreExamId(scope),cvsScope);
+    const combinedId = (ids:string[])=>scopedCvsPaperId(combinedPaperId(ids),cvsScope);
+    const visibleEntries = useMemo(()=>{
+        if(!catalog)return [];
+        if(cvsScope==='all')return catalog.papers;
+        if(!topics)return [];
+        return catalog.papers.map(entry=>{
+            const ids=downloads?.[entry.id]?.questionIds??Object.keys(topics.questions).filter(id=>id.startsWith(entry.id+'-')&&matchesCvsPaperScope(topics.questions[id],cvsScope));
+            return {...entry,count:ids.length,title:`${entry.title} · ${scopeLabel}`,fingerprint:cvsPaperScopeFingerprint(entry.fingerprint,ids,cvsScope)};
+        }).filter(entry=>entry.count>0);
+    },[catalog,cvsScope,topics,downloads,scopeLabel]);
+    const savedCombinations = Object.values(progress.attempts).filter(a=>a.sourcePaperIds?.length&&a.paperId===combinedId(a.sourcePaperIds)&&a.sourcePaperIds.every(id=>visibleEntries.some(entry=>entry.id===id)));
     useEffect(() => {
         onSessionActiveChange?.(active);
         return () => onSessionActiveChange?.(false);
@@ -69,17 +86,21 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
 
     useEffect(() => {
         let cancelled = false;
-        try {
-            const saved = readPaperProgress(localStorage.getItem(CVS_PAPER_STORAGE_KEY));
-            progressRef.current = saved;
-            setProgress(saved);
-        } catch { setStorageWarning('Storage is unavailable. Answers remain in this tab only.'); }
-        setReady(true);
+        const pendingRequest=request;
+        queueMicrotask(()=>{
+            if(cancelled)return;
+            try {
+                const saved = readPaperProgress(localStorage.getItem(CVS_PAPER_STORAGE_KEY));
+                progressRef.current = saved;
+                setProgress(saved);
+            } catch { setStorageWarning('Storage is unavailable. Answers remain in this tab only.'); }
+            setReady(true);
+        });
         cachedJson<Index>('/study/cvs-past-papers/index.json').then(data => { if (!cancelled) setCatalog(data); })
           .catch(e => { if (!cancelled) setError(e.message); });
-        cachedJson<PaperTopicMap>('/study/cvs-past-papers/topic-map.json').then(data => { if (!cancelled) setTopics(data); })
+        cachedJson<PaperTopicMap>('/study/cvs-past-papers/topic-map.json').then(data => { if(!cvsTopicMapReady(data))throw new Error('Invalid CVS topic mapping.'); if (!cancelled) setTopics(data); })
           .catch(() => { if (!cancelled) setMappingWarning('Topic mapping unavailable. Your answers are still saved; reopen the paper later for section results.'); });
-        return () => { cancelled = true; request.current++; };
+        return () => { cancelled = true; pendingRequest.current++; };
     }, []);
 
     function save(next: PaperProgress) {
@@ -115,7 +136,7 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
         const previous = progressRef.current.attempts[p.id];
         let saved = restart ? null : restorePaperAttempt(previous, p);
         // Updating a curated set must not discard answers to retained questions.
-        if (!restart && !saved && previous && (p.id.startsWith('cvs-core-exam:') || p.id === NON_CORE_ANATOMY_ID)) {
+        if (!restart && !saved && previous && (p.id.startsWith('cvs-core-exam:') || p.id === nonCoreId)) {
             saved = restorePaperAttempt({...previous,fingerprint:p.fingerprint,completedAt:null,index:0},p);
             if (saved) saved.index = Math.max(0,p.questions.findIndex(q => !saved!.answers[q.id]?.trim()));
         }
@@ -130,7 +151,9 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
         const id = ++request.current;
         setLoading(true); setError('');
         try {
-            const p = await loadPaper(entry);
+            const source = catalog?.papers.find(item=>item.id===entry.id);
+            if(!source)throw new Error('This paper is no longer available. Reload the catalog.');
+            const p = scopeCvsPaper(await loadPaper(source),cvsScope,topics);
             if (id !== request.current) return;
             enter(p, restart);
         } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not open paper.'); }
@@ -146,7 +169,7 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
             if (entries.length !== new Set(paperIds).size) throw new Error('A selected paper is no longer available. Choose the papers again.');
             const papers = await Promise.all(entries.map(loadPaper));
             if (id !== request.current) return;
-            enter(createCombinedPaper(papers), restart);
+            enter(scopeCvsPaper(createCombinedPaper(papers),cvsScope,topics), restart);
         } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not combine papers.'); }
         finally { if (id === request.current) setLoading(false); }
     }
@@ -156,11 +179,11 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
         const id = ++request.current;
         setLoading(true); setError('');
         try {
-            const rows = coreManifest.questions.filter(row => scope !== 'anatomy' || row.subjectId === 'anatomy');
+            const rows = coreQuestions.filter(row => scope !== 'anatomy' || row.subjectId === 'anatomy');
             const ids = new Set(rows.map(row => row.paperId));
             const sources = await Promise.all(catalog.papers.filter(entry => ids.has(entry.id)).map(loadPaper));
             if (id !== request.current) return;
-            enter(createCoreExam(coreManifest, sources, scope), restart);
+            enter(scopeCvsPaper(createCoreExam(scopedCoreManifest, sources, scope),cvsScope,topics), restart);
         } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not open Core Exam.'); }
         finally { if (id === request.current) setLoading(false); }
     }
@@ -173,7 +196,7 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
             const ids = new Set(nonCoreManifest.questions.map(row => row.paperId));
             const sources = await Promise.all(catalog.papers.filter(entry => ids.has(entry.id)).map(loadPaper));
             if (id !== request.current) return;
-            enter(createNonCoreAnatomyExam(nonCoreManifest, sources, coreManifest), restart);
+            enter(scopeCvsPaper(createNonCoreAnatomyExam(nonCoreManifest, sources, coreManifest),cvsScope,topics), restart);
         } catch (e) { if (id === request.current) setError(e instanceof Error ? e.message : 'Could not open Non-core Anatomy.'); }
         finally { if (id === request.current) setLoading(false); }
     }
@@ -220,6 +243,7 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
     }
 
     if (error && !catalog) return <section className={styles.root}><p role="alert">{error}</p><button onClick={() => window.location.reload()}>Retry</button></section>;
+    if(cvsScope!=='all'&&!topics)return <p role={mappingWarning?'alert':'status'}>{mappingWarning?'CVS topic mapping could not load. Reconnect and reload to open scoped papers.':'Loading CVS question scopes…'}</p>;
     if (!catalog || !ready) return <p role="status">Loading your CVS papers…</p>;
     if (!paper || !attempt || !q) return <div className="cvs-hub" aria-label="CVS past exams">
         {storageWarning && <p role="alert" className="mcq-alert">{storageWarning}</p>}{error && <p role="alert" className="mcq-alert error">{error}</p>}
@@ -229,14 +253,14 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
             <details className="hub-note"><summary>About the answers</summary><p>Slightly stronger colors distinguish reference-reviewed answers from supplied keys. Review provenance and references are available with each answer. These are study answers, not certified university keys. Feedback mode applies to new attempts.</p></details>
         </div>
         <section className="paper-combiner" aria-label="Combine past papers">
-            <div className="section-head compact"><h3><StudyIcon name="layers"/>Combine papers</h3><p>One continuous session with a combined subject and review-section report. Individual-paper attempts stay separate; repeated questions from different papers are retained.</p><div className="pill-row"><button type="button" className="pill small" disabled={loading} onClick={() => setSelectedPapers(catalog.papers.map(p => p.id))}>Select all</button><button type="button" className="pill small" disabled={loading || !selectedPapers.length} onClick={() => setSelectedPapers([])}>Clear</button></div></div>
-            <div className="paper-selection">{catalog.papers.map(entry => <label key={entry.id}>
+            <div className="section-head compact"><h3><StudyIcon name="layers"/>Combine papers</h3><p>One continuous session with a combined subject and review-section report. Individual-paper attempts stay separate; repeated questions from different papers are retained.</p><div className="pill-row"><button type="button" className="pill small" disabled={loading} onClick={() => setSelectedPapers(visibleEntries.map(p => p.id))}>Select all</button><button type="button" className="pill small" disabled={loading || !selectedPapers.length} onClick={() => setSelectedPapers([])}>Clear</button></div></div>
+            <div className="paper-selection">{visibleEntries.map(entry => <label key={entry.id}>
                 <input type="checkbox" disabled={loading} checked={selectedPapers.includes(entry.id)} onChange={e => setSelectedPapers(ids => e.target.checked ? [...ids, entry.id] : ids.filter(id => id !== entry.id))} />
                 {entry.title}<small>{entry.count}</small>
             </label>)}</div>
-            <div className="paper-combiner-footer"><span>{selectedPapers.length} papers · {catalog.papers.filter(p => selectedPapers.includes(p.id)).reduce((n, p) => n + p.count, 0)} questions</span><div className="pill-row"><button type="button" className="primary" disabled={loading || !selectedPapers.length} onClick={() => void openCombined()}>{progress.attempts[combinedPaperId(selectedPapers)] ? 'Resume combined · results' : 'Start combined session'}<StudyIcon name="arrow"/></button>{progress.attempts[combinedPaperId(selectedPapers)] && <button type="button" className="pill" disabled={loading} onClick={() => void openCombined(true)}>New combined attempt</button>}</div></div>
-            {Object.values(progress.attempts).some(a => a.sourcePaperIds?.length) && <details className="paper-saved-combinations"><summary>Saved combined sessions</summary>
-                {Object.values(progress.attempts).filter(a => a.sourcePaperIds?.length).map(saved => <article key={saved.paperId}>
+            <div className="paper-combiner-footer"><span>{selectedPapers.length} papers · {visibleEntries.filter(p => selectedPapers.includes(p.id)).reduce((n, p) => n + p.count, 0)} questions</span><div className="pill-row"><button type="button" className="primary" disabled={loading || !selectedPapers.length} onClick={() => void openCombined()}>{progress.attempts[combinedId(selectedPapers)] ? 'Resume combined · results' : 'Start combined session'}<StudyIcon name="arrow"/></button>{progress.attempts[combinedId(selectedPapers)] && <button type="button" className="pill" disabled={loading} onClick={() => void openCombined(true)}>New combined attempt</button>}</div></div>
+            {savedCombinations.length>0 && <details className="paper-saved-combinations"><summary>Saved combined sessions</summary>
+                {savedCombinations.map(saved => <article key={saved.paperId}>
                     <b>{saved.sourcePaperIds!.map(id => catalog.papers.find(p => p.id === id)?.title ?? id).join(' + ')}</b>
                     {progress.latest[saved.paperId] ? <Result result={progress.latest[saved.paperId]} /> : <p>Ready to resume</p>}
                     <button type="button" className="pill small" disabled={loading} onClick={() => { setSelectedPapers(saved.sourcePaperIds!); void openCombined(false, saved.sourcePaperIds); }}>{saved.completedAt ? 'Results & review' : 'Resume'}</button>
@@ -245,15 +269,15 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
         </section>
         <div className="paper-grid">
             <PastPaperCard featured badge="★ Start here" label="Core exam · repeated PYQs first" title="Core Exam" note={`${coreManifest.methodology} ${coreManifest.limitation}`}>
-                <p className="paper-counts">{coreManifest.subjects.map((subject, i) => <span key={subject.id}>{i > 0 && <i>·</i>}<b>{subject.count}</b> {subject.title}</span>)}</p>
-                <p className="paper-lead">Repeated concepts first: {coreManifest.questions.length} selected questions, {coreManifest.repeatedPatternCount} repeated patterns, one representative per pattern. Priority, not a prediction.</p>
-                {(['all','anatomy'] as const).filter(scope => progress.latest[coreExamId(scope)]).map(scope => <Result key={scope} result={progress.latest[coreExamId(scope)]} stale={progress.latest[coreExamId(scope)].total !== (scope === 'all' ? coreManifest.questions.length : coreAnatomyCount)} />)}
-                <div className="paper-card-actions">{(['all','anatomy'] as const).map(scope => {
-                    const saved = progress.attempts[coreExamId(scope)];
+                <p className="paper-counts">{coreManifest.subjects.map(subject=>({...subject,count:coreQuestions.filter(row=>row.subjectId===subject.id).length})).filter(subject=>subject.count>0).map((subject, i) => <span key={subject.id}>{i > 0 && <i>·</i>}<b>{subject.count}</b> {subject.title}</span>)}</p>
+                <p className="paper-lead">Repeated concepts first: {coreQuestions.length} selected questions, {coreQuestions.filter(row=>row.repeatSourceIds.length>=2).length} repeated patterns, one representative per pattern. Priority, not a prediction.</p>
+                {coreScopes.filter(scope => progress.latest[coreId(scope)]).map(scope => <Result key={scope} result={progress.latest[coreId(scope)]} stale={progress.latest[coreId(scope)].total !== (scope === 'all' ? coreQuestions.length : coreAnatomyCount)} />)}
+                <div className="paper-card-actions">{coreScopes.map(scope => {
+                    const saved = progress.attempts[coreId(scope)];
                     return <button key={scope} type="button" className={scope === 'all' ? 'primary' : 'pill'} disabled={loading} onClick={() => void openCore(scope)}>
-                        {saved ? saved.completedAt ? 'Results' : 'Resume' : 'Start'} · {scope === 'all' ? `Full core · ${coreManifest.questions.length}` : `Anatomy · ${coreAnatomyCount}`}
+                        {saved ? saved.completedAt ? 'Results' : 'Resume' : 'Start'} · {scope === 'all' ? `${cvsScope==='all'?'Full core':scopeLabel+' core'} · ${coreQuestions.length}` : `Anatomy · ${coreAnatomyCount}`}
                     </button>;
-                })}{(['all','anatomy'] as const).filter(scope => progress.attempts[coreExamId(scope)]).map(scope => <button key={scope + '-new'} type="button" className="pill" disabled={loading} onClick={() => void openCore(scope, true)}>New {scope === 'all' ? 'full' : 'anatomy'} attempt</button>)}</div>
+                })}{coreScopes.filter(scope => progress.attempts[coreId(scope)]).map(scope => <button key={scope + '-new'} type="button" className="pill" disabled={loading} onClick={() => void openCore(scope, true)}>New {scope === 'all' ? cvsScope==='all'?'full':scopeLabel : 'anatomy'} attempt</button>)}</div>
                 <details className="paper-evidence"><summary>Why these questions?</summary>
                     <p>{coreManifest.methodology}</p>
                     <p>Repeated questions appear first. After answering, open “Repeated-question sources” to see their matches. The list shows <b>topic coverage</b>, not identical-question repeats or predicted probabilities.</p>
@@ -261,13 +285,13 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
                     <p>{coreManifest.limitation}</p>
                 </details>
             </PastPaperCard>
-            <PastPaperCard featured badge="02 · Beyond core" label="Non-core anatomy · original PYQs" title="Non-core Anatomy" note={`${nonCoreManifest.methodology} ${nonCoreManifest.limitation}`}>
+            {cvsScope!=='physio'&&<PastPaperCard featured badge="02 · Beyond core" label="Non-core anatomy · original PYQs" title="Non-core Anatomy" note={`${nonCoreManifest.methodology} ${nonCoreManifest.limitation}`}>
                 <p className="paper-counts"><b>{nonCoreManifest.questions.length}</b> distinct questions<i>·</i>{nonCoreManifest.questions.filter(row => row.hasImage).length} image spotters</p>
                 <p className="paper-lead">The unusual details, exceptions and one-offs. Core questions and known repeat variants are excluded; duplicate copies are collapsed.</p>
-                {progress.latest[NON_CORE_ANATOMY_ID] ? <Result result={progress.latest[NON_CORE_ANATOMY_ID]} stale={progress.latest[NON_CORE_ANATOMY_ID].total !== nonCoreManifest.questions.length} /> : <p className="paper-saved-result">Not attempted yet</p>}
+                {progress.latest[nonCoreId] ? <Result result={progress.latest[nonCoreId]} stale={progress.latest[nonCoreId].total !== nonCoreManifest.questions.length} /> : <p className="paper-saved-result">Not attempted yet</p>}
                 <div className="paper-card-actions">
-                    <button type="button" className="primary" disabled={loading} onClick={() => void openNonCoreAnatomy()}>{progress.attempts[NON_CORE_ANATOMY_ID] ? progress.attempts[NON_CORE_ANATOMY_ID].completedAt ? 'Results & review' : 'Resume' : 'Start'} · {nonCoreManifest.questions.length}</button>
-                    {progress.attempts[NON_CORE_ANATOMY_ID] && <button type="button" className="pill" disabled={loading} onClick={() => void openNonCoreAnatomy(true)}>New attempt</button>}
+                    <button type="button" className="primary" disabled={loading} onClick={() => void openNonCoreAnatomy()}>{progress.attempts[nonCoreId] ? progress.attempts[nonCoreId].completedAt ? 'Results & review' : 'Resume' : 'Start'} · {nonCoreManifest.questions.length}</button>
+                    {progress.attempts[nonCoreId] && <button type="button" className="pill" disabled={loading} onClick={() => void openNonCoreAnatomy(true)}>New attempt</button>}
                 </div>
                 <details className="paper-evidence"><summary>Coverage &amp; excluded items</summary>
                     <p>{nonCoreManifest.candidateCount} anatomy source questions accounted for: {nonCoreManifest.excludedCore.length} Core overlaps, {nonCoreManifest.duplicates.length} additional duplicate copies, {nonCoreManifest.questions.length} in this test, and {nonCoreManifest.withheld.length} held for clarification.</p>
@@ -280,12 +304,15 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
                         </li>)}</ul>
                     </details>
                 </details>
-            </PastPaperCard>
-            {catalog.papers.map(entry => {
-                const result = progress.latest[entry.id], saved = progress.attempts[entry.id];
+            </PastPaperCard>}
+            {visibleEntries.map(entry => {
+                const id=scopedCvsPaperId(entry.id,cvsScope);
+                const result = progress.latest[id], saved = progress.attempts[id];
                 const same = saved?.fingerprint === entry.fingerprint;
+                const keyed = cvsScope==='all'?entry.keyed+(answerCounts[entry.id]?.proposed??0):downloads?.[entry.id]?.gradedQuestionCount;
+                const unresolved = cvsScope==='all'?answerCounts[entry.id]?.unresolved:downloads?.[entry.id]?.ungradedCount;
                 return <PastPaperCard key={entry.id} title={entry.title} label={entry.category} note={entry.note}>
-                    <p className="paper-counts"><b>{entry.count}</b> questions<i>·</i><b>{entry.keyed + (answerCounts[entry.id]?.proposed ?? 0)}</b> with answers{answerCounts[entry.id]?.unresolved ? <><i>·</i>{answerCounts[entry.id].unresolved} unresolved</> : null}</p>
+                    <p className="paper-counts"><b>{entry.count}</b> questions{keyed!==undefined&&<><i>·</i><b>{keyed}</b> with answers</>}{unresolved ? <><i>·</i>{unresolved} unresolved</> : null}</p>
                     {result ? <Result result={result} stale={result.fingerprint !== entry.fingerprint} /> : <p className="paper-saved-result">{same ? `${Object.values(saved.answers).filter(v => v?.trim()).length}/${entry.count} answered · saved on this device` : 'Not attempted yet'}</p>}
                     <div className="paper-card-actions"><button type="button" className="primary" disabled={loading} onClick={() => void open(entry)}>{same ? saved.completedAt ? 'Results & review' : 'Resume paper' : 'Take paper'}</button>
                         {same && <button type="button" className="pill" disabled={loading} onClick={() => void open(entry, true)}>New attempt</button>}</div>
@@ -320,8 +347,8 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
         {storageWarning && <p role="alert">{storageWarning}</p>}{mappingWarning && <p className={styles.warning}>{mappingWarning}</p>}{answerWarning && <p role="alert" className={styles.warning}>{answerWarning}</p>}
         {reportOpen && finished && breakdown ? <>
             {result && <Result result={result} />}
-            <WrongAnswerReview exam="term2-cvs" attemptId={`cvs:${paper.id}:${attempt.startedAt}`} questions={paperReviewQuestions(paper.questions)} outcomes={paper.questions.map(item=>({questionId:item.id,answered:Boolean(attempt.answers[item.id]?.trim()),correct:questionFeedback(item,attempt.answers[item.id])==='correct'||(!answerResolution(item).key&&attempt.manual[item.id]==='correct'),gradable:Boolean(answerResolution(item).key)||['correct','incorrect'].includes(attempt.manual[item.id]),topic:topics?.questions[item.id]?.topicId}))}/>
-            <details><summary>Subject breakdown &amp; paper review controls</summary><CvsWeaknessReport breakdown={breakdown} topics={topics} onReview={review}/></details>
+            <WrongAnswerReview exam="term2-cvs" cvsScope={cvsScope} attemptId={`cvs:${paper.id}:${attempt.startedAt}`} questions={paperReviewQuestions(paper.questions)} outcomes={paper.questions.map(item=>({questionId:item.id,answered:Boolean(attempt.answers[item.id]?.trim()),correct:questionFeedback(item,attempt.answers[item.id])==='correct'||(!answerResolution(item).key&&attempt.manual[item.id]==='correct'),gradable:Boolean(answerResolution(item).key)||['correct','incorrect'].includes(attempt.manual[item.id]),topic:topics?.questions[item.id]?.topicId}))}/>
+            <details><summary>Subject breakdown &amp; paper review controls</summary><CvsWeaknessReport breakdown={breakdown} topics={topics} cvsScope={cvsScope} onReview={review}/></details>
             <button onClick={() => { setFilter(null); setReportOpen(false); }}>Review all questions</button>
         </> : <>
             <div className={styles.sessionTools}>
@@ -372,10 +399,12 @@ export function CvsPastExams({ onSessionActiveChange, downloads }: { onSessionAc
                 {confirmFinish && <section role="alert" className={styles.confirm}><p>{paper.questions.length - answered} questions unanswered. Finish and save your section report? This attempt will be locked for review.</p>
                     <div className={styles.actions}><button className="primary" onClick={finish}>Finish and save result</button><button onClick={() => setConfirmFinish(false)}>Keep answering</button></div></section>}
                 <details className={styles.source}><summary>Source &amp; what to review</summary>
-                    {topic?.reviewLocator && <p><b>Review notes:</b> {topic.reviewLocator.documentTitle} → {topic.reviewLocator.sectionTitle}</p>}
+                    {cvsScope==='all'&&topic?.reviewLocator && <p><b>Review notes:</b> {topic.reviewLocator.documentTitle} → {topic.reviewLocator.sectionTitle}</p>}
+                    {cvsScope==='physio'&&topic&&<p><b>Physio topic:</b> {topic.title??topic.label}. Use the Physio review for this scope.</p>}
+                    {cvsScope==='non-physio'&&<p>Non-Physio review notes are not available yet. Original question sources remain available below.</p>}
                     <p>Original pages may contain handwritten answers. Opening them is a study aid, not a closed-book attempt.</p>
                     <div className={styles.actions}><button onClick={() => setSourceOpen(v => !v)}>{sourceOpen ? 'Hide original page' : 'Show original page'}</button>
-                        <a href={q.originPaper?.transcriptUrl ?? paper.transcriptUrl} target="_blank" rel="noreferrer">Questions + answer notes (.md)</a><a href={q.originPaper?.sourceUrl ?? paper.sourceUrl} target="_blank" rel="noreferrer">Source document</a></div>
+                        <a href={q.originPaper?.transcriptUrl ?? paper.transcriptUrl} target="_blank" rel="noreferrer">{cvsScope==='all'?'Questions + answer notes (.md)':'Complete original transcript (.md)'}</a><a href={q.originPaper?.sourceUrl ?? paper.sourceUrl} target="_blank" rel="noreferrer">{cvsScope==='all'?'Source document':'Complete original source'}</a></div>
                     {sourceOpen && <img className={styles.scan} src={q.sourcePage} alt={'Source page ' + q.page + '; may include student marks'} />}
                 </details>
             </article>

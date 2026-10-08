@@ -69,7 +69,7 @@ test('browser PDF renderer receives only the selected limb and uses distinct cac
 });
 
 test('every published export parses into its transcribed questions and graded keys',()=>{
-  assert.equal(collections.length,30);
+  assert.equal(collections.length,110);
   for(const item of collections){
     const questions=parseExport(read(item.downloads.questions)),keys=parseExport(read(item.downloads.answerKey)),both=parseExport(read(item.downloads.questionsAndKey));
     assert.equal(questions.title,item.title,item.id);
@@ -77,7 +77,8 @@ test('every published export parses into its transcribed questions and graded ke
     assert.ok([item.transcribedQuestionCount,item.sourceRecordCount].includes(questions.questions.length),item.id+' questions '+questions.questions.length);
     assert.ok(keys.keys.length>=item.gradedQuestionCount,item.id+' keys');
     assert.equal(both.questions.length,questions.questions.length);assert.equal(both.keys.length,keys.keys.length);
-    assert.ok(both.sources.length>0&&both.sources.length===questions.sources.length,item.id+' sources listed once');
+    assert.equal(both.sources.length,questions.sources.length,item.id+' sources listed once');
+    assert.ok(both.sources.length>0||item.originals.length===0||both.intro.some(p=>/^Original: \/study\//.test(p)),item.id+' public originals listed');
     const graded=both.keys.filter(k=>keyOf(k).letter).length;
     assert.equal(graded,item.gradedQuestionCount,item.id+' graded letters');
     assert.ok(questions.questions.filter(q=>q.paragraphs.length).length>=item.transcribedQuestionCount,item.id+' prompts');

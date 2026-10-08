@@ -9,6 +9,7 @@ import {selectRespiratorySprint} from '@/src/lib/mcq/respiratory-selection.mjs';
 import {selectPracticalSprint} from '@/src/lib/mcq/practical-selection.mjs';
 import {selectTerm2Sprint} from '@/src/lib/mcq/term2-selection.mjs';
 import {matchesLimbPracticeScope,requestedLimbPracticeScope} from '@/src/lib/mcq/limb-practice-scope.mjs';
+import {matchesCvsPracticeScope,requestedCvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
 import {isExamId,isTerm2Exam,isImageQuestion,type ExamId} from '@/src/lib/mcq/exams.mjs';
 export {isExamId};export type {ExamId};
 export type FinalExamBankId='telegram-past-papers'|'nutrition-past-papers'|'religion-past-papers'|'divine-ethics-past-papers'|'biochemistry-metabolism-past-papers'|'respiratory-past-papers'|'limbs-past-papers'|'biochemistry-retake-past-papers';
@@ -93,6 +94,7 @@ export function questionSet(searchParams: URLSearchParams) {
   const collection = searchParams.get("collection");
   if (!isExamId(exam)) throw new Error("A valid exam is required");
   const limbScope = requestedLimbPracticeScope(exam, searchParams.get('limbScope'));
+  const cvsScope = requestedCvsScope(exam, searchParams.get('cvsScope'));
   if (collection !== null && !isCollectionId(collection)) throw new Error("A valid collection is required");
 
   const subject = searchParams.get("subject");
@@ -104,6 +106,7 @@ export function questionSet(searchParams: URLSearchParams) {
   const limit = cappedLimit(searchParams.get("limit"), 20);
   const filtered = loadVerifiedQuestions(exam).filter((question) => {
     if (!matchesLimbPracticeScope(question, limbScope)) return false;
+    if (!matchesCvsPracticeScope(question, cvsScope)) return false;
     if (collection && !matchesCollection(question, collection)) return false;
     if (subject && question.subject !== subject) return false;
     if (kind && question.kind !== kind) return false;
@@ -120,6 +123,7 @@ export function coverageQuestionSet(body: unknown) {
   if (!input || !isExamId(input.exam)) throw new Error("A valid exam is required");
   const exam = input.exam;
   const limbScope = requestedLimbPracticeScope(exam, input.limbScope);
+  const cvsScope = requestedCvsScope(exam, input.cvsScope);
   const collection = typeof input.collection === "string" ? input.collection : "all";
   if (!isCollectionId(collection)) throw new Error("A valid collection is required");
 
@@ -131,6 +135,7 @@ export function coverageQuestionSet(body: unknown) {
   const filtered = loadVerifiedQuestions(exam)
     .filter((question) => matchesCollection(question, collection)
       && matchesLimbPracticeScope(question, limbScope)
+      && matchesCvsPracticeScope(question, cvsScope)
       && (!chapterId || biochemistryChapterIdForQuestion(question) === chapterId));
   const selection = exam === "term2-respiratory"
     ? selectRespiratorySprint(filtered, { limit, seenIds, repairIds, studyMode: input.studyMode === "exam" ? "exam" : "learn" })
@@ -149,6 +154,7 @@ export function coverageQuestionSet(body: unknown) {
     },
     biochemistryChapterId: chapterId,
     limbScope,
+    cvsScope,
   };
 }
 
@@ -158,6 +164,7 @@ export function questionSetByIds(body: unknown) {
   if (!isExamId(input.exam)) throw new Error("A valid exam is required");
   const exam = input.exam;
   const limbScope = requestedLimbPracticeScope(exam, input.limbScope);
+  const cvsScope = requestedCvsScope(exam, input.cvsScope);
   const ids = cleanIds(input.ids, 10_000);
   const limit = cappedLimit(input.limit, ids.length || 1);
   const idSet = new Set(ids);
@@ -167,7 +174,7 @@ export function questionSetByIds(body: unknown) {
   // validIds describes availability, not the regional filter. Otherwise reviewing
   // upper-only mistakes could erase the student's saved lower-limb mistakes.
   const filtered = input.purpose === 'history' ? validQuestions
-    : validQuestions.filter(question => matchesLimbPracticeScope(question, limbScope));
+    : validQuestions.filter(question => matchesLimbPracticeScope(question, limbScope) && matchesCvsPracticeScope(question, cvsScope));
   const byId = new Map(filtered.map((question) => [question.id, question]));
   const ordered = input.prioritize === true
     ? (exam === "term2-respiratory" ? selectRespiratorySprint : exam === "term2-physiology-practical" ? selectPracticalSprint : isTerm2Exam(exam) ? selectTerm2Sprint : selectCoverageSprint)(filtered, {

@@ -26,7 +26,7 @@ export function parseExport(markdown) {
   };
   const startBlock=(heading)=>{
     flushParagraph();
-    const m=heading.match(/^###\s+(\S+)\s+·\s+(.*)$/);
+    const m=heading.match(/^###\s+(.+?)\s+·\s+(.*)$/);
     block={number:m?m[1]:heading.replace(/^###\s*/,''),id:m?m[2].trim():'',paragraphs:[],options:[],fields:{}};
     (section==='keys'?doc.keys:doc.questions).push(block);
   };
@@ -76,4 +76,15 @@ export function scopeLimbExport(doc, scope) {
   const questions=doc.questions.filter(q=>(q.fields.Source??'').startsWith(scope+' limb'));
   const ids=new Set(questions.map(q=>q.id));
   return {...doc,title:`${doc.title} · ${scope==='upper'?'Upper':'Lower'} only`,questions,keys:doc.keys.filter(k=>ids.has(k.id))};
+}
+
+/** Filter questions and standalone answer-key exports by the exact source IDs. */
+export function selectPaperExport(doc, selection) {
+  const ids = new Set(selection.ids);
+  if(!ids.size || ids.size !== selection.ids.length) throw new Error('No valid scoped questions were selected for this PDF.');
+  const available = new Set([...doc.questions, ...doc.keys].map(block => block.id));
+  if([...ids].some(id => !available.has(id))) throw new Error('The paper export has changed. Reload the paper catalog before downloading.');
+  return {...doc, title:`${doc.title} · ${selection.label}`,
+    intro:[...doc.intro.filter(p=>!/^\d+ retained source records/.test(p)),`${selection.label} selection only. Original source numbering is preserved. Linked original scans remain complete.`],
+    questions:doc.questions.filter(q=>ids.has(q.id)), keys:doc.keys.filter(q=>ids.has(q.id))};
 }

@@ -8,6 +8,7 @@ import {buildLimbPracticeIndex,limbPracticeRegion,matchesLimbPracticeScope,reque
 import {parseProgress} from '../src/lib/mcq/study-progress.mjs';
 import {isExamId} from '../src/lib/mcq/exams.mjs';
 import {guidanceMode} from '../src/lib/mcq/guided-exam.mjs';
+import {savedCvsScope} from '../src/lib/mcq/cvs-scope.mjs';
 
 const root=path.resolve(import.meta.dirname,'..'),require=createRequire(import.meta.url),modules=new Map();
 function load(file) {
@@ -108,7 +109,7 @@ test('actual archive parser retains scope, questions and scores for active/compl
   const names=['cleanIds','optionalPracticeIds','cleanAnswers','isCollectionId','isTerm2CourseExam','cleanActiveSession','parseSessionArchive','isAnswered'];
   const definitions=ast.statements.filter(node=>ts.isFunctionDeclaration(node)&&names.includes(node.name?.text)||ts.isVariableStatement(node)&&node.declarationList.declarations.some(d=>d.name.getText(ast)==='collectionLabel')).map(node=>node.getText(ast)).join('\n');
   const compiled=ts.transpileModule(definitions,{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText;
-  const parse=new Function('isExamId','guidanceMode','savedLimbPracticeScope','isBiochemistryChapterId',`${compiled};return parseSessionArchive;`)(isExamId,guidanceMode,savedLimbPracticeScope,load(path.join(root,'src/lib/biochemistry/chapters.ts')).isBiochemistryChapterId);
+  const parse=new Function('isExamId','guidanceMode','savedLimbPracticeScope','savedCvsScope','isBiochemistryChapterId',`${compiled};return parseSessionArchive;`)(isExamId,guidanceMode,savedLimbPracticeScope,savedCvsScope,load(path.join(root,'src/lib/biochemistry/chapters.ts')).isBiochemistryChapterId);
   for(const limbScope of ['all','upper','lower',undefined]) {
     const questionIds=index[limbScope??'all'].slice(-3),id=questionIds[0];
     const active={exam:'term2-limbs',collection:'all',limbScope,questionIds,visitedQuestionIds:questionIds,questionIndex:1,answers:{[id]:{mode:'select',selectedOptionId:'A',flagged:true}},studyMode:'exam'};

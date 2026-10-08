@@ -3,13 +3,13 @@
 // version and the variant, so an edited paper or a new layout produces a new key
 // and the stale copy is evicted the next time that paper is requested. Answers and
 // results never enter this cache; it holds only regenerable documents.
-import {parseExport,scopeLimbExport} from './parse-export.mjs';
+import {parseExport,scopeLimbExport,selectPaperExport} from './parse-export.mjs';
 import {requireStudySession,denyStudySession} from '../../../public/med25-auth-cache.mjs';
 import {buildPaperDocument,PAPER_PDF_TEMPLATE,paperFonts,type PaperPart,type PaperVariant} from './document';
 import type {TDocumentDefinitions} from 'pdfmake/interfaces';
 
 export const PAPER_PDF_CACHE='med25-paper-pdfs-v1';
-export type PaperSource={url:string;collection:PaperPart['collection'];limbScope?:'upper'|'lower'};
+export type PaperSource={url:string;collection:PaperPart['collection'];limbScope?:'upper'|'lower';questionSelection?:{ids:string[];label:string}};
 export type PaperRequest={sources:PaperSource[];variant:PaperVariant;courseTitle:string;footerLabel:string};
 export type PaperResult={blob:Blob;fromCache:boolean;cached:boolean;key:string};
 type Env={authorize?:()=>Promise<unknown>;fetch?:typeof fetch;caches?:CacheStorage;crypto?:Crypto;origin?:string;render?:(definition:TDocumentDefinitions)=>Promise<Blob>;maxFiles?:number};
@@ -83,8 +83,10 @@ export function createPaperPdf(env:Env={}) {
       if(!response.ok)throw new Error('The paper export could not be loaded. Please retry when connected.');
       return response.text();
     }));
-    const name=request.sources.length===1?request.sources[0].collection.id:`${request.sources.map(s=>s.collection.id).join('+').slice(0,40)}-bundle`;
-    const version=await sha256(env,JSON.stringify({template:PAPER_PDF_TEMPLATE,fonts:fontFiles,variant:request.variant,footer:request.footerLabel,course:request.courseTitle,collections:request.sources.map(s=>s.collection),limbScopes:request.sources.map(s=>s.limbScope??'all'),texts}));
+    const baseName=request.sources.length===1?request.sources[0].collection.id:`${request.sources.map(s=>s.collection.id).join('+').slice(0,40)}-bundle`;
+    const selections=[...new Set(request.sources.flatMap(source=>source.questionSelection?[source.questionSelection.label]:[]))];
+    const name=baseName+(selections.length?'-'+selections.join('-').toLowerCase().replace(/[^a-z0-9-]/g,'-'):'');
+    const version=await sha256(env,JSON.stringify({template:PAPER_PDF_TEMPLATE,fonts:fontFiles,variant:request.variant,footer:request.footerLabel,course:request.courseTitle,collections:request.sources.map(s=>s.collection),limbScopes:request.sources.map(s=>s.limbScope??'all'),selections:request.sources.map(s=>s.questionSelection??null),texts}));
     const key=new URL(`/study/paper-pdf/${encodeURIComponent(name)}-${request.variant}.pdf?v=${version}`,origin()).href;
     latest.set(new URL(key).pathname,key);
     const cache=await open();
@@ -96,7 +98,7 @@ export function createPaperPdf(env:Env={}) {
     }
     if(!pending.has(key)){
       const task=(async()=>{
-        const parts:PaperPart[]=request.sources.map((source,i)=>{const parsed=parseExport(texts[i]);return {doc:source.limbScope?scopeLimbExport(parsed,source.limbScope):parsed,courseTitle:request.courseTitle,collection:source.collection};});
+        const parts:PaperPart[]=request.sources.map((source,i)=>{let doc=parseExport(texts[i]);if(source.limbScope)doc=scopeLimbExport(doc,source.limbScope);if(source.questionSelection)doc=selectPaperExport(doc,source.questionSelection);return {doc,courseTitle:request.courseTitle,collection:source.collection};});
         const definition=buildPaperDocument(parts,request.variant,request.footerLabel);
         const blob=await (env.render??(d=>defaultRender(d,env)))(definition);
         let cached=false;

@@ -1,17 +1,19 @@
 "use client";
 import { useState } from 'react';
 import type { PaperBreakdown, PaperTopicMap, PaperSectionStats } from '@/src/lib/mcq/cvs-paper-state.mjs';
+import {matchesCvsPaperScope,type CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
 import styles from './CvsPastExams.module.css';
 
-export function CvsWeaknessReport({ breakdown, topics, onReview }: {
+export function CvsWeaknessReport({ breakdown, topics, onReview, cvsScope='all' }: {
     breakdown: PaperBreakdown;
     topics: PaperTopicMap | null;
     onReview: (ids: string[], title: string) => void;
+    cvsScope?: CvsScope;
 }) {
     const [subject, setSubject] = useState('all');
     const [gapsOnly, setGapsOnly] = useState(true);
     const covered = new Set(breakdown.topics.map(row => row.id));
-    const untested = topics?.topics.filter(row => row.id !== 'unclassified' && !covered.has(row.id)) ?? [];
+    const untested = topics?.topics.filter(row => row.id !== 'unclassified' && !covered.has(row.id)&&matchesCvsPaperScope({subjectId:row.subjectId,topicId:row.id},cvsScope)) ?? [];
     const filtered = breakdown.topics.filter(row => (subject === 'all' || row.subjectId === subject)
         && (!gapsOnly || row.incorrect > 0 || row.unanswered > 0 || row.ungraded > 0))
         .sort((a, b) => b.incorrect - a.incorrect || b.unanswered - a.unanswered || b.ungraded - a.ungraded || a.title.localeCompare(b.title));
@@ -33,10 +35,10 @@ export function CvsWeaknessReport({ breakdown, topics, onReview }: {
         <p className={styles.meta}>Lymphoid organ architecture is under Histology; blood cells, hemostasis and immune function are under Blood / lymph / immune. These are study categories, not official exam weightings.</p>
         <div className={styles.reportTools}><button aria-pressed={subject === 'all'} onClick={() => setSubject('all')}>All subjects</button>
             <label><input type="checkbox" checked={gapsOnly} onChange={e => setGapsOnly(e.target.checked)} /> Show gaps only</label></div>
-        <p className={styles.meta}>Section names match the headings in 01 - Cardiovascular Review.pdf. Topics with more wrong answers appear first.</p>
+        <p className={styles.meta}>{cvsScope==='all'?'Section names match the headings in 01 - Cardiovascular Review.pdf. ':cvsScope==='non-physio'?'Non-Physio review notes are not available yet. ':'Only Physio topics are included. '}Topics with more wrong answers appear first.</p>
         <div className={styles.topicRows}>{filtered.map(row => <TopicRow key={row.id} row={row} onReview={onReview} />)}</div>
         {!filtered.length && <p>No gaps in the graded items for this selection. Check untested sections below; this is not a completeness or mastery claim.</p>}
-        {untested.length > 0 && <details className={styles.untested}><summary>{untested.length} review sections not tested by this paper</summary>
+        {untested.length > 0 && <details className={styles.untested}><summary>{untested.length} {cvsScope==='all'?'review sections':'topics in this scope'} not tested by this paper</summary>
             <p>Not tested does not mean learned. A single past paper cannot cover the full course.</p><ul>{untested.map(row => <li key={row.id}>{row.title ?? row.label}</li>)}</ul>
         </details>}
     </section>;

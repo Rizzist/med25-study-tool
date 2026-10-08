@@ -6,6 +6,7 @@ import {DEFAULT_RETAKE_CHAPTER_IDS, RETAKE_PRACTICE_CHAPTERS, isRetakeChapterInd
 import {isExamId} from '../src/lib/mcq/exams.mjs';
 import {guidanceMode} from '../src/lib/mcq/guided-exam.mjs';
 import {savedLimbPracticeScope} from '../src/lib/mcq/limb-practice-scope.mjs';
+import {savedCvsScope} from '../src/lib/mcq/cvs-scope.mjs';
 
 const pageSource = fs.readFileSync(new URL('../app/page.tsx', import.meta.url), 'utf8');
 const ast = ts.createSourceFile('page.tsx', pageSource, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
@@ -46,7 +47,7 @@ test('chapter union deduplicates IDs, rejects unknown chapters, and never substi
 test('actual archive parser preserves chapter scope, exact session pool, guidance, answers and original score', () => {
   const names = ['cleanIds', 'optionalPracticeIds', 'cleanAnswers', 'isCollectionId', 'isTerm2CourseExam', 'cleanActiveSession', 'parseSessionArchive', 'isAnswered'];
   const definitions = ast.statements.filter(node => ts.isFunctionDeclaration(node) && names.includes(node.name?.text) || ts.isVariableStatement(node) && node.declarationList.declarations.some(d => d.name.getText(ast) === 'collectionLabel')).map(node => node.getText(ast)).join('\n');
-  const parse = new Function('isExamId', 'guidanceMode', 'savedLimbPracticeScope', 'isBiochemistryChapterId', 'sanitizeRetakeChapterIds', `${compile(definitions)};return parseSessionArchive;`)(isExamId, guidanceMode, savedLimbPracticeScope, id => typeof id === 'string', sanitizeRetakeChapterIds);
+  const parse = new Function('isExamId', 'guidanceMode', 'savedLimbPracticeScope', 'savedCvsScope', 'isBiochemistryChapterId', 'sanitizeRetakeChapterIds', `${compile(definitions)};return parseSessionArchive;`)(isExamId, guidanceMode, savedLimbPracticeScope, savedCvsScope, id => typeof id === 'string', sanitizeRetakeChapterIds);
   const exactPool = Array.from({length: 1200}, (_, i) => `retake-chapter-q-${i}`);
   const active = {exam: 'term1-biochemistry-retake', collection: 'all', questionIds: ['retake-chapter-q-1', 'retake-chapter-q-2'], practicalPracticeIds: exactPool, questionIndex: 1, answers: {'retake-chapter-q-1': {mode: 'select', selectedOptionId: 'B'}}, studyMode: 'exam', guidance: 'guided', biochemistryChapterIds: ['ch-1', 'ch-17', 'bad']};
   const result = parse(JSON.stringify({active, history: [{...active, id: 'completed', correctCount: 1, answeredCount: 2}]}));

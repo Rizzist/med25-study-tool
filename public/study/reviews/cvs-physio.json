@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "examId": "term2-cvs",
+  "scope": "physio",
+  "sourceVolumeId": "cvs",
+  "sourcePdfSha256": "f1be96bb34555339460d144408443d54a90565e6271e334e609f26854b720f2e",
+  "authoringSha256": "84bcd77b386d42f1a3e14ca094ca42df14050cc07d9eb41f04ea534a4abf671d",
+  "contentSha256": "f31dce4e1afd1c4f7634f0eb1ce18a99ee9717047465f2b2888e2a53bac13e88",
+  "rendererSha256": "493af0ad23aaa53820edf8a56bf3d2a3c97e143857f1641bbe95e4b76284b417",
+  "volume": {
+    "id": "cvs-physio",
+    "title": "CVS Physiology Review",
+    "url": "/study/reviews/cvs-physio.pdf?v=979f2337f10f9d90b38d6e5edf00895be2ee67c9e48df7bf1a8463f5b3509133",
+    "sha256": "979f2337f10f9d90b38d6e5edf00895be2ee67c9e48df7bf1a8463f5b3509133",
+    "pageCount": 29
+  },
+  "sections": [
+    {
+      "id": "cvs/cardiac-ap",
+      "title": "Cardiac action potentials and excitation-contraction coupling",
+      "volumeId": "cvs-physio",
+      "order": 24,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 3
+    },
+    {
+      "id": "cvs/conduction-phys",
+      "title": "Pacemakers, AV delay and conduction failure",
+      "volumeId": "cvs-physio",
+      "order": 25,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 5
+    },
+    {
+      "id": "cvs/cycle",
+      "title": "Cardiac cycle, pressure crossings and heart sounds",
+      "volumeId": "cvs-physio",
+      "order": 26,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 5
+    },
+    {
+      "id": "cvs/pv-loop",
+      "title": "Pressure-volume loops, preload, afterload and contractility",
+      "volumeId": "cvs-physio",
+      "order": 27,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 7
+    },
+    {
+      "id": "cvs/flow-laws",
+      "title": "Pressure, flow, resistance and vascular networks",
+      "volumeId": "cvs-physio",
+      "order": 28,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 8
+    },
+    {
+      "id": "cvs/velocity-turbulence",
+      "title": "Velocity, Bernoulli, Reynolds and flow measurement",
+      "volumeId": "cvs-physio",
+      "order": 29,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 9
+    },
+    {
+      "id": "cvs/measurement-special-circulations",
+      "title": "Measurement principles and regional circulations",
+      "volumeId": "cvs-physio",
+      "order": 30,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 10
+    },
+    {
+      "id": "cvs/arterial-pressure",
+      "title": "Compliance, pulse pressure, MAP and measurement",
+      "volumeId": "cvs-physio",
+      "order": 31,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 11
+    },
+    {
+      "id": "cvs/venous-return",
+      "title": "Venous return, capacitance, posture and cardiac output",
+      "volumeId": "cvs-physio",
+      "order": 32,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 11
+    },
+    {
+      "id": "cvs/advanced-return-pressure",
+      "title": "Venous-return curves, transmural pressure and feedback timing",
+      "volumeId": "cvs-physio",
+      "order": 33,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 12
+    },
+    {
+      "id": "cvs/microexchange",
+      "title": "Microcirculation, Starling forces, lymph and edema",
+      "volumeId": "cvs-physio",
+      "order": 34,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 13
+    },
+    {
+      "id": "cvs/local-regulation",
+      "title": "Local blood-flow control, autoregulation and special circuits",
+      "volumeId": "cvs-physio",
+      "order": 35,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 14
+    },
+    {
+      "id": "cvs/neural-pressure",
+      "title": "Baroreceptors, chemoreceptors and central pressure regulation",
+      "volumeId": "cvs-physio",
+      "order": 36,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 15
+    },
+    {
+      "id": "cvs/longterm-pressure",
+      "title": "Renal-body fluid feedback and hormonal pressure control",
+      "volumeId": "cvs-physio",
+      "order": 37,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 15
+    },
+    {
+      "id": "cvs/coronary-exercise",
+      "title": "Coronary perfusion, exercise and oxygen demand",
+      "volumeId": "cvs-physio",
+      "order": 38,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 16
+    },
+    {
+      "id": "cvs/shock-failure",
+      "title": "Shock, heart failure and valve lesions: integrated physiology",
+      "volumeId": "cvs-physio",
+      "order": 39,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 17
+    },
+    {
+      "id": "cvs/advanced-failure-shock",
+      "title": "Preserved ejection fraction, valve geometry and shock mechanisms",
+      "volumeId": "cvs-physio",
+      "order": 40,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 18
+    },
+    {
+      "id": "cvs/ecg-foundations",
+      "title": "ECG calibration, lead geometry and a systematic interpretation",
+      "volumeId": "cvs-physio",
+      "order": 41,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 19
+    },
+    {
+      "id": "cvs/ecg-axis",
+      "title": "Cardiac axis and vector interpretation",
+      "volumeId": "cvs-physio",
+      "order": 42,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 20
+    },
+    {
+      "id": "cvs/ecg-patterns",
+      "title": "ECG rhythm, intervals and difficult distinctions",
+      "volumeId": "cvs-physio",
+      "order": 43,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 22
+    },
+    {
+      "id": "cvs/advanced-excitation",
+      "title": "Pacemaker competition, reentry and vector calculations",
+      "volumeId": "cvs-physio",
+      "order": 44,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 23
+    },
+    {
+      "id": "cvs/rbc",
+      "title": "Erythrocytes, hematocrit and oxygen delivery",
+      "volumeId": "cvs-physio",
+      "order": 45,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 23
+    },
+    {
+      "id": "cvs/erythropoiesis",
+      "title": "Erythropoiesis, iron and anemia mechanisms",
+      "volumeId": "cvs-physio",
+      "order": 46,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 24
+    },
+    {
+      "id": "cvs/wbc",
+      "title": "Leukocytes, inflammation and absolute counts",
+      "volumeId": "cvs-physio",
+      "order": 47,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 26
+    },
+    {
+      "id": "cvs/platelets",
+      "title": "Primary hemostasis and platelet biology",
+      "volumeId": "cvs-physio",
+      "order": 48,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 27
+    },
+    {
+      "id": "cvs/coagulation",
+      "title": "Coagulation cascade, anticoagulants and fibrinolysis",
+      "volumeId": "cvs-physio",
+      "order": 49,
+      "role": "review-section",
+      "sourceBasis": "lecture + book",
+      "pdfPage": 28
+    },
+    {
+      "id": "cvs/blood-groups",
+      "title": "ABO, Rh and transfusion concepts",
+      "volumeId": "cvs-physio",
+      "order": 50,
+      "role": "review-section",
+      "sourceBasis": "book extension",
+      "pdfPage": 29
+    }
+  ]
+}

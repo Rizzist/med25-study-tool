@@ -34,9 +34,9 @@ function fixture(extra={}){
   return {make,req,saved,counts:()=>({renders,loads}),deny:()=>{authorized=false;}};
 }
 
-test('course header exports the full bank, independently of session length and filters',()=>{
+test('course header exports the selected CVS portion or full course, independently of sprint filters',()=>{
   const page=fs.readFileSync(path.join(root,'app/page.tsx'),'utf8');
-  assert.match(page,/PracticePdfDownload[^\n]+questionIds=\{subjectIds\?\.all\}/);
+  assert.match(page,/PracticePdfDownload[^\n]+questionIds=\{cvsPracticeIds\?\[\.\.\.cvsPracticeIds\]:subjectIds\?\.all\}/);
   const component=fs.readFileSync(path.join(root,'src/components/PracticePdfDownload.tsx'),'utf8');
   assert.match(component,/await import\('\.\.\/lib\/practice-pdf\/client'\)/);
   assert.match(component,/disabled=\{!ready\|\|busy\}/);
@@ -75,6 +75,16 @@ test('questions-only and keyed PDFs cache independently, including later version
   assert((await f.make({...f.req,variant:'questions'})).fromCache);assert((await f.make(f.req)).fromCache);
   assert.deepEqual(f.counts(),{renders:2,loads:2});
   const changed=await f.make({...f.req,version:'two'});assert(f.saved.has(plain.key));assert(f.saved.has(changed.key));assert(!f.saved.has(keyed.key));
+});
+test('CVS portions keep independent cached PDFs when switching or updating a single portion',async()=>{
+  const f=fixture({figures:async questions=>Object.fromEntries(questions.map(q=>[q.id,(q.media??[]).map(()=>({image:'data:image/png;base64,fixture'}))]))}),questions=bank('term2-cvs');
+  const base={...f.req,exam:'term2-cvs',loadQuestions:async ids=>questions.filter(q=>ids.includes(q.id))};
+  const requests=['all','physio','non-physio'].map(scope=>({...base,scope,title:`CVS ${scope}`,questionIds:questions.filter(q=>scope==='all'||(q.subject==='physiology')===(scope==='physio')).map(q=>q.id)}));
+  const results=[];for(const request of requests)results.push(await f.make(request));
+  assert.equal(new Set(results.map(r=>new URL(r.key).pathname)).size,3);
+  for(const request of requests)assert((await f.make(request)).fromCache);
+  const updated=await f.make({...requests[1],version:'two'});
+  assert(f.saved.has(results[0].key));assert(f.saved.has(results[2].key));assert(f.saved.has(updated.key));assert(!f.saved.has(results[1].key));
 });
 test('cached repeat downloads skip question loading and rendering; new versions replace only this course',async()=>{
   const f=fixture(),first=await f.make(f.req);assert(first.cached);assert(!first.fromCache);

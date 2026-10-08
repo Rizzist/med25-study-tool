@@ -6,7 +6,7 @@ import {preparePracticeFigures} from './media';
 import type {TDocumentDefinitions} from 'pdfmake/interfaces';
 
 export const PRACTICE_PDF_CACHE='med25-practice-pdfs-v1';
-export type PracticePdfRequest={exam:string;title:string;version:string;variant:PracticePdfVariant;questionIds:string[];loadQuestions:(ids:string[])=>Promise<MCQQuestion[]>;progress?:(text:string)=>void};
+export type PracticePdfRequest={exam:string;title:string;version:string;variant:PracticePdfVariant;questionIds:string[];scope?:'all'|'physio'|'non-physio';loadQuestions:(ids:string[])=>Promise<MCQQuestion[]>;progress?:(text:string)=>void};
 type Env={authorize?:()=>Promise<unknown>;caches?:CacheStorage;crypto?:Crypto;origin?:string;render?:(definition:TDocumentDefinitions)=>Promise<Blob>;figures?:(questions:MCQQuestion[],progress?:PracticePdfRequest['progress'])=>Promise<PracticeFigures>};
 
 export function createPracticePdf(env:Env={}){
@@ -22,12 +22,13 @@ export function createPracticePdf(env:Env={}){
     await (env.authorize??requireStudySession)();
     const ids=[...new Set(request.questionIds)];
     if(!ids.length||!request.version)throw new Error('The practice catalog is still loading. Please retry in a moment.');
-    const fingerprint=JSON.stringify({template:PRACTICE_PDF_TEMPLATE,exam:request.exam,title:request.title,version:request.version,variant:request.variant,ids});
+    const fingerprint=JSON.stringify({template:PRACTICE_PDF_TEMPLATE,exam:request.exam,title:request.title,version:request.version,variant:request.variant,ids,...(request.exam==='term2-cvs'&&request.scope&&request.scope!=='all'?{scope:request.scope}:{})});
     // Deduplicate before asynchronous hashing, including very fast cached/text-only exports.
     if(!pending.has(fingerprint))pending.set(fingerprint,(async()=>{
       const bytes=await (env.crypto??globalThis.crypto).subtle.digest('SHA-256',new TextEncoder().encode(fingerprint));
       const hash=Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');
-      const key=new URL(`/study/practice-pdf/${encodeURIComponent(request.exam)}-${request.variant}.pdf?v=${hash}`,env.origin??location.origin).href;
+      const suffix=request.exam==='term2-cvs'&&request.scope&&request.scope!=='all'?`-${request.scope}`:'';
+      const key=new URL(`/study/practice-pdf/${encodeURIComponent(request.exam)}${suffix}-${request.variant}.pdf?v=${hash}`,env.origin??location.origin).href;
       latest.set(new URL(key).pathname,key);
       let cache:Cache|undefined;try{cache=await (env.caches??globalThis.caches)?.open(PRACTICE_PDF_CACHE);}catch{/* Optional device cache. */}
       const hit=await cache?.match(key).catch(()=>undefined);

@@ -5,12 +5,13 @@ import {CourseReviewReport} from './CourseReview';
 import {QuestionMedia} from './QuestionMedia';
 import {isLocationQuestion,locationOptionId} from '@/src/lib/mcq/anatomy-location.mjs';
 import type {ReviewOutcome} from '@/src/lib/mcq/review-results.mjs';
+import type {CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
 import {answerWrongReview,canRetryQuestion,emptyWrongReview,readWrongReview,startWrongReview,wrongQuestionIds,wrongReviewStats,wrongReviewStorageKey,type RetryQuestion,type WrongReviewState} from '@/src/lib/mcq/wrong-answer-review.mjs';
 
-type Props={exam:string;attemptId:string;questions:RetryQuestion[];outcomes:ReviewOutcome[]};
+type Props={exam:string;attemptId:string;questions:RetryQuestion[];outcomes:ReviewOutcome[];cvsScope?:CvsScope};
 // Key the controller by attempt identity so a new attempt cannot inherit a review.
 export function WrongAnswerReview(props:Props) {return <ReviewController key={props.attemptId} {...props}/>;}
-function ReviewController({exam,attemptId,questions,outcomes}:Props) {
+function ReviewController({exam,attemptId,questions,outcomes,cvsScope='all'}:Props) {
   const [state,setState]=useState<WrongReviewState>(emptyWrongReview);
   const [ready,setReady]=useState(false),[warning,setWarning]=useState(''),[open,setOpen]=useState(false);
   const dialog=useRef<HTMLDialogElement>(null),heading=useRef<HTMLHeadingElement>(null);
@@ -61,7 +62,7 @@ function ReviewController({exam,attemptId,questions,outcomes}:Props) {
       </>}
       {warning&&<p role="alert">{warning}</p>}
     </section>
-    <CourseReviewReport exam={exam} outcomes={outcomes} reviewAnswers={state.answers} retryableIds={eligible} onRetryWrong={ready?(ids,title)=>start(ids.filter(id=>eligibleSet.has(id)),title):undefined}/>
+    <CourseReviewReport exam={exam} cvsScope={cvsScope} outcomes={outcomes} reviewAnswers={state.answers} retryableIds={eligible} onRetryWrong={ready?(ids,title)=>start(ids.filter(id=>eligibleSet.has(id)),title):undefined}/>
     <dialog ref={dialog} className="wrong-review-dialog" aria-labelledby="wrong-review-title" onCancel={close} onClose={close}>
       {open&&run&&q&&<div className="wrong-review-page">
         <header><div><span className="eyebrow">Review only · original score unchanged</span><h1 id="wrong-review-title">{run.title}</h1><p>Question {run.index+1}/{run.ids.length} · {answered} answered in this review</p></div><button className="pill" onClick={close}>Save &amp; return to results</button></header>
