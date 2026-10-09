@@ -5,14 +5,16 @@ type Props = {
   answeredCount: number;
   correctCount: number;
   total: number;
+  gradedTotal?: number;
+  ungradedCount?: number;
   currentIndex: number;
   onOpen: () => void;
   onRestart: () => void;
 };
 
-export function FinalExamStatusBanner({title,completed,hasSession,answeredCount,correctCount,total,currentIndex,onOpen,onRestart}:Props) {
+export function FinalExamStatusBanner({title,completed,hasSession,answeredCount,correctCount,total,gradedTotal=total,ungradedCount=0,currentIndex,onOpen,onRestart}:Props) {
   const description = completed
-    ? `${answeredCount} of ${total} answered · ${correctCount} correct (${Math.round(correctCount / Math.max(1,total) * 100)}%). Your result is saved.`
+    ? `${answeredCount} of ${total} answered · ${gradedTotal?`${correctCount} correct (${Math.round(correctCount / gradedTotal * 100)}%)`:'No scored questions'}${ungradedCount?` · ${ungradedCount} ungraded`:""}. Your result is saved.`
     : hasSession
       ? `${answeredCount} of ${total} answered. Resume at question ${currentIndex + 1}.`
       : 'Start the complete past-paper bank. Feedback appears immediately after every choice.';

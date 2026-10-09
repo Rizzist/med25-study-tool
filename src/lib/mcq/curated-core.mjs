@@ -13,8 +13,8 @@ export function coreSelection(manifest,scope='all') {
 export function selectCollectionQuestions(questions,collection) {
   if(!collection)return questions;
   const byId=new Map(questions.map(q=>[q.id,q]));
-  const selected=collection.gradedQuestionIds.map(id=>byId.get(id));
-  if(collection.independent&&selected.some(q=>!q))throw Error('Core Exam and question bank versions differ. Reload when online to update both; no partial test was started.');
+  const selected=(collection.takeableQuestionIds??collection.gradedQuestionIds).map(id=>byId.get(id));
+  if((collection.independent||collection.takeableQuestionIds)&&selected.some(q=>!q))throw Error('Paper and question bank versions differ. Reload when online to update both; no partial test was started.');
   return selected.filter(Boolean);
 }
 export function finalSessionSeed(sessions,key,baseKey,collection,initialIntent,filtered=false) {

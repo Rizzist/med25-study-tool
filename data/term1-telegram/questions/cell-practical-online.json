@@ -1,0 +1,924 @@
+{
+  "paperId": "cell-practical-online",
+  "questions": [
+    {
+      "number": "30",
+      "page": 1,
+      "prompt": "Which of the following confirmed values meets the diagnostic threshold for diabetes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "fasting blood glucose: 140 mg/dl"
+        },
+        {
+          "id": "B",
+          "text": "2 hour post prandial glucose ≥ 126 mg/dl"
+        },
+        {
+          "id": "C",
+          "text": "fasting blood glucose ≥ 126 mg/dl"
+        },
+        {
+          "id": "D",
+          "text": "random glucose > 160 mg/dl"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Fasting plasma glucose ≥126 mg/dL meets the diagnostic criterion when appropriately confirmed. A fasting value of 140 also meets it, so A and C are accepted.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 1,
+      "acceptedOptionIds": [
+        "A",
+        "C"
+      ],
+      "answerReferences": [
+        {
+          "title": "NIDDK: Diabetes Tests & Diagnosis",
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/tests-diagnosis"
+        }
+      ]
+    },
+    {
+      "number": "31",
+      "page": 2,
+      "prompt": "What kind of method is used to measure hemoglobin A2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Affinity ChChromatographyChromatography"
+        },
+        {
+          "id": "B",
+          "text": "Anion Exchange Choromatography"
+        },
+        {
+          "id": "C",
+          "text": "Size exclusion chromatography"
+        },
+        {
+          "id": "D",
+          "text": "Column adsorption chromatography"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "Hemoglobin A2 is commonly quantified by cation-exchange HPLC or electrophoretic methods. The source offers anion exchange and does not establish the intended validated method.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceOrdinal": 2
+    },
+    {
+      "number": "32",
+      "page": 3,
+      "prompt": "Establishing a quality control system includes all of the following except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Controlling"
+        },
+        {
+          "id": "B",
+          "text": "Directing"
+        },
+        {
+          "id": "C",
+          "text": "Calibration"
+        },
+        {
+          "id": "D",
+          "text": "Planning"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "Planning, directing, controlling and calibration can all contribute to laboratory quality systems; the source provides no curriculum-specific exclusion.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceOrdinal": 3
+    },
+    {
+      "number": "33",
+      "page": 4,
+      "prompt": "Which of the following is not the thyroid hormone-binding proteins in the plasma?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transthyretin"
+        },
+        {
+          "id": "B",
+          "text": "Albumin"
+        },
+        {
+          "id": "C",
+          "text": "Transferrin"
+        },
+        {
+          "id": "D",
+          "text": "Thyroid binding globulin"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 4
+    },
+    {
+      "number": "28",
+      "page": 5,
+      "prompt": "For measurement of which of the following tests we don't need fasting?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HbA1c"
+        },
+        {
+          "id": "B",
+          "text": "LDL"
+        },
+        {
+          "id": "C",
+          "text": "FBS"
+        },
+        {
+          "id": "D",
+          "text": "TG"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "HbA1c does not require fasting and is the likely intended answer. Routine lipid profiles, including LDL cholesterol and triglycerides, can also be measured without fasting; particular clinical or laboratory circumstances may call for a fasting sample. The unrestricted question therefore has no unique answer and is ungraded.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceOrdinal": 5,
+      "answerReferences": [
+        "https://pubmed.ncbi.nlm.nih.gov/27122601/",
+        "https://eas-society.org/wp-content/uploads/2022/05/2016_Consensus-lipid-profile-fasting.pdf"
+      ]
+    },
+    {
+      "number": "23",
+      "page": 6,
+      "prompt": "IR spectrophotometer uses light over the",
+      "options": [
+        {
+          "id": "A",
+          "text": "700"
+        },
+        {
+          "id": "B",
+          "text": "400"
+        },
+        {
+          "id": "C",
+          "text": "185"
+        },
+        {
+          "id": "D",
+          "text": "500"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 6
+    },
+    {
+      "number": "1",
+      "page": 7,
+      "prompt": "Which of the following cannot be used to make the conjugate pad in immunochromatography assay:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Glass fiber"
+        },
+        {
+          "id": "B",
+          "text": "Agarose"
+        },
+        {
+          "id": "C",
+          "text": "Cellulose"
+        },
+        {
+          "id": "D",
+          "text": "Polyester"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 7
+    },
+    {
+      "number": "2",
+      "page": 8,
+      "prompt": "In HDL Measurement, which of the following enzymes is not used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cholesterol Esterase (CHE)"
+        },
+        {
+          "id": "B",
+          "text": "Lipoprotein Lipase (LPL)"
+        },
+        {
+          "id": "C",
+          "text": "Catalase"
+        },
+        {
+          "id": "D",
+          "text": "Cholesterol Oxidase (CHO)"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "HDL assay enzyme systems vary by method. Without naming the assay, the listed enzyme exception cannot be reliably assigned.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceOrdinal": 8
+    },
+    {
+      "number": "3",
+      "page": 9,
+      "prompt": "The rate of LDL per HDL is very important to the diagnosis of Atherosclerosis diseases, the best value for LDL/HDL ratio is less than ....",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "4"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "No universally diagnostic LDL/HDL cutoff is specified; the overlapping “less than” choices and absent assay/course context prevent a unique key.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceOrdinal": 9
+    },
+    {
+      "number": "4",
+      "page": 10,
+      "prompt": "In a titration experiment how do we know the end point has reached?",
+      "options": [
+        {
+          "id": "A",
+          "text": "With a base"
+        },
+        {
+          "id": "B",
+          "text": "Measuring pH"
+        },
+        {
+          "id": "C",
+          "text": "Using indicators"
+        },
+        {
+          "id": "D",
+          "text": "With an acid"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "The visual endpoint uses an indicator; pH measurement can also locate the endpoint. Both corresponding methods are accepted.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 10,
+      "acceptedOptionIds": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "number": "5",
+      "page": 11,
+      "prompt": "In DNA extraction why soap solution is used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To find the amount of DNA"
+        },
+        {
+          "id": "B",
+          "text": "To break the cell membrane"
+        },
+        {
+          "id": "C",
+          "text": "To decrease the heat"
+        },
+        {
+          "id": "D",
+          "text": "To make the saliva watery"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 11
+    },
+    {
+      "number": "6",
+      "page": 12,
+      "prompt": "Which of the following is a set of regulatory standards for clinical and medical labs that were created to help to make sure labs maintain quality assurance?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clinical lab improvement amendments (CLIA)"
+        },
+        {
+          "id": "B",
+          "text": "Procedure Manual"
+        },
+        {
+          "id": "C",
+          "text": "Standard operating procedures (SOPs)"
+        },
+        {
+          "id": "D",
+          "text": "Health Insurance Portability and Accountability Act (HIPPA)"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 12
+    },
+    {
+      "number": "7",
+      "page": 13,
+      "prompt": "Which of the following is correct about “the effect of temperature on reaction rate” experiment:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Renin has a maximum activity at 37° C."
+        },
+        {
+          "id": "B",
+          "text": "Renin has a maximum activity at 80° C."
+        },
+        {
+          "id": "C",
+          "text": "Renin activity is constant at the different temperature."
+        },
+        {
+          "id": "D",
+          "text": "At the lower temperatures, the rate of reaction will be increased."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "37 °C is the intended optimum in this teaching experiment. The source spells the milk-clotting enzyme as “Renin”; rennin/chymosin is the likely intended enzyme.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 13
+    },
+    {
+      "number": "8",
+      "page": 14,
+      "prompt": "The product of urease reaction is .... and for detection of this product we use ....",
+      "options": [
+        {
+          "id": "A",
+          "text": "NH3, phenol red"
+        },
+        {
+          "id": "B",
+          "text": "H2O, phenolphthalein"
+        },
+        {
+          "id": "C",
+          "text": "CO2, phenolphthalein"
+        },
+        {
+          "id": "D",
+          "text": "H2O, phenol red"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 14
+    },
+    {
+      "number": "10",
+      "page": 15,
+      "prompt": "What is the Qualitative test for protein detection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hopkin's Cole"
+        },
+        {
+          "id": "B",
+          "text": "Ninhydrin"
+        },
+        {
+          "id": "C",
+          "text": "Urease"
+        },
+        {
+          "id": "D",
+          "text": "Biuret"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 15
+    },
+    {
+      "number": "11",
+      "page": 16,
+      "prompt": "Which of the following is correct about valid and positive result for HIV rapid test:",
+      "options": [
+        {
+          "id": "A",
+          "text": "No colored line in control line and no colored line in test line"
+        },
+        {
+          "id": "B",
+          "text": "No colored line in control line and colored line in test line"
+        },
+        {
+          "id": "C",
+          "text": "Colored line in control line and no colored line in test line"
+        },
+        {
+          "id": "D",
+          "text": "Colored line in control line and colored line in test line"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 16
+    },
+    {
+      "number": "12",
+      "page": 17,
+      "prompt": "If an amino acid solution has a positive result for the Hopkins-cole test, so it contains:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hydroxyl"
+        },
+        {
+          "id": "B",
+          "text": "Imidazole"
+        },
+        {
+          "id": "C",
+          "text": "Indole"
+        },
+        {
+          "id": "D",
+          "text": "Sulfhydryl"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 17
+    },
+    {
+      "number": "13",
+      "page": 18,
+      "prompt": "Which of the following metal ion is regarded as a constituent metal ion for alkaline phosphatase:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mg2+"
+        },
+        {
+          "id": "B",
+          "text": "Mn2+"
+        },
+        {
+          "id": "C",
+          "text": "Co2+"
+        },
+        {
+          "id": "D",
+          "text": "Zn2+"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Alkaline phosphatase has catalytic zinc ions and an associated magnesium ion. Both Zn2+ and Mg2+ are accepted because “constituent” does not distinguish their roles.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 18,
+      "acceptedOptionIds": [
+        "A",
+        "D"
+      ],
+      "answerReferences": [
+        {
+          "title": "Effect of Zn(II) and Mg(II) on phosphohydrolytic activity of rat matrix-induced alkaline phosphatase",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/2611837/"
+        }
+      ]
+    },
+    {
+      "number": "15",
+      "page": 19,
+      "prompt": "Which test is specific for detection of ketoses in a solution?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Benedict's Test"
+        },
+        {
+          "id": "B",
+          "text": "Seliwanoff's Test"
+        },
+        {
+          "id": "C",
+          "text": "Fehling's Test"
+        },
+        {
+          "id": "D",
+          "text": "Barfoed's test"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 19
+    },
+    {
+      "number": "16",
+      "page": 20,
+      "prompt": "In DNA extraction where does the DNA in saliva come from?",
+      "options": [
+        {
+          "id": "A",
+          "text": "cells in the cheeks"
+        },
+        {
+          "id": "B",
+          "text": "lung secretions"
+        },
+        {
+          "id": "C",
+          "text": "nose secretions"
+        },
+        {
+          "id": "D",
+          "text": "sputum"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 20
+    },
+    {
+      "number": "17",
+      "page": 21,
+      "prompt": "Flame Photometry is for determining:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Concentration of metal ions"
+        },
+        {
+          "id": "B",
+          "text": "Concentration of liquids"
+        },
+        {
+          "id": "C",
+          "text": "Concentration of organic solutions"
+        },
+        {
+          "id": "D",
+          "text": "Concentration of colored solutions"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 21
+    },
+    {
+      "number": "18",
+      "page": 22,
+      "prompt": "In titration when do we add the indicators?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In the beginning of titration"
+        },
+        {
+          "id": "B",
+          "text": "In the end of titration"
+        },
+        {
+          "id": "C",
+          "text": "In the middle of titration"
+        },
+        {
+          "id": "D",
+          "text": "Sometimes it is added"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 22
+    },
+    {
+      "number": "19",
+      "page": 23,
+      "prompt": "If we add trichloro acetic acid to an unknown solution, we will observe a precipitation so:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The solution is cholesterol"
+        },
+        {
+          "id": "B",
+          "text": "The solution is protein"
+        },
+        {
+          "id": "C",
+          "text": "The solution is amino acid"
+        },
+        {
+          "id": "D",
+          "text": "The solution is carbohydrate"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 23
+    },
+    {
+      "number": "20",
+      "page": 24,
+      "prompt": "In size exclusion chromatography, the stationary phase is ....",
+      "options": [
+        {
+          "id": "A",
+          "text": "adsorbents"
+        },
+        {
+          "id": "B",
+          "text": "porous matrix"
+        },
+        {
+          "id": "C",
+          "text": "cation exchange resin"
+        },
+        {
+          "id": "D",
+          "text": "silica gel"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Size-exclusion chromatography uses a porous stationary matrix. Porous silica can be used as that matrix, so both porous matrix and silica gel are accepted for this unrestricted material question; porous matrix is the preferred general answer.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 24,
+      "acceptedOptionIds": [
+        "B",
+        "D"
+      ],
+      "answerReferences": [
+        "https://documents.thermofisher.com/TFS-Assets/CMD/Specification-Sheets/PS-20985-MAbPac-SEC-1-PS20985-EN.pdf"
+      ]
+    },
+    {
+      "number": "21",
+      "page": 25,
+      "prompt": "Which of the following samples is suitable for measuring LDL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Whole Blood"
+        },
+        {
+          "id": "B",
+          "text": "Urine"
+        },
+        {
+          "id": "C",
+          "text": "Stool"
+        },
+        {
+          "id": "D",
+          "text": "Serum"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 25
+    },
+    {
+      "number": "22",
+      "page": 26,
+      "prompt": "In chromatography, which of the following can the mobile phase be made of?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Liquid only"
+        },
+        {
+          "id": "B",
+          "text": "Solid or liquid"
+        },
+        {
+          "id": "C",
+          "text": "Gas only"
+        },
+        {
+          "id": "D",
+          "text": "Liquid or gas"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 26
+    },
+    {
+      "number": "24",
+      "page": 27,
+      "prompt": "The phenomenon by which part of the analyte present in a sample appears to be present in the next or following samples in the same analytic process is known as ....",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carry over"
+        },
+        {
+          "id": "B",
+          "text": "Precision"
+        },
+        {
+          "id": "C",
+          "text": "Analytical sensitivity"
+        },
+        {
+          "id": "D",
+          "text": "Analytical specificity"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 27
+    },
+    {
+      "number": "25",
+      "page": 28,
+      "prompt": "All of the following methods are used for FBS measurement, Except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical method"
+        },
+        {
+          "id": "B",
+          "text": "Fluorometric method"
+        },
+        {
+          "id": "C",
+          "text": "Oxidoreduction method"
+        },
+        {
+          "id": "D",
+          "text": "Enzymatic method"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "Glucose can be measured by chemical, enzymatic, redox and fluorometric methods; the options do not identify a uniquely excluded method.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceOrdinal": 28
+    },
+    {
+      "number": "26",
+      "page": 29,
+      "prompt": "Which of the following disorders would typically result in decrease of alkaline phosphatase level in plasma:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rickets"
+        },
+        {
+          "id": "B",
+          "text": "Paget's disease"
+        },
+        {
+          "id": "C",
+          "text": "Bone cancer"
+        },
+        {
+          "id": "D",
+          "text": "Celiac disease"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "Rickets, Paget disease and bone cancer often raise ALP; celiac disease may also raise it through osteomalacia. A reliably decreased-ALP condition is not unambiguously offered.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceOrdinal": 29
+    },
+    {
+      "number": "27",
+      "page": 30,
+      "prompt": "Which of the following is correct about ELISA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "In a sandwich immunoassay, unlabeled analyte in a sample competes with labelled analyte to bind an antibody."
+        },
+        {
+          "id": "B",
+          "text": "The sandwich immunoassay is applicable to antigens with at least two antigenic sites at an appropriate distance."
+        },
+        {
+          "id": "C",
+          "text": "In the sandwich immunoassay, the amount of optical density (OD) is indirectly proportional to the concentration of the analyte."
+        },
+        {
+          "id": "D",
+          "text": "The dose-response curve will be inverse (descending curve) in noncompetitive immunoassays."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 30
+    },
+    {
+      "number": "29",
+      "page": 31,
+      "prompt": "In the presence of concentrated sulfuric acid, carbohydrates lose .... and form ....?",
+      "options": [
+        {
+          "id": "A",
+          "text": "H2O, furfural"
+        },
+        {
+          "id": "B",
+          "text": "H2O, diazine"
+        },
+        {
+          "id": "C",
+          "text": "CO2, diazine"
+        },
+        {
+          "id": "D",
+          "text": "O2, furfural"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial answer based on the stated biochemical principle.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceOrdinal": 31
+    }
+  ],
+  "notes": [
+    "All 31 source screenshots transcribed in PDF page order, preserving printed question numbers. The online exam reports 33 questions but source questions 9 and 14 are absent. Student selections are not an official key and were not used for grading."
+  ],
+  "coverage": {
+    "sourceQuestionOccurrences": 31,
+    "importedQuestionOccurrences": 31,
+    "gradedQuestionOccurrences": 24,
+    "unresolvedQuestionOccurrences": 7,
+    "complete": true,
+    "sourceDeclaredQuestionCount": 33,
+    "missingFromSource": [
+      "9",
+      "14"
+    ],
+    "completeSourceTranscription": true
+  }
+}

@@ -9,6 +9,7 @@ import {
   parseFinalExamProgress,
   reconcileFinalExamSession,
   isFinalAnswerCorrect,
+  isFinalQuestionGraded,
 } from "@/src/lib/mcq/final-exam-state.mjs";
 import {cachedJson} from '@/src/lib/mcq/client-cache';
 import {selectCollectionQuestions,finalSessionSeed,type ExamCollection} from '@/src/lib/mcq/curated-core.mjs';
@@ -29,6 +30,8 @@ type FinalSessionKey = string;
 type FinalAnswer = {
   selectedOptionId: string;
   correct: boolean;
+  graded?: boolean;
+  responseText?: string;
   answeredAt: string;
   questionRevision: number;
   correctOptionId: string;
@@ -64,6 +67,7 @@ function mediaUrl(bridgeUrl: string, question: MCQQuestion, mediaId: string) {
 
 export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,initialIntent='review',initialGuidance,onProgressSaved,onExit }: { exam: ExamId; bridgeUrl: string; collection?: ExamCollection; onSessionActiveChange?:(active:boolean)=>void;initialIntent?:'start'|'new'|'review';initialGuidance?:GuidanceMode;onProgressSaved?:()=>void;onExit?:()=>void }) {
   const [bank, setBank] = useState<FinalExamBankId>(exam === 'term2-divine-ethics' ? 'divine-ethics-past-papers' : exam === 'term1-biochemistry-retake' ? 'biochemistry-retake-past-papers' : exam === 'term2-limbs' ? 'limbs-past-papers' : exam === 'term2-respiratory' ? 'respiratory-past-papers' : exam === "term2-biochemistry" ? "biochemistry-metabolism-past-papers" : exam === "term2-religion" ? "religion-past-papers" : exam === "term2-nutrition" ? "nutrition-past-papers" : "telegram-past-papers");
+  const [writtenResponse,setWrittenResponse]=useState('');
   const [questions, setQuestions] = useState<MCQQuestion[]>([]);
   const [fingerprint, setFingerprint] = useState("");
   const [bankLabel, setBankLabel] = useState(exam === "term2-biochemistry" ? "Biochemistry II · Metabolism Past Papers" : exam === "term2-religion" ? "Religion · Downloaded Past Papers" : exam === "term2-nutrition" ? "Nutrition · Downloaded Past Papers" : "Telegram Past Papers");
@@ -92,7 +96,9 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
   const answer = question && session ? session.answers[question.id] : undefined;
   const answeredCount = session ? Object.keys(session.answers).length : 0;
   const correctCount = session ? Object.values(session.answers).filter((item) => item.correct).length : 0;
-  const wrongCount = answeredCount - correctCount;
+  const ungradedCount = session ? Object.values(session.answers).filter(item=>item.graded===false).length : 0;
+  const gradedTotal = questions.filter(isFinalQuestionGraded).length;
+  const wrongCount = answeredCount - correctCount - ungradedCount;
   const completed = Boolean(session?.completedAt);
 
   useEffect(() => {
@@ -181,6 +187,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
   }
 
   function moveTo(index: number) {
+    setWrittenResponse('');
     setProgress((current) => {
       const existing = current.sessions[sessionKey];
       if (!existing) return current;
@@ -198,11 +205,13 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
     });
   }
 
-  function answerQuestion(optionId: string) {
+  function answerQuestion(optionId: string, responseText?: string) {
     if (!session || !question || session.answers[question.id]) return;
     const nextAnswer: FinalAnswer = {
       selectedOptionId: optionId,
       correct: isFinalAnswerCorrect(question, optionId),
+      ...(!isFinalQuestionGraded(question)?{graded:false}:{}),
+      ...(responseText?{responseText:responseText.slice(0,10000)}:{}),
       answeredAt: new Date().toISOString(),
       questionRevision: question.revision,
       correctOptionId: question.correctOptionId,
@@ -238,6 +247,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
     const coreEvidence=collection?.coreEvidence?.[question.id];
     const chosen = question.options.find((option) => option.id === answer?.selectedOptionId);
     const correct = question.options.find((option) => option.id === question.correctOptionId);
+    const graded = isFinalQuestionGraded(question);
     const inferred = question.answerReview?.basis === 'ai-inferred';
     const provisional = question.qualityFlags.includes('provisional-answer');
     return <main className={`final-exam-shell ${guidanceMode(exam,session.guidance)==='guided'?'is-guided':''}`}>
@@ -246,7 +256,7 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
         <div className="final-live-progress">
           <span>{session.currentIndex + 1} / {session.questionIds.length}</span>
           <div><i style={{ width: `${(answeredCount / session.questionIds.length) * 100}%` }} /></div>
-          <small>{answeredCount} answered · {correctCount} correct</small>
+          <small>{answeredCount} answered · {correctCount} correct{ungradedCount?` · ${ungradedCount} ungraded`:null}</small>
         </div>
         <button onClick={() => {setActive(false);onExit?.();}}>Save & exit</button>
       </header>
@@ -259,21 +269,23 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
             {question.qualityFlags.includes('editorially-repaired-source-question') && <p className="term2-scope-note">Edited study version · the original item had a wording or choice defect. Original text is retained in Sources &amp; answer notes and downloads.</p>}
             {exam === "term2-religion" && <p className="term2-scope-note">Original wording · source-reviewed editorial key, not an official answer. Interpret within the source framework; qualifications and corrections appear with feedback.</p>}
             {exam === "term2-nutrition" && question.qualityFlags.includes("qualified-source-wording") && <p className="term2-scope-note">Qualified source item: the study answer includes qualifications or corrections. Read the explanation and original wording; source marks are not an official key.</p>}
+            {!graded&&<p className="term2-scope-note">Ungraded source question · your response is saved and excluded from the score. Answer notes appear after submission.</p>}
             <QuestionMedia question={question} review={Boolean(answer)}/>
+            {!question.options.length&&!answer&&<div className="paper-written-response"><label htmlFor="paper-written-response">Your answer</label><textarea id="paper-written-response" value={writtenResponse} maxLength={10000} onChange={e=>setWrittenResponse(e.target.value)}/><button type="button" className="primary" disabled={!writtenResponse.trim()} onClick={()=>answerQuestion("response",writtenResponse.trim())}>Save answer</button></div>}
             <div className={`final-options ${answer ? "locked" : ""} ${answer && inferred ? "inferred-answer" : ""}`}>
               {question.options.map((option) => {
-                const state = answer
+                const state = answer && graded
                   ? isFinalAnswerCorrect(question, option.id) ? "correct" : option.id === answer.selectedOptionId ? "wrong" : ""
                   : "";
                 return <button key={option.id} className={state} disabled={Boolean(answer)} onClick={() => answerQuestion(option.id)}><span>{option.id}</span><b>{option.text}</b></button>;
               })}
             </div>
-            {answer && <section className={`instant-feedback ${answer.correct ? "correct" : "wrong"} ${inferred ? "inferred-answer" : ""}`}>
-              <div className="instant-feedback-title"><b>{answer.correct ? provisional ? "✓ Best available choice" : "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · page ${question.source.page}` : ""}</span></div>
-              <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer.selectedOptionId}</b></div><div><span>{provisional ? 'Best available choice · wording uncertain' : (question.acceptedOptionIds?.length ?? 0) > 1 ? 'Preferred answer' : 'Correct answer'}</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId}</b>{(question.acceptedOptionIds?.length ?? 0) > 1 && <small>Accepted choices: {question.acceptedOptionIds!.join(', ')}</small>}</div></div>
-              <div className="explanation"><span>Why it wins</span><p>{question.explanation}</p>{!answer.correct && question.distractorExplanations[answer.selectedOptionId] && <p className="distractor-note"><b>Why {answer.selectedOptionId} loses:</b> {question.distractorExplanations[answer.selectedOptionId]}</p>}</div>
+            {answer && <section className={`instant-feedback ${!graded ? "ungraded" : answer.correct ? "correct" : "wrong"} ${inferred ? "inferred-answer" : ""}`}>
+              <div className="instant-feedback-title"><b>{!graded ? "Response saved · ungraded" : answer.correct ? provisional ? "✓ Best available choice" : "✓ Correct" : "× Repair this"}</b><span>{question.source.title}{question.source.page ? ` · page ${question.source.page}` : ""}</span></div>
+              <div className="answer-comparison"><div><span>Your answer</span><b>{chosen ? `${chosen.id}. ${chosen.text}` : answer.responseText??answer.selectedOptionId}</b></div><div><span>{!graded ? 'Answer status' : provisional ? 'Best available choice · wording uncertain' : (question.acceptedOptionIds?.length ?? 0) > 1 ? 'Preferred answer' : 'Correct answer'}</span><b>{correct ? `${correct.id}. ${correct.text}` : question.correctOptionId||"No reliable key"}</b>{(question.acceptedOptionIds?.length ?? 0) > 1 && <small>Accepted choices: {question.acceptedOptionIds!.join(', ')}</small>}</div></div>
+              <div className="explanation"><span>{graded?'Answer explanation':'Answer notes'}</span><p>{question.explanation}</p>{graded && !answer.correct && question.distractorExplanations[answer.selectedOptionId] && <p className="distractor-note"><b>Why {answer.selectedOptionId} loses:</b> {question.distractorExplanations[answer.selectedOptionId]}</p>}</div>
               {coreEvidence&&<details className="answer-review-evidence"><summary>Core selection &amp; source occurrences</summary><p>{coreEvidence.reason}. {coreEvidence.kind==='repeat'?`${coreEvidence.sourceCollectionCount} source collections, one representative.`:'Supplemental coverage, not counted as a repeated pattern.'} Historical evidence, not an exam prediction.</p><p>{coreEvidence.sectionTitle} · PDF p. {coreEvidence.pdfPage}</p><ul>{coreEvidence.members.map(m=><li key={m.questionId}><a href={m.sourceUrl} target="_blank" rel="noreferrer">{m.paperId} · original Q{m.sourceNumber}</a></li>)}</ul></details>}
-              {question.answerReview && <details className="answer-review-evidence"><summary>Sources & answer notes</summary><p>Editorial review · {question.answerReview.confidence} confidence · {question.answerReview.auditedAt}. Not an official university key.</p>{question.answerReview.evidence.map(ref=><p key={ref}>{ref}</p>)}<p>{question.source.excerpt}</p></details>}
+              {question.answerReview && <details className="answer-review-evidence"><summary>Sources & answer notes</summary><p>{question.answerReview.basis==='unresolved'?'Unresolved answer':'Editorial review'} · {question.answerReview.confidence} confidence · {question.answerReview.auditedAt}. Not an official university key.</p>{question.answerReview.evidence.map(ref=><p key={ref}>{ref}</p>)}<p>{question.source.excerpt}</p></details>}
             </section>}
           </article>
         </div>
@@ -316,11 +328,11 @@ export function FinalExam({ exam, bridgeUrl, collection, onSessionActiveChange,i
       <div className="final-exam-stats">
         <article><span>PAST-PAPER QUESTIONS</span><strong>{questions.length}</strong><small>Relevant to {examLabels[exam].date}</small></article>
         <article><span>ANSWERED</span><strong>{answeredCount}</strong><small>{questions.length - answeredCount} remaining</small></article>
-        <article><span>CORRECT</span><strong>{correctCount}</strong><small>{wrongCount} need repair</small></article>
+        <article><span>CORRECT</span><strong>{correctCount}</strong><small>{wrongCount} need repair{ungradedCount?` · ${ungradedCount} ungraded`:null}</small></article>
         <article><span>STATUS</span><strong>{completed ? "Done" : session ? "Saved" : "New"}</strong><small>{completed ? 'All questions answered' : session ? `Question ${session.currentIndex + 1}` : "Ready to begin"}</small></article>
       </div>
-      <FinalExamStatusBanner title={bankLabel} completed={completed} hasSession={Boolean(session)} answeredCount={answeredCount} correctCount={correctCount} total={questions.length} currentIndex={session?.currentIndex ?? 0} onOpen={startOrResume} onRestart={resetProgress}/>
+      <FinalExamStatusBanner title={bankLabel} completed={completed} hasSession={Boolean(session)} answeredCount={answeredCount} correctCount={correctCount} total={questions.length} gradedTotal={gradedTotal} ungradedCount={ungradedCount} currentIndex={session?.currentIndex ?? 0} onOpen={startOrResume} onRestart={resetProgress}/>
     </div>}
-    {session&&answeredCount>0&&(completed?<WrongAnswerReview exam={exam} attemptId={`${sessionKey}:${session.startedAt}`} questions={mcqReviewQuestions(orderedQuestions)} outcomes={orderedQuestions.map(q=>({questionId:q.id,answered:Boolean(session.answers[q.id]),correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>:<CourseReviewReport exam={exam} outcomes={orderedQuestions.filter(q=>session.answers[q.id]).map(q=>({questionId:q.id,answered:true,correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>)}
+    {session&&answeredCount>0&&(completed?<WrongAnswerReview exam={exam} attemptId={`${sessionKey}:${session.startedAt}`} questions={mcqReviewQuestions(orderedQuestions)} outcomes={orderedQuestions.map(q=>({questionId:q.id,gradable:isFinalQuestionGraded(q),answered:Boolean(session.answers[q.id]),correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>:<CourseReviewReport exam={exam} outcomes={orderedQuestions.filter(q=>session.answers[q.id]).map(q=>({questionId:q.id,gradable:isFinalQuestionGraded(q),answered:true,correct:Boolean(session.answers[q.id]?.correct),topic:q.topic}))}/>)}
   </section>;
 }

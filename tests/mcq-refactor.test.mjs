@@ -84,7 +84,7 @@ test('final API refuses authored bank; source banks match approved IDs exactly',
   assert.throws(()=>server.finalExamSet('term2-limbs','telegram-past-papers'));
   const catalog=read('data/mcq-refactor/past-source-catalog.json');
   for(const [key,entry] of Object.entries(runtime.finals)){
-    const expected=new Set(catalog.collections.filter(c=>c.bankKey===key).flatMap(c=>c.gradedQuestionIds));
+    const expected=new Set(catalog.collections.filter(c=>c.bankKey===key).flatMap(c=>c.takeableQuestionIds??c.gradedQuestionIds));
     assert.deepEqual(read(entry.file).map(q=>q.id).sort(),[...expected].sort());
   }
   assert.equal(server.loadVerifiedQuestions('july29').filter(q=>q.qualityFlags.includes('not-a-past-paper-question')).length,151);
@@ -116,7 +116,9 @@ test('collection sessions and retired legacy sessions survive parse',()=>{
 });
 test('all source download URLs resolve, and none exposes local paths',()=>{
   const c=read('public/study/past-paper-downloads/catalog.json');assert(!/\/Users\/|\/tmp\//.test(JSON.stringify(c)));
-  assert.equal(c.courses.flatMap(c=>c.collections).length,110); // Includes current source-paper imports.
+  const collections=c.courses.flatMap(c=>c.collections);
+  assert.equal(collections.filter(item=>!item.importBatch).length,110);
+  assert.equal(collections.filter(item=>item.importBatch==='term1-2026-10-09').length,59);
   assert.equal(c.courses.find(c=>c.id==='term2-divine-ethics').collections.length,6);
   assert.equal(c.courses.find(c=>c.id==='term2-nutrition').collections.length,9);
   for(const item of c.courses.flatMap(c=>c.collections))for(const url of [...Object.values(item.downloads),...item.originals.map(o=>o.url)])assert(fs.statSync(path.join(root,'public',url.split(/[?#]/)[0])).size>0,url);

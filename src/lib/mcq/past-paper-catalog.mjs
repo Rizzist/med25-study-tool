@@ -14,13 +14,13 @@ const links={
 const equivalentOriginals={'cell-feb2021-answers':'/study/past-paper-downloads/originals/term1-source-3.pdf'};
 export function hasAdditionalPastPapers(exam){return Object.hasOwn(links,exam);}
 
-/** One paper list for display/downloads; scans never manufacture scored questions or session IDs. */
+/** Attach original provenance to canonical paper collections; preserve legacy IDs and attempts. */
 export function mergePastPaperSources(course,catalog){
   if(!course||!hasAdditionalPastPapers(course.id)||!catalog)return course;
   const collections=course.collections.map(item=>({...item,sourcePapers:[]}));
   for(const paper of catalog.papers.filter(p=>p.course===(course.id==='july25'?'tissue':'biochemistry'))){
     const linkedId=links[course.id][paper.id];
-    const existing=collections.find(item=>item.id===linkedId||item.id===`${linkedId}--full`);
+    const existing=collections.find(item=>item.sourcePaperIds?.includes(paper.id))??collections.find(item=>item.id===linkedId||item.id===`${linkedId}--full`);
     if(existing){existing.sourcePapers.push({...paper,duplicateOfUrl:equivalentOriginals[paper.id]});continue;}
     collections.push({
       id:paper.id,courseId:course.id,title:paper.title,note:paper.note,kind:paper.kind,
@@ -37,7 +37,7 @@ export function filterPastPapers(papers,query='',filter='all'){
   return papers.filter(paper=>{
     const sources=paper.sourcePapers??[];
     const kind=paper.kind==='source-collection'||paper.kind==='source-paper-selection'?'theory':paper.kind;
-    const matches=filter==='all'||(filter==='scored'?paper.gradedQuestionCount>0:filter==='supplement'?!paper.defaultEligible:filter==='course'?paper.defaultEligible:kind===filter||sources.some(p=>p.kind===filter));
+    const matches=filter==='all'||(filter==='scored'?(paper.takeableQuestionIds?.length??paper.gradedQuestionCount)>0:filter==='supplement'?!paper.defaultEligible:filter==='course'?paper.defaultEligible:kind===filter||sources.some(p=>p.kind===filter));
     return matches&&[paper.title,paper.note,...sources.flatMap(p=>[p.title,p.note,p.source])].join(' ').toLowerCase().includes(needle);
   });
 }

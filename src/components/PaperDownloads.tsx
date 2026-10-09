@@ -8,7 +8,7 @@ import type {CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
 import type {SourcePaper} from '@/src/lib/mcq/past-paper-catalog.mjs';
 
 /** One sourced past-paper collection as published in the downloads catalog. */
-export type DownloadCollection={id:string;courseId:string;title:string;note:string;kind:string;courseMatch:string;defaultEligible:boolean;sourceRecordCount:number;gradedQuestionCount:number;ungradedCount:number;gradedQuestionIds:string[];questionIds?:string[];cvsScope?:CvsScope;fullPaper?:DownloadCollection;independent?:boolean;limbQuestionIds?:{upper:string[];lower:string[]};limbSourceCounts?:{upper:number;lower:number};date?:string|null;downloads:{questions:string;answerKey:string;questionsAndKey:string};originals:Array<{name:string;url:string}>;sourceOnly?:boolean;sourcePapers?:SourcePaper[]};
+export type DownloadCollection={id:string;courseId:string;title:string;note:string;kind:string;courseMatch:string;defaultEligible:boolean;sourceRecordCount:number;gradedQuestionCount:number;ungradedCount:number;gradedQuestionIds:string[];questionIds?:string[];takeableQuestionIds?:string[];cvsScope?:CvsScope;fullPaper?:DownloadCollection;independent?:boolean;limbQuestionIds?:{upper:string[];lower:string[]};limbSourceCounts?:{upper:number;lower:number};date?:string|null;downloads:{questions:string;answerKey:string;questionsAndKey:string};originals:Array<{name:string;url:string}>;sourceOnly?:boolean;sourcePaperIds?:string[];sourcePapers?:SourcePaper[]};
 const isPdf=(url:string)=>/\.pdf(?:[?#]|$)/i.test(url);
 export const paperSource=(item:DownloadCollection,url:string):PaperSource=>({url,collection:{id:item.id,title:item.title,gradedQuestionCount:item.gradedQuestionCount,sourceRecordCount:item.sourceRecordCount,ungradedCount:item.ungradedCount,date:item.date??null},...(item.cvsScope&&item.cvsScope!=='all'?{questionSelection:{ids:item.questionIds??[],label:item.cvsScope==='physio'?'Physio':'Non-Physio'}}:{})});
 /** Every artefact of one paper as a download pill: typeset questions, answer key, both, and the originals. */
@@ -27,7 +27,7 @@ export function PaperDownloads({item,courseTitle}:{item:DownloadCollection;cours
       ?<CachedPdfDownload href={originals[0].url}><StudyIcon name="download"/>{scoped?'Complete original':'Original'}<small>PDF</small></CachedPdfDownload>
       :originals.length>0&&<OriginalPdfDownload collectionId={item.id} title={item.title} label={scoped?'Complete original':undefined}/>}
     </>}
-    {item.sourcePapers?.filter(paper=>!originals.some(file=>file.url===paper.duplicateOfUrl)).map(paper=><div className="paper-original-version" key={paper.id}>
+    {item.sourcePapers?.filter(paper=>!originals.some(file=>file.url===paper.url||file.url===paper.duplicateOfUrl)).map(paper=><div className="paper-original-version" key={paper.id}>
       {!item.sourceOnly&&<small>{paper.title}</small>}
       <div className="pill-row">{paper.format==='PDF'?<>
         <a className="pill" href={paper.url} target="_blank" rel="noreferrer"><StudyIcon name="book"/>Read original</a>

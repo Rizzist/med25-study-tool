@@ -6,7 +6,7 @@
 import {parseExport,scopeLimbExport,selectPaperExport} from './parse-export.mjs';
 import {requireStudySession,denyStudySession} from '../../../public/med25-auth-cache.mjs';
 import {buildPaperDocument,PAPER_PDF_TEMPLATE,paperFonts,type PaperPart,type PaperVariant} from './document';
-import type {TDocumentDefinitions} from 'pdfmake/interfaces';
+import type {TDocumentDefinitions,Content} from 'pdfmake/interfaces';
 
 export const PAPER_PDF_CACHE='med25-paper-pdfs-v1';
 export type PaperSource={url:string;collection:PaperPart['collection'];limbScope?:'upper'|'lower';questionSelection?:{ids:string[];label:string}};
@@ -99,6 +99,26 @@ export function createPaperPdf(env:Env={}) {
     if(!pending.has(key)){
       const task=(async()=>{
         const parts:PaperPart[]=request.sources.map((source,i)=>{let doc=parseExport(texts[i]);if(source.limbScope)doc=scopeLimbExport(doc,source.limbScope);if(source.questionSelection)doc=selectPaperExport(doc,source.questionSelection);return {doc,courseTitle:request.courseTitle,collection:source.collection};});
+        // Figures are part of the question, including in question-only downloads.
+        // Export URLs include content hashes, so changed image bytes invalidate the PDF cache.
+        if(request.variant!=='key')for(const part of parts){
+          part.questionExtras={};
+          for(const question of part.doc.questions){
+            const paths=(question.fields.Image??'').split(' | ').filter(Boolean);
+            if(!paths.length)continue;
+            const media:Content[]=[];
+            for(const path of paths){
+              const url=new URL(path,origin());
+              if(url.origin!==origin()||!url.pathname.startsWith('/study/')||!/\.(png|jpe?g)$/i.test(url.pathname))throw new Error('Invalid paper figure.');
+              const response=await network(url.href);
+              if(response.status===401||response.status===403)throw denyStudySession();
+              if(!response.ok)throw new Error('A paper figure could not load. Reconnect and retry.');
+              const mime=/\.png$/i.test(url.pathname)?'image/png':'image/jpeg';
+              media.push({image:`data:${mime};base64,${base64(await response.arrayBuffer())}`,fit:[460,340],margin:[0,5,0,8]});
+            }
+            part.questionExtras[question.id]={media,unbreakable:false};
+          }
+        }
         const definition=buildPaperDocument(parts,request.variant,request.footerLabel);
         const blob=await (env.render??(d=>defaultRender(d,env)))(definition);
         let cached=false;

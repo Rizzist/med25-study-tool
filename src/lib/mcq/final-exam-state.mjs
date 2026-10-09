@@ -2,6 +2,10 @@ export const FINAL_EXAM_STORAGE_KEY = "med25-final-exam-v1";
 
 // Keep live grading and restored attempts consistent for flawed source items
 // with genuinely equivalent alternatives. Preferred answer remains explicit.
+export function isFinalQuestionGraded(question) {
+  return Boolean(question.correctOptionId && question.options.some(option=>option.id===question.correctOptionId));
+}
+
 export function isFinalAnswerCorrect(question, optionId) {
   return question.options.some(option=>option.id===optionId)
     && (question.correctOptionId===optionId || question.acceptedOptionIds?.includes(optionId)===true);
@@ -50,11 +54,14 @@ function cleanIds(value) {
 function cleanAnswer(value, question) {
   if (!value || typeof value !== "object" || typeof value.selectedOptionId !== "string") return null;
   const validOptionIds = new Set(question.options.map((option) => option.id));
-  if (!validOptionIds.has(value.selectedOptionId)) return null;
+  const written = !question.options.length && value.selectedOptionId === "response" && typeof value.responseText === "string" && value.responseText.trim();
+  if (!validOptionIds.has(value.selectedOptionId) && !written) return null;
   if (value.questionRevision !== question.revision || value.correctOptionId !== question.correctOptionId) return null;
   return {
     selectedOptionId: value.selectedOptionId.slice(0, 8),
     correct: Boolean(value.correct),
+    ...(!isFinalQuestionGraded(question)?{graded:false}:{}),
+    ...(written?{responseText:value.responseText.slice(0,10000)}:{}),
     answeredAt: typeof value.answeredAt === "string" ? value.answeredAt : new Date().toISOString(),
     questionRevision: question.revision,
     correctOptionId: question.correctOptionId,

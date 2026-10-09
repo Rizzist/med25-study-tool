@@ -1,0 +1,2241 @@
+{
+  "paperId": "bio-kish-theory",
+  "questions": [
+    {
+      "number": "1",
+      "page": 1,
+      "prompt": "Assume that the concentration of ion X+ in extracellular fluid is 300 mEq/L and inside the cell is 20 mEq/L. The resting membrane potential is closer to: log10(15) = 1.17; log10(0.06) = −1.2.",
+      "options": [
+        {
+          "id": "A",
+          "text": "+71 mV"
+        },
+        {
+          "id": "B",
+          "text": "−73 mV"
+        },
+        {
+          "id": "C",
+          "text": "+94 mV"
+        },
+        {
+          "id": "D",
+          "text": "−61 mV"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "For the monovalent positive ion, the Nernst potential is about +61 log10(300/20) = +71 mV.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 1,
+      "section": "Physiology"
+    },
+    {
+      "number": "2",
+      "page": 1,
+      "prompt": "Comparing the Goldman equation with the Nernst equation, which of the following is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Membrane permeability to ions is only considered in the Nernst equation"
+        },
+        {
+          "id": "B",
+          "text": "The Nernst equation shows the simultaneous effect of several ions on membrane potential"
+        },
+        {
+          "id": "C",
+          "text": "Only the concentration gradient of positively charged ions is included in the Nernst equation"
+        },
+        {
+          "id": "D",
+          "text": "The Goldman equation describes real conditions, while the Nernst equation depicts imaginary conditions"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: The Goldman equation describes real conditions, while the Nernst equation depicts imaginary conditions.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 2,
+      "section": "Physiology"
+    },
+    {
+      "number": "3",
+      "page": 1,
+      "prompt": "Which of the following does not play any role in determining the resting membrane potential?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Leakage of K through K leak channels"
+        },
+        {
+          "id": "B",
+          "text": "Leakage of Na through K leak channels"
+        },
+        {
+          "id": "C",
+          "text": "Leakage of Na through Na leak channels"
+        },
+        {
+          "id": "D",
+          "text": "Na-K pump"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "The label K leak channels is ambiguous: textbook K–Na leak channels permit a small Na flux, which contributes to resting potential. No unique absent contribution follows without specifying channel selectivity.",
+      "answerBasis": "unresolved",
+      "subject": "physiology",
+      "sourceOrdinal": 3,
+      "section": "Physiology"
+    },
+    {
+      "number": "4",
+      "page": 1,
+      "prompt": "The peak of an action potential in a large nerve cell is closer to the Nernst potential of which ion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "K"
+        },
+        {
+          "id": "B",
+          "text": "Na"
+        },
+        {
+          "id": "C",
+          "text": "Cl"
+        },
+        {
+          "id": "D",
+          "text": "HCO3"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Na.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 4,
+      "section": "Physiology"
+    },
+    {
+      "number": "5",
+      "page": 1,
+      "prompt": "What is the main cause of the repolarization phase of an action potential?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Closure of voltage-gated K channels"
+        },
+        {
+          "id": "B",
+          "text": "Opening of voltage-gated K channels"
+        },
+        {
+          "id": "C",
+          "text": "Opening of voltage-gated Ca channels"
+        },
+        {
+          "id": "D",
+          "text": "Closure of voltage-gated Na channels"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Opening of voltage-gated K channels.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 5,
+      "section": "Physiology"
+    },
+    {
+      "number": "6",
+      "page": 1,
+      "prompt": "A new action potential cannot occur in an excitable fiber as long as its membrane is still depolarized from the preceding action potential. Why?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inactivation of voltage-gated Na channels"
+        },
+        {
+          "id": "B",
+          "text": "Inactivation of voltage-gated K channels"
+        },
+        {
+          "id": "C",
+          "text": "Activation of voltage-gated Na channels"
+        },
+        {
+          "id": "D",
+          "text": "Activation of voltage-gated K channels"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Inactivation of voltage-gated Na channels.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 6,
+      "section": "Physiology"
+    },
+    {
+      "number": "7",
+      "page": 2,
+      "prompt": "Saltatory conduction is of value for:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decrease in conduction velocity"
+        },
+        {
+          "id": "B",
+          "text": "Conserving energy"
+        },
+        {
+          "id": "C",
+          "text": "Having a plateau phase"
+        },
+        {
+          "id": "D",
+          "text": "Existence of Schwann cells"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Conserving energy.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 7,
+      "section": "Physiology"
+    },
+    {
+      "number": "8",
+      "page": 2,
+      "prompt": "In the plateau phase, calcium is transported inside the cardiac cell by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Na+/Ca2+ exchanger"
+        },
+        {
+          "id": "B",
+          "text": "Ca2+-ATPase"
+        },
+        {
+          "id": "C",
+          "text": "Na+/K+-ATPase pump"
+        },
+        {
+          "id": "D",
+          "text": "Voltage-gated Ca channels"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Voltage-gated Ca channels.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 8,
+      "section": "Physiology"
+    },
+    {
+      "number": "9",
+      "page": 2,
+      "prompt": "In which compartment is the largest amount of body water found?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ECF"
+        },
+        {
+          "id": "B",
+          "text": "ICF"
+        },
+        {
+          "id": "C",
+          "text": "Plasma"
+        },
+        {
+          "id": "D",
+          "text": "Interstitial fluid"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: ICF.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 9,
+      "section": "Physiology"
+    },
+    {
+      "number": "10",
+      "page": 2,
+      "prompt": "Which of the following acts as a β-cell glucose sensor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "GLUT1"
+        },
+        {
+          "id": "B",
+          "text": "GLUT2"
+        },
+        {
+          "id": "C",
+          "text": "GLUT3"
+        },
+        {
+          "id": "D",
+          "text": "GLUT4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: GLUT2.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 10,
+      "section": "Physiology"
+    },
+    {
+      "number": "11",
+      "page": 2,
+      "prompt": "Which of the following transporters has the greatest number in the kidneys?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SGLT1"
+        },
+        {
+          "id": "B",
+          "text": "SGLT2"
+        },
+        {
+          "id": "C",
+          "text": "SGLT3"
+        },
+        {
+          "id": "D",
+          "text": "SGLT4"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: SGLT2.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 11,
+      "section": "Physiology"
+    },
+    {
+      "number": "12",
+      "page": 2,
+      "prompt": "Simple diffusion of ions is based on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chemical gradient"
+        },
+        {
+          "id": "B",
+          "text": "Concentration gradient"
+        },
+        {
+          "id": "C",
+          "text": "Electrical gradient"
+        },
+        {
+          "id": "D",
+          "text": "Electrochemical gradient"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Electrochemical gradient.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 12,
+      "section": "Physiology"
+    },
+    {
+      "number": "13",
+      "page": 2,
+      "prompt": "Which of the following is negatively correlated with the rate of simple diffusion?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lipid solubility"
+        },
+        {
+          "id": "B",
+          "text": "Thickness of membrane"
+        },
+        {
+          "id": "C",
+          "text": "Concentration gradient across membrane"
+        },
+        {
+          "id": "D",
+          "text": "Surface area of membrane"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Thickness of membrane.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 13,
+      "section": "Physiology"
+    },
+    {
+      "number": "14",
+      "page": 2,
+      "prompt": "Which factor is most important in limiting lateral movement of proteins in the membrane of kidney epithelial cells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Connecting proteins to the cell cortex"
+        },
+        {
+          "id": "B",
+          "text": "Connecting proteins to extracellular matrix"
+        },
+        {
+          "id": "C",
+          "text": "Connecting proteins of one cell to proteins of the adjacent cell"
+        },
+        {
+          "id": "D",
+          "text": "Tight junctions between cells"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Tight junctions between cells.",
+      "answerBasis": "editorial",
+      "subject": "physiology",
+      "sourceOrdinal": 14,
+      "section": "Physiology"
+    },
+    {
+      "number": "1",
+      "page": 3,
+      "prompt": "In which case is the protein related to the relevant organelle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Proteasome–ubiquitin"
+        },
+        {
+          "id": "B",
+          "text": "Peroxisome–porin"
+        },
+        {
+          "id": "C",
+          "text": "RER–clathrin"
+        },
+        {
+          "id": "D",
+          "text": "Mitochondria–catalase"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Proteasome–ubiquitin.",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "sourceOrdinal": 15
+    },
+    {
+      "number": "2",
+      "page": 3,
+      "prompt": "During RER protein synthesis, which is not observed as part of the organelle's structure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ribosome receptor"
+        },
+        {
+          "id": "B",
+          "text": "Translocator complex"
+        },
+        {
+          "id": "C",
+          "text": "Signal-recognition-particle receptor"
+        },
+        {
+          "id": "D",
+          "text": "Signal peptide"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Signal peptide.",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "sourceOrdinal": 16
+    },
+    {
+      "number": "3",
+      "page": 3,
+      "prompt": "Microfilaments are composed of … and play a role in …",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vimentin; endocytosis"
+        },
+        {
+          "id": "B",
+          "text": "Tubulin; cilia formation"
+        },
+        {
+          "id": "C",
+          "text": "Actin; mitotic division"
+        },
+        {
+          "id": "D",
+          "text": "Desmin; mitochondrial function"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Actin; mitotic division.",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "sourceOrdinal": 17
+    },
+    {
+      "number": "4",
+      "page": 3,
+      "prompt": "A pale, central, large, euchromatic nucleus shows:",
+      "options": [
+        {
+          "id": "A",
+          "text": "The cell is active in protein synthesis"
+        },
+        {
+          "id": "B",
+          "text": "The cell starts apoptosis"
+        },
+        {
+          "id": "C",
+          "text": "The cell is differentiated"
+        },
+        {
+          "id": "D",
+          "text": "The cell is dead and necrotic"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: The cell is active in protein synthesis.",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "sourceOrdinal": 18
+    },
+    {
+      "number": "5",
+      "page": 3,
+      "prompt": "What are the outward-projecting surface oligosaccharide chains and their function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Adherent glycoproteins; receptor"
+        },
+        {
+          "id": "B",
+          "text": "Glycocalyx; cell identification"
+        },
+        {
+          "id": "C",
+          "text": "Basal layer; active transport"
+        },
+        {
+          "id": "D",
+          "text": "Glycosaminoglycans; adhesion"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Glycocalyx; cell identification.",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "sourceOrdinal": 19
+    },
+    {
+      "number": "6",
+      "page": 3,
+      "prompt": "In the Golgi organelle:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cisternae are tubular"
+        },
+        {
+          "id": "B",
+          "text": "Secretory vesicles are on the cis face"
+        },
+        {
+          "id": "C",
+          "text": "Cis cisternae are adjacent to the RER"
+        },
+        {
+          "id": "D",
+          "text": "Golgi is near the nucleus"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Both adjacency of the cis Golgi to the RER and a juxtanuclear location are correct.",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "acceptedOptionIds": [
+        "C",
+        "D"
+      ],
+      "sourceOrdinal": 20
+    },
+    {
+      "number": "7",
+      "page": 3,
+      "prompt": "Which characteristic applies to mitochondria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Outer membrane contains thermogenin"
+        },
+        {
+          "id": "B",
+          "text": "Inner membrane has porin particles"
+        },
+        {
+          "id": "C",
+          "text": "Cristae of the inner membrane enclose the matrix"
+        },
+        {
+          "id": "D",
+          "text": "Inner membrane contains ATPase"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Inner membrane contains ATPase.",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "sourceOrdinal": 21
+    },
+    {
+      "number": "8",
+      "page": 4,
+      "prompt": "Which characteristic applies to a nucleosome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It has a core of four histones"
+        },
+        {
+          "id": "B",
+          "text": "It has single-stranded DNA"
+        },
+        {
+          "id": "C",
+          "text": "It does not contribute to heterochromatin formation"
+        },
+        {
+          "id": "D",
+          "text": "Histone H1 is outside the nucleosome"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Linker histone H1 lies outside the nucleosome core; the core contains eight histone molecules (two each of four types).",
+      "answerBasis": "editorial",
+      "subject": "histology",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Histology",
+      "sourceOrdinal": 22
+    },
+    {
+      "number": "9",
+      "page": 4,
+      "prompt": "In receptor-mediated endocytosis:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Clathrin is present in the membrane structure"
+        },
+        {
+          "id": "B",
+          "text": "Ligand binding activates ion channels"
+        },
+        {
+          "id": "C",
+          "text": "Clathrin forms the coated pit at a faster rate"
+        },
+        {
+          "id": "D",
+          "text": "Coated secretory vesicles have clathrin"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "No reliable answer has been established for this source occurrence; retained as an ungraded question.",
+      "answerBasis": "unresolved",
+      "subject": "histology",
+      "section": "Histology",
+      "sourceOrdinal": 23
+    },
+    {
+      "number": "1",
+      "page": 5,
+      "prompt": "Obese people tend to have a … percentage of body water than thin people, and females a … percentage than males.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lower/higher"
+        },
+        {
+          "id": "B",
+          "text": "Higher/higher"
+        },
+        {
+          "id": "C",
+          "text": "Lower/lower"
+        },
+        {
+          "id": "D",
+          "text": "Higher/lower"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Lower/lower.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 24
+    },
+    {
+      "number": "2",
+      "page": 5,
+      "prompt": "All are major buffers regulating pH except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phosphate"
+        },
+        {
+          "id": "B",
+          "text": "Sulfuric acid"
+        },
+        {
+          "id": "C",
+          "text": "Bicarbonate"
+        },
+        {
+          "id": "D",
+          "text": "Hemoglobin"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Sulfuric acid.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 25
+    },
+    {
+      "number": "3",
+      "page": 5,
+      "prompt": "Molecules soluble in nonpolar solvents are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amphipathic"
+        },
+        {
+          "id": "B",
+          "text": "Hydrophilic"
+        },
+        {
+          "id": "C",
+          "text": "Hypotonic"
+        },
+        {
+          "id": "D",
+          "text": "Hydrophobic"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Hydrophobic.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 26
+    },
+    {
+      "number": "4",
+      "page": 5,
+      "prompt": "What is the pH of a solution with [OH−] = 1 × 10−4 M?",
+      "options": [
+        {
+          "id": "A",
+          "text": "4"
+        },
+        {
+          "id": "B",
+          "text": "10"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "8"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: 10.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 27
+    },
+    {
+      "number": "5",
+      "page": 5,
+      "prompt": "All are functions of proteins except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Antibodies"
+        },
+        {
+          "id": "B",
+          "text": "Catalysts"
+        },
+        {
+          "id": "C",
+          "text": "Insulation"
+        },
+        {
+          "id": "D",
+          "text": "Transporters"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Insulation.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 28
+    },
+    {
+      "number": "6",
+      "page": 5,
+      "prompt": "Which pairs contain individually strong chemical bonds?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ionic/hydrophobic"
+        },
+        {
+          "id": "B",
+          "text": "Hydrophobic/covalent"
+        },
+        {
+          "id": "C",
+          "text": "Ionic/hydrogen"
+        },
+        {
+          "id": "D",
+          "text": "Disulfide/ionic"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Disulfide/ionic.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 29
+    },
+    {
+      "number": "7",
+      "page": 5,
+      "prompt": "According to pK, which acid is strongest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acid 1: pK = −10.3"
+        },
+        {
+          "id": "B",
+          "text": "Acid 2: pK = −8.7"
+        },
+        {
+          "id": "C",
+          "text": "Acid 3: pK = −6.5"
+        },
+        {
+          "id": "D",
+          "text": "Acid 4: pK = −9.2"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Acid 1: pK = −10.3.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 30
+    },
+    {
+      "number": "8",
+      "page": 6,
+      "prompt": "Which of the following is a monomer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Protein"
+        },
+        {
+          "id": "B",
+          "text": "Vitamin"
+        },
+        {
+          "id": "C",
+          "text": "Nucleic acid"
+        },
+        {
+          "id": "D",
+          "text": "Polysaccharide"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "No reliable answer has been established for this source occurrence; retained as an ungraded question.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "section": "Biochemistry",
+      "sourceOrdinal": 31
+    },
+    {
+      "number": "9",
+      "page": 6,
+      "prompt": "All statements about galactose are true except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "It is used for milk biosynthesis in mammary glands"
+        },
+        {
+          "id": "B",
+          "text": "It is a constituent of glycolipids"
+        },
+        {
+          "id": "C",
+          "text": "It is a ketoheptose"
+        },
+        {
+          "id": "D",
+          "text": "Galactose accumulation can cause cataracts"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: It is a ketoheptose.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 32
+    },
+    {
+      "number": "10",
+      "page": 6,
+      "prompt": "Choose an aldopentose:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Glyceraldehyde"
+        },
+        {
+          "id": "B",
+          "text": "Dihydroxyacetone"
+        },
+        {
+          "id": "C",
+          "text": "Erythrose"
+        },
+        {
+          "id": "D",
+          "text": "Ribose"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Ribose.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 33
+    },
+    {
+      "number": "11",
+      "page": 6,
+      "prompt": "Which monosaccharide is the precursor of glycogen synthesis in animals?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fructose"
+        },
+        {
+          "id": "B",
+          "text": "Glucose"
+        },
+        {
+          "id": "C",
+          "text": "Ribose"
+        },
+        {
+          "id": "D",
+          "text": "Mannose"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Glucose.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 34
+    },
+    {
+      "number": "12",
+      "page": 6,
+      "prompt": "Which are enantiomers?",
+      "options": [
+        {
+          "id": "A",
+          "text": "D-Galactose and L-glucose"
+        },
+        {
+          "id": "B",
+          "text": "D-Galactose and L-glucose"
+        },
+        {
+          "id": "C",
+          "text": "D-Mannose and L-mannose"
+        },
+        {
+          "id": "D",
+          "text": "α-Mannose and β-mannose"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: D-Mannose and L-mannose.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 35
+    },
+    {
+      "number": "13",
+      "page": 6,
+      "prompt": "Which statement about polysaccharides is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Heteropolysaccharides contain one type of monosaccharide"
+        },
+        {
+          "id": "B",
+          "text": "Glycogen is a homopolysaccharide"
+        },
+        {
+          "id": "C",
+          "text": "All polysaccharides are linear"
+        },
+        {
+          "id": "D",
+          "text": "Chondroitin sulfate contains sugar alcohol"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Glycogen is a homopolysaccharide.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 36
+    },
+    {
+      "number": "14",
+      "page": 6,
+      "prompt": "Which carbohydrate can determine glomerular filtration rate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inulin"
+        },
+        {
+          "id": "B",
+          "text": "Amylopectin"
+        },
+        {
+          "id": "C",
+          "text": "Hyaluronic acid"
+        },
+        {
+          "id": "D",
+          "text": "Amylose"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Inulin.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 37
+    },
+    {
+      "number": "15",
+      "page": 7,
+      "prompt": "Which biomolecule can control calcification in bone?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hyaluronic acid"
+        },
+        {
+          "id": "B",
+          "text": "Keratan sulfate"
+        },
+        {
+          "id": "C",
+          "text": "Chondroitin sulfate"
+        },
+        {
+          "id": "D",
+          "text": "Dermatan sulfate"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Chondroitin sulfate.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 38
+    },
+    {
+      "number": "16",
+      "page": 7,
+      "prompt": "Maltose is a disaccharide of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fructose and lactose"
+        },
+        {
+          "id": "B",
+          "text": "Glucose and glucose"
+        },
+        {
+          "id": "C",
+          "text": "Glucose and galactose"
+        },
+        {
+          "id": "D",
+          "text": "Glucose and lactose"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Glucose and glucose.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 39
+    },
+    {
+      "number": "17",
+      "page": 7,
+      "prompt": "The slope of a Lineweaver–Burk plot is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vmax/Km"
+        },
+        {
+          "id": "B",
+          "text": "Km/Vmax"
+        },
+        {
+          "id": "C",
+          "text": "Vmax/[S]"
+        },
+        {
+          "id": "D",
+          "text": "[S]/Km"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Km/Vmax.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 40
+    },
+    {
+      "number": "18",
+      "page": 7,
+      "prompt": "Which enzyme is a hydrolase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Phosphatase"
+        },
+        {
+          "id": "B",
+          "text": "Dehydrogenase"
+        },
+        {
+          "id": "C",
+          "text": "Mutase"
+        },
+        {
+          "id": "D",
+          "text": "Phosphorylase"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Phosphatase.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 41
+    },
+    {
+      "number": "19",
+      "page": 7,
+      "prompt": "Which is the definition of enzyme activity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amount catalyzing one micromole substrate per second"
+        },
+        {
+          "id": "B",
+          "text": "Substrate molecules converted per enzyme molecule per second"
+        },
+        {
+          "id": "C",
+          "text": "Substrate molecules converted per enzyme molecule per minute"
+        },
+        {
+          "id": "D",
+          "text": "Amount catalyzing one micromole substrate per minute"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Amount catalyzing one micromole substrate per minute.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 42
+    },
+    {
+      "number": "20",
+      "page": 7,
+      "prompt": "Which reaction is catalyzed by a lyase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Breaking bonds"
+        },
+        {
+          "id": "B",
+          "text": "Intramolecular rearrangement"
+        },
+        {
+          "id": "C",
+          "text": "Formation of bonds"
+        },
+        {
+          "id": "D",
+          "text": "Transfer of a group between molecules"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Breaking bonds.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 43
+    },
+    {
+      "number": "21",
+      "page": 8,
+      "prompt": "All are examples of competitive inhibition except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Methotrexate and dihydrofolate reductase"
+        },
+        {
+          "id": "B",
+          "text": "Atorvastatin and HMG-CoA reductase"
+        },
+        {
+          "id": "C",
+          "text": "Amoxicillin and transpeptidase"
+        },
+        {
+          "id": "D",
+          "text": "Malonate and succinate dehydrogenase"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Amoxicillin and transpeptidase.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 44
+    },
+    {
+      "number": "22",
+      "page": 8,
+      "prompt": "Which statement about allosteric enzymes is not true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Activators increase enzyme activity"
+        },
+        {
+          "id": "B",
+          "text": "Inhibitors decrease activity after binding"
+        },
+        {
+          "id": "C",
+          "text": "They are generally multisubunit enzymes"
+        },
+        {
+          "id": "D",
+          "text": "They show hyperbolic dependence on substrate concentration"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: They show hyperbolic dependence on substrate concentration.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 45
+    },
+    {
+      "number": "23",
+      "page": 8,
+      "prompt": "Reversible noncompetitive inhibitor binding outside the active site causes:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increased Km; unchanged Vmax"
+        },
+        {
+          "id": "B",
+          "text": "Decreased Vmax; unchanged Km"
+        },
+        {
+          "id": "C",
+          "text": "Increased Vmax; unchanged Km"
+        },
+        {
+          "id": "D",
+          "text": "No change in Vmax or Km"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Decreased Vmax; unchanged Km.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 46
+    },
+    {
+      "number": "24",
+      "page": 8,
+      "prompt": "An enzyme extract separates into two fractions in an electric field, each catalyzing the same reaction. The fractions are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Coenzyme"
+        },
+        {
+          "id": "B",
+          "text": "Allosteric enzyme"
+        },
+        {
+          "id": "C",
+          "text": "Isoenzyme"
+        },
+        {
+          "id": "D",
+          "text": "Inducible enzyme"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Isoenzyme.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 47
+    },
+    {
+      "number": "25",
+      "page": 8,
+      "prompt": "Which amino acid is not considered a site for phosphate attachment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Serine"
+        },
+        {
+          "id": "B",
+          "text": "Threonine"
+        },
+        {
+          "id": "C",
+          "text": "Leucine"
+        },
+        {
+          "id": "D",
+          "text": "Tyrosine"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Leucine.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 48
+    },
+    {
+      "number": "26",
+      "page": 8,
+      "prompt": "Which amino acids contain hydroxyl groups?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cysteine and methionine"
+        },
+        {
+          "id": "B",
+          "text": "Threonine and cysteine"
+        },
+        {
+          "id": "C",
+          "text": "Serine and methionine"
+        },
+        {
+          "id": "D",
+          "text": "Serine and threonine"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Serine and threonine.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 49
+    },
+    {
+      "number": "27",
+      "page": 8,
+      "prompt": "Which characteristic applies to glycine?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Optically inactive"
+        },
+        {
+          "id": "B",
+          "text": "Hydrophilic, basic and charged"
+        },
+        {
+          "id": "C",
+          "text": "Hydrophilic, acidic and charged"
+        },
+        {
+          "id": "D",
+          "text": "Proton donor"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Optically inactive.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 50
+    },
+    {
+      "number": "28",
+      "page": 9,
+      "prompt": "Protein absorbance at 280 nm is due to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aliphatic amino acids"
+        },
+        {
+          "id": "B",
+          "text": "Aromatic amino acids"
+        },
+        {
+          "id": "C",
+          "text": "Acidic amino acids"
+        },
+        {
+          "id": "D",
+          "text": "Basic amino acids"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Aromatic amino acids.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 51
+    },
+    {
+      "number": "29",
+      "page": 9,
+      "prompt": "All statements about myoglobin are correct except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "It consists of one polypeptide chain"
+        },
+        {
+          "id": "B",
+          "text": "Its secondary structure is rich in β-sheet"
+        },
+        {
+          "id": "C",
+          "text": "It is compact and spherical"
+        },
+        {
+          "id": "D",
+          "text": "It is present in skeletal muscle"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Its secondary structure is rich in β-sheet.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 52
+    },
+    {
+      "number": "30",
+      "page": 9,
+      "prompt": "Which amino acids are most common in collagen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tryptophan and proline"
+        },
+        {
+          "id": "B",
+          "text": "Glycine and lysine"
+        },
+        {
+          "id": "C",
+          "text": "Threonine and proline"
+        },
+        {
+          "id": "D",
+          "text": "Proline and glycine"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Proline and glycine.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 53
+    },
+    {
+      "number": "31",
+      "page": 9,
+      "prompt": "Which increases P50 in hemoglobin's oxygen-dissociation curve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Decreased CO2 pressure"
+        },
+        {
+          "id": "B",
+          "text": "Increased pH"
+        },
+        {
+          "id": "C",
+          "text": "Decreased temperature"
+        },
+        {
+          "id": "D",
+          "text": "Increased 2,3-BPG"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Editorial study answer: Increased 2,3-BPG.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 54
+    },
+    {
+      "number": "32",
+      "page": 9,
+      "prompt": "Which protein is defective in Ehlers–Danlos syndrome?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Myoglobin"
+        },
+        {
+          "id": "B",
+          "text": "Elastase"
+        },
+        {
+          "id": "C",
+          "text": "Collagen"
+        },
+        {
+          "id": "D",
+          "text": "Hemoglobin"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Collagen.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 55
+    },
+    {
+      "number": "33",
+      "page": 9,
+      "prompt": "Which is correctly matched?",
+      "options": [
+        {
+          "id": "A",
+          "text": "NADH–vitamin B2"
+        },
+        {
+          "id": "B",
+          "text": "FADH2–vitamin B3"
+        },
+        {
+          "id": "C",
+          "text": "PLP–vitamin B6"
+        },
+        {
+          "id": "D",
+          "text": "TPP–vitamin C"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: PLP–vitamin B6.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 56
+    },
+    {
+      "number": "34",
+      "page": 9,
+      "prompt": "Thiamine deficiency causes all except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cheilosis"
+        },
+        {
+          "id": "B",
+          "text": "Ataxia"
+        },
+        {
+          "id": "C",
+          "text": "Nystagmus"
+        },
+        {
+          "id": "D",
+          "text": "Ophthalmoplegia"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Cheilosis.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 57
+    },
+    {
+      "number": "35",
+      "page": 10,
+      "prompt": "Which disease is caused by niacin deficiency?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Scurvy"
+        },
+        {
+          "id": "B",
+          "text": "Rickets"
+        },
+        {
+          "id": "C",
+          "text": "Pellagra"
+        },
+        {
+          "id": "D",
+          "text": "Pernicious anemia"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Pellagra.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 58
+    },
+    {
+      "number": "36",
+      "page": 10,
+      "prompt": "Which is effective in premenstrual syndrome and diabetes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vitamin B12"
+        },
+        {
+          "id": "B",
+          "text": "Vitamin B9"
+        },
+        {
+          "id": "C",
+          "text": "Vitamin B6"
+        },
+        {
+          "id": "D",
+          "text": "Vitamin B3"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "No reliable answer has been established for this source occurrence; retained as an ungraded question.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "section": "Biochemistry",
+      "sourceOrdinal": 59
+    },
+    {
+      "number": "37",
+      "page": 10,
+      "prompt": "Which vitamin provides a coenzyme for γ-carboxylation?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vitamin A"
+        },
+        {
+          "id": "B",
+          "text": "Vitamin K"
+        },
+        {
+          "id": "C",
+          "text": "Vitamin C"
+        },
+        {
+          "id": "D",
+          "text": "Vitamin B7"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Vitamin K.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 60
+    },
+    {
+      "number": "38",
+      "page": 10,
+      "prompt": "Which deficiency causes megaloblastic anemia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pantothenic acid"
+        },
+        {
+          "id": "B",
+          "text": "Niacin"
+        },
+        {
+          "id": "C",
+          "text": "Folic acid"
+        },
+        {
+          "id": "D",
+          "text": "Retinol"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Folic acid.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 61
+    },
+    {
+      "number": "39",
+      "page": 10,
+      "prompt": "The most biologically active form of vitamin K is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Menadione"
+        },
+        {
+          "id": "B",
+          "text": "Menaquinone"
+        },
+        {
+          "id": "C",
+          "text": "Phylloquinone"
+        },
+        {
+          "id": "D",
+          "text": "Phytonadione"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "Most biologically active is not defined by an endpoint or vitamin-K subtype. Menaquinones and phylloquinone are active vitamin-K forms; phylloquinone and phytonadione are equivalent names. This ranking does not establish a unique study answer.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 62
+    },
+    {
+      "number": "40",
+      "page": 10,
+      "prompt": "Which vitamin is a major lipid-soluble antioxidant in cell membranes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vitamin A"
+        },
+        {
+          "id": "B",
+          "text": "Vitamin D"
+        },
+        {
+          "id": "C",
+          "text": "Vitamin E"
+        },
+        {
+          "id": "D",
+          "text": "Vitamin K"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Vitamin E.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 63
+    },
+    {
+      "number": "41",
+      "page": 11,
+      "prompt": "Which is common to all phospholipids?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Glycerol backbone"
+        },
+        {
+          "id": "B",
+          "text": "Phosphate group"
+        },
+        {
+          "id": "C",
+          "text": "Two fatty-acid tails"
+        },
+        {
+          "id": "D",
+          "text": "Sphingosine backbone"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Phosphate group.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 64
+    },
+    {
+      "number": "42",
+      "page": 11,
+      "prompt": "Which lipid is a precursor of steroid hormones?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sphingomyelin"
+        },
+        {
+          "id": "B",
+          "text": "Phosphatidylserine"
+        },
+        {
+          "id": "C",
+          "text": "Cholesterol"
+        },
+        {
+          "id": "D",
+          "text": "Triacylglycerol"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Cholesterol.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 65
+    },
+    {
+      "number": "43",
+      "page": 11,
+      "prompt": "The primary function of HDL is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transporting cholesterol to peripheral tissues"
+        },
+        {
+          "id": "B",
+          "text": "Transporting triglycerides to liver"
+        },
+        {
+          "id": "C",
+          "text": "Transporting cholesterol from peripheral tissues to liver"
+        },
+        {
+          "id": "D",
+          "text": "Storing excess cholesterol in adipose tissue"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Transporting cholesterol from peripheral tissues to liver.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 66
+    },
+    {
+      "number": "44",
+      "page": 11,
+      "prompt": "Besides membrane structure, cholesterol is involved in:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Energy storage"
+        },
+        {
+          "id": "B",
+          "text": "Signal transduction"
+        },
+        {
+          "id": "C",
+          "text": "Nerve impulse transmission"
+        },
+        {
+          "id": "D",
+          "text": "Regulation of membrane fluidity"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "No reliable answer has been established for this source occurrence; retained as an ungraded question.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "section": "Biochemistry",
+      "sourceOrdinal": 67
+    },
+    {
+      "number": "45",
+      "page": 11,
+      "prompt": "Which fatty acid must be supplied in the diet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Palmitic acid"
+        },
+        {
+          "id": "B",
+          "text": "Lauric acid"
+        },
+        {
+          "id": "C",
+          "text": "Linolenic acid"
+        },
+        {
+          "id": "D",
+          "text": "Palmitoleic acid"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Linolenic acid.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 68
+    },
+    {
+      "number": "46",
+      "page": 11,
+      "prompt": "Cephalin consists of:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Glycerol, fatty acids, phosphoric acid and choline"
+        },
+        {
+          "id": "B",
+          "text": "Glycerol, fatty acids, phosphoric acid and ethanolamine"
+        },
+        {
+          "id": "C",
+          "text": "Sphingosine, two fatty acids, phosphoric acid and inositol"
+        },
+        {
+          "id": "D",
+          "text": "Sphingosine, fatty acids and serine"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Editorial study answer: Glycerol, fatty acids, phosphoric acid and ethanolamine.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 69
+    },
+    {
+      "number": "47",
+      "page": 12,
+      "prompt": "Glycosphingolipids combine:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ceramide with one or more sugar residues"
+        },
+        {
+          "id": "B",
+          "text": "Glycerol with galactose"
+        },
+        {
+          "id": "C",
+          "text": "Sphingosine with galactose"
+        },
+        {
+          "id": "D",
+          "text": "Sphingosine with phosphoric acid"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Editorial study answer: Ceramide with one or more sugar residues.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 70
+    },
+    {
+      "number": "48",
+      "page": 12,
+      "prompt": "All have 18 carbon atoms except:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Linoleic acid"
+        },
+        {
+          "id": "B",
+          "text": "Linolenic acid"
+        },
+        {
+          "id": "C",
+          "text": "Arachidonic acid"
+        },
+        {
+          "id": "D",
+          "text": "Stearic acid"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Editorial study answer: Arachidonic acid.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "answerEvidence": [
+        "Editorial study key; not a certified university answer key."
+      ],
+      "section": "Biochemistry",
+      "sourceOrdinal": 71
+    }
+  ],
+  "notes": "71 source-present questions: physiology Q1–14, histology Q1–9 and biochemistry Q1–48. Numbering restarts in each section; sourceOrdinal is unique. The compilation is not evidence of one complete sitting. Ambiguous or invalid choices are left ungraded. Highlighted student answers are not treated as official.",
+  "coverage": {
+    "completeSource": true,
+    "completeSitting": "unconfirmed",
+    "sections": {
+      "physiology": 14,
+      "histology": 9,
+      "biochemistry": 48
+    },
+    "sourceOccurrences": 71,
+    "graded": 65,
+    "ungraded": 6,
+    "sourcePages": 12
+  }
+}

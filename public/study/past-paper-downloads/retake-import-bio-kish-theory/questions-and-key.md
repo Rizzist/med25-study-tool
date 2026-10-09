@@ -1,0 +1,1122 @@
+# Cell & Molecules · Kish theory photo compilation · Biochemistry only
+
+Posted as a Kish Biochemistry theory past paper on 27 July 2024. Includes physiology sheets and biochemistry pages; the first sheet has an older Persian exam header. Exact sitting and program are unconfirmed. Twelve source photos retained. 71 source-present questions: physiology Q1–14, histology Q1–9 and biochemistry Q1–48. Numbering restarts in each section; sourceOrdinal is unique. The compilation is not evidence of one complete sitting. Ambiguous or invalid choices are left ungraded. Highlighted student answers are not treated as official.
+
+48 retained source records; 44 scored and 4 ungraded. Original numbering is retained, including repeated numbers.
+
+Collection ID: retake-import-bio-kish-theory
+Course: term1-biochemistry-retake
+
+## Original sources
+
+- Cell & Molecules · Kish theory photo compilation: /study/term1-telegram/bio-kish-theory.pdf
+
+## Questions
+
+### Biochemistry 1 · term1-bio-kish-theory-024
+
+Obese people tend to have a … percentage of body water than thin people, and females a … percentage than males.
+
+A. Lower/higher
+B. Higher/higher
+C. Lower/lower
+D. Higher/lower
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 5
+
+### Biochemistry 2 · term1-bio-kish-theory-025
+
+All are major buffers regulating pH except:
+
+A. Phosphate
+B. Sulfuric acid
+C. Bicarbonate
+D. Hemoglobin
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 5
+
+### Biochemistry 3 · term1-bio-kish-theory-026
+
+Molecules soluble in nonpolar solvents are:
+
+A. Amphipathic
+B. Hydrophilic
+C. Hypotonic
+D. Hydrophobic
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 5
+
+### Biochemistry 4 · term1-bio-kish-theory-027
+
+What is the pH of a solution with [OH−] = 1 × 10−4 M?
+
+A. 4
+B. 10
+C. 6
+D. 8
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 5
+
+### Biochemistry 5 · term1-bio-kish-theory-028
+
+All are functions of proteins except:
+
+A. Antibodies
+B. Catalysts
+C. Insulation
+D. Transporters
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 5
+
+### Biochemistry 6 · term1-bio-kish-theory-029
+
+Which pairs contain individually strong chemical bonds?
+
+A. Ionic/hydrophobic
+B. Hydrophobic/covalent
+C. Ionic/hydrogen
+D. Disulfide/ionic
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 5
+
+### Biochemistry 7 · term1-bio-kish-theory-030
+
+According to pK, which acid is strongest?
+
+A. Acid 1: pK = −10.3
+B. Acid 2: pK = −8.7
+C. Acid 3: pK = −6.5
+D. Acid 4: pK = −9.2
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 5
+
+### Biochemistry 8 · term1-bio-kish-theory-031
+
+Which of the following is a monomer?
+
+A. Protein
+B. Vitamin
+C. Nucleic acid
+D. Polysaccharide
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 6
+
+### Biochemistry 9 · term1-bio-kish-theory-032
+
+All statements about galactose are true except:
+
+A. It is used for milk biosynthesis in mammary glands
+B. It is a constituent of glycolipids
+C. It is a ketoheptose
+D. Galactose accumulation can cause cataracts
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 6
+
+### Biochemistry 10 · term1-bio-kish-theory-033
+
+Choose an aldopentose:
+
+A. Glyceraldehyde
+B. Dihydroxyacetone
+C. Erythrose
+D. Ribose
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 6
+
+### Biochemistry 11 · term1-bio-kish-theory-034
+
+Which monosaccharide is the precursor of glycogen synthesis in animals?
+
+A. Fructose
+B. Glucose
+C. Ribose
+D. Mannose
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 6
+
+### Biochemistry 12 · term1-bio-kish-theory-035
+
+Which are enantiomers?
+
+A. D-Galactose and L-glucose
+B. D-Galactose and L-glucose
+C. D-Mannose and L-mannose
+D. α-Mannose and β-mannose
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 6
+
+### Biochemistry 13 · term1-bio-kish-theory-036
+
+Which statement about polysaccharides is true?
+
+A. Heteropolysaccharides contain one type of monosaccharide
+B. Glycogen is a homopolysaccharide
+C. All polysaccharides are linear
+D. Chondroitin sulfate contains sugar alcohol
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 6
+
+### Biochemistry 14 · term1-bio-kish-theory-037
+
+Which carbohydrate can determine glomerular filtration rate?
+
+A. Inulin
+B. Amylopectin
+C. Hyaluronic acid
+D. Amylose
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 6
+
+### Biochemistry 15 · term1-bio-kish-theory-038
+
+Which biomolecule can control calcification in bone?
+
+A. Hyaluronic acid
+B. Keratan sulfate
+C. Chondroitin sulfate
+D. Dermatan sulfate
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 7
+
+### Biochemistry 16 · term1-bio-kish-theory-039
+
+Maltose is a disaccharide of:
+
+A. Fructose and lactose
+B. Glucose and glucose
+C. Glucose and galactose
+D. Glucose and lactose
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 7
+
+### Biochemistry 17 · term1-bio-kish-theory-040
+
+The slope of a Lineweaver–Burk plot is:
+
+A. Vmax/Km
+B. Km/Vmax
+C. Vmax/[S]
+D. [S]/Km
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 7
+
+### Biochemistry 18 · term1-bio-kish-theory-041
+
+Which enzyme is a hydrolase?
+
+A. Phosphatase
+B. Dehydrogenase
+C. Mutase
+D. Phosphorylase
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 7
+
+### Biochemistry 19 · term1-bio-kish-theory-042
+
+Which is the definition of enzyme activity?
+
+A. Amount catalyzing one micromole substrate per second
+B. Substrate molecules converted per enzyme molecule per second
+C. Substrate molecules converted per enzyme molecule per minute
+D. Amount catalyzing one micromole substrate per minute
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 7
+
+### Biochemistry 20 · term1-bio-kish-theory-043
+
+Which reaction is catalyzed by a lyase?
+
+A. Breaking bonds
+B. Intramolecular rearrangement
+C. Formation of bonds
+D. Transfer of a group between molecules
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 7
+
+### Biochemistry 21 · term1-bio-kish-theory-044
+
+All are examples of competitive inhibition except:
+
+A. Methotrexate and dihydrofolate reductase
+B. Atorvastatin and HMG-CoA reductase
+C. Amoxicillin and transpeptidase
+D. Malonate and succinate dehydrogenase
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 8
+
+### Biochemistry 22 · term1-bio-kish-theory-045
+
+Which statement about allosteric enzymes is not true?
+
+A. Activators increase enzyme activity
+B. Inhibitors decrease activity after binding
+C. They are generally multisubunit enzymes
+D. They show hyperbolic dependence on substrate concentration
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 8
+
+### Biochemistry 23 · term1-bio-kish-theory-046
+
+Reversible noncompetitive inhibitor binding outside the active site causes:
+
+A. Increased Km; unchanged Vmax
+B. Decreased Vmax; unchanged Km
+C. Increased Vmax; unchanged Km
+D. No change in Vmax or Km
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 8
+
+### Biochemistry 24 · term1-bio-kish-theory-047
+
+An enzyme extract separates into two fractions in an electric field, each catalyzing the same reaction. The fractions are:
+
+A. Coenzyme
+B. Allosteric enzyme
+C. Isoenzyme
+D. Inducible enzyme
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 8
+
+### Biochemistry 25 · term1-bio-kish-theory-048
+
+Which amino acid is not considered a site for phosphate attachment?
+
+A. Serine
+B. Threonine
+C. Leucine
+D. Tyrosine
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 8
+
+### Biochemistry 26 · term1-bio-kish-theory-049
+
+Which amino acids contain hydroxyl groups?
+
+A. Cysteine and methionine
+B. Threonine and cysteine
+C. Serine and methionine
+D. Serine and threonine
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 8
+
+### Biochemistry 27 · term1-bio-kish-theory-050
+
+Which characteristic applies to glycine?
+
+A. Optically inactive
+B. Hydrophilic, basic and charged
+C. Hydrophilic, acidic and charged
+D. Proton donor
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 8
+
+### Biochemistry 28 · term1-bio-kish-theory-051
+
+Protein absorbance at 280 nm is due to:
+
+A. Aliphatic amino acids
+B. Aromatic amino acids
+C. Acidic amino acids
+D. Basic amino acids
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 9
+
+### Biochemistry 29 · term1-bio-kish-theory-052
+
+All statements about myoglobin are correct except:
+
+A. It consists of one polypeptide chain
+B. Its secondary structure is rich in β-sheet
+C. It is compact and spherical
+D. It is present in skeletal muscle
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 9
+
+### Biochemistry 30 · term1-bio-kish-theory-053
+
+Which amino acids are most common in collagen?
+
+A. Tryptophan and proline
+B. Glycine and lysine
+C. Threonine and proline
+D. Proline and glycine
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 9
+
+### Biochemistry 31 · term1-bio-kish-theory-054
+
+Which increases P50 in hemoglobin's oxygen-dissociation curve?
+
+A. Decreased CO2 pressure
+B. Increased pH
+C. Decreased temperature
+D. Increased 2,3-BPG
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 9
+
+### Biochemistry 32 · term1-bio-kish-theory-055
+
+Which protein is defective in Ehlers–Danlos syndrome?
+
+A. Myoglobin
+B. Elastase
+C. Collagen
+D. Hemoglobin
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 9
+
+### Biochemistry 33 · term1-bio-kish-theory-056
+
+Which is correctly matched?
+
+A. NADH–vitamin B2
+B. FADH2–vitamin B3
+C. PLP–vitamin B6
+D. TPP–vitamin C
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 9
+
+### Biochemistry 34 · term1-bio-kish-theory-057
+
+Thiamine deficiency causes all except:
+
+A. Cheilosis
+B. Ataxia
+C. Nystagmus
+D. Ophthalmoplegia
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 9
+
+### Biochemistry 35 · term1-bio-kish-theory-058
+
+Which disease is caused by niacin deficiency?
+
+A. Scurvy
+B. Rickets
+C. Pellagra
+D. Pernicious anemia
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 10
+
+### Biochemistry 36 · term1-bio-kish-theory-059
+
+Which is effective in premenstrual syndrome and diabetes?
+
+A. Vitamin B12
+B. Vitamin B9
+C. Vitamin B6
+D. Vitamin B3
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 10
+
+### Biochemistry 37 · term1-bio-kish-theory-060
+
+Which vitamin provides a coenzyme for γ-carboxylation?
+
+A. Vitamin A
+B. Vitamin K
+C. Vitamin C
+D. Vitamin B7
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 10
+
+### Biochemistry 38 · term1-bio-kish-theory-061
+
+Which deficiency causes megaloblastic anemia?
+
+A. Pantothenic acid
+B. Niacin
+C. Folic acid
+D. Retinol
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 10
+
+### Biochemistry 39 · term1-bio-kish-theory-062
+
+The most biologically active form of vitamin K is:
+
+A. Menadione
+B. Menaquinone
+C. Phylloquinone
+D. Phytonadione
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 10
+
+### Biochemistry 40 · term1-bio-kish-theory-063
+
+Which vitamin is a major lipid-soluble antioxidant in cell membranes?
+
+A. Vitamin A
+B. Vitamin D
+C. Vitamin E
+D. Vitamin K
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 10
+
+### Biochemistry 41 · term1-bio-kish-theory-064
+
+Which is common to all phospholipids?
+
+A. Glycerol backbone
+B. Phosphate group
+C. Two fatty-acid tails
+D. Sphingosine backbone
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 11
+
+### Biochemistry 42 · term1-bio-kish-theory-065
+
+Which lipid is a precursor of steroid hormones?
+
+A. Sphingomyelin
+B. Phosphatidylserine
+C. Cholesterol
+D. Triacylglycerol
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 11
+
+### Biochemistry 43 · term1-bio-kish-theory-066
+
+The primary function of HDL is:
+
+A. Transporting cholesterol to peripheral tissues
+B. Transporting triglycerides to liver
+C. Transporting cholesterol from peripheral tissues to liver
+D. Storing excess cholesterol in adipose tissue
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 11
+
+### Biochemistry 44 · term1-bio-kish-theory-067
+
+Besides membrane structure, cholesterol is involved in:
+
+A. Energy storage
+B. Signal transduction
+C. Nerve impulse transmission
+D. Regulation of membrane fluidity
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 11
+
+### Biochemistry 45 · term1-bio-kish-theory-068
+
+Which fatty acid must be supplied in the diet?
+
+A. Palmitic acid
+B. Lauric acid
+C. Linolenic acid
+D. Palmitoleic acid
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 11
+
+### Biochemistry 46 · term1-bio-kish-theory-069
+
+Cephalin consists of:
+
+A. Glycerol, fatty acids, phosphoric acid and choline
+B. Glycerol, fatty acids, phosphoric acid and ethanolamine
+C. Sphingosine, two fatty acids, phosphoric acid and inositol
+D. Sphingosine, fatty acids and serine
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 11
+
+### Biochemistry 47 · term1-bio-kish-theory-070
+
+Glycosphingolipids combine:
+
+A. Ceramide with one or more sugar residues
+B. Glycerol with galactose
+C. Sphingosine with galactose
+D. Sphingosine with phosphoric acid
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 12
+
+### Biochemistry 48 · term1-bio-kish-theory-071
+
+All have 18 carbon atoms except:
+
+A. Linoleic acid
+B. Linolenic acid
+C. Arachidonic acid
+D. Stearic acid
+
+Source: Cell & Molecules · Kish theory photo compilation · PDF page 12
+
+## Answer key and provenance
+
+Source markings and editorial study answers are distinguished below. Ungraded items do not affect scores.
+
+### Biochemistry 1 · term1-bio-kish-theory-024
+
+Key: C — Lower/lower
+
+Editorial study answer: Lower/lower.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 5
+
+### Biochemistry 2 · term1-bio-kish-theory-025
+
+Key: B — Sulfuric acid
+
+Editorial study answer: Sulfuric acid.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 5
+
+### Biochemistry 3 · term1-bio-kish-theory-026
+
+Key: D — Hydrophobic
+
+Editorial study answer: Hydrophobic.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 5
+
+### Biochemistry 4 · term1-bio-kish-theory-027
+
+Key: B — 10
+
+Editorial study answer: 10.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 5
+
+### Biochemistry 5 · term1-bio-kish-theory-028
+
+Key: C — Insulation
+
+Editorial study answer: Insulation.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 5
+
+### Biochemistry 6 · term1-bio-kish-theory-029
+
+Key: D — Disulfide/ionic
+
+Editorial study answer: Disulfide/ionic.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 5
+
+### Biochemistry 7 · term1-bio-kish-theory-030
+
+Key: A — Acid 1: pK = −10.3
+
+Editorial study answer: Acid 1: pK = −10.3.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 5
+
+### Biochemistry 8 · term1-bio-kish-theory-031
+
+Key: Not graded — no reliable scored key
+
+No reliable answer has been established for this source occurrence; retained as an ungraded question.
+
+Key provenance: Unresolved / written response
+
+Provenance note: No reliable scored key. Response is saved without affecting the score.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 6
+
+### Biochemistry 9 · term1-bio-kish-theory-032
+
+Key: C — It is a ketoheptose
+
+Editorial study answer: It is a ketoheptose.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 6
+
+### Biochemistry 10 · term1-bio-kish-theory-033
+
+Key: D — Ribose
+
+Editorial study answer: Ribose.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 6
+
+### Biochemistry 11 · term1-bio-kish-theory-034
+
+Key: B — Glucose
+
+Editorial study answer: Glucose.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 6
+
+### Biochemistry 12 · term1-bio-kish-theory-035
+
+Key: C — D-Mannose and L-mannose
+
+Editorial study answer: D-Mannose and L-mannose.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 6
+
+### Biochemistry 13 · term1-bio-kish-theory-036
+
+Key: B — Glycogen is a homopolysaccharide
+
+Editorial study answer: Glycogen is a homopolysaccharide.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 6
+
+### Biochemistry 14 · term1-bio-kish-theory-037
+
+Key: A — Inulin
+
+Editorial study answer: Inulin.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 6
+
+### Biochemistry 15 · term1-bio-kish-theory-038
+
+Key: C — Chondroitin sulfate
+
+Editorial study answer: Chondroitin sulfate.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 7
+
+### Biochemistry 16 · term1-bio-kish-theory-039
+
+Key: B — Glucose and glucose
+
+Editorial study answer: Glucose and glucose.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 7
+
+### Biochemistry 17 · term1-bio-kish-theory-040
+
+Key: B — Km/Vmax
+
+Editorial study answer: Km/Vmax.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 7
+
+### Biochemistry 18 · term1-bio-kish-theory-041
+
+Key: A — Phosphatase
+
+Editorial study answer: Phosphatase.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 7
+
+### Biochemistry 19 · term1-bio-kish-theory-042
+
+Key: D — Amount catalyzing one micromole substrate per minute
+
+Editorial study answer: Amount catalyzing one micromole substrate per minute.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 7
+
+### Biochemistry 20 · term1-bio-kish-theory-043
+
+Key: A — Breaking bonds
+
+Editorial study answer: Breaking bonds.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 7
+
+### Biochemistry 21 · term1-bio-kish-theory-044
+
+Key: C — Amoxicillin and transpeptidase
+
+Editorial study answer: Amoxicillin and transpeptidase.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 8
+
+### Biochemistry 22 · term1-bio-kish-theory-045
+
+Key: D — They show hyperbolic dependence on substrate concentration
+
+Editorial study answer: They show hyperbolic dependence on substrate concentration.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 8
+
+### Biochemistry 23 · term1-bio-kish-theory-046
+
+Key: B — Decreased Vmax; unchanged Km
+
+Editorial study answer: Decreased Vmax; unchanged Km.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 8
+
+### Biochemistry 24 · term1-bio-kish-theory-047
+
+Key: C — Isoenzyme
+
+Editorial study answer: Isoenzyme.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 8
+
+### Biochemistry 25 · term1-bio-kish-theory-048
+
+Key: C — Leucine
+
+Editorial study answer: Leucine.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 8
+
+### Biochemistry 26 · term1-bio-kish-theory-049
+
+Key: D — Serine and threonine
+
+Editorial study answer: Serine and threonine.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 8
+
+### Biochemistry 27 · term1-bio-kish-theory-050
+
+Key: A — Optically inactive
+
+Editorial study answer: Optically inactive.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 8
+
+### Biochemistry 28 · term1-bio-kish-theory-051
+
+Key: B — Aromatic amino acids
+
+Editorial study answer: Aromatic amino acids.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 9
+
+### Biochemistry 29 · term1-bio-kish-theory-052
+
+Key: B — Its secondary structure is rich in β-sheet
+
+Editorial study answer: Its secondary structure is rich in β-sheet.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 9
+
+### Biochemistry 30 · term1-bio-kish-theory-053
+
+Key: D — Proline and glycine
+
+Editorial study answer: Proline and glycine.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 9
+
+### Biochemistry 31 · term1-bio-kish-theory-054
+
+Key: D — Increased 2,3-BPG
+
+Editorial study answer: Increased 2,3-BPG.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 9
+
+### Biochemistry 32 · term1-bio-kish-theory-055
+
+Key: C — Collagen
+
+Editorial study answer: Collagen.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 9
+
+### Biochemistry 33 · term1-bio-kish-theory-056
+
+Key: C — PLP–vitamin B6
+
+Editorial study answer: PLP–vitamin B6.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 9
+
+### Biochemistry 34 · term1-bio-kish-theory-057
+
+Key: A — Cheilosis
+
+Editorial study answer: Cheilosis.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 9
+
+### Biochemistry 35 · term1-bio-kish-theory-058
+
+Key: C — Pellagra
+
+Editorial study answer: Pellagra.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 10
+
+### Biochemistry 36 · term1-bio-kish-theory-059
+
+Key: Not graded — no reliable scored key
+
+No reliable answer has been established for this source occurrence; retained as an ungraded question.
+
+Key provenance: Unresolved / written response
+
+Provenance note: No reliable scored key. Response is saved without affecting the score.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 10
+
+### Biochemistry 37 · term1-bio-kish-theory-060
+
+Key: B — Vitamin K
+
+Editorial study answer: Vitamin K.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 10
+
+### Biochemistry 38 · term1-bio-kish-theory-061
+
+Key: C — Folic acid
+
+Editorial study answer: Folic acid.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 10
+
+### Biochemistry 39 · term1-bio-kish-theory-062
+
+Key: Not graded — no reliable scored key
+
+Most biologically active is not defined by an endpoint or vitamin-K subtype. Menaquinones and phylloquinone are active vitamin-K forms; phylloquinone and phytonadione are equivalent names. This ranking does not establish a unique study answer.
+
+Key provenance: Unresolved / written response
+
+Provenance note: Editorial study key; not a certified university answer key. | No reliable scored key. Response is saved without affecting the score.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 10
+
+### Biochemistry 40 · term1-bio-kish-theory-063
+
+Key: C — Vitamin E
+
+Editorial study answer: Vitamin E.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 10
+
+### Biochemistry 41 · term1-bio-kish-theory-064
+
+Key: B — Phosphate group
+
+Editorial study answer: Phosphate group.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 11
+
+### Biochemistry 42 · term1-bio-kish-theory-065
+
+Key: C — Cholesterol
+
+Editorial study answer: Cholesterol.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 11
+
+### Biochemistry 43 · term1-bio-kish-theory-066
+
+Key: C — Transporting cholesterol from peripheral tissues to liver
+
+Editorial study answer: Transporting cholesterol from peripheral tissues to liver.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 11
+
+### Biochemistry 44 · term1-bio-kish-theory-067
+
+Key: Not graded — no reliable scored key
+
+No reliable answer has been established for this source occurrence; retained as an ungraded question.
+
+Key provenance: Unresolved / written response
+
+Provenance note: No reliable scored key. Response is saved without affecting the score.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 11
+
+### Biochemistry 45 · term1-bio-kish-theory-068
+
+Key: C — Linolenic acid
+
+Editorial study answer: Linolenic acid.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 11
+
+### Biochemistry 46 · term1-bio-kish-theory-069
+
+Key: B — Glycerol, fatty acids, phosphoric acid and ethanolamine
+
+Editorial study answer: Glycerol, fatty acids, phosphoric acid and ethanolamine.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 11
+
+### Biochemistry 47 · term1-bio-kish-theory-070
+
+Key: A — Ceramide with one or more sugar residues
+
+Editorial study answer: Ceramide with one or more sugar residues.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 12
+
+### Biochemistry 48 · term1-bio-kish-theory-071
+
+Key: C — Arachidonic acid
+
+Editorial study answer: Arachidonic acid.
+
+Key provenance: Editorial study answer
+
+Provenance note: Editorial study key; not a certified university answer key. | Editorial study answer; not an official university key.
+
+Question source: Cell & Molecules · Kish theory photo compilation · page 12

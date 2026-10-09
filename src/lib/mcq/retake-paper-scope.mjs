@@ -7,5 +7,5 @@ export function scopeRetakePaper(paper,scope='biochemistry') {
  return paper;
 }
 export function retakeBankSelection(papers,scope='biochemistry') {
- return {id:`retake-all-${scope}`,title:scope==='full'?'All full Cells & Molecules papers':'All biochemistry-only papers',gradedQuestionIds:[...new Set(papers.flatMap(p=>p.gradedQuestionIds))],independent:true};
+ return {id:`retake-all-${scope}`,title:scope==='full'?'All full Cells & Molecules papers':'All biochemistry-only papers',gradedQuestionIds:[...new Set(papers.flatMap(p=>p.gradedQuestionIds))],independent:true,...(papers.some(p=>p.takeableQuestionIds)?{takeableQuestionIds:[...new Set(papers.flatMap(p=>p.takeableQuestionIds??p.gradedQuestionIds))]}:{})};
 }

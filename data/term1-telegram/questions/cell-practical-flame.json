@@ -1,0 +1,812 @@
+{
+  "paperId": "cell-practical-flame",
+  "questions": [
+    {
+      "number": "1",
+      "page": 1,
+      "prompt": "Flame Photometry is for determining :",
+      "options": [
+        {
+          "id": "A",
+          "text": "Concentration of colored solutions"
+        },
+        {
+          "id": "B",
+          "text": "Concentration of metal ions"
+        },
+        {
+          "id": "C",
+          "text": "Concentration of liquids"
+        },
+        {
+          "id": "D",
+          "text": "Concentration of organic solutions"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 1
+    },
+    {
+      "number": "2",
+      "page": 1,
+      "prompt": "In a titration experiment how do we know the end point has reached?",
+      "options": [
+        {
+          "id": "A",
+          "text": "With an acid"
+        },
+        {
+          "id": "B",
+          "text": "Measuring pH"
+        },
+        {
+          "id": "C",
+          "text": "With a base"
+        },
+        {
+          "id": "D",
+          "text": "Using indicators"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "The visual endpoint is detected using an indicator. Measuring the pH change can also locate an endpoint; either method is accepted.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 2,
+      "acceptedOptionIds": [
+        "B",
+        "D"
+      ]
+    },
+    {
+      "number": "3",
+      "page": 1,
+      "prompt": "Which of the following is insoluble in water?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fructose"
+        },
+        {
+          "id": "B",
+          "text": "Starch"
+        },
+        {
+          "id": "C",
+          "text": "Glucose"
+        },
+        {
+          "id": "D",
+          "text": "Sucrose"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 3
+    },
+    {
+      "number": "4",
+      "page": 1,
+      "prompt": "Which of the following tests is specific for amines, phenols and imidazole?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Xanthoproteic test"
+        },
+        {
+          "id": "B",
+          "text": "Biuret test"
+        },
+        {
+          "id": "C",
+          "text": "Molisch test"
+        },
+        {
+          "id": "D",
+          "text": "Paulys test"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 4
+    },
+    {
+      "number": "5",
+      "page": 1,
+      "prompt": "What is the color of Phenolphthalein in acidic solutions?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Colorless"
+        },
+        {
+          "id": "B",
+          "text": "Blue"
+        },
+        {
+          "id": "C",
+          "text": "Pink"
+        },
+        {
+          "id": "D",
+          "text": "Yellow"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "A",
+      "sourceOrdinal": 5
+    },
+    {
+      "number": "6",
+      "page": 2,
+      "prompt": "Which of the following is used in inorganic chemical analysis ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Colorimetry"
+        },
+        {
+          "id": "B",
+          "text": "Spetrophotometry"
+        },
+        {
+          "id": "C",
+          "text": "Chromatography"
+        },
+        {
+          "id": "D",
+          "text": "Flame Photometry"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "Flame photometry is used for inorganic analysis, but spectrophotometry, colorimetry and chromatographic methods can also analyze inorganic substances. The unrestricted stem does not identify a unique method; this source item is ungraded.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 6,
+      "answerReferences": [
+        "https://www.thermofisher.com/us/en/home/industrial/environmental/environmental-learning-center/contaminant-analysis-information/anion-analysis.html"
+      ]
+    },
+    {
+      "number": "7",
+      "page": 2,
+      "prompt": "Which of the following tests indicates the presence of a reducing sugar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Millons test"
+        },
+        {
+          "id": "B",
+          "text": "Ninhydrin test"
+        },
+        {
+          "id": "C",
+          "text": "Molisch test"
+        },
+        {
+          "id": "D",
+          "text": "Fehling’s test"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 7
+    },
+    {
+      "number": "8",
+      "page": 2,
+      "prompt": "Amax is defined as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "coloured compound absorbs maximum light at a particular wavelength"
+        },
+        {
+          "id": "B",
+          "text": "explains the transmittance of light"
+        },
+        {
+          "id": "C",
+          "text": "it is useful for colorless compounds"
+        },
+        {
+          "id": "D",
+          "text": "relationship between absorbance and concentration"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "A",
+      "sourceOrdinal": 8
+    },
+    {
+      "number": "9",
+      "page": 2,
+      "prompt": "Ninhydrin with evolution of CO2 forms a coloured complex with",
+      "options": [
+        {
+          "id": "A",
+          "text": "Histamine"
+        },
+        {
+          "id": "B",
+          "text": "Serotonin"
+        },
+        {
+          "id": "C",
+          "text": "Peptide bond"
+        },
+        {
+          "id": "D",
+          "text": "α -Amino acids"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 9
+    },
+    {
+      "number": "10",
+      "page": 2,
+      "prompt": "In gel permeation chromatography separation is based on....",
+      "options": [
+        {
+          "id": "A",
+          "text": "Size of molecule"
+        },
+        {
+          "id": "B",
+          "text": "Solubility"
+        },
+        {
+          "id": "C",
+          "text": "Ion exchanging"
+        },
+        {
+          "id": "D",
+          "text": "Affinity"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "A",
+      "sourceOrdinal": 10
+    },
+    {
+      "number": "11",
+      "page": 3,
+      "prompt": "Guanidine group of argentine gives positive test with",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sakaguchi reagent"
+        },
+        {
+          "id": "B",
+          "text": "Molisch’s reagent"
+        },
+        {
+          "id": "C",
+          "text": "Tricholoroacetic acid"
+        },
+        {
+          "id": "D",
+          "text": "Lead acetate"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "A",
+      "sourceOrdinal": 11
+    },
+    {
+      "number": "12",
+      "page": 3,
+      "prompt": "Presence of carbohydrates is confirmed by which test?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Biuret test"
+        },
+        {
+          "id": "B",
+          "text": "Millons test"
+        },
+        {
+          "id": "C",
+          "text": "Molisch test"
+        },
+        {
+          "id": "D",
+          "text": "Ninhydrin test"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "C",
+      "sourceOrdinal": 12
+    },
+    {
+      "number": "13",
+      "page": 3,
+      "prompt": "Millon’s test is for identification of",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tryptophan"
+        },
+        {
+          "id": "B",
+          "text": "Proline"
+        },
+        {
+          "id": "C",
+          "text": "Arginine"
+        },
+        {
+          "id": "D",
+          "text": "Tyrosine"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 13
+    },
+    {
+      "number": "14",
+      "page": 3,
+      "prompt": "The mobile phase in chromatography is :",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solid-solid"
+        },
+        {
+          "id": "B",
+          "text": "Liqid-gas"
+        },
+        {
+          "id": "C",
+          "text": "Solid-gas"
+        },
+        {
+          "id": "D",
+          "text": "Liquid-solid"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 14
+    },
+    {
+      "number": "15",
+      "page": 3,
+      "prompt": "In Mohr pipetes :",
+      "options": [
+        {
+          "id": "A",
+          "text": "Has a single graduation to deliver specific volume"
+        },
+        {
+          "id": "B",
+          "text": "The graduation on these end before the tip"
+        },
+        {
+          "id": "C",
+          "text": "The graduation marks continue to the tip"
+        },
+        {
+          "id": "D",
+          "text": "Are disposable"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 15
+    },
+    {
+      "number": "16",
+      "page": 4,
+      "prompt": "Which of the following tests is specific for albumin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Xanthoproteic test"
+        },
+        {
+          "id": "B",
+          "text": "Millon’s test"
+        },
+        {
+          "id": "C",
+          "text": "Molisch test"
+        },
+        {
+          "id": "D",
+          "text": "Paulys test"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "The source marks Millon’s test, which detects phenolic groups such as tyrosine and is not specific for albumin. The defective specificity claim is not graded.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 16
+    },
+    {
+      "number": "17",
+      "page": 4,
+      "prompt": "Watch Glass is used to :",
+      "options": [
+        {
+          "id": "A",
+          "text": "heat and evaporate liquids"
+        },
+        {
+          "id": "B",
+          "text": "dry and weigh solid compounds"
+        },
+        {
+          "id": "C",
+          "text": "dissolve the solids"
+        },
+        {
+          "id": "D",
+          "text": "crush solids into powders"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A watch glass can hold solids for drying/weighing and can also be used for evaporation; both corresponding choices are accepted.",
+      "answerBasis": "editorial",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 17,
+      "acceptedOptionIds": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "number": "18",
+      "page": 4,
+      "prompt": "Mortar and Pestle are used to :",
+      "options": [
+        {
+          "id": "A",
+          "text": "heat and evaporate liquids"
+        },
+        {
+          "id": "B",
+          "text": "dissolve the solids"
+        },
+        {
+          "id": "C",
+          "text": "dry and weigh solid compounds"
+        },
+        {
+          "id": "D",
+          "text": "crush solids into powders"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 18
+    },
+    {
+      "number": "19",
+      "page": 4,
+      "prompt": "Which of the following is used to dispensing solid chemicals?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spatulas"
+        },
+        {
+          "id": "B",
+          "text": "Forceps"
+        },
+        {
+          "id": "C",
+          "text": "Glass Rods"
+        },
+        {
+          "id": "D",
+          "text": "Mortar"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "A",
+      "sourceOrdinal": 19
+    },
+    {
+      "number": "20",
+      "page": 4,
+      "prompt": "Aromatic amino acids can be detected by",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sakaguchi reaction"
+        },
+        {
+          "id": "B",
+          "text": "Xanthoproteic reaction"
+        },
+        {
+          "id": "C",
+          "text": "Millon-Nasse reaction"
+        },
+        {
+          "id": "D",
+          "text": "Hopkins-Cole reaction"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 20
+    },
+    {
+      "number": "21",
+      "page": 5,
+      "prompt": "Hopkins-Cole test is for identification of",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cysteine"
+        },
+        {
+          "id": "B",
+          "text": "Arginine"
+        },
+        {
+          "id": "C",
+          "text": "Tyrosine"
+        },
+        {
+          "id": "D",
+          "text": "Tryptophan"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 21
+    },
+    {
+      "number": "22",
+      "page": 5,
+      "prompt": "Iodine solution produces no color with",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cellulose"
+        },
+        {
+          "id": "B",
+          "text": "Dextrin"
+        },
+        {
+          "id": "C",
+          "text": "Starch"
+        },
+        {
+          "id": "D",
+          "text": "Glycogen"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "A",
+      "sourceOrdinal": 22
+    },
+    {
+      "number": "23",
+      "page": 5,
+      "prompt": "Which of the following indicates the presence of amino acids?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Molisch test"
+        },
+        {
+          "id": "B",
+          "text": "Ninhydrin test"
+        },
+        {
+          "id": "C",
+          "text": "Fehling’s test"
+        },
+        {
+          "id": "D",
+          "text": "Millons test"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "B",
+      "sourceOrdinal": 23
+    },
+    {
+      "number": "24",
+      "page": 5,
+      "prompt": "The purple ring of Molisch reaction is due to",
+      "options": [
+        {
+          "id": "A",
+          "text": "Furfural + α Napthol"
+        },
+        {
+          "id": "B",
+          "text": "Furfurol + H2SO4 + α -Naphthol"
+        },
+        {
+          "id": "C",
+          "text": "Furfural"
+        },
+        {
+          "id": "D",
+          "text": "°C Napthol"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "A",
+      "sourceOrdinal": 24
+    },
+    {
+      "number": "25",
+      "page": 5,
+      "prompt": "A positive Benedict’s test is not given by",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maltose"
+        },
+        {
+          "id": "B",
+          "text": "Lactose"
+        },
+        {
+          "id": "C",
+          "text": "Glucose"
+        },
+        {
+          "id": "D",
+          "text": "Sucrose"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "D",
+      "sourceOrdinal": 25
+    },
+    {
+      "number": "26",
+      "page": 6,
+      "prompt": "What is the color of Phenolphthalein in basic solutions :",
+      "options": [
+        {
+          "id": "A",
+          "text": "Yellow"
+        },
+        {
+          "id": "B",
+          "text": "Colorless"
+        },
+        {
+          "id": "C",
+          "text": "Pink"
+        },
+        {
+          "id": "D",
+          "text": "Blue"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Source report answer mark aligned to its option.",
+      "answerBasis": "source-reviewed",
+      "subject": "biochemistry",
+      "sourceAnswer": "C",
+      "sourceOrdinal": 26
+    },
+    {
+      "number": "27",
+      "page": 6,
+      "prompt": "All the following is true regarding the basic principle of spectrophotometer except ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It depends on how much a chemical substance absorbs light"
+        },
+        {
+          "id": "B",
+          "text": "Its done over a certain range of wavelength"
+        },
+        {
+          "id": "C",
+          "text": "is one of the most useful qualitative analysis"
+        },
+        {
+          "id": "D",
+          "text": "It depends on how much a substance transmits light"
+        }
+      ],
+      "correctOptionId": null,
+      "explanation": "Spectrophotometry supports qualitative identification as well as quantitative analysis. Calling qualitative analysis false is not justified by the unrestricted wording, so no unique exception is established; this source item is ungraded.",
+      "answerBasis": "unresolved",
+      "subject": "biochemistry",
+      "sourceAnswer": "C",
+      "sourceOrdinal": 27,
+      "answerReferences": [
+        "https://www.shimadzu.com/an/sites/shimadzu.com.an/files/pim/pim_document_file/applications/application_note/11407/l546.pdf"
+      ]
+    }
+  ],
+  "notes": [
+    "All source question occurrences retained in printed order. Check marks were mapped by PDF coordinates. Scientifically defective albumin-specific items are ungraded."
+  ],
+  "coverage": {
+    "sourceQuestionOccurrences": 27,
+    "importedQuestionOccurrences": 27,
+    "gradedQuestionOccurrences": 24,
+    "unresolvedQuestionOccurrences": 3,
+    "complete": true
+  }
+}

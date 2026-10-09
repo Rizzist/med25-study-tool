@@ -69,7 +69,8 @@ test('browser PDF renderer receives only the selected limb and uses distinct cac
 });
 
 test('every published export parses into its transcribed questions and graded keys',()=>{
-  assert.equal(collections.length,110);
+  assert.equal(collections.filter(c=>!c.importBatch).length,110);
+  assert(collections.some(c=>c.importBatch==='term1-2026-10-09'));
   for(const item of collections){
     const questions=parseExport(read(item.downloads.questions)),keys=parseExport(read(item.downloads.answerKey)),both=parseExport(read(item.downloads.questionsAndKey));
     assert.equal(questions.title,item.title,item.id);

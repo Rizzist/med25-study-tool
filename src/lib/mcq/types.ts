@@ -60,7 +60,7 @@ export type MCQQuestion = {
   options: MCQOption[];
   correctOptionId: string;
   acceptedOptionIds?: string[];
-  answerReview?: { basis: 'source-reviewed' | 'ai-inferred'; confidence: 'high' | 'medium' | 'low'; canonicalSourceId: string; auditedAt: string; evidence: string[] };
+  answerReview?: { basis: 'source-reviewed' | 'ai-inferred' | 'unresolved'; confidence: 'high' | 'medium' | 'low'; canonicalSourceId: string; auditedAt: string; evidence: string[] };
   acceptedFreeText?: string[];
   explanation: string;
   distractorExplanations: Record<string, string>;

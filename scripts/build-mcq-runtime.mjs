@@ -1,5 +1,6 @@
 // Build-time only: preserve legacy course selection while keeping the 64 MB
 // authoring corpus and lesson/concept payloads out of the application runtime.
+import './build-term1-papers.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
@@ -45,10 +46,11 @@ function enrich(q) {
 }
 const past=read('data/mcq-refactor/past-source-catalog.json');
 const finals={};
+const importedFinals=read('data/term1-telegram/banks.json');
 for(const [key,questions] of Object.entries(bank.finalExams)) {
   if(key.endsWith(':downloaded-core'))continue;
-  const approved=new Set(past.collections.filter(c=>c.bankKey===key).flatMap(c=>c.gradedQuestionIds));
-  const filtered=questions.filter(q=>approved.has(q.id)&&q.status==='verified'&&!q.tags.includes('distilled-core')).map(enrich);
+  const approved=new Set(past.collections.filter(c=>c.bankKey===key).flatMap(c=>c.takeableQuestionIds??c.gradedQuestionIds));
+  const filtered=[...questions,...(importedFinals[key]??[])].filter(q=>approved.has(q.id)&&q.status==='verified'&&!q.tags.includes('distilled-core')).map(enrich);
   const version=hash(filtered),file='data/mcq-runtime/final-'+key.replaceAll(':','-')+'.json';
   write(file,filtered);finals[key]={file,version,count:filtered.length};
 }

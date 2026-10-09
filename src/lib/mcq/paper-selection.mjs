@@ -12,14 +12,15 @@ export function readCombinedSelections(raw) {
 export function paperAttemptSummary(progress,exam,collection) {
   const saved=progress?.sessions?.[finalPaperKey(exam,collection.id)];
   if(!saved||!Array.isArray(saved.questionIds)||!saved.answers||typeof saved.answers!=='object')return null;
-  const ids=new Set(collection.gradedQuestionIds);
+  const ids=new Set(collection.takeableQuestionIds??collection.gradedQuestionIds);
+  const gradedIds=new Set(collection.gradedQuestionIds);
   const answers=Object.entries(saved.answers).filter(([id,a])=>ids.has(id)&&a&&typeof a.selectedOptionId==='string'&&typeof a.correct==='boolean');
-  return {answered:answers.length,correct:answers.filter(([,a])=>a.correct).length,total:ids.size,completedAt:typeof saved.completedAt==='string'&&answers.length===ids.size?saved.completedAt:null};
+  return {answered:answers.length,correct:answers.filter(([id,a])=>gradedIds.has(id)&&a.correct).length,total:ids.size,...(collection.takeableQuestionIds?{gradedTotal:gradedIds.size,ungraded:answers.filter(([id])=>!gradedIds.has(id)).length}:{}),completedAt:typeof saved.completedAt==='string'&&answers.length===ids.size?saved.completedAt:null};
 }
 export async function combinedSourceSelection(collections, selectedIds) {
-  const selected=collections.filter(c=>selectedIds.includes(c.id)&&c.gradedQuestionIds.length).sort((a,b)=>a.id.localeCompare(b.id));
-  if(!selected.length)throw new Error('Select at least one paper with scored questions.');
+  const selected=collections.filter(c=>selectedIds.includes(c.id)&&(c.takeableQuestionIds??c.gradedQuestionIds).length).sort((a,b)=>a.id.localeCompare(b.id));
+  if(!selected.length)throw new Error('Select at least one paper with questions.');
   const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(selected.map(c=>c.id))));
   const hash=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');
-  return {id:'combined-'+hash,title:`Combined papers · ${selected.length} source collections`,gradedQuestionIds:[...new Set(selected.flatMap(c=>c.gradedQuestionIds))],sourcePaperIds:selected.map(c=>c.id)};
+  return {id:'combined-'+hash,title:`Combined papers · ${selected.length} source collections`,gradedQuestionIds:[...new Set(selected.flatMap(c=>c.gradedQuestionIds))],sourcePaperIds:selected.map(c=>c.id),...(selected.some(c=>c.takeableQuestionIds)?{takeableQuestionIds:[...new Set(selected.flatMap(c=>c.takeableQuestionIds??c.gradedQuestionIds))],independent:true}:{})};
 }

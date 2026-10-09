@@ -20,6 +20,7 @@ const practice=jsonl('data/bank/questions/biochemistry-retake.jsonl'),finals=jso
 const course=read(`public/study/reviews/${exam}.json`),anchors=read(`public/study/guided/${exam}.json`);
 const audit=read('data/biochemistry-retake/audit.json');
 const papers=read('public/study/past-paper-downloads/catalog.json').courses.find(c=>c.id===exam);
+const legacyPapers=papers.collections.filter(p=>!p.importBatch);
 test('Retake appears in Term 2 but preserves its original source identity and guidance modes',()=>{
  assert(isExamId(exam));assert(!isTerm2Exam(exam));assert(hasReviewCurriculum(exam));assert(supportsGuidedExam(exam));
  assert.equal(examTerm(exam),2);assert.equal(examTerm('july29'),1);assert.equal(examTerm('term2-biochemistry'),2);
@@ -45,8 +46,8 @@ test('All exported MCQs satisfy the current strict schema',()=>{
  const validate=new Ajv2020({allErrors:true}).compile(read('schemas/mcq-question.schema.json'));
  for(const q of [...practice,...finals]){assert(validate(q),q.id+' '+JSON.stringify(validate.errors));assert(q.options.some(o=>o.id===q.correctOptionId));for(const id of q.acceptedOptionIds??[])assert(q.options.some(o=>o.id===id));}
 });
-test('Four complete source papers have contiguous numbering; biochemistry excludes other subjects',()=>{
- assert.equal(finals.length,314);assert.equal(papers.collections.length,4);
+test('Four legacy complete source papers retain contiguous numbering; biochemistry excludes other subjects',()=>{
+ assert.equal(finals.length,314);assert.equal(legacyPapers.length,4);assert.equal(papers.collections.length,28);
  const extracts=read('data/biochemistry-retake/full-source-extract.json');
  for(const p of extracts){const exported=finals.filter(q=>q.id.startsWith(`retake-final-${p.id}-q`));assert.deepEqual(exported.map(q=>Number(q.id.match(/q(\d+)$/)[1])).sort((a,b)=>a-b),p.questions.map(r=>r.number));const c=papers.collections.find(c=>c.id===`retake-${p.id}`);assert.equal(c.gradedQuestionCount,p.questions.filter(q=>q.biochemistry).length);assert.equal(c.fullPaper.gradedQuestionCount,p.questions.length);assert(c.fullPaper.independent);for(const id of c.gradedQuestionIds)assert.equal(finals.find(q=>q.id===id).subject,'biochemistry');}
  for(const q of finals){assert(q.tags.includes('past-paper'));assert(!q.source.title.includes('PharmD'));assert(!q.tags.includes('distilled-core'));}
@@ -81,11 +82,11 @@ test('Every confirmed chapter has substantial practice and every item belongs to
  for(const c of chapters){assert.equal(c.questionCount,c.questionIds.length);for(const id of c.questionIds)assert.equal(course.questions[id].sectionId,`biochemistry-retake/${c.id}`);if(DEFAULT_RETAKE_CHAPTER_IDS.includes(c.id))assert(c.questionCount>=25,`${c.id} needs at least25 substantive questions; found${c.questionCount}`);}
  for(const q of practice.filter(q=>q.id.startsWith('retake-depth-'))){assert(q.source.title&&q.source.chapter);assert(q.explanation.length>50);assert.equal(new Set(q.options.map(o=>o.text.toLowerCase().trim())).size,4);assert(!q.acceptedOptionIds);assert.equal(q.options.filter(o=>o.id===q.correctOptionId).length,1);for(const o of q.options.filter(o=>o.id!==q.correctOptionId))assert(q.distractorExplanations[o.id]?.length>=20);assert(course.questions[q.id].sectionId);assert(resolveGuidedReference(course,anchors,q.id));}
 });
-test('Paper downloads parse into exactly the scored rows and keep provenance and images',()=>{
- for(const p of papers.collections.flatMap(p=>[p,p.fullPaper])){const q=parseExport(text('public'+p.downloads.questions)),both=parseExport(text('public'+p.downloads.questionsAndKey));assert.equal(q.questions.length,p.gradedQuestionCount);assert.equal(both.keys.length,p.gradedQuestionCount);assert.deepEqual(q.questions.map(q=>q.id),p.gradedQuestionIds);assert(q.intro.join(' ').includes('not certified university keys'));for(const r of q.questions)assert(r.fields.Source);}
+test('Paper downloads retain all takeable rows, including ungraded imports, and provenance',()=>{
+ for(const p of papers.collections.flatMap(p=>[p,p.fullPaper])){const q=parseExport(text('public'+p.downloads.questions)),both=parseExport(text('public'+p.downloads.questionsAndKey));const ids=p.takeableQuestionIds??p.gradedQuestionIds;assert.equal(q.questions.length,ids.length);assert.equal(both.keys.length,ids.length);assert.deepEqual(q.questions.map(q=>q.id),ids);if(!p.importBatch)assert(q.intro.join(' ').includes('not certified university keys'));else assert(both.keyIntro.join(' ').includes('Ungraded items do not affect scores'));for(const r of q.questions)assert(r.fields.Source);}
 });
 test('Guided paper and combined attempts persist independently and report review sections',async()=>{
- const combined=await combinedSourceSelection(papers.collections,papers.collections.map(p=>p.id));assert.equal(combined.gradedQuestionIds.length,243);
+ const combined=await combinedSourceSelection(legacyPapers,legacyPapers.map(p=>p.id));assert.equal(combined.gradedQuestionIds.length,243);
  const saved={id:combined.id,exam,sourcePaperIds:combined.sourcePaperIds};assert.deepEqual(readCombinedSelections(JSON.stringify([saved])),[saved]);
  for(const id of [undefined,papers.collections[0].id,combined.id]){
   const q=finals[0],stamp='2026-09-30T12:00:00Z',key=finalPaperKey(exam,id);
@@ -99,7 +100,7 @@ test('Guided paper and combined attempts persist independently and report review
  assert.equal(rows.reduce((n,r)=>n+r.correct,0),1);
 });
 test('Full and biochemistry scopes keep separate paper, combined and all-bank results',async()=>{
- const bio=papers.collections.map(p=>scopeRetakePaper(p,'biochemistry')),full=papers.collections.map(p=>scopeRetakePaper(p,'full'));
+ const bio=legacyPapers.map(p=>scopeRetakePaper(p,'biochemistry')),full=legacyPapers.map(p=>scopeRetakePaper(p,'full'));
  assert.deepEqual(bio.map(p=>p.id),['retake-cell-block','retake-february-2021','retake-biochemistry-2022','retake-september-2021']);
  for(let i=0;i<4;i++)assert.notEqual(finalPaperKey(exam,bio[i].id),finalPaperKey(exam,full[i].id));
  const combined=await combinedSourceSelection(full,full.map(p=>p.id));assert.equal(combined.gradedQuestionIds.length,314);

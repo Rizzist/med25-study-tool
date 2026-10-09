@@ -399,3 +399,5 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 .limb-paper-scope small{flex-basis:100%;font-size:.78rem;color:var(--muted,#68766c)}
 .limb-paper-scope button{min-height:40px;padding:8px 14px}
 @media(max-width:600px){.limb-paper-scope{padding:8px}.limb-paper-scope button{flex:1;padding:8px;font-size:.82rem}}
+
+.paper-written-response{display:grid;gap:12px;margin:20px 0}.paper-written-response textarea{min-height:130px;padding:14px;border:1px solid #cbd6cc;border-radius:12px;font:inherit}.instant-feedback.ungraded{background:#f7f5e9;border-color:#d4cdb4}
