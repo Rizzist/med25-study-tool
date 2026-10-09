@@ -43,20 +43,23 @@ export function RetakeCoreCard({saved,onOpen}:{saved:unknown;onOpen:(selection:E
     const previous=paperAttemptSummary(saved,'term1-biochemistry-retake',selection);
     return <div className="core-scope-launch">
       <button type="button" className={main?'primary':'pill'} onClick={()=>onOpen(selection)}>{previous?previous.completedAt?'Results & review':'Resume':'Take exam'} · {selection.gradedQuestionIds.length}</button>
-      {previous&&<><small>{previous.completedAt?`${previous.correct}/${previous.total} correct`:`${previous.answered}/${previous.total} answered`}</small><button type="button" className="pill small" onClick={()=>onOpen(selection,true)}>New attempt</button></>}
+      {previous&&<>{!main&&<small>{previous.completedAt?`${previous.correct}/${previous.total} correct`:`${previous.answered}/${previous.total} answered`}</small>}<button type="button" className="pill small" onClick={()=>onOpen(selection,true)}>New attempt</button></>}
     </div>;
   }
-  return <div className="retake-core-card"><PastPaperCard featured badge="Start here" label="Core exam · repeated past questions" title={manifest.title??'Biochemistry I Core Exam'} note={manifest.methodology}>
-    <p className="paper-lead"><b>{manifest.questions.length} distinct repeated questions</b>. {manifest.sourceFamilyCount} exam source families reviewed; each repeated question appears once.</p>
+  const previous=paperAttemptSummary(saved,'term1-biochemistry-retake',full);
+  return <div className="retake-core-card"><PastPaperCard featured badge="★ Start here" label="Core exam" title={manifest.title??'Biochemistry I Core Exam'} note={manifest.methodology}>
+    <p className="paper-counts"><b>{manifest.questions.length}</b> distinct repeated questions</p>
+    <p className="paper-saved-result">{previous?previous.completedAt?`${previous.correct}/${previous.total} correct`:`${previous.answered}/${previous.total} answered · saved on this device`:'Not attempted yet'}</p>
     <div className="paper-card-actions">{launch(full,true)}</div>
     <CoreDownloadPills manifest={manifest} selection={full}/>
+    <details className="retake-core-options"><summary>Chapters &amp; sources</summary>
     <details className="core-section-details"><summary>Focus a chapter</summary><div className="core-section-picker">
       <label className="mcq-sr-only" htmlFor="retake-core-chapter">Core Exam chapter</label>
       <select id="retake-core-chapter" value={scope} onChange={event=>setScope(event.target.value)}><option value="">Choose a chapter…</option>{manifest.sections.filter(s=>s.count>0).map(s=><option key={s.id} value={s.id}>{s.title} · {s.count}</option>)}</select>
       {section&&launch(section)}
     </div>{section&&<CoreDownloadPills manifest={manifest} selection={section}/>}</details>
     <details className="core-evidence"><summary>Repeated questions and source evidence</summary>
-      <p>{manifest.sourceQuestionCount} in-scope source questions were reviewed. Reordered copies count as one family; recall notes and student practice do not add exam recurrence votes. Counts describe these sources, not exam predictions.</p>
+      <p>{manifest.sourceQuestionCount} in-scope source questions and {manifest.sourceFamilyCount} exam source families were reviewed. Reordered copies count as one family; recall notes and student practice do not add exam recurrence votes. Counts describe these sources, not exam predictions.</p>
       <div className="core-pattern-list">{manifest.questions.map(row=><details key={row.questionId}><summary><span>{row.sourceCollectionCount} source families</span>{row.questionText||row.reason}</summary>
         <p>{row.sectionTitle} · {row.reason}</p><ul>{row.members.map(member=><li key={member.questionId}><a href={member.sourceUrl} target="_blank" rel="noreferrer">{manifest.papers.find(p=>p.id===member.paperId)?.title??member.paperId} · Q{member.sourceNumber}</a></li>)}</ul>
       </details>)}</div>
@@ -64,6 +67,6 @@ export function RetakeCoreCard({saved,onOpen}:{saved:unknown;onOpen:(selection:E
     <details className="retake-core-originals"><summary>Complete source originals</summary><p>Full source papers retain their original questions and annotations.</p><ul>{manifest.papers.map(paper=><li key={paper.id}>
       <a href={paper.url} target="_blank" rel="noreferrer">{paper.title}</a>
       {/\.pdf(?:[?#]|$)/i.test(paper.url)?<CachedPdfDownload href={paper.url}><StudyIcon name="download"/>Original PDF</CachedPdfDownload>:<a className="pill" href={paper.url} download><StudyIcon name="download"/>Original document</a>}
-    </li>)}</ul></details>
+    </li>)}</ul></details></details>
   </PastPaperCard></div>;
 }

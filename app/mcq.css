@@ -403,9 +403,12 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 .paper-written-response{display:grid;gap:12px;margin:20px 0}.paper-written-response textarea{min-height:130px;padding:14px;border:1px solid #cbd6cc;border-radius:12px;font:inherit}.instant-feedback.ungraded{background:#f7f5e9;border-color:#d4cdb4}
 
 /* Biochemistry I Retake: one deduplicated Core and its source-backed guide. */
-.retake-core-card{min-width:0;grid-column:1/-1}
-.mcq-app .mcq-content .retake-core-card article.past-paper-card.featured{position:relative;overflow:hidden;border-color:#cba94e;background:linear-gradient(125deg,#fff7d7 0%,#ffedb9 42%,#f4c75b 72%,#fff7d7 100%);background-size:240% 100%;animation:retake-core-shine 9s ease-in-out infinite;box-shadow:0 2px 18px #b6943320}
+.retake-core-card{min-width:0;display:flex}
+.mcq-app .mcq-content .retake-core-card article.past-paper-card.featured{flex:1;position:relative;border-color:#cba94e;background:linear-gradient(125deg,#fff7d7 0%,#ffedb9 42%,#f4c75b 72%,#fff7d7 100%);background-size:240% 100%;animation:retake-core-shine 9s ease-in-out infinite;box-shadow:0 2px 18px #b6943320}
 .retake-core-card .past-paper-badge{background:#eacb71;color:#49360b}
+.retake-core-card .past-paper-note p{left:auto;right:0}
+.retake-core-options>summary{cursor:pointer;font-size:12px;font-weight:650;color:#725517;padding-block:6px}
+.retake-core-options[open]{max-height:420px;overflow:auto}
 .retake-core-card .core-section-details>summary,.retake-core-originals>summary{cursor:pointer;min-height:36px;align-content:center;font-size:12px;font-weight:650;color:#725517}
 .retake-core-card .core-pattern-list summary{overflow-wrap:anywhere}
 .retake-core-originals ul{padding:0;list-style:none;display:grid;gap:8px}
