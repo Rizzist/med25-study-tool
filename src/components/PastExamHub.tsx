@@ -21,6 +21,7 @@ import {scopeCvsDownloadCollection,cvsTopicMapReady} from '@/src/lib/mcq/cvs-pap
 const BiochemistryCoreCard=dynamic(()=>import('./BiochemistryCoreCard').then(m=>m.BiochemistryCoreCard),{loading:()=> <p role="status" className="mcq-loading">Loading Core Exam…</p>});
 const CvsPastExams=dynamic(()=>import('./CvsPastExams').then(m=>m.CvsPastExams),{loading:()=> <p role="status" className="mcq-loading">Loading CVS paper tools…</p>});
 const FinalExam=dynamic(()=>import('./FinalExam').then(m=>m.FinalExam),{loading:()=> <p role="status" className="mcq-loading">Loading selected paper…</p>});
+const TermOneSourceLibrary=dynamic(()=>import('./TermOneSourceLibrary').then(m=>m.TermOneSourceLibrary));
 const NutritionArchive=dynamic(()=>import('./NutritionExam').then(m=>m.NutritionPaperArchive));
 const ReligionArchive=dynamic(()=>import('./ReligionExam').then(m=>m.ReligionPaperArchive));
 type Collection=DownloadCollection;
@@ -130,6 +131,7 @@ export function PastExamHub({exam,onSessionActiveChange,cvsScope='all'}:{exam:Ex
       setLaunchGuidance(mode);setIntent(pendingStart.intent);setSelected(pendingStart.id);setPendingStart(null);window.scrollTo({top:0,behavior:'instant'});
     }}/>}
     {head}
+    {(exam==='july25'||exam==='july29'||exam==='term1-biochemistry-retake')&&<TermOneSourceLibrary key={exam} exam={exam}/>}
     {exam==='term1-biochemistry-retake'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['biochemistry','full'] as RetakePaperScope[]).map(scope=><button type="button" key={scope} disabled={scope==='full'&&!fullRetakeAvailable} className={retakeScope===scope?'primary':'pill'} aria-pressed={retakeScope===scope} onClick={()=>{setRetakeScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='biochemistry'?'Biochemistry only':'Full paper'}</button>)}<small>{!fullRetakeAvailable?'Reconnect and reload to download the full-paper catalog. ':''}Full paper includes the original physiology and histology questions where present. Both options support guided or unguided study, scoped downloads and separate saved results. Practice remains biochemistry only.</small></fieldset>}
     {exam==='term2-limbs'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['all','upper','lower'] as LimbScope[]).map(scope=><button type="button" key={scope} className={limbScope===scope?'primary':'pill'} aria-pressed={limbScope===scope} onClick={()=>{setLimbScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='all'?'Full':scope==='upper'?'Upper only':'Lower only'}</button>)}<small>Full includes every scored question, including spine and general anatomy in mixed papers. Upper/Lower filters questions and bundle PDFs; each scope saves separate results. Individual paper downloads and original scans remain complete.</small></fieldset>}
     {!course.collections.length?<div className="mcq-empty"><StudyIcon name="papers"/><b>No past papers imported yet</b><p>{course.emptyReason||'Practice MCQs are available, but they are not past-exam questions.'}</p></div>:<>
