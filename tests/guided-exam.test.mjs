@@ -111,7 +111,8 @@ test('Retake Core leads the paper grid while other course Core cards remain avai
   const grid=hub.split('<div className="paper-grid">')[1];
   assert(grid);
   assert.match(grid,/^\s*\{exam==='term1-biochemistry-retake'&&<RetakeCoreCard/);
-  assert.match(grid,/RetakeCoreCard[^]*RetakeDistilledGuide[^]*shownPapers\.map/);
+  assert.match(grid,/RetakeCoreCard[^]*shownPapers\.map/);
+  assert.doesNotMatch(hub,/RetakeDistilledGuide/);
   for(const exam of ['term2-biochemistry','term2-nutrition','term2-respiratory'])assert(grid.includes(`exam==='${exam}'&&<BiochemistryCoreCard`));
   assert.match(card,/core-section-details/);
 });
