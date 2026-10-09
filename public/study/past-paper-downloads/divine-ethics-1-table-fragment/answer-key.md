@@ -30,7 +30,7 @@ Source: Original Q3; source PDF page 2.
 Divine Ethics 1 · photographed fragment Q3–12; original Q 3; source PDF page 2.
 /study/divine-ethics/references/first-term-lessons.pdf#page=1
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
-/study/reviews/divine-ethics.pdf#page=9 — Remembrance of the heart and the apple case. Related teaching concept; not a claim that the review reproduces the original question.
+/study/reviews/divine-ethics.pdf#page=19 — Remembrance of the heart and the apple case. Related teaching concept; not a claim that the review reproduces the original question.
 
 ### 4 · divine-ethics-1-table-fragment-q004
 

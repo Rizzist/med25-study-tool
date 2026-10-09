@@ -410,7 +410,7 @@ Divine Ethics · 99-item compilation · relevant selection; original Q 1; source
 /study/divine-ethics/references/first-term-lessons.pdf#page=10
 /study/divine-ethics/references/first-term-lessons.pdf#page=11
 /study/divine-ethics/references/first-term-lessons.pdf#page=12
-/study/reviews/divine-ethics.pdf#page=8 — Trust in God, effort and five signs. Dependent means and the example of medicine, review p. 8.
+/study/reviews/divine-ethics.pdf#page=16 — Trust in God, effort and five signs. Dependent means and the example of medicine, review p. 8.
 
 ### 4 · divine-ethics-compilation-99-selection-q004
 
@@ -618,7 +618,7 @@ Divine Ethics · 99-item compilation · relevant selection; original Q 36; sourc
 /study/divine-ethics/references/first-term-lessons.pdf#page=3
 /study/divine-ethics/references/first-term-lessons.pdf#page=4
 /study/divine-ethics/references/first-term-lessons.pdf#page=5
-/study/reviews/divine-ethics.pdf#page=16 — Earlier packet: Self-knowledge and the purpose of self-building. The review lists virtues and opposing vices; the Arabic terms come from the source question.
+/study/reviews/divine-ethics.pdf#page=6 — Earlier packet: Self-knowledge and the purpose of self-building. The review lists virtues and opposing vices; the Arabic terms come from the source question.
 
 ### 40 · divine-ethics-compilation-99-selection-q040
 
@@ -681,7 +681,7 @@ Source: Original Q70; source PDF page 13.
 Divine Ethics · 99-item compilation · relevant selection; original Q 70; source PDF page 13.
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
-/study/reviews/divine-ethics.pdf#page=5 — Sincerity, ostentation and dependent means. Outwardly good actions can be spoiled by their motive, review p. 5.
+/study/reviews/divine-ethics.pdf#page=11 — Sincerity, ostentation and dependent means. Outwardly good actions can be spoiled by their motive, review p. 5.
 
 ### 71 · divine-ethics-compilation-99-selection-q071
 
@@ -696,7 +696,7 @@ Source: Original Q71; source PDF page 13.
 Divine Ethics · 99-item compilation · relevant selection; original Q 71; source PDF page 13.
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
-/study/reviews/divine-ethics.pdf#page=13 — Immediate repentance, habits and moral development. Small, sustained good actions versus an abandoned impressive act, review p. 13.
+/study/reviews/divine-ethics.pdf#page=29 — Immediate repentance, habits and moral development. Small, sustained good actions versus an abandoned impressive act, review p. 13.
 
 ### 72 · divine-ethics-compilation-99-selection-q072
 
@@ -728,7 +728,7 @@ Source: Original Q73; source PDF page 14.
 Divine Ethics · 99-item compilation · relevant selection; original Q 73; source PDF page 14.
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
-/study/reviews/divine-ethics.pdf#page=5 — Sincerity, ostentation and dependent means. Intention gives the action its moral character; the exact body/spirit analogy is in the source papers.
+/study/reviews/divine-ethics.pdf#page=11 — Sincerity, ostentation and dependent means. Intention gives the action its moral character; the exact body/spirit analogy is in the source papers.
 
 ### 74 · divine-ethics-compilation-99-selection-q074
 
@@ -759,7 +759,7 @@ Source: Original Q75; source PDF page 14.
 Divine Ethics · 99-item compilation · relevant selection; original Q 75; source PDF page 14.
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
-/study/reviews/divine-ethics.pdf#page=5 — Sincerity, ostentation and dependent means. Intention versus money/status or outward appearance, review pp. 5–6.
+/study/reviews/divine-ethics.pdf#page=11 — Sincerity, ostentation and dependent means. Intention versus money/status or outward appearance, review pp. 5–6.
 
 ### 77 · divine-ethics-compilation-99-selection-q077
 

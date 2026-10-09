@@ -49,7 +49,7 @@ Divine Ethics · 2021 report · relevant selection; original Q 2; source PDF pag
 /study/divine-ethics/references/first-term-lessons.pdf#page=6
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
 /study/divine-ethics/references/first-term-lessons.pdf#page=8
-/study/reviews/divine-ethics.pdf#page=16 — Earlier packet: Self-knowledge and the purpose of self-building. Reason and knowledge guide ethical self-building; review p. 16.
+/study/reviews/divine-ethics.pdf#page=6 — Earlier packet: Self-knowledge and the purpose of self-building. Reason and knowledge guide ethical self-building; review p. 16.
 
 ### 5 · divine-ethics-2021-report-selection-q005
 
@@ -200,7 +200,7 @@ Divine Ethics · 2021 report · relevant selection; original Q 15; source PDF pa
 /study/divine-ethics/references/first-term-lessons.pdf#page=6
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
 /study/divine-ethics/references/first-term-lessons.pdf#page=8
-/study/reviews/divine-ethics.pdf#page=16 — Earlier packet: Self-knowledge and the purpose of self-building. Identity, origin, destination and purpose are the guiding questions on review p. 16.
+/study/reviews/divine-ethics.pdf#page=6 — Earlier packet: Self-knowledge and the purpose of self-building. Identity, origin, destination and purpose are the guiding questions on review p. 16.
 
 ### 16 · divine-ethics-2021-report-selection-q016
 
@@ -233,7 +233,7 @@ Divine Ethics · 2021 report · relevant selection; original Q 17; source PDF pa
 /study/divine-ethics/references/first-term-lessons.pdf#page=9
 /study/divine-ethics/references/first-term-lessons.pdf#page=10
 Primary text, Quran 24:37: https://quran.com/24/37
-/study/reviews/divine-ethics.pdf#page=4 — Planning, organization and the value of time. Work, worship and rest are balanced by needs and priorities, not necessarily equal durations, review pp. 4–5.
+/study/reviews/divine-ethics.pdf#page=7 — Planning, organization and the value of time. Work, worship and rest are balanced by needs and priorities, not necessarily equal durations, review pp. 4–5.
 
 ### 18 · divine-ethics-2021-report-selection-q018
 

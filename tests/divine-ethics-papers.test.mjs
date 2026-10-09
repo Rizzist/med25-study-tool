@@ -150,7 +150,7 @@ test('expanded source selections preserve numbering, options, corrections and ho
  const numbered=questions.filter(q=>q.id.startsWith('divine-ethics-2017-additional-selection-'));
  assert(numbered.every(q=>q.source.chapter.startsWith('Source item')));
  assert.equal(cards.find(c=>c.id==='divine-ethics-2017-additional-selection').originalOrderClaim,false);
- assert.equal(createHash('sha256').update(fs.readFileSync(new URL('../public/study/reviews/divine-ethics.pdf',import.meta.url))).digest('hex'),'24cb2e45e92f3125fde928b0fa6a391b651c577baf3dae2f101abae267982ad6');
+ assert.equal(createHash('sha256').update(fs.readFileSync(new URL('../public/study/reviews/divine-ethics.pdf',import.meta.url))).digest('hex'),'84921e391f83147ea2c35c95981d273bcce1db2f8086ab26477b9f98b63a5ab7');
 });
 test('new photo bundles contain all original pages and every original source is downloadable',async()=>{
  const manifest=read('data/divine-ethics/paper-source-manifest.json');

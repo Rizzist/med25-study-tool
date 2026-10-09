@@ -151,7 +151,7 @@ Divine Ethics · 2017 compilation · additional questions; source item 7; source
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
 Nahjul Balagha, saying 227: https://al-islam.org/nahjul-balagha-part-2-letters-and-sayings/selections-sayings-and-preaching-amir-al-muminin-ali
-/study/reviews/divine-ethics.pdf#page=17 — Earlier packet: Remembrance of God: heart, action and speech. Practical remembrance expresses inward faith in conduct, review p. 17.
+/study/reviews/divine-ethics.pdf#page=19 — Earlier packet: Remembrance of God: heart, action and speech. Practical remembrance expresses inward faith in conduct, review p. 17.
 
 ### 8 · divine-ethics-2017-additional-selection-q008
 
@@ -184,7 +184,7 @@ Divine Ethics · 2017 compilation · additional questions; source item 17; sourc
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
 Primary text, Quran 49:12: https://quran.com/49/12
-/study/reviews/divine-ethics.pdf#page=10 — Gratitude in recognition, speech and action. Speech used for good rather than backbiting, review p. 10.
+/study/reviews/divine-ethics.pdf#page=22 — Gratitude in recognition, speech and action. Speech used for good rather than backbiting, review p. 10.
 
 ### 34 · divine-ethics-2017-additional-selection-q034
 
@@ -199,7 +199,7 @@ Source: Source item34; source PDF page 7.
 Divine Ethics · 2017 compilation · additional questions; source item 34; source PDF page 7.
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
 /study/divine-ethics/references/first-term-lessons.pdf#page=7
-/study/reviews/divine-ethics.pdf#page=5 — Sincerity, ostentation and dependent means. A good-looking act can be spoiled by its intention; neither side alone is enough.
+/study/reviews/divine-ethics.pdf#page=11 — Sincerity, ostentation and dependent means. A good-looking act can be spoiled by its intention; neither side alone is enough.
 
 ### 36 · divine-ethics-2017-additional-selection-q036
 
@@ -266,7 +266,7 @@ Divine Ethics · 2017 compilation · additional questions; source item 47; sourc
 /study/divine-ethics/references/first-term-lessons.pdf#page=14
 /study/divine-ethics/references/first-term-lessons.pdf#page=15
 /study/divine-ethics/references/first-term-lessons.pdf#page=16
-/study/reviews/divine-ethics.pdf#page=11 — Gratitude’s effects and five obstacles. Envy of others’ blessings, review p. 11.
+/study/reviews/divine-ethics.pdf#page=25 — Gratitude’s effects and five obstacles. Envy of others’ blessings, review p. 11.
 
 ### 57 · divine-ethics-2017-additional-selection-q057
 

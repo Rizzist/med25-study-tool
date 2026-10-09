@@ -464,7 +464,7 @@ Source: Original Q8; source PDF page 2.
 Divine Ethics · 30-question photographed paper; original Q 8; source PDF page 2.
 /study/divine-ethics/references/first-term-lessons.pdf#page=1
 /study/divine-ethics/references/first-term-lessons.pdf#page=2
-/study/reviews/divine-ethics.pdf#page=6 — Seven practices for cultivating sincerity. Remembering death and impermanence as a corrective to ostentation, review pp. 6–7.
+/study/reviews/divine-ethics.pdf#page=14 — Seven practices for cultivating sincerity. Remembering death and impermanence as a corrective to ostentation, review pp. 6–7.
 
 ### 9 · divine-ethics-first-term-photo-30-q009
 
@@ -528,7 +528,7 @@ Divine Ethics · 30-question photographed paper; original Q 12; source PDF page 
 /study/divine-ethics/references/first-term-lessons.pdf#page=10
 /study/divine-ethics/references/first-term-lessons.pdf#page=11
 /study/divine-ethics/references/first-term-lessons.pdf#page=12
-/study/reviews/divine-ethics.pdf#page=8 — Trust in God, effort and five signs. Trust includes responsible use of dependent natural means.
+/study/reviews/divine-ethics.pdf#page=16 — Trust in God, effort and five signs. Trust includes responsible use of dependent natural means.
 
 ### 13 · divine-ethics-first-term-photo-30-q013
 
@@ -544,7 +544,7 @@ Divine Ethics · 30-question photographed paper; original Q 13; source PDF page 
 /study/divine-ethics/references/first-term-lessons.pdf#page=10
 /study/divine-ethics/references/first-term-lessons.pdf#page=11
 /study/divine-ethics/references/first-term-lessons.pdf#page=12
-/study/reviews/divine-ethics.pdf#page=18 — Earlier packet: Trust in God and the use of means. Trust in a benevolent, knowledgeable and powerful God, review p. 18.
+/study/reviews/divine-ethics.pdf#page=16 — Earlier packet: Trust in God and the use of means. Trust in a benevolent, knowledgeable and powerful God, review p. 18.
 
 ### 14 · divine-ethics-first-term-photo-30-q014
 
@@ -560,7 +560,7 @@ Divine Ethics · 30-question photographed paper; original Q 14; source PDF page 
 /study/divine-ethics/references/first-term-lessons.pdf#page=10
 /study/divine-ethics/references/first-term-lessons.pdf#page=11
 /study/divine-ethics/references/first-term-lessons.pdf#page=12
-/study/reviews/divine-ethics.pdf#page=8 — Trust in God, effort and five signs. Responsible effort rather than inactivity, review pp. 8–9.
+/study/reviews/divine-ethics.pdf#page=16 — Trust in God, effort and five signs. Responsible effort rather than inactivity, review pp. 8–9.
 
 ### 15 · divine-ethics-first-term-photo-30-q015
 
