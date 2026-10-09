@@ -401,3 +401,37 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 @media(max-width:600px){.limb-paper-scope{padding:8px}.limb-paper-scope button{flex:1;padding:8px;font-size:.82rem}}
 
 .paper-written-response{display:grid;gap:12px;margin:20px 0}.paper-written-response textarea{min-height:130px;padding:14px;border:1px solid #cbd6cc;border-radius:12px;font:inherit}.instant-feedback.ungraded{background:#f7f5e9;border-color:#d4cdb4}
+
+/* Biochemistry I Retake: one deduplicated Core and its source-backed guide. */
+.retake-core-card{min-width:0;grid-column:1/-1}
+.mcq-app .mcq-content .retake-core-card article.past-paper-card.featured{position:relative;overflow:hidden;border-color:#cba94e;background:linear-gradient(125deg,#fff7d7 0%,#ffedb9 42%,#f4c75b 72%,#fff7d7 100%);background-size:240% 100%;animation:retake-core-shine 9s ease-in-out infinite;box-shadow:0 2px 18px #b6943320}
+.retake-core-card .past-paper-badge{background:#eacb71;color:#49360b}
+.retake-core-card .core-section-details>summary,.retake-core-originals>summary{cursor:pointer;min-height:36px;align-content:center;font-size:12px;font-weight:650;color:#725517}
+.retake-core-card .core-pattern-list summary{overflow-wrap:anywhere}
+.retake-core-originals ul{padding:0;list-style:none;display:grid;gap:8px}
+.retake-core-originals li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;padding-top:7px;border-top:1px solid #ddcfaa}
+.retake-core-originals li>a:first-child{flex:1;min-width:180px;font-size:12px;line-height:1.5}
+.retake-distilled-guide{grid-column:1/-1;min-width:0;margin:16px 0;padding:18px;border:1px solid var(--mcq-line);border-radius:var(--mcq-radius);background:var(--mcq-card)}
+.retake-guide-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.retake-guide-heading h2{font-size:19px;line-height:1.3;margin:3px 0 5px}
+.retake-guide-heading p{font-size:12px;color:var(--mcq-muted);margin:0}
+.retake-guide-heading .retake-guide-kicker{font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#80621b;font-size:10px}
+.retake-guide-scope,.retake-guide-full{font-size:12px;line-height:1.6;color:var(--mcq-muted)}
+.retake-guide-sections{display:grid;gap:6px;margin-top:12px}
+.retake-guide-reader>summary{cursor:pointer;min-height:44px;align-content:center;font-size:13px;font-weight:700;color:var(--mcq-green)}
+.retake-guide-reader>summary small{font-size:11px;font-weight:400;color:var(--mcq-muted);margin-left:8px}
+.retake-guide-section{border:1px solid var(--mcq-line);border-radius:10px;padding:0 12px}
+.retake-guide-section>summary{cursor:pointer;min-height:44px;align-content:center;padding:10px 0;font-size:13px;font-weight:700;line-height:1.45}
+.retake-guide-section>summary small{margin-left:10px;color:var(--mcq-muted);font-size:11px;font-weight:400;white-space:nowrap}
+.retake-guide-focus{font-size:12.5px;color:#80621b;line-height:1.55;margin:2px 0 12px}
+.mcq-app .mcq-content article.retake-guide-concept{background:transparent;border:0;border-top:1px solid var(--mcq-line);border-radius:0;padding:12px 0;box-shadow:none}
+.retake-guide-concept h3{font-size:13px;line-height:1.5;margin:0 0 5px}
+.retake-guide-concept ul,.retake-guide-evidence ul{font-size:12px;line-height:1.65;margin:4px 0 6px;padding-left:20px}
+.retake-guide-explanation,.retake-guide-evidence{font-size:12px;line-height:1.65;color:var(--mcq-muted)}
+.retake-guide-explanation summary,.retake-guide-evidence summary{cursor:pointer;min-height:32px;align-content:center;font-weight:600;color:var(--mcq-green)}
+.retake-guide-explanation p{margin:5px 0 8px}
+.retake-guide-review-link{display:inline-flex;gap:6px;align-items:center;min-height:40px;margin:4px 0;font-size:12px}
+.retake-distilled-guide a{overflow-wrap:anywhere}
+@keyframes retake-core-shine{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){.mcq-app .mcq-content .retake-core-card article.past-paper-card.featured{animation:none}}
+@media(max-width:600px){.retake-distilled-guide{padding:13px}.retake-guide-heading h2{font-size:17px}.retake-guide-section>summary small{display:block;margin-left:0}.retake-core-originals li{align-items:flex-start}.retake-core-originals li>a:first-child{flex-basis:100%}}

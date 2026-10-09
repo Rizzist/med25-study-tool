@@ -1,0 +1,154 @@
+{
+  "revision": "2026-10-09.1",
+  "policy": {
+    "unit": "At most one recurrence vote per equivalent-question group per family whose role is exam.",
+    "supportOnlyRoles": [
+      "recall",
+      "practice"
+    ],
+    "uncertainty": "Family IDs describe conservative source independence, not verified exam dates. Undated exam sheets can contribute one family vote; duplicated/reordered sources and heavily overlapping undated versions are collapsed where independence is not established.",
+    "scope": "Main retake collection IDs. Full-paper variants inherit their main paper family; only biochemistry questions belong in Biochem I recurrence. A dated quiz is an assessment family, explicitly identified in its reason."
+  },
+  "papers": {
+    "retake-cell-block": {
+      "familyId": "cell-block-april-2021",
+      "role": "exam",
+      "reason": "April 2021 report; retained as its own source family. Shared individual questions with other papers do not demonstrate a duplicate sitting."
+    },
+    "retake-february-2021": {
+      "familyId": "cell-february-2021",
+      "role": "exam",
+      "reason": "Canonical February 2021 paper. The newly imported answer version preserves the same 57 biochemistry stems and is the same source family."
+    },
+    "retake-biochemistry-2022": {
+      "familyId": "biochemistry-2021-2022-shared-paper",
+      "role": "exam",
+      "reason": "All 64 biochemistry stems match the September 2021-labelled source. Conflicting labels are insufficient evidence of independent sittings; count this content once."
+    },
+    "retake-september-2021": {
+      "familyId": "biochemistry-2021-2022-shared-paper",
+      "role": "exam",
+      "reason": "All 64 biochemistry stems match the 2022-labelled source. Treat as another labelled copy, not a second independent recurrence vote."
+    },
+    "retake-import-cell-jan2024": {
+      "familyId": "cell-january-2024",
+      "role": "exam",
+      "reason": "Dated 22 January 2024 MD final. Repeated Q56–60 pages within this source contribute one family vote per equivalent question."
+    },
+    "retake-import-bio-jan2023": {
+      "familyId": "biochemistry-january-2023",
+      "role": "exam",
+      "reason": "Dated 29 January 2023 final for MD/DDS/PharmD; 50 declared questions. The repeated Q38/Q40 stem contributes only one family vote."
+    },
+    "retake-import-bio-sep2019": {
+      "familyId": "biochemistry-september-2019-recall",
+      "role": "recall",
+      "reason": "Non-sequential recall stems and answer notes; incomplete options and unverified answers. Supports a repeat group but does not establish an independent exam recurrence."
+    },
+    "retake-import-bio-nourozi": {
+      "familyId": "nowrouzi-online-shared-paper",
+      "role": "exam",
+      "reason": "Undated paper fragment shares 39 normalized stems with the online screenshot source (47 versus 49 unique biochemistry stems), including matching targets. Independence is unproven; conservatively count their overlapping content as one family, without claiming a known date."
+    },
+    "retake-import-bio-marked-2023": {
+      "familyId": "biochemistry-marked-fragments",
+      "role": "recall",
+      "reason": "Mixed annotated fragments with differently ordered question sets and repeated photographs; no dated cover establishes a distinct sitting. Supporting evidence only, not an independent recurrence vote."
+    },
+    "retake-import-bio-undated-t3": {
+      "familyId": "biochemistry-undated-t3",
+      "role": "exam",
+      "reason": "Six exam-paper pages with gaps in numbering. Date and program are unconfirmed; no demonstrated duplicate sitting establishes another family relationship."
+    },
+    "retake-import-bio-dds-t2": {
+      "familyId": "biochemistry-dds-undated-t2",
+      "role": "exam",
+      "reason": "DDS exam-paper source with a program cover. Exact sitting is unconfirmed; retained separately because shared topics/questions alone do not prove a duplicate."
+    },
+    "retake-import-bio-pharmd-jan2024": {
+      "familyId": "biochemistry-pharmd-january-2024",
+      "role": "exam",
+      "reason": "Cover establishes PharmD midterm, 6 January 2024. Separate from the 22 January MD final despite reused questions."
+    },
+    "retake-import-bio-dds-jul2023": {
+      "familyId": "biochemistry-dds-pharmd-july-2023",
+      "role": "exam",
+      "reason": "Cover establishes DDS/PharmD final, 12 July 2023, with 57 questions."
+    },
+    "retake-import-cell-online-theory": {
+      "familyId": "nowrouzi-online-shared-paper",
+      "role": "exam",
+      "reason": "Online-exam screenshots, incomplete and undated, share 39 normalized biochemistry stems with the Nowrouzi fragment. Conservatively one family because independent sittings are not established; repeated screenshots never add votes."
+    },
+    "retake-import-cell-online-scan2022": {
+      "familyId": "cell-online-undated-30",
+      "role": "exam",
+      "reason": "Thirty online-exam screenshots. June 2022 is a scan filename, not a verified sitting date. No demonstrated duplicate source; retain separate family with date uncertainty."
+    },
+    "retake-import-cell-feb2021-answers": {
+      "familyId": "cell-february-2021",
+      "role": "exam",
+      "reason": "Alternate annotated answer copy of the existing February 2021 source; all 57 biochemistry stems match. Source annotations do not constitute another sitting."
+    },
+    "retake-import-cell-final-docx": {
+      "familyId": "biochemistry-final-answer-compilation",
+      "role": "recall",
+      "reason": "Word document assembles embedded question images, duplicated typed questions and student answer notes. No independently dated sitting is established; supporting evidence only."
+    },
+    "retake-import-bio-kish-theory": {
+      "familyId": "kish-theory-undated",
+      "role": "exam",
+      "reason": "Photos of exam sheets with numbering restarting by subject. Date/program and whether all sections belong to one sitting are unconfirmed. Only the biochemistry section enters recurrence; no independent source for each photographed page is inferred."
+    },
+    "retake-import-bio-kish-practical": {
+      "familyId": "kish-practical-undated",
+      "role": "exam",
+      "reason": "Twenty practical exam questions in six photos; Telegram posting date is not an exam date. Kept separate from theory and other practical sources absent demonstrated duplicate content."
+    },
+    "retake-import-bio-practical-jan2024": {
+      "familyId": "biochemistry-practical-january-2024",
+      "role": "exam",
+      "reason": "Cover establishes practical final, 22 January 2024, with 25 questions. Shared practical questions do not merge this dated source with undated papers."
+    },
+    "retake-import-cell-practical20203": {
+      "familyId": "cell-practical-february-2021",
+      "role": "exam",
+      "reason": "February 2021 report with 22 practical items. Twelve stems overlap the undated 27-item practical versions, but the remaining content and distinct report do not establish the same sitting."
+    },
+    "retake-import-cell-practical-flame": {
+      "familyId": "cell-practical-27-reordered",
+      "role": "exam",
+      "reason": "All 27 normalized stems match the Molisch-first paper with reordered questions/options. Undated versions count as one source family."
+    },
+    "retake-import-cell-practical-molisch": {
+      "familyId": "cell-practical-27-reordered",
+      "role": "exam",
+      "reason": "Reordered copy of the 27-item flame-first practical paper. A February filename does not establish a second sitting."
+    },
+    "retake-import-cell-practical-online": {
+      "familyId": "cell-practical-online-undated",
+      "role": "exam",
+      "reason": "Thirty-one screenshots from an online practical exam reporting 33 questions; Q9/Q14 absent. Date and independent sitting identity unconfirmed; no demonstrated duplicate paper."
+    },
+    "retake-import-bio-practical-dds2023": {
+      "familyId": "biochemistry-practical-dds-pharmd-july-2023",
+      "role": "exam",
+      "reason": "Cover establishes DDS/PharmD practical exam, 15 July 2023, with 17 questions; separate assessment from the 12 July theory exam."
+    },
+    "retake-import-bio-quiz2016": {
+      "familyId": "biochemistry-quiz-february-2016",
+      "role": "exam",
+      "reason": "Dated 27 February 2016 quiz, not a block final. Its alternate version has the same 20 normalized stems; together they contribute one quiz-family vote."
+    },
+    "retake-import-bio-quiz2016-variant": {
+      "familyId": "biochemistry-quiz-february-2016",
+      "role": "exam",
+      "reason": "Reordered question/option version of the same 27 February 2016 quiz. Does not contribute a second recurrence vote."
+    },
+    "retake-import-bio-dna-student-mcqs": {
+      "familyId": "biochemistry-student-dna-compilation",
+      "role": "practice",
+      "reason": "Explicitly prepared by first-semester students as an MCQ compilation, not a confirmed examination. Supports equivalent groups but never contributes independent exam recurrence."
+    }
+  }
+}

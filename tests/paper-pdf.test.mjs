@@ -182,3 +182,28 @@ test('pills announce their status in a live region and keep their visible label 
   assert.match(shared,/alive\.current=false/);assert.match(paper,/useDownloadPill\(\)/);
   assert.match(fs.readFileSync(path.join(root,'app/mcq.css'),'utf8'),/\.mcq-sr-only\{position:absolute/);
 });
+
+test('paper PDF denies sign-out during rendering without caching or returning the protected Blob',async()=>{
+  let signedIn=true,cacheWrites=0,release;
+  const entered=new Promise(resolve=>{release=resolve;});let finish;
+  const gate=new Promise(resolve=>{finish=resolve;});
+  const make=createPaperPdf({origin:'https://study.test',crypto:webcrypto,
+    authorize:async()=>{if(!signedIn)throw Error('Signed out');},
+    caches:{open:async()=>({match:async()=>undefined,put:async()=>{cacheWrites++;},keys:async()=>[]})},
+    fetch:async()=>new Response(read(collections[0].downloads.questions)),
+    render:async()=>{release();await gate;return new Blob(['%PDF-protected']);}});
+  const pending=make({sources:[{url:collections[0].downloads.questions,collection:collections[0]}],variant:'questions',courseTitle:'T',footerLabel:'f'});
+  await entered;signedIn=false;finish();
+  await assert.rejects(pending,/Signed out/);assert.equal(cacheWrites,0);
+});
+
+test('paper PDF rechecks authorization after reading a cached protected Blob',async()=>{
+  let signedIn=true,renders=0;
+  const make=createPaperPdf({origin:'https://study.test',crypto:webcrypto,
+    authorize:async()=>{if(!signedIn)throw Error('Signed out');},
+    caches:{open:async()=>({match:async()=>({status:200,blob:async()=>{signedIn=false;return new Blob(['%PDF-protected']);}}),keys:async()=>[]})},
+    fetch:async()=>new Response(read(collections[0].downloads.questions)),
+    render:async()=>{renders++;return new Blob();}});
+  await assert.rejects(make({sources:[{url:collections[0].downloads.questions,collection:collections[0]}],variant:'questions',courseTitle:'T',footerLabel:'f'}),/Signed out/);
+  assert.equal(renders,0);
+});

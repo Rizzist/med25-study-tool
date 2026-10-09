@@ -94,7 +94,9 @@ export function createPaperPdf(env:Env={}) {
     if(saved?.status===200){
       // A hit also tidies superseded versions of this document (e.g. a slow render that finished after a fresher one).
       if(cache)await prune(cache,key).catch(()=>{/* best effort */});
-      return {blob:await saved.blob(),fromCache:true,cached:true,key};
+      const blob=await saved.blob();
+      await (env.authorize??requireStudySession)();
+      return {blob,fromCache:true,cached:true,key};
     }
     if(!pending.has(key)){
       const task=(async()=>{
@@ -121,6 +123,8 @@ export function createPaperPdf(env:Env={}) {
         }
         const definition=buildPaperDocument(parts,request.variant,request.footerLabel);
         const blob=await (env.render??(d=>defaultRender(d,env)))(definition);
+        // A sign-out during rendering must neither refill the cache nor save a PDF.
+        await (env.authorize??requireStudySession)();
         let cached=false;
         if(cache){
           try{await cache.put(key,new Response(blob,{headers:{'content-type':'application/pdf','content-length':String(blob.size),'x-paper-pdf-template':PAPER_PDF_TEMPLATE}}));cached=true;}
@@ -131,7 +135,9 @@ export function createPaperPdf(env:Env={}) {
       })().finally(()=>pending.delete(key));
       pending.set(key,task);
     }
-    return pending.get(key)!;
+    const result=await pending.get(key)!;
+    await (env.authorize??requireStudySession)();
+    return result;
   };
 }
 export const paperPdf=createPaperPdf();

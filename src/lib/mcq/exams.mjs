@@ -11,7 +11,7 @@ export const term2Exams = [
 ];
 
 // Keep this persistent ID so existing attempts and bookmarks remain valid.
-export const biochemistryRetake = {id:'term1-biochemistry-retake',date:null,title:'Biochemistry Retake',scope:'Term 2 retake of Cells and Molecules biochemistry. Reuses the existing biochemistry Practice bank; past papers offer full-paper and biochemistry-only scopes. The review retains its confirmed original syllabus.',status:'ready'};
+export const biochemistryRetake = {id:'term1-biochemistry-retake',date:null,title:'Biochemistry Retake',scope:'Term 2 retake of Cells and Molecules biochemistry. Reuses the existing biochemistry Practice bank; past papers are distilled biochemistry-only selections for Biochem I, with complete originals retained. The review retains its confirmed original syllabus.',status:'ready'};
 export const examIds = ["july25", "aug22", "july29", biochemistryRetake.id, ...term2Exams.map((exam) => exam.id)];
 export const isExamId = (value) => typeof value === "string" && examIds.includes(value);
 export const isTerm2Exam = (value) => term2Exams.some((exam) => exam.id === value);

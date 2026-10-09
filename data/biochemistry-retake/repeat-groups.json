@@ -1,0 +1,811 @@
+{
+  "revision": "2026-10-09.2",
+  "policy": {
+    "scope": "Explicitly reviewed semantic/paraphrase equivalences supplement exact stem/options/accepted-answer matching. This is not topic-level clustering.",
+    "equivalence": "Same tested relation and compatible reviewed answer; preserve negation, molecule identity, numerical values, clinical target and required figure. No media-dependent question is manually merged here.",
+    "counting": "Question occurrences remain distinct. Independent recurrence uses source-families.json and at most one exam-family vote; recall/practice members are support only.",
+    "excluded": "Opposite pKa directions, different named syndromes, essential versus polyunsaturated fatty acids, different inhibition examples, changed numerical problems and incompatible accepted-answer sets are not merged just because words or answers overlap."
+  },
+  "groups": [
+    {
+      "label": "Vitamin K coenzyme for gamma-carboxylation",
+      "questionIds": [
+        "retake-final-cell-block-q027",
+        "retake-final-february-2021-q007",
+        "term1-cell-feb2021-answers-007",
+        "term1-cell-jan2024-060",
+        "term1-cell-jan2024-065"
+      ],
+      "reason": "Same vitamin-to-gamma-carboxylation relation. The scan spells gamma as y; the answer remains menaquinone."
+    },
+    {
+      "label": "Constitutively expressed lac regulatory gene",
+      "questionIds": [
+        "retake-final-cell-block-q035",
+        "retake-final-biochemistry-2022-q006",
+        "retake-final-september-2021-q039",
+        "term1-bio-dds-jul2023-055"
+      ],
+      "reason": "Same lac-operon gene identification, with reordered options and unchanged i-gene answer."
+    },
+    {
+      "label": "Vitamin B12 as a methyl-group acceptor",
+      "questionIds": [
+        "retake-final-cell-block-q052",
+        "term1-cell-jan2024-059",
+        "term1-cell-jan2024-064"
+      ],
+      "reason": "Same methyl-acceptor question; Vit B12 and Vitamin B12 are synonymous. Includes the repeated January page without creating an extra family vote."
+    },
+    {
+      "label": "Lowest melting point among the same four fatty acids",
+      "questionIds": [
+        "retake-final-cell-block-q067",
+        "retake-final-biochemistry-2022-q007",
+        "retake-final-september-2021-q058",
+        "term1-bio-dds-jul2023-023",
+        "term1-cell-online-theory-065"
+      ],
+      "reason": "All variants compare palmitic, stearic, arachidonic and eicosapentaenoic acids. Identical comparative target and EPA answer; option order differs."
+    },
+    {
+      "label": "Pantothenic acid active coenzyme",
+      "questionIds": [
+        "retake-final-cell-block-q069",
+        "term1-cell-jan2024-068",
+        "term1-bio-dds-t2-003"
+      ],
+      "reason": "Same vitamin B5-to-coenzyme A identification; distractors vary but the requested active coenzyme and correct answer do not."
+    },
+    {
+      "label": "Cholesterol-rich LDL",
+      "questionIds": [
+        "retake-final-cell-block-q084",
+        "retake-final-biochemistry-2022-q060",
+        "retake-final-september-2021-q030",
+        "term1-bio-pharmd-jan2024-047",
+        "term1-bio-dds-jul2023-025"
+      ],
+      "reason": "Same lipoprotein cholesterol-composition comparison among chylomicron, VLDL, LDL and HDL. Does not merge LDL cardiovascular-risk questions."
+    },
+    {
+      "label": "Topoisomerase relieves replication supercoiling",
+      "questionIds": [
+        "retake-final-february-2021-q033",
+        "term1-cell-feb2021-answers-033",
+        "term1-bio-nourozi-038",
+        "term1-bio-dna-student-mcqs-036"
+      ],
+      "reason": "Same enzyme for DNA supercoil relief during replication; helicase unwinding questions remain separate."
+    },
+    {
+      "label": "Vitamin E as a lipid-soluble membrane antioxidant",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q027",
+        "retake-final-september-2021-q017",
+        "term1-bio-kish-theory-063"
+      ],
+      "reason": "Singular/plural membrane wording and distractor changes do not alter the vitamin E antioxidant relation."
+    },
+    {
+      "label": "Cardiolipin lacks sphingosine",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q046",
+        "retake-final-september-2021-q013",
+        "term1-bio-dds-jul2023-026"
+      ],
+      "reason": "Not a component and component of all except express the same negative target. Same four lipid choices and cardiolipin answer."
+    },
+    {
+      "label": "Glutamate pI with pKa 2.3, 4.2 and 9.3",
+      "questionIds": [
+        "term1-cell-jan2024-018",
+        "term1-bio-pharmd-jan2024-010",
+        "term1-bio-dds-jul2023-003"
+      ],
+      "reason": "The amino acid, all three numerical pKa values and pI answer 3.25 are identical; only value order and wording change."
+    },
+    {
+      "label": "Carbon monoxide increases hemoglobin oxygen affinity",
+      "questionIds": [
+        "term1-cell-jan2024-021",
+        "term1-bio-pharmd-jan2024-013",
+        "term1-bio-dds-jul2023-004"
+      ],
+      "reason": "Same four physiological changes and same CO answer. CO2, pH and temperature alternatives are not merged as distinct questions."
+    },
+    {
+      "label": "Isoenzymes catalyze the same reaction",
+      "questionIds": [
+        "term1-cell-jan2024-031",
+        "term1-bio-pharmd-jan2024-023",
+        "term1-bio-dds-jul2023-034"
+      ],
+      "reason": "All ask for the false isoenzyme statement and key different reactions. Same negative target, with a scan typo in not."
+    },
+    {
+      "label": "Alpha and beta glucose are anomers",
+      "questionIds": [
+        "term1-cell-jan2024-034",
+        "term1-bio-pharmd-jan2024-048"
+      ],
+      "reason": "Same alpha-versus-beta glucose relationship; one source explicitly writes D. Both distinguish the most specific offered relationship, anomers."
+    },
+    {
+      "label": "Heparin as an anticoagulant carbohydrate",
+      "questionIds": [
+        "term1-cell-jan2024-039",
+        "term1-bio-pharmd-jan2024-041",
+        "term1-bio-dds-jul2023-020"
+      ],
+      "reason": "Same carbohydrate-to-anticoagulant use relation; the shorter biosynthesis wording and clinical vignette identify heparin. Homopolysaccharide classification is excluded."
+    },
+    {
+      "label": "Hydrogen bonds join complementary DNA strands",
+      "questionIds": [
+        "term1-cell-jan2024-045",
+        "term1-bio-dna-student-mcqs-028"
+      ],
+      "reason": "Same interstrand bond question; intrachain phosphodiester questions stay separate. The student compilation is support only."
+    },
+    {
+      "label": "Rifamycin inhibition of prokaryotic transcription initiation",
+      "questionIds": [
+        "term1-cell-jan2024-050",
+        "term1-bio-nourozi-028",
+        "term1-cell-online-theory-015"
+      ],
+      "reason": "Same antibiotic and promoter/RNA-polymerase initiation target, with reordered distractors."
+    },
+    {
+      "label": "Vitamin D does not hydroxylate connective-tissue proteins",
+      "questionIds": [
+        "term1-cell-jan2024-058",
+        "term1-cell-jan2024-063"
+      ],
+      "reason": "Repeated January page with an OCR spelling difference; same negative stem and identical choices. One source family only."
+    },
+    {
+      "label": "Liver and kidney activate vitamin D",
+      "questionIds": [
+        "term1-cell-jan2024-069",
+        "term1-bio-pharmd-jan2024-031",
+        "term1-bio-dds-jul2023-042"
+      ],
+      "reason": "Same organ-pair activation target and liver/kidney answer, including minor OCR truncation."
+    },
+    {
+      "label": "Lower pKa means stronger acid",
+      "questionIds": [
+        "term1-bio-nourozi-001",
+        "term1-bio-dds-jul2023-008"
+      ],
+      "reason": "Same direction of pKa change and acid-strength answer. The opposite higher-pKa prompt is deliberately excluded."
+    },
+    {
+      "label": "Inulin measurement of glomerular filtration",
+      "questionIds": [
+        "term1-bio-nourozi-008",
+        "term1-cell-online-theory-058",
+        "term1-bio-kish-theory-037"
+      ],
+      "reason": "Same carbohydrate used to measure GFR; differing distractors do not change inulin as the requested marker."
+    },
+    {
+      "label": "Arachidonic acid is the exception to 18-carbon fatty acids",
+      "questionIds": [
+        "term1-bio-nourozi-012",
+        "term1-cell-online-theory-062",
+        "term1-cell-online-scan2022-004",
+        "term1-bio-kish-theory-071"
+      ],
+      "reason": "Same negative carbon-count target and same four fatty-acid alternatives; number 18 is preserved."
+    },
+    {
+      "label": "Collagen defect in Ehlers–Danlos syndrome",
+      "questionIds": [
+        "term1-bio-nourozi-015",
+        "term1-cell-online-theory-070",
+        "term1-bio-kish-theory-055"
+      ],
+      "reason": "Same named disorder and defective-protein identification; Marfan/fibrillin items are deliberately excluded."
+    },
+    {
+      "label": "Noncompetitive inhibition lowers Vmax with unchanged Km",
+      "questionIds": [
+        "term1-bio-nourozi-018",
+        "term1-cell-online-theory-073",
+        "term1-bio-pharmd-jan2024-024"
+      ],
+      "reason": "Same noncompetitive inhibition kinetic effects. Max is an OCR shortening of Vmax. Competitive-inhibition changes remain a separate relation."
+    },
+    {
+      "label": "RNA caps are characteristic of eukaryotic mRNA",
+      "questionIds": [
+        "term1-bio-nourozi-025",
+        "term1-cell-online-theory-012",
+        "term1-bio-pharmd-jan2024-053"
+      ],
+      "reason": "Same cap-specificity statement and answer. Different incorrect 3-prime RNA distractors do not change the tested relation."
+    },
+    {
+      "label": "Primase synthesizes RNA primers",
+      "questionIds": [
+        "term1-bio-nourozi-030",
+        "term1-bio-pharmd-jan2024-039",
+        "term1-cell-online-theory-017",
+        "term1-bio-dds-jul2023-045"
+      ],
+      "reason": "Same enzyme-to-RNA-primer synthesis question, including reordered polymerase alternatives."
+    },
+    {
+      "label": "Repressor prevents lac structural-gene transcription",
+      "questionIds": [
+        "term1-bio-nourozi-035",
+        "term1-bio-pharmd-jan2024-060"
+      ],
+      "reason": "Same lac z/y/a structural genes and repressor action. Gene order and capitalization differ."
+    },
+    {
+      "label": "Hydrophobic interactions dominate protein tertiary folding",
+      "questionIds": [
+        "term1-bio-marked-2023-022",
+        "term1-bio-marked-2023-028"
+      ],
+      "reason": "Same tertiary-structure force comparison with reordered choices; repeated annotated fragment supplies supporting evidence only."
+    },
+    {
+      "label": "Vitamin C supports collagen production and maintenance",
+      "questionIds": [
+        "term1-bio-undated-t3-018",
+        "term1-cell-final-docx-002"
+      ],
+      "reason": "Same vitamin C-to-collagen production relation and identical alternatives. The DOCX is support only."
+    },
+    {
+      "label": "Fibrillin defect in Marfan syndrome",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-016",
+        "term1-bio-dds-jul2023-007"
+      ],
+      "reason": "Same named disorder and defective-protein target. Ehlers–Danlos/collagen questions remain separate."
+    },
+    {
+      "label": "Folate deficiency causes megaloblastic anemia",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-030",
+        "term1-bio-kish-theory-061"
+      ],
+      "reason": "Same four vitamin options with folate uniquely offered as correct. Multi-answer folate/B12 variants are excluded from this group."
+    },
+    {
+      "label": "Gamma-carboxylation is not biotin-dependent",
+      "questionIds": [
+        "term1-bio-dds-jul2023-036",
+        "term1-cell-online-theory-008"
+      ],
+      "reason": "Same except target and four chemical conversions; gamma spelled as Greek or English does not change the vitamin-K-dependent exception."
+    },
+    {
+      "label": "Glycosphingolipids contain ceramide plus sugar",
+      "questionIds": [
+        "term1-cell-online-scan2022-029",
+        "term1-bio-kish-theory-070"
+      ],
+      "reason": "Same structural composition target with reordered options and identical ceramide/sugar answer."
+    },
+    {
+      "label": "Biuret is the qualitative protein test",
+      "questionIds": [
+        "term1-bio-kish-practical-010",
+        "term1-cell-practical-online-015"
+      ],
+      "reason": "Same protein-identification test among Biuret, Hopkins–Cole, urease and ninhydrin. One wording supplies urine as the specimen; the requested test and answer remain unchanged."
+    },
+    {
+      "label": "Chromatographic mobile phase may be liquid or gas",
+      "questionIds": [
+        "term1-bio-practical-jan2024-013",
+        "term1-cell-practical-online-026",
+        "term1-bio-practical-dds2023-006",
+        "term1-bio-practical-jan2024-022",
+        "term1-cell-practical20203-015",
+        "term1-cell-practical-flame-014",
+        "term1-cell-practical-molisch-006"
+      ],
+      "reason": "Same possible physical states and same answer pair, with reordered options. The abbreviated Liqid-gas choice in four other sources expresses the same liquid-or-gas alternatives."
+    },
+    {
+      "label": "Starch is the insoluble carbohydrate among these choices",
+      "questionIds": [
+        "term1-cell-practical20203-012",
+        "term1-cell-practical-flame-003",
+        "term1-cell-practical-molisch-022"
+      ],
+      "reason": "Soluble except and insoluble express the same negative target. Same fructose/sucrose/glucose/starch comparison; no change in solution context."
+    },
+    {
+      "label": "Dihydroxyacetone is achiral",
+      "questionIds": [
+        "retake-final-cell-block-q043",
+        "term1-bio-nourozi-004",
+        "term1-cell-online-theory-054"
+      ],
+      "reason": "Lack of a chiral carbon and inability to form D/L stereoisomers ask the same chirality relation for dihydroxyacetone; other carbohydrate-isomer classifications stay separate."
+    },
+    {
+      "label": "Humans cannot digest cellulose",
+      "questionIds": [
+        "term1-cell-jan2024-040",
+        "term1-cell-online-scan2022-019"
+      ],
+      "reason": "Same lack of human enzymatic digestion of cellulose; distractor carbohydrates differ but the digestive capability tested is identical."
+    },
+    {
+      "label": "Linoleic acid must be supplied in the diet",
+      "questionIds": [
+        "retake-final-cell-block-q060",
+        "retake-final-february-2021-q041",
+        "term1-cell-feb2021-answers-041",
+        "term1-cell-jan2024-012"
+      ],
+      "reason": "Essential and cannot synthesize/must obtain from diet ask the same linoleic-acid relation. Polyunsaturated classification and linolenic-acid variants are excluded."
+    },
+    {
+      "label": "Operator is the repressor-binding sequence",
+      "questionIds": [
+        "retake-final-february-2021-q009",
+        "term1-cell-feb2021-answers-009",
+        "term1-bio-nourozi-029",
+        "term1-cell-online-theory-016"
+      ],
+      "reason": "Same DNA-site identity for repressor binding. Does not merge inverse questions asking which protein binds the operator."
+    },
+    {
+      "label": "Catalytic efficiency is kcat over Km",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q016",
+        "retake-final-september-2021-q008",
+        "term1-bio-dds-t2-013"
+      ],
+      "reason": "Same catalytic-efficiency parameter, including comparison of two enzymes; kcat/Km is preserved."
+    },
+    {
+      "label": "Platelet-activating factor contains an ether linkage",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q052",
+        "retake-final-september-2021-q025",
+        "term1-bio-dds-jul2023-024"
+      ],
+      "reason": "Same identification of an ether-containing lipid, with identical answer and equivalent lipid distractors."
+    },
+    {
+      "label": "Pyridoxine supports transamination",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q055",
+        "retake-final-september-2021-q006",
+        "term1-bio-undated-t3-022"
+      ],
+      "reason": "Same vitamin-to-amino-acid transamination relation; cofactor phrasing does not alter the answer."
+    },
+    {
+      "label": "Thiamine deficiency causes beriberi",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q062",
+        "retake-final-september-2021-q002",
+        "term1-bio-undated-t3-025"
+      ],
+      "reason": "Thiamine and vitamin B1 are equivalent; same deficiency-disease target and beriberi answer."
+    },
+    {
+      "label": "Glucose is the glycogen precursor",
+      "questionIds": [
+        "term1-cell-jan2024-033",
+        "term1-bio-pharmd-jan2024-033",
+        "term1-bio-kish-theory-034"
+      ],
+      "reason": "Same precursor monosaccharide and animal glycogen context; same four choices."
+    },
+    {
+      "label": "Pentose-phosphate pathway produces NADPH",
+      "questionIds": [
+        "term1-bio-jan2023-001",
+        "term1-bio-jan2023-011"
+      ],
+      "reason": "Phosphogluconate pathway and HMP shunt denote the same pathway. Same reducing-equivalent production target; two occurrences within one source still yield one family vote."
+    },
+    {
+      "label": "Beta sheets are secondary protein structure",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-012",
+        "term1-bio-quiz2016-013",
+        "term1-bio-quiz2016-variant-014"
+      ],
+      "reason": "Same structural-level classification; Greek beta and spelled-out beta are equivalent. Dated quiz variants share one family."
+    },
+    {
+      "label": "Collagen is rich in glycine and proline",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-015",
+        "term1-bio-kish-theory-053"
+      ],
+      "reason": "Same requested pair of abundant collagen amino acids, with equivalent options."
+    },
+    {
+      "label": "Niacin deficiency causes pellagra",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-027",
+        "term1-bio-dds-jul2023-038",
+        "term1-bio-kish-theory-058"
+      ],
+      "reason": "Same vitamin-deficiency disease, unchanged answer and alternatives."
+    },
+    {
+      "label": "Linolenic acid must be supplied in the diet",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-036",
+        "term1-bio-dds-jul2023-027",
+        "term1-bio-kish-theory-068"
+      ],
+      "reason": "Same essential-fatty-acid relation with linolenic acid as the offered answer. Kept separate from linoleic-acid variants because the selected molecule changes."
+    },
+    {
+      "label": "Phosphodiester bonds connect adjacent nucleotides",
+      "questionIds": [
+        "term1-cell-final-docx-021",
+        "term1-bio-dna-student-mcqs-022"
+      ],
+      "reason": "Same within-strand nucleotide linkage; complementary-strand hydrogen bonding is excluded. Both source documents are supporting compilations."
+    },
+    {
+      "label": "Millon test identifies tyrosine",
+      "questionIds": [
+        "term1-cell-practical20203-010",
+        "term1-cell-practical-flame-013",
+        "term1-cell-practical-molisch-016"
+      ],
+      "reason": "Same reagent-to-amino-acid identification; distractor amino acids differ without changing the target."
+    },
+    {
+      "label": "DNA ligase joins DNA ends",
+      "questionIds": [
+        "retake-final-cell-block-q028",
+        "retake-final-february-2021-q021",
+        "term1-cell-feb2021-answers-021",
+        "term1-bio-dna-student-mcqs-042",
+        "term1-bio-dna-student-mcqs-045"
+      ],
+      "reason": "Same DNA-end joining/nick-sealing enzyme relation, including Okazaki-fragment joining. Student questions provide supporting evidence only."
+    },
+    {
+      "label": "Rifampicin inhibits bacterial RNA polymerase",
+      "questionIds": [
+        "retake-final-february-2021-q003",
+        "term1-cell-feb2021-answers-003",
+        "retake-final-biochemistry-2022-q048",
+        "retake-final-september-2021-q042"
+      ],
+      "reason": "Same antibiotic inhibition of prokaryotic DNA-dependent RNA polymerase; one wording describes initiation at the promoter. Rifamycin-class wording is retained in its own group rather than silently equated to a specific member."
+    },
+    {
+      "label": "Absorbed dietary fat circulates in chylomicrons",
+      "questionIds": [
+        "retake-final-cell-block-q042",
+        "term1-bio-nourozi-011",
+        "term1-bio-pharmd-jan2024-035",
+        "term1-cell-online-theory-061"
+      ],
+      "reason": "Same transport form after dietary-fat absorption; dotted blanks, option order and an HDL scan typo do not change the chylomicron target."
+    },
+    {
+      "label": "Tryptophan and phenylalanine operons are anabolic",
+      "questionIds": [
+        "retake-final-cell-block-q044",
+        "term1-bio-pharmd-jan2024-057"
+      ],
+      "reason": "Same anabolic-operon question; both variants accept Trp and Phe. Abbreviated gene-set names do not alter the accepted answer set."
+    },
+    {
+      "label": "Sigma factor recognizes transcription initiation sites",
+      "questionIds": [
+        "retake-final-cell-block-q048",
+        "term1-bio-nourozi-032",
+        "term1-bio-pharmd-jan2024-055",
+        "term1-cell-online-theory-019"
+      ],
+      "reason": "Same bacterial initiation-site recognition factor. Alpha/beta RNA-polymerase distractors use Greek letters or Latin scan approximations."
+    },
+    {
+      "label": "HDL is synthesized in liver and intestine",
+      "questionIds": [
+        "retake-final-cell-block-q070",
+        "term1-bio-nourozi-013",
+        "term1-cell-online-theory-063"
+      ],
+      "reason": "Same HDL origin question and organ-pair answer; only dotted blanks and option order differ."
+    },
+    {
+      "label": "Ciprofloxacin inhibits DNA gyrase",
+      "questionIds": [
+        "retake-final-cell-block-q079",
+        "retake-final-biochemistry-2022-q014",
+        "retake-final-september-2021-q026",
+        "term1-bio-pharmd-jan2024-040"
+      ],
+      "reason": "Same drug-to-enzyme target, with shortened prompt and minor topoisomerase/polymerase distractor spelling differences."
+    },
+    {
+      "label": "Sickle cell hemoglobin has an amino-acid substitution",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q020",
+        "retake-final-september-2021-q020",
+        "term1-bio-pharmd-jan2024-009"
+      ],
+      "reason": "Same molecular basis of sickle cell disease; distractor changes do not alter the single-amino-acid substitution target."
+    },
+    {
+      "label": "Amylopectin has alpha-1,4 and alpha-1,6 linkages",
+      "questionIds": [
+        "retake-final-biochemistry-2022-q024",
+        "retake-final-september-2021-q061",
+        "term1-cell-online-scan2022-020"
+      ],
+      "reason": "Both linkage positions and alpha stereochemistry match. Different typography and one incorrect beta distractor do not change the keyed amylopectin bonds."
+    },
+    {
+      "label": "Polar residues lie on the aqueous protein surface",
+      "questionIds": [
+        "term1-cell-jan2024-017",
+        "term1-bio-dds-jul2023-002"
+      ],
+      "reason": "Same aqueous-environment protein localization question and four alternatives; punctuation differs."
+    },
+    {
+      "label": "Bohr effect is the pH and CO2 effect on oxygen binding",
+      "questionIds": [
+        "term1-cell-jan2024-024",
+        "term1-bio-nourozi-016",
+        "term1-cell-online-theory-071"
+      ],
+      "reason": "Identical Bohr-effect target and accepted statement; a temperature spelling error appears only in a distractor."
+    },
+    {
+      "label": "Isomerases catalyze intramolecular rearrangement",
+      "questionIds": [
+        "term1-cell-jan2024-025",
+        "term1-bio-pharmd-jan2024-017"
+      ],
+      "reason": "Same enzyme class and requested reaction type; distractor reactions vary, while the rearrangement answer is unchanged."
+    },
+    {
+      "label": "High affinity does not mean high Km",
+      "questionIds": [
+        "term1-cell-jan2024-027",
+        "term1-bio-nourozi-021",
+        "term1-cell-online-theory-003",
+        "term1-bio-dds-jul2023-029"
+      ],
+      "reason": "Same false statement about Km versus substrate affinity. Retains the negative target; variations in the true distractors do not change the accepted false relation."
+    },
+    {
+      "label": "Amylose and amylopectin both have alpha linkages",
+      "questionIds": [
+        "term1-cell-jan2024-038",
+        "term1-bio-pharmd-jan2024-052"
+      ],
+      "reason": "Identical comparison and answer; chair versus chain is an OCR error in an incorrect option."
+    },
+    {
+      "label": "Glutamate pair is not the intended physiological buffer",
+      "questionIds": [
+        "term1-bio-nourozi-003",
+        "term1-cell-online-theory-052",
+        "term1-cell-online-theory-053"
+      ],
+      "reason": "Same source question and intended buffer exception with scan variations in other chemical formulae. Repeated pages and Nowrouzi/online copies remain one source family."
+    },
+    {
+      "label": "Cheilosis is the exception to thiamine-deficiency signs",
+      "questionIds": [
+        "term1-bio-nourozi-023",
+        "term1-cell-online-theory-005",
+        "term1-bio-kish-theory-057"
+      ],
+      "reason": "Same negative vitamin-deficiency target; ophthalmoplegia spelling is the only material text variation."
+    },
+    {
+      "label": "Telomerase has reverse-transcriptase activity",
+      "questionIds": [
+        "term1-bio-nourozi-031",
+        "term1-cell-online-theory-018"
+      ],
+      "reason": "Same enzyme activity question and telomerase answer. An incorrect polymerase II/beta option differs; the same-source family still supplies one vote."
+    },
+    {
+      "label": "VLDL is pre-beta lipoprotein",
+      "questionIds": [
+        "term1-bio-nourozi-036",
+        "term1-bio-pharmd-jan2024-046"
+      ],
+      "reason": "Same alternative lipoprotein name; Greek beta and the scanned B spelling refer to the same electrophoretic designation."
+    },
+    {
+      "label": "Alpha helix has 3.6 residues per turn",
+      "questionIds": [
+        "term1-bio-marked-2023-016",
+        "term1-bio-marked-2023-030"
+      ],
+      "reason": "Same numeric structural constant and answer 3.6; distractor numbers differ within the annotated compilation. No independent votes from this recall source."
+    },
+    {
+      "label": "Salting in increases protein solubility at low salt",
+      "questionIds": [
+        "term1-bio-marked-2023-017",
+        "term1-bio-marked-2023-031"
+      ],
+      "reason": "Same definition and low-salt solubilization answer; different incorrect alternatives. Both occurrences are support-only fragments."
+    },
+    {
+      "label": "A motif is supersecondary structure",
+      "questionIds": [
+        "term1-bio-marked-2023-023",
+        "term1-bio-marked-2023-029"
+      ],
+      "reason": "Same motif definition; omission of of proteins does not change the answer. Do not equate these definition prompts with the inverse motif-identification questions."
+    },
+    {
+      "label": "Lecithin contains choline",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-044",
+        "term1-cell-online-scan2022-024"
+      ],
+      "reason": "Same nitrogenous-head-group identification; choline remains the answer despite one changed distractor."
+    },
+    {
+      "label": "Linoleic acid is polyunsaturated",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-045",
+        "term1-cell-online-scan2022-027"
+      ],
+      "reason": "Same polyunsaturated-fatty-acid identification and linoleic answer. Kept separate from essential/dietary-fatty-acid questions."
+    },
+    {
+      "label": "Chloramphenicol inhibits peptidyl transferase",
+      "questionIds": [
+        "term1-bio-pharmd-jan2024-056",
+        "term1-bio-dds-jul2023-051"
+      ],
+      "reason": "Same antibiotic mechanism in prokaryotes; hyphenation and the incorrect premature-release distractor do not change the target."
+    },
+    {
+      "label": "Arachidonic acid has four double bonds",
+      "questionIds": [
+        "term1-bio-dds-jul2023-028",
+        "term1-cell-online-scan2022-018"
+      ],
+      "reason": "Same named fatty acid, counted feature and answer 4; other numerical choices differ."
+    },
+    {
+      "label": "One enzyme unit converts one micromole per minute",
+      "questionIds": [
+        "term1-bio-dds-jul2023-030",
+        "term1-bio-kish-theory-042"
+      ],
+      "reason": "Same enzyme-activity unit definition; minute versus second and amount versus per-enzyme turnover distinctions are preserved."
+    },
+    {
+      "label": "DNA ligase connects DNA-chain ends",
+      "questionIds": [
+        "term1-bio-dds-jul2023-044",
+        "term1-cell-final-docx-030"
+      ],
+      "reason": "Same function-of-ligase question. Kept distinct from inverse enzyme-identification questions so answer targets are not swapped."
+    },
+    {
+      "label": "Guanine is 2-amino-6-oxypurine",
+      "questionIds": [
+        "term1-cell-online-theory-011",
+        "term1-bio-dna-student-mcqs-094"
+      ],
+      "reason": "Same chemical-name identification; dotted blanks and an O/zero distractor typo do not affect guanine identity."
+    },
+    {
+      "label": "Ribozymes are catalytic RNA",
+      "questionIds": [
+        "term1-cell-final-docx-031",
+        "term1-bio-dna-student-mcqs-062"
+      ],
+      "reason": "Enzymes made of RNA and catalytic RNA express the same definition; both source compilations are support-only."
+    },
+    {
+      "label": "Titration endpoints use indicators or measured pH",
+      "questionIds": [
+        "term1-bio-kish-practical-006",
+        "term1-bio-practical-jan2024-018",
+        "term1-cell-practical20203-011",
+        "term1-cell-practical-flame-002",
+        "term1-cell-practical-molisch-027",
+        "term1-cell-practical-online-010",
+        "term1-bio-practical-dds2023-016"
+      ],
+      "reason": "Same endpoint-detection methods; both indicators and pH measurement remain accepted in every variant, including by using indicators wording."
+    },
+    {
+      "label": "Flame photometry measures metal-ion concentrations",
+      "questionIds": [
+        "term1-bio-kish-practical-008",
+        "term1-bio-practical-jan2024-023",
+        "term1-cell-practical20203-004",
+        "term1-cell-practical-flame-001",
+        "term1-cell-practical-molisch-007",
+        "term1-cell-practical-online-021",
+        "term1-bio-practical-dds2023-010"
+      ],
+      "reason": "Same analytical quantity and accepted metal-ion answer; space before the colon and option order vary. Ungraded broad inorganic-analysis-only questions are excluded."
+    },
+    {
+      "label": "Trichloroacetic acid precipitates proteins",
+      "questionIds": [
+        "term1-bio-practical-jan2024-005",
+        "term1-cell-practical-online-023"
+      ],
+      "reason": "Same reagent observation and unknown-solution identification; monosaccharide versus amino-acid distractor does not change the protein answer."
+    },
+    {
+      "label": "Gel permeation separates by molecular size",
+      "questionIds": [
+        "term1-bio-practical-jan2024-016",
+        "term1-cell-practical20203-005",
+        "term1-cell-practical-flame-010",
+        "term1-cell-practical-molisch-026"
+      ],
+      "reason": "Same chromatographic separation basis; dotted blanks and option order vary without a target change."
+    },
+    {
+      "label": "Phenolphthalein is pink in basic solution",
+      "questionIds": [
+        "term1-bio-practical-jan2024-017",
+        "term1-cell-practical20203-018",
+        "term1-cell-practical-flame-026",
+        "term1-cell-practical-molisch-020"
+      ],
+      "reason": "Same basic-solution color and answer pink; acidic colorless variants are deliberately excluded."
+    },
+    {
+      "label": "Sucrose gives a negative Benedict test",
+      "questionIds": [
+        "term1-bio-practical-jan2024-025",
+        "term1-cell-practical-flame-025",
+        "term1-cell-practical-molisch-019"
+      ],
+      "reason": "Same negative assay question and same four sugars. Apostrophe typography and option order differ; general nonreducing-sugar questions are left separate."
+    },
+    {
+      "label": "Mohr pipette graduations stop before the tip",
+      "questionIds": [
+        "term1-cell-practical-flame-015",
+        "term1-cell-practical-molisch-009",
+        "term1-bio-practical-dds2023-012"
+      ],
+      "reason": "Same pipette feature and answer; colon spacing and option order differ."
+    },
+    {
+      "label": "Watch glasses evaporate liquids and hold solids for weighing",
+      "questionIds": [
+        "term1-cell-practical-flame-017",
+        "term1-cell-practical-molisch-017",
+        "term1-bio-practical-dds2023-013"
+      ],
+      "reason": "Same laboratory-item uses; both heating/evaporation and drying/weighing alternatives remain accepted in every source version."
+    },
+    {
+      "label": "Mortar and pestle crush solids",
+      "questionIds": [
+        "term1-cell-practical-flame-018",
+        "term1-cell-practical-molisch-025",
+        "term1-bio-practical-dds2023-014"
+      ],
+      "reason": "Same laboratory equipment function with identical alternatives in different orders."
+    }
+  ]
+}

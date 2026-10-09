@@ -79,17 +79,38 @@ for(const course of download.courses)course.collections=course.collections.filte
 write('data/term1-telegram/banks.json',banks);
 write('data/mcq-refactor/past-source-catalog.json',canonical);
 write('public/study/past-paper-downloads/catalog.json',download);
-// Review reports must recognize every new retake source ID. A new transcription
-// does not establish a bookmark in the separately reviewed textbook PDF.
+// Reviewed source scope assigns sections, never new paragraph anchors. Existing
+// PDF-version-bound anchors remain untouched and must agree with the new section.
 const reviewPath='data/review-curriculum/courses/term1-biochemistry-retake.json';
 const evidencePath='data/review-curriculum/evidence/question-review-map-v2.json';
 const review=read(reviewPath),evidence=read(evidencePath);
-const importedIds=new Set([...allQuestions.keys()]);
-for(const [id,value] of Object.entries(evidence.questions))if(value.examId==='term1-biochemistry-retake'&&value.method==='reviewed-source-occurrence'&&!importedIds.has(id)){delete review.questions[id];delete evidence.questions[id];}
-for(const q of banks['term1-biochemistry-retake:biochemistry-retake-past-papers']??[]){
-  const mapping={sectionId:null,uncertain:true,status:'needs-crosswalk',livePractice:false,bankId:'biochemistry-retake-past-papers'};
+const topicMap=read('data/biochemistry-retake/source-topic-map.json');
+const retakeSources=[
+  ...fs.readFileSync(path.join(root,'data/final-exams/biochemistry-retake-past-papers.jsonl'),'utf8').trim().split('\n').map(line=>JSON.parse(line)),
+  ...(banks['term1-biochemistry-retake:biochemistry-retake-past-papers']??[]),
+];
+const retakeIds=new Set(retakeSources.map(q=>q.id));
+const reviewSections=new Set(review.sections.map(section=>section.id));
+assert.equal(retakeIds.size,retakeSources.length,'Duplicate retake source ID');
+assert.equal(topicMap.version,1,'Unsupported reviewed source-topic map');
+assert.deepEqual(Object.keys(topicMap.questions).sort(),[...retakeIds].sort(),'Reviewed topic map must cover every retake final source ID');
+// Fail stale or invalid editorial decisions before changing any review mappings.
+for(const q of retakeSources){
+  const decision=topicMap.questions[q.id];
+  const sourceHash=sha(JSON.stringify([q.prompt,q.options,q.correctOptionId,q.acceptedOptionIds??[],q.subject]));
+  assert.equal(decision.sourceHash,sourceHash,`Stale reviewed scope: ${q.id}`);
+  assert(typeof decision.inScope==='boolean'&&decision.reason?.trim(),`Missing scope decision: ${q.id}`);
+  if(decision.inScope){
+    assert.equal(q.subject,'biochemistry',`Other subject in retake scope: ${q.id}`);
+    assert(reviewSections.has(`biochemistry-retake/${decision.chapterId}`),`Unknown reviewed section: ${q.id}`);
+  }else assert.equal(decision.chapterId,null,`Excluded source must have no review section: ${q.id}`);
+}
+for(const [id,value] of Object.entries(evidence.questions))if(value.examId==='term1-biochemistry-retake'&&['reviewed-source-occurrence','reviewed-retake-scope'].includes(value.method)&&!retakeIds.has(id)){delete review.questions[id];delete evidence.questions[id];}
+for(const q of retakeSources){
+  const decision=topicMap.questions[q.id];
+  const mapping={sectionId:decision.inScope?`biochemistry-retake/${decision.chapterId}`:null,uncertain:!decision.inScope,status:decision.inScope?'mapped':'needs-crosswalk',livePractice:false,bankId:'biochemistry-retake-past-papers'};
   review.questions[q.id]=mapping;
-  evidence.questions[q.id]={examId:'term1-biochemistry-retake',...mapping,kind:q.kind,specificity:'unmapped',method:'reviewed-source-occurrence',evidence:'Original source question retained. No independently verified section or paragraph in the version-locked retake review has been assigned.'};
+  evidence.questions[q.id]={examId:'term1-biochemistry-retake',...mapping,kind:q.kind,specificity:decision.inScope?'section':'unmapped',method:'reviewed-retake-scope',inScope:decision.inScope,sourceHash:decision.sourceHash,evidence:decision.reason};
 }
 write(reviewPath,review);write(evidencePath,evidence);
 console.log(`Term 1 papers: ${new Set(imported.flatMap(c=>c.sourcePaperIds)).size}/${sources.papers.length} originals mapped; ${allQuestions.size} source occurrences; ${[...allQuestions.values()].filter(q=>q.correctOptionId).length} keyed.`);

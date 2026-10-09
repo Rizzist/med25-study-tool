@@ -105,10 +105,14 @@ test('Respiratory combined selections survive reload without weakening stored-se
   const invalid=[{...saved,exam:'unsupported'},{...saved,id:'combined-invalid'},{...saved,sourcePaperIds:['../outside']}];
   assert.deepEqual(readCombinedSelections(JSON.stringify([saved,...invalid])),[{...saved,sourcePaperIds:['respiratory-07','respiratory-15']}]);
 });
-test('Biochemistry Core uses the shared exam card in the paper grid',()=>{
+test('Retake Core leads the paper grid while other course Core cards remain available',()=>{
   const card=read('src/components/BiochemistryCoreCard.tsx'),hub=read('src/components/PastExamHub.tsx');
   assert.match(card,/return <PastPaperCard/);
-  assert.match(hub,/<div className="paper-grid">\s*\{exam==='term2-biochemistry'/);
+  const grid=hub.split('<div className="paper-grid">')[1];
+  assert(grid);
+  assert.match(grid,/^\s*\{exam==='term1-biochemistry-retake'&&<RetakeCoreCard/);
+  assert.match(grid,/RetakeCoreCard[^]*RetakeDistilledGuide[^]*shownPapers\.map/);
+  for(const exam of ['term2-biochemistry','term2-nutrition','term2-respiratory'])assert(grid.includes(`exam==='${exam}'&&<BiochemistryCoreCard`));
   assert.match(card,/core-section-details/);
 });
 

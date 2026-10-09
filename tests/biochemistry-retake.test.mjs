@@ -68,9 +68,32 @@ test('Existing paragraph anchors are preserved; expanded scope never invents rev
  assert.equal(course.volumes[0].sha256,anchors.pdfSha256);
  assert.equal(Object.keys(anchors.questions).length,audit.paragraphAnchors);
  for(const q of practice.filter(q=>q.id.startsWith('retake-practice-')))assert(anchors.questions[q.id],"existing practice keeps its exact review paragraph: "+q.id);
- for(const q of [...practice,...finals]){const ref=resolveGuidedReference(course,anchors,q.id);if(anchors.questions[q.id]){assert.equal(ref.precision,'paragraph',q.id);assert(ref.quote.length>20);assert(ref.page<=course.volumes[0].pageCount);assert(ref.top>=0&&ref.top<1);}else if(course.questions[q.id].sectionId){assert.equal(ref.precision,'section');}else{assert.equal(ref,null);assert(course.questions[q.id].uncertain);}}
+ for(const q of [...practice,...finals]){const ref=resolveGuidedReference(course,anchors,q.id),mapping=course.questions[q.id],anchor=anchors.questions[q.id];if(anchor&&anchor.sectionId===mapping.sectionId){assert.equal(ref.precision,'paragraph',q.id);assert(ref.quote.length>20);assert(ref.page<=course.volumes[0].pageCount);assert(ref.top>=0&&ref.top<1);}else if(mapping.sectionId){assert.equal(ref.precision,'section',q.id);assert.equal(ref.sectionId,mapping.sectionId);assert.equal(ref.quote,null);}else{assert.equal(ref,null);assert(mapping.uncertain);}}
  for(const q of finals.filter(q=>q.subject!=='biochemistry'))assert.equal(resolveGuidedReference(course,anchors,q.id),null);
  assert.equal(resolveGuidedReference(course,{...anchors,pdfSha256:'outdated'},practice[0].id).precision,'section');
+});
+test('Reviewed source scope maps every legacy and imported final to its approved section only',()=>{
+ const imported=read('data/term1-telegram/banks.json')[`${exam}:${bank}`];
+ const topicMap=read('data/biochemistry-retake/source-topic-map.json').questions;
+ const evidence=read('data/review-curriculum/evidence/question-review-map-v2.json').questions;
+ const sources=[...finals,...imported];
+ assert.deepEqual(Object.keys(topicMap).sort(),sources.map(q=>q.id).sort());
+ for(const q of sources){
+  const decision=topicMap[q.id],mapping=course.questions[q.id],ref=resolveGuidedReference(course,anchors,q.id);
+  assert.equal(decision.sourceHash,createHash('sha256').update(JSON.stringify([q.prompt,q.options,q.correctOptionId,q.acceptedOptionIds??[],q.subject])).digest('hex'),q.id);
+  assert.equal(mapping.sectionId,decision.inScope?`biochemistry-retake/${decision.chapterId}`:null,q.id);
+  assert.equal(mapping.uncertain,!decision.inScope,q.id);
+  assert.equal(mapping.livePractice,false,q.id);
+  assert.equal(evidence[q.id].method,'reviewed-retake-scope',q.id);
+  assert.equal(evidence[q.id].specificity,decision.inScope?'section':'unmapped',q.id);
+  if(!decision.inScope)assert.equal(ref,null,q.id);
+  else if(!anchors.questions[q.id]){assert.equal(ref.precision,'section',q.id);assert.equal(ref.uncertain,false);}
+ }
+ // A corrected chapter must override an older, still byte-preserved paragraph anchor.
+ const moved='retake-final-cell-block-q067';
+ assert.equal(anchors.questions[moved].sectionId,'biochemistry-retake/ch-16');
+ assert.equal(course.questions[moved].sectionId,'biochemistry-retake/ch-15');
+ assert.equal(resolveGuidedReference(course,anchors,moved).precision,'section');
 });
 test('Every confirmed chapter has substantial practice and every item belongs to exactly one selectable chapter',()=>{
  const detail=read(`public/study/runtime/${exam}.json`);

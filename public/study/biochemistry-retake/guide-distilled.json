@@ -1,0 +1,2314 @@
+{
+  "title": "Biochemistry I · Distilled past-paper guide",
+  "scope": "A concise review of concepts tested in the in-scope Biochemistry I past papers, including theory and laboratory principles. This is a study selection, not a replacement for the full confirmed syllabus.",
+  "conceptCount": 76,
+  "sourceQuestionCount": 125,
+  "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d",
+  "sections": [
+    {
+      "chapterId": "foundations",
+      "title": "Biochemical foundations",
+      "focus": "Recognize functional groups and connect their names to the structures in the question.",
+      "pdfPage": 3,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=3",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-biochemistry-2022-q018",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "18",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=5"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q054",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "54",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=12"
+        },
+        {
+          "id": "retake-final-september-2021-q001",
+          "paperId": "retake-september-2021",
+          "title": "Cell & Molecules · September 2021 · Biochemistry",
+          "number": "1",
+          "url": "/study/past-paper-downloads/originals/term1-source-6.pdf#page=1"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "foundations-functional-groups",
+          "title": "Functional groups determine biochemical behavior",
+          "summary": "Functional groups give biomolecules predictable acid-base behavior, polarity, reactivity, and interaction patterns. Hydroxyl groups are polar; carboxyl and amino groups participate in proton transfer; carbonyl groups define aldehydes and ketones; phosphate groups carry charge and transfer energy; and sulfhydryls can form disulfides. Recognizing the group is more useful than memorizing an isolated molecule because the same chemistry reappears in proteins, carbohydrates, lipids, and nucleotides.",
+          "keyPoints": [
+            "Hydroxyl groups support polarity and hydrogen bonding.",
+            "Carboxyl groups can donate protons; amino groups can accept protons.",
+            "Carbonyl groups occur in aldehydes and ketones.",
+            "Phosphate groups contribute negative charge and participate in energy and signal transfer.",
+            "Two oxidized cysteine sulfhydryls can form a disulfide bond."
+          ],
+          "sourceEvidence": [
+            "INTRODUCTION.ppt, slides 20-22 (major biological functional groups)."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "water-buffers",
+      "title": "Water, acids, bases and buffers",
+      "focus": "Prioritize pKa versus acid strength, acid/base ratios, and choosing a useful buffer range.",
+      "pdfPage": 6,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=6",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q031",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "31",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=10"
+        },
+        {
+          "id": "retake-final-cell-block-q040",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "40",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=13"
+        },
+        {
+          "id": "term1-cell-jan2024-006",
+          "paperId": "retake-import-cell-jan2024",
+          "title": "Cell & Molecules · 22 January 2024 · Biochemistry only",
+          "number": "6",
+          "url": "/study/term1-telegram/cell-jan2024.pdf#page=3"
+        },
+        {
+          "id": "term1-bio-nourozi-001",
+          "paperId": "retake-import-bio-nourozi",
+          "title": "Biochemistry · Dr Nowrouzi question scan · Biochemistry only",
+          "number": "1",
+          "url": "/study/term1-telegram/bio-nourozi.pdf#page=1"
+        },
+        {
+          "id": "term1-bio-dds-jul2023-010",
+          "paperId": "retake-import-bio-dds-jul2023",
+          "title": "Biochemistry · DDS / PharmD, 12 July 2023",
+          "number": "10",
+          "url": "/study/term1-telegram/bio-dds-jul2023.pdf#page=3"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "water-acids-bases-ka-and-pka",
+          "title": "Acids, bases, conjugate pairs, Ka, and pKa",
+          "summary": "A Brønsted acid donates a proton and a Brønsted base accepts one; loss of a proton converts an acid into its conjugate base. Strong acids dissociate more completely than weak acids in water. A larger Ka and therefore a lower pKa indicate a stronger acid and make quantitative prediction of ionization possible.",
+          "keyPoints": [
+            "Acid and conjugate base differ by one proton.",
+            "Ka measures the extent of acid dissociation.",
+            "pKa = -log10 Ka.",
+            "Lower pKa means stronger acid.",
+            "Weak does not mean dilute; it describes incomplete dissociation."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 14 and 17-20 (acid-base definitions, conjugate pairs, Ka, and pKa)."
+          ]
+        },
+        {
+          "id": "water-henderson-hasselbalch-calculations",
+          "title": "Henderson-Hasselbalch equation and ionization ratios",
+          "summary": "The Henderson-Hasselbalch equation is pH = pKa + log([A-]/[HA]). It converts the difference between pH and pKa into the ratio of conjugate base to weak acid: one unit above pKa means 10:1, and one unit below means 1:10. At pH equal to pKa, acid and conjugate base are equal.",
+          "keyPoints": [
+            "pH - pKa = log([A-]/[HA]).",
+            "pH = pKa gives [A-] = [HA].",
+            "Each unit of pH-pKa changes the ratio tenfold.",
+            "Above pKa the deprotonated form predominates; below pKa the protonated form predominates."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 24-28 and teacher MCQs 37-38.",
+            "Lippincott 6e, Chapter 1 acid-base section, local PDF pages 18-21."
+          ]
+        },
+        {
+          "id": "water-titration-buffer-range-and-capacity",
+          "title": "Titration curves and how buffers resist pH change",
+          "summary": "A buffer contains a weak acid and its conjugate base, allowing added H+ to be consumed by base and added OH- to be consumed by acid. Its flattest titration-curve region lies near pKa, with greatest effectiveness roughly within pKa plus or minus one pH unit. Buffer capacity depends on the total concentration of the pair, not just their ratio.",
+          "keyPoints": [
+            "At half-equivalence, pH = pKa and buffering is maximal.",
+            "The useful buffer range is approximately pKa ± 1.",
+            "The conjugate base consumes added H+.",
+            "Higher total buffer concentration gives greater capacity at the same pH and ratio."
+          ],
+          "sourceEvidence": [
+            "Water and Buffer 1404.ppt, slides 22-28 (titration, buffer region, range, and capacity)."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-1",
+      "title": "Amino acids",
+      "focus": "Classify side chains, recognize the glycine exception, and calculate charge and pI from the relevant pKa values.",
+      "pdfPage": 10,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=10",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q061",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "61",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=18"
+        },
+        {
+          "id": "term1-bio-quiz2016-006",
+          "paperId": "retake-import-bio-quiz2016",
+          "title": "Biochemistry · comprehensive quiz, 27 February 2016",
+          "number": "6",
+          "url": "/study/term1-telegram/bio-quiz2016.pdf#page=1"
+        },
+        {
+          "id": "term1-bio-quiz2016-008",
+          "paperId": "retake-import-bio-quiz2016",
+          "title": "Biochemistry · comprehensive quiz, 27 February 2016",
+          "number": "8",
+          "url": "/study/term1-telegram/bio-quiz2016.pdf#page=1"
+        },
+        {
+          "id": "term1-bio-quiz2016-010",
+          "paperId": "retake-import-bio-quiz2016",
+          "title": "Biochemistry · comprehensive quiz, 27 February 2016",
+          "number": "10",
+          "url": "/study/term1-telegram/bio-quiz2016.pdf#page=2"
+        },
+        {
+          "id": "term1-cell-jan2024-018",
+          "paperId": "retake-import-cell-jan2024",
+          "title": "Cell & Molecules · 22 January 2024 · Biochemistry only",
+          "number": "18",
+          "url": "/study/term1-telegram/cell-jan2024.pdf#page=5"
+        },
+        {
+          "id": "term1-bio-quiz2016-011",
+          "paperId": "retake-import-bio-quiz2016",
+          "title": "Biochemistry · comprehensive quiz, 27 February 2016",
+          "number": "11",
+          "url": "/study/term1-telegram/bio-quiz2016.pdf#page=2"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch1-common-structure-and-classification",
+          "title": "Common amino-acid structure and side-chain classification",
+          "summary": "A standard alpha-amino acid has an alpha carbon attached to an amino group, a carboxyl group, a hydrogen, and a distinctive side chain. The side chain determines most residue-specific chemistry and supports the practical classification into nonpolar, uncharged polar, acidic, and basic groups. At physiological pH, the alpha amino and carboxyl groups are usually protonated and deprotonated respectively.",
+          "keyPoints": [
+            "The R group distinguishes one amino acid from another.",
+            "Nonpolar side chains favor hydrophobic interactions.",
+            "Uncharged polar side chains can hydrogen bond.",
+            "Acidic side chains are usually negative and basic side chains often positive at physiological pH.",
+            "Proline has a secondary amino group; glycine has two alpha-carbon hydrogens."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 7-15 (structure and side-chain classes).",
+            "Lippincott 6e, Chapter 1, local extraction items 11 and 135."
+          ]
+        },
+        {
+          "id": "ch1-stereochemistry-and-glycine",
+          "title": "Amino-acid stereochemistry and the glycine exception",
+          "summary": "Except for glycine, standard amino acids have four different substituents on the alpha carbon and are chiral. Human ribosomal proteins are synthesized from L-amino acids. Glycine is achiral because its side chain is hydrogen, leaving two hydrogens attached to the alpha carbon.",
+          "keyPoints": [
+            "Chiral amino acids occur as D and L enantiomers.",
+            "Human proteins use L-amino acids.",
+            "Glycine is achiral.",
+            "D-amino acids occur in some bacterial cell walls and antibiotics."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, page 20 (glycine and L-amino acids).",
+            "Lippincott 6e, Chapter 1 stereochemistry section."
+          ]
+        },
+        {
+          "id": "ch1-ionization-titration-and-pi",
+          "title": "Amino-acid ionization, titration, and isoelectric point",
+          "summary": "Amino acids are amphoteric and can carry positive, zero, or negative net charge as pH changes. The isoelectric point is the pH at which the average net charge is zero; below pI a molecule is more protonated and positive, while above pI it is more deprotonated and negative. Buffering is greatest near each ionizable group's pKa, not specifically at pI unless a pKa coincides with it.",
+          "keyPoints": [
+            "At pI, average net charge is zero.",
+            "pH below pI gives a net positive charge.",
+            "pH above pI gives a net negative charge.",
+            "Titration curves reveal pKa values and buffering regions.",
+            "Ionizable side chains add extra titration steps."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 25-26 (isoelectric point).",
+            "Lippincott 6e, Chapter 1, local PDF pages 10-29."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-2",
+      "title": "Protein structure and folding",
+      "focus": "Distinguish peptide-bond properties from the forces that stabilize each level of protein structure.",
+      "pdfPage": 12,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=12",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q029",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "29",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=10"
+        },
+        {
+          "id": "retake-final-cell-block-q039",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "39",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=12"
+        },
+        {
+          "id": "retake-final-cell-block-q068",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "68",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=20"
+        },
+        {
+          "id": "term1-bio-quiz2016-015",
+          "paperId": "retake-import-bio-quiz2016",
+          "title": "Biochemistry · comprehensive quiz, 27 February 2016",
+          "number": "15",
+          "url": "/study/term1-telegram/bio-quiz2016.pdf#page=2"
+        },
+        {
+          "id": "term1-bio-quiz2016-016",
+          "paperId": "retake-import-bio-quiz2016",
+          "title": "Biochemistry · comprehensive quiz, 27 February 2016",
+          "number": "16",
+          "url": "/study/term1-telegram/bio-quiz2016.pdf#page=2"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch2-peptide-bond-chemistry-and-planarity",
+          "title": "Peptide-bond formation, resonance, and planarity",
+          "summary": "A peptide bond is an amide linkage formed between an alpha-carboxyl group and an alpha-amino group. Resonance gives the C-N bond partial double-bond character, making the peptide unit rigid and planar and restricting rotation. Rotation around bonds adjacent to the alpha carbon still permits organized folding, and peptide bonds are usually trans.",
+          "keyPoints": [
+            "Peptide formation is a condensation reaction.",
+            "The peptide C-N bond has partial double-bond character.",
+            "Restricted rotation makes the peptide unit planar.",
+            "Most peptide bonds adopt the trans configuration.",
+            "Denaturation usually does not hydrolyze peptide bonds."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 31-33 (peptide bond).",
+            "Lippincott 6e, Chapter 2, local PDF pages 30-54."
+          ]
+        },
+        {
+          "id": "ch2-secondary-structure",
+          "title": "Alpha helices, beta sheets, and beta turns",
+          "summary": "Secondary structure is local, repetitive backbone folding stabilized mainly by hydrogen bonds between peptide carbonyl and amide groups. In an alpha helix, hydrogen bonds form within one chain and the side chains project outward; beta sheets contain extended strands hydrogen-bonded in parallel or antiparallel arrangements. Beta turns reverse chain direction and often connect nearby antiparallel strands.",
+          "keyPoints": [
+            "An alpha helix has about 3.6 residues per turn and i-to-i+4 backbone hydrogen bonds.",
+            "Proline often disrupts an alpha helix.",
+            "Beta sheets are stabilized by backbone hydrogen bonds between extended strands.",
+            "Beta turns permit compact folding and often contain glycine or proline."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, pages 36-40 (alpha helix, beta sheet, and beta turn)."
+          ]
+        },
+        {
+          "id": "ch2-tertiary-structure-domains-and-stabilization",
+          "title": "Tertiary structure, motifs, domains, and side-chain forces",
+          "summary": "Tertiary structure is the overall three-dimensional arrangement of one polypeptide, including how secondary elements assemble into motifs and domains. A domain is a compact structural and often functional unit that can fold somewhat independently. Hydrophobic interactions, hydrogen bonds, ionic interactions, and disulfide bonds collectively stabilize the native conformation.",
+          "keyPoints": [
+            "Motifs are recurring combinations of secondary structures.",
+            "Domains are modular structural and functional units.",
+            "Hydrophobic burial is a major folding force in aqueous solution.",
+            "Ionic and hydrogen bonds are sensitive to pH and solvent.",
+            "Disulfides provide covalent stabilization, especially extracellularly."
+          ],
+          "sourceEvidence": [
+            "Amino acids and Proteins.Part1.pdf, page 43 (protein domains).",
+            "Lippincott 6e, Chapter 2, local extraction item 91."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-3",
+      "title": "Hemoglobin and globular proteins",
+      "focus": "Connect hemoglobin structure to oxygen transport, abnormal iron states, and the HbS substitution.",
+      "pdfPage": 15,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=15",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q083",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "83",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=24"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q009",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "9",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=2"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q058",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "58",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=13"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q020",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "20",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=5"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch3-cooperativity-tr-and-p50",
+          "title": "Cooperativity, T/R states, and P50",
+          "summary": "Deoxyhemoglobin favors the low-affinity T state, whereas oxygen binding shifts subunits toward the high-affinity R state. Binding at one heme increases affinity at the remaining hemes, producing the sigmoidal curve and efficient tissue unloading. P50 is the oxygen partial pressure at half-saturation; a higher P50 means lower affinity and a right shift.",
+          "keyPoints": [
+            "T state is tense, deoxygenated, and lower affinity.",
+            "R state is relaxed, oxygenated, and higher affinity.",
+            "Positive cooperativity creates a sigmoidal curve.",
+            "Higher P50 means lower oxygen affinity."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 3, local extraction items 39-40, 49, and 53-64."
+          ]
+        },
+        {
+          "id": "ch3-carbon-monoxide-and-methemoglobin",
+          "title": "Carbon monoxide poisoning versus methemoglobinemia",
+          "summary": "Carbon monoxide occupies heme sites and stabilizes the R state, reducing oxygen capacity while making remaining sites hold oxygen more tightly. Methemoglobin instead contains Fe3+, which cannot bind oxygen normally and can produce brown blood with cyanosis. Both cause tissue hypoxia, but pulse oximetry and treatment considerations differ.",
+          "keyPoints": [
+            "CO reduces available sites and left-shifts remaining oxygen binding.",
+            "Methemoglobin contains Fe3+ rather than Fe2+.",
+            "Chocolate-brown blood suggests methemoglobinemia.",
+            "Oxidant drugs such as nitrates or benzocaine can cause acquired methemoglobinemia."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 3.",
+            "Lippincott 6e, Chapter 3, local extraction items 97-104 and 167-174."
+          ]
+        },
+        {
+          "id": "ch3-sickle-cell-disease",
+          "title": "HbS: a primary-structure change causes polymerization",
+          "summary": "HbS contains a beta-chain Glu6Val substitution that creates a hydrophobic patch. When deoxygenated, HbS molecules polymerize into rigid fibers that distort red cells, impair deformability, and occlude small vessels. Low oxygen, acidosis, dehydration, and other conditions favoring deoxyhemoglobin increase sickling, whereas HbF reduces polymerization.",
+          "keyPoints": [
+            "The mutation is beta6 glutamate to valine.",
+            "Deoxy-HbS, not oxy-HbS, polymerizes most readily.",
+            "Polymerization causes hemolysis and vaso-occlusion.",
+            "Hydroxyurea helps by increasing HbF."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 1 local extraction item 24 and Chapter 3 local extraction items 151-158."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-4",
+      "title": "Collagen, elastin and fibrous proteins",
+      "focus": "Know the collagen repeat and distinguish synthesis steps from the disorders caused by their failure.",
+      "pdfPage": 19,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=19",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-february-2021-q011",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "11",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=3"
+        },
+        {
+          "id": "retake-final-cell-block-q049",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "49",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=15"
+        },
+        {
+          "id": "retake-final-cell-block-q063",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "63",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=18"
+        },
+        {
+          "id": "retake-final-cell-block-q080",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "80",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=23"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch4-collagen-triple-helix-and-types",
+          "title": "Collagen triple helix, Gly-X-Y, and major types",
+          "summary": "Collagen is a triple helix of three alpha chains with a repeating Gly-X-Y sequence, commonly containing proline and hydroxyproline. Glycine must occur every third residue because only its small hydrogen side chain fits at the helix center. Types I, II, and III form fibrils, whereas type IV forms a sheet-like basement-membrane network.",
+          "keyPoints": [
+            "Collagen is the most abundant protein in the body.",
+            "Gly-X-Y repeats permit triple-helix packing.",
+            "Type I predominates in bone, skin, tendon, and scar.",
+            "Type II predominates in cartilage and vitreous body.",
+            "Type III forms reticular fibers; type IV forms basement-membrane networks."
+          ],
+          "sourceEvidence": [
+            "exam-scope.md, complete confirmed Lippincott Chapters 1-7 scaffold.",
+            "Lippincott 6e, Chapter 4, local PDF pages 87-104."
+          ]
+        },
+        {
+          "id": "ch4-intracellular-collagen-synthesis",
+          "title": "Intracellular collagen synthesis and vitamin C",
+          "summary": "Prepro-alpha chains enter rough ER, lose their signal sequence, and undergo selected proline and lysine hydroxylation plus hydroxylysine glycosylation. Hydroxylases require oxygen, Fe2+, and vitamin C; terminal propeptides align three chains and prevent premature fibril formation. The chains assemble from the C terminus into a procollagen triple helix before Golgi processing and secretion.",
+          "keyPoints": [
+            "Hydroxylation occurs in rough ER after residues enter the chain.",
+            "Vitamin C keeps iron in the reduced state needed by hydroxylases.",
+            "Hydroxyproline stabilizes the triple helix through hydrogen bonding.",
+            "Propeptides align chains and keep procollagen soluble inside the cell."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 4, local PDF pages 87-104 and extraction items 31-39."
+          ]
+        },
+        {
+          "id": "ch4-collagen-disorders",
+          "title": "Scurvy, osteogenesis imperfecta, and Ehlers-Danlos syndrome",
+          "summary": "Scurvy is acquired defective hydroxylation from vitamin C deficiency, causing capillary fragility and poor wound healing. Osteogenesis imperfecta usually involves type I collagen quantity or structure and produces fractures, blue sclerae, and sometimes hearing or dental abnormalities. Ehlers-Danlos syndromes arise from varied collagen or processing defects and commonly feature skin hyperextensibility and joint hypermobility; vascular type III collagen defects risk arterial rupture.",
+          "keyPoints": [
+            "Scurvy impairs proline and lysine hydroxylation.",
+            "Osteogenesis imperfecta commonly involves type I collagen.",
+            "Glycine substitution can disrupt the entire triple helix.",
+            "Classic EDS often involves type V; vascular EDS involves type III.",
+            "Dominant-negative chains can damage a multichain collagen molecule."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 4, local PDF pages 87-104 and extraction item 58."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-5",
+      "title": "Enzymes, kinetics and regulation",
+      "focus": "Use Km and Vmax to solve rate and inhibition questions; separate isoenzymes from unrelated enzyme forms.",
+      "pdfPage": 22,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=22",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q036",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "36",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=11"
+        },
+        {
+          "id": "retake-final-cell-block-q045",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "45",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=14"
+        },
+        {
+          "id": "retake-final-cell-block-q071",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "71",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=21"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q031",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "31",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=7"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q056",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "56",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=12"
+        },
+        {
+          "id": "term1-cell-jan2024-031",
+          "paperId": "retake-import-cell-jan2024",
+          "title": "Cell & Molecules · 22 January 2024 · Biochemistry only",
+          "number": "31",
+          "url": "/study/term1-telegram/cell-jan2024.pdf#page=7"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch5-michaelis-menten-km-vmax",
+          "title": "Michaelis-Menten saturation, Km, and Vmax",
+          "summary": "For a simple Michaelis-Menten enzyme, velocity rises hyperbolically with substrate concentration and approaches Vmax as active sites become saturated. Km is the substrate concentration at half Vmax and is often used as an inverse indicator of apparent substrate affinity. Vmax depends on enzyme concentration, whereas Km for a given enzyme-substrate system does not.",
+          "keyPoints": [
+            "v = Vmax[S]/(Km + [S]).",
+            "At [S] = Km, v = Vmax/2.",
+            "Lower Km commonly means higher apparent affinity.",
+            "At saturation, adding substrate does not raise velocity further.",
+            "Increasing enzyme concentration increases Vmax."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 7 and 9-10."
+          ]
+        },
+        {
+          "id": "ch5-competitive-inhibition",
+          "title": "Competitive inhibition raises apparent Km",
+          "summary": "A competitive inhibitor and substrate compete for the enzyme's active site. It increases apparent Km because more substrate is needed to reach half Vmax, but Vmax is unchanged because sufficiently high substrate can outcompete reversible inhibitor. On a Lineweaver-Burk plot, lines share the y-intercept.",
+          "keyPoints": [
+            "Competitive inhibitor binds the active site.",
+            "Apparent Km increases.",
+            "Vmax is unchanged.",
+            "Increasing substrate can overcome reversible competitive inhibition."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 16-18 and 21.",
+            "Lippincott 6e, Chapter 5, local extraction item 112."
+          ]
+        },
+        {
+          "id": "ch5-noncompetitive-and-irreversible-inhibition",
+          "title": "Noncompetitive versus irreversible inhibition",
+          "summary": "A pure noncompetitive inhibitor binds enzyme and enzyme-substrate complex outside the active site, lowering Vmax without changing Km. An irreversible inhibitor permanently inactivates enzyme, commonly through covalent modification, so activity returns only when new enzyme is synthesized. Neither mechanism is overcome simply by increasing substrate concentration.",
+          "keyPoints": [
+            "Pure noncompetitive inhibition decreases Vmax and leaves Km unchanged.",
+            "Irreversible inhibition permanently reduces active enzyme concentration.",
+            "Increasing substrate does not restore the original Vmax.",
+            "Real mixed inhibition can change both Km and Vmax."
+          ],
+          "sourceEvidence": [
+            "Enzyme Kinetics and regulation- Session2 2024.pptx, slides 19-24.",
+            "Lippincott 6e, Chapter 5, local extraction item 82."
+          ]
+        },
+        {
+          "id": "ch5-clinical-enzymes-isoenzymes-and-biomarkers",
+          "title": "Plasma enzymes, isoenzymes, and tissue injury",
+          "summary": "Many intracellular enzymes appear in plasma at low steady-state concentrations and rise when cells are injured. Isoenzymes catalyze the same reaction but differ in structure and tissue distribution, helping identify a source of damage. Biomarker interpretation requires tissue specificity and time course; for myocardial infarction, cardiac troponin has replaced CK-MB as the preferred marker in most settings.",
+          "keyPoints": [
+            "Plasma enzyme elevation can indicate cell injury rather than increased pathway activity in plasma.",
+            "Isoenzymes differ in sequence, charge, kinetics, or tissue distribution.",
+            "ALT is relatively useful for hepatocellular injury.",
+            "Cardiac troponin is the preferred myocardial-injury biomarker.",
+            "A result must be interpreted with symptoms, timing, and reference intervals."
+          ],
+          "sourceEvidence": [
+            "Exam scope update 2026-08-20: complete confirmed Lippincott scaffold includes Chapter 5.",
+            "Lippincott 6e, Chapter 5, local extraction items 96-110."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-6",
+      "title": "Bioenergetics and oxidative phosphorylation",
+      "focus": "Identify respiratory-chain components, ATP/ADP exchange, and high-energy phosphate donors.",
+      "pdfPage": 27,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=27",
+      "sourceQuestions": [
+        {
+          "id": "term1-bio-jan2023-025",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "25",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=6"
+        },
+        {
+          "id": "term1-bio-jan2023-027",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "27",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=7"
+        },
+        {
+          "id": "term1-bio-jan2023-002",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "2",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=2"
+        },
+        {
+          "id": "term1-bio-jan2023-036",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "36",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=9"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch6-redox-cofactors-and-cytochrome-complexes",
+          "title": "Dehydrogenases, flavins, and cytochrome a/a3",
+          "summary": "Dehydrogenases catalyze oxidation-reduction reactions by transferring hydrogen or electrons to acceptors such as NAD+ or FAD; molecular oxygen need not be a direct substrate. NADH supplies electrons to Complex I through FMN, whereas succinate dehydrogenase contains covalently attached FAD and constitutes Complex II. Complex IV contains cytochromes a and a3 together with copper centers and transfers electrons ultimately to oxygen. Cytochrome c is a separate mobile carrier that carries electrons from Complex III to Complex IV.",
+          "keyPoints": [
+            "Complex I uses FMN; succinate dehydrogenase/Complex II uses FAD.",
+            "Complex II transfers electrons to coenzyme Q without pumping protons.",
+            "Cytochromes a and a3 belong to Complex IV, cytochrome c oxidase.",
+            "Cytochrome c transfers single electrons between Complexes III and IV.",
+            "Dehydrogenases transfer reducing equivalents without directly requiring O2 as their acceptor."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 6, pp. 73-76 (ETC carrier sequence and dehydrogenases), and Chapter 9, pp. 112-113 (succinate dehydrogenase-bound FAD). See also Chapter 28, p. 380 (flavin binding to enzymes)."
+          ]
+        },
+        {
+          "id": "ch6-adenine-nucleotide-translocase",
+          "title": "ADP/ATP exchange and atractyloside inhibition",
+          "summary": "The inner mitochondrial membrane requires specific carriers for adenine nucleotides and inorganic phosphate. Adenine nucleotide translocase exchanges cytosolic ADP for ATP made in the matrix, supplying ATP synthase with substrate while exporting its product. Atractyloside inhibits this ADP/ATP carrier and therefore restricts oxidative phosphorylation by blocking nucleotide exchange. The phosphate carrier is a separate transport system, and neither transporter is the carnitine shuttle.",
+          "keyPoints": [
+            "Adenine nucleotide translocase is also called the ADP/ATP antiporter.",
+            "One ADP enters the matrix as one ATP leaves.",
+            "Atractyloside blocks the adenine nucleotide carrier.",
+            "Phosphate transport and carnitine-acylcarnitine transport use different proteins."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 6, pp. 78-79 (mitochondrial ATP/ADP and phosphate transport).",
+            "Supplement for atractyloside specificity: Identification of adenine nucleotide translocase 4 inhibitors by molecular docking (2013), Introduction: https://pmc.ncbi.nlm.nih.gov/articles/PMC3821932/"
+          ]
+        },
+        {
+          "id": "ch6-high-energy-phosphate-transfer",
+          "title": "High-energy phosphate compounds versus glucose 6-phosphate",
+          "summary": "High-energy phosphate compounds have a large negative free-energy change of hydrolysis and can support favorable phosphoryl-group transfer. Phosphoenolpyruvate and phosphocreatine have high phosphoryl-transfer potential, and carbamoyl phosphate contains an energy-rich mixed anhydride linkage. Glucose 6-phosphate is an ordinary phosphate ester with a lower transfer potential and is not classified with these high-energy compounds. The term refers to the energetics of the complete reaction, not to energy being released simply by breaking an isolated bond.",
+          "keyPoints": [
+            "Phosphoenolpyruvate is a high-energy enol phosphate.",
+            "Phosphocreatine provides a rapidly transferable phosphate reserve.",
+            "Carbamoyl phosphate contains a high-energy mixed anhydride.",
+            "Glucose 6-phosphate is the low-energy phosphate ester in this comparison."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 6, pp. 72-73 (ATP and energy coupling); Chapter 8, pp. 97-103 (glucose phosphorylation and high-energy glycolytic intermediates); Chapter 19, pp. 253-254 (carbamoyl phosphate); Chapter 21, pp. 287-288 (creatine phosphate)."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-7",
+      "title": "Carbohydrate structure and stereochemistry",
+      "focus": "Identify isomers, anomeric carbons, reducing ends, and the linkages in major polysaccharides.",
+      "pdfPage": 30,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=30",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q043",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "43",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=13"
+        },
+        {
+          "id": "retake-final-cell-block-q046",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "46",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=14"
+        },
+        {
+          "id": "retake-final-cell-block-q066",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "66",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=19"
+        },
+        {
+          "id": "retake-final-february-2021-q054",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "54",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=11"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q024",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "24",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=6"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q053",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "53",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=12"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch7-monosaccharide-stereochemistry",
+          "title": "Monosaccharide classification and stereochemistry",
+          "summary": "Monosaccharides are classified by carbonyl type and carbon number. Epimers differ at one chiral carbon, while enantiomers are mirror images; D-glucose and D-galactose are C4 epimers, and glucose and mannose are C2 epimers. Cyclization creates an anomeric carbon, and alpha and beta forms differ at that carbon.",
+          "keyPoints": [
+            "Aldose versus ketose",
+            "Epimer differs at one chiral center",
+            "Anomer differs at the anomeric carbon",
+            "D/L does not specify optical rotation"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 7, monosaccharide structure (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch7-glycosidic-reducing-sugars",
+          "title": "Glycosidic bonds and reducing sugars",
+          "summary": "A glycosidic bond links the anomeric carbon of a sugar to an oxygen or nitrogen on another molecule. A sugar is reducing when it retains a free anomeric carbon capable of opening to a reactive carbonyl. All monosaccharides are reducing; lactose and maltose are reducing, whereas sucrose is not because both anomeric carbons participate in the bond.",
+          "keyPoints": [
+            "Free anomeric carbon permits reduction tests",
+            "Glycosidic linkages are named by alpha/beta and carbon positions",
+            "Sucrose is nonreducing",
+            "Benedict reagent detects reducing sugars"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 7, glycosidic bonds (textbook-confirmed).",
+            "Carbohydrate Qualification Test Esmaeili Jan 2026 — 21-page teacher practical deck (teacher-confirmed practical context).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch7-storage-and-structural-polysaccharides",
+          "title": "Starch, glycogen, and cellulose",
+          "summary": "Starch is the principal storage polysaccharide in plants and contains amylose and amylopectin. Amylose is an unbranched alpha(1→4)-linked glucose polymer, whereas amylopectin also contains alpha(1→6) branch points. Glycogen is the highly branched storage glucose polymer in animals. Cellulose is a structural plant polymer of beta(1→4)-linked glucose, and human digestive enzymes cannot hydrolyze these beta linkages.",
+          "keyPoints": [
+            "Plant glucose storage: starch.",
+            "Animal glucose storage: glycogen.",
+            "Amylose: alpha(1→4) bonds without branches.",
+            "Amylopectin and glycogen: alpha(1→4) chains with alpha(1→6) branches.",
+            "Cellulose: beta(1→4)-linked glucose; indigestible to human enzymes."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 7, pp. 85-87; Chapter 11, pp. 126-128 (polysaccharides, starch digestion, and branching)."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-14",
+      "title": "Glycoconjugates",
+      "focus": "Distinguish mixed-sugar glycoconjugates and recognize the amino-acid attachment in N-linked glycosylation.",
+      "pdfPage": 34,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=34",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-february-2021-q037",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "37",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=8"
+        },
+        {
+          "id": "retake-final-february-2021-q040",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "40",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=9"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q036",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "36",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=8"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q051",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "51",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=11"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch14-gags",
+          "title": "Glycosaminoglycan structure and major examples",
+          "summary": "Glycosaminoglycans are long repeating disaccharide chains whose sulfate and carboxyl groups attract cations and water. Their hydrated gels resist compression and support extracellular matrix. Hyaluronan is unusual because it is unsulfated, is not covalently attached to a core protein, and is synthesized at the plasma membrane.",
+          "keyPoints": [
+            "Most GAGs are highly negatively charged",
+            "Hydration provides resilience",
+            "Hyaluronan is unsulfated",
+            "Keratan sulfate lacks uronic acid"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 14, glycosaminoglycans (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch14-proteoglycan-glycoprotein",
+          "title": "Proteoglycans versus glycoproteins",
+          "summary": "A proteoglycan contains a core protein bearing long GAG chains, so carbohydrate is usually the dominant mass. Glycoproteins typically contain shorter, branched oligosaccharides and relatively more protein. Proteoglycans chiefly organize hydrated extracellular matrix, while glycoproteins have diverse roles in receptors, adhesion, immunity, and secretion.",
+          "keyPoints": [
+            "Proteoglycan = core protein plus GAG chains",
+            "Glycoprotein glycans are shorter and branched",
+            "Proteoglycans are carbohydrate-rich",
+            "Both are formed through specific glycosylation pathways"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 14, proteoglycans and glycoproteins (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch14-glycosylation-lysosomal-targeting",
+          "title": "N-linked glycosylation and mannose-6-phosphate targeting",
+          "summary": "N-linked oligosaccharides attach to asparagine and begin assembly on dolichol in the ER before Golgi processing. Lysosomal hydrolases acquire mannose-6-phosphate in the Golgi, which directs them to lysosomes. Failure to add the tag causes I-cell disease, with hydrolases secreted extracellularly and undegraded substrates accumulating in cells.",
+          "keyPoints": [
+            "N-linked glycans attach to asparagine",
+            "Dolichol supports ER assembly",
+            "Mannose-6-phosphate targets lysosomal enzymes",
+            "I-cell disease is a targeting defect"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 14, glycoprotein synthesis and lysosomal targeting (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-15",
+      "title": "Dietary lipids and absorption",
+      "focus": "Focus on fatty-acid names, chain length, saturation, essentiality, and melting behavior.",
+      "pdfPage": 36,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=36",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q060",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "60",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=18"
+        },
+        {
+          "id": "retake-final-cell-block-q067",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "67",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=20"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q035",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "35",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=8"
+        },
+        {
+          "id": "retake-final-february-2021-q002",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "2",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=1"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch15-lipid-classes-fatty-acid-structure",
+          "title": "Lipid classes and fatty-acid structure",
+          "summary": "Fatty acids contain a carboxyl group and a hydrocarbon chain; saturated fatty acids have no carbon-carbon double bonds, whereas unsaturated fatty acids contain one or more. A cis double bond introduces a kink that reduces packing and generally lowers melting point, while greater chain length and saturation raise melting point. Triacylglycerols and cholesteryl esters are simple storage or transport lipids; phospholipids and glycolipids contain additional polar groups and are major membrane lipids.",
+          "keyPoints": [
+            "Saturated fatty acids contain no carbon-carbon double bonds",
+            "Cis double bonds disrupt packing and lower melting point",
+            "Longer and more saturated chains generally melt at higher temperatures",
+            "Triacylglycerol is a concentrated hydrophobic energy store",
+            "Complex lipids include additional phosphate, carbohydrate, or nitrogen-containing groups"
+          ],
+          "sourceEvidence": [
+            "Lipid structure Esmaeili.pdf, 96-page teacher deck, early fatty-acid and lipid-classification sections.",
+            "biochemistry-telegram-scope.md: lipid structure, classification, fatty acids, complex lipids, and lipoproteins are confirmed first-semester teacher material."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-16",
+      "title": "Fatty acids, triacylglycerols and ketones",
+      "focus": "Contrast mitochondrial fatty-acid entry and oxidation with cytosolic synthesis and its carbon and NADPH supplies.",
+      "pdfPage": 38,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=38",
+      "sourceQuestions": [
+        {
+          "id": "term1-bio-jan2023-018",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "18",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=5"
+        },
+        {
+          "id": "term1-bio-jan2023-019",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "19",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=5"
+        },
+        {
+          "id": "term1-bio-jan2023-024",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "24",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=6"
+        },
+        {
+          "id": "term1-bio-jan2023-022",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "22",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=6"
+        },
+        {
+          "id": "term1-bio-jan2023-017",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "17",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=5"
+        },
+        {
+          "id": "term1-bio-jan2023-020",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "20",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=5"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch16-fa-entry-carnitine",
+          "title": "Fatty-acid activation and the carnitine shuttle",
+          "summary": "Acyl-CoA synthetase activates a fatty acid to fatty acyl-CoA at a cost equivalent to two ATP. Long-chain acyl groups enter the mitochondrial matrix through CPT-I, the carnitine-acylcarnitine translocase, and CPT-II. Malonyl-CoA inhibits CPT-I, preventing simultaneous synthesis and oxidation of fatty acids.",
+          "keyPoints": [
+            "Activation forms fatty acyl-CoA",
+            "CPT-I is the regulated entry step",
+            "Carnitine carries long-chain acyl groups",
+            "Malonyl-CoA inhibits CPT-I"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch16-beta-oxidation",
+          "title": "Mitochondrial beta-oxidation and odd-chain fatty acids",
+          "summary": "Each beta-oxidation cycle performs oxidation, hydration, oxidation, and thiolysis, producing FADH2, NADH, acetyl-CoA, and a two-carbon-shorter acyl-CoA. Even-chain fatty acids end as acetyl-CoA and cannot produce net glucose. Odd-chain fatty acids also yield propionyl-CoA, which becomes succinyl-CoA through biotin- and B12-dependent steps.",
+          "keyPoints": [
+            "Occurs mainly in mitochondrial matrix",
+            "Four recurring reactions",
+            "Produces NADH, FADH2, and acetyl-CoA",
+            "Propionyl-CoA is glucogenic through succinyl-CoA"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16, fatty-acid oxidation (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch16-fatty-acid-synthesis",
+          "title": "Fatty-acid synthesis and reciprocal control",
+          "summary": "Cytosolic acetyl-CoA carboxylase uses biotin and ATP to form malonyl-CoA, the committed and rate-limiting step. Fatty-acid synthase uses acetyl and malonyl units plus NADPH to make palmitate. Insulin and citrate activate synthesis, whereas glucagon, epinephrine, AMPK, and long-chain acyl-CoA oppose it; malonyl-CoA simultaneously blocks CPT-I.",
+          "keyPoints": [
+            "ACC makes malonyl-CoA",
+            "Biotin is required",
+            "FAS mainly produces palmitate",
+            "NADPH supplies reducing power",
+            "Malonyl-CoA coordinates synthesis with oxidation"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 16, fatty-acid synthesis (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch16-lipogenesis-carbon-nadph-and-acyl-carrier",
+          "title": "Citrate export, malic enzyme, and the acyl carrier arm",
+          "summary": "Fatty-acid synthesis occurs in the cytosol, but much of its acetyl-CoA is generated in mitochondria. Acetyl units are exported as citrate, and ATP-citrate lyase releases cytosolic acetyl-CoA and oxaloacetate. Cytosolic malic enzyme converts malate to pyruvate and CO2 while generating NADPH; the pentose phosphate pathway is another major NADPH source. Fatty-acid synthase carries growing acyl chains on the thiol of its 4-prime-phosphopantetheine arm, derived from pantothenic acid. In the fed state, active ACC supplies malonyl-CoA for synthesis and simultaneously suppresses CPT-I-mediated fatty-acid entry into mitochondria.",
+          "keyPoints": [
+            "Citrate crosses the inner membrane; acetyl-CoA does not diffuse across it.",
+            "ATP-citrate lyase produces cytosolic acetyl-CoA.",
+            "Malic enzyme produces pyruvate, CO2, and NADPH from malate.",
+            "The ACP phosphopantetheine arm derives from vitamin B5.",
+            "Citrate activates ACC; malonyl-CoA supplies FAS and inhibits CPT-I."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 16, pp. 183-187 (citrate export, ACC, fatty-acid synthase, and malic enzyme), and Chapter 28, p. 381 (pantothenate)."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-17",
+      "title": "Complex lipids and eicosanoids",
+      "focus": "Match lipid structures to membrane signaling, surfactant, sphingolipids, and the products affected by COX inhibition.",
+      "pdfPage": 43,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=43",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q041",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "41",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=13"
+        },
+        {
+          "id": "retake-final-cell-block-q055",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "55",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=16"
+        },
+        {
+          "id": "retake-final-february-2021-q016",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "16",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=4"
+        },
+        {
+          "id": "retake-final-cell-block-q077",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "77",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=22"
+        },
+        {
+          "id": "retake-final-february-2021-q036",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "36",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=8"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q034",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "34",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=8"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch17-phospholipids-signaling",
+          "title": "Phospholipid structure, membranes, and PIP2 signaling",
+          "summary": "Phospholipids are amphipathic molecules that form membrane bilayers and also serve as reservoirs for signaling molecules. Receptor-activated phospholipase C cleaves PIP2 to IP3 and DAG. IP3 releases ER Ca2+, while DAG activates protein kinase C.",
+          "keyPoints": [
+            "Polar head and hydrophobic tails",
+            "Phospholipids form bilayers",
+            "PLC cleaves PIP2",
+            "IP3 raises cytosolic Ca2+",
+            "DAG activates PKC"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — 96-page teacher deck, phospholipid section (teacher-confirmed).",
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 17 (mechanism cross-check).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch17-surfactant",
+          "title": "DPPC, pulmonary surfactant, and neonatal respiratory distress",
+          "summary": "Type II pneumocytes secrete surfactant rich in dipalmitoyl phosphatidylcholine, which lowers alveolar surface tension and prevents collapse at end-expiration. Production rises late in gestation. Prematurity can therefore cause neonatal respiratory distress syndrome, treated or prevented with antenatal glucocorticoids and exogenous surfactant as appropriate.",
+          "keyPoints": [
+            "DPPC is the major surface-active phospholipid",
+            "Made by type II pneumocytes",
+            "Reduces surface tension",
+            "Deficiency causes neonatal RDS"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 17, surfactant (confirmed August 25 scope in tracked bank).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch17-sphingolipids",
+          "title": "Sphingolipid architecture and sphingolipidoses",
+          "summary": "Ceramide is the core of sphingomyelin and glycosphingolipids. Lysosomal hydrolase defects cause substrate-specific accumulation: hexosaminidase A deficiency causes Tay-Sachs, sphingomyelinase deficiency causes Niemann-Pick A/B, and glucocerebrosidase deficiency causes Gaucher disease. Clinical pattern recognition should be linked to the accumulated lipid and missing enzyme rather than memorized as isolated names.",
+          "keyPoints": [
+            "Ceramide is the common sphingolipid core",
+            "Tay-Sachs: GM2 and hexosaminidase A",
+            "Niemann-Pick A/B: sphingomyelinase",
+            "Gaucher: glucocerebrosidase"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — sphingolipid section (teacher-confirmed class).",
+            "Tracked comprehensive bank — Chapter 17, PDF pp. 374-405 (marked confirmed August 25 scope).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch17-eicosanoids-cox",
+          "title": "Arachidonic acid, cyclooxygenase products, and NSAIDs",
+          "summary": "Phospholipase A2 releases arachidonic acid from membrane phospholipids. Cyclooxygenases convert it toward prostaglandins, prostacyclin, and thromboxanes; NSAIDs inhibit COX and therefore reduce these mediators. Glucocorticoids act further upstream by inducing lipocortin and reducing phospholipase-A2-mediated release.",
+          "keyPoints": [
+            "Arachidonate is stored in membrane phospholipids",
+            "COX produces prostanoid precursors",
+            "NSAIDs inhibit COX",
+            "Glucocorticoids reduce arachidonate release"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 17, eicosanoids (confirmed August 25 scope in tracked bank).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-18",
+      "title": "Cholesterol, lipoproteins and steroids",
+      "focus": "Compare lipoproteins by origin, major cargo, and transport role.",
+      "pdfPage": 46,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=46",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-cell-block-q070",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "70",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=20"
+        },
+        {
+          "id": "retake-final-cell-block-q084",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "84",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=24"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q032",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "32",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=7"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch18-apo-lipoprotein-map",
+          "title": "Lipoprotein pathways and apolipoprotein map",
+          "summary": "Chylomicrons carry dietary TAG with apoB-48; VLDL carries hepatic TAG with apoB-100 and becomes IDL then LDL. ApoC-II activates LPL, apoE mediates remnant uptake, apoB-100 binds the LDL receptor, and apoA-I activates LCAT on HDL. HDL also supplies apoC-II and apoE to nascent TAG-rich particles.",
+          "keyPoints": [
+            "ApoB-48: chylomicron structure",
+            "ApoB-100: VLDL/LDL structure and LDL-receptor ligand",
+            "ApoC-II activates LPL",
+            "ApoE clears remnants",
+            "ApoA-I activates LCAT"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — 96-page deck, lipoprotein section (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch18-hdl-reverse-transport",
+          "title": "HDL maturation and reverse cholesterol transport",
+          "summary": "Lipid-poor apoA-I accepts cellular cholesterol through ABCA1 to form nascent HDL. LCAT esterifies surface cholesterol, allowing cholesteryl ester to enter the HDL core; HDL returns it directly to liver through SR-B1 or transfers it to apoB particles through CETP. ABCA1 deficiency causes Tangier disease with nearly absent HDL.",
+          "keyPoints": [
+            "ABCA1 loads cholesterol onto apoA-I",
+            "LCAT esterifies HDL cholesterol",
+            "SR-B1 supports selective hepatic uptake",
+            "CETP exchanges HDL cholesteryl ester for TAG"
+          ],
+          "sourceEvidence": [
+            "Lipid Structure Esmaeili — lipoprotein section (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-23",
+      "title": "Insulin and glucagon",
+      "focus": "Recognize insulin-related glucose transport and the cAMP–PKA signaling connection tested in the papers.",
+      "pdfPage": 50,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=50",
+      "sourceQuestions": [
+        {
+          "id": "term1-bio-jan2023-005",
+          "paperId": "retake-import-bio-jan2023",
+          "title": "Biochemistry I · 29 January 2023",
+          "number": "5",
+          "url": "/study/term1-telegram/bio-jan2023.pdf#page=2"
+        },
+        {
+          "id": "term1-bio-sep2019-007",
+          "paperId": "retake-import-bio-sep2019",
+          "title": "Biochemistry I · September 2019 recall",
+          "number": "75",
+          "url": "/study/term1-telegram/bio-sep2019.pdf#page=1"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch23-insulin-action",
+          "title": "Insulin receptor signaling and metabolic effects",
+          "summary": "The insulin receptor is a receptor tyrosine kinase that signals through IRS proteins, PI3K, and Akt. Insulin recruits GLUT4 to skeletal-muscle and adipose membranes and promotes glycogen, lipid, and protein synthesis while suppressing gluconeogenesis and lipolysis. Liver uses GLUT2 rather than insulin-recruited GLUT4, but insulin still changes hepatic enzyme activity and gene expression.",
+          "keyPoints": [
+            "Insulin receptor is a receptor tyrosine kinase",
+            "GLUT4 is in muscle and adipose tissue",
+            "Insulin promotes storage and synthesis",
+            "Insulin suppresses hepatic glucose output"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 23 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch23-glucagon-counterregulation",
+          "title": "Glucagon signaling and counterregulatory hormones",
+          "summary": "Glucagon binds a hepatic Gs-coupled receptor, raises cAMP, and activates PKA to promote glycogenolysis and gluconeogenesis while suppressing glycolysis. Skeletal muscle lacks a meaningful glucagon response and mobilizes glycogen mainly through epinephrine and contraction signals. Glucagon and epinephrine provide rapid defense against falling glucose, with cortisol and growth hormone acting more slowly.",
+          "keyPoints": [
+            "Glucagon uses Gs-cAMP-PKA",
+            "Primary target is liver",
+            "No direct glucagon-driven muscle glycogenolysis",
+            "Counterregulation protects against hypoglycemia"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 23 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-24",
+      "title": "Fed-fast integration",
+      "focus": "Remember which tissue must use glucose even during starvation.",
+      "pdfPage": 52,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=52",
+      "sourceQuestions": [
+        {
+          "id": "term1-bio-dds-jul2023-021",
+          "paperId": "retake-import-bio-dds-jul2023",
+          "title": "Biochemistry · DDS / PharmD, 12 July 2023",
+          "number": "21",
+          "url": "/study/term1-telegram/bio-dds-jul2023.pdf#page=4"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch24-tissue-fuel-exceptions",
+          "title": "Tissue-specific fuel constraints",
+          "summary": "RBCs lack mitochondria and need glucose for glycolysis. Liver can oxidize fatty acids and make ketones but cannot use ketones because it lacks thiophorase; muscle uses fatty acids and ketones according to state. Brain normally relies on glucose but uses substantial ketones during prolonged fasting, while long-chain fatty acids do not cross the blood-brain barrier efficiently.",
+          "keyPoints": [
+            "RBC: glucose only for ATP",
+            "Liver: produces ketones",
+            "Brain: glucose, then more ketones in fasting",
+            "Muscle: flexible fuel use"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 24 (textbook concept; this chapter is confirmed for August 25 by exam-scope.md).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-25",
+      "title": "Diabetes mellitus",
+      "focus": "Review the diagnostic glucose threshold and what HbA1c measures; retain the source item’s multiple accepted values where applicable.",
+      "pdfPage": 54,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=54",
+      "sourceQuestions": [
+        {
+          "id": "term1-cell-practical-online-001",
+          "paperId": "retake-import-cell-practical-online",
+          "title": "Cell & Molecules practical · online screenshots",
+          "number": "30",
+          "url": "/study/term1-telegram/cell-practical-online.pdf#page=1"
+        },
+        {
+          "id": "term1-bio-kish-practical-015",
+          "paperId": "retake-import-bio-kish-practical",
+          "title": "Biochemistry practical · Kish photo paper",
+          "number": "15",
+          "url": "/study/term1-telegram/bio-kish-practical.pdf#page=4"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch25-diagnosis-monitoring",
+          "title": "Diagnosis and glycemic monitoring",
+          "summary": "Diabetes can be diagnosed with reproducibly elevated fasting plasma glucose, HbA1c, oral-glucose-tolerance values, or classic symptoms with a high random glucose. HbA1c reflects nonenzymatic glycation over the approximate lifespan of circulating RBCs and therefore represents roughly two to three months of glycemia. Altered RBC survival can make HbA1c misleading.",
+          "keyPoints": [
+            "Repeat abnormal testing when symptoms are absent",
+            "HbA1c reflects recent months",
+            "RBC lifespan affects HbA1c",
+            "Diagnosis and treatment targets are not identical"
+          ],
+          "sourceEvidence": [
+            "Lippincott's Illustrated Reviews: Biochemistry, 6e — Chapter 25 (textbook/tracked-bank; current thresholds require guideline verification).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-28",
+      "title": "Vitamins",
+      "focus": "Build vitamin-to-coenzyme and deficiency associations, with special attention to folate/B12 and the fat-soluble vitamins.",
+      "pdfPage": 59,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=59",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-biochemistry-2022-q062",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "62",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=13"
+        },
+        {
+          "id": "retake-final-cell-block-q054",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "54",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=16"
+        },
+        {
+          "id": "retake-final-cell-block-q069",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "69",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=20"
+        },
+        {
+          "id": "retake-final-february-2021-q017",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "17",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=4"
+        },
+        {
+          "id": "retake-final-february-2021-q024",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "24",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=5"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q047",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "47",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=10"
+        },
+        {
+          "id": "retake-final-cell-block-q059",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "59",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=17"
+        },
+        {
+          "id": "retake-final-february-2021-q018",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "18",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=4"
+        },
+        {
+          "id": "retake-final-cell-block-q027",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "27",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=9"
+        },
+        {
+          "id": "retake-final-february-2021-q025",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "25",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=5"
+        },
+        {
+          "id": "retake-final-february-2021-q053",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "53",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=11"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "ch28-thiamine",
+          "title": "Thiamine (B1): TPP reactions and neurologic deficiency",
+          "summary": "Thiamine pyrophosphate supports oxidative decarboxylation by PDH, alpha-ketoglutarate dehydrogenase, and branched-chain alpha-ketoacid dehydrogenase, plus transketolase reactions. Deficiency impairs glucose oxidation and can raise lactate. Wernicke encephalopathy presents with confusion, ataxia, and ocular abnormalities. Give thiamine promptly in at-risk patients; do not delay urgent glucose while waiting for thiamine.",
+          "keyPoints": [
+            "Active form is TPP",
+            "Required by three major dehydrogenase complexes",
+            "Required by transketolase",
+            "Deficiency causes Wernicke-Korsakoff and beriberi"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — water-soluble vitamin section, pp. 13-45 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ],
+          "correctionSourceUrl": "https://downloads.asam.org/sitefinity-production-blobs/docs/default-source/quality-science/the_asam_clinical_practice_guideline_on_alcohol-1.pdf"
+        },
+        {
+          "id": "ch28-riboflavin-niacin",
+          "title": "Riboflavin (B2) and niacin (B3) in redox metabolism",
+          "summary": "Riboflavin forms FMN and FAD, tightly associated redox cofactors in dehydrogenases and the respiratory chain. Niacin forms NAD+ and NADP+; NADH is used mainly for ATP-generating oxidation, while NADPH supports reductive synthesis and antioxidant defense. Niacin deficiency causes pellagra with dermatitis, diarrhea, and dementia.",
+          "keyPoints": [
+            "B2 gives FMN and FAD",
+            "B3 gives NAD and NADP",
+            "NADH favors energy production",
+            "NADPH favors reductive work",
+            "Pellagra is niacin deficiency"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — water-soluble vitamin section, pp. 13-45 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch28-b5-b6-biotin",
+          "title": "Pantothenate, pyridoxine, and biotin reaction patterns",
+          "summary": "Pantothenate is part of CoA and acyl-carrier protein, supporting acyl-group transfer. Pyridoxal phosphate from B6 supports amino-acid transamination and decarboxylation and glycogen phosphorylase; isoniazid can cause functional B6 deficiency. Biotin carries CO2 in carboxylase reactions, and avidin in raw egg white can impair its absorption.",
+          "keyPoints": [
+            "B5 supports acyl transfer",
+            "PLP supports amino-acid reactions",
+            "Isoniazid can cause B6 deficiency",
+            "Biotin supports carboxylation",
+            "Avidin binds biotin"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — water-soluble vitamin section, pp. 13-45 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch28-folate-b12",
+          "title": "Folate and B12 one-carbon metabolism",
+          "summary": "Tetrahydrofolate transfers one-carbon units for nucleotide synthesis, while B12 is needed for methionine synthase and methylmalonyl-CoA mutase. Both deficiencies cause megaloblastic anemia and elevated homocysteine, but only B12 deficiency raises methylmalonic acid and causes characteristic neurologic injury. B12 absorption requires gastric intrinsic factor and terminal ileum.",
+          "keyPoints": [
+            "Folate supports nucleotide synthesis",
+            "B12 requires intrinsic factor",
+            "Both can cause megaloblastic anemia",
+            "Neurologic deficits and methylmalonate favor B12 deficiency",
+            "Folate prevents neural-tube defects"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — folate p. 34; B12 pp. 37-39 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch28-vitamins-a-d",
+          "title": "Vitamins A and D: vision, transcription, and calcium balance",
+          "summary": "Retinal participates in the visual cycle and retinoic acid regulates transcription through nuclear receptors; vitamin-A deficiency causes night blindness and may progress to xerophthalmia. Vitamin D3 is made in skin, 25-hydroxylated in liver, and 1-alpha-hydroxylated in kidney to calcitriol. Calcitriol supports calcium/phosphate balance and bone mineralization; deficiency causes rickets/osteomalacia and excess causes hypercalcemia.",
+          "keyPoints": [
+            "11-cis-retinal supports vision",
+            "Retinoic acid controls transcription",
+            "Vitamin D activation uses skin, liver, kidney",
+            "Calcitriol increases calcium/phosphate availability",
+            "A and D can be toxic in excess"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — vitamin A pp. 46-55; vitamin D pp. 56-63 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        },
+        {
+          "id": "ch28-vitamins-e-k-c",
+          "title": "Vitamins E, K, and C: antioxidant, coagulation, and collagen roles",
+          "summary": "Vitamin E is a lipid-phase antioxidant that protects membranes and RBCs from peroxidation; deficiency is most likely with fat malabsorption and can cause hemolysis or neurologic dysfunction. Vitamin K supports gamma-carboxylation of glutamate residues in clotting and bone proteins, and deficiency prolongs PT early because factor VII has a short half-life. Vitamin C supports collagen hydroxylation and iron absorption; deficiency causes scurvy with poor wound healing and bleeding.",
+          "keyPoints": [
+            "Vitamin E protects membranes",
+            "Vitamin K enables gamma-carboxylation",
+            "PT rises early in vitamin-K deficiency",
+            "Vitamin C supports collagen hydroxylation",
+            "Fat malabsorption threatens E and K"
+          ],
+          "sourceEvidence": [
+            "Vitamin 2024 — vitamin C pp. 40-45; vitamins E/K pp. 63-70 (teacher-confirmed).",
+            "exam-scope.md (updated 2026-08-20): August 25 includes the complete confirmed Lippincott scaffold for Chapters 1–7, 14–18, and 23–33."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-29",
+      "title": "DNA structure, replication and repair",
+      "focus": "Separate DNA chemistry from the jobs of replication and repair enzymes; track strand direction before choosing an answer.",
+      "pdfPage": 64,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=64",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-biochemistry-2022-q033",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "33",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=8"
+        },
+        {
+          "id": "retake-final-cell-block-q057",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "57",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=17"
+        },
+        {
+          "id": "retake-final-cell-block-q073",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "73",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=21"
+        },
+        {
+          "id": "retake-final-february-2021-q033",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "33",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=7"
+        },
+        {
+          "id": "retake-final-cell-block-q074",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "74",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=21"
+        },
+        {
+          "id": "retake-final-cell-block-q028",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "28",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=9"
+        },
+        {
+          "id": "retake-final-february-2021-q042",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "42",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=9"
+        },
+        {
+          "id": "retake-final-cell-block-q072",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "72",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=21"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q040",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "40",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=9"
+        },
+        {
+          "id": "term1-bio-dna-student-mcqs-042",
+          "paperId": "retake-import-bio-dna-student-mcqs",
+          "title": "Biochemistry · Dr Pasalar student MCQ compilation",
+          "number": "17",
+          "url": "/study/term1-telegram/bio-dna-student-mcqs.pdf#page=8"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "bio-29-nucleotide-chemistry",
+          "title": "Nucleosides, nucleotides, and the phosphodiester backbone",
+          "summary": "A nucleoside is a nitrogenous base joined to a pentose sugar, whereas a nucleotide adds one or more phosphates. Purines are adenine and guanine; pyrimidines are cytosine, thymine, and uracil. Within one nucleic-acid strand, the 3′ hydroxyl of one sugar is joined to the 5′ phosphate of the next nucleotide by a phosphodiester bond, giving the strand directionality.",
+          "keyPoints": [
+            "Nucleoside = base + sugar; nucleotide = nucleoside + phosphate.",
+            "Ribose has a 2′-OH, whereas deoxyribose has 2′-H.",
+            "A and G are purines; C, T, and U are pyrimidines.",
+            "The backbone linkage is 3′→5′ phosphodiester, and sequences are written 5′→3′."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA)Structure (2).pdf, pp. 6-14 and 25-28.",
+            "Lippincott Illustrated Reviews: Biochemistry, 6e, Chapter 29, DNA primary structure and polarity."
+          ]
+        },
+        {
+          "id": "bio-29-dna-duplex-and-melting",
+          "title": "Complementary antiparallel DNA, helix forms, and melting",
+          "summary": "Double-stranded DNA contains complementary strands running in opposite 5′→3′ directions. Adenine pairs with thymine through two hydrogen bonds and guanine pairs with cytosine through three, so Chargaff's relation is A = T and G = C. B-DNA is the usual right-handed physiologic form; heat, extreme pH, or low ionic strength denatures DNA, and greater GC content generally raises its melting temperature.",
+          "keyPoints": [
+            "The strands are complementary and antiparallel.",
+            "A–T has two hydrogen bonds; G–C has three.",
+            "Base stacking also makes a major contribution to duplex stability.",
+            "B-DNA is physiologic and right-handed; Z-DNA is left-handed.",
+            "Denaturation is strand separation without backbone hydrolysis and can be reversed by controlled annealing."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA)Structure (2).pdf, pp. 22-34.",
+            "Lippincott 6e, Chapter 29, DNA secondary structure, denaturation, and A/B/Z forms."
+          ]
+        },
+        {
+          "id": "bio-29-replication-fork-machinery",
+          "title": "Helicase, single-strand binding proteins, and topoisomerases",
+          "summary": "Helicase separates parental strands, while single-strand DNA-binding proteins keep the templates apart and protect them. Unwinding produces positive supercoiling ahead of the fork, which topoisomerases relieve by transiently breaking and resealing DNA. Type I topoisomerases cut one strand without ATP, whereas type II enzymes cut both strands and require ATP.",
+          "keyPoints": [
+            "DnaB is the principal bacterial replicative helicase.",
+            "SSB prevents reannealing and protects exposed single-stranded DNA.",
+            "Topoisomerase I changes linking number in steps of one.",
+            "Topoisomerase II changes linking number in steps of two and includes bacterial DNA gyrase."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, slides 15 onward in the fork-machinery block.",
+            "Lippincott 6e, Chapter 29, prepriming complex and topoisomerases."
+          ]
+        },
+        {
+          "id": "bio-29-leading-lagging-synthesis",
+          "title": "5′→3′ synthesis, primers, and leading versus lagging strands",
+          "summary": "DNA polymerases add nucleotides only to a free 3′-OH, so every new strand grows 5′→3′ and requires a primer. The leading strand is synthesized continuously toward the fork, whereas the lagging strand is synthesized away from the fork as Okazaki fragments. Primase makes the RNA primers, and the repeated primers on the lagging strand must later be removed and the fragments joined.",
+          "keyPoints": [
+            "Polymerase reads template 3′→5′ while synthesizing 5′→3′.",
+            "A primer supplies the initial paired 3′-OH.",
+            "Leading synthesis is continuous; lagging synthesis is discontinuous.",
+            "Okazaki fragments arise from antiparallel template geometry."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, strand-synthesis and Okazaki-fragment slides.",
+            "Lippincott 6e, Chapter 29, DNA synthesis directionality and primer requirement."
+          ]
+        },
+        {
+          "id": "bio-29-polymerases-proofreading-ligation",
+          "title": "Polymerase specialization, proofreading, primer removal, and ligation",
+          "summary": "Replicative polymerases extend DNA processively, and their 3′→5′ exonuclease activity removes a newly misincorporated nucleotide for proofreading. In bacteria, DNA polymerase I uses 5′→3′ exonuclease activity to remove RNA primers and fills the resulting gaps with DNA. DNA ligase then seals the remaining nick by creating the final phosphodiester bond.",
+          "keyPoints": [
+            "Bacterial DNA polymerase III performs most fork elongation.",
+            "Proofreading exonuclease is 3′→5′.",
+            "Bacterial DNA polymerase I removes primers with 5′→3′ exonuclease.",
+            "DNA ligase seals, but does not fill, a nick.",
+            "PCNA is the eukaryotic sliding clamp."
+          ],
+          "sourceEvidence": [
+            "Teacher: Deoxyribonucleic Acid(DNA Replication (1).pptx, polymerase, exonuclease, and ligase block.",
+            "Lippincott 6e, Chapter 29, polymerases I/III, proofreading, and ligation."
+          ]
+        },
+        {
+          "id": "bio-29-single-strand-dna-repair",
+          "title": "Mismatch, nucleotide-excision, and base-excision repair",
+          "summary": "Mismatch repair removes replication errors that escape proofreading. Nucleotide-excision repair removes a short oligonucleotide containing a bulky, helix-distorting lesion such as a UV-induced pyrimidine dimer. Base-excision repair begins with a lesion-specific glycosylase that removes a damaged base, followed by AP-site incision, gap filling, and ligation.",
+          "keyPoints": [
+            "Mismatch repair corrects base mismatches and small insertion/deletion loops.",
+            "NER handles bulky, helix-distorting lesions.",
+            "BER handles small, nonbulky base damage such as deamination.",
+            "All three pathways use an intact complementary strand as sequence information."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 29, DNA repair section: mismatch, nucleotide-excision, and base-excision repair.",
+            "The teacher replication deck is titled DNA replication and the textbook supplies the repair mechanisms needed to complete that chapter outcome."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-30",
+      "title": "RNA, transcription and processing",
+      "focus": "Identify promoter recognition, coding versus template strands, RNA splicing, and the targets of transcription inhibitors.",
+      "pdfPage": 70,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=70",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-february-2021-q022",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "22",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=5"
+        },
+        {
+          "id": "retake-final-cell-block-q078",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "78",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=23"
+        },
+        {
+          "id": "retake-final-cell-block-q050",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "50",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=15"
+        },
+        {
+          "id": "retake-final-february-2021-q015",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "15",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=3"
+        },
+        {
+          "id": "term1-cell-jan2024-050",
+          "paperId": "retake-import-cell-jan2024",
+          "title": "Cell & Molecules · 22 January 2024 · Biochemistry only",
+          "number": "50",
+          "url": "/study/term1-telegram/cell-jan2024.pdf#page=12"
+        },
+        {
+          "id": "term1-bio-dna-student-mcqs-076",
+          "paperId": "retake-import-bio-dna-student-mcqs",
+          "title": "Biochemistry · Dr Pasalar student MCQ compilation",
+          "number": "49",
+          "url": "/study/term1-telegram/bio-dna-student-mcqs.pdf#page=13"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "bio-30-bacterial-transcription-initiation",
+          "title": "Primer-independent bacterial transcription initiation",
+          "summary": "RNA polymerase can begin RNA synthesis de novo and therefore does not require a primer. In bacteria, the sigma factor joins the core enzyme to form a holoenzyme that recognizes promoter consensus sequences. The −35 region supports recognition and the AT-rich −10 Pribnow box facilitates local DNA opening near the +1 start site.",
+          "keyPoints": [
+            "RNA polymerase synthesizes RNA 5′→3′ without a primer.",
+            "Sigma confers promoter specificity but is not the elongating catalytic core.",
+            "Canonical bacterial promoter elements are near −35 and −10.",
+            "Promoter sequences are not themselves transcribed."
+          ],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, bacterial RNA polymerase and promoter-initiation block.",
+            "Lippincott 6e, Chapter 30, bacterial promoter recognition and sigma factor."
+          ]
+        },
+        {
+          "id": "bio-30-transcription-elongation-termination",
+          "title": "Transcript direction, coding/template strands, and bacterial termination",
+          "summary": "RNA polymerase reads the DNA template strand 3′→5′ and synthesizes RNA 5′→3′. The RNA sequence is complementary to the template and matches the coding strand except that uracil replaces thymine. Intrinsic termination uses a GC-rich RNA hairpin followed by uridines, whereas rho-dependent termination uses an ATP-dependent helicase to release the transcript.",
+          "keyPoints": [
+            "RNA grows 5′→3′ and the template is read 3′→5′.",
+            "Coding-strand sequence corresponds to RNA with T replaced by U.",
+            "Sigma commonly dissociates after promoter clearance.",
+            "Intrinsic termination requires a hairpin plus a U-rich tract.",
+            "Rho binds RNA and catches a paused polymerase."
+          ],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, elongation and termination sections.",
+            "Lippincott 6e, Chapter 30, transcript directionality and bacterial termination mechanisms."
+          ]
+        },
+        {
+          "id": "bio-30-splicing-alternative-splicing",
+          "title": "Spliceosome mechanism, splice-site disease, and alternative splicing",
+          "summary": "The spliceosome uses snRNPs to recognize the 5′ GU site, branch-point adenine, polypyrimidine tract, and 3′ AG site. Two transesterification reactions form a lariat and join neighboring exons without consuming ATP for the bond-exchange chemistry itself. Alternative splice-site choice allows one gene to produce different protein isoforms, while pathogenic splice mutations can cause exon skipping, intron retention, or activation of cryptic sites.",
+          "keyPoints": [
+            "Introns are removed and exons are ligated by the spliceosome.",
+            "The branch-point A forms a 2′–5′ bond in the lariat.",
+            "Consensus boundaries are usually GU at the 5′ end and AG at the 3′ end.",
+            "Alternative splicing expands the proteome without adding genes.",
+            "Splice-site mutations can alter the reading frame or introduce premature stops."
+          ],
+          "sourceEvidence": [
+            "Lippincott 6e, Chapter 30, spliceosome, splice-site mutations, and alternative splicing.",
+            "Teacher: Transcription 2025.pptx includes eukaryotic RNA processing in the confirmed course block."
+          ]
+        },
+        {
+          "id": "bio-30-transcription-inhibitors",
+          "title": "Transcription inhibitors as mechanism probes and drugs",
+          "summary": "Actinomycin D intercalates into DNA and broadly blocks RNA-chain elongation. Rifampicin binds the β subunit of bacterial RNA polymerase and prevents productive initiation. α-Amanitin from Amanita mushrooms most strongly inhibits eukaryotic RNA polymerase II, shutting down mRNA synthesis.",
+          "keyPoints": [
+            "Actinomycin D targets DNA and inhibits transcription broadly.",
+            "Rifampicin selectively targets bacterial RNA polymerase.",
+            "α-Amanitin is most potent against Pol II.",
+            "Selectivity depends on whether the target is DNA itself or a domain-specific polymerase."
+          ],
+          "sourceEvidence": [
+            "Teacher: Transcription 2025.pptx, transcription-inhibitor section.",
+            "Lippincott 6e, Chapter 30, rifampin, dactinomycin, and α-amanitin."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-31",
+      "title": "Translation",
+      "focus": "Follow tRNA charging and ribosomal sites, then match antibiotics and toxins to the blocked translation step.",
+      "pdfPage": 73,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=73",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-february-2021-q019",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "19",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=4"
+        },
+        {
+          "id": "term1-bio-dna-student-mcqs-077",
+          "paperId": "retake-import-bio-dna-student-mcqs",
+          "title": "Biochemistry · Dr Pasalar student MCQ compilation",
+          "number": "50",
+          "url": "/study/term1-telegram/bio-dna-student-mcqs.pdf#page=14"
+        },
+        {
+          "id": "term1-bio-dna-student-mcqs-083",
+          "paperId": "retake-import-bio-dna-student-mcqs",
+          "title": "Biochemistry · Dr Pasalar student MCQ compilation",
+          "number": "55",
+          "url": "/study/term1-telegram/bio-dna-student-mcqs.pdf#page=15"
+        },
+        {
+          "id": "term1-bio-dna-student-mcqs-084",
+          "paperId": "retake-import-bio-dna-student-mcqs",
+          "title": "Biochemistry · Dr Pasalar student MCQ compilation",
+          "number": "56",
+          "url": "/study/term1-telegram/bio-dna-student-mcqs.pdf#page=15"
+        },
+        {
+          "id": "retake-final-cell-block-q047",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "47",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=14"
+        },
+        {
+          "id": "retake-final-february-2021-q004",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "4",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=1"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "bio-31-trna-charging-wobble",
+          "title": "Aminoacyl-tRNA synthetases, proofreading, and wobble",
+          "summary": "An aminoacyl-tRNA synthetase uses ATP to attach a specific amino acid to the 3′ CCA end of its cognate tRNA. Many synthetases proofread by removing an incorrectly activated or attached amino acid before the tRNA reaches the ribosome. Flexible pairing between the third codon base and first anticodon base, called wobble, lets one tRNA decode several synonymous codons.",
+          "keyPoints": [
+            "Each amino acid has a corresponding synthetase specificity system.",
+            "Charging consumes ATP to AMP, equivalent to two high-energy phosphate bonds.",
+            "The ribosome checks codon–anticodon pairing but cannot verify the attached amino acid.",
+            "Wobble explains why fewer tRNAs than sense codons are required."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 17-25.",
+            "Lippincott 6e, Chapter 31, tRNA charging and wobble."
+          ]
+        },
+        {
+          "id": "bio-31-ribosome-sites-direction",
+          "title": "Ribosomal A/P/E sites, peptidyl transferase, and directionality",
+          "summary": "The ribosome reads mRNA 5′→3′ and synthesizes protein from the amino terminus toward the carboxyl terminus. Incoming aminoacyl-tRNA enters the A site, peptidyl-tRNA occupies the P site, and deacylated tRNA exits through the E site. The large-subunit rRNA catalyzes peptide-bond formation, demonstrating that the ribosome is a ribozyme.",
+          "keyPoints": [
+            "A = aminoacyl entry, P = peptidyl chain, E = exit.",
+            "Protein elongates N→C.",
+            "Peptide-bond energy comes from the high-energy aminoacyl-tRNA ester bond.",
+            "Bacterial 23S rRNA is the peptidyl-transferase catalyst."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 26, 28, and 41-42.",
+            "Lippincott 6e, Chapter 31, ribosome structure and directionality."
+          ]
+        },
+        {
+          "id": "bio-31-translation-inhibitors-toxins",
+          "title": "Antibiotics and toxins mapped to translation steps",
+          "summary": "Tetracyclines block aminoacyl-tRNA entry into the bacterial A site, whereas macrolides inhibit translocation through the 50S subunit. Puromycin mimics aminoacyl-tRNA and causes premature chain release in both domains. Diphtheria toxin ADP-ribosylates eEF2, and ricin depurinates 28S rRNA, so both arrest eukaryotic protein synthesis by distinct mechanisms.",
+          "keyPoints": [
+            "Tetracycline: blocks A-site entry on bacterial ribosomes.",
+            "Macrolides: 50S binding and impaired translocation.",
+            "Chloramphenicol: inhibits bacterial/mitochondrial peptidyl transferase.",
+            "Puromycin: aminoacyl-tRNA analog causing premature termination.",
+            "Diphtheria toxin targets eEF2; ricin targets 28S rRNA."
+          ],
+          "sourceEvidence": [
+            "Teacher: Translation 2025.pptx, slides 47-50.",
+            "Lippincott 6e, Chapter 31, inhibitors of protein synthesis."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-32",
+      "title": "Gene regulation",
+      "focus": "Distinguish promoter, operator, regulator, and structural genes; compare lac induction with trp repression.",
+      "pdfPage": 77,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=77",
+      "sourceQuestions": [
+        {
+          "id": "retake-final-february-2021-q009",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "9",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=2"
+        },
+        {
+          "id": "retake-final-cell-block-q035",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "35",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=11"
+        },
+        {
+          "id": "retake-final-february-2021-q012",
+          "paperId": "retake-february-2021",
+          "title": "Cell & Molecules · February 2021 · Biochemistry",
+          "number": "12",
+          "url": "/study/past-paper-downloads/originals/term1-source-3.pdf#page=3"
+        },
+        {
+          "id": "retake-final-cell-block-q044",
+          "paperId": "retake-cell-block",
+          "title": "Cell & Molecules · April 2021 report · Biochemistry",
+          "number": "44",
+          "url": "/study/past-paper-downloads/originals/term1-source-2.pdf#page=14"
+        },
+        {
+          "id": "retake-final-biochemistry-2022-q063",
+          "paperId": "retake-biochemistry-2022",
+          "title": "Biochemistry 1 · Finals 2022",
+          "number": "63",
+          "url": "/study/past-paper-downloads/originals/term1-source-5.pdf#page=14"
+        },
+        {
+          "id": "term1-bio-dna-student-mcqs-089",
+          "paperId": "retake-import-bio-dna-student-mcqs",
+          "title": "Biochemistry · Dr Pasalar student MCQ compilation",
+          "number": "61",
+          "url": "/study/term1-telegram/bio-dna-student-mcqs.pdf#page=16"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "bio-32-regulatory-logic-cis-trans",
+          "title": "Constitutive versus regulated genes, cis elements, trans factors, and operons",
+          "summary": "Constitutive genes are expressed relatively continuously for basal functions, whereas regulated genes change expression with conditions, cell type, or signals. A cis-acting element is a DNA sequence that affects linked genes on the same DNA molecule; a trans-acting factor is a diffusible product, usually a protein, that binds a target sequence. A bacterial operon places multiple structural genes under shared regulatory DNA so they can be transcribed together as a polycistronic mRNA.",
+          "keyPoints": [
+            "Cis = local DNA sequence; trans = diffusible regulator.",
+            "Promoters, operators, enhancers, and response elements are cis elements.",
+            "Repressors, activators, and many transcription factors act in trans.",
+            "Operons coordinate related bacterial genes efficiently."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, constitutive/controllable genes, cis/trans factors, and operons.",
+            "Lippincott 6e, Chapter 32, universal transcriptional-regulation logic."
+          ]
+        },
+        {
+          "id": "bio-32-lac-operon",
+          "title": "Lac operon integrates lactose availability with glucose status",
+          "summary": "Without lactose, active lac repressor binds the operator and blocks transcription. Lactose-derived allolactose binds the repressor and lowers its operator affinity, providing negative-control release. When glucose is low, cAMP rises and cAMP–CAP activates RNA-polymerase recruitment, so maximal expression requires lactose present and glucose absent.",
+          "keyPoints": [
+            "Allolactose is the inducer that inactivates lac repressor.",
+            "Low glucose → high cAMP → active CAP.",
+            "Lactose present removes negative control; low glucose provides positive control.",
+            "Maximal lacZYA transcription: lactose present, glucose absent.",
+            "Glucose-mediated suppression is catabolite repression."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, lac-operon block.",
+            "Lippincott 6e, Chapter 32, lac negative and positive regulation."
+          ]
+        },
+        {
+          "id": "bio-32-trp-operon-attenuation",
+          "title": "Trp operon repression and attenuation sense amino-acid supply",
+          "summary": "The trp operon is normally on when tryptophan is scarce and is repressed when tryptophan acts as a corepressor. Attenuation adds a second layer by coupling translation of a leader peptide to formation of alternative mRNA hairpins. Abundant charged tRNA-Trp allows the ribosome to advance and favors a terminator, whereas scarcity stalls the ribosome and favors an antiterminator so biosynthetic genes are transcribed.",
+          "keyPoints": [
+            "Lac is inducible and catabolic; trp is repressible and anabolic.",
+            "Tryptophan activates its repressor as a corepressor.",
+            "Attenuation depends on coupled transcription and translation.",
+            "High Trp favors termination; low Trp permits transcription."
+          ],
+          "sourceEvidence": [
+            "Teacher: Regulation of Gene Expression 2025.pptx, trp-operon section.",
+            "Lippincott 6e, Chapter 32, trp attenuation mechanism."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "ch-33",
+      "title": "Biotechnology",
+      "focus": "Recognize the essential features of a plasmid cloning vector.",
+      "pdfPage": 80,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=80",
+      "sourceQuestions": [
+        {
+          "id": "term1-bio-sep2019-047",
+          "paperId": "retake-import-bio-sep2019",
+          "title": "Biochemistry I · September 2019 recall",
+          "number": "42",
+          "url": "/study/term1-telegram/bio-sep2019.pdf#page=7"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "bio-33-restriction-cloning",
+          "title": "Restriction enzymes, sticky ends, and plasmid cloning vectors",
+          "summary": "Type II restriction endonucleases recognize short, often palindromic DNA sequences and cut reproducibly. Staggered cuts can create complementary sticky ends that align insert and vector before DNA ligase seals the backbone. A basic plasmid vector needs an origin of replication, a selectable marker, and a cloning site for the inserted DNA.",
+          "keyPoints": [
+            "Restriction enzymes cut sequence-specific sites.",
+            "Compatible sticky ends improve directional assembly efficiency.",
+            "DNA ligase covalently seals vector and insert.",
+            "Origin, selectable marker, and cloning site are core vector features."
+          ],
+          "sourceEvidence": [
+            "Lippincott Illustrated Reviews: Biochemistry, 6e, Chapter 33, PDF pp. 838-877.",
+            "Tracked bank source labels Chapter 33 as confirmed August 25 Cell & Molecules scope."
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "lab-practical",
+      "title": "Laboratory principles and tests",
+      "focus": "Know what each test detects and why it changes; distinguish instrument parts and separation principles instead of relying on a source letter key.",
+      "pdfPage": 83,
+      "reviewUrl": "/study/reviews/biochemistry-retake.pdf?v=2537e92e657726448a5e469d9b86073d802fc0987a930b5b3f2822ca24dc705d#page=83",
+      "sourceQuestions": [
+        {
+          "id": "term1-bio-practical-jan2024-025",
+          "paperId": "retake-import-bio-practical-jan2024",
+          "title": "Biochemistry practical · 22 January 2024",
+          "number": "25",
+          "url": "/study/term1-telegram/bio-practical-jan2024.pdf#page=6"
+        },
+        {
+          "id": "term1-bio-practical-jan2024-002",
+          "paperId": "retake-import-bio-practical-jan2024",
+          "title": "Biochemistry practical · 22 January 2024",
+          "number": "2",
+          "url": "/study/term1-telegram/bio-practical-jan2024.pdf#page=2"
+        },
+        {
+          "id": "term1-bio-practical-jan2024-004",
+          "paperId": "retake-import-bio-practical-jan2024",
+          "title": "Biochemistry practical · 22 January 2024",
+          "number": "4",
+          "url": "/study/term1-telegram/bio-practical-jan2024.pdf#page=2"
+        },
+        {
+          "id": "term1-bio-practical-jan2024-006",
+          "paperId": "retake-import-bio-practical-jan2024",
+          "title": "Biochemistry practical · 22 January 2024",
+          "number": "6",
+          "url": "/study/term1-telegram/bio-practical-jan2024.pdf#page=2"
+        },
+        {
+          "id": "term1-cell-practical20203-008",
+          "paperId": "retake-import-cell-practical20203",
+          "title": "Cell & Molecules practical · report 20203",
+          "number": "8",
+          "url": "/study/term1-telegram/cell-practical20203.pdf#page=3"
+        },
+        {
+          "id": "term1-cell-practical20203-011",
+          "paperId": "retake-import-cell-practical20203",
+          "title": "Cell & Molecules practical · report 20203",
+          "number": "11",
+          "url": "/study/term1-telegram/cell-practical20203.pdf#page=3"
+        },
+        {
+          "id": "term1-bio-practical-jan2024-007",
+          "paperId": "retake-import-bio-practical-jan2024",
+          "title": "Biochemistry practical · 22 January 2024",
+          "number": "7",
+          "url": "/study/term1-telegram/bio-practical-jan2024.pdf#page=3"
+        },
+        {
+          "id": "term1-bio-practical-jan2024-009",
+          "paperId": "retake-import-bio-practical-jan2024",
+          "title": "Biochemistry practical · 22 January 2024",
+          "number": "9",
+          "url": "/study/term1-telegram/bio-practical-jan2024.pdf#page=3"
+        },
+        {
+          "id": "term1-bio-practical-dds2023-007",
+          "paperId": "retake-import-bio-practical-dds2023",
+          "title": "Biochemistry practical · DDS / PharmD, 15 July 2023",
+          "number": "7",
+          "url": "/study/term1-telegram/bio-practical-dds2023.pdf#page=2"
+        },
+        {
+          "id": "term1-bio-practical-dds2023-008",
+          "paperId": "retake-import-bio-practical-dds2023",
+          "title": "Biochemistry practical · DDS / PharmD, 15 July 2023",
+          "number": "8",
+          "url": "/study/term1-telegram/bio-practical-dds2023.pdf#page=2"
+        },
+        {
+          "id": "term1-bio-kish-practical-004",
+          "paperId": "retake-import-bio-kish-practical",
+          "title": "Biochemistry practical · Kish photo paper",
+          "number": "4",
+          "url": "/study/term1-telegram/bio-kish-practical.pdf#page=1"
+        },
+        {
+          "id": "term1-bio-practical-jan2024-023",
+          "paperId": "retake-import-bio-practical-jan2024",
+          "title": "Biochemistry practical · 22 January 2024",
+          "number": "23",
+          "url": "/study/term1-telegram/bio-practical-jan2024.pdf#page=5"
+        },
+        {
+          "id": "term1-cell-practical-flame-015",
+          "paperId": "retake-import-cell-practical-flame",
+          "title": "Cell & Molecules practical · flame photometry paper",
+          "number": "15",
+          "url": "/study/term1-telegram/cell-practical-flame.pdf#page=3"
+        },
+        {
+          "id": "term1-bio-kish-practical-012",
+          "paperId": "retake-import-bio-kish-practical",
+          "title": "Biochemistry practical · Kish photo paper",
+          "number": "12",
+          "url": "/study/term1-telegram/bio-kish-practical.pdf#page=4"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "bio-lab-carbohydrate-general-tests",
+          "title": "General carbohydrate, starch, and reducing-sugar tests",
+          "summary": "Molisch is a broad carbohydrate test that produces a violet ring at the acid–aqueous interface. Iodine forms a blue-black complex with the helical structure of starch and is useful for polysaccharide recognition. Benedict reagent detects reducing sugars by reduction of Cu2+ to Cu2O, with color progressing from green toward orange or brick red as reducing-sugar concentration increases.",
+          "keyPoints": [
+            "Molisch: general carbohydrate; violet interfacial ring.",
+            "Iodine: starch/polysaccharide; blue-black complex.",
+            "Benedict: reducing sugar; colored Cu2O precipitate after heating.",
+            "A positive broad test does not identify the exact carbohydrate."
+          ],
+          "sourceEvidence": [
+            "Teacher: Carbohydrate Qualification Test Esmaeili Jan 2026.pdf, pp. 7-15.",
+            "Telegram scope audit identifies this 21-page file as confirmed practical biochemistry material."
+          ]
+        },
+        {
+          "id": "bio-lab-carbohydrate-differentiation-tests",
+          "title": "Use reaction conditions and timing to distinguish carbohydrate classes",
+          "summary": "Benedict color is semiquantitative because increasing reducing-sugar concentration produces progressively more colored Cu2O precipitate rather than an exact calibrated concentration. Barfoed uses acidic copper reagent, in which monosaccharides reduce copper rapidly while disaccharides react more slowly. Seliwanoff uses acid and resorcinol; ketoses dehydrate rapidly and form a red product sooner than aldoses.",
+          "keyPoints": [
+            "Benedict estimates reducing-sugar amount only roughly by color.",
+            "Barfoed separates rapid monosaccharide reduction from slower disaccharide reduction.",
+            "Seliwanoff favors rapid ketose detection.",
+            "Timing matters: prolonged heating can create misleading late positives."
+          ],
+          "sourceEvidence": [
+            "Teacher: Carbohydrate Qualification Test Esmaeili Jan 2026.pdf, pp. 14-19.",
+            "Teacher-derived image spotters confirm the expected Benedict, Barfoed, and Seliwanoff appearances."
+          ]
+        },
+        {
+          "id": "bio-lab-amino-acid-protein-tests",
+          "title": "Ninhydrin, Biuret, and xanthoproteic reaction targets",
+          "summary": "Ninhydrin reacts with free amino groups and gives Ruhemann's purple for most amino acids, while proline characteristically gives yellow. Biuret detects multiple peptide bonds through a violet Cu2+ complex in alkaline solution and is therefore a protein/peptide test rather than a free-amino-acid test. The xanthoproteic reaction nitrates aromatic residues, producing yellow that deepens toward orange after alkali.",
+          "keyPoints": [
+            "Ninhydrin: free amino groups; purple for most amino acids.",
+            "Proline is the yellow ninhydrin exception.",
+            "Biuret: Cu2+ complex with multiple peptide bonds in alkali.",
+            "Xanthoproteic: aromatic amino-acid residues; yellow-to-orange product."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Practical amino acid and protein tests. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ]
+        },
+        {
+          "id": "bio-lab-volumetric-technique",
+          "title": "Precision glassware, meniscus reading, and burette delivery",
+          "summary": "A volumetric pipette is calibrated to deliver one specified volume with high precision, whereas a graduated pipette can deliver variable volumes with lower precision. A typical aqueous meniscus should be read at eye level from its bottom to avoid parallax. A burette delivers controlled variable volumes of titrant through a stopcock and is read from the change between initial and final graduations.",
+          "keyPoints": [
+            "Volumetric pipette: one precise delivered volume.",
+            "Volumetric flask: one precise contained final volume.",
+            "Read the lower aqueous meniscus at eye level.",
+            "Burette: variable controlled delivery for titration.",
+            "Correct pipette fillers are used; mouth pipetting is never acceptable."
+          ],
+          "sourceEvidence": [
+            "Teacher: Laboratory Equipment Esmaeili Jan 2026.pdf, pp. 18-27.",
+            "Telegram scope audit confirms the 46-page laboratory-equipment deck."
+          ]
+        },
+        {
+          "id": "bio-lab-acid-base-titration",
+          "title": "Acid–base titration endpoint and normality calculation",
+          "summary": "In the teacher experiment, standardized 0.1 N NaOH is delivered from the burette to determine an unknown acid concentration. Phenolphthalein marks the endpoint as the first faint pink color persisting for roughly 30 seconds; a strong pink indicates overshooting. At the stated equivalence relationship, unknown normality follows from N1V1 = N2V2 using consistent volume units.",
+          "keyPoints": [
+            "Titrant is known; analyte is unknown.",
+            "Teacher standard: 0.1 N NaOH.",
+            "Endpoint is persistent pale pink, not deep pink.",
+            "Normality counts reactive equivalents per liter.",
+            "Record initial and final burette readings and use their difference."
+          ],
+          "sourceEvidence": [
+            "Teacher: Titration Esmaeili Jan 2026.pdf, pp. 6-9.",
+            "Telegram scope audit confirms this 10-page practical titration file."
+          ]
+        },
+        {
+          "id": "bio-lab-spectrophotometry",
+          "title": "Beer–Lambert law, blanking, and wavelength selection",
+          "summary": "Within its linear range, Beer–Lambert law states A = εbc, so absorbance is proportional to molar absorptivity, path length, and concentration. A reagent blank removes absorbance caused by solvent, reagents, and cuvette so the remaining signal is attributed to analyte or reaction product. Measuring near the wavelength of maximum absorbance improves sensitivity and reduces the effect of small wavelength-setting errors.",
+          "keyPoints": [
+            "A = εbc within the validated linear range.",
+            "Absorbance is −log10 of fractional transmittance.",
+            "Blank composition should match the sample except for the measured analyte/reaction.",
+            "Use λmax for sensitivity.",
+            "Dilute and apply the dilution factor when absorbance exceeds the calibration range."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Spectrophotometry. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ]
+        },
+        {
+          "id": "bio-lab-chromatography",
+          "title": "Chromatographic separation by mobility, charge, size, or affinity",
+          "summary": "In paper or thin-layer chromatography, Rf is the distance traveled by solute divided by the solvent-front distance under the same run conditions. Ion-exchange chromatography separates by net charge through reversible binding to oppositely charged groups. Affinity chromatography uses a specific immobilized ligand to retain a target, while size-exclusion chromatography makes larger molecules elute first because they enter fewer bead pores.",
+          "keyPoints": [
+            "Rf is unitless and lies between zero and one in a valid planar run.",
+            "Ion exchange separates principally by net charge.",
+            "Affinity uses specific target–ligand recognition.",
+            "Size exclusion: large molecules elute before small molecules.",
+            "Changing pH or ionic strength can alter binding and elution."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Chromatography. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ]
+        },
+        {
+          "id": "bio-lab-dna-extraction",
+          "title": "DNA extraction by lysis, nuclease inhibition, and alcohol precipitation",
+          "summary": "Detergent disrupts lipid membranes and helps release DNA from cells and nuclei. EDTA chelates divalent cations required by many nucleases, while protease removes protein contaminants including histones and nucleases. Salt shields phosphate charges and cold ethanol lowers DNA solubility, allowing DNA to aggregate and precipitate from the aqueous extract.",
+          "keyPoints": [
+            "Detergent lyses membranes.",
+            "EDTA chelates Mg2+/Ca2+ and suppresses nucleases.",
+            "Protease removes DNA-bound and contaminating proteins.",
+            "Salt plus cold alcohol precipitates DNA.",
+            "Avoid vigorous shearing when intact high-molecular-weight DNA is needed."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: DNA extraction. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ]
+        },
+        {
+          "id": "bio-lab-flame-photometry",
+          "title": "Atomic emission, calibration, and clinical ions in flame photometry",
+          "summary": "A flame excites atoms, and light emitted as electrons return to lower energy levels is measured at element-specific wavelengths. Sodium, potassium, and lithium are common analytes because their atomic emissions are strong and characteristic. An unknown concentration is obtained from standards and a calibration curve; out-of-range samples must be diluted into the validated range and corrected by the dilution factor.",
+          "keyPoints": [
+            "Flame photometry measures emitted light, not absorbance.",
+            "Emission wavelength identifies the element; intensity relates to concentration.",
+            "Na+ and K+ are classic analytes.",
+            "Standards and blanks establish a valid calibration.",
+            "Never extrapolate far beyond the highest standard."
+          ],
+          "sourceEvidence": [
+            "Confirmed TUMS Cell & Molecules practical curriculum and data/teacher-materials/exam-scope.md.",
+            "Tracked curriculum-gap bank: Flame photometry. No separate local teacher deck is recorded in the current Telegram scope audit."
+          ]
+        }
+      ]
+    }
+  ],
+  "fingerprint": "86a32a1d6edd7b5bb11536539706dac4870ab14eff9c011889299fc868fcf0a6"
+}
