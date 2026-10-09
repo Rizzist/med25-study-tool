@@ -1,0 +1,4 @@
+.filters{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.filters label{display:flex;flex:1;flex-direction:column;gap:6px;min-width:180px;font-size:12px;font-weight:650}
+.filters input,.filters select{width:100%;padding:10px 12px;border:1px solid var(--mcq-line);border-radius:9px;background:var(--mcq-card);color:inherit;font:inherit}
+.filters p{width:100%;margin:0;font-size:12px;color:var(--mcq-muted)}

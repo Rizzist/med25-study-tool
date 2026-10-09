@@ -336,6 +336,9 @@ body:has(.mcq-app),body:has(.review-shell){height:auto;min-height:100%;overflow:
 
 /* Past-paper hub: toolbar, downloads panel, curated-set cards, selected-paper head. */
 .hub-tools{margin:0 0 12px}
+.paper-original-version{display:flex;flex-direction:column;gap:6px;max-width:100%}
+.paper-original-version>small{font-size:11px;color:var(--mcq-muted)}
+.paper-combiner-disclosure>summary{cursor:pointer;padding:10px 0;font-size:12.5px;font-weight:650}
 .hub-tools .seg{margin-right:2px}
 .hub-note{font-size:12px;color:var(--mcq-muted)}.hub-note>summary{display:inline-flex;align-items:center;min-height:34px;cursor:pointer;font-weight:600;color:var(--mcq-green)}.hub-note p{max-width:720px;margin:4px 0 8px;line-height:1.5}
 .mcq-app .dl-pill small,.paper-downloads a small,.review-downloads a small{font-size:10px;font-weight:600;color:#6d8073}

@@ -18,29 +18,36 @@ import {scopeRetakePaper,retakeBankSelection,type RetakePaperScope} from '@/src/
 import type {CvsScope} from '@/src/lib/mcq/cvs-scope.mjs';
 import type {PaperTopicMap} from '@/src/lib/mcq/cvs-paper-state.mjs';
 import {scopeCvsDownloadCollection,cvsTopicMapReady} from '@/src/lib/mcq/cvs-paper-catalog.mjs';
+import {PastPaperFilters} from './PastPaperFilters';
+import {hasAdditionalPastPapers,mergePastPaperSources,filterPastPapers,type SourcePaperCatalog} from '@/src/lib/mcq/past-paper-catalog.mjs';
 const BiochemistryCoreCard=dynamic(()=>import('./BiochemistryCoreCard').then(m=>m.BiochemistryCoreCard),{loading:()=> <p role="status" className="mcq-loading">Loading Core Exam…</p>});
 const CvsPastExams=dynamic(()=>import('./CvsPastExams').then(m=>m.CvsPastExams),{loading:()=> <p role="status" className="mcq-loading">Loading CVS paper tools…</p>});
 const FinalExam=dynamic(()=>import('./FinalExam').then(m=>m.FinalExam),{loading:()=> <p role="status" className="mcq-loading">Loading selected paper…</p>});
-const TermOneSourceLibrary=dynamic(()=>import('./TermOneSourceLibrary').then(m=>m.TermOneSourceLibrary));
 const NutritionArchive=dynamic(()=>import('./NutritionExam').then(m=>m.NutritionPaperArchive));
 const ReligionArchive=dynamic(()=>import('./ReligionExam').then(m=>m.ReligionPaperArchive));
 type Collection=DownloadCollection;
 type Catalog={courses:Array<{id:string;title:string;emptyReason:string|null;collections:Collection[]}>};
 type Selection=ExamCollection;
+function PaperCombiner({collapsible,children}:{collapsible:boolean;children:React.ReactNode}){
+  return collapsible?<details className="paper-combiner-disclosure"><summary>Combine papers into one session</summary>{children}</details>:<>{children}</>;
+}
 /** Toolbar shared by every course: bundle PDF and the all-downloads panel toggle. */
 function HubTools({course,open,onToggle,children,limbScope='all',cvsScope='all'}:{course:Catalog['courses'][number];open:boolean;onToggle:()=>void;children?:React.ReactNode;limbScope?:LimbScope;cvsScope?:CvsScope}) {
-  const label=cvsScope!=='all'?`${cvsScope==='physio'?'Physio':'Non-Physio'} papers`:limbScope==='all'?'All papers':limbScope==='upper'?'Upper-only papers':'Lower-only papers';
+  const label=course.collections.some(c=>c.sourceOnly)?'Transcribed papers':cvsScope!=='all'?`${cvsScope==='physio'?'Physio':'Non-Physio'} papers`:limbScope==='all'?'All papers':limbScope==='upper'?'Upper-only papers':'Lower-only papers';
   const suffix=cvsScope!=='all'?`-cvs-${cvsScope}`:limbScope==='all'?'':`-${limbScope}-only`;
   const source=(c:Collection,url:string)=>({...paperSource(c,url),...(limbScope==='all'?{}:{limbScope})});
   return <div className="pill-row hub-tools">
     {children}
-    {course.collections.some(c=>c.sourceRecordCount)&&<PaperPdfDownload sources={course.collections.map(c=>source(c,c.downloads.questions))} variant="questions" filename={`${course.id}-all-papers${suffix}-without-keys.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · ${label} without answer keys`}><StudyIcon name="download"/>{label} without keys<small>PDF</small></PaperPdfDownload>}
-    {course.collections.some(c=>c.gradedQuestionCount)&&<PaperPdfDownload sources={course.collections.map(c=>source(c,c.downloads.questionsAndKey))} variant="both" filename={`${course.id}-all-papers${suffix}.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · ${label} with answer keys`}><StudyIcon name="download"/>{label} + keys<small>PDF</small></PaperPdfDownload>}
+    {course.collections.some(c=>c.sourceRecordCount)&&<PaperPdfDownload sources={course.collections.filter(c=>!c.sourceOnly).map(c=>source(c,c.downloads.questions))} variant="questions" filename={`${course.id}-all-papers${suffix}-without-keys.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · ${label} without answer keys`}><StudyIcon name="download"/>{label} without keys<small>PDF</small></PaperPdfDownload>}
+    {course.collections.some(c=>c.gradedQuestionCount)&&<PaperPdfDownload sources={course.collections.filter(c=>!c.sourceOnly).map(c=>source(c,c.downloads.questionsAndKey))} variant="both" filename={`${course.id}-all-papers${suffix}.pdf`} courseTitle={course.title} footerLabel={`MED//25 · ${course.title} · ${label} with answer keys`}><StudyIcon name="download"/>{label} + keys<small>PDF</small></PaperPdfDownload>}
     <button type="button" className="pill" aria-expanded={open} onClick={onToggle}><StudyIcon name="download"/>{open?'Hide downloads':'All downloads'}</button>
   </div>;
 }
 export function PastExamHub({exam,onSessionActiveChange,cvsScope='all'}:{exam:ExamId;onSessionActiveChange?:(active:boolean)=>void;cvsScope?:CvsScope}) {
   const [catalog,setCatalog]=useState<Catalog|null>(null),[error,setError]=useState(''),[selected,setSelected]=useState<string|null>(null),[active,setActive]=useState(false),[archive,setArchive]=useState(false),[library,setLibrary]=useState(false);
+  const [sourceCatalog,setSourceCatalog]=useState<SourcePaperCatalog|null>(null),[sourceError,setSourceError]=useState('');
+  const [paperQuery,setPaperQuery]=useState(''),[paperFilter,setPaperFilter]=useState('all');
+  const hasSources=hasAdditionalPastPapers(exam);
   const [selectedPapers,setSelectedPapers]=useState<string[]>([]),[combined,setCombined]=useState<Selection|null>(null),[combining,setCombining]=useState(false),[selectionError,setSelectionError]=useState('');
   const [intent,setIntent]=useState<'start'|'new'|'review'>('start'),[saved,setSaved]=useState<unknown>(null);
   const [pendingStart,setPendingStart]=useState<{id:string;intent:'start'|'new'}|null>(null);
@@ -61,11 +68,17 @@ export function PastExamHub({exam,onSessionActiveChange,cvsScope='all'}:{exam:Ex
     }).catch(()=>{if(!cancelled)setCvsMappingError('CVS topic mapping could not load. Reconnect and reload to open scoped papers and downloads.');});
     return()=>{cancelled=true;};
   },[exam,cvsScope]);
+  useEffect(()=>{
+    if(!hasSources)return;
+    let cancelled=false;
+    void cachedJson<SourcePaperCatalog>('/study/term1-telegram/catalog.json').then(value=>{if(!cancelled)setSourceCatalog(value);}).catch(()=>{if(!cancelled)setSourceError('Some past papers could not load. Reload to retry.');});
+    return()=>{cancelled=true;};
+  },[hasSources]);
   useEffect(()=>{onSessionActiveChange?.(active);return()=>onSessionActiveChange?.(false);},[active,onSessionActiveChange]);
   const originalCourse=catalog?.courses.find(c=>c.id===exam);
   const fullRetakeAvailable=Boolean(originalCourse?.collections.length&&originalCourse.collections.every(c=>c.fullPaper));
   // Stable collection identity prevents progress-save renders from restarting FinalExam's loading effect.
-  const course=useMemo(()=>{
+  const scopedCourse=useMemo(()=>{
     if(!originalCourse)return originalCourse;
     if(exam==='term1-biochemistry-retake')return {...originalCourse,collections:originalCourse.collections.map(c=>scopeRetakePaper(c,fullRetakeAvailable?retakeScope:'biochemistry'))};
     if(exam==='term2-limbs')return {...originalCourse,collections:originalCourse.collections.map(c=>scopeLimbPaper(c,limbScope)).filter(c=>limbScope==='all'||c.sourceRecordCount>0).sort((a,b)=>Number(b.defaultEligible)-Number(a.defaultEligible))};
@@ -77,12 +90,15 @@ export function PastExamHub({exam,onSessionActiveChange,cvsScope='all'}:{exam:Ex
     }
     return originalCourse;
   },[originalCourse,exam,limbScope,retakeScope,fullRetakeAvailable,cvsScope,cvsTopics]);
+  const course=useMemo(()=>mergePastPaperSources(scopedCourse,sourceCatalog),[scopedCourse,sourceCatalog]);
+  const shownPapers=useMemo(()=>filterPastPapers(course?.collections??[],hasSources?paperQuery:'',hasSources?paperFilter:'all'),[course,hasSources,paperQuery,paperFilter]);
+  const downloadItem=(item:Collection)=>({...(originalCourse?.collections.find(c=>c.downloads.questions===item.downloads.questions)??item),sourcePapers:item.sourcePapers});
   const visibleCombinations=savedCombinations.filter(r=>r.exam===exam&&r.sourcePaperIds.every(id=>course?.collections.some(c=>c.id===id)));
   const sourceCollection=course?.collections.find(c=>c.id===selected),collection=sourceCollection??(combined?.id===selected?combined:undefined);
   if(error)return <p role="alert" className="mcq-alert error">{error}</p>;
   if(exam==='term2-cvs'&&cvsScope!=='all'&&(cvsMappingError||(originalCourse&&cvsTopics&&!course)))return <p role="alert" className="mcq-alert error">{cvsMappingError||'The CVS catalog is out of date. Reconnect and reload before opening scoped papers.'}</p>;
-  if(!course)return <p role="status" className="mcq-loading">Loading sourced past papers and downloads…</p>;
-  const head=<div className="section-head"><h2>Past papers<span>{course.collections.length} sourced</span></h2><p>Past-paper questions, with any study repairs clearly identified and original wording preserved in downloads. Take a paper, resume a saved attempt, or combine several into one session.</p></div>;
+  if(!course||(hasSources&&!sourceCatalog&&!sourceError))return <p role="status" className="mcq-loading">Loading sourced past papers and downloads…</p>;
+  const head=<div className="section-head"><h2>Past papers<span>{course.collections.length} {hasSources?'total':'sourced'}</span></h2><p>{hasSources?'Browse all past papers here. Read or download originals, and take or combine papers where scored questions are available.':'Past-paper questions, with any study repairs clearly identified and original wording preserved in downloads. Take a paper, resume a saved attempt, or combine several into one session.'}</p></div>;
   if(exam==='term2-cvs')return <section className="past-exam-hub">
     {!active&&<>{head}<HubTools course={course} cvsScope={cvsScope} open={library} onToggle={()=>setLibrary(v=>!v)}/>{library&&<DownloadLibrary collections={course.collections} courseTitle={course.title}/>}</>}
     <CvsPastExams key={cvsScope} cvsScope={cvsScope} onSessionActiveChange={setActive} downloads={Object.fromEntries(course.collections.map(item=>[item.id,item]))}/>
@@ -90,7 +106,7 @@ export function PastExamHub({exam,onSessionActiveChange,cvsScope='all'}:{exam:Ex
   const supported=exam==='term2-divine-ethics'||exam==='term1-biochemistry-retake'||exam==='july25'||exam==='july29'||exam==='term2-nutrition'||exam==='term2-religion'||exam==='term2-biochemistry'||exam==='term2-respiratory'||exam==='term2-limbs';
   if(selected&&supported)return <>{!active&&<div className="paper-view">
     <div className="paper-view-head"><button type="button" className="pill" onClick={()=>setSelected(null)}><StudyIcon name="arrow" className="flip"/>All papers</button>{collection&&<h2>{collection.title}</h2>}</div>
-    {sourceCollection&&<><p className="paper-note">{sourceCollection.note}</p><PaperDownloads item={originalCourse?.collections.find(c=>c.downloads.questions===sourceCollection.downloads.questions)??sourceCollection} courseTitle={course.title}/></>}
+    {sourceCollection&&<><p className="paper-note">{sourceCollection.note}</p><PaperDownloads item={downloadItem(sourceCollection)} courseTitle={course.title}/></>}
   </div>}<FinalExam key={selected} exam={exam} bridgeUrl="" collection={collection} initialIntent={intent} initialGuidance={launchGuidance} onProgressSaved={refreshSaved} onExit={()=>{setActive(false);setSelected(null);}} onSessionActiveChange={setActive}/></>;
   const selectedIds=[...new Set(course.collections.filter(c=>selectedPapers.includes(c.id)).flatMap(c=>c.gradedQuestionIds))];
   function requestOpen(id:string,nextIntent:'start'|'new'|'review') {
@@ -131,42 +147,46 @@ export function PastExamHub({exam,onSessionActiveChange,cvsScope='all'}:{exam:Ex
       setLaunchGuidance(mode);setIntent(pendingStart.intent);setSelected(pendingStart.id);setPendingStart(null);window.scrollTo({top:0,behavior:'instant'});
     }}/>}
     {head}
-    {(exam==='july25'||exam==='july29'||exam==='term1-biochemistry-retake')&&<TermOneSourceLibrary key={exam} exam={exam}/>}
+    {sourceError&&hasSources&&<p role="alert" className="mcq-alert error">{sourceError}</p>}
     {exam==='term1-biochemistry-retake'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['biochemistry','full'] as RetakePaperScope[]).map(scope=><button type="button" key={scope} disabled={scope==='full'&&!fullRetakeAvailable} className={retakeScope===scope?'primary':'pill'} aria-pressed={retakeScope===scope} onClick={()=>{setRetakeScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='biochemistry'?'Biochemistry only':'Full paper'}</button>)}<small>{!fullRetakeAvailable?'Reconnect and reload to download the full-paper catalog. ':''}Full paper includes the original physiology and histology questions where present. Both options support guided or unguided study, scoped downloads and separate saved results. Practice remains biochemistry only.</small></fieldset>}
     {exam==='term2-limbs'&&<fieldset className="pill-row limb-paper-scope"><legend>Questions to include</legend>{(['all','upper','lower'] as LimbScope[]).map(scope=><button type="button" key={scope} className={limbScope===scope?'primary':'pill'} aria-pressed={limbScope===scope} onClick={()=>{setLimbScope(scope);setSelectedPapers([]);setCombined(null);setSelectionError('');}}>{scope==='all'?'Full':scope==='upper'?'Upper only':'Lower only'}</button>)}<small>Full includes every scored question, including spine and general anatomy in mixed papers. Upper/Lower filters questions and bundle PDFs; each scope saves separate results. Individual paper downloads and original scans remain complete.</small></fieldset>}
     {!course.collections.length?<div className="mcq-empty"><StudyIcon name="papers"/><b>No past papers imported yet</b><p>{course.emptyReason||'Practice MCQs are available, but they are not past-exam questions.'}</p></div>:<>
       <HubTools course={course} limbScope={exam==='term2-limbs'?limbScope:'all'} open={library} onToggle={()=>setLibrary(v=>!v)}>
-        {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');if(exam==='term2-limbs'||exam==='term1-biochemistry-retake'){const scope=exam==='term2-limbs'?limbBankSelection(course.collections,limbScope):retakeBankSelection(course.collections,retakeScope);setCombined(scope);setSelected(scope.id);}else setSelected('all');}}><StudyIcon name="results"/>All-paper bank &amp; saved results</button>}
+        {supported&&<button type="button" className="pill" onClick={()=>{setIntent('review');if(exam==='term2-limbs'||exam==='term1-biochemistry-retake'){const scope=exam==='term2-limbs'?limbBankSelection(course.collections,limbScope):retakeBankSelection(course.collections,retakeScope);setCombined(scope);setSelected(scope.id);}else setSelected('all');}}><StudyIcon name="results"/>{hasSources?'Scored questions & saved results':'All-paper bank & saved results'}</button>}
         {archived&&<button type="button" className="pill" aria-expanded={archive} onClick={()=>setArchive(!archive)}><StudyIcon name="book"/>{archive?'Close':'Open'} source archive</button>}
       </HubTools>
       {exam==='term2-divine-ethics'&&<div className="mcq-note"><b>Divine Ethics · source-checked, course-relevant selections</b><p>Includes the photographed paper and relevant selections from the reports and compilations. Content-matched papers are labelled separately from the explicit Ethics 1 cover. Duplicate versions, unsupported medical rulings and unclear items are excluded. The review covers selected chapters; questions outside its coverage link to the first-term notes and supporting evidence.</p><div className="pill-row"><CachedPdfDownload href="/study/divine-ethics/references/first-term-lessons.pdf"><StudyIcon name="book"/>First-term lesson notes</CachedPdfDownload><a className="pill" href="/study/divine-ethics/paper-audit.md" target="_blank" rel="noreferrer">Source comparison &amp; exclusions</a></div></div>}
-      {library&&<DownloadLibrary collections={(exam==='term1-biochemistry-retake'?course:originalCourse??course).collections} courseTitle={course.title}/>}
+      {library&&<DownloadLibrary collections={hasSources?course.collections.map(downloadItem):(originalCourse??course).collections} courseTitle={course.title}/>}
       {exam==='july29'&&<p className="mcq-note">The authored “Core Distilled” questions are now in Practice MCQs, not Final Exam. The separate PharmD paper below is cross-course material, not confirmed medical-exam scope. The all-bank option retains legacy answers and includes both source groups.</p>}
       {archive&&(exam==='term2-nutrition'?<NutritionArchive/>:<ReligionArchive/>)}
-      <section className="paper-combiner" aria-label="Combine past papers">
+      <PaperCombiner collapsible={hasSources}><section className="paper-combiner" aria-label="Combine past papers">
         <div className="section-head compact"><h3><StudyIcon name="layers"/>Combine papers</h3><p>One continuous session; repeated question IDs count once. Results map to your review sections.</p><div className="pill-row"><button type="button" className="pill small" onClick={()=>setSelectedPapers(course.collections.filter(c=>c.gradedQuestionCount&&c.defaultEligible).map(c=>c.id))}>Select all</button><button type="button" className="pill small" onClick={()=>setSelectedPapers([])}>Clear</button></div></div>
         {exam==='term2-limbs'&&<p className="paper-note">Select all includes the main paper collections. Midterms and scope-unconfirmed supplements are optional: tick them individually to add them.</p>}
-        <div className="paper-selection">{course.collections.map(item=><label key={item.id}><input type="checkbox" disabled={!item.gradedQuestionCount||combining} checked={selectedPapers.includes(item.id)} onChange={e=>setSelectedPapers(current=>e.target.checked?[...current,item.id]:current.filter(id=>id!==item.id))}/>{item.title}<small>{item.gradedQuestionCount}{!item.defaultEligible?' · supplement':''}</small></label>)}</div>
+        <div className="paper-selection">{course.collections.filter(item=>!item.sourceOnly).map(item=><label key={item.id}><input type="checkbox" disabled={!item.gradedQuestionCount||combining} checked={selectedPapers.includes(item.id)} onChange={e=>setSelectedPapers(current=>e.target.checked?[...current,item.id]:current.filter(id=>id!==item.id))}/>{item.title}<small>{item.gradedQuestionCount}{!item.defaultEligible?' · supplement':''}</small></label>)}</div>
         <div className="paper-combiner-footer"><span>{selectedPapers.length} papers · {selectedIds.length} scored questions</span><button type="button" className="primary" disabled={!selectedIds.length||combining} onClick={()=>void openCombined()}>{combining?'Preparing…':'Start combined session'}<StudyIcon name="arrow"/></button></div>
         {selectionError&&<p role="alert" className="mcq-alert error">{selectionError}</p>}
         {visibleCombinations.length>0&&<details className="paper-saved-combinations"><summary>Saved combined sessions</summary>{visibleCombinations.map(row=>{const included=course.collections.filter(c=>row.sourcePaperIds.includes(c.id)),summary=paperAttemptSummary(saved,exam,{id:row.id,gradedQuestionIds:[...new Set(included.flatMap(c=>c.gradedQuestionIds))]});return <article key={row.id}><b>{included.map(c=>c.title).join(' + ')}</b><p>{summary?`${summary.answered}/${summary.total} answered · ${summary.correct} correct`:'Ready to resume'}{summary?.completedAt?' · Completed':''}</p><button type="button" className="pill small" disabled={combining||!included.length} onClick={()=>void openCombined(row.sourcePaperIds)}>{summary?.completedAt?'Results & review':'Resume'}</button></article>;})}</details>}
-      </section>
+      </section></PaperCombiner>
+      {hasSources&&<PastPaperFilters query={paperQuery} filter={paperFilter} onQuery={setPaperQuery} onFilter={setPaperFilter} shown={shownPapers.length} total={course.collections.length}/>}
       <div className="paper-grid">
       {exam==='term2-biochemistry'&&<BiochemistryCoreCard saved={saved} onOpen={openCore}/>}
       {exam==='term2-nutrition'&&<BiochemistryCoreCard exam="term2-nutrition" saved={saved} onOpen={openCore}/>}
       {exam==='term2-respiratory'&&<BiochemistryCoreCard exam="term2-respiratory" saved={saved} onOpen={openCore}/>}
-      {course.collections.map(item=>{
+      {shownPapers.map(item=>{
         const previous=paperAttemptSummary(saved,exam,item);
-        const referenceOnly=exam==='term2-respiratory'&&!item.sourceRecordCount&&!item.gradedQuestionCount;
-        return <PastPaperCard key={item.id} title={item.title} label={referenceOnly?'Reference only':item.defaultEligible?'Source paper':'Supplement · scope unconfirmed'} note={item.note}>
-          {referenceOnly?<p className="paper-counts">Original reference retained · no standalone MCQs</p>:<p className="paper-counts"><b>{item.gradedQuestionCount}</b> scored<i>·</i>{item.sourceRecordCount} source items{item.ungradedCount?<><i>·</i>{item.ungradedCount} ungraded</>:null}</p>}
+        const referenceOnly=Boolean(item.sourceOnly)||(exam==='term2-respiratory'&&!item.sourceRecordCount&&!item.gradedQuestionCount);
+        const typeLabel=({theory:'Theory',practical:'Practical',midterm:'Midterm',quiz:'Quiz',recall:'Recall / answer notes',practice:'Student compilation'} as Record<string,string>)[item.kind];
+        const details=[item.note,...(item.sourcePapers??[]).map(p=>`${p.title}: ${p.note} Source: ${p.source}`)].join('\n\n');
+        return <PastPaperCard key={item.id} title={item.title} label={item.sourceOnly?`${typeLabel??'Past paper'}${!item.defaultEligible?' · Supplement':''}`:referenceOnly?'Reference only':item.defaultEligible?(hasSources?'Past paper':'Source paper'):'Supplement · scope unconfirmed'} note={details}>
+          {referenceOnly?<p className="paper-counts">{item.sourceOnly?`${item.sourcePapers?.[0]?.pages?item.sourcePapers[0].pages+' pages · ':''}Original available · no scored questions yet`:'Original reference retained · no standalone MCQs'}</p>:<p className="paper-counts"><b>{item.gradedQuestionCount}</b> scored<i>·</i>{item.sourceRecordCount} source items{item.ungradedCount?<><i>·</i>{item.ungradedCount} ungraded</>:null}</p>}
           {!referenceOnly&&(previous?.completedAt
             ?<p className="paper-saved-result"><strong>{Math.round(previous.correct/Math.max(1,previous.total)*100)}%</strong><span>{previous.correct}/{previous.total} correct · {new Date(previous.completedAt).toLocaleDateString()}</span></p>
             :<p className="paper-saved-result">{previous?`${previous.answered}/${previous.total} answered · saved on this device`:'Not attempted yet'}</p>)}
           {!referenceOnly&&<div className="paper-card-actions"><button type="button" className="primary" disabled={!item.gradedQuestionCount} onClick={()=>openPaper(item)}>{previous?previous.completedAt?'Results & review':'Resume paper':'Take paper'}</button>{previous&&<button type="button" className="pill" onClick={()=>openPaper(item,true)}>New attempt</button>}</div>}
-          <PaperDownloads item={originalCourse?.collections.find(c=>c.downloads.questions===item.downloads.questions)??item} courseTitle={course.title}/>
+          <PaperDownloads item={downloadItem(item)} courseTitle={course.title}/>
         </PastPaperCard>;
       })}</div>
+      {hasSources&&!shownPapers.length&&<p className="mcq-empty">No papers match this search.</p>}
     </>}
   </section>;
 }
