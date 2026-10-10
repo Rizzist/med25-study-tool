@@ -1,6 +1,6 @@
 # Cell & Molecules · September 2021 · Distilled
 
-Distilled for the confirmed Biochemistry I retake syllabus. Physiology, histology, Biochemistry II-only metabolism and unclassified items are excluded. Source numbering and study-key qualifications are retained. The downloadable original is the complete source document. Biochemistry-only source selection. Original question numbers retained; some wording/options normalized and defective keys qualified. Downloaded keys apply to displayed options. Original PDF also includes other subjects where present.
+Distilled for the confirmed Biochemistry I retake syllabus. Physiology, histology, Biochemistry II-only metabolism and unclassified items are excluded. Source numbering and study-key qualifications are retained. The downloadable original is the complete source document. Biochemistry-only source selection. Original question numbers retained; some wording/options normalized and defective keys qualified. Downloaded keys apply to displayed options. Original PDF also includes other subjects where present. Same questions as Biochemistry 1 · Finals 2022 · Distilled; left out of Select all.
 
 64 retained source records; 64 scored and 0 ungraded.
 

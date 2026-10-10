@@ -94,6 +94,22 @@ test('Distilled exports preserve source content; Core numbers sequentially with 
  }
 });
 
+test('Select all takes every Core-voting exam sheet once and leaves copies and supporting sources optional',()=>{
+ const selected=distilled.collections.filter(p=>p.defaultEligible);
+ assert.equal(selected.length,19);
+ assert.equal(selected.reduce((n,p)=>n+p.sourceRecordCount,0),782);
+ for(const p of distilled.collections){
+  const family=families[p.originalCollectionId];
+  if(p.duplicateOf){
+   const kept=distilled.collections.find(q=>q.id===p.duplicateOf);
+   assert(!p.defaultEligible&&kept.defaultEligible,p.id);
+   assert.equal(families[kept.originalCollectionId].familyId,family.familyId,p.id);
+  }
+  else if(family.role!=='exam')assert(!p.defaultEligible,`${p.id}: supporting source is selected by default`);
+ }
+ assert.deepEqual(distilled.collections.filter(p=>p.duplicateOf).map(p=>p.originalCollectionId).sort(),['retake-import-cell-feb2021-answers','retake-import-cell-practical-molisch','retake-september-2021']);
+ assert.deepEqual(distilled.collections.filter(p=>!p.defaultEligible&&!p.duplicateOf&&families[p.originalCollectionId].role==='exam').map(p=>p.originalCollectionId).sort(),['retake-import-bio-quiz2016','retake-import-bio-quiz2016-variant']);
+});
 test('Core counts independent exam families once and cannot use supporting compilations as votes',()=>{
  assert.equal(core.supplementalCount,0);
  assert.equal(core.sourceFamilyCount,19);

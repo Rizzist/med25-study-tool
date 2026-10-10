@@ -12,36 +12,38 @@ One existing keyed past-paper question per detected repeated pattern, ranked by 
 
 ## Source variants
 
-| Source paper | Distilled items | Scored | Ungraded | Family role |
-|---|---:|---:|---:|---|
-| Cell & Molecules · April 2021 report · Distilled | 58 | 58 | 0 | exam |
-| Cell & Molecules · February 2021 · Distilled | 57 | 57 | 0 | exam |
-| Biochemistry 1 · Finals 2022 · Distilled | 64 | 64 | 0 | exam |
-| Cell & Molecules · September 2021 · Distilled | 64 | 64 | 0 | exam |
-| Cell & Molecules · 22 January 2024 · Distilled | 69 | 69 | 0 | exam |
-| Biochemistry I · 29 January 2023 · Distilled | 23 | 22 | 1 | exam |
-| Biochemistry I · September 2019 recall · Distilled | 51 | 12 | 39 | recall |
-| Biochemistry · Dr Nowrouzi question scan · Distilled | 46 | 46 | 0 | exam |
-| Biochemistry · annotated paper fragment · Distilled | 36 | 29 | 7 | recall |
-| Biochemistry · undated TUMS paper · Distilled | 35 | 32 | 3 | exam |
-| Biochemistry · undated DDS paper · Distilled | 40 | 31 | 9 | exam |
-| Biochemistry · PharmD midterm, January 2024 · Distilled | 64 | 60 | 4 | exam |
-| Biochemistry · DDS / PharmD, 12 July 2023 · Distilled | 56 | 51 | 5 | exam |
-| Cell & Molecules · online exam screenshots · Distilled | 50 | 49 | 1 | exam |
-| Cell block · June 2022 scan file · Distilled | 30 | 30 | 0 | exam |
-| Cell & Molecules · February 2021 answer version · Distilled | 57 | 57 | 0 | exam |
-| Biochemistry · FINAL EXAM answer document · Distilled | 39 | 37 | 2 | recall |
-| Cell & Molecules · Kish theory photo compilation · Distilled | 48 | 44 | 4 | exam |
-| Biochemistry practical · Kish photo paper · Distilled | 20 | 15 | 5 | exam |
-| Biochemistry practical · 22 January 2024 · Distilled | 25 | 22 | 3 | exam |
-| Cell & Molecules practical · report 20203 · Distilled | 22 | 19 | 3 | exam |
-| Cell & Molecules practical · flame photometry paper · Distilled | 27 | 24 | 3 | exam |
-| Cell & Molecules practical · Molisch test paper · Distilled | 27 | 24 | 3 | exam |
-| Cell & Molecules practical · online screenshots · Distilled | 31 | 24 | 7 | exam |
-| Biochemistry practical · DDS / PharmD, 15 July 2023 · Distilled | 17 | 15 | 2 | exam |
-| Biochemistry · comprehensive quiz, 27 February 2016 · Distilled | 20 | 15 | 5 | exam |
-| Biochemistry · comprehensive quiz alternate version · Distilled | 20 | 15 | 5 | exam |
-| Biochemistry · Dr Pasalar student MCQ compilation · Distilled | 98 | 83 | 15 | practice |
+Select all ticks 19 papers (782 items): every exam sheet the Core relies on, including DDS/PharmD and undated sheets, but not duplicate copies of a selected paper. Recall notes, the alternate quiz and the student compilation stay optional.
+
+| Source paper | Distilled items | Scored | Ungraded | Family role | Select all |
+|---|---:|---:|---:|---|---|
+| Cell & Molecules · April 2021 report · Distilled | 58 | 58 | 0 | exam | yes |
+| Cell & Molecules · February 2021 · Distilled | 57 | 57 | 0 | exam | yes |
+| Biochemistry 1 · Finals 2022 · Distilled | 64 | 64 | 0 | exam | yes |
+| Cell & Molecules · September 2021 · Distilled | 64 | 64 | 0 | exam | duplicate |
+| Cell & Molecules · 22 January 2024 · Distilled | 69 | 69 | 0 | exam | yes |
+| Biochemistry I · 29 January 2023 · Distilled | 23 | 22 | 1 | exam | yes |
+| Biochemistry I · September 2019 recall · Distilled | 51 | 12 | 39 | recall | optional |
+| Biochemistry · Dr Nowrouzi question scan · Distilled | 46 | 46 | 0 | exam | yes |
+| Biochemistry · annotated paper fragment · Distilled | 36 | 29 | 7 | recall | optional |
+| Biochemistry · undated TUMS paper · Distilled | 35 | 32 | 3 | exam | yes |
+| Biochemistry · undated DDS paper · Distilled | 40 | 31 | 9 | exam | yes |
+| Biochemistry · PharmD midterm, January 2024 · Distilled | 64 | 60 | 4 | exam | yes |
+| Biochemistry · DDS / PharmD, 12 July 2023 · Distilled | 56 | 51 | 5 | exam | yes |
+| Cell & Molecules · online exam screenshots · Distilled | 50 | 49 | 1 | exam | yes |
+| Cell block · June 2022 scan file · Distilled | 30 | 30 | 0 | exam | yes |
+| Cell & Molecules · February 2021 answer version · Distilled | 57 | 57 | 0 | exam | duplicate |
+| Biochemistry · FINAL EXAM answer document · Distilled | 39 | 37 | 2 | recall | optional |
+| Cell & Molecules · Kish theory photo compilation · Distilled | 48 | 44 | 4 | exam | yes |
+| Biochemistry practical · Kish photo paper · Distilled | 20 | 15 | 5 | exam | yes |
+| Biochemistry practical · 22 January 2024 · Distilled | 25 | 22 | 3 | exam | yes |
+| Cell & Molecules practical · report 20203 · Distilled | 22 | 19 | 3 | exam | yes |
+| Cell & Molecules practical · flame photometry paper · Distilled | 27 | 24 | 3 | exam | yes |
+| Cell & Molecules practical · Molisch test paper · Distilled | 27 | 24 | 3 | exam | duplicate |
+| Cell & Molecules practical · online screenshots · Distilled | 31 | 24 | 7 | exam | yes |
+| Biochemistry practical · DDS / PharmD, 15 July 2023 · Distilled | 17 | 15 | 2 | exam | yes |
+| Biochemistry · comprehensive quiz, 27 February 2016 · Distilled | 20 | 15 | 5 | exam | optional |
+| Biochemistry · comprehensive quiz alternate version · Distilled | 20 | 15 | 5 | exam | optional |
+| Biochemistry · Dr Pasalar student MCQ compilation · Distilled | 98 | 83 | 15 | practice | optional |
 
 ## Core evidence
 

@@ -68,10 +68,20 @@ function exportCollection(collection,questions){
   for(const [key,body] of Object.entries({questions:intro+qs,answerKey:intro+keys,questionsAndKey:intro+qs+'\n'+keys}))emit('public'+urls[key],body.replace(/[ \t]+$/gm,''));
   return {...collection,downloads:urls};
 }
+// Select all for the retake: exam sheets the Core relies on, minus copies of a paper already selected.
+// The inherited catalog flag only marks confirmed MD sittings, which leaves out DDS/PharmD and undated exam sheets.
+const retakeDefaultAdditions=new Set(['retake-import-bio-pharmd-jan2024','retake-import-bio-dds-jul2023','retake-import-bio-kish-theory','retake-import-bio-practical-dds2023','retake-import-bio-undated-t3','retake-import-bio-dds-t2']);
+const retakeDuplicateOf={'retake-september-2021':'retake-biochemistry-2022','retake-import-cell-feb2021-answers':'retake-february-2021','retake-import-cell-practical-molisch':'retake-import-cell-practical-flame'};
+for(const [id,keep] of Object.entries(retakeDuplicateOf))assert.equal(families.papers[id].familyId,families.papers[keep].familyId,`${id} is not a copy of ${keep}`);
+for(const id of retakeDefaultAdditions)assert.equal(families.papers[id].role,'exam',`${id} is not an exam source`);
 const collections=papers.map(p=>{
   const questions=(p.fullPaper??p).questionIds.map(id=>byId.get(id)).filter(q=>topicMap.questions[q.id].inScope);
   const {fullPaper,downloads,...original}=p;
-  return exportCollection({...original,id:p.id+'-distilled',originalCollectionId:p.id,distilled:true,independent:true,title:p.title.replace(/ · Biochemistry(?: only)?$/,'')+' · Distilled',note:scopeNote+' '+p.note,
+  const duplicateOf=retakeDuplicateOf[p.id];
+  const defaultEligible=!duplicateOf&&(p.defaultEligible||retakeDefaultAdditions.has(p.id));
+  const keepTitle=duplicateOf&&papers.find(q=>q.id===duplicateOf).title.replace(/ · Biochemistry(?: only)?$/,'')+' · Distilled';
+  return exportCollection({...original,id:p.id+'-distilled',originalCollectionId:p.id,distilled:true,independent:true,title:p.title.replace(/ · Biochemistry(?: only)?$/,'')+' · Distilled',note:scopeNote+' '+p.note+(duplicateOf?` Same questions as ${keepTitle}; left out of Select all.`:''),
+    defaultEligible,courseMatch:defaultEligible?'source-course':duplicateOf?'duplicate':'supplement',...(duplicateOf?{duplicateOf:duplicateOf+'-distilled'}:{}),
     sourceRecordCount:questions.length,transcribedQuestionCount:questions.length,gradedQuestionCount:questions.filter(q=>q.correctOptionId).length,ungradedCount:questions.filter(q=>!q.correctOptionId).length,
     sourceKeyCount:questions.filter(q=>q.correctOptionId&&q.answerReview?.basis==='source-reviewed').length,editorialKeyCount:questions.filter(q=>q.correctOptionId&&q.answerReview?.basis!=='source-reviewed').length,
     questionIds:questions.map(q=>q.id),takeableQuestionIds:questions.map(q=>q.id),gradedQuestionIds:questions.filter(q=>q.correctOptionId).map(q=>q.id)},questions);
@@ -146,8 +156,9 @@ emit('docs/biochemistry-retake-distilled.md',[
   `${papers.length} source papers, ${all.length} original occurrences reviewed. ${inScope.length} in-scope occurrences (${graded.length} scored; ${inScope.length-graded.length} ungraded); ${all.length-inScope.length} excluded or unclassified.`,
   '',scopeNote,'',`${rows.length} deduplicated Core questions; ${result.repeatedSourceOccurrenceCount} supporting occurrences. ${result.sourceFamilyCount} voting exam families. No coverage fillers.`,
   '',methodology,'',`${guide.conceptCount} existing review concepts selected across ${guideSections.length} sections, supported by ${guide.sourceQuestionCount} example source occurrences. Any guide-only scientific correction is explicitly sourced in the authoring manifest.`,
-  '','## Source variants','','| Source paper | Distilled items | Scored | Ungraded | Family role |','|---|---:|---:|---:|---|',
-  ...collections.map(p=>`| ${p.title} | ${p.sourceRecordCount} | ${p.gradedQuestionCount} | ${p.ungradedCount} | ${families.papers[p.originalCollectionId].role} |`),
+  '','## Source variants','',`Select all ticks ${collections.filter(p=>p.defaultEligible).length} papers (${collections.filter(p=>p.defaultEligible).reduce((n,p)=>n+p.sourceRecordCount,0)} items): every exam sheet the Core relies on, including DDS/PharmD and undated sheets, but not duplicate copies of a selected paper. Recall notes, the alternate quiz and the student compilation stay optional.`,'',
+  '| Source paper | Distilled items | Scored | Ungraded | Family role | Select all |','|---|---:|---:|---:|---|---|',
+  ...collections.map(p=>`| ${p.title} | ${p.sourceRecordCount} | ${p.gradedQuestionCount} | ${p.ungradedCount} | ${families.papers[p.originalCollectionId].role} | ${p.defaultEligible?'yes':p.duplicateOf?'duplicate':'optional'} |`),
   '','## Core evidence','','| Original question | Exam families | Review chapter |','|---|---:|---|',...rows.map(r=>`| ${r.questionId} | ${r.sourceCollectionCount} | ${r.sectionTitle} |`),
   '','## Maintenance','',
   'Reviewed question tags, source families, semantic equivalences and guide selections live in data/biochemistry-retake. Every topic tag is bound to a source-content hash. Run npm run biochemistry:retake:distilled:generate after a reviewed update; the check command rejects stale outputs. Existing source banks and full originals remain unchanged. Distilled paper IDs separate their saved attempts from historical full-paper or broader biochemistry attempts. Core and chapter attempts are independent of paper attempts.','',

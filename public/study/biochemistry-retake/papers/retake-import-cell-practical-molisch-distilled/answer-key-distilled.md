@@ -1,6 +1,6 @@
 # Cell & Molecules practical · Molisch test paper · Distilled
 
-Distilled for the confirmed Biochemistry I retake syllabus. Physiology, histology, Biochemistry II-only metabolism and unclassified items are excluded. Source numbering and study-key qualifications are retained. The downloadable original is the complete source document. Undated February filename. Begins with the carbohydrate identification test; marked source version. All source question occurrences retained in printed order. Check marks were mapped by PDF coordinates. Scientifically defective albumin-specific items are ungraded.
+Distilled for the confirmed Biochemistry I retake syllabus. Physiology, histology, Biochemistry II-only metabolism and unclassified items are excluded. Source numbering and study-key qualifications are retained. The downloadable original is the complete source document. Undated February filename. Begins with the carbohydrate identification test; marked source version. All source question occurrences retained in printed order. Check marks were mapped by PDF coordinates. Scientifically defective albumin-specific items are ungraded. Same questions as Cell & Molecules practical · flame photometry paper · Distilled; left out of Select all.
 
 27 retained source records; 24 scored and 3 ungraded.
 
